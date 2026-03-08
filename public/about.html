@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-K6C9EVRFH4"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-K6C9EVRFH4');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Boxoffy — Making Box Office Cool Again</title>
+  <meta name="description" content="Boxoffy is building the definitive box office intelligence layer for Indian cinema. Clean data. Validated numbers. All languages.">
+  <meta property="og:title" content="About Boxoffy — Making Box Office Cool Again">
+  <meta property="og:description" content="We are building the definitive box office intelligence layer for Indian cinema. Clean data. Validated numbers. All languages.">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Boxoffy — India Box Office Intelligence">
+  <meta property="og:url" content="https://boxoffy.com/about.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="About Boxoffy — Making Box Office Cool Again">
+  <meta name="twitter:description" content="Building the definitive box office intelligence layer for Indian cinema.">
+  <link rel="canonical" href="https://boxoffy.com/about.html">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Barlow+Condensed:wght@400;600;700;800&family=Lora:ital,wght@0,400;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --ink:        #0D0D0D;
+      --paper:      #F7F3EC;
+      --red:        #C8201A;
+      --red-dark:   #8B1612;
+      --gold:       #B8860B;
+      --gold-light: #E8C547;
+      --muted:      #6B6457;
+      --rule:       #D4C9B4;
+      --surface:    #FFFFFF;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--paper);
+      color: var(--ink);
+      font-family: 'Lora', Georgia, serif;
+      font-size: 18px;
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── MASTHEAD ── */
+    .masthead {
+      background: var(--ink);
+      padding: 14px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 3px solid var(--red);
+    }
+    .masthead-logo {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 800;
+      font-size: 22px;
+      letter-spacing: 0.12em;
+      color: #fff;
+      text-transform: uppercase;
+      text-decoration: none;
+    }
+    .masthead-logo span { color: var(--red); }
+    .masthead-tag {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      color: #999;
+      text-transform: uppercase;
+    }
+    .masthead-date {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 11px;
+      color: #666;
+    }
+
+    /* ── CATEGORY STRIP ── */
+    .category-strip {
+      background: var(--red);
+      padding: 7px 40px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    .cat-badge {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 11px;
+      letter-spacing: 0.25em;
+      color: #fff;
+      text-transform: uppercase;
+    }
+    .cat-rule { flex: 1; height: 1px; background: rgba(255,255,255,0.25); }
+    .cat-issue {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 10px;
+      color: rgba(255,255,255,0.6);
+      letter-spacing: 0.1em;
+    }
+    .cat-issue a { color: rgba(255,255,255,0.6); text-decoration: none; }
+    .cat-issue a:hover { color: #fff; }
+
+    /* ── BREADCRUMB ── */
+    .breadcrumb {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 18px 40px 0;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 12px;
+      letter-spacing: 0.15em;
+      color: var(--muted);
+      text-transform: uppercase;
+    }
+    .breadcrumb a { color: var(--red); text-decoration: none; }
+    .breadcrumb a:hover { text-decoration: underline; }
+
+    /* ── HERO ── */
+    .hero {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 48px 40px 0;
+    }
+
+    .issue-label {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 11px;
+      letter-spacing: 0.3em;
+      color: var(--red);
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .issue-label::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--red);
+      opacity: 0.3;
+    }
+
+    .headline {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-weight: 900;
+      font-size: clamp(36px, 6vw, 64px);
+      line-height: 1.05;
+      color: var(--ink);
+      letter-spacing: -0.01em;
+      margin-bottom: 24px;
+    }
+    .headline em { font-style: italic; color: var(--red); }
+
+    .dek {
+      font-family: 'Lora', serif;
+      font-size: 20px;
+      line-height: 1.55;
+      color: #3A3530;
+      border-left: 4px solid var(--gold);
+      padding-left: 20px;
+      margin-bottom: 28px;
+    }
+
+    .byline-row {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      padding: 16px 0;
+      border-top: 1px solid var(--rule);
+      border-bottom: 1px solid var(--rule);
+      margin-bottom: 40px;
+    }
+    .byline-name {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 13px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--ink);
+    }
+    .byline-sep { color: var(--rule); }
+    .byline-meta {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 11px;
+      color: var(--muted);
+    }
+
+    /* ── ARTICLE BODY ── */
+    .article-body {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 0 40px 60px;
+    }
+    .article-body p { margin-bottom: 24px; color: #1A1713; }
+    .article-body em { font-style: italic; }
+
+    /* ── SECTION HEADS ── */
+    .section-head {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: 26px;
+      line-height: 1.2;
+      color: var(--ink);
+      margin: 52px 0 20px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--ink);
+      position: relative;
+    }
+    .section-head::after {
+      content: '';
+      position: absolute;
+      bottom: -2px; left: 0;
+      width: 48px; height: 2px;
+      background: var(--red);
+    }
+
+    /* ── PULL QUOTE ── */
+    .pull-quote {
+      margin: 40px 0;
+      padding: 28px 32px;
+      border-left: 5px solid var(--red);
+      background: var(--surface);
+      box-shadow: 0 1px 0 var(--rule), 0 -1px 0 var(--rule);
+    }
+    .pull-quote-text {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: 22px;
+      line-height: 1.5;
+      color: var(--ink);
+      margin-bottom: 12px;
+    }
+    .pull-quote-attr {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 11px;
+      color: var(--muted);
+      letter-spacing: 0.08em;
+    }
+
+    /* ── STAT LIST ── */
+    .stat-list {
+      margin: 32px 0;
+      border-top: 2px solid var(--ink);
+    }
+    .stat-item {
+      display: grid;
+      grid-template-columns: 160px 1fr;
+      gap: 24px;
+      padding: 20px 0;
+      border-bottom: 1px solid var(--rule);
+      align-items: start;
+    }
+    .stat-num {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 800;
+      font-size: 26px;
+      color: var(--red);
+      letter-spacing: 0.02em;
+      line-height: 1.15;
+    }
+    .stat-desc {
+      font-family: 'Lora', serif;
+      font-size: 16px;
+      color: #3A3530;
+      line-height: 1.65;
+      padding-top: 2px;
+    }
+
+    /* ── MANIFESTO BLOCK ── */
+    .manifesto-block {
+      margin: 40px 0;
+      background: var(--ink);
+      padding: 40px;
+    }
+    .m-label {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 10px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--red);
+      margin-bottom: 28px;
+    }
+    .manifesto-item {
+      display: grid;
+      grid-template-columns: 36px 1fr;
+      gap: 16px;
+      padding: 20px 0;
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+    .manifesto-item:last-child { border-bottom: 1px solid rgba(255,255,255,0.08); }
+    .m-num {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 800;
+      font-size: 18px;
+      color: var(--red);
+      padding-top: 2px;
+    }
+    .m-text {
+      font-family: 'Lora', serif;
+      font-size: 16px;
+      color: rgba(255,255,255,0.75);
+      line-height: 1.7;
+    }
+    .m-text strong { color: #fff; font-style: italic; font-weight: 400; }
+
+    /* ── LANGUAGE GRID ── */
+    .lang-grid {
+      margin: 32px 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2px;
+      background: var(--rule);
+    }
+    .lang-card {
+      background: var(--paper);
+      padding: 28px;
+    }
+    .lang-card.live { background: var(--ink); }
+    .lang-badge {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 10px;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--red);
+      margin-bottom: 10px;
+    }
+    .lang-card.live .lang-badge { color: #4ADE80; }
+    .lang-name {
+      font-family: 'Playfair Display', serif;
+      font-weight: 900;
+      font-size: 28px;
+      color: var(--ink);
+      margin-bottom: 10px;
+      line-height: 1;
+    }
+    .lang-card.live .lang-name { color: #fff; }
+    .lang-body {
+      font-family: 'Lora', serif;
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.65;
+    }
+    .lang-card.live .lang-body { color: rgba(255,255,255,0.5); }
+    .lang-more {
+      background: var(--surface);
+      padding: 28px;
+      display: flex;
+      align-items: center;
+    }
+    .lang-more p {
+      font-family: 'Lora', serif;
+      font-size: 15px;
+      color: var(--muted);
+      line-height: 1.7;
+      margin-bottom: 0;
+    }
+
+    /* ── CREDIBILITY LIST ── */
+    .cred-list {
+      margin: 32px 0;
+      border-top: 2px solid var(--ink);
+    }
+    .cred-item {
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      gap: 32px;
+      padding: 24px 0;
+      border-bottom: 1px solid var(--rule);
+      align-items: start;
+    }
+    .cred-title {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 14px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--ink);
+      line-height: 1.4;
+      padding-top: 4px;
+    }
+    .cred-body {
+      font-family: 'Lora', serif;
+      font-size: 16px;
+      color: #3A3530;
+      line-height: 1.7;
+    }
+
+    /* ── VERDICT / MISSION BLOCK ── */
+    .verdict-block {
+      margin: 52px 0 40px;
+      background: var(--ink);
+      padding: 36px 40px;
+      border-left: 6px solid var(--red);
+    }
+    .verdict-label {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 10px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--red);
+      margin-bottom: 16px;
+    }
+    .verdict-text {
+      font-family: 'Lora', serif;
+      font-style: italic;
+      font-size: 19px;
+      line-height: 1.7;
+      color: rgba(255,255,255,0.88);
+    }
+
+    /* ── DIVIDER ── */
+    .hr { border: none; border-top: 1px solid var(--rule); margin: 40px 0; }
+
+    /* ── FOOTER ── */
+    .article-footer {
+      background: var(--ink);
+      border-top: 3px solid var(--red);
+      padding: 24px 40px;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 11px;
+      color: #555;
+      text-align: center;
+      line-height: 1.8;
+    }
+    .article-footer a { color: var(--red); text-decoration: none; }
+    .article-footer a:hover { text-decoration: underline; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 680px) {
+      .masthead { padding: 14px 20px; }
+      .masthead-tag { display: none; }
+      .category-strip { padding: 7px 20px; }
+      .hero, .article-body, .breadcrumb { padding-left: 20px; padding-right: 20px; }
+      .stat-item, .cred-item { grid-template-columns: 1fr; gap: 6px; }
+      .lang-grid { grid-template-columns: 1fr; }
+      .manifesto-block, .verdict-block { padding: 28px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- MASTHEAD -->
+  <nav class="masthead">
+    <a href="https://boxoffy.com" class="masthead-logo">BOX<span>OFFY</span></a>
+    <div class="masthead-tag">India Box Office Intelligence</div>
+    <div class="masthead-date">EST. 2026</div>
+  </nav>
+
+  <!-- CATEGORY STRIP -->
+  <div class="category-strip">
+    <div class="cat-badge">About</div>
+    <div class="cat-rule"></div>
+    <div class="cat-issue">← <a href="https://boxoffy.com">Boxoffy</a> / About Us</div>
+  </div>
+
+  <!-- BREADCRUMB -->
+  <div class="breadcrumb">
+    <a href="https://boxoffy.com">Boxoffy</a> &nbsp;/&nbsp; About
+  </div>
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="issue-label">The Boxoffy Manifesto</div>
+
+    <h1 class="headline">
+      The data behind Indian cinema<br/>
+      deserves better than<br/>
+      <em>rumour, spin, and guesswork.</em>
+    </h1>
+
+    <p class="dek">
+      We are building the definitive box office intelligence layer for Indian cinema — clean numbers, validated sources, and editorial honesty. All languages. Every Friday.
+    </p>
+
+    <div class="byline-row">
+      <div class="byline-name">The Boxoffy Team</div>
+      <div class="byline-sep">·</div>
+      <div class="byline-meta">2026</div>
+      <div class="byline-sep">·</div>
+      <div class="byline-meta">5 min read</div>
+    </div>
+  </div>
+
+  <!-- ARTICLE BODY -->
+  <div class="article-body">
+
+    <p>
+      India produces more films annually than any other country on earth. Its audiences span 28 states, 22 official languages, and every economic tier. Yet the infrastructure for clean, publicly accessible box office intelligence has remained — for decades — fragmented, opaque, and unreliable. Numbers passed through trade sources. Inflated by distributors. Massaged by studios. Published without methodology. The audience was expected to simply trust it.
+    </p>
+
+    <p>
+      We didn't. So we built something.
+    </p>
+
+    <div class="section-head">The Problem Is Not The Data. It's The Noise.</div>
+
+    <p>
+      Box office reporting in India is a game of telephone. A film's collection travels from the theatre to the distributor to the trade contact to the publication — and at each step, the number changes. Sometimes upward, to protect a fragile opening weekend. Sometimes downward, to manage expectations before a recovery. The audience, sitting on the other side of this chain, has no way to know which version is real.
+    </p>
+
+    <p>
+      Meanwhile, the industry itself operates on these numbers. Exhibitors decide screen allocation based on them. OTT platforms price acquisition deals against them. Investors read them to understand where audiences are going. When the numbers are wrong, everything downstream is wrong too.
+    </p>
+
+    <div class="pull-quote">
+      <div class="pull-quote-text">
+        A number without context is not intelligence. It's just a headline. Indian cinema — and the people who love it — deserve better than that.
+      </div>
+      <div class="pull-quote-attr">— The Boxoffy Team · 2026</div>
+    </div>
+
+    <p>
+      Boxoffy was built on a simple premise: that box office data, reported cleanly and consistently, is genuinely interesting. That the story of how a film performs — week by week, territory by territory — is as compelling as the film itself, if you tell it properly. And that the people who care about Indian cinema are smart enough to handle the truth, even when it contradicts the studio's press release.
+    </p>
+
+    <div class="section-head">What We Believe</div>
+
+    <div class="manifesto-block">
+      <div class="m-label">Four Principles · The Boxoffy Way</div>
+      <div class="manifesto-item">
+        <div class="m-num">01</div>
+        <div class="m-text"><strong>Noise is not intelligence.</strong> We publish weekly collections, verdicts, and territory breakdowns with the reasoning visible. If we can't verify a number, we say so. If sources conflict, we show both and explain the gap.</div>
+      </div>
+      <div class="manifesto-item">
+        <div class="m-num">02</div>
+        <div class="m-text"><strong>Every language matters.</strong> Bollywood is not Indian cinema. Telugu, Tamil, Malayalam, and Kannada industries move thousands of crores annually and deserve the same rigour of tracking. We are building toward that, systematically.</div>
+      </div>
+      <div class="manifesto-item">
+        <div class="m-num">03</div>
+        <div class="m-text"><strong>Credibility is built, not claimed.</strong> Our numbers are cross-referenced across trade sources and territorial data. We define net vs gross, India vs worldwide, Week 1 vs lifetime — before we use those terms, every time.</div>
+      </div>
+      <div class="manifesto-item">
+        <div class="m-num">04</div>
+        <div class="m-text"><strong>The fan deserves the truth.</strong> Not the PR version. Not the spin. The actual picture of how Indian cinema performs — and the editorial honesty to call a Flop a Flop, even when it's uncomfortable.</div>
+      </div>
+    </div>
+
+    <div class="section-head">The Scale of What We're Tracking</div>
+
+    <p>
+      To understand why this matters, consider the numbers. Indian theatrical box office — across all languages — generates over twelve thousand crore rupees annually. That is one of the largest film markets on earth. It is tracked, in aggregate, worse than most regional markets half its size.
+    </p>
+
+    <div class="stat-list">
+      <div class="stat-item">
+        <div class="stat-num">₹12,000+ Cr</div>
+        <div class="stat-desc">Annual Indian theatrical box office across all languages. One of the largest film markets on earth, still tracked like it's 1999.</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">5 Industries</div>
+        <div class="stat-desc">Bollywood, Telugu, Tamil, Malayalam, Kannada — each with its own audience, economics, and release calendar. One unified intelligence layer is what's been missing.</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">0 Conflicts</div>
+        <div class="stat-desc">No studio affiliations. No distribution partnerships. No promotional placements from films we cover. We are not for sale, and our numbers reflect it.</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">Every Sunday</div>
+        <div class="stat-desc">The chart updates. No exceptions. Box office reporting is a discipline — not a whenever-it's-convenient exercise.</div>
+      </div>
+    </div>
+
+    <div class="section-head">One Platform. All of Indian Cinema.</div>
+
+    <p>
+      We launched with Bollywood — Hindi cinema, tracked weekly, with editorial verdicts, advance booking intelligence, and OTT transition data. That is live now, every Sunday.
+    </p>
+
+    <p>
+      The roadmap is the rest of Indian cinema.
+    </p>
+
+    <div class="lang-grid">
+      <div class="lang-card live">
+        <div class="lang-badge">● Live Now</div>
+        <div class="lang-name">Bollywood</div>
+        <p class="lang-body">Hindi cinema. Weekly charts, OTT data, editorial verdicts, and advance booking intelligence — updated every Sunday.</p>
+      </div>
+      <div class="lang-card">
+        <div class="lang-badge">Coming Soon</div>
+        <div class="lang-name">Telugu</div>
+        <p class="lang-body">The largest South Indian industry by volume. Tollywood commands global audiences and record-breaking openings that deserve proper tracking.</p>
+      </div>
+      <div class="lang-card">
+        <div class="lang-badge">Coming Soon</div>
+        <div class="lang-name">Tamil</div>
+        <p class="lang-body">Kollywood's reach extends from Chennai to Singapore to Toronto. Its OTT ecosystem and pan-India crossover hits are underreported at every level.</p>
+      </div>
+      <div class="lang-card">
+        <div class="lang-badge">Coming Soon</div>
+        <div class="lang-name">Malayalam</div>
+        <p class="lang-body">Mollywood punches above its weight every year. Content-first cinema with exceptional per-screen averages and a fiercely passionate global diaspora.</p>
+      </div>
+      <div class="lang-card">
+        <div class="lang-badge">Coming Soon</div>
+        <div class="lang-name">Kannada</div>
+        <p class="lang-body"><em>KGF</em> rewrote what Sandalwood was capable of. The industry has never looked back. Neither will our coverage.</p>
+      </div>
+      <div class="lang-more">
+        <p>Marathi. Punjabi. Bengali. Odia. Indian cinema is not a monolith — and neither will our coverage be. Every industry that moves audiences deserves to be tracked with precision.</p>
+      </div>
+    </div>
+
+    <div class="section-head">Validated at Every Level</div>
+
+    <p>
+      The word <em>credibility</em> is easy to say and hard to earn. Here is specifically how we work to earn it:
+    </p>
+
+    <div class="cred-list">
+      <div class="cred-item">
+        <div class="cred-title">Multi-Source Verification</div>
+        <div class="cred-body">Every number we publish is cross-referenced across at least two independent trade sources before it appears on Boxoffy. When sources conflict, we say so — and explain why we chose the figure we did.</div>
+      </div>
+      <div class="cred-item">
+        <div class="cred-title">Methodology Transparency</div>
+        <div class="cred-body">Net vs gross. India vs worldwide. Week 1 vs lifetime. We define our terms before using them, every time. No bait-and-switch between collection types to make a number look more impressive than it is.</div>
+      </div>
+      <div class="cred-item">
+        <div class="cred-title">Zero Conflicts of Interest</div>
+        <div class="cred-body">We do not accept promotional placements from studios or distributors. We do not inflate numbers for films that want favourable coverage. We have no advertisers with skin in the game. Full stop.</div>
+      </div>
+      <div class="cred-item">
+        <div class="cred-title">Consistent Verdict Criteria</div>
+        <div class="cred-body">Our verdicts — Hit, Flop, Blockbuster — are assigned against published budget benchmarks applied identically to every film. A major-studio release gets the same methodology as an independent production. No favourites.</div>
+      </div>
+      <div class="cred-item">
+        <div class="cred-title">Territory-Level Clarity</div>
+        <div class="cred-body">Overseas, India net, worldwide gross — tracked separately, labelled clearly. A film that earns ₹500 Cr in India and ₹2 Cr overseas is a very different story from one that earns ₹500 Cr worldwide, and we will never allow that distinction to blur.</div>
+      </div>
+      <div class="cred-item">
+        <div class="cred-title">Weekly Cadence, No Exceptions</div>
+        <div class="cred-body">Every Sunday, the chart updates. We treat box office reporting as a publication discipline — the numbers are current, the commentary is fresh, and we show up regardless of whether it's a slow week or a record-breaking one.</div>
+      </div>
+    </div>
+
+    <hr class="hr">
+
+    <div class="verdict-block">
+      <div class="verdict-label">Boxoffy Mission Statement · 2026</div>
+      <div class="verdict-text">
+        Indian cinema is one of the great cultural industries of the world. The audiences who love it — in Mumbai and Chennai and Hyderabad and London and Toronto — deserve to know, clearly and honestly, how it is performing. Not the version the studios want you to see. The real version. That is what Boxoffy is here to provide, one Sunday at a time.
+      </div>
+    </div>
+
+  </div><!-- /article-body -->
+
+  <footer class="article-footer">
+    <div>© 2026 <a href="https://boxoffy.com">boxoffy.com</a> · India Box Office Intelligence · All figures are estimates based on publicly available trade data · Editorial views are those of the Boxoffy desk</div>
+  </footer>
+
+</body>
+</html>
