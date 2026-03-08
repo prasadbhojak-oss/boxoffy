@@ -1012,26 +1012,27 @@ function NavBar({ activeSection, setActiveSection }) {
           }}>{s}</button>
         ))}
 
-        {/* Divider before About */}
-        <div style={{ width:1, height:20, background:"#E5E7EB", marginLeft:8, marginRight:16, flexShrink:0 }} />
-
-        {/* About link — external page */}
-        <a href="/about.html" style={{
-          fontFamily:"'DM Sans', sans-serif", fontWeight:600, fontSize:13,
-          color:"#9CA3AF", textDecoration:"none",
-          padding:"18px 14px",
-          borderBottom:"2px solid transparent",
-          marginBottom:"-2px",
-          letterSpacing:"0.04em",
-          transition:"color 0.15s",
-          flexShrink:0,
-        }}
-        onMouseEnter={e => e.target.style.color="#111827"}
-        onMouseLeave={e => e.target.style.color="#9CA3AF"}
-        >About</a>
-
         {/* Right side — static update stamp */}
         <div style={{ marginLeft:"auto", display:"flex", alignItems:"center", gap:0, flexShrink:0 }}>
+
+          {/* About link */}
+          <a href="/about.html" style={{
+            fontFamily:"'DM Sans', sans-serif", fontWeight:600, fontSize:13,
+            color:"#9CA3AF", textDecoration:"none",
+            padding:"18px 14px",
+            borderBottom:"2px solid transparent",
+            marginBottom:"-2px",
+            letterSpacing:"0.04em",
+            transition:"color 0.15s",
+            flexShrink:0,
+            marginRight:8,
+          }}
+          onMouseEnter={e => e.target.style.color="#111827"}
+          onMouseLeave={e => e.target.style.color="#9CA3AF"}
+          >About</a>
+
+          {/* Divider */}
+          <div style={{ width:1, height:20, background:"#E5E7EB", marginRight:12, flexShrink:0 }} />
 
           {/* Week indicator */}
           <div style={{
