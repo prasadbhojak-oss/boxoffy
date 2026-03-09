@@ -3955,6 +3955,61 @@ function NewsSection({ category }) {
 }
 
 /* ── FEATURED EDITORIAL STRIP ───────────────────────────────── */
+function FeaturedEditorialRow({ item, index, TagPill, onClick }) {
+  const [hov, setHov] = useState(false);
+  const isLead = index === 0;
+  return (
+    <div
+      onClick={onClick}
+      onMouseEnter={() => setHov(true)}
+      onMouseLeave={() => setHov(false)}
+      style={{
+        display:"flex", alignItems:"center", gap:14,
+        padding: isLead ? "14px 28px" : "10px 28px",
+        borderBottom:`1px solid ${T.border}`,
+        cursor:"pointer",
+        background: hov ? "#FFF8EE" : isLead ? "#FFFDF8" : T.surface,
+        transition:"background 0.15s",
+        borderLeft: isLead ? `3px solid ${T.accent}` : `3px solid transparent`,
+      }}
+    >
+      <div style={{
+        fontFamily:"'Barlow Condensed',sans-serif", fontWeight:900,
+        fontSize:isLead ? 22 : 16, color: isLead ? T.accent : T.textMuted,
+        opacity: isLead ? 1 : 0.4, flexShrink:0, width:24, textAlign:"center", lineHeight:1,
+      }}>
+        {index === 0 ? "①" : index === 1 ? "②" : "③"}
+      </div>
+      <div style={{ width:1, height:isLead ? 42 : 32, background:T.border, flexShrink:0 }} />
+      <TagPill tag={item.tag} />
+      <div style={{ flex:1, minWidth:0 }}>
+        <div style={{
+          fontFamily:"'Barlow Condensed',sans-serif", fontWeight:800,
+          fontSize: isLead ? 18 : 15, color:T.text, lineHeight:1.15,
+          letterSpacing:"-0.01em",
+          whiteSpace:"nowrap", overflow:"hidden", textOverflow:"ellipsis",
+        }}>{item.headline}</div>
+        {isLead && (
+          <div style={{
+            fontFamily:"'DM Sans',sans-serif", fontSize:11,
+            color:T.textMuted, marginTop:3, lineHeight:1.3,
+            whiteSpace:"nowrap", overflow:"hidden", textOverflow:"ellipsis",
+          }}>{item.dek}</div>
+        )}
+      </div>
+      <div style={{ flexShrink:0, textAlign:"right", borderLeft:`1px solid ${T.border}`, paddingLeft:14 }}>
+        <div style={{ fontFamily:"'DM Sans',sans-serif", fontSize:10, fontWeight:700, color:T.textMid }}>{item.author}</div>
+        <div style={{ fontFamily:"'DM Sans',sans-serif", fontSize:9, color:T.textMuted, marginTop:1 }}>{item.date} · {item.readTime}</div>
+      </div>
+      <div style={{
+        flexShrink:0, fontFamily:"'Barlow Condensed',sans-serif",
+        fontWeight:800, fontSize:18, color: hov ? T.accent : T.textMuted,
+        transition:"color 0.15s", marginLeft:2,
+      }}>→</div>
+    </div>
+  );
+}
+
 function EditorialSection({ onNavigate }) {
   const TAG_COLORS = {
     "ANALYSIS":        { bg:"#1E3A5F", text:"#93C5FD" },
@@ -4009,63 +4064,9 @@ function EditorialSection({ onNavigate }) {
       </div>
 
       {/* Top 3 featured rows */}
-      {featured.map((item, i) => {
-        const [hov, setHov] = React.useState(false);
-        const isLead = i === 0;
-        const tagStyle = TAG_COLORS[item.tag] || TAG_COLORS["ANALYSIS"];
-        return (
-          <div
-            key={i}
-            onClick={() => openArticle(item)}
-            onMouseEnter={() => setHov(true)}
-            onMouseLeave={() => setHov(false)}
-            style={{
-              display:"flex", alignItems:"center", gap:14,
-              padding: isLead ? "14px 28px" : "10px 28px",
-              borderBottom:`1px solid ${T.border}`,
-              cursor:"pointer",
-              background: hov ? "#FFF8EE" : isLead ? "#FFFDF8" : T.surface,
-              transition:"background 0.15s",
-              borderLeft: isLead ? `3px solid ${T.accent}` : `3px solid transparent`,
-            }}
-          >
-            {/* Issue number */}
-            <div style={{
-              fontFamily:"'Barlow Condensed',sans-serif", fontWeight:900,
-              fontSize:isLead ? 22 : 16, color: isLead ? T.accent : T.textMuted,
-              opacity: isLead ? 1 : 0.4, flexShrink:0, width:24, textAlign:"center", lineHeight:1,
-            }}>
-              {i === 0 ? "①" : i === 1 ? "②" : "③"}
-            </div>
-            <div style={{ width:1, height:isLead ? 42 : 32, background:T.border, flexShrink:0 }} />
-            <TagPill tag={item.tag} />
-            <div style={{ flex:1, minWidth:0 }}>
-              <div style={{
-                fontFamily:"'Barlow Condensed',sans-serif", fontWeight:800,
-                fontSize: isLead ? 18 : 15, color:T.text, lineHeight:1.15,
-                letterSpacing:"-0.01em",
-                whiteSpace:"nowrap", overflow:"hidden", textOverflow:"ellipsis",
-              }}>{item.headline}</div>
-              {isLead && (
-                <div style={{
-                  fontFamily:"'DM Sans',sans-serif", fontSize:11,
-                  color:T.textMuted, marginTop:3, lineHeight:1.3,
-                  whiteSpace:"nowrap", overflow:"hidden", textOverflow:"ellipsis",
-                }}>{item.dek}</div>
-              )}
-            </div>
-            <div style={{ flexShrink:0, textAlign:"right", borderLeft:`1px solid ${T.border}`, paddingLeft:14 }}>
-              <div style={{ fontFamily:"'DM Sans',sans-serif", fontSize:10, fontWeight:700, color:T.textMid }}>{item.author}</div>
-              <div style={{ fontFamily:"'DM Sans',sans-serif", fontSize:9, color:T.textMuted, marginTop:1 }}>{item.date} · {item.readTime}</div>
-            </div>
-            <div style={{
-              flexShrink:0, fontFamily:"'Barlow Condensed',sans-serif",
-              fontWeight:800, fontSize:18, color: hov ? T.accent : T.textMuted,
-              transition:"color 0.15s", marginLeft:2,
-            }}>→</div>
-          </div>
-        );
-      })}
+      {featured.map((item, i) => (
+        <FeaturedEditorialRow key={i} item={item} index={i} TagPill={TagPill} onClick={() => openArticle(item)} />
+      ))}
 
       {/* Archive — 4th article onwards */}
       {archived.length > 0 && (
@@ -4105,6 +4106,7 @@ function EditorialSection({ onNavigate }) {
 // Legacy shim — keeps the callsite working
 function FeaturedEditorialStrip({ editorial, onNavigate }) {
   return <EditorialSection onNavigate={onNavigate} />;
+}
 
 /* ── HEADER SNAPSHOT CARDS ──────────────────────────────────── */
 function HeaderSnapshotCards({ activeSection }) {
