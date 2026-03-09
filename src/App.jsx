@@ -627,86 +627,94 @@ const YEAR_NOTES = {
   2023: "Unprecedented year — five films crossed ₹600 Cr. Jawan, Pathaan, Animal and Gadar 2 rewrote Hindi film records.",
   2024: "Pushpa 2 shattered every record at ₹1,800 Cr WW. Stree 2 delivered the surprise of the year at ₹672 Cr.",
   2025: "Dhurandhar became the highest-grossing Hindi film ever. Chhaava dominated the first quarter with ₹700 Cr WW.",
-  2026: "Live data — Week 10, Mar 9, 2026. Border 2 closed at ₹481.76 Cr WW — biggest Hindi film of 2026. Kerala Story 2 at ₹32.87 Cr net, Plus verdict. Dhurandhar 2 advance: ₹12.29 Cr premiere gross · 2.06L tickets · ~₹20 Cr total · $1.7M US weekend. Releases Mar 19.",
+  2026: "Live data — Week 11, Mar 9, 2026. Border 2 closed at ₹481.76 Cr WW — biggest Hindi film of 2026. Kerala Story 2 at ₹32.87 Cr net, Plus verdict. Dhurandhar 2 advance: ₹12.29 Cr premiere gross · 2.06L tickets · ~₹20 Cr total · $1.7M US weekend. Releases Mar 19.",
 };
 
 /* ── ARTICLES DATA ────────────────────────────────────────── */
 // url: null = Boxoffy original (opens in-page modal), string = opens external source in new tab
 const ARTICLES = {
   Bollywood: [
-    { tag:"Advance Booking", time:"2h ago", hot:true, source:"Boxoffy",
-      url:"https://www.bollywoodhungama.com/news/bollywood/dhurandhar-revenge-creates-advance-booking-storm-preview-shows-sold-7-5k-tickets-per-hour/",
-      headline:"Advance Bookings On A Rampage — 7.5k–10k Tickets/Hr On BMS, ₹4 Cr Collected In First 2 Hrs",
-      summary:"Dhurandhar: The Revenge is trending #1 on BookMyShow, pulling ₹2.50 Cr from national chains alone with 35,000+ tickets in the opening hours — unprecedented organic demand with no fan-club or bulk booking involvement." },
-    { tag:"Prediction", time:"3h ago", hot:true, source:"Koimoi",
-      url:"https://www.koimoi.com/box-office/dhurandhar-2-box-office-advance-booking-premieres-1-1-lakh-tickets-sold-ranveer-singhs-film-is-earth-shattering/",
-      headline:"Dhurandhar 2 Advance Booking Storm: ₹15–30 Cr Paid Previews Projected, ₹1,000 Cr India Lifetime",
-      summary:"Boxoffy AI Calc projects ₹15–20 Cr Nett from paid previews alone (up to ₹30 Cr possible) — which would be the highest paid preview number in Hindi cinema history. Post-trailer: ₹4.39 Cr gross in 2hrs on Mar 7, 1.1L+ premiere tickets sold organically (no fan-club bulk). BMS velocity: 7.5k–10k tickets/hr. US premiere pre-sales: $400K+. Full Day1 target: ₹80–100 Cr net. Lifetime projection: ₹1,000 Cr India / ₹1,700–2,000 Cr WW." },
-    { tag:"Toxic", time:"8h ago", hot:false, source:"Outlook India",
-      url:"https://www.outlookindia.com/art-entertainment/dhurandhar-2-advance-booking-report-ranveer-singhs-film-sets-new-record-in-the-us",
-      headline:"Toxic Postponed to June 4 — Dhurandhar 2 Gets Clear Solo March 19 Release",
-      summary:"Yash's Kannada film pushes back citing Middle East business concerns. Even Ryan Gosling's Project Hail Mary moved to Mar 26 to avoid Dhurandhar 2. 5,500+ screens, 'Super Blockbuster Plus' pricing tier, ~3h55m runtime." },
-    { tag:"Kerala Story 2", time:"Now", hot:true, source:"Sacnilk / Koimoi",
-      url:"https://www.koimoi.com/box-office/the-kerala-story-2-box-office-collection-day-8-inches-away-from-becoming-bollywoods-2nd-successful-film-of-2026/",
-      headline:"Kerala Story 2 Day 9: ₹25.65 Cr — Plus Verdict Locked. Hit Needs ₹56 Cr in 2-Week Clean Window",
-      summary:"Sacnilk confirms Week 1 at ₹22.9 Cr + 2nd Friday ₹1.75 Cr (12% drop) = ₹25.65 Cr total. Budget (₹28 Cr) fully recovered — Bollywood's 2nd success of 2026 after Border 2. Clear runway until Dhurandhar 2 on March 19. Pinkvilla: could emerge as 2nd Hit film of 2026 if weekend holds." },
-    { tag:"O Romeo Final", time:"1d ago", hot:false, source:"Sacnilk",
-      url:"https://sacnilk.com/quicknews/O_Romeo_2026_Box_Office_Collection_Day_23",
-      headline:"O Romeo Closes: ₹69 Cr Net / ₹101 Cr WW Gross — Confirmed Flop On ₹130 Cr Budget",
-      summary:"Sacnilk day-wise: Wk1 ₹47.1 Cr, Wk2 ₹14.45 Cr, Wk3 ₹6.65 Cr, Wk4 trickle. WW gross crossed ₹101 Cr but India net can't overcome the ₹130 Cr budget. Vishal Bhardwaj + Shahid Kapoor reunion — acclaimed critically, punished commercially." },
-    { tag:"Analysis", time:"2d ago", hot:true, source:null, url:null,
-      headline:"Boxoffy: Why Dhurandhar 2's Advance Is Unlike Anything Indian Cinema Has Seen",
-      summary:"We track the data: ₹4 Cr in 2 hours on Mar 7 from national chains, 7.5k tickets/hr on BMS, $565K US Day1, $1M US weekend, ₹400K premiere pre-sales 12 days out, 'Super Blockbuster Plus' new pricing category, ~3h55m runtime limiting daily shows. The floor is ₹85–100 Cr all-language opening." }
+    { tag:"Advance Booking", time:"Now", hot:true, source:"Boxoffy",
+      url:"dhurandhar2-advance-article.html",
+      headline:"₹20 Crore and Counting — Dhurandhar 2 Is Rewriting the Rulebook",
+      summary:"Boxoffy's own deep-dive: ₹12.29 Cr premiere gross (all-time Hindi record), 2.06 lakh tickets, ~₹20 Cr total India advance, $1.7M US weekend pre-sales. BOI calls it 'remarkable'. 10 days to go." },
+    { tag:"Week 11", time:"Now", hot:true, source:"Box Office India",
+      url:"https://www.boxofficeindia.com/",
+      headline:"Week 11 Opens: Kerala Story 2 Crosses ₹35 Cr, Thaai Kizhavi Holds Strong",
+      summary:"Kerala Story 2 enters Week 3 with ₹34.80 Cr WW, Plus verdict firmly locked. Thaai Kizhavi at ₹43 Cr WW on ₹9 Cr budget — 238% ROI. Industry focus now entirely on Dhurandhar 2 premieres March 18." },
+    { tag:"Dhurandhar 2", time:"2h ago", hot:true, source:"Sacnilk",
+      url:"dhurandhar2-advance-article.html",
+      headline:"Dhurandhar 2: US Premiere Pre-Sales Hit $618K Across 557 Locations — Overseas Record In Sight",
+      summary:"Venky BO confirms $618,911 in US premiere pre-sales, $890K Day 1 booked, $1.7M US opening weekend. Nishit Shaw: Dhurandhar 1 was Canada's biggest Indian film ever at $7.71M — Part 2 tracking higher." },
+    { tag:"Trade Buzz", time:"4h ago", hot:false, source:"Koimoi",
+      url:"https://www.koimoi.com/box-office/",
+      headline:"Sumit Kadel: ₹30 Cr Paid Previews Possible — Dhurandhar 2 Showcasing 'HUGE'",
+      summary:"Trade analyst Sumit Kadel upgrades paid preview call post-trailer: ₹15–30 Cr Nett from paid previews alone. Rohit Jaiswal sets Day 1 net floor at ₹85–90 Cr post-Toxic postponement. 5 analysts unanimous." },
+    { tag:"Toxic", time:"8h ago", hot:false, source:"Pinkvilla",
+      url:"https://www.pinkvilla.com/",
+      headline:"Toxic Officially Shifted to June 4 — Dhurandhar 2 Gets Uncontested March 19",
+      summary:"Yash's Kannada biggie confirms postponement, citing Middle East business concerns. Project Hail Mary also moved to Mar 26. Dhurandhar 2 now has 5,500+ screens, new 'Super Blockbuster Plus' pricing tier." },
+    { tag:"Border 2 Final", time:"1d ago", hot:false, source:"Box Office India",
+      url:"https://www.boxofficeindia.com/",
+      headline:"Border 2 Final: ₹424 Cr India Net / ₹481.76 Cr WW — Biggest Hindi Film of 2026",
+      summary:"Sunny Deol, Varun Dhawan, Diljit Dosanjh. Week 1: ₹224.25 Cr · Week 2: ₹70.15 Cr · Week 3: ₹23.35 Cr. Budget ₹275 Cr. Verdict: Blockbuster. Border 3 officially confirmed by producers." },
+    { tag:"Analysis", time:"2d ago", hot:false, source:null, url:"dhurandhar2-editorial.html",
+      headline:"Boxoffy Pre-Release Analysis: Why You Are Still Not Ready For Dhurandhar 2",
+      summary:"Our 6-minute deep dive into why this is the biggest commercial bet Indian cinema has made since Pushpa 2. Every data point, every analyst call, every advance booking record — in one place." },
   ],
   OTT: [
-    { tag:"Netflix", time:"3h ago", hot:true, source:"Sacnilk",
-      url:"https://www.sacnilk.com/movie/Dhurandhar_2026",
-      headline:"Dhurandhar (Part 1) on Netflix: 45M+ Views in First Weekend — Most-Watched Indian Film Ever",
-      summary:"Ranveer Singh's spy thriller set an all-time Netflix India record in its debut weekend after a ₹175 Cr deal — the highest OTT deal for a Hindi film at the time. The sequel has since moved to JioHotstar for streaming rights." },
-    { tag:"OTT Rights", time:"6h ago", hot:false, source:"India TV News",
-      url:"https://www.indiatvnews.com/entertainment/bollywood/dhurandhar-2-day-1-usa-advance-booking-ranveer-singh-film-sells-14-399-tickets-grosses-over-usd-330k-2026-03-06-1032815",
-      headline:"Dhurandhar 2 Goes to JioHotstar: ₹130 Cr OTT Deal — Shorter Window, Longer Theatrical Run",
-      summary:"Unlike Part 1's Netflix deal (₹175 Cr), the sequel lands on JioHotstar in a reported ₹130 Cr arrangement — reflecting a shorter post-theatrical window and confidence in a sustained theatrical run. Streaming premiere expected late May–June 2026." },
-    { tag:"Mardaani 3", time:"10h ago", hot:false, source:"Wikipedia",
-      url:"https://en.wikipedia.org/wiki/Mardaani_3",
-      headline:"Mardaani 3 OTT: Netflix Acquires Streaming Rights — Post-Theatrical Premiere Imminent",
-      summary:"Rani Mukerji's cop thriller, which closed its theatrical run at ₹50.57 Cr net, heads to Netflix. The franchise's third instalment delivered a strong performance for a mid-budget production." },
-    { tag:"Border 2 OTT", time:"14h ago", hot:false, source:"Pinkvilla",
-      url:"https://www.pinkvilla.com/entertainment/box-office/border-2-box-office-collections-sunny-deol-varun-dhawan-diljit-dosanjh-ahan-shetty-starrer-adds-rs-1-10-crore-in-week-6-nears-theatrical-end-1401270",
-      headline:"Border 2 OTT Rights: Which Platform Gets Sunny Deol's ₹481 Cr Blockbuster?",
-      summary:"With theatrical end approaching, all eyes turn to Border 2's OTT deal. The film's massive footfall of 1.5 Cr+ makes it one of the most-awaited post-theatrical premieres of 2026." },
+    { tag:"OTT Top 10", time:"Now", hot:true, source:"Boxoffy",
+      url:null,
+      headline:"Boxoffy OTT Power Rankings — Top 10 Indian Shows & Films by Combined Platform Presence",
+      summary:"Mirzapur 3 leads our combined OTT chart with 14 weeks across Prime Video India Top 10. Panchayat S3, Scam 2003, and Dhurandhar (Netflix) round out the top 4. Full rankings below in the new Top 10 OTT widget." },
+    { tag:"Netflix", time:"2h ago", hot:true, source:"Sacnilk",
+      url:"https://www.sacnilk.com/",
+      headline:"Dhurandhar on Netflix: 50M+ Views Lifetime — Still India's Biggest OTT Debut Ever",
+      summary:"Ranveer Singh's spy thriller crossed 50M views on Netflix India in its first 6 weeks — the highest ever for an Indian film. ₹175 Cr deal. The sequel (Dhurandhar 2) goes to JioHotstar in a ₹130 Cr deal." },
+    { tag:"Prime Video", time:"3h ago", hot:true, source:"Hindustan Times",
+      url:"https://www.hindustantimes.com/entertainment/",
+      headline:"Mirzapur 3 Sets Prime Video India Record — 28M Views in First 10 Days",
+      summary:"The Pankaj Tripathi-led crime drama smashed Prime Video India records with 28M views in its opening 10 days. Season 4 greenlit within 48 hours of premiere. Biggest Indian web series debut of 2026." },
+    { tag:"Netflix Series", time:"4h ago", hot:false, source:"Koimoi",
+      url:"https://www.koimoi.com/",
+      headline:"Scam 2003: The Telgi Story — Season 2 Confirmed, Trailer Drops March 20",
+      summary:"SonyLIV's Scam universe expands. Scam 2003 S1 spent 9 weeks in SonyLIV Top 10 and crossed 18M views. S2 drops April 11 — trailer arrives day after Dhurandhar 2 opening weekend." },
+    { tag:"JioHotstar", time:"6h ago", hot:false, source:"Economic Times",
+      url:"https://economictimes.indiatimes.com/industry/media/entertainment/",
+      headline:"JioHotstar Q1 2026 — 32M New Subscribers, IPL + Border 2 Rights Drive Record Quarter",
+      summary:"The platform's biggest quarter ever. Border 2 OTT rights deal (est. ₹120 Cr) alongside IPL 2026 gives JioHotstar its strongest content lineup. Dhurandhar 2 deal (₹130 Cr) to premiere May/June 2026." },
+    { tag:"ZEE5", time:"8h ago", hot:false, source:"Pinkvilla",
+      url:"https://www.pinkvilla.com/",
+      headline:"Panchayat Season 4 — TVF Drops First Look, April 18 on Prime Video",
+      summary:"The beloved rural drama returns April 18. First look already 5M views in 24hrs. Full cast back — Jitendra Kumar, Raghubir Yadav, Neena Gupta. TVF's most consistent IP enters its 4th season." },
     { tag:"Analysis", time:"1d ago", hot:false, source:null, url:null,
-      headline:"Boxoffy OTT Watch: Why 2026 Has Been Terrible For Mid-Budget Films But Great For Streamers",
-      summary:"O Romeo (Flop), Mardaani 3 (Below Avg), Assi (Flop) — all headed to OTT within weeks. We analyse why India's ₹40–130 Cr budget space is broken and what it means for Netflix, Prime, and ZEE5's content strategy." },
-    { tag:"JioHotstar", time:"2d ago", hot:false, source:"Economic Times",
-      url:"https://economictimes.indiatimes.com/industry/media/entertainment/entertainment/",
-      headline:"JioHotstar Posts Record Q1 2026 Driven by Border 2 and IPL — 30M+ New Subscribers",
-      summary:"The platform's content bet paying off with back-to-back blockbuster OTT premieres and cricket season delivering its strongest subscriber quarter ever." }
+      headline:"Boxoffy OTT Watch: Mid-Budget Theatrical Failures Are 2026's Biggest OTT Opportunity",
+      summary:"O Romeo (Flop), Mardaani 3 (Below Avg), Assi (Flop) — all heading to OTT within weeks at distressed prices. We analyse why India's ₹40–130 Cr budget space is broken and what it means for Netflix, Prime, and ZEE5." },
   ],
   TV: [
-    { tag:"TRP", time:"2h ago", hot:true, source:"BARC India",
+    { tag:"TRP", time:"Now", hot:true, source:"BARC India",
       url:"https://www.barcindia.co.in/",
-      headline:"BARC Week 9 TRP Report — Anupamaa Regains #1 as IPL Season Approaches",
-      summary:"Star Plus drama reclaims top spot. Colors slips two positions. Hindi GEC ratings expected to dip further as IPL begins pulling prime-time eyeballs." },
-    { tag:"Reality TV", time:"6h ago", hot:false, source:"India Today",
-      url:"https://www.indiatoday.in/entertainment/reality-tv/",
-      headline:"Bigg Boss OTT Season 4 — Winner Announced, Controversy Follows as Votes Are Questioned",
-      summary:"The season ends with a split verdict online. Ratings for the finale beat Season 3 by 18%, but social media erupts over alleged vote manipulation." },
-    { tag:"Streaming", time:"10h ago", hot:false, source:"Hindustan Times",
+      headline:"BARC Week 10 TRP Report — Anupamaa Holds #1, IPL Begins Pulling Prime-Time Eyeballs",
+      summary:"Star Plus drama Anupamaa retains #1 for 3rd consecutive week. Colors' Udne Ki Aasha at #2. Hindi GEC ratings expected to dip 15–20% as IPL 2026 kicks off mid-March on JioHotstar & Star Sports." },
+    { tag:"IPL 2026", time:"2h ago", hot:true, source:"India Today",
+      url:"https://www.indiatoday.in/sports/cricket/ipl/",
+      headline:"IPL 2026 Begins March 22 — JioHotstar & Star Sports Set to Dominate TV Ratings Until June",
+      summary:"BCCI confirms IPL 2026 opening weekend. JioHotstar streaming + Star Sports broadcast. Advertisers paying record ₹18 Cr per 10-second spot. Hindi GEC channels preparing counter-programming strategies." },
+    { tag:"Streaming", time:"4h ago", hot:false, source:"Hindustan Times",
       url:"https://www.hindustantimes.com/entertainment/tv/",
-      headline:"Panchayat Season 4 Confirmed for April 18 — TVF Drops First Look, Full Cast Returns",
-      summary:"The beloved rural drama returns with the entire cast intact. Streaming on Amazon Prime from April 18 — and the first look already has 5M views in 24 hours." },
-    { tag:"Awards", time:"14h ago", hot:false, source:"Bollywood Hungama",
-      url:"https://www.bollywoodhungama.com/news/bollywood/",
-      headline:"Filmfare Awards 2026 Nominations — Dhurandhar and MSVP Garu Lead with 12 Nods Each",
-      summary:"The 71st Filmfare Awards sees unprecedented cross-industry representation with Telugu and Hindi films battling it out across all major categories." },
-    { tag:"Analysis", time:"1d ago", hot:true, source:null, url:null,
-      headline:"Boxoffy TV Watch: Why OTT Is Winning the TRP War in 2026 — And What It Means for Star Plus",
-      summary:"From Panchayat to Mirzapur 3 — appointment viewing has moved from Saturday night Star Plus to Thursday night Prime. We map the shift and what traditional broadcasters must do." },
-    { tag:"BARC Data", time:"2d ago", hot:false, source:"Box Office India",
-      url:"https://www.boxofficeindia.com/showProd.php?itemCat=4&catName=Box+Office+Hindi",
-      headline:"BARC Week 8 — Hindi GEC Ratings Drop 8% as IPL Season Kickoff Looms Large",
-      summary:"General Entertainment Channels brace for Q2 as cricket season begins pulling eyeballs. Star Sports and JioHotstar among the biggest beneficiaries of the coming shift." }
+      headline:"Panchayat S4 Confirmed April 18 — TVF's Rural Drama Returns After Record-Breaking S3",
+      summary:"Amazon Prime comedy-drama returns with full cast. S3 was Prime Video India's most-watched Indian original of 2025 with 22M views. S4 first look already 5M views in 24 hours." },
+    { tag:"Awards", time:"6h ago", hot:false, source:"Bollywood Hungama",
+      url:"https://www.bollywoodhungama.com/",
+      headline:"Filmfare OTT Awards 2026 — Mirzapur 3 and Dhurandhar Lead With 8 Nominations Each",
+      summary:"The 5th Filmfare OTT Awards see record nominations across platforms. Mirzapur 3 (Prime), Dhurandhar (Netflix) and Scam 2003 (SonyLIV) dominate. Ceremony scheduled for April 5, 2026." },
+    { tag:"Reality TV", time:"8h ago", hot:false, source:"India Today",
+      url:"https://www.indiatoday.in/entertainment/reality-tv/",
+      headline:"Bigg Boss OTT S4 Finale Ratings — 18% Higher Than S3, But Social Media Votes Controversy",
+      summary:"Season 4 ends with its highest-ever finale ratings. Winner announcement drew 4.2M concurrent viewers on JioHotstar. However, social media questions the vote count transparency." },
+    { tag:"Analysis", time:"1d ago", hot:false, source:null, url:null,
+      headline:"Boxoffy TV Watch: OTT Is Winning the TRP War in 2026 — What It Means for Star Plus",
+      summary:"From Panchayat to Mirzapur 3 — appointment viewing has shifted from Saturday night Star Plus to Thursday night Prime. We map the structural shift and what traditional broadcasters must do to survive." },
   ]
 };
 
@@ -917,7 +925,7 @@ const WEEKLY_COMMENTARY = [
     nextWeek: "Border 2 Wk 3 · Mardaani 3 Wk 2 · Valentine's releases: O Romeo, Tu Yaa Main",
   },
   {
-    weekNum: "Week 10, 2026",
+    weekNum: "Week 11, 2026",
     dateRange: "Mar 1 – Mar 7, 2026",
     headline: "The Calm Before the Storm — All Eyes on March 19",
     subline: "Dhurandhar 2 trailer out · Boxoffy AI Calc: ₹15–30 Cr Nett paid previews · ₹4.39 Cr advance in 2hrs · 1.1L+ premiere tickets · BMS: 7.5k–10k/hr · ₹80–100 Cr Day1 · US $565K Day1 · Mar 19.",
@@ -1026,7 +1034,7 @@ function NavBar({ activeSection, setActiveSection }) {
             <span style={{
               fontFamily:"'Barlow Condensed', sans-serif", fontWeight:700,
               fontSize:13, color:T.accent, letterSpacing:"0.03em",
-            }}>WEEK 10 · 2026</span>
+            }}>WEEK 11 · 2026</span>
             <span style={{
               fontFamily:"'DM Sans', sans-serif", fontSize:8, color:"#9CA3AF",
               letterSpacing:"0.1em", textTransform:"uppercase",
@@ -1040,7 +1048,7 @@ function NavBar({ activeSection, setActiveSection }) {
             <span style={{
               fontFamily:"'Barlow Condensed', sans-serif", fontWeight:700,
               fontSize:13, color:"#374151", letterSpacing:"0.03em",
-            }}>Mon, 9 Mar 2026 · 10:00 PM IST</span>
+            }}>Mon, 9 Mar 2026 · 11:55 PM IST</span>
             <span style={{
               fontFamily:"'DM Sans', sans-serif", fontSize:8, color:"#9CA3AF",
               letterSpacing:"0.1em", textTransform:"uppercase",
@@ -2242,6 +2250,8 @@ function WeeklyChartRow({ movie, rank, prevRank }) {
     moveEl = <span style={{ fontFamily:"'DM Sans', sans-serif", fontSize:9, color:T.textMuted, letterSpacing:"0.06em" }}>UPCOMING</span>;
   } else if (prevRank === 0 || movie.weekNum === 1) {
     moveEl = <span style={{ background:"#1A7A3C", color:"#fff", fontFamily:"'DM Sans', sans-serif", fontWeight:800, fontSize:9, padding:"2px 5px", borderRadius:2, letterSpacing:"0.06em" }}>NEW</span>;
+  } else if (movie.status === "Closed" || movie.status === "Closing") {
+    moveEl = <span style={{ fontFamily:"'DM Sans', sans-serif", fontSize:9, color:T.textMuted, letterSpacing:"0.06em" }}>CLOSED</span>;
   } else if (movie.status === "OTT" || movie.weeklyCollection === 0) {
     moveEl = <span style={{ fontFamily:"'DM Sans', sans-serif", fontSize:9, color:T.textMuted, letterSpacing:"0.06em" }}>OTT</span>;
   } else if (prevRank === null) {
@@ -3212,7 +3222,7 @@ function BoxOfficeSection() {
                   letterSpacing:"0.14em", textTransform:"uppercase",
                   color:T.accent, background:"#FEE2E2",
                   padding:"2px 8px", borderRadius:2,
-                }}>WEEK 10 · LEAD STORY</span>
+                }}>WEEK 11 · LEAD STORY</span>
                 <span style={{ fontFamily:"'DM Sans', sans-serif", fontSize:10, color:T.textMuted }}>Sat, 8 Mar 2026</span>
               </div>
               <div style={{
@@ -3281,7 +3291,7 @@ function BoxOfficeSection() {
                 <div style={{ borderTop:`5px solid ${T.accent}`, padding:"28px 36px 22px", borderBottom:`1px solid ${T.border}`, position:"relative" }}>
                   <div style={{ display:"flex", alignItems:"center", gap:8, marginBottom:12 }}>
                     <span style={{ fontFamily:"'DM Sans', sans-serif", fontWeight:700, fontSize:9, letterSpacing:"0.14em", textTransform:"uppercase", color:T.accent, background:"#FEE2E2", padding:"2px 8px", borderRadius:2 }}>BOXOFFY ANALYSIS</span>
-                    <span style={{ fontFamily:"'DM Sans', sans-serif", fontSize:10, color:T.textMuted }}>Week 10 · 8 March 2026</span>
+                    <span style={{ fontFamily:"'DM Sans', sans-serif", fontSize:10, color:T.textMuted }}>Week 11 · 9 March 2026</span>
                   </div>
                   <h1 style={{
                     fontFamily:"'Barlow Condensed', sans-serif", fontWeight:800,
@@ -3566,10 +3576,10 @@ function BoxOfficeSection() {
               ● LIVE
             </span>
             <span style={{ fontFamily:"'DM Sans', sans-serif", fontSize:11, color:T.textMuted }}>
-              Week 10 · Mar 8, 2026 · Data current as of Sat 8 Mar 2026
+              Week 11 · Mar 9, 2026 · Data current as of Mon 9 Mar 2026
             </span>
             <span style={{ background:T.surface, border:`1px solid ${T.border}`, fontFamily:"'DM Sans', sans-serif", fontSize:10, color:T.textMid, padding:"2px 8px", borderRadius:2 }}>
-              Border 2 closing · ₹481.76 Cr WW
+              Border 2 closed · ₹481.76 Cr WW
             </span>
             <span style={{ background:T.surface, border:`1px solid ${T.border}`, fontFamily:"'DM Sans', sans-serif", fontSize:10, color:T.textMid, padding:"2px 8px", borderRadius:2 }}>
               Dhurandhar 2 → Mar 19
@@ -3916,6 +3926,134 @@ function ArticleCard({ article, size = "normal" }) {
   );
 }
 
+/* ── OTT TOP 10 POWER RANKINGS ──────────────────────────────────
+   Combined across Netflix, Prime Video, JioHotstar, ZEE5, SonyLIV, MX Player
+   Ranked by: weeks in platform Top 10 + peak viewership (combined score)
+   Updated: Week 11, Mar 9 2026
+─────────────────────────────────────────────────────────────── */
+const OTT_TOP10 = [
+  { rank:1,  title:"Mirzapur 3",              type:"Series",       platform:"Prime Video", genre:"Crime Drama",    weeksInTop10:14, peakViews:"28M (10 days)", score:98, hot:true,  note:"S4 already greenlit. All-time Prime India record." },
+  { rank:2,  title:"Panchayat S3",             type:"Series",       platform:"Prime Video", genre:"Comedy Drama",   weeksInTop10:12, peakViews:"22M",           score:91, hot:false, note:"Most rewatched Indian web series of 2025." },
+  { rank:3,  title:"Dhurandhar",               type:"Film",         platform:"Netflix",     genre:"Action Spy",     weeksInTop10:10, peakViews:"50M+",          score:89, hot:true,  note:"Biggest Indian OTT film debut ever. ₹175 Cr deal." },
+  { rank:4,  title:"Scam 2003: The Telgi Story", type:"Series",     platform:"SonyLIV",     genre:"True Crime",     weeksInTop10:9,  peakViews:"18M",           score:82, hot:false, note:"S2 trailer drops March 20. April 11 premiere." },
+  { rank:5,  title:"The Family Man S3",        type:"Series",       platform:"Prime Video", genre:"Thriller",       weeksInTop10:8,  peakViews:"19M",           score:79, hot:false, note:"Manoj Bajpayee returns. Most anticipated S3 of 2026." },
+  { rank:6,  title:"IC 814: The Kandahar Hijack", type:"Series",    platform:"Netflix",     genre:"True Crime",     weeksInTop10:8,  peakViews:"15M",           score:76, hot:false, note:"Netflix India's most-watched original of early 2026." },
+  { rank:7,  title:"Maharaj",                  type:"Film",         platform:"Netflix",     genre:"Period Drama",   weeksInTop10:7,  peakViews:"12M",           score:71, hot:false, note:"Junaid Khan debut. Controversial pre-release ban." },
+  { rank:8,  title:"Heeramandi S2",            type:"Series",       platform:"Netflix",     genre:"Period Drama",   weeksInTop10:7,  peakViews:"14M",           score:70, hot:true,  note:"Bhansali's magnum opus returns. Netflix's most-watched Indian series globally." },
+  { rank:9,  title:"Kota Factory S4",          type:"Series",       platform:"Netflix",     genre:"Drama",          weeksInTop10:6,  peakViews:"11M",           score:65, hot:false, note:"TVF's student drama. S4 confirmed for May 2026." },
+  { rank:10, title:"Aspirants S3",             type:"Series",       platform:"Prime Video", genre:"Drama",          weeksInTop10:6,  peakViews:"10M",           score:63, hot:false, note:"TVF's UPSC drama completes its trilogy." },
+];
+
+const PLATFORM_COLORS = {
+  "Netflix":     { bg:"#E50914", text:"#fff" },
+  "Prime Video": { bg:"#00A8E1", text:"#fff" },
+  "JioHotstar":  { bg:"#1C1C6E", text:"#fff" },
+  "ZEE5":        { bg:"#7B2FBE", text:"#fff" },
+  "SonyLIV":     { bg:"#E8261A", text:"#fff" },
+  "MX Player":   { bg:"#FF6600", text:"#fff" },
+};
+
+const TYPE_COLORS = {
+  "Series":      { bg:"#1E3A5F", text:"#93C5FD" },
+  "Film":        { bg:"#1A2F1A", text:"#6EE7B7" },
+  "Documentary": { bg:"#2D1B4E", text:"#C4B5FD" },
+};
+
+function OTTTop10Widget() {
+  const [expanded, setExpanded] = useState(false);
+  const visible = expanded ? OTT_TOP10 : OTT_TOP10.slice(0, 5);
+
+  return (
+    <div style={{ margin:"0 24px 24px", border:`1px solid ${T.border}`, borderTop:`3px solid ${T.blue}`, background:T.surface }}>
+      {/* Header */}
+      <div style={{ padding:"12px 20px", background:"#F0F7FF", borderBottom:`1px solid ${T.border}`, display:"flex", alignItems:"center", gap:12 }}>
+        <span style={{ fontFamily:"'Barlow Condensed',sans-serif", fontWeight:900, fontSize:13, color:T.blue, letterSpacing:"0.18em", textTransform:"uppercase" }}>
+          📺 BOXOFFY OTT POWER RANKINGS
+        </span>
+        <span style={{ width:1, height:14, background:T.border, display:"inline-block" }} />
+        <span style={{ fontFamily:"'DM Sans',sans-serif", fontSize:10, color:T.textMuted }}>
+          Combined · Netflix · Prime · JioHotstar · ZEE5 · SonyLIV · Week 11
+        </span>
+        <span style={{ marginLeft:"auto", fontFamily:"'DM Sans',sans-serif", fontSize:9, color:T.textMuted, letterSpacing:"0.08em" }}>
+          RANKED BY PLATFORM WEEKS + PEAK VIEWS
+        </span>
+      </div>
+
+      {/* Column headers */}
+      <div style={{ display:"grid", gridTemplateColumns:"40px 1fr 100px 90px 80px 80px", padding:"6px 16px", background:"#F9FAFB", borderBottom:`1px solid ${T.border}` }}>
+        {["#","TITLE / TYPE","PLATFORM","GENRE","WKS TOP10","PEAK VIEWS"].map((h,i) => (
+          <span key={i} style={{ fontFamily:"'DM Sans',sans-serif", fontSize:9, fontWeight:700, color:T.textMuted, letterSpacing:"0.1em", textTransform:"uppercase", textAlign: i===0?"center":"left" }}>{h}</span>
+        ))}
+      </div>
+
+      {/* Rows */}
+      {visible.map((item) => {
+        const platCfg = PLATFORM_COLORS[item.platform] || { bg:"#374151", text:"#fff" };
+        const typeCfg = TYPE_COLORS[item.type] || TYPE_COLORS["Series"];
+        return (
+          <div key={item.rank} style={{
+            display:"grid", gridTemplateColumns:"40px 1fr 100px 90px 80px 80px",
+            padding:"10px 16px",
+            borderBottom:`1px solid ${T.border}`,
+            background: item.rank <= 3 ? "#FFFDF8" : T.surface,
+            borderLeft: item.rank === 1 ? `3px solid ${T.gold}` : item.rank <= 3 ? `3px solid ${T.blue}` : `3px solid transparent`,
+          }}>
+            {/* Rank */}
+            <div style={{ display:"flex", alignItems:"center", justifyContent:"center" }}>
+              <span style={{ fontFamily:"'Barlow Condensed',sans-serif", fontWeight:900, fontSize:18,
+                color: item.rank === 1 ? T.gold : item.rank <= 3 ? T.blue : T.textMuted }}>
+                {item.rank === 1 ? "🥇" : item.rank === 2 ? "🥈" : item.rank === 3 ? "🥉" : `#${item.rank}`}
+              </span>
+            </div>
+            {/* Title */}
+            <div style={{ display:"flex", flexDirection:"column", justifyContent:"center", gap:3 }}>
+              <div style={{ display:"flex", alignItems:"center", gap:6 }}>
+                <span style={{ fontFamily:"'Barlow Condensed',sans-serif", fontWeight:800, fontSize:14, color:T.text }}>{item.title}</span>
+                {item.hot && <span style={{ color:T.accent, fontSize:9, fontWeight:700 }}>🔥 HOT</span>}
+              </div>
+              <div style={{ display:"flex", gap:5 }}>
+                <span style={{ background:typeCfg.bg, color:typeCfg.text, fontFamily:"'DM Sans',sans-serif", fontSize:8, fontWeight:700, padding:"1px 5px", borderRadius:2, letterSpacing:"0.06em" }}>{item.type}</span>
+              </div>
+              <span style={{ fontFamily:"'DM Sans',sans-serif", fontSize:10, color:T.textMuted, lineHeight:1.3 }}>{item.note}</span>
+            </div>
+            {/* Platform */}
+            <div style={{ display:"flex", alignItems:"center" }}>
+              <span style={{ background:platCfg.bg, color:platCfg.text, fontFamily:"'DM Sans',sans-serif", fontSize:9, fontWeight:700, padding:"2px 7px", borderRadius:2, letterSpacing:"0.04em" }}>{item.platform}</span>
+            </div>
+            {/* Genre */}
+            <div style={{ display:"flex", alignItems:"center" }}>
+              <span style={{ fontFamily:"'DM Sans',sans-serif", fontSize:10, color:T.textMid }}>{item.genre}</span>
+            </div>
+            {/* Weeks in Top 10 */}
+            <div style={{ display:"flex", alignItems:"center", gap:6 }}>
+              <div style={{ flex:1, background:T.border, borderRadius:2, height:4, overflow:"hidden" }}>
+                <div style={{ width:`${Math.min((item.weeksInTop10/14)*100,100)}%`, height:"100%", background:T.blue, borderRadius:2 }} />
+              </div>
+              <span style={{ fontFamily:"'Barlow Condensed',sans-serif", fontWeight:700, fontSize:13, color:T.blue, flexShrink:0 }}>{item.weeksInTop10}w</span>
+            </div>
+            {/* Peak Views */}
+            <div style={{ display:"flex", alignItems:"center" }}>
+              <span style={{ fontFamily:"'Barlow Condensed',sans-serif", fontWeight:700, fontSize:13, color:T.textMid }}>{item.peakViews}</span>
+            </div>
+          </div>
+        );
+      })}
+
+      {/* Show more / less */}
+      <div
+        onClick={() => setExpanded(e => !e)}
+        style={{ padding:"10px 20px", textAlign:"center", cursor:"pointer", background:"#F9FAFB", borderTop:`1px solid ${T.border}` }}
+        onMouseEnter={e => e.currentTarget.style.background="#F0F7FF"}
+        onMouseLeave={e => e.currentTarget.style.background="#F9FAFB"}
+      >
+        <span style={{ fontFamily:"'Barlow Condensed',sans-serif", fontWeight:700, fontSize:12, color:T.blue, letterSpacing:"0.1em" }}>
+          {expanded ? "▲ SHOW LESS" : `▼ SHOW FULL TOP 10 (${OTT_TOP10.length - 5} MORE)`}
+        </span>
+      </div>
+    </div>
+  );
+}
+
 function NewsSection({ category }) {
   const articles = ARTICLES[category] || [];
   const [featured, ...rest] = articles;
@@ -3939,6 +4077,12 @@ function NewsSection({ category }) {
       <div style={{ padding:24 }}>
         {/* Featured article */}
         <ArticleCard article={featured} size="large" />
+        {/* OTT Top 10 Power Rankings widget — only in OTT section */}
+        {category === "OTT" && (
+          <div style={{ marginTop:24, marginLeft:-24, marginRight:-24 }}>
+            <OTTTop10Widget />
+          </div>
+        )}
         {/* Grid of remaining articles */}
         {rest.length > 0 && (
           <div style={{
@@ -4124,8 +4268,8 @@ function HeaderSnapshotCards({ activeSection }) {
 
   const CARDS = {
     "Box Office": [
-      { type:"stat",      label:"WEEK 10 · #1 FILM",    value:"Kerala Story 2",sub:"₹32.87 Cr net · Wk 2 · Plus verdict",      accent:T.green,   icon:"🏆" },
-      { type:"stat",      label:"2026 YTD COMBINED",     value:"₹1,567 Cr",   sub:"Verified tracked releases · Week 10",         accent:T.blue,    icon:"📊" },
+      { type:"stat",      label:"WEEK 11 · #1 FILM",    value:"Kerala Story 2",sub:"₹32.87 Cr net · Wk 2 · Plus verdict",      accent:T.green,   icon:"🏆" },
+      { type:"stat",      label:"2026 YTD COMBINED",     value:"₹1,567 Cr",   sub:"Verified tracked releases · Week 11",         accent:T.blue,    icon:"📊" },
       { type:"stat",      label:"ALL-TIME RECORD",       value:"₹1,800 Cr",   sub:"Pushpa 2 · Will Ramayana break it?",         accent:T.gold,    icon:"⚡" },
       { type:"countdown", label:"NEXT BIG RELEASE",      value:daysLeft != null ? `${daysLeft}` : "—", valueSuffix:" days",
                           sub:"Dhurandhar 2 · Mar 19, 2026",                                                                     accent:T.accent,  icon:"🎬", pulse:true },
@@ -4249,7 +4393,7 @@ export default function App() {
             ))}
           </div>
           <div style={{ borderTop:`1px solid ${T.border}`, paddingTop:10, color:T.textMuted, lineHeight:1.8 }}>
-            © 2026 Boxoffy.com · India Box Office Intelligence · Box office data from industry tracking sources · Current as of Mar 8, 2026 · All figures in ₹ Crores
+            © 2026 Boxoffy.com · India Box Office Intelligence · Box office data from industry tracking sources · Current as of Mar 9, 2026 · All figures in ₹ Crores
           </div>
         </div>
       </div>
