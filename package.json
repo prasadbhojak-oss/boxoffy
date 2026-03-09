@@ -1,11 +1,11 @@
 {
   "name": "boxoffy",
   "version": "1.0.0",
-  "description": "Boxoffy — India Box Office Intelligence",
+  "description": "Boxoffy - India Box Office Intelligence",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build && cp -r public/* dist/",
+    "build": "vite build && node -e \"const fs=require('fs');fs.readdirSync('public').forEach(f=>fs.copyFileSync('public/'+f,'dist/'+f))\"",
     "preview": "vite preview"
   },
   "dependencies": {
