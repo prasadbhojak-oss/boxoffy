@@ -290,7 +290,7 @@ const DATA = {
       ott:{ platform:"ZEE5", debutViews:"N/A", debutHours:"N/A", lifetimeViews:"N/A", lifetimeHours:"N/A", globalRank:"N/A", countries:3, rightsDeal:"₹30 Cr", ottNote:"ZEE5 — viewership data not publicly disclosed" }},
   ],
   2025: [
-    { title:"Dhurandhar", language:"Hindi", director:"Aditya Dhar", releaseDate:"Dec 2025", totalCollection:"1,303 Cr", totalNum:1303, indiaNet:"895 Cr", overseas:"299 Cr", weeksInTop10:10, status:"OTT", budget:"~250 Cr", verdict:"All-Time Blockbuster", note:"Highest-grossing Hindi film of all time · Jio Studios & B62 Studios · Music: Shashwat Sachdev",
+    { title:"Dhurandhar", language:"Hindi", director:"Aditya Dhar", releaseDate:"Dec 2025", totalCollection:"1,303 Cr", totalNum:1303, indiaNet:"895 Cr", overseas:"299 Cr", weeksInTop10:10, status:"OTT", budget:"~250 Cr", verdict:"All-Time Blockbuster", note:"Highest-grossing Hindi film of all time · Jio Studios & B62 Studios · Music: Shashwat Sachdev", pageUrl:"dhurandhar-box-office.html",
       ott:{ platform:"Netflix", debutViews:"7.6M (3 days) → 15.8M (10 days)", debutHours:"21.6M hrs (Wk1) · 28.1M hrs (Wk2)", lifetimeViews:"~16M+ (2 weeks)", lifetimeHours:"~50M hrs (10 days)", globalRank:"#1 Non-English (2 weeks)", countries:22, rightsDeal:"₹85 Cr (Part 1)", ottNote:"Biggest Indian post-theatrical OTT debut ever · Beat Animal's 6.2M record · #1 in India, Pakistan, UAE, Qatar, Oman, Bahrain, Mauritius" }},
     { title:"Chhaava", language:"Hindi", director:"Laxman Utekar", releaseDate:"Feb 2025", totalCollection:"700 Cr", totalNum:700, indiaNet:"550 Cr", overseas:"150 Cr", weeksInTop10:10, status:"OTT", budget:"130 Cr", verdict:"All-Time Blockbuster",
       ott:{ platform:"Netflix", debutViews:"2.2M (Wk1)", debutHours:"5.9M hrs", lifetimeViews:"~5.5M (2 weeks)", lifetimeHours:"~15M hrs", globalRank:"#4 Non-English (peak)", countries:11, rightsDeal:"₹100 Cr", ottNote:"Low debut attributed to massive theatrical run fatigue; bounced 50% in Wk2 · #1 in India & Pakistan" }},
@@ -338,7 +338,7 @@ const DATA = {
       weeklyCollection:9.97, weekNum:2, daysInRelease:10, lastWeekRank:1, weeklyNote:"Day 10: ₹32.87 Cr net / ₹34.80 Cr WW. Budget (₹28 Cr) fully recovered + profit. Wk2 so far ₹9.97 Cr. Plus verdict locked. 11 days to Dhurandhar 2. Hit (₹56 Cr) is unlikely. net — clean 2-week window before Dhurandhar 2.", wkTrend:"new",
       ott:{ platform:"ZEE5 (expected)", debutViews:"TBD", debutHours:"TBD", lifetimeViews:"TBD", lifetimeHours:"TBD", globalRank:"TBD", countries:0, rightsDeal:"~₹8 Cr (est.)", ottNote:"Controversial sequel — released Feb 27 after HC lifted stay. Tracking towards profit on low budget." }},
     // ── CLOSED / OTT ──
-    { title:"Dhurandhar",           language:"Hindi",   director:"Aditya Dhar",       releaseDate:"Dec 5, 2025",  totalCollection:"1,303 Cr", totalNum:1303, indiaNet:"895 Cr",  overseas:"299 Cr",  weeksInTop10:12, status:"OTT",    budget:"~250 Cr", verdict:"All-Time Blockbuster", note:"₹895 Cr India net · WW #1 Hindi film ever · 59 days on BMS trending · Jio Studios & B62 Studios",
+    { title:"Dhurandhar",           language:"Hindi",   director:"Aditya Dhar",       releaseDate:"Dec 5, 2025",  totalCollection:"1,303 Cr", totalNum:1303, indiaNet:"895 Cr",  overseas:"299 Cr",  weeksInTop10:12, status:"OTT",    budget:"~250 Cr", verdict:"All-Time Blockbuster", note:"₹895 Cr India net · WW #1 Hindi film ever · 59 days on BMS trending · Jio Studios & B62 Studios", pageUrl:"dhurandhar-box-office.html",
       weeklyCollection:0, weekNum:12, daysInRelease:78, lastWeekRank:null, weeklyNote:"Theatrical run concluded. On Netflix. Biggest Hindi film ever.",
       ott:{ platform:"Netflix", debutViews:"7.6M (3 days) → 15.8M (10 days)", debutHours:"21.6M hrs (Wk1) · 28.1M hrs (Wk2)", lifetimeViews:"~16M+", lifetimeHours:"~50M hrs", globalRank:"#1 Non-English (2 weeks)", countries:22, rightsDeal:"₹85 Cr (Part 1)", ottNote:"Biggest Indian post-theatrical OTT debut ever · #1 India, Pakistan, UAE, Qatar, Oman, Bahrain, Mauritius" }},
     { title:"MSVP (Mana ShankaraVaraprasad Garu)", language:"Telugu", director:"Anil Ravipudi", releaseDate:"Jan 23, 2026", totalCollection:"438 Cr", totalNum:438, indiaNet:"320 Cr", overseas:"56 Cr", weeksInTop10:4, status:"OTT", budget:"275 Cr", verdict:"Blockbuster", note:"Chiranjeevi & Nayanthara — now on OTT",
@@ -463,7 +463,7 @@ const DATA = {
       indiaGross:null, indiaNet:null, indiaWeekend:null, indiaWeekNo:0,
       ott:{ platform:"TBD (Prime/Netflix expected)", debutViews:"TBD", debutHours:"TBD", lifetimeViews:"TBD", lifetimeHours:"TBD", globalRank:"TBD", countries:0, rightsDeal:"TBD", ottNote:"Horror franchise — Netflix deal likely for India post-theatrical." }},
     // ── UPCOMING ──
-    { title:"Dhurandhar: The Revenge", language:"Hindi", director:"Aditya Dhar", releaseDate:"Mar 19, 2026", eventTier:"event", totalCollection:"—", totalNum:0, indiaNet:"—", overseas:null, weeksInTop10:0, status:"Upcoming", budget:"350 Cr", verdict:"Upcoming",
+    { title:"Dhurandhar: The Revenge", language:"Hindi", director:"Aditya Dhar", releaseDate:"Mar 19, 2026", eventTier:"event", totalCollection:"—", totalNum:0, indiaNet:"—", overseas:null, weeksInTop10:0, status:"Upcoming", budget:"350 Cr", verdict:"Upcoming", pageUrl:"dhurandhar-2-box-office.html",
       weeklyCollection:0, weekNum:0, daysInRelease:0, lastWeekRank:null,
       weeklyNote:"Solo release. US: $565K Day1 · $1M wknd advance. India: ₹4.10 Cr advance in 2hrs on Mar 7 · 1.1L+ premiere tickets sold · 7.5k–10k tickets/hr on BMS · Runtime ~3h55m · Previews Mar 18 from 5PM · New 'Super Blockbuster Plus' ticket tier.",
       openingPrediction:{ low:85, mid:100, high:120, allLanguages:110, basis:"Boxoffy AI Calc — post-trailer advance booking data", note:"Boxoffy AI Calc: ₹15–20 Cr Nett from paid previews (up to ₹30 Cr possible). ₹80–100 Cr Day1 net. ₹350–400 Cr Eid weekend India. ₹500–600 Cr WW 4-day. ₹1,000 Cr India lifetime. ₹1,700–2,000 Cr WW. BMS velocity: 7.5k–10k tickets/hr. ₹4.39 Cr premiere gross in first 2hrs. 1.1L+ premiere tickets. Day1 net floor: ₹85–90 Cr post-Toxic postponement. US: $400K+ premiere pre-sales, $565K Day1, $1M wknd." },
@@ -2362,6 +2362,17 @@ function WeeklyChartRow({ movie, rank, prevRank }) {
           {barPct > 0 && (
             <div style={{ marginTop:6, height:3, background:T.border, borderRadius:2, width:"80%", maxWidth:200 }}>
               <div style={{ height:"100%", width:`${barPct}%`, background: isNew ? "#16A34A" : T.accent, borderRadius:2, transition:"width 0.4s" }} />
+            </div>
+          )}
+          {/* Dedicated page link */}
+          {movie.pageUrl && (
+            <div style={{ marginTop:7 }}>
+              <a
+                href={movie.pageUrl}
+                onClick={e => e.stopPropagation()}
+                style={{ display:"inline-flex", alignItems:"center", gap:4, fontFamily:"'DM Sans', sans-serif", fontSize:10, fontWeight:700, color: movie.status === "Upcoming" ? "#B8860B" : T.accent, letterSpacing:"0.04em", textDecoration:"none", textTransform:"uppercase", borderBottom:`1px solid currentColor`, paddingBottom:1 }}>
+                {movie.status === "Upcoming" ? "📊 Live Tracker" : "📊 Full Box Office"} →
+              </a>
             </div>
           )}
         </div>
