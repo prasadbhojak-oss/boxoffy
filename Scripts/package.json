@@ -1,0 +1,21 @@
+{
+  "name": "boxoffy-update-engine",
+  "version": "1.0.0",
+  "description": "Semi-automated BO data reconciliation tool for Boxoffy",
+  "main": "update.js",
+  "scripts": {
+    "update": "node update.js",
+    "open": "node update.js --open",
+    "analysts": "node update.js --analysts",
+    "input": "node update.js --input",
+    "review": "node update.js --review",
+    "apply": "node update.js --apply",
+    "trigger": "node update.js --trigger",
+    "history": "node update.js --history"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "author": "Boxoffy",
+  "license": "UNLICENSED"
+}

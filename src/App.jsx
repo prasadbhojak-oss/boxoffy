@@ -334,8 +334,8 @@ const DATA = {
     { title:"Tu Yaa Main",          language:"Hindi",   director:"Bejoy Nambiar",     releaseDate:"Feb 13, 2026", totalCollection:"8 Cr",    totalNum:8,    indiaNet:"6.4 Cr",  overseas:"0.8 Cr",  weeksInTop10:0, status:"Closed",  budget:"40 Cr",  verdict:"Disaster",
       weeklyCollection:0, weekNum:3, daysInRelease:21, lastWeekRank:7, weeklyNote:"Closed. ₹6.4 Cr net. Shanaya Kapoor debut — worst major-studio launch of 2026.", wkTrend:"down",
       ott:{ platform:"TBD (Prime/Netflix expected)", debutViews:"TBD", debutHours:"TBD", lifetimeViews:"TBD", lifetimeHours:"TBD", globalRank:"TBD", countries:0, rightsDeal:"~₹8 Cr (est.)", ottNote:"Expected OTT in 2–3 weeks given theatrical disaster" }},
-    { title:"The Kerala Story 2: Goes Beyond", language:"Hindi", director:"Kamakhya Narayan Singh", releaseDate:"Feb 27, 2026", totalCollection:"37.50 Cr", totalNum:37.5, indiaNet:"27.68 Cr",  overseas:"2.10 Cr",   weeksInTop10:2, status:"Running",  budget:"28 Cr",  verdict:"Average",
-      weeklyCollection:8.40, weekNum:2, daysInRelease:11, lastWeekRank:1, weeklyNote:"Day 11: ₹27.68 Cr net (BOI). Wk1: ₹19.28 Cr · Wk2 so far: ₹8.40 Cr. BOI verdict: AVERAGE. Budget ₹28 Cr recovered. Projected finish ~₹35 Cr net before Dhurandhar 2 (Mar 19). Mumbai circuit alone ₹12 Cr — only sequel to show legs in quiet Ramadan period.", wkTrend:"stable",
+    { title:"The Kerala Story 2: Goes Beyond", language:"Hindi", director:"Kamakhya Narayan Singh", releaseDate:"Feb 27, 2026", totalCollection:"41.10 Cr", totalNum:41.1, indiaNet:"34.85 Cr",  overseas:"6.25 Cr",   weeksInTop10:2, status:"Running",  budget:"28 Cr",  verdict:"Average",
+      weeklyCollection:11.95, weekNum:2, daysInRelease:12, lastWeekRank:1, weeklyNote:"Day 12: ₹34.85 Cr net / ₹41.10 Cr WW (Sacnilk). Wk1: ₹22.90 Cr · Wk2 so far: ₹11.95 Cr. BOI verdict: AVERAGE. Budget ₹28 Cr recovered. Projected finish ~₹40–42 Cr net. 9 days remaining before Dhurandhar 2 (Mar 19).", wkTrend:"stable",
       ott:{ platform:"ZEE5 (expected)", debutViews:"TBD", debutHours:"TBD", lifetimeViews:"TBD", lifetimeHours:"TBD", globalRank:"TBD", countries:0, rightsDeal:"~₹8 Cr (est.)", ottNote:"Controversial sequel — released Feb 27 after HC lifted stay. Tracking towards profit on low budget." }},
     // ── CLOSED / OTT ──
     { title:"Dhurandhar",           language:"Hindi",   director:"Aditya Dhar",       releaseDate:"Dec 5, 2025",  totalCollection:"1,303 Cr", totalNum:1303, indiaNet:"895 Cr",  overseas:"299 Cr",  weeksInTop10:12, status:"OTT",    budget:"~250 Cr", verdict:"All-Time Blockbuster", note:"₹895 Cr India net · WW #1 Hindi film ever · 59 days on BMS trending · Jio Studios & B62 Studios", pageUrl:"dhurandhar-box-office.html",
@@ -391,10 +391,10 @@ const DATA = {
       weeklyNote:"FINAL: ₹30 Cr India net / ₹39 Cr WW on ₹4 Cr budget. Blockbuster ROI. Now streaming on Netflix (from Mar 6, 2026) in Hindi, Telugu, Tamil, Malayalam, Kannada.",
       ott:{ platform:"Netflix", debutViews:"TBD", debutHours:"TBD", lifetimeViews:"TBD", lifetimeHours:"TBD", globalRank:"TBD", countries:2, rightsDeal:"~₹8 Cr (est.)", ottNote:"Netflix India South — Tamil romantic drama. Strong Kerala + TN collections." }},
     { title:"Thaai Kizhavi", language:"Tamil", director:"Sivakumar Murugesan", releaseDate:"Feb 27, 2026",
-      totalCollection:"43 Cr", totalNum:43, indiaNet:"35.48 Cr", overseas:"7.15 Cr", weeksInTop10:2,
+      totalCollection:"54.72 Cr", totalNum:54.72, indiaNet:"37.90 Cr", overseas:"9.30 Cr", weeksInTop10:2,
       status:"Running", budget:"9 Cr", verdict:"Super Hit",
-      weeklyCollection:5.88, weekNum:2, daysInRelease:10, lastWeekRank:null,
-      weeklyNote:"Day 10: ₹35.48 Cr India net / ₹43 Cr WW. Massive 238% ROI on ₹9 Cr budget. Tamil comedy drama — Radhika Sarathkumar.",
+      weeklyCollection:14.65, weekNum:2, daysInRelease:12, lastWeekRank:null,
+      weeklyNote:"Day 12: ₹37.90 Cr India net / ₹43.42 Cr gross / ₹54.72 Cr WW (Sacnilk/News9). Wk1: ₹23.25 Cr · Wk2 so far: ₹14.65 Cr. 321% ROI on ₹9 Cr budget. 2nd highest-grossing Tamil film of 2026. Projected to cross ₹50 Cr net.",
       ott:{ platform:"TBD", debutViews:"N/A", debutHours:"N/A", lifetimeViews:"N/A", lifetimeHours:"N/A", globalRank:"N/A", countries:1, rightsDeal:"N/A", ottNote:"Tamil comedy drama — Radhika Sarathkumar. 238% ROI in 9 days." }},
 
     // ── REGIONAL: MALAYALAM (Mollywood) ──
@@ -468,8 +468,8 @@ const DATA = {
     // ── UPCOMING ──
     { title:"Dhurandhar: The Revenge", language:"Hindi", director:"Aditya Dhar", releaseDate:"Mar 19, 2026", eventTier:"event", totalCollection:"—", totalNum:0, indiaNet:"—", overseas:null, weeksInTop10:0, status:"Upcoming", budget:"350 Cr", verdict:"Upcoming", pageUrl:"dhurandhar-2-box-office.html",
       weeklyCollection:0, weekNum:0, daysInRelease:0, lastWeekRank:null,
-      weeklyNote:"Solo release. US: $565K Day1 · $1M wknd advance. India: ₹4.10 Cr advance in 2hrs on Mar 7 · 1.1L+ premiere tickets sold · 7.5k–10k tickets/hr on BMS · Runtime ~3h55m · Previews Mar 18 from 5PM · New 'Super Blockbuster Plus' ticket tier.",
-      openingPrediction:{ low:85, mid:100, high:120, allLanguages:110, basis:"Boxoffy AI Calc — post-trailer advance booking data", note:"Boxoffy AI Calc: ₹15–20 Cr Nett from paid previews (up to ₹30 Cr possible). ₹80–100 Cr Day1 net. ₹350–400 Cr Eid weekend India. ₹500–600 Cr WW 4-day. ₹1,000 Cr India lifetime. ₹1,700–2,000 Cr WW. BMS velocity: 7.5k–10k tickets/hr. ₹4.39 Cr premiere gross in first 2hrs. 1.1L+ premiere tickets. Day1 net floor: ₹85–90 Cr post-Toxic postponement. US: $400K+ premiere pre-sales, $565K Day1, $1M wknd." },
+      weeklyNote:"Solo release. Paid previews Mar 18 from 5PM. India: ₹15.91 Cr gross (excl. blocks) / ₹21 Cr with blocks · 2.86L+ tickets · 8K+ shows. On track for ₹30–35 Cr nett in paid previews — new all-India record beating OG (₹21 Cr). Ticket prices up to ₹3,100 (INOX Mumbai). US: $565K Day1 · $1M+ weekend advance · Near $2M total NA. BOI: '₹20 Cr+ paid previews done'. Trade consensus: ₹85–100 Cr Day 1.",
+      openingPrediction:{ low:85, mid:100, high:120, allLanguages:110, basis:"Boxoffy AI Calc — post-trailer advance booking data", note:"Boxoffy AI Calc: Paid previews tracking ₹30–35 Cr nett (beats OG ₹21 Cr record). ₹85–100 Cr Day1 net. ₹350–400 Cr Eid weekend India. ₹500–600 Cr WW 4-day. ₹1,000 Cr India lifetime. ₹1,700–2,000 Cr WW. BMS velocity: 7.5k–10k tickets/hr. India ticket gross ₹15.91 Cr (excl. blocks) / ₹21 Cr (with blocks). US: $565K Day1, $1M+ wknd, near $2M total NA." },
       ott:{ platform:"Netflix", debutViews:"TBD", debutHours:"TBD", lifetimeViews:"TBD", lifetimeHours:"TBD", globalRank:"TBD", countries:0, rightsDeal:"₹150 Cr (confirmed)", ottNote:"Netflix deal confirmed pre-release — sequel to the biggest Indian OTT debut ever" },
       xChatter:[
         { handle:"@rohitjswl01", name:"Rohit Jaiswal", role:"Trade Analyst", color:"#1D4ED8", post:"#Dhurandhar2 Day 1 NET floor is ₹85–90 Cr India. Solo release + Eid + trailer storm = historic opening. Advance booking pace: ALL-TIME. Day1 realistic range ₹90–100 Cr. #BoxOffice", date:"Mar 8, 2026" },
@@ -517,8 +517,8 @@ const DATA = {
       weeklyCollection:0, weekNum:0, daysInRelease:0, lastWeekRank:null, weeklyNote:"Ram Charan's next post-RRR. High anticipation. Date TBC." },
 
     // ── JUNE 2026 ──
-    { title:"Hai Jawani Toh Ishq Hona Hai", language:"Hindi", director:"David Dhawan", releaseDate:"Jun 5, 2026", totalCollection:"—", totalNum:0, indiaNet:"—", overseas:null, weeksInTop10:0, status:"Upcoming", budget:"TBC", verdict:"Upcoming",
-      weeklyCollection:0, weekNum:0, daysInRelease:0, lastWeekRank:null, weeklyNote:"Varun Dhawan, Mrunal Thakur, Pooja Hegde. David Dhawan directorial. Jun 5." },
+    { title:"Hai Jawani Toh Ishq Hona Hai", language:"Hindi", director:"David Dhawan", releaseDate:"Jun 12, 2026", totalCollection:"—", totalNum:0, indiaNet:"—", overseas:null, weeksInTop10:0, status:"Upcoming", budget:"TBC", verdict:"Upcoming",
+      weeklyCollection:0, weekNum:0, daysInRelease:0, lastWeekRank:null, weeklyNote:"Varun Dhawan, Mrunal Thakur, Pooja Hegde. David Dhawan directorial. Moved from Jun 5 → Jun 12 to avoid clash with Yash's Toxic (Jun 4)." },
     { title:"Welcome to the Jungle", language:"Hindi", director:"TBC", releaseDate:"Jun 26, 2026", totalCollection:"—", totalNum:0, indiaNet:"—", overseas:null, weeksInTop10:0, status:"Upcoming", budget:"TBC", verdict:"Upcoming",
       weeklyCollection:0, weekNum:0, daysInRelease:0, lastWeekRank:null, weeklyNote:"Akshay Kumar. Next instalment of Welcome franchise. Jun 26." },
     { title:"Dragon", language:"Telugu/Hindi", director:"TBC", releaseDate:"Jun 25, 2026", totalCollection:"—", totalNum:0, indiaNet:"—", overseas:null, weeksInTop10:0, status:"Upcoming", budget:"TBC", verdict:"Upcoming",
@@ -630,7 +630,7 @@ const YEAR_NOTES = {
   2023: "Unprecedented year — five films crossed ₹600 Cr. Jawan, Pathaan, Animal and Gadar 2 rewrote Hindi film records.",
   2024: "Pushpa 2 shattered every record at ₹1,800 Cr WW. Stree 2 delivered the surprise of the year at ₹672 Cr.",
   2025: "Dhurandhar became the highest-grossing Hindi film ever. Chhaava dominated the first quarter with ₹700 Cr WW.",
-  2026: "Live data — Week 11, Mar 10, 2026. Border 2: ₹481.76 Cr WW · Super Hit (BOI). Kerala Story 2: ₹27.68 Cr net · Average verdict · ~₹35 Cr projected. D2 advance: ₹15.91 Cr gross (excl. blocks) / ₹21 Cr with blocks · 2.86L tickets · 8K+ shows · US $1M+ weekend · New Bollywood paid preview record (beats Stree 2 ₹8.75 Cr by 69%). Releases Mar 19.",
+  2026: "Live data — Week 11, Mar 10, 2026. Border 2: ₹481.76 Cr WW · Super Hit (BOI). Kerala Story 2: ₹34.85 Cr net (Day 12) · Average verdict · ~₹40–42 Cr projected. Thaai Kizhavi: ₹37.90 Cr net · Super Hit. D2 advance: ₹15.91 Cr gross (excl. blocks) / ₹21 Cr with blocks · 2.86L+ tickets · 8K+ shows · US near $2M NA total · BOI: '₹30 Cr+ nett paid previews done'. Releases Mar 19.",
 };
 
 /* ── ARTICLES DATA ────────────────────────────────────────── */
@@ -639,12 +639,12 @@ const ARTICLES = {
   Bollywood: [
     { tag:"Advance Booking", time:"Now", hot:true, source:"Boxoffy",
       url:"dhurandhar2-advance-article.html",
-      headline:"₹20 Crore and Counting — Dhurandhar 2 Is Rewriting the Rulebook",
-      summary:"Boxoffy's own deep-dive: ₹12.29 Cr premiere gross (all-time Hindi record), 2.06 lakh tickets, ~₹20 Cr total India advance, $1.7M US weekend pre-sales. BOI calls it 'remarkable'. 10 days to go." },
+      headline:"₹21 Crore and Rising — Dhurandhar 2 Rewrites the Rulebook on Paid Previews",
+      summary:"Boxoffy's deep-dive: ₹15.91 Cr gross paid previews (excl. blocks) / ₹21 Cr with blocks · 2.86L+ tickets · 8K+ shows. BOI: '₹30 Cr+ nett easily done.' Beats Stree 2 by 69%. US near $2M total NA advance. Tickets up to ₹3,100 in Mumbai. 9 days to go." },
     { tag:"Week 11", time:"Now", hot:true, source:"Box Office India",
       url:"https://www.boxofficeindia.com/",
-      headline:"Week 11 Opens: Kerala Story 2 Crosses ₹35 Cr, Thaai Kizhavi Holds Strong",
-      summary:"Kerala Story 2 enters Week 3 with ₹34.80 Cr WW, Plus verdict firmly locked. Thaai Kizhavi at ₹43 Cr WW on ₹9 Cr budget — 238% ROI. Industry focus now entirely on Dhurandhar 2 premieres March 18." },
+      headline:"Week 11 Update: Thaai Kizhavi ₹37.90 Cr Leads, Kerala Story 2 ₹34.85 Cr, D2 Paid Previews Near ₹20 Cr",
+      summary:"Thaai Kizhavi (Day 12) is the week's leader at ₹37.90 Cr net. Kerala Story 2 (Day 12) at ₹34.85 Cr net. Both running out of runway before Dhurandhar 2 arrives Mar 19. D2 paid previews: ₹15.91 Cr gross / ₹21 Cr with blocks — BOI says ₹30 Cr+ nett done. US near $2M advance." },
     { tag:"Dhurandhar 2", time:"2h ago", hot:true, source:"Sacnilk",
       url:"dhurandhar2-advance-article.html",
       headline:"Dhurandhar 2: US Premiere Pre-Sales Hit $618K Across 557 Locations — Overseas Record In Sight",
@@ -929,17 +929,17 @@ const WEEKLY_COMMENTARY = [
   },
   {
     weekNum: "Week 11, 2026",
-    dateRange: "Mar 1 – Mar 7, 2026",
-    headline: "The Calm Before the Storm — All Eyes on March 19",
-    subline: "Dhurandhar 2 trailer out · Boxoffy AI Calc: ₹15–30 Cr Nett paid previews · ₹4.39 Cr advance in 2hrs · 1.1L+ premiere tickets · BMS: 7.5k–10k/hr · ₹80–100 Cr Day1 · US $565K Day1 · Mar 19.",
+    dateRange: "Mar 3 – Mar 10, 2026",
+    headline: "The Countdown Begins — 9 Days to Dhurandhar 2",
+    subline: "D2 paid previews: ₹15.91 Cr gross / ₹21 Cr with blocks · 2.86L tickets · on track for ₹30–35 Cr nett paid previews (new all-India record) · US near $2M · Tickets ₹3,100 in Mumbai · Thaai Kizhavi ₹37.90 Cr net · Kerala Story 2 ₹34.85 Cr net",
     status: "current",
     scoreboard: [
-      { film:"Border 2", week:"Wk 7 (FINAL — Closed)", wkCollection:"₹0 (Theatrical run over)", total:"₹424 Cr net / ₹481.76 Cr WW", verdict:"Blockbuster — Biggest Hindi film of 2026. Border 3 confirmed.", color:"#16A34A" },
-      { film:"The Kerala Story 2", week:"Wk 2 (Day 10)", wkCollection:"₹9.97 Cr (Wk2 ongoing)", total:"₹32.87 Cr net / ₹34.80 Cr WW", verdict:"Plus — budget recovered + profit. 11 days to Dhurandhar 2.", color:"#22C55E" },
+      { film:"Border 2", week:"Wk 7 (FINAL — Closed)", wkCollection:"₹0 (Theatrical run over)", total:"₹424 Cr net / ₹481.76 Cr WW", verdict:"Super Hit (BOI) — Biggest Hindi film of 2026. Border 3 confirmed.", color:"#16A34A" },
+      { film:"The Kerala Story 2", week:"Wk 2 (Day 12)", wkCollection:"₹11.95 Cr (Wk2)", total:"₹34.85 Cr net / ₹41.10 Cr WW", verdict:"Average (BOI) — budget recovered, projected finish ₹40–42 Cr net. 9 days to D2.", color:"#22C55E" },
+      { film:"Thaai Kizhavi", week:"Wk 2 (Day 12)", wkCollection:"₹14.65 Cr (Wk2)", total:"₹37.90 Cr net / ₹54.72 Cr WW", verdict:"Super Hit — 321% ROI on ₹9 Cr budget. 2nd highest-grossing Tamil film of 2026.", color:"#16A34A" },
       { film:"O'Romeo", week:"Wk 4 (Day 24)", wkCollection:"₹0.65 Cr (Wk4 trickle)", total:"₹68.20 Cr net / ₹80.73 Cr WW gross", verdict:"Confirmed Flop — ₹68 Cr vs ₹130 Cr. Amazon Prime OTT. Final days.", color:"#EF4444" },
       { film:"Mardaani 3", week:"Wk 6 (OTT)", wkCollection:"OTT — Netflix", total:"₹50.57 Cr net", verdict:"Below Average — Now on Netflix India.", color:"#EF4444" },
-      { film:"Assi", week:"Wk 3 (closing)", wkCollection:"~₹22 lakh (Day 15)", total:"~₹9.8 Cr net", verdict:"Flop vs ₹40 Cr budget — final days in theatres.", color:"#EF4444" },
-      { film:"Dhurandhar 2: The Revenge", week:"9 days to release", wkCollection:"—", total:"Paid previews: ₹15.91 Cr gross (₹21 Cr incl. blocks) · 2.86L tickets · 8K shows · US $1M+ weekend advance", verdict:"New Bollywood paid preview record (beats Stree 2 ₹8.75 Cr by 69%). Targeting ₹20 Cr+ previews. Could beat OG (₹21 Cr all-India record). ₹100 Cr Day 1 target. Tickets up to ₹3,100.", color:"#D97706" },
+      { film:"Dhurandhar 2: The Revenge", week:"9 days to release", wkCollection:"—", total:"Paid previews: ₹15.91 Cr gross (₹21 Cr incl. blocks) · 2.86L+ tickets · 8K+ shows · US near $2M total NA advance", verdict:"New Bollywood paid preview record (beats Stree 2 ₹8.75 Cr by 69%). BOI: ₹30 Cr+ nett easily done. Could beat OG ₹21 Cr all-India record. Tickets up to ₹3,100 Mumbai.", color:"#D97706" },
     ],
     sources: [
       { name:"Boxoffy AI Calc", note:"Pre-Toxic-postponement: ₹65–70 Cr Day 1. After Toxic pulled out Mar 4: upgraded to ₹85–90 Cr Day 1 net India. Post-trailer: ₹90–100 Cr in play.", url:"https://x.com/rohitjswl01",
@@ -4282,15 +4282,15 @@ function HeaderSnapshotCards({ activeSection }) {
 
   const CARDS = {
     "Box Office": [
-      { type:"stat",      label:"WEEK 11 · #1 FILM",    value:"Kerala Story 2",sub:"₹27.68 Cr net · Wk 2 · Average verdict",   accent:T.green,   icon:"🏆" },
-      { type:"stat",      label:"2026 YTD COMBINED",     value:"₹1,567 Cr",   sub:"Verified tracked releases · Week 11",         accent:T.blue,    icon:"📊" },
+      { type:"stat",      label:"WEEK 11 · #1 FILM",    value:"Thaai Kizhavi",sub:"₹37.90 Cr net · Wk 2 · Super Hit",   accent:T.green,   icon:"🏆" },
+      { type:"stat",      label:"2026 YTD COMBINED",     value:"₹1,580 Cr",   sub:"Verified tracked releases · Week 11",         accent:T.blue,    icon:"📊" },
       { type:"stat",      label:"ALL-TIME RECORD",       value:"₹1,800 Cr",   sub:"Pushpa 2 · Will Ramayana break it?",         accent:T.gold,    icon:"⚡" },
       { type:"countdown", label:"NEXT BIG RELEASE",      value:daysLeft != null ? `${daysLeft}` : "—", valueSuffix:" days",
                           sub:"Dhurandhar 2 · Mar 19, 2026",                                                                     accent:T.accent,  icon:"🎬", pulse:true },
     ],
     "Weekly": [
-      { type:"stat",      label:"THIS WEEK · LEADER",    value:"Kerala Story 2",sub:"₹27.68 Cr net · Wk 2 · Average verdict",   accent:T.green,   icon:"🏆" },
-      { type:"stat",      label:"BIGGEST CLOSE",         value:"Border 2",     sub:"Closed · ₹481.76 Cr WW · Blockbuster",      accent:T.textMuted,icon:"🏁" },
+      { type:"stat",      label:"THIS WEEK · LEADER",    value:"Thaai Kizhavi",sub:"₹37.90 Cr net · Wk 2 · Super Hit",   accent:T.green,   icon:"🏆" },
+      { type:"stat",      label:"BIGGEST CLOSE",         value:"Border 2",     sub:"Closed · ₹481.76 Cr WW · Super Hit (BOI)",      accent:T.textMuted,icon:"🏁" },
       { type:"stat",      label:"OTT THIS WEEK",         value:"With Love",    sub:"Netflix from Mar 6 · ₹39 Cr WW · 644% ROI",accent:T.purple,  icon:"📺" },
       { type:"countdown", label:"COUNTDOWN",             value:daysLeft != null ? `${daysLeft}` : "—", valueSuffix:" days",
                           sub:"Dhurandhar 2 · Mar 19 · Eid",                                                                     accent:T.accent,  icon:"🎬", pulse:true },
