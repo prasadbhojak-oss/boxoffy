@@ -320,11 +320,11 @@ const DATA = {
       weeklyCollection:0, weekNum:7, daysInRelease:45, lastWeekRank:1, weeklyNote:"FINAL: ₹424 Cr India net / ₹481.76 Cr WW. Biggest Hindi film of 2026. Week 1: ₹224.25 Cr · Week 2: ₹70.15 Cr · Week 3: ₹23.35 Cr. Border 3 confirmed. OTT deal pending.", wkTrend:"down",
       ott:{ platform:"TBD (Prime/Netflix expected)", debutViews:"TBD", debutHours:"TBD", lifetimeViews:"TBD", lifetimeHours:"TBD", globalRank:"TBD", countries:0, rightsDeal:"~₹120 Cr (est.)", ottNote:"Theatrical wind-down. OTT premiere expected Mar/Apr 2026." }},
     { title:"O'Romeo",              language:"Hindi",   director:"Vishal Bhardwaj",   releaseDate:"Feb 13, 2026", totalCollection:"80.73 Cr",totalNum:80.73,indiaNet:"68.20 Cr",overseas:"12.53 Cr",weeksInTop10:3, status:"Closed",  budget:"130 Cr", verdict:"Flop",
-      weeklyCollection:0, weekNum:4, daysInRelease:24, lastWeekRank:2, weeklyNote:"FINAL: ₹68.20 Cr net / ₹80.73 Cr WW. Confirmed Flop vs ₹130 Cr budget. Amazon Prime OTT deal confirmed.", wkTrend:"down",
+      weeklyCollection:0, weekNum:4, daysInRelease:25, lastWeekRank:2, weeklyNote:"FINAL: ₹68.20 Cr net / ₹80.73 Cr WW. Confirmed Flop vs ₹130 Cr budget. Amazon Prime Video OTT deal confirmed — premiere expected Apr 2026.", wkTrend:"down",
       ott:{ platform:"TBD (Prime/Netflix expected)", debutViews:"TBD", debutHours:"TBD", lifetimeViews:"TBD", lifetimeHours:"TBD", globalRank:"TBD", countries:0, rightsDeal:"~₹50 Cr (est.)", ottNote:"Expected on Netflix around April 2026 after theatrical wind-down" }},
     { title:"Mardaani 3",           language:"Hindi",   director:"Abhiraj Minawala",  releaseDate:"Jan 30, 2026", totalCollection:"62 Cr",   totalNum:62,   indiaNet:"50.57 Cr", overseas:"9 Cr",    weeksInTop10:5, status:"OTT",     budget:"60 Cr",  verdict:"Below Average",
       weeklyCollection:1, weekNum:6, daysInRelease:37, lastWeekRank:3, weeklyNote:"Day 37: ₹50.57 Cr net. Wk 5: ₹1.2 Cr. Targeting ₹50 Cr net finish. Netflix OTT rights confirmed. Final screens.", wkTrend:"down",
-      ott:{ platform:"TBD (Prime/Netflix expected)", debutViews:"TBD", debutHours:"TBD", lifetimeViews:"TBD", lifetimeHours:"TBD", globalRank:"TBD", countries:0, rightsDeal:"~₹30 Cr (est.)", ottNote:"YRF franchise — Netflix deal likely; OTT premiere expected Mar/Apr 2026" }},
+      ott:{ platform:"Netflix (expected Apr 2026)", debutViews:"TBD", debutHours:"TBD", lifetimeViews:"TBD", lifetimeHours:"TBD", globalRank:"TBD", countries:0, rightsDeal:"~₹30 Cr (est.)", ottNote:"YRF franchise — Netflix deal likely; OTT premiere expected Apr 2026" }},
     { title:"Assi",                 language:"Hindi",   director:"Anubhav Sinha",     releaseDate:"Feb 20, 2026", totalCollection:"11.5 Cr",  totalNum:11.5, indiaNet:"9.8 Cr",    overseas:"1 Cr",    weeksInTop10:0, status:"Closed", budget:"40 Cr",  verdict:"Flop",
       weeklyCollection:0, weekNum:3, daysInRelease:17, lastWeekRank:5, weeklyNote:"FINAL: ₹9.8 Cr net / ₹11.5 Cr WW. Confirmed Flop vs ₹40 Cr budget. Taapsee Pannu courtroom drama. Theatrical run over.", wkTrend:"down",
       ott:{ platform:"ZEE5 (expected)", debutViews:"TBD", debutHours:"TBD", lifetimeViews:"TBD", lifetimeHours:"TBD", globalRank:"TBD", countries:0, rightsDeal:"~₹10 Cr (est.)", ottNote:"Social drama — likely ZEE5 or Netflix; OTT in 3–4 weeks" }},
@@ -334,8 +334,8 @@ const DATA = {
     { title:"Tu Yaa Main",          language:"Hindi",   director:"Bejoy Nambiar",     releaseDate:"Feb 13, 2026", totalCollection:"8 Cr",    totalNum:8,    indiaNet:"6.4 Cr",  overseas:"0.8 Cr",  weeksInTop10:0, status:"Closed",  budget:"40 Cr",  verdict:"Disaster",
       weeklyCollection:0, weekNum:3, daysInRelease:21, lastWeekRank:7, weeklyNote:"Closed. ₹6.4 Cr net. Shanaya Kapoor debut — worst major-studio launch of 2026.", wkTrend:"down",
       ott:{ platform:"TBD (Prime/Netflix expected)", debutViews:"TBD", debutHours:"TBD", lifetimeViews:"TBD", lifetimeHours:"TBD", globalRank:"TBD", countries:0, rightsDeal:"~₹8 Cr (est.)", ottNote:"Expected OTT in 2–3 weeks given theatrical disaster" }},
-    { title:"The Kerala Story 2: Goes Beyond", language:"Hindi", director:"Kamakhya Narayan Singh", releaseDate:"Feb 27, 2026", totalCollection:"34.80 Cr", totalNum:34.8, indiaNet:"32.87 Cr",  overseas:"1.93 Cr",   weeksInTop10:2, status:"Running",  budget:"28 Cr",  verdict:"Plus",
-      weeklyCollection:9.97, weekNum:2, daysInRelease:10, lastWeekRank:1, weeklyNote:"Day 10: ₹32.87 Cr net / ₹34.80 Cr WW. Budget (₹28 Cr) fully recovered + profit. Wk2 so far ₹9.97 Cr. Plus verdict locked. 11 days to Dhurandhar 2. Hit (₹56 Cr) is unlikely. net — clean 2-week window before Dhurandhar 2.", wkTrend:"new",
+    { title:"The Kerala Story 2: Goes Beyond", language:"Hindi", director:"Kamakhya Narayan Singh", releaseDate:"Feb 27, 2026", totalCollection:"37.50 Cr", totalNum:37.5, indiaNet:"27.68 Cr",  overseas:"2.10 Cr",   weeksInTop10:2, status:"Running",  budget:"28 Cr",  verdict:"Average",
+      weeklyCollection:8.40, weekNum:2, daysInRelease:11, lastWeekRank:1, weeklyNote:"Day 11: ₹27.68 Cr net (BOI). Wk1: ₹19.28 Cr · Wk2 so far: ₹8.40 Cr. BOI verdict: AVERAGE. Budget ₹28 Cr recovered. Projected finish ~₹35 Cr net before Dhurandhar 2 (Mar 19). Mumbai circuit alone ₹12 Cr — only sequel to show legs in quiet Ramadan period.", wkTrend:"stable",
       ott:{ platform:"ZEE5 (expected)", debutViews:"TBD", debutHours:"TBD", lifetimeViews:"TBD", lifetimeHours:"TBD", globalRank:"TBD", countries:0, rightsDeal:"~₹8 Cr (est.)", ottNote:"Controversial sequel — released Feb 27 after HC lifted stay. Tracking towards profit on low budget." }},
     // ── CLOSED / OTT ──
     { title:"Dhurandhar",           language:"Hindi",   director:"Aditya Dhar",       releaseDate:"Dec 5, 2025",  totalCollection:"1,303 Cr", totalNum:1303, indiaNet:"895 Cr",  overseas:"299 Cr",  weeksInTop10:12, status:"OTT",    budget:"~250 Cr", verdict:"All-Time Blockbuster", note:"₹895 Cr India net · WW #1 Hindi film ever · 59 days on BMS trending · Jio Studios & B62 Studios", pageUrl:"dhurandhar-box-office.html",
@@ -371,9 +371,9 @@ const DATA = {
       totalCollection:"16 Cr", totalNum:16, indiaNet:"12 Cr", overseas:"4 Cr", weeksInTop10:1,
       status:"Closed", budget:"40 Cr", verdict:"Flop",
       note:"₹12 Cr India net. Confirmed Flop on ₹40 Cr budget.",
-      weeklyCollection:0, weekNum:4, daysInRelease:24, lastWeekRank:null,
-      weeklyNote:"FINAL: ₹12 Cr India net / ₹16 Cr WW. Confirmed Flop vs ₹40 Cr budget. Theatrical run concluded.",
-      ott:{ platform:"TBD (Prime/Netflix expected)", debutViews:"TBD", debutHours:"TBD", lifetimeViews:"TBD", lifetimeHours:"TBD", globalRank:"TBD", countries:1, rightsDeal:"~₹5 Cr (est.)", ottNote:"Telugu release — poor theatrical debut. OTT premiere expected April 2026." }},
+      weeklyCollection:0, weekNum:4, daysInRelease:25, lastWeekRank:null,
+      weeklyNote:"FINAL: ₹12 Cr India net / ₹16 Cr WW. Confirmed Flop vs ₹40 Cr budget. Now on Netflix from Mar 13, 2026 (Telugu, Tamil, Kannada, Malayalam, Hindi).",
+      ott:{ platform:"Netflix", debutViews:"TBD", debutHours:"TBD", lifetimeViews:"TBD", lifetimeHours:"TBD", globalRank:"TBD", countries:3, rightsDeal:"~₹5 Cr (est.)", ottNote:"Netflix India from Mar 13, 2026. Telugu + multilingual streaming. Poor theatrical debut; OTT the only viable revenue window." }},
 
     // ── REGIONAL: TAMIL (Kollywood) ──
     { title:"Parasakthi", language:"Tamil", director:"Sudha Kongara", releaseDate:"Jan 10, 2026",
@@ -387,8 +387,8 @@ const DATA = {
       totalCollection:"39 Cr", totalNum:39, indiaNet:"30 Cr", overseas:"3.5 Cr", weeksInTop10:4,
       status:"OTT", budget:"4 Cr", verdict:"Blockbuster",
       note:"Abishan Jeevinth & Anaswara Rajan. ₹30 Cr India net on ₹4 Cr budget = 644% ROI. On Netflix from Mar 6.",
-      weeklyCollection:0, weekNum:4, daysInRelease:29, lastWeekRank:2,
-      weeklyNote:"FINAL: ₹30 Cr India net / ₹39 Cr WW on ₹4 Cr budget. Blockbuster ROI. On Netflix from Mar 6.",
+      weeklyCollection:0, weekNum:4, daysInRelease:32, lastWeekRank:2,
+      weeklyNote:"FINAL: ₹30 Cr India net / ₹39 Cr WW on ₹4 Cr budget. Blockbuster ROI. Now streaming on Netflix (from Mar 6, 2026) in Hindi, Telugu, Tamil, Malayalam, Kannada.",
       ott:{ platform:"Netflix", debutViews:"TBD", debutHours:"TBD", lifetimeViews:"TBD", lifetimeHours:"TBD", globalRank:"TBD", countries:2, rightsDeal:"~₹8 Cr (est.)", ottNote:"Netflix India South — Tamil romantic drama. Strong Kerala + TN collections." }},
     { title:"Thaai Kizhavi", language:"Tamil", director:"Sivakumar Murugesan", releaseDate:"Feb 27, 2026",
       totalCollection:"43 Cr", totalNum:43, indiaNet:"35.48 Cr", overseas:"7.15 Cr", weeksInTop10:2,
@@ -462,6 +462,9 @@ const DATA = {
       theaterCount:3500, theaterChange:0, perTheater:null, distributor:"Paramount", cinemaScore:null, rtScore:null,
       indiaGross:null, indiaNet:null, indiaWeekend:null, indiaWeekNo:0,
       ott:{ platform:"TBD (Prime/Netflix expected)", debutViews:"TBD", debutHours:"TBD", lifetimeViews:"TBD", lifetimeHours:"TBD", globalRank:"TBD", countries:0, rightsDeal:"TBD", ottNote:"Horror franchise — Netflix deal likely for India post-theatrical." }},
+    { title:"Subedaar", language:"Hindi", director:"Suresh Triveni", releaseDate:"Mar 5, 2026", totalCollection:"—", totalNum:0, indiaNet:"OTT Premiere", overseas:null, weeksInTop10:0, status:"OTT", budget:"~40 Cr", verdict:"OTT Hit",
+      weeklyCollection:0, weekNum:1, daysInRelease:5, lastWeekRank:null, weeklyNote:"Direct OTT premiere on Amazon Prime Video, Mar 5. Anil Kapoor as retired Subedaar Arjun Maurya. Dir: Suresh Triveni (Tumhari Sulu, Jalsa). Strong lead performance (HT: 3.5/5). Mixed reviews overall. Solid OTT performer — trending on Prime India.",
+      ott:{ platform:"Amazon Prime Video", debutViews:"TBD", debutHours:"TBD", lifetimeViews:"TBD", lifetimeHours:"TBD", globalRank:"Top 5 India (est.)", countries:5, rightsDeal:"~₹30 Cr (est.)", ottNote:"Direct OTT premiere. Anil Kapoor, Radhika Madan, Mona Singh, Aditya Rawal. Abundantia Entertainment. Hindi + Tamil + Telugu + Kannada + Malayalam." }},
     // ── UPCOMING ──
     { title:"Dhurandhar: The Revenge", language:"Hindi", director:"Aditya Dhar", releaseDate:"Mar 19, 2026", eventTier:"event", totalCollection:"—", totalNum:0, indiaNet:"—", overseas:null, weeksInTop10:0, status:"Upcoming", budget:"350 Cr", verdict:"Upcoming", pageUrl:"dhurandhar-2-box-office.html",
       weeklyCollection:0, weekNum:0, daysInRelease:0, lastWeekRank:null,
@@ -492,8 +495,8 @@ const DATA = {
       weeklyCollection:0, weekNum:0, daysInRelease:0, lastWeekRank:null, weeklyNote:"Akshay Kumar, Paresh Rawal, Tabu. Horror-comedy. Priyadarshan returns to the genre." },
     // Tu Meri Main Tera = Dec 25 2025 release, ₹39 Cr India net, Flop — removed from 2026 upcoming
     // Saiyaara was a 2025 film (Jul 18 2025, ₹579 Cr WW) — removed from 2026 upcoming
-    { title:"Alpha", language:"Hindi", director:"TBC", releaseDate:"Apr 17, 2026", totalCollection:"—", totalNum:0, indiaNet:"—", overseas:null, weeksInTop10:0, status:"Upcoming", budget:"TBC", verdict:"Upcoming",
-      weeklyCollection:0, weekNum:0, daysInRelease:0, lastWeekRank:null, weeklyNote:"Alia Bhatt's debut in YRF Spy Universe. Sharvari Wagh co-stars. Action-spy-thriller. Apr 17." },
+    { title:"Alpha", language:"Hindi", director:"Shiv Rawail", releaseDate:"Jul 10, 2026", totalCollection:"—", totalNum:0, indiaNet:"—", overseas:null, weeksInTop10:0, status:"Upcoming", budget:"~300 Cr", verdict:"Upcoming",
+      weeklyCollection:0, weekNum:0, daysInRelease:0, lastWeekRank:null, weeklyNote:"Alia Bhatt & Sharvari lead YRF Spy Universe 6th film. Bobby Deol (antagonist), Anil Kapoor (Vikrant Kaul), Hrithik Roshan (cameo). Dir: Shiv Rawail (Railway Men). Moved from Apr 17 → Jul 10 to avoid Battle of Galwan. YRF rejected ₹215 Cr Netflix OTT offer — confirmed theatrical. First female-led YRF spy film." },
     { title:"Battle of Galwan", language:"Hindi", director:"Apoorva Lakhia", releaseDate:"Aug 14, 2026", totalCollection:"—", totalNum:0, indiaNet:"—", overseas:null, weeksInTop10:0, status:"Upcoming", budget:"TBC", verdict:"Upcoming",
       weeklyCollection:0, weekNum:0, daysInRelease:0, lastWeekRank:null, weeklyNote:"Salman Khan, Chitrangada Singh. War drama on 2020 Galwan Valley clash. Moved from Apr 17 → Aug 14, 2026. Clashes with Naagzilla (Kartik Aaryan) on Independence Day weekend." },
     { title:"KD – The Devil", language:"Kannada", director:"TBC", releaseDate:"Apr 14, 2026", totalCollection:"—", totalNum:0, indiaNet:"—", overseas:null, weeksInTop10:0, status:"Upcoming", budget:"TBC", verdict:"Upcoming",
@@ -627,7 +630,7 @@ const YEAR_NOTES = {
   2023: "Unprecedented year — five films crossed ₹600 Cr. Jawan, Pathaan, Animal and Gadar 2 rewrote Hindi film records.",
   2024: "Pushpa 2 shattered every record at ₹1,800 Cr WW. Stree 2 delivered the surprise of the year at ₹672 Cr.",
   2025: "Dhurandhar became the highest-grossing Hindi film ever. Chhaava dominated the first quarter with ₹700 Cr WW.",
-  2026: "Live data — Week 11, Mar 9, 2026. Border 2 closed at ₹481.76 Cr WW — biggest Hindi film of 2026. Kerala Story 2 at ₹32.87 Cr net, Plus verdict. Dhurandhar 2 advance: ₹12.29 Cr premiere gross · 2.06L tickets · ~₹20 Cr total · $1.7M US weekend. Releases Mar 19.",
+  2026: "Live data — Week 11, Mar 10, 2026. Border 2: ₹481.76 Cr WW · Super Hit (BOI). Kerala Story 2: ₹27.68 Cr net · Average verdict · ~₹35 Cr projected. D2 advance: ₹15.91 Cr gross (excl. blocks) / ₹21 Cr with blocks · 2.86L tickets · 8K+ shows · US $1M+ weekend · New Bollywood paid preview record (beats Stree 2 ₹8.75 Cr by 69%). Releases Mar 19.",
 };
 
 /* ── ARTICLES DATA ────────────────────────────────────────── */
@@ -936,7 +939,7 @@ const WEEKLY_COMMENTARY = [
       { film:"O'Romeo", week:"Wk 4 (Day 24)", wkCollection:"₹0.65 Cr (Wk4 trickle)", total:"₹68.20 Cr net / ₹80.73 Cr WW gross", verdict:"Confirmed Flop — ₹68 Cr vs ₹130 Cr. Amazon Prime OTT. Final days.", color:"#EF4444" },
       { film:"Mardaani 3", week:"Wk 6 (OTT)", wkCollection:"OTT — Netflix", total:"₹50.57 Cr net", verdict:"Below Average — Now on Netflix India.", color:"#EF4444" },
       { film:"Assi", week:"Wk 3 (closing)", wkCollection:"~₹22 lakh (Day 15)", total:"~₹9.8 Cr net", verdict:"Flop vs ₹40 Cr budget — final days in theatres.", color:"#EF4444" },
-      { film:"Dhurandhar 2: The Revenge", week:"12 days to release", wkCollection:"—", total:"India: ₹4 Cr advance in 2hrs · 1.1L+ premiere tickets · US: $565K Day1 · $1M wknd", verdict:"Boxoffy AI Calc: ₹1,000 Cr India / ₹1,700–2,000 Cr WW. BMS: 7.5k–10k tickets/hr. ₹100 Cr opening targeted.", color:"#D97706" },
+      { film:"Dhurandhar 2: The Revenge", week:"9 days to release", wkCollection:"—", total:"Paid previews: ₹15.91 Cr gross (₹21 Cr incl. blocks) · 2.86L tickets · 8K shows · US $1M+ weekend advance", verdict:"New Bollywood paid preview record (beats Stree 2 ₹8.75 Cr by 69%). Targeting ₹20 Cr+ previews. Could beat OG (₹21 Cr all-India record). ₹100 Cr Day 1 target. Tickets up to ₹3,100.", color:"#D97706" },
     ],
     sources: [
       { name:"Boxoffy AI Calc", note:"Pre-Toxic-postponement: ₹65–70 Cr Day 1. After Toxic pulled out Mar 4: upgraded to ₹85–90 Cr Day 1 net India. Post-trailer: ₹90–100 Cr in play.", url:"https://x.com/rohitjswl01",
@@ -4279,14 +4282,14 @@ function HeaderSnapshotCards({ activeSection }) {
 
   const CARDS = {
     "Box Office": [
-      { type:"stat",      label:"WEEK 11 · #1 FILM",    value:"Kerala Story 2",sub:"₹32.87 Cr net · Wk 2 · Plus verdict",      accent:T.green,   icon:"🏆" },
+      { type:"stat",      label:"WEEK 11 · #1 FILM",    value:"Kerala Story 2",sub:"₹27.68 Cr net · Wk 2 · Average verdict",   accent:T.green,   icon:"🏆" },
       { type:"stat",      label:"2026 YTD COMBINED",     value:"₹1,567 Cr",   sub:"Verified tracked releases · Week 11",         accent:T.blue,    icon:"📊" },
       { type:"stat",      label:"ALL-TIME RECORD",       value:"₹1,800 Cr",   sub:"Pushpa 2 · Will Ramayana break it?",         accent:T.gold,    icon:"⚡" },
       { type:"countdown", label:"NEXT BIG RELEASE",      value:daysLeft != null ? `${daysLeft}` : "—", valueSuffix:" days",
                           sub:"Dhurandhar 2 · Mar 19, 2026",                                                                     accent:T.accent,  icon:"🎬", pulse:true },
     ],
     "Weekly": [
-      { type:"stat",      label:"THIS WEEK · LEADER",    value:"Kerala Story 2",sub:"₹32.87 Cr net · Wk 2 · Plus verdict",      accent:T.green,   icon:"🏆" },
+      { type:"stat",      label:"THIS WEEK · LEADER",    value:"Kerala Story 2",sub:"₹27.68 Cr net · Wk 2 · Average verdict",   accent:T.green,   icon:"🏆" },
       { type:"stat",      label:"BIGGEST CLOSE",         value:"Border 2",     sub:"Closed · ₹481.76 Cr WW · Blockbuster",      accent:T.textMuted,icon:"🏁" },
       { type:"stat",      label:"OTT THIS WEEK",         value:"With Love",    sub:"Netflix from Mar 6 · ₹39 Cr WW · 644% ROI",accent:T.purple,  icon:"📺" },
       { type:"countdown", label:"COUNTDOWN",             value:daysLeft != null ? `${daysLeft}` : "—", valueSuffix:" days",
@@ -4313,8 +4316,216 @@ function HeaderSnapshotCards({ activeSection }) {
   );
 }
 
+/* ── NEWSLETTER POPUP ────────────────────────────────────────────────────────
+   Mailchimp embedded form. After creating your Mailchimp account:
+   1. Go to Audience → Signup Forms → Embedded Forms
+   2. Copy the form action URL (looks like: https://xxxx.us1.list-manage.com/subscribe/post?u=XXXX&id=XXXX)
+   3. Replace MAILCHIMP_ACTION_URL below with that URL
+   ─────────────────────────────────────────────────────────────────────────── */
+const MAILCHIMP_ACTION_URL = "https://boxoffy.us16.list-manage.com/subscribe/post?u=306da5d11e109c71055a97422&id=9e4b95b96f&f_id=003e1fe1f0";
+
+function NewsletterPopup({ onClose }) {
+  const [name,     setName]     = useState("");
+  const [email,    setEmail]    = useState("");
+  const [lang,     setLang]     = useState("");
+  const [status,   setStatus]   = useState("idle"); // idle | submitting | success | error
+  const [hov,      setHov]      = useState(false);
+
+  const languages = ["Hindi / Bollywood", "South Indian", "Hollywood", "All Languages"];
+
+  async function handleSubmit() {
+    if (!email || !email.includes("@")) { setStatus("error"); return; }
+    setStatus("submitting");
+    try {
+      // Mailchimp requires a JSONP workaround for direct POST from browser
+      // We use a hidden iframe trick — standard for Mailchimp embedded forms
+      const form = document.createElement("form");
+      form.method  = "POST";
+      form.action  = MAILCHIMP_ACTION_URL.replace("/post?", "/post-json?") + "&c=?";
+      form.target  = "_blank"; // opens in new tab silently, no redirect on our page
+      form.style.display = "none";
+
+      const fields = { EMAIL: email, FNAME: name, MMERGE3: lang };
+      Object.entries(fields).forEach(([k, v]) => {
+        const input = document.createElement("input");
+        input.name  = k;
+        input.value = v;
+        form.appendChild(input);
+      });
+
+      document.body.appendChild(form);
+      form.submit();
+      document.body.removeChild(form);
+      setStatus("success");
+    } catch {
+      setStatus("error");
+    }
+  }
+
+  // Trap escape key
+  useEffect(() => {
+    const handler = e => { if (e.key === "Escape") onClose(); };
+    window.addEventListener("keydown", handler);
+    return () => window.removeEventListener("keydown", handler);
+  }, [onClose]);
+
+  return (
+    <div
+      onClick={e => { if (e.target === e.currentTarget) onClose(); }}
+      style={{
+        position:"fixed", inset:0, zIndex:9999,
+        background:"rgba(13,13,13,0.72)", backdropFilter:"blur(3px)",
+        display:"flex", alignItems:"center", justifyContent:"center",
+        padding:16, animation:"fadeIn 0.2s ease both",
+      }}>
+      <div style={{
+        background:T.surface, maxWidth:440, width:"100%",
+        borderRadius:2, overflow:"hidden",
+        boxShadow:"0 24px 64px rgba(0,0,0,0.35)",
+        border:`1px solid ${T.border}`,
+        animation:"fadeIn 0.25s ease both",
+      }}>
+
+        {/* Header bar */}
+        <div style={{ background:T.text, padding:"18px 24px 14px", position:"relative" }}>
+          <div style={{ display:"flex", alignItems:"baseline", gap:0, marginBottom:4 }}>
+            <span style={{ fontFamily:"'Barlow Condensed', sans-serif", fontWeight:800, fontSize:26, color:"#fff", letterSpacing:"-0.02em" }}>BOXOF</span>
+            <span style={{ fontFamily:"'Barlow Condensed', sans-serif", fontWeight:800, fontSize:26, color:T.accent, letterSpacing:"-0.02em" }}>FY</span>
+            <span style={{ fontFamily:"'DM Sans', sans-serif", fontSize:9, color:"#999", marginLeft:10, letterSpacing:"0.18em", textTransform:"uppercase" }}>Weekly Digest</span>
+          </div>
+          <div style={{ fontFamily:"'Barlow Condensed', sans-serif", fontSize:17, color:"#E0D9CC", fontWeight:600, letterSpacing:"0.02em" }}>
+            Every Monday. Box office numbers, OTT deals, trade analysis.
+          </div>
+          <button
+            onClick={onClose}
+            style={{ position:"absolute", top:14, right:16, background:"none", border:"none", color:"#777", fontSize:18, cursor:"pointer", lineHeight:1 }}>
+            ✕
+          </button>
+        </div>
+
+        {status === "success" ? (
+          <div style={{ padding:"32px 24px", textAlign:"center" }}>
+            <div style={{ fontSize:36, marginBottom:12 }}>🎬</div>
+            <div style={{ fontFamily:"'Barlow Condensed', sans-serif", fontWeight:800, fontSize:22, color:T.text, marginBottom:8 }}>
+              You're on the list.
+            </div>
+            <div style={{ fontFamily:"'DM Sans', sans-serif", fontSize:13, color:T.textMuted, lineHeight:1.6, marginBottom:20 }}>
+              First digest lands Monday. No spam, no PR fluff — just the numbers that matter.
+            </div>
+            <button
+              onClick={onClose}
+              style={{ background:T.accent, color:"#fff", border:"none", borderRadius:2, padding:"10px 28px", fontFamily:"'DM Sans', sans-serif", fontWeight:700, fontSize:13, letterSpacing:"0.04em", cursor:"pointer" }}>
+              Back to Boxoffy
+            </button>
+          </div>
+        ) : (
+          <div style={{ padding:"20px 24px 24px" }}>
+
+            {/* Value prop */}
+            <div style={{ display:"flex", gap:16, marginBottom:20, flexWrap:"wrap" }}>
+              {["📊 Week's top collections", "🎬 Hit or Flop verdicts", "📺 OTT debut numbers"].map(item => (
+                <div key={item} style={{ fontFamily:"'DM Sans', sans-serif", fontSize:11, color:T.textMid, display:"flex", alignItems:"center", gap:4 }}>
+                  {item}
+                </div>
+              ))}
+            </div>
+
+            {/* Name */}
+            <div style={{ marginBottom:12 }}>
+              <label style={{ fontFamily:"'DM Sans', sans-serif", fontSize:11, fontWeight:600, color:T.textMid, letterSpacing:"0.06em", textTransform:"uppercase", display:"block", marginBottom:5 }}>
+                First Name
+              </label>
+              <input
+                type="text"
+                placeholder="Your name"
+                value={name}
+                onChange={e => setName(e.target.value)}
+                style={{ width:"100%", padding:"9px 12px", border:`1px solid ${T.border}`, borderRadius:2, fontFamily:"'DM Sans', sans-serif", fontSize:13, color:T.text, background:T.bg, outline:"none" }}
+              />
+            </div>
+
+            {/* Email */}
+            <div style={{ marginBottom:12 }}>
+              <label style={{ fontFamily:"'DM Sans', sans-serif", fontSize:11, fontWeight:600, color:T.textMid, letterSpacing:"0.06em", textTransform:"uppercase", display:"block", marginBottom:5 }}>
+                Email Address <span style={{ color:T.accent }}>*</span>
+              </label>
+              <input
+                type="email"
+                placeholder="you@email.com"
+                value={email}
+                onChange={e => { setEmail(e.target.value); setStatus("idle"); }}
+                style={{ width:"100%", padding:"9px 12px", border:`1px solid ${status === "error" ? T.accent : T.border}`, borderRadius:2, fontFamily:"'DM Sans', sans-serif", fontSize:13, color:T.text, background:T.bg, outline:"none" }}
+              />
+              {status === "error" && (
+                <div style={{ fontFamily:"'DM Sans', sans-serif", fontSize:11, color:T.accent, marginTop:4 }}>Please enter a valid email address.</div>
+              )}
+            </div>
+
+            {/* Language preference */}
+            <div style={{ marginBottom:20 }}>
+              <label style={{ fontFamily:"'DM Sans', sans-serif", fontSize:11, fontWeight:600, color:T.textMid, letterSpacing:"0.06em", textTransform:"uppercase", display:"block", marginBottom:8 }}>
+                I follow mostly
+              </label>
+              <div style={{ display:"flex", gap:8, flexWrap:"wrap" }}>
+                {languages.map(l => (
+                  <button
+                    key={l}
+                    onClick={() => setLang(l)}
+                    style={{
+                      padding:"6px 12px", borderRadius:2, cursor:"pointer",
+                      fontFamily:"'DM Sans', sans-serif", fontSize:11, fontWeight:600,
+                      letterSpacing:"0.03em", transition:"all 0.12s",
+                      background: lang === l ? T.text : T.bg,
+                      color:      lang === l ? "#fff"  : T.textMid,
+                      border:     lang === l ? `1px solid ${T.text}` : `1px solid ${T.border}`,
+                    }}>
+                    {l}
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            {/* Submit */}
+            <button
+              onClick={handleSubmit}
+              disabled={status === "submitting"}
+              onMouseEnter={() => setHov(true)}
+              onMouseLeave={() => setHov(false)}
+              style={{
+                width:"100%", padding:"12px", borderRadius:2, border:"none", cursor:"pointer",
+                background: hov ? T.redDark : T.accent,
+                color:"#fff", fontFamily:"'Barlow Condensed', sans-serif",
+                fontWeight:800, fontSize:17, letterSpacing:"0.06em",
+                textTransform:"uppercase", transition:"background 0.15s",
+                opacity: status === "submitting" ? 0.7 : 1,
+              }}>
+              {status === "submitting" ? "Subscribing..." : "Subscribe — It's Free"}
+            </button>
+
+            <div style={{ fontFamily:"'DM Sans', sans-serif", fontSize:10, color:T.textMuted, textAlign:"center", marginTop:10, lineHeight:1.5 }}>
+              No spam. Unsubscribe any time. Every Monday morning.
+            </div>
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}
+
 export default function App() {
-  const [activeSection, setActiveSection] = useState("Box Office");
+  const [activeSection,    setActiveSection]    = useState("Box Office");
+  const [showNewsletter,   setShowNewsletter]   = useState(false);
+  const [popupFired,       setPopupFired]       = useState(false);
+
+  // Fire popup after 30 seconds — only once per session
+  useEffect(() => {
+    if (popupFired) return;
+    const timer = setTimeout(() => {
+      setShowNewsletter(true);
+      setPopupFired(true);
+    }, 30000);
+    return () => clearTimeout(timer);
+  }, [popupFired]);
 
   const newsCategory =
     activeSection === "Bollywood" ? "Bollywood" :
@@ -4333,6 +4544,9 @@ export default function App() {
         button { cursor:pointer; }
         button:hover { filter: brightness(0.92); }
       `}</style>
+
+      {/* Newsletter Popup */}
+      {showNewsletter && <NewsletterPopup onClose={() => setShowNewsletter(false)} />}
 
       <NavBar activeSection={activeSection} setActiveSection={setActiveSection} />
 
