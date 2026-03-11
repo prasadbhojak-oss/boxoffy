@@ -601,9 +601,18 @@ const US_BO_WEEKLY = {
 ─────────────────────────────────────────────────────────────── */
 const EDITORIALS = [
   {
+    tag: "DEEP DIVE",
+    headline: "Bollywood Box Office Explained — How Producers, Distributors & Exhibitors Share Your Ticket Money",
+    dek: "Who keeps your ₹300 PVR ticket? The complete guide to how Indian cinema's money chain works — from the producer's budget to PVR vs Raj Mandir revenue splits, the MG model, and why Week 1 changes everything.",
+    author: "The Boxoffy Team",
+    date: "Mar 10, 2026",
+    readTime: "15 min read",
+    url: "india-boxoffice-how-it-works.html",
+  },
+  {
     tag: "ADVANCE BOOKING",
-    headline: "₹20 Crore and Counting — The Trade Is Out of Words",
-    dek: "2.06 lakh tickets. ₹12.29 Cr premiere gross. $1.7M US weekend. BOI calls it remarkable. Boxoffy tracks every number.",
+    headline: "Dhurandhar 2 The Revenge Advance Booking — ₹21 Crore and the Trade Is Out of Words",
+    dek: "2.86 lakh tickets. ₹15.91 Cr paid preview gross. US near $2M. BOI: '₹30 Cr+ nett easily done.' Boxoffy tracks every number for Dhurandhar: The Revenge.",
     author: "The Boxoffy Team",
     date: "Mar 9, 2026",
     readTime: "2 min read",
@@ -611,8 +620,8 @@ const EDITORIALS = [
   },
   {
     tag: "ANALYSIS",
-    headline: "Ladies and Gentlemen, You Are STILL Not Ready For This",
-    dek: "₹80–100 Cr Day 1. 5 languages. The biggest commercial bet Indian cinema has made since Pushpa 2. Boxoffy's full pre-release breakdown.",
+    headline: "Dhurandhar 2 The Revenge Pre-Release Analysis — Ladies and Gentlemen, You Are STILL Not Ready",
+    dek: "₹80–100 Cr Day 1. 5 languages. Ranveer Singh. The biggest commercial bet Indian cinema has made since Pushpa 2. Boxoffy's full Dhurandhar: The Revenge pre-release breakdown.",
     author: "The Boxoffy Team",
     date: "Mar 8, 2026",
     readTime: "6 min read",
@@ -637,9 +646,13 @@ const YEAR_NOTES = {
 // url: null = Boxoffy original (opens in-page modal), string = opens external source in new tab
 const ARTICLES = {
   Bollywood: [
+    { tag:"Deep Dive", time:"Now", hot:true, source:"Boxoffy",
+      url:"india-boxoffice-how-it-works.html",
+      headline:"Bollywood Box Office Explained — How Producers, Distributors & Exhibitors Share Your Ticket Money",
+      summary:"Who keeps your ₹300 ticket? The complete breakdown of producers, distributors and exhibitors — PVR vs Raj Mandir, the Minimum Guarantee model, the weekly share shift, and what a film actually needs to break even. Boxoffy's definitive industry explainer." },
     { tag:"Advance Booking", time:"Now", hot:true, source:"Boxoffy",
       url:"dhurandhar2-advance-article.html",
-      headline:"₹21 Crore and Rising — Dhurandhar 2 Rewrites the Rulebook on Paid Previews",
+      headline:"Dhurandhar 2 The Revenge Advance Booking — ₹21 Crore and the Trade Is Out of Words",
       summary:"Boxoffy's deep-dive: ₹15.91 Cr gross paid previews (excl. blocks) / ₹21 Cr with blocks · 2.86L+ tickets · 8K+ shows. BOI: '₹30 Cr+ nett easily done.' Beats Stree 2 by 69%. US near $2M total NA advance. Tickets up to ₹3,100 in Mumbai. 9 days to go." },
     { tag:"Week 11", time:"Now", hot:true, source:"Box Office India",
       url:"https://www.boxofficeindia.com/",
@@ -662,7 +675,7 @@ const ARTICLES = {
       headline:"Border 2 Final: ₹424 Cr India Net / ₹481.76 Cr WW — Biggest Hindi Film of 2026",
       summary:"Sunny Deol, Varun Dhawan, Diljit Dosanjh. Week 1: ₹224.25 Cr · Week 2: ₹70.15 Cr · Week 3: ₹23.35 Cr. Budget ₹275 Cr. Verdict: Blockbuster. Border 3 officially confirmed by producers." },
     { tag:"Analysis", time:"2d ago", hot:false, source:null, url:"dhurandhar2-editorial.html",
-      headline:"Boxoffy Pre-Release Analysis: Why You Are Still Not Ready For Dhurandhar 2",
+      headline:"Dhurandhar 2 The Revenge Pre-Release Analysis — Ladies and Gentlemen, You Are STILL Not Ready",
       summary:"Our 6-minute deep dive into why this is the biggest commercial bet Indian cinema has made since Pushpa 2. Every data point, every analyst call, every advance booking record — in one place." },
   ],
   OTT: [
