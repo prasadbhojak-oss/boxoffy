@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build && node -e \"const fs=require('fs');fs.readdirSync('public').forEach(f=>fs.copyFileSync('public/'+f,'dist/'+f))\"",
+    "build": "vite build && node copy-public.cjs",
     "preview": "vite preview"
   },
   "dependencies": {
