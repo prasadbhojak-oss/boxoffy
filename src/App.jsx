@@ -4337,12 +4337,22 @@ function NewsletterPopup({ onClose }) {
     if (!email || !email.includes("@")) { setStatus("error"); return; }
     setStatus("submitting");
     try {
-      // Mailchimp requires a JSONP workaround for direct POST from browser
-      // We use a hidden iframe trick — standard for Mailchimp embedded forms
+      // Use a hidden iframe as the form target so Mailchimp's JSON response
+      // is swallowed silently — never shown to the user or opened in a new tab
+      const iframeId = "mc-hidden-iframe";
+      let iframe = document.getElementById(iframeId);
+      if (!iframe) {
+        iframe = document.createElement("iframe");
+        iframe.id = iframeId;
+        iframe.name = iframeId;
+        iframe.style.display = "none";
+        document.body.appendChild(iframe);
+      }
+
       const form = document.createElement("form");
       form.method  = "POST";
-      form.action  = MAILCHIMP_ACTION_URL.replace("/post?", "/post-json?") + "&c=?";
-      form.target  = "_blank"; // opens in new tab silently, no redirect on our page
+      form.action  = MAILCHIMP_ACTION_URL;
+      form.target  = iframeId; // POST into hidden iframe — response never shown
       form.style.display = "none";
 
       const fields = { EMAIL: email, FNAME: name, MMERGE3: lang };
