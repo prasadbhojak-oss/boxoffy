@@ -3202,7 +3202,7 @@ function ForeignFilmsPanel({ movies }) {
   );
 }
 
-function BoxOfficeSection() {
+function BoxOfficeSection({ onNavigate }) {
   const [year, setYear] = useState(2026);
   const [filter, setFilter] = useState("All");
   const [sortBy, setSortBy] = useState("collection");
@@ -3319,7 +3319,7 @@ function BoxOfficeSection() {
     <div>
       {/* ── FROM THE DESK — stacked editorial articles ──────────── */}
       {year === 2026 && showWeekly && (
-        <EditorialSection onNavigate={setActiveSection} />
+        <EditorialSection onNavigate={onNavigate} />
       )}
 
       {/* ── WEEKLY HEADLINE BANNER ──────────────────────────────────── */}
@@ -4458,7 +4458,7 @@ export default function App() {
 
       {/* Content */}
       <div style={{ maxWidth:1160, margin:"0 auto", background:T.surface, boxShadow:"0 0 0 1px #E2E5EA", animation:"fadeIn 0.3s ease both" }}>
-        {activeSection === "Box Office" && <BoxOfficeSection />}
+        {activeSection === "Box Office" && <BoxOfficeSection onNavigate={setActiveSection} />}
         {activeSection === "Weekly" && <WeeklyCommentarySection />}
         {newsCategory && <NewsSection category={newsCategory} />}
       </div>
