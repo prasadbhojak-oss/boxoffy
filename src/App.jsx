@@ -290,9 +290,9 @@ const DATA = {
       ott:{ platform:"ZEE5", debutViews:"N/A", debutHours:"N/A", lifetimeViews:"N/A", lifetimeHours:"N/A", globalRank:"N/A", countries:3, rightsDeal:"₹30 Cr", ottNote:"ZEE5 — viewership data not publicly disclosed" }},
   ],
   2025: [
-    { title:"Dhurandhar", language:"Hindi", director:"Aditya Dhar", releaseDate:"Dec 2025", totalCollection:"1,303 Cr", totalNum:1303, indiaNet:"895 Cr", overseas:"299 Cr", weeksInTop10:10, status:"OTT", budget:"~250 Cr", verdict:"All-Time Blockbuster", note:"Highest-grossing Hindi film of all time · Jio Studios & B62 Studios · Music: Shashwat Sachdev", pageUrl:"dhurandhar-box-office.html",
-      ott:{ platform:"Netflix", debutViews:"7.6M (3 days) → 15.8M (10 days)", debutHours:"21.6M hrs (Wk1) · 28.1M hrs (Wk2)", lifetimeViews:"~16M+ (2 weeks)", lifetimeHours:"~50M hrs (10 days)", globalRank:"#1 Non-English (2 weeks)", countries:22, rightsDeal:"₹85 Cr (Part 1)", ottNote:"Biggest Indian post-theatrical OTT debut ever · Beat Animal's 6.2M record · #1 in India, Pakistan, UAE, Qatar, Oman, Bahrain, Mauritius" }},
-    { title:"Chhaava", language:"Hindi", director:"Laxman Utekar", releaseDate:"Feb 2025", totalCollection:"700 Cr", totalNum:700, indiaNet:"550 Cr", overseas:"150 Cr", weeksInTop10:10, status:"OTT", budget:"130 Cr", verdict:"All-Time Blockbuster",
+    { title:"Dhurandhar", language:"Hindi", director:"Aditya Dhar", releaseDate:"Dec 2025", totalCollection:"1,305.35 Cr", totalNum:1305.35, indiaNet:"838.5 Cr", overseas:"299.5 Cr", weeksInTop10:11, status:"OTT", budget:"300 Cr", verdict:"All-Time Blockbuster", note:"Highest-grossing Hindi film of all time. Day 100 on Mar 13 2026. Re-releasing 1000 screens globally.",
+      ott:{ platform:"Netflix", ottDate:"Jan 30, 2026", debutViews:"7.6M (Wk1) / 8.2M (Wk2) / 23M (6 wks total)", debutHours:"21.6M hrs (Wk1) / 28.1M hrs (Wk2) / 70.6M hrs total", lifetimeViews:"23M (6 weeks)", lifetimeHours:"70.6M+ hours", globalRank:"#1 Non-English Wk1 & Wk2", countries:22, rightsDeal:"₹285 Cr", ottNote:"Most-watched Indian film on Netflix ever. Beat Animal 6.2M Wk1 record. 22 countries peak. Still trending Top 10 India Wk6. D1 OTT deal: ₹285 Cr (not ₹175 Cr — updated per Sacnilk). GCC ban applies: no UAE/Qatar/Oman/Bahrain/Saudi data." }},
+    { title:"Chhaava", language:"Hindi", director:"Laxman Utekar", releaseDate:"Feb 2025", totalCollection:"₹807.91 Cr", totalNum:807.91, indiaNet:"601.54 Cr", overseas:"91 Cr", weeksInTop10:10, status:"OTT", budget:"150 Cr", verdict:"Blockbuster",
       ott:{ platform:"Netflix", debutViews:"2.2M (Wk1)", debutHours:"5.9M hrs", lifetimeViews:"~5.5M (2 weeks)", lifetimeHours:"~15M hrs", globalRank:"#4 Non-English (peak)", countries:11, rightsDeal:"₹100 Cr", ottNote:"Low debut attributed to massive theatrical run fatigue; bounced 50% in Wk2 · #1 in India & Pakistan" }},
     { title:"Housefull 5", language:"Hindi", director:"Tarun Mansukhani", releaseDate:"Jun 2025", totalCollection:"235 Cr", totalNum:235, indiaNet:"205 Cr", overseas:"30 Cr", weeksInTop10:5, status:"OTT", budget:"170 Cr", verdict:"Blockbuster",
       ott:{ platform:"Netflix", debutViews:"N/A", debutHours:"N/A", lifetimeViews:"N/A", lifetimeHours:"N/A", globalRank:"Top 10 India (peak)", countries:5, rightsDeal:"₹75 Cr", ottNote:"Netflix — viewership data not publicly disclosed" }},
@@ -316,17 +316,17 @@ const DATA = {
   ],
   2026: [
     // ── ACTIVE IN CINEMAS THIS WEEK (ranked by this week's collection) ──
-    { title:"Border 2",             language:"Hindi",   director:"Anurag Singh",      releaseDate:"Jan 23, 2026", totalCollection:"481.76 Cr",totalNum:481.76,indiaNet:"424 Cr", overseas:"57.76 Cr",weeksInTop10:7, status:"Closed",  budget:"275 Cr", verdict:"Blockbuster",
-      weeklyCollection:0, weekNum:7, daysInRelease:45, lastWeekRank:1, weeklyNote:"FINAL: ₹424 Cr India net / ₹481.76 Cr WW. Biggest Hindi film of 2026. Week 1: ₹224.25 Cr · Week 2: ₹70.15 Cr · Week 3: ₹23.35 Cr. Border 3 confirmed. OTT deal pending.", wkTrend:"down",
-      ott:{ platform:"TBD (Prime/Netflix expected)", debutViews:"TBD", debutHours:"TBD", lifetimeViews:"TBD", lifetimeHours:"TBD", globalRank:"TBD", countries:0, rightsDeal:"~₹120 Cr (est.)", ottNote:"Theatrical wind-down. OTT premiere expected Mar/Apr 2026." }},
-    { title:"O'Romeo",              language:"Hindi",   director:"Vishal Bhardwaj",   releaseDate:"Feb 13, 2026", totalCollection:"80.73 Cr",totalNum:80.73,indiaNet:"68.20 Cr",overseas:"12.53 Cr",weeksInTop10:3, status:"Closed",  budget:"130 Cr", verdict:"Flop",
-      weeklyCollection:0, weekNum:4, daysInRelease:25, lastWeekRank:2, weeklyNote:"FINAL: ₹68.20 Cr net / ₹80.73 Cr WW. Confirmed Flop vs ₹130 Cr budget. Amazon Prime Video OTT deal confirmed — premiere expected Apr 2026.", wkTrend:"down",
-      ott:{ platform:"TBD (Prime/Netflix expected)", debutViews:"TBD", debutHours:"TBD", lifetimeViews:"TBD", lifetimeHours:"TBD", globalRank:"TBD", countries:0, rightsDeal:"~₹50 Cr (est.)", ottNote:"Expected on Netflix around April 2026 after theatrical wind-down" }},
-    { title:"Mardaani 3",           language:"Hindi",   director:"Abhiraj Minawala",  releaseDate:"Jan 30, 2026", totalCollection:"62 Cr",   totalNum:62,   indiaNet:"50.57 Cr", overseas:"9 Cr",    weeksInTop10:5, status:"OTT",     budget:"60 Cr",  verdict:"Below Average",
-      weeklyCollection:1, weekNum:6, daysInRelease:37, lastWeekRank:3, weeklyNote:"Day 37: ₹50.57 Cr net. Wk 5: ₹1.2 Cr. Targeting ₹50 Cr net finish. Netflix OTT rights confirmed. Final screens.", wkTrend:"down",
-      ott:{ platform:"Netflix (expected Apr 2026)", debutViews:"TBD", debutHours:"TBD", lifetimeViews:"TBD", lifetimeHours:"TBD", globalRank:"TBD", countries:0, rightsDeal:"~₹30 Cr (est.)", ottNote:"YRF franchise — Netflix deal likely; OTT premiere expected Apr 2026" }},
-    { title:"Assi",                 language:"Hindi",   director:"Anubhav Sinha",     releaseDate:"Feb 20, 2026", totalCollection:"11.5 Cr",  totalNum:11.5, indiaNet:"9.8 Cr",    overseas:"1 Cr",    weeksInTop10:0, status:"Closed", budget:"40 Cr",  verdict:"Flop",
-      weeklyCollection:0, weekNum:3, daysInRelease:17, lastWeekRank:5, weeklyNote:"FINAL: ₹9.8 Cr net / ₹11.5 Cr WW. Confirmed Flop vs ₹40 Cr budget. Taapsee Pannu courtroom drama. Theatrical run over.", wkTrend:"down",
+    { title:"Border 2",             language:"Hindi",   director:"Anurag Singh",      releaseDate:"Jan 23, 2026", totalCollection:"481.76 Cr",totalNum:481.76,indiaNet:"424 Cr", overseas:"57.71 Cr",weeksInTop10:7, status:"OTT",     budget:"275 Cr", verdict:"Super Hit",
+      weeklyCollection:0, weekNum:8, daysInRelease:51, lastWeekRank:1, weeklyNote:"CLOSED. Final: ₹424 Cr India net / ₹481.76 Cr WW. OTT: Netflix Mar 20, 2026 — same day as Dhurandhar 2 release. Budget ₹275 Cr. ROI ~114%. Border 3 confirmed by makers.", wkTrend:"closed",
+      ott:{ platform:"Netflix", ottDate:"Mar 20, 2026", debutViews:"TBD", debutHours:"TBD", lifetimeViews:"TBD", lifetimeHours:"TBD", globalRank:"TBD", countries:0, rightsDeal:"₹225 Cr (confirmed)", ottNote:"Netflix confirmed Mar 20 2026. Premieres same day as Dhurandhar 2 theatrical release. Non-theatrical total ₹495 Cr." }},
+    { title:"O'Romeo",              language:"Hindi",   director:"Vishal Bhardwaj",   releaseDate:"Feb 13, 2026", totalCollection:"~₹110 Cr",totalNum:110,indiaNet:"80.90 Cr",overseas:"~₹29 Cr",weeksInTop10:3, status:"OTT",     budget:"150 Cr", verdict:"Flop",
+      weeklyCollection:0, weekNum:5, daysInRelease:29, lastWeekRank:2, weeklyNote:"CLOSED. Final: ~₹80.9 Cr India net / ~₹110 Cr WW. Budget ₹150 Cr. Recovered ~54% of cost. Confirmed Flop. Shahid Kapoor + Vishal Bhardwaj 4th collab — their highest India gross but still a loss. OTT: Amazon Prime Video.", wkTrend:"closed",
+      ott:{ platform:"Amazon Prime Video", debutViews:"TBD", debutHours:"TBD", lifetimeViews:"TBD", lifetimeHours:"TBD", globalRank:"TBD", countries:0, rightsDeal:"~₹50 Cr (est.)", ottNote:"Amazon Prime Video confirmed. Wikipedia article confirms post-theatrical rights to Prime. Expected April 2026." }},
+    { title:"Mardaani 3",           language:"Hindi",   director:"Abhiraj Minawala",  releaseDate:"Jan 30, 2026", totalCollection:"₹75.10 Cr",totalNum:75.10,indiaNet:"50.78 Cr", overseas:"9 Cr",    weeksInTop10:6, status:"OTT",     budget:"65 Cr",  verdict:"Flop",
+      weeklyCollection:0, weekNum:7, daysInRelease:44, lastWeekRank:3, weeklyNote:"CLOSED. Final: ₹50.78 Cr India net / ₹75.10 Cr WW. Budget ₹65 Cr. Flop verdict (hat-trick of failures for Rani Mukerji franchise per Koimoi). OTT: Amazon Prime Video ~Mar 27.", wkTrend:"closed",
+      ott:{ platform:"Amazon Prime Video", ottDate:"~Mar 27, 2026", debutViews:"TBD", debutHours:"TBD", lifetimeViews:"TBD", lifetimeHours:"TBD", globalRank:"TBD", countries:0, rightsDeal:"~₹30 Cr (est.)", ottNote:"Amazon Prime Video. Expected ~Mar 27 2026. YRF franchise — Netflix deal likely; OTT premiere expected Mar/Apr 2026" }},
+    { title:"Assi",                 language:"Hindi",   director:"Anubhav Sinha",     releaseDate:"Feb 20, 2026", totalCollection:"11.5 Cr",  totalNum:11.5, indiaNet:"9.8 Cr",    overseas:"1 Cr",    weeksInTop10:0, status:"Closing", budget:"40 Cr",  verdict:"Flop",
+      weeklyCollection:0, weekNum:3, daysInRelease:16, lastWeekRank:5, weeklyNote:"Wk 3 trickle. Total ~₹9.5 Cr net. Taapsee courtroom drama — no WOM. Budget ₹40 Cr, confirmed Flop. Closing.", wkTrend:"down",
       ott:{ platform:"ZEE5 (expected)", debutViews:"TBD", debutHours:"TBD", lifetimeViews:"TBD", lifetimeHours:"TBD", globalRank:"TBD", countries:0, rightsDeal:"~₹10 Cr (est.)", ottNote:"Social drama — likely ZEE5 or Netflix; OTT in 3–4 weeks" }},
     { title:"Do Deewane Sehar Mein",language:"Hindi",   director:"Ravi Udyawar",      releaseDate:"Feb 20, 2026", totalCollection:"9 Cr",    totalNum:9,    indiaNet:"7 Cr",    overseas:"2 Cr",    weeksInTop10:0, status:"Closed",  budget:"50 Cr",  verdict:"Flop",
       weeklyCollection:0, weekNum:3, daysInRelease:15, lastWeekRank:6, weeklyNote:"Closed. ₹7 Cr net / ₹9 Cr WW. Bhansali production but poor run — budget ₹50 Cr, confirmed Flop.", wkTrend:"down",
@@ -334,13 +334,13 @@ const DATA = {
     { title:"Tu Yaa Main",          language:"Hindi",   director:"Bejoy Nambiar",     releaseDate:"Feb 13, 2026", totalCollection:"8 Cr",    totalNum:8,    indiaNet:"6.4 Cr",  overseas:"0.8 Cr",  weeksInTop10:0, status:"Closed",  budget:"40 Cr",  verdict:"Disaster",
       weeklyCollection:0, weekNum:3, daysInRelease:21, lastWeekRank:7, weeklyNote:"Closed. ₹6.4 Cr net. Shanaya Kapoor debut — worst major-studio launch of 2026.", wkTrend:"down",
       ott:{ platform:"TBD (Prime/Netflix expected)", debutViews:"TBD", debutHours:"TBD", lifetimeViews:"TBD", lifetimeHours:"TBD", globalRank:"TBD", countries:0, rightsDeal:"~₹8 Cr (est.)", ottNote:"Expected OTT in 2–3 weeks given theatrical disaster" }},
-    { title:"The Kerala Story 2: Goes Beyond", language:"Hindi", director:"Kamakhya Narayan Singh", releaseDate:"Feb 27, 2026", totalCollection:"41.10 Cr", totalNum:41.1, indiaNet:"34.85 Cr",  overseas:"6.25 Cr",   weeksInTop10:2, status:"Running",  budget:"28 Cr",  verdict:"Average",
-      weeklyCollection:11.95, weekNum:2, daysInRelease:12, lastWeekRank:1, weeklyNote:"Day 12: ₹34.85 Cr net / ₹41.10 Cr WW (Sacnilk). Wk1: ₹22.90 Cr · Wk2 so far: ₹11.95 Cr. BOI verdict: AVERAGE. Budget ₹28 Cr recovered. Projected finish ~₹40–42 Cr net. 9 days remaining before Dhurandhar 2 (Mar 19).", wkTrend:"stable",
+    { title:"The Kerala Story 2: Goes Beyond", language:"Hindi", director:"Kamakhya Narayan Singh", releaseDate:"Feb 27, 2026", totalCollection:"~₹46 Cr", totalNum:46, indiaNet:"~39 Cr",      overseas:"~₹1.93 Cr", weeksInTop10:3, status:"Running",  budget:"28 Cr",  verdict:"Average",
+      weeklyCollection:2, weekNum:3, daysInRelease:15, lastWeekRank:2, weeklyNote:"Day 14: ~₹39 Cr net / ~₹46 Cr WW. Budget recovered, slim profit. Day 1 legal issues hurt opening badly. Closing before Dhurandar 2 on Mar 19. OTT platform TBD. Plus/Average verdict — borderline hit.andhar 2. Hit (₹56 Cr) is unlikely. net — clean 2-week window before Dhurandhar 2.", wkTrend:"new",
       ott:{ platform:"ZEE5 (expected)", debutViews:"TBD", debutHours:"TBD", lifetimeViews:"TBD", lifetimeHours:"TBD", globalRank:"TBD", countries:0, rightsDeal:"~₹8 Cr (est.)", ottNote:"Controversial sequel — released Feb 27 after HC lifted stay. Tracking towards profit on low budget." }},
     // ── CLOSED / OTT ──
-    { title:"Dhurandhar",           language:"Hindi",   director:"Aditya Dhar",       releaseDate:"Dec 5, 2025",  totalCollection:"1,303 Cr", totalNum:1303, indiaNet:"895 Cr",  overseas:"299 Cr",  weeksInTop10:12, status:"OTT",    budget:"~250 Cr", verdict:"All-Time Blockbuster", note:"₹895 Cr India net · WW #1 Hindi film ever · 59 days on BMS trending · Jio Studios & B62 Studios", pageUrl:"dhurandhar-box-office.html",
+    { title:"Dhurandhar",           language:"Hindi",   director:"Aditya Dhar",       releaseDate:"Dec 5, 2025",  totalCollection:"1,355 Cr", totalNum:1355, indiaNet:"838.5 Cr",  overseas:"299 Cr",  weeksInTop10:12, status:"OTT",    budget:"225 Cr", verdict:"All-Time Blockbuster", note:"₹893 Cr India net · WW #1 Hindi film ever · 59 days on BMS trending",
       weeklyCollection:0, weekNum:12, daysInRelease:78, lastWeekRank:null, weeklyNote:"Theatrical run concluded. On Netflix. Biggest Hindi film ever.",
-      ott:{ platform:"Netflix", debutViews:"7.6M (3 days) → 15.8M (10 days)", debutHours:"21.6M hrs (Wk1) · 28.1M hrs (Wk2)", lifetimeViews:"~16M+", lifetimeHours:"~50M hrs", globalRank:"#1 Non-English (2 weeks)", countries:22, rightsDeal:"₹85 Cr (Part 1)", ottNote:"Biggest Indian post-theatrical OTT debut ever · #1 India, Pakistan, UAE, Qatar, Oman, Bahrain, Mauritius" }},
+      ott:{ platform:"Netflix", debutViews:"7.6M (3 days) → 15.8M (10 days)", debutHours:"21.6M hrs (Wk1) · 28.1M hrs (Wk2)", lifetimeViews:"~16M+", lifetimeHours:"~50M hrs", globalRank:"#1 Non-English (2 weeks)", countries:22, rightsDeal:"₹175 Cr", ottNote:"Biggest Indian post-theatrical OTT debut ever · #1 India, Pakistan, UAE, Qatar, Oman, Bahrain, Mauritius" }},
     { title:"MSVP (Mana ShankaraVaraprasad Garu)", language:"Telugu", director:"Anil Ravipudi", releaseDate:"Jan 23, 2026", totalCollection:"438 Cr", totalNum:438, indiaNet:"320 Cr", overseas:"56 Cr", weeksInTop10:4, status:"OTT", budget:"275 Cr", verdict:"Blockbuster", note:"Chiranjeevi & Nayanthara — now on OTT",
       weeklyCollection:0, weekNum:4, daysInRelease:29, lastWeekRank:null, weeklyNote:"Concluded theatrical run. On OTT.",
       ott:{ platform:"TBD (Prime/Netflix expected)", debutViews:"TBD", debutHours:"TBD", lifetimeViews:"TBD", lifetimeHours:"TBD", globalRank:"TBD", countries:0, rightsDeal:"~₹100 Cr (est.)", ottNote:"OTT premiere expected" }},
@@ -359,7 +359,28 @@ const DATA = {
     { title:"Vadh 2",               language:"Hindi",   director:"Rajkumar Gupta",    releaseDate:"Feb 7, 2026",  totalCollection:"6 Cr",    totalNum:6,    indiaNet:"5 Cr",    overseas:"0.5 Cr",  weeksInTop10:0, status:"OTT",    budget:"30 Cr",  verdict:"Disaster",
       weeklyCollection:0, weekNum:1, daysInRelease:14, lastWeekRank:null, weeklyNote:"Closed already. Opened ₹0.5 Cr Day 1. Franchise goodwill exhausted.",
       ott:{ platform:"ZEE5 (expected)", debutViews:"TBD", debutHours:"TBD", lifetimeViews:"TBD", lifetimeHours:"TBD", globalRank:"TBD", countries:0, rightsDeal:"~₹5 Cr (est.)", ottNote:"Expected on ZEE5 in 4–6 weeks" }},
-    // ── REGIONAL: TELUGU (Tollywood) — unique entries only ──
+    // ── REGIONAL: TELUGU (Tollywood) ──
+    { title:"Mana ShankaraVaraprasad Garu", language:"Telugu", director:"Anil Ravipudi", releaseDate:"Jan 12, 2026",
+      totalCollection:"300 Cr", totalNum:300, indiaNet:"215 Cr", overseas:"43 Cr", weeksInTop10:5,
+      status:"OTT", budget:"180 Cr", verdict:"Blockbuster",
+      note:"Sankranthi winner. Chiranjeevi + Nayanthara. ₹215 Cr India net. WW ₹300 Cr. On Zee5.",
+      weeklyCollection:0, weekNum:6, daysInRelease:40, lastWeekRank:null,
+      weeklyNote:"Theatrical closed. Final: ₹215 Cr India net · ₹300 Cr WW. Chiranjeevi's biggest Telugu hit. Streamed on Zee5 from Feb 11.",
+      ott:{ platform:"Zee5", debutViews:"N/A", debutHours:"N/A", lifetimeViews:"N/A", lifetimeHours:"N/A", globalRank:"#1 Zee5 Telugu (launch week)", countries:8, rightsDeal:"Record Zee5 deal (undisclosed)", ottNote:"Zee5 India — record deal for Telugu film. Dubbed in Hindi, Tamil, Kannada, Malayalam. Industry Hit verdict." }},
+    { title:"The Raja Saab", language:"Telugu", director:"Maruthi Dasari", releaseDate:"Jan 9, 2026",
+      totalCollection:"208 Cr", totalNum:208, indiaNet:"146 Cr", overseas:"34 Cr", weeksInTop10:4,
+      status:"OTT", budget:"400 Cr", verdict:"Disaster",
+      note:"Prabhas horror comedy. ₹400 Cr budget, ₹208 Cr WW. DISASTER — biggest 2026 Telugu flop.",
+      weeklyCollection:0, weekNum:6, daysInRelease:43, lastWeekRank:null,
+      weeklyNote:"Closed. ₹146 Cr India net on ₹400 Cr budget = massive disaster. Prabhas' lowest since Adipurush.",
+      ott:{ platform:"JioHotstar", debutViews:"N/A", debutHours:"N/A", lifetimeViews:"N/A", lifetimeHours:"N/A", globalRank:"Top 5 Hotstar Telugu (launch)", countries:6, rightsDeal:"₹160 Cr (pre-sold)", ottNote:"JioHotstar India — rights sold pre-release at ₹160 Cr, streaming from Feb 6. Despite poor theatrical run, OTT deal protected producers." }},
+    { title:"Anaganaga Oka Raju", language:"Telugu", director:"Maari", releaseDate:"Jan 14, 2026",
+      totalCollection:"82 Cr", totalNum:82, indiaNet:"34 Cr", overseas:"20 Cr", weeksInTop10:3,
+      status:"OTT", budget:"20 Cr", verdict:"Blockbuster",
+      note:"Naveen Polishetty comedy. ₹20 Cr budget, ₹82 Cr WW. ROI Blockbuster.",
+      weeklyCollection:0, weekNum:5, daysInRelease:38, lastWeekRank:null,
+      weeklyNote:"Closed theatrical. On Netflix from Feb 11. ₹34 Cr India net on ₹20 Cr budget — excellent ROI.",
+      ott:{ platform:"Netflix", debutViews:"N/A", debutHours:"N/A", lifetimeViews:"N/A", lifetimeHours:"N/A", globalRank:"Top 5 Netflix Telugu", countries:5, rightsDeal:"₹19 Cr", ottNote:"Netflix India South — acquired for ₹19 Cr. Naveen Polishetty's most profitable film per rupee invested." }},
     { title:"Nari Nari Naduma Murari", language:"Telugu", director:"Ram Abbaraju", releaseDate:"Jan 14, 2026",
       totalCollection:"64 Cr", totalNum:64, indiaNet:"26 Cr", overseas:"20 Cr", weeksInTop10:3,
       status:"OTT", budget:"50 Cr", verdict:"Hit",
@@ -367,13 +388,6 @@ const DATA = {
       weeklyCollection:0, weekNum:5, daysInRelease:38, lastWeekRank:null,
       weeklyNote:"Theatrical closed. ₹64 Cr WW on ₹50 Cr budget. Sharwanand comeback hit. On Prime Video.",
       ott:{ platform:"Amazon Prime Video", debutViews:"N/A", debutHours:"N/A", lifetimeViews:"N/A", lifetimeHours:"N/A", globalRank:"Top 5 Prime Telugu", countries:4, rightsDeal:"~₹18 Cr (est.)", ottNote:"Prime Video India South — Sharwanand–Samyuktha Menon rom-com. Strong family audiences." }},
-    { title:"Funky", language:"Telugu", director:"Vamshi Paidipally", releaseDate:"Feb 13, 2026",
-      totalCollection:"16 Cr", totalNum:16, indiaNet:"12 Cr", overseas:"4 Cr", weeksInTop10:1,
-      status:"Closed", budget:"40 Cr", verdict:"Flop",
-      note:"₹12 Cr India net. Confirmed Flop on ₹40 Cr budget.",
-      weeklyCollection:0, weekNum:4, daysInRelease:25, lastWeekRank:null,
-      weeklyNote:"FINAL: ₹12 Cr India net / ₹16 Cr WW. Confirmed Flop vs ₹40 Cr budget. Now on Netflix from Mar 13, 2026 (Telugu, Tamil, Kannada, Malayalam, Hindi).",
-      ott:{ platform:"Netflix", debutViews:"TBD", debutHours:"TBD", lifetimeViews:"TBD", lifetimeHours:"TBD", globalRank:"TBD", countries:3, rightsDeal:"~₹5 Cr (est.)", ottNote:"Netflix India from Mar 13, 2026. Telugu + multilingual streaming. Poor theatrical debut; OTT the only viable revenue window." }},
 
     // ── REGIONAL: TAMIL (Kollywood) ──
     { title:"Parasakthi", language:"Tamil", director:"Sudha Kongara", releaseDate:"Jan 10, 2026",
@@ -382,20 +396,24 @@ const DATA = {
       note:"Sivakarthikeyan political drama. ₹87 Cr WW on ₹200 Cr budget. Underperformer.",
       weeklyCollection:0, weekNum:6, daysInRelease:42, lastWeekRank:null,
       weeklyNote:"Closed. Final ₹87 Cr WW on ₹200 Cr budget — FLOP. Strong critical reception but mass audiences didn't connect. On Zee5.",
-      ott:{ platform:"Zee5", debutViews:"N/A", debutHours:"N/A", lifetimeViews:"N/A", lifetimeHours:"N/A", globalRank:"Top 5 Zee5 Tamil", countries:5, rightsDeal:"~₹30 Cr (est.)", ottNote:"Zee5 India — Sudha Kongara political drama. Streamed from Feb 7." }},
+      ott:{ platform:"Zee5", debutViews:"N/A", debutHours:"N/A", lifetimeViews:"N/A", lifetimeHours:"N/A", globalRank:"Top 5 Zee5 Tamil", countries:5, rightsDeal:"~₹30 Cr (est.)", ottNote:"Zee5 India — Sudha Kongara period drama. Streamed from Feb 7. Tamil Nadu political controversy added buzz on OTT." }},
     { title:"With Love", language:"Tamil", director:"Madhan", releaseDate:"Feb 6, 2026",
       totalCollection:"39 Cr", totalNum:39, indiaNet:"30 Cr", overseas:"3.5 Cr", weeksInTop10:4,
       status:"OTT", budget:"4 Cr", verdict:"Blockbuster",
-      note:"Abishan Jeevinth & Anaswara Rajan. ₹30 Cr India net on ₹4 Cr budget = 644% ROI. On Netflix from Mar 6.",
-      weeklyCollection:0, weekNum:4, daysInRelease:32, lastWeekRank:2,
-      weeklyNote:"FINAL: ₹30 Cr India net / ₹39 Cr WW on ₹4 Cr budget. Blockbuster ROI. Now streaming on Netflix (from Mar 6, 2026) in Hindi, Telugu, Tamil, Malayalam, Kannada.",
-      ott:{ platform:"Netflix", debutViews:"TBD", debutHours:"TBD", lifetimeViews:"TBD", lifetimeHours:"TBD", globalRank:"TBD", countries:2, rightsDeal:"~₹8 Cr (est.)", ottNote:"Netflix India South — Tamil romantic drama. Strong Kerala + TN collections." }},
-    { title:"Thaai Kizhavi", language:"Tamil", director:"Sivakumar Murugesan", releaseDate:"Feb 27, 2026",
-      totalCollection:"54.72 Cr", totalNum:54.72, indiaNet:"37.90 Cr", overseas:"9.30 Cr", weeksInTop10:2,
-      status:"Running", budget:"9 Cr", verdict:"Super Hit",
-      weeklyCollection:14.65, weekNum:2, daysInRelease:12, lastWeekRank:null,
-      weeklyNote:"Day 12: ₹37.90 Cr India net / ₹43.42 Cr gross / ₹54.72 Cr WW (Sacnilk/News9). Wk1: ₹23.25 Cr · Wk2 so far: ₹14.65 Cr. 321% ROI on ₹9 Cr budget. 2nd highest-grossing Tamil film of 2026. Projected to cross ₹50 Cr net.",
-      ott:{ platform:"TBD", debutViews:"N/A", debutHours:"N/A", lifetimeViews:"N/A", lifetimeHours:"N/A", globalRank:"N/A", countries:1, rightsDeal:"N/A", ottNote:"Tamil comedy drama — Radhika Sarathkumar. 238% ROI in 9 days." }},
+      note:"Abishan Jeevinth & Anaswara Rajan. ₹30 Cr India net on ₹4 Cr budget = 644% ROI. #2 highest-grossing Tamil film 2026. On Netflix from Mar 6.",
+      weeklyCollection:0, weekNum:4, daysInRelease:29, lastWeekRank:2,
+      weeklyNote:"Wk 2: ₹3 Cr. ₹20 Cr India net running — solid Hold. Valentine's release benefiting from word of mouth.",
+      ott:{ platform:"Amazon Prime Video (expected)", debutViews:"TBD", debutHours:"TBD", lifetimeViews:"TBD", lifetimeHours:"TBD", globalRank:"TBD", countries:2, rightsDeal:"~₹8 Cr (est.)", ottNote:"Tamil romantic drama — strong Kerala + TN collections. Expected Prime Video premiere." }},
+    { title:"Thaai Kizhavi", language:"Tamil", director:"Sivakumar Murugesan", releaseDate:"Feb 27, 2026", totalCollection:"~₹58 Cr", totalNum:58, indiaNet:"~43 Cr", overseas:"~₹9.6 Cr", weeksInTop10:3, status:"Running", budget:"9 Cr", verdict:"Super Hit",
+      weeklyCollection:3, weekNum:3, daysInRelease:15, lastWeekRank:2, weeklyNote:"Day 13: ~₹41.16 Cr net (Sacnilk). Budget ₹9 Cr. ROI 357%. Super Hit. #2 Tamil grosser 2026. Chasing Parasakthi for #1.", wkTrend:"stable",
+      ott:{ platform:"TBD", debutViews:"N/A", debutHours:"N/A", lifetimeViews:"N/A", lifetimeHours:"N/A", globalRank:"N/A", countries:1, rightsDeal:"N/A", ottNote:"Tamil comedy drama — Radhika Sarathkumar. 238% ROI in 9 days. 2nd highest-grossing Tamil film of 2026." }},
+    { title:"Funky", language:"Telugu", director:"Vamshi Paidipally", releaseDate:"Feb 13, 2026",
+      totalCollection:"12 Cr", totalNum:12, indiaNet:"9 Cr", overseas:"3 Cr", weeksInTop10:1,
+      status:"Running", budget:"40 Cr", verdict:"Flop",
+      note:"₹9 Cr India net in 8 days. FLOP on ₹40 Cr budget.",
+      weeklyCollection:1.5, weekNum:1, daysInRelease:8, lastWeekRank:0,
+      weeklyNote:"Week 1 end: ₹9 Cr India net — tracking to FLOP. Valentine's competition from O Romeo and Hindi releases.",
+      ott:{ platform:"TBD (Prime/Netflix expected)", debutViews:"TBD", debutHours:"TBD", lifetimeViews:"TBD", lifetimeHours:"TBD", globalRank:"TBD", countries:1, rightsDeal:"~₹5 Cr (est.)", ottNote:"Telugu release — poor theatrical debut." }},
 
     // ── REGIONAL: MALAYALAM (Mollywood) ──
     { title:"Chatha Pacha: The Ring of Rowdies", language:"Malayalam", director:"Adhvaith Nayar", releaseDate:"Jan 22, 2026",
@@ -403,8 +421,17 @@ const DATA = {
       status:"OTT", budget:"15 Cr", verdict:"Blockbuster",
       note:"Mammootty wrestling comedy. ₹33 Cr WW on ₹15 Cr budget. BLOCKBUSTER ROI.",
       weeklyCollection:0, weekNum:4, daysInRelease:30, lastWeekRank:null,
-      weeklyNote:"Closed theatrical. ₹16 Cr India net · ₹33 Cr WW on ₹15 Cr budget. Mollywood's #1 of 2026 so far.",
-      ott:{ platform:"Netflix", debutViews:"N/A", debutHours:"N/A", lifetimeViews:"N/A", lifetimeHours:"N/A", globalRank:"Top 5 Netflix Malayalam", countries:5, rightsDeal:"~₹8 Cr (est.)", ottNote:"Netflix India — Mammootty ensemble comedy about Fort Kochi wrestlers." }},
+      weeklyNote:"Closed theatrical. ₹16 Cr India net · ₹33 Cr WW on ₹15 Cr budget. Massive Kerala + strong overseas. Mollywood's #1 of 2026 so far.",
+      ott:{ platform:"Netflix", debutViews:"N/A", debutHours:"N/A", lifetimeViews:"N/A", lifetimeHours:"N/A", globalRank:"Top 5 Netflix Malayalam", countries:5, rightsDeal:"~₹8 Cr (est.)", ottNote:"Netflix India — Mammootty ensemble comedy about Fort Kochi wrestlers. Strong diaspora numbers." }},
+
+    // ── REGIONAL: KANNADA (Sandalwood) ──
+    { title:"Landlord", language:"Kannada", director:"Jadesh Kumar Hampi", releaseDate:"Jan 23, 2026",
+      totalCollection:"7 Cr", totalNum:7, indiaNet:"5 Cr", overseas:"1 Cr", weeksInTop10:1,
+      status:"OTT", budget:"5 Cr", verdict:"Hit",
+      note:"Duniya Vijay rural drama. ₹7 Cr WW. Kannada #1 of 2026 (limited release).",
+      weeklyCollection:0, weekNum:4, daysInRelease:29, lastWeekRank:null,
+      weeklyNote:"Closed. ₹5 Cr India net on ₹5 Cr budget. Karnataka-circuit hit. Kannada's biggest 2026 release so far.",
+      ott:{ platform:"Amazon Prime Video (expected)", debutViews:"TBD", debutHours:"TBD", lifetimeViews:"TBD", lifetimeHours:"TBD", globalRank:"TBD", countries:1, rightsDeal:"~₹2 Cr (est.)", ottNote:"Sandalwood rural action-drama. Limited release, strong Karnataka single-screen performance." }},
 
     // ── HOLLYWOOD / FOREIGN FILMS ──
     // BOG-style fields: bogRank, bogRankChange, usWeekend, usCumulative, intlCumulative, wwCumulative, indiaGross, indiaNet, theaterCount, theaterChange, perTheater, distributor, cinemascor, rtScore
@@ -462,14 +489,11 @@ const DATA = {
       theaterCount:3500, theaterChange:0, perTheater:null, distributor:"Paramount", cinemaScore:null, rtScore:null,
       indiaGross:null, indiaNet:null, indiaWeekend:null, indiaWeekNo:0,
       ott:{ platform:"TBD (Prime/Netflix expected)", debutViews:"TBD", debutHours:"TBD", lifetimeViews:"TBD", lifetimeHours:"TBD", globalRank:"TBD", countries:0, rightsDeal:"TBD", ottNote:"Horror franchise — Netflix deal likely for India post-theatrical." }},
-    { title:"Subedaar", language:"Hindi", director:"Suresh Triveni", releaseDate:"Mar 5, 2026", totalCollection:"—", totalNum:0, indiaNet:"OTT Premiere", overseas:null, weeksInTop10:0, status:"OTT", budget:"~40 Cr", verdict:"OTT Hit",
-      weeklyCollection:0, weekNum:1, daysInRelease:5, lastWeekRank:null, weeklyNote:"Direct OTT premiere on Amazon Prime Video, Mar 5. Anil Kapoor as retired Subedaar Arjun Maurya. Dir: Suresh Triveni (Tumhari Sulu, Jalsa). Strong lead performance (HT: 3.5/5). Mixed reviews overall. Solid OTT performer — trending on Prime India.",
-      ott:{ platform:"Amazon Prime Video", debutViews:"TBD", debutHours:"TBD", lifetimeViews:"TBD", lifetimeHours:"TBD", globalRank:"Top 5 India (est.)", countries:5, rightsDeal:"~₹30 Cr (est.)", ottNote:"Direct OTT premiere. Anil Kapoor, Radhika Madan, Mona Singh, Aditya Rawal. Abundantia Entertainment. Hindi + Tamil + Telugu + Kannada + Malayalam." }},
     // ── UPCOMING ──
-    { title:"Dhurandhar: The Revenge", language:"Hindi", director:"Aditya Dhar", releaseDate:"Mar 19, 2026", eventTier:"event", totalCollection:"—", totalNum:0, indiaNet:"—", overseas:null, weeksInTop10:0, status:"Upcoming", budget:"350 Cr", verdict:"Upcoming", pageUrl:"dhurandhar-2-box-office.html",
+    { title:"Dhurandhar: The Revenge", language:"Hindi", director:"Aditya Dhar", releaseDate:"Mar 19, 2026", eventTier:"event", totalCollection:"—", totalNum:0, indiaNet:"—", overseas:null, weeksInTop10:0, status:"Upcoming", budget:"350 Cr", verdict:"Upcoming",
       weeklyCollection:0, weekNum:0, daysInRelease:0, lastWeekRank:null,
-      weeklyNote:"Solo release. Paid previews Mar 18 from 5PM. India: ₹15.91 Cr gross (excl. blocks) / ₹21 Cr with blocks · 2.86L+ tickets · 8K+ shows. On track for ₹30–35 Cr nett in paid previews — new all-India record beating OG (₹21 Cr). Ticket prices up to ₹3,100 (INOX Mumbai). US: $565K Day1 · $1M+ weekend advance · Near $2M total NA. BOI: '₹20 Cr+ paid previews done'. Trade consensus: ₹85–100 Cr Day 1.",
-      openingPrediction:{ low:85, mid:100, high:120, allLanguages:110, basis:"Boxoffy AI Calc — post-trailer advance booking data", note:"Boxoffy AI Calc: Paid previews tracking ₹30–35 Cr nett (beats OG ₹21 Cr record). ₹85–100 Cr Day1 net. ₹350–400 Cr Eid weekend India. ₹500–600 Cr WW 4-day. ₹1,000 Cr India lifetime. ₹1,700–2,000 Cr WW. BMS velocity: 7.5k–10k tickets/hr. India ticket gross ₹15.91 Cr (excl. blocks) / ₹21 Cr (with blocks). US: $565K Day1, $1M+ wknd, near $2M total NA." },
+      weeklyNote:"Mar 13 Boxoffy Verified: ₹24.76 Cr premiere gross (no blocks) / ₹29.69 Cr with blocks · 4.84L tickets / 9,128 shows · ATP ₹414 · OG ₹25 Cr all-India premiere record BROKEN · WW advance ~₹60 Cr · US $982K+ premiere (678 locations) · NA OW nearing $2M · BMS 7.5k–10k tickets/hr (Taran Adarsh) · Yami Gautam confirmed in cast · Runtime 3h55m · Premieres Mar 18 5PM · Regular India bookings not yet open.",
+      openingPrediction:{ low:85, mid:100, high:120, allLanguages:110, basis:"Boxoffy AI Calc — post-trailer advance booking data", note:"Boxoffy AI Calc: ₹15–20 Cr Nett from paid previews (up to ₹30 Cr possible). ₹80–100 Cr Day1 net. ₹350–400 Cr Eid weekend India. ₹500–600 Cr WW 4-day. ₹1,000 Cr India lifetime. ₹1,700–2,000 Cr WW. BMS velocity: 7.5k–10k tickets/hr. ₹4.39 Cr premiere gross in first 2hrs. 1.1L+ premiere tickets. Day1 net floor: ₹85–90 Cr (Boxoffy floor). US: $982K+ premiere pre-sales (678 locations) / NA OW $2M+. OG record BROKEN. WW advance ~₹60 Cr. India regular bookings not yet open — will surge further." },
       ott:{ platform:"Netflix", debutViews:"TBD", debutHours:"TBD", lifetimeViews:"TBD", lifetimeHours:"TBD", globalRank:"TBD", countries:0, rightsDeal:"₹150 Cr (confirmed)", ottNote:"Netflix deal confirmed pre-release — sequel to the biggest Indian OTT debut ever" },
       xChatter:[
         { handle:"@rohitjswl01", name:"Rohit Jaiswal", role:"Trade Analyst", color:"#1D4ED8", post:"#Dhurandhar2 Day 1 NET floor is ₹85–90 Cr India. Solo release + Eid + trailer storm = historic opening. Advance booking pace: ALL-TIME. Day1 realistic range ₹90–100 Cr. #BoxOffice", date:"Mar 8, 2026" },
@@ -491,12 +515,12 @@ const DATA = {
       weeklyCollection:0, weekNum:0, daysInRelease:0, lastWeekRank:null, weeklyNote:"Nikhil Siddhartha & Nabha Natesh. Action-period. Apr 10 release." },
 
     // ── APRIL 2026 ──
-    { title:"Bhooth Bangla", language:"Hindi", director:"Priyadarshan", releaseDate:"Apr 10, 2026", totalCollection:"—", totalNum:0, indiaNet:"—", overseas:null, weeksInTop10:0, status:"Upcoming", budget:"TBC", verdict:"Upcoming",
-      weeklyCollection:0, weekNum:0, daysInRelease:0, lastWeekRank:null, weeklyNote:"Akshay Kumar, Paresh Rawal, Tabu. Horror-comedy. Priyadarshan returns to the genre." },
+    { title:"Bhooth Bangla", language:"Hindi", director:"Priyadarshan", releaseDate:"Apr 10, 2026", totalCollection:"—", totalNum:0, indiaNet:"—", overseas:null, weeksInTop10:0, status:"Upcoming", budget:"120 Cr", verdict:"Upcoming",
+      weeklyCollection:0, weekNum:0, daysInRelease:0, lastWeekRank:null, weeklyNote:"TEASER OUT Mar 12 — 55M views in 24 hrs, #2 YouTube India trending (Komal Nahta: ICONIC). Akshay Kumar, Paresh Rawal, Tabu, Wamiqa Gabbi, Rajpal Yadav, Asrani. Horror-comedy. Priyadarshan reunion with Akshay after 14 years (Khatta Meetha 2010). Music: Pritam. Trailer attaching to Dhurandhar 2 from Mar 19. Preponed from May 15 → Apr 10. Produced by Balaji Motion Pictures. Boxoffy note: Will face D2 screen hangover — limited multiplexes through Apr 18." },
     // Tu Meri Main Tera = Dec 25 2025 release, ₹39 Cr India net, Flop — removed from 2026 upcoming
     // Saiyaara was a 2025 film (Jul 18 2025, ₹579 Cr WW) — removed from 2026 upcoming
-    { title:"Alpha", language:"Hindi", director:"Shiv Rawail", releaseDate:"Jul 10, 2026", totalCollection:"—", totalNum:0, indiaNet:"—", overseas:null, weeksInTop10:0, status:"Upcoming", budget:"~300 Cr", verdict:"Upcoming",
-      weeklyCollection:0, weekNum:0, daysInRelease:0, lastWeekRank:null, weeklyNote:"Alia Bhatt & Sharvari lead YRF Spy Universe 6th film. Bobby Deol (antagonist), Anil Kapoor (Vikrant Kaul), Hrithik Roshan (cameo). Dir: Shiv Rawail (Railway Men). Moved from Apr 17 → Jul 10 to avoid Battle of Galwan. YRF rejected ₹215 Cr Netflix OTT offer — confirmed theatrical. First female-led YRF spy film." },
+    { title:"Alpha", language:"Hindi", director:"Shiv Rawail", releaseDate:"Jul 10, 2026", eventTier:"major", totalCollection:"—", totalNum:0, indiaNet:"—", overseas:null, weeksInTop10:0, status:"Upcoming", budget:"TBC", verdict:"Upcoming",
+      weeklyCollection:0, weekNum:0, daysInRelease:0, lastWeekRank:null, weeklyNote:"RELEASE DATE LOCKED: Jul 10, 2026 (YRF official, Mar 9). Moved from Apr 17 to avoid clash with Salman's Battle of Galwan. FIRST female-led YRF Spy Universe film (7th instalment). Cast: Alia Bhatt · Sharvari · Bobby Deol (antagonist, teased War 2 post-credits) · Anil Kapoor (Vikrant Kaul) · Hrithik Roshan (special cameo as Kabir Dhaliwal). Director: Shiv Rawail (The Railway Men). Raw/gritty aesthetic vs earlier glossy Spy Universe films. New poster Mar 9: Alia bruised, battle-hardened. VFX-heavy post-production caused all three delays (Dec 2025 → Apr → Jul). YRF confirmed theatrical-only; dismissed OTT rumours." },
     { title:"Battle of Galwan", language:"Hindi", director:"Apoorva Lakhia", releaseDate:"Aug 14, 2026", totalCollection:"—", totalNum:0, indiaNet:"—", overseas:null, weeksInTop10:0, status:"Upcoming", budget:"TBC", verdict:"Upcoming",
       weeklyCollection:0, weekNum:0, daysInRelease:0, lastWeekRank:null, weeklyNote:"Salman Khan, Chitrangada Singh. War drama on 2020 Galwan Valley clash. Moved from Apr 17 → Aug 14, 2026. Clashes with Naagzilla (Kartik Aaryan) on Independence Day weekend." },
     { title:"KD – The Devil", language:"Kannada", director:"TBC", releaseDate:"Apr 14, 2026", totalCollection:"—", totalNum:0, indiaNet:"—", overseas:null, weeksInTop10:0, status:"Upcoming", budget:"TBC", verdict:"Upcoming",
@@ -517,8 +541,10 @@ const DATA = {
       weeklyCollection:0, weekNum:0, daysInRelease:0, lastWeekRank:null, weeklyNote:"Ram Charan's next post-RRR. High anticipation. Date TBC." },
 
     // ── JUNE 2026 ──
-    { title:"Hai Jawani Toh Ishq Hona Hai", language:"Hindi", director:"David Dhawan", releaseDate:"Jun 12, 2026", totalCollection:"—", totalNum:0, indiaNet:"—", overseas:null, weeksInTop10:0, status:"Upcoming", budget:"TBC", verdict:"Upcoming",
-      weeklyCollection:0, weekNum:0, daysInRelease:0, lastWeekRank:null, weeklyNote:"Varun Dhawan, Mrunal Thakur, Pooja Hegde. David Dhawan directorial. Moved from Jun 5 → Jun 12 to avoid clash with Yash's Toxic (Jun 4)." },
+    { title:"Hai Jawani Toh Ishq Hona Hai", language:"Hindi", director:"David Dhawan", releaseDate:"Jun 5, 2026", totalCollection:"—", totalNum:0, indiaNet:"—", overseas:null, weeksInTop10:0, status:"Upcoming", budget:"TBC", verdict:"Upcoming",
+      weeklyCollection:0, weekNum:0, daysInRelease:0, lastWeekRank:null, weeklyNote:"Varun Dhawan, Mrunal Thakur, Pooja Hegde. David Dhawan directorial. Jun 5." },
+    { title:"Cocktail 2", language:"Hindi", director:"Homi Adajania", releaseDate:"Jun 19, 2026", totalCollection:"—", totalNum:0, indiaNet:"—", overseas:null, weeksInTop10:0, status:"Upcoming", budget:"TBC", verdict:"Upcoming",
+      weeklyCollection:0, weekNum:0, daysInRelease:0, lastWeekRank:null, weeklyNote:"ANNOUNCED TODAY Mar 13 — Release date Jun 19, 2026 confirmed. First-look posters out. Teaser dropping in theatres Mar 18 (with D2 paid previews). Shahid Kapoor, Rashmika Mandanna, Kriti Sanon. Sequel to 2012 cult romantic drama. Dir: Homi Adajania (same as Cocktail). Produced by Maddock Films (Dinesh Vijan) + Luv Ranjan. Written by Luv Ranjan. Shoot wrapped early 2026. Modern love triangle. Rashmika's first post-wedding film." },
     { title:"Welcome to the Jungle", language:"Hindi", director:"TBC", releaseDate:"Jun 26, 2026", totalCollection:"—", totalNum:0, indiaNet:"—", overseas:null, weeksInTop10:0, status:"Upcoming", budget:"TBC", verdict:"Upcoming",
       weeklyCollection:0, weekNum:0, daysInRelease:0, lastWeekRank:null, weeklyNote:"Akshay Kumar. Next instalment of Welcome franchise. Jun 26." },
     { title:"Dragon", language:"Telugu/Hindi", director:"TBC", releaseDate:"Jun 25, 2026", totalCollection:"—", totalNum:0, indiaNet:"—", overseas:null, weeksInTop10:0, status:"Upcoming", budget:"TBC", verdict:"Upcoming",
@@ -533,6 +559,9 @@ const DATA = {
     // ── AUGUST 2026 ──
     { title:"Love & War", language:"Hindi", director:"Sanjay Leela Bhansali", releaseDate:"Jan/Feb 2027 (expected)", totalCollection:"—", totalNum:0, indiaNet:"—", overseas:null, weeksInTop10:0, status:"Upcoming", budget:"TBC", verdict:"Upcoming",
       weeklyCollection:0, weekNum:0, daysInRelease:0, lastWeekRank:null, weeklyNote:"Ranbir Kapoor, Alia Bhatt, Vicky Kaushal. SLB's epic war-romance. Shoot wraps Jun 2026, heavy VFX needed. Now targeting Jan/Feb 2027 (Republic Day or Valentine's). 2026 release unlikely." },
+    // ── 2027 RELEASES ──
+    { title:"Varanasi", language:"Telugu (Pan-India)", director:"SS Rajamouli", releaseDate:"Apr 7, 2027", eventTier:"event", totalCollection:"—", totalNum:0, indiaNet:"—", overseas:null, weeksInTop10:0, status:"Upcoming", budget:"1,000–1,200 Cr", verdict:"Upcoming",
+      weeklyCollection:0, weekNum:0, daysInRelease:0, lastWeekRank:null, weeklyNote:"RELEASE DATE CONFIRMED: Apr 7, 2027 (Ugadi/Gudi Padwa). SS Rajamouli's next after RRR (global phenomenon, Oscar winner). Cast: Mahesh Babu (dual role: Rudhra + Lord Rama) · Priyanka Chopra Jonas (Mandakini — Telugu debut, away from Hindi cinema 7 yrs) · Prithviraj Sukumaran (Kumbha, antagonist). Music: MM Keeravani (Oscar: Naatu Naatu). Budget: ₹1,000–1,200 Cr — most expensive Indian film ever (revenue-share model with cast). IMAX: First Indian film in IMAX 1.43:1 landscape format. TEASER GLOBAL ROLLOUT: Nov 15, 2025 — GlobeTrotter event Ramoji Film City (40,000+ fans, 100×132 ft IMAX screen; covered by Polygon, CinemaBlend, DiscussingFilm, Variety, Inverse) · Jan 5, 2026 — Premiere at Le Grand Rex Paris (world's largest cinema hall) — FIRST Indian film screened there. International reaction: called 'Rajamouli's boldest cinematic universe yet'. James Cameron (Dec 2025 video call) offered to shoot second-unit sequences. STORY: Spans 512 CE to year 2071 (asteroid threat) — Africa, Antarctica, underground Varanasi caves, incorporates actual Ramayana episode. Single film ~3 hrs (NOT two parts — Rajamouli confirmed to ScreenRant). Priyanka Chopra on Fallon: '14 months filming, 6 more to go = 20 months total'. Mahesh Babu wrapped Georgia schedule Mar 10, 2026 — Antarctica next (4th feature film ever to shoot there, 1st Indian). DEALS: Netflix global digital rights (record-breaking). Phars Films ₹160 Cr overseas rights offer (highest-ever Indian film). SkyBlue Cinematix worldwide brand integration deal. 120+ countries theatrical release planned." },
     { title:"Bhediya 2", language:"Hindi", director:"Amar Kaushik", releaseDate:"Aug 14, 2026", totalCollection:"—", totalNum:0, indiaNet:"—", overseas:null, weeksInTop10:0, status:"Upcoming", budget:"TBC", verdict:"Upcoming",
       weeklyCollection:0, weekNum:0, daysInRelease:0, lastWeekRank:null, weeklyNote:"Varun Dhawan returns as the werewolf. Maddock Horror Comedy Universe. Aug 14." },
     { title:"Naagzilla", language:"Hindi", director:"TBC", releaseDate:"Aug 14, 2026", eventTier:"tentpole", totalCollection:"—", totalNum:0, indiaNet:"—", overseas:null, weeksInTop10:0, status:"Upcoming", budget:"TBC", verdict:"Upcoming",
@@ -550,7 +579,7 @@ const DATA = {
 
     // ── DIWALI / Q4 2026 ──
     { title:"Ramayana: Part One", language:"Hindi", director:"Nitesh Tiwari", releaseDate:"Diwali 2026", eventTier:"event", totalCollection:"—", totalNum:0, indiaNet:"—", overseas:null, weeksInTop10:0, status:"Upcoming", budget:"TBC", verdict:"Upcoming",
-      weeklyCollection:0, weekNum:0, daysInRelease:0, lastWeekRank:null, weeklyNote:"Ranbir Kapoor (Ram), Sai Pallavi (Sita), Yash (Ravana). Nitesh Tiwari (Dangal) directs. Most anticipated Indian film. Diwali 2026.",
+      weeklyCollection:0, weekNum:0, daysInRelease:0, lastWeekRank:null, weeklyNote:"PART 1 EDIT LOCKED. VFX underway (DNEG — 8x Oscar winner). Part 2 ALREADY SHOOTING — Ranbir started Mumbai schedule, Sunny Deol joins Mar 20. Teaser premiered at GlobeTrotter event Nov 15 2025, Ramoji Film City. Trailer eyeing San Diego Comic-Con July 2026 for global platform. Release: Diwali 2026 (Nov 8 expected) / Part 2 Diwali 2027. Budget: ₹835–1,600 Cr (most expensive Indian film ever). Stars: Ranbir Kapoor (Ram) · Yash (Ravana, co-producer) · Sai Pallavi (Sita) · Sunny Deol (Hanuman) · Ravi Dubey (Lakshman) · Arun Govil (Dasharatha) · Lara Dutta (Kaikeyi). Music: AR Rahman + Hans Zimmer. IMAX format — first Indian film in 1.43:1 IMAX. Produced: Prime Focus Studios (Namit Malhotra) + Monster Mind Creations.",
       xChatter:[
         { handle:"@taran_adarsh", name:"Taran Adarsh", role:"Film Critic & Trade", color:"#DC2626", post:"#Ramayana is not just a film — it is a cinematic event. Nitesh Tiwari + Ranbir Kapoor + Yash + Sai Pallavi. Diwali 2026 is already booked.", date:"2025" },
         { handle:"@rohitjswl01", name:"Rohit Jaiswal", role:"Trade Analyst", color:"#1D4ED8", post:"Ramayana Part 1 is the most anticipated Indian film since Baahubali 2. ₹500 Cr opening weekend is in the conversation. India will stop.", date:"Jan 2026" },
@@ -572,6 +601,25 @@ const DATA = {
 
 /* ── US BOX OFFICE WEEKLY DATA ───────────────────────────── */
 const US_BO_WEEKLY = {
+    "Week 11, 2026": {
+    dateRange: "Mar 13–15, 2026",
+    headline: "Hoppers Holds + Reminders of Him Opens — Pre-Dhurandhar 2 Calm",
+    subline: "Reminders of Him (Colleen Hoover #3) tracking $13M+ · A24's Undertone $9M+ (Friday 13th horror) · Hoppers $27M (Wk2) · Project Hail Mary looms next week",
+    source: "Deadline · Boxoffice Pro · Gold Derby · The Wrap · The Numbers (projections as of Mar 13)",
+    chart: [
+      { rank:1,  title:"Hoppers",            studio:"Disney/Pixar",   weekend:"$27M (proj)",  weekendNum:27,   total:"$72M (proj)",   totalNum:72,    weeks:2, theaters:4000, change:"-40%",  genre:"Animation",    rtScore:"94%", admitsNote:"Spring break tailwind begins" },
+      { rank:2,  title:"Reminders of Him",   studio:"Universal",      weekend:"$13M (proj)",  weekendNum:13,   total:"$13M (proj)",   totalNum:13,    weeks:1, theaters:3402, change:"NEW",   genre:"Romance/Drama",rtScore:"81%", admitsNote:"Colleen Hoover #3. $1.9M Thu previews." },
+      { rank:3,  title:"Undertone",          studio:"A24",            weekend:"$9M (proj)",   weekendNum:9,    total:"$9M (proj)",    totalNum:9,     weeks:1, theaters:2750, change:"NEW",   genre:"Horror",       rtScore:"89%", admitsNote:"$500K budget. Friday 13th timing. $1M Thu." },
+      { rank:4,  title:"Scream 7",           studio:"Paramount",      weekend:"$8M (proj)",   weekendNum:8,    total:"$102M (proj)",  totalNum:102,   weeks:3, theaters:3243, change:"-53%",  genre:"Horror",       rtScore:"81%", admitsNote:"Crosses $100M domestic this weekend" },
+      { rank:5,  title:"GOAT",               studio:"Sony",           weekend:"$5M (proj)",   weekendNum:5,    total:"$82M (proj)",   totalNum:82,    weeks:4, theaters:2946, change:"-29%",  genre:"Animation",    rtScore:"88%", admitsNote:"Solid legs for family film" },
+      { rank:6,  title:"The Bride!",         studio:"Warner Bros.",   weekend:"$3M (proj)",   weekendNum:3,    total:"$12M (proj)",   totalNum:12,    weeks:2, theaters:3304, change:"-70%",  genre:"Horror/Drama", rtScore:"68%", admitsNote:"Maggie Gyllenhaal. Bombed. -70% drop." },
+      { rank:7,  title:"Wuthering Heights",  studio:"Warner Bros.",   weekend:"$3M (proj)",   weekendNum:3,    total:"$78M (proj)",   totalNum:78,    weeks:4, theaters:2800, change:"-40%",  genre:"Romance",      rtScore:"79%", admitsNote:"Strong legs for prestige romance" },
+      { rank:8,  title:"Crime 101",          studio:"Amazon MGM",     weekend:"$2M (proj)",   weekendNum:2,    total:"$33M (proj)",   totalNum:33,    weeks:4, theaters:2000, change:"-38%",  genre:"Crime",        rtScore:"72%", admitsNote:"Steady holdover" },
+      { rank:9,  title:"Send Help",          studio:"Focus Features", weekend:"$1.5M (proj)", weekendNum:1.5,  total:"$50M (proj)",   totalNum:50,    weeks:6, theaters:1600, change:"-35%",  genre:"Comedy",       rtScore:"83%", admitsNote:"Quiet long-legger" },
+      { rank:10, title:"Slanted",            studio:"Bleecker Street",weekend:"$1M (proj)",   weekendNum:1,    total:"$1M (proj)",    totalNum:1,     weeks:1, theaters:588,  change:"LTD",   genre:"Drama",        rtScore:"91%", admitsNote:"SXSW prize winner. Limited." },
+    ]
+  },
+
   "Week 10, 2026": {
     dateRange: "Mar 6–8, 2026",
     headline: "Pixar Back With a Bang — Hoppers Leads Strong $91M Weekend",
@@ -593,13 +641,21 @@ const US_BO_WEEKLY = {
 };
 
 
-/* ── EDITORIALS REGISTRY ─────────────────────────────────────────
-   All Boxoffy original pieces — newest first.
-   Top 3 shown as featured rows on home. Rest stack in archive.
-   To add a new piece: prepend a new object at the TOP of this array.
-   Never delete old entries — they auto-archive below the fold.
+/* ── EDITORIALS — FROM THE DESK stacked list ────────────────────
+   Add newest article at the TOP of the array.
+   Top 3 show as numbered rows ①②③. Rest go to ARCHIVE.
+   Fields: tag, headline, dek (lead only), author, date, readTime, url
 ─────────────────────────────────────────────────────────────── */
 const EDITORIALS = [
+  {
+    tag: "ADVANCE BOOKING",
+    headline: "Dhurandhar 2 The Revenge Advance Booking — ₹29.69 Crore and the OG Record Is BROKEN",
+    dek: "4.84 lakh tickets. 9,128 shows. WW advance ~₹60 Cr. US $982K+. Taran Adarsh: 7,500–10,000 tickets/hr on BMS. The OG ₹25 Cr all-India premiere record: GONE.",
+    author: "The Boxoffy Team",
+    date: "Mar 13, 2026",
+    readTime: "2 min read",
+    url: "dhurandhar2-advance-article.html",
+  },
   {
     tag: "DEEP DIVE",
     headline: "Bollywood Box Office Explained — How Producers, Distributors & Exhibitors Share Your Ticket Money",
@@ -607,21 +663,13 @@ const EDITORIALS = [
     author: "The Boxoffy Team",
     date: "Mar 10, 2026",
     readTime: "15 min read",
-    url: "india-boxoffice-how-it-works.html",
-  },
-  {
-    tag: "ADVANCE BOOKING",
-    headline: "Dhurandhar 2 The Revenge Advance Booking — ₹21 Crore and the Trade Is Out of Words",
-    dek: "2.86 lakh tickets. ₹15.91 Cr paid preview gross. US near $2M. BOI: '₹30 Cr+ nett easily done.' Boxoffy tracks every number for Dhurandhar: The Revenge.",
-    author: "The Boxoffy Team",
-    date: "Mar 9, 2026",
-    readTime: "2 min read",
-    url: "dhurandhar2-advance-article.html",
+    url: null,
+    section: "Weekly",
   },
   {
     tag: "ANALYSIS",
     headline: "Dhurandhar 2 The Revenge Pre-Release Analysis — Ladies and Gentlemen, You Are STILL Not Ready",
-    dek: "₹80–100 Cr Day 1. 5 languages. Ranveer Singh. The biggest commercial bet Indian cinema has made since Pushpa 2. Boxoffy's full Dhurandhar: The Revenge pre-release breakdown.",
+    dek: "₹80–100 Cr Day 1. 5 languages. The biggest commercial bet Indian cinema has made since Pushpa 2. Boxoffy's full pre-release breakdown.",
     author: "The Boxoffy Team",
     date: "Mar 8, 2026",
     readTime: "6 min read",
@@ -629,8 +677,20 @@ const EDITORIALS = [
   },
 ];
 
-// Legacy alias — keeps any existing code referencing FEATURED_EDITORIAL working
-const FEATURED_EDITORIAL = EDITORIALS[0];
+/* ── FEATURED EDITORIAL ─────────────────────────────────────────
+   Update this object each time you publish a new piece.
+   Set to null to hide the strip entirely.
+─────────────────────────────────────────────────────────────── */
+const FEATURED_EDITORIAL = {
+  tag: "BREAKING",
+  headline: "OG Record Gone. D2 Advance ₹29.69 Cr — 6 Days to History.",
+  dek: "4.84 lakh tickets. WW advance ~₹60 Cr. Taran Adarsh: UNSTOPPABLE. Nishit Shaw: overseas will EXCEED Part 1. The countdown to March 19 is on.",
+  author: "Boxoffy Editorial",
+  date: "Mar 13, 2026",
+  readTime: "6 min read",
+  // url: opens article in new tab. Set to null to navigate to section instead.
+  url: "dhurandhar2-editorial.html",
+};
 
 const YEAR_NOTES = {
   2020: "COVID-19 shut theatres from March 2020. Only Jan–Feb films had a full run; the rest went direct to OTT.",
@@ -638,99 +698,87 @@ const YEAR_NOTES = {
   2022: "Box office roared back. RRR & KGF Chapter 2 both crossed ₹1,200 Cr WW — a watershed moment for Indian cinema globally.",
   2023: "Unprecedented year — five films crossed ₹600 Cr. Jawan, Pathaan, Animal and Gadar 2 rewrote Hindi film records.",
   2024: "Pushpa 2 shattered every record at ₹1,800 Cr WW. Stree 2 delivered the surprise of the year at ₹672 Cr.",
-  2025: "Dhurandhar became the highest-grossing Hindi film ever. Chhaava dominated the first quarter with ₹700 Cr WW.",
-  2026: "Live data — Week 11, Mar 10, 2026. Border 2: ₹481.76 Cr WW · Super Hit (BOI). Kerala Story 2: ₹34.85 Cr net (Day 12) · Average verdict · ~₹40–42 Cr projected. Thaai Kizhavi: ₹37.90 Cr net · Super Hit. D2 advance: ₹15.91 Cr gross (excl. blocks) / ₹21 Cr with blocks · 2.86L+ tickets · 8K+ shows · US near $2M NA total · BOI: '₹30 Cr+ nett paid previews done'. Releases Mar 19.",
+  2025: "Dhurandhar became the highest-grossing Hindi film ever. Chhaava dominated the first quarter with ₹807.91 Cr WW. Dhurandhar: The Revenge advance crosses ₹60 Cr WW with OG record BROKEN.",
+  2026: "Live data — Week 12, Mar 13, 2026. D2 advance: ₹29.69 Cr (with blocks) / ₹24.76 Cr (no blocks) / 4.84L tickets / OG record BROKEN / WW ~₹60 Cr. Border 2 → Netflix Mar 20. O Romeo CLOSED (Flop ₹80.9 Cr). D1 Day 100 re-release today. D2 releases Mar 19.",
 };
 
 /* ── ARTICLES DATA ────────────────────────────────────────── */
 // url: null = Boxoffy original (opens in-page modal), string = opens external source in new tab
 const ARTICLES = {
   Bollywood: [
-    { tag:"Deep Dive", time:"Now", hot:true, source:"Boxoffy",
-      url:"india-boxoffice-how-it-works.html",
-      headline:"Bollywood Box Office Explained — How Producers, Distributors & Exhibitors Share Your Ticket Money",
-      summary:"Who keeps your ₹300 ticket? The complete breakdown of producers, distributors and exhibitors — PVR vs Raj Mandir, the Minimum Guarantee model, the weekly share shift, and what a film actually needs to break even. Boxoffy's definitive industry explainer." },
-    { tag:"Advance Booking", time:"Now", hot:true, source:"Boxoffy",
-      url:"dhurandhar2-advance-article.html",
-      headline:"Dhurandhar 2 The Revenge Advance Booking — ₹21 Crore and the Trade Is Out of Words",
-      summary:"Boxoffy's deep-dive: ₹15.91 Cr gross paid previews (excl. blocks) / ₹21 Cr with blocks · 2.86L+ tickets · 8K+ shows. BOI: '₹30 Cr+ nett easily done.' Beats Stree 2 by 69%. US near $2M total NA advance. Tickets up to ₹3,100 in Mumbai. 9 days to go." },
-    { tag:"Week 11", time:"Now", hot:true, source:"Box Office India",
-      url:"https://www.boxofficeindia.com/",
-      headline:"Week 11 Update: Thaai Kizhavi ₹37.90 Cr Leads, Kerala Story 2 ₹34.85 Cr, D2 Paid Previews Near ₹20 Cr",
-      summary:"Thaai Kizhavi (Day 12) is the week's leader at ₹37.90 Cr net. Kerala Story 2 (Day 12) at ₹34.85 Cr net. Both running out of runway before Dhurandhar 2 arrives Mar 19. D2 paid previews: ₹15.91 Cr gross / ₹21 Cr with blocks — BOI says ₹30 Cr+ nett done. US near $2M advance." },
-    { tag:"Dhurandhar 2", time:"2h ago", hot:true, source:"Sacnilk",
-      url:"dhurandhar2-advance-article.html",
-      headline:"Dhurandhar 2: US Premiere Pre-Sales Hit $618K Across 557 Locations — Overseas Record In Sight",
-      summary:"Venky BO confirms $618,911 in US premiere pre-sales, $890K Day 1 booked, $1.7M US opening weekend. Nishit Shaw: Dhurandhar 1 was Canada's biggest Indian film ever at $7.71M — Part 2 tracking higher." },
-    { tag:"Trade Buzz", time:"4h ago", hot:false, source:"Koimoi",
-      url:"https://www.koimoi.com/box-office/",
-      headline:"Sumit Kadel: ₹30 Cr Paid Previews Possible — Dhurandhar 2 Showcasing 'HUGE'",
-      summary:"Trade analyst Sumit Kadel upgrades paid preview call post-trailer: ₹15–30 Cr Nett from paid previews alone. Rohit Jaiswal sets Day 1 net floor at ₹85–90 Cr post-Toxic postponement. 5 analysts unanimous." },
-    { tag:"Toxic", time:"8h ago", hot:false, source:"Pinkvilla",
-      url:"https://www.pinkvilla.com/",
-      headline:"Toxic Officially Shifted to June 4 — Dhurandhar 2 Gets Uncontested March 19",
-      summary:"Yash's Kannada biggie confirms postponement, citing Middle East business concerns. Project Hail Mary also moved to Mar 26. Dhurandhar 2 now has 5,500+ screens, new 'Super Blockbuster Plus' pricing tier." },
-    { tag:"Border 2 Final", time:"1d ago", hot:false, source:"Box Office India",
-      url:"https://www.boxofficeindia.com/",
-      headline:"Border 2 Final: ₹424 Cr India Net / ₹481.76 Cr WW — Biggest Hindi Film of 2026",
-      summary:"Sunny Deol, Varun Dhawan, Diljit Dosanjh. Week 1: ₹224.25 Cr · Week 2: ₹70.15 Cr · Week 3: ₹23.35 Cr. Budget ₹275 Cr. Verdict: Blockbuster. Border 3 officially confirmed by producers." },
-    { tag:"Analysis", time:"2d ago", hot:false, source:null, url:"dhurandhar2-editorial.html",
-      headline:"Dhurandhar 2 The Revenge Pre-Release Analysis — Ladies and Gentlemen, You Are STILL Not Ready",
-      summary:"Our 6-minute deep dive into why this is the biggest commercial bet Indian cinema has made since Pushpa 2. Every data point, every analyst call, every advance booking record — in one place." },
+    { tag:"Advance Booking", time:"2h ago", hot:true, source:"Boxoffy",
+      url:"https://www.bollywoodhungama.com/news/bollywood/dhurandhar-revenge-creates-advance-booking-storm-preview-shows-sold-7-5k-tickets-per-hour/",
+      headline:"Advance Bookings On A Rampage — 7.5k–10k Tickets/Hr On BMS, ₹4 Cr Collected In First 2 Hrs",
+      summary:"Dhurandhar: The Revenge is trending #1 on BookMyShow, pulling ₹2.50 Cr from national chains alone with 35,000+ tickets in the opening hours — unprecedented organic demand with no fan-club or bulk booking involvement." },
+    { tag:"Prediction", time:"3h ago", hot:true, source:"Koimoi",
+      url:"https://www.koimoi.com/box-office/dhurandhar-2-box-office-advance-booking-premieres-1-1-lakh-tickets-sold-ranveer-singhs-film-is-earth-shattering/",
+      headline:"Dhurandhar 2 Advance Booking Storm: ₹15–30 Cr Paid Previews Projected, ₹1,000 Cr India Lifetime",
+      summary:"Boxoffy AI Calc projects ₹15–20 Cr Nett from paid previews alone (up to ₹30 Cr possible) — which would be the highest paid preview number in Hindi cinema history. Post-trailer: ₹4.39 Cr gross in 2hrs on Mar 7, 1.1L+ premiere tickets sold organically (no fan-club bulk). BMS velocity: 7.5k–10k tickets/hr. US premiere pre-sales: $400K+. Full Day1 target: ₹80–100 Cr net. Lifetime projection: ₹1,000 Cr India / ₹1,700–2,000 Cr WW." },
+    { tag:"Toxic", time:"8h ago", hot:false, source:"Outlook India",
+      url:"https://www.outlookindia.com/art-entertainment/dhurandhar-2-advance-booking-report-ranveer-singhs-film-sets-new-record-in-the-us",
+      headline:"Toxic Postponed to June 4 — Dhurandhar 2 Gets Clear Solo March 19 Release",
+      summary:"Yash's Kannada film pushes back citing Middle East business concerns. Even Ryan Gosling's Project Hail Mary moved to Mar 26 to avoid Dhurandhar 2. 5,500+ screens, 'Super Blockbuster Plus' pricing tier, ~3h55m runtime." },
+    { tag:"Kerala Story 2", time:"Now", hot:true, source:"Sacnilk / Koimoi",
+      url:"https://www.koimoi.com/box-office/the-kerala-story-2-box-office-collection-day-8-inches-away-from-becoming-bollywoods-2nd-successful-film-of-2026/",
+      headline:"Kerala Story 2 Day 9: ₹25.65 Cr — Plus Verdict Locked. Hit Needs ₹56 Cr in 2-Week Clean Window",
+      summary:"Sacnilk confirms Week 1 at ₹22.9 Cr + 2nd Friday ₹1.75 Cr (12% drop) = ₹25.65 Cr total. Budget (₹28 Cr) fully recovered — Bollywood's 2nd success of 2026 after Border 2. Clear runway until Dhurandhar 2 on March 19. Pinkvilla: could emerge as 2nd Hit film of 2026 if weekend holds." },
+    { tag:"O Romeo Final", time:"1d ago", hot:false, source:"Sacnilk",
+      url:"https://sacnilk.com/quicknews/O_Romeo_2026_Box_Office_Collection_Day_23",
+      headline:"O Romeo Closes: ₹69 Cr Net / ₹101 Cr WW Gross — Confirmed Flop On ₹130 Cr Budget",
+      summary:"Sacnilk day-wise: Wk1 ₹47.1 Cr, Wk2 ₹14.45 Cr, Wk3 ₹6.65 Cr, Wk4 trickle. WW gross crossed ₹101 Cr but India net can't overcome the ₹130 Cr budget. Vishal Bhardwaj + Shahid Kapoor reunion — acclaimed critically, punished commercially." },
+    { tag:"Analysis", time:"2d ago", hot:true, source:null, url:null,
+      headline:"Boxoffy: Why Dhurandhar 2's Advance Is Unlike Anything Indian Cinema Has Seen",
+      summary:"We track the data: ₹4 Cr in 2 hours on Mar 7 from national chains, 7.5k tickets/hr on BMS, $565K US Day1, $1M US weekend, ₹400K premiere pre-sales 12 days out, 'Super Blockbuster Plus' new pricing category, ~3h55m runtime limiting daily shows. The floor is ₹85–100 Cr all-language opening." }
   ],
   OTT: [
-    { tag:"OTT Top 10", time:"Now", hot:true, source:"Boxoffy",
-      url:null,
-      headline:"Boxoffy OTT Power Rankings — Top 10 Indian Shows & Films by Combined Platform Presence",
-      summary:"Mirzapur 3 leads our combined OTT chart with 14 weeks across Prime Video India Top 10. Panchayat S3, Scam 2003, and Dhurandhar (Netflix) round out the top 4. Full rankings below in the new Top 10 OTT widget." },
-    { tag:"Netflix", time:"2h ago", hot:true, source:"Sacnilk",
-      url:"https://www.sacnilk.com/",
-      headline:"Dhurandhar on Netflix: 50M+ Views Lifetime — Still India's Biggest OTT Debut Ever",
-      summary:"Ranveer Singh's spy thriller crossed 50M views on Netflix India in its first 6 weeks — the highest ever for an Indian film. ₹85 Cr Netflix deal (Part 1). The sequel (Dhurandhar 2) goes to JioHotstar in a ₹150 Cr deal." },
-    { tag:"Prime Video", time:"3h ago", hot:true, source:"Hindustan Times",
-      url:"https://www.hindustantimes.com/entertainment/",
-      headline:"Mirzapur 3 Sets Prime Video India Record — 28M Views in First 10 Days",
-      summary:"The Pankaj Tripathi-led crime drama smashed Prime Video India records with 28M views in its opening 10 days. Season 4 greenlit within 48 hours of premiere. Biggest Indian web series debut of 2026." },
-    { tag:"Netflix Series", time:"4h ago", hot:false, source:"Koimoi",
-      url:"https://www.koimoi.com/",
-      headline:"Scam 2003: The Telgi Story — Season 2 Confirmed, Trailer Drops March 20",
-      summary:"SonyLIV's Scam universe expands. Scam 2003 S1 spent 9 weeks in SonyLIV Top 10 and crossed 18M views. S2 drops April 11 — trailer arrives day after Dhurandhar 2 opening weekend." },
-    { tag:"JioHotstar", time:"6h ago", hot:false, source:"Economic Times",
-      url:"https://economictimes.indiatimes.com/industry/media/entertainment/",
-      headline:"JioHotstar Q1 2026 — 32M New Subscribers, IPL + Border 2 Rights Drive Record Quarter",
-      summary:"The platform's biggest quarter ever. Border 2 OTT rights deal (est. ₹120 Cr) alongside IPL 2026 gives JioHotstar its strongest content lineup. Dhurandhar 2 deal (₹150 Cr) to premiere May/June 2026." },
-    { tag:"ZEE5", time:"8h ago", hot:false, source:"Pinkvilla",
-      url:"https://www.pinkvilla.com/",
-      headline:"Panchayat Season 4 — TVF Drops First Look, April 18 on Prime Video",
-      summary:"The beloved rural drama returns April 18. First look already 5M views in 24hrs. Full cast back — Jitendra Kumar, Raghubir Yadav, Neena Gupta. TVF's most consistent IP enters its 4th season." },
+    { tag:"Netflix", time:"3h ago", hot:true, source:"Sacnilk",
+      url:"https://www.sacnilk.com/movie/Dhurandhar_2026",
+      headline:"Dhurandhar (Part 1) on Netflix: 45M+ Views in First Weekend — Most-Watched Indian Film Ever",
+      summary:"Ranveer Singh's spy thriller set an all-time Netflix India record in its debut weekend after a ₹175 Cr deal — the highest OTT deal for a Hindi film at the time. The sequel has since moved to JioHotstar for streaming rights." },
+    { tag:"OTT Rights", time:"6h ago", hot:false, source:"India TV News",
+      url:"https://www.indiatvnews.com/entertainment/bollywood/dhurandhar-2-day-1-usa-advance-booking-ranveer-singh-film-sells-14-399-tickets-grosses-over-usd-330k-2026-03-06-1032815",
+      headline:"Dhurandhar 2 Goes to JioHotstar: ₹130 Cr OTT Deal — Shorter Window, Longer Theatrical Run",
+      summary:"Unlike Part 1's Netflix deal (₹175 Cr), the sequel lands on JioHotstar in a reported ₹130 Cr arrangement — reflecting a shorter post-theatrical window and confidence in a sustained theatrical run. Streaming premiere expected late May–June 2026." },
+    { tag:"Mardaani 3", time:"10h ago", hot:false, source:"Wikipedia",
+      url:"https://en.wikipedia.org/wiki/Mardaani_3",
+      headline:"Mardaani 3 OTT: Netflix Acquires Streaming Rights — Post-Theatrical Premiere Imminent",
+      summary:"Rani Mukerji's cop thriller, which closed its theatrical run at ₹50.57 Cr net, heads to Netflix. The franchise's third instalment delivered a strong performance for a mid-budget production." },
+    { tag:"Border 2 OTT", time:"14h ago", hot:false, source:"Pinkvilla",
+      url:"https://www.pinkvilla.com/entertainment/box-office/border-2-box-office-collections-sunny-deol-varun-dhawan-diljit-dosanjh-ahan-shetty-starrer-adds-rs-1-10-crore-in-week-6-nears-theatrical-end-1401270",
+      headline:"Border 2 OTT Rights: Which Platform Gets Sunny Deol's ₹481 Cr Blockbuster?",
+      summary:"With theatrical end approaching, all eyes turn to Border 2's OTT deal. The film's massive footfall of 1.5 Cr+ makes it one of the most-awaited post-theatrical premieres of 2026." },
     { tag:"Analysis", time:"1d ago", hot:false, source:null, url:null,
-      headline:"Boxoffy OTT Watch: Mid-Budget Theatrical Failures Are 2026's Biggest OTT Opportunity",
-      summary:"O Romeo (Flop), Mardaani 3 (Below Avg), Assi (Flop) — all heading to OTT within weeks at distressed prices. We analyse why India's ₹40–130 Cr budget space is broken and what it means for Netflix, Prime, and ZEE5." },
+      headline:"Boxoffy OTT Watch: Why 2026 Has Been Terrible For Mid-Budget Films But Great For Streamers",
+      summary:"O Romeo (Flop), Mardaani 3 (Below Avg), Assi (Flop) — all headed to OTT within weeks. We analyse why India's ₹40–130 Cr budget space is broken and what it means for Netflix, Prime, and ZEE5's content strategy." },
+    { tag:"JioHotstar", time:"2d ago", hot:false, source:"Economic Times",
+      url:"https://economictimes.indiatimes.com/industry/media/entertainment/entertainment/",
+      headline:"JioHotstar Posts Record Q1 2026 Driven by Border 2 and IPL — 30M+ New Subscribers",
+      summary:"The platform's content bet paying off with back-to-back blockbuster OTT premieres and cricket season delivering its strongest subscriber quarter ever." }
   ],
   TV: [
-    { tag:"TRP", time:"Now", hot:true, source:"BARC India",
+    { tag:"TRP", time:"2h ago", hot:true, source:"BARC India",
       url:"https://www.barcindia.co.in/",
-      headline:"BARC Week 10 TRP Report — Anupamaa Holds #1, IPL Begins Pulling Prime-Time Eyeballs",
-      summary:"Star Plus drama Anupamaa retains #1 for 3rd consecutive week. Colors' Udne Ki Aasha at #2. Hindi GEC ratings expected to dip 15–20% as IPL 2026 kicks off mid-March on JioHotstar & Star Sports." },
-    { tag:"IPL 2026", time:"2h ago", hot:true, source:"India Today",
-      url:"https://www.indiatoday.in/sports/cricket/ipl/",
-      headline:"IPL 2026 Begins March 22 — JioHotstar & Star Sports Set to Dominate TV Ratings Until June",
-      summary:"BCCI confirms IPL 2026 opening weekend. JioHotstar streaming + Star Sports broadcast. Advertisers paying record ₹18 Cr per 10-second spot. Hindi GEC channels preparing counter-programming strategies." },
-    { tag:"Streaming", time:"4h ago", hot:false, source:"Hindustan Times",
-      url:"https://www.hindustantimes.com/entertainment/tv/",
-      headline:"Panchayat S4 Confirmed April 18 — TVF's Rural Drama Returns After Record-Breaking S3",
-      summary:"Amazon Prime comedy-drama returns with full cast. S3 was Prime Video India's most-watched Indian original of 2025 with 22M views. S4 first look already 5M views in 24 hours." },
-    { tag:"Awards", time:"6h ago", hot:false, source:"Bollywood Hungama",
-      url:"https://www.bollywoodhungama.com/",
-      headline:"Filmfare OTT Awards 2026 — Mirzapur 3 and Dhurandhar Lead With 8 Nominations Each",
-      summary:"The 5th Filmfare OTT Awards see record nominations across platforms. Mirzapur 3 (Prime), Dhurandhar (Netflix) and Scam 2003 (SonyLIV) dominate. Ceremony scheduled for April 5, 2026." },
-    { tag:"Reality TV", time:"8h ago", hot:false, source:"India Today",
+      headline:"BARC Week 9 TRP Report — Anupamaa Regains #1 as IPL Season Approaches",
+      summary:"Star Plus drama reclaims top spot. Colors slips two positions. Hindi GEC ratings expected to dip further as IPL begins pulling prime-time eyeballs." },
+    { tag:"Reality TV", time:"6h ago", hot:false, source:"India Today",
       url:"https://www.indiatoday.in/entertainment/reality-tv/",
-      headline:"Bigg Boss OTT S4 Finale Ratings — 18% Higher Than S3, But Social Media Votes Controversy",
-      summary:"Season 4 ends with its highest-ever finale ratings. Winner announcement drew 4.2M concurrent viewers on JioHotstar. However, social media questions the vote count transparency." },
-    { tag:"Analysis", time:"1d ago", hot:false, source:null, url:null,
-      headline:"Boxoffy TV Watch: OTT Is Winning the TRP War in 2026 — What It Means for Star Plus",
-      summary:"From Panchayat to Mirzapur 3 — appointment viewing has shifted from Saturday night Star Plus to Thursday night Prime. We map the structural shift and what traditional broadcasters must do to survive." },
+      headline:"Bigg Boss OTT Season 4 — Winner Announced, Controversy Follows as Votes Are Questioned",
+      summary:"The season ends with a split verdict online. Ratings for the finale beat Season 3 by 18%, but social media erupts over alleged vote manipulation." },
+    { tag:"Streaming", time:"10h ago", hot:false, source:"Hindustan Times",
+      url:"https://www.hindustantimes.com/entertainment/tv/",
+      headline:"Panchayat Season 4 Confirmed for April 18 — TVF Drops First Look, Full Cast Returns",
+      summary:"The beloved rural drama returns with the entire cast intact. Streaming on Amazon Prime from April 18 — and the first look already has 5M views in 24 hours." },
+    { tag:"Awards", time:"14h ago", hot:false, source:"Bollywood Hungama",
+      url:"https://www.bollywoodhungama.com/news/bollywood/",
+      headline:"Filmfare Awards 2026 Nominations — Dhurandhar and MSVP Garu Lead with 12 Nods Each",
+      summary:"The 71st Filmfare Awards sees unprecedented cross-industry representation with Telugu and Hindi films battling it out across all major categories." },
+    { tag:"Analysis", time:"1d ago", hot:true, source:null, url:null,
+      headline:"Boxoffy TV Watch: Why OTT Is Winning the TRP War in 2026 — And What It Means for Star Plus",
+      summary:"From Panchayat to Mirzapur 3 — appointment viewing has moved from Saturday night Star Plus to Thursday night Prime. We map the shift and what traditional broadcasters must do." },
+    { tag:"BARC Data", time:"2d ago", hot:false, source:"Box Office India",
+      url:"https://www.boxofficeindia.com/showProd.php?itemCat=4&catName=Box+Office+Hindi",
+      headline:"BARC Week 8 — Hindi GEC Ratings Drop 8% as IPL Season Kickoff Looms Large",
+      summary:"General Entertainment Channels brace for Q2 as cricket season begins pulling eyeballs. Star Sports and JioHotstar among the biggest beneficiaries of the coming shift." }
   ]
 };
 
@@ -826,11 +874,86 @@ function FootnotesBar({ ns }) {
 /* ── WEEKLY COMMENTARY DATA ────────────────────────────────── */
 const WEEKLY_COMMENTARY = [
   {
+    weekNum: "Week 12, 2026",
+    dateRange: "Mar 7 – Mar 13, 2026",
+    headline: "OG Record BROKEN — Dhurandhar 2 Rewrites Every Premiere Benchmark",
+    subline: "₹29.69 Cr (with blocks) · 4.84L tickets · WW ~₹60 Cr · US $982K+ · Taran Adarsh: 7,500–10,000 tickets/hr on BMS · 6 days to release",
+    status: "current",
+    scoreboard: [
+      { film:"Dhurandhar 2: The Revenge", week:"6 days to release", wkCollection:"—", total:"Premiere advance ₹24.76 Cr (no blocks) / ₹29.69 Cr with blocks · WW ~₹60 Cr", verdict:"OG all-India premiere record BROKEN ✅ | Day 1 target ₹85–100 Cr+", color:"#C8201A" },
+      { film:"Thaai Kizhavi", week:"Wk 3 (Day 15)", wkCollection:"~₹3 Cr (Wk3)", total:"~₹43 Cr net / ~₹58 Cr WW", verdict:"Super Hit — ROI 357% — #2 Tamil 2026", color:"#16A34A" },
+      { film:"The Kerala Story 2", week:"Wk 3 (Day 15)", wkCollection:"~₹2 Cr (Wk3)", total:"~₹39 Cr net / ~₹46 Cr WW", verdict:"Average — budget recovered — closing before D2", color:"#D97706" },
+      { film:"O'Romeo", week:"Wk 5 (CLOSED)", wkCollection:"~₹33 lakh (Day 25)", total:"₹80.90 Cr net / ~₹110 Cr WW", verdict:"FLOP — ₹150 Cr budget, 54% recovered. OTT: Amazon Prime", color:"#EF4444" },
+      { film:"Border 2", week:"CLOSED → OTT", wkCollection:"—", total:"₹424 Cr net / ₹481.76 Cr WW", verdict:"Super Hit — OTT Netflix Mar 20. Border 3 confirmed.", color:"#16A34A" },
+      { film:"Mardaani 3", week:"OTT (Amazon)", wkCollection:"—", total:"₹50.78 Cr net / ₹75.10 Cr WW", verdict:"Flop — Amazon Prime ~Mar 27", color:"#EF4444" },
+      { film:"120 Bahadur", week:"Wk 1 (NEW)", wkCollection:"₹8.6 Cr WW Day 1 (early)", total:"₹8.6 Cr (Day 1)", verdict:"Flop — Sriram Raghavan. Budget ₹50 Cr. Slow start.", color:"#EF4444" },
+      { film:"Dhurandhar (re-release)", week:"Day 100 (TODAY)", wkCollection:"1,000 screens globally", total:"₹838.5 Cr net / ₹1,305.35 Cr WW", verdict:"All-Time Blockbuster — Final theatrical run before sequel", color:"#B8860B" },
+    ],
+    sources: [
+      {
+        name:"Taran Adarsh",
+        handle:"@taran_adarsh",
+        color:"#DC2626",
+        quote:"DHURANDHAR 2 SIMPLY UNSTOPPABLE — OG Record BROKEN",
+        analysis:"Taran Adarsh confirmed on X that Dhurandhar 2 paid preview bookings opened at a blazing 7,500 to 10,000 tickets per hour on BookMyShow — a pace he called simply UNSTOPPABLE. The film crossed ₹24.76 crore premiere gross without blocked seats, shattering Pawan Kalyan's OG record of ₹25 crore which was the highest all-India premiere collection ever. With blocked seats the total stands at ₹29.69 crore. US premiere advance crossed $982K across 678 locations, overtaking Animal's all-time Bollywood US premiere record. Worldwide advance is approximately ₹60 crore, and India's regular show bookings have not even opened yet — that surge is still ahead."
+      },
+      {
+        name:"Nishit Shaw",
+        handle:"@NishitShawHere",
+        color:"#059669",
+        quote:"Overseas will EXCEED Part 1 — pure CARNAGE in North America",
+        analysis:"Trade and overseas analyst Nishit Shaw confirmed that Dhurandhar 2 premiere advance in North America is nearing $2 million for the opening weekend — a historic pace for a Hindi film. PLF and IMAX Wednesday shows in the US and Canada have already sold out across multiple locations (Variety). He noted that Part 1 set all-time records for a Hindi film in Canada ($7.71M) and Australia (A$2.46M), and current tracking puts Part 2 30 to 40 percent higher across all key overseas markets. The WW advance of ₹60 crore is the highest for any Bollywood premiere in history."
+      },
+      {
+        name:"Sacnilk / Box Office India",
+        handle:"@sacnilk",
+        color:"#0369A1",
+        quote:"4.84 lakh tickets / 9,128 shows / ATP ₹414 — Boxoffy Verified Mar 13",
+        analysis:"Sacnilk's real-time tracking as of March 13 at 12 PM confirms 4,84,627 tickets sold across 9,128 premiere shows in India. The average ticket price of ₹414 reflects the premium pricing strategy — INOX Mumbai Recliner Prime at ₹2,900 vs AGS Cinemas Chennai at ₹59, a remarkable price spread that maximises both revenue and volume. PVR INOX CEO Gautam Dutta confirmed 1.5 lakh+ tickets in PVR INOX alone, calling it a big screen celebration. Dhurandhar 1 completed its 100th day on March 13 and simultaneously re-released across 1,000 screens globally — the first time in Indian cinema history that a prequel has run continuously until its sequel's launch."
+      },
+    ],
+    interval_take: "The week belonged entirely to Dhurandhar 2. Every day brought a new record. The OG premiere record — long held by Pawan Kalyan's OG — is gone. The Stree 2 Bollywood premiere record was already broken earlier this week. The worldwide advance is ₹60 crore and climbing, with India's regular show bookings not yet open. Taran Adarsh called the velocity UNSTOPPABLE. Nishit Shaw says overseas will exceed Part 1. Boxoffy's floor remains ₹85–90 Cr Day 1 net. The rest of the market is in standby — 120 Bahadur released today to little fanfare, O Romeo has quietly closed at ₹80.9 Cr as a confirmed Flop, and Border 2 moves to Netflix on March 20. The industry holds its breath for March 18 previews.",
+    nextWeek: "Mar 18 — Dhurandhar 2 paid previews (5PM). Mar 19 — Dhurandhar 2 worldwide release (Eid + Gudi Padwa + Ugadi). Border 2 on Netflix. Aadu 3 (Malayalam) also releasing. This is the biggest Indian opening since Baahubali 2.",
+  },
+  {
+    weekNum: "Week 11, 2026",
+    dateRange: "Feb 28 – Mar 6, 2026",
+    headline: "Dhurandhar 2 Advance Storm Begins — 3.56L Tickets in 4 Days",
+    subline: "Kerala Story 2 opens despite legal battles · Thaai Kizhavi surprises with word of mouth · D2 advance breaks Stree 2 premiere record",
+    status: "archived",
+    scoreboard: [
+      { film:"Dhurandhar 2: The Revenge", week:"Advance opens", wkCollection:"—", total:"₹19.01 Cr premiere gross (no blocks) / ₹24.2 Cr with blocks · 3.56L tickets", verdict:"Stree 2 premiere record broken · OG record within ₹1.99 Cr", color:"#C8201A" },
+      { film:"The Kerala Story 2", week:"Wk 1", wkCollection:"₹22.9 Cr (Wk1)", total:"₹22.9 Cr", verdict:"Average — legal issues hurt Day 1. Budget ₹28 Cr. Break-even zone.", color:"#D97706" },
+      { film:"Thaai Kizhavi", week:"Wk 1", wkCollection:"₹23.25 Cr (Wk1)", total:"₹23.25 Cr", verdict:"Super Hit — ₹9 Cr budget, 158% ROI in week 1 alone", color:"#16A34A" },
+      { film:"O'Romeo", week:"Wk 3 (Day 17)", wkCollection:"₹3.55 Cr (Wk3)", total:"₹65.15 Cr net", verdict:"Confirmed Flop — crawling to ₹70 Cr", color:"#EF4444" },
+      { film:"Border 2", week:"Wk 7 (closing)", wkCollection:"~₹1.43 Cr (Wk6)", total:"₹424 Cr net / ₹481.76 Cr WW", verdict:"Blockbuster — final screens before OTT Mar 20", color:"#16A34A" },
+      { film:"Mardaani 3", week:"OTT bound", wkCollection:"~₹1.2 Cr (Wk5)", total:"₹50.57 Cr net", verdict:"Below Average — Amazon Prime ~Mar 27", color:"#EF4444" },
+    ],
+    sources: [
+      {
+        name:"Box Office India",
+        handle:"@Box_Off_India",
+        color:"#1F2937",
+        quote:"Kerala Story 2 clears legal hurdle — opens to mixed collections",
+        analysis:"Box Office India reported that The Kerala Story 2 was affected by a Kerala High Court stay order on its release morning, limiting shows to after 6PM on Day 1. This severely dented what could have been a stronger opening. The film still managed ₹0.75 Cr on Day 1 and jumped to ₹4.65 Cr on Day 2 — showing genuine audience demand once the legal cloud lifted. BOI noted that Thaai Kizhavi's ₹2.65 Cr Day 1 from a ₹9 Cr budget was a very strong start for a Tamil comedy drama, with positive word-of-mouth driving the film up 88% on Day 2 to ₹5 Cr."
+      },
+      {
+        name:"Sacnilk",
+        handle:"@sacnilk",
+        color:"#0369A1",
+        quote:"D2 advance: 3.56L tickets in 4 days — Stree 2 premiere record BROKEN",
+        analysis:"Sacnilk tracked Dhurandhar 2's advance booking surge from the moment trailer and paid preview announcement went live on March 7. Within 24 hours, the premiere gross crossed ₹9 crore — smashing Stree 2's Bollywood premiere record of ₹8.75 Cr. By March 11 at 2PM, the figure had reached ₹19.01 Cr without blocks and ₹24.2 Cr with blocks, with 3.56 lakh tickets across 8,371 shows. The PVR INOX CEO Gautam Dutta confirmed 1.5 lakh+ tickets in PVR INOX chains alone. The US opened at $1.12M for Day 1 and $2.16M for the opening weekend in advance."
+      },
+    ],
+    interval_take: "Week 11 was the week the Dhurandhar 2 machine switched on. The moment the trailer dropped and paid preview bookings opened on March 7, Sacnilk clocked 7,500–10,000 tickets per hour on BookMyShow — a pace comparable to Baahubali 2's legendary booking velocity. The domestic market itself was quiet: Kerala Story 2 opened amid legal drama, Thaai Kizhavi emerged as the week's pleasant surprise, and O Romeo limped toward its Flop conclusion. But all of it was background noise. The trade, exhibitors, and audiences were already mentally in March 19.",
+    nextWeek: "Mar 13 — D2 advance continues building. Dhurandhar re-release (Day 100). Kerala Story 2 Wk 3. Thaai Kizhavi Wk 3. 120 Bahadur releases.",
+  },
+  {
     weekNum: "Week 7, 2026",
     dateRange: "Feb 15 – Feb 21, 2026",
     headline: "Valentine's Fizzle: O Romeo Confirmed Flop, New Releases Disappoint",
     subline: "A quiet mid-Feb window with no clear winner — trade eyes March 19 mega-clash",
-    status: "current",
+    status: "archived",
     scoreboard: [
       { film:"Border 2", week:"Wk 4", wkCollection:"~₹24 Cr", total:"~₹481 Cr", verdict:"Blockbuster ↓ winding down", color:"#16A34A" },
       { film:"O Romeo", week:"Wk 1→2", wkCollection:"₹47.1 Cr (Wk1) + ₹7 Cr (2nd wknd)", total:"~₹55 Cr", verdict:"FLOP — needs ₹130 Cr to break even", color:"#DC2626" },
@@ -941,18 +1064,18 @@ const WEEKLY_COMMENTARY = [
     nextWeek: "Border 2 Wk 3 · Mardaani 3 Wk 2 · Valentine's releases: O Romeo, Tu Yaa Main",
   },
   {
-    weekNum: "Week 11, 2026",
-    dateRange: "Mar 3 – Mar 10, 2026",
-    headline: "The Countdown Begins — 9 Days to Dhurandhar 2",
-    subline: "D2 paid previews: ₹15.91 Cr gross / ₹21 Cr with blocks · 2.86L tickets · on track for ₹30–35 Cr nett paid previews (new all-India record) · US near $2M · Tickets ₹3,100 in Mumbai · Thaai Kizhavi ₹37.90 Cr net · Kerala Story 2 ₹34.85 Cr net",
-    status: "current",
+    weekNum: "Week 10, 2026",
+    dateRange: "Mar 1 – Mar 7, 2026",
+    headline: "The Calm Before the Storm — All Eyes on March 19",
+    subline: "Dhurandhar 2 trailer out · Boxoffy AI Calc: ₹15–30 Cr Nett paid previews · ₹4.39 Cr advance in 2hrs · 1.1L+ premiere tickets · BMS: 7.5k–10k/hr · ₹80–100 Cr Day1 · US $565K Day1 · Mar 19.",
+    status: "archived",
     scoreboard: [
-      { film:"Border 2", week:"Wk 7 (FINAL — Closed)", wkCollection:"₹0 (Theatrical run over)", total:"₹424 Cr net / ₹481.76 Cr WW", verdict:"Super Hit (BOI) — Biggest Hindi film of 2026. Border 3 confirmed.", color:"#16A34A" },
-      { film:"The Kerala Story 2", week:"Wk 2 (Day 12)", wkCollection:"₹11.95 Cr (Wk2)", total:"₹34.85 Cr net / ₹41.10 Cr WW", verdict:"Average (BOI) — budget recovered, projected finish ₹40–42 Cr net. 9 days to D2.", color:"#22C55E" },
-      { film:"Thaai Kizhavi", week:"Wk 2 (Day 12)", wkCollection:"₹14.65 Cr (Wk2)", total:"₹37.90 Cr net / ₹54.72 Cr WW", verdict:"Super Hit — 321% ROI on ₹9 Cr budget. 2nd highest-grossing Tamil film of 2026.", color:"#16A34A" },
+      { film:"Border 2", week:"Wk 7 (Day 44+)", wkCollection:"₹1.43 Cr (Wk6)", total:"₹424 Cr net / ₹481.76 Cr WW", verdict:"Blockbuster — final days. Border 3 announced.", color:"#16A34A" },
+      { film:"The Kerala Story 2", week:"Wk 2 (Day 10)", wkCollection:"₹9.97 Cr (Wk2 ongoing)", total:"₹32.87 Cr net / ₹34.80 Cr WW", verdict:"Plus — budget recovered + profit. 11 days to Dhurandhar 2.", color:"#22C55E" },
       { film:"O'Romeo", week:"Wk 4 (Day 24)", wkCollection:"₹0.65 Cr (Wk4 trickle)", total:"₹68.20 Cr net / ₹80.73 Cr WW gross", verdict:"Confirmed Flop — ₹68 Cr vs ₹130 Cr. Amazon Prime OTT. Final days.", color:"#EF4444" },
       { film:"Mardaani 3", week:"Wk 6 (OTT)", wkCollection:"OTT — Netflix", total:"₹50.57 Cr net", verdict:"Below Average — Now on Netflix India.", color:"#EF4444" },
-      { film:"Dhurandhar 2: The Revenge", week:"9 days to release", wkCollection:"—", total:"Paid previews: ₹15.91 Cr gross (₹21 Cr incl. blocks) · 2.86L+ tickets · 8K+ shows · US near $2M total NA advance", verdict:"New Bollywood paid preview record (beats Stree 2 ₹8.75 Cr by 69%). BOI: ₹30 Cr+ nett easily done. Could beat OG ₹21 Cr all-India record. Tickets up to ₹3,100 Mumbai.", color:"#D97706" },
+      { film:"Assi", week:"Wk 3 (closing)", wkCollection:"~₹22 lakh (Day 15)", total:"~₹9.8 Cr net", verdict:"Flop vs ₹40 Cr budget — final days in theatres.", color:"#EF4444" },
+      { film:"Dhurandhar 2: The Revenge", week:"12 days to release", wkCollection:"—", total:"India: ₹4 Cr advance in 2hrs · 1.1L+ premiere tickets · US: $565K Day1 · $1M wknd", verdict:"Boxoffy AI Calc: ₹1,000 Cr India / ₹1,700–2,000 Cr WW. BMS: 7.5k–10k tickets/hr. ₹100 Cr opening targeted.", color:"#D97706" },
     ],
     sources: [
       { name:"Boxoffy AI Calc", note:"Pre-Toxic-postponement: ₹65–70 Cr Day 1. After Toxic pulled out Mar 4: upgraded to ₹85–90 Cr Day 1 net India. Post-trailer: ₹90–100 Cr in play.", url:"https://x.com/rohitjswl01",
@@ -1024,23 +1147,8 @@ function NavBar({ activeSection, setActiveSection }) {
           }}>{s}</button>
         ))}
 
-        {/* Right side */}
+        {/* Right side — static update stamp */}
         <div style={{ marginLeft:"auto", display:"flex", alignItems:"center", gap:0, flexShrink:0 }}>
-
-          {/* About link */}
-          <a href="/about.html"
-            style={{
-              fontFamily:"'DM Sans', sans-serif", fontWeight:600, fontSize:13,
-              color:"#9CA3AF", textDecoration:"none",
-              padding:"18px 14px",
-              borderBottom:"2px solid transparent",
-              letterSpacing:"0.04em", transition:"color 0.15s", flexShrink:0,
-            }}
-            onMouseEnter={e => e.target.style.color="#111827"}
-            onMouseLeave={e => e.target.style.color="#9CA3AF"}
-          >About</a>
-
-          <div style={{ width:1, height:20, background:"#E5E7EB", marginRight:12, flexShrink:0 }} />
 
           {/* Week indicator */}
           <div style={{
@@ -1050,7 +1158,7 @@ function NavBar({ activeSection, setActiveSection }) {
             <span style={{
               fontFamily:"'Barlow Condensed', sans-serif", fontWeight:700,
               fontSize:13, color:T.accent, letterSpacing:"0.03em",
-            }}>WEEK 11 · 2026</span>
+            }}>WEEK 12 · 2026</span>
             <span style={{
               fontFamily:"'DM Sans', sans-serif", fontSize:8, color:"#9CA3AF",
               letterSpacing:"0.1em", textTransform:"uppercase",
@@ -1064,7 +1172,7 @@ function NavBar({ activeSection, setActiveSection }) {
             <span style={{
               fontFamily:"'Barlow Condensed', sans-serif", fontWeight:700,
               fontSize:13, color:"#374151", letterSpacing:"0.03em",
-            }}>Mon, 9 Mar 2026 · 11:55 PM IST</span>
+            }}>Sat, 8 Mar 2026 · 12:00 AM IST</span>
             <span style={{
               fontFamily:"'DM Sans', sans-serif", fontSize:8, color:"#9CA3AF",
               letterSpacing:"0.1em", textTransform:"uppercase",
@@ -2266,8 +2374,6 @@ function WeeklyChartRow({ movie, rank, prevRank }) {
     moveEl = <span style={{ fontFamily:"'DM Sans', sans-serif", fontSize:9, color:T.textMuted, letterSpacing:"0.06em" }}>UPCOMING</span>;
   } else if (prevRank === 0 || movie.weekNum === 1) {
     moveEl = <span style={{ background:"#1A7A3C", color:"#fff", fontFamily:"'DM Sans', sans-serif", fontWeight:800, fontSize:9, padding:"2px 5px", borderRadius:2, letterSpacing:"0.06em" }}>NEW</span>;
-  } else if (movie.status === "Closed" || movie.status === "Closing") {
-    moveEl = <span style={{ fontFamily:"'DM Sans', sans-serif", fontSize:9, color:T.textMuted, letterSpacing:"0.06em" }}>CLOSED</span>;
   } else if (movie.status === "OTT" || movie.weeklyCollection === 0) {
     moveEl = <span style={{ fontFamily:"'DM Sans', sans-serif", fontSize:9, color:T.textMuted, letterSpacing:"0.06em" }}>OTT</span>;
   } else if (prevRank === null) {
@@ -2378,17 +2484,6 @@ function WeeklyChartRow({ movie, rank, prevRank }) {
           {barPct > 0 && (
             <div style={{ marginTop:6, height:3, background:T.border, borderRadius:2, width:"80%", maxWidth:200 }}>
               <div style={{ height:"100%", width:`${barPct}%`, background: isNew ? "#16A34A" : T.accent, borderRadius:2, transition:"width 0.4s" }} />
-            </div>
-          )}
-          {/* Dedicated page link */}
-          {movie.pageUrl && (
-            <div style={{ marginTop:7 }}>
-              <a
-                href={movie.pageUrl}
-                onClick={e => e.stopPropagation()}
-                style={{ display:"inline-flex", alignItems:"center", gap:4, fontFamily:"'DM Sans', sans-serif", fontSize:10, fontWeight:700, color: movie.status === "Upcoming" ? "#B8860B" : T.accent, letterSpacing:"0.04em", textDecoration:"none", textTransform:"uppercase", borderBottom:`1px solid currentColor`, paddingBottom:1 }}>
-                {movie.status === "Upcoming" ? "📊 Live Tracker" : "📊 Full Box Office"} →
-              </a>
             </div>
           )}
         </div>
@@ -2974,7 +3069,7 @@ function ForeignFilmsPanel({ movies }) {
 
   const running  = [...movies.filter(m => m.status === "Running")].sort((a,b) => (a.bogRank||99) - (b.bogRank||99));
   const upcoming = movies.filter(m => m.status === "Upcoming");
-  const otts     = [...movies.filter(m => m.status === "OTT" || m.status === "Closed" || m.status === "Closing")].sort((a,b) => b.totalNum - a.totalNum);
+  const otts     = [...movies.filter(m => m.status === "OTT")].sort((a,b) => b.totalNum - a.totalNum);
 
   return (
     <div style={{
@@ -3115,26 +3210,25 @@ function BoxOfficeSection() {
   const movies = (liveData || DATA)[year] || [];
   const accent = YEAR_ACCENT[year];
 
-  // Weekly chart: sort by this week's collection (active films first, then Closed/OTT, then upcoming)
+  // Weekly chart: sort by this week's collection (active films first, then OTT, then upcoming)
   // Hollywood films are separated out into their own section
-  const isInactive = s => s === "OTT" || s === "Closed" || s === "Closing";
   const weeklyChartMovies = year === 2026
     ? [...movies].filter(m => m.language !== "Hollywood").sort((a,b) => {
         if (a.status === "Upcoming" && b.status !== "Upcoming") return 1;
         if (b.status === "Upcoming" && a.status !== "Upcoming") return -1;
-        if (isInactive(a.status) && !isInactive(b.status)) return 1;
-        if (isInactive(b.status) && !isInactive(a.status)) return -1;
+        if (a.status === "OTT" && b.status !== "OTT") return 1;
+        if (b.status === "OTT" && a.status !== "OTT") return -1;
         return b.weeklyCollection - a.weeklyCollection;
       })
     : [];
 
-  // Hollywood films sorted: Running first (by weekly), then Closed/OTT (by India gross), then Upcoming
+  // Hollywood films sorted: Running first (by weekly), then OTT (by India gross), then Upcoming
   const hollywoodMovies = year === 2026
     ? [...movies].filter(m => m.language === "Hollywood").sort((a,b) => {
         if (a.status === "Upcoming" && b.status !== "Upcoming") return 1;
         if (b.status === "Upcoming" && a.status !== "Upcoming") return -1;
-        if (isInactive(a.status) && !isInactive(b.status)) return 1;
-        if (isInactive(b.status) && !isInactive(a.status)) return -1;
+        if (a.status === "OTT" && b.status !== "OTT") return 1;
+        if (b.status === "OTT" && a.status !== "OTT") return -1;
         return b.totalNum - a.totalNum;
       })
     : [];
@@ -3223,6 +3317,11 @@ function BoxOfficeSection() {
 
   return (
     <div>
+      {/* ── FROM THE DESK — stacked editorial articles ──────────── */}
+      {year === 2026 && showWeekly && (
+        <EditorialSection onNavigate={setActiveSection} />
+      )}
+
       {/* ── WEEKLY HEADLINE BANNER ──────────────────────────────────── */}
       {year === 2026 && showWeekly && (
         <>
@@ -3249,8 +3348,8 @@ function BoxOfficeSection() {
                   letterSpacing:"0.14em", textTransform:"uppercase",
                   color:T.accent, background:"#FEE2E2",
                   padding:"2px 8px", borderRadius:2,
-                }}>WEEK 11 · LEAD STORY</span>
-                <span style={{ fontFamily:"'DM Sans', sans-serif", fontSize:10, color:T.textMuted }}>Sat, 8 Mar 2026</span>
+                }}>WEEK 12 · LEAD STORY</span>
+                <span style={{ fontFamily:"'DM Sans', sans-serif", fontSize:10, color:T.textMuted }}>Fri, 13 Mar 2026</span>
               </div>
               <div style={{
                 fontFamily:"'Barlow Condensed', sans-serif",
@@ -3261,12 +3360,12 @@ function BoxOfficeSection() {
                 letterSpacing:"-0.01em",
                 marginBottom:9,
               }}>
-                Indian Box Office — Left, Right, Centre.{" "}
-                <span style={{ color:T.accent }}>All Eyes on Dhurandhar: The Revenge.</span>
+                Dhurandhar 2 Rewrites History.{" "}
+                <span style={{ color:T.accent }}>OG Premiere Record BROKEN. ₹29.69 Cr.</span>
               </div>
               <div style={{ display:"flex", alignItems:"center", gap:10, flexWrap:"wrap" }}>
                 <span style={{ fontFamily:"'DM Sans', sans-serif", fontSize:11, color:T.textMuted }}>
-                  Ranveer Singh · Aditya Dhar · Mar 19 · Eid + Gudi Padwa
+                  Ranveer Singh · Aditya Dhar · 4.84L tickets · 9,128 shows · Mar 19
                 </span>
                 <span style={{ fontFamily:"'DM Sans', sans-serif", fontSize:10, color:T.textMid, fontWeight:600 }}>
                   Boxoffy AI Calc ↗
@@ -3277,10 +3376,10 @@ function BoxOfficeSection() {
             {/* Right — 4 key numbers, static, clean */}
             <div style={{ display:"flex", gap:0, borderLeft:`1px solid ${T.border}`, flexShrink:0 }}>
               {[
-                { label:"Opening Day (floor)", val:"₹85–100 Cr", sub:"Net India · Boxoffy AI Calc" },
-                { label:"Paid Previews", val:"₹15–30 Cr", sub:"Mar 18 · Boxoffy AI Calc" },
-                { label:"WW 4-Day Eid", val:"₹500–600 Cr", sub:"Boxoffy AI Calc" },
-                { label:"BMS Velocity", val:"10K / hr", sub:"Tickets · BMS live data" },
+                { label:"Premiere Gross (verified)", val:"₹24.76 Cr", sub:"No blocks · Mar 13 · Boxoffy" },
+                { label:"With Blocks (verified)", val:"₹29.69 Cr", sub:"India premiere · OG record BROKEN" },
+                { label:"WW Advance (so far)", val:"~₹60 Cr", sub:"India + overseas · Outlook India" },
+                { label:"US Premiere Advance", val:"$982K+", sub:"678 locations · NA OW ~$2M" },
               ].map((s,i) => (
                 <div key={i} style={{
                   padding:"0 18px", borderRight:`1px solid ${T.border}`, textAlign:"right",
@@ -3318,7 +3417,7 @@ function BoxOfficeSection() {
                 <div style={{ borderTop:`5px solid ${T.accent}`, padding:"28px 36px 22px", borderBottom:`1px solid ${T.border}`, position:"relative" }}>
                   <div style={{ display:"flex", alignItems:"center", gap:8, marginBottom:12 }}>
                     <span style={{ fontFamily:"'DM Sans', sans-serif", fontWeight:700, fontSize:9, letterSpacing:"0.14em", textTransform:"uppercase", color:T.accent, background:"#FEE2E2", padding:"2px 8px", borderRadius:2 }}>BOXOFFY ANALYSIS</span>
-                    <span style={{ fontFamily:"'DM Sans', sans-serif", fontSize:10, color:T.textMuted }}>Week 11 · 9 March 2026</span>
+                    <span style={{ fontFamily:"'DM Sans', sans-serif", fontSize:10, color:T.textMuted }}>Week 10 · 8 March 2026</span>
                   </div>
                   <h1 style={{
                     fontFamily:"'Barlow Condensed', sans-serif", fontWeight:800,
@@ -3498,7 +3597,7 @@ function BoxOfficeSection() {
             </h2>
           </div>
           <p style={{ fontFamily:"'DM Sans', sans-serif", fontSize:13, color:T.textMuted, marginLeft:12 }}>
-            {showWeekly ? "Week 7, 2026 — Ranked by this week's collection · All active films listed · Feb 15–21" : "Top Indian films by worldwide gross · Industry tracking data"}
+            {showWeekly ? "Week 12, 2026 — Ranked by this week's collection · All active films listed · Mar 7–13" : "Top Indian films by worldwide gross · Industry tracking data"}
           </p>
         </div>
         {topFilm && (
@@ -3603,13 +3702,13 @@ function BoxOfficeSection() {
               ● LIVE
             </span>
             <span style={{ fontFamily:"'DM Sans', sans-serif", fontSize:11, color:T.textMuted }}>
-              Week 11 · Mar 9, 2026 · Data current as of Mon 9 Mar 2026
+              Week 12 · Mar 13, 2026 · Data current as of Fri 13 Mar 2026
             </span>
             <span style={{ background:T.surface, border:`1px solid ${T.border}`, fontFamily:"'DM Sans', sans-serif", fontSize:10, color:T.textMid, padding:"2px 8px", borderRadius:2 }}>
-              Border 2 closed · ₹481.76 Cr WW
+              D2: ₹29.69 Cr premiere (OG BROKEN)
             </span>
             <span style={{ background:T.surface, border:`1px solid ${T.border}`, fontFamily:"'DM Sans', sans-serif", fontSize:10, color:T.textMid, padding:"2px 8px", borderRadius:2 }}>
-              Dhurandhar 2 → Mar 19
+              Border 2 → Netflix Mar 20
             </span>
             <span style={{ marginLeft:"auto", fontFamily:"'DM Sans', sans-serif", fontSize:10, color:T.textMuted, fontStyle:"italic" }}>
               Data: Sacnilk · Koimoi · Box Office India
@@ -3663,7 +3762,7 @@ function BoxOfficeSection() {
               ◎ RECENTLY CLOSED / MOVED TO OTT
             </span>
           </div>
-          {weeklyChartMovies.filter(m => m.status === "OTT" || m.status === "Closed" || m.status === "Closing").map((m, i) => (
+          {weeklyChartMovies.filter(m => m.status === "OTT").map((m, i) => (
             <WeeklyChartRow key={m.title} movie={m} rank={"—"} prevRank={null} />
           ))}
 
@@ -3953,134 +4052,6 @@ function ArticleCard({ article, size = "normal" }) {
   );
 }
 
-/* ── OTT TOP 10 POWER RANKINGS ──────────────────────────────────
-   Combined across Netflix, Prime Video, JioHotstar, ZEE5, SonyLIV, MX Player
-   Ranked by: weeks in platform Top 10 + peak viewership (combined score)
-   Updated: Week 11, Mar 9 2026
-─────────────────────────────────────────────────────────────── */
-const OTT_TOP10 = [
-  { rank:1,  title:"Mirzapur 3",              type:"Series",       platform:"Prime Video", genre:"Crime Drama",    weeksInTop10:14, peakViews:"28M (10 days)", score:98, hot:true,  note:"S4 already greenlit. All-time Prime India record." },
-  { rank:2,  title:"Panchayat S3",             type:"Series",       platform:"Prime Video", genre:"Comedy Drama",   weeksInTop10:12, peakViews:"22M",           score:91, hot:false, note:"Most rewatched Indian web series of 2025." },
-  { rank:3,  title:"Dhurandhar",               type:"Film",         platform:"Netflix",     genre:"Action Spy",     weeksInTop10:10, peakViews:"50M+",          score:89, hot:true,  note:"Biggest Indian OTT film debut ever. ₹85 Cr Netflix deal (Part 1)." },
-  { rank:4,  title:"Scam 2003: The Telgi Story", type:"Series",     platform:"SonyLIV",     genre:"True Crime",     weeksInTop10:9,  peakViews:"18M",           score:82, hot:false, note:"S2 trailer drops March 20. April 11 premiere." },
-  { rank:5,  title:"The Family Man S3",        type:"Series",       platform:"Prime Video", genre:"Thriller",       weeksInTop10:8,  peakViews:"19M",           score:79, hot:false, note:"Manoj Bajpayee returns. Most anticipated S3 of 2026." },
-  { rank:6,  title:"IC 814: The Kandahar Hijack", type:"Series",    platform:"Netflix",     genre:"True Crime",     weeksInTop10:8,  peakViews:"15M",           score:76, hot:false, note:"Netflix India's most-watched original of early 2026." },
-  { rank:7,  title:"Maharaj",                  type:"Film",         platform:"Netflix",     genre:"Period Drama",   weeksInTop10:7,  peakViews:"12M",           score:71, hot:false, note:"Junaid Khan debut. Controversial pre-release ban." },
-  { rank:8,  title:"Heeramandi S2",            type:"Series",       platform:"Netflix",     genre:"Period Drama",   weeksInTop10:7,  peakViews:"14M",           score:70, hot:true,  note:"Bhansali's magnum opus returns. Netflix's most-watched Indian series globally." },
-  { rank:9,  title:"Kota Factory S4",          type:"Series",       platform:"Netflix",     genre:"Drama",          weeksInTop10:6,  peakViews:"11M",           score:65, hot:false, note:"TVF's student drama. S4 confirmed for May 2026." },
-  { rank:10, title:"Aspirants S3",             type:"Series",       platform:"Prime Video", genre:"Drama",          weeksInTop10:6,  peakViews:"10M",           score:63, hot:false, note:"TVF's UPSC drama completes its trilogy." },
-];
-
-const PLATFORM_COLORS = {
-  "Netflix":     { bg:"#E50914", text:"#fff" },
-  "Prime Video": { bg:"#00A8E1", text:"#fff" },
-  "JioHotstar":  { bg:"#1C1C6E", text:"#fff" },
-  "ZEE5":        { bg:"#7B2FBE", text:"#fff" },
-  "SonyLIV":     { bg:"#E8261A", text:"#fff" },
-  "MX Player":   { bg:"#FF6600", text:"#fff" },
-};
-
-const TYPE_COLORS = {
-  "Series":      { bg:"#1E3A5F", text:"#93C5FD" },
-  "Film":        { bg:"#1A2F1A", text:"#6EE7B7" },
-  "Documentary": { bg:"#2D1B4E", text:"#C4B5FD" },
-};
-
-function OTTTop10Widget() {
-  const [expanded, setExpanded] = useState(false);
-  const visible = expanded ? OTT_TOP10 : OTT_TOP10.slice(0, 5);
-
-  return (
-    <div style={{ margin:"0 24px 24px", border:`1px solid ${T.border}`, borderTop:`3px solid ${T.blue}`, background:T.surface }}>
-      {/* Header */}
-      <div style={{ padding:"12px 20px", background:"#F0F7FF", borderBottom:`1px solid ${T.border}`, display:"flex", alignItems:"center", gap:12 }}>
-        <span style={{ fontFamily:"'Barlow Condensed',sans-serif", fontWeight:900, fontSize:13, color:T.blue, letterSpacing:"0.18em", textTransform:"uppercase" }}>
-          📺 BOXOFFY OTT POWER RANKINGS
-        </span>
-        <span style={{ width:1, height:14, background:T.border, display:"inline-block" }} />
-        <span style={{ fontFamily:"'DM Sans',sans-serif", fontSize:10, color:T.textMuted }}>
-          Combined · Netflix · Prime · JioHotstar · ZEE5 · SonyLIV · Week 11
-        </span>
-        <span style={{ marginLeft:"auto", fontFamily:"'DM Sans',sans-serif", fontSize:9, color:T.textMuted, letterSpacing:"0.08em" }}>
-          RANKED BY PLATFORM WEEKS + PEAK VIEWS
-        </span>
-      </div>
-
-      {/* Column headers */}
-      <div style={{ display:"grid", gridTemplateColumns:"40px 1fr 100px 90px 80px 80px", padding:"6px 16px", background:"#F9FAFB", borderBottom:`1px solid ${T.border}` }}>
-        {["#","TITLE / TYPE","PLATFORM","GENRE","WKS TOP10","PEAK VIEWS"].map((h,i) => (
-          <span key={i} style={{ fontFamily:"'DM Sans',sans-serif", fontSize:9, fontWeight:700, color:T.textMuted, letterSpacing:"0.1em", textTransform:"uppercase", textAlign: i===0?"center":"left" }}>{h}</span>
-        ))}
-      </div>
-
-      {/* Rows */}
-      {visible.map((item) => {
-        const platCfg = PLATFORM_COLORS[item.platform] || { bg:"#374151", text:"#fff" };
-        const typeCfg = TYPE_COLORS[item.type] || TYPE_COLORS["Series"];
-        return (
-          <div key={item.rank} style={{
-            display:"grid", gridTemplateColumns:"40px 1fr 100px 90px 80px 80px",
-            padding:"10px 16px",
-            borderBottom:`1px solid ${T.border}`,
-            background: item.rank <= 3 ? "#FFFDF8" : T.surface,
-            borderLeft: item.rank === 1 ? `3px solid ${T.gold}` : item.rank <= 3 ? `3px solid ${T.blue}` : `3px solid transparent`,
-          }}>
-            {/* Rank */}
-            <div style={{ display:"flex", alignItems:"center", justifyContent:"center" }}>
-              <span style={{ fontFamily:"'Barlow Condensed',sans-serif", fontWeight:900, fontSize:18,
-                color: item.rank === 1 ? T.gold : item.rank <= 3 ? T.blue : T.textMuted }}>
-                {item.rank === 1 ? "🥇" : item.rank === 2 ? "🥈" : item.rank === 3 ? "🥉" : `#${item.rank}`}
-              </span>
-            </div>
-            {/* Title */}
-            <div style={{ display:"flex", flexDirection:"column", justifyContent:"center", gap:3 }}>
-              <div style={{ display:"flex", alignItems:"center", gap:6 }}>
-                <span style={{ fontFamily:"'Barlow Condensed',sans-serif", fontWeight:800, fontSize:14, color:T.text }}>{item.title}</span>
-                {item.hot && <span style={{ color:T.accent, fontSize:9, fontWeight:700 }}>🔥 HOT</span>}
-              </div>
-              <div style={{ display:"flex", gap:5 }}>
-                <span style={{ background:typeCfg.bg, color:typeCfg.text, fontFamily:"'DM Sans',sans-serif", fontSize:8, fontWeight:700, padding:"1px 5px", borderRadius:2, letterSpacing:"0.06em" }}>{item.type}</span>
-              </div>
-              <span style={{ fontFamily:"'DM Sans',sans-serif", fontSize:10, color:T.textMuted, lineHeight:1.3 }}>{item.note}</span>
-            </div>
-            {/* Platform */}
-            <div style={{ display:"flex", alignItems:"center" }}>
-              <span style={{ background:platCfg.bg, color:platCfg.text, fontFamily:"'DM Sans',sans-serif", fontSize:9, fontWeight:700, padding:"2px 7px", borderRadius:2, letterSpacing:"0.04em" }}>{item.platform}</span>
-            </div>
-            {/* Genre */}
-            <div style={{ display:"flex", alignItems:"center" }}>
-              <span style={{ fontFamily:"'DM Sans',sans-serif", fontSize:10, color:T.textMid }}>{item.genre}</span>
-            </div>
-            {/* Weeks in Top 10 */}
-            <div style={{ display:"flex", alignItems:"center", gap:6 }}>
-              <div style={{ flex:1, background:T.border, borderRadius:2, height:4, overflow:"hidden" }}>
-                <div style={{ width:`${Math.min((item.weeksInTop10/14)*100,100)}%`, height:"100%", background:T.blue, borderRadius:2 }} />
-              </div>
-              <span style={{ fontFamily:"'Barlow Condensed',sans-serif", fontWeight:700, fontSize:13, color:T.blue, flexShrink:0 }}>{item.weeksInTop10}w</span>
-            </div>
-            {/* Peak Views */}
-            <div style={{ display:"flex", alignItems:"center" }}>
-              <span style={{ fontFamily:"'Barlow Condensed',sans-serif", fontWeight:700, fontSize:13, color:T.textMid }}>{item.peakViews}</span>
-            </div>
-          </div>
-        );
-      })}
-
-      {/* Show more / less */}
-      <div
-        onClick={() => setExpanded(e => !e)}
-        style={{ padding:"10px 20px", textAlign:"center", cursor:"pointer", background:"#F9FAFB", borderTop:`1px solid ${T.border}` }}
-        onMouseEnter={e => e.currentTarget.style.background="#F0F7FF"}
-        onMouseLeave={e => e.currentTarget.style.background="#F9FAFB"}
-      >
-        <span style={{ fontFamily:"'Barlow Condensed',sans-serif", fontWeight:700, fontSize:12, color:T.blue, letterSpacing:"0.1em" }}>
-          {expanded ? "▲ SHOW LESS" : `▼ SHOW FULL TOP 10 (${OTT_TOP10.length - 5} MORE)`}
-        </span>
-      </div>
-    </div>
-  );
-}
-
 function NewsSection({ category }) {
   const articles = ARTICLES[category] || [];
   const [featured, ...rest] = articles;
@@ -4104,12 +4075,6 @@ function NewsSection({ category }) {
       <div style={{ padding:24 }}>
         {/* Featured article */}
         <ArticleCard article={featured} size="large" />
-        {/* OTT Top 10 Power Rankings widget — only in OTT section */}
-        {category === "OTT" && (
-          <div style={{ marginTop:24, marginLeft:-24, marginRight:-24 }}>
-            <OTTTop10Widget />
-          </div>
-        )}
         {/* Grid of remaining articles */}
         {rest.length > 0 && (
           <div style={{
@@ -4125,10 +4090,11 @@ function NewsSection({ category }) {
   );
 }
 
-/* ── FEATURED EDITORIAL STRIP ───────────────────────────────── */
+/* ── EDITORIAL ROW (numbered ①②③) ──────────────────────────── */
 function FeaturedEditorialRow({ item, index, TagPill, onClick }) {
   const [hov, setHov] = useState(false);
   const isLead = index === 0;
+
   return (
     <div
       onClick={onClick}
@@ -4144,20 +4110,29 @@ function FeaturedEditorialRow({ item, index, TagPill, onClick }) {
         borderLeft: isLead ? `3px solid ${T.accent}` : `3px solid transparent`,
       }}
     >
+      {/* Issue number */}
       <div style={{
         fontFamily:"'Barlow Condensed',sans-serif", fontWeight:900,
         fontSize:isLead ? 22 : 16, color: isLead ? T.accent : T.textMuted,
-        opacity: isLead ? 1 : 0.4, flexShrink:0, width:24, textAlign:"center", lineHeight:1,
+        opacity: isLead ? 1 : 0.4, flexShrink:0, width:24, textAlign:"center",
+        lineHeight:1,
       }}>
         {index === 0 ? "①" : index === 1 ? "②" : "③"}
       </div>
+
+      {/* Divider */}
       <div style={{ width:1, height:isLead ? 42 : 32, background:T.border, flexShrink:0 }} />
+
+      {/* Tag */}
       <TagPill tag={item.tag} />
+
+      {/* Text */}
       <div style={{ flex:1, minWidth:0 }}>
         <div style={{
-          fontFamily:"'Barlow Condensed',sans-serif", fontWeight:800,
-          fontSize: isLead ? 18 : 15, color:T.text, lineHeight:1.15,
-          letterSpacing:"-0.01em",
+          fontFamily:"'Barlow Condensed',sans-serif",
+          fontWeight:800,
+          fontSize: isLead ? 18 : 15,
+          color: T.text, lineHeight:1.15, letterSpacing:"-0.01em",
           whiteSpace:"nowrap", overflow:"hidden", textOverflow:"ellipsis",
         }}>{item.headline}</div>
         {isLead && (
@@ -4168,28 +4143,34 @@ function FeaturedEditorialRow({ item, index, TagPill, onClick }) {
           }}>{item.dek}</div>
         )}
       </div>
+
+      {/* Meta */}
       <div style={{ flexShrink:0, textAlign:"right", borderLeft:`1px solid ${T.border}`, paddingLeft:14 }}>
         <div style={{ fontFamily:"'DM Sans',sans-serif", fontSize:10, fontWeight:700, color:T.textMid }}>{item.author}</div>
         <div style={{ fontFamily:"'DM Sans',sans-serif", fontSize:9, color:T.textMuted, marginTop:1 }}>{item.date} · {item.readTime}</div>
       </div>
+
+      {/* Arrow */}
       <div style={{
         flexShrink:0, fontFamily:"'Barlow Condensed',sans-serif",
-        fontWeight:800, fontSize:18, color: hov ? T.accent : T.textMuted,
-        transition:"color 0.15s", marginLeft:2,
+        fontWeight:800, fontSize:18, color:T.accent,
       }}>→</div>
     </div>
   );
 }
 
+/* ── FROM THE DESK — stacked editorial list ─────────────────── */
 function EditorialSection({ onNavigate }) {
   const TAG_COLORS = {
-    "ANALYSIS":        { bg:"#1E3A5F", text:"#93C5FD" },
-    "ADVANCE BOOKING": { bg:"#1A2F1A", text:"#6EE7B7" },
-    "INTERVIEW":       { bg:"#1A3A1A", text:"#86EFAC" },
-    "OPINION":         { bg:"#3B1F1F", text:"#FCA5A5" },
-    "EXCLUSIVE":       { bg:"#2D1B4E", text:"#C4B5FD" },
-    "REPORT":          { bg:"#1A2F1A", text:"#6EE7B7" },
-    "PREVIEW":         { bg:"#1C2B3A", text:"#7DD3FC" },
+    "ANALYSIS":        { bg:"#1E3A5F",  text:"#93C5FD"  },
+    "ADVANCE BOOKING": { bg:"#1A2F1A",  text:"#6EE7B7"  },
+    "DEEP DIVE":       { bg:"#1C2B3A",  text:"#7DD3FC"  },
+    "INTERVIEW":       { bg:"#1A3A1A",  text:"#86EFAC"  },
+    "OPINION":         { bg:"#3B1F1F",  text:"#FCA5A5"  },
+    "EXCLUSIVE":       { bg:"#2D1B4E",  text:"#C4B5FD"  },
+    "REPORT":          { bg:"#1A2F1A",  text:"#6EE7B7"  },
+    "PREVIEW":         { bg:"#1C2B3A",  text:"#7DD3FC"  },
+    "BREAKING":        { bg:"#7F1D1D",  text:"#FCA5A5"  },
   };
 
   const featured = EDITORIALS.slice(0, 3);
@@ -4215,7 +4196,7 @@ function EditorialSection({ onNavigate }) {
   return (
     <div style={{ background:T.surface, borderTop:`1px solid ${T.border}`, borderBottom:`2px solid ${T.border}` }}>
 
-      {/* Section header */}
+      {/* ── Section label ── */}
       <div style={{
         padding:"7px 28px",
         background:"#FFFDF8",
@@ -4234,12 +4215,12 @@ function EditorialSection({ onNavigate }) {
         </span>
       </div>
 
-      {/* Top 3 featured rows */}
+      {/* ── Top 3 numbered rows ── */}
       {featured.map((item, i) => (
         <FeaturedEditorialRow key={i} item={item} index={i} TagPill={TagPill} onClick={() => openArticle(item)} />
       ))}
 
-      {/* Archive — 4th article onwards */}
+      {/* ── Archive (4th article onwards) ── */}
       {archived.length > 0 && (
         <div style={{ borderTop:`1px solid ${T.border}` }}>
           <div style={{ padding:"6px 28px 4px", background:"#F9FAFB" }}>
@@ -4255,7 +4236,9 @@ function EditorialSection({ onNavigate }) {
                 display:"flex", alignItems:"center", gap:14,
                 padding:"9px 28px",
                 borderBottom: i < archived.length - 1 ? `1px solid ${T.border}` : "none",
-                cursor:"pointer", background:T.surface, transition:"background 0.12s",
+                cursor:"pointer",
+                transition:"background 0.12s",
+                background:T.surface,
               }}
               onMouseEnter={e => e.currentTarget.style.background = "#FAFAF8"}
               onMouseLeave={e => e.currentTarget.style.background = T.surface}
@@ -4274,9 +4257,88 @@ function EditorialSection({ onNavigate }) {
   );
 }
 
-// Legacy shim — keeps the callsite working
+/* ── FEATURED EDITORIAL STRIP ───────────────────────────────── */
 function FeaturedEditorialStrip({ editorial, onNavigate }) {
-  return <EditorialSection onNavigate={onNavigate} />;
+  if (!editorial) return null;
+
+  const TAG_COLORS = {
+    "ANALYSIS":   { bg:"#1E3A5F", text:"#93C5FD" },
+    "INTERVIEW":  { bg:"#1A3A1A", text:"#86EFAC" },
+    "OPINION":    { bg:"#3B1F1F", text:"#FCA5A5" },
+    "EXCLUSIVE":  { bg:"#2D1B4E", text:"#C4B5FD" },
+    "REPORT":     { bg:"#1A2F1A", text:"#6EE7B7" },
+  };
+  const tagStyle = TAG_COLORS[editorial.tag] || TAG_COLORS["ANALYSIS"];
+
+  return (
+    <div
+      onClick={() => {
+        if (editorial.url) { window.open(editorial.url, "_blank", "noopener"); }
+        else if (onNavigate) { onNavigate(editorial.section || "Weekly"); }
+      }}
+      style={{
+        background:"#FFFDF8",
+        borderTop:`1px solid ${T.border}`,
+        borderBottom:`2px solid ${T.border}`,
+        padding:"10px 32px",
+        display:"flex", alignItems:"center", gap:16,
+        cursor:"pointer",
+        transition:"background 0.15s",
+      }}
+      onMouseEnter={e => e.currentTarget.style.background = "#FFF8EE"}
+      onMouseLeave={e => e.currentTarget.style.background = "#FFFDF8"}
+    >
+      {/* FROM THE EDITORS label */}
+      <div style={{
+        fontFamily:"'Barlow Condensed',sans-serif", fontWeight:900,
+        fontSize:10, color:T.textMuted, letterSpacing:"0.2em",
+        textTransform:"uppercase", flexShrink:0,
+        borderRight:`1px solid ${T.border}`, paddingRight:16,
+        lineHeight:1.4,
+      }}>
+        FROM<br/>THE DESK
+      </div>
+
+      {/* Tag */}
+      <div style={{
+        background: tagStyle.bg,
+        color: tagStyle.text,
+        fontFamily:"'Barlow Condensed',sans-serif",
+        fontWeight:800, fontSize:10, letterSpacing:"0.12em",
+        padding:"3px 8px", borderRadius:2, flexShrink:0,
+      }}>{editorial.tag}</div>
+
+      {/* Headline + dek */}
+      <div style={{ flex:1, minWidth:0 }}>
+        <div style={{
+          fontFamily:"'Barlow Condensed',sans-serif",
+          fontWeight:800, fontSize:16,
+          color:T.text, lineHeight:1.15,
+          letterSpacing:"-0.01em",
+          whiteSpace:"nowrap", overflow:"hidden", textOverflow:"ellipsis",
+        }}>{editorial.headline}</div>
+        <div style={{
+          fontFamily:"'DM Sans',sans-serif", fontSize:11,
+          color:T.textMuted, marginTop:2, lineHeight:1.3,
+          whiteSpace:"nowrap", overflow:"hidden", textOverflow:"ellipsis",
+        }}>{editorial.dek}</div>
+      </div>
+
+      {/* Meta */}
+      <div style={{ flexShrink:0, textAlign:"right", borderLeft:`1px solid ${T.border}`, paddingLeft:16 }}>
+        <div style={{ fontFamily:"'DM Sans',sans-serif", fontSize:10, fontWeight:700, color:T.textMid }}>{editorial.author}</div>
+        <div style={{ fontFamily:"'DM Sans',sans-serif", fontSize:9, color:T.textMuted, marginTop:1 }}>{editorial.date} · {editorial.readTime}</div>
+      </div>
+
+      {/* Read arrow */}
+      <div style={{
+        flexShrink:0,
+        fontFamily:"'Barlow Condensed',sans-serif",
+        fontWeight:800, fontSize:18,
+        color:T.accent, marginLeft:4,
+      }}>→</div>
+    </div>
+  );
 }
 
 /* ── HEADER SNAPSHOT CARDS ──────────────────────────────────── */
@@ -4295,15 +4357,15 @@ function HeaderSnapshotCards({ activeSection }) {
 
   const CARDS = {
     "Box Office": [
-      { type:"stat",      label:"WEEK 11 · #1 FILM",    value:"Thaai Kizhavi",sub:"₹37.90 Cr net · Wk 2 · Super Hit",   accent:T.green,   icon:"🏆" },
-      { type:"stat",      label:"2026 YTD COMBINED",     value:"₹1,580 Cr",   sub:"Verified tracked releases · Week 11",         accent:T.blue,    icon:"📊" },
+      { type:"stat",      label:"WEEK 10 · #1 FILM",    value:"Kerala Story 2",sub:"₹32.87 Cr net · Wk 2 · Plus verdict",      accent:T.green,   icon:"🏆" },
+      { type:"stat",      label:"2026 YTD COMBINED",     value:"₹1,567 Cr",   sub:"Verified tracked releases · Week 10",         accent:T.blue,    icon:"📊" },
       { type:"stat",      label:"ALL-TIME RECORD",       value:"₹1,800 Cr",   sub:"Pushpa 2 · Will Ramayana break it?",         accent:T.gold,    icon:"⚡" },
       { type:"countdown", label:"NEXT BIG RELEASE",      value:daysLeft != null ? `${daysLeft}` : "—", valueSuffix:" days",
                           sub:"Dhurandhar 2 · Mar 19, 2026",                                                                     accent:T.accent,  icon:"🎬", pulse:true },
     ],
     "Weekly": [
-      { type:"stat",      label:"THIS WEEK · LEADER",    value:"Thaai Kizhavi",sub:"₹37.90 Cr net · Wk 2 · Super Hit",   accent:T.green,   icon:"🏆" },
-      { type:"stat",      label:"BIGGEST CLOSE",         value:"Border 2",     sub:"Closed · ₹481.76 Cr WW · Super Hit (BOI)",      accent:T.textMuted,icon:"🏁" },
+      { type:"stat",      label:"THIS WEEK · LEADER",    value:"Kerala Story 2",sub:"₹25.65 Cr net · Wk 2 · +39% weekend hold",   accent:T.green,   icon:"🏆" },
+      { type:"stat",      label:"BIGGEST DROP",          value:"Border 2",     sub:"Closing · ₹481 Cr WW final",                accent:T.textMuted,icon:"📉" },
       { type:"stat",      label:"OTT THIS WEEK",         value:"With Love",    sub:"Netflix from Mar 6 · ₹39 Cr WW · 644% ROI",accent:T.purple,  icon:"📺" },
       { type:"countdown", label:"COUNTDOWN",             value:daysLeft != null ? `${daysLeft}` : "—", valueSuffix:" days",
                           sub:"Dhurandhar 2 · Mar 19 · Eid",                                                                     accent:T.accent,  icon:"🎬", pulse:true },
@@ -4329,226 +4391,8 @@ function HeaderSnapshotCards({ activeSection }) {
   );
 }
 
-/* ── NEWSLETTER POPUP ────────────────────────────────────────────────────────
-   Mailchimp embedded form. After creating your Mailchimp account:
-   1. Go to Audience → Signup Forms → Embedded Forms
-   2. Copy the form action URL (looks like: https://xxxx.us1.list-manage.com/subscribe/post?u=XXXX&id=XXXX)
-   3. Replace MAILCHIMP_ACTION_URL below with that URL
-   ─────────────────────────────────────────────────────────────────────────── */
-const MAILCHIMP_ACTION_URL = "https://boxoffy.us16.list-manage.com/subscribe/post?u=306da5d11e109c71055a97422&id=9e4b95b96f&f_id=003e1fe1f0";
-
-function NewsletterPopup({ onClose }) {
-  const [name,     setName]     = useState("");
-  const [email,    setEmail]    = useState("");
-  const [lang,     setLang]     = useState("");
-  const [status,   setStatus]   = useState("idle"); // idle | submitting | success | error
-  const [hov,      setHov]      = useState(false);
-
-  const languages = ["Hindi / Bollywood", "South Indian", "Hollywood", "All Languages"];
-
-  async function handleSubmit() {
-    if (!email || !email.includes("@")) { setStatus("error"); return; }
-    setStatus("submitting");
-    try {
-      // Use a hidden iframe as the form target so Mailchimp's JSON response
-      // is swallowed silently — never shown to the user or opened in a new tab
-      const iframeId = "mc-hidden-iframe";
-      let iframe = document.getElementById(iframeId);
-      if (!iframe) {
-        iframe = document.createElement("iframe");
-        iframe.id = iframeId;
-        iframe.name = iframeId;
-        iframe.style.display = "none";
-        document.body.appendChild(iframe);
-      }
-
-      const form = document.createElement("form");
-      form.method  = "POST";
-      form.action  = MAILCHIMP_ACTION_URL;
-      form.target  = iframeId; // POST into hidden iframe — response never shown
-      form.style.display = "none";
-
-      const fields = { EMAIL: email, FNAME: name, MMERGE3: lang };
-      Object.entries(fields).forEach(([k, v]) => {
-        const input = document.createElement("input");
-        input.name  = k;
-        input.value = v;
-        form.appendChild(input);
-      });
-
-      document.body.appendChild(form);
-      form.submit();
-      document.body.removeChild(form);
-      setStatus("success");
-    } catch {
-      setStatus("error");
-    }
-  }
-
-  // Trap escape key
-  useEffect(() => {
-    const handler = e => { if (e.key === "Escape") onClose(); };
-    window.addEventListener("keydown", handler);
-    return () => window.removeEventListener("keydown", handler);
-  }, [onClose]);
-
-  return (
-    <div
-      onClick={e => { if (e.target === e.currentTarget) onClose(); }}
-      style={{
-        position:"fixed", inset:0, zIndex:9999,
-        background:"rgba(13,13,13,0.72)", backdropFilter:"blur(3px)",
-        display:"flex", alignItems:"center", justifyContent:"center",
-        padding:16, animation:"fadeIn 0.2s ease both",
-      }}>
-      <div style={{
-        background:T.surface, maxWidth:440, width:"100%",
-        borderRadius:2, overflow:"hidden",
-        boxShadow:"0 24px 64px rgba(0,0,0,0.35)",
-        border:`1px solid ${T.border}`,
-        animation:"fadeIn 0.25s ease both",
-      }}>
-
-        {/* Header bar */}
-        <div style={{ background:T.text, padding:"18px 24px 14px", position:"relative" }}>
-          <div style={{ display:"flex", alignItems:"baseline", gap:0, marginBottom:4 }}>
-            <span style={{ fontFamily:"'Barlow Condensed', sans-serif", fontWeight:800, fontSize:26, color:"#fff", letterSpacing:"-0.02em" }}>BOXOF</span>
-            <span style={{ fontFamily:"'Barlow Condensed', sans-serif", fontWeight:800, fontSize:26, color:T.accent, letterSpacing:"-0.02em" }}>FY</span>
-            <span style={{ fontFamily:"'DM Sans', sans-serif", fontSize:9, color:"#999", marginLeft:10, letterSpacing:"0.18em", textTransform:"uppercase" }}>Weekly Digest</span>
-          </div>
-          <div style={{ fontFamily:"'Barlow Condensed', sans-serif", fontSize:17, color:"#E0D9CC", fontWeight:600, letterSpacing:"0.02em" }}>
-            Every Monday. Box office numbers, OTT deals, trade analysis.
-          </div>
-          <button
-            onClick={onClose}
-            style={{ position:"absolute", top:14, right:16, background:"none", border:"none", color:"#777", fontSize:18, cursor:"pointer", lineHeight:1 }}>
-            ✕
-          </button>
-        </div>
-
-        {status === "success" ? (
-          <div style={{ padding:"32px 24px", textAlign:"center" }}>
-            <div style={{ fontSize:36, marginBottom:12 }}>🎬</div>
-            <div style={{ fontFamily:"'Barlow Condensed', sans-serif", fontWeight:800, fontSize:22, color:T.text, marginBottom:8 }}>
-              You're on the list.
-            </div>
-            <div style={{ fontFamily:"'DM Sans', sans-serif", fontSize:13, color:T.textMuted, lineHeight:1.6, marginBottom:20 }}>
-              First digest lands Monday. No spam, no PR fluff — just the numbers that matter.
-            </div>
-            <button
-              onClick={onClose}
-              style={{ background:T.accent, color:"#fff", border:"none", borderRadius:2, padding:"10px 28px", fontFamily:"'DM Sans', sans-serif", fontWeight:700, fontSize:13, letterSpacing:"0.04em", cursor:"pointer" }}>
-              Back to Boxoffy
-            </button>
-          </div>
-        ) : (
-          <div style={{ padding:"20px 24px 24px" }}>
-
-            {/* Value prop */}
-            <div style={{ display:"flex", gap:16, marginBottom:20, flexWrap:"wrap" }}>
-              {["📊 Week's top collections", "🎬 Hit or Flop verdicts", "📺 OTT debut numbers"].map(item => (
-                <div key={item} style={{ fontFamily:"'DM Sans', sans-serif", fontSize:11, color:T.textMid, display:"flex", alignItems:"center", gap:4 }}>
-                  {item}
-                </div>
-              ))}
-            </div>
-
-            {/* Name */}
-            <div style={{ marginBottom:12 }}>
-              <label style={{ fontFamily:"'DM Sans', sans-serif", fontSize:11, fontWeight:600, color:T.textMid, letterSpacing:"0.06em", textTransform:"uppercase", display:"block", marginBottom:5 }}>
-                First Name
-              </label>
-              <input
-                type="text"
-                placeholder="Your name"
-                value={name}
-                onChange={e => setName(e.target.value)}
-                style={{ width:"100%", padding:"9px 12px", border:`1px solid ${T.border}`, borderRadius:2, fontFamily:"'DM Sans', sans-serif", fontSize:13, color:T.text, background:T.bg, outline:"none" }}
-              />
-            </div>
-
-            {/* Email */}
-            <div style={{ marginBottom:12 }}>
-              <label style={{ fontFamily:"'DM Sans', sans-serif", fontSize:11, fontWeight:600, color:T.textMid, letterSpacing:"0.06em", textTransform:"uppercase", display:"block", marginBottom:5 }}>
-                Email Address <span style={{ color:T.accent }}>*</span>
-              </label>
-              <input
-                type="email"
-                placeholder="you@email.com"
-                value={email}
-                onChange={e => { setEmail(e.target.value); setStatus("idle"); }}
-                style={{ width:"100%", padding:"9px 12px", border:`1px solid ${status === "error" ? T.accent : T.border}`, borderRadius:2, fontFamily:"'DM Sans', sans-serif", fontSize:13, color:T.text, background:T.bg, outline:"none" }}
-              />
-              {status === "error" && (
-                <div style={{ fontFamily:"'DM Sans', sans-serif", fontSize:11, color:T.accent, marginTop:4 }}>Please enter a valid email address.</div>
-              )}
-            </div>
-
-            {/* Language preference */}
-            <div style={{ marginBottom:20 }}>
-              <label style={{ fontFamily:"'DM Sans', sans-serif", fontSize:11, fontWeight:600, color:T.textMid, letterSpacing:"0.06em", textTransform:"uppercase", display:"block", marginBottom:8 }}>
-                I follow mostly
-              </label>
-              <div style={{ display:"flex", gap:8, flexWrap:"wrap" }}>
-                {languages.map(l => (
-                  <button
-                    key={l}
-                    onClick={() => setLang(l)}
-                    style={{
-                      padding:"6px 12px", borderRadius:2, cursor:"pointer",
-                      fontFamily:"'DM Sans', sans-serif", fontSize:11, fontWeight:600,
-                      letterSpacing:"0.03em", transition:"all 0.12s",
-                      background: lang === l ? T.text : T.bg,
-                      color:      lang === l ? "#fff"  : T.textMid,
-                      border:     lang === l ? `1px solid ${T.text}` : `1px solid ${T.border}`,
-                    }}>
-                    {l}
-                  </button>
-                ))}
-              </div>
-            </div>
-
-            {/* Submit */}
-            <button
-              onClick={handleSubmit}
-              disabled={status === "submitting"}
-              onMouseEnter={() => setHov(true)}
-              onMouseLeave={() => setHov(false)}
-              style={{
-                width:"100%", padding:"12px", borderRadius:2, border:"none", cursor:"pointer",
-                background: hov ? T.redDark : T.accent,
-                color:"#fff", fontFamily:"'Barlow Condensed', sans-serif",
-                fontWeight:800, fontSize:17, letterSpacing:"0.06em",
-                textTransform:"uppercase", transition:"background 0.15s",
-                opacity: status === "submitting" ? 0.7 : 1,
-              }}>
-              {status === "submitting" ? "Subscribing..." : "Subscribe — It's Free"}
-            </button>
-
-            <div style={{ fontFamily:"'DM Sans', sans-serif", fontSize:10, color:T.textMuted, textAlign:"center", marginTop:10, lineHeight:1.5 }}>
-              No spam. Unsubscribe any time. Every Monday morning.
-            </div>
-          </div>
-        )}
-      </div>
-    </div>
-  );
-}
-
 export default function App() {
-  const [activeSection,    setActiveSection]    = useState("Box Office");
-  const [showNewsletter,   setShowNewsletter]   = useState(false);
-  const [popupFired,       setPopupFired]       = useState(false);
-
-  // Fire popup after 30 seconds — only once per session
-  useEffect(() => {
-    if (popupFired) return;
-    const timer = setTimeout(() => {
-      setShowNewsletter(true);
-      setPopupFired(true);
-    }, 30000);
-    return () => clearTimeout(timer);
-  }, [popupFired]);
+  const [activeSection, setActiveSection] = useState("Box Office");
 
   const newsCategory =
     activeSection === "Bollywood" ? "Bollywood" :
@@ -4567,9 +4411,6 @@ export default function App() {
         button { cursor:pointer; }
         button:hover { filter: brightness(0.92); }
       `}</style>
-
-      {/* Newsletter Popup */}
-      {showNewsletter && <NewsletterPopup onClose={() => setShowNewsletter(false)} />}
 
       <NavBar activeSection={activeSection} setActiveSection={setActiveSection} />
 
@@ -4641,7 +4482,7 @@ export default function App() {
             ))}
           </div>
           <div style={{ borderTop:`1px solid ${T.border}`, paddingTop:10, color:T.textMuted, lineHeight:1.8 }}>
-            © 2026 Boxoffy.com · India Box Office Intelligence · Box office data from industry tracking sources · Current as of Mar 9, 2026 · All figures in ₹ Crores
+            © 2026 Boxoffy.com · India Box Office Intelligence · Box office data from industry tracking sources · Current as of Mar 8, 2026 · All figures in ₹ Crores
           </div>
         </div>
       </div>
