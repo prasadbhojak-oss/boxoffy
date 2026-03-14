@@ -4816,6 +4816,7 @@ function SubscribePopup({ onClose }) {
   }, [onClose]);
 
   async function handleSubmit() {
+    if (!name || !name.trim()) { setStatus("error"); return; }
     if (!email || !email.includes("@")) { setStatus("error"); return; }
     setStatus("submitting");
     try {
@@ -4908,7 +4909,7 @@ function SubscribePopup({ onClose }) {
             {/* Name */}
             <input
               type="text"
-              placeholder="First name (optional)"
+              placeholder="First name"
               value={name}
               onChange={e => setName(e.target.value)}
               style={{
@@ -4954,7 +4955,7 @@ function SubscribePopup({ onClose }) {
             </select>
             {status === "error" && (
               <div style={{ fontFamily:"'DM Sans',sans-serif", fontSize:11, color:"#EF4444", marginBottom:4 }}>
-                Please enter a valid email address.
+                Please enter your first name and a valid email address.
               </div>
             )}
           </>
