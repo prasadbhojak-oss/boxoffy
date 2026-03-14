@@ -663,8 +663,7 @@ const EDITORIALS = [
     author: "The Boxoffy Team",
     date: "Mar 10, 2026",
     readTime: "15 min read",
-    url: null,
-    section: "Weekly",
+    url: "india-boxoffice-how-it-works.html",
   },
   {
     tag: "ANALYSIS",
@@ -4482,7 +4481,7 @@ export default function App() {
             ))}
           </div>
           <div style={{ borderTop:`1px solid ${T.border}`, paddingTop:10, color:T.textMuted, lineHeight:1.8 }}>
-            © 2026 Boxoffy.com · India Box Office Intelligence · Box office data from industry tracking sources · Current as of Mar 8, 2026 · All figures in ₹ Crores
+            © 2026 Boxoffy.com · India Box Office Intelligence · Box office data from industry tracking sources · Current as of Mar 13, 2026 · All figures in ₹ Crores
           </div>
         </div>
       </div>
