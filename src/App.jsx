@@ -4795,12 +4795,10 @@ function PrivacyPolicyPage({ onBack }) {
 
 
 /* ── NEWSLETTER POPUP ─────────────────────────────────────────────────────────
-   Resend Audiences API — adds contact directly to Resend audience list.
-   Fields: email, firstName, language (stored as last_name field)
+   Posts to /api/subscribe (Vercel serverless) which forwards to Resend.
+   API key lives in Vercel env vars — never exposed to the browser.
    Audience ID: 6fc2744e-1719-4693-91a9-770d9e0eea36
    ─────────────────────────────────────────────────────────────────────────── */
-const RESEND_AUDIENCE_ID = "6fc2744e-1719-4693-91a9-770d9e0eea36";
-const RESEND_API_KEY = "re_cSQRLPvm_4QoZjaV1ECAPyDeM2s3wdjQ5";
 
 function SubscribePopup({ onClose }) {
   const [name,   setName]   = useState("");
@@ -4821,17 +4819,13 @@ function SubscribePopup({ onClose }) {
     if (!email || !email.includes("@")) { setStatus("error"); return; }
     setStatus("submitting");
     try {
-      const res = await fetch(`https://api.resend.com/audiences/${RESEND_AUDIENCE_ID}/contacts`, {
+      const res = await fetch("/api/subscribe", {
         method: "POST",
-        headers: {
-          "Authorization": `Bearer ${RESEND_API_KEY}`,
-          "Content-Type": "application/json",
-        },
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           email: email.trim(),
-          first_name: name.trim(),
-          last_name: lang || "All Languages",
-          unsubscribed: false,
+          firstName: name.trim(),
+          language: lang || "All Languages",
         }),
       });
       if (res.ok) {
