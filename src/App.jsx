@@ -4523,8 +4523,313 @@ function HeaderSnapshotCards({ activeSection }) {
   );
 }
 
+/* ── SUBSCRIBE POPUP ────────────────────────────────────────── */
+function SubscribePopup({ onClose }) {
+  const [email, setEmail] = useState("");
+  const [status, setStatus] = useState("idle"); // idle | success | error
+
+  const handleSubmit = () => {
+    if (!email || !email.includes("@")) { setStatus("error"); return; }
+    // TODO: wire to your email provider (Mailchimp / ConvertKit / Resend)
+    setStatus("success");
+  };
+
+  return (
+    <div onClick={onClose} style={{
+      position:"fixed", inset:0, background:"rgba(10,8,6,0.72)",
+      backdropFilter:"blur(4px)", zIndex:9000,
+      display:"flex", alignItems:"center", justifyContent:"center", padding:20,
+    }}>
+      <div onClick={e => e.stopPropagation()} style={{
+        background:"#FFFFFF", maxWidth:420, width:"100%",
+        borderTop:`4px solid ${T.accent}`, boxShadow:"0 24px 64px rgba(0,0,0,0.3)",
+        padding:"36px 32px 28px", position:"relative",
+      }}>
+        {/* Close */}
+        <button onClick={onClose} style={{
+          position:"absolute", top:12, right:14, background:"none", border:"none",
+          fontSize:18, color:T.textMuted, cursor:"pointer", lineHeight:1,
+        }}>✕</button>
+
+        {/* Badge */}
+        <div style={{
+          display:"inline-block", fontFamily:"'Barlow Condensed',sans-serif",
+          fontSize:9, fontWeight:800, letterSpacing:"0.2em", textTransform:"uppercase",
+          color:T.accent, background:"rgba(200,32,26,0.08)", border:`1px solid ${T.accent}`,
+          padding:"3px 10px", marginBottom:14,
+        }}>Boxoffy Weekly</div>
+
+        <div style={{
+          fontFamily:"'Barlow Condensed',sans-serif", fontWeight:800,
+          fontSize:26, color:T.text, lineHeight:1.1, marginBottom:10,
+        }}>
+          India's sharpest box office<br/>intel. Every week. Free.
+        </div>
+
+        <p style={{
+          fontFamily:"'DM Sans',sans-serif", fontSize:13, color:T.textMid,
+          lineHeight:1.65, marginBottom:22,
+        }}>
+          Opening day predictions · Advance booking breakdowns · OTT numbers ·
+          Verdict calls before anyone else. No noise. No filler.
+        </p>
+
+        {status === "success" ? (
+          <div style={{
+            background:"#F0FFF4", border:"1px solid #6EE7B7", padding:"16px 20px",
+            fontFamily:"'DM Sans',sans-serif", fontSize:14, color:"#065F46",
+            textAlign:"center", fontWeight:600,
+          }}>
+            ✓ You're in. First edition lands Friday.
+          </div>
+        ) : (
+          <>
+            <div style={{ display:"flex", gap:0, marginBottom:8 }}>
+              <input
+                type="email"
+                placeholder="your@email.com"
+                value={email}
+                onChange={e => { setEmail(e.target.value); setStatus("idle"); }}
+                onKeyDown={e => e.key === "Enter" && handleSubmit()}
+                style={{
+                  flex:1, padding:"11px 14px", border:`1px solid ${status==="error"?"#EF4444":T.border}`,
+                  borderRight:"none", fontFamily:"'DM Sans',sans-serif", fontSize:14,
+                  outline:"none", background:T.bg, color:T.text,
+                }}
+              />
+              <button onClick={handleSubmit} style={{
+                background:T.accent, color:"#fff", border:"none",
+                padding:"11px 20px", fontFamily:"'Barlow Condensed',sans-serif",
+                fontWeight:800, fontSize:13, letterSpacing:"0.1em", textTransform:"uppercase",
+                cursor:"pointer", whiteSpace:"nowrap",
+              }}>Subscribe</button>
+            </div>
+            {status === "error" && (
+              <div style={{ fontFamily:"'DM Sans',sans-serif", fontSize:11, color:"#EF4444", marginBottom:4 }}>
+                Please enter a valid email address.
+              </div>
+            )}
+          </>
+        )}
+
+        <div style={{
+          fontFamily:"'DM Sans',sans-serif", fontSize:10, color:T.textMuted,
+          marginTop:14, letterSpacing:"0.04em",
+        }}>
+          No spam. Unsubscribe any time. Boxoffy.com
+        </div>
+      </div>
+    </div>
+  );
+}
+
+/* ── CONTACT SECTION ────────────────────────────────────────── */
+function ContactSection() {
+  const [form, setForm] = useState({ name:"", org:"", email:"", type:"official-numbers", message:"" });
+  const [status, setStatus] = useState("idle"); // idle | submitting | success | error
+
+  const REQUEST_TYPES = [
+    { value:"official-numbers",  label:"📊 Share official box office numbers" },
+    { value:"press-credentials", label:"🎬 Press / media credentials" },
+    { value:"partnership",       label:"🤝 Partnership / collaboration" },
+    { value:"correction",        label:"✏️ Data correction request" },
+    { value:"other",             label:"💬 Other" },
+  ];
+
+  const handleChange = (field, val) => setForm(f => ({ ...f, [field]:val }));
+
+  const handleSubmit = () => {
+    if (!form.name || !form.email || !form.message) { setStatus("error"); return; }
+    if (!form.email.includes("@")) { setStatus("error"); return; }
+    // TODO: wire to Resend / EmailJS / your backend
+    setStatus("success");
+  };
+
+  const inputStyle = {
+    width:"100%", padding:"10px 14px", border:`1px solid ${T.border}`,
+    fontFamily:"'DM Sans',sans-serif", fontSize:13, color:T.text,
+    background:"#FFFFFF", outline:"none", marginBottom:12,
+  };
+  const labelStyle = {
+    fontFamily:"'Barlow Condensed',sans-serif", fontSize:11, fontWeight:700,
+    letterSpacing:"0.12em", textTransform:"uppercase", color:T.textMuted,
+    display:"block", marginBottom:4,
+  };
+
+  return (
+    <div style={{ background:T.bg, borderTop:`2px solid ${T.border}` }}>
+      <div style={{ maxWidth:1160, margin:"0 auto", padding:"48px 32px 56px" }}>
+
+        {/* Heading */}
+        <div style={{ maxWidth:640, marginBottom:36 }}>
+          <div style={{
+            fontFamily:"'Barlow Condensed',sans-serif", fontSize:10, fontWeight:700,
+            letterSpacing:"0.22em", textTransform:"uppercase", color:T.accent, marginBottom:10,
+          }}>Get In Touch</div>
+          <div style={{
+            fontFamily:"'Barlow Condensed',sans-serif", fontWeight:800,
+            fontSize:"clamp(24px,3vw,36px)", color:T.text, lineHeight:1.1, marginBottom:12,
+          }}>
+            Official numbers? Press inquiry?<br/>Boxoffy wants to hear from you.
+          </div>
+          <p style={{
+            fontFamily:"'DM Sans',sans-serif", fontSize:14, color:T.textMid, lineHeight:1.7,
+          }}>
+            Studios, distributors and PR teams — share verified box office data directly with us
+            and we'll cite you accurately. Press credentials, corrections, partnerships and
+            general enquiries all welcome.
+          </p>
+        </div>
+
+        <div style={{ display:"grid", gridTemplateColumns:"1fr 1fr", gap:48 }}>
+
+          {/* Left — form */}
+          <div>
+            {status === "success" ? (
+              <div style={{
+                background:"#F0FFF4", border:"1px solid #6EE7B7",
+                padding:"28px 24px", textAlign:"center",
+              }}>
+                <div style={{ fontSize:28, marginBottom:10 }}>✓</div>
+                <div style={{
+                  fontFamily:"'Barlow Condensed',sans-serif", fontWeight:800,
+                  fontSize:20, color:"#065F46", marginBottom:8,
+                }}>Message received.</div>
+                <div style={{
+                  fontFamily:"'DM Sans',sans-serif", fontSize:13, color:"#047857",
+                }}>We'll get back to you within 24–48 hours.</div>
+              </div>
+            ) : (
+              <>
+                {status === "error" && (
+                  <div style={{
+                    background:"#FEF2F2", border:"1px solid #FECACA",
+                    padding:"10px 14px", marginBottom:16,
+                    fontFamily:"'DM Sans',sans-serif", fontSize:12, color:"#B91C1C",
+                  }}>
+                    Please fill in all required fields with a valid email.
+                  </div>
+                )}
+
+                <div style={{ display:"grid", gridTemplateColumns:"1fr 1fr", gap:12, marginBottom:0 }}>
+                  <div>
+                    <label style={labelStyle}>Name *</label>
+                    <input
+                      type="text" placeholder="Your name"
+                      value={form.name} onChange={e => handleChange("name", e.target.value)}
+                      style={inputStyle}
+                    />
+                  </div>
+                  <div>
+                    <label style={labelStyle}>Organisation</label>
+                    <input
+                      type="text" placeholder="Studio / PR / Media"
+                      value={form.org} onChange={e => handleChange("org", e.target.value)}
+                      style={inputStyle}
+                    />
+                  </div>
+                </div>
+
+                <label style={labelStyle}>Email *</label>
+                <input
+                  type="email" placeholder="your@email.com"
+                  value={form.email} onChange={e => handleChange("email", e.target.value)}
+                  style={inputStyle}
+                />
+
+                <label style={labelStyle}>Request Type</label>
+                <select
+                  value={form.type} onChange={e => handleChange("type", e.target.value)}
+                  style={{ ...inputStyle, cursor:"pointer" }}
+                >
+                  {REQUEST_TYPES.map(r => (
+                    <option key={r.value} value={r.value}>{r.label}</option>
+                  ))}
+                </select>
+
+                <label style={labelStyle}>Message *</label>
+                <textarea
+                  placeholder="Tell us what you need..."
+                  value={form.message} onChange={e => handleChange("message", e.target.value)}
+                  rows={4}
+                  style={{ ...inputStyle, resize:"vertical", lineHeight:1.6, marginBottom:16 }}
+                />
+
+                <button onClick={handleSubmit} style={{
+                  background:T.accent, color:"#fff", border:"none",
+                  padding:"13px 28px", fontFamily:"'Barlow Condensed',sans-serif",
+                  fontWeight:800, fontSize:14, letterSpacing:"0.1em", textTransform:"uppercase",
+                  cursor:"pointer", width:"100%",
+                }}>
+                  Send Message →
+                </button>
+              </>
+            )}
+          </div>
+
+          {/* Right — info cards */}
+          <div style={{ display:"flex", flexDirection:"column", gap:16 }}>
+            {[
+              {
+                icon:"📊",
+                title:"Studios & Distributors",
+                body:"Share verified opening day, weekly, or lifetime figures. We publish with full attribution and will not cite unverified numbers.",
+              },
+              {
+                icon:"✏️",
+                title:"Data Corrections",
+                body:"Spotted an error in our charts or articles? Send us the correct figure with a source link and we'll update within 24 hours.",
+              },
+              {
+                icon:"🎬",
+                title:"Press & Media",
+                body:"Accredited journalists and content creators — reach out for press credentials, data partnerships or attribution requests.",
+              },
+              {
+                icon:"🤝",
+                title:"Partnerships",
+                body:"Interested in data licensing, co-branded content or integration with Boxoffy intelligence? We'd love to talk.",
+              },
+            ].map((card, i) => (
+              <div key={i} style={{
+                display:"flex", gap:16, padding:"16px 18px",
+                background:"#FFFFFF", border:`1px solid ${T.border}`,
+                borderLeft:`3px solid ${T.accent}`,
+              }}>
+                <span style={{ fontSize:20, flexShrink:0, marginTop:2 }}>{card.icon}</span>
+                <div>
+                  <div style={{
+                    fontFamily:"'Barlow Condensed',sans-serif", fontWeight:800,
+                    fontSize:15, color:T.text, marginBottom:4,
+                  }}>{card.title}</div>
+                  <div style={{
+                    fontFamily:"'DM Sans',sans-serif", fontSize:12,
+                    color:T.textMid, lineHeight:1.6,
+                  }}>{card.body}</div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function App() {
   const [activeSection, setActiveSection] = useState("Box Office");
+  const [showSubscribe, setShowSubscribe] = useState(false);
+
+  // Show subscribe popup after 18 seconds, once per session
+  useEffect(() => {
+    const seen = sessionStorage.getItem("boxoffy_sub_seen");
+    if (seen) return;
+    const timer = setTimeout(() => {
+      setShowSubscribe(true);
+      sessionStorage.setItem("boxoffy_sub_seen", "1");
+    }, 18000);
+    return () => clearTimeout(timer);
+  }, []);
 
   const newsCategory =
     activeSection === "Bollywood" ? "Bollywood" :
@@ -4533,6 +4838,9 @@ export default function App() {
 
   return (
     <div style={{ minHeight:"100vh", background:T.bg, fontFamily:"'DM Sans', sans-serif" }}>
+
+      {/* Subscribe popup */}
+      {showSubscribe && <SubscribePopup onClose={() => setShowSubscribe(false)} />}
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap');
         @keyframes fadeIn { from { opacity:0; transform:translateY(8px); } to { opacity:1; transform:translateY(0); } }
@@ -4593,6 +4901,9 @@ export default function App() {
         {newsCategory && <NewsSection category={newsCategory} />}
       </div>
 
+      {/* Contact Section */}
+      <ContactSection />
+
       {/* Footer */}
       <div style={{ background:"#F9FAFB", color:T.textMuted, fontFamily:"'DM Sans', sans-serif", fontSize:11, padding:"24px 32px", borderTop:`2px solid ${T.accent}` }}>
         <div style={{ maxWidth:1160, margin:"0 auto" }}>
@@ -4601,7 +4912,7 @@ export default function App() {
             <span style={{ fontFamily:"'Barlow Condensed', sans-serif", fontWeight:800, fontSize:20, color:T.accent, letterSpacing:"-0.02em" }}>FY</span>
             <span style={{ fontFamily:"'DM Sans', sans-serif", fontSize:10, color:T.textMuted, marginLeft:10, letterSpacing:"0.18em", textTransform:"uppercase" }}>India Box Office Intelligence</span>
           </div>
-          <div style={{ display:"flex", gap:24, flexWrap:"wrap", marginBottom:10 }}>
+          <div style={{ display:"flex", gap:24, flexWrap:"wrap", marginBottom:10, alignItems:"center" }}>
             {["Box Office","Bollywood","OTT","TV","Weekly"].map(s => (
               <span key={s}
                 onClick={() => { setActiveSection(s); window.scrollTo({top:0,behavior:"smooth"}); }}
@@ -4610,6 +4921,13 @@ export default function App() {
                 style={{ color:T.textMuted, fontSize:11, fontWeight:600, letterSpacing:"0.06em", cursor:"pointer", transition:"color 0.15s" }}
               >{s}</span>
             ))}
+            <span style={{ color:T.border }}>·</span>
+            <span
+              onClick={() => setShowSubscribe(true)}
+              onMouseEnter={e => e.target.style.color=T.accent}
+              onMouseLeave={e => e.target.style.color=T.textMuted}
+              style={{ color:T.textMuted, fontSize:11, fontWeight:600, letterSpacing:"0.06em", cursor:"pointer", transition:"color 0.15s" }}
+            >📧 Subscribe</span>
           </div>
           <div style={{ borderTop:`1px solid ${T.border}`, paddingTop:10, color:T.textMuted, lineHeight:1.8 }}>
             © 2026 Boxoffy.com · India Box Office Intelligence · Box office data from industry tracking sources · Current as of Mar 13, 2026 · All figures in ₹ Crores
