@@ -5402,8 +5402,8 @@ export default function App() {
           </div>
         </div>
       </div>
-      </div>{/* end main-content */}
-      )}{/* end showPrivacy conditional */}
+      </div>
+      )}
     </div>
   );
 }
