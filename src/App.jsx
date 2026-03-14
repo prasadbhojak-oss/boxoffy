@@ -4795,11 +4795,12 @@ function PrivacyPolicyPage({ onBack }) {
 
 
 /* ── NEWSLETTER POPUP ─────────────────────────────────────────────────────────
-   Mailchimp embedded form — posts to boxoffy.us16.list-manage.com via hidden
-   iframe so there's no redirect or new tab opened on the user's screen.
-   Fields: EMAIL, FNAME (first name), MMERGE3 (language preference)
+   Resend Audiences API — adds contact directly to Resend audience list.
+   Fields: email, firstName, language (stored as last_name field)
+   Audience ID: 6fc2744e-1719-4693-91a9-770d9e0eea36
    ─────────────────────────────────────────────────────────────────────────── */
-const MAILCHIMP_ACTION_URL = "https://boxoffy.us16.list-manage.com/subscribe/post?u=306da5d11e109c71055a97422&id=9e4b95b96f&f_id=003e1fe1f0";
+const RESEND_AUDIENCE_ID = "6fc2744e-1719-4693-91a9-770d9e0eea36";
+const RESEND_API_KEY = "re_cSQRLPvm_4QoZjaV1ECAPyDeM2s3wdjQ5";
 
 function SubscribePopup({ onClose }) {
   const [name,   setName]   = useState("");
@@ -4820,36 +4821,24 @@ function SubscribePopup({ onClose }) {
     if (!email || !email.includes("@")) { setStatus("error"); return; }
     setStatus("submitting");
     try {
-      // Hidden iframe trick — Mailchimp's response is swallowed silently,
-      // never shown to the user or opened in a new tab
-      const iframeId = "mc-hidden-iframe";
-      let iframe = document.getElementById(iframeId);
-      if (!iframe) {
-        iframe = document.createElement("iframe");
-        iframe.id = iframeId;
-        iframe.name = iframeId;
-        iframe.style.display = "none";
-        document.body.appendChild(iframe);
-      }
-
-      const form = document.createElement("form");
-      form.method = "POST";
-      form.action = MAILCHIMP_ACTION_URL;
-      form.target = iframeId;
-      form.style.display = "none";
-
-      const fields = { EMAIL: email, FNAME: name, MMERGE3: lang };
-      Object.entries(fields).forEach(([k, v]) => {
-        const input = document.createElement("input");
-        input.name  = k;
-        input.value = v;
-        form.appendChild(input);
+      const res = await fetch(`https://api.resend.com/audiences/${RESEND_AUDIENCE_ID}/contacts`, {
+        method: "POST",
+        headers: {
+          "Authorization": `Bearer ${RESEND_API_KEY}`,
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          email: email.trim(),
+          first_name: name.trim(),
+          last_name: lang || "All Languages",
+          unsubscribed: false,
+        }),
       });
-
-      document.body.appendChild(form);
-      form.submit();
-      document.body.removeChild(form);
-      setStatus("success");
+      if (res.ok) {
+        setStatus("success");
+      } else {
+        setStatus("error");
+      }
     } catch {
       setStatus("error");
     }
