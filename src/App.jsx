@@ -648,6 +648,15 @@ const US_BO_WEEKLY = {
 ─────────────────────────────────────────────────────────────── */
 const EDITORIALS = [
   {
+    tag: "US BOX OFFICE",
+    headline: "Dhurandhar 2 Has Already Eaten the US Chart. $3.65M and Counting.",
+    dek: "$982K+ premiere · $1.8M opening day · $3.65M weekend advance · Fastest Indian film to $1M NA · Boxoffy predicts #4 finish on the US Top 10 alongside Project Hail Mary.",
+    author: "The Boxoffy Team",
+    date: "Mar 13, 2026",
+    readTime: "3 min read",
+    url: "dhurandhar2-us-boxoffice.html",
+  },
+  {
     tag: "ADVANCE BOOKING",
     headline: "Dhurandhar 2 The Revenge Advance Booking — ₹29.69 Crore and the OG Record Is BROKEN",
     dek: "4.84 lakh tickets. 9,128 shows. WW advance ~₹60 Cr. US $982K+. Taran Adarsh: 7,500–10,000 tickets/hr on BMS. The OG ₹25 Cr all-India premiere record: GONE.",
@@ -3416,7 +3425,7 @@ function BoxOfficeSection({ onNavigate }) {
                 <div style={{ borderTop:`5px solid ${T.accent}`, padding:"28px 36px 22px", borderBottom:`1px solid ${T.border}`, position:"relative" }}>
                   <div style={{ display:"flex", alignItems:"center", gap:8, marginBottom:12 }}>
                     <span style={{ fontFamily:"'DM Sans', sans-serif", fontWeight:700, fontSize:9, letterSpacing:"0.14em", textTransform:"uppercase", color:T.accent, background:"#FEE2E2", padding:"2px 8px", borderRadius:2 }}>BOXOFFY ANALYSIS</span>
-                    <span style={{ fontFamily:"'DM Sans', sans-serif", fontSize:10, color:T.textMuted }}>Week 10 · 8 March 2026</span>
+                    <span style={{ fontFamily:"'DM Sans', sans-serif", fontSize:10, color:T.textMuted }}>BREAKING · Mar 13, 2026</span>
                   </div>
                   <h1 style={{
                     fontFamily:"'Barlow Condensed', sans-serif", fontWeight:800,
