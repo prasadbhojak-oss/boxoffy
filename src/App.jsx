@@ -4794,15 +4794,65 @@ function PrivacyPolicyPage({ onBack }) {
 }
 
 
-function SubscribePopup({ onClose }) {
-  const [email, setEmail] = useState("");
-  const [status, setStatus] = useState("idle"); // idle | success | error
+/* ── NEWSLETTER POPUP ─────────────────────────────────────────────────────────
+   Mailchimp embedded form — posts to boxoffy.us16.list-manage.com via hidden
+   iframe so there's no redirect or new tab opened on the user's screen.
+   Fields: EMAIL, FNAME (first name), MMERGE3 (language preference)
+   ─────────────────────────────────────────────────────────────────────────── */
+const MAILCHIMP_ACTION_URL = "https://boxoffy.us16.list-manage.com/subscribe/post?u=306da5d11e109c71055a97422&id=9e4b95b96f&f_id=003e1fe1f0";
 
-  const handleSubmit = () => {
+function SubscribePopup({ onClose }) {
+  const [name,   setName]   = useState("");
+  const [email,  setEmail]  = useState("");
+  const [lang,   setLang]   = useState("");
+  const [status, setStatus] = useState("idle"); // idle | submitting | success | error
+
+  const languages = ["Hindi / Bollywood", "South Indian", "Hollywood", "All Languages"];
+
+  useEffect(() => {
+    const handler = e => { if (e.key === "Escape") onClose(); };
+    window.addEventListener("keydown", handler);
+    return () => window.removeEventListener("keydown", handler);
+  }, [onClose]);
+
+  async function handleSubmit() {
     if (!email || !email.includes("@")) { setStatus("error"); return; }
-    // TODO: wire to your email provider (Mailchimp / ConvertKit / Resend)
-    setStatus("success");
-  };
+    setStatus("submitting");
+    try {
+      // Hidden iframe trick — Mailchimp's response is swallowed silently,
+      // never shown to the user or opened in a new tab
+      const iframeId = "mc-hidden-iframe";
+      let iframe = document.getElementById(iframeId);
+      if (!iframe) {
+        iframe = document.createElement("iframe");
+        iframe.id = iframeId;
+        iframe.name = iframeId;
+        iframe.style.display = "none";
+        document.body.appendChild(iframe);
+      }
+
+      const form = document.createElement("form");
+      form.method = "POST";
+      form.action = MAILCHIMP_ACTION_URL;
+      form.target = iframeId;
+      form.style.display = "none";
+
+      const fields = { EMAIL: email, FNAME: name, MMERGE3: lang };
+      Object.entries(fields).forEach(([k, v]) => {
+        const input = document.createElement("input");
+        input.name  = k;
+        input.value = v;
+        form.appendChild(input);
+      });
+
+      document.body.appendChild(form);
+      form.submit();
+      document.body.removeChild(form);
+      setStatus("success");
+    } catch {
+      setStatus("error");
+    }
+  }
 
   return (
     <div onClick={onClose} style={{
@@ -4846,14 +4896,28 @@ function SubscribePopup({ onClose }) {
 
         {status === "success" ? (
           <div style={{
-            background:"#F0FFF4", border:"1px solid #6EE7B7", padding:"16px 20px",
+            background:"#F0FFF4", border:"1px solid #6EE7B7", padding:"20px 24px",
             fontFamily:"'DM Sans',sans-serif", fontSize:14, color:"#065F46",
-            textAlign:"center", fontWeight:600,
+            textAlign:"center", fontWeight:600, lineHeight:1.6,
           }}>
-            ✓ You're in. First edition lands Friday.
+            🎬 You're on the list.<br/>
+            <span style={{ fontSize:12, fontWeight:400 }}>First digest lands Monday. No spam, no PR fluff — just the numbers that matter.</span>
           </div>
         ) : (
           <>
+            {/* Name */}
+            <input
+              type="text"
+              placeholder="First name (optional)"
+              value={name}
+              onChange={e => setName(e.target.value)}
+              style={{
+                width:"100%", padding:"11px 14px", border:`1px solid ${T.border}`,
+                fontFamily:"'DM Sans',sans-serif", fontSize:13, outline:"none",
+                background:T.bg, color:T.text, marginBottom:8, boxSizing:"border-box",
+              }}
+            />
+            {/* Email + Submit */}
             <div style={{ display:"flex", gap:0, marginBottom:8 }}>
               <input
                 type="email"
@@ -4867,13 +4931,27 @@ function SubscribePopup({ onClose }) {
                   outline:"none", background:T.bg, color:T.text,
                 }}
               />
-              <button onClick={handleSubmit} style={{
-                background:T.accent, color:"#fff", border:"none",
+              <button onClick={handleSubmit} disabled={status==="submitting"} style={{
+                background: status==="submitting" ? T.textMuted : T.accent,
+                color:"#fff", border:"none",
                 padding:"11px 20px", fontFamily:"'Barlow Condensed',sans-serif",
                 fontWeight:800, fontSize:13, letterSpacing:"0.1em", textTransform:"uppercase",
-                cursor:"pointer", whiteSpace:"nowrap",
-              }}>Subscribe</button>
+                cursor: status==="submitting" ? "not-allowed" : "pointer", whiteSpace:"nowrap",
+              }}>{status==="submitting" ? "..." : "Subscribe"}</button>
             </div>
+            {/* Language preference */}
+            <select
+              value={lang}
+              onChange={e => setLang(e.target.value)}
+              style={{
+                width:"100%", padding:"10px 14px", border:`1px solid ${T.border}`,
+                fontFamily:"'DM Sans',sans-serif", fontSize:12, color: lang ? T.text : T.textMuted,
+                background:T.bg, outline:"none", marginBottom:8, boxSizing:"border-box",
+              }}
+            >
+              <option value="">I follow... (select cinema preference)</option>
+              {languages.map(l => <option key={l} value={l}>{l}</option>)}
+            </select>
             {status === "error" && (
               <div style={{ fontFamily:"'DM Sans',sans-serif", fontSize:11, color:"#EF4444", marginBottom:4 }}>
                 Please enter a valid email address.
@@ -4908,11 +4986,54 @@ function ContactSection() {
 
   const handleChange = (field, val) => setForm(f => ({ ...f, [field]:val }));
 
-  const handleSubmit = () => {
+  const handleSubmit = async () => {
     if (!form.name || !form.email || !form.message) { setStatus("error"); return; }
     if (!form.email.includes("@")) { setStatus("error"); return; }
-    // TODO: wire to Resend / EmailJS / your backend
-    setStatus("success");
+
+    setStatus("submitting");
+
+    try {
+      // EmailJS — sends directly to info@boxoffy.com, no backend needed
+      // Setup: emailjs.com → create account → add Email Service (Gmail) →
+      //   create Template with vars: {{from_name}}, {{from_email}}, {{org}}, {{request_type}}, {{message}}
+      //   → replace the three IDs below with your own
+      const SERVICE_ID  = "YOUR_EMAILJS_SERVICE_ID";   // e.g. "service_abc123"
+      const TEMPLATE_ID = "YOUR_EMAILJS_TEMPLATE_ID";  // e.g. "template_xyz789"
+      const PUBLIC_KEY  = "YOUR_EMAILJS_PUBLIC_KEY";   // e.g. "abc123XYZ"
+
+      const response = await fetch("https://api.emailjs.com/api/v1.0/email/send", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          service_id:  SERVICE_ID,
+          template_id: TEMPLATE_ID,
+          user_id:     PUBLIC_KEY,
+          template_params: {
+            from_name:    form.name,
+            from_email:   form.email,
+            org:          form.org || "Not provided",
+            request_type: form.type,
+            message:      form.message,
+            reply_to:     form.email,
+          },
+        }),
+      });
+
+      if (response.ok) {
+        setStatus("success");
+      } else {
+        throw new Error("EmailJS send failed");
+      }
+    } catch (err) {
+      console.error("Contact form error:", err);
+      // Fallback — open mailto with pre-filled content
+      const subject = encodeURIComponent(`Boxoffy Contact: ${form.type} from ${form.name}`);
+      const body = encodeURIComponent(
+        `Name: ${form.name}\nOrg: ${form.org || "N/A"}\nEmail: ${form.email}\nType: ${form.type}\n\n${form.message}`
+      );
+      window.location.href = `mailto:info@boxoffy.com?subject=${subject}&body=${body}`;
+      setStatus("success");
+    }
   };
 
   const inputStyle = {
@@ -5026,13 +5147,14 @@ function ContactSection() {
                   style={{ ...inputStyle, resize:"vertical", lineHeight:1.6, marginBottom:16 }}
                 />
 
-                <button onClick={handleSubmit} style={{
-                  background:T.accent, color:"#fff", border:"none",
+                <button onClick={handleSubmit} disabled={status === "submitting"} style={{
+                  background: status === "submitting" ? T.textMuted : T.accent, color:"#fff", border:"none",
                   padding:"13px 28px", fontFamily:"'Barlow Condensed',sans-serif",
                   fontWeight:800, fontSize:14, letterSpacing:"0.1em", textTransform:"uppercase",
-                  cursor:"pointer", width:"100%",
+                  cursor: status === "submitting" ? "not-allowed" : "pointer", width:"100%",
+                  opacity: status === "submitting" ? 0.7 : 1,
                 }}>
-                  Send Message →
+                  {status === "submitting" ? "Sending..." : "Send Message →"}
                 </button>
               </>
             )}
