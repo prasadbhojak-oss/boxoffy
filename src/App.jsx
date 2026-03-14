@@ -4973,35 +4973,32 @@ function SubscribePopup({ onClose }) {
 
 /* ── CONTACT SECTION ────────────────────────────────────────── */
 function ContactSection() {
-  const [form, setForm] = useState({ name:"", org:"", email:"", type:"official-numbers", message:"" });
+  const [form, setForm]     = useState({ name:"", email:"", phone:"", message:"", honeypot:"" });
   const [status, setStatus] = useState("idle"); // idle | submitting | success | error
-
-  const REQUEST_TYPES = [
-    { value:"official-numbers",  label:"📊 Share official box office numbers" },
-    { value:"press-credentials", label:"🎬 Press / media credentials" },
-    { value:"partnership",       label:"🤝 Partnership / collaboration" },
-    { value:"correction",        label:"✏️ Data correction request" },
-    { value:"other",             label:"💬 Other" },
-  ];
+  const [submitTime]        = useState(Date.now()); // bot check: real humans take >3s to fill
 
   const handleChange = (field, val) => setForm(f => ({ ...f, [field]:val }));
 
   const handleSubmit = async () => {
+    // ── Bot protection checks ──────────────────────────────────────────────
+    // 1. Honeypot — bots fill hidden fields, humans never see them
+    if (form.honeypot) return;
+    // 2. Time check — bots submit instantly, real humans take at least 3 seconds
+    if (Date.now() - submitTime < 3000) return;
+    // ── Validation ────────────────────────────────────────────────────────
     if (!form.name || !form.email || !form.message) { setStatus("error"); return; }
     if (!form.email.includes("@")) { setStatus("error"); return; }
 
     setStatus("submitting");
 
     try {
-      // EmailJS — sends directly to info@boxoffy.com, no backend needed
-      // Setup: emailjs.com → create account → add Email Service (Gmail) →
-      //   create Template with vars: {{from_name}}, {{from_email}}, {{org}}, {{request_type}}, {{message}}
-      //   → replace the three IDs below with your own
-      const SERVICE_ID  = "YOUR_EMAILJS_SERVICE_ID";   // e.g. "service_abc123"
-      const TEMPLATE_ID = "YOUR_EMAILJS_TEMPLATE_ID";  // e.g. "template_xyz789"
-      const PUBLIC_KEY  = "YOUR_EMAILJS_PUBLIC_KEY";   // e.g. "abc123XYZ"
+      // EmailJS — replace the 3 IDs below after setting up emailjs.com account
+      // Template vars to map: {{from_name}}, {{from_email}}, {{phone}}, {{message}}
+      const SERVICE_ID  = "YOUR_EMAILJS_SERVICE_ID";
+      const TEMPLATE_ID = "YOUR_EMAILJS_TEMPLATE_ID";
+      const PUBLIC_KEY  = "YOUR_EMAILJS_PUBLIC_KEY";
 
-      const response = await fetch("https://api.emailjs.com/api/v1.0/email/send", {
+      const res = await fetch("https://api.emailjs.com/api/v1.0/email/send", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -5009,27 +5006,25 @@ function ContactSection() {
           template_id: TEMPLATE_ID,
           user_id:     PUBLIC_KEY,
           template_params: {
-            from_name:    form.name,
-            from_email:   form.email,
-            org:          form.org || "Not provided",
-            request_type: form.type,
-            message:      form.message,
-            reply_to:     form.email,
+            from_name:  form.name,
+            from_email: form.email,
+            phone:      form.phone || "Not provided",
+            message:    form.message,
+            reply_to:   form.email,
           },
         }),
       });
 
-      if (response.ok) {
+      if (res.ok) {
         setStatus("success");
       } else {
-        throw new Error("EmailJS send failed");
+        throw new Error("EmailJS failed");
       }
-    } catch (err) {
-      console.error("Contact form error:", err);
-      // Fallback — open mailto with pre-filled content
-      const subject = encodeURIComponent(`Boxoffy Contact: ${form.type} from ${form.name}`);
-      const body = encodeURIComponent(
-        `Name: ${form.name}\nOrg: ${form.org || "N/A"}\nEmail: ${form.email}\nType: ${form.type}\n\n${form.message}`
+    } catch {
+      // Fallback — pre-fill mailto so nothing is lost
+      const subject = encodeURIComponent(`Boxoffy enquiry from ${form.name}`);
+      const body    = encodeURIComponent(
+        `Name: ${form.name}\nEmail: ${form.email}\nPhone: ${form.phone || "N/A"}\n\n${form.message}`
       );
       window.location.href = `mailto:info@boxoffy.com?subject=${subject}&body=${body}`;
       setStatus("success");
@@ -5037,9 +5032,9 @@ function ContactSection() {
   };
 
   const inputStyle = {
-    width:"100%", padding:"10px 14px", border:`1px solid ${T.border}`,
+    width:"100%", padding:"11px 14px", border:`1px solid ${T.border}`,
     fontFamily:"'DM Sans',sans-serif", fontSize:13, color:T.text,
-    background:"#FFFFFF", outline:"none", marginBottom:12,
+    background:"#FFFFFF", outline:"none", marginBottom:12, boxSizing:"border-box",
   };
   const labelStyle = {
     fontFamily:"'Barlow Condensed',sans-serif", fontSize:11, fontWeight:700,
@@ -5061,31 +5056,30 @@ function ContactSection() {
             fontFamily:"'Barlow Condensed',sans-serif", fontWeight:800,
             fontSize:"clamp(24px,3vw,36px)", color:T.text, lineHeight:1.1, marginBottom:12,
           }}>
-            Official numbers? Press inquiry?<br/>Boxoffy wants to hear from you.
+            Numbers to share? Question to ask?<br/>We're listening.
           </div>
           <p style={{
             fontFamily:"'DM Sans',sans-serif", fontSize:14, color:T.textMid, lineHeight:1.7,
           }}>
-            Studios, distributors and PR teams — share verified box office data directly with us
-            and we'll cite you accurately. Press credentials, corrections, partnerships and
-            general enquiries all welcome. You can also reach us directly at{' '}
+            Studios, distributors, PR teams, press, or just a film nerd with a correction — 
+            drop us a note. You can also reach us directly at{' '}
             <a href="mailto:info@boxoffy.com" style={{ color:"#C8201A", fontWeight:600, textDecoration:"none" }}>info@boxoffy.com</a>.
           </p>
         </div>
 
-        <div style={{ display:"grid", gridTemplateColumns:"1fr 1fr", gap:48 }}>
+        <div style={{ display:"grid", gridTemplateColumns:"minmax(0,1fr) minmax(0,1fr)", gap:48 }}>
 
           {/* Left — form */}
           <div>
             {status === "success" ? (
               <div style={{
                 background:"#F0FFF4", border:"1px solid #6EE7B7",
-                padding:"28px 24px", textAlign:"center",
+                padding:"32px 24px", textAlign:"center",
               }}>
-                <div style={{ fontSize:28, marginBottom:10 }}>✓</div>
+                <div style={{ fontSize:32, marginBottom:10 }}>✓</div>
                 <div style={{
                   fontFamily:"'Barlow Condensed',sans-serif", fontWeight:800,
-                  fontSize:20, color:"#065F46", marginBottom:8,
+                  fontSize:22, color:"#065F46", marginBottom:8,
                 }}>Message received.</div>
                 <div style={{
                   fontFamily:"'DM Sans',sans-serif", fontSize:13, color:"#047857",
@@ -5099,11 +5093,20 @@ function ContactSection() {
                     padding:"10px 14px", marginBottom:16,
                     fontFamily:"'DM Sans',sans-serif", fontSize:12, color:"#B91C1C",
                   }}>
-                    Please fill in all required fields with a valid email.
+                    Please fill in your name, a valid email, and a message.
                   </div>
                 )}
 
-                <div style={{ display:"grid", gridTemplateColumns:"1fr 1fr", gap:12, marginBottom:0 }}>
+                {/* Honeypot — hidden from real users, bots fill this */}
+                <input
+                  type="text" name="website" tabIndex={-1} autoComplete="off"
+                  value={form.honeypot} onChange={e => handleChange("honeypot", e.target.value)}
+                  style={{ position:"absolute", left:"-9999px", opacity:0, height:0, width:0 }}
+                  aria-hidden="true"
+                />
+
+                {/* Name + Phone side by side */}
+                <div style={{ display:"grid", gridTemplateColumns:"1fr 1fr", gap:12 }}>
                   <div>
                     <label style={labelStyle}>Name *</label>
                     <input
@@ -5113,15 +5116,16 @@ function ContactSection() {
                     />
                   </div>
                   <div>
-                    <label style={labelStyle}>Organisation</label>
+                    <label style={labelStyle}>Phone</label>
                     <input
-                      type="text" placeholder="Studio / PR / Media"
-                      value={form.org} onChange={e => handleChange("org", e.target.value)}
+                      type="tel" placeholder="+91 98765 43210"
+                      value={form.phone} onChange={e => handleChange("phone", e.target.value)}
                       style={inputStyle}
                     />
                   </div>
                 </div>
 
+                {/* Email */}
                 <label style={labelStyle}>Email *</label>
                 <input
                   type="email" placeholder="your@email.com"
@@ -5129,26 +5133,18 @@ function ContactSection() {
                   style={inputStyle}
                 />
 
-                <label style={labelStyle}>Request Type</label>
-                <select
-                  value={form.type} onChange={e => handleChange("type", e.target.value)}
-                  style={{ ...inputStyle, cursor:"pointer" }}
-                >
-                  {REQUEST_TYPES.map(r => (
-                    <option key={r.value} value={r.value}>{r.label}</option>
-                  ))}
-                </select>
-
+                {/* Message */}
                 <label style={labelStyle}>Message *</label>
                 <textarea
-                  placeholder="Tell us what you need..."
+                  placeholder="What's on your mind?"
                   value={form.message} onChange={e => handleChange("message", e.target.value)}
-                  rows={4}
+                  rows={5}
                   style={{ ...inputStyle, resize:"vertical", lineHeight:1.6, marginBottom:16 }}
                 />
 
                 <button onClick={handleSubmit} disabled={status === "submitting"} style={{
-                  background: status === "submitting" ? T.textMuted : T.accent, color:"#fff", border:"none",
+                  background: status === "submitting" ? T.textMuted : T.accent,
+                  color:"#fff", border:"none",
                   padding:"13px 28px", fontFamily:"'Barlow Condensed',sans-serif",
                   fontWeight:800, fontSize:14, letterSpacing:"0.1em", textTransform:"uppercase",
                   cursor: status === "submitting" ? "not-allowed" : "pointer", width:"100%",
@@ -5156,6 +5152,13 @@ function ContactSection() {
                 }}>
                   {status === "submitting" ? "Sending..." : "Send Message →"}
                 </button>
+
+                <div style={{
+                  fontFamily:"'DM Sans',sans-serif", fontSize:10, color:T.textMuted,
+                  marginTop:10, letterSpacing:"0.03em",
+                }}>
+                  We respond within 24–48 hours. No spam, ever.
+                </div>
               </>
             )}
           </div>
