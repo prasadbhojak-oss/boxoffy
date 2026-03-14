@@ -4677,7 +4677,8 @@ function ContactSection() {
           }}>
             Studios, distributors and PR teams — share verified box office data directly with us
             and we'll cite you accurately. Press credentials, corrections, partnerships and
-            general enquiries all welcome.
+            general enquiries all welcome. You can also reach us directly at{' '}
+            <a href="mailto:info@boxoffy.com" style={{ color:"#C8201A", fontWeight:600, textDecoration:"none" }}>info@boxoffy.com</a>.
           </p>
         </div>
 
@@ -4928,9 +4929,22 @@ export default function App() {
               onMouseLeave={e => e.target.style.color=T.textMuted}
               style={{ color:T.textMuted, fontSize:11, fontWeight:600, letterSpacing:"0.06em", cursor:"pointer", transition:"color 0.15s" }}
             >📧 Subscribe</span>
+            <span style={{ color:T.border }}>·</span>
+            <a
+              href="mailto:info@boxoffy.com"
+              onMouseEnter={e => e.target.style.color=T.accent}
+              onMouseLeave={e => e.target.style.color=T.textMuted}
+              style={{ color:T.textMuted, fontSize:11, fontWeight:600, letterSpacing:"0.04em", textDecoration:"none", transition:"color 0.15s" }}
+            >info@boxoffy.com</a>
           </div>
-          <div style={{ borderTop:`1px solid ${T.border}`, paddingTop:10, color:T.textMuted, lineHeight:1.8 }}>
-            © 2026 Boxoffy.com · India Box Office Intelligence · Box office data from industry tracking sources · Current as of Mar 13, 2026 · All figures in ₹ Crores
+          <div style={{ borderTop:`1px solid ${T.border}`, paddingTop:10, color:T.textMuted, lineHeight:1.8, display:"flex", alignItems:"center", justifyContent:"space-between", flexWrap:"wrap", gap:8 }}>
+            <span>© 2026 Boxoffy.com · India Box Office Intelligence · Box office data from industry tracking sources · Current as of Mar 13, 2026 · All figures in ₹ Crores</span>
+            <a
+              href="mailto:info@boxoffy.com"
+              onMouseEnter={e => e.target.style.color=T.accent}
+              onMouseLeave={e => e.target.style.color=T.textMuted}
+              style={{ color:T.textMuted, fontSize:11, fontWeight:500, textDecoration:"none", letterSpacing:"0.04em", flexShrink:0, transition:"color 0.15s" }}
+            >info@boxoffy.com</a>
           </div>
         </div>
       </div>
