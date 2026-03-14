@@ -290,7 +290,7 @@ const DATA = {
       ott:{ platform:"ZEE5", debutViews:"N/A", debutHours:"N/A", lifetimeViews:"N/A", lifetimeHours:"N/A", globalRank:"N/A", countries:3, rightsDeal:"₹30 Cr", ottNote:"ZEE5 — viewership data not publicly disclosed" }},
   ],
   2025: [
-    { title:"Dhurandhar", language:"Hindi", director:"Aditya Dhar", releaseDate:"Dec 2025", totalCollection:"1,305.35 Cr", totalNum:1305.35, indiaNet:"838.5 Cr", overseas:"299.5 Cr", weeksInTop10:11, status:"OTT", budget:"300 Cr", verdict:"All-Time Blockbuster", note:"Highest-grossing Hindi film of all time. Day 100 on Mar 13 2026. Re-releasing 1000 screens globally.",
+    { title:"Dhurandhar", language:"Hindi", director:"Aditya Dhar", releaseDate:"Dec 2025", totalCollection:"1,305.35 Cr", totalNum:1305.35, indiaNet:"838.5 Cr", overseas:"299.5 Cr", weeksInTop10:11, status:"OTT", budget:"300 Cr", verdict:"All-Time Blockbuster", pageUrl:"dhurandhar-box-office.html", note:"Highest-grossing Hindi film of all time. Day 100 on Mar 13 2026. Re-releasing 1000 screens globally.",
       ott:{ platform:"Netflix", ottDate:"Jan 30, 2026", debutViews:"7.6M (Wk1) / 8.2M (Wk2) / 23M (6 wks total)", debutHours:"21.6M hrs (Wk1) / 28.1M hrs (Wk2) / 70.6M hrs total", lifetimeViews:"23M (6 weeks)", lifetimeHours:"70.6M+ hours", globalRank:"#1 Non-English Wk1 & Wk2", countries:22, rightsDeal:"₹285 Cr", ottNote:"Most-watched Indian film on Netflix ever. Beat Animal 6.2M Wk1 record. 22 countries peak. Still trending Top 10 India Wk6. D1 OTT deal: ₹285 Cr (not ₹175 Cr — updated per Sacnilk). GCC ban applies: no UAE/Qatar/Oman/Bahrain/Saudi data." }},
     { title:"Chhaava", language:"Hindi", director:"Laxman Utekar", releaseDate:"Feb 2025", totalCollection:"₹807.91 Cr", totalNum:807.91, indiaNet:"601.54 Cr", overseas:"91 Cr", weeksInTop10:10, status:"OTT", budget:"150 Cr", verdict:"Blockbuster",
       ott:{ platform:"Netflix", debutViews:"2.2M (Wk1)", debutHours:"5.9M hrs", lifetimeViews:"~5.5M (2 weeks)", lifetimeHours:"~15M hrs", globalRank:"#4 Non-English (peak)", countries:11, rightsDeal:"₹100 Cr", ottNote:"Low debut attributed to massive theatrical run fatigue; bounced 50% in Wk2 · #1 in India & Pakistan" }},
@@ -338,7 +338,7 @@ const DATA = {
       weeklyCollection:2, weekNum:3, daysInRelease:15, lastWeekRank:2, weeklyNote:"Day 14: ~₹39 Cr net / ~₹46 Cr WW. Budget recovered, slim profit. Day 1 legal issues hurt opening badly. Closing before Dhurandar 2 on Mar 19. OTT platform TBD. Plus/Average verdict — borderline hit.andhar 2. Hit (₹56 Cr) is unlikely. net — clean 2-week window before Dhurandhar 2.", wkTrend:"new",
       ott:{ platform:"ZEE5 (expected)", debutViews:"TBD", debutHours:"TBD", lifetimeViews:"TBD", lifetimeHours:"TBD", globalRank:"TBD", countries:0, rightsDeal:"~₹8 Cr (est.)", ottNote:"Controversial sequel — released Feb 27 after HC lifted stay. Tracking towards profit on low budget." }},
     // ── CLOSED / OTT ──
-    { title:"Dhurandhar",           language:"Hindi",   director:"Aditya Dhar",       releaseDate:"Dec 5, 2025",  totalCollection:"1,355 Cr", totalNum:1355, indiaNet:"838.5 Cr",  overseas:"299 Cr",  weeksInTop10:12, status:"OTT",    budget:"225 Cr", verdict:"All-Time Blockbuster", note:"₹893 Cr India net · WW #1 Hindi film ever · 59 days on BMS trending",
+    { title:"Dhurandhar",           language:"Hindi",   director:"Aditya Dhar",       releaseDate:"Dec 5, 2025",  totalCollection:"1,355 Cr", totalNum:1355, indiaNet:"838.5 Cr",  overseas:"299 Cr",  weeksInTop10:12, status:"OTT",    budget:"225 Cr", verdict:"All-Time Blockbuster", pageUrl:"dhurandhar-box-office.html", note:"₹893 Cr India net · WW #1 Hindi film ever · 59 days on BMS trending",
       weeklyCollection:0, weekNum:12, daysInRelease:78, lastWeekRank:null, weeklyNote:"Theatrical run concluded. On Netflix. Biggest Hindi film ever.",
       ott:{ platform:"Netflix", debutViews:"7.6M (3 days) → 15.8M (10 days)", debutHours:"21.6M hrs (Wk1) · 28.1M hrs (Wk2)", lifetimeViews:"~16M+", lifetimeHours:"~50M hrs", globalRank:"#1 Non-English (2 weeks)", countries:22, rightsDeal:"₹175 Cr", ottNote:"Biggest Indian post-theatrical OTT debut ever · #1 India, Pakistan, UAE, Qatar, Oman, Bahrain, Mauritius" }},
     { title:"MSVP (Mana ShankaraVaraprasad Garu)", language:"Telugu", director:"Anil Ravipudi", releaseDate:"Jan 23, 2026", totalCollection:"438 Cr", totalNum:438, indiaNet:"320 Cr", overseas:"56 Cr", weeksInTop10:4, status:"OTT", budget:"275 Cr", verdict:"Blockbuster", note:"Chiranjeevi & Nayanthara — now on OTT",
@@ -490,7 +490,7 @@ const DATA = {
       indiaGross:null, indiaNet:null, indiaWeekend:null, indiaWeekNo:0,
       ott:{ platform:"TBD (Prime/Netflix expected)", debutViews:"TBD", debutHours:"TBD", lifetimeViews:"TBD", lifetimeHours:"TBD", globalRank:"TBD", countries:0, rightsDeal:"TBD", ottNote:"Horror franchise — Netflix deal likely for India post-theatrical." }},
     // ── UPCOMING ──
-    { title:"Dhurandhar: The Revenge", language:"Hindi", director:"Aditya Dhar", releaseDate:"Mar 19, 2026", eventTier:"event", totalCollection:"—", totalNum:0, indiaNet:"—", overseas:null, weeksInTop10:0, status:"Upcoming", budget:"350 Cr", verdict:"Upcoming",
+    { title:"Dhurandhar: The Revenge", language:"Hindi", director:"Aditya Dhar", releaseDate:"Mar 19, 2026", eventTier:"event", totalCollection:"—", totalNum:0, indiaNet:"—", overseas:null, weeksInTop10:0, status:"Upcoming", budget:"350 Cr", verdict:"Upcoming", pageUrl:"dhurandhar-2-box-office.html",
       weeklyCollection:0, weekNum:0, daysInRelease:0, lastWeekRank:null,
       weeklyNote:"Mar 13 Boxoffy Verified: ₹24.76 Cr premiere gross (no blocks) / ₹29.69 Cr with blocks · 4.84L tickets / 9,128 shows · ATP ₹414 · OG ₹25 Cr all-India premiere record BROKEN · WW advance ~₹60 Cr · US $982K+ premiere (678 locations) · NA OW nearing $2M · BMS 7.5k–10k tickets/hr (Taran Adarsh) · Yami Gautam confirmed in cast · Runtime 3h55m · Premieres Mar 18 5PM · Regular India bookings not yet open.",
       openingPrediction:{ low:85, mid:100, high:120, allLanguages:110, basis:"Boxoffy AI Calc — post-trailer advance booking data", note:"Boxoffy AI Calc: ₹15–20 Cr Nett from paid previews (up to ₹30 Cr possible). ₹80–100 Cr Day1 net. ₹350–400 Cr Eid weekend India. ₹500–600 Cr WW 4-day. ₹1,000 Cr India lifetime. ₹1,700–2,000 Cr WW. BMS velocity: 7.5k–10k tickets/hr. ₹4.39 Cr premiere gross in first 2hrs. 1.1L+ premiere tickets. Day1 net floor: ₹85–90 Cr (Boxoffy floor). US: $982K+ premiere pre-sales (678 locations) / NA OW $2M+. OG record BROKEN. WW advance ~₹60 Cr. India regular bookings not yet open — will surge further." },
@@ -2190,10 +2190,22 @@ function BoxOfficeRow({ movie, rank, maxWeeks }) {
         {/* Film info */}
         <div style={{ padding:"12px 16px", display:"flex", flexDirection:"column", justifyContent:"center", gap:4 }}>
           <div style={{ display:"flex", alignItems:"center", gap:8, flexWrap:"wrap" }}>
-            <span style={{
-              fontFamily:"'Barlow Condensed', sans-serif", fontWeight:700,
-              fontSize:17, color:T.text, letterSpacing:"0.01em", lineHeight:1.1,
-            }}>{movie.title}</span>
+            {movie.pageUrl ? (
+              <a href={`/${movie.pageUrl}`} style={{
+                fontFamily:"'Barlow Condensed', sans-serif", fontWeight:700,
+                fontSize:17, color:T.text, letterSpacing:"0.01em", lineHeight:1.1,
+                textDecoration:"none", borderBottom:`1px solid ${T.border}`,
+                transition:"color 0.15s, border-color 0.15s",
+              }}
+                onMouseEnter={e => { e.target.style.color=T.accent; e.target.style.borderColor=T.accent; }}
+                onMouseLeave={e => { e.target.style.color=T.text; e.target.style.borderColor=T.border; }}
+              >{movie.title}</a>
+            ) : (
+              <span style={{
+                fontFamily:"'Barlow Condensed', sans-serif", fontWeight:700,
+                fontSize:17, color:T.text, letterSpacing:"0.01em", lineHeight:1.1,
+              }}>{movie.title}</span>
+            )}
             {tier && (
               <span style={{
                 background: tier.badgeBg, color: tier.badgeText,
@@ -2435,9 +2447,20 @@ function WeeklyChartRow({ movie, rank, prevRank }) {
         {/* Film info */}
         <div style={{ padding:"10px 14px", borderRight:`1px solid ${T.border}` }}>
           <div style={{ display:"flex", alignItems:"center", gap:8, marginBottom:3, flexWrap:"wrap" }}>
-            <span style={{ fontFamily:"'Barlow Condensed', sans-serif", fontWeight:800, fontSize:16, color:T.text, lineHeight:1.1 }}>
-              {movie.title}
-            </span>
+            {movie.pageUrl ? (
+              <a href={`/${movie.pageUrl}`} style={{
+                fontFamily:"'Barlow Condensed', sans-serif", fontWeight:800,
+                fontSize:16, color:T.text, lineHeight:1.1, textDecoration:"none",
+                borderBottom:`1px solid ${T.border}`, transition:"color 0.15s, border-color 0.15s",
+              }}
+                onMouseEnter={e => { e.target.style.color=T.accent; e.target.style.borderColor=T.accent; }}
+                onMouseLeave={e => { e.target.style.color=T.text; e.target.style.borderColor=T.border; }}
+              >{movie.title}</a>
+            ) : (
+              <span style={{ fontFamily:"'Barlow Condensed', sans-serif", fontWeight:800, fontSize:16, color:T.text, lineHeight:1.1 }}>
+                {movie.title}
+              </span>
+            )}
             <span style={{ background:verdictCfg.bg, color:verdictCfg.color, border:`1px solid ${verdictCfg.border}`, fontFamily:"'DM Sans', sans-serif", fontWeight:700, fontSize:9, letterSpacing:"0.05em", textTransform:"uppercase", borderRadius:2, padding:"1px 5px" }}>
               {movie.verdict}
             </span>
@@ -2687,11 +2710,24 @@ function BogRow({ movie, viewMode, rank, isNew }) {
           overflow:"hidden",
         }}>
           <div style={{ display:"flex", alignItems:"center", gap:7, flexWrap:"wrap" }}>
-            <span style={{
-              fontFamily:"'Barlow Condensed', sans-serif", fontWeight:800,
-              fontSize:15, color:T.text, letterSpacing:"0.01em",
-              whiteSpace:"nowrap", overflow:"hidden", textOverflow:"ellipsis",
-            }}>{movie.title}</span>
+            {movie.pageUrl ? (
+              <a href={`/${movie.pageUrl}`} style={{
+                fontFamily:"'Barlow Condensed', sans-serif", fontWeight:800,
+                fontSize:15, color:T.text, letterSpacing:"0.01em",
+                whiteSpace:"nowrap", overflow:"hidden", textOverflow:"ellipsis",
+                textDecoration:"none", borderBottom:`1px solid ${T.border}`,
+                transition:"color 0.15s, border-color 0.15s",
+              }}
+                onMouseEnter={e => { e.target.style.color=T.accent; e.target.style.borderColor=T.accent; }}
+                onMouseLeave={e => { e.target.style.color=T.text; e.target.style.borderColor=T.border; }}
+              >{movie.title}</a>
+            ) : (
+              <span style={{
+                fontFamily:"'Barlow Condensed', sans-serif", fontWeight:800,
+                fontSize:15, color:T.text, letterSpacing:"0.01em",
+                whiteSpace:"nowrap", overflow:"hidden", textOverflow:"ellipsis",
+              }}>{movie.title}</span>
+            )}
             <BogStatusBadge status={movie.status} releaseDate={movie.releaseDate} />
             {movie.cinemaScore && <BogScorePill label="CS " value={movie.cinemaScore} color={movie.cinemaScore?.startsWith("A") ? "#16A34A" : "#D97706"} />}
             {movie.rtScore && <BogScorePill label="RT " value={`${movie.rtScore}%`} color={movie.rtScore >= 75 ? "#16A34A" : movie.rtScore >= 55 ? "#D97706" : "#DC2626"} />}
@@ -4523,7 +4559,241 @@ function HeaderSnapshotCards({ activeSection }) {
   );
 }
 
-/* ── SUBSCRIBE POPUP ────────────────────────────────────────── */
+/* ── COOKIE CONSENT HELPERS ─────────────────────────────────
+   Key: boxoffy_cookie_consent
+   Values: "accepted" | "declined" | null (not yet decided)
+   GA4 only fires after "accepted" is stored.
+──────────────────────────────────────────────────────────── */
+const CONSENT_KEY = "boxoffy_cookie_consent";
+
+function getConsent() {
+  try { return localStorage.getItem(CONSENT_KEY); } catch { return null; }
+}
+function setConsent(val) {
+  try { localStorage.setItem(CONSENT_KEY, val); } catch {}
+}
+
+function loadGA4() {
+  if (typeof window === "undefined") return;
+  if (window.__ga4Loaded) return;
+  window.__ga4Loaded = true;
+  const s = document.createElement("script");
+  s.async = true;
+  s.src = "https://www.googletagmanager.com/gtag/js?id=G-K6C9EVRFH4";
+  document.head.appendChild(s);
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = function(){ window.dataLayer.push(arguments); };
+  window.gtag("js", new Date());
+  window.gtag("config", "G-K6C9EVRFH4", { anonymize_ip: true });
+}
+
+/* ── COOKIE BANNER ───────────────────────────────────────── */
+function CookieBanner({ onConsent }) {
+  const [visible, setVisible] = React.useState(false);
+  const [showDetails, setShowDetails] = React.useState(false);
+
+  React.useEffect(() => {
+    if (!getConsent()) {
+      const t = setTimeout(() => setVisible(true), 800);
+      return () => clearTimeout(t);
+    }
+  }, []);
+
+  if (!visible) return null;
+
+  const accept = () => {
+    setConsent("accepted");
+    loadGA4();
+    setVisible(false);
+    onConsent("accepted");
+  };
+  const decline = () => {
+    setConsent("declined");
+    setVisible(false);
+    onConsent("declined");
+  };
+
+  return (
+    <div style={{
+      position:"fixed", bottom:0, left:0, right:0, zIndex:8000,
+      background:"#0D0D0D", borderTop:`3px solid ${T.accent}`,
+      boxShadow:"0 -4px 24px rgba(0,0,0,0.35)",
+      fontFamily:"'DM Sans',sans-serif",
+      animation:"slideUp 0.3s ease",
+    }}>
+      <style>{`@keyframes slideUp{from{transform:translateY(100%);opacity:0}to{transform:translateY(0);opacity:1}}`}</style>
+      <div style={{ maxWidth:1160, margin:"0 auto", padding:"18px 32px" }}>
+
+        {/* Main row */}
+        <div style={{ display:"flex", alignItems:"center", gap:24, flexWrap:"wrap" }}>
+          {/* Icon + text */}
+          <div style={{ flex:1, minWidth:260 }}>
+            <div style={{ display:"flex", alignItems:"center", gap:10, marginBottom:6 }}>
+              <span style={{ fontSize:18 }}>🍪</span>
+              <span style={{
+                fontFamily:"'Barlow Condensed',sans-serif", fontWeight:800,
+                fontSize:13, letterSpacing:"0.12em", textTransform:"uppercase",
+                color:"#fff",
+              }}>Cookie Preferences</span>
+            </div>
+            <p style={{ fontSize:12, color:"#9CA3AF", lineHeight:1.65, margin:0 }}>
+              Boxoffy uses Google Analytics to understand how visitors use the site.
+              No personal data is sold or shared with advertisers.{" "}
+              <button
+                onClick={() => setShowDetails(d => !d)}
+                style={{ background:"none", border:"none", color:T.accent, fontSize:12,
+                         cursor:"pointer", padding:0, textDecoration:"underline" }}
+              >{showDetails ? "Hide details" : "Learn more"}</button>
+            </p>
+          </div>
+
+          {/* Buttons */}
+          <div style={{ display:"flex", gap:10, flexShrink:0 }}>
+            <button onClick={decline} style={{
+              padding:"9px 22px", fontSize:12, fontWeight:600,
+              fontFamily:"'Barlow Condensed',sans-serif", letterSpacing:"0.08em",
+              textTransform:"uppercase", border:"1px solid #374151",
+              background:"transparent", color:"#9CA3AF", cursor:"pointer",
+              borderRadius:2, transition:"all 0.15s",
+            }}
+              onMouseEnter={e => { e.target.style.borderColor="#6B7280"; e.target.style.color="#fff"; }}
+              onMouseLeave={e => { e.target.style.borderColor="#374151"; e.target.style.color="#9CA3AF"; }}
+            >Decline</button>
+            <button onClick={accept} style={{
+              padding:"9px 28px", fontSize:12, fontWeight:700,
+              fontFamily:"'Barlow Condensed',sans-serif", letterSpacing:"0.08em",
+              textTransform:"uppercase", border:"none",
+              background:T.accent, color:"#fff", cursor:"pointer",
+              borderRadius:2, transition:"opacity 0.15s",
+            }}
+              onMouseEnter={e => e.target.style.opacity="0.88"}
+              onMouseLeave={e => e.target.style.opacity="1"}
+            >Accept Cookies</button>
+          </div>
+        </div>
+
+        {/* Expandable details */}
+        {showDetails && (
+          <div style={{
+            marginTop:14, paddingTop:14, borderTop:"1px solid #1F2937",
+            display:"grid", gridTemplateColumns:"repeat(auto-fit,minmax(200px,1fr))",
+            gap:16,
+          }}>
+            {[
+              { name:"Essential cookies", desc:"Session management and site functionality. Always active. Cannot be disabled.", always:true },
+              { name:"Analytics (Google Analytics 4)", desc:"Anonymous usage statistics — pages visited, time on site, device type. No personal identifiers.", always:false },
+              { name:"Future cookies", desc:"Boxoffy may add additional cookies as the site grows. You will be asked again if new cookie types are introduced.", always:false, na:true },
+            ].map(c => (
+              <div key={c.name} style={{ display:"flex", gap:10 }}>
+                <div style={{
+                  width:18, height:18, borderRadius:9, flexShrink:0, marginTop:2,
+                  background: c.na ? "#374151" : c.always ? T.accent : "#15803D",
+                  display:"flex", alignItems:"center", justifyContent:"center",
+                  fontSize:10, color:"#fff", fontWeight:700,
+                }}>{c.na ? "–" : "✓"}</div>
+                <div>
+                  <div style={{ fontSize:11, fontWeight:700, color:"#E5E7EB", marginBottom:2 }}>{c.name}</div>
+                  <div style={{ fontSize:10, color:"#9CA3AF", lineHeight:1.6 }}>{c.desc}</div>
+                </div>
+              </div>
+            ))}
+            <div style={{ gridColumn:"1/-1", fontSize:10, color:"#6B7280", marginTop:4 }}>
+              By using Boxoffy.com you acknowledge our{" "}
+              <span
+                style={{ color:T.accent, cursor:"pointer", textDecoration:"underline" }}
+                onClick={() => { decline(); /* navigate to privacy */ window.location.hash="#privacy"; }}
+              >Privacy Policy</span>.
+              Consent is stored in your browser and can be changed at any time via the Cookie Settings link in the footer.
+            </div>
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}
+
+/* ── PRIVACY POLICY PAGE ─────────────────────────────────── */
+function PrivacyPolicyPage({ onBack }) {
+  React.useEffect(() => { window.scrollTo({ top:0, behavior:"smooth" }); }, []);
+  const P = ({ children }) => (
+    <p style={{ fontFamily:"'DM Sans',sans-serif", fontSize:14, color:"#3B3530",
+                lineHeight:1.8, marginBottom:14 }}>{children}</p>
+  );
+  const H = ({ children }) => (
+    <h3 style={{ fontFamily:"'Barlow Condensed',sans-serif", fontWeight:800,
+                 fontSize:14, letterSpacing:"0.14em", textTransform:"uppercase",
+                 color:T.text, marginBottom:8, marginTop:24 }}>{children}</h3>
+  );
+
+  return (
+    <div style={{ maxWidth:720, margin:"0 auto", padding:"40px 32px 80px",
+                  fontFamily:"'DM Sans',sans-serif" }}>
+      <button onClick={onBack} style={{
+        background:"none", border:"none", cursor:"pointer", padding:"0 0 24px",
+        fontFamily:"'Barlow Condensed',sans-serif", fontWeight:700, fontSize:12,
+        letterSpacing:"0.14em", textTransform:"uppercase", color:T.textMuted,
+        display:"flex", alignItems:"center", gap:6,
+      }}>← Back to Boxoffy</button>
+
+      <div style={{ borderBottom:`2px solid ${T.text}`, paddingBottom:20, marginBottom:32 }}>
+        <div style={{ fontFamily:"'Barlow Condensed',sans-serif", fontWeight:700,
+                      fontSize:10, letterSpacing:"0.2em", textTransform:"uppercase",
+                      color:T.accent, marginBottom:10 }}>Legal</div>
+        <h1 style={{ fontFamily:"'Barlow Condensed',sans-serif", fontWeight:900,
+                     fontSize:36, color:T.text, lineHeight:1.1, marginBottom:8 }}>
+          Privacy Policy
+        </h1>
+        <p style={{ fontSize:12, color:T.textMuted }}>
+          Boxoffy.com · Last updated: March 13, 2026 · Effective date: March 13, 2026
+        </p>
+      </div>
+
+      <H>Who We Are</H>
+      <P>Boxoffy.com ("Boxoffy", "we", "our") is an independent India box office intelligence platform operated as a media and data publication. Our registered contact email is info@boxoffy.com. We are not affiliated with any film production house, studio, distributor or exhibitor.</P>
+
+      <H>What Data We Collect and Why</H>
+      <P><strong>Analytics data (with your consent):</strong> If you accept cookies, we use Google Analytics 4 (GA4) to collect anonymous usage data — pages visited, time spent, device type, browser, and approximate geographic region (country/city level only). We have enabled IP anonymisation on all GA4 configurations. This data helps us understand how people use Boxoffy so we can improve it. We do not use this data for advertising or sell it to third parties.</P>
+      <P><strong>Contact form data:</strong> If you use the Contact Us form, we collect your name, email address, organisation name (optional), and message. This data is used solely to respond to your enquiry and is not stored beyond what is necessary for that purpose.</P>
+      <P><strong>Newsletter subscriptions:</strong> If you subscribe to the Boxoffy newsletter, we store your email address to send you the weekly Boxoffy Brief. You can unsubscribe at any time via the link in any email we send.</P>
+      <P><strong>Essential data (no consent required):</strong> Like all websites, Boxoffy's hosting infrastructure (Vercel) logs basic request data (IP address, timestamp, page requested) for security and performance purposes. This is a standard server-side function and is not used for tracking individual users.</P>
+
+      <H>Cookies We Use</H>
+      <P><strong>Essential cookies:</strong> Required for the site to function correctly. These include session management cookies set by our hosting provider (Vercel). These cannot be disabled.</P>
+      <P><strong>Analytics cookies (consent required):</strong> Google Analytics 4 sets cookies (_ga, _ga_*, _gid) to distinguish users and track sessions anonymously. These are only set after you click "Accept Cookies" on our consent banner. If you click "Decline", no analytics cookies are set and GA4 does not load.</P>
+      <P><strong>Other cookies:</strong> Boxoffy may introduce additional cookies in the future — for example, advertising or personalisation cookies if we introduce those features. If we do, we will update this policy and request fresh consent before any new cookie types are set.</P>
+
+      <H>Your Rights Under the DPDP Act 2023</H>
+      <P>Under India's Digital Personal Data Protection Act 2023 ("DPDP Act"), you have the right to access the personal data we hold about you, correct inaccurate data, withdraw consent at any time, and request erasure of your data. To exercise any of these rights, email us at info@boxoffy.com with the subject line "Data Rights Request".</P>
+      <P><strong>Withdrawing cookie consent:</strong> You can withdraw your analytics consent at any time by clicking "Cookie Settings" in the website footer. This will clear stored consent and reload the banner, giving you the option to change your preference.</P>
+
+      <H>Data Storage and Third Parties</H>
+      <P>Analytics data is processed by Google LLC under Google's privacy terms. Google Analytics data is stored on Google's servers, which may be located outside India. Google acts as a data processor on our behalf. You can review Google's privacy policy at policies.google.com/privacy. Newsletter data is processed by Resend Inc. under their data processing terms. No other third parties receive your personal data from Boxoffy.</P>
+
+      <H>Data Retention</H>
+      <P>Google Analytics data is retained for 14 months (Google's default). Contact form enquiries are retained for up to 12 months. Newsletter subscriber data is retained until you unsubscribe. Server access logs are retained for up to 30 days.</P>
+
+      <H>Children's Privacy</H>
+      <P>Boxoffy is a general audience entertainment data platform. We do not knowingly collect personal data from children under the age of 18. In accordance with the DPDP Act 2023, we do not target, track or display behavioural advertising to minors.</P>
+
+      <H>Changes to This Policy</H>
+      <P>We may update this Privacy Policy from time to time. The "Last updated" date at the top of this page will reflect any changes. Continued use of Boxoffy.com after an update constitutes acceptance of the revised policy.</P>
+
+      <H>Contact Us</H>
+      <P>For privacy-related enquiries, data rights requests, or to report a concern, contact us at{" "}
+        <a href="mailto:info@boxoffy.com" style={{ color:T.accent, textDecoration:"none", fontWeight:600 }}>info@boxoffy.com</a>.
+        We aim to respond within 5 business days.
+      </P>
+
+      <div style={{ marginTop:36, padding:"16px 20px", background:"#F9FAFB",
+                    borderLeft:`3px solid ${T.accent}`, fontSize:12, color:T.textMuted,
+                    lineHeight:1.7 }}>
+        This Privacy Policy is governed by the laws of India. Any disputes arising from this policy shall be subject to the jurisdiction of the courts of India. This policy is intended to comply with the Digital Personal Data Protection Act 2023 (No. 22 of 2023) and the Information Technology (Intermediary Guidelines and Digital Media Ethics Code) Rules 2021.
+      </div>
+    </div>
+  );
+}
+
+
 function SubscribePopup({ onClose }) {
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState("idle"); // idle | success | error
@@ -4820,6 +5090,21 @@ function ContactSection() {
 export default function App() {
   const [activeSection, setActiveSection] = useState("Box Office");
   const [showSubscribe, setShowSubscribe] = useState(false);
+  const [showPrivacy, setShowPrivacy] = useState(false);
+  const [cookieConsent, setCookieConsent] = useState(getConsent);
+
+  // Fire GA4 on mount if already consented from a previous visit
+  useEffect(() => {
+    if (getConsent() === "accepted") loadGA4();
+  }, []);
+
+  const handleConsent = (val) => setCookieConsent(val);
+
+  const resetCookies = () => {
+    try { localStorage.removeItem(CONSENT_KEY); } catch {}
+    setCookieConsent(null);
+    window.__ga4Loaded = false;
+  };
 
   // Show subscribe popup after 18 seconds, once per session
   useEffect(() => {
@@ -4840,6 +5125,9 @@ export default function App() {
   return (
     <div style={{ minHeight:"100vh", background:T.bg, fontFamily:"'DM Sans', sans-serif" }}>
 
+      {/* Cookie consent banner — shows if no decision yet */}
+      {!cookieConsent && <CookieBanner onConsent={handleConsent} />}
+
       {/* Subscribe popup */}
       {showSubscribe && <SubscribePopup onClose={() => setShowSubscribe(false)} />}
       <style>{`
@@ -4854,6 +5142,12 @@ export default function App() {
       `}</style>
 
       <NavBar activeSection={activeSection} setActiveSection={setActiveSection} />
+
+      {/* Privacy Policy overlay — replaces main content when active */}
+      {showPrivacy ? (
+        <PrivacyPolicyPage onBack={() => setShowPrivacy(false)} />
+      ) : (
+      <div id="main-content">
 
       {/* Hero masthead */}
       <div style={{
@@ -4936,18 +5230,55 @@ export default function App() {
               onMouseLeave={e => e.target.style.color=T.textMuted}
               style={{ color:T.textMuted, fontSize:11, fontWeight:600, letterSpacing:"0.04em", textDecoration:"none", transition:"color 0.15s" }}
             >info@boxoffy.com</a>
-          </div>
-          <div style={{ borderTop:`1px solid ${T.border}`, paddingTop:10, color:T.textMuted, lineHeight:1.8, display:"flex", alignItems:"center", justifyContent:"space-between", flexWrap:"wrap", gap:8 }}>
-            <span>© 2026 Boxoffy.com · India Box Office Intelligence · Box office data from industry tracking sources · Current as of Mar 13, 2026 · All figures in ₹ Crores</span>
-            <a
-              href="mailto:info@boxoffy.com"
+            <span style={{ color:T.border }}>·</span>
+            <span
+              onClick={() => { setShowPrivacy(true); window.scrollTo({top:0,behavior:"smooth"}); }}
               onMouseEnter={e => e.target.style.color=T.accent}
               onMouseLeave={e => e.target.style.color=T.textMuted}
-              style={{ color:T.textMuted, fontSize:11, fontWeight:500, textDecoration:"none", letterSpacing:"0.04em", flexShrink:0, transition:"color 0.15s" }}
-            >info@boxoffy.com</a>
+              style={{ color:T.textMuted, fontSize:11, fontWeight:600, letterSpacing:"0.06em", cursor:"pointer", transition:"color 0.15s" }}
+            >Privacy Policy</span>
+            <span style={{ color:T.border }}>·</span>
+            <span
+              onClick={resetCookies}
+              onMouseEnter={e => e.target.style.color=T.accent}
+              onMouseLeave={e => e.target.style.color=T.textMuted}
+              style={{ color:T.textMuted, fontSize:11, fontWeight:600, letterSpacing:"0.06em", cursor:"pointer", transition:"color 0.15s" }}
+              title="Change your cookie preferences"
+            >🍪 Cookie Settings</span>
+          </div>
+          <div style={{ borderTop:`1px solid ${T.border}`, paddingTop:12, display:"flex", flexDirection:"column", gap:10 }}>
+
+            {/* Legal Disclaimer */}
+            <div style={{
+              background:"#F3F4F6", borderLeft:`3px solid ${T.border}`,
+              padding:"10px 14px", fontSize:10, color:T.textMuted,
+              lineHeight:1.75, fontFamily:"'DM Sans',sans-serif",
+            }}>
+              <span style={{ fontWeight:700, color:T.text, display:"block", marginBottom:4, fontSize:10, letterSpacing:"0.06em", textTransform:"uppercase" }}>
+                Data Disclaimer &amp; Legal Notice
+              </span>
+              Boxoffy.com is an independent box office intelligence platform that aggregates, analyses and presents publicly available entertainment industry data sourced from third-party trade publications, ticketing platforms and industry analysts including but not limited to Box Office India, Sacnilk, Venky Box Office and Koimoi. All box office figures, advance booking data, verdict calls, predictions and editorial analysis published on this website represent estimates based on available information at the time of publication and are not official figures unless expressly stated otherwise. Boxoffy.com does not represent, warrant or guarantee the absolute accuracy, completeness or timeliness of any data presented herein.{" "}
+              <strong style={{ color:T.text }}>Boxoffy.com is not affiliated with, endorsed by, or acting on behalf of any film production house, studio, distributor or exhibitor.</strong>{" "}
+              Opinions, predictions and editorial commentary published on this platform constitute the views of the Boxoffy editorial team and are protected expression under Article 19(1)(a) of the Constitution of India. Nothing published on Boxoffy.com is intended to defame, disparage or make false factual claims against any individual, company or film production. In the event any content is alleged to be inaccurate, please contact{" "}
+              <a href="mailto:info@boxoffy.com" style={{ color:T.accent, textDecoration:"none" }}>info@boxoffy.com</a>{" "}
+              and we will review and correct verified errors promptly. Boxoffy.com operates as a news aggregator and commentary platform and claims the protections available to intermediaries and media publishers under Section 79 of the Information Technology Act, 2000, the Information Technology (Intermediary Guidelines and Digital Media Ethics Code) Rules, 2021, and the fair dealing provisions of Section 52 of the Copyright Act, 1957. All rights reserved. Unauthorised reproduction of original editorial content is prohibited.
+            </div>
+
+            {/* Copyright strip */}
+            <div style={{ display:"flex", alignItems:"center", justifyContent:"space-between", flexWrap:"wrap", gap:8, color:T.textMuted, lineHeight:1.8 }}>
+              <span style={{ fontSize:11 }}>© 2026 Boxoffy.com · India Box Office Intelligence · Box office data from industry tracking sources · Current as of Mar 13, 2026 · All figures in ₹ Crores</span>
+              <a
+                href="mailto:info@boxoffy.com"
+                onMouseEnter={e => e.target.style.color=T.accent}
+                onMouseLeave={e => e.target.style.color=T.textMuted}
+                style={{ color:T.textMuted, fontSize:11, fontWeight:500, textDecoration:"none", letterSpacing:"0.04em", flexShrink:0, transition:"color 0.15s" }}
+              >info@boxoffy.com</a>
+            </div>
           </div>
         </div>
       </div>
+      </div>{/* end main-content */}
+      )}{/* end showPrivacy conditional */}
     </div>
   );
 }
