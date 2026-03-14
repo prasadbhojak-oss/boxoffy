@@ -683,6 +683,15 @@ const EDITORIALS = [
     readTime: "6 min read",
     url: "dhurandhar2-editorial.html",
   },
+  {
+    tag: "PRICING ANALYSIS",
+    headline: "Dhurandhar 2 Is Not Just Bigger. It Is Priced Bigger.",
+    dek: "From ₹307 to ₹414 ATP — a 34.9% jump in pricing power. What equal footfalls would mean for the gross. The ATP math, seat mix logic, and why runtime changes everything.",
+    author: "The Boxoffy Team",
+    date: "Mar 13, 2026",
+    readTime: "5 min read",
+    url: "dhurandhar-comparison.html",
+  },
 ];
 
 /* ── FEATURED EDITORIAL ─────────────────────────────────────────
@@ -714,79 +723,71 @@ const YEAR_NOTES = {
 // url: null = Boxoffy original (opens in-page modal), string = opens external source in new tab
 const ARTICLES = {
   Bollywood: [
-    { tag:"Advance Booking", time:"2h ago", hot:true, source:"Boxoffy",
-      url:"https://www.bollywoodhungama.com/news/bollywood/dhurandhar-revenge-creates-advance-booking-storm-preview-shows-sold-7-5k-tickets-per-hour/",
-      headline:"Advance Bookings On A Rampage — 7.5k–10k Tickets/Hr On BMS, ₹4 Cr Collected In First 2 Hrs",
-      summary:"Dhurandhar: The Revenge is trending #1 on BookMyShow, pulling ₹2.50 Cr from national chains alone with 35,000+ tickets in the opening hours — unprecedented organic demand with no fan-club or bulk booking involvement." },
-    { tag:"Prediction", time:"3h ago", hot:true, source:"Koimoi",
-      url:"https://www.koimoi.com/box-office/dhurandhar-2-box-office-advance-booking-premieres-1-1-lakh-tickets-sold-ranveer-singhs-film-is-earth-shattering/",
-      headline:"Dhurandhar 2 Advance Booking Storm: ₹15–30 Cr Paid Previews Projected, ₹1,000 Cr India Lifetime",
-      summary:"Boxoffy AI Calc projects ₹15–20 Cr Nett from paid previews alone (up to ₹30 Cr possible) — which would be the highest paid preview number in Hindi cinema history. Post-trailer: ₹4.39 Cr gross in 2hrs on Mar 7, 1.1L+ premiere tickets sold organically (no fan-club bulk). BMS velocity: 7.5k–10k tickets/hr. US premiere pre-sales: $400K+. Full Day1 target: ₹80–100 Cr net. Lifetime projection: ₹1,000 Cr India / ₹1,700–2,000 Cr WW." },
-    { tag:"Toxic", time:"8h ago", hot:false, source:"Outlook India",
-      url:"https://www.outlookindia.com/art-entertainment/dhurandhar-2-advance-booking-report-ranveer-singhs-film-sets-new-record-in-the-us",
-      headline:"Toxic Postponed to June 4 — Dhurandhar 2 Gets Clear Solo March 19 Release",
-      summary:"Yash's Kannada film pushes back citing Middle East business concerns. Even Ryan Gosling's Project Hail Mary moved to Mar 26 to avoid Dhurandhar 2. 5,500+ screens, 'Super Blockbuster Plus' pricing tier, ~3h55m runtime." },
-    { tag:"Kerala Story 2", time:"Now", hot:true, source:"Sacnilk / Koimoi",
-      url:"https://www.koimoi.com/box-office/the-kerala-story-2-box-office-collection-day-8-inches-away-from-becoming-bollywoods-2nd-successful-film-of-2026/",
-      headline:"Kerala Story 2 Day 9: ₹25.65 Cr — Plus Verdict Locked. Hit Needs ₹56 Cr in 2-Week Clean Window",
-      summary:"Sacnilk confirms Week 1 at ₹22.9 Cr + 2nd Friday ₹1.75 Cr (12% drop) = ₹25.65 Cr total. Budget (₹28 Cr) fully recovered — Bollywood's 2nd success of 2026 after Border 2. Clear runway until Dhurandhar 2 on March 19. Pinkvilla: could emerge as 2nd Hit film of 2026 if weekend holds." },
-    { tag:"O Romeo Final", time:"1d ago", hot:false, source:"Sacnilk",
-      url:"https://sacnilk.com/quicknews/O_Romeo_2026_Box_Office_Collection_Day_23",
-      headline:"O Romeo Closes: ₹69 Cr Net / ₹101 Cr WW Gross — Confirmed Flop On ₹130 Cr Budget",
-      summary:"Sacnilk day-wise: Wk1 ₹47.1 Cr, Wk2 ₹14.45 Cr, Wk3 ₹6.65 Cr, Wk4 trickle. WW gross crossed ₹101 Cr but India net can't overcome the ₹130 Cr budget. Vishal Bhardwaj + Shahid Kapoor reunion — acclaimed critically, punished commercially." },
-    { tag:"Analysis", time:"2d ago", hot:true, source:null, url:null,
-      headline:"Boxoffy: Why Dhurandhar 2's Advance Is Unlike Anything Indian Cinema Has Seen",
-      summary:"We track the data: ₹4 Cr in 2 hours on Mar 7 from national chains, 7.5k tickets/hr on BMS, $565K US Day1, $1M US weekend, ₹400K premiere pre-sales 12 days out, 'Super Blockbuster Plus' new pricing category, ~3h55m runtime limiting daily shows. The floor is ₹85–100 Cr all-language opening." }
+    { tag:"BREAKING", time:"Now", hot:true, source:"Bollywood Hungama",
+      url:"https://www.bollywoodhungama.com/news/bollywood/cocktail-2-first-look-drop-march-18-likely-attached-paid-previews-dhurandhar-revenge/",
+      headline:"Cocktail 2 First Look Teaser Drops March 18 — Attached to Dhurandhar 2 Paid Previews",
+      summary:"Maddock Films released character posters of Shahid Kapoor, Kriti Sanon and Rashmika Mandanna today (Mar 13). The teaser will premiere in cinemas on Mar 18 alongside Dhurandhar 2 paid previews — same date Ranveer Singh and Shahid Kapoor screen together for the first time since Padmaavat." },
+    { tag:"Bhooth Bangla", time:"3h ago", hot:true, source:"Box Office Worldwide",
+      url:"https://boxofficeworldwide.com/movies-latest-news/bhooth-bangla-teaser-55-million-views-youtube-india-no-2/",
+      headline:"Bhooth Bangla Teaser Hits 55M Views — #2 on YouTube India for 24+ Hours",
+      summary:"Akshay Kumar and Priyadarshan's reunion horror-comedy teaser has crossed 55 million views and held #2 on YouTube India trending for over 24 hours. Komal Nahta called it 'ICONIC'. Trailer attached to Dhurandhar 2 prints from Mar 19. Cast: Akshay Kumar, Tabu, Paresh Rawal, Rajpal Yadav, Wamiqa Gabbi. Apr 10, 2026 release." },
+    { tag:"D2 Screens", time:"5h ago", hot:true, source:"Sacnilk",
+      url:"https://sacnilk.com/news/Dhurandhar_2_The_Revenge_Euphoria_To_Hit_Bhooth_Bangla_as_Jio_Studios_Demand_6Week_Exclusive_Release_In_Single_Screens",
+      headline:"Jio Studios Demands 6-Week Exclusive Single-Screen Run for Dhurandhar 2 — Bhooth Bangla Could Be Hit",
+      summary:"Jio Studios has reportedly asked single-screen exhibitors to dedicate all shows to Dhurandhar 2 for 6 weeks — a highly unusual demand (norm is 1–3 weeks). Raja Shivaji gets additional 2-week exclusive ask. Bhooth Bangla (Apr 10) faces potential screen shortage if demand is met." },
+    { tag:"D2 Preview", time:"8h ago", hot:true, source:"Boxoffy Verified",
+      url:"/dhurandhar2-advance-article.html",
+      headline:"D2 Advance: ₹29.69 Cr India · 4.84L Tickets · OG Record BROKEN · WW ~₹60 Cr",
+      summary:"Mar 13, 12PM data: ₹24.76 Cr premiere gross (no blocks), ₹29.69 Cr with blocks, 4.84 lakh tickets across 9,128 shows. OG all-India premiere record (₹25 Cr) officially broken. US $982K+ premiere / $1.8M opening day / $3.65M weekend advance. Regular India show bookings yet to open." },
+    { tag:"Alpha", time:"2d ago", hot:false, source:"Bollywood Hungama",
+      url:"https://www.bollywoodhungama.com/news/bollywood/alia-bhatt-sharvari-starrer-alpha-locks-july-10-2026-theatrical-release/",
+      headline:"Alpha Locks July 10, 2026 — Moved From Apr 17 to Avoid Battle of Galwan Clash",
+      summary:"YRF officially announced Jul 10 release (Mar 9). Alia Bhatt confirmed on Instagram: #ALPHA 10.07.2026. First female-led YRF Spy Universe film. Cast: Alia Bhatt, Sharvari, Bobby Deol (villain), Anil Kapoor, Hrithik Roshan (cameo). Director: Shiv Rawail. VFX-heavy — third delay since Dec 2025." },
+    { tag:"Analysis", time:"3d ago", hot:false, source:null, url:"/dhurandhar-comparison.html",
+      headline:"Boxoffy: D2 Is Not Just Bigger. It Is Priced Bigger. The ATP Math Explained.",
+      summary:"From ₹307 to ₹414 ATP — a 34.9% pricing jump. Equal footfalls would imply ₹874 Cr India domestic for D2. We break down seat mix, runtime economics, yield optimization and why the ₹3,100 luxury ticket is not the whole story." }
   ],
   OTT: [
-    { tag:"Netflix", time:"3h ago", hot:true, source:"Sacnilk",
-      url:"https://www.sacnilk.com/movie/Dhurandhar_2026",
-      headline:"Dhurandhar (Part 1) on Netflix: 45M+ Views in First Weekend — Most-Watched Indian Film Ever",
-      summary:"Ranveer Singh's spy thriller set an all-time Netflix India record in its debut weekend after a ₹175 Cr deal — the highest OTT deal for a Hindi film at the time. The sequel has since moved to JioHotstar for streaming rights." },
-    { tag:"OTT Rights", time:"6h ago", hot:false, source:"India TV News",
-      url:"https://www.indiatvnews.com/entertainment/bollywood/dhurandhar-2-day-1-usa-advance-booking-ranveer-singh-film-sells-14-399-tickets-grosses-over-usd-330k-2026-03-06-1032815",
-      headline:"Dhurandhar 2 Goes to JioHotstar: ₹130 Cr OTT Deal — Shorter Window, Longer Theatrical Run",
-      summary:"Unlike Part 1's Netflix deal (₹175 Cr), the sequel lands on JioHotstar in a reported ₹130 Cr arrangement — reflecting a shorter post-theatrical window and confidence in a sustained theatrical run. Streaming premiere expected late May–June 2026." },
-    { tag:"Mardaani 3", time:"10h ago", hot:false, source:"Wikipedia",
-      url:"https://en.wikipedia.org/wiki/Mardaani_3",
-      headline:"Mardaani 3 OTT: Netflix Acquires Streaming Rights — Post-Theatrical Premiere Imminent",
-      summary:"Rani Mukerji's cop thriller, which closed its theatrical run at ₹50.57 Cr net, heads to Netflix. The franchise's third instalment delivered a strong performance for a mid-budget production." },
-    { tag:"Border 2 OTT", time:"14h ago", hot:false, source:"Pinkvilla",
-      url:"https://www.pinkvilla.com/entertainment/box-office/border-2-box-office-collections-sunny-deol-varun-dhawan-diljit-dosanjh-ahan-shetty-starrer-adds-rs-1-10-crore-in-week-6-nears-theatrical-end-1401270",
-      headline:"Border 2 OTT Rights: Which Platform Gets Sunny Deol's ₹481 Cr Blockbuster?",
-      summary:"With theatrical end approaching, all eyes turn to Border 2's OTT deal. The film's massive footfall of 1.5 Cr+ makes it one of the most-awaited post-theatrical premieres of 2026." },
-    { tag:"Analysis", time:"1d ago", hot:false, source:null, url:null,
-      headline:"Boxoffy OTT Watch: Why 2026 Has Been Terrible For Mid-Budget Films But Great For Streamers",
-      summary:"O Romeo (Flop), Mardaani 3 (Below Avg), Assi (Flop) — all headed to OTT within weeks. We analyse why India's ₹40–130 Cr budget space is broken and what it means for Netflix, Prime, and ZEE5's content strategy." },
-    { tag:"JioHotstar", time:"2d ago", hot:false, source:"Economic Times",
-      url:"https://economictimes.indiatimes.com/industry/media/entertainment/entertainment/",
-      headline:"JioHotstar Posts Record Q1 2026 Driven by Border 2 and IPL — 30M+ New Subscribers",
-      summary:"The platform's content bet paying off with back-to-back blockbuster OTT premieres and cricket season delivering its strongest subscriber quarter ever." }
+    { tag:"LIVE Mar 20", time:"Now", hot:true, source:"India TV News",
+      url:"https://www.indiatvnews.com/entertainment/ott/border-2-ott-release-date-know-when-and-where-to-stream-sunny-deol-varun-dhawan-war-drama-online-2026-03-13-1033679",
+      headline:"Border 2 Arrives on Netflix March 20 — Same Day as Dhurandhar 2's Wide Release",
+      summary:"Sunny Deol's ₹481.76 Cr WW blockbuster hits Netflix tomorrow (Mar 20), sharing the date with Dhurandhar 2's full release. Netflix confirmed the date on-platform; official poster still awaited from makers. Budget ₹275 Cr. Verdict: Super Hit. Border 3 already confirmed." },
+    { tag:"Netflix Mar 27", time:"6h ago", hot:true, source:"Sacnilk",
+      url:"https://www.sacnilk.com/news/Mardaani_3_OTT_Release_Date_Rani_Mukerjis_Action_Thriller_Set_for_Netflix_Premiere",
+      headline:"Mardaani 3 Streams on Netflix March 27 — 56-Day Theatrical Window Respected",
+      summary:"YRF's cop thriller closes its theatrical run at ₹50.78 Cr net / ₹75.10 Cr WW and heads to Netflix Mar 27, midnight IST. Exactly 8 weeks after Jan 30 release. Franchise's third instalment beat the original (₹35.65 Cr net) handily. Streaming in Hindi + South Indian dubbed versions." },
+    { tag:"JioHotstar", time:"10h ago", hot:false, source:"Boxoffy",
+      url:null,
+      headline:"Dhurandhar 2 OTT Deal: JioHotstar at ₹130 Cr — Streaming Window Expected Late May",
+      summary:"Unlike Part 1's Netflix deal (₹175 Cr), D2 lands on JioHotstar in a reported ₹130 Cr arrangement. Reflects shorter post-theatrical window and makers' confidence in a sustained theatrical run. Streaming premiere expected late May–early June 2026, giving roughly 8–10 weeks of pure theatrical." },
+    { tag:"Panchayat S5", time:"1d ago", hot:true, source:"Prime Video / TVF",
+      url:"https://theindianeye.com/2025/07/08/prime-videos-panchayat-season-4-achieves-record-breaking-success-season-5-confirmed-for-2026/",
+      headline:"Panchayat Season 5 Confirmed for 2026 — TVF Returns to Phulera After Record S4",
+      summary:"Prime Video officially confirmed Panchayat Season 5 is in development after Season 4 (Jun 24, 2025) trended #1 in India and Top 10 in 42 countries. Streamed across 95% of India's pin codes in Week 1. Full cast returns: Jitendra Kumar, Neena Gupta, Raghubir Yadav, Sanvikaa. No release date yet but 2026 confirmed." },
+    { tag:"Analysis", time:"2d ago", hot:false, source:null, url:null,
+      headline:"Boxoffy OTT Watch: Netflix Dominates Q1 2026 as Prime Holds with Panchayat, JioHotstar Bets on IPL",
+      summary:"Border 2 (Netflix Mar 20) + Mardaani 3 (Netflix Mar 27) gives the platform back-to-back big arrivals in the same week. JioHotstar counters with D2's OTT deal + IPL. Prime Video holds steady on Panchayat loyalty. The streaming war in India's Q1 2026 is being decided by theatrical spillover." }
   ],
   TV: [
-    { tag:"TRP", time:"2h ago", hot:true, source:"BARC India",
-      url:"https://www.barcindia.co.in/",
-      headline:"BARC Week 9 TRP Report — Anupamaa Regains #1 as IPL Season Approaches",
-      summary:"Star Plus drama reclaims top spot. Colors slips two positions. Hindi GEC ratings expected to dip further as IPL begins pulling prime-time eyeballs." },
-    { tag:"Reality TV", time:"6h ago", hot:false, source:"India Today",
-      url:"https://www.indiatoday.in/entertainment/reality-tv/",
-      headline:"Bigg Boss OTT Season 4 — Winner Announced, Controversy Follows as Votes Are Questioned",
-      summary:"The season ends with a split verdict online. Ratings for the finale beat Season 3 by 18%, but social media erupts over alleged vote manipulation." },
-    { tag:"Streaming", time:"10h ago", hot:false, source:"Hindustan Times",
-      url:"https://www.hindustantimes.com/entertainment/tv/",
-      headline:"Panchayat Season 4 Confirmed for April 18 — TVF Drops First Look, Full Cast Returns",
-      summary:"The beloved rural drama returns with the entire cast intact. Streaming on Amazon Prime from April 18 — and the first look already has 5M views in 24 hours." },
-    { tag:"Awards", time:"14h ago", hot:false, source:"Bollywood Hungama",
+    { tag:"BARC Wk8", time:"4d ago", hot:true, source:"Filmy Masala Now",
+      url:"https://www.filmymasalanow.in/hindi-t-v-serials-trp/",
+      headline:"BARC Week 8 2026: Kyunki Saas Bhi Kabhi Bahu Thi 2 Holds #1 — Tum Se Tum Tak Continues Strong",
+      summary:"Star Plus dominates with Kyunki S2 at #1. Anupamaa solid at #2. Colors' Naagin 7 holds top 3. ZEE TV's Tum Se Tum Tak and Ganga Mai Ki Betiyaan performing strongly. IPL expected to dent GEC prime-time numbers from late March onwards as cricket eyeballs shift to JioHotstar." },
+    { tag:"IPL Alert", time:"Now", hot:true, source:"Boxoffy",
+      url:null,
+      headline:"IPL 2026 Begins March 22 — Hindi GEC Channels Brace for Prime-Time Ratings Drop",
+      summary:"IPL Season 19 kicks off Mar 22 exclusively on JioHotstar. Star Plus, Colors, Zee TV historically see 15–25% GEC prime-time drops during IPL months. The 10-week tournament runs until end of May. Drama serials shifting to 9–10 PM slots to avoid direct competition with 7:30 PM matches." },
+    { tag:"Panchayat S5", time:"1d ago", hot:false, source:"Prime Video",
+      url:"https://theindianeye.com/2025/07/08/prime-videos-panchayat-season-4-achieves-record-breaking-success-season-5-confirmed-for-2026/",
+      headline:"Panchayat Season 5 in 2026 — The Show That Proved OTT Originals Beat Linear TV",
+      summary:"TVF's Panchayat S4 (Jun 2025) trended Top 10 in 42 countries and across 95% of India's pin codes. S5 confirmed. The series has effectively migrated India's most loyal drama audience from Saturday night Star Plus to Prime Video appointment viewing — a structural shift for the GEC business." },
+    { tag:"Filmfare 2026", time:"3d ago", hot:false, source:"Bollywood Hungama",
       url:"https://www.bollywoodhungama.com/news/bollywood/",
-      headline:"Filmfare Awards 2026 Nominations — Dhurandhar and MSVP Garu Lead with 12 Nods Each",
-      summary:"The 71st Filmfare Awards sees unprecedented cross-industry representation with Telugu and Hindi films battling it out across all major categories." },
-    { tag:"Analysis", time:"1d ago", hot:true, source:null, url:null,
-      headline:"Boxoffy TV Watch: Why OTT Is Winning the TRP War in 2026 — And What It Means for Star Plus",
-      summary:"From Panchayat to Mirzapur 3 — appointment viewing has moved from Saturday night Star Plus to Thursday night Prime. We map the shift and what traditional broadcasters must do." },
-    { tag:"BARC Data", time:"2d ago", hot:false, source:"Box Office India",
-      url:"https://www.boxofficeindia.com/showProd.php?itemCat=4&catName=Box+Office+Hindi",
-      headline:"BARC Week 8 — Hindi GEC Ratings Drop 8% as IPL Season Kickoff Looms Large",
-      summary:"General Entertainment Channels brace for Q2 as cricket season begins pulling eyeballs. Star Sports and JioHotstar among the biggest beneficiaries of the coming shift." }
+      headline:"71st Filmfare Awards — Dhurandhar Leads Nominations; Cross-Industry Competition Highest Ever",
+      summary:"Dhurandhar (2025) leads Hindi film nominations. First time Telugu and Hindi films battle across all major categories in a single year — reflecting 2025's pan-India box office reality. Ceremony date to be announced post-IPL season." },
+    { tag:"Analysis", time:"5d ago", hot:false, source:null, url:null,
+      headline:"Boxoffy TV Watch: The GEC Squeeze — Why Star Plus Needs a Blockbuster and OTT Has Already Won Thursday Nights",
+      summary:"Appointment viewing has decisively moved to OTT for the 18–35 demographic. GEC channels now fight for 35+ audiences and rural markets. With IPL arriving and Panchayat S5 confirmed, the platform war in India enters its most competitive phase yet." }
   ]
 };
 
@@ -4098,6 +4099,177 @@ function NewsSection({ category }) {
   );
 }
 
+/* ── OTT CHARTS DATA ─────────────────────────────────────────
+   Source: Netflix Tudum official (week Mar 2–8, 2026) + Sacnilk India Top 10
+   Update weekly. India chart = Netflix India Top 10 Movies (latest available).
+   Global chart = Netflix Global Non-English Films Top 10.
+──────────────────────────────────────────────────────────────── */
+const OTT_CHARTS = {
+  updatedDate: "Mar 13, 2026",
+  weekRange: "Mar 2–8, 2026",
+  india: {
+    platform: "Netflix India",
+    source: "Sacnilk / Netflix Tudum",
+    sourceUrl: "https://sacnilk.com/news/Accused_On_Netflix_Hits_Jackpot_With_15_Million_Views_In_2_Weeks_Dhurandhar_Remains_In_Top_10_Worldwide",
+    films: [
+      { rank:1, title:"Accused",             lang:"Hindi",   weeks:2,  note:"15M+ views in 2 wks · Trending top 10 in 72 countries", hot:true },
+      { rank:2, title:"Dhurandhar",          lang:"Hindi",   weeks:6,  note:"23M views total · 101.3M viewing hours · 6 wks Global top 10", hot:true },
+      { rank:3, title:"Chatha Pacha",        lang:"Malayalam", weeks:2, note:"Trending Middle East — Bahrain, Kuwait, Qatar, UAE" },
+      { rank:4, title:"Tere Ishk Mein",      lang:"Hindi",   weeks:6,  note:"6 weeks on chart · subcontinent hold" },
+      { rank:5, title:"Firebreak",           lang:"Intl",    weeks:3,  note:"#1 in 26 countries globally · Spanish survival thriller" },
+      { rank:6, title:"Anaganaga Oka Raju",  lang:"Telugu",  weeks:3,  note:"India-only trending" },
+      { rank:7, title:"Dum Laga Ke Haisha",  lang:"Hindi",   weeks:3,  note:"2015 classic resurging · Valentine's Week trigger" },
+      { rank:8, title:"Thalaivar Thambi Thalaimaiyil", lang:"Tamil", weeks:3, note:"India + Sri Lanka audience" },
+      { rank:9, title:"De De Pyaar De 2",    lang:"Hindi",   weeks:8,  note:"8-week run · India, Bangladesh, Pakistan" },
+      { rank:10, title:"Padmaavat",          lang:"Hindi",   weeks:1,  note:"Library re-entry — D2 franchise buzz trigger" },
+    ],
+  },
+  global: {
+    platform: "Netflix Global · Non-English Films",
+    source: "Netflix Tudum (Official)",
+    sourceUrl: "https://www.netflix.com/tudum/articles/top-10-march-2-2026",
+    films: [
+      { rank:1, title:"Accused",       lang:"Hindi · India",    views:"7.6M", note:"#1 in 5 countries · Top 10 in 72 countries", hot:true },
+      { rank:2, title:"Firebreak",     lang:"Spanish · Spain",  views:"4.6M", note:"#1 in 26 countries · 91 countries top 10" },
+      { rank:3, title:"Dhurandhar",    lang:"Hindi · India",    views:"3.6M (Wk6)", note:"6 consecutive weeks · 101M+ hours total", hot:true },
+      { rank:4, title:"Chatha Pacha",  lang:"Malayalam · India",views:"~2M",  note:"Middle East + India trending" },
+      { rank:5, title:"De De Pyaar De 2", lang:"Hindi · India", views:"~1.8M",note:"8-week run · Trending India / Pakistan / Bangladesh" },
+      { rank:6, title:"Tere Ishk Mein",  lang:"Hindi · India",  views:"~1.5M",note:"6 weeks global chart presence" },
+      { rank:7, title:"Thalaivar Thambi Thalaimaiyil", lang:"Tamil · India", views:"~1.2M", note:"3 weeks · India + Sri Lanka" },
+      { rank:8, title:"Anaganaga Oka Raju", lang:"Telugu · India", views:"~1M", note:"India regional chart" },
+      { rank:9, title:"Dum Laga Ke Haisha", lang:"Hindi · India",  views:"~0.9M", note:"Library title resurging" },
+      { rank:10, title:"Padmaavat",         lang:"Hindi · India",  views:"~0.7M", note:"Library re-entry" },
+    ],
+  },
+};
+
+/* ── OTT RANKINGS SECTION ────────────────────────────────────── */
+function OTTRankingsSection() {
+  const [tab, setTab] = React.useState("india");
+  const chart = tab === "india" ? OTT_CHARTS.india : OTT_CHARTS.global;
+  const isGlobal = tab === "global";
+
+  return (
+    <div style={{ background:T.surface, borderBottom:`2px solid ${T.border}` }}>
+
+      {/* ── Header ── */}
+      <div style={{
+        padding:"10px 24px",
+        display:"flex", alignItems:"center", gap:0,
+        borderBottom:`2px solid ${T.ink || "#0D0D0D"}`,
+      }}>
+        <span style={{ fontFamily:"'Barlow Condensed',sans-serif", fontWeight:900, fontSize:11, color:T.text, letterSpacing:"0.22em", textTransform:"uppercase" }}>
+          OTT CHARTS
+        </span>
+        <span style={{ flex:1 }} />
+        <span style={{ fontFamily:"'DM Sans',sans-serif", fontSize:10, color:T.textMuted }}>
+          Week {OTT_CHARTS.weekRange} · {OTT_CHARTS.updatedDate}
+        </span>
+      </div>
+
+      {/* ── Tab switcher ── */}
+      <div style={{ display:"flex", borderBottom:`1px solid ${T.border}` }}>
+        {[
+          { key:"india",  label:"🇮🇳  Netflix India Top 10" },
+          { key:"global", label:"🌍  Global Non-English Top 10" },
+        ].map(({ key, label }) => (
+          <button
+            key={key}
+            onClick={() => setTab(key)}
+            style={{
+              fontFamily:"'Barlow Condensed',sans-serif", fontWeight:700,
+              fontSize:11, letterSpacing:"0.12em", textTransform:"uppercase",
+              padding:"9px 20px", border:"none", cursor:"pointer",
+              borderBottom: tab === key ? `2px solid ${T.blue}` : "2px solid transparent",
+              background: tab === key ? "#EFF6FF" : T.surface,
+              color: tab === key ? T.blue : T.textMuted,
+              transition:"all 0.12s",
+            }}
+          >{label}</button>
+        ))}
+        <div style={{ flex:1 }} />
+        <a
+          href={chart.sourceUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ fontFamily:"'DM Sans',sans-serif", fontSize:9, color:T.textMuted, letterSpacing:"0.06em", padding:"9px 16px", textDecoration:"none" }}
+        >Source: {chart.source} ↗</a>
+      </div>
+
+      {/* ── Chart rows ── */}
+      <div>
+        {chart.films.map((film, i) => (
+          <div
+            key={i}
+            style={{
+              display:"flex", alignItems:"center", gap:14,
+              padding:"9px 24px",
+              borderBottom: i < chart.films.length - 1 ? `1px solid ${T.border}` : "none",
+              background: film.hot ? "#FFFDF8" : T.surface,
+              borderLeft: film.hot ? `3px solid ${T.blue}` : `3px solid transparent`,
+            }}
+          >
+            {/* Rank */}
+            <div style={{
+              fontFamily:"'Barlow Condensed',sans-serif", fontWeight:900,
+              fontSize: film.rank <= 3 ? 18 : 14,
+              color: film.rank === 1 ? "#B8860B" : film.rank <= 3 ? T.blue : T.textMuted,
+              width:22, flexShrink:0, textAlign:"center",
+            }}>{film.rank}</div>
+
+            {/* Divider */}
+            <div style={{ width:1, height:26, background:T.border, flexShrink:0 }} />
+
+            {/* Title + lang */}
+            <div style={{ flex:1, minWidth:0 }}>
+              <div style={{
+                fontFamily:"'Barlow Condensed',sans-serif", fontWeight: film.hot ? 800 : 700,
+                fontSize:15, color:T.text, whiteSpace:"nowrap", overflow:"hidden", textOverflow:"ellipsis",
+              }}>{film.title}</div>
+              <div style={{ fontFamily:"'DM Sans',sans-serif", fontSize:9, color:T.textMuted, marginTop:1 }}>
+                {film.lang}
+              </div>
+            </div>
+
+            {/* Note */}
+            <div style={{
+              fontFamily:"'DM Sans',sans-serif", fontSize:9, color:T.textMuted,
+              textAlign:"right", maxWidth:220, lineHeight:1.4,
+              display:"none",
+            }} className="ott-note">{film.note}</div>
+
+            {/* Views (global only) or weeks (india) */}
+            <div style={{ flexShrink:0, textAlign:"right" }}>
+              {isGlobal ? (
+                <div style={{ fontFamily:"'Barlow Condensed',sans-serif", fontWeight:800, fontSize:14, color:T.blue }}>
+                  {film.views}
+                </div>
+              ) : (
+                <div style={{ fontFamily:"'DM Sans',sans-serif", fontSize:9, color:T.textMuted }}>
+                  Wk {film.weeks}
+                </div>
+              )}
+              <div style={{ fontFamily:"'DM Sans',sans-serif", fontSize:9, color:T.textMuted, marginTop:1 }}>
+                {film.note.split(" · ")[0]}
+              </div>
+            </div>
+
+            {/* Hot badge */}
+            {film.hot && (
+              <div style={{
+                fontFamily:"'Barlow Condensed',sans-serif", fontWeight:800, fontSize:8,
+                letterSpacing:"0.14em", textTransform:"uppercase",
+                background:"#1A3A6B", color:"#93C5FD",
+                padding:"2px 6px", borderRadius:2, flexShrink:0,
+              }}>HOT</div>
+            )}
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 /* ── EDITORIAL ROW (numbered ①②③) ──────────────────────────── */
 function FeaturedEditorialRow({ item, index, TagPill, onClick }) {
   const [hov, setHov] = useState(false);
@@ -4170,28 +4342,35 @@ function FeaturedEditorialRow({ item, index, TagPill, onClick }) {
 /* ── FROM THE DESK — stacked editorial list ─────────────────── */
 function EditorialSection({ onNavigate }) {
   const TAG_COLORS = {
-    "ANALYSIS":        { bg:"#1E3A5F",  text:"#93C5FD"  },
-    "ADVANCE BOOKING": { bg:"#1A2F1A",  text:"#6EE7B7"  },
-    "DEEP DIVE":       { bg:"#1C2B3A",  text:"#7DD3FC"  },
-    "INTERVIEW":       { bg:"#1A3A1A",  text:"#86EFAC"  },
-    "OPINION":         { bg:"#3B1F1F",  text:"#FCA5A5"  },
-    "EXCLUSIVE":       { bg:"#2D1B4E",  text:"#C4B5FD"  },
-    "REPORT":          { bg:"#1A2F1A",  text:"#6EE7B7"  },
-    "PREVIEW":         { bg:"#1C2B3A",  text:"#7DD3FC"  },
-    "BREAKING":        { bg:"#7F1D1D",  text:"#FCA5A5"  },
+    "ANALYSIS":         { bg:"#1E3A5F",  text:"#93C5FD"  },
+    "ADVANCE BOOKING":  { bg:"#1A2F1A",  text:"#6EE7B7"  },
+    "DEEP DIVE":        { bg:"#1C2B3A",  text:"#7DD3FC"  },
+    "US BOX OFFICE":    { bg:"#1A3A6B",  text:"#93C5FD"  },
+    "PRICING ANALYSIS": { bg:"#2D1B4E",  text:"#C4B5FD"  },
+    "INTERVIEW":        { bg:"#1A3A1A",  text:"#86EFAC"  },
+    "OPINION":          { bg:"#3B1F1F",  text:"#FCA5A5"  },
+    "EXCLUSIVE":        { bg:"#2D1B4E",  text:"#C4B5FD"  },
+    "REPORT":           { bg:"#1A2F1A",  text:"#6EE7B7"  },
+    "BREAKING":         { bg:"#7F1D1D",  text:"#FCA5A5"  },
   };
 
-  const featured = EDITORIALS.slice(0, 3);
-  const archived = EDITORIALS.slice(3);
+  // Sort newest first — array position is tiebreaker within same date
+  const parseDate = (d) => { try { return new Date(d); } catch(e) { return new Date(0); } };
+  const sorted = [...EDITORIALS].sort((a, b) => {
+    const diff = parseDate(b.date) - parseDate(a.date);
+    if (diff !== 0) return diff;
+    return EDITORIALS.indexOf(a) - EDITORIALS.indexOf(b); // earlier in array = more recent
+  });
 
-  const TagPill = ({ tag }) => {
+  const TagPill = ({ tag, small }) => {
     const s = TAG_COLORS[tag] || TAG_COLORS["ANALYSIS"];
     return (
       <span style={{
         background:s.bg, color:s.text,
         fontFamily:"'Barlow Condensed',sans-serif", fontWeight:800,
-        fontSize:9, letterSpacing:"0.14em", textTransform:"uppercase",
-        padding:"2px 7px", borderRadius:2, flexShrink:0,
+        fontSize: small ? 8 : 9, letterSpacing:"0.14em", textTransform:"uppercase",
+        padding: small ? "1px 5px" : "2px 7px", borderRadius:2, flexShrink:0,
+        whiteSpace:"nowrap",
       }}>{tag}</span>
     );
   };
@@ -4201,150 +4380,95 @@ function EditorialSection({ onNavigate }) {
     else if (onNavigate && item.section) onNavigate(item.section);
   };
 
-  return (
-    <div style={{ background:T.surface, borderTop:`1px solid ${T.border}`, borderBottom:`2px solid ${T.border}` }}>
+  const nums = ["①","②","③","④","⑤","⑥","⑦","⑧"];
 
-      {/* ── Section label ── */}
+  return (
+    <div style={{ background:T.surface, borderTop:`1px solid ${T.border}` }}>
+
+      {/* ── Section header — Variety style: label left, count right ── */}
       <div style={{
-        padding:"7px 28px",
-        background:"#FFFDF8",
-        borderBottom:`1px solid ${T.border}`,
-        display:"flex", alignItems:"center", gap:14,
+        padding:"10px 28px",
+        display:"flex", alignItems:"center", gap:0,
+        borderBottom:`2px solid ${T.ink || "#0D0D0D"}`,
       }}>
-        <span style={{ fontFamily:"'Barlow Condensed',sans-serif", fontWeight:900, fontSize:11, color:T.textMuted, letterSpacing:"0.22em", textTransform:"uppercase" }}>
-          FROM THE DESK
-        </span>
-        <span style={{ width:1, height:14, background:T.border, display:"inline-block" }} />
-        <span style={{ fontFamily:"'DM Sans',sans-serif", fontSize:10, color:T.textMuted }}>
-          {EDITORIALS.length} original {EDITORIALS.length === 1 ? "piece" : "pieces"} · Boxoffy Editorial
-        </span>
-        <span style={{ marginLeft:"auto", fontFamily:"'DM Sans',sans-serif", fontSize:9, color:T.textMuted, letterSpacing:"0.08em" }}>
-          NEWEST FIRST
-        </span>
+        <span style={{
+          fontFamily:"'Barlow Condensed',sans-serif", fontWeight:900,
+          fontSize:11, color:T.text, letterSpacing:"0.22em", textTransform:"uppercase",
+        }}>FROM THE DESK</span>
+        <span style={{ flex:1 }} />
+        <span style={{
+          fontFamily:"'DM Sans',sans-serif", fontSize:10, color:T.textMuted,
+        }}>{EDITORIALS.length} pieces · Boxoffy Editorial</span>
       </div>
 
-      {/* ── Top 3 numbered rows ── */}
-      {featured.map((item, i) => (
-        <FeaturedEditorialRow key={i} item={item} index={i} TagPill={TagPill} onClick={() => openArticle(item)} />
-      ))}
+      {/* ── All articles — clean numbered list ── */}
+      {sorted.map((item, i) => {
+        const isLead = i === 0;
+        return (
+          <div
+            key={i}
+            onClick={() => openArticle(item)}
+            style={{
+              display:"flex", alignItems:"center", gap:16,
+              padding: isLead ? "18px 28px" : "12px 28px",
+              borderBottom:`1px solid ${T.border}`,
+              borderLeft: isLead ? `3px solid ${T.accent}` : `3px solid transparent`,
+              background: isLead ? "#FFFDF8" : T.surface,
+              cursor:"pointer", transition:"background 0.12s",
+            }}
+            onMouseEnter={e => e.currentTarget.style.background = isLead ? "#FFF4F0" : "#FAFAF8"}
+            onMouseLeave={e => e.currentTarget.style.background = isLead ? "#FFFDF8" : T.surface}
+          >
+            {/* Issue number */}
+            <div style={{
+              fontFamily:"'Barlow Condensed',sans-serif", fontWeight:900,
+              fontSize: isLead ? 20 : 14,
+              color: isLead ? T.accent : T.textMuted,
+              opacity: isLead ? 1 : 0.5,
+              flexShrink:0, width:20, textAlign:"center", lineHeight:1,
+            }}>{nums[i] || String(i+1)}</div>
 
-      {/* ── Archive (4th article onwards) ── */}
-      {archived.length > 0 && (
-        <div style={{ borderTop:`1px solid ${T.border}` }}>
-          <div style={{ padding:"6px 28px 4px", background:"#F9FAFB" }}>
-            <span style={{ fontFamily:"'Barlow Condensed',sans-serif", fontWeight:700, fontSize:9, color:T.textMuted, letterSpacing:"0.16em", textTransform:"uppercase" }}>
-              ARCHIVE · {archived.length} MORE
-            </span>
-          </div>
-          {archived.map((item, i) => (
-            <div
-              key={i}
-              onClick={() => openArticle(item)}
-              style={{
-                display:"flex", alignItems:"center", gap:14,
-                padding:"9px 28px",
-                borderBottom: i < archived.length - 1 ? `1px solid ${T.border}` : "none",
-                cursor:"pointer",
-                transition:"background 0.12s",
-                background:T.surface,
-              }}
-              onMouseEnter={e => e.currentTarget.style.background = "#FAFAF8"}
-              onMouseLeave={e => e.currentTarget.style.background = T.surface}
-            >
-              <TagPill tag={item.tag} />
-              <span style={{ fontFamily:"'Barlow Condensed',sans-serif", fontWeight:700, fontSize:14, color:T.text, flex:1, overflow:"hidden", textOverflow:"ellipsis", whiteSpace:"nowrap" }}>
-                {item.headline}
-              </span>
-              <span style={{ fontFamily:"'DM Sans',sans-serif", fontSize:9, color:T.textMuted, flexShrink:0 }}>{item.date} · {item.readTime}</span>
-              <span style={{ fontFamily:"'Barlow Condensed',sans-serif", fontWeight:800, fontSize:14, color:T.accent, flexShrink:0 }}>→</span>
+            {/* Divider */}
+            <div style={{ width:1, height: isLead ? 40 : 28, background:T.border, flexShrink:0 }} />
+
+            {/* Tag */}
+            <TagPill tag={item.tag} small={!isLead} />
+
+            {/* Headline + dek (lead only) */}
+            <div style={{ flex:1, minWidth:0 }}>
+              <div style={{
+                fontFamily:"'Barlow Condensed',sans-serif",
+                fontWeight: isLead ? 800 : 700,
+                fontSize: isLead ? 17 : 14,
+                color:T.text, lineHeight:1.2,
+                whiteSpace:"nowrap", overflow:"hidden", textOverflow:"ellipsis",
+              }}>{item.headline}</div>
+              {isLead && (
+                <div style={{
+                  fontFamily:"'DM Sans',sans-serif", fontSize:11,
+                  color:T.textMuted, marginTop:3, lineHeight:1.3,
+                  whiteSpace:"nowrap", overflow:"hidden", textOverflow:"ellipsis",
+                }}>{item.dek}</div>
+              )}
             </div>
-          ))}
-        </div>
-      )}
-    </div>
-  );
-}
 
-/* ── FEATURED EDITORIAL STRIP ───────────────────────────────── */
-function FeaturedEditorialStrip({ editorial, onNavigate }) {
-  if (!editorial) return null;
+            {/* Meta — right side */}
+            <div style={{ flexShrink:0, textAlign:"right" }}>
+              {isLead && (
+                <div style={{ fontFamily:"'DM Sans',sans-serif", fontSize:10, fontWeight:700, color:T.textMid, marginBottom:2 }}>
+                  {item.author}
+                </div>
+              )}
+              <div style={{ fontFamily:"'DM Sans',sans-serif", fontSize:9, color:T.textMuted, letterSpacing:"0.04em" }}>
+                {item.date} · {item.readTime}
+              </div>
+            </div>
 
-  const TAG_COLORS = {
-    "ANALYSIS":   { bg:"#1E3A5F", text:"#93C5FD" },
-    "INTERVIEW":  { bg:"#1A3A1A", text:"#86EFAC" },
-    "OPINION":    { bg:"#3B1F1F", text:"#FCA5A5" },
-    "EXCLUSIVE":  { bg:"#2D1B4E", text:"#C4B5FD" },
-    "REPORT":     { bg:"#1A2F1A", text:"#6EE7B7" },
-  };
-  const tagStyle = TAG_COLORS[editorial.tag] || TAG_COLORS["ANALYSIS"];
-
-  return (
-    <div
-      onClick={() => {
-        if (editorial.url) { window.open(editorial.url, "_blank", "noopener"); }
-        else if (onNavigate) { onNavigate(editorial.section || "Weekly"); }
-      }}
-      style={{
-        background:"#FFFDF8",
-        borderTop:`1px solid ${T.border}`,
-        borderBottom:`2px solid ${T.border}`,
-        padding:"10px 32px",
-        display:"flex", alignItems:"center", gap:16,
-        cursor:"pointer",
-        transition:"background 0.15s",
-      }}
-      onMouseEnter={e => e.currentTarget.style.background = "#FFF8EE"}
-      onMouseLeave={e => e.currentTarget.style.background = "#FFFDF8"}
-    >
-      {/* FROM THE EDITORS label */}
-      <div style={{
-        fontFamily:"'Barlow Condensed',sans-serif", fontWeight:900,
-        fontSize:10, color:T.textMuted, letterSpacing:"0.2em",
-        textTransform:"uppercase", flexShrink:0,
-        borderRight:`1px solid ${T.border}`, paddingRight:16,
-        lineHeight:1.4,
-      }}>
-        FROM<br/>THE DESK
-      </div>
-
-      {/* Tag */}
-      <div style={{
-        background: tagStyle.bg,
-        color: tagStyle.text,
-        fontFamily:"'Barlow Condensed',sans-serif",
-        fontWeight:800, fontSize:10, letterSpacing:"0.12em",
-        padding:"3px 8px", borderRadius:2, flexShrink:0,
-      }}>{editorial.tag}</div>
-
-      {/* Headline + dek */}
-      <div style={{ flex:1, minWidth:0 }}>
-        <div style={{
-          fontFamily:"'Barlow Condensed',sans-serif",
-          fontWeight:800, fontSize:16,
-          color:T.text, lineHeight:1.15,
-          letterSpacing:"-0.01em",
-          whiteSpace:"nowrap", overflow:"hidden", textOverflow:"ellipsis",
-        }}>{editorial.headline}</div>
-        <div style={{
-          fontFamily:"'DM Sans',sans-serif", fontSize:11,
-          color:T.textMuted, marginTop:2, lineHeight:1.3,
-          whiteSpace:"nowrap", overflow:"hidden", textOverflow:"ellipsis",
-        }}>{editorial.dek}</div>
-      </div>
-
-      {/* Meta */}
-      <div style={{ flexShrink:0, textAlign:"right", borderLeft:`1px solid ${T.border}`, paddingLeft:16 }}>
-        <div style={{ fontFamily:"'DM Sans',sans-serif", fontSize:10, fontWeight:700, color:T.textMid }}>{editorial.author}</div>
-        <div style={{ fontFamily:"'DM Sans',sans-serif", fontSize:9, color:T.textMuted, marginTop:1 }}>{editorial.date} · {editorial.readTime}</div>
-      </div>
-
-      {/* Read arrow */}
-      <div style={{
-        flexShrink:0,
-        fontFamily:"'Barlow Condensed',sans-serif",
-        fontWeight:800, fontSize:18,
-        color:T.accent, marginLeft:4,
-      }}>→</div>
+            {/* Arrow */}
+            <div style={{ flexShrink:0, fontFamily:"'Barlow Condensed',sans-serif", fontWeight:800, fontSize:16, color:T.accent }}>→</div>
+          </div>
+        );
+      })}
     </div>
   );
 }
@@ -4461,13 +4585,11 @@ export default function App() {
       </div>
 
 
-      {/* Editorial Strip */}
-      <FeaturedEditorialStrip editorial={FEATURED_EDITORIAL} onNavigate={setActiveSection} />
-
       {/* Content */}
       <div style={{ maxWidth:1160, margin:"0 auto", background:T.surface, boxShadow:"0 0 0 1px #E2E5EA", animation:"fadeIn 0.3s ease both" }}>
         {activeSection === "Box Office" && <BoxOfficeSection onNavigate={setActiveSection} />}
         {activeSection === "Weekly" && <WeeklyCommentarySection />}
+        {newsCategory && newsCategory === "OTT" && <OTTRankingsSection />}
         {newsCategory && <NewsSection category={newsCategory} />}
       </div>
 
