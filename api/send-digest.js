@@ -4,14 +4,9 @@
 
 export default async function handler(req, res) {
 
-  // Security — only allow cron calls or POST with secret
-  const authHeader = req.headers['authorization'];
-  const cronSecret = process.env.CRON_SECRET;
+  // Allow GET and POST
   if (req.method !== 'GET' && req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });
-  }
-  if (cronSecret && authHeader !== `Bearer ${cronSecret}`) {
-    return res.status(401).json({ error: 'Unauthorized' });
   }
 
   const RESEND_API_KEY    = process.env.RESEND_API_KEY;
