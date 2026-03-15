@@ -1333,9 +1333,9 @@
       "verdict": "Super Hit",
       "weeklyCollection": 0,
       "weekNum": 8,
-      "daysInRelease": 51,
+      "daysInRelease": 56,
       "lastWeekRank": 1,
-      "weeklyNote": "CLOSED. Final: ₹424 Cr India net / ₹481.76 Cr WW. OTT: Netflix Mar 20, 2026 — same day as Dhurandhar 2 release. Budget ₹275 Cr. ROI ~114%. Border 3 confirmed by makers.",
+      "weeklyNote": "CLOSED theatrical. Final: ₹424 Cr India net / ₹481.76 Cr WW. OTT: Netflix Mar 20, 2026. Border 3 confirmed.",
       "wkTrend": "closed",
       "ott": {
         "platform": "Netflix",
@@ -1347,7 +1347,7 @@
         "globalRank": "TBD",
         "countries": 0,
         "rightsDeal": "₹225 Cr (confirmed)",
-        "ottNote": "Netflix confirmed Mar 20 2026. Premieres same day as Dhurandhar 2 theatrical release. Non-theatrical total ₹495 Cr."
+        "ottNote": "Netflix India Mar 20, 2026 — same day as D2 wide release. ₹225 Cr rights deal. 8-week theatrical window. Border 3 confirmed by Sunny Deol."
       }
     },
     {
@@ -1355,19 +1355,19 @@
       "language": "Hindi",
       "director": "Vishal Bhardwaj",
       "releaseDate": "Feb 13, 2026",
-      "totalCollection": "~₹110 Cr",
+      "totalCollection": "110 Cr",
       "totalNum": 110,
-      "indiaNet": "80.90 Cr",
+      "indiaNet": "71.30 Cr",
       "overseas": "~₹29 Cr",
       "weeksInTop10": 3,
       "status": "OTT",
       "budget": "150 Cr",
       "verdict": "Flop",
-      "weeklyCollection": 0,
+      "weeklyCollection": 0.15,
       "weekNum": 5,
       "daysInRelease": 29,
       "lastWeekRank": 2,
-      "weeklyNote": "CLOSED. Final: ~₹80.9 Cr India net / ~₹110 Cr WW. Budget ₹150 Cr. Recovered ~54% of cost. Confirmed Flop. Shahid Kapoor + Vishal Bhardwaj 4th collab — their highest India gross but still a loss. OTT: Amazon Prime Video.",
+      "weeklyNote": "Day 29: ₹15 lakh. Total ₹71.30 Cr India net. FLOP verdict. Shahid Kapoor–Vishal Bhardwaj failed to connect. Heading to OTT.",
       "wkTrend": "closed",
       "ott": {
         "platform": "Amazon Prime Video",
@@ -2363,14 +2363,14 @@
       "weekNum": 0,
       "daysInRelease": 0,
       "lastWeekRank": null,
-      "weeklyNote": "Mar 13 Boxoffy Verified: ₹24.76 Cr premiere gross (no blocks) / ₹29.69 Cr with blocks · 4.84L tickets / 9,128 shows · ATP ₹414 · OG ₹25 Cr all-India premiere record BROKEN · WW advance ~₹60 Cr · US $982K+ premiere (678 locations) · NA OW nearing $2M · BMS 7.5k–10k tickets/hr (Taran Adarsh) · Yami Gautam confirmed in cast · Runtime 3h55m · Premieres Mar 18 5PM · Regular India bookings not yet open.",
+      "weeklyNote": "Boxoffy Verified Mar 15 3PM: Day 1 advance ₹30.51 Cr gross (approaching D1 opening) · Premiere (Mar 18) ₹21.50 Cr India gross · WW advance ₹56 Cr+ · NA weekend advance $4.6M · 9,500+ shows · Premieres Mar 18 5PM · Kerala advance ₹1 Cr+ (vs ₹17 lakh for D1) · Pan-India 5-language release.",
       "openingPrediction": {
-        "low": 85,
-        "mid": 100,
-        "high": 120,
+        "low": 90,
+        "mid": 105,
+        "high": 125,
         "allLanguages": 110,
         "basis": "Boxoffy AI Calc — post-trailer advance booking data",
-        "note": "Boxoffy AI Calc: ₹15–20 Cr Nett from paid previews (up to ₹30 Cr possible). ₹80–100 Cr Day1 net. ₹350–400 Cr Eid weekend India. ₹500–600 Cr WW 4-day. ₹1,000 Cr India lifetime. ₹1,700–2,000 Cr WW. BMS velocity: 7.5k–10k tickets/hr. ₹4.39 Cr premiere gross in first 2hrs. 1.1L+ premiere tickets. Day1 net floor: ₹85–90 Cr (Boxoffy floor). US: $982K+ premiere pre-sales (678 locations) / NA OW $2M+. OG record BROKEN. WW advance ~₹60 Cr. India regular bookings not yet open — will surge further."
+        "note": "Boxoffy AI Calc (updated Mar 15): Day 1 advance ₹30.51 Cr gross (85% of D1's entire opening gross before premiere). Paid previews Mar 18 5PM tracking ₹25–30 Cr net. Day 1 net floor: ₹90–100 Cr. ₹350–400 Cr Eid weekend India. ₹500–600 Cr WW 4-day. ₹1,700–2,000 Cr WW lifetime. NA: $4.6M advance → $12–15M OW possible."
       },
       "ott": {
         "platform": "Netflix",

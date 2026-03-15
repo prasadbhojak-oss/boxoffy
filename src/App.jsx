@@ -2348,7 +2348,7 @@ function ForeignFilmsPanel({ movies }) {
 
       {/* ── Global view: US BO Top 10 ─────────────────────────── */}
       {viewMode === "global"
-        ? <USBoTop10 weekData={US_BO_WEEKLY["Week 10, 2026"]} />
+        ? <USBoTop10 weekData={US_BO_WEEKLY["Week 11, 2026"]} />
         : <>
           {/* ── Column headers ──────────────────────────────────── */}
           <BogColHeaders viewMode={viewMode} />
@@ -2580,10 +2580,10 @@ function BoxOfficeSection({ onNavigate }) {
             {/* Right — 4 key numbers, static, clean */}
             <div style={{ display:"flex", gap:0, borderLeft:`1px solid ${T.border}`, flexShrink:0 }}>
               {[
-                { label:"Premiere Gross (verified)", val:"₹24.76 Cr", sub:"No blocks · Mar 13 · Boxoffy" },
-                { label:"With Blocks (verified)", val:"₹29.69 Cr", sub:"India premiere · OG record BROKEN" },
-                { label:"WW Advance (so far)", val:"~₹60 Cr", sub:"India + overseas · Outlook India" },
-                { label:"US Premiere Advance", val:"$982K+", sub:"678 locations · NA OW ~$2M" },
+                { label:"Day 1 India Advance (Mar 15)", val:"₹30.51 Cr", sub:"Gross · Approaching D1 opening · Boxoffy" },
+                { label:"Premiere Mar 18 (India)", val:"₹21.50 Cr", sub:"India premiere gross · 9,500+ shows" },
+                { label:"WW Advance", val:"₹56 Cr+", sub:"India + overseas · Sacnilk Mar 15" },
+                { label:"NA Weekend Advance", val:"$4.6M", sub:"Koimoi · Destroys KGF2, near Padmaavat" },
               ].map((s,i) => (
                 <div key={i} style={{
                   padding:"0 18px", borderRight:`1px solid ${T.border}`, textAlign:"right",
@@ -2801,7 +2801,7 @@ function BoxOfficeSection({ onNavigate }) {
             </h2>
           </div>
           <p style={{ fontFamily:"'DM Sans', sans-serif", fontSize:13, color:T.textMuted, marginLeft:12 }}>
-            {showWeekly ? "Week 12, 2026 — Ranked by this week's collection · All active films listed · Mar 7–13" : "Top Indian films by worldwide gross · Industry tracking data"}
+            {showWeekly ? "Week 13, 2026 — Ranked by this week's collection · All active films listed · Mar 14–20" : "Top Indian films by worldwide gross · Industry tracking data"}
           </p>
         </div>
         {topFilm && (
@@ -2906,10 +2906,10 @@ function BoxOfficeSection({ onNavigate }) {
               ● LIVE
             </span>
             <span style={{ fontFamily:"'DM Sans', sans-serif", fontSize:11, color:T.textMuted }}>
-              Week 12 · Mar 13, 2026 · Data current as of Fri 13 Mar 2026
+              Week 13 · Mar 15, 2026 · Data current as of Sun 15 Mar 2026
             </span>
             <span style={{ background:T.surface, border:`1px solid ${T.border}`, fontFamily:"'DM Sans', sans-serif", fontSize:10, color:T.textMid, padding:"2px 8px", borderRadius:2 }}>
-              D2: ₹29.69 Cr premiere (OG BROKEN)
+              D2: ₹30.51 Cr Day 1 advance · Mar 19 RELEASE
             </span>
             <span style={{ background:T.surface, border:`1px solid ${T.border}`, fontFamily:"'DM Sans', sans-serif", fontSize:10, color:T.textMid, padding:"2px 8px", borderRadius:2 }}>
               Border 2 → Netflix Mar 20
@@ -3300,7 +3300,7 @@ function NewsSection({ category }) {
    Global chart = Netflix Global Non-English Films Top 10.
 ──────────────────────────────────────────────────────────────── */
 const OTT_CHARTS = {
-  updatedDate: "Mar 13, 2026",
+  updatedDate: "Mar 15, 2026",
   weekRange: "Mar 2–8, 2026",
   india: {
     platform: "Netflix India",

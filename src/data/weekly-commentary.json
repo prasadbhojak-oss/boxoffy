@@ -1,10 +1,75 @@
 [
   {
+    "weekNum": "Week 13, 2026",
+    "dateRange": "Mar 14–20, 2026",
+    "headline": "The Reckoning Arrives — Dhurandhar 2 Storms Indian Cinemas on Eid",
+    "subline": "Day 1 advance: ₹30.51 Cr gross (Mar 15, 3PM) · NA weekend advance $4.6M · WW advance ₹56 Cr+ · Premieres Mar 18 5PM · 9,500+ shows India · Project Hail Mary also releasing globally Mar 20",
+    "status": "current",
+    "scoreboard": [
+      {
+        "film": "Dhurandhar 2: The Revenge",
+        "week": "Day 1 — Mar 19, 2026",
+        "wkCollection": "—",
+        "total": "Advance: ₹30.51 Cr gross Day 1 · WW advance ₹56 Cr+ · NA $4.6M · Premieres Mar 18",
+        "verdict": "ALL-TIME BLOCKBUSTER in the making — ₹85–120 Cr Day 1 projected",
+        "color": "#C8201A"
+      },
+      {
+        "film": "Border 2",
+        "week": "NOW ON NETFLIX",
+        "wkCollection": "—",
+        "total": "₹424 Cr India net · ₹481.76 Cr WW · CLOSED theatrical",
+        "verdict": "Super Hit — Netflix Mar 20",
+        "color": "#15803D"
+      },
+      {
+        "film": "O'Romeo",
+        "week": "Day 29",
+        "wkCollection": "₹15 lakh",
+        "total": "₹71.30 Cr India net · ₹110 Cr WW (est)",
+        "verdict": "FLOP — closing screens for D2",
+        "color": "#6B7280"
+      },
+      {
+        "film": "The Kerala Story 2",
+        "week": "Day 28",
+        "wkCollection": "~₹50 lakh",
+        "total": "₹10.83 Cr India net",
+        "verdict": "FLOP — limited run",
+        "color": "#6B7280"
+      },
+      {
+        "film": "Thaai Kizhavi",
+        "week": "Wk4",
+        "wkCollection": "~₹1 Cr",
+        "total": "~₹43 Cr net / ~₹58 Cr WW",
+        "verdict": "Super Hit — ROI 357%",
+        "color": "#15803D"
+      },
+      {
+        "film": "Dhurandhar (re-release)",
+        "week": "Day 101",
+        "wkCollection": "~₹2 Cr",
+        "total": "₹895 Cr India net · ₹1,305 Cr WW (lifetime)",
+        "verdict": "All-Time Blockbuster — 100-day celebration",
+        "color": "#B8860B"
+      }
+    ],
+    "sources": [
+      "Koimoi",
+      "Sacnilk",
+      "Box Office India",
+      "Venky Box Office"
+    ],
+    "interval_take": "The week India has been waiting for since December 2025. Dhurandhar 2: The Revenge arrives on March 19 with the most staggering advance booking story in Bollywood history. As of Sunday afternoon (Mar 15), the Day 1 India advance has already crossed ₹30 Cr gross — approaching Dhurandhar 1's entire opening day collection before a single ticket has been torn. North America has banked $4.6 million in weekend pre-sales, threatening Baahubali 2's nine-year record. The film opens on Eid, Gudi Padwa and Ugadi — the most powerful festive alignment for a Hindi release since Bajrangi Bhaijaan in 2015. If content delivers, Boxoffy's ₹1,700–2,000 Cr WW call looks conservative.",
+    "nextWeek": "Mar 19: Dhurandhar 2 Day 1 collections. Mar 20: Border 2 Netflix debut — first streaming figures. Mar 22: D2 opening weekend confirmed. Mar 20: Project Hail Mary (Ryan Gosling) US opening — tracking $75-85M."
+  },
+  {
     "weekNum": "Week 12, 2026",
     "dateRange": "Mar 7 – Mar 13, 2026",
     "headline": "OG Record BROKEN — Dhurandhar 2 Rewrites Every Premiere Benchmark",
-    "subline": "₹29.69 Cr (with blocks) · 4.84L tickets · WW ~₹60 Cr · US $982K+ · Taran Adarsh: 7,500–10,000 tickets/hr on BMS · 6 days to release",
-    "status": "current",
+    "subline": "Final figures: ₹29.69 Cr advance (with blocks) · 4.84L tickets · WW ~₹60 Cr · US $982K+ premiere advance · OG ₹25 Cr all-India record BROKEN · BMS 7,500–10,000 tickets/hr",
+    "status": "historical",
     "scoreboard": [
       {
         "film": "Dhurandhar 2: The Revenge",
@@ -94,7 +159,7 @@
         "analysis": "Sacnilk's real-time tracking as of March 13 at 12 PM confirms 4,84,627 tickets sold across 9,128 premiere shows in India. The average ticket price of ₹414 reflects the premium pricing strategy — INOX Mumbai Recliner Prime at ₹2,900 vs AGS Cinemas Chennai at ₹59, a remarkable price spread that maximises both revenue and volume. PVR INOX CEO Gautam Dutta confirmed 1.5 lakh+ tickets in PVR INOX alone, calling it a big screen celebration. Dhurandhar 1 completed its 100th day on March 13 and simultaneously re-released across 1,000 screens globally — the first time in Indian cinema history that a prequel has run continuously until its sequel's launch."
       }
     ],
-    "interval_take": "The week belonged entirely to Dhurandhar 2. Every day brought a new record. The OG premiere record — long held by Pawan Kalyan's OG — is gone. The Stree 2 Bollywood premiere record was already broken earlier this week. The worldwide advance is ₹60 crore and climbing, with India's regular show bookings not yet open. Taran Adarsh called the velocity UNSTOPPABLE. Nishit Shaw says overseas will exceed Part 1. Boxoffy's floor remains ₹85–90 Cr Day 1 net. The rest of the market is in standby — 120 Bahadur released today to little fanfare, O Romeo has quietly closed at ₹80.9 Cr as a confirmed Flop, and Border 2 moves to Netflix on March 20. The industry holds its breath for March 18 previews.",
+    "interval_take": "The week belonged entirely to Dhurandhar 2. Every day brought a new record. The OG premiere record — long held by Pawan Kalyan's OG at ₹25 Cr — is gone. The Stree 2 Bollywood premiere record was the first to fall. India's regular show bookings were not even open for most of this week. That means the ₹29.69 Cr advance came entirely from premiere and special screenings. Trade consensus has shifted: this is no longer a question of whether D2 opens big. The question is how big. Boxoffy's ₹85–120 Cr Day 1 range looks like the floor, not the ceiling.",
     "nextWeek": "Mar 18 — Dhurandhar 2 paid previews (5PM). Mar 19 — Dhurandhar 2 worldwide release (Eid + Gudi Padwa + Ugadi). Border 2 on Netflix. Aadu 3 (Malayalam) also releasing. This is the biggest Indian opening since Baahubali 2."
   },
   {
