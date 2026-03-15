@@ -2,12 +2,19 @@
 <html lang="en">
   <head>
     <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K6C9EVRFH4"></script>
+    <!-- Google Analytics — consent-gated (DPDP Act 2023 compliant) -->
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-K6C9EVRFH4');
+    (function(){
+      var c=null;try{c=localStorage.getItem("boxoffy_cookie_consent");}catch(e){}
+      if(c==="accepted"){
+        var s=document.createElement("script");s.async=true;
+        s.src="https://www.googletagmanager.com/gtag/js?id=G-K6C9EVRFH4";
+        document.head.appendChild(s);
+        window.dataLayer=window.dataLayer||[];
+        window.gtag=function(){window.dataLayer.push(arguments);};
+        gtag("js",new Date());gtag("config","G-K6C9EVRFH4",{anonymize_ip:true});
+      }
+    })();
     </script>
 
     <meta charset="UTF-8" />
