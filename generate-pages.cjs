@@ -19,7 +19,7 @@ const path = require('path');
 
 // ── Config ──────────────────────────────────────────────────────────────────
 const DATA_FILE   = path.join(__dirname, 'src/data/films.json');
-const OUTPUT_DIR  = path.join(__dirname, 'public/films');
+const OUTPUT_DIR  = path.join(__dirname, 'public');
 const BASE_URL    = 'https://boxoffy.com';
 const GA_ID       = 'G-K6C9EVRFH4';
 
@@ -68,7 +68,7 @@ function languageFlag(lang) {
 function generateSlug(film) {
   const titleSlug = slugify(film.title);
   const year = (film.releaseDate || '').match(/\d{4}/)?.[0] || '';
-  return `${titleSlug}-box-office${year ? '-' + year : ''}`;
+  return `${titleSlug}-box-office`;
 }
 
 // ── SEO helpers ─────────────────────────────────────────────────────────────
@@ -91,7 +91,7 @@ function generateDescription(film) {
 
 // ── HTML Template ────────────────────────────────────────────────────────────
 function generatePage(film, slug) {
-  const url          = `${BASE_URL}/films/${slug}.html`;
+  const url          = `${BASE_URL}/${slug}.html`;
   const title        = generateTitle(film);
   const description  = generateDescription(film);
   const verdictClr   = verdictColor(film.verdict);
