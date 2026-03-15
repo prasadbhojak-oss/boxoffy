@@ -62,6 +62,8 @@ export default async function handler(req, res) {
       } catch (e) {
         errors.push({ email: contact.email, error: e.message });
       }
+      // Rate limit: Resend allows 2 req/sec — wait 600ms between sends
+      await new Promise(r => setTimeout(r, 600));
     }
 
     return res.status(200).json({
