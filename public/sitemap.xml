@@ -2,18 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
 
-  <!-- Homepage (React SPA) -->
+  <!-- ═══ HOMEPAGE ═══ -->
+
   <url>
     <loc>https://boxoffy.com/</loc>
-    <lastmod>2026-03-14</lastmod>
+    <lastmod>2026-03-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
-  <!-- Film Tracker Pages -->
+  <!-- ═══ HAND-CRAFTED FILM TRACKER PAGES ═══ -->
+
   <url>
     <loc>https://boxoffy.com/dhurandhar-2-box-office.html</loc>
-    <lastmod>2026-03-14</lastmod>
+    <lastmod>2026-03-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
     <news:news>
@@ -28,23 +30,24 @@
 
   <url>
     <loc>https://boxoffy.com/dhurandhar-box-office.html</loc>
-    <lastmod>2026-03-14</lastmod>
+    <lastmod>2026-03-15</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
     <news:news>
       <news:publication>
         <news:name>Boxoffy</news:name>
         <news:language>en</news:language>
       </news:publication>
       <news:publication_date>2026-01-15</news:publication_date>
-      <news:title>Dhurandhar Box Office Collection — ₹1,305 Cr WW | Day 100 | All-Time Hindi Record</news:title>
+      <news:title>Dhurandhar Box Office Collection — ₹1,305 Cr WW | All-Time Hindi Record</news:title>
     </news:news>
   </url>
 
-  <!-- Editorial / Analysis Articles -->
+  <!-- ═══ EDITORIAL / ANALYSIS ARTICLES ═══ -->
+
   <url>
     <loc>https://boxoffy.com/dhurandhar2-editorial.html</loc>
-    <lastmod>2026-03-14</lastmod>
+    <lastmod>2026-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <news:news>
@@ -59,7 +62,7 @@
 
   <url>
     <loc>https://boxoffy.com/dhurandhar2-advance-article.html</loc>
-    <lastmod>2026-03-14</lastmod>
+    <lastmod>2026-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <news:news>
@@ -74,7 +77,7 @@
 
   <url>
     <loc>https://boxoffy.com/dhurandhar2-us-boxoffice.html</loc>
-    <lastmod>2026-03-14</lastmod>
+    <lastmod>2026-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <news:news>
@@ -89,7 +92,7 @@
 
   <url>
     <loc>https://boxoffy.com/dhurandhar-comparison.html</loc>
-    <lastmod>2026-03-14</lastmod>
+    <lastmod>2026-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <news:news>
@@ -102,10 +105,11 @@
     </news:news>
   </url>
 
-  <!-- Deep Dive / Evergreen -->
+  <!-- ═══ DEEP DIVE / EVERGREEN ═══ -->
+
   <url>
     <loc>https://boxoffy.com/india-boxoffice-how-it-works.html</loc>
-    <lastmod>2026-03-14</lastmod>
+    <lastmod>2026-03-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <news:news>
@@ -118,12 +122,513 @@
     </news:news>
   </url>
 
-  <!-- Site Pages -->
+  <!-- ═══ SITE PAGES ═══ -->
+
   <url>
     <loc>https://boxoffy.com/about.html</loc>
     <lastmod>2026-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
+  </url>
+
+  <!-- ═══ GENERATED FILM PAGES (83 films · 2020–2026) ═══ -->
+  <url>
+    <loc>https://boxoffy.com/tanhaji-the-unsung-warrior-box-office.html</loc>
+    <lastmod>2020-12-31</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://boxoffy.com/darbar-box-office.html</loc>
+    <lastmod>2020-12-31</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://boxoffy.com/baaghi-3-box-office.html</loc>
+    <lastmod>2020-12-31</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://boxoffy.com/street-dancer-3d-box-office.html</loc>
+    <lastmod>2020-12-31</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://boxoffy.com/malang-box-office.html</loc>
+    <lastmod>2020-12-31</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://boxoffy.com/shubh-mangal-zyada-saavdhan-box-office.html</loc>
+    <lastmod>2020-12-31</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://boxoffy.com/thappad-box-office.html</loc>
+    <lastmod>2020-12-31</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://boxoffy.com/love-aaj-kal-box-office.html</loc>
+    <lastmod>2020-12-31</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://boxoffy.com/angrezi-medium-box-office.html</loc>
+    <lastmod>2020-12-31</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://boxoffy.com/haathi-mere-saathi-box-office.html</loc>
+    <lastmod>2020-12-31</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://boxoffy.com/pushpa-the-rise-box-office.html</loc>
+    <lastmod>2021-12-31</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://boxoffy.com/sooryavanshi-box-office.html</loc>
+    <lastmod>2021-12-31</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://boxoffy.com/spider-man-no-way-home-hindi-box-office.html</loc>
+    <lastmod>2021-12-31</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://boxoffy.com/master-box-office.html</loc>
+    <lastmod>2021-12-31</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://boxoffy.com/radhe-shyam-box-office.html</loc>
+    <lastmod>2021-12-31</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://boxoffy.com/annaatthe-box-office.html</loc>
+    <lastmod>2021-12-31</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://boxoffy.com/83-box-office.html</loc>
+    <lastmod>2021-12-31</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://boxoffy.com/bell-bottom-box-office.html</loc>
+    <lastmod>2021-12-31</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://boxoffy.com/shershaah-box-office.html</loc>
+    <lastmod>2021-12-31</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://boxoffy.com/satyameva-jayate-2-box-office.html</loc>
+    <lastmod>2021-12-31</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://boxoffy.com/rrr-box-office.html</loc>
+    <lastmod>2022-12-31</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://boxoffy.com/kgf-chapter-2-box-office.html</loc>
+    <lastmod>2022-12-31</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://boxoffy.com/ponniyin-selvan-i-box-office.html</loc>
+    <lastmod>2022-12-31</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://boxoffy.com/vikram-box-office.html</loc>
+    <lastmod>2022-12-31</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://boxoffy.com/brahmastra-part-one-box-office.html</loc>
+    <lastmod>2022-12-31</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://boxoffy.com/the-kashmir-files-box-office.html</loc>
+    <lastmod>2022-12-31</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://boxoffy.com/drishyam-2-box-office.html</loc>
+    <lastmod>2022-12-31</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://boxoffy.com/bhool-bhulaiyaa-2-box-office.html</loc>
+    <lastmod>2022-12-31</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://boxoffy.com/beast-box-office.html</loc>
+    <lastmod>2022-12-31</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://boxoffy.com/gangubai-kathiawadi-box-office.html</loc>
+    <lastmod>2022-12-31</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://boxoffy.com/jawan-box-office.html</loc>
+    <lastmod>2023-12-31</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://boxoffy.com/pathaan-box-office.html</loc>
+    <lastmod>2023-12-31</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://boxoffy.com/animal-box-office.html</loc>
+    <lastmod>2023-12-31</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://boxoffy.com/salaar-part-1-box-office.html</loc>
+    <lastmod>2023-12-31</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://boxoffy.com/gadar-2-box-office.html</loc>
+    <lastmod>2023-12-31</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://boxoffy.com/jailer-box-office.html</loc>
+    <lastmod>2023-12-31</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://boxoffy.com/leo-box-office.html</loc>
+    <lastmod>2023-12-31</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://boxoffy.com/dunki-box-office.html</loc>
+    <lastmod>2023-12-31</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://boxoffy.com/ponniyin-selvan-ii-box-office.html</loc>
+    <lastmod>2023-12-31</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://boxoffy.com/rocky-aur-rani-kii-prem-kahaani-box-office.html</loc>
+    <lastmod>2023-12-31</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://boxoffy.com/pushpa-2-the-rule-box-office.html</loc>
+    <lastmod>2024-12-31</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://boxoffy.com/stree-2-box-office.html</loc>
+    <lastmod>2024-12-31</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://boxoffy.com/kalki-2898-ad-box-office.html</loc>
+    <lastmod>2024-12-31</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://boxoffy.com/singham-again-box-office.html</loc>
+    <lastmod>2024-12-31</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://boxoffy.com/devara-part-1-box-office.html</loc>
+    <lastmod>2024-12-31</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://boxoffy.com/vettaiyan-box-office.html</loc>
+    <lastmod>2024-12-31</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://boxoffy.com/lucky-baskhar-box-office.html</loc>
+    <lastmod>2024-12-31</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://boxoffy.com/game-changer-box-office.html</loc>
+    <lastmod>2024-12-31</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://boxoffy.com/mufasa-the-lion-king-hindi-box-office.html</loc>
+    <lastmod>2024-12-31</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://boxoffy.com/the-sabarmati-report-box-office.html</loc>
+    <lastmod>2024-12-31</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://boxoffy.com/chhaava-box-office.html</loc>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://boxoffy.com/housefull-5-box-office.html</loc>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://boxoffy.com/raid-2-box-office.html</loc>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://boxoffy.com/sky-force-box-office.html</loc>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://boxoffy.com/retro-box-office.html</loc>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://boxoffy.com/baby-john-box-office.html</loc>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://boxoffy.com/saiyaara-box-office.html</loc>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://boxoffy.com/tu-meri-main-tera-main-tera-tu-meri-box-office.html</loc>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://boxoffy.com/deva-box-office.html</loc>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://boxoffy.com/pushpa-2-re-release-box-office.html</loc>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://boxoffy.com/border-2-box-office.html</loc>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://boxoffy.com/oromeo-box-office.html</loc>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://boxoffy.com/mardaani-3-box-office.html</loc>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://boxoffy.com/assi-box-office.html</loc>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://boxoffy.com/do-deewane-sehar-mein-box-office.html</loc>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://boxoffy.com/tu-yaa-main-box-office.html</loc>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://boxoffy.com/the-kerala-story-2-goes-beyond-box-office.html</loc>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://boxoffy.com/msvp-mana-shankaravaraprasad-garu-box-office.html</loc>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://boxoffy.com/the-raja-saab-box-office.html</loc>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://boxoffy.com/anaganaga-oka-raju-box-office.html</loc>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://boxoffy.com/ikkis-box-office.html</loc>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://boxoffy.com/landlord-box-office.html</loc>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://boxoffy.com/vadh-2-box-office.html</loc>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://boxoffy.com/mana-shankaravaraprasad-garu-box-office.html</loc>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://boxoffy.com/the-raja-saab-box-office.html</loc>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://boxoffy.com/anaganaga-oka-raju-box-office.html</loc>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://boxoffy.com/nari-nari-naduma-murari-box-office.html</loc>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://boxoffy.com/parasakthi-box-office.html</loc>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://boxoffy.com/with-love-box-office.html</loc>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://boxoffy.com/thaai-kizhavi-box-office.html</loc>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://boxoffy.com/funky-box-office.html</loc>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://boxoffy.com/chatha-pacha-the-ring-of-rowdies-box-office.html</loc>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://boxoffy.com/landlord-box-office.html</loc>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
   </url>
 
 </urlset>
