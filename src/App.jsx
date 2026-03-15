@@ -210,6 +210,75 @@ import ARTICLES           from "./data/articles.json";
 import FOOTNOTES          from "./data/footnotes.json";
 import WEEKLY_COMMENTARY  from "./data/weekly-commentary.json";
 
+/* ── SOURCE COLORS ── */
+const SOURCE_COLORS = {
+  "Box Office India":   { bg:"#1A1714", fg:"#fff" },
+  "Sacnilk":            { bg:"#0369A1", fg:"#fff" },
+  "Koimoi":             { bg:"#7C3AED", fg:"#fff" },
+  "Bollywood Hungama":  { bg:"#DC2626", fg:"#fff" },
+  "Variety":            { bg:"#111827", fg:"#fff" },
+  "Deadline":           { bg:"#111827", fg:"#FACC15" },
+  "The Hindu":          { bg:"#B91C1C", fg:"#fff" },
+  "Economic Times":     { bg:"#1D4ED8", fg:"#fff" },
+  "Pinkvilla":          { bg:"#DB2777", fg:"#fff" },
+  "Mint Lounge":        { bg:"#065F46", fg:"#fff" },
+  "Film Companion":     { bg:"#4F46E5", fg:"#fff" },
+  "BARC India":         { bg:"#1E3A5F", fg:"#fff" },
+  "India Today":        { bg:"#DC2626", fg:"#fff" },
+  "Hindustan Times":    { bg:"#0F172A", fg:"#fff" },
+  "Boxoffy":            { bg:"#E8261A", fg:"#fff" },
+};
+
+/* ── SOURCE → FOOTNOTE MAP ── */
+const SOURCE_FN = {
+  "Sacnilk":           1, "Box Office India":     1, "Bollymoviereviewz":   1,
+  "Koimoi":            2, "Bollywood Hungama":    2, "Pinkvilla":           2,
+  "Boxoffy AI Calc":   6, "Boxoffy":              6,
+  "Venky BO":         10, "Box Office Mojo":      10, "The Numbers":        10,
+  "Deadline":         10, "Variety":              10,
+  "CBIC":              7, "PIB":                  8, "GST Council":         8,
+  "BookMyShow":       11, "BMS":                  11,
+  "Ormax":             4, "Ormax Media":          4,
+  "Business Standard": 5, "Upstox":               5,
+  "Wikipedia":         9, "CBFC":                 9,
+  "MAI":               3, "Multiplex Association":3,
+};
+
+// Superscript footnote reference
+function Fn({ n, style = {} }) {
+  if (!n) return null;
+  const sup = String(n).split("").map(d => "\u2070\u00B9\u00B2\u00B3\u2074\u2075\u2076\u2077\u2078\u2079"[parseInt(d)]).join("");
+  return (
+    <sup style={{
+      fontFamily:"'DM Sans',sans-serif", fontSize:8, color:"#9CA3AF",
+      letterSpacing:0, verticalAlign:"super", lineHeight:0,
+      cursor:"default", userSelect:"none",
+      ...style,
+    }} title={FOOTNOTES.find(f=>f.n===n)?.label || ""}>{sup}</sup>
+  );
+}
+
+function FootnotesBar({ ns }) {
+  const items = (ns || FOOTNOTES.map(f=>f.n)).map(n => FOOTNOTES.find(f=>f.n===n)).filter(Boolean);
+  if (!items.length) return null;
+  return (
+    <div style={{
+      borderTop:`1px solid ${T.border}`,
+      padding:"8px 18px 6px",
+      display:"flex", flexWrap:"wrap", gap:"4px 16px",
+    }}>
+      {items.map(f => {
+        const sup = String(f.n).split("").map(d => "\u2070\u00B9\u00B2\u00B3\u2074\u2075\u2076\u2077\u2078\u2079"[parseInt(d)]).join("");
+        return (
+          <span key={f.n} style={{ fontFamily:"'DM Sans',sans-serif", fontSize:9, color:"#B0A8A0", lineHeight:1.6 }}>
+            <span style={{ color:"#9CA3AF", fontWeight:700 }}>{sup}</span> {f.label}
+          </span>
+        );
+      })}
+    </div>
+  );
+}
+
 function NavBar({ activeSection, setActiveSection }) {
 
   return (
