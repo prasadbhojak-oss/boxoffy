@@ -1,0 +1,50 @@
+[
+  {
+    "n": 1,
+    "label": "Trade industry data sources (domestic box office collection tracking)"
+  },
+  {
+    "n": 2,
+    "label": "Industry publication — film trade analytics & box office reporting"
+  },
+  {
+    "n": 3,
+    "label": "Multiplex industry body — all-India average ticket price data"
+  },
+  {
+    "n": 4,
+    "label": "Annual Indian theatrical market report — gross collections & admissions 2025"
+  },
+  {
+    "n": 5,
+    "label": "Multiplex chain quarterly financial results (Q2 & Q3 FY26) — ATP & footfall data"
+  },
+  {
+    "n": 6,
+    "label": "Boxoffy AI Calc — opening projections derived from advance booking velocity, screen count & historical comp analysis"
+  },
+  {
+    "n": 7,
+    "label": "Central Board of Indirect Taxes & Customs — GST rate notifications"
+  },
+  {
+    "n": 8,
+    "label": "GST Council press releases — rate revision announcements"
+  },
+  {
+    "n": 9,
+    "label": "Film certification board records — runtime, certificate, release details"
+  },
+  {
+    "n": 10,
+    "label": "Overseas box office tracking services — North America, Australia, UK pre-sales"
+  },
+  {
+    "n": 11,
+    "label": "Online ticketing platform — advance booking velocity & premiere data"
+  },
+  {
+    "n": 12,
+    "label": "OTT platform viewership disclosures — debut week hours & rankings"
+  }
+]
