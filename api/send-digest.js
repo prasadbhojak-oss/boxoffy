@@ -31,7 +31,36 @@ export default async function handler(req, res) {
 
     // Get upcoming films from films data
     const allFilms    = Object.values(films).flat();
-    const upcoming    = allFilms.filter(f => f.status === 'Upcoming' && f.totalNum === 0).slice(0, 3);
+    // Filter upcoming: status Upcoming + release date is in the future
+    const today = new Date();
+    const upcoming = allFilms
+      .filter(f => {
+        if (f.status !== 'Upcoming') return false;
+        // Try to parse release date — skip if unparseable or in the past
+        const rd = (f.releaseDate || '').replace('(expected)', '').trim();
+        const months = {jan:0,feb:1,mar:2,apr:3,may:4,jun:5,jul:6,aug:7,sep:8,oct:9,nov:10,dec:11};
+        const yearM = rd.match(/\d{4}/);
+        const monM  = rd.toLowerCase().match(/(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)/);
+        const dayM  = rd.match(/^(\d{1,2})\s/);
+        if (!yearM) return true; // keep if no year parseable
+        const year = parseInt(yearM[1]);
+        const mon  = monM ? months[monM[1]] : 0;
+        const day  = dayM ? parseInt(dayM[1]) : 1;
+        const releaseDate = new Date(year, mon, day);
+        return releaseDate > today;
+      })
+      .sort((a, b) => {
+        // Sort by soonest first
+        const parseDate = rd => {
+          const months = {jan:0,feb:1,mar:2,apr:3,may:4,jun:5,jul:6,aug:7,sep:8,oct:9,nov:10,dec:11};
+          const yearM = (rd||'').match(/\d{4}/);
+          const monM  = (rd||'').toLowerCase().match(/(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)/);
+          if (!yearM) return new Date(9999,0,1);
+          return new Date(parseInt(yearM[1]), monM ? months[monM[1]] : 0, 1);
+        };
+        return parseDate(a.releaseDate) - parseDate(b.releaseDate);
+      })
+      .slice(0, 3);
 
     // ── Get all subscribers ─────────────────────────────────────
     const contactsRes = await fetch(
@@ -160,7 +189,7 @@ function buildEmailHtml(week, ottArticles, editorial, upcoming) {
       </p>
       ${week.interval_take ? `
       <p style="margin:14px 0 0;font-size:13px;color:#9CA3AF;line-height:1.7;border-top:1px solid #1F2937;padding-top:14px;">
-        ${esc(week.interval_take.slice(0, 400))}${week.interval_take.length > 400 ? '...' : ''}
+        ${esc(truncateAtSentence(week.interval_take, 400))}
       </p>` : ''}
     </td>
   </tr>
@@ -173,22 +202,28 @@ function buildEmailHtml(week, ottArticles, editorial, upcoming) {
       </div>
       <div style="font-size:17px;font-weight:700;color:#0D0D0D;margin-bottom:18px;">Weekly Chart</div>
 
-      ${(week.scoreboard || []).slice(0, 5).map((entry, i) => `
+      ${(week.scoreboard || []).slice(0, 5).map((entry, i) => {
+        const vBg = verdictBadgeColor(entry.verdict || entry.film);
+        const slug = slugify(entry.film);
+        return `
       <table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:12px;border-bottom:1px solid #F0EBE1;padding-bottom:12px;">
         <tr>
-          <td width="28" style="vertical-align:top;padding-top:2px;">
-            <div style="font-size:20px;font-weight:900;color:#D4C9B4;">${i + 1}</div>
+          <td width="44" style="vertical-align:top;padding-top:2px;">
+            <div style="background:${vBg};color:#fff;font-size:16px;font-weight:900;width:36px;height:36px;display:table-cell;text-align:center;vertical-align:middle;border-radius:2px;">${i + 1}</div>
           </td>
-          <td style="vertical-align:top;padding-left:12px;">
-            <div style="font-size:14px;font-weight:700;color:#0D0D0D;">${esc(entry.film)}</div>
-            <div style="font-size:11px;color:#6B7280;margin-top:2px;">${esc(entry.verdict || entry.week || '')}</div>
+          <td style="vertical-align:top;padding-left:10px;">
+            <a href="https://boxoffy.com/${slug}-box-office.html" style="text-decoration:none;">
+              <div style="font-size:14px;font-weight:700;color:#0D0D0D;">${esc(entry.film)}</div>
+            </a>
+            <div style="font-size:11px;color:#6B7280;margin-top:2px;">${esc(truncateAtSentence(entry.verdict || entry.week || '', 80))}</div>
           </td>
           <td align="right" style="vertical-align:top;white-space:nowrap;">
-            <div style="font-size:15px;font-weight:900;color:${entry.color || '#0D0D0D'};">${esc(entry.wkCollection || '—')}</div>
-            <div style="font-size:10px;color:#9CA3AF;margin-top:2px;">${esc(entry.total ? entry.total.slice(0, 40) : '')}</div>
+            <div style="font-size:16px;font-weight:900;color:${entry.color || '#0D0D0D'};">${esc(entry.wkCollection || '—')}</div>
+            <div style="font-size:10px;color:#9CA3AF;margin-top:2px;">${esc(entry.total ? entry.total.slice(0, 45) : '')}</div>
           </td>
         </tr>
-      </table>`).join('')}
+      </table>`;
+      }).join('')}
 
       <div style="margin-top:8px;text-align:center;">
         <a href="https://boxoffy.com"
@@ -321,4 +356,33 @@ function esc(str) {
     .replace(/</g, '&lt;')
     .replace(/>/g, '&gt;')
     .replace(/"/g, '&quot;');
+}
+
+function truncateAtSentence(str, maxLen) {
+  if (!str || str.length <= maxLen) return str || '';
+  const cut = str.slice(0, maxLen);
+  const lastDot = Math.max(cut.lastIndexOf('. '), cut.lastIndexOf('! '), cut.lastIndexOf('? '));
+  return lastDot > maxLen * 0.5 ? cut.slice(0, lastDot + 1) : cut + '...';
+}
+
+function verdictBadgeColor(verdictOrFilm) {
+  const v = (verdictOrFilm || '').toLowerCase();
+  if (v.includes('all-time blockbuster')) return '#B8860B';
+  if (v.includes('blockbuster'))          return '#15803D';
+  if (v.includes('super hit'))            return '#16A34A';
+  if (v.includes('hit'))                  return '#16A34A';
+  if (v.includes('average'))              return '#D97706';
+  if (v.includes('flop'))                 return '#C8201A';
+  if (v.includes('disaster'))             return '#991B1B';
+  return '#6B7280';
+}
+
+function slugify(title) {
+  return String(title || '')
+    .toLowerCase()
+    .replace(/[^a-z0-9\s-]/g, '')
+    .trim()
+    .replace(/\s+/g, '-')
+    .replace(/-+/g, '-')
+    .slice(0, 60);
 }
