@@ -2521,11 +2521,6 @@ function BoxOfficeSection({ onNavigate }) {
 
   return (
     <div>
-      {/* ── FROM THE DESK — stacked editorial articles ──────────── */}
-      {year === 2026 && showWeekly && (
-        <EditorialSection onNavigate={onNavigate} />
-      )}
-
       {/* ── WEEKLY HEADLINE BANNER ──────────────────────────────────── */}
       {year === 2026 && showWeekly && (
         <>
@@ -4456,6 +4451,11 @@ export default function App() {
         <HeaderSnapshotCards activeSection={activeSection} />
       </div>
 
+
+      {/* ── FROM THE DESK — always visible, above all tabs ──────── */}
+      <div style={{ maxWidth:1160, margin:"0 auto", background:T.surface, boxShadow:"0 0 0 1px #E2E5EA" }}>
+        <EditorialSection onNavigate={setActiveSection} />
+      </div>
 
       {/* Content */}
       <div style={{ maxWidth:1160, margin:"0 auto", background:T.surface, boxShadow:"0 0 0 1px #E2E5EA", animation:"fadeIn 0.3s ease both" }}>
