@@ -1397,34 +1397,24 @@ function BoxOfficeRow({ movie, rank, maxWeeks }) {
               ★ {movie.note}
             </div>
           )}
-          {/* Boxoffy page button — always visible pill */}
+          {/* Boxoffy page link */}
           {movie.pageUrl && (
             <div style={{ marginTop:6 }}>
               <a
                 href={`/${movie.pageUrl}`}
                 onClick={e => e.stopPropagation()}
                 style={{
-                  display:"inline-flex", alignItems:"center", gap:4,
+                  display:"inline-flex", alignItems:"center",
                   fontFamily:"'IBM Plex Mono',monospace", fontWeight:700,
                   fontSize:9, letterSpacing:"0.12em", textTransform:"uppercase",
-                  textDecoration:"none",
+                  textDecoration:"none", padding:"3px 10px", borderRadius:2,
                   color: isUpcoming ? "#065F46" : T.accent,
                   background: isUpcoming ? "#ECFDF5" : "#FFF5F5",
                   border: `1px solid ${isUpcoming ? "#6EE7B7" : T.accent}`,
-                  padding:"3px 10px", borderRadius:2,
-                  transition:"background 0.15s, color 0.15s",
                 }}
-                onMouseEnter={e => {
-                  e.currentTarget.style.background = isUpcoming ? "#D1FAE5" : T.accent;
-                  e.currentTarget.style.color = isUpcoming ? "#064E3B" : "#fff";
-                }}
-                onMouseLeave={e => {
-                  e.currentTarget.style.background = isUpcoming ? "#ECFDF5" : "#FFF5F5";
-                  e.currentTarget.style.color = isUpcoming ? "#065F46" : T.accent;
-                }}
-              >
-                {isUpcoming ? "Preview →" : "Full Analysis →"}
-              </a>
+                onMouseEnter={e => { e.currentTarget.style.background = isUpcoming?"#D1FAE5":T.accent; e.currentTarget.style.color = isUpcoming?"#064E3B":"#fff"; }}
+                onMouseLeave={e => { e.currentTarget.style.background = isUpcoming?"#ECFDF5":"#FFF5F5"; e.currentTarget.style.color = isUpcoming?"#065F46":T.accent; }}
+              >{isUpcoming ? "Preview →" : "Full Analysis →"}</a>
             </div>
           )}
           {/* Expand / collapse hint */}
@@ -1576,252 +1566,190 @@ function BoxOfficeRow({ movie, rank, maxWeeks }) {
 
 function WeeklyChartRow({ movie, rank, prevRank }) {
   const [hov, setHov] = useState(false);
-  const [expanded, setExpanded] = useState(false);
 
-  // Rank movement
+  const isUpcoming = movie.status === "Upcoming";
+  const isOTT      = movie.status === "OTT";
+  const isNew      = movie.weekNum === 1 && movie.status === "Running";
+  const isHollywood= movie.language === "Hollywood";
+
+  // Rank movement pill
   let moveEl = null;
-  if (movie.status === "Upcoming") {
-    moveEl = <span style={{ fontFamily:"'DM Sans', sans-serif", fontSize:9, color:T.textMuted, letterSpacing:"0.06em" }}>UPCOMING</span>;
-  } else if (prevRank === 0 || movie.weekNum === 1) {
-    moveEl = <span style={{ background:"#1A7A3C", color:"#fff", fontFamily:"'DM Sans', sans-serif", fontWeight:800, fontSize:9, padding:"2px 5px", borderRadius:2, letterSpacing:"0.06em" }}>NEW</span>;
-  } else if (movie.status === "OTT" || movie.weeklyCollection === 0) {
-    moveEl = <span style={{ fontFamily:"'DM Sans', sans-serif", fontSize:9, color:T.textMuted, letterSpacing:"0.06em" }}>OTT</span>;
-  } else if (prevRank === null) {
-    moveEl = <span style={{ color:T.textMuted, fontSize:11 }}>—</span>;
-  } else if (rank < prevRank) {
-    moveEl = <span style={{ color:"#16A34A", fontSize:13, fontWeight:800 }}>▲{prevRank - rank}</span>;
-  } else if (rank > prevRank) {
-    moveEl = <span style={{ color:T.accent, fontSize:13, fontWeight:800 }}>▼{rank - prevRank}</span>;
+  if (isUpcoming) {
+    moveEl = <span style={{ fontFamily:"'DM Sans',sans-serif", fontSize:9, color:T.gold, fontWeight:700, letterSpacing:"0.06em" }}>SOON</span>;
+  } else if (isOTT) {
+    moveEl = <span style={{ fontFamily:"'DM Sans',sans-serif", fontSize:9, color:T.textMuted, letterSpacing:"0.06em" }}>OTT</span>;
+  } else if (isNew) {
+    moveEl = <span style={{ background:"#16A34A", color:"#fff", fontFamily:"'DM Sans',sans-serif", fontWeight:800, fontSize:9, padding:"2px 5px", borderRadius:2, letterSpacing:"0.06em" }}>NEW</span>;
+  } else if (prevRank !== null && prevRank !== undefined && prevRank > 0) {
+    const diff = prevRank - rank;
+    if (diff > 0)      moveEl = <span style={{ color:"#16A34A", fontSize:12, fontWeight:800 }}>▲{diff}</span>;
+    else if (diff < 0) moveEl = <span style={{ color:T.accent,  fontSize:12, fontWeight:800 }}>▼{Math.abs(diff)}</span>;
+    else               moveEl = <span style={{ color:T.textMuted, fontSize:12 }}>—</span>;
   } else {
-    moveEl = <span style={{ color:T.textMuted, fontSize:13 }}>—</span>;
+    moveEl = <span style={{ color:T.textMuted, fontSize:12 }}>—</span>;
   }
 
   const verdictCfg = VERDICT_CFG[movie.verdict] || VERDICT_CFG["Average"];
-  const isActive = movie.status === "Running";
-  const isUpcoming = movie.status === "Upcoming";
-  const isNew = movie.weekNum === 1 && movie.status === "Running";
-  const isHollywood = movie.language === "Hollywood";
 
-  // Bar width for this week's collection vs max (Border 2 at 24 Cr)
-  const maxWk = 24;
-  const barPct = movie.weeklyCollection > 0 ? Math.min((movie.weeklyCollection / maxWk) * 100, 100) : 0;
+  // Row accent
+  const leftBorder = isUpcoming
+    ? `3px solid ${T.gold}`
+    : isOTT
+    ? "3px solid transparent"
+    : isNew
+    ? "3px solid #16A34A"
+    : isHollywood
+    ? "3px solid #2563EB"
+    : `3px solid ${T.accent}`;
+
+  const rowBg = hov
+    ? "#FAFAF9"
+    : isNew
+    ? "#F0FFF4"
+    : isUpcoming
+    ? "#FFFBF0"
+    : isHollywood
+    ? "#F8FBFF"
+    : T.surface;
+
+  // Collection display
+  const weeklyStr = movie.weeklyCollection > 0 ? `₹${movie.weeklyCollection} Cr` : (isUpcoming ? "—" : "Closed");
+  const indiaStr  = movie.indiaNet ? movie.indiaNet : (movie.totalNum ? `₹${movie.totalNum} Cr` : "—");
+  const wwStr     = movie.totalCollection || "—";
 
   return (
-    <div style={{ borderBottom:`1px solid ${T.border}`, opacity: isUpcoming ? 0.55 : 1 }}>
-      <div
-        onClick={() => movie.ott && setExpanded(e => !e)}
-        onMouseEnter={() => setHov(true)}
-        onMouseLeave={() => setHov(false)}
-        style={{
-          display:"grid",
-          gridTemplateColumns:"36px 28px 1fr 120px 120px 110px 80px",
-          background: hov && !isUpcoming ? (isHollywood ? "#EFF6FF" : "#FAFAF9") : isNew ? "#F0FFF4" : isUpcoming ? "#FFFBF0" : isHollywood ? "#F8FBFF" : T.surface,
-          transition:"background 0.12s",
-          cursor: movie.ott ? "pointer" : "default",
-          borderLeft: isActive ? `3px solid ${isNew ? "#16A34A" : isHollywood ? "#2563EB" : T.accent}` : isUpcoming ? `3px solid ${T.gold}` : isHollywood ? `3px solid #93C5FD` : `3px solid transparent`,
-        }}>
-
-        {/* Rank */}
-        <div style={{ display:"flex", alignItems:"center", justifyContent:"center", padding:"14px 4px", borderRight:`1px solid ${T.border}` }}>
-          <span style={{ fontFamily:"'Barlow Condensed', sans-serif", fontWeight:800, fontSize:16, color: rank <= 3 ? T.accent : T.textMuted }}>
-            {rank}
-          </span>
-        </div>
-
-        {/* Movement */}
-        <div style={{ display:"flex", alignItems:"center", justifyContent:"center", padding:"0 2px", borderRight:`1px solid ${T.border}` }}>
-          {moveEl}
-        </div>
-
-        {/* Film info */}
-        <div style={{ padding:"10px 14px", borderRight:`1px solid ${T.border}` }}>
-          <div style={{ display:"flex", alignItems:"center", gap:8, marginBottom:3, flexWrap:"wrap" }}>
-            {movie.pageUrl ? (
-              <a href={`/${movie.pageUrl}`} style={{
-                fontFamily:"'Barlow Condensed', sans-serif", fontWeight:800,
-                fontSize:16, color:T.text, lineHeight:1.1, textDecoration:"none",
-                borderBottom:`1px solid ${T.border}`, transition:"color 0.15s, border-color 0.15s",
-              }}
-                onMouseEnter={e => { e.target.style.color=T.accent; e.target.style.borderColor=T.accent; }}
-                onMouseLeave={e => { e.target.style.color=T.text; e.target.style.borderColor=T.border; }}
-              >{movie.title}</a>
-            ) : (
-              <span style={{ fontFamily:"'Barlow Condensed', sans-serif", fontWeight:800, fontSize:16, color:T.text, lineHeight:1.1 }}>
-                {movie.title}
-              </span>
-            )}
-            <span style={{ background:verdictCfg.bg, color:verdictCfg.color, border:`1px solid ${verdictCfg.border}`, fontFamily:"'DM Sans', sans-serif", fontWeight:700, fontSize:9, letterSpacing:"0.05em", textTransform:"uppercase", borderRadius:2, padding:"1px 5px" }}>
-              {movie.verdict}
+    <div
+      onMouseEnter={() => setHov(true)}
+      onMouseLeave={() => setHov(false)}
+      style={{
+        display:"grid",
+        gridTemplateColumns:"40px 32px 1fr 108px 108px 108px 90px",
+        borderBottom:`1px solid ${T.border}`,
+        borderLeft: leftBorder,
+        background: rowBg,
+        transition:"background 0.12s",
+        alignItems:"center",
+        minHeight:52,
+        opacity: isOTT ? 0.72 : 1,
+      }}
+    >
+      {/* Rank */}
+      <div style={{ display:"flex", alignItems:"center", justifyContent:"center", padding:"0 4px", borderRight:`1px solid ${T.border}`, alignSelf:"stretch" }}>
+        {typeof rank === "number" && rank <= 3
+          ? <span style={{ fontSize:20 }}>{["🥇","🥈","🥉"][rank-1]}</span>
+          : <span style={{ fontFamily:"'Barlow Condensed',sans-serif", fontWeight:800, fontSize:18, color: typeof rank === "number" && rank <= 5 ? T.accent : T.textMuted }}>
+              {rank}
             </span>
-            {isHollywood && (
-              <span style={{ background:"#1D4ED8", color:"#fff", fontFamily:"'DM Sans', sans-serif", fontWeight:700, fontSize:9, letterSpacing:"0.07em", textTransform:"uppercase", borderRadius:2, padding:"1px 6px" }}>
-                🎬 FOREIGN
-              </span>
-            )}
-            {movie.ott && (
-              <span style={{ background:T.surfaceAlt, border:`1px solid ${T.border}`, color:T.textMuted, fontFamily:"'DM Sans', sans-serif", fontSize:9, fontWeight:600, padding:"1px 5px", borderRadius:2, letterSpacing:"0.04em" }}>
-                OTT ▼
-              </span>
-            )}
-          </div>
-          <div style={{ fontFamily:"'DM Sans', sans-serif", fontSize:11, color:T.textMuted }}>
-            {movie.director} · {movie.language} · {movie.releaseDate}
-            {movie.daysInRelease > 0 && <span style={{ marginLeft:6, color:T.textMuted }}>· Day {movie.daysInRelease}</span>}
-          </div>
-          {movie.weeklyNote && (
-            <div style={{ fontFamily:"'DM Sans', sans-serif", fontSize:10.5, color:T.textMid, marginTop:4, lineHeight:1.5, fontStyle:"italic" }}>
-              {movie.weeklyNote}
-            </div>
-          )}
-          {/* Opening Day Prediction — shown for Upcoming films */}
-          {movie.openingPrediction && movie.status === "Upcoming" && (
-            <div style={{ marginTop:8, padding:"8px 12px", background:"#FFFBEB", border:"1px dashed #D97706", borderRadius:4 }}>
-              <div style={{ fontFamily:"'Barlow Condensed', sans-serif", fontWeight:700, fontSize:11, color:"#92400E", letterSpacing:"0.1em", textTransform:"uppercase", marginBottom:4 }}>
-                🔮 BOXOFFY OPENING DAY PREDICTION
-              </div>
-              <div style={{ display:"flex", gap:12, flexWrap:"wrap", marginBottom:6 }}>
-                <div style={{ textAlign:"center" }}>
-                  <div style={{ fontFamily:"'Barlow Condensed', sans-serif", fontWeight:800, fontSize:22, color:"#D97706", fontStyle:"italic" }}>
-                    ₹{movie.openingPrediction.mid}–{movie.openingPrediction.high} Cr
-                  </div>
-                  <div style={{ fontFamily:"'DM Sans', sans-serif", fontSize:9, color:"#92400E", letterSpacing:"0.08em", textTransform:"uppercase" }}>All Languages</div>
-                </div>
-                <div style={{ textAlign:"center" }}>
-                  <div style={{ fontFamily:"'Barlow Condensed', sans-serif", fontWeight:700, fontSize:16, color:"#B45309", fontStyle:"italic" }}>
-                    ₹{movie.openingPrediction.low}–{movie.openingPrediction.mid} Cr
-                  </div>
-                  <div style={{ fontFamily:"'DM Sans', sans-serif", fontSize:9, color:"#92400E", letterSpacing:"0.08em", textTransform:"uppercase" }}>Hindi Net Only</div>
-                </div>
-              </div>
-              <div style={{ fontFamily:"'DM Sans', sans-serif", fontSize:10, color:"#78350F", fontStyle:"italic", lineHeight:1.4 }}>
-                {movie.openingPrediction.note}
-              </div>
-              <div style={{ fontFamily:"'DM Sans', sans-serif", fontSize:9, color:"#A87840", marginTop:4 }}>
-                Sources: {movie.openingPrediction.basis}
-              </div>
-            </div>
-          )}
-          {/* Boxoffy page button */}
-          {movie.pageUrl && (
-            <div style={{ marginTop:6 }}>
-              <a
-                href={`/${movie.pageUrl}`}
-                onClick={e => e.stopPropagation()}
-                style={{
-                  display:"inline-flex", alignItems:"center", gap:4,
-                  fontFamily:"'IBM Plex Mono',monospace", fontWeight:700,
-                  fontSize:9, letterSpacing:"0.12em", textTransform:"uppercase",
-                  textDecoration:"none",
-                  color: isUpcoming ? "#065F46" : T.accent,
-                  background: isUpcoming ? "#ECFDF5" : "#FFF5F5",
-                  border:`1px solid ${isUpcoming ? "#6EE7B7" : T.accent}`,
-                  padding:"3px 10px", borderRadius:2,
-                }}
-                onMouseEnter={e => { e.currentTarget.style.background=isUpcoming?"#D1FAE5":T.accent; e.currentTarget.style.color=isUpcoming?"#064E3B":"#fff"; }}
-                onMouseLeave={e => { e.currentTarget.style.background=isUpcoming?"#ECFDF5":"#FFF5F5"; e.currentTarget.style.color=isUpcoming?"#065F46":T.accent; }}
-              >{isUpcoming ? "Preview →" : "Full Analysis →"}</a>
-            </div>
-          )}
-          {/* Mini bar */}
-          {barPct > 0 && (
-            <div style={{ marginTop:6, height:3, background:T.border, borderRadius:2, width:"80%", maxWidth:200 }}>
-              <div style={{ height:"100%", width:`${barPct}%`, background: isNew ? "#16A34A" : T.accent, borderRadius:2, transition:"width 0.4s" }} />
-            </div>
-          )}
-        </div>
-
-        {/* This week */}
-        <div style={{ display:"flex", flexDirection:"column", justifyContent:"center", padding:"0 14px", borderRight:`1px solid ${T.border}`, textAlign:"right" }}>
-          {movie.weeklyCollection > 0
-            ? <>
-                <div style={{ fontFamily:"'Barlow Condensed', sans-serif", fontWeight:800, fontSize:20, color: isNew ? "#16A34A" : T.accent, lineHeight:1 }}>₹{movie.weeklyCollection} Cr</div>
-                <div style={{ fontFamily:"'DM Sans', sans-serif", fontSize:9, color:T.textMuted, marginTop:2, letterSpacing:"0.06em", textTransform:"uppercase" }}>Wk {movie.weekNum}</div>
-              </>
-            : <div style={{ fontFamily:"'DM Sans', sans-serif", fontSize:10, color:T.textMuted }}>
-                {movie.status === "Upcoming" ? "Mar 19" : "Closed"}
-              </div>
-          }
-        </div>
-
-        {/* India net total */}
-        <div style={{ display:"flex", flexDirection:"column", justifyContent:"center", padding:"0 14px", borderRight:`1px solid ${T.border}`, textAlign:"right" }}>
-          <div style={{ fontFamily:"'Barlow Condensed', sans-serif", fontWeight:700, fontSize:17, color:T.text, lineHeight:1 }}>{movie.indiaNet}</div>
-          <div style={{ fontFamily:"'DM Sans', sans-serif", fontSize:9, color:T.textMuted, marginTop:2, letterSpacing:"0.06em", textTransform:"uppercase" }}>India Net</div>
-        </div>
-
-        {/* Worldwide total + GST + Footfalls */}
-        {(() => {
-          const gst = calcGST(movie);
-          const ff  = calcFootfalls(movie);
-          return (
-            <div style={{ display:"flex", flexDirection:"column", justifyContent:"center", padding:"0 14px", borderRight:`1px solid ${T.border}`, textAlign:"right" }}>
-              <div style={{ fontFamily:"'Barlow Condensed', sans-serif", fontWeight:700, fontSize:17, color: isHollywood ? "#1D4ED8" : T.text, lineHeight:1 }}>
-                {isHollywood ? movie.totalCollection : movie.totalCollection}
-              </div>
-              <div style={{ fontFamily:"'DM Sans', sans-serif", fontSize:9, color:T.textMuted, marginTop:2, letterSpacing:"0.06em", textTransform:"uppercase" }}>
-                {isHollywood ? "India Gross" : "Worldwide"}
-              </div>
-              {gst && gst.gstCrore > 0 && (
-                <div style={{ marginTop:5, paddingTop:4, borderTop:`1px dashed ${T.border}` }}>
-                  <div style={{ fontFamily:"'Barlow Condensed', sans-serif", fontWeight:700, fontSize:13, color:"#15803D", lineHeight:1 }}>
-                    ₹{gst.gstCrore} Cr
-                  </div>
-                  <div style={{ fontFamily:"'DM Sans', sans-serif", fontSize:8, color:"#15803D", marginTop:1, letterSpacing:"0.05em", textTransform:"uppercase", opacity:0.85 }}>
-                    GST to Govt
-                  </div>
-                </div>
-              )}
-              {ff && ff.footfalls > 0 && !isUpcoming && (
-                <div style={{ marginTop:4, paddingTop:4, borderTop:`1px dashed ${T.border}` }}>
-                  <div style={{ fontFamily:"'Barlow Condensed', sans-serif", fontWeight:700, fontSize:13, color:"#1D4ED8", lineHeight:1 }}>
-                    {ff.footfallsFormatted}
-                  </div>
-                  <div style={{ fontFamily:"'DM Sans', sans-serif", fontSize:8, color:"#1D4ED8", marginTop:1, letterSpacing:"0.05em", textTransform:"uppercase", opacity:0.85 }}>
-                    Footfalls
-                  </div>
-                </div>
-              )}
-            </div>
-          );
-        })()}
-
-        {/* Budget / status */}
-        <div style={{ display:"flex", flexDirection:"column", justifyContent:"center", padding:"0 10px", textAlign:"center" }}>
-          <div style={{ fontFamily:"'DM Sans', sans-serif", fontSize:10, color:T.textMuted }}>₹{movie.budget}</div>
-          <div style={{ fontFamily:"'DM Sans', sans-serif", fontSize:9, color: isActive ? T.green : isUpcoming ? T.gold : T.textMuted, fontWeight:700, letterSpacing:"0.06em", textTransform:"uppercase", marginTop:2 }}>
-            {movie.status}
-          </div>
-        </div>
+        }
       </div>
 
-      {/* OTT Panel */}
-      {expanded && movie.ott && <OTTPanel ott={movie.ott} />}
+      {/* Movement */}
+      <div style={{ display:"flex", alignItems:"center", justifyContent:"center", padding:"0 2px", borderRight:`1px solid ${T.border}`, alignSelf:"stretch" }}>
+        {moveEl}
+      </div>
+
+      {/* Film info — compact single line + sub */}
+      <div style={{ padding:"10px 14px" }}>
+        <div style={{ display:"flex", alignItems:"center", gap:7, flexWrap:"wrap", marginBottom:3 }}>
+          {movie.pageUrl ? (
+            <a href={`/${movie.pageUrl}`}
+              style={{ fontFamily:"'Barlow Condensed',sans-serif", fontWeight:800, fontSize:16,
+                color:T.text, lineHeight:1.1, textDecoration:"none" }}
+              onMouseEnter={e => { e.target.style.color=T.accent; }}
+              onMouseLeave={e => { e.target.style.color=T.text; }}
+            >{movie.title}</a>
+          ) : (
+            <span style={{ fontFamily:"'Barlow Condensed',sans-serif", fontWeight:800, fontSize:16, color:T.text, lineHeight:1.1 }}>
+              {movie.title}
+            </span>
+          )}
+          <span style={{ background:verdictCfg.bg, color:verdictCfg.color, border:`1px solid ${verdictCfg.border}`,
+            fontFamily:"'DM Sans',sans-serif", fontWeight:700, fontSize:8,
+            letterSpacing:"0.05em", textTransform:"uppercase", borderRadius:2, padding:"1px 5px" }}>
+            {movie.verdict}
+          </span>
+          {isHollywood && (
+            <span style={{ background:"#1D4ED8", color:"#fff",
+              fontFamily:"'DM Sans',sans-serif", fontWeight:700, fontSize:8,
+              letterSpacing:"0.07em", textTransform:"uppercase", borderRadius:2, padding:"1px 5px" }}>
+              FOREIGN
+            </span>
+          )}
+        </div>
+
+        {/* Single sub-line: language · director · release */}
+        <div style={{ fontFamily:"'DM Sans',sans-serif", fontSize:10, color:T.textMuted, lineHeight:1.3 }}>
+          {movie.language}
+          {movie.director && movie.director !== "TBC" ? ` · ${movie.director}` : ""}
+          {movie.releaseDate ? ` · ${movie.releaseDate}` : ""}
+          {movie.daysInRelease > 0 ? ` · Day ${movie.daysInRelease}` : ""}
+        </div>
+
+        {/* Analysis button — small, inline */}
+        {movie.pageUrl && (
+          <div style={{ marginTop:5 }}>
+            <a href={`/${movie.pageUrl}`}
+              style={{ display:"inline-flex", alignItems:"center",
+                fontFamily:"'IBM Plex Mono',monospace", fontWeight:700, fontSize:8,
+                letterSpacing:"0.12em", textTransform:"uppercase", textDecoration:"none",
+                padding:"2px 8px", borderRadius:2,
+                color: isUpcoming ? "#065F46" : T.accent,
+                background: isUpcoming ? "#ECFDF5" : "#FFF5F5",
+                border:`1px solid ${isUpcoming ? "#6EE7B7" : T.accent}`,
+              }}
+              onMouseEnter={e => { e.currentTarget.style.background=isUpcoming?"#D1FAE5":T.accent; e.currentTarget.style.color=isUpcoming?"#064E3B":"#fff"; }}
+              onMouseLeave={e => { e.currentTarget.style.background=isUpcoming?"#ECFDF5":"#FFF5F5"; e.currentTarget.style.color=isUpcoming?"#065F46":T.accent; }}
+            >{isUpcoming ? "Preview →" : "Analysis →"}</a>
+          </div>
+        )}
+      </div>
+
+      {/* This week */}
+      <div style={{ padding:"0 12px", textAlign:"right", borderLeft:`1px solid ${T.border}`, alignSelf:"stretch", display:"flex", flexDirection:"column", justifyContent:"center" }}>
+        <div style={{ fontFamily:"'Barlow Condensed',sans-serif", fontWeight:800, fontSize:18,
+          color: isNew ? "#16A34A" : isUpcoming ? T.gold : T.accent, lineHeight:1 }}>
+          {weeklyStr}
+        </div>
+        {movie.weekNum > 0 && (
+          <div style={{ fontFamily:"'DM Sans',sans-serif", fontSize:9, color:T.textMuted, marginTop:2, letterSpacing:"0.06em", textTransform:"uppercase" }}>
+            Wk {movie.weekNum}
+          </div>
+        )}
+      </div>
+
+      {/* India Net */}
+      <div style={{ padding:"0 12px", textAlign:"right", borderLeft:`1px solid ${T.border}`, alignSelf:"stretch", display:"flex", flexDirection:"column", justifyContent:"center" }}>
+        <div style={{ fontFamily:"'Barlow Condensed',sans-serif", fontWeight:700, fontSize:16, color:T.text, lineHeight:1 }}>
+          {indiaStr}
+        </div>
+        <div style={{ fontFamily:"'DM Sans',sans-serif", fontSize:9, color:T.textMuted, marginTop:2, letterSpacing:"0.06em", textTransform:"uppercase" }}>India Net</div>
+      </div>
+
+      {/* Worldwide */}
+      <div style={{ padding:"0 12px", textAlign:"right", borderLeft:`1px solid ${T.border}`, alignSelf:"stretch", display:"flex", flexDirection:"column", justifyContent:"center" }}>
+        <div style={{ fontFamily:"'Barlow Condensed',sans-serif", fontWeight:700, fontSize:16,
+          color: isHollywood ? "#1D4ED8" : T.text, lineHeight:1 }}>
+          {wwStr}
+        </div>
+        <div style={{ fontFamily:"'DM Sans',sans-serif", fontSize:9, color:T.textMuted, marginTop:2, letterSpacing:"0.06em", textTransform:"uppercase" }}>Worldwide</div>
+      </div>
+
+      {/* Budget / Verdict */}
+      <div style={{ padding:"0 8px", textAlign:"center", borderLeft:`1px solid ${T.border}`, alignSelf:"stretch", display:"flex", flexDirection:"column", justifyContent:"center", alignItems:"center", gap:4 }}>
+        {movie.budget && movie.budget !== "—" && (
+          <div style={{ fontFamily:"'DM Sans',sans-serif", fontSize:9, color:T.textMuted }}>
+            ₹{movie.budget}
+          </div>
+        )}
+        <div style={{ fontFamily:"'DM Sans',sans-serif", fontSize:9, color:T.textMuted, letterSpacing:"0.06em", textTransform:"uppercase" }}>
+          {movie.status === "OTT" ? `OTT` : movie.status === "Upcoming" ? "Upcoming" : `Wk ${movie.weekNum}`}
+        </div>
+      </div>
     </div>
   );
 }
 
-/* ═══════════════════════════════════════════════════════════════
-   FOREIGN FILMS PANEL — BOG-Style Weekend Chart
-   Two-panel split: India Collections (left) | US/Global (right)
-   ═══════════════════════════════════════════════════════════════ */
 
-/* ═══════════════════════════════════════════════════════════════════
-   FOREIGN FILMS — BOX OFFICE GURU–STYLE WEEKEND CHART
-   Clean, light, tabular. BOG aesthetic: white surface, ruled rows,
-   bold rank numbers, red accent bar, crisp mono data columns.
-   Two views: 🇮🇳 India  |  🌐 US/Global
-   ═══════════════════════════════════════════════════════════════════ */
-
-// ── Helpers ──────────────────────────────────────────────────────────
-const fmt$ = v => {
-  if (v == null) return "—";
-  if (v >= 1000) return `$${(v/1000).toFixed(2)}B`;
-  return `$${v.toFixed(1)}M`;
-};
-const fmtInr = v => v != null ? `₹${typeof v === "number" ? v % 1 === 0 ? v : v.toFixed(2) : v} Cr` : "—";
-const fmtThousands = v => v ? v.toLocaleString() : "—";
-
-// ── Sub-components ───────────────────────────────────────────────────
 function BogMoveCell({ change }) {
   if (change == null)  return <span style={{ color:"#B0A8A0", fontSize:11, fontFamily:"'DM Sans',sans-serif" }}>—</span>;
   if (change === 0)    return <span style={{ color:"#6B7280", fontSize:11, fontFamily:"'DM Sans',sans-serif", fontWeight:600 }}>—</span>;
@@ -1950,28 +1878,26 @@ function BogRow({ movie, viewMode, rank, isNew }) {
             {movie.distributor && <><span style={{ color:"#D5D0CB" }}>·</span><span>{movie.distributor}</span></>}
             {isRunning && movie.theaterCount > 0 && <><span style={{ color:"#D5D0CB" }}>·</span><span>{fmtThousands(movie.theaterCount)} screens</span></>}
           </div>
-          {/* Boxoffy page button */}
-          {movie.pageUrl && (
-          <div style={{ marginTop:6 }}>
-            <a
-              href={`/${movie.pageUrl}`}
-              onClick={e => e.stopPropagation()}
-              style={{
-                display:"inline-flex", alignItems:"center", gap:4,
-                fontFamily:"'IBM Plex Mono',monospace", fontWeight:700,
-                fontSize:9, letterSpacing:"0.12em", textTransform:"uppercase",
-                textDecoration:"none",
-                color: isUpcoming ? "#065F46" : T.accent,
-                background: isUpcoming ? "#ECFDF5" : "#FFF5F5",
-                border:`1px solid ${isUpcoming ? "#6EE7B7" : T.accent}`,
-                padding:"3px 10px", borderRadius:2,
-              }}
-              onMouseEnter={e => { e.currentTarget.style.background=isUpcoming?"#D1FAE5":T.accent; e.currentTarget.style.color=isUpcoming?"#064E3B":"#fff"; }}
-              onMouseLeave={e => { e.currentTarget.style.background=isUpcoming?"#ECFDF5":"#FFF5F5"; e.currentTarget.style.color=isUpcoming?"#065F46":T.accent; }}
-            >{isUpcoming ? "Preview →" : "Full Analysis →"}</a>
-          </div>
+        {/* Boxoffy page link */}
+        {movie.pageUrl && (
+        <div style={{ marginTop:6 }}>
+          <a
+            href={`/${movie.pageUrl}`}
+            onClick={e => e.stopPropagation()}
+            style={{
+              display:"inline-flex", alignItems:"center",
+              fontFamily:"'IBM Plex Mono',monospace", fontWeight:700,
+              fontSize:9, letterSpacing:"0.12em", textTransform:"uppercase",
+              textDecoration:"none", padding:"3px 10px", borderRadius:2,
+              color: isUpcoming ? "#065F46" : T.accent,
+              background: isUpcoming ? "#ECFDF5" : "#FFF5F5",
+              border: `1px solid ${isUpcoming ? "#6EE7B7" : T.accent}`,
+            }}
+            onMouseEnter={e => { e.currentTarget.style.background = isUpcoming?"#D1FAE5":T.accent; e.currentTarget.style.color = isUpcoming?"#064E3B":"#fff"; }}
+            onMouseLeave={e => { e.currentTarget.style.background = isUpcoming?"#ECFDF5":"#FFF5F5"; e.currentTarget.style.color = isUpcoming?"#065F46":T.accent; }}
+          >{isUpcoming ? "Preview →" : "Full Analysis →"}</a>
+        </div>
           )}
-
         </div>
 
         {/* ── DATA COLUMNS: India view ── */}
@@ -2421,7 +2347,7 @@ function ForeignFilmsPanel({ movies }) {
 
       {/* ── Global view: US BO Top 10 ─────────────────────────── */}
       {viewMode === "global"
-        ? <USBoTop10 weekData={US_BO_WEEKLY["Week 10, 2026"]} />
+        ? <USBoTop10 weekData={US_BO_WEEKLY["Week 11, 2026"]} />
         : <>
           {/* ── Column headers ──────────────────────────────────── */}
           <BogColHeaders viewMode={viewMode} />
@@ -2524,14 +2450,14 @@ function BoxOfficeSection({ onNavigate }) {
   const [showHeadlineModal, setShowHeadlineModal] = useState(false);
 
   const bmsStats = [
-    { label:"BMS Ticket Velocity", val:"7,500–10,000 / hr", src:"6" },
-    { label:"Premiere Gross (2 hrs)", val:"₹4.39 Cr", src:"1" },
+    { label:"Day 1 India Advance", val:"₹30.51 Cr", src:"Sacnilk/Koimoi" },
+    { label:"Premiere India Gross", val:"₹21.50 Cr", src:"BOI/Koimoi" },
     { label:"Premiere Tickets Sold", val:"1.1 Lakh+", src:"2" },
     { label:"Housefull Shows", val:"26 confirmed", src:"Sacnilk" },
     { label:"Premiere Shows India", val:"3,979", src:"Koimoi" },
-    { label:"US Premiere Pre-Sales", val:"$400K+", src:"10" },
-    { label:"US Day 1 Booked", val:"$565K", src:"Venky BO" },
-    { label:"US Weekend Pre-Sales", val:"$1 Million", src:"Venky BO" },
+    { label:"NA Weekend Advance", val:"$4.6M", src:"Venky BO · KGF2 record broken" },
+    { label:"Boxoffy 4-Day Call", val:"$15M", src:"Boxoffy AI Calc v3" },
+    { label:"Shows", val:"SOLD OUT", src:"BMS · PVR · INOX — 4-day frame" },
   ];
 
   const analysts = [
@@ -2633,7 +2559,7 @@ function BoxOfficeSection({ onNavigate }) {
                 marginBottom:9,
               }}>
                 Dhurandhar 2 Rewrites History.{" "}
-                <span style={{ color:T.accent }}>Day 1 Advance ₹30.51 Cr. 4 Days. Sold Out.</span>
+                <span style={{ color:T.accent }}>Day 1 Advance ₹30.51 Cr. 4 Days to Go. Sold Out.</span>
               </div>
               <div style={{ display:"flex", alignItems:"center", gap:10, flexWrap:"wrap" }}>
                 <span style={{ fontFamily:"'DM Sans', sans-serif", fontSize:11, color:T.textMuted }}>
@@ -2649,7 +2575,7 @@ function BoxOfficeSection({ onNavigate }) {
             <div style={{ display:"flex", gap:0, borderLeft:`1px solid ${T.border}`, flexShrink:0 }}>
               {[
                 { label:"Premiere Gross (verified)", val:"₹24.76 Cr", sub:"No blocks · Mar 13 · Boxoffy" },
-                { label:"Day 1 Advance (Mar 15)", val:"₹30.51 Cr", sub:"India gross · 3 days to release" },
+                { label:"Day 1 India Advance", val:"₹30.51 Cr", sub:"India gross · Mar 15 verified · Sacnilk/Koimoi" },
                 { label:"WW Advance (so far)", val:"~₹60 Cr", sub:"India + overseas · Outlook India" },
                 { label:"US Premiere Advance", val:"$982K+", sub:"678 locations · NA OW ~$2M" },
               ].map((s,i) => (
@@ -2977,7 +2903,7 @@ function BoxOfficeSection({ onNavigate }) {
               Week 13 · Mar 16, 2026 · Data current as of Mon 16 Mar 2026
             </span>
             <span style={{ background:T.surface, border:`1px solid ${T.border}`, fontFamily:"'DM Sans', sans-serif", fontSize:10, color:T.textMid, padding:"2px 8px", borderRadius:2 }}>
-              D2: ₹30.51 Cr Day 1 advance · $4.6M NA · Premieres Mar 18
+              D2: ₹30.51 Cr Day 1 advance · ₹21.50 Cr premiere · $4.6M NA · Premieres Mar 18
             </span>
             <span style={{ background:T.surface, border:`1px solid ${T.border}`, fontFamily:"'DM Sans', sans-serif", fontSize:10, color:T.textMid, padding:"2px 8px", borderRadius:2 }}>
               Border 2 → Netflix Mar 20
@@ -2994,17 +2920,17 @@ function BoxOfficeSection({ onNavigate }) {
         <div style={{ animation:"fadeIn 0.25s ease both" }}>
           {/* Weekly chart header */}
           <div style={{
-            display:"grid", gridTemplateColumns:"36px 28px 1fr 120px 120px 110px 80px",
+            display:"grid", gridTemplateColumns:"40px 32px 1fr 108px 108px 108px 90px",
             background:T.surfaceAlt, borderBottom:`2px solid ${T.borderDark}`, padding:"8px 0",
           }}>
             {[
               ["#","center"],
               ["±","center"],
-              ["FILM · DIRECTOR · THIS WEEK'S NOTE","16px"],
+              ["FILM · LANGUAGE · DIRECTOR","left"],
               ["THIS WEEK","right"],
               ["INDIA NET","right"],
               ["WORLDWIDE","right"],
-              ["BUDGET/STATUS","center"],
+              ["STATUS","center"],
             ].map(([label, align], i) => (
               <div key={i} style={{
                 fontFamily:"'DM Sans', sans-serif", fontWeight:700, fontSize:9,
@@ -3754,7 +3680,7 @@ function HeaderSnapshotCards({ activeSection }) {
   const CARDS = {
     "Box Office": [
       { type:"stat",      label:"WEEK 10 · #1 FILM",    value:"Kerala Story 2",sub:"₹32.87 Cr net · Wk 2 · Plus verdict",      accent:T.green,   icon:"🏆" },
-      { type:"stat",      label:"2026 YTD COMBINED",     value:"₹1,567 Cr",   sub:"Verified tracked releases · Week 10",         accent:T.blue,    icon:"📊" },
+      { type:"stat",      label:"2026 YTD COMBINED",     value:"₹1,567 Cr",   sub:"Verified tracked releases · Week 11",         accent:T.blue,    icon:"📊" },
       { type:"stat",      label:"ALL-TIME RECORD",       value:"₹1,800 Cr",   sub:"Pushpa 2 · Will Ramayana break it?",         accent:T.gold,    icon:"⚡" },
       { type:"countdown", label:"NEXT BIG RELEASE",      value:daysLeft != null ? `${daysLeft}` : "—", valueSuffix:" days",
                           sub:"Dhurandhar 2 · Mar 19, 2026",                                                                     accent:T.accent,  icon:"🎬", pulse:true },
@@ -4525,7 +4451,7 @@ export default function App() {
       </div>
 
 
-      {/* FROM THE DESK — always visible */}
+      {/* FROM THE DESK — always visible above all tabs */}
       <div style={{ maxWidth:1160, margin:"0 auto", background:T.surface, boxShadow:"0 0 0 1px #E2E5EA" }}>
         <EditorialSection onNavigate={setActiveSection} />
       </div>

@@ -1,0 +1,1329 @@
+[
+  {
+    "title": "Tanhaji: The Unsung Warrior",
+    "year": "2020",
+    "slug": "tanhaji-the-unsung-warrior-box-office.html",
+    "verdict": "Blockbuster",
+    "language": "Hindi"
+  },
+  {
+    "title": "Darbar",
+    "year": "2020",
+    "slug": "darbar-box-office.html",
+    "verdict": "Average",
+    "language": "Tamil"
+  },
+  {
+    "title": "Baaghi 3",
+    "year": "2020",
+    "slug": "baaghi-3-box-office.html",
+    "verdict": "Hit",
+    "language": "Hindi"
+  },
+  {
+    "title": "Street Dancer 3D",
+    "year": "2020",
+    "slug": "street-dancer-3d-box-office.html",
+    "verdict": "Flop",
+    "language": "Hindi"
+  },
+  {
+    "title": "Malang",
+    "year": "2020",
+    "slug": "malang-box-office.html",
+    "verdict": "Average",
+    "language": "Hindi"
+  },
+  {
+    "title": "Shubh Mangal Zyada Saavdhan",
+    "year": "2020",
+    "slug": "shubh-mangal-zyada-saavdhan-box-office.html",
+    "verdict": "Average",
+    "language": "Hindi"
+  },
+  {
+    "title": "Thappad",
+    "year": "2020",
+    "slug": "thappad-box-office.html",
+    "verdict": "Hit",
+    "language": "Hindi"
+  },
+  {
+    "title": "Love Aaj Kal",
+    "year": "2020",
+    "slug": "love-aaj-kal-box-office.html",
+    "verdict": "Disaster",
+    "language": "Hindi"
+  },
+  {
+    "title": "Angrezi Medium",
+    "year": "2020",
+    "slug": "angrezi-medium-box-office.html",
+    "verdict": "Flop",
+    "language": "Hindi"
+  },
+  {
+    "title": "Haathi Mere Saathi",
+    "year": "2020",
+    "slug": "haathi-mere-saathi-box-office.html",
+    "verdict": "Flop",
+    "language": "Hindi"
+  },
+  {
+    "title": "Pushpa: The Rise",
+    "year": "2021",
+    "slug": "pushpa-the-rise-box-office.html",
+    "verdict": "Blockbuster",
+    "language": "Telugu"
+  },
+  {
+    "title": "Sooryavanshi",
+    "year": "2021",
+    "slug": "sooryavanshi-box-office.html",
+    "verdict": "Hit",
+    "language": "Hindi"
+  },
+  {
+    "title": "Spider-Man: No Way Home (Hindi)",
+    "year": "2021",
+    "slug": "spider-man-no-way-home-hindi-box-office.html",
+    "verdict": "Blockbuster",
+    "language": "Hindi"
+  },
+  {
+    "title": "Master",
+    "year": "2021",
+    "slug": "master-box-office.html",
+    "verdict": "Blockbuster",
+    "language": "Tamil"
+  },
+  {
+    "title": "Radhe Shyam",
+    "year": "2021",
+    "slug": "radhe-shyam-box-office.html",
+    "verdict": "Disaster",
+    "language": "Telugu"
+  },
+  {
+    "title": "Annaatthe",
+    "year": "2021",
+    "slug": "annaatthe-box-office.html",
+    "verdict": "Average",
+    "language": "Tamil"
+  },
+  {
+    "title": "83",
+    "year": "2021",
+    "slug": "83-box-office.html",
+    "verdict": "Disaster",
+    "language": "Hindi"
+  },
+  {
+    "title": "Bell Bottom",
+    "year": "2021",
+    "slug": "bell-bottom-box-office.html",
+    "verdict": "Flop",
+    "language": "Hindi"
+  },
+  {
+    "title": "Shershaah",
+    "year": "2021",
+    "slug": "shershaah-box-office.html",
+    "verdict": "OTT Hit",
+    "language": "Hindi"
+  },
+  {
+    "title": "Satyameva Jayate 2",
+    "year": "2021",
+    "slug": "satyameva-jayate-2-box-office.html",
+    "verdict": "Disaster",
+    "language": "Hindi"
+  },
+  {
+    "title": "RRR",
+    "year": "2022",
+    "slug": "rrr-box-office.html",
+    "verdict": "All-Time Blockbuster",
+    "language": "Telugu"
+  },
+  {
+    "title": "K.G.F: Chapter 2",
+    "year": "2022",
+    "slug": "kgf-chapter-2-box-office.html",
+    "verdict": "All-Time Blockbuster",
+    "language": "Kannada"
+  },
+  {
+    "title": "Ponniyin Selvan I",
+    "year": "2022",
+    "slug": "ponniyin-selvan-i-box-office.html",
+    "verdict": "Blockbuster",
+    "language": "Tamil"
+  },
+  {
+    "title": "Vikram",
+    "year": "2022",
+    "slug": "vikram-box-office.html",
+    "verdict": "Blockbuster",
+    "language": "Tamil"
+  },
+  {
+    "title": "Brahmastra Part One",
+    "year": "2022",
+    "slug": "brahmastra-part-one-box-office.html",
+    "verdict": "Hit",
+    "language": "Hindi"
+  },
+  {
+    "title": "The Kashmir Files",
+    "year": "2022",
+    "slug": "the-kashmir-files-box-office.html",
+    "verdict": "Blockbuster",
+    "language": "Hindi"
+  },
+  {
+    "title": "Drishyam 2",
+    "year": "2022",
+    "slug": "drishyam-2-box-office.html",
+    "verdict": "Blockbuster",
+    "language": "Hindi"
+  },
+  {
+    "title": "Bhool Bhulaiyaa 2",
+    "year": "2022",
+    "slug": "bhool-bhulaiyaa-2-box-office.html",
+    "verdict": "Blockbuster",
+    "language": "Hindi"
+  },
+  {
+    "title": "Beast",
+    "year": "2022",
+    "slug": "beast-box-office.html",
+    "verdict": "Flop",
+    "language": "Tamil"
+  },
+  {
+    "title": "Gangubai Kathiawadi",
+    "year": "2022",
+    "slug": "gangubai-kathiawadi-box-office.html",
+    "verdict": "Hit",
+    "language": "Hindi"
+  },
+  {
+    "title": "Jawan",
+    "year": "2023",
+    "slug": "jawan-box-office.html",
+    "verdict": "All-Time Blockbuster",
+    "language": "Hindi"
+  },
+  {
+    "title": "Pathaan",
+    "year": "2023",
+    "slug": "pathaan-box-office.html",
+    "verdict": "All-Time Blockbuster",
+    "language": "Hindi"
+  },
+  {
+    "title": "Animal",
+    "year": "2023",
+    "slug": "animal-box-office.html",
+    "verdict": "All-Time Blockbuster",
+    "language": "Hindi"
+  },
+  {
+    "title": "Salaar: Part 1",
+    "year": "2023",
+    "slug": "salaar-part-1-box-office.html",
+    "verdict": "Blockbuster",
+    "language": "Telugu"
+  },
+  {
+    "title": "Gadar 2",
+    "year": "2023",
+    "slug": "gadar-2-box-office.html",
+    "verdict": "All-Time Blockbuster",
+    "language": "Hindi"
+  },
+  {
+    "title": "Jailer",
+    "year": "2023",
+    "slug": "jailer-box-office.html",
+    "verdict": "Blockbuster",
+    "language": "Tamil"
+  },
+  {
+    "title": "Leo",
+    "year": "2023",
+    "slug": "leo-box-office.html",
+    "verdict": "Blockbuster",
+    "language": "Tamil"
+  },
+  {
+    "title": "Dunki",
+    "year": "2023",
+    "slug": "dunki-box-office.html",
+    "verdict": "Hit",
+    "language": "Hindi"
+  },
+  {
+    "title": "Ponniyin Selvan II",
+    "year": "2023",
+    "slug": "ponniyin-selvan-ii-box-office.html",
+    "verdict": "Flop",
+    "language": "Tamil"
+  },
+  {
+    "title": "Rocky Aur Rani Kii Prem Kahaani",
+    "year": "2023",
+    "slug": "rocky-aur-rani-kii-prem-kahaani-box-office.html",
+    "verdict": "Hit",
+    "language": "Hindi"
+  },
+  {
+    "title": "Pushpa 2: The Rule",
+    "year": "2024",
+    "slug": "pushpa-2-the-rule-box-office.html",
+    "verdict": "All-Time Blockbuster",
+    "language": "Telugu"
+  },
+  {
+    "title": "Stree 2",
+    "year": "2024",
+    "slug": "stree-2-box-office.html",
+    "verdict": "All-Time Blockbuster",
+    "language": "Hindi"
+  },
+  {
+    "title": "Kalki 2898 AD",
+    "year": "2024",
+    "slug": "kalki-2898-ad-box-office.html",
+    "verdict": "Blockbuster",
+    "language": "Telugu"
+  },
+  {
+    "title": "Singham Again",
+    "year": "2024",
+    "slug": "singham-again-box-office.html",
+    "verdict": "Average",
+    "language": "Hindi"
+  },
+  {
+    "title": "Devara Part 1",
+    "year": "2024",
+    "slug": "devara-part-1-box-office.html",
+    "verdict": "Average",
+    "language": "Telugu"
+  },
+  {
+    "title": "Vettaiyan",
+    "year": "2024",
+    "slug": "vettaiyan-box-office.html",
+    "verdict": "Average",
+    "language": "Tamil"
+  },
+  {
+    "title": "Lucky Baskhar",
+    "year": "2024",
+    "slug": "lucky-baskhar-box-office.html",
+    "verdict": "Hit",
+    "language": "Telugu"
+  },
+  {
+    "title": "Game Changer",
+    "year": "2024",
+    "slug": "game-changer-box-office.html",
+    "verdict": "Disaster",
+    "language": "Telugu"
+  },
+  {
+    "title": "Mufasa: The Lion King (Hindi)",
+    "year": "2024",
+    "slug": "mufasa-the-lion-king-hindi-box-office.html",
+    "verdict": "Average",
+    "language": "Hindi"
+  },
+  {
+    "title": "The Sabarmati Report",
+    "year": "2024",
+    "slug": "the-sabarmati-report-box-office.html",
+    "verdict": "Hit",
+    "language": "Hindi"
+  },
+  {
+    "title": "Chhaava",
+    "year": "2025",
+    "slug": "chhaava-box-office.html",
+    "verdict": "Blockbuster",
+    "language": "Hindi"
+  },
+  {
+    "title": "Housefull 5",
+    "year": "2025",
+    "slug": "housefull-5-box-office.html",
+    "verdict": "Blockbuster",
+    "language": "Hindi"
+  },
+  {
+    "title": "Raid 2",
+    "year": "2025",
+    "slug": "raid-2-box-office.html",
+    "verdict": "Blockbuster",
+    "language": "Hindi"
+  },
+  {
+    "title": "Sky Force",
+    "year": "2025",
+    "slug": "sky-force-box-office.html",
+    "verdict": "Hit",
+    "language": "Hindi"
+  },
+  {
+    "title": "Retro",
+    "year": "2025",
+    "slug": "retro-box-office.html",
+    "verdict": "Average",
+    "language": "Tamil"
+  },
+  {
+    "title": "Baby John",
+    "year": "2025",
+    "slug": "baby-john-box-office.html",
+    "verdict": "Disaster",
+    "language": "Hindi"
+  },
+  {
+    "title": "Saiyaara",
+    "year": "2025",
+    "slug": "saiyaara-box-office.html",
+    "verdict": "All-Time Blockbuster",
+    "language": "Hindi"
+  },
+  {
+    "title": "Tu Meri Main Tera Main Tera Tu Meri",
+    "year": "2025",
+    "slug": "tu-meri-main-tera-main-tera-tu-meri-box-office.html",
+    "verdict": "Flop",
+    "language": "Hindi"
+  },
+  {
+    "title": "Deva",
+    "year": "2025",
+    "slug": "deva-box-office.html",
+    "verdict": "Flop",
+    "language": "Hindi"
+  },
+  {
+    "title": "Pushpa 2 Re-release",
+    "year": "2025",
+    "slug": "pushpa-2-re-release-box-office.html",
+    "verdict": "Rerun",
+    "language": "Telugu"
+  },
+  {
+    "title": "Border 2",
+    "year": "2026",
+    "slug": "border-2-box-office.html",
+    "verdict": "Super Hit",
+    "language": "Hindi"
+  },
+  {
+    "title": "O'Romeo",
+    "year": "2026",
+    "slug": "oromeo-box-office.html",
+    "verdict": "Flop",
+    "language": "Hindi"
+  },
+  {
+    "title": "Mardaani 3",
+    "year": "2026",
+    "slug": "mardaani-3-box-office.html",
+    "verdict": "Flop",
+    "language": "Hindi"
+  },
+  {
+    "title": "Assi",
+    "year": "2026",
+    "slug": "assi-box-office.html",
+    "verdict": "Flop",
+    "language": "Hindi"
+  },
+  {
+    "title": "Do Deewane Sehar Mein",
+    "year": "2026",
+    "slug": "do-deewane-sehar-mein-box-office.html",
+    "verdict": "Flop",
+    "language": "Hindi"
+  },
+  {
+    "title": "Tu Yaa Main",
+    "year": "2026",
+    "slug": "tu-yaa-main-box-office.html",
+    "verdict": "Disaster",
+    "language": "Hindi"
+  },
+  {
+    "title": "The Kerala Story 2: Goes Beyond",
+    "year": "2026",
+    "slug": "the-kerala-story-2-goes-beyond-box-office.html",
+    "verdict": "Average",
+    "language": "Hindi"
+  },
+  {
+    "title": "MSVP (Mana ShankaraVaraprasad Garu)",
+    "year": "2026",
+    "slug": "msvp-mana-shankaravaraprasad-garu-box-office.html",
+    "verdict": "Blockbuster",
+    "language": "Telugu"
+  },
+  {
+    "title": "The Raja Saab",
+    "year": "2026",
+    "slug": "the-raja-saab-box-office.html",
+    "verdict": "Blockbuster",
+    "language": "Telugu"
+  },
+  {
+    "title": "Anaganaga Oka Raju",
+    "year": "2026",
+    "slug": "anaganaga-oka-raju-box-office.html",
+    "verdict": "Disaster",
+    "language": "Telugu"
+  },
+  {
+    "title": "Ikkis",
+    "year": "2026",
+    "slug": "ikkis-box-office.html",
+    "verdict": "Flop",
+    "language": "Hindi"
+  },
+  {
+    "title": "Landlord",
+    "year": "2026",
+    "slug": "landlord-box-office.html",
+    "verdict": "Blockbuster",
+    "language": "Kannada"
+  },
+  {
+    "title": "Vadh 2",
+    "year": "2026",
+    "slug": "vadh-2-box-office.html",
+    "verdict": "Disaster",
+    "language": "Hindi"
+  },
+  {
+    "title": "Mana ShankaraVaraprasad Garu",
+    "year": "2026",
+    "slug": "mana-shankaravaraprasad-garu-box-office.html",
+    "verdict": "Blockbuster",
+    "language": "Telugu"
+  },
+  {
+    "title": "The Raja Saab",
+    "year": "2026",
+    "slug": "the-raja-saab-box-office.html",
+    "verdict": "Disaster",
+    "language": "Telugu"
+  },
+  {
+    "title": "Anaganaga Oka Raju",
+    "year": "2026",
+    "slug": "anaganaga-oka-raju-box-office.html",
+    "verdict": "Blockbuster",
+    "language": "Telugu"
+  },
+  {
+    "title": "Nari Nari Naduma Murari",
+    "year": "2026",
+    "slug": "nari-nari-naduma-murari-box-office.html",
+    "verdict": "Hit",
+    "language": "Telugu"
+  },
+  {
+    "title": "Parasakthi",
+    "year": "2026",
+    "slug": "parasakthi-box-office.html",
+    "verdict": "Flop",
+    "language": "Tamil"
+  },
+  {
+    "title": "With Love",
+    "year": "2026",
+    "slug": "with-love-box-office.html",
+    "verdict": "Blockbuster",
+    "language": "Tamil"
+  },
+  {
+    "title": "Thaai Kizhavi",
+    "year": "2026",
+    "slug": "thaai-kizhavi-box-office.html",
+    "verdict": "Super Hit",
+    "language": "Tamil"
+  },
+  {
+    "title": "Funky",
+    "year": "2026",
+    "slug": "funky-box-office.html",
+    "verdict": "Flop",
+    "language": "Telugu"
+  },
+  {
+    "title": "Chatha Pacha: The Ring of Rowdies",
+    "year": "2026",
+    "slug": "chatha-pacha-the-ring-of-rowdies-box-office.html",
+    "verdict": "Blockbuster",
+    "language": "Malayalam"
+  },
+  {
+    "title": "Landlord",
+    "year": "2026",
+    "slug": "landlord-box-office.html",
+    "verdict": "Hit",
+    "language": "Kannada"
+  },
+  {
+    "title": "Dhurandhar",
+    "year": "2026",
+    "slug": "dhurandhar-box-office.html",
+    "verdict": "All-Time Blockbuster",
+    "language": "Hindi",
+    "director": "Aditya Dhar",
+    "cast": "TBC",
+    "releaseDate": "Dec 5, 2025",
+    "status": "OTT",
+    "note": "₹893 Cr India net · WW #1 Hindi film ever · 59 days on BMS trending",
+    "budget": "225 Cr",
+    "indiaNet": "838.5 Cr",
+    "wwGross": "—",
+    "ott": {
+      "platform": "Netflix",
+      "debutViews": "7.6M (3 days) → 15.8M (10 days)",
+      "debutHours": "21.6M hrs (Wk1) · 28.1M hrs (Wk2)",
+      "lifetimeViews": "~16M+",
+      "lifetimeHours": "~50M hrs",
+      "globalRank": "#1 Non-English (2 weeks)",
+      "countries": 22,
+      "rightsDeal": "₹175 Cr",
+      "ottNote": "Biggest Indian post-theatrical OTT debut ever · #1 India, Pakistan, UAE, Qatar, Oman, Bahrain, Mauritius"
+    }
+  },
+  {
+    "title": "Wuthering Heights",
+    "year": "2026",
+    "slug": "wuthering-heights-box-office.html",
+    "verdict": "Hit",
+    "language": "Hollywood",
+    "director": "Emerald Fennell",
+    "cast": "TBC",
+    "releaseDate": "Feb 13, 2026",
+    "status": "Running",
+    "note": "Margot Robbie · Jacob Elordi · Warner Bros. ₹152 Cr WW ($152M global) in 10 days.",
+    "budget": "725 Cr",
+    "indiaNet": 2.5,
+    "wwGross": "—",
+    "ott": {
+      "platform": "TBD (Prime/Netflix expected)",
+      "debutViews": "TBD",
+      "debutHours": "TBD",
+      "lifetimeViews": "TBD",
+      "lifetimeHours": "TBD",
+      "globalRank": "TBD",
+      "countries": 79,
+      "rightsDeal": "~₹5 Cr (est.)",
+      "ottNote": "Emerald Fennell's prestige romance. $80M budget · $100M P&A. Needs ~$360M global to break even."
+    }
+  },
+  {
+    "title": "GOAT",
+    "year": "2026",
+    "slug": "goat-box-office.html",
+    "verdict": "Hit",
+    "language": "Hollywood",
+    "director": "Tyree Dillihay",
+    "cast": "TBC",
+    "releaseDate": "Feb 13, 2026",
+    "status": "Running",
+    "note": "Sony Animation · Stephen Curry produced. $102M WW in 10 days. US #1 Weekend 2.",
+    "budget": "830 Cr",
+    "indiaNet": 0.75,
+    "wwGross": "—",
+    "ott": {
+      "platform": "Netflix (expected May 2026)",
+      "debutViews": "TBD",
+      "debutHours": "TBD",
+      "lifetimeViews": "TBD",
+      "lifetimeHours": "TBD",
+      "globalRank": "TBD",
+      "countries": 42,
+      "rightsDeal": "~₹20 Cr (est.)",
+      "ottNote": "Sony Animation original — basketball-themed. Stephen Curry produced. 'A' CinemaScore = strong legs expected."
+    }
+  },
+  {
+    "title": "Avatar: Fire & Ash",
+    "year": "2026",
+    "slug": "avatar-fire-ash-box-office.html",
+    "verdict": "Hit",
+    "language": "Hollywood",
+    "director": "James Cameron",
+    "cast": "TBC",
+    "releaseDate": "Dec 19, 2025",
+    "status": "OTT",
+    "note": "India Gross ₹235 Cr · #6 Hollywood all-time India · WW $1.5B+",
+    "budget": "2,200 Cr",
+    "indiaNet": 193,
+    "wwGross": "—",
+    "ott": {
+      "platform": "Disney+ Hotstar",
+      "debutViews": "N/A",
+      "debutHours": "N/A",
+      "lifetimeViews": "N/A",
+      "lifetimeHours": "N/A",
+      "globalRank": "Top 10 Global (peak)",
+      "countries": 12,
+      "rightsDeal": "~₹80 Cr (est.)",
+      "ottNote": "Hotstar India — Day 1 India: ₹25 Cr gross. #6 Hollywood all-time India."
+    }
+  },
+  {
+    "title": "Zootopia 2",
+    "year": "2026",
+    "slug": "zootopia-2-box-office.html",
+    "verdict": "Super Hit",
+    "language": "Hollywood",
+    "director": "Byron Howard / Jason Hand",
+    "cast": "TBC",
+    "releaseDate": "Nov 26, 2025",
+    "status": "OTT",
+    "note": "India Gross ₹21 Cr · WW $1.36B ($423M domestic + $875M intl)",
+    "budget": "1,341 Cr",
+    "indiaNet": 15,
+    "wwGross": "—",
+    "ott": {
+      "platform": "Disney+ Hotstar",
+      "debutViews": "N/A",
+      "debutHours": "N/A",
+      "lifetimeViews": "N/A",
+      "lifetimeHours": "N/A",
+      "globalRank": "#1 Animated 2025 (global)",
+      "countries": 15,
+      "rightsDeal": "~₹30 Cr (est.)",
+      "ottNote": "Disney+ Hotstar — India underperformed vs global blockbuster status."
+    }
+  },
+  {
+    "title": "Captain America: Brave New World",
+    "year": "2026",
+    "slug": "captain-america-brave-new-world-box-office.html",
+    "verdict": "Flop",
+    "language": "Hollywood",
+    "director": "Julius Onah",
+    "cast": "TBC",
+    "releaseDate": "Feb 13, 2026 (India)",
+    "status": "OTT",
+    "note": "India ₹38 Cr net · MCU underperformance · WW $350M",
+    "budget": "1,886 Cr",
+    "indiaNet": 38,
+    "wwGross": "—",
+    "ott": {
+      "platform": "Disney+ Hotstar",
+      "debutViews": "N/A",
+      "debutHours": "N/A",
+      "lifetimeViews": "N/A",
+      "lifetimeHours": "N/A",
+      "globalRank": "N/A",
+      "countries": 3,
+      "rightsDeal": "~₹15 Cr (est.)",
+      "ottNote": "Hotstar India — significant MCU underperformance."
+    }
+  },
+  {
+    "title": "Scream 7",
+    "year": "2026",
+    "slug": "scream-7-box-office.html",
+    "verdict": "Upcoming",
+    "language": "Hollywood",
+    "director": "Kevin Williamson",
+    "cast": "TBC",
+    "releaseDate": "Feb 27, 2026",
+    "status": "Upcoming",
+    "note": "Feb 27 — Paramount. Jenna Ortega returns. Horror franchise.",
+    "budget": "665 Cr",
+    "indiaNet": 0,
+    "wwGross": "—",
+    "ott": {
+      "platform": "TBD (Prime/Netflix expected)",
+      "debutViews": "TBD",
+      "debutHours": "TBD",
+      "lifetimeViews": "TBD",
+      "lifetimeHours": "TBD",
+      "globalRank": "TBD",
+      "countries": 0,
+      "rightsDeal": "TBD",
+      "ottNote": "Horror franchise — Netflix deal likely for India post-theatrical."
+    }
+  },
+  {
+    "title": "Dhurandhar: The Revenge",
+    "year": "2026",
+    "slug": "dhurandhar-2-box-office.html",
+    "verdict": "Upcoming",
+    "language": "Hindi",
+    "director": "Aditya Dhar",
+    "cast": "Ranveer Singh · Sanjay Dutt · Akshaye Khanna · R. Madhavan · Arjun Rampal",
+    "releaseDate": "Mar 19, 2026",
+    "status": "Upcoming",
+    "note": "",
+    "budget": "~₹350 Cr",
+    "indiaNet": "—",
+    "wwGross": "—",
+    "ott": {
+      "platform": "Netflix",
+      "debutViews": "TBD",
+      "debutHours": "TBD",
+      "lifetimeViews": "TBD",
+      "lifetimeHours": "TBD",
+      "globalRank": "TBD",
+      "countries": 0,
+      "rightsDeal": "₹150 Cr (confirmed)",
+      "ottNote": "Netflix deal confirmed pre-release — sequel to the biggest Indian OTT debut ever"
+    }
+  },
+  {
+    "title": "Toxic: A Fairytale for Grown-ups",
+    "year": "2026",
+    "slug": "toxic-box-office.html",
+    "verdict": "Upcoming",
+    "language": "Kannada",
+    "director": "Geetu Mohandas",
+    "cast": "Yash · Nayanthara",
+    "releaseDate": "Apr 30, 2026 (TBC)",
+    "status": "Upcoming",
+    "note": "Postponed from Mar 19 — Middle East business concerns amid regional turmoil",
+    "budget": "300 Cr",
+    "indiaNet": "—",
+    "wwGross": "—",
+    "ott": {
+      "platform": "Amazon Prime Video (expected)",
+      "debutViews": "TBD",
+      "debutHours": "TBD",
+      "lifetimeViews": "TBD",
+      "lifetimeHours": "TBD",
+      "globalRank": "TBD",
+      "countries": 0,
+      "rightsDeal": "~₹100 Cr (est.)",
+      "ottNote": "Yash comeback — OTT rights deal not yet confirmed"
+    }
+  },
+  {
+    "title": "Awarapan 2",
+    "year": "2026",
+    "slug": "awarapan-2-box-office.html",
+    "verdict": "Upcoming",
+    "language": "Hindi",
+    "director": "Mohit Suri (expected)",
+    "cast": "Emraan Hashmi",
+    "releaseDate": "Apr 3, 2026",
+    "status": "Upcoming",
+    "note": "Almost 20 years in the making",
+    "budget": "TBC",
+    "indiaNet": "—",
+    "wwGross": "—",
+    "ott": {}
+  },
+  {
+    "title": "The Paradise",
+    "year": "2026",
+    "slug": "the-paradise-box-office.html",
+    "verdict": "Upcoming",
+    "language": "Telugu",
+    "director": "Dr Bikash Dhar",
+    "cast": "Mukesh Chhabra · Triptii Dimri",
+    "releaseDate": "May 2026 (TBC)",
+    "status": "Upcoming",
+    "note": "Period drama set in 1960s Benaras",
+    "budget": "TBC",
+    "indiaNet": "—",
+    "wwGross": "—",
+    "ott": {}
+  },
+  {
+    "title": "Swayambhu",
+    "year": "2026",
+    "slug": "swayambhu-box-office.html",
+    "verdict": "Upcoming",
+    "language": "Telugu",
+    "director": "Gunasekhar",
+    "cast": "Nandamuri Balakrishna · Trisha Krishnan",
+    "releaseDate": "Apr 10, 2026 (TBC)",
+    "status": "Upcoming",
+    "note": "Telugu · Apr 10",
+    "budget": "TBC",
+    "indiaNet": "—",
+    "wwGross": "—",
+    "ott": {}
+  },
+  {
+    "title": "Bhooth Bangla",
+    "year": "2026",
+    "slug": "bhooth-bangla-box-office.html",
+    "verdict": "Upcoming",
+    "language": "Hindi",
+    "director": "Priyadarshan",
+    "cast": "Akshay Kumar · Wamiqa Gabbi · Paresh Rawal · Tabu · Rajpal Yadav",
+    "releaseDate": "Apr 10, 2026",
+    "status": "Upcoming",
+    "note": "Akshay-Priyadarshan reunion. Teaser released Mar 12. Trailer expected with D2 prints",
+    "budget": "120 Cr",
+    "indiaNet": "—",
+    "wwGross": "—",
+    "ott": {}
+  },
+  {
+    "title": "Alpha",
+    "year": "2026",
+    "slug": "alpha-box-office.html",
+    "verdict": "Upcoming",
+    "language": "Hindi",
+    "director": "Shiv Rawail",
+    "cast": "Alia Bhatt · Sharvari",
+    "releaseDate": "Jul 2026 (TBC)",
+    "status": "Upcoming",
+    "note": "YRF Spy Universe. Moved from Apr 17 to Jul 2026",
+    "budget": "TBC",
+    "indiaNet": "—",
+    "wwGross": "—",
+    "ott": {}
+  },
+  {
+    "title": "Battle of Galwan",
+    "year": "2026",
+    "slug": "battle-of-galwan-box-office.html",
+    "verdict": "Upcoming",
+    "language": "Hindi",
+    "director": "Apoorva Lakhia",
+    "cast": "Salman Khan · Chitrangda Singh",
+    "releaseDate": "Aug 15, 2026",
+    "status": "Upcoming",
+    "note": "Moved from Apr 17. Independence Day clash with Naagzilla + Bhediya 2",
+    "budget": "~₹200 Cr",
+    "indiaNet": "—",
+    "wwGross": "—",
+    "ott": {}
+  },
+  {
+    "title": "KD – The Devil",
+    "year": "2026",
+    "slug": "kd-the-devil-box-office.html",
+    "verdict": "Upcoming",
+    "language": "Kannada",
+    "director": "Prem",
+    "cast": "Dhruva Sarja · Rebelstar Kannada Rockstar",
+    "releaseDate": "Apr 14, 2026",
+    "status": "Upcoming",
+    "note": "Kannada action. Independence Day Apr 14",
+    "budget": "TBC",
+    "indiaNet": "—",
+    "wwGross": "—",
+    "ott": {}
+  },
+  {
+    "title": "Ginny Weds Sunny 2",
+    "year": "2026",
+    "slug": "ginny-weds-sunny-2-box-office.html",
+    "verdict": "Upcoming",
+    "language": "Hindi",
+    "director": "Puneet Khanna",
+    "cast": "Avinash Tiwari · Medha Shankar",
+    "releaseDate": "Apr 24, 2026",
+    "status": "Upcoming",
+    "note": "Spiritual sequel. Netflix release April 24",
+    "budget": "TBC",
+    "indiaNet": "—",
+    "wwGross": "—",
+    "ott": {}
+  },
+  {
+    "title": "Ek Din",
+    "year": "2026",
+    "slug": "ek-din-box-office.html",
+    "verdict": "Upcoming",
+    "language": "Hindi",
+    "director": "Srijit Mukherji",
+    "cast": "Sai Pallavi · Junaid Khan",
+    "releaseDate": "May 1, 2026",
+    "status": "Upcoming",
+    "note": "Remake of 2016 Thai film One Day",
+    "budget": "TBC",
+    "indiaNet": "—",
+    "wwGross": "—",
+    "ott": {}
+  },
+  {
+    "title": "Raja Shivaji",
+    "year": "2026",
+    "slug": "raja-shivaji-box-office.html",
+    "verdict": "Upcoming",
+    "language": "Hindi/Marathi",
+    "director": "Riteish Deshmukh",
+    "cast": "Riteish Deshmukh",
+    "releaseDate": "May 1, 2026",
+    "status": "Upcoming",
+    "note": "Historical drama. Shot in Hindi + Marathi simultaneously",
+    "budget": "TBC",
+    "indiaNet": "—",
+    "wwGross": "—",
+    "ott": {}
+  },
+  {
+    "title": "Bandar",
+    "year": "2026",
+    "slug": "bandar-box-office.html",
+    "verdict": "Upcoming",
+    "language": "Hindi",
+    "director": "Anurag Kashyap",
+    "cast": "Anurag Kashyap directorial",
+    "releaseDate": "May 22, 2026",
+    "status": "Upcoming",
+    "note": "Anurag Kashyap. Battle Zoo Amar Akbar Anthony's district. May 22",
+    "budget": "TBC",
+    "indiaNet": "—",
+    "wwGross": "—",
+    "ott": {}
+  },
+  {
+    "title": "NTR – Neel",
+    "year": "2026",
+    "slug": "ntr-neel-box-office.html",
+    "verdict": "Upcoming",
+    "language": "Telugu",
+    "director": "Prashanth Neel",
+    "cast": "Jr NTR",
+    "releaseDate": "TBC 2026",
+    "status": "Upcoming",
+    "note": "NTR after RRR — massive pan-India expectations. Date TBC",
+    "budget": "TBC",
+    "indiaNet": "—",
+    "wwGross": "—",
+    "ott": {}
+  },
+  {
+    "title": "Peddi",
+    "year": "2026",
+    "slug": "peddi-box-office.html",
+    "verdict": "Upcoming",
+    "language": "Telugu",
+    "director": "Buchi Babu Sana",
+    "cast": "Ram Charan · Janhvi Kapoor · Dr Shiva Rajkumar",
+    "releaseDate": "Apr 30, 2026",
+    "status": "Upcoming",
+    "note": "A.R. Rahman music. Mythri Movie Makers + Sukumar Writings",
+    "budget": "~₹180 Cr",
+    "indiaNet": "—",
+    "wwGross": "—",
+    "ott": {}
+  },
+  {
+    "title": "Hai Jawani Toh Ishq Hona Hai",
+    "year": "2026",
+    "slug": "hai-jawani-toh-ishq-hona-hai-box-office.html",
+    "verdict": "Upcoming",
+    "language": "Hindi",
+    "director": "Mudassar Aziz",
+    "cast": "Vicky Kaushal · Triptii Dimri · Wamiqa Gabbi",
+    "releaseDate": "Jun 5, 2026",
+    "status": "Upcoming",
+    "note": "",
+    "budget": "TBC",
+    "indiaNet": "—",
+    "wwGross": "—",
+    "ott": {}
+  },
+  {
+    "title": "Cocktail 2",
+    "year": "2026",
+    "slug": "cocktail-2-box-office.html",
+    "verdict": "Upcoming",
+    "language": "Hindi",
+    "director": "Homi Adajania",
+    "cast": "Saif Ali Khan · Deepika Padukone (expected)",
+    "releaseDate": "Jun 30, 2026 (TBC)",
+    "status": "Upcoming",
+    "note": "Sequel. Production ongoing. Release date TBC",
+    "budget": "TBC",
+    "indiaNet": "—",
+    "wwGross": "—",
+    "ott": {}
+  },
+  {
+    "title": "Welcome to the Jungle",
+    "year": "2026",
+    "slug": "welcome-to-the-jungle-box-office.html",
+    "verdict": "Upcoming",
+    "language": "Hindi",
+    "director": "Ahmed Khan",
+    "cast": "Akshay Kumar · Suniel Shetty · Jackie Shroff · Raveena Tandon · Disha Patani",
+    "releaseDate": "Jul 2026 (TBC)",
+    "status": "Upcoming",
+    "note": "Welcome franchise fourth installment",
+    "budget": "TBC",
+    "indiaNet": "—",
+    "wwGross": "—",
+    "ott": {}
+  },
+  {
+    "title": "Dragon",
+    "year": "2026",
+    "slug": "dragon-box-office.html",
+    "verdict": "Upcoming",
+    "language": "Telugu/Hindi",
+    "director": "TBC",
+    "cast": "Pan-India action",
+    "releaseDate": "Jun 26, 2026",
+    "status": "Upcoming",
+    "note": "",
+    "budget": "TBC",
+    "indiaNet": "—",
+    "wwGross": "—",
+    "ott": {}
+  },
+  {
+    "title": "Dhamaal 4",
+    "year": "2026",
+    "slug": "dhamaal-4-box-office.html",
+    "verdict": "Upcoming",
+    "language": "Hindi",
+    "director": "Indra Kumar",
+    "cast": "Arshad Warsi · Javed Jaffrey · Riteish Deshmukh · Sanjay Dutt",
+    "releaseDate": "Jul 3, 2026",
+    "status": "Upcoming",
+    "note": "Dhamaal franchise. Fourth installment. Jul 3",
+    "budget": "TBC",
+    "indiaNet": "—",
+    "wwGross": "—",
+    "ott": {}
+  },
+  {
+    "title": "King",
+    "year": "2026",
+    "slug": "king-box-office.html",
+    "verdict": "Upcoming",
+    "language": "Hindi",
+    "director": "Siddharth Anand",
+    "cast": "Shah Rukh Khan · Suhana Khan · Abhishek Bachchan",
+    "releaseDate": "Dec 24, 2026",
+    "status": "Upcoming",
+    "note": "SRK Christmas 2026. Most anticipated of year-end",
+    "budget": "~₹350 Cr",
+    "indiaNet": "—",
+    "wwGross": "—",
+    "ott": {}
+  },
+  {
+    "title": "Love & War",
+    "year": "2026",
+    "slug": "love-and-war-box-office.html",
+    "verdict": "Upcoming",
+    "language": "Hindi",
+    "director": "Sanjay Leela Bhansali",
+    "cast": "Ranbir Kapoor · Alia Bhatt · Vicky Kaushal",
+    "releaseDate": "Jan 22, 2027",
+    "status": "Upcoming",
+    "note": "SLB epic. Streaming partner: Netflix. Jan 2027",
+    "budget": "~₹350 Cr",
+    "indiaNet": "—",
+    "wwGross": "—",
+    "ott": {}
+  },
+  {
+    "title": "Varanasi",
+    "year": "2026",
+    "slug": "varanasi-box-office.html",
+    "verdict": "Upcoming",
+    "language": "Telugu (Pan-India)",
+    "director": "TBC",
+    "cast": "Multi-cast epic",
+    "releaseDate": "Apr 1, 2027 (TBC)",
+    "status": "Upcoming",
+    "note": "",
+    "budget": "1,000–1,200 Cr",
+    "indiaNet": "—",
+    "wwGross": "—",
+    "ott": {}
+  },
+  {
+    "title": "Bhediya 2",
+    "year": "2026",
+    "slug": "bhediya-2-box-office.html",
+    "verdict": "Upcoming",
+    "language": "Hindi",
+    "director": "Amar Kaushik",
+    "cast": "Varun Dhawan · Kriti Sanon",
+    "releaseDate": "Aug 14, 2026",
+    "status": "Upcoming",
+    "note": "Independence Day clash with Battle of Galwan + Naagzilla. Aug 14",
+    "budget": "TBC",
+    "indiaNet": "—",
+    "wwGross": "—",
+    "ott": {}
+  },
+  {
+    "title": "Naagzilla",
+    "year": "2026",
+    "slug": "naagzilla-box-office.html",
+    "verdict": "Upcoming",
+    "language": "Hindi",
+    "director": "Aashiq Abu",
+    "cast": "Kartik Aaryan",
+    "releaseDate": "Aug 14, 2026",
+    "status": "Upcoming",
+    "note": "Confirmed Aug 14 — clash with Battle of Galwan + Bhediya 2. Maddock Films",
+    "budget": "TBC",
+    "indiaNet": "—",
+    "wwGross": "—",
+    "ott": {}
+  },
+  {
+    "title": "Fauji / Fauzi",
+    "year": "2026",
+    "slug": "fauji-box-office.html",
+    "verdict": "Upcoming",
+    "language": "Hindi",
+    "director": "TBC",
+    "cast": "TBC",
+    "releaseDate": "Aug 2026 (TBC)",
+    "status": "Upcoming",
+    "note": "Expected Aug 2026",
+    "budget": "TBC",
+    "indiaNet": "—",
+    "wwGross": "—",
+    "ott": {}
+  },
+  {
+    "title": "Billa Ranga Baasha",
+    "year": "2026",
+    "slug": "billa-ranga-baasha-box-office.html",
+    "verdict": "Upcoming",
+    "language": "Kannada",
+    "director": "TBC",
+    "cast": "TBC",
+    "releaseDate": "TBC 2026",
+    "status": "Upcoming",
+    "note": "",
+    "budget": "TBC",
+    "indiaNet": "—",
+    "wwGross": "—",
+    "ott": {}
+  },
+  {
+    "title": "Khalifa",
+    "year": "2026",
+    "slug": "khalifa-box-office.html",
+    "verdict": "Upcoming",
+    "language": "Malayalam",
+    "director": "Prithviraj Sukumaran",
+    "cast": "Prithviraj Sukumaran · Malayalam",
+    "releaseDate": "TBC — Independence 2026",
+    "status": "Upcoming",
+    "note": "",
+    "budget": "TBC",
+    "indiaNet": "—",
+    "wwGross": "—",
+    "ott": {}
+  },
+  {
+    "title": "Patriot",
+    "year": "2026",
+    "slug": "patriot-box-office.html",
+    "verdict": "Upcoming",
+    "language": "Malayalam",
+    "director": "Mammootty directorial",
+    "cast": "Mammootty",
+    "releaseDate": "TBC 2026",
+    "status": "Upcoming",
+    "note": "",
+    "budget": "TBC",
+    "indiaNet": "—",
+    "wwGross": "—",
+    "ott": {}
+  },
+  {
+    "title": "Kattalan",
+    "year": "2026",
+    "slug": "kattalan-box-office.html",
+    "verdict": "Upcoming",
+    "language": "Malayalam/Pan-India",
+    "director": "TBC",
+    "cast": "Tamil action",
+    "releaseDate": "TBC 2026",
+    "status": "Upcoming",
+    "note": "",
+    "budget": "TBC",
+    "indiaNet": "—",
+    "wwGross": "—",
+    "ott": {}
+  },
+  {
+    "title": "Ramayana: Part One",
+    "year": "2026",
+    "slug": "ramayana-part-one-box-office.html",
+    "verdict": "Upcoming",
+    "language": "Hindi",
+    "director": "Nitesh Tiwari",
+    "cast": "Ranbir Kapoor · Sai Pallavi · Yash · Sunny Deol",
+    "releaseDate": "Diwali 2026 (TBC)",
+    "status": "Upcoming",
+    "note": "Largest Indian production ever. VFX-heavy. Pan-India. Diwali 2026 target",
+    "budget": "~₹600 Cr",
+    "indiaNet": "—",
+    "wwGross": "—",
+    "ott": {}
+  },
+  {
+    "title": "Drishyam 3",
+    "year": "2026",
+    "slug": "drishyam-3-box-office.html",
+    "verdict": "Upcoming",
+    "language": "Hindi/Malayalam",
+    "director": "Drishyam Films",
+    "cast": "Ajay Devgn · Tabu · Akshaye Khanna · Shriya Saran",
+    "releaseDate": "Oct 2, 2026",
+    "status": "Upcoming",
+    "note": "Gandhi Jayanti. Drishyam franchise third chapter",
+    "budget": "TBC",
+    "indiaNet": "—",
+    "wwGross": "—",
+    "ott": {}
+  },
+  {
+    "title": "Mirzapur – The Film",
+    "year": "2026",
+    "slug": "mirzapur-the-film-box-office.html",
+    "verdict": "Upcoming",
+    "language": "Hindi",
+    "director": "TBC",
+    "cast": "Ali Fazal · Pankaj Tripathi",
+    "releaseDate": "Sep 4, 2026",
+    "status": "Upcoming",
+    "note": "Amazon Prime series comes to big screen. Sep 4",
+    "budget": "TBC",
+    "indiaNet": "—",
+    "wwGross": "—",
+    "ott": {}
+  },
+  {
+    "title": "Chamunda",
+    "year": "2026",
+    "slug": "chamunda-box-office.html",
+    "verdict": "Upcoming",
+    "language": "Hindi",
+    "director": "TBC",
+    "cast": "TBC",
+    "releaseDate": "Dec 4, 2026",
+    "status": "Upcoming",
+    "note": "Maddock Horror Comedy Universe. Dec 4",
+    "budget": "TBC",
+    "indiaNet": "—",
+    "wwGross": "—",
+    "ott": {}
+  }
+]

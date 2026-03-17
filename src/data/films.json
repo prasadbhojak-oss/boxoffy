@@ -1324,13 +1324,13 @@
       "director": "Anurag Singh",
       "releaseDate": "Jan 23, 2026",
       "totalCollection": "481.76 Cr",
-      "totalNum": 481.76,
+      "totalNum": 424,
       "indiaNet": "424 Cr",
       "overseas": "57.71 Cr",
       "weeksInTop10": 7,
       "status": "OTT",
       "budget": "275 Cr",
-      "verdict": "Super Hit",
+      "verdict": "SUPER HIT",
       "weeklyCollection": 0,
       "weekNum": 8,
       "daysInRelease": 56,
@@ -1349,7 +1349,9 @@
         "rightsDeal": "₹225 Cr (confirmed)",
         "ottNote": "Netflix India Mar 20, 2026 — same day as D2 wide release. ₹225 Cr rights deal. 8-week theatrical window. Border 3 confirmed by Sunny Deol."
       },
-      "pageUrl": "border-2-box-office.html"
+      "pageUrl": "border-2-box-office.html",
+      "wwGross": "₹481.76 Cr",
+      "note": "CLOSED. Final: ₹424 Cr India net / ₹481.76 Cr WW. OTT: Netflix Mar 20. Border 3 confirmed."
     },
     {
       "title": "O'Romeo",
@@ -1381,7 +1383,7 @@
         "rightsDeal": "~₹50 Cr (est.)",
         "ottNote": "Amazon Prime Video confirmed. Wikipedia article confirms post-theatrical rights to Prime. Expected April 2026."
       },
-      "pageUrl": "o-romeo-box-office.html"
+      "pageUrl": "oromeo-box-office.html"
     },
     {
       "title": "Mardaani 3",
@@ -1389,13 +1391,13 @@
       "director": "Abhiraj Minawala",
       "releaseDate": "Jan 30, 2026",
       "totalCollection": "₹75.10 Cr",
-      "totalNum": 75.1,
+      "totalNum": 50.78,
       "indiaNet": "50.78 Cr",
       "overseas": "9 Cr",
       "weeksInTop10": 6,
       "status": "OTT",
       "budget": "65 Cr",
-      "verdict": "Flop",
+      "verdict": "FLOP",
       "weeklyCollection": 0,
       "weekNum": 7,
       "daysInRelease": 44,
@@ -1414,7 +1416,9 @@
         "rightsDeal": "~₹30 Cr (est.)",
         "ottNote": "Amazon Prime Video. Expected ~Mar 27 2026. YRF franchise — Netflix deal likely; OTT premiere expected Mar/Apr 2026"
       },
-      "pageUrl": "mardaani-3-box-office.html"
+      "pageUrl": "mardaani-3-box-office.html",
+      "wwGross": "₹75.10 Cr",
+      "note": "CLOSED. Final: ₹50.78 Cr India net / ₹75.10 Cr WW. Budget ₹65 Cr. Flop. OTT: Amazon Prime ~Mar 27."
     },
     {
       "title": "Assi",
@@ -1542,7 +1546,7 @@
         "rightsDeal": "~₹8 Cr (est.)",
         "ottNote": "Controversial sequel — released Feb 27 after HC lifted stay. Tracking towards profit on low budget."
       },
-      "pageUrl": "kerala-story-2-box-office.html"
+      "pageUrl": "the-kerala-story-2-goes-beyond-box-office.html"
     },
     {
       "title": "Dhurandhar",
@@ -1550,15 +1554,15 @@
       "director": "Aditya Dhar",
       "releaseDate": "Dec 5, 2025",
       "totalCollection": "1,355 Cr",
-      "totalNum": 1355,
+      "totalNum": 838.5,
       "indiaNet": "838.5 Cr",
       "overseas": "299 Cr",
       "weeksInTop10": 12,
       "status": "OTT",
       "budget": "225 Cr",
-      "verdict": "All-Time Blockbuster",
+      "verdict": "ALL-TIME BLOCKBUSTER",
       "pageUrl": "dhurandhar-box-office.html",
-      "note": "₹893 Cr India net · WW #1 Hindi film ever · 59 days on BMS trending",
+      "note": "Theatrical run concluded. On Netflix. Biggest Hindi film ever. ₹118.2 Cr GST. 3.26 Cr footfalls.",
       "weeklyCollection": 0,
       "weekNum": 12,
       "daysInRelease": 78,
@@ -1574,7 +1578,8 @@
         "countries": 22,
         "rightsDeal": "₹175 Cr",
         "ottNote": "Biggest Indian post-theatrical OTT debut ever · #1 India, Pakistan, UAE, Qatar, Oman, Bahrain, Mauritius"
-      }
+      },
+      "wwGross": "₹1,355 Cr"
     },
     {
       "title": "MSVP (Mana ShankaraVaraprasad Garu)",
@@ -1582,14 +1587,14 @@
       "director": "Anil Ravipudi",
       "releaseDate": "Jan 23, 2026",
       "totalCollection": "438 Cr",
-      "totalNum": 438,
+      "totalNum": 320,
       "indiaNet": "320 Cr",
       "overseas": "56 Cr",
       "weeksInTop10": 4,
       "status": "OTT",
       "budget": "275 Cr",
-      "verdict": "Blockbuster",
-      "note": "Chiranjeevi & Nayanthara — now on OTT",
+      "verdict": "BLOCKBUSTER",
+      "note": "Concluded theatrical run. On OTT.",
       "weeklyCollection": 0,
       "weekNum": 4,
       "daysInRelease": 29,
@@ -1606,7 +1611,8 @@
         "rightsDeal": "~₹100 Cr (est.)",
         "ottNote": "OTT premiere expected"
       },
-      "pageUrl": "msvp-box-office.html"
+      "pageUrl": "msvp-mana-shankaravaraprasad-garu-box-office.html",
+      "wwGross": "₹438 Cr"
     },
     {
       "title": "The Raja Saab",
@@ -1614,13 +1620,13 @@
       "director": "Maruthi Dasari",
       "releaseDate": "Jan 12, 2026",
       "totalCollection": "300 Cr",
-      "totalNum": 300,
+      "totalNum": 217,
       "indiaNet": "217 Cr",
       "overseas": "43 Cr",
       "weeksInTop10": 5,
       "status": "OTT",
       "budget": "200 Cr",
-      "verdict": "Blockbuster",
+      "verdict": "BLOCKBUSTER",
       "weeklyCollection": 0,
       "weekNum": 6,
       "daysInRelease": 40,
@@ -1637,7 +1643,9 @@
         "rightsDeal": "₹80 Cr",
         "ottNote": "Prime Video — viewership data not publicly disclosed"
       },
-      "pageUrl": "the-raja-saab-box-office.html"
+      "pageUrl": "the-raja-saab-box-office.html",
+      "wwGross": "₹300 Cr",
+      "note": "Closed. On OTT."
     },
     {
       "title": "Anaganaga Oka Raju",
@@ -1645,13 +1653,13 @@
       "director": "Maruthi Dasari",
       "releaseDate": "Jan 9, 2026",
       "totalCollection": "208 Cr",
-      "totalNum": 208,
+      "totalNum": 146,
       "indiaNet": "146 Cr",
       "overseas": "34 Cr",
       "weeksInTop10": 5,
       "status": "OTT",
       "budget": "400 Cr",
-      "verdict": "Disaster",
+      "verdict": "DISASTER",
       "weeklyCollection": 0,
       "weekNum": 6,
       "daysInRelease": 43,
@@ -1668,7 +1676,9 @@
         "rightsDeal": "₹90 Cr",
         "ottNote": "Netflix — biggest OTT loss-maker of early 2026; ₹400 Cr budget vs ₹208 Cr WW gross"
       },
-      "pageUrl": "anaganaga-oka-raju-box-office.html"
+      "pageUrl": "anaganaga-oka-raju-box-office.html",
+      "wwGross": "₹208 Cr",
+      "note": "Closed. On OTT. Biggest loss of early 2026."
     },
     {
       "title": "Ikkis",
@@ -1795,7 +1805,7 @@
         "rightsDeal": "Record Zee5 deal (undisclosed)",
         "ottNote": "Zee5 India — record deal for Telugu film. Dubbed in Hindi, Tamil, Kannada, Malayalam. Industry Hit verdict."
       },
-      "pageUrl": "msvp-box-office.html"
+      "pageUrl": "mana-shankaravaraprasad-garu-box-office.html"
     },
     {
       "title": "The Raja Saab",
@@ -1803,14 +1813,14 @@
       "director": "Maruthi Dasari",
       "releaseDate": "Jan 9, 2026",
       "totalCollection": "208 Cr",
-      "totalNum": 208,
+      "totalNum": 217,
       "indiaNet": "146 Cr",
       "overseas": "34 Cr",
       "weeksInTop10": 4,
       "status": "OTT",
       "budget": "400 Cr",
-      "verdict": "Disaster",
-      "note": "Prabhas horror comedy. ₹400 Cr budget, ₹208 Cr WW. DISASTER — biggest 2026 Telugu flop.",
+      "verdict": "BLOCKBUSTER",
+      "note": "Closed. On OTT.",
       "weeklyCollection": 0,
       "weekNum": 6,
       "daysInRelease": 43,
@@ -1827,7 +1837,8 @@
         "rightsDeal": "₹160 Cr (pre-sold)",
         "ottNote": "JioHotstar India — rights sold pre-release at ₹160 Cr, streaming from Feb 6. Despite poor theatrical run, OTT deal protected producers."
       },
-      "pageUrl": "the-raja-saab-box-office.html"
+      "pageUrl": "the-raja-saab-box-office.html",
+      "wwGross": "₹300 Cr"
     },
     {
       "title": "Anaganaga Oka Raju",
@@ -1835,14 +1846,14 @@
       "director": "Maari",
       "releaseDate": "Jan 14, 2026",
       "totalCollection": "82 Cr",
-      "totalNum": 82,
+      "totalNum": 146,
       "indiaNet": "34 Cr",
       "overseas": "20 Cr",
       "weeksInTop10": 3,
       "status": "OTT",
       "budget": "20 Cr",
-      "verdict": "Blockbuster",
-      "note": "Naveen Polishetty comedy. ₹20 Cr budget, ₹82 Cr WW. ROI Blockbuster.",
+      "verdict": "DISASTER",
+      "note": "Closed. On OTT. Biggest loss of early 2026.",
       "weeklyCollection": 0,
       "weekNum": 5,
       "daysInRelease": 38,
@@ -1859,7 +1870,8 @@
         "rightsDeal": "₹19 Cr",
         "ottNote": "Netflix India South — acquired for ₹19 Cr. Naveen Polishetty's most profitable film per rupee invested."
       },
-      "pageUrl": "anaganaga-oka-raju-box-office.html"
+      "pageUrl": "anaganaga-oka-raju-box-office.html",
+      "wwGross": "₹208 Cr"
     },
     {
       "title": "Nari Nari Naduma Murari",
@@ -2051,7 +2063,7 @@
         "rightsDeal": "~₹8 Cr (est.)",
         "ottNote": "Netflix India — Mammootty ensemble comedy about Fort Kochi wrestlers. Strong diaspora numbers."
       },
-      "pageUrl": "chatha-pacha-box-office.html"
+      "pageUrl": "chatha-pacha-the-ring-of-rowdies-box-office.html"
     },
     {
       "title": "Landlord",
@@ -2091,14 +2103,14 @@
       "director": "Emerald Fennell",
       "releaseDate": "Feb 13, 2026",
       "totalCollection": "18 Cr",
-      "totalNum": 18,
+      "totalNum": 81.9,
       "indiaNetStr": "2.5 Cr",
       "overseas": "1,298 Cr",
       "weeksInTop10": 2,
       "status": "Running",
       "budget": "725 Cr",
-      "verdict": "Hit",
-      "note": "Margot Robbie · Jacob Elordi · Warner Bros. ₹152 Cr WW ($152M global) in 10 days.",
+      "verdict": "HIT",
+      "note": "Week 5 running. $226M WW — best 2026 US release so far.",
       "weeklyCollection": 1.2,
       "weekNum": 2,
       "daysInRelease": 10,
@@ -2131,7 +2143,8 @@
         "rightsDeal": "~₹5 Cr (est.)",
         "ottNote": "Emerald Fennell's prestige romance. $80M budget · $100M P&A. Needs ~$360M global to break even."
       },
-      "pageUrl": "wuthering-heights-box-office.html"
+      "pageUrl": "wuthering-heights-box-office.html",
+      "wwGross": "₹226 Cr"
     },
     {
       "title": "GOAT",
@@ -2145,8 +2158,8 @@
       "weeksInTop10": 2,
       "status": "Running",
       "budget": "830 Cr",
-      "verdict": "Hit",
-      "note": "Sony Animation · Stephen Curry produced. $102M WW in 10 days. US #1 Weekend 2.",
+      "verdict": "BLOCKBUSTER",
+      "note": "Week 5 US. $90.6M domestic / $162.8M WW. India theatrical concluded.",
       "weeklyCollection": 0.8,
       "weekNum": 2,
       "daysInRelease": 10,
@@ -2179,7 +2192,8 @@
         "rightsDeal": "~₹20 Cr (est.)",
         "ottNote": "Sony Animation original — basketball-themed. Stephen Curry produced. 'A' CinemaScore = strong legs expected."
       },
-      "pageUrl": "goat-box-office.html"
+      "pageUrl": "goat-box-office.html",
+      "wwGross": "$162.8M"
     },
     {
       "title": "Avatar: Fire & Ash",
@@ -2394,12 +2408,11 @@
       "lastWeekRank": null,
       "weeklyNote": "Boxoffy Verified Mar 15 3PM: Day 1 advance ₹30.51 Cr gross (approaching D1 opening) · Premiere (Mar 18) ₹21.50 Cr India gross · WW advance ₹56 Cr+ · NA weekend advance $4.6M · 9,500+ shows · Premieres Mar 18 5PM · Kerala advance ₹1 Cr+ (vs ₹17 lakh for D1) · Pan-India 5-language release.",
       "openingPrediction": {
-        "low": 90,
-        "mid": 105,
-        "high": 125,
-        "allLanguages": 110,
-        "basis": "Boxoffy AI Calc — post-trailer advance booking data",
-        "note": "Boxoffy AI Calc (updated Mar 15): Day 1 advance ₹30.51 Cr gross (85% of D1's entire opening gross before premiere). Paid previews Mar 18 5PM tracking ₹25–30 Cr net. Day 1 net floor: ₹90–100 Cr. ₹350–400 Cr Eid weekend India. ₹500–600 Cr WW 4-day. ₹1,700–2,000 Cr WW lifetime. NA: $4.6M advance → $12–15M OW possible."
+        "low": 95,
+        "mid": 107,
+        "high": 120,
+        "note": "Central case ₹100–107 Cr net India. Based on ₹30.51 Cr Day 1 advance + ₹21.50 Cr premiere + advance-to-actual multiplier 2.8–3.2x.",
+        "basis": "BOI · Sacnilk · Koimoi · Boxoffy AI Calc v3"
       },
       "ott": {
         "platform": "Netflix",
@@ -2454,7 +2467,8 @@
           "date": "Mar 8, 2026"
         }
       ],
-      "cast": "Ranveer Singh · Sanjay Dutt · Akshaye Khanna · R. Madhavan · Arjun Rampal"
+      "cast": "Ranveer Singh · Sanjay Dutt · Akshaye Khanna · R. Madhavan · Arjun Rampal",
+      "note": "₹30.51 Cr Day 1 advance (Mar 15) · ₹21.50 Cr premiere India · $4.6M NA advance · Shows sold out · Releases Mar 19"
     },
     {
       "title": "Toxic: A Fairytale for Grown-ups",
