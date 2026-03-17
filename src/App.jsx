@@ -1701,6 +1701,27 @@ function WeeklyChartRow({ movie, rank, prevRank }) {
               </div>
             </div>
           )}
+          {/* Boxoffy page button */}
+          {movie.pageUrl && (
+            <div style={{ marginTop:6 }}>
+              <a
+                href={`/${movie.pageUrl}`}
+                onClick={e => e.stopPropagation()}
+                style={{
+                  display:"inline-flex", alignItems:"center", gap:4,
+                  fontFamily:"'IBM Plex Mono',monospace", fontWeight:700,
+                  fontSize:9, letterSpacing:"0.12em", textTransform:"uppercase",
+                  textDecoration:"none",
+                  color: isUpcoming ? "#065F46" : T.accent,
+                  background: isUpcoming ? "#ECFDF5" : "#FFF5F5",
+                  border:`1px solid ${isUpcoming ? "#6EE7B7" : T.accent}`,
+                  padding:"3px 10px", borderRadius:2,
+                }}
+                onMouseEnter={e => { e.currentTarget.style.background=isUpcoming?"#D1FAE5":T.accent; e.currentTarget.style.color=isUpcoming?"#064E3B":"#fff"; }}
+                onMouseLeave={e => { e.currentTarget.style.background=isUpcoming?"#ECFDF5":"#FFF5F5"; e.currentTarget.style.color=isUpcoming?"#065F46":T.accent; }}
+              >{isUpcoming ? "Preview →" : "Full Analysis →"}</a>
+            </div>
+          )}
           {/* Mini bar */}
           {barPct > 0 && (
             <div style={{ marginTop:6, height:3, background:T.border, borderRadius:2, width:"80%", maxWidth:200 }}>
@@ -1929,6 +1950,28 @@ function BogRow({ movie, viewMode, rank, isNew }) {
             {movie.distributor && <><span style={{ color:"#D5D0CB" }}>·</span><span>{movie.distributor}</span></>}
             {isRunning && movie.theaterCount > 0 && <><span style={{ color:"#D5D0CB" }}>·</span><span>{fmtThousands(movie.theaterCount)} screens</span></>}
           </div>
+          {/* Boxoffy page button */}
+          {movie.pageUrl && (
+          <div style={{ marginTop:6 }}>
+            <a
+              href={`/${movie.pageUrl}`}
+              onClick={e => e.stopPropagation()}
+              style={{
+                display:"inline-flex", alignItems:"center", gap:4,
+                fontFamily:"'IBM Plex Mono',monospace", fontWeight:700,
+                fontSize:9, letterSpacing:"0.12em", textTransform:"uppercase",
+                textDecoration:"none",
+                color: isUpcoming ? "#065F46" : T.accent,
+                background: isUpcoming ? "#ECFDF5" : "#FFF5F5",
+                border:`1px solid ${isUpcoming ? "#6EE7B7" : T.accent}`,
+                padding:"3px 10px", borderRadius:2,
+              }}
+              onMouseEnter={e => { e.currentTarget.style.background=isUpcoming?"#D1FAE5":T.accent; e.currentTarget.style.color=isUpcoming?"#064E3B":"#fff"; }}
+              onMouseLeave={e => { e.currentTarget.style.background=isUpcoming?"#ECFDF5":"#FFF5F5"; e.currentTarget.style.color=isUpcoming?"#065F46":T.accent; }}
+            >{isUpcoming ? "Preview →" : "Full Analysis →"}</a>
+          </div>
+          )}
+
         </div>
 
         {/* ── DATA COLUMNS: India view ── */}
