@@ -1345,5 +1345,55 @@
     "director": "Harish Shankar",
     "releaseDate": "Mar 19, 2026",
     "status": "Upcoming"
+  },
+  {
+    "title": "Krantijyoti Vidyalay Marathi Madhyam",
+    "year": "2026",
+    "slug": "krantijyoti-vidyalay-box-office.html",
+    "verdict": "HIT",
+    "language": "Marathi",
+    "director": "TBC",
+    "releaseDate": "Jan 3, 2026",
+    "status": "Running"
+  },
+  {
+    "title": "Mrithyunjay",
+    "year": "2026",
+    "slug": "mrithyunjay-box-office.html",
+    "verdict": "AVERAGE",
+    "language": "Telugu",
+    "director": "Hussain Sha Kiran",
+    "releaseDate": "Mar 6, 2026",
+    "status": "Running"
+  },
+  {
+    "title": "Hoppers",
+    "year": "2026",
+    "slug": "hoppers-box-office.html",
+    "verdict": "HIT",
+    "language": "Hollywood",
+    "director": "TBC",
+    "releaseDate": "Mar 6, 2026",
+    "status": "Running"
+  },
+  {
+    "title": "Charak: Fair of Faith",
+    "year": "2026",
+    "slug": "charak-box-office.html",
+    "verdict": "FLOP",
+    "language": "Hindi",
+    "director": "Amarnath Jha · Shiladitya Moulik",
+    "releaseDate": "Mar 6, 2026",
+    "status": "Running"
+  },
+  {
+    "title": "Boong",
+    "year": "2026",
+    "slug": "boong-box-office.html",
+    "verdict": "HIT",
+    "language": "Manipuri",
+    "director": "Laksmipriya Devi",
+    "releaseDate": "Mar 6, 2026",
+    "status": "Running"
   }
 ]

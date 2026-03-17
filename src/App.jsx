@@ -1668,6 +1668,13 @@ function WeeklyChartRow({ movie, rank, prevRank }) {
             letterSpacing:"0.05em", textTransform:"uppercase", borderRadius:2, padding:"1px 5px" }}>
             {movie.verdict}
           </span>
+          {movie.isBeta && (
+            <span style={{ background:"#F3E8FF", color:"#7C3AED", border:"1px solid #C4B5FD",
+              fontFamily:"'IBM Plex Mono',monospace", fontWeight:700, fontSize:7,
+              letterSpacing:"0.12em", textTransform:"uppercase", borderRadius:2, padding:"1px 6px" }}>
+              ⚡ BETA
+            </span>
+          )}
           {isHollywood && (
             <span style={{ background:"#1D4ED8", color:"#fff",
               fontFamily:"'DM Sans',sans-serif", fontWeight:700, fontSize:8,
@@ -2985,7 +2992,7 @@ function BoxOfficeSection({ onNavigate }) {
               ▶ UPCOMING — NEXT MAJOR RELEASES
             </span>
           </div>
-          {weeklyChartMovies.filter(m => m.status === "Upcoming" && (m.openingPrediction || m.releaseDate?.includes("Mar") || m.releaseDate?.includes("Apr"))).slice(0,5).map((m, i) => (
+          {weeklyChartMovies.filter(m => m.status === "Upcoming" && m.openingPrediction).slice(0,3).map((m, i) => (
             <WeeklyChartRow key={m.title} movie={m} rank={"—"} prevRank={null} />
           ))}
 

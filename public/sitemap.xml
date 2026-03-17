@@ -131,7 +131,7 @@
     <priority>0.4</priority>
   </url>
 
-  <!-- ═══ GENERATED FILM PAGES (126 films · 2020–2026) ═══ -->
+  <!-- ═══ GENERATED FILM PAGES (131 films · 2020–2026) ═══ -->
   <url>
     <loc>https://boxoffy.com/tanhaji-the-unsung-warrior-box-office.html</loc>
     <lastmod>2020-12-31</lastmod>
@@ -887,6 +887,36 @@
     <lastmod>2026-03-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://boxoffy.com/krantijyoti-vidyalay-box-office.html</loc>
+    <lastmod>2026-03-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://boxoffy.com/mrithyunjay-box-office.html</loc>
+    <lastmod>2026-03-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://boxoffy.com/hoppers-box-office.html</loc>
+    <lastmod>2026-03-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://boxoffy.com/charak-box-office.html</loc>
+    <lastmod>2026-03-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://boxoffy.com/boong-box-office.html</loc>
+    <lastmod>2026-03-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
   </url>
 
 </urlset>

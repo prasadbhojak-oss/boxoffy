@@ -2,70 +2,85 @@
   {
     "weekNum": "Week 14, 2026",
     "dateRange": "Mar 19–25, 2026",
-    "headline": "The Year's Biggest Weekend — D2 Opens, Ustaad Bhagat Singh Challenges, Thaai Kizhavi Holds",
-    "subline": "Dhurandhar 2 ₹100+ Cr Day 1 target · Ustaad Bhagat Singh ₹45 Cr projected · Thaai Kizhavi ₹50.87 Cr India net · India's biggest box office week since Dec 2025",
+    "headline": "Eid Mega-Week — D2 + Ustaad Bhagat Singh Open, 18 Films Still Playing",
+    "subline": "Dhurandhar 2 ₹95–125 Cr Day 1 · Ustaad Bhagat Singh ₹35–55 Cr · Thaai Kizhavi ₹50.87 Cr India · Krantijyoti Marathi Wk10 still running · 18 films tracked across all languages",
     "status": "current",
     "scoreboard": [
       {
         "film": "Dhurandhar: The Revenge",
-        "week": "Day 1 — Mar 19, 2026",
+        "week": "Day 1 — Mar 19",
         "wkCollection": "—",
-        "total": "₹30.51 Cr Day 1 advance · ₹21.50 Cr premiere · $4.6M NA",
-        "verdict": "₹95–125 Cr Day 1 projected · ALL-TIME BLOCKBUSTER in the making",
+        "total": "₹30.51 Cr Day 1 advance · ₹21.50 Cr premiere · $4.6M NA · 9,500+ shows",
+        "verdict": "₹95–125 Cr Day 1 projected | CONFIRMED ADVANCE DATA",
         "color": "#C8201A"
       },
       {
         "film": "Ustaad Bhagat Singh",
-        "week": "Day 1 — Mar 19, 2026",
+        "week": "Day 1 — Mar 19",
         "wkCollection": "—",
-        "total": "Pawan Kalyan · Harish Shankar · Telugu · Budget ₹150 Cr",
-        "verdict": "₹35–55 Cr Day 1 projected · Clash with D2 limits ceiling",
+        "total": "Pawan Kalyan · Harish Shankar · Telugu · Budget ₹150 Cr · Clash with D2",
+        "verdict": "₹35–55 Cr Day 1 projected | PREDICTED (Koimoi/Filmibeat)",
         "color": "#D97706"
       },
       {
         "film": "Thaai Kizhavi",
         "week": "Week 3",
-        "wkCollection": "~₹4.8 Cr",
+        "wkCollection": "~₹4.5 Cr",
         "total": "₹50.87 Cr India net · ₹66 Cr WW",
-        "verdict": "SUPER HIT — 2nd Tamil film of 2026 to cross ₹50 Cr India",
+        "verdict": "SUPER HIT — 2nd Tamil film of 2026 to cross ₹50 Cr | CONFIRMED",
         "color": "#15803D"
       },
       {
         "film": "The Kerala Story 2: Goes Beyond",
         "week": "Week 3",
-        "wkCollection": "~₹2.5 Cr",
-        "total": "₹40.15 Cr India net",
-        "verdict": "AVERAGE — holding against D2 pressure",
+        "wkCollection": "~₹2.8 Cr",
+        "total": "₹40.15 Cr India net | Film Information Wk2: ₹12.80 Cr (rep+unrep)",
+        "verdict": "AVERAGE — strong in Rajkot, Gujarat circuit | CONFIRMED (FI)",
         "color": "#6B7280"
       },
       {
-        "film": "Assi",
-        "week": "Week 4",
-        "wkCollection": "~₹1.1 Cr",
-        "total": "₹12.50 Cr India net",
-        "verdict": "SEMI HIT — Tigmanshu Dhulia delivers",
+        "film": "Hoppers (Hollywood)",
+        "week": "Week 2",
+        "wkCollection": "~₹2.1 Cr",
+        "total": "₹3.75 Cr India total | $164.7M WW | Dubbed versions strong in tier-2",
+        "verdict": "Film Information Wk1: ₹3.75 Cr India (reported+unreported) | CONFIRMED",
+        "color": "#1D4ED8"
+      },
+      {
+        "film": "O'Romeo",
+        "week": "Week 5",
+        "wkCollection": "~₹1.8 Cr",
+        "total": "₹59.50 Cr India net | Film Information Wk4: ₹2.15 Cr",
+        "verdict": "FLOP — losing screens to D2 · Shahid Kapoor | CONFIRMED (FI)",
         "color": "#6B7280"
       },
       {
-        "film": "Dhurandhar (Re-release)",
-        "week": "Day 106",
-        "wkCollection": "~₹3.5 Cr",
-        "total": "₹838.5 Cr India net · ₹1,355 Cr WW",
-        "verdict": "ALL-TIME BLOCKBUSTER — running alongside its own sequel",
-        "color": "#C8201A"
+        "film": "Krantijyoti Vidyalay Marathi Madhyam",
+        "week": "Week 10",
+        "wkCollection": "~₹0.6 Cr ★BETA",
+        "total": "~₹8–10 Cr est | Maharashtra circuit only",
+        "verdict": "⚡BETA — FI shows 8 cinemas in Thane/NaviMumbai = ₹1.94L sample. Week 10 STILL running!",
+        "color": "#7C3AED"
+      },
+      {
+        "film": "Mrithyunjay",
+        "week": "Week 2",
+        "wkCollection": "~₹0.4 Cr ★BETA",
+        "total": "~₹2.5–3 Cr est | Telugu thriller",
+        "verdict": "⚡BETA — FI Pune: 2 cinemas = ₹80,557. Day 1: ₹75L. Est 100-150 screens Wk2",
+        "color": "#7C3AED"
       }
     ],
     "sources": [
-      "Film Information (Komal Nahata)",
-      "BOI",
-      "Sacnilk",
-      "Koimoi",
-      "Filmibeat",
-      "Venky Box Office",
-      "Boxoffy Prediction Model v1"
+      "Film Information (Komal Nahata) — station-wise weekly collections Mar 6-12",
+      "Sacnilk — daily collections all languages",
+      "Koimoi — Hindi BO verdicts",
+      "Filmibeat — Telugu/Tamil tracking",
+      "Venky Box Office — NA advance",
+      "Boxoffy Prediction Model v1 — BETA rankings"
     ],
-    "interval_take": "Two Indian giants release on the same Eid+Ugadi+Gudi Padwa holiday — the biggest multi-holiday frame since Jan 2025. D2 is targeting the all-time Hindi Day 1 record. UBS carries Pawan Kalyan's stardom but fights a losing advance booking battle. Thaai Kizhavi quietly became 2026's biggest Tamil surprise. The week will define 2026's box office narrative.",
-    "nextWeek": "Mar 26: Project Hail Mary India release (postponed from Mar 20) + Ustaad Bhagat Singh Week 2 + D2 first weekend actuals. Watch for D2 verdict and UBS hit/flop call."
+    "interval_take": "Eid + Ugadi + Gudi Padwa triple holiday in one week — rarest of frames. But 16 films had to make way for D2 which is taking 9,500+ screens. Krantijyoti Vidyalay Marathi Madhyam in WEEK 10 is this week's secret — a Marathi film that nobody tracked nationally is still pulling audiences in Maharashtra. This is exactly why Film Information's station-wise data matters: it catches films that Twitter BO analysts completely ignore.",
+    "nextWeek": "Mar 26: D2 opening weekend actuals · UBS verdict (hit or flop?) · Project Hail Mary India release (postponed from Mar 20) · 2 Way, Ramyaa, Dacoit also releasing Mar 19."
   },
   {
     "weekNum": "Week 13, 2026",
