@@ -1,116 +1,104 @@
 {
   "Week 11, 2026": {
     "dateRange": "Mar 13–15, 2026",
-    "headline": "Hoppers Holds, Reminders of Him Overperforms — Oscar Weekend Delivers",
-    "subline": "Hoppers $28.5M (Wk2) · Reminders of Him $18.3M (2x forecast) · Undertone $9.3M (A24) · Scream 7 $8.35M/$106.5M total · GOAT $4.7M/$90.5M total · YTD up 15.5%",
-    "source": "Deadline · AP · Hollywood Reporter · Rotten Tomatoes · Comscore (actuals Mar 15, 2026)",
+    "headline": "Hoppers Holds, Reminders of Him Surprises — Oscar Weekend Delivers",
+    "subline": "Hoppers $28.5M (Wk2 -37%) · Reminders of Him $18.3M NEW · Undertone $9.3M NEW (A24) · Scream 7 $106.5M total · YTD +15.5%",
+    "source": "Deadline · Variety · AP · Comscore (actuals Mar 15, 2026)",
+    "status": "confirmed",
+    "totalWeekend": "$83.7M",
     "chart": [
       {
         "rank": 1,
         "title": "Hoppers",
         "studio": "Disney/Pixar",
-        "weekend": 28.5,
-        "weekendStr": "$28.5M",
+        "genre": "Animation",
+        "weekend": "$28.5M",
+        "total": "$86.8M",
+        "theaters": 4000,
         "change": "-37%",
         "weeks": 2,
-        "domestic": 86.8,
-        "domesticStr": "$86.8M",
-        "ww": 164.7,
-        "wwStr": "$164.7M",
-        "note": "Coco-like holds. $150M budget. Strong legs ahead."
+        "rtScore": "94%",
+        "admitsNote": "~1.9M est."
       },
       {
         "rank": 2,
         "title": "Reminders of Him",
         "studio": "Universal",
-        "weekend": 18.3,
-        "weekendStr": "$18.3M",
+        "genre": "Romance",
+        "weekend": "$18.3M",
+        "total": "$18.3M",
+        "theaters": 3200,
         "change": "NEW",
         "weeks": 1,
-        "domestic": 18.3,
-        "domesticStr": "$18.3M",
-        "ww": 28.2,
-        "wwStr": "$28.2M",
-        "note": "Colleen Hoover. Nearly 2x tracking. $28.2M WW."
+        "rtScore": "63%",
+        "admitsNote": "~1.2M est."
       },
       {
         "rank": 3,
         "title": "Undertone",
         "studio": "A24",
-        "weekend": 9.3,
-        "weekendStr": "$9.3M",
+        "genre": "Horror",
+        "weekend": "$9.3M",
+        "total": "$9.3M",
+        "theaters": 2800,
         "change": "NEW",
         "weeks": 1,
-        "domestic": 9.3,
-        "domesticStr": "$9.3M",
-        "ww": 9.3,
-        "wwStr": "$9.3M",
-        "note": "Horror thriller. $3-4M acquisition. $9.3M opening = massive win."
+        "rtScore": "91%",
+        "admitsNote": "~0.6M est."
       },
       {
         "rank": 4,
         "title": "Scream 7",
         "studio": "Paramount",
-        "weekend": 8.35,
-        "weekendStr": "$8.35M",
+        "genre": "Horror",
+        "weekend": "$8.35M",
+        "total": "$106.5M",
+        "theaters": 3540,
         "change": "-51%",
         "weeks": 3,
-        "domestic": 106.5,
-        "domesticStr": "$106.5M",
-        "ww": 106.5,
-        "wwStr": "$106.5M total",
-        "note": "$106.5M domestic. Best in franchise."
+        "rtScore": "81%",
+        "admitsNote": "~0.6M est."
       },
       {
         "rank": 5,
         "title": "GOAT",
         "studio": "Sony",
-        "weekend": 4.7,
-        "weekendStr": "$4.7M",
+        "genre": "Animation",
+        "weekend": "$4.7M",
+        "total": "$90.6M",
+        "theaters": 3707,
         "change": "-27%",
         "weeks": 5,
-        "domestic": 90.6,
-        "domesticStr": "$90.6M",
-        "ww": 162.8,
-        "wwStr": "$162.8M",
-        "note": "Week 5. Heading for $100M domestic."
+        "rtScore": "88%",
+        "admitsNote": "~0.3M est."
       },
       {
         "rank": 6,
         "title": "The Bride!",
         "studio": "Warner Bros.",
-        "weekend": 2.1,
-        "weekendStr": "$2.1M",
+        "genre": "Horror",
+        "weekend": "$2.1M",
+        "total": "$11.3M",
+        "theaters": 3200,
         "change": "-70%",
         "weeks": 2,
-        "domestic": 11.3,
-        "domesticStr": "$11.3M",
-        "ww": 11.3,
-        "wwStr": "$11.3M",
-        "note": "Brutal 70% drop. $90M budget. Financial disaster."
+        "rtScore": "55%",
+        "admitsNote": "~0.1M est."
       },
       {
         "rank": 7,
         "title": "Wuthering Heights",
         "studio": "Warner Bros.",
-        "weekend": 1.6,
-        "weekendStr": "$1.6M",
+        "genre": "Romance",
+        "weekend": "$1.6M",
+        "total": "$81.9M",
+        "theaters": 3221,
         "change": "-15%",
         "weeks": 5,
-        "domestic": 81.9,
-        "domesticStr": "$81.9M",
-        "ww": 226,
-        "wwStr": "$226M WW",
-        "note": "Steady holds. $226M WW — best 2026 US release so far."
+        "rtScore": "79%",
+        "admitsNote": "~0.1M est."
       }
-    ],
-    "totalWeekend": "$83.7M",
-    "yoyChange": "+54%",
-    "ytdTotal": 1410,
-    "ytdYoy": "+15.5%",
-    "nextWeekPreview": "Project Hail Mary (Ryan Gosling) tracking $75-85M — could be biggest opening of 2026. Dhurandhar 2 (Indian) debuts in NA with $4.6M+ advance already — tracking Top 10.",
-    "ytd": "Up 15.5% vs 2025",
-    "status": "confirmed"
+    ]
   },
   "Week 10, 2026": {
     "dateRange": "Mar 6–8, 2026",
@@ -273,55 +261,75 @@
   "Week 12, 2026": {
     "dateRange": "Mar 20–22, 2026",
     "headline": "Project Hail Mary Opens — Dhurandhar 2 Eyes Top 5 NA Debut",
-    "subline": "Project Hail Mary (Ryan Gosling/Sony) tracking $60-80M · Ready or Not 2 tracking $9-13M · Dhurandhar 2 $4.6M NA advance — projecting $12-15M 4-day · Eid extended frame",
-    "source": "Deadline · Boxoffice Pro · Venky BO · Sacnilk (projections as of Mar 16, 2026)",
+    "subline": "Project Hail Mary tracking $60–80M · Ready or Not 2 tracking $9–13M · D2 $4.6M advance — projecting $12–15M 4-day",
+    "source": "Deadline · Boxoffice Pro · Venky BO (projections as of Mar 16, 2026)",
+    "status": "preview",
     "chart": [
       {
         "rank": "P1",
         "title": "Project Hail Mary",
-        "studio": "Amazon MGM / Sony",
-        "weekendStr": "$60–80M proj",
+        "studio": "Amazon MGM",
+        "genre": "Sci-Fi",
+        "weekend": "$60–80M proj",
+        "total": "—",
+        "theaters": 4200,
         "change": "NEW",
         "weeks": 1,
-        "note": "Ryan Gosling. Phil Lord/Chris Miller. 94% RT. Tracking $65M most likely. Could be biggest opener of 2026 so far."
+        "rtScore": "94%",
+        "admitsNote": "~4.5M est."
       },
       {
         "rank": "P2",
         "title": "Dhurandhar: The Revenge",
         "studio": "Jio Studios",
-        "weekendStr": "$12–15M proj",
+        "genre": "Action",
+        "weekend": "$12–15M proj",
+        "total": "—",
+        "theaters": 650,
         "change": "NEW",
         "weeks": 1,
-        "note": "$4.6M advance already. Eid 4-day (Mar 19-22). Boxoffy $15M call. KGF2 NA advance record broken."
+        "rtScore": "—",
+        "admitsNote": "~1M est."
       },
       {
         "rank": "P3",
-        "title": "Ready or Not 2: Here I Come",
+        "title": "Ready or Not 2",
         "studio": "Paramount",
-        "weekendStr": "$9–13M proj",
+        "genre": "Horror",
+        "weekend": "$9–13M proj",
+        "total": "—",
+        "theaters": 3000,
         "change": "NEW",
         "weeks": 1,
-        "note": "SXSW premiere. Samara Weaving. Horror sequel. Tracking $9.5M most likely."
+        "rtScore": "87%",
+        "admitsNote": "~0.7M est."
       },
       {
         "rank": "P4",
         "title": "Hoppers",
         "studio": "Disney/Pixar",
-        "weekendStr": "~$16M proj",
-        "change": "-45% proj",
+        "genre": "Animation",
+        "weekend": "~$16M proj",
+        "total": "~$103M",
+        "theaters": 3800,
+        "change": "-44% proj",
         "weeks": 3,
-        "note": "Week 3. Strong holds expected. Family audience sustained."
+        "rtScore": "94%",
+        "admitsNote": "~1.1M est."
       },
       {
         "rank": "P5",
         "title": "Reminders of Him",
         "studio": "Universal",
-        "weekendStr": "~$8M proj",
-        "change": "-55% proj",
+        "genre": "Romance",
+        "weekend": "~$8M proj",
+        "total": "~$26M",
+        "theaters": 3000,
+        "change": "-56% proj",
         "weeks": 2,
-        "note": "Week 2 Colleen Hoover. Romance audience retention."
+        "rtScore": "63%",
+        "admitsNote": "~0.5M est."
       }
-    ],
-    "status": "preview"
+    ]
   }
 }

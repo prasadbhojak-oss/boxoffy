@@ -2301,7 +2301,7 @@ function ForeignFilmsPanel({ movies }) {
             </span>
           </div>
           <div style={{ fontFamily:"'DM Sans',sans-serif", fontSize:9, color:T.textMuted, letterSpacing:"0.18em", textTransform:"uppercase", marginTop:2 }}>
-            BOXOFFY · WKD 8 · FEB 22–23, 2026
+            BOXOFFY · WKD 13 · MAR 14–20, 2026
           </div>
         </div>
 
@@ -3680,7 +3680,7 @@ function HeaderSnapshotCards({ activeSection }) {
   const CARDS = {
     "Box Office": [
       { type:"stat",      label:"WEEK 10 · #1 FILM",    value:"Kerala Story 2",sub:"₹32.87 Cr net · Wk 2 · Plus verdict",      accent:T.green,   icon:"🏆" },
-      { type:"stat",      label:"2026 YTD COMBINED",     value:"₹1,567 Cr",   sub:"Verified tracked releases · Week 11",         accent:T.blue,    icon:"📊" },
+      { type:"stat",      label:"2026 YTD COMBINED",     value:"₹1,590 Cr",   sub:"Verified tracked releases · Week 13",         accent:T.blue,    icon:"📊" },
       { type:"stat",      label:"ALL-TIME RECORD",       value:"₹1,800 Cr",   sub:"Pushpa 2 · Will Ramayana break it?",         accent:T.gold,    icon:"⚡" },
       { type:"countdown", label:"NEXT BIG RELEASE",      value:daysLeft != null ? `${daysLeft}` : "—", valueSuffix:" days",
                           sub:"Dhurandhar 2 · Mar 19, 2026",                                                                     accent:T.accent,  icon:"🎬", pulse:true },

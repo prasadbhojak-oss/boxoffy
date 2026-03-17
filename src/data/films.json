@@ -3250,6 +3250,22 @@
       "cast": "TBC",
       "note": "Maddock Horror Comedy Universe. Dec 4",
       "pageUrl": "chamunda-box-office.html"
+    },
+    {
+      "title": "Vishnu Vinyasam",
+      "language": "Telugu",
+      "director": "Srinivas Avasarala",
+      "releaseDate": "Mar 6, 2026",
+      "status": "Running",
+      "verdict": "AVERAGE",
+      "weeklyCollection": 0.8,
+      "weekNum": 2,
+      "totalNum": 11.76,
+      "wwGross": "₹16.60 Cr",
+      "budget": "~₹25 Cr",
+      "pageUrl": "vishnu-vinyasam-box-office.html",
+      "lastWeekRank": 4,
+      "note": "Week 2 Telugu comedy. Modest run."
     }
   ]
 }
