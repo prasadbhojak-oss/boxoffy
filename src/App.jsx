@@ -1397,29 +1397,34 @@ function BoxOfficeRow({ movie, rank, maxWeeks }) {
               ★ {movie.note}
             </div>
           )}
-          {/* Boxoffy page link — shown when pageUrl exists */}
-          {movie.pageUrl && !isUpcoming && (
-            <div style={{ marginTop:4 }}>
-              <a href={`/${movie.pageUrl}`}
-                style={{ fontFamily:"'IBM Plex Mono',sans-serif", fontSize:9, fontWeight:700,
-                  letterSpacing:"0.12em", textTransform:"uppercase", color:T.accent,
-                  textDecoration:"none", borderBottom:`1px solid ${T.accent}`,
-                  paddingBottom:1, opacity:0.8, transition:"opacity 0.15s" }}
-                onMouseEnter={e => e.target.style.opacity="1"}
-                onMouseLeave={e => e.target.style.opacity="0.8"}
-              >Boxoffy Analysis →</a>
-            </div>
-          )}
-          {movie.pageUrl && isUpcoming && (
-            <div style={{ marginTop:4 }}>
-              <a href={`/${movie.pageUrl}`}
-                style={{ fontFamily:"'IBM Plex Mono',sans-serif", fontSize:9, fontWeight:700,
-                  letterSpacing:"0.12em", textTransform:"uppercase", color:"#059669",
-                  textDecoration:"none", borderBottom:"1px solid #059669",
-                  paddingBottom:1, opacity:0.8, transition:"opacity 0.15s" }}
-                onMouseEnter={e => e.target.style.opacity="1"}
-                onMouseLeave={e => e.target.style.opacity="0.8"}
-              >Boxoffy Preview →</a>
+          {/* Boxoffy page button — always visible pill */}
+          {movie.pageUrl && (
+            <div style={{ marginTop:6 }}>
+              <a
+                href={`/${movie.pageUrl}`}
+                onClick={e => e.stopPropagation()}
+                style={{
+                  display:"inline-flex", alignItems:"center", gap:4,
+                  fontFamily:"'IBM Plex Mono',monospace", fontWeight:700,
+                  fontSize:9, letterSpacing:"0.12em", textTransform:"uppercase",
+                  textDecoration:"none",
+                  color: isUpcoming ? "#065F46" : T.accent,
+                  background: isUpcoming ? "#ECFDF5" : "#FFF5F5",
+                  border: `1px solid ${isUpcoming ? "#6EE7B7" : T.accent}`,
+                  padding:"3px 10px", borderRadius:2,
+                  transition:"background 0.15s, color 0.15s",
+                }}
+                onMouseEnter={e => {
+                  e.currentTarget.style.background = isUpcoming ? "#D1FAE5" : T.accent;
+                  e.currentTarget.style.color = isUpcoming ? "#064E3B" : "#fff";
+                }}
+                onMouseLeave={e => {
+                  e.currentTarget.style.background = isUpcoming ? "#ECFDF5" : "#FFF5F5";
+                  e.currentTarget.style.color = isUpcoming ? "#065F46" : T.accent;
+                }}
+              >
+                {isUpcoming ? "Preview →" : "Full Analysis →"}
+              </a>
             </div>
           )}
           {/* Expand / collapse hint */}
