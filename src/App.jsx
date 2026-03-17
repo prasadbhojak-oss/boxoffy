@@ -2451,14 +2451,14 @@ function BoxOfficeSection({ onNavigate }) {
   const [showHeadlineModal, setShowHeadlineModal] = useState(false);
 
   const bmsStats = [
-    { label:"BMS Ticket Velocity", val:"7,500–10,000 / hr", src:"6" },
-    { label:"Premiere Gross (2 hrs)", val:"₹4.39 Cr", src:"1" },
+    { label:"Day 1 India Advance", val:"₹30.51 Cr", src:"Sacnilk/Koimoi" },
+    { label:"Premiere India Gross", val:"₹21.50 Cr", src:"BOI/Koimoi" },
     { label:"Premiere Tickets Sold", val:"1.1 Lakh+", src:"2" },
     { label:"Housefull Shows", val:"26 confirmed", src:"Sacnilk" },
     { label:"Premiere Shows India", val:"3,979", src:"Koimoi" },
-    { label:"US Premiere Pre-Sales", val:"$400K+", src:"10" },
-    { label:"US Day 1 Booked", val:"$565K", src:"Venky BO" },
-    { label:"US Weekend Pre-Sales", val:"$1 Million", src:"Venky BO" },
+    { label:"NA Weekend Advance", val:"$4.6M", src:"Venky BO · KGF2 record broken" },
+    { label:"US Day 1 Booked", val:"$1.2M+", src:"Venky BO" },
+    { label:"4-Day shows", val:"Near Sellout", src:"BMS · PVR · INOX" },
   ];
 
   const analysts = [
@@ -2521,6 +2521,11 @@ function BoxOfficeSection({ onNavigate }) {
 
   return (
     <div>
+      {/* ── FROM THE DESK — stacked editorial articles ──────────── */}
+      {year === 2026 && showWeekly && (
+        <EditorialSection onNavigate={onNavigate} />
+      )}
+
       {/* ── WEEKLY HEADLINE BANNER ──────────────────────────────────── */}
       {year === 2026 && showWeekly && (
         <>
@@ -2547,8 +2552,8 @@ function BoxOfficeSection({ onNavigate }) {
                   letterSpacing:"0.14em", textTransform:"uppercase",
                   color:T.accent, background:"#FEE2E2",
                   padding:"2px 8px", borderRadius:2,
-                }}>WEEK 12 · LEAD STORY</span>
-                <span style={{ fontFamily:"'DM Sans', sans-serif", fontSize:10, color:T.textMuted }}>Fri, 13 Mar 2026</span>
+                }}>WEEK 13 · LEAD STORY</span>
+                <span style={{ fontFamily:"'DM Sans', sans-serif", fontSize:10, color:T.textMuted }}>Mon, 16 Mar 2026</span>
               </div>
               <div style={{
                 fontFamily:"'Barlow Condensed', sans-serif",
@@ -2560,7 +2565,7 @@ function BoxOfficeSection({ onNavigate }) {
                 marginBottom:9,
               }}>
                 Dhurandhar 2 Rewrites History.{" "}
-                <span style={{ color:T.accent }}>OG Premiere Record BROKEN. ₹29.69 Cr.</span>
+                <span style={{ color:T.accent }}>Day 1 Advance ₹30.51 Cr. 4 Days. Sold Out.</span>
               </div>
               <div style={{ display:"flex", alignItems:"center", gap:10, flexWrap:"wrap" }}>
                 <span style={{ fontFamily:"'DM Sans', sans-serif", fontSize:11, color:T.textMuted }}>
@@ -2576,7 +2581,7 @@ function BoxOfficeSection({ onNavigate }) {
             <div style={{ display:"flex", gap:0, borderLeft:`1px solid ${T.border}`, flexShrink:0 }}>
               {[
                 { label:"Premiere Gross (verified)", val:"₹24.76 Cr", sub:"No blocks · Mar 13 · Boxoffy" },
-                { label:"With Blocks (verified)", val:"₹29.69 Cr", sub:"India premiere · OG record BROKEN" },
+                { label:"Day 1 Advance (Mar 15)", val:"₹30.51 Cr", sub:"India gross · 3 days to release" },
                 { label:"WW Advance (so far)", val:"~₹60 Cr", sub:"India + overseas · Outlook India" },
                 { label:"US Premiere Advance", val:"$982K+", sub:"678 locations · NA OW ~$2M" },
               ].map((s,i) => (
@@ -2796,7 +2801,7 @@ function BoxOfficeSection({ onNavigate }) {
             </h2>
           </div>
           <p style={{ fontFamily:"'DM Sans', sans-serif", fontSize:13, color:T.textMuted, marginLeft:12 }}>
-            {showWeekly ? "Week 12, 2026 — Ranked by this week's collection · All active films listed · Mar 7–13" : "Top Indian films by worldwide gross · Industry tracking data"}
+            {showWeekly ? "Week 13, 2026 — Ranked by this week's collection · All active films listed · Mar 14–20" : "Top Indian films by worldwide gross · Industry tracking data"}
           </p>
         </div>
         {topFilm && (
@@ -2901,10 +2906,10 @@ function BoxOfficeSection({ onNavigate }) {
               ● LIVE
             </span>
             <span style={{ fontFamily:"'DM Sans', sans-serif", fontSize:11, color:T.textMuted }}>
-              Week 12 · Mar 13, 2026 · Data current as of Fri 13 Mar 2026
+              Week 13 · Mar 16, 2026 · Data current as of Mon 16 Mar 2026
             </span>
             <span style={{ background:T.surface, border:`1px solid ${T.border}`, fontFamily:"'DM Sans', sans-serif", fontSize:10, color:T.textMid, padding:"2px 8px", borderRadius:2 }}>
-              D2: ₹29.69 Cr premiere (OG BROKEN)
+              D2: ₹30.51 Cr Day 1 advance · $4.6M NA · Premieres Mar 18
             </span>
             <span style={{ background:T.surface, border:`1px solid ${T.border}`, fontFamily:"'DM Sans', sans-serif", fontSize:10, color:T.textMid, padding:"2px 8px", borderRadius:2 }}>
               Border 2 → Netflix Mar 20
@@ -3532,7 +3537,6 @@ function FeaturedEditorialRow({ item, index, TagPill, onClick }) {
 /* ── FROM THE DESK — stacked editorial list ─────────────────── */
 function EditorialSection({ onNavigate }) {
   const TAG_COLORS = {
-    "DATA ANALYSIS":    { bg:"#064E3B",  text:"#6EE7B7"  },
     "ANALYSIS":         { bg:"#1E3A5F",  text:"#93C5FD"  },
     "ADVANCE BOOKING":  { bg:"#1A2F1A",  text:"#6EE7B7"  },
     "DEEP DIVE":        { bg:"#1C2B3A",  text:"#7DD3FC"  },
@@ -4451,11 +4455,6 @@ export default function App() {
         <HeaderSnapshotCards activeSection={activeSection} />
       </div>
 
-
-      {/* ── FROM THE DESK — always visible, above all tabs ──────── */}
-      <div style={{ maxWidth:1160, margin:"0 auto", background:T.surface, boxShadow:"0 0 0 1px #E2E5EA" }}>
-        <EditorialSection onNavigate={setActiveSection} />
-      </div>
 
       {/* Content */}
       <div style={{ maxWidth:1160, margin:"0 auto", background:T.surface, boxShadow:"0 0 0 1px #E2E5EA", animation:"fadeIn 0.3s ease both" }}>
