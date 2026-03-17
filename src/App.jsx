@@ -1397,6 +1397,31 @@ function BoxOfficeRow({ movie, rank, maxWeeks }) {
               ★ {movie.note}
             </div>
           )}
+          {/* Boxoffy page link — shown when pageUrl exists */}
+          {movie.pageUrl && !isUpcoming && (
+            <div style={{ marginTop:4 }}>
+              <a href={`/${movie.pageUrl}`}
+                style={{ fontFamily:"'IBM Plex Mono',sans-serif", fontSize:9, fontWeight:700,
+                  letterSpacing:"0.12em", textTransform:"uppercase", color:T.accent,
+                  textDecoration:"none", borderBottom:`1px solid ${T.accent}`,
+                  paddingBottom:1, opacity:0.8, transition:"opacity 0.15s" }}
+                onMouseEnter={e => e.target.style.opacity="1"}
+                onMouseLeave={e => e.target.style.opacity="0.8"}
+              >Boxoffy Analysis →</a>
+            </div>
+          )}
+          {movie.pageUrl && isUpcoming && (
+            <div style={{ marginTop:4 }}>
+              <a href={`/${movie.pageUrl}`}
+                style={{ fontFamily:"'IBM Plex Mono',sans-serif", fontSize:9, fontWeight:700,
+                  letterSpacing:"0.12em", textTransform:"uppercase", color:"#059669",
+                  textDecoration:"none", borderBottom:"1px solid #059669",
+                  paddingBottom:1, opacity:0.8, transition:"opacity 0.15s" }}
+                onMouseEnter={e => e.target.style.opacity="1"}
+                onMouseLeave={e => e.target.style.opacity="0.8"}
+              >Boxoffy Preview →</a>
+            </div>
+          )}
           {/* Expand / collapse hint */}
           {canExpand && (
             <div style={{ display:"flex", alignItems:"center", gap:8, marginTop:2, flexWrap:"wrap" }}>
@@ -2451,14 +2476,14 @@ function BoxOfficeSection({ onNavigate }) {
   const [showHeadlineModal, setShowHeadlineModal] = useState(false);
 
   const bmsStats = [
-    { label:"Day 1 India Advance", val:"₹30.51 Cr", src:"Sacnilk/Koimoi" },
-    { label:"Premiere India Gross", val:"₹21.50 Cr", src:"BOI/Koimoi" },
+    { label:"BMS Ticket Velocity", val:"7,500–10,000 / hr", src:"6" },
+    { label:"Premiere Gross (2 hrs)", val:"₹4.39 Cr", src:"1" },
     { label:"Premiere Tickets Sold", val:"1.1 Lakh+", src:"2" },
     { label:"Housefull Shows", val:"26 confirmed", src:"Sacnilk" },
     { label:"Premiere Shows India", val:"3,979", src:"Koimoi" },
-    { label:"NA Weekend Advance", val:"$4.6M", src:"Venky BO · KGF2 record broken" },
-    { label:"US Day 1 Booked", val:"$1.2M+", src:"Venky BO" },
-    { label:"4-Day shows", val:"Near Sellout", src:"BMS · PVR · INOX" },
+    { label:"US Premiere Pre-Sales", val:"$400K+", src:"10" },
+    { label:"US Day 1 Booked", val:"$565K", src:"Venky BO" },
+    { label:"US Weekend Pre-Sales", val:"$1 Million", src:"Venky BO" },
   ];
 
   const analysts = [
@@ -2521,11 +2546,6 @@ function BoxOfficeSection({ onNavigate }) {
 
   return (
     <div>
-      {/* ── FROM THE DESK — stacked editorial articles ──────────── */}
-      {year === 2026 && showWeekly && (
-        <EditorialSection onNavigate={onNavigate} />
-      )}
-
       {/* ── WEEKLY HEADLINE BANNER ──────────────────────────────────── */}
       {year === 2026 && showWeekly && (
         <>
@@ -3537,6 +3557,7 @@ function FeaturedEditorialRow({ item, index, TagPill, onClick }) {
 /* ── FROM THE DESK — stacked editorial list ─────────────────── */
 function EditorialSection({ onNavigate }) {
   const TAG_COLORS = {
+    "DATA ANALYSIS":    { bg:"#064E3B",  text:"#6EE7B7"  },
     "ANALYSIS":         { bg:"#1E3A5F",  text:"#93C5FD"  },
     "ADVANCE BOOKING":  { bg:"#1A2F1A",  text:"#6EE7B7"  },
     "DEEP DIVE":        { bg:"#1C2B3A",  text:"#7DD3FC"  },
@@ -4455,6 +4476,11 @@ export default function App() {
         <HeaderSnapshotCards activeSection={activeSection} />
       </div>
 
+
+      {/* FROM THE DESK — always visible */}
+      <div style={{ maxWidth:1160, margin:"0 auto", background:T.surface, boxShadow:"0 0 0 1px #E2E5EA" }}>
+        <EditorialSection onNavigate={setActiveSection} />
+      </div>
 
       {/* Content */}
       <div style={{ maxWidth:1160, margin:"0 auto", background:T.surface, boxShadow:"0 0 0 1px #E2E5EA", animation:"fadeIn 0.3s ease both" }}>
