@@ -1750,6 +1750,16 @@ function WeeklyChartRow({ movie, rank, prevRank }) {
 }
 
 
+// ── BogRow / ForeignFilmsPanel helpers ───────────────────────────────
+const fmt$ = v => {
+  if (v == null) return "—";
+  if (v >= 1000) return `$${(v/1000).toFixed(2)}B`;
+  return `$${v.toFixed(1)}M`;
+};
+const fmtInr = v => v != null ? `₹${typeof v === "number" ? v % 1 === 0 ? v : v.toFixed(2) : v} Cr` : "—";
+const fmtThousands = v => v ? v.toLocaleString() : "—";
+
+
 function BogMoveCell({ change }) {
   if (change == null)  return <span style={{ color:"#B0A8A0", fontSize:11, fontFamily:"'DM Sans',sans-serif" }}>—</span>;
   if (change === 0)    return <span style={{ color:"#6B7280", fontSize:11, fontFamily:"'DM Sans',sans-serif", fontWeight:600 }}>—</span>;
