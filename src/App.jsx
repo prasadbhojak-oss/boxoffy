@@ -2311,7 +2311,7 @@ function ForeignFilmsPanel({ movies }) {
             </span>
           </div>
           <div style={{ fontFamily:"'DM Sans',sans-serif", fontSize:9, color:T.textMuted, letterSpacing:"0.18em", textTransform:"uppercase", marginTop:2 }}>
-            BOXOFFY · WKD 13 · MAR 14–20, 2026
+            BOXOFFY · WKD 14 · MAR 19–25, 2026
           </div>
         </div>
 
@@ -2426,7 +2426,11 @@ function BoxOfficeSection({ onNavigate }) {
   // Weekly chart: sort by this week's collection (active films first, then OTT, then upcoming)
   // Hollywood films are separated out into their own section
   const weeklyChartMovies = year === 2026
-    ? [...movies].filter(m => m.language !== "Hollywood").sort((a,b) => {
+    ? [...movies].filter(m => {
+        // Include Hollywood films that have meaningful India weekly collections
+        if (m.language === "Hollywood") return m.weeklyCollection > 0.3;
+        return true;
+      }).sort((a,b) => {
         if (a.status === "Upcoming" && b.status !== "Upcoming") return 1;
         if (b.status === "Upcoming" && a.status !== "Upcoming") return -1;
         if (a.status === "OTT" && b.status !== "OTT") return 1;
@@ -2556,8 +2560,8 @@ function BoxOfficeSection({ onNavigate }) {
                   letterSpacing:"0.14em", textTransform:"uppercase",
                   color:T.accent, background:"#FEE2E2",
                   padding:"2px 8px", borderRadius:2,
-                }}>WEEK 13 · LEAD STORY</span>
-                <span style={{ fontFamily:"'DM Sans', sans-serif", fontSize:10, color:T.textMuted }}>Mon, 16 Mar 2026</span>
+                }}>WEEK 14 · LEAD STORY</span>
+                <span style={{ fontFamily:"'DM Sans', sans-serif", fontSize:10, color:T.textMuted }}>Thu, 19 Mar 2026</span>
               </div>
               <div style={{
                 fontFamily:"'Barlow Condensed', sans-serif",
@@ -2569,7 +2573,7 @@ function BoxOfficeSection({ onNavigate }) {
                 marginBottom:9,
               }}>
                 Dhurandhar 2 Rewrites History.{" "}
-                <span style={{ color:T.accent }}>Day 1 Advance ₹30.51 Cr. 4 Days to Go. Sold Out.</span>
+                <span style={{ color:T.accent }}>D2 + Ustaad Bhagat Singh — India's Biggest Opening Day since Pushpa 2.</span>
               </div>
               <div style={{ display:"flex", alignItems:"center", gap:10, flexWrap:"wrap" }}>
                 <span style={{ fontFamily:"'DM Sans', sans-serif", fontSize:11, color:T.textMuted }}>
@@ -2805,7 +2809,7 @@ function BoxOfficeSection({ onNavigate }) {
             </h2>
           </div>
           <p style={{ fontFamily:"'DM Sans', sans-serif", fontSize:13, color:T.textMuted, marginLeft:12 }}>
-            {showWeekly ? "Week 13, 2026 — Ranked by this week's collection · All active films listed · Mar 14–20" : "Top Indian films by worldwide gross · Industry tracking data"}
+            {showWeekly ? "Week 14, 2026 — Ranked by this week's collection · All active films listed · Mar 14–20" : "Top Indian films by worldwide gross · Industry tracking data"}
           </p>
         </div>
         {topFilm && (
@@ -2910,10 +2914,10 @@ function BoxOfficeSection({ onNavigate }) {
               ● LIVE
             </span>
             <span style={{ fontFamily:"'DM Sans', sans-serif", fontSize:11, color:T.textMuted }}>
-              Week 13 · Mar 16, 2026 · Data current as of Mon 16 Mar 2026
+              Week 14 · Mar 19, 2026 · Data current as of Thu 19 Mar 2026
             </span>
             <span style={{ background:T.surface, border:`1px solid ${T.border}`, fontFamily:"'DM Sans', sans-serif", fontSize:10, color:T.textMid, padding:"2px 8px", borderRadius:2 }}>
-              D2: ₹30.51 Cr Day 1 advance · ₹21.50 Cr premiere · $4.6M NA · Premieres Mar 18
+              D2 DAY 1 · Ustaad Bhagat Singh DAY 1 · Mar 19, 2026
             </span>
             <span style={{ background:T.surface, border:`1px solid ${T.border}`, fontFamily:"'DM Sans', sans-serif", fontSize:10, color:T.textMid, padding:"2px 8px", borderRadius:2 }}>
               Border 2 → Netflix Mar 20
@@ -2956,7 +2960,7 @@ function BoxOfficeSection({ onNavigate }) {
           <div style={{ padding:"6px 12px 4px", background:"#F0FDF4", borderBottom:`1px solid ${T.border}`, display:"flex", alignItems:"center", gap:8 }}>
             <span style={{ width:8, height:8, borderRadius:"50%", background:"#16A34A", display:"inline-block", flexShrink:0 }} />
             <span style={{ fontFamily:"'DM Sans', sans-serif", fontSize:10, fontWeight:700, color:"#16A34A", letterSpacing:"0.1em", textTransform:"uppercase" }}>
-              NOW IN CINEMAS — {weeklyChartMovies.filter(m => m.status === "Running").length} ACTIVE INDIAN RELEASES · RANKED BY THIS WEEK'S COLLECTION
+              NOW IN CINEMAS — {weeklyChartMovies.filter(m => m.status === "Running").length} ACTIVE RELEASES · RANKED BY WEEKLY COLLECTION
             </span>
           </div>
 
@@ -2970,7 +2974,7 @@ function BoxOfficeSection({ onNavigate }) {
               ◎ RECENTLY CLOSED / MOVED TO OTT
             </span>
           </div>
-          {weeklyChartMovies.filter(m => m.status === "OTT").map((m, i) => (
+          {weeklyChartMovies.filter(m => m.status === "OTT" && m.weekNum <= 8).slice(0,6).map((m, i) => (
             <WeeklyChartRow key={m.title} movie={m} rank={"—"} prevRank={null} />
           ))}
 
@@ -2981,7 +2985,7 @@ function BoxOfficeSection({ onNavigate }) {
               ▶ UPCOMING — NEXT MAJOR RELEASES
             </span>
           </div>
-          {weeklyChartMovies.filter(m => m.status === "Upcoming").map((m, i) => (
+          {weeklyChartMovies.filter(m => m.status === "Upcoming" && (m.openingPrediction || m.releaseDate?.includes("Mar") || m.releaseDate?.includes("Apr"))).slice(0,5).map((m, i) => (
             <WeeklyChartRow key={m.title} movie={m} rank={"—"} prevRank={null} />
           ))}
 
@@ -3690,7 +3694,7 @@ function HeaderSnapshotCards({ activeSection }) {
   const CARDS = {
     "Box Office": [
       { type:"stat",      label:"WEEK 10 · #1 FILM",    value:"Kerala Story 2",sub:"₹32.87 Cr net · Wk 2 · Plus verdict",      accent:T.green,   icon:"🏆" },
-      { type:"stat",      label:"2026 YTD COMBINED",     value:"₹1,590 Cr",   sub:"Verified tracked releases · Week 13",         accent:T.blue,    icon:"📊" },
+      { type:"stat",      label:"2026 YTD COMBINED",     value:"₹1,590 Cr",   sub:"Verified tracked releases · Week 14",         accent:T.blue,    icon:"📊" },
       { type:"stat",      label:"ALL-TIME RECORD",       value:"₹1,800 Cr",   sub:"Pushpa 2 · Will Ramayana break it?",         accent:T.gold,    icon:"⚡" },
       { type:"countdown", label:"NEXT BIG RELEASE",      value:daysLeft != null ? `${daysLeft}` : "—", valueSuffix:" days",
                           sub:"Dhurandhar 2 · Mar 19, 2026",                                                                     accent:T.accent,  icon:"🎬", pulse:true },

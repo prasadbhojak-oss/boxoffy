@@ -1,5 +1,73 @@
 [
   {
+    "weekNum": "Week 14, 2026",
+    "dateRange": "Mar 19–25, 2026",
+    "headline": "The Year's Biggest Weekend — D2 Opens, Ustaad Bhagat Singh Challenges, Thaai Kizhavi Holds",
+    "subline": "Dhurandhar 2 ₹100+ Cr Day 1 target · Ustaad Bhagat Singh ₹45 Cr projected · Thaai Kizhavi ₹50.87 Cr India net · India's biggest box office week since Dec 2025",
+    "status": "current",
+    "scoreboard": [
+      {
+        "film": "Dhurandhar: The Revenge",
+        "week": "Day 1 — Mar 19, 2026",
+        "wkCollection": "—",
+        "total": "₹30.51 Cr Day 1 advance · ₹21.50 Cr premiere · $4.6M NA",
+        "verdict": "₹95–125 Cr Day 1 projected · ALL-TIME BLOCKBUSTER in the making",
+        "color": "#C8201A"
+      },
+      {
+        "film": "Ustaad Bhagat Singh",
+        "week": "Day 1 — Mar 19, 2026",
+        "wkCollection": "—",
+        "total": "Pawan Kalyan · Harish Shankar · Telugu · Budget ₹150 Cr",
+        "verdict": "₹35–55 Cr Day 1 projected · Clash with D2 limits ceiling",
+        "color": "#D97706"
+      },
+      {
+        "film": "Thaai Kizhavi",
+        "week": "Week 3",
+        "wkCollection": "~₹4.8 Cr",
+        "total": "₹50.87 Cr India net · ₹66 Cr WW",
+        "verdict": "SUPER HIT — 2nd Tamil film of 2026 to cross ₹50 Cr India",
+        "color": "#15803D"
+      },
+      {
+        "film": "The Kerala Story 2: Goes Beyond",
+        "week": "Week 3",
+        "wkCollection": "~₹2.5 Cr",
+        "total": "₹40.15 Cr India net",
+        "verdict": "AVERAGE — holding against D2 pressure",
+        "color": "#6B7280"
+      },
+      {
+        "film": "Assi",
+        "week": "Week 4",
+        "wkCollection": "~₹1.1 Cr",
+        "total": "₹12.50 Cr India net",
+        "verdict": "SEMI HIT — Tigmanshu Dhulia delivers",
+        "color": "#6B7280"
+      },
+      {
+        "film": "Dhurandhar (Re-release)",
+        "week": "Day 106",
+        "wkCollection": "~₹3.5 Cr",
+        "total": "₹838.5 Cr India net · ₹1,355 Cr WW",
+        "verdict": "ALL-TIME BLOCKBUSTER — running alongside its own sequel",
+        "color": "#C8201A"
+      }
+    ],
+    "sources": [
+      "Film Information (Komal Nahata)",
+      "BOI",
+      "Sacnilk",
+      "Koimoi",
+      "Filmibeat",
+      "Venky Box Office",
+      "Boxoffy Prediction Model v1"
+    ],
+    "interval_take": "Two Indian giants release on the same Eid+Ugadi+Gudi Padwa holiday — the biggest multi-holiday frame since Jan 2025. D2 is targeting the all-time Hindi Day 1 record. UBS carries Pawan Kalyan's stardom but fights a losing advance booking battle. Thaai Kizhavi quietly became 2026's biggest Tamil surprise. The week will define 2026's box office narrative.",
+    "nextWeek": "Mar 26: Project Hail Mary India release (postponed from Mar 20) + Ustaad Bhagat Singh Week 2 + D2 first weekend actuals. Watch for D2 verdict and UBS hit/flop call."
+  },
+  {
     "weekNum": "Week 13, 2026",
     "dateRange": "Mar 14–20, 2026",
     "headline": "The Reckoning Arrives — Dhurandhar 2 Storms Indian Cinemas on Eid",
@@ -59,6 +127,7 @@
       "Koimoi",
       "Sacnilk",
       "Box Office India",
+      "Film Information (Komal Nahata)",
       "Venky Box Office"
     ],
     "interval_take": "The week India has been waiting for since December 2025. Dhurandhar 2: The Revenge arrives on March 19 with the most staggering advance booking story in Bollywood history. As of Sunday afternoon (Mar 15), the Day 1 India advance has already crossed ₹30 Cr gross — approaching Dhurandhar 1's entire opening day collection before a single ticket has been torn. North America has banked $4.6 million in weekend pre-sales, threatening Baahubali 2's nine-year record. The film opens on Eid, Gudi Padwa and Ugadi — the most powerful festive alignment for a Hindi release since Bajrangi Bhaijaan in 2015. If content delivers, Boxoffy's ₹1,700–2,000 Cr WW call looks conservative.",
@@ -137,6 +206,7 @@
       }
     ],
     "sources": [
+      "Film Information (Komal Nahata)",
       {
         "name": "Taran Adarsh",
         "handle": "@taran_adarsh",
@@ -219,6 +289,7 @@
       }
     ],
     "sources": [
+      "Film Information (Komal Nahata)",
       {
         "name": "Box Office India",
         "handle": "@Box_Off_India",
@@ -294,6 +365,7 @@
       }
     ],
     "sources": [
+      "Film Information (Komal Nahata)",
       {
         "name": "Box Office India",
         "handle": "@Box_Off_India",
@@ -360,6 +432,7 @@
       }
     ],
     "sources": [
+      "Film Information (Komal Nahata)",
       {
         "name": "Box Office India",
         "handle": "@Box_Off_India",
@@ -418,6 +491,7 @@
       }
     ],
     "sources": [
+      "Film Information (Komal Nahata)",
       {
         "name": "Box Office India",
         "handle": "@Box_Off_India",
@@ -500,6 +574,7 @@
       }
     ],
     "sources": [
+      "Film Information (Komal Nahata)",
       {
         "name": "Boxoffy AI Calc",
         "note": "Pre-Toxic-postponement: ₹65–70 Cr Day 1. After Toxic pulled out Mar 4: upgraded to ₹85–90 Cr Day 1 net India. Post-trailer: ₹90–100 Cr in play.",
