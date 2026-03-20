@@ -1,13 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-K6C9EVRFH4"></script>
+  <!-- Google Analytics — consent-gated (DPDP Act 2023 compliant) -->
   <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-K6C9EVRFH4');
+  (function(){
+    var c=null;try{c=localStorage.getItem("boxoffy_cookie_consent");}catch(e){}
+    if(c==="accepted"){
+      var s=document.createElement("script");s.async=true;
+      s.src="https://www.googletagmanager.com/gtag/js?id=G-K6C9EVRFH4";
+      document.head.appendChild(s);
+      window.dataLayer=window.dataLayer||[];
+      window.gtag=function(){window.dataLayer.push(arguments);};
+      gtag("js",new Date());gtag("config","G-K6C9EVRFH4",{anonymize_ip:true});
+    }
+  })();
   </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,6 +27,17 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="About Boxoffy — Making Box Office Cool Again">
   <meta name="twitter:description" content="Building the definitive box office intelligence layer for Indian cinema.">
+<meta name="robots" content="index, follow">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "url": "https://boxoffy.com/about.html",
+    "name": "About Boxoffy",
+    "description": "Boxoffy is building the definitive box office intelligence layer for Indian cinema. Clean data. Validated numbers. All languages.",
+    "publisher": { "@type": "Organization", "name": "Boxoffy", "url": "https://boxoffy.com" }
+  }
+  </script>
   <link rel="canonical" href="https://boxoffy.com/about.html">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -646,7 +663,7 @@
       </div>
       <div class="cred-item">
         <div class="cred-title">Zero Conflicts of Interest</div>
-        <div class="cred-body">We do not accept promotional placements from studios or distributors. We do not inflate numbers for films that want favourable coverage. We have no advertisers with skin in the game. Full stop.</div>
+        <div class="cred-body">We do not inflate numbers for films that want favourable coverage. Our editorial positions are independent and not influenced by commercial relationships. Full stop.</div>
       </div>
       <div class="cred-item">
         <div class="cred-title">Consistent Verdict Criteria</div>
@@ -676,6 +693,21 @@
   <footer class="article-footer">
     <div>© 2026 <a href="https://boxoffy.com">boxoffy.com</a> · India Box Office Intelligence · All figures are estimates based on publicly available trade data · Editorial views are those of the Boxoffy desk</div>
   </footer>
+
+<div style="background:#1A1A1A;padding:20px 32px;font-family:'Barlow Condensed',sans-serif;margin-top:0;">
+  <div style="max-width:720px;margin:0 auto;">
+    <div style="font-size:9px;color:#4B5563;text-transform:uppercase;letter-spacing:0.14em;margin-bottom:8px;padding-bottom:8px;border-bottom:1px solid #2D2D2D;">
+      Data Disclaimer &amp; Legal Notice
+    </div>
+    <p style="font-size:9px;color:#4B5563;line-height:1.7;margin:0 0 8px 0;">
+      Boxoffy.com is an independent box office intelligence platform that aggregates and analyses publicly available entertainment industry data sourced from third-party trade publications including Box Office India, Sacnilk, Venky Box Office and Koimoi. All figures represent estimates based on available information at time of publication and are not official figures unless expressly stated. Boxoffy.com is not affiliated with any film production house, studio, distributor or exhibitor. Editorial opinions and predictions are protected expression under Article 19(1)(a) of the Constitution of India. Boxoffy.com claims intermediary protections under Section 79 of the Information Technology Act, 2000 and fair dealing provisions of Section 52 of the Copyright Act, 1957.
+    </p>
+    <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;font-size:9px;color:#4B5563;">
+      <span>© 2026 Boxoffy.com · India Box Office Intelligence · All figures in ₹ Crores unless stated</span>
+      <a href="mailto:info@boxoffy.com" style="color:#C8201A;text-decoration:none;font-weight:700;">info@boxoffy.com</a>
+    </div>
+  </div>
+</div>
 
 </body>
 </html>

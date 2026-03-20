@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 /* ═══════════════════════════════════════════════════════════
-   BOXOFFY — India Box Office Intelligence
+   BOXOFFY — Box Office Intelligence
    Inspired by The Verge / Deadline / Variety
    Fonts: Barlow Condensed (headlines) + DM Sans (body)
 ═══════════════════════════════════════════════════════════ */
@@ -161,8 +161,13 @@ const T = {
 };
 
 // year accent colors (for tabs)
-const YEAR_ACCENT = { 2020:"#6B7280", 2021:"#2563EB", 2022:"#D97706", 2023:"#DC2626", 2024:"#7C3AED", 2025:"#059669", 2026:"#E8261A" };
-const YEARS = [2020,2021,2022,2023,2024,2025,2026];
+const YEAR_ACCENT = {
+  2010:"#78716C", 2011:"#78716C", 2012:"#78716C", 2013:"#78716C", 2014:"#78716C",
+  2015:"#78716C", 2016:"#78716C", 2017:"#78716C", 2018:"#78716C", 2019:"#78716C",
+  2020:"#6B7280", 2021:"#2563EB", 2022:"#D97706", 2023:"#DC2626", 2024:"#7C3AED", 2025:"#059669", 2026:"#E8261A",
+};
+const YEARS         = [2020,2021,2022,2023,2024,2025,2026];
+const ARCHIVE_YEARS = [2019,2018,2017,2016,2015,2014,2013,2012,2011,2010];
 const LANGUAGES = ["All","Hindi","Tamil","Telugu","Kannada","Malayalam","Hollywood"];
 
 const VERDICT_CFG = {
@@ -209,6 +214,7 @@ import YEAR_NOTES         from "./data/year-notes.json";
 import ARTICLES           from "./data/articles.json";
 import FOOTNOTES          from "./data/footnotes.json";
 import WEEKLY_COMMENTARY  from "./data/weekly-commentary.json";
+import HISTORICAL_DATA    from "./data/films-historical.json";
 
 /* ── SOURCE COLORS ── */
 const SOURCE_COLORS = {
@@ -295,7 +301,7 @@ function NavBar({ activeSection, setActiveSection }) {
         <div style={{ display:"flex", alignItems:"baseline", gap:0, marginRight:32, paddingTop:4, paddingBottom:4, flexShrink:0 }}>
           <span style={{ fontFamily:"'Barlow Condensed', sans-serif", fontWeight:800, fontSize:24, color:"#111827", letterSpacing:"-0.02em", lineHeight:1 }}>BOXOF</span>
           <span style={{ fontFamily:"'Barlow Condensed', sans-serif", fontWeight:800, fontSize:24, color:T.accent, letterSpacing:"-0.02em", lineHeight:1 }}>FY</span>
-          <span style={{ fontFamily:"'DM Sans', sans-serif", fontWeight:400, fontSize:10, color:"#9CA3AF", marginLeft:10, letterSpacing:"0.2em", textTransform:"uppercase", alignSelf:"center" }}>India</span>
+          <span style={{ fontFamily:"'DM Sans', sans-serif", fontWeight:400, fontSize:10, color:"#9CA3AF", marginLeft:10, letterSpacing:"0.2em", textTransform:"uppercase", alignSelf:"center" }}>Box Office</span>
         </div>
 
         {/* Vertical divider */}
@@ -315,6 +321,28 @@ function NavBar({ activeSection, setActiveSection }) {
           }}>{s}</button>
         ))}
 
+        {/* Divider */}
+        <div style={{ width:1, height:20, background:"#E5E7EB", margin:"0 6px", flexShrink:0 }} />
+
+        {/* Studios link */}
+        <a href="/production-houses.html" style={{
+          fontFamily:"'DM Sans', sans-serif", fontWeight:700, fontSize:13,
+          color:T.accent, textDecoration:"none",
+          padding:"18px 12px", borderBottom:"2px solid transparent", marginBottom:"-2px",
+          letterSpacing:"0.04em", display:"flex", alignItems:"center", gap:5, flexShrink:0,
+        }}>
+          Studios
+          <span style={{ fontSize:9, background:T.accent, color:"#fff", padding:"1px 5px", borderRadius:2, fontWeight:800, letterSpacing:"0.1em", lineHeight:"14px" }}>30</span>
+        </a>
+
+        {/* About link */}
+        <a href="/about.html" style={{
+          fontFamily:"'DM Sans', sans-serif", fontWeight:600, fontSize:13,
+          color:"#9CA3AF", textDecoration:"none",
+          padding:"18px 12px", borderBottom:"2px solid transparent", marginBottom:"-2px",
+          letterSpacing:"0.04em", flexShrink:0, transition:"color 0.15s",
+        }}>About</a>
+
         {/* Right side — static update stamp */}
         <div style={{ marginLeft:"auto", display:"flex", alignItems:"center", gap:0, flexShrink:0 }}>
 
@@ -326,7 +354,7 @@ function NavBar({ activeSection, setActiveSection }) {
             <span style={{
               fontFamily:"'Barlow Condensed', sans-serif", fontWeight:700,
               fontSize:13, color:T.accent, letterSpacing:"0.03em",
-            }}>WEEK 12 · 2026</span>
+            }}>WEEK 13 · 2026</span>
             <span style={{
               fontFamily:"'DM Sans', sans-serif", fontSize:8, color:"#9CA3AF",
               letterSpacing:"0.1em", textTransform:"uppercase",
@@ -340,7 +368,7 @@ function NavBar({ activeSection, setActiveSection }) {
             <span style={{
               fontFamily:"'Barlow Condensed', sans-serif", fontWeight:700,
               fontSize:13, color:"#374151", letterSpacing:"0.03em",
-            }}>Sat, 8 Mar 2026 · 12:00 AM IST</span>
+            }}>Wed, 19 Mar 2026 · Live</span>
             <span style={{
               fontFamily:"'DM Sans', sans-serif", fontSize:8, color:"#9CA3AF",
               letterSpacing:"0.1em", textTransform:"uppercase",
@@ -1347,7 +1375,24 @@ function BoxOfficeRow({ movie, rank, maxWeeks }) {
         </div>
 
         {/* Film info */}
-        <div style={{ padding:"12px 16px", display:"flex", flexDirection:"column", justifyContent:"center", gap:4 }}>
+        <div style={{ padding:"10px 14px", display:"flex", flexDirection:"row", alignItems:"center", gap:12 }}>
+          {/* Poster thumbnail */}
+          {movie.posterUrl ? (
+            <img
+              src={movie.posterUrl}
+              alt={movie.title}
+              style={{ width:36, height:54, objectFit:"cover", borderRadius:2, flexShrink:0, border:`1px solid ${T.border}` }}
+              onError={e => { e.target.style.display='none'; }}
+            />
+          ) : (
+            <div style={{ width:36, height:54, flexShrink:0, background:T.surfaceAlt, borderRadius:2, border:`1px solid ${T.border}`, display:"flex", alignItems:"center", justifyContent:"center" }}>
+              <span style={{ fontFamily:"'Barlow Condensed',sans-serif", fontWeight:800, fontSize:10, color:T.textMuted }}>
+                {(movie.title||'').split(' ').map(w=>w[0]).join('').slice(0,3).toUpperCase()}
+              </span>
+            </div>
+          )}
+          {/* Text block */}
+          <div style={{ display:"flex", flexDirection:"column", justifyContent:"center", gap:4, minWidth:0 }}>
           <div style={{ display:"flex", alignItems:"center", gap:8, flexWrap:"wrap" }}>
             {movie.pageUrl ? (
               <a href={`/${movie.pageUrl}`} style={{
@@ -1397,26 +1442,6 @@ function BoxOfficeRow({ movie, rank, maxWeeks }) {
               ★ {movie.note}
             </div>
           )}
-          {/* Boxoffy page link */}
-          {movie.pageUrl && (
-            <div style={{ marginTop:6 }}>
-              <a
-                href={`/${movie.pageUrl}`}
-                onClick={e => e.stopPropagation()}
-                style={{
-                  display:"inline-flex", alignItems:"center",
-                  fontFamily:"'IBM Plex Mono',monospace", fontWeight:700,
-                  fontSize:9, letterSpacing:"0.12em", textTransform:"uppercase",
-                  textDecoration:"none", padding:"3px 10px", borderRadius:2,
-                  color: isUpcoming ? "#065F46" : T.accent,
-                  background: isUpcoming ? "#ECFDF5" : "#FFF5F5",
-                  border: `1px solid ${isUpcoming ? "#6EE7B7" : T.accent}`,
-                }}
-                onMouseEnter={e => { e.currentTarget.style.background = isUpcoming?"#D1FAE5":T.accent; e.currentTarget.style.color = isUpcoming?"#064E3B":"#fff"; }}
-                onMouseLeave={e => { e.currentTarget.style.background = isUpcoming?"#ECFDF5":"#FFF5F5"; e.currentTarget.style.color = isUpcoming?"#065F46":T.accent; }}
-              >{isUpcoming ? "Preview →" : "Full Analysis →"}</a>
-            </div>
-          )}
           {/* Expand / collapse hint */}
           {canExpand && (
             <div style={{ display:"flex", alignItems:"center", gap:8, marginTop:2, flexWrap:"wrap" }}>
@@ -1443,7 +1468,8 @@ function BoxOfficeRow({ movie, rank, maxWeeks }) {
               )}
             </div>
           )}
-        </div>
+          </div>{/* end text block */}
+        </div>{/* end film info */}
 
         {/* Worldwide */}
         <div style={{ padding:"12px 16px", display:"flex", flexDirection:"column", justifyContent:"center", borderLeft:`1px solid ${T.border}` }}>
@@ -1566,198 +1592,257 @@ function BoxOfficeRow({ movie, rank, maxWeeks }) {
 
 function WeeklyChartRow({ movie, rank, prevRank }) {
   const [hov, setHov] = useState(false);
+  const [expanded, setExpanded] = useState(false);
 
-  const isUpcoming = movie.status === "Upcoming";
-  const isOTT      = movie.status === "OTT";
-  const isNew      = movie.weekNum === 1 && movie.status === "Running";
-  const isHollywood= movie.language === "Hollywood";
-
-  // Rank movement pill
+  // Rank movement
   let moveEl = null;
-  if (isUpcoming) {
-    moveEl = <span style={{ fontFamily:"'DM Sans',sans-serif", fontSize:9, color:T.gold, fontWeight:700, letterSpacing:"0.06em" }}>SOON</span>;
-  } else if (isOTT) {
-    moveEl = <span style={{ fontFamily:"'DM Sans',sans-serif", fontSize:9, color:T.textMuted, letterSpacing:"0.06em" }}>OTT</span>;
-  } else if (isNew) {
-    moveEl = <span style={{ background:"#16A34A", color:"#fff", fontFamily:"'DM Sans',sans-serif", fontWeight:800, fontSize:9, padding:"2px 5px", borderRadius:2, letterSpacing:"0.06em" }}>NEW</span>;
-  } else if (prevRank !== null && prevRank !== undefined && prevRank > 0) {
-    const diff = prevRank - rank;
-    if (diff > 0)      moveEl = <span style={{ color:"#16A34A", fontSize:12, fontWeight:800 }}>▲{diff}</span>;
-    else if (diff < 0) moveEl = <span style={{ color:T.accent,  fontSize:12, fontWeight:800 }}>▼{Math.abs(diff)}</span>;
-    else               moveEl = <span style={{ color:T.textMuted, fontSize:12 }}>—</span>;
+  if (movie.status === "Upcoming") {
+    moveEl = <span style={{ fontFamily:"'DM Sans', sans-serif", fontSize:9, color:T.textMuted, letterSpacing:"0.06em" }}>UPCOMING</span>;
+  } else if (prevRank === 0 || movie.weekNum === 1) {
+    moveEl = <span style={{ background:"#1A7A3C", color:"#fff", fontFamily:"'DM Sans', sans-serif", fontWeight:800, fontSize:9, padding:"2px 5px", borderRadius:2, letterSpacing:"0.06em" }}>NEW</span>;
+  } else if (movie.status === "OTT" || movie.weeklyCollection === 0) {
+    moveEl = <span style={{ fontFamily:"'DM Sans', sans-serif", fontSize:9, color:T.textMuted, letterSpacing:"0.06em" }}>OTT</span>;
+  } else if (prevRank === null) {
+    moveEl = <span style={{ color:T.textMuted, fontSize:11 }}>—</span>;
+  } else if (rank < prevRank) {
+    moveEl = <span style={{ color:"#16A34A", fontSize:13, fontWeight:800 }}>▲{prevRank - rank}</span>;
+  } else if (rank > prevRank) {
+    moveEl = <span style={{ color:T.accent, fontSize:13, fontWeight:800 }}>▼{rank - prevRank}</span>;
   } else {
-    moveEl = <span style={{ color:T.textMuted, fontSize:12 }}>—</span>;
+    moveEl = <span style={{ color:T.textMuted, fontSize:13 }}>—</span>;
   }
 
   const verdictCfg = VERDICT_CFG[movie.verdict] || VERDICT_CFG["Average"];
+  const isActive = movie.status === "Running";
+  const isUpcoming = movie.status === "Upcoming";
+  const isNew = movie.weekNum === 1 && movie.status === "Running";
+  const isEstimated = movie.estimated === true || movie.betaModel === true;
+  const isHollywood = movie.language === "Hollywood";
 
-  // Row accent
-  const leftBorder = isUpcoming
-    ? `3px solid ${T.gold}`
-    : isOTT
-    ? "3px solid transparent"
-    : isNew
-    ? "3px solid #16A34A"
-    : isHollywood
-    ? "3px solid #2563EB"
-    : `3px solid ${T.accent}`;
-
-  const rowBg = hov
-    ? "#FAFAF9"
-    : isNew
-    ? "#F0FFF4"
-    : isUpcoming
-    ? "#FFFBF0"
-    : isHollywood
-    ? "#F8FBFF"
-    : T.surface;
-
-  // Collection display
-  const weeklyStr = movie.weeklyCollection > 0 ? `₹${movie.weeklyCollection} Cr` : (isUpcoming ? "—" : "Closed");
-  const indiaStr  = movie.indiaNet ? movie.indiaNet : (movie.totalNum ? `₹${movie.totalNum} Cr` : "—");
-  const wwStr     = movie.totalCollection || "—";
+  // Bar width for this week's collection vs max (Border 2 at 24 Cr)
+  const maxWk = 24;
+  const barPct = movie.weeklyCollection > 0 ? Math.min((movie.weeklyCollection / maxWk) * 100, 100) : 0;
 
   return (
-    <div
-      onMouseEnter={() => setHov(true)}
-      onMouseLeave={() => setHov(false)}
-      style={{
-        display:"grid",
-        gridTemplateColumns:"40px 32px 1fr 108px 108px 108px 90px",
-        borderBottom:`1px solid ${T.border}`,
-        borderLeft: leftBorder,
-        background: rowBg,
-        transition:"background 0.12s",
-        alignItems:"center",
-        minHeight:52,
-        opacity: isOTT ? 0.72 : 1,
-      }}
-    >
-      {/* Rank */}
-      <div style={{ display:"flex", alignItems:"center", justifyContent:"center", padding:"0 4px", borderRight:`1px solid ${T.border}`, alignSelf:"stretch" }}>
-        {typeof rank === "number" && rank <= 3
-          ? <span style={{ fontSize:20 }}>{["🥇","🥈","🥉"][rank-1]}</span>
-          : <span style={{ fontFamily:"'Barlow Condensed',sans-serif", fontWeight:800, fontSize:18, color: typeof rank === "number" && rank <= 5 ? T.accent : T.textMuted }}>
-              {rank}
-            </span>
-        }
-      </div>
+    <div style={{ borderBottom:`1px solid ${T.border}`, opacity: isUpcoming ? 0.55 : 1 }}>
+      <div
+        onClick={() => movie.ott && setExpanded(e => !e)}
+        onMouseEnter={() => setHov(true)}
+        onMouseLeave={() => setHov(false)}
+        style={{
+          display:"grid",
+          gridTemplateColumns:"36px 28px 1fr 120px 120px 110px 80px",
+          background: hov && !isUpcoming ? (isHollywood ? "#EFF6FF" : "#FAFAF9") : isNew ? "#F0FFF4" : isUpcoming ? "#FFFBF0" : isHollywood ? "#F8FBFF" : T.surface,
+          transition:"background 0.12s",
+          cursor: movie.ott ? "pointer" : "default",
+          borderLeft: isActive ? `3px solid ${isNew ? "#16A34A" : isHollywood ? "#2563EB" : T.accent}` : isUpcoming ? `3px solid ${T.gold}` : isHollywood ? `3px solid #93C5FD` : `3px solid transparent`,
+        }}>
 
-      {/* Movement */}
-      <div style={{ display:"flex", alignItems:"center", justifyContent:"center", padding:"0 2px", borderRight:`1px solid ${T.border}`, alignSelf:"stretch" }}>
-        {moveEl}
-      </div>
-
-      {/* Film info — compact single line + sub */}
-      <div style={{ padding:"10px 14px" }}>
-        <div style={{ display:"flex", alignItems:"center", gap:7, flexWrap:"wrap", marginBottom:3 }}>
-          {movie.pageUrl ? (
-            <a href={`/${movie.pageUrl}`}
-              style={{ fontFamily:"'Barlow Condensed',sans-serif", fontWeight:800, fontSize:16,
-                color:T.text, lineHeight:1.1, textDecoration:"none" }}
-              onMouseEnter={e => { e.target.style.color=T.accent; }}
-              onMouseLeave={e => { e.target.style.color=T.text; }}
-            >{movie.title}</a>
-          ) : (
-            <span style={{ fontFamily:"'Barlow Condensed',sans-serif", fontWeight:800, fontSize:16, color:T.text, lineHeight:1.1 }}>
-              {movie.title}
-            </span>
-          )}
-          <span style={{ background:verdictCfg.bg, color:verdictCfg.color, border:`1px solid ${verdictCfg.border}`,
-            fontFamily:"'DM Sans',sans-serif", fontWeight:700, fontSize:8,
-            letterSpacing:"0.05em", textTransform:"uppercase", borderRadius:2, padding:"1px 5px" }}>
-            {movie.verdict}
+        {/* Rank */}
+        <div style={{ display:"flex", alignItems:"center", justifyContent:"center", padding:"14px 4px", borderRight:`1px solid ${T.border}` }}>
+          <span style={{ fontFamily:"'Barlow Condensed', sans-serif", fontWeight:800, fontSize:16, color: rank <= 3 ? T.accent : T.textMuted }}>
+            {rank}
           </span>
-          {movie.isBeta && (
-            <span style={{ background:"#F3E8FF", color:"#7C3AED", border:"1px solid #C4B5FD",
-              fontFamily:"'IBM Plex Mono',monospace", fontWeight:700, fontSize:7,
-              letterSpacing:"0.12em", textTransform:"uppercase", borderRadius:2, padding:"1px 6px" }}>
-              ⚡ BETA
-            </span>
-          )}
-          {isHollywood && (
-            <span style={{ background:"#1D4ED8", color:"#fff",
-              fontFamily:"'DM Sans',sans-serif", fontWeight:700, fontSize:8,
-              letterSpacing:"0.07em", textTransform:"uppercase", borderRadius:2, padding:"1px 5px" }}>
-              FOREIGN
-            </span>
-          )}
         </div>
 
-        {/* Single sub-line: language · director · release */}
-        <div style={{ fontFamily:"'DM Sans',sans-serif", fontSize:10, color:T.textMuted, lineHeight:1.3 }}>
-          {movie.language}
-          {movie.director && movie.director !== "TBC" ? ` · ${movie.director}` : ""}
-          {movie.releaseDate ? ` · ${movie.releaseDate}` : ""}
-          {movie.daysInRelease > 0 ? ` · Day ${movie.daysInRelease}` : ""}
+        {/* Movement */}
+        <div style={{ display:"flex", alignItems:"center", justifyContent:"center", padding:"0 2px", borderRight:`1px solid ${T.border}` }}>
+          {moveEl}
         </div>
 
-        {/* Analysis button — small, inline */}
-        {movie.pageUrl && (
-          <div style={{ marginTop:5 }}>
-            <a href={`/${movie.pageUrl}`}
-              style={{ display:"inline-flex", alignItems:"center",
-                fontFamily:"'IBM Plex Mono',monospace", fontWeight:700, fontSize:8,
-                letterSpacing:"0.12em", textTransform:"uppercase", textDecoration:"none",
-                padding:"2px 8px", borderRadius:2,
-                color: isUpcoming ? "#065F46" : T.accent,
-                background: isUpcoming ? "#ECFDF5" : "#FFF5F5",
-                border:`1px solid ${isUpcoming ? "#6EE7B7" : T.accent}`,
+        {/* Film info */}
+        <div style={{ padding:"8px 12px", borderRight:`1px solid ${T.border}`, display:"flex", flexDirection:"row", alignItems:"center", gap:10 }}>
+          {/* Poster thumbnail */}
+          {movie.posterUrl ? (
+            <img src={movie.posterUrl} alt={movie.title}
+              style={{ width:30, height:45, objectFit:"cover", borderRadius:2, flexShrink:0, border:`1px solid ${T.border}` }}
+              onError={e => { e.target.style.display='none'; }} />
+          ) : (
+            <div style={{ width:30, height:45, flexShrink:0, background:T.surfaceAlt, borderRadius:2, border:`1px solid ${T.border}`, display:"flex", alignItems:"center", justifyContent:"center" }}>
+              <span style={{ fontFamily:"'Barlow Condensed',sans-serif", fontWeight:800, fontSize:9, color:T.textMuted }}>
+                {(movie.title||'').split(' ').map(w=>w[0]).join('').slice(0,3).toUpperCase()}
+              </span>
+            </div>
+          )}
+          <div style={{ minWidth:0, flex:1 }}>
+          <div style={{ display:"flex", alignItems:"center", gap:8, marginBottom:3, flexWrap:"wrap" }}>
+            {movie.pageUrl ? (
+              <a href={`/${movie.pageUrl}`} style={{
+                fontFamily:"'Barlow Condensed', sans-serif", fontWeight:800,
+                fontSize:16, color:T.text, lineHeight:1.1, textDecoration:"none",
+                borderBottom:`1px solid ${T.border}`, transition:"color 0.15s, border-color 0.15s",
               }}
-              onMouseEnter={e => { e.currentTarget.style.background=isUpcoming?"#D1FAE5":T.accent; e.currentTarget.style.color=isUpcoming?"#064E3B":"#fff"; }}
-              onMouseLeave={e => { e.currentTarget.style.background=isUpcoming?"#ECFDF5":"#FFF5F5"; e.currentTarget.style.color=isUpcoming?"#065F46":T.accent; }}
-            >{isUpcoming ? "Preview →" : "Analysis →"}</a>
+                onMouseEnter={e => { e.target.style.color=T.accent; e.target.style.borderColor=T.accent; }}
+                onMouseLeave={e => { e.target.style.color=T.text; e.target.style.borderColor=T.border; }}
+              >{movie.title}</a>
+            ) : (
+              <span style={{ fontFamily:"'Barlow Condensed', sans-serif", fontWeight:800, fontSize:16, color:T.text, lineHeight:1.1 }}>
+                {movie.title}
+              </span>
+            )}
+            <span style={{ background:verdictCfg.bg, color:verdictCfg.color, border:`1px solid ${verdictCfg.border}`, fontFamily:"'DM Sans', sans-serif", fontWeight:700, fontSize:9, letterSpacing:"0.05em", textTransform:"uppercase", borderRadius:2, padding:"1px 5px" }}>
+              {movie.verdict}
+            </span>
+            {isHollywood && (
+              <span style={{ background:"#1D4ED8", color:"#fff", fontFamily:"'DM Sans', sans-serif", fontWeight:700, fontSize:9, letterSpacing:"0.07em", textTransform:"uppercase", borderRadius:2, padding:"1px 6px" }}>
+                🎬 FOREIGN
+              </span>
+            )}
+            {movie.ott && (
+              <span style={{ background:T.surfaceAlt, border:`1px solid ${T.border}`, color:T.textMuted, fontFamily:"'DM Sans', sans-serif", fontSize:9, fontWeight:600, padding:"1px 5px", borderRadius:2, letterSpacing:"0.04em" }}>
+                OTT ▼
+              </span>
+            )}
           </div>
-        )}
-      </div>
-
-      {/* This week */}
-      <div style={{ padding:"0 12px", textAlign:"right", borderLeft:`1px solid ${T.border}`, alignSelf:"stretch", display:"flex", flexDirection:"column", justifyContent:"center" }}>
-        <div style={{ fontFamily:"'Barlow Condensed',sans-serif", fontWeight:800, fontSize:18,
-          color: isNew ? "#16A34A" : isUpcoming ? T.gold : T.accent, lineHeight:1 }}>
-          {weeklyStr}
-        </div>
-        {movie.weekNum > 0 && (
-          <div style={{ fontFamily:"'DM Sans',sans-serif", fontSize:9, color:T.textMuted, marginTop:2, letterSpacing:"0.06em", textTransform:"uppercase" }}>
-            Wk {movie.weekNum}
+          <div style={{ fontFamily:"'DM Sans', sans-serif", fontSize:11, color:T.textMuted }}>
+            {movie.director} · {movie.language} · {movie.releaseDate}
+            {movie.daysInRelease > 0 && <span style={{ marginLeft:6, color:T.textMuted }}>· Day {movie.daysInRelease}</span>}
           </div>
-        )}
-      </div>
+          {isEstimated && (
+            <div style={{ display:"flex", alignItems:"center", gap:6, marginBottom:4 }}>
+              <span style={{ background:"#FEF3C7", color:"#92400E", border:"1px solid #FCD34D", fontFamily:"'IBM Plex Mono', monospace", fontSize:8, fontWeight:700, letterSpacing:"0.12em", textTransform:"uppercase", padding:"2px 7px", borderRadius:2 }}>BOXOFFY DAY 1 CALL</span>
+              <span style={{ fontFamily:"'DM Sans', sans-serif", fontSize:9, color:"#92400E" }}>3-model BETA v2 · Bear ₹80 Cr · Base ₹95 Cr · Bull ₹110 Cr · Boxoffy call: ₹72 Cr ✓</span>
+            </div>
+          )}
+          {movie.weeklyNote && (
+            <div style={{ fontFamily:"'DM Sans', sans-serif", fontSize:10.5, color:T.textMid, marginTop:4, lineHeight:1.5, fontStyle:"italic" }}>
+              {movie.weeklyNote}
+            </div>
+          )}
+          {/* Opening Day Prediction — shown for Upcoming films */}
+          {movie.openingPrediction && movie.status === "Upcoming" && (
+            <div style={{ marginTop:8, padding:"8px 12px", background:"#FFFBEB", border:"1px dashed #D97706", borderRadius:4 }}>
+              <div style={{ fontFamily:"'Barlow Condensed', sans-serif", fontWeight:700, fontSize:11, color:"#92400E", letterSpacing:"0.1em", textTransform:"uppercase", marginBottom:4 }}>
+                🔮 BOXOFFY OPENING DAY PREDICTION
+              </div>
+              <div style={{ display:"flex", gap:12, flexWrap:"wrap", marginBottom:6 }}>
+                <div style={{ textAlign:"center" }}>
+                  <div style={{ fontFamily:"'Barlow Condensed', sans-serif", fontWeight:800, fontSize:22, color:"#D97706", fontStyle:"italic" }}>
+                    ₹{movie.openingPrediction.mid}–{movie.openingPrediction.high} Cr
+                  </div>
+                  <div style={{ fontFamily:"'DM Sans', sans-serif", fontSize:9, color:"#92400E", letterSpacing:"0.08em", textTransform:"uppercase" }}>All Languages</div>
+                </div>
+                <div style={{ textAlign:"center" }}>
+                  <div style={{ fontFamily:"'Barlow Condensed', sans-serif", fontWeight:700, fontSize:16, color:"#B45309", fontStyle:"italic" }}>
+                    ₹{movie.openingPrediction.low}–{movie.openingPrediction.mid} Cr
+                  </div>
+                  <div style={{ fontFamily:"'DM Sans', sans-serif", fontSize:9, color:"#92400E", letterSpacing:"0.08em", textTransform:"uppercase" }}>Hindi Net Only</div>
+                </div>
+              </div>
+              <div style={{ fontFamily:"'DM Sans', sans-serif", fontSize:10, color:"#78350F", fontStyle:"italic", lineHeight:1.4 }}>
+                {movie.openingPrediction.note}
+              </div>
+              <div style={{ fontFamily:"'DM Sans', sans-serif", fontSize:9, color:"#A87840", marginTop:4 }}>
+                Sources: {movie.openingPrediction.basis}
+              </div>
+            </div>
+          )}
+          {/* Mini bar */}
+          {barPct > 0 && (
+            <div style={{ marginTop:6, height:3, background:T.border, borderRadius:2, width:"80%", maxWidth:200 }}>
+              <div style={{ height:"100%", width:`${barPct}%`, background: isNew ? "#16A34A" : T.accent, borderRadius:2, transition:"width 0.4s" }} />
+            </div>
+          )}
+          </div>{/* end text block */}
+        </div>{/* end film info */}
 
-      {/* India Net */}
-      <div style={{ padding:"0 12px", textAlign:"right", borderLeft:`1px solid ${T.border}`, alignSelf:"stretch", display:"flex", flexDirection:"column", justifyContent:"center" }}>
-        <div style={{ fontFamily:"'Barlow Condensed',sans-serif", fontWeight:700, fontSize:16, color:T.text, lineHeight:1 }}>
-          {indiaStr}
+        {/* This week */}
+        <div style={{ display:"flex", flexDirection:"column", justifyContent:"center", padding:"0 14px", borderRight:`1px solid ${T.border}`, textAlign:"right" }}>
+          {movie.weeklyCollection > 0
+            ? <>
+                <div style={{ fontFamily:"'Barlow Condensed', sans-serif", fontWeight:900, fontSize: isEstimated ? 24 : 20, color: isEstimated ? "#D97706" : isNew ? "#16A34A" : T.accent, lineHeight:1 }}>
+                  ₹{movie.weeklyCollection} Cr
+                </div>
+                <div style={{ fontFamily:"'DM Sans', sans-serif", fontSize:9, fontWeight: isEstimated ? 700 : 400, color: isEstimated ? "#D97706" : T.textMuted, marginTop:2, letterSpacing:"0.06em", textTransform:"uppercase" }}>
+                  {isEstimated ? "DAY 1 CALL" : movie.weekNum === 0 ? "PREMIERE" : `Wk ${movie.weekNum}`}
+                </div>
+                {isEstimated && (
+                  <div style={{ marginTop:3, fontFamily:"'DM Sans', sans-serif", fontSize:8, color:"#9CA3AF", letterSpacing:"0.04em" }}>
+                    ₹80–₹110 Cr range
+                  </div>
+                )}
+                {!isEstimated && movie.weekNum === 0 && (
+                  <div style={{ marginTop:3, fontFamily:"'DM Sans', sans-serif", fontSize:8, color:"#9CA3AF", letterSpacing:"0.04em" }}>
+                    Sacnilk · rough data
+                  </div>
+                )}
+              </>
+            : <div style={{ fontFamily:"'DM Sans', sans-serif", fontSize:10, color:T.textMuted }}>
+                {movie.status === "Upcoming" ? "Mar 19" : "Closed"}
+              </div>
+          }
         </div>
-        <div style={{ fontFamily:"'DM Sans',sans-serif", fontSize:9, color:T.textMuted, marginTop:2, letterSpacing:"0.06em", textTransform:"uppercase" }}>India Net</div>
-      </div>
 
-      {/* Worldwide */}
-      <div style={{ padding:"0 12px", textAlign:"right", borderLeft:`1px solid ${T.border}`, alignSelf:"stretch", display:"flex", flexDirection:"column", justifyContent:"center" }}>
-        <div style={{ fontFamily:"'Barlow Condensed',sans-serif", fontWeight:700, fontSize:16,
-          color: isHollywood ? "#1D4ED8" : T.text, lineHeight:1 }}>
-          {wwStr}
+        {/* India net total */}
+        <div style={{ display:"flex", flexDirection:"column", justifyContent:"center", padding:"0 14px", borderRight:`1px solid ${T.border}`, textAlign:"right" }}>
+          <div style={{ fontFamily:"'Barlow Condensed', sans-serif", fontWeight:700, fontSize:17, color: movie.estimated ? "#D97706" : T.text, lineHeight:1 }}>{movie.indiaNet}</div>
+          <div style={{ fontFamily:"'DM Sans', sans-serif", fontSize:9, color:T.textMuted, marginTop:2, letterSpacing:"0.06em", textTransform:"uppercase" }}>India Net</div>
         </div>
-        <div style={{ fontFamily:"'DM Sans',sans-serif", fontSize:9, color:T.textMuted, marginTop:2, letterSpacing:"0.06em", textTransform:"uppercase" }}>Worldwide</div>
-      </div>
 
-      {/* Budget / Verdict */}
-      <div style={{ padding:"0 8px", textAlign:"center", borderLeft:`1px solid ${T.border}`, alignSelf:"stretch", display:"flex", flexDirection:"column", justifyContent:"center", alignItems:"center", gap:4 }}>
-        {movie.budget && movie.budget !== "—" && (
-          <div style={{ fontFamily:"'DM Sans',sans-serif", fontSize:9, color:T.textMuted }}>
-            ₹{movie.budget}
+        {/* Worldwide total + GST + Footfalls */}
+        {(() => {
+          const gst = calcGST(movie);
+          const ff  = calcFootfalls(movie);
+          return (
+            <div style={{ display:"flex", flexDirection:"column", justifyContent:"center", padding:"0 14px", borderRight:`1px solid ${T.border}`, textAlign:"right" }}>
+              <div style={{ fontFamily:"'Barlow Condensed', sans-serif", fontWeight:700, fontSize:17, color: isHollywood ? "#1D4ED8" : T.text, lineHeight:1 }}>
+                {isHollywood ? movie.totalCollection : movie.totalCollection}
+              </div>
+              <div style={{ fontFamily:"'DM Sans', sans-serif", fontSize:9, color:T.textMuted, marginTop:2, letterSpacing:"0.06em", textTransform:"uppercase" }}>
+                {isHollywood ? "India Gross" : "Worldwide"}
+              </div>
+              {gst && gst.gstCrore > 0 && (
+                <div style={{ marginTop:5, paddingTop:4, borderTop:`1px dashed ${T.border}` }}>
+                  <div style={{ fontFamily:"'Barlow Condensed', sans-serif", fontWeight:700, fontSize:13, color:"#15803D", lineHeight:1 }}>
+                    ₹{gst.gstCrore} Cr
+                  </div>
+                  <div style={{ fontFamily:"'DM Sans', sans-serif", fontSize:8, color:"#15803D", marginTop:1, letterSpacing:"0.05em", textTransform:"uppercase", opacity:0.85 }}>
+                    GST to Govt
+                  </div>
+                </div>
+              )}
+              {ff && ff.footfalls > 0 && !isUpcoming && (
+                <div style={{ marginTop:4, paddingTop:4, borderTop:`1px dashed ${T.border}` }}>
+                  <div style={{ fontFamily:"'Barlow Condensed', sans-serif", fontWeight:700, fontSize:13, color:"#1D4ED8", lineHeight:1 }}>
+                    {ff.footfallsFormatted}
+                  </div>
+                  <div style={{ fontFamily:"'DM Sans', sans-serif", fontSize:8, color:"#1D4ED8", marginTop:1, letterSpacing:"0.05em", textTransform:"uppercase", opacity:0.85 }}>
+                    Footfalls
+                  </div>
+                </div>
+              )}
+            </div>
+          );
+        })()}
+
+        {/* Budget / status */}
+        <div style={{ display:"flex", flexDirection:"column", justifyContent:"center", padding:"0 10px", textAlign:"center" }}>
+          <div style={{ fontFamily:"'DM Sans', sans-serif", fontSize:10, color:T.textMuted }}>₹{movie.budget}</div>
+          <div style={{ fontFamily:"'DM Sans', sans-serif", fontSize:9, color: isActive ? T.green : isUpcoming ? T.gold : T.textMuted, fontWeight:700, letterSpacing:"0.06em", textTransform:"uppercase", marginTop:2 }}>
+            {movie.status}
           </div>
-        )}
-        <div style={{ fontFamily:"'DM Sans',sans-serif", fontSize:9, color:T.textMuted, letterSpacing:"0.06em", textTransform:"uppercase" }}>
-          {movie.status === "OTT" ? `OTT` : movie.status === "Upcoming" ? "Upcoming" : `Wk ${movie.weekNum}`}
         </div>
       </div>
+
+      {/* OTT Panel */}
+      {expanded && movie.ott && <OTTPanel ott={movie.ott} />}
     </div>
   );
 }
 
+/* ═══════════════════════════════════════════════════════════════
+   FOREIGN FILMS PANEL — BOG-Style Weekend Chart
+   Two-panel split: India Collections (left) | US/Global (right)
+   ═══════════════════════════════════════════════════════════════ */
 
-// ── BogRow / ForeignFilmsPanel helpers ───────────────────────────────
+/* ═══════════════════════════════════════════════════════════════════
+   FOREIGN FILMS — BOX OFFICE GURU–STYLE WEEKEND CHART
+   Clean, light, tabular. BOG aesthetic: white surface, ruled rows,
+   bold rank numbers, red accent bar, crisp mono data columns.
+   Two views: 🇮🇳 India  |  🌐 US/Global
+   ═══════════════════════════════════════════════════════════════════ */
+
+// ── Helpers ──────────────────────────────────────────────────────────
 const fmt$ = v => {
   if (v == null) return "—";
   if (v >= 1000) return `$${(v/1000).toFixed(2)}B`;
@@ -1766,7 +1851,7 @@ const fmt$ = v => {
 const fmtInr = v => v != null ? `₹${typeof v === "number" ? v % 1 === 0 ? v : v.toFixed(2) : v} Cr` : "—";
 const fmtThousands = v => v ? v.toLocaleString() : "—";
 
-
+// ── Sub-components ───────────────────────────────────────────────────
 function BogMoveCell({ change }) {
   if (change == null)  return <span style={{ color:"#B0A8A0", fontSize:11, fontFamily:"'DM Sans',sans-serif" }}>—</span>;
   if (change === 0)    return <span style={{ color:"#6B7280", fontSize:11, fontFamily:"'DM Sans',sans-serif", fontWeight:600 }}>—</span>;
@@ -1860,10 +1945,23 @@ function BogRow({ movie, viewMode, rank, isNew }) {
 
         {/* Film title + meta */}
         <div style={{
-          display:"flex", flexDirection:"column", justifyContent:"center",
-          padding:"7px 14px", borderRight:"1px solid #F0EDE8",
-          overflow:"hidden",
+          display:"flex", flexDirection:"row", alignItems:"center",
+          padding:"7px 12px", borderRight:"1px solid #F0EDE8",
+          overflow:"hidden", gap:10,
         }}>
+          {/* Poster thumbnail */}
+          {movie.posterUrl ? (
+            <img src={movie.posterUrl} alt={movie.title}
+              style={{ width:28, height:42, objectFit:"cover", borderRadius:2, flexShrink:0, border:"1px solid #E5E7EB" }}
+              onError={e => { e.target.style.display='none'; }} />
+          ) : (
+            <div style={{ width:28, height:42, flexShrink:0, background:"#F3F4F6", borderRadius:2, border:"1px solid #E5E7EB", display:"flex", alignItems:"center", justifyContent:"center" }}>
+              <span style={{ fontFamily:"'Barlow Condensed',sans-serif", fontWeight:800, fontSize:8, color:"#9CA3AF" }}>
+                {(movie.title||'').split(' ').map(w=>w[0]).join('').slice(0,3).toUpperCase()}
+              </span>
+            </div>
+          )}
+          <div style={{ minWidth:0, flex:1 }}>
           <div style={{ display:"flex", alignItems:"center", gap:7, flexWrap:"wrap" }}>
             {movie.pageUrl ? (
               <a href={`/${movie.pageUrl}`} style={{
@@ -1895,27 +1993,8 @@ function BogRow({ movie, viewMode, rank, isNew }) {
             {movie.distributor && <><span style={{ color:"#D5D0CB" }}>·</span><span>{movie.distributor}</span></>}
             {isRunning && movie.theaterCount > 0 && <><span style={{ color:"#D5D0CB" }}>·</span><span>{fmtThousands(movie.theaterCount)} screens</span></>}
           </div>
-        {/* Boxoffy page link */}
-        {movie.pageUrl && (
-        <div style={{ marginTop:6 }}>
-          <a
-            href={`/${movie.pageUrl}`}
-            onClick={e => e.stopPropagation()}
-            style={{
-              display:"inline-flex", alignItems:"center",
-              fontFamily:"'IBM Plex Mono',monospace", fontWeight:700,
-              fontSize:9, letterSpacing:"0.12em", textTransform:"uppercase",
-              textDecoration:"none", padding:"3px 10px", borderRadius:2,
-              color: isUpcoming ? "#065F46" : T.accent,
-              background: isUpcoming ? "#ECFDF5" : "#FFF5F5",
-              border: `1px solid ${isUpcoming ? "#6EE7B7" : T.accent}`,
-            }}
-            onMouseEnter={e => { e.currentTarget.style.background = isUpcoming?"#D1FAE5":T.accent; e.currentTarget.style.color = isUpcoming?"#064E3B":"#fff"; }}
-            onMouseLeave={e => { e.currentTarget.style.background = isUpcoming?"#ECFDF5":"#FFF5F5"; e.currentTarget.style.color = isUpcoming?"#065F46":T.accent; }}
-          >{isUpcoming ? "Preview →" : "Full Analysis →"}</a>
-        </div>
-          )}
-        </div>
+          </div>{/* end text block */}
+        </div>{/* end film title cell */}
 
         {/* ── DATA COLUMNS: India view ── */}
         {viewMode === "india" ? <>
@@ -2318,7 +2397,7 @@ function ForeignFilmsPanel({ movies }) {
             </span>
           </div>
           <div style={{ fontFamily:"'DM Sans',sans-serif", fontSize:9, color:T.textMuted, letterSpacing:"0.18em", textTransform:"uppercase", marginTop:2 }}>
-            BOXOFFY · WKD 14 · MAR 19–25, 2026
+            BOXOFFY · WKD 8 · FEB 22–23, 2026
           </div>
         </div>
 
@@ -2364,7 +2443,7 @@ function ForeignFilmsPanel({ movies }) {
 
       {/* ── Global view: US BO Top 10 ─────────────────────────── */}
       {viewMode === "global"
-        ? <USBoTop10 weekData={US_BO_WEEKLY["Week 11, 2026"]} />
+        ? <USBoTop10 weekData={US_BO_WEEKLY["Week 10, 2026"]} />
         : <>
           {/* ── Column headers ──────────────────────────────────── */}
           <BogColHeaders viewMode={viewMode} />
@@ -2422,6 +2501,111 @@ function ForeignFilmsPanel({ movies }) {
   );
 }
 
+function HistoricalYearView({ year }) {
+  const d = HISTORICAL_DATA[String(year)];
+  if (!d) return (
+    <div style={{ padding:"60px 24px", textAlign:"center", color:"#6B7280", fontFamily:"'DM Sans',sans-serif" }}>
+      Data for {year} coming soon.
+    </div>
+  );
+  const vc = {
+    "All Time Blockbuster":"#7C3AED", "Super Blockbuster":"#7C3AED",
+    "Blockbuster":"#DC2626", "Super Hit":"#D97706", "Hit":"#16A34A",
+    "Semi Hit":"#2563EB", "Average":"#6B7280", "Below Average":"#6B7280",
+    "Flop":"#4B5563", "Disaster":"#374151",
+  };
+  return (
+    <div>
+      {/* Year header */}
+      <div style={{ background:"linear-gradient(180deg,#1a0000 0%,#0D0D0D 100%)", borderBottom:"2px solid #C8201A", padding:"22px 24px 18px" }}>
+        <div style={{ display:"flex", alignItems:"flex-end", gap:16, flexWrap:"wrap" }}>
+          <div>
+            <div style={{ fontSize:"3rem", fontFamily:"'Barlow Condensed',sans-serif", fontWeight:900, color:"#C8201A", lineHeight:1 }}>{year}</div>
+            <div style={{ color:"#9CA3AF", fontSize:"0.82rem", marginTop:4 }}>India Box Office — Top {d.films.length} Films · Source: Box Office India</div>
+          </div>
+          <div style={{ marginLeft:"auto", display:"flex", gap:24, flexWrap:"wrap" }}>
+            {[["#1 Film", d.yearStats.topGrosser],["Total Releases", d.yearStats.totalReleases],["Tax Era", d.yearStats.era],["Avg Ticket", `₹${d.yearStats.avgATP}`]].map(([label, val]) => (
+              <div key={label} style={{ textAlign:"right" }}>
+                <div style={{ color:"#6B7280", fontSize:"0.63rem", letterSpacing:"0.1em", textTransform:"uppercase", fontFamily:"'DM Sans',sans-serif" }}>{label}</div>
+                <div style={{ color:"#F3F4F6", fontSize:"0.9rem", fontWeight:700, fontFamily:"'Barlow Condensed',sans-serif" }}>{val}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+        {d.yearStats.note && (
+          <div style={{ marginTop:12, color:"#D1D5DB", fontSize:"0.78rem", fontStyle:"italic", borderTop:"1px solid #222", paddingTop:10, maxWidth:860, lineHeight:1.55 }}>
+            {d.yearStats.note}
+          </div>
+        )}
+      </div>
+
+      {/* Films table */}
+      <div style={{ overflowX:"auto" }}>
+        <table style={{ width:"100%", borderCollapse:"collapse", minWidth:560 }}>
+          <thead>
+            <tr style={{ borderBottom:"2px solid #C8201A", background:"#0D0D0D" }}>
+              {["#","Film","Director","India Nett","Verdict","Budget"].map(h => (
+                <th key={h} style={{
+                  padding:"10px 14px",
+                  textAlign: (h==="#"||h==="India Nett"||h==="Budget") ? "center" : "left",
+                  color:"#6B7280", fontSize:"0.67rem", fontFamily:"'DM Sans',sans-serif",
+                  fontWeight:700, letterSpacing:"0.1em", textTransform:"uppercase", whiteSpace:"nowrap",
+                }}>{h}</th>
+              ))}
+            </tr>
+          </thead>
+          <tbody>
+            {d.films.map((f, i) => (
+              <tr key={f.title} style={{ borderBottom:"1px solid #1a1a1a", background: i%2===0 ? "#0D0D0D":"#111" }}
+                onMouseEnter={e => e.currentTarget.style.background="#1a1a1a"}
+                onMouseLeave={e => e.currentTarget.style.background = i%2===0 ? "#0D0D0D":"#111"}
+              >
+                {/* Rank */}
+                <td style={{ padding:"11px 14px", textAlign:"center", width:40 }}>
+                  <span style={{ color: f.rank<=3?"#C8201A":"#4B5563", fontFamily:"'Barlow Condensed',sans-serif", fontWeight:700, fontSize:"1.05rem" }}>{f.rank}</span>
+                </td>
+                {/* Title */}
+                <td style={{ padding:"11px 14px" }}>
+                  <div style={{ color:"#F3F4F6", fontWeight:700, fontFamily:"'Barlow Condensed',sans-serif", fontSize:"1.05rem" }}>
+                    {f.title}
+                    {f.dataNote && <span title={f.dataNote} style={{ marginLeft:6, color:"#6B7280", fontSize:"0.65rem", fontStyle:"italic" }}>*</span>}
+                  </div>
+                  <div style={{ color:"#6B7280", fontSize:"0.72rem", marginTop:2, fontFamily:"'DM Sans',sans-serif" }}>{f.language} · {f.genre} · {f.releaseDate.slice(0,7)}</div>
+                  <div style={{ color:"#4B5563", fontSize:"0.69rem", marginTop:1, fontFamily:"'DM Sans',sans-serif" }}>{f.cast.split(",").slice(0,2).join(", ")}</div>
+                </td>
+                {/* Director */}
+                <td style={{ padding:"11px 14px", color:"#9CA3AF", fontSize:"0.8rem", fontFamily:"'DM Sans',sans-serif", whiteSpace:"nowrap" }}>{f.director}</td>
+                {/* India Nett */}
+                <td style={{ padding:"11px 14px", textAlign:"center", whiteSpace:"nowrap" }}>
+                  <span style={{ color: f.indiaNetCr>=200?"#C8201A":f.indiaNetCr>=100?"#D97706":"#F3F4F6", fontFamily:"'Barlow Condensed',sans-serif", fontWeight:700, fontSize:"1.1rem" }}>
+                    ₹{f.indiaNetCr} Cr
+                  </span>
+                </td>
+                {/* Verdict */}
+                <td style={{ padding:"11px 14px", textAlign:"center" }}>
+                  <span style={{ color: vc[f.verdict]||"#9CA3AF", border:`1px solid ${vc[f.verdict]||"#333"}`, padding:"2px 7px", borderRadius:3, fontSize:"0.63rem", fontFamily:"'DM Sans',sans-serif", fontWeight:700, letterSpacing:"0.05em", textTransform:"uppercase", whiteSpace:"nowrap" }}>
+                    {f.verdict}
+                  </span>
+                </td>
+                {/* Budget */}
+                <td style={{ padding:"11px 14px", textAlign:"center", color:"#6B7280", fontFamily:"'DM Sans',sans-serif", fontSize:"0.8rem", whiteSpace:"nowrap" }}>
+                  {f.budgetCr ? `₹${f.budgetCr} Cr` : "—"}
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      {/* Footer */}
+      <div style={{ padding:"10px 20px", borderTop:"1px solid #1a1a1a", color:"#4B5563", fontSize:"0.68rem", fontFamily:"'DM Sans',sans-serif", lineHeight:1.6 }}>
+        Source: Box Office India (India Nett) · Budget estimates from Film Information / Koimoi · Pre-2017 figures are pre-GST (Entertainment Tax era) — not directly comparable to post-Jul 2017 GST figures.
+        {d.films.some(f => f.dataNote) && " · * = BOI restricted; cross-referenced from Koimoi/Wikipedia."}
+      </div>
+    </div>
+  );
+}
+
 function BoxOfficeSection({ onNavigate }) {
   const [year, setYear] = useState(2026);
   const [filter, setFilter] = useState("All");
@@ -2433,11 +2617,7 @@ function BoxOfficeSection({ onNavigate }) {
   // Weekly chart: sort by this week's collection (active films first, then OTT, then upcoming)
   // Hollywood films are separated out into their own section
   const weeklyChartMovies = year === 2026
-    ? [...movies].filter(m => {
-        // Include Hollywood films that have meaningful India weekly collections
-        if (m.language === "Hollywood") return m.weeklyCollection > 0.3;
-        return true;
-      }).sort((a,b) => {
+    ? [...movies].filter(m => m.language !== "Hollywood").sort((a,b) => {
         if (a.status === "Upcoming" && b.status !== "Upcoming") return 1;
         if (b.status === "Upcoming" && a.status !== "Upcoming") return -1;
         if (a.status === "OTT" && b.status !== "OTT") return 1;
@@ -2471,76 +2651,84 @@ function BoxOfficeSection({ onNavigate }) {
   const [showHeadlineModal, setShowHeadlineModal] = useState(false);
 
   const bmsStats = [
-    { label:"Day 1 India Advance", val:"₹30.51 Cr", src:"Sacnilk/Koimoi" },
-    { label:"Premiere India Gross", val:"₹21.50 Cr", src:"BOI/Koimoi" },
-    { label:"Premiere Tickets Sold", val:"1.1 Lakh+", src:"2" },
-    { label:"Housefull Shows", val:"26 confirmed", src:"Sacnilk" },
-    { label:"Premiere Shows India", val:"3,979", src:"Koimoi" },
-    { label:"NA Weekend Advance", val:"$4.6M", src:"Venky BO · KGF2 record broken" },
-    { label:"Boxoffy 4-Day Call", val:"$15M", src:"Boxoffy AI Calc v3" },
-    { label:"Shows", val:"SOLD OUT", src:"BMS · PVR · INOX — 4-day frame" },
+    { label:"Day 0 Nett ✅", val:"₹43 Cr", src:"BOI confirmed · All-time Bollywood preview record" },
+    { label:"Day 1 Nett ✅", val:"₹72 Cr", src:"BOI + Pinkvilla · All-time Hindi Day 1 record" },
+    { label:"D0+D1 Total ✅", val:"₹115 Cr", src:"Boxoffy confirmed · First Bollywood 100 Cr D0+D1" },
+    { label:"WW D0+D1 Gross", val:"₹159 Cr", src:"Sacnilk · India ₹137 Cr gross + Overseas ₹22.25 Cr" },
+    { label:"NA Premiere ✅", val:"$1.43M", src:"Venky BO · 705 locations" },
+    { label:"BMS All-Time #1", val:"14.81L", src:"Tickets · Broke Jawan record" },
+    { label:"WW Weekend Pre-Sales", val:"₹200+ Cr", src:"Sacnilk · first Bollywood film ever" },
+    { label:"Weekend Projection", val:"₹350–380 Cr", src:"BOI floor ₹350 Cr · Eid Saturday upside" },
   ];
 
   const analysts = [
     {
-      name:"Boxoffy AI Calc", handle:"analyst-2", accentColor:"#7C3AED",
-      badge:"Most Bullish", badgeBg:"#EDE9FE", badgeColor:"#5B21B6",
-      quote:"Showcasing is HUGE.. Collection from Paid Previews can reach upto ₹30 Cr nett as well. #Dhurandhar2",
+      name:"Boxoffy BETA v2", handle:"day1-confirmed", accentColor:"#059669",
+      badge:"Day 1 Confirmed ✅", badgeBg:"#D1FAE5", badgeColor:"#065F46",
+      quote:"Day 1 confirmed ₹72 Cr nett (BOI 70–75 Cr range · Pinkvilla 'over/under ₹75 Cr'). Boxoffy call ₹72 Cr. D0+D1 combined: ₹115 Cr. Biggest Hindi opener in history.",
       lines:[
-        "Paid Previews: ₹15–20 Cr Nett floor · up to ₹30 Cr ceiling",
-        "Day 1: ₹80–100 Cr net",
-        "Eid 4-Day India: ₹350–400 Cr",
-        "WW 4-Day: ₹500–600 Cr",
-        "India Lifetime: ₹1,000 Cr",
-        "WW Lifetime: ₹1,700–2,000 Cr",
+        "Day 0 (previews): ₹43 Cr nett — all-time Bollywood preview record (4× Stree 2's ₹10 Cr)",
+        "Day 1 nett: ₹72 Cr — new all-time Hindi record (beat Jawan ₹64 Cr on holiday)",
+        "D0+D1 combined: ₹115 Cr — first Bollywood film to cross ₹100 Cr in opening day incl. previews",
+        "WW D0+D1 gross: ₹159 Cr · Overseas: ₹22.25 Cr (Sacnilk)",
+        "NA premiere: $1.43M (Venky BO · 705 locations) · NA D0+D1 advance: $2.85M",
       ],
     },
     {
-      name:"Boxoffy AI Calc", handle:"analyst-1", accentColor:"#1D4ED8",
-      badge:"Conservative Floor", badgeBg:"#DBEAFE", badgeColor:"#1E40AF",
-      quote:"Current scenario and solo release will ensure that film touches ₹85–₹90 cr on Day one.",
+      name:"Boxoffy BETA v2", handle:"weekend-projection", accentColor:"#1D4ED8",
+      badge:"Weekend Live 🔴", badgeBg:"#DBEAFE", badgeColor:"#1E40AF",
+      quote:"D1 confirmed ₹72 Cr. BOI weekend projection: ₹350 Cr+ nett. North India and Eid holiday (Saturday) are the upside drivers yet to fully fire.",
       lines:[
-        "Upgraded Day 1 to ₹85–90 Cr net after Toxic postponed",
-        "Post-trailer storm: floor moving toward ₹90–100 Cr",
-        "Quotes nett collections — cleanest benchmark in trade",
+        "Day 2 (Fri): first full day without preview fatigue — likely flat or mild drop",
+        "Day 3 (Sat): Eid holiday — North India at full strength — could be ₹90–110 Cr",
+        "Day 4 (Sun): sustained holiday crowd — target ₹80–100 Cr",
+        "Boxoffy 4-day India projection: ₹350–380 Cr nett",
+        "WW 4-day projection: ₹500–560 Cr gross",
       ],
     },
     {
-      name:"Boxoffy AI Calc", handle:"analyst-3", accentColor:"#B45309",
-      badge:"Live Data Reporter", badgeBg:"#FEF3C7", badgeColor:"#92400E",
-      quote:"DHURANDHAR THE REVENGE ADVANCE BOOKINGS GO ON A RAMPAGE... trending on BMS, selling 7.5k tickets per hour.",
+      name:"Sacnilk / BollywoodLife", handle:"source-data", accentColor:"#B45309",
+      badge:"Live Source Data", badgeBg:"#FEF3C7", badgeColor:"#92400E",
+      quote:"D2 Premiere: ₹40 Cr India nett (Pinkvilla cross-ref) · ₹69 Cr WW. First Bollywood film to cross ₹200 Cr in worldwide advance sales.",
       lines:[
-        "7,500–10,000 tickets/hr on BookMyShow — Mar 7 live data",
-        "₹4.39 Cr premiere gross from national chains in under 2 hrs",
-        "1.1 Lakh+ premiere tickets — purely organic, zero fan-club bulk",
-        "35,000+ national multiplex tickets in opening session",
+        "14.81 Lakh tickets on BMS — all-time #1, beat Jawan's 11.02 Lakh",
+        "WW weekend pre-sales ₹200+ Cr — first Bollywood film ever (after Pushpa 2, Leo, RRR, Baahubali 2 for India)",
+        "Opening day pre-sales ₹100+ Cr incl premiere — ₹73 Cr domestic + ₹35 Cr overseas",
+        "RGV post-premiere: 'The very definition of a director will now be Aditya Dhar's name'",
       ],
     },
     {
-      name:"Boxoffy AI Calc", handle:"analyst-4", accentColor:"#0F766E",
-      badge:"Overseas Specialist", badgeBg:"#D1FAE5", badgeColor:"#065F46",
-      quote:"Part Two will be pure Carnage!",
+      name:"Boxoffy Overseas Watch", handle:"overseas-data", accentColor:"#0F766E",
+      badge:"Overseas Confirmed", badgeBg:"#D1FAE5", badgeColor:"#065F46",
+      quote:"Premiere overseas: ₹22.25 Cr. NA opening weekend advance $5M+ — first Indian film to cross this mark.",
       lines:[
-        "Dhurandhar 1: Canada all-time Indian film record — $7.71M",
-        "Australia: A$2.46M in 10 days — highest Indian film of 2025",
-        "BMS: Part 1 sold 10M+ tickets — All-Time Blockbuster confirmed",
-        "US $400K+ premiere pre-sales, Day1 $565K, weekend $1M locked",
+        "Premiere overseas nett: ₹22.25 Cr",
+        "NA opening weekend pre-sales: $5M+ — Indian film record",
+        "UK/Aus/NZ/ROW premiere accounted in ₹22.25 Cr overseas figure",
+        "D1 Canada: could challenge D1 all-time record set by Dhurandhar 1 ($7.71M total)",
       ],
     },
     {
-      name:"Boxoffy AI Calc", handle:"analyst-5", accentColor:"#9D174D",
-      badge:"Audience Pulse", badgeBg:"#FCE7F3", badgeColor:"#9D174D",
-      quote:"The franchise energy is at a level this industry hasn't seen since KGF 2.",
+      name:"Boxoffy Model Update", handle:"model-revision", accentColor:"#059669",
+      badge:"Model Outcome ✅", badgeBg:"#D1FAE5", badgeColor:"#065F46",
+      quote:"BPREDICT v1 called ₹110 Cr. Actual landed ₹115 Cr. Error +4.5% — within the ₹101–122 Cr range. The advance-based model beat the city bottom-up by ₹20 Cr.",
       lines:[
-        "Franchise comparison post: 95,700 views + 1,500 reposts",
-        "Cultural penetration beyond trade circles",
-        "Verdict: Anticipation at maximum levels",
+        "v1 (advance-based): Called ₹110 Cr · Actual ₹115 Cr · Error +4.5% ✓",
+        "v2 (city bottom-up): Called ₹95 Cr · Underestimated walk-in by ₹20 Cr",
+        "Key miss: Eid walk-in added 30–40% on top of advance — model now updated",
+        "Day 0 actual: ₹43 Cr · Day 1 actual: ₹72 Cr · Combined: ₹115 Cr ✅",
+        "Week 1 projection: ₹350–380 Cr India nett · BOI floor ₹350 Cr",
       ],
     },
   ];
 
   return (
     <div>
+      {/* ── FROM THE DESK — stacked editorial articles ──────────── */}
+      {year === 2026 && showWeekly && (
+        <EditorialSection onNavigate={onNavigate} />
+      )}
+
       {/* ── WEEKLY HEADLINE BANNER ──────────────────────────────────── */}
       {year === 2026 && showWeekly && (
         <>
@@ -2567,8 +2755,8 @@ function BoxOfficeSection({ onNavigate }) {
                   letterSpacing:"0.14em", textTransform:"uppercase",
                   color:T.accent, background:"#FEE2E2",
                   padding:"2px 8px", borderRadius:2,
-                }}>WEEK 14 · LEAD STORY</span>
-                <span style={{ fontFamily:"'DM Sans', sans-serif", fontSize:10, color:T.textMuted }}>Thu, 19 Mar 2026</span>
+                }}>WEEK 13 · LEAD STORY</span>
+                <span style={{ fontFamily:"'DM Sans', sans-serif", fontSize:10, color:T.textMuted }}>Wed, 19 Mar 2026</span>
               </div>
               <div style={{
                 fontFamily:"'Barlow Condensed', sans-serif",
@@ -2579,12 +2767,12 @@ function BoxOfficeSection({ onNavigate }) {
                 letterSpacing:"-0.01em",
                 marginBottom:9,
               }}>
-                Dhurandhar 2 Rewrites History.{" "}
-                <span style={{ color:T.accent }}>D2 + Ustaad Bhagat Singh — India's Biggest Opening Day since Pushpa 2.</span>
+                Dhurandhar: The Revenge —{" "}
+                <span style={{ color:T.accent }}>Day 1 ₹72 Cr ✓ · D0+D1 ₹115 Cr · Biggest Hindi opener ever.</span>
               </div>
               <div style={{ display:"flex", alignItems:"center", gap:10, flexWrap:"wrap" }}>
                 <span style={{ fontFamily:"'DM Sans', sans-serif", fontSize:11, color:T.textMuted }}>
-                  Ranveer Singh · Aditya Dhar · 4.84L tickets · 9,128 shows · Mar 19
+                  Ranveer Singh · Aditya Dhar · Day 0 ₹43 Cr · Day 1 ₹72 Cr nett · WW ₹159 Cr · BOI+Pinkvilla confirmed
                 </span>
                 <span style={{ fontFamily:"'DM Sans', sans-serif", fontSize:10, color:T.textMid, fontWeight:600 }}>
                   Boxoffy AI Calc ↗
@@ -2595,10 +2783,10 @@ function BoxOfficeSection({ onNavigate }) {
             {/* Right — 4 key numbers, static, clean */}
             <div style={{ display:"flex", gap:0, borderLeft:`1px solid ${T.border}`, flexShrink:0 }}>
               {[
-                { label:"Premiere Gross (verified)", val:"₹24.76 Cr", sub:"No blocks · Mar 13 · Boxoffy" },
-                { label:"Day 1 India Advance", val:"₹30.51 Cr", sub:"India gross · Mar 15 verified · Sacnilk/Koimoi" },
-                { label:"WW Advance (so far)", val:"~₹60 Cr", sub:"India + overseas · Outlook India" },
-                { label:"US Premiere Advance", val:"$982K+", sub:"678 locations · NA OW ~$2M" },
+                { label:"Day 0 Nett ✅", val:"₹43 Cr", sub:"BOI · All-time Bollywood preview record" },
+                { label:"WW D0+D1 Gross ✅", val:"₹159 Cr", sub:"Overseas ₹22.25 Cr · Sacnilk" },
+                { label:"BMS All-Time #1", val:"14.81L", sub:"Tickets · Shattered Jawan record" },
+                { label:"Day 1 Actuals", val:"Mar 20", sub:"BOI · Sacnilk · update coming" },
               ].map((s,i) => (
                 <div key={i} style={{
                   padding:"0 18px", borderRight:`1px solid ${T.border}`, textAlign:"right",
@@ -2635,16 +2823,16 @@ function BoxOfficeSection({ onNavigate }) {
                 {/* Article header — white with red accent bar */}
                 <div style={{ borderTop:`5px solid ${T.accent}`, padding:"28px 36px 22px", borderBottom:`1px solid ${T.border}`, position:"relative" }}>
                   <div style={{ display:"flex", alignItems:"center", gap:8, marginBottom:12 }}>
-                    <span style={{ fontFamily:"'DM Sans', sans-serif", fontWeight:700, fontSize:9, letterSpacing:"0.14em", textTransform:"uppercase", color:T.accent, background:"#FEE2E2", padding:"2px 8px", borderRadius:2 }}>BOXOFFY ANALYSIS</span>
-                    <span style={{ fontFamily:"'DM Sans', sans-serif", fontSize:10, color:T.textMuted }}>BREAKING · Mar 13, 2026</span>
+                    <span style={{ fontFamily:"'DM Sans', sans-serif", fontWeight:700, fontSize:9, letterSpacing:"0.14em", textTransform:"uppercase", color:"#22C55E", background:"#DCFCE7", padding:"2px 8px", borderRadius:2 }}>✅ DAY 1 CONFIRMED</span>
+                    <span style={{ fontFamily:"'DM Sans', sans-serif", fontSize:10, color:T.textMuted }}>Mar 20, 2026</span>
                   </div>
                   <h1 style={{
                     fontFamily:"'Barlow Condensed', sans-serif", fontWeight:800,
                     fontSize:"clamp(26px,3.6vw,42px)", color:T.text,
                     lineHeight:1.05, letterSpacing:"-0.02em", margin:"0 0 12px",
                   }}>
-                    Indian Box Office — Left, Right, Centre.<br/>
-                    All Eyes on <span style={{ color:T.accent }}>Dhurandhar: The Revenge.</span>
+                    Dhurandhar: The Revenge — Day 1 Confirmed.<br/>
+                    <span style={{ color:"#22C55E" }}>₹115 Cr in 36 Hours. Biggest Hindi Opener. Ever.</span>
                   </h1>
                   <div style={{ fontFamily:"'DM Sans', sans-serif", fontSize:12, color:T.textMuted, display:"flex", gap:12, flexWrap:"wrap" }}>
                     <span>Ranveer Singh · Dir. Aditya Dhar</span>
@@ -2675,20 +2863,18 @@ function BoxOfficeSection({ onNavigate }) {
                     lineHeight:1.8, margin:0,
                     borderLeft:`3px solid ${T.border}`, paddingLeft:16,
                   }}>
-                    With Border 2 closing at ₹481 Cr WW and every other 2026 release either
-                    wrapping up or confirmed flop, the multiplex calendar has effectively been
-                    cleared. Every screen manager, distributor, and trade analyst is pointing
-                    the same direction — <strong style={{ color:T.text }}>March 19</strong>.
-                    The sequel to the highest-grossing Hindi film of all time arrives on an
-                    Eid + Gudi Padwa + Ugadi triple-holiday weekend. One question drives the
-                    entire industry: <em>can the content match a once-in-a-decade booking storm?</em>
+                    Day 1 confirmed ₹72 Cr nett (BOI + Pinkvilla). D0+D1: ₹115 Cr — the
+                    biggest Hindi opening in history. Jawan's ₹64 Cr on a national holiday:
+                    gone. WW D0+D1 gross: <strong style={{ color:T.text }}>₹159 Cr</strong>.
+                    North India and Eid Saturday are yet to fully fire.
+                    Weekend projection: ₹350–380 Cr India nett.
                   </p>
 
                   {/* BMS Advance Data — clean table style */}
                   <div>
                     <div style={{ fontFamily:"'Barlow Condensed', sans-serif", fontWeight:800, fontSize:17, color:T.text, letterSpacing:"0.04em", textTransform:"uppercase", marginBottom:12, display:"flex", alignItems:"center", gap:10 }}>
                       <div style={{ width:3, height:18, background:T.accent, borderRadius:2 }} />
-                      BookMyShow Advance Data — 7 March 2026
+                      Premiere Actuals + Advance Data — Mar 18–19, 2026
                     </div>
                     <div style={{ display:"grid", gridTemplateColumns:"repeat(auto-fill, minmax(180px, 1fr))", gap:1, border:`1px solid ${T.border}`, borderRadius:3, overflow:"hidden" }}>
                       {bmsStats.map((s,i) => (
@@ -2714,18 +2900,20 @@ function BoxOfficeSection({ onNavigate }) {
                     </div>
                     <div style={{ display:"grid", gridTemplateColumns:"repeat(auto-fill, minmax(170px, 1fr))", gap:8 }}>
                       {[
-                        { label:"Paid Previews", val:"₹15–30 Cr", sub:"Mar 18 from 5 PM · Boxoffy AI Calc" },
-                        { label:"Opening Day Net", val:"₹85–100 Cr", sub:"Net India · Boxoffy AI Calc" },
-                        { label:"Eid 4-Day India", val:"₹350–400 Cr", sub:"Boxoffy AI Calc" },
-                        { label:"WW 4-Day Weekend", val:"₹500–600 Cr", sub:"Boxoffy AI Calc" },
-                        { label:"India Lifetime", val:"₹1,000 Cr", sub:"Boxoffy AI Calc" },
-                        { label:"WW Lifetime", val:"₹1,700–2,000 Cr", sub:"Would be all-time Indian record" },
-                        { label:"India Screens", val:"5,500+", sub:"Pan-India · 5 languages" },
-                        { label:"US Premiere Tickets", val:"14,399", sub:"472 locations" },
-                        { label:"Netflix OTT Deal", val:"₹150 Cr", sub:"6–8 week theatrical window" },
-                        { label:"Runtime", val:"~3h 55m", sub:"Longest Hindi film · 21st century" },
-                        { label:"Super Blockbuster+", val:"₹350–₹2,500", sub:"New premium pricing tier" },
-                        { label:"Music Rights", val:"₹45 Cr", sub:"T-Series · Shashwat Sachdev" },
+                        { label:"Day 0 Nett ✅", val:"₹43 Cr", sub:"All-time Bollywood preview record" },
+                        { label:"Day 1 Nett ✅", val:"₹72 Cr", sub:"All-time Hindi Day 1 record · BOI+PV" },
+                        { label:"D0+D1 Total ✅", val:"₹115 Cr", sub:"Boxoffy confirmed call" },
+                        { label:"Premiere WW ✅", val:"₹69 Cr", sub:"Overseas ₹22.25 Cr · Mar 18" },
+                        { label:"WW D0+D1 Gross ✅", val:"₹159 Cr", sub:"India ₹137 Cr gross + Overseas ₹22.25 Cr" },
+                        { label:"Eid 4-Day India", val:"₹350–380 Cr", sub:"Upward confirmed · BOI ₹350 Cr floor" },
+                        { label:"WW 4-Day Weekend", val:"₹500–560 Cr", sub:"Boxoffy projection" },
+                        { label:"India Lifetime", val:"₹900–1,100 Cr", sub:"Depends on South recovery" },
+                        { label:"WW Lifetime", val:"₹1,500–2,000 Cr", sub:"Boxoffy projection" },
+                        { label:"India Screens", val:"17,000+", sub:"Pan-India · 5 languages" },
+                        { label:"BMS All-Time #1", val:"14.81L", sub:"Broke Jawan · 11.02L record" },
+                        { label:"JioHotstar OTT Deal", val:"₹150 Cr", sub:"Non-theatrical total ₹245 Cr" },
+                        { label:"Runtime (CBFC)", val:"3h 49m", sub:"229 min 6 sec · certified" },
+                        { label:"WW Weekend Pre-Sales", val:"₹200+ Cr", sub:"First Bollywood film ever" },
                       ].map((s,i) => (
                         <div key={i} style={{ background:T.surfaceAlt, border:`1px solid ${T.border}`, borderRadius:3, padding:"11px 14px" }}>
                           <div style={{ fontFamily:"'Barlow Condensed', sans-serif", fontWeight:800, fontSize:20, color:T.accent, lineHeight:1 }}>{s.val}</div>
@@ -2816,7 +3004,7 @@ function BoxOfficeSection({ onNavigate }) {
             </h2>
           </div>
           <p style={{ fontFamily:"'DM Sans', sans-serif", fontSize:13, color:T.textMuted, marginLeft:12 }}>
-            {showWeekly ? "Week 14, 2026 — Ranked by this week's collection · All active films listed · Mar 14–20" : "Top Indian films by worldwide gross · Industry tracking data"}
+            {showWeekly ? "Week 13, 2026 — D2 Day 1 ₹72 Cr confirmed · D0+D1 ₹115 Cr · Weekend live now" : "Top Indian films by worldwide gross · Industry tracking data"}
           </p>
         </div>
         {topFilm && (
@@ -2854,6 +3042,25 @@ function BoxOfficeSection({ onNavigate }) {
             </button>
           );
         })}
+
+        <div style={{ width:1, height:20, background:T.border, margin:"0 8px" }} />
+
+        {/* Archive years 2010-2019 — link out to dedicated pages */}
+        <span style={{ fontFamily:"'DM Sans', sans-serif", fontSize:11, color:"#C8201A", fontWeight:700, letterSpacing:"0.08em", textTransform:"uppercase" }}>Archives:</span>
+        {ARCHIVE_YEARS.map(y => (
+          <a key={y} href={`/india-box-office-${y}.html`} style={{
+            fontFamily:"'Barlow Condensed', sans-serif", fontWeight:700, fontSize:15,
+            background:"transparent", color:"#9CA3AF",
+            border:"1px solid #333", borderRadius:3,
+            padding:"4px 12px", cursor:"pointer",
+            transition:"all 0.15s", textDecoration:"none", display:"inline-block",
+          }}
+            onMouseEnter={e => { e.currentTarget.style.color="#fff"; e.currentTarget.style.borderColor="#555"; e.currentTarget.style.background="#1a1a1a"; }}
+            onMouseLeave={e => { e.currentTarget.style.color="#9CA3AF"; e.currentTarget.style.borderColor="#333"; e.currentTarget.style.background="transparent"; }}
+          >
+            {y}
+          </a>
+        ))}
 
         <div style={{ width:1, height:20, background:T.border, margin:"0 8px" }} />
 
@@ -2921,13 +3128,13 @@ function BoxOfficeSection({ onNavigate }) {
               ● LIVE
             </span>
             <span style={{ fontFamily:"'DM Sans', sans-serif", fontSize:11, color:T.textMuted }}>
-              Week 14 · Mar 19, 2026 · Data current as of Thu 19 Mar 2026
+              Week 13 · Mar 20, 2026 · D2 Day 1 ₹72 Cr confirmed · D0+D1 ₹115 Cr nett · Weekend live now
+            </span>
+            <span style={{ background:"#FEF3C7", border:"1px solid #FCD34D", fontFamily:"'DM Sans', sans-serif", fontSize:10, color:"#92400E", fontWeight:700, padding:"2px 8px", borderRadius:2 }}>
+              🔴 D2 DAY 1 CONFIRMED · ₹72 Cr nett · D0+D1 ₹115 Cr · Biggest Hindi opener ever · Weekend live now
             </span>
             <span style={{ background:T.surface, border:`1px solid ${T.border}`, fontFamily:"'DM Sans', sans-serif", fontSize:10, color:T.textMid, padding:"2px 8px", borderRadius:2 }}>
-              D2 DAY 1 · Ustaad Bhagat Singh DAY 1 · Mar 19, 2026
-            </span>
-            <span style={{ background:T.surface, border:`1px solid ${T.border}`, fontFamily:"'DM Sans', sans-serif", fontSize:10, color:T.textMid, padding:"2px 8px", borderRadius:2 }}>
-              Border 2 → Netflix Mar 20
+              UBS Day 1 ₹20.15 Cr nett · South D2 KDM issue resolved · Full pan-India Day 2 now live
             </span>
             <span style={{ marginLeft:"auto", fontFamily:"'DM Sans', sans-serif", fontSize:10, color:T.textMuted, fontStyle:"italic" }}>
               Data: Sacnilk · Koimoi · Box Office India
@@ -2941,17 +3148,17 @@ function BoxOfficeSection({ onNavigate }) {
         <div style={{ animation:"fadeIn 0.25s ease both" }}>
           {/* Weekly chart header */}
           <div style={{
-            display:"grid", gridTemplateColumns:"40px 32px 1fr 108px 108px 108px 90px",
+            display:"grid", gridTemplateColumns:"36px 28px 1fr 120px 120px 110px 80px",
             background:T.surfaceAlt, borderBottom:`2px solid ${T.borderDark}`, padding:"8px 0",
           }}>
             {[
               ["#","center"],
               ["±","center"],
-              ["FILM · LANGUAGE · DIRECTOR","left"],
+              ["FILM · DIRECTOR · THIS WEEK'S NOTE","16px"],
               ["THIS WEEK","right"],
               ["INDIA NET","right"],
               ["WORLDWIDE","right"],
-              ["STATUS","center"],
+              ["BUDGET/STATUS","center"],
             ].map(([label, align], i) => (
               <div key={i} style={{
                 fontFamily:"'DM Sans', sans-serif", fontWeight:700, fontSize:9,
@@ -2967,7 +3174,7 @@ function BoxOfficeSection({ onNavigate }) {
           <div style={{ padding:"6px 12px 4px", background:"#F0FDF4", borderBottom:`1px solid ${T.border}`, display:"flex", alignItems:"center", gap:8 }}>
             <span style={{ width:8, height:8, borderRadius:"50%", background:"#16A34A", display:"inline-block", flexShrink:0 }} />
             <span style={{ fontFamily:"'DM Sans', sans-serif", fontSize:10, fontWeight:700, color:"#16A34A", letterSpacing:"0.1em", textTransform:"uppercase" }}>
-              NOW IN CINEMAS — {weeklyChartMovies.filter(m => m.status === "Running").length} ACTIVE RELEASES · RANKED BY WEEKLY COLLECTION
+              NOW IN CINEMAS — {weeklyChartMovies.filter(m => m.status === "Running").length} ACTIVE INDIAN RELEASES · RANKED BY THIS WEEK'S COLLECTION · <span style={{color:"#D97706",fontWeight:700}}>AMBER = BOXOFFY BETA ESTIMATE</span>
             </span>
           </div>
 
@@ -2981,7 +3188,7 @@ function BoxOfficeSection({ onNavigate }) {
               ◎ RECENTLY CLOSED / MOVED TO OTT
             </span>
           </div>
-          {weeklyChartMovies.filter(m => m.status === "OTT" && m.weekNum <= 8).slice(0,6).map((m, i) => (
+          {weeklyChartMovies.filter(m => m.status === "OTT").map((m, i) => (
             <WeeklyChartRow key={m.title} movie={m} rank={"—"} prevRank={null} />
           ))}
 
@@ -2992,7 +3199,7 @@ function BoxOfficeSection({ onNavigate }) {
               ▶ UPCOMING — NEXT MAJOR RELEASES
             </span>
           </div>
-          {weeklyChartMovies.filter(m => m.status === "Upcoming" && m.openingPrediction).slice(0,3).map((m, i) => (
+          {weeklyChartMovies.filter(m => m.status === "Upcoming").map((m, i) => (
             <WeeklyChartRow key={m.title} movie={m} rank={"—"} prevRank={null} />
           ))}
 
@@ -3143,7 +3350,7 @@ function ArticleModal({ article, onClose }) {
             borderTop:`1px solid ${T.border}`, paddingTop:14,
             fontFamily:"'DM Sans',sans-serif", fontSize:11, color:T.textMuted,
           }}>
-            Boxoffy Original · India Box Office Intelligence · boxoffy.com
+            Boxoffy Original · Box Office Intelligence · boxoffy.com
           </div>
         </div>
       </div>
@@ -3314,171 +3521,685 @@ function NewsSection({ category }) {
    Update weekly. India chart = Netflix India Top 10 Movies (latest available).
    Global chart = Netflix Global Non-English Films Top 10.
 ──────────────────────────────────────────────────────────────── */
-const OTT_CHARTS = {
-  updatedDate: "Mar 13, 2026",
-  weekRange: "Mar 2–8, 2026",
-  india: {
-    platform: "Netflix India",
-    source: "Sacnilk / Netflix Tudum",
-    sourceUrl: "https://sacnilk.com/news/Accused_On_Netflix_Hits_Jackpot_With_15_Million_Views_In_2_Weeks_Dhurandhar_Remains_In_Top_10_Worldwide",
+/* ── OTT DATA ─────────────────────────────────────────────────────────────
+   Weekly update required: Netflix (Tudum official) · Trade sources for others.
+   Prime/Zee5/MX do not publish official ranked charts — showing "Known Trending".
+   ─────────────────────────────────────────────────────────────────────────── */
+
+const OTT_META = {
+  updatedDate: "Mar 20, 2026",
+  weekRange:   "Mar 9–15, 2026",
+  nextUpdate:  "Mar 27, 2026",
+};
+
+/* Netflix India — Official Tudum weekly chart (most recent: 2/2–2/8)
+   + March trending from Sacnilk/Zee News confirmed through Mar 17           */
+const OTT_NETFLIX = {
+  movies: {
+    weekRange: "Mar 9–15, 2026",
+    source: "Netflix Tudum (Official)",
+    sourceUrl: "https://www.netflix.com/tudum/top10/india/films",
     films: [
-      { rank:1, title:"Accused",             lang:"Hindi",   weeks:2,  note:"15M+ views in 2 wks · Trending top 10 in 72 countries", hot:true },
-      { rank:2, title:"Dhurandhar",          lang:"Hindi",   weeks:6,  note:"23M views total · 101.3M viewing hours · 6 wks Global top 10", hot:true },
-      { rank:3, title:"Chatha Pacha",        lang:"Malayalam", weeks:2, note:"Trending Middle East — Bahrain, Kuwait, Qatar, UAE" },
-      { rank:4, title:"Tere Ishk Mein",      lang:"Hindi",   weeks:6,  note:"6 weeks on chart · subcontinent hold" },
-      { rank:5, title:"Firebreak",           lang:"Intl",    weeks:3,  note:"#1 in 26 countries globally · Spanish survival thriller" },
-      { rank:6, title:"Anaganaga Oka Raju",  lang:"Telugu",  weeks:3,  note:"India-only trending" },
-      { rank:7, title:"Dum Laga Ke Haisha",  lang:"Hindi",   weeks:3,  note:"2015 classic resurging · Valentine's Week trigger" },
-      { rank:8, title:"Thalaivar Thambi Thalaimaiyil", lang:"Tamil", weeks:3, note:"India + Sri Lanka audience" },
-      { rank:9, title:"De De Pyaar De 2",    lang:"Hindi",   weeks:8,  note:"8-week run · India, Bangladesh, Pakistan" },
-      { rank:10, title:"Padmaavat",          lang:"Hindi",   weeks:1,  note:"Library re-entry — D2 franchise buzz trigger" },
+      { rank:1,  title:"Dhurandhar",              lang:"Hindi",   weeks:9,  views:"23M total",  note:"101.3M hrs · India's highest for a Hindi film ever", hot:true },
+      { rank:2,  title:"Accused",                  lang:"Hindi",   weeks:3,  views:"15M+ wk 2",  note:"Top 10 in 72 countries · Karan Johar production", hot:true },
+      { rank:3,  title:"Made in Korea",            lang:"Tamil",   weeks:2,  views:"~4M",        note:"Tamil-Korean crossover · Priyanka Mohan" },
+      { rank:4,  title:"Tere Ishk Mein",           lang:"Hindi",   weeks:7,  views:"~3.5M",      note:"7 consecutive weeks · Subcontinent hold" },
+      { rank:5,  title:"Jolly LLB 3",              lang:"Hindi",   weeks:10, views:"~3M",        note:"10-week marathon · Akshay Kumar courtroom comedy" },
+      { rank:6,  title:"Mardaani 2",               lang:"Hindi",   weeks:5,  views:"~2.5M",      note:"Rani Mukerji franchise library resurge" },
+      { rank:7,  title:"De De Pyaar De 2",         lang:"Hindi",   weeks:8,  views:"~2M",        note:"8 weeks · India + Bangladesh + Pakistan" },
+      { rank:8,  title:"Champion",                 lang:"Korean",  weeks:3,  views:"~1.8M",      note:"Korean action drama trending India" },
+      { rank:9,  title:"Akhanda 2: Thaandavam",    lang:"Telugu",  weeks:5,  views:"~1.5M",      note:"Telugu mass blockbuster · Balakrishna" },
+      { rank:10, title:"Haq",                      lang:"Hindi",   weeks:6,  views:"~1.2M",      note:"Hindi legal drama · 6-week run" },
     ],
   },
-  global: {
-    platform: "Netflix Global · Non-English Films",
+  shows: {
+    weekRange: "Mar 9–15, 2026",
     source: "Netflix Tudum (Official)",
-    sourceUrl: "https://www.netflix.com/tudum/articles/top-10-march-2-2026",
+    sourceUrl: "https://www.netflix.com/tudum/top10/india/tv",
     films: [
-      { rank:1, title:"Accused",       lang:"Hindi · India",    views:"7.6M", note:"#1 in 5 countries · Top 10 in 72 countries", hot:true },
-      { rank:2, title:"Firebreak",     lang:"Spanish · Spain",  views:"4.6M", note:"#1 in 26 countries · 91 countries top 10" },
-      { rank:3, title:"Dhurandhar",    lang:"Hindi · India",    views:"3.6M (Wk6)", note:"6 consecutive weeks · 101M+ hours total", hot:true },
-      { rank:4, title:"Chatha Pacha",  lang:"Malayalam · India",views:"~2M",  note:"Middle East + India trending" },
-      { rank:5, title:"De De Pyaar De 2", lang:"Hindi · India", views:"~1.8M",note:"8-week run · Trending India / Pakistan / Bangladesh" },
-      { rank:6, title:"Tere Ishk Mein",  lang:"Hindi · India",  views:"~1.5M",note:"6 weeks global chart presence" },
-      { rank:7, title:"Thalaivar Thambi Thalaimaiyil", lang:"Tamil · India", views:"~1.2M", note:"3 weeks · India + Sri Lanka" },
-      { rank:8, title:"Anaganaga Oka Raju", lang:"Telugu · India", views:"~1M", note:"India regional chart" },
-      { rank:9, title:"Dum Laga Ke Haisha", lang:"Hindi · India",  views:"~0.9M", note:"Library title resurging" },
-      { rank:10, title:"Padmaavat",         lang:"Hindi · India",  views:"~0.7M", note:"Library re-entry" },
+      { rank:1,  title:"One Piece Season 2",       lang:"Intl · Dubbed", weeks:1, views:"Top 10 · 64 countries", note:"Luffy's Grand Line journey begins · March 10 premiere", hot:true },
+      { rank:2,  title:"Virgin River Season 7",    lang:"Intl",    weeks:2,  views:"Global #1",   note:"Netflix's most consistent romance hit" },
+      { rank:3,  title:"Hello Bachhon",            lang:"Hindi",   weeks:2,  views:"~5M",        note:"TVF · Inspired by Alakh Pandey · 6 March premiere", hot:true },
+      { rank:4,  title:"Boyfriend on Demand",      lang:"Korean",  weeks:2,  views:"~4M",        note:"Jisoo (BLACKPINK) · 6 March premiere · massive fan pre-save" },
+      { rank:5,  title:"Aspirants Season 3",       lang:"Hindi",   weeks:1,  views:"~3.5M",      note:"TVF · March 13 · UPSC drama returns", hot:true },
+      { rank:6,  title:"Panchayat Season 4",       lang:"Hindi",   weeks:5,  views:"~3M",        note:"5-week India run · streaming heartland" },
+      { rank:7,  title:"Squid Game Season 3",      lang:"Korean",  weeks:4,  views:"~2.8M",      note:"Korean thriller global hold" },
+      { rank:8,  title:"The Night Agent S3",       lang:"Intl",    weeks:3,  views:"~2.5M",      note:"American thriller maintaining India chart" },
+      { rank:9,  title:"Family Man Season 3",      lang:"Hindi",   weeks:8,  views:"~2M",        note:"Manoj Bajpayee · 8 weeks of India chart presence" },
+      { rank:10, title:"Firebreak",                lang:"Spanish", weeks:4,  views:"~1.5M",      note:"#1 in 26 countries globally · Spain survival drama" },
     ],
   },
 };
 
-/* ── OTT RANKINGS SECTION ────────────────────────────────────── */
+/* Amazon Prime Video — No official weekly chart. Showing Known Trending
+   based on trade sources: Ormax OTT Intelligence + Prime Video India blog  */
+const OTT_PRIME = {
+  movies: {
+    weekRange: "Mar 2026",
+    source: "Ormax OTT Intelligence + Trade",
+    sourceUrl: "https://www.aboutamazon.in/news/entertainment/prime-video-lineup-2026",
+    note: "Prime Video does not publish official weekly ranked charts. Figures from Ormax OTT Intelligence (primary research) and Prime Video India trade blog.",
+    films: [
+      { rank:1,  title:"Subedaar",               lang:"Hindi",   weeks:3,  note:"Anil Kapoor · sand mafia drama · strong word-of-mouth", hot:true },
+      { rank:2,  title:"Aspirants Season 3",     lang:"Hindi",   weeks:1,  note:"TVF · March 13 premiere — also on Netflix India", hot:true },
+      { rank:3,  title:"Jawan",                  lang:"Hindi",   weeks:55, note:"Library anchor · SRK · still pulling India + diaspora viewership" },
+      { rank:4,  title:"Panchayat Season 4",     lang:"Hindi",   weeks:12, note:"Most-watched rural comedy on Prime India" },
+      { rank:5,  title:"Young Sherlock",         lang:"Intl",    weeks:2,  note:"Guy Ritchie · Hero Fiennes Tiffin · Amazon Original March 4" },
+      { rank:6,  title:"The Family Man S2",      lang:"Hindi",   weeks:100, note:"Library evergreen · Manoj Bajpayee · still charting" },
+      { rank:7,  title:"Farzi Season 1",         lang:"Hindi",   weeks:150, note:"37M+ views all-time · Amazon India record · Farzi S2 announced 2026", hot:true },
+      { rank:8,  title:"KGF: Chapter 2",         lang:"Kannada/Hindi", weeks:80, note:"100M+ views · Pan-India catalogue anchor" },
+      { rank:9,  title:"Scarpetta",              lang:"Intl",    weeks:1,  note:"Nicole Kidman · Patricia Cornwell adaptation · March 11" },
+      { rank:10, title:"RRR",                    lang:"Telugu/Hindi", weeks:100, note:"Oscar winner · One of Prime India's global performers" },
+    ],
+  },
+  shows: {
+    weekRange: "Mar 2026",
+    source: "Ormax OTT Intelligence",
+    sourceUrl: "https://www.aboutamazon.in/news/entertainment/prime-video-lineup-2026",
+    note: "Based on Ormax weekly primary research across India OTT universe.",
+    films: [
+      { rank:1,  title:"Mirzapur Season 3",      lang:"Hindi",   weeks:20, note:"All-time Prime India record · ₹37M+ views S3", hot:true },
+      { rank:2,  title:"Panchayat Season 4",     lang:"Hindi",   weeks:12, note:"Sustained rural India + diaspora viewership" },
+      { rank:3,  title:"Aspirants Season 3",     lang:"Hindi",   weeks:1,  note:"March 13 · TVF school · UPSC drama", hot:true },
+      { rank:4,  title:"The Family Man S3",      lang:"Hindi",   weeks:8,  note:"Raj & DK · Manoj Bajpayee's third season" },
+      { rank:5,  title:"Citadel: Honey Bunny",   lang:"Hindi",   weeks:15, note:"Samantha + Varun Dhawan spy action · global crossover" },
+      { rank:6,  title:"Made in Heaven S2",      lang:"Hindi",   weeks:40, note:"Zoya Akhtar · sustained prestige viewership" },
+      { rank:7,  title:"Tandav",                 lang:"Hindi",   weeks:100, note:"Political thriller library evergreen" },
+      { rank:8,  title:"Dahaad Season 1",        lang:"Hindi",   weeks:50, note:"Sonakshi Sinha · crime drama ahead of S2 announcement" },
+      { rank:9,  title:"Farzi Season 1",         lang:"Hindi",   weeks:150, note:"Rewatch surge ahead of Farzi S2 announcement" },
+      { rank:10, title:"Daldal",                 lang:"Hindi",   weeks:8,  note:"Bhumi Pednekar · serial killer crime thriller · Jan 30" },
+    ],
+  },
+  slate2026: [
+    { title:"Farzi Season 2",       cast:"Shahid Kapoor, Vijay Sethupathi", status:"Announced", note:"Raj & DK return · biggest Prime India sequel of 2026" },
+    { title:"Panchayat Season 5",   cast:"Jitendra Kumar, Neena Gupta",    status:"Announced", note:"TVF · rural India comedy returns" },
+    { title:"The Revolutionaries",  cast:"Bhuvan Bam",                     status:"Announced", note:"Nikkhil Advani · political saga" },
+    { title:"Call Me Bae Season 2", cast:"Ananya Panday, Vir Das",         status:"Announced", note:"Dharmatic Entertainment · comedy sequel" },
+    { title:"Dahaad Season 2",      cast:"Sonakshi Sinha",                 status:"Announced", note:"Zoya Akhtar crime drama returns" },
+    { title:"O'Romeo",              cast:"Shahid Kapoor",                  status:"Announced", note:"Vishal Bharadwaj · gangster love story" },
+    { title:"Matka King",           cast:"Vijay Varma",                    status:"Announced", note:"Crime drama · Emmay Entertainment" },
+    { title:"Anarth",               cast:"TBC",                            status:"Announced", note:"Horror thriller · unveiled Mar 19, 2026" },
+  ],
+};
+
+/* Zee5 — India's third-largest SVOD. No public weekly chart.
+   Known trending based on Zee5 social + trade reports.                     */
+const OTT_ZEE5 = {
+  weekRange: "Mar 2026",
+  source: "Zee5 Official + Trade Reports",
+  sourceUrl: "https://www.zee5.com",
+  note: "Zee5 does not publish official weekly ranked charts. Content sourced from Zee5 social media announcements and trade reports.",
+  films: [
+    { rank:1,  title:"Jwala",                  lang:"Hindi",   type:"Series",  note:"Zee5 Original · crime thriller dominating platform", hot:true },
+    { rank:2,  title:"Chhaava",                lang:"Hindi",   type:"Film",    note:"Vicky Kaushal historical epic · post-theatrical premiere", hot:true },
+    { rank:3,  title:"Tanaav Season 2",        lang:"Hindi",   type:"Series",  note:"Kashmir conflict drama · Zee5 Original continuing run" },
+    { rank:4,  title:"Aabha",                  lang:"Hindi",   type:"Series",  note:"Political drama series · strong female-led viewership" },
+    { rank:5,  title:"Mangal Lakshmi",         lang:"Hindi",   type:"Series",  note:"Star Plus drama on Zee5 · mass family viewership" },
+    { rank:6,  title:"Scam 2003",              lang:"Hindi",   type:"Series",  note:"Hansal Mehta · SonyLIV original now on Zee5 library" },
+    { rank:7,  title:"Dharam Yudh",            lang:"Hindi",   type:"Series",  note:"Manoj Bajpayee Zee5 Original · sustained 2-month run" },
+    { rank:8,  title:"Sunflower Season 2",     lang:"Hindi",   type:"Series",  note:"Sunil Grover comedy series on Zee5" },
+    { rank:9,  title:"The Broken News S2",     lang:"Hindi",   type:"Series",  note:"Media industry thriller · Zee5 Original" },
+    { rank:10, title:"Kaala Paani",            lang:"Hindi",   type:"Series",  note:"Netflix crossover library title on Zee5 bundle" },
+  ],
+};
+
+/* MX Player — AVOD (free, ad-supported). Aashram dominates all-time.
+   No official ranked chart published. Known popular content only.          */
+const OTT_MX = {
+  weekRange: "Mar 2026",
+  source: "Ormax OTT Intelligence (AVOD universe)",
+  sourceUrl: "https://www.mxplayer.in",
+  note: "MX Player is India's largest AVOD platform (~300M MAU). Does not publish official ranked charts. Showing historically high-performing and currently trending titles based on Ormax AVOD tracking.",
+  films: [
+    { rank:1,  title:"Aashram Season 3",        lang:"Hindi",   type:"Series",  note:"Bobby Deol · all-time most-watched Indian web series incl. AVOD · 150M+ views", hot:true },
+    { rank:2,  title:"Raktanchal Season 2",     lang:"Hindi",   type:"Series",  note:"Gangster drama · MX Original · consistently highest-ranked" },
+    { rank:3,  title:"Bhaukaal Season 2",       lang:"Hindi",   type:"Series",  note:"UP police drama · MX Original · mass Hindi market" },
+    { rank:4,  title:"Hello Mini Season 3",     lang:"Hindi",   type:"Series",  note:"Psychological thriller · MX Originals female-led hit" },
+    { rank:5,  title:"Queen Season 1",          lang:"Hindi",   type:"Series",  note:"Ramya Krishnan political biopic · rewatch peak" },
+    { rank:6,  title:"Aashram Season 4",        lang:"Hindi",   type:"Series",  note:"Bobby Deol franchise continues · 2026 new season" },
+    { rank:7,  title:"Poison Season 2",         lang:"Hindi",   type:"Series",  note:"Arbaaz Khan crime drama" },
+    { rank:8,  title:"Campus Beats Season 2",   lang:"Hindi",   type:"Series",  note:"Youth drama · college audience stronghold" },
+    { rank:9,  title:"Vikrant Rona",            lang:"Kannada", type:"Film",    note:"Kiccha Sudeep action · South cinema access on MX" },
+    { rank:10, title:"Poran Jai Jaliya Re",     lang:"Bengali", type:"Series",  note:"Bengali regional OTT growing fast on MX Player" },
+  ],
+};
+
+/* Combined Most Watched — Cross-platform composite
+   Methodology: Netflix official views data + Ormax primary research
+   for Prime/others. Streaming hours not comparable across platforms.
+   All figures are approximate composite estimates.                          */
+const OTT_COMBINED = {
+  weekRange: "Mar 9–15, 2026",
+  source: "Netflix Tudum (Official) + Ormax OTT Intelligence + Trade",
+  note: "Cross-platform chart is a composite — Netflix figures are official weekly views, Prime/Zee5/MX are Ormax primary research estimates. Not directly comparable due to differing methodologies.",
+  films: [
+    { rank:1,  title:"One Piece Season 2",     platform:"Netflix",       lang:"Dubbed", type:"Show",  note:"Netflix global #1 · 64 countries top 10 · March 10 premiere", hot:true },
+    { rank:2,  title:"Dhurandhar",             platform:"Netflix",       lang:"Hindi",  type:"Film",  note:"101.3M hrs all-time · still holding chart after 9 weeks", hot:true },
+    { rank:3,  title:"Hello Bachhon",          platform:"Netflix",       lang:"Hindi",  type:"Show",  note:"TVF × Netflix · Alakh Pandey biopic · March 6 debut", hot:true },
+    { rank:4,  title:"Accused",                platform:"Netflix",       lang:"Hindi",  type:"Film",  note:"Karan Johar × Anubhuti Kashyap · 15M+ views in 2 wks" },
+    { rank:5,  title:"Aspirants Season 3",     platform:"Prime Video",   lang:"Hindi",  type:"Show",  note:"TVF × Prime · UPSC drama · also charting Netflix India", hot:true },
+    { rank:6,  title:"Mirzapur Season 3",      platform:"Prime Video",   lang:"Hindi",  type:"Show",  note:"37M+ lifetime views · Prime India all-time record" },
+    { rank:7,  title:"Boyfriend on Demand",    platform:"Netflix",       lang:"Korean", type:"Show",  note:"Jisoo (BLACKPINK) × Seo In-guk · K-drama India crossover" },
+    { rank:8,  title:"Subedaar",               platform:"Prime Video",   lang:"Hindi",  type:"Film",  note:"Anil Kapoor OTT film · strong Prime India debut" },
+    { rank:9,  title:"Panchayat Season 4",     platform:"Prime Video",   lang:"Hindi",  type:"Show",  note:"Multi-platform hit · India's most-watched rural show" },
+    { rank:10, title:"Aashram Season 4",       platform:"MX Player",     lang:"Hindi",  type:"Show",  note:"Bobby Deol franchise · India's biggest AVOD show continues" },
+  ],
+};
+
+/* Streaming Calendar — OTT premiere dates (upcoming + recent)              */
+const OTT_CALENDAR = [
+  { film:"Peaky Blinders: The Immortal Man", platform:"Netflix",     estreaming:"Mar 20, 2026", status:"streaming", lang:"English",       note:"Cillian Murphy's Tommy Shelby in WWII · cinematic finale" },
+  { film:"Border 2",                         platform:"Netflix",     estreaming:"Mar 20, 2026", status:"streaming", lang:"Hindi",          note:"Sunny Deol, Varun Dhawan, Diljit Dosanjh · 1971 war drama" },
+  { film:"Landlord",                         platform:"Prime Video", estreaming:"Mar 21, 2026", status:"streaming", lang:"Hindi/Telugu",   note:"₹37 Cr theatrical · rural India labour story" },
+  { film:"Dhurandhar 2: The Revenge",        platform:"JioHotstar",  estreaming:"~May 15, 2026",status:"confirmed", lang:"Hindi · Pan-India", note:"₹150 Cr deal · 8-week theatrical window · D2 sequel" },
+  { film:"Ustaad Bhagat Singh",              platform:"Netflix",     estreaming:"~May 19, 2026",status:"confirmed", lang:"Telugu · Pan-India", note:"Pawan Kalyan · 8-week window · ₹90 Cr deal (est.)" },
+  { film:"The Kerala Story 2: Goes Beyond",  platform:"Netflix",     estreaming:"~Apr 30, 2026",status:"expected",  lang:"Malayalam",      note:"₹40 Cr theatrical run → 6-week window" },
+  { film:"O'Romeo",                          platform:"Prime Video", estreaming:"~May 2026",    status:"expected",  lang:"Hindi",          note:"Shahid Kapoor × Vishal Bharadwaj gangster film" },
+  { film:"Bhooth Bangla",                    platform:"Netflix",     estreaming:"~Jul 2026",    status:"expected",  lang:"Hindi",          note:"Akshay Kumar horror comedy · Priyadarshan direction" },
+  { film:"Farzi Season 2",                   platform:"Prime Video", estreaming:"H2 2026",      status:"announced", lang:"Hindi",          note:"Shahid Kapoor + Vijay Sethupathi return · Raj & DK" },
+  { film:"Panchayat Season 5",               platform:"Prime Video", estreaming:"H2 2026",      status:"announced", lang:"Hindi",          note:"TVF × Prime · Jitendra Kumar rural comedy" },
+];
+
+/* OTT Weekly Editorial — updated every Thursday                            */
+const OTT_EDITORIAL = [
+  {
+    week:      "Week 11 · Mar 13–19, 2026",
+    headline:  "Prime Video Goes Big. Very Big.",
+    subline:   "55 titles, a new theatrical slate, and Farzi S2. Amazon just fired back at Netflix.",
+    body:      "Amazon Prime Video's 'It Starts Here' slate event on March 19 was a statement. Farzi Season 2, Panchayat Season 5, Aspirants Season 3 (already live), The Revolutionaries with Bhuvan Bam, Dahaad Season 2, Call Me Bae Season 2 — and a five-film theatrical slate including Rajkummar Rao's Raftaar. The headline from Prime's own data: over half of the most-watched Top 50 non-English titles globally in 2025 came from Prime India. And 25% of their Indian content audience is outside India. That number is the real story — Indian OTT originals are becoming a global export business.",
+    intel: [
+      { label:"Prime 2026 Slate",    val:"55+ titles",   note:"Hindi + Tamil + Telugu across originals and films" },
+      { label:"Farzi S2",            val:"Confirmed",    note:"Shahid Kapoor + Vijay Sethupathi return · Raj & DK" },
+      { label:"Global Indian Share", val:"25%",          note:"Prime Video Indian content watched outside India" },
+      { label:"Non-English Top 50",  val:">50% India",   note:"India dominated Prime's global non-English chart in 2025" },
+    ],
+  },
+  {
+    week:      "Week 10 · Mar 6–12, 2026",
+    headline:  "Netflix India's March is Already Full.",
+    subline:   "One Piece S2, Peaky Blinders, Hello Bachhon, Boyfriend on Demand — all in 10 days.",
+    body:      "Netflix crammed an extraordinary slate into the first two weeks of March. One Piece Season 2 debuted March 10 and immediately hit top 10 in 64 countries. Hello Bachhon (TVF, March 6) and Aspirants Season 3 (Prime, March 13) are competing for the same Hindi OTT prestige audience — and Aspirants is charting on both platforms simultaneously. Boyfriend on Demand with Jisoo has become the fastest-selling new K-drama premiere in India in months. Meanwhile Border 2's March 20 Netflix premiere will be a test: can a ₹424 Cr box office hit still drive OTT subscription adds when the theatrical memory is fresh?",
+    intel: [
+      { label:"One Piece S2",         val:"64 countries",  note:"Netflix top 10 debut · March 10" },
+      { label:"Border 2 Netflix",     val:"Mar 20, 2026",  note:"Sunny Deol war drama · 8 weeks after theatrical" },
+      { label:"Boyfriend on Demand",  val:"Jisoo debut",   note:"BLACKPINK K-drama × Indian audience convergence" },
+      { label:"TVF on Both",          val:"Hello Bachhon", note:"TVF content now split across Netflix and Prime simultaneously" },
+    ],
+  },
+];
+
+/* OTT Deals — verified and estimated                                       */
+const OTT_DEALS = [
+  { film:"Dhurandhar",               platform:"Netflix",     deal:"₹285 Cr",       year:2025, note:"Record Hindi OTT deal · 101.3M hrs · 23M views confirmed", verified:true },
+  { film:"Dhurandhar 2: The Revenge",platform:"JioHotstar",  deal:"₹150 Cr",       year:2026, note:"+ Star Gold ₹50 Cr + T-Series ₹45 Cr · Total non-theatrical ₹245 Cr", verified:true },
+  { film:"Pushpa 2: The Rule",       platform:"Netflix",     deal:"₹250 Cr (est.)",year:2024, note:"Netflix India's most-watched Indian film 2025 · 50M+ views", verified:false },
+  { film:"Ustaad Bhagat Singh",      platform:"Netflix",     deal:"₹90 Cr (est.)", year:2026, note:"8-week theatrical window · OTT premiere ~May 2026", verified:false },
+  { film:"Jawan",                    platform:"Prime Video", deal:"₹200 Cr (est.)",year:2023, note:"SRK biggest OTT acquisition · 30M+ views", verified:false },
+  { film:"Border 2",                 platform:"Netflix",     deal:"₹80 Cr (est.)", year:2026, note:"₹424 Cr theatrical · Netflix premiere March 20, 2026", verified:false },
+  { film:"KGF: Chapter 2",           platform:"Prime Video", deal:"₹100 Cr (est.)",year:2022, note:"Kannada + Hindi · Pan-India catalogue anchor", verified:false },
+  { film:"RRR",                      platform:"Netflix",     deal:"₹70 Cr (est.)", year:2022, note:"Oscar winner · Netflix India global performer", verified:false },
+];
+
+/* Platform Intel                                                           */
+const OTT_PLATFORMS = [
+  {
+    id:"netflix", name:"Netflix", color:"#E50914", bg:"#1A0000",
+    subscribers:"~11M India (est.)", globalSubs:"300M+ global",
+    topTitle:"Dhurandhar", topStat:"101.3M hrs",
+    recentDeal:"D2 sequel lost to JioHotstar", recentDealNote:"D1 record holder keeping catalogue strong",
+    badge:"SVOD", badgeColor:"#E50914",
+    intel:"Netflix India's 2026 is defined by content density — One Piece S2, Peaky Blinders, Border 2 and Hello Bachhon all in a single month. Dhurandhar's 101.3M hours remains their all-time Hindi record. The D2 acquisition going to JioHotstar is the first time a major Hindi franchise split platforms mid-run. Their strength: global prestige + Korean crossover + TVF originals.",
+  },
+  {
+    id:"prime", name:"Prime Video", color:"#00A8E1", bg:"#001020",
+    subscribers:"~22M India (est.)", globalSubs:"200M+ global",
+    topTitle:"Mirzapur S3", topStat:"37M+ views",
+    recentDeal:"55-title 2026 slate · Farzi S2 + Panchayat S5", recentDealNote:"'It Starts Here' event March 19",
+    badge:"SVOD", badgeColor:"#00A8E1",
+    intel:"Prime's March 19 slate event was their biggest statement yet: 55 titles, a theatrical division with 5 new films, and returning hits Farzi S2 + Panchayat S5. Their India data is striking — 25% of Indian content views come from outside India, and Indian originals make up half their global non-English Top 50. Lost Dhurandhar 2 to JioHotstar. Won Aspirants S3, Subedaar, and the entire 2026 originals calendar.",
+  },
+  {
+    id:"jiohotstar", name:"JioHotstar", color:"#0066FF", bg:"#000A1A",
+    subscribers:"~500M MAU (free)", globalSubs:"India + MENA",
+    topTitle:"Dhurandhar 2", topStat:"₹150 Cr deal",
+    recentDeal:"D2 + UBS · ₹150 Cr+ combined", recentDealNote:"2026's biggest OTT acquisitions",
+    badge:"AVOD+SVOD", badgeColor:"#0066FF",
+    intel:"JioHotstar's big 2026 bet: Dhurandhar 2 at ₹150 Cr after losing D1 to Netflix. Combined with Ustaad Bhagat Singh, they've committed ₹200 Cr+ in Q1 theatrical acquisitions. IPL + D2 is their cornerstone strategy for 2026. The free tier (Jio network) gives them 500M+ reach — converting even 5% to D2 is a massive streaming event.",
+  },
+  {
+    id:"zee5", name:"Zee5", color:"#6B21A8", bg:"#0D001A",
+    subscribers:"~15M India (est.)", globalSubs:"India + diaspora",
+    topTitle:"Aashram library", topStat:"300M MAU (AVOD tier)",
+    recentDeal:"Zee5 × MX Player convergence", recentDealNote:"AVOD + SVOD bundled play",
+    badge:"AVOD+SVOD", badgeColor:"#6B21A8",
+    intel:"Zee5's strength is regional content and the Zee TV library — Star Plus and Star Gold dramas are their daily engagement engine. Their AVOD tier (300M+ MAU shared with MX Player) gives scale. Original series like Tanaav and Jwala are building prestige credentials. The Zee5-MX Player bundled approach is creating the largest free streaming audience in India.",
+  },
+  {
+    id:"mxplayer", name:"MX Player", color:"#F97316", bg:"#1A0800",
+    subscribers:"~300M MAU (AVOD)", globalSubs:"India-centric",
+    topTitle:"Aashram", topStat:"150M+ views",
+    recentDeal:"MX × Zee5 AVOD partnership", recentDealNote:"India's largest free streaming combine",
+    badge:"AVOD (Free)", badgeColor:"#F97316",
+    intel:"Aashram is the most-watched Indian web series ever when AVOD is included — 150M+ views across all seasons. MX Player's AVOD model means no subscription barrier, making it India's true mass-market streamer. Their audience skews North India, Hindi heartland, and Tier 2-3 cities. Aashram Season 4 is their 2026 tent-pole. The MX-Zee5 partnership creates a combined free streaming footprint that dwarfs every SVOD platform in India.",
+  },
+  {
+    id:"sonyliv", name:"SonyLIV", color:"#00B140", bg:"#001A0A",
+    subscribers:"~12M India (est.)", globalSubs:"India + diaspora",
+    topTitle:"Scam 1992", topStat:"Most-watched series",
+    recentDeal:"ICC Cricket + Scam franchise", recentDealNote:"Sports + prestige originals",
+    badge:"SVOD", badgeColor:"#00B140",
+    intel:"SonyLIV's lane is prestige originals + live cricket. Scam 1992 remains their all-time benchmark. Scam 2003 extended the franchise. Relatively quiet on big theatrical film acquisitions — competing on original series quality rather than licensing spend. The Hansal Mehta partnership remains their most productive creative relationship.",
+  },
+];
+
+/* ── OTT LANDING PAGE ─────────────────────────────────────────────────── */
 function OTTRankingsSection() {
-  const [tab, setTab] = React.useState("india");
-  const chart = tab === "india" ? OTT_CHARTS.india : OTT_CHARTS.global;
-  const isGlobal = tab === "global";
+  const [tab, setTab] = React.useState("combined");
+  const [netflixSub, setNetflixSub] = React.useState("movies");
+  const [primeSub, setPrimeSub] = React.useState("movies");
+  const [activePlatform, setActivePlatform] = React.useState("netflix");
+  const [editorialIdx, setEditorialIdx] = React.useState(0);
+
+  const PLATFORM_COLOR = {
+    "Netflix": "#E50914", "Prime Video": "#00A8E1", "JioHotstar": "#0066FF",
+    "Zee5": "#6B21A8", "MX Player": "#F97316", "SonyLIV": "#00B140",
+  };
+
+  const navTabs = [
+    { key:"combined",  label:"🔥 Most Watched" },
+    { key:"netflix",   label:"🎬 Netflix" },
+    { key:"prime",     label:"📦 Prime Video" },
+    { key:"zee5",      label:"🔵 Zee5" },
+    { key:"mx",        label:"📱 MX Player" },
+    { key:"calendar",  label:"📅 Premiere Dates" },
+    { key:"editorial", label:"📰 Weekly Take" },
+    { key:"deals",     label:"💰 Deals" },
+    { key:"platforms", label:"⚡ Platform Intel" },
+  ];
+
+  const platform = OTT_PLATFORMS.find(p => p.id === activePlatform) || OTT_PLATFORMS[0];
+
+  // Shared row renderer
+  const ChartRow = ({ film, i, total, showPlatform }) => {
+    const isHot = film.hot;
+    const platformCol = showPlatform ? (PLATFORM_COLOR[film.platform] || "#6B7280") : null;
+    return (
+      <div style={{
+        display:"flex", alignItems:"center", gap:12, padding:"10px 24px",
+        borderBottom: i < total-1 ? `1px solid ${T.border}` : "none",
+        background: isHot ? "#FFFDF8" : T.surface,
+        borderLeft: isHot ? "3px solid #E50914" : "3px solid transparent",
+      }}>
+        <div style={{ fontFamily:"'Barlow Condensed',sans-serif", fontWeight:900,
+          fontSize: film.rank<=3?20:15, width:24, flexShrink:0, textAlign:"center",
+          color: film.rank===1?"#B8860B":film.rank<=3?"#E50914":T.textMuted,
+        }}>{film.rank}</div>
+        <div style={{ width:1, height:28, background:T.border, flexShrink:0 }} />
+        <div style={{ flex:1, minWidth:0 }}>
+          <div style={{ fontFamily:"'Barlow Condensed',sans-serif", fontWeight:isHot?800:700,
+            fontSize:15, color:T.text, whiteSpace:"nowrap", overflow:"hidden", textOverflow:"ellipsis",
+          }}>{film.title}</div>
+          <div style={{ display:"flex", alignItems:"center", gap:6, marginTop:2, flexWrap:"wrap" }}>
+            <span style={{ fontFamily:"'DM Sans',sans-serif", fontSize:9, color:T.textMuted }}>{film.lang}</span>
+            {film.type && <span style={{ fontFamily:"'IBM Plex Mono',monospace", fontSize:8, fontWeight:600, color:T.textMuted, letterSpacing:"0.08em", textTransform:"uppercase", background:T.surfaceAlt, padding:"1px 5px", borderRadius:2 }}>{film.type}</span>}
+          </div>
+        </div>
+        <div style={{ textAlign:"right", flexShrink:0, minWidth:0 }}>
+          {showPlatform && platformCol && (
+            <div style={{ fontFamily:"'Barlow Condensed',sans-serif", fontWeight:800, fontSize:11,
+              color:platformCol, letterSpacing:"0.06em", textTransform:"uppercase", marginBottom:2,
+            }}>{film.platform}</div>
+          )}
+          {film.views && <div style={{ fontFamily:"'Barlow Condensed',sans-serif", fontWeight:800, fontSize:13, color:"#E50914" }}>{film.views}</div>}
+          {film.weeks && !film.views && <div style={{ fontFamily:"'IBM Plex Mono',monospace", fontSize:10, color:T.textMid, fontWeight:600 }}>Wk {film.weeks}</div>}
+          <div style={{ fontFamily:"'DM Sans',sans-serif", fontSize:9, color:T.textMuted, marginTop:1,
+            maxWidth:160, whiteSpace:"nowrap", overflow:"hidden", textOverflow:"ellipsis",
+          }}>{film.note?.split(" · ")[0]}</div>
+        </div>
+        {isHot && <div style={{ fontFamily:"'Barlow Condensed',sans-serif", fontWeight:800, fontSize:8,
+          letterSpacing:"0.14em", textTransform:"uppercase", background:"#7F1D1D",
+          color:"#FCA5A5", padding:"2px 6px", borderRadius:2, flexShrink:0,
+        }}>HOT</div>}
+      </div>
+    );
+  };
+
+  const SourceNote = ({ text, url }) => (
+    <div style={{ padding:"8px 24px", background:T.surfaceAlt, borderTop:`1px solid ${T.border}` }}>
+      <span style={{ fontFamily:"'DM Sans',sans-serif", fontSize:9, color:T.textMuted, fontStyle:"italic" }}>{text}</span>
+      {url && <a href={url} target="_blank" rel="noopener noreferrer" style={{ fontFamily:"'DM Sans',sans-serif", fontSize:9, color:T.accent, marginLeft:8 }}>Source ↗</a>}
+    </div>
+  );
+
+  const SubToggle = ({ val, setVal, options }) => (
+    <div style={{ display:"flex", borderBottom:`1px solid ${T.border}`, background:T.surface }}>
+      {options.map(([k, label]) => (
+        <button key={k} onClick={() => setVal(k)} style={{
+          fontFamily:"'Barlow Condensed',sans-serif", fontWeight:700, fontSize:11,
+          letterSpacing:"0.12em", textTransform:"uppercase", padding:"9px 20px",
+          border:"none", cursor:"pointer", flexShrink:0,
+          borderBottom: val===k ? `2px solid ${T.accent}` : "2px solid transparent",
+          background: val===k ? "#FFF5F5" : T.surface,
+          color: val===k ? T.accent : T.textMuted, transition:"all 0.12s",
+        }}>{label}</button>
+      ))}
+    </div>
+  );
 
   return (
-    <div style={{ background:T.surface, borderBottom:`2px solid ${T.border}` }}>
+    <div style={{ background:T.surface }}>
 
-      {/* ── Header ── */}
-      <div style={{
-        padding:"10px 24px",
-        display:"flex", alignItems:"center", gap:0,
-        borderBottom:`2px solid ${T.ink || "#0D0D0D"}`,
-      }}>
-        <span style={{ fontFamily:"'Barlow Condensed',sans-serif", fontWeight:900, fontSize:11, color:T.text, letterSpacing:"0.22em", textTransform:"uppercase" }}>
-          OTT CHARTS
-        </span>
-        <span style={{ flex:1 }} />
-        <span style={{ fontFamily:"'DM Sans',sans-serif", fontSize:10, color:T.textMuted }}>
-          Week {OTT_CHARTS.weekRange} · {OTT_CHARTS.updatedDate}
-        </span>
+      {/* Hero stat strip */}
+      <div style={{ background:"#0A0A0A", borderBottom:"1px solid #1A1A1A", padding:"18px 24px" }}>
+        <div style={{ display:"flex", alignItems:"baseline", gap:12, marginBottom:14 }}>
+          <span style={{ fontFamily:"'Barlow Condensed',sans-serif", fontWeight:900, fontSize:11, color:"#C8201A", letterSpacing:"0.22em", textTransform:"uppercase" }}>OTT INTELLIGENCE</span>
+          <span style={{ fontFamily:"'DM Sans',sans-serif", fontSize:10, color:"#4B5563" }}>India · {OTT_META.updatedDate}</span>
+          <span style={{ fontFamily:"'IBM Plex Mono',monospace", fontSize:9, color:"#374151", marginLeft:"auto" }}>Next update: {OTT_META.nextUpdate}</span>
+        </div>
+        <div style={{ display:"grid", gridTemplateColumns:"repeat(auto-fill,minmax(160px,1fr))", gap:1 }}>
+          {[
+            { label:"All-Time Hindi Record",  val:"101.3M hrs", sub:"Dhurandhar · Netflix India 2025",   col:"#E50914" },
+            { label:"Biggest Film Deal",       val:"₹285 Cr",    sub:"Dhurandhar · Netflix",               col:"#22C55E" },
+            { label:"D2 OTT Deal",             val:"₹150 Cr",    sub:"Dhurandhar 2 · JioHotstar 2026",    col:"#0066FF" },
+            { label:"Prime 2026 Slate",        val:"55+ Titles",  sub:"Farzi S2 · Panchayat S5 · + more",  col:"#00A8E1" },
+            { label:"India AVOD Reach",        val:"~300M MAU",   sub:"MX Player + Zee5 free tier",        col:"#F97316" },
+          ].map((s,i) => (
+            <div key={i} style={{ background:"#111", padding:"12px 16px", borderRight:"1px solid #1A1A1A" }}>
+              <div style={{ fontFamily:"'Barlow Condensed',sans-serif", fontWeight:900, fontSize:22, color:s.col, lineHeight:1, marginBottom:3 }}>{s.val}</div>
+              <div style={{ fontFamily:"'IBM Plex Mono',monospace", fontSize:8, fontWeight:600, color:"#6B7280", letterSpacing:"0.12em", textTransform:"uppercase" }}>{s.label}</div>
+              <div style={{ fontFamily:"'DM Sans',sans-serif", fontSize:9, color:"#4B5563", marginTop:2 }}>{s.sub}</div>
+            </div>
+          ))}
+        </div>
       </div>
 
-      {/* ── Tab switcher ── */}
-      <div style={{ display:"flex", borderBottom:`1px solid ${T.border}` }}>
-        {[
-          { key:"india",  label:"🇮🇳  Netflix India Top 10" },
-          { key:"global", label:"🌍  Global Non-English Top 10" },
-        ].map(({ key, label }) => (
-          <button
-            key={key}
-            onClick={() => setTab(key)}
-            style={{
-              fontFamily:"'Barlow Condensed',sans-serif", fontWeight:700,
-              fontSize:11, letterSpacing:"0.12em", textTransform:"uppercase",
-              padding:"9px 20px", border:"none", cursor:"pointer",
-              borderBottom: tab === key ? `2px solid ${T.blue}` : "2px solid transparent",
-              background: tab === key ? "#EFF6FF" : T.surface,
-              color: tab === key ? T.blue : T.textMuted,
-              transition:"all 0.12s",
-            }}
-          >{label}</button>
+      {/* Tab nav */}
+      <div style={{ borderBottom:`1px solid ${T.border}`, display:"flex", background:T.surfaceAlt, overflowX:"auto" }}>
+        {navTabs.map(t => (
+          <button key={t.key} onClick={() => setTab(t.key)} style={{
+            fontFamily:"'Barlow Condensed',sans-serif", fontWeight:700, fontSize:11,
+            letterSpacing:"0.1em", textTransform:"uppercase", padding:"10px 18px",
+            border:"none", cursor:"pointer", flexShrink:0,
+            borderBottom: tab===t.key ? `2px solid ${T.accent}` : "2px solid transparent",
+            background: tab===t.key ? T.surface : "transparent",
+            color: tab===t.key ? T.accent : T.textMuted, transition:"all 0.12s",
+          }}>{t.label}</button>
         ))}
-        <div style={{ flex:1 }} />
-        <a
-          href={chart.sourceUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          style={{ fontFamily:"'DM Sans',sans-serif", fontSize:9, color:T.textMuted, letterSpacing:"0.06em", padding:"9px 16px", textDecoration:"none" }}
-        >Source: {chart.source} ↗</a>
+        <span style={{ fontFamily:"'DM Sans',sans-serif", fontSize:9, color:T.textMuted, padding:"10px 16px", marginLeft:"auto", alignSelf:"center", flexShrink:0 }}>
+          Updated {OTT_META.updatedDate}
+        </span>
       </div>
 
-      {/* ── Chart rows ── */}
-      <div>
-        {chart.films.map((film, i) => (
-          <div
-            key={i}
-            style={{
-              display:"flex", alignItems:"center", gap:14,
-              padding:"9px 24px",
-              borderBottom: i < chart.films.length - 1 ? `1px solid ${T.border}` : "none",
-              background: film.hot ? "#FFFDF8" : T.surface,
-              borderLeft: film.hot ? `3px solid ${T.blue}` : `3px solid transparent`,
-            }}
-          >
-            {/* Rank */}
-            <div style={{
-              fontFamily:"'Barlow Condensed',sans-serif", fontWeight:900,
-              fontSize: film.rank <= 3 ? 18 : 14,
-              color: film.rank === 1 ? "#B8860B" : film.rank <= 3 ? T.blue : T.textMuted,
-              width:22, flexShrink:0, textAlign:"center",
-            }}>{film.rank}</div>
-
-            {/* Divider */}
-            <div style={{ width:1, height:26, background:T.border, flexShrink:0 }} />
-
-            {/* Title + lang */}
-            <div style={{ flex:1, minWidth:0 }}>
-              <div style={{
-                fontFamily:"'Barlow Condensed',sans-serif", fontWeight: film.hot ? 800 : 700,
-                fontSize:15, color:T.text, whiteSpace:"nowrap", overflow:"hidden", textOverflow:"ellipsis",
-              }}>{film.title}</div>
-              <div style={{ fontFamily:"'DM Sans',sans-serif", fontSize:9, color:T.textMuted, marginTop:1 }}>
-                {film.lang}
-              </div>
-            </div>
-
-            {/* Note */}
-            <div style={{
-              fontFamily:"'DM Sans',sans-serif", fontSize:9, color:T.textMuted,
-              textAlign:"right", maxWidth:220, lineHeight:1.4,
-              display:"none",
-            }} className="ott-note">{film.note}</div>
-
-            {/* Views (global only) or weeks (india) */}
-            <div style={{ flexShrink:0, textAlign:"right" }}>
-              {isGlobal ? (
-                <div style={{ fontFamily:"'Barlow Condensed',sans-serif", fontWeight:800, fontSize:14, color:T.blue }}>
-                  {film.views}
-                </div>
-              ) : (
-                <div style={{ fontFamily:"'DM Sans',sans-serif", fontSize:9, color:T.textMuted }}>
-                  Wk {film.weeks}
-                </div>
-              )}
-              <div style={{ fontFamily:"'DM Sans',sans-serif", fontSize:9, color:T.textMuted, marginTop:1 }}>
-                {film.note.split(" · ")[0]}
-              </div>
-            </div>
-
-            {/* Hot badge */}
-            {film.hot && (
-              <div style={{
-                fontFamily:"'Barlow Condensed',sans-serif", fontWeight:800, fontSize:8,
-                letterSpacing:"0.14em", textTransform:"uppercase",
-                background:"#1A3A6B", color:"#93C5FD",
-                padding:"2px 6px", borderRadius:2, flexShrink:0,
-              }}>HOT</div>
-            )}
+      {/* COMBINED MOST WATCHED */}
+      {tab === "combined" && (
+        <div>
+          <div style={{ padding:"12px 24px", background:T.surfaceAlt, borderBottom:`1px solid ${T.border}`, display:"flex", alignItems:"center", gap:8 }}>
+            <span style={{ fontFamily:"'Barlow Condensed',sans-serif", fontWeight:800, fontSize:13, color:T.text, letterSpacing:"0.06em", textTransform:"uppercase" }}>Cross-Platform Most Watched</span>
+            <span style={{ fontFamily:"'DM Sans',sans-serif", fontSize:10, color:T.textMuted }}>· {OTT_COMBINED.weekRange}</span>
           </div>
-        ))}
-      </div>
+          {OTT_COMBINED.films.map((film, i) => (
+            <ChartRow key={i} film={film} i={i} total={OTT_COMBINED.films.length} showPlatform={true} />
+          ))}
+          <SourceNote text={OTT_COMBINED.note} url={null} />
+        </div>
+      )}
+
+      {/* NETFLIX */}
+      {tab === "netflix" && (
+        <div>
+          <SubToggle val={netflixSub} setVal={setNetflixSub} options={[["movies","🎬 Movies"],["shows","📺 Shows"]]} />
+          <div style={{ padding:"8px 24px 4px", display:"flex", alignItems:"center", justifyContent:"space-between" }}>
+            <span style={{ fontFamily:"'IBM Plex Mono',monospace", fontSize:9, color:"#E50914", fontWeight:600, letterSpacing:"0.12em", textTransform:"uppercase" }}>Netflix India · Official Tudum · {OTT_NETFLIX.movies.weekRange}</span>
+            <a href={OTT_NETFLIX.movies.sourceUrl} target="_blank" rel="noopener noreferrer" style={{ fontFamily:"'DM Sans',sans-serif", fontSize:9, color:T.textMuted, textDecoration:"none" }}>Source ↗</a>
+          </div>
+          {(netflixSub === "movies" ? OTT_NETFLIX.movies.films : OTT_NETFLIX.shows.films).map((film, i) => {
+            const list = netflixSub === "movies" ? OTT_NETFLIX.movies.films : OTT_NETFLIX.shows.films;
+            return <ChartRow key={i} film={film} i={i} total={list.length} showPlatform={false} />;
+          })}
+          <SourceNote text="Netflix India Top 10 published weekly via Netflix Tudum (official). Views = millions of accounts that watched ≥70% of a film / ≥1 episode of a show in the stated week." url={OTT_NETFLIX.movies.sourceUrl} />
+        </div>
+      )}
+
+      {/* PRIME VIDEO */}
+      {tab === "prime" && (
+        <div>
+          <SubToggle val={primeSub} setVal={setPrimeSub} options={[["movies","🎬 Movies"],["shows","📺 Shows"],["slate","🗓 2026 Slate"]]} />
+          <div style={{ padding:"8px 24px 4px", display:"flex", alignItems:"center", justifyContent:"space-between" }}>
+            <span style={{ fontFamily:"'IBM Plex Mono',monospace", fontSize:9, color:"#00A8E1", fontWeight:600, letterSpacing:"0.12em", textTransform:"uppercase" }}>Prime Video India · {OTT_PRIME.movies.weekRange}</span>
+            <a href={OTT_PRIME.movies.sourceUrl} target="_blank" rel="noopener noreferrer" style={{ fontFamily:"'DM Sans',sans-serif", fontSize:9, color:T.textMuted, textDecoration:"none" }}>Source ↗</a>
+          </div>
+          {primeSub === "slate" ? (
+            <div>
+              {OTT_PRIME.slate2026.map((s, i) => (
+                <div key={i} style={{ display:"flex", alignItems:"center", gap:14, padding:"12px 24px",
+                  borderBottom:`1px solid ${T.border}`, background: i%2===0 ? T.surface : T.surfaceAlt,
+                  borderLeft:"3px solid #00A8E1",
+                }}>
+                  <div style={{ fontFamily:"'Barlow Condensed',sans-serif", fontWeight:900, fontSize:15, color:T.text, flex:1 }}>{s.title}</div>
+                  <div style={{ fontFamily:"'DM Sans',sans-serif", fontSize:10, color:T.textMuted, textAlign:"right" }}>{s.cast}</div>
+                  <span style={{ fontFamily:"'IBM Plex Mono',monospace", fontSize:8, fontWeight:600, letterSpacing:"0.1em", textTransform:"uppercase",
+                    color:"#00A8E1", border:"1px solid #00A8E1", background:"#00A8E108", padding:"2px 7px", borderRadius:2, flexShrink:0,
+                  }}>{s.status}</span>
+                </div>
+              ))}
+              <SourceNote text="Prime Video India 2026 slate announced at 'It Starts Here' event · March 19, 2026." url={OTT_PRIME.movies.sourceUrl} />
+            </div>
+          ) : (
+            <>
+              {(primeSub === "movies" ? OTT_PRIME.movies.films : OTT_PRIME.shows.films).map((film, i) => {
+                const list = primeSub === "movies" ? OTT_PRIME.movies.films : OTT_PRIME.shows.films;
+                return <ChartRow key={i} film={film} i={i} total={list.length} showPlatform={false} />;
+              })}
+              <SourceNote text={OTT_PRIME.movies.note} url={OTT_PRIME.movies.sourceUrl} />
+            </>
+          )}
+        </div>
+      )}
+
+      {/* ZEE5 */}
+      {tab === "zee5" && (
+        <div>
+          <div style={{ padding:"8px 24px 4px", display:"flex", alignItems:"center", justifyContent:"space-between" }}>
+            <span style={{ fontFamily:"'IBM Plex Mono',monospace", fontSize:9, color:"#6B21A8", fontWeight:600, letterSpacing:"0.12em", textTransform:"uppercase" }}>Zee5 India · {OTT_ZEE5.weekRange}</span>
+            <a href={OTT_ZEE5.sourceUrl} target="_blank" rel="noopener noreferrer" style={{ fontFamily:"'DM Sans',sans-serif", fontSize:9, color:T.textMuted, textDecoration:"none" }}>Zee5 ↗</a>
+          </div>
+          {OTT_ZEE5.films.map((film, i) => (
+            <ChartRow key={i} film={film} i={i} total={OTT_ZEE5.films.length} showPlatform={false} />
+          ))}
+          <SourceNote text={OTT_ZEE5.note} url={null} />
+        </div>
+      )}
+
+      {/* MX PLAYER */}
+      {tab === "mx" && (
+        <div>
+          <div style={{ padding:"8px 24px 4px", display:"flex", alignItems:"center", justifyContent:"space-between" }}>
+            <span style={{ fontFamily:"'IBM Plex Mono',monospace", fontSize:9, color:"#F97316", fontWeight:600, letterSpacing:"0.12em", textTransform:"uppercase" }}>MX Player India · AVOD · {OTT_MX.weekRange}</span>
+            <a href={OTT_MX.sourceUrl} target="_blank" rel="noopener noreferrer" style={{ fontFamily:"'DM Sans',sans-serif", fontSize:9, color:T.textMuted, textDecoration:"none" }}>MX Player ↗</a>
+          </div>
+          {OTT_MX.films.map((film, i) => (
+            <ChartRow key={i} film={film} i={i} total={OTT_MX.films.length} showPlatform={false} />
+          ))}
+          <SourceNote text={OTT_MX.note} url={null} />
+        </div>
+      )}
+
+      {/* PREMIERE DATES */}
+      {tab === "calendar" && (
+        <div>
+          <div style={{ padding:"12px 24px", background:T.surfaceAlt, borderBottom:`1px solid ${T.border}` }}>
+            <span style={{ fontFamily:"'Barlow Condensed',sans-serif", fontWeight:800, fontSize:13, color:T.text, letterSpacing:"0.06em", textTransform:"uppercase" }}>OTT Premiere Dates — Confirmed & Expected</span>
+          </div>
+          {OTT_CALENDAR.map((c, i) => {
+            const platformEntry = OTT_PLATFORMS.find(p => c.platform.includes(p.name.split(" ")[0]) || p.name.includes(c.platform));
+            const col = platformEntry ? platformEntry.color : "#6B7280";
+            const statusColor = c.status === "streaming" ? "#22C55E" : c.status === "confirmed" ? "#22C55E" : c.status === "expected" ? "#D97706" : "#6B7280";
+            return (
+              <div key={i} style={{
+                display:"flex", alignItems:"center", gap:14, padding:"14px 24px",
+                borderBottom:`1px solid ${T.border}`,
+                borderLeft:`3px solid ${statusColor}`,
+                background: i%2===0 ? T.surface : T.surfaceAlt,
+              }}>
+                <div style={{ flex:1, minWidth:0 }}>
+                  <div style={{ fontFamily:"'Barlow Condensed',sans-serif", fontWeight:800, fontSize:16, color:T.text }}>{c.film}</div>
+                  <div style={{ fontFamily:"'DM Sans',sans-serif", fontSize:9, color:T.textMuted, marginTop:2 }}>{c.lang} · {c.note}</div>
+                </div>
+                <span style={{ fontFamily:"'Barlow Condensed',sans-serif", fontWeight:700, fontSize:11,
+                  letterSpacing:"0.08em", textTransform:"uppercase",
+                  color:col, border:`1px solid ${col}`, background:`${col}18`,
+                  padding:"2px 8px", borderRadius:2, flexShrink:0,
+                }}>{c.platform}</span>
+                <div style={{ flexShrink:0, textAlign:"right", minWidth:100 }}>
+                  <div style={{ fontFamily:"'Barlow Condensed',sans-serif", fontWeight:800, fontSize:14, color:statusColor }}>{c.estreaming}</div>
+                  <span style={{ fontFamily:"'IBM Plex Mono',monospace", fontSize:8, fontWeight:600,
+                    letterSpacing:"0.1em", textTransform:"uppercase",
+                    color:statusColor, border:`1px solid ${statusColor}80`,
+                    background:`${statusColor}12`, padding:"1px 6px", borderRadius:2,
+                  }}>{c.status}</span>
+                </div>
+              </div>
+            );
+          })}
+          <div style={{ padding:"10px 24px", background:T.surfaceAlt, borderTop:`1px solid ${T.border}` }}>
+            <span style={{ fontFamily:"'DM Sans',sans-serif", fontSize:9, color:T.textMuted, fontStyle:"italic" }}>
+              ✅ Confirmed = official announcement · ⚠️ Expected = based on standard theatrical window · 🔴 Streaming = live now. Windows: typically 6–8 weeks for mainstream films, 4 weeks for mid-budget.
+            </span>
+          </div>
+        </div>
+      )}
+
+      {/* WEEKLY EDITORIAL */}
+      {tab === "editorial" && (
+        <div>
+          {/* Tab selector for multiple weeks */}
+          <div style={{ display:"flex", borderBottom:`1px solid ${T.border}`, background:T.surfaceAlt, overflowX:"auto" }}>
+            {OTT_EDITORIAL.map((e, i) => (
+              <button key={i} onClick={() => setEditorialIdx(i)} style={{
+                fontFamily:"'DM Sans',sans-serif", fontWeight:editorialIdx===i?700:500, fontSize:11,
+                padding:"9px 18px", border:"none", cursor:"pointer", flexShrink:0,
+                borderBottom: editorialIdx===i ? `2px solid ${T.accent}` : "2px solid transparent",
+                background: editorialIdx===i ? T.surface : "transparent",
+                color: editorialIdx===i ? T.accent : T.textMuted, transition:"all 0.12s",
+              }}>{e.week}</button>
+            ))}
+          </div>
+          {OTT_EDITORIAL[editorialIdx] && (() => {
+            const ed = OTT_EDITORIAL[editorialIdx];
+            return (
+              <div style={{ padding:"28px 32px", maxWidth:820 }}>
+                <div style={{ fontFamily:"'IBM Plex Mono',monospace", fontSize:9, fontWeight:600, color:T.accent, letterSpacing:"0.18em", textTransform:"uppercase", marginBottom:10 }}>{ed.week} · OTT Intel</div>
+                <h2 style={{ fontFamily:"'Barlow Condensed',sans-serif", fontWeight:900, fontSize:28, color:T.text, lineHeight:1.1, marginBottom:6 }}>{ed.headline}</h2>
+                <div style={{ fontFamily:"'DM Sans',sans-serif", fontSize:13, color:T.textMuted, marginBottom:20, fontStyle:"italic" }}>{ed.subline}</div>
+                <p style={{ fontFamily:"'DM Sans',sans-serif", fontSize:14, color:T.textMid, lineHeight:1.8, marginBottom:24, borderLeft:`3px solid ${T.border}`, paddingLeft:16 }}>{ed.body}</p>
+                <div style={{ display:"grid", gridTemplateColumns:"repeat(auto-fill,minmax(200px,1fr))", gap:8 }}>
+                  {ed.intel.map((item, i) => (
+                    <div key={i} style={{ background:T.surfaceAlt, border:`1px solid ${T.border}`, borderRadius:3, padding:"12px 14px" }}>
+                      <div style={{ fontFamily:"'Barlow Condensed',sans-serif", fontWeight:900, fontSize:20, color:T.accent, lineHeight:1 }}>{item.val}</div>
+                      <div style={{ fontFamily:"'IBM Plex Mono',monospace", fontSize:8, fontWeight:600, color:T.text, letterSpacing:"0.12em", textTransform:"uppercase", marginTop:3 }}>{item.label}</div>
+                      <div style={{ fontFamily:"'DM Sans',sans-serif", fontSize:9, color:T.textMuted, marginTop:4 }}>{item.note}</div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            );
+          })()}
+        </div>
+      )}
+
+      {/* DEALS */}
+      {tab === "deals" && (
+        <div>
+          <div style={{ padding:"12px 24px", background:T.surfaceAlt, borderBottom:`1px solid ${T.border}` }}>
+            <span style={{ fontFamily:"'Barlow Condensed',sans-serif", fontWeight:800, fontSize:13, color:T.text, letterSpacing:"0.06em", textTransform:"uppercase" }}>Major OTT Acquisition Deals</span>
+          </div>
+          {OTT_DEALS.map((d, i) => {
+            const platformEntry = OTT_PLATFORMS.find(p => p.name.includes(d.platform.split(" ")[0]));
+            const col = platformEntry ? platformEntry.color : "#6B7280";
+            return (
+              <div key={i} style={{
+                display:"flex", alignItems:"center", gap:14, padding:"14px 24px",
+                borderBottom:`1px solid ${T.border}`, background: i%2===0 ? T.surface : T.surfaceAlt,
+                borderLeft:`3px solid ${d.verified?"#22C55E":"#D97706"}`,
+              }}>
+                <div style={{ flex:1, minWidth:0 }}>
+                  <div style={{ fontFamily:"'Barlow Condensed',sans-serif", fontWeight:800, fontSize:16, color:T.text }}>{d.film}</div>
+                  <div style={{ fontFamily:"'DM Sans',sans-serif", fontSize:9, color:T.textMuted, marginTop:2 }}>{d.note}</div>
+                </div>
+                <span style={{ fontFamily:"'Barlow Condensed',sans-serif", fontWeight:700, fontSize:11,
+                  color:col, border:`1px solid ${col}`, background:`${col}18`,
+                  padding:"2px 8px", borderRadius:2, flexShrink:0, letterSpacing:"0.06em", textTransform:"uppercase",
+                }}>{d.platform}</span>
+                <div style={{ textAlign:"right", flexShrink:0 }}>
+                  <div style={{ fontFamily:"'Barlow Condensed',sans-serif", fontWeight:900, fontSize:18, color:T.accent, lineHeight:1 }}>{d.deal}</div>
+                  <div style={{ fontFamily:"'IBM Plex Mono',monospace", fontSize:8, color:T.textMuted, marginTop:2 }}>{d.year} · {d.verified ? "✅ Verified" : "⚠️ Est."}</div>
+                </div>
+              </div>
+            );
+          })}
+          <div style={{ padding:"10px 24px", background:T.surfaceAlt, borderTop:`1px solid ${T.border}` }}>
+            <span style={{ fontFamily:"'DM Sans',sans-serif", fontSize:9, color:T.textMuted, fontStyle:"italic" }}>✅ Verified = confirmed via official announcements. ⚠️ Estimated = trade sources. All figures in ₹ Crores.</span>
+          </div>
+        </div>
+      )}
+
+      {/* PLATFORM INTEL */}
+      {tab === "platforms" && (
+        <div>
+          <div style={{ background:"#111", borderBottom:"1px solid #1A1A1A", padding:"0 24px", display:"flex", overflowX:"auto", gap:0 }}>
+            {OTT_PLATFORMS.map(p => (
+              <button key={p.id} onClick={() => setActivePlatform(p.id)} style={{
+                background:"transparent", border:"none",
+                borderBottom:`2px solid ${activePlatform===p.id ? p.color : "transparent"}`,
+                padding:"10px 18px", cursor:"pointer", flexShrink:0,
+                display:"flex", alignItems:"center", gap:8, transition:"all 0.12s",
+              }}>
+                <div style={{ width:7, height:7, borderRadius:"50%", background:p.color }} />
+                <span style={{ fontFamily:"'Barlow Condensed',sans-serif", fontWeight:700, fontSize:12,
+                  color: activePlatform===p.id ? p.color : "#6B7280",
+                  letterSpacing:"0.06em", textTransform:"uppercase", transition:"color 0.12s",
+                }}>{p.name}</span>
+              </button>
+            ))}
+          </div>
+          <div style={{ padding:"24px 28px" }}>
+            <div style={{ display:"flex", alignItems:"center", gap:10, marginBottom:16 }}>
+              <div style={{ width:4, height:28, background:platform.color, borderRadius:2 }} />
+              <div>
+                <div style={{ fontFamily:"'Barlow Condensed',sans-serif", fontWeight:900, fontSize:22, color:T.text }}>{platform.name}</div>
+                <div style={{ fontFamily:"'DM Sans',sans-serif", fontSize:10, color:T.textMuted }}>{platform.subscribers} · {platform.badge}</div>
+              </div>
+              <span style={{ marginLeft:"auto", fontFamily:"'Barlow Condensed',sans-serif", fontWeight:800, fontSize:11,
+                letterSpacing:"0.12em", textTransform:"uppercase",
+                color:platform.badgeColor, border:`1px solid ${platform.badgeColor}`,
+                background:`${platform.badgeColor}18`, padding:"3px 10px", borderRadius:2,
+              }}>{platform.badge}</span>
+            </div>
+            <div style={{ display:"grid", gridTemplateColumns:"1fr 1fr", gap:12, marginBottom:20 }}>
+              {[
+                { label:"Top Title", val:platform.topTitle, sub:platform.topStat },
+                { label:"Recent Deal", val:platform.recentDeal, sub:platform.recentDealNote },
+              ].map((s,i) => (
+                <div key={i} style={{ background:T.surfaceAlt, border:`1px solid ${T.border}`, padding:"14px 16px", borderRadius:3 }}>
+                  <div style={{ fontFamily:"'IBM Plex Mono',monospace", fontSize:8, fontWeight:600, color:T.textMuted, letterSpacing:"0.12em", textTransform:"uppercase", marginBottom:6 }}>{s.label}</div>
+                  <div style={{ fontFamily:"'Barlow Condensed',sans-serif", fontWeight:800, fontSize:17, color:T.text, lineHeight:1.1 }}>{s.val}</div>
+                  <div style={{ fontFamily:"'DM Sans',sans-serif", fontSize:10, color:T.textMuted, marginTop:4 }}>{s.sub}</div>
+                </div>
+              ))}
+            </div>
+            <div style={{ fontFamily:"'DM Sans',sans-serif", fontSize:13, color:T.textMid, lineHeight:1.8,
+              borderLeft:`3px solid ${platform.color}`, paddingLeft:16,
+            }}>{platform.intel}</div>
+          </div>
+        </div>
+      )}
+
     </div>
   );
 }
+
+
+
 
 /* ── EDITORIAL ROW (numbered ①②③) ──────────────────────────── */
 function FeaturedEditorialRow({ item, index, TagPill, onClick }) {
@@ -3552,7 +4273,6 @@ function FeaturedEditorialRow({ item, index, TagPill, onClick }) {
 /* ── FROM THE DESK — stacked editorial list ─────────────────── */
 function EditorialSection({ onNavigate }) {
   const TAG_COLORS = {
-    "DATA ANALYSIS":    { bg:"#064E3B",  text:"#6EE7B7"  },
     "ANALYSIS":         { bg:"#1E3A5F",  text:"#93C5FD"  },
     "ADVANCE BOOKING":  { bg:"#1A2F1A",  text:"#6EE7B7"  },
     "DEEP DIVE":        { bg:"#1C2B3A",  text:"#7DD3FC"  },
@@ -3686,60 +4406,103 @@ function EditorialSection({ onNavigate }) {
 
 /* ── HEADER SNAPSHOT CARDS ──────────────────────────────────── */
 function HeaderSnapshotCards({ activeSection }) {
-  const [daysLeft, setDaysLeft] = useState(null);
-  useEffect(() => {
-    const calc = () => {
-      const target = new Date("2026-03-19T00:00:00");
-      const diff = Math.ceil((target - new Date()) / (1000 * 60 * 60 * 24));
-      setDaysLeft(diff > 0 ? diff : 0);
-    };
-    calc();
-    const id = setInterval(calc, 60000);
-    return () => clearInterval(id);
-  }, []);
-
-  const CARDS = {
-    "Box Office": [
-      { type:"stat",      label:"WEEK 10 · #1 FILM",    value:"Kerala Story 2",sub:"₹32.87 Cr net · Wk 2 · Plus verdict",      accent:T.green,   icon:"🏆" },
-      { type:"stat",      label:"2026 YTD COMBINED",     value:"₹1,590 Cr",   sub:"Verified tracked releases · Week 14",         accent:T.blue,    icon:"📊" },
-      { type:"stat",      label:"ALL-TIME RECORD",       value:"₹1,800 Cr",   sub:"Pushpa 2 · Will Ramayana break it?",         accent:T.gold,    icon:"⚡" },
-      { type:"countdown", label:"NEXT BIG RELEASE",      value:daysLeft != null ? `${daysLeft}` : "—", valueSuffix:" days",
-                          sub:"Dhurandhar 2 · Mar 19, 2026",                                                                     accent:T.accent,  icon:"🎬", pulse:true },
-    ],
-    "Weekly": [
-      { type:"stat",      label:"THIS WEEK · LEADER",    value:"Kerala Story 2",sub:"₹25.65 Cr net · Wk 2 · +39% weekend hold",   accent:T.green,   icon:"🏆" },
-      { type:"stat",      label:"BIGGEST DROP",          value:"Border 2",     sub:"Closing · ₹481 Cr WW final",                accent:T.textMuted,icon:"📉" },
-      { type:"stat",      label:"OTT THIS WEEK",         value:"With Love",    sub:"Netflix from Mar 6 · ₹39 Cr WW · 644% ROI",accent:T.purple,  icon:"📺" },
-      { type:"countdown", label:"COUNTDOWN",             value:daysLeft != null ? `${daysLeft}` : "—", valueSuffix:" days",
-                          sub:"Dhurandhar 2 · Mar 19 · Eid",                                                                     accent:T.accent,  icon:"🎬", pulse:true },
-    ],
-  };
-  const cards = (CARDS[activeSection] || CARDS["Box Office"]);
-
   return (
-    <div style={{ display:"flex", gap:0, borderLeft:`1px solid ${T.border}`, flexShrink:0 }}>
-      {cards.map((card, i) => (
-        <div key={i} style={{ position:"relative", textAlign:"right", padding:"4px 18px 8px", borderRight:`1px solid ${T.border}`, minWidth:148 }}>
-          <div style={{ position:"absolute", top:0, right:0, left:0, height:2, background:card.pulse ? `linear-gradient(90deg,transparent,${card.accent})` : card.accent, opacity:0.8 }} />
-          <div style={{ fontSize:12, marginBottom:2, opacity:0.7 }}>{card.icon}</div>
-          <div style={{ fontFamily:"'DM Sans',sans-serif", fontSize:8, fontWeight:700, color:T.textMuted, letterSpacing:"0.14em", textTransform:"uppercase", marginBottom:3 }}>{card.label}</div>
-          <div style={{ display:"flex", alignItems:"baseline", justifyContent:"flex-end", gap:1 }}>
-            <span style={{ fontFamily:"'Barlow Condensed',sans-serif", fontWeight:800, fontSize:card.type==="countdown"?28:20, color:card.accent, lineHeight:1, ...(card.pulse?{animation:"pulseFade 2s ease-in-out infinite"}:{}) }}>{card.value}</span>
-            {card.valueSuffix && <span style={{ fontFamily:"'DM Sans',sans-serif", fontSize:11, color:card.accent, fontWeight:700 }}>{card.valueSuffix}</span>}
+    <div style={{ display:"flex", flexDirection:"column", gap:8, flexShrink:0, maxWidth:480 }}>
+
+      {/* Card 1 — D2 Day 1 confirmed */}
+      <a
+        href="/dhurandhar2-advance-article.html"
+        style={{ textDecoration:"none", display:"block" }}
+      >
+        <div style={{
+          background:"#FFFFFF", borderBottom:`1px solid #E5E7EB`,
+          borderLeft:`4px solid ${T.accent}`, padding:"12px 18px",
+          cursor:"pointer",
+        }}>
+          <div style={{
+            fontFamily:"'IBM Plex Mono', monospace", fontSize:9, fontWeight:700,
+            color:"#22C55E", letterSpacing:"0.16em", textTransform:"uppercase", marginBottom:5,
+          }}>✅ DAY 1 CONFIRMED · MAR 20, 2026</div>
+          <div style={{
+            fontFamily:"'Barlow Condensed', sans-serif", fontWeight:900,
+            fontSize:"clamp(14px, 1.8vw, 18px)", color:"#111827",
+            lineHeight:1.1, marginBottom:10, letterSpacing:"-0.01em",
+          }}>
+            Dhurandhar: The Revenge OPENS —{" "}
+            <span style={{ color:T.accent }}>₹115 Cr in 36 Hours. Biggest Hindi Opener. Ever.</span>
           </div>
-          <div style={{ fontFamily:"'DM Sans',sans-serif", fontSize:10, color:T.textMid, marginTop:2, lineHeight:1.3 }}>{card.sub}</div>
+          <div style={{ display:"flex", gap:20, flexWrap:"wrap" }}>
+            {[
+              { label:"Day 0 Nett ✅",  val:"₹43 Cr" },
+              { label:"Day 1 Nett ✅",  val:"₹72 Cr" },
+              { label:"D0+D1 Total ✅", val:"₹115 Cr" },
+              { label:"WW Gross",       val:"₹159 Cr" },
+            ].map(s => (
+              <div key={s.label}>
+                <div style={{ fontFamily:"'Barlow Condensed', sans-serif", fontWeight:900, fontSize:17, color:"#111827", lineHeight:1 }}>{s.val}</div>
+                <div style={{ fontFamily:"'DM Sans', sans-serif", fontSize:8, color:"#9CA3AF", letterSpacing:"0.1em", textTransform:"uppercase", marginTop:2 }}>{s.label}</div>
+              </div>
+            ))}
+          </div>
         </div>
-      ))}
+      </a>
+
+      {/* Card 2 — D1 vs D2 poster comparison */}
+      <a
+        href="/dhurandhar-box-office-d1-vs-d2.html"
+        style={{ textDecoration:"none", display:"block" }}
+      >
+        <div style={{
+          background:"#F9FAFB", borderBottom:`1px solid #E5E7EB`,
+          borderLeft:`4px solid #2563EB`, padding:"12px 18px",
+          cursor:"pointer", display:"flex", alignItems:"center", gap:16,
+        }}>
+          {/* Poster pair */}
+          <div style={{ display:"flex", alignItems:"center", flexShrink:0 }}>
+            <img
+              src="https://image.tmdb.org/t/p/w185/8FHOtUpNIk5ZPEay2N2EY5lrxkv.jpg"
+              alt="Dhurandhar"
+              style={{ width:44, height:66, objectFit:"cover", borderRadius:3, border:"1px solid #D1D5DB" }}
+              onError={e => { e.target.style.display="none"; }}
+            />
+            <div style={{
+              width:26, height:26, borderRadius:"50%", background:"#1E3A8A",
+              display:"flex", alignItems:"center", justifyContent:"center",
+              fontFamily:"'Barlow Condensed', sans-serif", fontWeight:900, fontSize:9,
+              color:"#FFFFFF", letterSpacing:"0.06em", flexShrink:0,
+              margin:"0 -3px", zIndex:1, boxShadow:"0 0 0 2px #F9FAFB",
+            }}>VS</div>
+            <img
+              src="https://image.tmdb.org/t/p/w185/ov8vrRLZGoXHpYjSY9Vpv1tHJX7.jpg"
+              alt="Dhurandhar: The Revenge"
+              style={{ width:44, height:66, objectFit:"cover", borderRadius:3, border:"1px solid #D1D5DB" }}
+              onError={e => { e.target.style.display="none"; }}
+            />
+          </div>
+          {/* Text */}
+          <div style={{ flex:1, minWidth:0 }}>
+            <div style={{
+              fontFamily:"'IBM Plex Mono', monospace", fontSize:9, fontWeight:700,
+              color:"#2563EB", letterSpacing:"0.14em", textTransform:"uppercase", marginBottom:4,
+            }}>⚔ HEAD-TO-HEAD COMPARISON</div>
+            <div style={{
+              fontFamily:"'Barlow Condensed', sans-serif", fontWeight:900,
+              fontSize:"clamp(13px, 1.6vw, 16px)", color:"#111827",
+              lineHeight:1.2, letterSpacing:"-0.01em",
+            }}>
+              Dhurandhar vs Dhurandhar 2{" "}
+              <span style={{ color:"#2563EB" }}>— D1 ₹838.5 Cr Final vs D2 Live</span>
+            </div>
+            <div style={{ fontFamily:"'DM Sans', sans-serif", fontSize:10, color:"#9CA3AF", marginTop:4 }}>
+              Day-wise · Week-wise · Budget · Verdict →
+            </div>
+          </div>
+        </div>
+      </a>
+
     </div>
   );
 }
-
-/* ── COOKIE CONSENT HELPERS ─────────────────────────────────
-   Key: boxoffy_cookie_consent
-   Values: "accepted" | "declined" | null (not yet decided)
-   GA4 only fires after "accepted" is stored.
-──────────────────────────────────────────────────────────── */
-const CONSENT_KEY = "boxoffy_cookie_consent";
 
 function getConsent() {
   try { return localStorage.getItem(CONSENT_KEY); } catch { return null; }
@@ -4151,26 +4914,15 @@ function ContactSection() {
     setStatus("submitting");
 
     try {
-      // EmailJS — replace the 3 IDs below after setting up emailjs.com account
-      // Template vars to map: {{from_name}}, {{from_email}}, {{phone}}, {{message}}
-      const SERVICE_ID  = "YOUR_EMAILJS_SERVICE_ID";
-      const TEMPLATE_ID = "YOUR_EMAILJS_TEMPLATE_ID";
-      const PUBLIC_KEY  = "YOUR_EMAILJS_PUBLIC_KEY";
-
-      const res = await fetch("https://api.emailjs.com/api/v1.0/email/send", {
+      // Resend API — via Vercel serverless function /api/contact
+      const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          service_id:  SERVICE_ID,
-          template_id: TEMPLATE_ID,
-          user_id:     PUBLIC_KEY,
-          template_params: {
-            from_name:  form.name,
-            from_email: form.email,
-            phone:      form.phone || "Not provided",
-            message:    form.message,
-            reply_to:   form.email,
-          },
+          name:    form.name,
+          email:   form.email,
+          phone:   form.phone || "Not provided",
+          message: form.message,
         }),
       });
 
@@ -4371,6 +5123,59 @@ function ContactSection() {
   );
 }
 
+
+function StudiosBanner() {
+  const studios = [
+    { name:"YRF", sub:"Spy Universe" },
+    { name:"Dharma", sub:"₹2,000 Cr" },
+    { name:"Maddock", sub:"HCU · 10/10" },
+    { name:"Jio Studios", sub:"Dhurandhar" },
+    { name:"Mythri", sub:"Pushpa ₹1,800 Cr" },
+    { name:"Hombale", sub:"KGF + Salaar" },
+    { name:"Excel", sub:"₹2,400 Cr" },
+    { name:"B62", sub:"Aditya Dhar" },
+  ];
+  return (
+    <div style={{ background:"#0D0D0D", borderTop:`4px solid ${T.accent}`, padding:"36px 32px 40px" }}>
+      <div style={{ maxWidth:1160, margin:"0 auto" }}>
+        <div style={{ display:"flex", alignItems:"flex-end", justifyContent:"space-between", marginBottom:24, flexWrap:"wrap", gap:12 }}>
+          <div>
+            <div style={{ fontFamily:"'IBM Plex Mono', monospace", fontSize:10, fontWeight:700, color:T.accent, letterSpacing:"0.2em", textTransform:"uppercase", marginBottom:6 }}>Boxoffy · Production Intelligence</div>
+            <div style={{ fontFamily:"'Barlow Condensed', sans-serif", fontWeight:900, fontSize:"clamp(28px, 4vw, 48px)", color:"#FFFFFF", lineHeight:0.95, letterSpacing:"-0.02em" }}>
+              30 Indian Studios.<br/><span style={{ color:T.accent }}>One place.</span>
+            </div>
+            <div style={{ fontFamily:"'DM Sans', sans-serif", fontSize:14, color:"#9CA3AF", marginTop:10, maxWidth:480, lineHeight:1.6 }}>
+              Valuations, ownership, franchise IP, 2026 slate and Boxoffy intelligence on every major Hindi, Telugu, Tamil, Malayalam and Kannada production house.
+            </div>
+          </div>
+          <a href="/production-houses.html" style={{ display:"inline-flex", alignItems:"center", gap:10, background:T.accent, color:"#fff", fontFamily:"'Barlow Condensed', sans-serif", fontWeight:900, fontSize:16, letterSpacing:"0.1em", textTransform:"uppercase", textDecoration:"none", padding:"14px 28px", borderRadius:2, flexShrink:0 }}>
+            Explore All Studios →
+          </a>
+        </div>
+        <div style={{ display:"flex", flexWrap:"wrap", gap:8, marginBottom:24 }}>
+          {studios.map(s => (
+            <div key={s.name} style={{ background:"#1A1A1A", border:"1px solid #2A2A2A", borderRadius:2, padding:"8px 14px", display:"flex", flexDirection:"column", gap:2 }}>
+              <span style={{ fontFamily:"'Barlow Condensed', sans-serif", fontWeight:800, fontSize:14, color:"#F3F4F6", letterSpacing:"0.04em" }}>{s.name}</span>
+              <span style={{ fontFamily:"'IBM Plex Mono', monospace", fontSize:9, color:"#6B7280", letterSpacing:"0.08em" }}>{s.sub}</span>
+            </div>
+          ))}
+          <div style={{ background:"transparent", border:"1px solid #2A2A2A", borderRadius:2, padding:"8px 14px", display:"flex", alignItems:"center" }}>
+            <span style={{ fontFamily:"'DM Sans', sans-serif", fontSize:12, color:"#6B7280", fontStyle:"italic" }}>+ 22 more studios</span>
+          </div>
+        </div>
+        <div style={{ display:"flex", borderTop:"1px solid #1F1F1F", paddingTop:16, flexWrap:"wrap", gap:24 }}>
+          {[["3 CONFIRMED","Dharma · Excel · Bhansali — transaction-verified"],["₹2,400 Cr","Excel — highest indie valuation in Indian cinema"],["5 languages","Hindi · Telugu · Tamil · Malayalam · Kannada"]].map(([val,lbl]) => (
+            <div key={val}>
+              <div style={{ fontFamily:"'Barlow Condensed', sans-serif", fontWeight:900, fontSize:18, color:"#E8C547" }}>{val}</div>
+              <div style={{ fontFamily:"'DM Sans', sans-serif", fontSize:11, color:"#4B5563", marginTop:2 }}>{lbl}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function App() {
   const [activeSection, setActiveSection] = useState("Box Office");
   const [showSubscribe, setShowSubscribe] = useState(false);
@@ -4454,7 +5259,7 @@ export default function App() {
             }}>FY</span>
           </div>
           <p style={{ fontFamily:"'DM Sans', sans-serif", fontSize:13, color:T.textMuted, letterSpacing:"0.12em", textTransform:"uppercase", fontWeight:500 }}>
-            India Box Office Intelligence
+            Box Office Intelligence
           </p>
           <div style={{ display:"flex", alignItems:"center", gap:12, marginTop:10 }}>
             <span style={{ fontFamily:"'DM Sans', sans-serif", fontSize:12, color:T.textMid, borderLeft:`2px solid ${T.accent}`, paddingLeft:8, lineHeight:1.5 }}>
@@ -4472,11 +5277,6 @@ export default function App() {
       </div>
 
 
-      {/* FROM THE DESK — always visible above all tabs */}
-      <div style={{ maxWidth:1160, margin:"0 auto", background:T.surface, boxShadow:"0 0 0 1px #E2E5EA" }}>
-        <EditorialSection onNavigate={setActiveSection} />
-      </div>
-
       {/* Content */}
       <div style={{ maxWidth:1160, margin:"0 auto", background:T.surface, boxShadow:"0 0 0 1px #E2E5EA", animation:"fadeIn 0.3s ease both" }}>
         {activeSection === "Box Office" && <BoxOfficeSection onNavigate={setActiveSection} />}
@@ -4484,6 +5284,9 @@ export default function App() {
         {newsCategory && newsCategory === "OTT" && <OTTRankingsSection />}
         {newsCategory && <NewsSection category={newsCategory} />}
       </div>
+
+      {/* Studios Discovery Banner */}
+      <StudiosBanner />
 
       {/* Contact Section */}
       <ContactSection />
@@ -4494,7 +5297,7 @@ export default function App() {
           <div style={{ display:"flex", alignItems:"baseline", gap:0, marginBottom:10 }}>
             <span style={{ fontFamily:"'Barlow Condensed', sans-serif", fontWeight:800, fontSize:20, color:T.text, letterSpacing:"-0.02em" }}>BOXOF</span>
             <span style={{ fontFamily:"'Barlow Condensed', sans-serif", fontWeight:800, fontSize:20, color:T.accent, letterSpacing:"-0.02em" }}>FY</span>
-            <span style={{ fontFamily:"'DM Sans', sans-serif", fontSize:10, color:T.textMuted, marginLeft:10, letterSpacing:"0.18em", textTransform:"uppercase" }}>India Box Office Intelligence</span>
+            <span style={{ fontFamily:"'DM Sans', sans-serif", fontSize:10, color:T.textMuted, marginLeft:10, letterSpacing:"0.18em", textTransform:"uppercase" }}>Box Office Intelligence</span>
           </div>
           <div style={{ display:"flex", gap:24, flexWrap:"wrap", marginBottom:10, alignItems:"center" }}>
             {["Box Office","Bollywood","OTT","TV","Weekly"].map(s => (
@@ -4505,6 +5308,20 @@ export default function App() {
                 style={{ color:T.textMuted, fontSize:11, fontWeight:600, letterSpacing:"0.06em", cursor:"pointer", transition:"color 0.15s" }}
               >{s}</span>
             ))}
+            <span style={{ color:T.border }}>·</span>
+            <a
+              href="/production-houses.html"
+              onMouseEnter={e => e.target.style.color=T.accent}
+              onMouseLeave={e => e.target.style.color=T.textMuted}
+              style={{ color:T.textMuted, fontSize:11, fontWeight:600, letterSpacing:"0.06em", textDecoration:"none", transition:"color 0.15s" }}
+            >Studios</a>
+            <span style={{ color:T.border }}>·</span>
+            <a
+              href="/about.html"
+              onMouseEnter={e => e.target.style.color=T.accent}
+              onMouseLeave={e => e.target.style.color=T.textMuted}
+              style={{ color:T.textMuted, fontSize:11, fontWeight:600, letterSpacing:"0.06em", textDecoration:"none", transition:"color 0.15s" }}
+            >About</a>
             <span style={{ color:T.border }}>·</span>
             <span
               onClick={() => setShowSubscribe(true)}
@@ -4555,7 +5372,7 @@ export default function App() {
 
             {/* Copyright strip */}
             <div style={{ display:"flex", alignItems:"center", justifyContent:"space-between", flexWrap:"wrap", gap:8, color:T.textMuted, lineHeight:1.8 }}>
-              <span style={{ fontSize:11 }}>© 2026 Boxoffy.com · India Box Office Intelligence · Box office data from industry tracking sources · Current as of Mar 13, 2026 · All figures in ₹ Crores</span>
+              <span style={{ fontSize:11 }}>© 2026 Boxoffy.com · Box Office Intelligence · Box office data from industry tracking sources · Current as of Mar 13, 2026 · All figures in ₹ Crores</span>
               <a
                 href="mailto:info@boxoffy.com"
                 onMouseEnter={e => e.target.style.color=T.accent}

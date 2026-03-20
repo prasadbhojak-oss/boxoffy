@@ -1,0 +1,262 @@
+{
+  "2019": {
+    "yearStats": {
+      "totalReleases": 210,
+      "avgATP": 140,
+      "topGrosser": "War",
+      "era": "GST",
+      "note": "War became 2019 #1 despite releasing Oct 2. Kabir Singh grossed highest India nett at ₹276 Cr. Uri: The Surgical Strike was Jan surprise blockbuster at ₹244 Cr."
+    },
+    "films": [
+      { "rank": 1, "title": "War", "language": "Hindi", "director": "Siddharth Anand", "cast": "Hrithik Roshan, Tiger Shroff, Vaani Kapoor", "releaseDate": "2019-10-02", "indiaNetCr": 292.72, "verdict": "Blockbuster", "genre": "Action", "budgetCr": 145, "ottPlatform": "Amazon Prime" },
+      { "rank": 2, "title": "Kabir Singh", "language": "Hindi", "director": "Sandeep Reddy Vanga", "cast": "Shahid Kapoor, Kiara Advani", "releaseDate": "2019-06-21", "indiaNetCr": 276.34, "verdict": "Super Blockbuster", "genre": "Drama/Romance", "budgetCr": 60, "ottPlatform": "Netflix" },
+      { "rank": 3, "title": "Uri: The Surgical Strike", "language": "Hindi", "director": "Aditya Dhar", "cast": "Vicky Kaushal, Paresh Rawal, Yami Gautam", "releaseDate": "2019-01-11", "indiaNetCr": 244.01, "verdict": "Super Blockbuster", "genre": "Action/War", "budgetCr": 50, "ottPlatform": "Zee5" },
+      { "rank": 4, "title": "Bharat", "language": "Hindi", "director": "Ali Abbas Zafar", "cast": "Salman Khan, Katrina Kaif, Sunil Grover", "releaseDate": "2019-06-05", "indiaNetCr": 197.35, "verdict": "Semi Hit", "genre": "Drama", "budgetCr": 155, "ottPlatform": "Zee5" },
+      { "rank": 5, "title": "Good Newwz", "language": "Hindi", "director": "Raj Mehta", "cast": "Akshay Kumar, Kareena Kapoor, Diljit Dosanjh, Kiara Advani", "releaseDate": "2019-12-27", "indiaNetCr": 196.34, "verdict": "Super Hit", "genre": "Comedy", "budgetCr": 60, "ottPlatform": "Amazon Prime" },
+      { "rank": 6, "title": "Mission Mangal", "language": "Hindi", "director": "Jagan Shakti", "cast": "Akshay Kumar, Vidya Balan, Taapsee Pannu", "releaseDate": "2019-08-15", "indiaNetCr": 192.67, "verdict": "Super Hit", "genre": "Drama/Science", "budgetCr": 95, "ottPlatform": "Disney+ Hotstar" },
+      { "rank": 7, "title": "Housefull 4", "language": "Hindi", "director": "Farhad Samji", "cast": "Akshay Kumar, Riteish Deshmukh, Bobby Deol", "releaseDate": "2019-10-25", "indiaNetCr": 205.61, "verdict": "Super Hit", "genre": "Comedy", "budgetCr": 100, "ottPlatform": "Netflix" },
+      { "rank": 8, "title": "Kesari", "language": "Hindi", "director": "Anurag Singh", "cast": "Akshay Kumar, Parineeti Chopra", "releaseDate": "2019-03-21", "indiaNetCr": 151.88, "verdict": "Hit", "genre": "Action/War", "budgetCr": 80, "ottPlatform": "Amazon Prime" },
+      { "rank": 9, "title": "Chhichhore", "language": "Hindi", "director": "Nitesh Tiwari", "cast": "Sushant Singh Rajput, Shraddha Kapoor, Varun Sharma", "releaseDate": "2019-09-06", "indiaNetCr": 147.33, "verdict": "Super Hit", "genre": "Drama/Comedy", "budgetCr": 65, "ottPlatform": "Netflix" },
+      { "rank": 10, "title": "Total Dhamaal", "language": "Hindi", "director": "Indra Kumar", "cast": "Ajay Devgn, Anil Kapoor, Madhuri Dixit", "releaseDate": "2019-02-22", "indiaNetCr": 150.08, "verdict": "Hit", "genre": "Comedy", "budgetCr": 100, "ottPlatform": "Zee5" },
+      { "rank": 11, "title": "Saaho", "language": "Telugu/Hindi", "director": "Sujeeth", "cast": "Prabhas, Shraddha Kapoor, Jackie Shroff", "releaseDate": "2019-08-30", "indiaNetCr": 148.84, "verdict": "Hit", "genre": "Action", "budgetCr": 350, "ottPlatform": "Amazon Prime" },
+      { "rank": 12, "title": "Super 30", "language": "Hindi", "director": "Vikas Bahl", "cast": "Hrithik Roshan, Mrunal Thakur", "releaseDate": "2019-07-12", "indiaNetCr": 147.00, "verdict": "Hit", "genre": "Drama/Biopic", "budgetCr": 80, "ottPlatform": "Amazon Prime" },
+      { "rank": 13, "title": "Dream Girl", "language": "Hindi", "director": "Raaj Shaandilyaa", "cast": "Ayushmann Khurrana, Nushrratt Bharuccha", "releaseDate": "2019-09-13", "indiaNetCr": 139.37, "verdict": "Super Hit", "genre": "Comedy", "budgetCr": 25, "ottPlatform": "Zee5" },
+      { "rank": 14, "title": "Gully Boy", "language": "Hindi", "director": "Zoya Akhtar", "cast": "Ranveer Singh, Alia Bhatt, Siddhant Chaturvedi", "releaseDate": "2019-02-14", "indiaNetCr": 134.24, "verdict": "Hit", "genre": "Drama/Music", "budgetCr": 75, "ottPlatform": "Amazon Prime" },
+      { "rank": 15, "title": "Bala", "language": "Hindi", "director": "Amar Kaushik", "cast": "Ayushmann Khurrana, Yami Gautam, Bhumi Pednekar", "releaseDate": "2019-11-08", "indiaNetCr": 110.98, "verdict": "Super Hit", "genre": "Comedy/Drama", "budgetCr": 45, "ottPlatform": "Disney+ Hotstar" }
+    ]
+  },
+  "2018": {
+    "yearStats": {
+      "totalReleases": 204,
+      "avgATP": 125,
+      "topGrosser": "Sanju",
+      "era": "GST",
+      "note": "Sanju became the first Bollywood solo (non-franchise) film to cross ₹300 Cr. Padmaavat overcame controversy to post ₹282 Cr. Stree and Badhaai Ho overperformed budgets massively."
+    },
+    "films": [
+      { "rank": 1, "title": "Sanju", "language": "Hindi", "director": "Rajkumar Hirani", "cast": "Ranbir Kapoor, Manisha Koirala, Paresh Rawal", "releaseDate": "2018-06-29", "indiaNetCr": 334.58, "verdict": "Super Blockbuster", "genre": "Biopic/Drama", "budgetCr": 110, "ottPlatform": "Netflix" },
+      { "rank": 2, "title": "Padmaavat", "language": "Hindi", "director": "Sanjay Leela Bhansali", "cast": "Deepika Padukone, Ranveer Singh, Shahid Kapoor", "releaseDate": "2018-01-25", "indiaNetCr": 282.28, "verdict": "Blockbuster", "genre": "Historical/Drama", "budgetCr": 215, "ottPlatform": "Netflix" },
+      { "rank": 3, "title": "Simmba", "language": "Hindi", "director": "Rohit Shetty", "cast": "Ranveer Singh, Sara Ali Khan, Sonu Sood", "releaseDate": "2018-12-28", "indiaNetCr": 239.85, "verdict": "Blockbuster", "genre": "Action/Comedy", "budgetCr": 150, "ottPlatform": "Netflix" },
+      { "rank": 4, "title": "2.0", "language": "Tamil/Hindi", "director": "S. Shankar", "cast": "Rajinikanth, Akshay Kumar, Amy Jackson", "releaseDate": "2018-11-29", "indiaNetCr": 185.89, "verdict": "Super Hit", "genre": "Sci-Fi/Action", "budgetCr": 543, "ottPlatform": "Amazon Prime" },
+      { "rank": 5, "title": "Race 3", "language": "Hindi", "director": "Remo D'Souza", "cast": "Salman Khan, Anil Kapoor, Jacqueline Fernandez", "releaseDate": "2018-06-15", "indiaNetCr": 166.15, "verdict": "Average", "genre": "Action/Thriller", "budgetCr": 150, "ottPlatform": "Amazon Prime" },
+      { "rank": 6, "title": "Baaghi 2", "language": "Hindi", "director": "Ahmed Khan", "cast": "Tiger Shroff, Disha Patani", "releaseDate": "2018-03-30", "indiaNetCr": 160.75, "verdict": "Blockbuster", "genre": "Action", "budgetCr": 80, "ottPlatform": "Zee5" },
+      { "rank": 7, "title": "Thugs Of Hindostan", "language": "Hindi", "director": "Vijay Krishna Acharya", "cast": "Aamir Khan, Amitabh Bachchan, Fatima Sana Shaikh", "releaseDate": "2018-11-08", "indiaNetCr": 138.35, "verdict": "Flop", "genre": "Action/Adventure", "budgetCr": 290, "ottPlatform": "Zee5" },
+      { "rank": 8, "title": "Badhaai Ho", "language": "Hindi", "director": "Amit Ravindernath Sharma", "cast": "Ayushmann Khurrana, Sanya Malhotra, Gajraj Rao", "releaseDate": "2018-10-18", "indiaNetCr": 134.47, "verdict": "Blockbuster", "genre": "Comedy/Drama", "budgetCr": 23, "ottPlatform": "Netflix" },
+      { "rank": 9, "title": "Stree", "language": "Hindi", "director": "Amar Kaushik", "cast": "Rajkummar Rao, Shraddha Kapoor, Aparshakti Khurana", "releaseDate": "2018-08-31", "indiaNetCr": 124.57, "verdict": "Super Hit", "genre": "Horror/Comedy", "budgetCr": 25, "ottPlatform": "Netflix" },
+      { "rank": 10, "title": "Raazi", "language": "Hindi", "director": "Meghna Gulzar", "cast": "Alia Bhatt, Vicky Kaushal, Rajit Kapur", "releaseDate": "2018-05-11", "indiaNetCr": 122.40, "verdict": "Super Hit", "genre": "Thriller/Spy", "budgetCr": 35, "ottPlatform": "Netflix" },
+      { "rank": 11, "title": "Sonu Ke Titu Ki Sweety", "language": "Hindi", "director": "Luv Ranjan", "cast": "Kartik Aaryan, Nushrratt Bharuccha, Sunny Singh", "releaseDate": "2018-02-23", "indiaNetCr": 100.81, "verdict": "Super Hit", "genre": "Comedy/Romance", "budgetCr": 28, "ottPlatform": "Netflix" },
+      { "rank": 12, "title": "Gold", "language": "Hindi", "director": "Reema Kagti", "cast": "Akshay Kumar, Mouni Roy, Kunal Kapoor", "releaseDate": "2018-08-15", "indiaNetCr": 102.02, "verdict": "Average", "genre": "Sports/Drama", "budgetCr": 100, "ottPlatform": "Zee5" },
+      { "rank": 13, "title": "Raid", "language": "Hindi", "director": "Raj Kumar Gupta", "cast": "Ajay Devgn, Ileana D'Cruz", "releaseDate": "2018-03-16", "indiaNetCr": 98.02, "verdict": "Hit", "genre": "Thriller/Drama", "budgetCr": 60, "ottPlatform": "Amazon Prime" },
+      { "rank": 14, "title": "Andhadhun", "language": "Hindi", "director": "Sriram Raghavan", "cast": "Ayushmann Khurrana, Tabu, Radhika Apte", "releaseDate": "2018-10-05", "indiaNetCr": 73.37, "verdict": "Hit", "genre": "Thriller", "budgetCr": 32, "ottPlatform": "Netflix" },
+      { "rank": 15, "title": "Dhadak", "language": "Hindi", "director": "Shashank Khaitan", "cast": "Ishaan Khatter, Janhvi Kapoor", "releaseDate": "2018-07-20", "indiaNetCr": 72.39, "verdict": "Hit", "genre": "Romance/Drama", "budgetCr": 35, "ottPlatform": "Amazon Prime" }
+    ]
+  },
+  "2017": {
+    "yearStats": {
+      "totalReleases": 245,
+      "avgATP": 134,
+      "topGrosser": "Bahubali 2",
+      "era": "GST (from Jul 2017)",
+      "note": "Bahubali 2 created history at ₹510 Cr India nett — still the all-time Bollywood/Indian record for a non-Bollywood film crossing ₹500 Cr. Tiger Zinda Hai became Salman's biggest film at ₹339 Cr."
+    },
+    "films": [
+      { "rank": 1, "title": "Baahubali 2: The Conclusion", "language": "Telugu/Hindi", "director": "S.S. Rajamouli", "cast": "Prabhas, Rana Daggubati, Anushka Shetty, Tamannaah", "releaseDate": "2017-04-28", "indiaNetCr": 510.56, "verdict": "All Time Blockbuster", "genre": "Action/Epic", "budgetCr": 250, "ottPlatform": "Amazon Prime" },
+      { "rank": 2, "title": "Tiger Zinda Hai", "language": "Hindi", "director": "Ali Abbas Zafar", "cast": "Salman Khan, Katrina Kaif", "releaseDate": "2017-12-22", "indiaNetCr": 339.00, "verdict": "Blockbuster", "genre": "Action/Spy", "budgetCr": 210, "ottPlatform": "Amazon Prime" },
+      { "rank": 3, "title": "Golmaal Again", "language": "Hindi", "director": "Rohit Shetty", "cast": "Ajay Devgn, Parineeti Chopra, Tabu, Arshad Warsi", "releaseDate": "2017-10-20", "indiaNetCr": 205.50, "verdict": "Blockbuster", "genre": "Comedy/Horror", "budgetCr": 115, "ottPlatform": "Disney+ Hotstar" },
+      { "rank": 4, "title": "Raees", "language": "Hindi", "director": "Rahul Dholakia", "cast": "Shah Rukh Khan, Mahira Khan, Nawazuddin Siddiqui", "releaseDate": "2017-01-25", "indiaNetCr": 128.78, "verdict": "Semi Hit", "genre": "Crime/Action", "budgetCr": 90, "ottPlatform": "Netflix" },
+      { "rank": 5, "title": "Judwaa 2", "language": "Hindi", "director": "David Dhawan", "cast": "Varun Dhawan, Jacqueline Fernandez, Taapsee Pannu", "releaseDate": "2017-09-29", "indiaNetCr": 132.39, "verdict": "Super Hit", "genre": "Comedy/Action", "budgetCr": 75, "ottPlatform": "Zee5" },
+      { "rank": 6, "title": "Toilet: Ek Prem Katha", "language": "Hindi", "director": "Shree Narayan Singh", "cast": "Akshay Kumar, Bhumi Pednekar", "releaseDate": "2017-08-11", "indiaNetCr": 132.07, "verdict": "Super Hit", "genre": "Drama/Comedy", "budgetCr": 80, "ottPlatform": "Amazon Prime" },
+      { "rank": 7, "title": "Badrinath Ki Dulhania", "language": "Hindi", "director": "Shashank Khaitan", "cast": "Varun Dhawan, Alia Bhatt", "releaseDate": "2017-03-10", "indiaNetCr": 114.12, "verdict": "Super Hit", "genre": "Romance/Comedy", "budgetCr": 60, "ottPlatform": "Amazon Prime" },
+      { "rank": 8, "title": "Tubelight", "language": "Hindi", "director": "Kabir Khan", "cast": "Salman Khan, Sohail Khan, Zhu Zhu", "releaseDate": "2017-06-23", "indiaNetCr": 114.57, "verdict": "Below Average", "genre": "Drama/War", "budgetCr": 145, "ottPlatform": "Amazon Prime" },
+      { "rank": 9, "title": "Jolly LLB 2", "language": "Hindi", "director": "Subhash Kapoor", "cast": "Akshay Kumar, Huma Qureshi, Annu Kapoor", "releaseDate": "2017-02-10", "indiaNetCr": 107.78, "verdict": "Hit", "genre": "Comedy/Drama", "budgetCr": 55, "ottPlatform": "Amazon Prime" },
+      { "rank": 10, "title": "Kaabil", "language": "Hindi", "director": "Sanjay Gupta", "cast": "Hrithik Roshan, Yami Gautam, Ronit Roy", "releaseDate": "2017-01-25", "indiaNetCr": 86.54, "verdict": "Below Average", "genre": "Thriller/Action", "budgetCr": 90, "ottPlatform": "Zee5" },
+      { "rank": 11, "title": "Fukrey Returns", "language": "Hindi", "director": "Mrighdeep Singh Lamba", "cast": "Pulkit Samrat, Varun Sharma, Ali Fazal", "releaseDate": "2017-12-08", "indiaNetCr": 77.91, "verdict": "Super Hit", "genre": "Comedy", "budgetCr": 35, "ottPlatform": "Amazon Prime" },
+      { "rank": 12, "title": "Baadshaho", "language": "Hindi", "director": "Milan Luthria", "cast": "Ajay Devgn, Emraan Hashmi, Ileana D'Cruz", "releaseDate": "2017-09-01", "indiaNetCr": 65.78, "verdict": "Flop", "genre": "Action/Thriller", "budgetCr": 90, "ottPlatform": "Disney+ Hotstar" },
+      { "rank": 13, "title": "Jab Harry Met Sejal", "language": "Hindi", "director": "Imtiaz Ali", "cast": "Shah Rukh Khan, Anushka Sharma", "releaseDate": "2017-08-04", "indiaNetCr": 62.01, "verdict": "Flop", "genre": "Romance", "budgetCr": 130, "ottPlatform": "Amazon Prime" },
+      { "rank": 14, "title": "Secret Superstar", "language": "Hindi", "director": "Advait Chandan", "cast": "Aamir Khan, Zaira Wasim, Meher Vij", "releaseDate": "2017-10-19", "indiaNetCr": 62.63, "verdict": "Average", "genre": "Drama/Music", "budgetCr": 30, "ottPlatform": "Disney+ Hotstar" },
+      { "rank": 15, "title": "Hindi Medium", "language": "Hindi", "director": "Saket Chaudhary", "cast": "Irrfan Khan, Saba Qamar, Deepak Dobriyal", "releaseDate": "2017-05-19", "indiaNetCr": 63.07, "verdict": "Hit", "genre": "Comedy/Drama", "budgetCr": 28, "ottPlatform": "Amazon Prime" }
+    ]
+  },
+  "2016": {
+    "yearStats": {
+      "totalReleases": 226,
+      "avgATP": 132,
+      "topGrosser": "Dangal",
+      "era": "Entertainment Tax",
+      "note": "Dangal crossed ₹374 Cr making it India's #2 all-time behind Baahubali 2 at the time. Sultan ₹300 Cr. Kabali (Rajinikanth, Tamil) and Vikram Vedha (Tamil) are major South films not fully tracked by BOI."
+    },
+    "films": [
+      { "rank": 1, "title": "Kabali", "language": "Tamil/Hindi", "director": "Pa. Ranjith", "cast": "Rajinikanth, Radhika Apte, Dhansika", "releaseDate": "2016-07-22", "indiaNetCr": 155.00, "verdict": "Semi Hit", "genre": "Action/Drama", "budgetCr": 90, "ottPlatform": "Sun NXT", "dataNote": "BOI restricted; figure from Koimoi/Wikipedia cross-reference" },
+      { "rank": 2, "title": "Janatha Garage", "language": "Telugu", "director": "Koratala Siva", "cast": "Jr. NTR, Mohanlal, Samantha, Nithya Menen", "releaseDate": "2016-09-01", "indiaNetCr": 85.00, "verdict": "Hit", "genre": "Action/Drama", "budgetCr": 75, "ottPlatform": "Zee5", "dataNote": "BOI restricted; figure estimated from multiple sources" },
+      { "rank": 3, "title": "Dangal", "language": "Hindi", "director": "Nitesh Tiwari", "cast": "Aamir Khan, Fatima Sana Shaikh, Sanya Malhotra", "releaseDate": "2016-12-23", "indiaNetCr": 374.53, "verdict": "All Time Blockbuster", "genre": "Sports/Biopic", "budgetCr": 70, "ottPlatform": "Disney+ Hotstar" },
+      { "rank": 4, "title": "Sultan", "language": "Hindi", "director": "Ali Abbas Zafar", "cast": "Salman Khan, Anushka Sharma, Randeep Hooda", "releaseDate": "2016-07-06", "indiaNetCr": 300.67, "verdict": "Blockbuster", "genre": "Sports/Action", "budgetCr": 130, "ottPlatform": "Amazon Prime" },
+      { "rank": 5, "title": "Fan", "language": "Hindi", "director": "Maneesh Sharma", "cast": "Shah Rukh Khan, Waluscha De Sousa", "releaseDate": "2016-04-15", "indiaNetCr": 84.03, "verdict": "Flop", "genre": "Thriller/Drama", "budgetCr": 100, "ottPlatform": "Netflix" },
+      { "rank": 6, "title": "Shivaay", "language": "Hindi", "director": "Ajay Devgn", "cast": "Ajay Devgn, Erika Kaar, Sayesha Saigal", "releaseDate": "2016-10-28", "indiaNetCr": 84.84, "verdict": "Below Average", "genre": "Action", "budgetCr": 125, "ottPlatform": "Zee5" },
+      { "rank": 7, "title": "Rustom", "language": "Hindi", "director": "Tinu Suresh Desai", "cast": "Akshay Kumar, Ileana D'Cruz, Arjan Bajwa", "releaseDate": "2016-08-12", "indiaNetCr": 124.45, "verdict": "Super Hit", "genre": "Crime/Drama", "budgetCr": 50, "ottPlatform": "Zee5" },
+      { "rank": 8, "title": "Airlift", "language": "Hindi", "director": "Raja Krishna Menon", "cast": "Akshay Kumar, Nimrat Kaur", "releaseDate": "2016-01-22", "indiaNetCr": 123.47, "verdict": "Super Hit", "genre": "Thriller/Drama", "budgetCr": 50, "ottPlatform": "Zee5" },
+      { "rank": 9, "title": "M.S. Dhoni: The Untold Story", "language": "Hindi", "director": "Neeraj Pandey", "cast": "Sushant Singh Rajput, Kiara Advani, Disha Patani", "releaseDate": "2016-09-30", "indiaNetCr": 119.09, "verdict": "Hit", "genre": "Sports/Biopic", "budgetCr": 95, "ottPlatform": "Disney+ Hotstar" },
+      { "rank": 10, "title": "Housefull 3", "language": "Hindi", "director": "Sajid-Farhad", "cast": "Akshay Kumar, Riteish Deshmukh, Abhishek Bachchan", "releaseDate": "2016-06-03", "indiaNetCr": 108.07, "verdict": "Hit", "genre": "Comedy", "budgetCr": 115, "ottPlatform": "Zee5" },
+      { "rank": 11, "title": "Ae Dil Hai Mushkil", "language": "Hindi", "director": "Karan Johar", "cast": "Ranbir Kapoor, Anushka Sharma, Aishwarya Rai", "releaseDate": "2016-10-28", "indiaNetCr": 106.48, "verdict": "Hit", "genre": "Romance/Drama", "budgetCr": 110, "ottPlatform": "Netflix" },
+      { "rank": 12, "title": "Baaghi", "language": "Hindi", "director": "Sabbir Khan", "cast": "Tiger Shroff, Shraddha Kapoor", "releaseDate": "2016-04-29", "indiaNetCr": 76.07, "verdict": "Hit", "genre": "Action/Romance", "budgetCr": 50, "ottPlatform": "Amazon Prime" },
+      { "rank": 13, "title": "Neerja", "language": "Hindi", "director": "Ram Madhvani", "cast": "Sonam Kapoor, Jim Sarbh, Shabana Azmi", "releaseDate": "2016-02-19", "indiaNetCr": 71.77, "verdict": "Hit", "genre": "Drama/Biopic", "budgetCr": 25, "ottPlatform": "Zee5" },
+      { "rank": 14, "title": "Dear Zindagi", "language": "Hindi", "director": "Gauri Shinde", "cast": "Alia Bhatt, Shah Rukh Khan, Kunal Kapoor", "releaseDate": "2016-11-25", "indiaNetCr": 66.47, "verdict": "Semi Hit", "genre": "Drama", "budgetCr": 60, "ottPlatform": "Netflix" },
+      { "rank": 15, "title": "Kapoor & Sons", "language": "Hindi", "director": "Shakun Batra", "cast": "Sidharth Malhotra, Alia Bhatt, Fawad Khan, Rishi Kapoor", "releaseDate": "2016-03-18", "indiaNetCr": 69.38, "verdict": "Hit", "genre": "Drama/Family", "budgetCr": 35, "ottPlatform": "Amazon Prime" }
+    ]
+  },
+  "2015": {
+    "yearStats": {
+      "totalReleases": 205,
+      "avgATP": 126,
+      "topGrosser": "Bajrangi Bhaijaan",
+      "era": "Entertainment Tax",
+      "note": "Bajrangi Bhaijaan crossed ₹315 Cr — only Baahubali 2 (2017) has surpassed it since. Bahubali: The Beginning was a crossover success at ₹119 Cr. Prem Ratan Dhan Payo ₹194 Cr, Bajirao Mastani ₹183 Cr in December blockbuster clash."
+    },
+    "films": [
+      { "rank": 1, "title": "Bajrangi Bhaijaan", "language": "Hindi", "director": "Kabir Khan", "cast": "Salman Khan, Harshaali Malhotra, Kareena Kapoor", "releaseDate": "2015-07-17", "indiaNetCr": 315.49, "verdict": "All Time Blockbuster", "genre": "Drama/Adventure", "budgetCr": 90, "ottPlatform": "Netflix" },
+      { "rank": 2, "title": "Prem Ratan Dhan Payo", "language": "Hindi", "director": "Sooraj Barjatya", "cast": "Salman Khan, Sonam Kapoor, Neil Nitin Mukesh", "releaseDate": "2015-11-12", "indiaNetCr": 194.31, "verdict": "Hit", "genre": "Romance/Drama", "budgetCr": 100, "ottPlatform": "Amazon Prime" },
+      { "rank": 3, "title": "Bajirao Mastani", "language": "Hindi", "director": "Sanjay Leela Bhansali", "cast": "Ranveer Singh, Deepika Padukone, Priyanka Chopra", "releaseDate": "2015-12-18", "indiaNetCr": 183.75, "verdict": "Hit", "genre": "Historical/Romance", "budgetCr": 120, "ottPlatform": "Netflix" },
+      { "rank": 4, "title": "Tanu Weds Manu Returns", "language": "Hindi", "director": "Aanand L. Rai", "cast": "Kangana Ranaut, R. Madhavan, Deepak Dobriyal", "releaseDate": "2015-05-22", "indiaNetCr": 148.85, "verdict": "Blockbuster", "genre": "Romance/Comedy", "budgetCr": 35, "ottPlatform": "Amazon Prime" },
+      { "rank": 5, "title": "Dilwale", "language": "Hindi", "director": "Rohit Shetty", "cast": "Shah Rukh Khan, Kajol, Varun Dhawan, Kriti Sanon", "releaseDate": "2015-12-18", "indiaNetCr": 139.98, "verdict": "Semi Hit", "genre": "Action/Romance", "budgetCr": 140, "ottPlatform": "Amazon Prime" },
+      { "rank": 6, "title": "Baahubali: The Beginning", "language": "Telugu/Hindi", "director": "S.S. Rajamouli", "cast": "Prabhas, Rana Daggubati, Tamannaah, Anushka Shetty", "releaseDate": "2015-07-10", "indiaNetCr": 119.20, "verdict": "Blockbuster", "genre": "Action/Epic", "budgetCr": 180, "ottPlatform": "Amazon Prime" },
+      { "rank": 7, "title": "Welcome Back", "language": "Hindi", "director": "Anees Bazmee", "cast": "Anil Kapoor, Nana Patekar, John Abraham", "releaseDate": "2015-09-04", "indiaNetCr": 95.93, "verdict": "Semi Hit", "genre": "Comedy/Action", "budgetCr": 80, "ottPlatform": "Zee5" },
+      { "rank": 8, "title": "Gabbar Is Back", "language": "Hindi", "director": "Krish Jagarlamudi", "cast": "Akshay Kumar, Shruti Haasan, Asin", "releaseDate": "2015-05-01", "indiaNetCr": 86.86, "verdict": "Semi Hit", "genre": "Action/Thriller", "budgetCr": 55, "ottPlatform": "Disney+ Hotstar" },
+      { "rank": 9, "title": "Baby", "language": "Hindi", "director": "Neeraj Pandey", "cast": "Akshay Kumar, Rana Daggubati, Danny Denzongpa", "releaseDate": "2015-01-23", "indiaNetCr": 81.84, "verdict": "Average", "genre": "Action/Thriller", "budgetCr": 80, "ottPlatform": "Netflix" },
+      { "rank": 10, "title": "ABCD 2", "language": "Hindi", "director": "Remo D'Souza", "cast": "Varun Dhawan, Shraddha Kapoor", "releaseDate": "2015-06-19", "indiaNetCr": 103.59, "verdict": "Super Hit", "genre": "Dance/Drama", "budgetCr": 45, "ottPlatform": "Netflix" },
+      { "rank": 11, "title": "Piku", "language": "Hindi", "director": "Shoojit Sircar", "cast": "Amitabh Bachchan, Deepika Padukone, Irrfan Khan", "releaseDate": "2015-05-08", "indiaNetCr": 78.39, "verdict": "Hit", "genre": "Drama/Comedy", "budgetCr": 28, "ottPlatform": "Zee5" },
+      { "rank": 12, "title": "Dil Dhadakne Do", "language": "Hindi", "director": "Zoya Akhtar", "cast": "Ranveer Singh, Priyanka Chopra, Anil Kapoor, Farhan Akhtar", "releaseDate": "2015-06-05", "indiaNetCr": 75.05, "verdict": "Below Average", "genre": "Drama/Family", "budgetCr": 100, "ottPlatform": "Netflix" },
+      { "rank": 13, "title": "Singh Is Bling", "language": "Hindi", "director": "Prabhu Deva", "cast": "Akshay Kumar, Amy Jackson, Lara Dutta", "releaseDate": "2015-10-02", "indiaNetCr": 71.08, "verdict": "Flop", "genre": "Action/Comedy", "budgetCr": 85, "ottPlatform": "Amazon Prime" },
+      { "rank": 14, "title": "Brothers", "language": "Hindi", "director": "Karan Malhotra", "cast": "Akshay Kumar, Sidharth Malhotra, Jackie Shroff", "releaseDate": "2015-08-14", "indiaNetCr": 70.66, "verdict": "Flop", "genre": "Action/Drama", "budgetCr": 130, "ottPlatform": "Amazon Prime" },
+      { "rank": 15, "title": "Drishyam", "language": "Hindi", "director": "Nishikant Kamat", "cast": "Ajay Devgn, Tabu, Shriya Saran", "releaseDate": "2015-07-31", "indiaNetCr": 68.67, "verdict": "Average", "genre": "Thriller/Drama", "budgetCr": 40, "ottPlatform": "Zee5" }
+    ]
+  },
+  "2014": {
+    "yearStats": {
+      "totalReleases": 201,
+      "avgATP": 118,
+      "topGrosser": "PK",
+      "era": "Entertainment Tax",
+      "note": "PK became the first Bollywood solo film to cross ₹300 Cr in India. Aamir Khan dominated with three hits across PK, Dhoom 3 (which released in 2013 but ran into 2014). Kick was Salman's biggest film at the time at ₹211 Cr."
+    },
+    "films": [
+      { "rank": 1, "title": "PK", "language": "Hindi", "director": "Rajkumar Hirani", "cast": "Aamir Khan, Anushka Sharma, Sanjay Dutt", "releaseDate": "2014-12-19", "indiaNetCr": 337.73, "verdict": "All Time Blockbuster", "genre": "Sci-Fi/Comedy", "budgetCr": 85, "ottPlatform": "Netflix" },
+      { "rank": 2, "title": "Kick", "language": "Hindi", "director": "Sajid Nadiadwala", "cast": "Salman Khan, Jacqueline Fernandez, Randeep Hooda", "releaseDate": "2014-07-25", "indiaNetCr": 211.63, "verdict": "Blockbuster", "genre": "Action/Comedy", "budgetCr": 90, "ottPlatform": "Zee5" },
+      { "rank": 3, "title": "Happy New Year", "language": "Hindi", "director": "Farah Khan", "cast": "Shah Rukh Khan, Deepika Padukone, Abhishek Bachchan", "releaseDate": "2014-10-24", "indiaNetCr": 178.41, "verdict": "Super Hit", "genre": "Action/Comedy", "budgetCr": 100, "ottPlatform": "Netflix" },
+      { "rank": 4, "title": "Bang Bang", "language": "Hindi", "director": "Siddharth Anand", "cast": "Hrithik Roshan, Katrina Kaif", "releaseDate": "2014-10-02", "indiaNetCr": 141.07, "verdict": "Semi Hit", "genre": "Action/Romance", "budgetCr": 130, "ottPlatform": "Amazon Prime" },
+      { "rank": 5, "title": "Singham Returns", "language": "Hindi", "director": "Rohit Shetty", "cast": "Ajay Devgn, Kareena Kapoor, Amole Gupte", "releaseDate": "2014-08-15", "indiaNetCr": 140.15, "verdict": "Super Hit", "genre": "Action/Drama", "budgetCr": 90, "ottPlatform": "Amazon Prime" },
+      { "rank": 6, "title": "Jai Ho", "language": "Hindi", "director": "Sohail Khan", "cast": "Salman Khan, Tabu, Aditya Pancholi", "releaseDate": "2014-01-24", "indiaNetCr": 109.36, "verdict": "Semi Hit", "genre": "Action/Drama", "budgetCr": 100, "ottPlatform": "Amazon Prime" },
+      { "rank": 7, "title": "2 States", "language": "Hindi", "director": "Abhishek Varman", "cast": "Arjun Kapoor, Alia Bhatt, Ronit Roy, Revathi", "releaseDate": "2014-04-18", "indiaNetCr": 101.86, "verdict": "Super Hit", "genre": "Romance/Comedy", "budgetCr": 35, "ottPlatform": "Amazon Prime" },
+      { "rank": 8, "title": "Holiday: A Soldier Is Never Off Duty", "language": "Hindi", "director": "A.R. Murugadoss", "cast": "Akshay Kumar, Sonakshi Sinha, Freddy Daruwala", "releaseDate": "2014-06-06", "indiaNetCr": 112.44, "verdict": "Hit", "genre": "Action/Thriller", "budgetCr": 75, "ottPlatform": "Amazon Prime" },
+      { "rank": 9, "title": "Ek Villain", "language": "Hindi", "director": "Mohit Suri", "cast": "Sidharth Malhotra, Shraddha Kapoor, Riteish Deshmukh", "releaseDate": "2014-06-27", "indiaNetCr": 97.52, "verdict": "Super Hit", "genre": "Romance/Thriller", "budgetCr": 35, "ottPlatform": "Zee5" },
+      { "rank": 10, "title": "Entertainment", "language": "Hindi", "director": "Sajid-Farhad", "cast": "Akshay Kumar, Tamannaah, Mithun Chakraborty", "releaseDate": "2014-08-08", "indiaNetCr": 64.30, "verdict": "Flop", "genre": "Comedy", "budgetCr": 70, "ottPlatform": "Amazon Prime" },
+      { "rank": 11, "title": "Gunday", "language": "Hindi", "director": "Ali Abbas Zafar", "cast": "Ranveer Singh, Arjun Kapoor, Priyanka Chopra", "releaseDate": "2014-02-14", "indiaNetCr": 73.28, "verdict": "Semi Hit", "genre": "Action/Drama", "budgetCr": 90, "ottPlatform": "Zee5" },
+      { "rank": 12, "title": "Humpty Sharma Ki Dulhania", "language": "Hindi", "director": "Shashank Khaitan", "cast": "Varun Dhawan, Alia Bhatt", "releaseDate": "2014-07-11", "indiaNetCr": 72.81, "verdict": "Hit", "genre": "Romance/Comedy", "budgetCr": 22, "ottPlatform": "Amazon Prime" },
+      { "rank": 13, "title": "Queen", "language": "Hindi", "director": "Vikas Bahl", "cast": "Kangana Ranaut, Rajkummar Rao, Lisa Haydon", "releaseDate": "2014-03-07", "indiaNetCr": 61.48, "verdict": "Hit", "genre": "Drama/Comedy", "budgetCr": 12, "ottPlatform": "Netflix" },
+      { "rank": 14, "title": "Mary Kom", "language": "Hindi", "director": "Omung Kumar", "cast": "Priyanka Chopra, Darshan Kumar, Sunil Thapa", "releaseDate": "2014-09-05", "indiaNetCr": 61.43, "verdict": "Hit", "genre": "Sports/Biopic", "budgetCr": 55, "ottPlatform": "Amazon Prime" },
+      { "rank": 15, "title": "Haider", "language": "Hindi", "director": "Vishal Bhardwaj", "cast": "Shahid Kapoor, Tabu, Shraddha Kapoor", "releaseDate": "2014-10-02", "indiaNetCr": 49.19, "verdict": "Average", "genre": "Thriller/Drama", "budgetCr": 35, "ottPlatform": "Amazon Prime" }
+    ]
+  },
+  "2013": {
+    "yearStats": {
+      "totalReleases": 185,
+      "avgATP": 110,
+      "topGrosser": "Dhoom 3",
+      "era": "Entertainment Tax",
+      "note": "Dhoom 3 crossed ₹260 Cr — first Bollywood film to do so. Chennai Express ₹207 Cr was SRK's biggest. Yeh Jawaani Hai Deewani and Krrish 3 both crossed ₹175 Cr. Aashiqui 2 was the surprise blockbuster of the year."
+    },
+    "films": [
+      { "rank": 1, "title": "Dhoom 3", "language": "Hindi", "director": "Vijay Krishna Acharya", "cast": "Aamir Khan, Katrina Kaif, Abhishek Bachchan", "releaseDate": "2013-12-20", "indiaNetCr": 260.63, "verdict": "All Time Blockbuster", "genre": "Action/Thriller", "budgetCr": 125, "ottPlatform": "Amazon Prime" },
+      { "rank": 2, "title": "Chennai Express", "language": "Hindi", "director": "Rohit Shetty", "cast": "Shah Rukh Khan, Deepika Padukone", "releaseDate": "2013-08-08", "indiaNetCr": 207.69, "verdict": "Blockbuster", "genre": "Action/Comedy", "budgetCr": 100, "ottPlatform": "Amazon Prime" },
+      { "rank": 3, "title": "Yeh Jawaani Hai Deewani", "language": "Hindi", "director": "Ayan Mukerji", "cast": "Ranbir Kapoor, Deepika Padukone, Aditya Roy Kapur", "releaseDate": "2013-05-31", "indiaNetCr": 177.99, "verdict": "Blockbuster", "genre": "Romance/Drama", "budgetCr": 75, "ottPlatform": "Amazon Prime" },
+      { "rank": 4, "title": "Krrish 3", "language": "Hindi", "director": "Rakesh Roshan", "cast": "Hrithik Roshan, Priyanka Chopra, Vivek Oberoi", "releaseDate": "2013-11-01", "indiaNetCr": 175.84, "verdict": "Blockbuster", "genre": "Action/Sci-Fi", "budgetCr": 150, "ottPlatform": "Amazon Prime" },
+      { "rank": 5, "title": "Race 2", "language": "Hindi", "director": "Abbas-Mastan", "cast": "Saif Ali Khan, John Abraham, Deepika Padukone", "releaseDate": "2013-01-25", "indiaNetCr": 93.49, "verdict": "Semi Hit", "genre": "Action/Thriller", "budgetCr": 80, "ottPlatform": "Zee5" },
+      { "rank": 6, "title": "Grand Masti", "language": "Hindi", "director": "Indra Kumar", "cast": "Riteish Deshmukh, Vivek Oberoi, Aftab Shivdasani", "releaseDate": "2013-09-13", "indiaNetCr": 91.66, "verdict": "Super Hit", "genre": "Comedy/Adult", "budgetCr": 15, "ottPlatform": "ZEE5" },
+      { "rank": 7, "title": "R... Rajkumar", "language": "Hindi", "director": "Prabhu Deva", "cast": "Shahid Kapoor, Sonakshi Sinha, Sonu Sood", "releaseDate": "2013-12-06", "indiaNetCr": 65.99, "verdict": "Average", "genre": "Action/Romance", "budgetCr": 50, "ottPlatform": "Amazon Prime" },
+      { "rank": 8, "title": "Special 26", "language": "Hindi", "director": "Neeraj Pandey", "cast": "Akshay Kumar, Manoj Bajpayee, Anupam Kher", "releaseDate": "2013-02-08", "indiaNetCr": 65.48, "verdict": "Semi Hit", "genre": "Crime/Thriller", "budgetCr": 40, "ottPlatform": "Zee5" },
+      { "rank": 9, "title": "Goliyon Ki Raasleela Ram-Leela", "language": "Hindi", "director": "Sanjay Leela Bhansali", "cast": "Ranveer Singh, Deepika Padukone, Supriya Pathak", "releaseDate": "2013-11-15", "indiaNetCr": 112.98, "verdict": "Hit", "genre": "Romance/Drama", "budgetCr": 65, "ottPlatform": "Netflix" },
+      { "rank": 10, "title": "Bhaag Milkha Bhaag", "language": "Hindi", "director": "Rakeysh Omprakash Mehra", "cast": "Farhan Akhtar, Sonam Kapoor, Divyendu Sharma", "releaseDate": "2013-07-12", "indiaNetCr": 109.19, "verdict": "Super Hit", "genre": "Sports/Biopic", "budgetCr": 65, "ottPlatform": "Disney+ Hotstar" },
+      { "rank": 11, "title": "Aashiqui 2", "language": "Hindi", "director": "Mohit Suri", "cast": "Aditya Roy Kapur, Shraddha Kapoor", "releaseDate": "2013-04-26", "indiaNetCr": 78.64, "verdict": "Blockbuster", "genre": "Romance/Music", "budgetCr": 14, "ottPlatform": "Zee5" },
+      { "rank": 12, "title": "Raanjhanaa", "language": "Hindi", "director": "Aanand L. Rai", "cast": "Dhanush, Sonam Kapoor, Abhay Deol", "releaseDate": "2013-06-21", "indiaNetCr": 61.63, "verdict": "Hit", "genre": "Romance/Drama", "budgetCr": 35, "ottPlatform": "Amazon Prime" },
+      { "rank": 13, "title": "Once Upon A Time In Mumbaai Dobaara!", "language": "Hindi", "director": "Milan Luthria", "cast": "Akshay Kumar, Imran Khan, Sonakshi Sinha", "releaseDate": "2013-08-15", "indiaNetCr": 58.49, "verdict": "Flop", "genre": "Crime/Action", "budgetCr": 80, "ottPlatform": "Zee5" },
+      { "rank": 14, "title": "Kai Po Che", "language": "Hindi", "director": "Abhishek Kapoor", "cast": "Sushant Singh Rajput, Raj Kumar Yadav, Amit Sadh", "releaseDate": "2013-02-22", "indiaNetCr": 43.58, "verdict": "Semi Hit", "genre": "Drama/Sports", "budgetCr": 30, "ottPlatform": "Zee5" },
+      { "rank": 15, "title": "Shuddh Desi Romance", "language": "Hindi", "director": "Maneesh Sharma", "cast": "Sushant Singh Rajput, Parineeti Chopra, Vaani Kapoor", "releaseDate": "2013-09-06", "indiaNetCr": 46.26, "verdict": "Hit", "genre": "Romance/Comedy", "budgetCr": 25, "ottPlatform": "Netflix" }
+    ]
+  },
+  "2012": {
+    "yearStats": {
+      "totalReleases": 165,
+      "avgATP": 102,
+      "topGrosser": "Ek Tha Tiger",
+      "era": "Entertainment Tax",
+      "note": "Ek Tha Tiger ₹186 Cr set a new record. Salman and Dabangg 2 both crushed. This was the year of Barfi! winning hearts, OMG winning wallets, and Kahaani becoming one of Indian cinema's best thrillers."
+    },
+    "films": [
+      { "rank": 1, "title": "Ek Tha Tiger", "language": "Hindi", "director": "Kabir Khan", "cast": "Salman Khan, Katrina Kaif, Ranvir Shorey", "releaseDate": "2012-08-15", "indiaNetCr": 186.15, "verdict": "Blockbuster", "genre": "Action/Spy", "budgetCr": 70, "ottPlatform": "Amazon Prime" },
+      { "rank": 2, "title": "Dabangg 2", "language": "Hindi", "director": "Arbaaz Khan", "cast": "Salman Khan, Sonakshi Sinha, Prakash Raj", "releaseDate": "2012-12-21", "indiaNetCr": 149.52, "verdict": "Blockbuster", "genre": "Action/Drama", "budgetCr": 55, "ottPlatform": "Netflix" },
+      { "rank": 3, "title": "Rowdy Rathore", "language": "Hindi", "director": "Prabhu Deva", "cast": "Akshay Kumar, Sonakshi Sinha, Nassar", "releaseDate": "2012-06-01", "indiaNetCr": 131.22, "verdict": "Blockbuster", "genre": "Action/Drama", "budgetCr": 70, "ottPlatform": "Zee5" },
+      { "rank": 4, "title": "Agneepath", "language": "Hindi", "director": "Karan Malhotra", "cast": "Hrithik Roshan, Sanjay Dutt, Priyanka Chopra", "releaseDate": "2012-01-26", "indiaNetCr": 119.98, "verdict": "Super Hit", "genre": "Action/Crime", "budgetCr": 80, "ottPlatform": "Amazon Prime" },
+      { "rank": 5, "title": "Talaash", "language": "Hindi", "director": "Reema Kagti", "cast": "Aamir Khan, Rani Mukerji, Kareena Kapoor", "releaseDate": "2012-11-30", "indiaNetCr": 91.24, "verdict": "Semi Hit", "genre": "Thriller/Mystery", "budgetCr": 70, "ottPlatform": "Zee5" },
+      { "rank": 6, "title": "Housefull 2", "language": "Hindi", "director": "Sajid Khan", "cast": "Akshay Kumar, John Abraham, Asin, Jacqueline Fernandez", "releaseDate": "2012-04-06", "indiaNetCr": 111.79, "verdict": "Super Hit", "genre": "Comedy", "budgetCr": 60, "ottPlatform": "Zee5" },
+      { "rank": 7, "title": "Barfi!", "language": "Hindi", "director": "Anurag Basu", "cast": "Ranbir Kapoor, Priyanka Chopra, Ileana D'Cruz", "releaseDate": "2012-09-14", "indiaNetCr": 105.57, "verdict": "Super Hit", "genre": "Drama/Comedy", "budgetCr": 40, "ottPlatform": "Amazon Prime" },
+      { "rank": 8, "title": "Jab Tak Hai Jaan", "language": "Hindi", "director": "Yash Chopra", "cast": "Shah Rukh Khan, Katrina Kaif, Anushka Sharma", "releaseDate": "2012-11-13", "indiaNetCr": 101.59, "verdict": "Hit", "genre": "Romance/Drama", "budgetCr": 80, "ottPlatform": "Netflix" },
+      { "rank": 9, "title": "Bol Bachchan", "language": "Hindi", "director": "Rohit Shetty", "cast": "Ajay Devgn, Abhishek Bachchan, Asin", "releaseDate": "2012-07-06", "indiaNetCr": 100.05, "verdict": "Hit", "genre": "Action/Comedy", "budgetCr": 70, "ottPlatform": "Zee5" },
+      { "rank": 10, "title": "Son Of Sardaar", "language": "Hindi", "director": "Ashwni Dhir", "cast": "Ajay Devgn, Sonakshi Sinha, Sanjay Dutt", "releaseDate": "2012-11-13", "indiaNetCr": 88.68, "verdict": "Hit", "genre": "Action/Comedy", "budgetCr": 55, "ottPlatform": "Zee5" },
+      { "rank": 11, "title": "OMG – Oh My God!", "language": "Hindi", "director": "Umesh Shukla", "cast": "Akshay Kumar, Paresh Rawal, Mithun Chakraborty", "releaseDate": "2012-09-28", "indiaNetCr": 81.44, "verdict": "Super Hit", "genre": "Comedy/Drama", "budgetCr": 35, "ottPlatform": "Amazon Prime" },
+      { "rank": 12, "title": "Cocktail", "language": "Hindi", "director": "Homi Adajania", "cast": "Saif Ali Khan, Deepika Padukone, Diana Penty", "releaseDate": "2012-07-13", "indiaNetCr": 74.48, "verdict": "Hit", "genre": "Romance/Drama", "budgetCr": 40, "ottPlatform": "Amazon Prime" },
+      { "rank": 13, "title": "Raaz 3", "language": "Hindi", "director": "Vikram Bhatt", "cast": "Emraan Hashmi, Bipasha Basu, Esha Gupta", "releaseDate": "2012-09-07", "indiaNetCr": 67.41, "verdict": "Super Hit", "genre": "Horror/Thriller", "budgetCr": 35, "ottPlatform": "Zee5" },
+      { "rank": 14, "title": "Kahaani", "language": "Hindi", "director": "Sujoy Ghosh", "cast": "Vidya Balan, Nawazuddin Siddiqui, Parambrata Chatterjee", "releaseDate": "2012-03-09", "indiaNetCr": 57.81, "verdict": "Hit", "genre": "Thriller/Mystery", "budgetCr": 8, "ottPlatform": "Amazon Prime" },
+      { "rank": 15, "title": "Student Of The Year", "language": "Hindi", "director": "Karan Johar", "cast": "Alia Bhatt, Varun Dhawan, Sidharth Malhotra", "releaseDate": "2012-10-19", "indiaNetCr": 62.94, "verdict": "Semi Hit", "genre": "Romance/Drama", "budgetCr": 45, "ottPlatform": "Amazon Prime" }
+    ]
+  },
+  "2011": {
+    "yearStats": {
+      "totalReleases": 159,
+      "avgATP": 95,
+      "topGrosser": "Bodyguard",
+      "era": "Entertainment Tax",
+      "note": "Bodyguard ₹144 Cr was the biggest of the year. Ready ₹120 Cr made Salman and Ajay Devgn the undisputed mass entertainers of the era. ZNMD became an iconic travel film. Ra.One was SRK's ambitious sci-fi attempt."
+    },
+    "films": [
+      { "rank": 1, "title": "Bodyguard", "language": "Hindi", "director": "Siddique", "cast": "Salman Khan, Kareena Kapoor, Hazel Keech", "releaseDate": "2011-08-31", "indiaNetCr": 144.78, "verdict": "Blockbuster", "genre": "Action/Romance", "budgetCr": 90, "ottPlatform": "Amazon Prime" },
+      { "rank": 2, "title": "Ready", "language": "Hindi", "director": "Anees Bazmee", "cast": "Salman Khan, Asin, Paresh Rawal", "releaseDate": "2011-06-03", "indiaNetCr": 120.72, "verdict": "Blockbuster", "genre": "Action/Comedy", "budgetCr": 55, "ottPlatform": "Amazon Prime" },
+      { "rank": 3, "title": "Ra.One", "language": "Hindi", "director": "Anubhav Sinha", "cast": "Shah Rukh Khan, Kareena Kapoor, Arjun Rampal", "releaseDate": "2011-10-26", "indiaNetCr": 113.95, "verdict": "Hit", "genre": "Action/Sci-Fi", "budgetCr": 150, "ottPlatform": "Amazon Prime" },
+      { "rank": 4, "title": "Don 2", "language": "Hindi", "director": "Farhan Akhtar", "cast": "Shah Rukh Khan, Priyanka Chopra, Boman Irani", "releaseDate": "2011-12-23", "indiaNetCr": 106.44, "verdict": "Hit", "genre": "Action/Crime", "budgetCr": 90, "ottPlatform": "Zee5" },
+      { "rank": 5, "title": "Singham", "language": "Hindi", "director": "Rohit Shetty", "cast": "Ajay Devgn, Kajal Aggarwal, Prakash Raj", "releaseDate": "2011-07-22", "indiaNetCr": 98.38, "verdict": "Super Hit", "genre": "Action/Drama", "budgetCr": 45, "ottPlatform": "Amazon Prime" },
+      { "rank": 6, "title": "Zindagi Na Milegi Dobara", "language": "Hindi", "director": "Zoya Akhtar", "cast": "Hrithik Roshan, Farhan Akhtar, Abhay Deol, Katrina Kaif", "releaseDate": "2011-07-15", "indiaNetCr": 89.96, "verdict": "Hit", "genre": "Drama/Comedy", "budgetCr": 70, "ottPlatform": "Netflix" },
+      { "rank": 7, "title": "The Dirty Picture", "language": "Hindi", "director": "Milan Luthria", "cast": "Vidya Balan, Emraan Hashmi, Naseeruddin Shah", "releaseDate": "2011-12-02", "indiaNetCr": 79.79, "verdict": "Super Hit", "genre": "Drama/Biopic", "budgetCr": 30, "ottPlatform": "Zee5" },
+      { "rank": 8, "title": "Rockstar", "language": "Hindi", "director": "Imtiaz Ali", "cast": "Ranbir Kapoor, Nargis Fakhri, Shammi Kapoor", "releaseDate": "2011-11-11", "indiaNetCr": 68.62, "verdict": "Semi Hit", "genre": "Drama/Music", "budgetCr": 65, "ottPlatform": "Netflix" },
+      { "rank": 9, "title": "Desi Boyz", "language": "Hindi", "director": "Rohit Dhawan", "cast": "Akshay Kumar, John Abraham, Chitrangada Singh", "releaseDate": "2011-11-25", "indiaNetCr": 45.92, "verdict": "Flop", "genre": "Comedy/Drama", "budgetCr": 55, "ottPlatform": "Zee5" },
+      { "rank": 10, "title": "Mere Brother Ki Dulhan", "language": "Hindi", "director": "Ali Abbas Zafar", "cast": "Imran Khan, Katrina Kaif, Ali Zafar", "releaseDate": "2011-09-09", "indiaNetCr": 57.41, "verdict": "Hit", "genre": "Romance/Comedy", "budgetCr": 35, "ottPlatform": "Netflix" },
+      { "rank": 11, "title": "Yamla Pagla Deewana", "language": "Hindi", "director": "Samir Karnik", "cast": "Dharmendra, Sunny Deol, Bobby Deol", "releaseDate": "2011-01-14", "indiaNetCr": 54.94, "verdict": "Hit", "genre": "Comedy/Action", "budgetCr": 35, "ottPlatform": "Zee5" },
+      { "rank": 12, "title": "Delhi Belly", "language": "Hindi", "director": "Abhinay Deo", "cast": "Imran Khan, Vir Das, Kunaal Roy Kapur, Shenaz Treasury", "releaseDate": "2011-07-01", "indiaNetCr": 54.84, "verdict": "Hit", "genre": "Comedy/Thriller", "budgetCr": 30, "ottPlatform": "Amazon Prime" },
+      { "rank": 13, "title": "Murder 2", "language": "Hindi", "director": "Mohit Suri", "cast": "Emraan Hashmi, Jacqueline Fernandez, Prashant Narayanan", "releaseDate": "2011-07-08", "indiaNetCr": 47.98, "verdict": "Super Hit", "genre": "Thriller/Crime", "budgetCr": 20, "ottPlatform": "Zee5" },
+      { "rank": 14, "title": "Thank You", "language": "Hindi", "director": "Anees Bazmee", "cast": "Akshay Kumar, Bobby Deol, Suniel Shetty, Sonam Kapoor", "releaseDate": "2011-04-08", "indiaNetCr": 45.03, "verdict": "Flop", "genre": "Comedy/Romance", "budgetCr": 60, "ottPlatform": "Zee5" },
+      { "rank": 15, "title": "Double Dhamaal", "language": "Hindi", "director": "Indra Kumar", "cast": "Sanjay Dutt, Riteish Deshmukh, Arshad Warsi", "releaseDate": "2011-06-24", "indiaNetCr": 45.06, "verdict": "Average", "genre": "Comedy", "budgetCr": 42, "ottPlatform": "Zee5" }
+    ]
+  },
+  "2010": {
+    "yearStats": {
+      "totalReleases": 160,
+      "avgATP": 89,
+      "topGrosser": "Dabangg",
+      "era": "Entertainment Tax",
+      "note": "Dabangg launched Salman Khan's mass commercial empire at ₹141 Cr. My Name Is Khan was SRK's biggest overseas earner. Raajneeti proved political films could work. Golmaal 3 delivered Diwali gold for Rohit Shetty."
+    },
+    "films": [
+      { "rank": 1, "title": "Dabangg", "language": "Hindi", "director": "Abhinav Kashyap", "cast": "Salman Khan, Sonakshi Sinha, Sonu Sood", "releaseDate": "2010-09-10", "indiaNetCr": 141.25, "verdict": "Blockbuster", "genre": "Action/Drama", "budgetCr": 40, "ottPlatform": "Amazon Prime" },
+      { "rank": 2, "title": "Golmaal 3", "language": "Hindi", "director": "Rohit Shetty", "cast": "Ajay Devgn, Kareena Kapoor, Mithun Chakraborty", "releaseDate": "2010-11-05", "indiaNetCr": 108.06, "verdict": "Blockbuster", "genre": "Comedy/Action", "budgetCr": 60, "ottPlatform": "Zee5" },
+      { "rank": 3, "title": "Raajneeti", "language": "Hindi", "director": "Prakash Jha", "cast": "Ranbir Kapoor, Katrina Kaif, Manoj Bajpayee, Nana Patekar", "releaseDate": "2010-06-04", "indiaNetCr": 92.38, "verdict": "Super Hit", "genre": "Political/Drama", "budgetCr": 70, "ottPlatform": "Amazon Prime" },
+      { "rank": 4, "title": "Kites", "language": "Hindi/English/Spanish", "director": "Anurag Basu", "cast": "Hrithik Roshan, Barbara Mori, Kangana Ranaut", "releaseDate": "2010-05-20", "indiaNetCr": 47.85, "verdict": "Flop", "genre": "Romance/Thriller", "budgetCr": 80, "ottPlatform": "Amazon Prime" },
+      { "rank": 5, "title": "My Name Is Khan", "language": "Hindi", "director": "Karan Johar", "cast": "Shah Rukh Khan, Kajol, Jimmy Shergill", "releaseDate": "2010-02-12", "indiaNetCr": 72.83, "verdict": "Hit", "genre": "Drama", "budgetCr": 90, "ottPlatform": "Amazon Prime" },
+      { "rank": 6, "title": "Housefull", "language": "Hindi", "director": "Sajid Khan", "cast": "Akshay Kumar, Riteish Deshmukh, Deepika Padukone", "releaseDate": "2010-04-30", "indiaNetCr": 72.25, "verdict": "Hit", "genre": "Comedy", "budgetCr": 55, "ottPlatform": "Zee5" },
+      { "rank": 7, "title": "Tees Maar Khan", "language": "Hindi", "director": "Farah Khan", "cast": "Akshay Kumar, Katrina Kaif, Akshaye Khanna", "releaseDate": "2010-12-24", "indiaNetCr": 60.57, "verdict": "Semi Hit", "genre": "Action/Comedy", "budgetCr": 55, "ottPlatform": "Zee5" },
+      { "rank": 8, "title": "Once Upon a Time in Mumbaai", "language": "Hindi", "director": "Milan Luthria", "cast": "Ajay Devgn, Emraan Hashmi, Kangana Ranaut", "releaseDate": "2010-07-30", "indiaNetCr": 58.27, "verdict": "Hit", "genre": "Crime/Drama", "budgetCr": 50, "ottPlatform": "Zee5" },
+      { "rank": 9, "title": "I Hate Luv Storys", "language": "Hindi", "director": "Punit Malhotra", "cast": "Imran Khan, Sonam Kapoor", "releaseDate": "2010-07-02", "indiaNetCr": 43.47, "verdict": "Hit", "genre": "Romance/Comedy", "budgetCr": 35, "ottPlatform": "Netflix" },
+      { "rank": 10, "title": "Anjaana Anjaani", "language": "Hindi", "director": "Siddharth Anand", "cast": "Ranbir Kapoor, Priyanka Chopra", "releaseDate": "2010-10-01", "indiaNetCr": 40.05, "verdict": "Average", "genre": "Romance/Drama", "budgetCr": 45, "ottPlatform": "Amazon Prime" },
+      { "rank": 11, "title": "Khatta Meetha", "language": "Hindi", "director": "Priyadarshan", "cast": "Akshay Kumar, Trisha Krishnan, Johny Lever", "releaseDate": "2010-07-23", "indiaNetCr": 39.13, "verdict": "Below Average", "genre": "Comedy", "budgetCr": 50, "ottPlatform": "Zee5" },
+      { "rank": 12, "title": "Veer", "language": "Hindi", "director": "Anil Sharma", "cast": "Salman Khan, Zareen Khan, Sohail Khan", "releaseDate": "2010-01-22", "indiaNetCr": 38.14, "verdict": "Below Average", "genre": "Historical/Action", "budgetCr": 50, "ottPlatform": "Zee5" },
+      { "rank": 13, "title": "Badmaash Company", "language": "Hindi", "director": "Parmeet Sethi", "cast": "Shahid Kapoor, Anushka Sharma, Vir Das", "releaseDate": "2010-05-07", "indiaNetCr": 32.87, "verdict": "Average", "genre": "Crime/Drama", "budgetCr": 30, "ottPlatform": "Amazon Prime" },
+      { "rank": 14, "title": "Guzaarish", "language": "Hindi", "director": "Sanjay Leela Bhansali", "cast": "Hrithik Roshan, Aishwarya Rai, Aditya Roy Kapur", "releaseDate": "2010-11-19", "indiaNetCr": 29.57, "verdict": "Disaster", "genre": "Drama", "budgetCr": 60, "ottPlatform": "Netflix" },
+      { "rank": 15, "title": "Peepli [Live]", "language": "Hindi", "director": "Anusha Rizvi", "cast": "Raghubir Yadav, Malaika Shenoy, Om Puri", "releaseDate": "2010-08-13", "indiaNetCr": 29.29, "verdict": "Hit", "genre": "Satire/Drama", "budgetCr": 5, "ottPlatform": "Netflix" }
+    ]
+  }
+}
