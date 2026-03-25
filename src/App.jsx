@@ -1514,6 +1514,7 @@ function BoxOfficeRow({ movie, rank, maxWeeks }) {
               {movie.pageUrl ? <a href={`/${movie.pageUrl}`} style={{ color:T.text, textDecoration:"none" }} onClick={e => e.stopPropagation()}>{movie.title}</a> : movie.title}
             </span>
             <VerdictPill verdict={movie.verdict} />
+              {movie.brs && <BRSBadge brs={movie.brs} compact={true} />}
           </div>
           {/* Row 2: numbers */}
           <div style={{ display:"flex", gap:10, alignItems:"baseline", marginBottom:3, flexWrap:"wrap" }}>
@@ -1785,6 +1786,142 @@ function BoxOfficeRow({ movie, rank, maxWeeks }) {
       )}
     </div>
   );
+}
+
+
+/* ═══════════════════════════════════════════════════════════════
+   BOXOFFY REVIEW SCORE (BRS)
+   Three-pillar rating: Critic Consensus (30%) + Verified Audience
+   Week 2+ (50%) + Box Office Signal/ROI (20%) = score /100
+   Week 1 scores are provisional (⚡) — locked at Week 2 (✅)
+   ═══════════════════════════════════════════════════════════════ */
+function BRSBadge({ brs, compact = false }) {
+  const [hov, setHov] = React.useState(false);
+  if (!brs || !brs.score) return null;
+
+  const { score, critic, audience, boSignal, label, audienceWeek,
+          criticCount, audienceSource, criticSource, note } = brs;
+
+  const provisional = audienceWeek === 1;
+
+  const scoreColor =
+    score >= 80 ? "#15803D" :
+    score >= 65 ? "#B45309" : "#B91C1C";
+
+  const scoreBg =
+    score >= 80 ? "#F0FDF4" :
+    score >= 65 ? "#FFFBEB" : "#FEF2F2";
+
+  const scoreBorder =
+    score >= 80 ? "#86EFAC" :
+    score >= 65 ? "#FCD34D" : "#FCA5A5";
+
+  const barStyle = (val, color) => ({
+    height: 4,
+    borderRadius: 2,
+    background: "#E5E7EB",
+    marginTop: 2,
+    marginBottom: 6,
+    position: "relative",
+    overflow: "hidden",
+  });
+
+  const barFill = (val, color) => ({
+    position: "absolute",
+    left: 0, top: 0, bottom: 0,
+    width: `${val}%`,
+    background: color,
+    borderRadius: 2,
+    transition: "width 0.3s ease",
+  });
+
+  if (compact) {
+    return (
+      <div style={{ position: "relative", display: "inline-block" }}
+           onMouseEnter={() => setHov(true)}
+           onMouseLeave={() => setHov(false)}>
+        <div style={{
+          display: "flex", alignItems: "baseline", gap: 2,
+          background: scoreBg, border: `1px solid ${scoreBorder}`,
+          borderRadius: 3, padding: "2px 6px", cursor: "default",
+        }}>
+          <span style={{
+            fontFamily: "'Barlow Condensed', sans-serif",
+            fontWeight: 900, fontSize: 13, color: scoreColor,
+            letterSpacing: "-0.01em", lineHeight: 1,
+          }}>{score}</span>
+          <span style={{
+            fontFamily: "'DM Sans', sans-serif",
+            fontSize: 7, fontWeight: 700, color: scoreColor,
+            letterSpacing: "0.06em", textTransform: "uppercase",
+          }}>BRS</span>
+          {provisional && (
+            <span style={{ fontSize: 8, color: "#D97706" }}>⚡</span>
+          )}
+        </div>
+
+        {/* Tooltip */}
+        {hov && (
+          <div style={{
+            position: "absolute", right: 0, top: "calc(100% + 6px)",
+            zIndex: 999, width: 220,
+            background: "#0D1117", border: `1px solid #374151`,
+            borderRadius: 4, padding: "12px 14px",
+            boxShadow: "0 8px 24px rgba(0,0,0,.35)",
+          }}>
+            {/* Header */}
+            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 10 }}>
+              <div>
+                <span style={{ fontFamily: "'Barlow Condensed',sans-serif", fontWeight: 900, fontSize: 22, color: scoreColor }}>{score}</span>
+                <span style={{ fontFamily: "'DM Sans',sans-serif", fontSize: 9, fontWeight: 700, color: "#9CA3AF", letterSpacing: "0.1em", textTransform: "uppercase", marginLeft: 4 }}>
+                  Boxoffy Review Score
+                </span>
+              </div>
+              <div style={{ fontFamily: "'DM Sans',sans-serif", fontSize: 9, fontWeight: 700, color: scoreColor, background: scoreBg, border: `1px solid ${scoreBorder}`, padding: "2px 6px", borderRadius: 2 }}>
+                {label}
+              </div>
+            </div>
+
+            {/* Pillars */}
+            {[
+              { label: "Critic Consensus", val: critic, color: "#60A5FA", wt: "30%", src: `${criticCount} reviews · ${criticSource}` },
+              { label: `Audience ${provisional ? "⚡ Week 1" : "✅ Week 2+"}`, val: audience, color: "#34D399", wt: "50%", src: audienceSource },
+              { label: "BO Signal (ROI)", val: boSignal, color: "#FBBF24", wt: "20%", src: "India ROI vs budget" },
+            ].map(({ label: l, val, color, wt, src }) => (
+              <div key={l} style={{ marginBottom: 4 }}>
+                <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 1 }}>
+                  <span style={{ fontFamily: "'DM Sans',sans-serif", fontSize: 9, color: "#9CA3AF" }}>{l} <span style={{ color: "#4B5563" }}>({wt})</span></span>
+                  <span style={{ fontFamily: "'Barlow Condensed',sans-serif", fontWeight: 700, fontSize: 11, color }}>{val}</span>
+                </div>
+                <div style={barStyle(val, color)}>
+                  <div style={barFill(val, color)} />
+                </div>
+                <div style={{ fontFamily: "'DM Sans',sans-serif", fontSize: 8, color: "#4B5563", marginBottom: 2 }}>{src}</div>
+              </div>
+            ))}
+
+            {note && (
+              <div style={{ marginTop: 6, paddingTop: 6, borderTop: "1px solid #1F2937", fontFamily: "'DM Sans',sans-serif", fontSize: 9, color: "#9CA3AF", fontStyle: "italic" }}>
+                {note}
+              </div>
+            )}
+
+            {provisional && (
+              <div style={{ marginTop: 6, padding: "4px 6px", background: "#451A03", borderRadius: 2, fontFamily: "'DM Sans',sans-serif", fontSize: 8, color: "#FDE68A" }}>
+                ⚡ Provisional — Week 1 audience score. Will update at Week 2.
+              </div>
+            )}
+
+            <div style={{ marginTop: 8, fontFamily: "'DM Sans',sans-serif", fontSize: 7, color: "#374151", textAlign: "right" }}>
+              boxoffy.com/brs-methodology
+            </div>
+          </div>
+        )}
+      </div>
+    );
+  }
+
+  return null; // full-size variant reserved for film pages
 }
 
 function WeeklyChartRow({ movie, rank, prevRank }) {
@@ -2083,8 +2220,9 @@ function WeeklyChartRow({ movie, rank, prevRank }) {
           );
         })()}
 
-        {/* Budget / status */}
-        <div style={{ display:"flex", flexDirection:"column", justifyContent:"center", padding:"0 10px", textAlign:"center" }}>
+        {/* Budget / status / BRS */}
+        <div style={{ display:"flex", flexDirection:"column", justifyContent:"center", alignItems:"center", padding:"0 10px", textAlign:"center", gap:4 }}>
+          {movie.brs && <BRSBadge brs={movie.brs} compact={true} />}
           <div style={{ fontFamily:"'DM Sans', sans-serif", fontSize:10, color:T.textMuted }}>₹{movie.budget}</div>
           <div style={{ fontFamily:"'DM Sans', sans-serif", fontSize:9, color: isActive ? T.green : isUpcoming ? T.gold : T.textMuted, fontWeight:700, letterSpacing:"0.06em", textTransform:"uppercase", marginTop:2 }}>
             {movie.status}
