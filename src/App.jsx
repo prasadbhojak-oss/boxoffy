@@ -364,6 +364,290 @@ function FootnotesBar({ ns }) {
   );
 }
 
+
+/* ═══════════════════════════════════════════════════════════════
+   INSTANT SEARCH — Google-style
+   Client-side fuzzy search across all films in DATA.
+   Results appear instantly as user types.
+   Keyboard: ↑↓ navigate · Enter go · Esc close
+   ═══════════════════════════════════════════════════════════════ */
+
+// Flatten DATA into a searchable array once at module level
+const SEARCH_INDEX = (() => {
+  const list = [];
+  Object.entries(DATA).forEach(([year, films]) => {
+    if (!Array.isArray(films)) return;
+    films.forEach(f => {
+      if (!f.title || !f.pageUrl) return;
+      list.push({
+        title:    f.title,
+        language: f.language || "",
+        director: f.director || "",
+        cast:     (f.cast || []).join(" "),
+        year:     year,
+        verdict:  f.verdict || "",
+        indiaNet: f.indiaNet || "",
+        pageUrl:  f.pageUrl,
+        posterUrl:f.posterUrl || "",
+        // pre-lowercase for fast matching
+        _q: (f.title + " " + (f.director||"") + " " + (f.cast||[]).join(" ")).toLowerCase(),
+      });
+    });
+  });
+  return list;
+})();
+
+function highlight(text, query) {
+  if (!query || !text) return text;
+  const idx = text.toLowerCase().indexOf(query.toLowerCase());
+  if (idx === -1) return text;
+  return (
+    <>
+      {text.slice(0, idx)}
+      <span style={{ background:"#FEF3C7", color:"#92400E", borderRadius:2, padding:"0 1px" }}>
+        {text.slice(idx, idx + query.length)}
+      </span>
+      {text.slice(idx + query.length)}
+    </>
+  );
+}
+
+function SearchBar() {
+  const [query,   setQuery]   = React.useState("");
+  const [results, setResults] = React.useState([]);
+  const [active,  setActive]  = React.useState(-1);
+  const [open,    setOpen]    = React.useState(false);
+  const [focused, setFocused] = React.useState(false);
+  const inputRef = React.useRef(null);
+  const dropRef  = React.useRef(null);
+  const isMobile = useIsMobile();
+
+  // Search on every keystroke — instant, no debounce needed for 549 films
+  React.useEffect(() => {
+    const q = query.trim().toLowerCase();
+    if (q.length < 2) {
+      setResults([]);
+      setOpen(false);
+      setActive(-1);
+      return;
+    }
+    // Score: title match scores higher than cast/director
+    const scored = SEARCH_INDEX
+      .map(f => {
+        const titleIdx = f.title.toLowerCase().indexOf(q);
+        const qIdx     = f._q.indexOf(q);
+        if (qIdx === -1) return null;
+        const score = titleIdx === 0 ? 100 : titleIdx > -1 ? 80 : 40;
+        return { ...f, score };
+      })
+      .filter(Boolean)
+      .sort((a, b) => b.score - a.score || b.year.localeCompare(a.year))
+      .slice(0, 8);
+    setResults(scored);
+    setOpen(scored.length > 0);
+    setActive(-1);
+  }, [query]);
+
+  // Keyboard navigation
+  function onKeyDown(e) {
+    if (!open) return;
+    if (e.key === "ArrowDown") {
+      e.preventDefault();
+      setActive(a => Math.min(a + 1, results.length - 1));
+    } else if (e.key === "ArrowUp") {
+      e.preventDefault();
+      setActive(a => Math.max(a - 1, 0));
+    } else if (e.key === "Enter") {
+      e.preventDefault();
+      const target = active >= 0 ? results[active] : results[0];
+      if (target) navigate(target.pageUrl);
+    } else if (e.key === "Escape") {
+      close();
+    }
+  }
+
+  function navigate(url) {
+    window.location.href = "/" + url;
+  }
+
+  function close() {
+    setOpen(false);
+    setQuery("");
+    setActive(-1);
+    inputRef.current?.blur();
+  }
+
+  // Close on outside click
+  React.useEffect(() => {
+    function handler(e) {
+      if (dropRef.current && !dropRef.current.contains(e.target) &&
+          inputRef.current && !inputRef.current.contains(e.target)) {
+        setOpen(false);
+      }
+    }
+    document.addEventListener("mousedown", handler);
+    return () => document.removeEventListener("mousedown", handler);
+  }, []);
+
+  const VERDICT_COLORS = {
+    "All-Time Blockbuster": "#92400E",
+    "Blockbuster":          "#065F46",
+    "Super Hit":            "#166534",
+    "Hit":                  "#1E40AF",
+    "Average":              "#374151",
+    "Flop":                 "#991B1B",
+    "Disaster":             "#9D174D",
+  };
+
+  const inputW = isMobile ? "100%" : focused || query ? 260 : 180;
+
+  return (
+    <div style={{ position:"relative", flexShrink:0 }}>
+      {/* Input */}
+      <div style={{
+        display:"flex", alignItems:"center",
+        background: focused ? "#fff" : "#F9FAFB",
+        border:`1px solid ${focused ? "#C8201A" : "#E5E7EB"}`,
+        borderRadius:6, padding:"5px 10px", gap:6,
+        width: inputW, transition:"all 0.2s ease",
+        boxShadow: focused ? "0 0 0 3px rgba(200,32,26,0.08)" : "none",
+      }}>
+        {/* Search icon */}
+        <svg width="14" height="14" viewBox="0 0 20 20" fill="none" style={{ flexShrink:0, opacity: focused ? 0.7 : 0.4 }}>
+          <circle cx="9" cy="9" r="6" stroke="#374151" strokeWidth="2"/>
+          <path d="M13.5 13.5L17 17" stroke="#374151" strokeWidth="2" strokeLinecap="round"/>
+        </svg>
+        <input
+          ref={inputRef}
+          value={query}
+          onChange={e => setQuery(e.target.value)}
+          onKeyDown={onKeyDown}
+          onFocus={() => setFocused(true)}
+          onBlur={() => setFocused(false)}
+          placeholder="Search films, directors..."
+          style={{
+            border:"none", outline:"none", background:"transparent",
+            fontFamily:"'DM Sans', sans-serif", fontSize:13,
+            color:"#111827", width:"100%",
+            "::placeholder": { color:"#9CA3AF" },
+          }}
+        />
+        {/* Clear button */}
+        {query && (
+          <button onClick={() => { setQuery(""); setOpen(false); inputRef.current?.focus(); }}
+            style={{ background:"none", border:"none", padding:0, cursor:"pointer",
+                     color:"#9CA3AF", fontSize:14, lineHeight:1, flexShrink:0 }}>✕</button>
+        )}
+      </div>
+
+      {/* Results dropdown */}
+      {open && results.length > 0 && (
+        <div ref={dropRef} style={{
+          position:"absolute", top:"calc(100% + 8px)",
+          right: isMobile ? "auto" : 0,
+          left: isMobile ? 0 : "auto",
+          width: isMobile ? "calc(100vw - 32px)" : 360,
+          background:"#fff",
+          border:"0.5px solid #E5E7EB",
+          borderRadius:8,
+          boxShadow:"0 8px 32px rgba(0,0,0,0.12)",
+          zIndex:9999,
+          overflow:"hidden",
+          animation:"fadeIn 0.12s ease",
+        }}>
+          {/* Result rows */}
+          {results.map((film, i) => (
+            <div key={film.pageUrl}
+              onMouseEnter={() => setActive(i)}
+              onMouseLeave={() => setActive(-1)}
+              onClick={() => navigate(film.pageUrl)}
+              style={{
+                display:"flex", alignItems:"center", gap:10,
+                padding:"10px 12px",
+                background: i === active ? "#FFF5F5" : "#fff",
+                borderBottom: i < results.length - 1 ? "0.5px solid #F3F4F6" : "none",
+                cursor:"pointer",
+                borderLeft: i === active ? "3px solid #C8201A" : "3px solid transparent",
+                transition:"background 0.08s",
+              }}>
+              {/* Poster thumbnail */}
+              <div style={{
+                width:32, height:48, flexShrink:0, borderRadius:3, overflow:"hidden",
+                background:"#F3F4F6", display:"flex", alignItems:"center", justifyContent:"center",
+              }}>
+                {film.posterUrl ? (
+                  <img src={film.posterUrl} alt={film.title}
+                    style={{ width:"100%", height:"100%", objectFit:"cover" }}
+                    onError={e => { e.target.style.display="none"; }}
+                  />
+                ) : (
+                  <span style={{ fontFamily:"'Barlow Condensed',sans-serif", fontSize:9,
+                    fontWeight:800, color:"#9CA3AF" }}>
+                    {film.title.split(" ").map(w=>w[0]).join("").slice(0,3).toUpperCase()}
+                  </span>
+                )}
+              </div>
+              {/* Info */}
+              <div style={{ flex:1, minWidth:0 }}>
+                <div style={{
+                  fontFamily:"'Barlow Condensed', sans-serif", fontWeight:800,
+                  fontSize:15, color:"#111827", lineHeight:1.2,
+                  overflow:"hidden", textOverflow:"ellipsis", whiteSpace:"nowrap",
+                }}>
+                  {highlight(film.title, query.trim())}
+                </div>
+                <div style={{
+                  fontFamily:"'DM Sans', sans-serif", fontSize:11, color:"#6B7280",
+                  marginTop:2, display:"flex", alignItems:"center", gap:6,
+                }}>
+                  <span>{film.language}</span>
+                  <span style={{ color:"#D1D5DB" }}>·</span>
+                  <span>{film.year}</span>
+                  {film.director && <>
+                    <span style={{ color:"#D1D5DB" }}>·</span>
+                    <span style={{ overflow:"hidden", textOverflow:"ellipsis", whiteSpace:"nowrap" }}>
+                      {highlight(film.director, query.trim())}
+                    </span>
+                  </>}
+                </div>
+              </div>
+              {/* Right: verdict + collection */}
+              <div style={{ flexShrink:0, textAlign:"right" }}>
+                {film.verdict && film.verdict !== "—" && (
+                  <div style={{
+                    fontSize:9, fontWeight:700, color: VERDICT_COLORS[film.verdict] || "#374151",
+                    letterSpacing:"0.05em", textTransform:"uppercase", lineHeight:1,
+                  }}>{film.verdict.replace("All-Time ","")}</div>
+                )}
+                {film.indiaNet && film.indiaNet !== "—" && (
+                  <div style={{
+                    fontFamily:"'Barlow Condensed', sans-serif", fontWeight:700,
+                    fontSize:13, color:"#C8201A", marginTop:2,
+                  }}>{film.indiaNet}</div>
+                )}
+              </div>
+            </div>
+          ))}
+
+          {/* Footer */}
+          <div style={{
+            padding:"8px 12px", background:"#F9FAFB",
+            borderTop:"0.5px solid #F3F4F6",
+            display:"flex", alignItems:"center", justifyContent:"space-between",
+          }}>
+            <span style={{ fontFamily:"'DM Sans', sans-serif", fontSize:10, color:"#9CA3AF" }}>
+              {results.length} result{results.length !== 1 ? "s" : ""} · ↑↓ navigate · Enter open
+            </span>
+            <span style={{ fontFamily:"'DM Sans', sans-serif", fontSize:10, color:"#9CA3AF" }}>
+              Esc to close
+            </span>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+
 function NavBar({ activeSection, setActiveSection, setForceAllTime }) {
   const isMobile = useIsMobile();
   const [menuOpen, setMenuOpen] = React.useState(false);
@@ -427,8 +711,9 @@ function NavBar({ activeSection, setActiveSection, setForceAllTime }) {
             padding:"18px 12px", borderBottom:"2px solid transparent", marginBottom:"-2px",
             letterSpacing:"0.04em", flexShrink:0, transition:"color 0.15s",
           }}>About</a>
-          {/* Right side — static update stamp */}
-          <div style={{ marginLeft:"auto", display:"flex", alignItems:"center", gap:0, flexShrink:0 }}>
+          {/* Right side — search + update stamp */}
+          <div style={{ marginLeft:"auto", display:"flex", alignItems:"center", gap:12, flexShrink:0 }}>
+            <SearchBar />
             <div style={{ display:"flex", flexDirection:"column", alignItems:"flex-end", borderRight:`1px solid #E5E7EB`, paddingRight:12, marginRight:12 }}>
               <span style={{ fontFamily:"'Barlow Condensed', sans-serif", fontWeight:700, fontSize:13, color:T.accent, letterSpacing:"0.03em" }}>WEEK 13 · 2026</span>
               <span style={{ fontFamily:"'DM Sans', sans-serif", fontSize:8, color:"#9CA3AF", letterSpacing:"0.1em", textTransform:"uppercase" }}>Box Office Period</span>
@@ -469,6 +754,10 @@ function NavBar({ activeSection, setActiveSection, setForceAllTime }) {
           background:"#FFFFFF", borderBottom:`2px solid ${T.accent}`,
           boxShadow:"0 4px 16px rgba(0,0,0,0.12)", zIndex:200,
         }}>
+          {/* Mobile search */}
+          <div style={{ padding:"10px 16px", borderBottom:"1px solid #F3F4F6" }}>
+            <SearchBar />
+          </div>
           {navLinks.map(s => (
             <button key={s} onClick={() => { setActiveSection(s); setMenuOpen(false); }} style={{
               display:"block", width:"100%", textAlign:"left",
