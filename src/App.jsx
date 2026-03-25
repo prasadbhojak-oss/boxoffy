@@ -383,7 +383,7 @@ const SEARCH_INDEX = (() => {
         title:    f.title,
         language: f.language || "",
         director: f.director || "",
-        cast:     (f.cast || []).join(" "),
+        cast:     (Array.isArray(f.cast) ? f.cast : [f.cast || ""]).join(" "),
         year:     year,
         verdict:  f.verdict || "",
         indiaNet: f.indiaNet || "",
