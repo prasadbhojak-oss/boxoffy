@@ -1,0 +1,57 @@
+[
+  {
+    "weekNum": "Week 13",
+    "dateRange": "Mar 19–22, 2026",
+    "headline": "Dhurandhar: The Revenge Stands Alone. ₹397 Crore in 4 Days.",
+    "subline": "Three separate ₹100 Cr+ days in a single opening weekend. D1 ₹102.55 Cr · D3 Eid Sat ₹113 Cr · D4 Sunday ₹102 Cr. 4-day India nett ₹397 Cr · WW ₹675 Cr · NA $13.5M record. UBS ₹66 Cr — FLOP. Thaai Kizhavi ₹55 Cr on ₹9 Cr budget — SUPER HIT. KS2 closes at ₹50 Cr.",
+    "status": "published",
+    "scoreboard": [
+      {
+        "film": "Dhurandhar: The Revenge",
+        "week": "Week 1 (D0–D4)",
+        "collection": "₹397 Cr nett",
+        "verdict": "BLOCKBUSTER"
+      },
+      {
+        "film": "Ustaad Bhagat Singh",
+        "week": "Week 1",
+        "collection": "₹66.2 Cr nett",
+        "verdict": "FLOP"
+      },
+      {
+        "film": "Thaai Kizhavi",
+        "week": "Week 4",
+        "collection": "~₹55 Cr nett (total)",
+        "verdict": "SUPER HIT"
+      },
+      {
+        "film": "The Kerala Story 2",
+        "week": "Week 4",
+        "collection": "~₹50.5 Cr nett (total)",
+        "verdict": "PLUS — closing"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Sacnilk",
+        "quote": "D0–D3 India nett confirmed: ₹43 + ₹102.55 + ₹80.72 + ₹113 = ₹339.27 Cr",
+        "analysis": "Sacnilk day-wise tracking across all languages. D0 preview, D1 Thu, D2 Fri, D3 Eid Sat — all language combined nett.",
+        "color": "#2563EB"
+      },
+      {
+        "name": "Pinkvilla",
+        "quote": "4-day India nett ₹397 Cr · WW ₹675 Cr · D4 Sunday ₹~102 Cr",
+        "analysis": "Pinkvilla Sunday wrap report confirmed 4-day India nett at ₹397 Cr and worldwide gross at ₹675 Cr including overseas of ₹199 Cr.",
+        "color": "#DB2777"
+      },
+      {
+        "name": "Deadline / Variety",
+        "quote": "D2 North America: $9.57M weekend · $13.5M 4-day — new Indian cinema NA record",
+        "analysis": "US figures cross-verified across Deadline, Variety and Washington Post. 987 locations. Beats Kalki 2898-AD’s $11.2M previous record.",
+        "color": "#374151"
+      }
+    ],
+    "interval_take": "Dhurandhar: The Revenge has done something Hindi cinema has never seen: three days above ₹100 Cr nett in a single opening weekend. Day 1 ₹102.55 Cr broke every Bollywood opening record. Eid Saturday at ₹113 Cr was the biggest single day in Hindi film history. Sunday at ₹102 Cr meant the film held almost flat from its opening day — a sign of genuine audience pull, not front-loaded hype. The 4-day India nett of ₹397 Cr and worldwide gross of ₹675 Cr place Dhurandhar 2 in the conversation with Pushpa 2 and RRR as the defining releases of this decade. On a reported budget of ₹280–300 Cr, this film has already returned its investment inside 4 days. The North America record of $13.5M in 4 days underlines the diaspora’s hunger for this franchise globally. \n\nAcross the aisle, Ustaad Bhagat Singh is a commercial disappointment. ₹66 Cr in 4 days against a ₹105 Cr+ Telugu distribution cost alone makes recovery near-impossible. A film that needed ₹250 Cr+ to break even has collected barely a quarter of that in its opening weekend. \n\nThe real story of the week, though, is Thaai Kizhavi. ₹55 Cr on a ₹9 Cr budget is a 500%+ ROI by any measure. In a week dominated by a ₹675 Cr worldwide juggernaut, a quiet Tamil film built entirely on word-of-mouth crossed the SUPER HIT threshold and kept going. The trade will study this for years as the template for content-first regional cinema. \n\nThe Kerala Story 2 closes at ₹50 Cr — a PLUS verdict and a clean exit for a sequel that punched above its weight.",
+    "nextWeek": "D2 Week 2 key read: the Monday hold. If Day 5 clears ₹25 Cr, a ₹600–700 Cr India nett lifetime is confirmed. Project Hail Mary arrives in India this week — premium screen competition will be the first real test for D2’s legs. UBS needs a miracle to approach break-even."
+  }
+]
