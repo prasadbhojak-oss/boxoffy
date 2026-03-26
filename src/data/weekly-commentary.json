@@ -2,14 +2,14 @@
   {
     "weekNum": "Week 13",
     "dateRange": "Mar 19–25, 2026",
-    "headline": "Dhurandhar 2: ₹620 Cr in 7 Days. ₹1,000 Cr WW by Thursday.",
-    "subline": "D5 ₹65 Cr · D6 ₹56.55 Cr · D7 ~₹45 Cr ⚡ · D0–D7 ₹620.67 Cr nett · WW ~₹980 Cr · NA record $14M · UBS ~₹65 Cr FLOP · TK OTT JioHotstar Mar 26",
+    "headline": "Dhurandhar 2: ~₹562 Cr India Nett D0–D7 (BOI/Pinkvilla Reconciled) · ₹1,006 Cr WW",
+    "subline": "Boxoffy reconciliation: BOI Hindi ₹532 Cr + Other lang ₹30 Cr = ~₹562 Cr · Sacnilk ₹623 Cr appears overstated by ~₹50-60 Cr · D1: BOI/PV ₹73-75 Cr vs Sacnilk ₹99 Cr (biggest gap) · WW ₹1,006.50 Cr confirmed · D8 Ram Navami ~₹55 Cr ⚡",
     "status": "current",
     "scoreboard": [
       {
         "film": "Dhurandhar: The Revenge",
         "week": "Week 1 (D0–D6 confirmed)",
-        "collection": "₹620.67 Cr nett (D0–D7) · WW ~₹980 Cr",
+        "collection": "~₹562 Cr nett (D0–D7 BOI/PV reconciled) · WW ₹1,006.50 Cr",
         "verdict": "BLOCKBUSTER"
       },
       {
@@ -54,7 +54,8 @@
         "type": "trade"
       }
     ],
-    "interval_take": "Boxoffy correction: D5 and D6 revised upward. Pinkvilla reported Hindi-only figures (₹60 Cr / ₹49 Cr). All-language India nett per Sacnilk/TheWeek: D5 ₹65 Cr, D6 ₹56.55 Cr. D2 North America opened to $14.02M 5-day extended — confirmed Venky BO, Deadline, Variety. Biggest Bollywood opening in NA history. D7 Wednesday closing ~₹45 Cr with Ram Navami D8 holiday boost expected tomorrow.",
-    "nextWeek": "Ram Navami D8 Thu Mar 26 holiday boost · D7 Wednesday confirmation morning · Week 2 Friday projection ~₹55-60 Cr · TK OTT JioHotstar Mar 26 · UBS expected to wrap in limited screens"
+    "interval_take": "Boxoffy correction issued. After cross-referencing BOI and Pinkvilla against Sacnilk, Sacnilk Hindi figures appear inflated — particularly D1 where Sacnilk reports ₹99.1 Cr vs BOI ₹75 Cr and Pinkvilla ₹73 Cr, a 33% gap. Pinkvilla and BOI align closely throughout. Revised canonical: BOI Hindi D0-D7 ₹532 Cr + other languages ~₹30 Cr = ~₹562 Cr India nett. WW ₹1,006.50 Cr is not disputed — Sacnilk WW uses confirmed distributor data. BLOCKBUSTER verdict and all records unchanged — D2 is still historic at any number.",
+    "nextWeek": "Ram Navami D8 Thu Mar 26 holiday boost · D7 Wednesday confirmation morning · Week 2 Friday projection ~₹55-60 Cr · TK OTT JioHotstar Mar 26 · UBS expected to wrap in limited screens",
+    "boxoffy_note": "Data note: India nett figures for D2 vary across tracking sites. BOI and Pinkvilla align at ~₹532 Cr Hindi + ~₹30 Cr other languages = ~₹562 Cr. Other trackers report higher figures using different methodologies. Boxoffy adopts the BOI/Pinkvilla consensus as canonical. WW ₹1,006.50 Cr is consistent across all sources."
   }
 ]
