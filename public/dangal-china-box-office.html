@@ -975,7 +975,7 @@ new Chart(document.getElementById('chart1'),{
       clearTimeout(timeout);
 
       var data = await res.json();
-      if (data.error) throw new Error(data.error.message);
+      if (data.error) throw new Error(typeof data.error === 'string' ? data.error : (data.error.message || 'API error'));
 
       var raw = data.content && data.content[0] && data.content[0].text ? data.content[0].text : '';
       labelText.textContent = 'Summary by Claude';
@@ -993,8 +993,8 @@ new Chart(document.getElementById('chart1'),{
       dots.forEach(function(d) { d.style.display = 'none'; });
       labelText.textContent = 'Error';
       var msg = err.name === 'AbortError'
-        ? 'Request timed out. Please try again.'
-        : 'Could not generate summary. Please try again.';
+        ? 'Request timed out — please try again.'
+        : 'Error: ' + (err.message || 'Could not generate summary. Please try again.');
       textEl.innerHTML = '<div class="ai-error">' + msg + '</div>';
       footer.style.display = 'flex';
       bxEvent('claude_summary_error', { article: 'dangal-china-box-office', error: err.name });
