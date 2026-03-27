@@ -1,10 +1,68 @@
 [
   {
+    "weekNum": "Week 14",
+    "dateRange": "Mar 26 – Apr 1, 2026",
+    "headline": "D2 ₹669 Cr India D0–D8 · D9 Live · Project Hail Mary Enters India Charts",
+    "subline": "D8 ₹49.70 Cr confirmed (2nd Thu bounce) · D0–D8 BOI canonical ₹669 Cr · D9 advance: 5L+ tickets, ₹18 Cr nett · Boxoffy D9 call ₹45–50 Cr · PHM D1+D2 ₹4.88 Cr nett · Sat Mar 28 bank holiday = D10 jump expected",
+    "status": "current",
+    "scoreboard": [
+      {
+        "film": "Dhurandhar: The Revenge",
+        "week": "Week 2 (D8-D9 live)",
+        "collection": "D0–D8 ₹669 Cr nett (BOI) · D9 live — Boxoffy call ₹45–50 Cr · WW ₹1,067 Cr gross",
+        "verdict": "BLOCKBUSTER"
+      },
+      {
+        "film": "Project Hail Mary",
+        "week": "Week 1 (D1–D2 partial)",
+        "collection": "D1 ₹2.25 Cr · D2 ₹2.63 Cr · Running ₹4.88 Cr nett",
+        "verdict": "TRACKING"
+      },
+      {
+        "film": "Ustaad Bhagat Singh",
+        "week": "Week 2 — wrapping",
+        "collection": "~₹63 Cr India nett lifetime",
+        "verdict": "FLOP"
+      },
+      {
+        "film": "Thaai Kizhavi",
+        "week": "Week 5 — OTT JioHotstar",
+        "collection": "~₹57 Cr nett · WW ~₹78 Cr · OTT Mar 26",
+        "verdict": "SUPER HIT"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Box Office India",
+        "handle": "@boxofficeindia",
+        "color": "#1A3A6B",
+        "take": "D0–D7 BOI canonical ₹619 Cr · D5 ₹60 Cr (not ₹65 Sacnilk) · D8 ₹49.70 Cr confirmed · D9 advance strong at 5L+ tickets",
+        "type": "trade"
+      },
+      {
+        "name": "Pinkvilla",
+        "handle": "@pinkvilla",
+        "color": "#E91E8C",
+        "take": "PHM D1 ₹3 Cr gross — 'good start for non-IP sci-fi in limited release' · Extended OW prediction ₹9–11 Cr · IMAX screens hurt by D2 dominance",
+        "type": "trade"
+      },
+      {
+        "name": "Sacnilk",
+        "handle": "@SacnilkEntmt",
+        "color": "#E8631A",
+        "take": "D0–D7 ₹624.47 Cr (uses D5 ₹65 Cr) · D8 ₹49.70 Cr · D0–D8 ₹674.17 Cr · PHM D1 ₹2.25 Cr nett / ₹2.70 Cr gross · D2 ₹2.63 Cr nett",
+        "type": "trade"
+      }
+    ],
+    "interval_take": "D8 delivered a rare second-Thursday bounce — ₹49.70 Cr vs D7 ₹48.75 Cr, a +1.9% uptick. This is almost unheard of in Hindi cinema on a weekday and signals genuine repeat viewership driving numbers back up ahead of the weekend. D9 (Friday) advance booking showed 5 lakh+ tickets and ₹18 Cr nett pre-sold by morning shows — the strongest second-Friday advance in Bollywood history. Boxoffy call: ₹45–50 Cr, which would make it the biggest second Friday for any Hindi film ever. Project Hail Mary entered India on Mar 26 with ₹2.25 Cr nett D1 — limited by IMAX screen scarcity (D2 occupies the premium formats). PHM's critical reception is positive and Hrithik Roshan's promotional association adds Hindi belt visibility. Boxoffy tracking: ₹9–11 Cr extended opening weekend is achievable if the word-of-mouth from positive reviews translates into weekend walk-ins.",
+    "nextWeek": "D10 Sat Mar 28 (bank holiday) — D2 targeting ₹85–95 Cr · D11 Sun — ₹90–100 Cr range · D0–D11 could cross ₹900 Cr India nett by Sunday night · PHM extended weekend number locks Monday · ₹1000 Cr India nett for D2 by Tue–Wed next week per Rohit Jaiswal"
+  },
+  {
     "weekNum": "Week 13",
     "dateRange": "Mar 19–25, 2026",
     "headline": "Dhurandhar 2: ~₹562 Cr India Nett D0–D7 (BOI/Pinkvilla Reconciled) · ₹1,006 Cr WW",
     "subline": "Boxoffy reconciliation: BOI Hindi ₹532 Cr + Other lang ₹30 Cr = ~₹562 Cr · Sacnilk ₹623 Cr appears overstated by ~₹50-60 Cr · D1: BOI/PV ₹73-75 Cr vs Sacnilk ₹99 Cr (biggest gap) · WW ₹1,006.50 Cr confirmed · D8 Ram Navami ~₹55 Cr ⚡",
-    "status": "current",
+    "status": "archived",
     "scoreboard": [
       {
         "film": "Dhurandhar: The Revenge",

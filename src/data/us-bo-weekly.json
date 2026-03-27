@@ -135,5 +135,64 @@
         "admitsNote": "~33K · Winding down — $83M+ domestic run"
       }
     ]
+  },
+  "Week 14, 2026": {
+    "dateRange": "Mar 27–30, 2026",
+    "headline": "Project Hail Mary Holds Strong at #1 With ~$38M 2nd Weekend · D2 Crosses $20M NA Lifetime",
+    "source": "Deadline · Variety · Exhibitor Relations · Venky BO · EntTelligence",
+    "chart": [
+      {
+        "rank": 1,
+        "title": "Project Hail Mary",
+        "studio": "Amazon MGM",
+        "genre": "Sci-Fi",
+        "weekend": "~$38M",
+        "total": "~$125M+",
+        "theaters": 4007,
+        "change": "-53%",
+        "weeks": 2,
+        "rtScore": "95%",
+        "admitsNote": "~2.5M tickets wkd 2 · $100M+ in 6 days (NA) · Gosling carrying strong legs"
+      },
+      {
+        "rank": 2,
+        "title": "Hoppers",
+        "studio": "Disney / Pixar",
+        "genre": "Animation",
+        "weekend": "~$13M",
+        "total": "~$133M",
+        "theaters": 3500,
+        "change": "-28%",
+        "weeks": 4,
+        "rtScore": "91%",
+        "admitsNote": "Pixar holdout · family audiences steady"
+      },
+      {
+        "rank": 3,
+        "title": "Ready or Not 2: Here I Come",
+        "studio": "Searchlight",
+        "genre": "Horror",
+        "weekend": "~$6.5M",
+        "total": "~$16M",
+        "theaters": 2900,
+        "change": "-29%",
+        "weeks": 2,
+        "rtScore": "72%",
+        "admitsNote": "Week 2 steady hold · genre loyal audience"
+      },
+      {
+        "rank": 4,
+        "title": "Dhurandhar: The Revenge",
+        "studio": "Moviegoer Ent.",
+        "genre": "Action / Spy",
+        "weekend": "~$6.8M",
+        "total": "~$21.5M",
+        "theaters": 987,
+        "change": "+68% (2nd wkd jump)",
+        "weeks": 2,
+        "rtScore": "N/A",
+        "admitsNote": "Wkd 2 bang · $18.17M through D8 (confirmed) · 2nd Sat bank holiday boost · Baahubali 2 $22M lifetime in sight"
+      }
+    ]
   }
 }
