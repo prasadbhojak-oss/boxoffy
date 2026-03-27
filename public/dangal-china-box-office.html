@@ -187,37 +187,7 @@
     .chart-title{font-family:'Barlow Condensed',sans-serif;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--muted);margin-bottom:8px;}
 
 
-    /* ── AI Summary Block ───────────────────────────────── */
-    .ai-summary-wrap{border-top:2px solid var(--ink);padding:28px 0 0;margin:40px 0 8px;}
-    .ai-summary-header{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;margin-bottom:18px;flex-wrap:wrap;}
-    .ai-summary-title{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:13px;letter-spacing:0.2em;text-transform:uppercase;color:var(--ink);}
-    .ai-summary-deck{font-family:'Lora',Georgia,serif;font-size:14px;color:var(--muted);margin-top:4px;font-style:italic;}
-    .ai-sponsor-pill{display:flex;align-items:center;gap:7px;background:#faf8f4;border:0.5px solid #d4c9b4;border-radius:20px;padding:5px 11px 5px 7px;flex-shrink:0;text-decoration:none;}
-    .ai-sponsor-pill:hover{background:#f0ece3;}
-    .ai-sponsor-pip{width:20px;height:20px;flex-shrink:0;}
-    .ai-sponsor-text{font-family:'Barlow Condensed',sans-serif;font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#6B6457;line-height:1;}
-    .ai-sponsor-text span{color:#da7756;}
-    .ai-summary-btn{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:12px;letter-spacing:0.14em;text-transform:uppercase;background:var(--ink);color:#fff;border:none;padding:11px 20px;cursor:pointer;border-radius:3px;display:flex;align-items:center;gap:8px;transition:background .15s;white-space:nowrap;}
-    .ai-summary-btn:hover{background:#1F2937;}
-    .ai-summary-btn:disabled{opacity:0.45;cursor:not-allowed;}
-    .ai-summary-output{background:#FAFAF8;border:1px solid var(--rule);border-radius:4px;padding:20px 22px;display:none;margin-bottom:4px;}
-    .ai-summary-output.visible{display:block;}
-    .ai-summary-label{font-family:'Barlow Condensed',sans-serif;font-size:10px;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--muted);margin-bottom:14px;display:flex;align-items:center;gap:6px;}
-    .ai-thinking-dot{width:5px;height:5px;border-radius:50%;background:#da7756;display:inline-block;animation:ai-pulse 1.2s ease-in-out infinite;}
-    .ai-thinking-dot:nth-child(2){animation-delay:.2s;}
-    .ai-thinking-dot:nth-child(3){animation-delay:.4s;}
-    @keyframes ai-pulse{0%,80%,100%{opacity:.2;transform:scale(.8)}40%{opacity:1;transform:scale(1)}}
-    .ai-summary-text .ai-bullet{display:flex;gap:10px;margin-bottom:9px;font-family:'Lora',Georgia,serif;font-size:15px;line-height:1.65;color:var(--ink);}
-    .ai-summary-text .ai-bullet::before{content:"";display:block;width:3px;min-height:18px;background:#da7756;border-radius:2px;flex-shrink:0;margin-top:4px;}
-    .ai-summary-text .ai-bullet:last-child{margin-bottom:0;}
-    .ai-error{font-family:'Barlow Condensed',sans-serif;font-size:13px;color:var(--red);padding:4px 0;}
-    .ai-summary-footer{display:flex;align-items:center;justify-content:space-between;margin-top:14px;padding-top:12px;border-top:1px solid var(--rule);flex-wrap:wrap;gap:8px;}
-    .ai-footer-note{font-family:'Barlow Condensed',sans-serif;font-size:10px;color:#B0A898;letter-spacing:0.06em;}
-    .ai-regen{font-family:'Barlow Condensed',sans-serif;font-size:11px;color:var(--muted);background:none;border:none;cursor:pointer;letter-spacing:0.06em;padding:0;text-decoration:underline;}
-    .ai-regen:hover{color:var(--ink);}
-    .ai-try-link{font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:700;color:#da7756;text-decoration:none;letter-spacing:0.1em;text-transform:uppercase;display:flex;align-items:center;gap:4px;}
-    .ai-try-link:hover{color:#c4623d;}
-    /* ─────────────────────────────────────────────────────── */
+
 
 
         .footnotes{margin-top:48px;padding-top:24px;border-top:1px solid var(--rule);}
@@ -313,54 +283,7 @@
     <span>12 min</span>
   </div>
 
-  <!-- AI Summary — Powered by Claude (Anthropic) -->
-  <div class="ai-summary-wrap">
-    <div class="ai-summary-header">
-      <div>
-        <div class="ai-summary-title">Boxoffy Intelligence Summary</div>
-        <div class="ai-summary-deck">Key takeaways from this article, generated on demand.</div>
-      </div>
-      <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
-        <a class="ai-sponsor-pill" href="https://claude.ai" target="_blank" rel="noopener" onclick="if(typeof gtag==='function')gtag('event','claude_referral_click',{article:'dangal-china-box-office'})">
-          <svg class="ai-sponsor-pip" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="10" cy="10" r="10" fill="#f5f0eb"/>
-          <g transform="translate(10,10)">
-            <ellipse rx="1.6" ry="4.2" cy="-2.6" fill="#da7756" opacity="1"    transform="rotate(0)"/>
-            <ellipse rx="1.6" ry="4.2" cy="-2.6" fill="#da7756" opacity="0.8"  transform="rotate(60)"/>
-            <ellipse rx="1.6" ry="4.2" cy="-2.6" fill="#da7756" opacity="0.6"  transform="rotate(120)"/>
-            <ellipse rx="1.6" ry="4.2" cy="-2.6" fill="#da7756" opacity="0.4"  transform="rotate(180)"/>
-            <ellipse rx="1.6" ry="4.2" cy="-2.6" fill="#da7756" opacity="0.25" transform="rotate(240)"/>
-            <ellipse rx="1.6" ry="4.2" cy="-2.6" fill="#da7756" opacity="0.12" transform="rotate(300)"/>
-            <circle r="1.2" fill="#da7756"/>
-          </g>
-        </svg>
-          <div class="ai-sponsor-text">Proudly sponsored by <span>Claude</span></div>
-        </a>
-        <button class="ai-summary-btn" id="ai-btn">
-          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 0 20A10 10 0 0 0 12 2z"/><path d="M12 6v6l4 2"/></svg>
-          Generate Summary
-        </button>
-      </div>
-    </div>
-    <div class="ai-summary-output" id="ai-output">
-      <div class="ai-summary-label" id="ai-label">
-        <span class="ai-thinking-dot"></span>
-        <span class="ai-thinking-dot"></span>
-        <span class="ai-thinking-dot"></span>
-        <span id="ai-label-text" style="margin-left:4px;">Reading article...</span>
-      </div>
-      <div class="ai-summary-text" id="ai-text"></div>
-    </div>
-    <div class="ai-summary-footer" id="ai-footer" style="display:none;">
-      <span class="ai-footer-note">AI-generated · Not editorial content · Proudly sponsored by Claude (Anthropic)</span>
-      <div style="display:flex;align-items:center;gap:14px;">
-        <button id="ai-regenerate" class="ai-regen">Regenerate ↺</button>
-        <a class="ai-try-link" href="https://claude.ai" target="_blank" rel="noopener" onclick="if(typeof gtag==='function')gtag('event','claude_referral_click',{article:'dangal-china-box-office'})">
-          Try Claude →
-        </a>
-      </div>
-    </div>
-  </div>
+
 
   
 
@@ -920,97 +843,6 @@ new Chart(document.getElementById('chart1'),{
 </div>
 
 
-<script>
-(function() {
-  function bxEvent(name, params) {
-    try {
-      if (typeof window.gtag === 'function') {
-        window.gtag('event', name, params || {});
-      }
-    } catch(e) {}
-  }
-
-  var ARTICLE_CONTENT = "Dangal (2016), directed by Nitesh Tiwari, starring Aamir Khan. China run: Rs 1,235 crore ($196.89M) over 70 days. 4.31 crore tickets sold, tracked by Maoyan (China's BookMyShow, 60% market share). Douban rating 9.8/10 from 1.2 million users. Film held No.1 for 16 consecutive days in China. Day 9 saw 30.99 lakh admissions — 5.66 times the opening day — pure word-of-mouth, no holiday. Day 16 (3rd Saturday) saw 36.47 lakh — bigger than opening weekend. Chinese government granted rare extension beyond the 30-day window because gross reached 70x opening day. Xi Jinping told PM Modi personally at the SCO Summit (June 2017) that he had watched and loved Dangal — confirmed by Foreign Secretary Jaishankar to press. Xi mentioned it again at Mamallapuram (October 2019). China Ambassador Luo Zhaohui said Xi watched it multiple times. Money laundering is arithmetically impossible: 25% revenue share means to fake Rs 1,235 Cr gross you must spend Rs 4,940 Cr real cash, receive Rs 309 Cr back, losing Rs 4,631 Cr — a 92% loss rate vs normal 20-40%. India: released 45 days after demonetisation, industry down 60%. Tax-free across Hindi belt drove corporate and NGO block bookings. BookMyShow fastest-ever 1 million advance tickets. 3.7 crore domestic footfalls. At today's ATP of Rs 225 = Rs 832-888 Cr India nett vs actual Rs 387 Cr (ATP was Rs 104 in 2016). Dangal released 109 days after Jio launch — before affordable data, without Reels, Shorts, or viral social media. Revenue: China Rs 309 Cr + India Rs 165 Cr + ROW Rs 74 Cr = Rs 548 Cr total on Rs 70 Cr budget. 683% ROI. Worldwide total Rs 2,059 Cr — still all-time highest-grossing Indian film.";
-
-  function attachHandlers() {
-    var btn = document.getElementById('ai-btn');
-    var regen = document.getElementById('ai-regenerate');
-    if (btn) btn.addEventListener('click', generateSummary);
-    if (regen) regen.addEventListener('click', function() {
-      bxEvent('claude_summary_click', { article: 'dangal-china-box-office', label: 'regenerate' });
-      generateSummary();
-    });
-  }
-
-  async function generateSummary() {
-    var btn = document.getElementById('ai-btn');
-    var output = document.getElementById('ai-output');
-    var textEl = document.getElementById('ai-text');
-    var footer = document.getElementById('ai-footer');
-    var label = document.getElementById('ai-label');
-    var labelText = document.getElementById('ai-label-text');
-    var dots = label.querySelectorAll('.ai-thinking-dot');
-
-    bxEvent('claude_summary_click', { article: 'dangal-china-box-office', label: 'generate_summary' });
-    btn.disabled = true;
-    btn.innerHTML = '<svg style="width:14px;height:14px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg> Generating...';
-    output.classList.add('visible');
-    footer.style.display = 'none';
-    textEl.innerHTML = '';
-    label.style.display = 'flex';
-    labelText.textContent = 'Claude is reading the article...';
-    dots.forEach(function(d) { d.style.display = 'inline-block'; });
-
-    try {
-      var controller = new AbortController();
-      var timeout = setTimeout(function() { controller.abort(); }, 20000);
-
-      var res = await fetch('/api/summarise', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        signal: controller.signal,
-        body: JSON.stringify({ articleId: 'dangal-china-box-office' })
-      });
-
-      clearTimeout(timeout);
-
-      var data = await res.json();
-      if (data.error) throw new Error(typeof data.error === 'string' ? data.error : (data.error.message || 'API error'));
-
-      var raw = data.content && data.content[0] && data.content[0].text ? data.content[0].text : '';
-      labelText.textContent = 'Summary by Claude';
-      dots.forEach(function(d) { d.style.display = 'none'; });
-
-      var lines = raw.split('\n').filter(function(l) { return l.trim(); });
-      textEl.innerHTML = lines.map(function(line) {
-        var clean = line.replace(/^[-\u2014\u2022*\d.]+\s*/, '').trim();
-        return clean ? '<div class="ai-bullet">' + clean + '</div>' : '';
-      }).join('');
-
-      footer.style.display = 'flex';
-      bxEvent('claude_summary_success', { article: 'dangal-china-box-office', bullets: lines.length });
-    } catch(err) {
-      dots.forEach(function(d) { d.style.display = 'none'; });
-      labelText.textContent = 'Error';
-      var msg = err.name === 'AbortError'
-        ? 'Request timed out — please try again.'
-        : 'Error: ' + (err.message || 'Could not generate summary. Please try again.');
-      textEl.innerHTML = '<div class="ai-error">' + msg + '</div>';
-      footer.style.display = 'flex';
-      bxEvent('claude_summary_error', { article: 'dangal-china-box-office', error: err.name });
-    }
-
-    btn.disabled = false;
-    btn.innerHTML = '<svg style="width:14px;height:14px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg> Generate Summary';
-  }
-
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', attachHandlers);
-  } else {
-    attachHandlers();
-  }
-})();
-</script>
 
 </body>
 </html>
