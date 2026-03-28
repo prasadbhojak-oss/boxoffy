@@ -2,20 +2,20 @@
   {
     "weekNum": "Week 14",
     "dateRange": "Mar 26 – Apr 1, 2026",
-    "headline": "D2 ₹669 Cr India D0–D8 · D9 Live · Project Hail Mary Enters India Charts",
-    "subline": "D8 ₹49.70 Cr confirmed (2nd Thu bounce) · D0–D8 BOI canonical ₹669 Cr · D9 advance: 5L+ tickets, ₹18 Cr nett · Boxoffy D9 call ₹45–50 Cr · PHM D1+D2 ₹4.88 Cr nett · Sat Mar 28 bank holiday = D10 jump expected",
+    "headline": "D2 ₹709 Cr India D0–D9 · PHM ₹4.88 Cr India D1+D2 · US: PHM $46.8M Wkd 2",
+    "subline": "D9 Fri ~₹40 Cr night est (addatoday) · D0–D9 BOI canonical ₹709 Cr · WW ~₹1,091 Cr · PHM India D1+D2 ₹4.88 Cr · IMAX 5→60 screens · PHM US Wkd 2 ~$46.8M (Deadline) · D2 NA ₹23M running",
     "status": "current",
     "scoreboard": [
       {
         "film": "Dhurandhar: The Revenge",
-        "week": "Week 2 (D8-D9 live)",
-        "collection": "D0–D8 ₹669 Cr nett (BOI) · D9 live — Boxoffy call ₹45–50 Cr · WW ₹1,067 Cr gross",
+        "week": "Week 2 D9 (live)",
+        "collection": "D0–D9 ~₹709 Cr nett (BOI canonical, D9 ~₹40 Cr night est) · WW ~₹1,091 Cr gross",
         "verdict": "BLOCKBUSTER"
       },
       {
         "film": "Project Hail Mary",
-        "week": "Week 1 (D1–D2 partial)",
-        "collection": "D1 ₹2.25 Cr · D2 ₹2.63 Cr · Running ₹4.88 Cr nett",
+        "week": "Week 1 India D1–D2",
+        "collection": "D1 ₹2.25 Cr · D2 ₹2.63 Cr · Running ₹4.88 Cr nett · IMAX expanded 5→60 screens",
         "verdict": "TRACKING"
       },
       {
@@ -26,8 +26,8 @@
       },
       {
         "film": "Thaai Kizhavi",
-        "week": "Week 5 — OTT JioHotstar",
-        "collection": "~₹57 Cr nett · WW ~₹78 Cr · OTT Mar 26",
+        "week": "Week 5 — OTT",
+        "collection": "~₹57 Cr nett · WW ~₹78 Cr · JioHotstar Mar 26",
         "verdict": "SUPER HIT"
       }
     ],
@@ -36,26 +36,34 @@
         "name": "Box Office India",
         "handle": "@boxofficeindia",
         "color": "#1A3A6B",
-        "take": "D0–D7 BOI canonical ₹619 Cr · D5 ₹60 Cr (not ₹65 Sacnilk) · D8 ₹49.70 Cr confirmed · D9 advance strong at 5L+ tickets",
-        "type": "trade"
-      },
-      {
-        "name": "Pinkvilla",
-        "handle": "@pinkvilla",
-        "color": "#E91E8C",
-        "take": "PHM D1 ₹3 Cr gross — 'good start for non-IP sci-fi in limited release' · Extended OW prediction ₹9–11 Cr · IMAX screens hurt by D2 dominance",
+        "take": "D5 ₹60 Cr canonical (not ₹65 Sacnilk) · D0–D8 ₹669 Cr · D9 ~₹40 Cr night est · D0–D9 ~₹709 Cr · WW ~₹1,091 Cr gross",
         "type": "trade"
       },
       {
         "name": "Sacnilk",
         "handle": "@SacnilkEntmt",
         "color": "#E8631A",
-        "take": "D0–D7 ₹624.47 Cr (uses D5 ₹65 Cr) · D8 ₹49.70 Cr · D0–D8 ₹674.17 Cr · PHM D1 ₹2.25 Cr nett / ₹2.70 Cr gross · D2 ₹2.63 Cr nett",
+        "take": "Week 1 ₹624.47 Cr · D8 ₹49.70 Cr · D9 partial ₹15.06 Cr by 5pm · PHM D1 ₹2.25 Cr / D2 ₹2.63 Cr nett · PHM running ₹4.88 Cr",
+        "type": "trade"
+      },
+      {
+        "name": "Pinkvilla",
+        "handle": "@pinkvilla",
+        "color": "#E91E8C",
+        "take": "PHM D1 ₹3 Cr gross · Extended OW ₹9–11 Cr · IMAX screen scarcity key factor for PHM",
+        "type": "trade"
+      },
+      {
+        "name": "Deadline / Boxoffice Pro",
+        "handle": "@DEADLINE",
+        "color": "#1A1A2E",
+        "take": "PHM Wkd 2 ~$46.8M (Deadline confirmed Fri PM) · D2 NA $1.4M Fri · $5M Wkd 2 · D2 running $23M NA · PHM 10-day $156.5M",
         "type": "trade"
       }
     ],
-    "interval_take": "D8 delivered a rare second-Thursday bounce — ₹49.70 Cr vs D7 ₹48.75 Cr, a +1.9% uptick. This is almost unheard of in Hindi cinema on a weekday and signals genuine repeat viewership driving numbers back up ahead of the weekend. D9 (Friday) advance booking showed 5 lakh+ tickets and ₹18 Cr nett pre-sold by morning shows — the strongest second-Friday advance in Bollywood history. Boxoffy call: ₹45–50 Cr, which would make it the biggest second Friday for any Hindi film ever. Project Hail Mary entered India on Mar 26 with ₹2.25 Cr nett D1 — limited by IMAX screen scarcity (D2 occupies the premium formats). PHM's critical reception is positive and Hrithik Roshan's promotional association adds Hindi belt visibility. Boxoffy tracking: ₹9–11 Cr extended opening weekend is achievable if the word-of-mouth from positive reviews translates into weekend walk-ins.",
-    "nextWeek": "D10 Sat Mar 28 (bank holiday) — D2 targeting ₹85–95 Cr · D11 Sun — ₹90–100 Cr range · D0–D11 could cross ₹900 Cr India nett by Sunday night · PHM extended weekend number locks Monday · ₹1000 Cr India nett for D2 by Tue–Wed next week per Rohit Jaiswal"
+    "interval_take": "D9 (Friday Mar 27) delivered ~₹40 Cr India nett per night estimates — occupancy held at 40–41% overall with 60% night shows (addatoday). This is a marginal drop from D8 ₹49.70 Cr but still exceptional for a second Friday. D0–D9 BOI canonical total: ~₹709 Cr. Sacnilk's higher D5 figure (₹65 Cr vs BOI ₹60 Cr) means their cumulative is ~₹14 Cr higher — not adopted by Boxoffy. Project Hail Mary India story is IMAX: the film was initially given just 5 IMAX screens (13 shows) across 34 IMAX theatres in India — all occupied by D2. Fan backlash prompted expansion to 60 IMAX screens by D2. PHM is tracking ₹9–11 Cr extended OW (Pinkvilla). US: PHM dominating Wkd 2 at ~$46.8M (-42%), comparable to Dune: Part Two's 2nd weekend. D2 NA running $23M — has beaten Baahubali 2's $22M NA lifetime.",
+    "nextWeek": "D10 Sat Mar 28 bank holiday — D2 targeting ₹80–90 Cr · D11 Sun ₹85–95 Cr · D0–D11 could cross ₹880 Cr India nett by Sun night · PHM Wkd 1 India locks Monday · ₹1,000 Cr India nett for D2 by Tue–Wed per Rohit Jaiswal · PHM US $50M Wkd 2 in play (Deadline) · Super Mario Galaxy Movie Apr 1 is next major US competition",
+    "boxoffy_note": "D9 marked ESTIMATED — Sacnilk running total derived (₹715.72 Cr minus ₹674.17 Cr D0–D8 = ₹41.55 Cr). IndiaTV News partial estimate (5pm capture) showed ₹24 Cr. Final BOI D9 confirmation expected Sat morning. D5 BOI canonical ₹60 Cr used throughout (not Sacnilk all-lang ₹65 Cr). PHM figures per Sacnilk/Pinkvilla cross-reference."
   },
   {
     "weekNum": "Week 13",

@@ -1,0 +1,103 @@
+{
+  "version": "3.25",
+  "deployedAt": "2026-03-27",
+  "gitCommit": "7a63f82",
+  "appJsxChars": 346239,
+  "dataFiles": {
+    "weekly-commentary.json": {
+      "weekNum": "Week 14",
+      "dateRange": "Mar 26 – Apr 1, 2026",
+      "lastUpdated": "2026-03-27",
+      "headline": "D2 ₹713 Cr D0–D9 · PHM India entry · 2nd weekend"
+    },
+    "us-bo-weekly.json": {
+      "week": "Week 14, 2026",
+      "dateRange": "Mar 27–29, 2026",
+      "lastUpdated": "2026-03-27",
+      "headline": "PHM $46.8M wk2 · D2 $23M NA · They Will Kill You opens"
+    },
+    "editorials.json": {
+      "entries": 10,
+      "latest": "दंगल at Ten: The Data, The Doubters, and Why the Arithmetic Ends the Debate",
+      "latestDate": "Mar 26, 2026",
+      "lastUpdated": "2026-03-27"
+    },
+    "films.json": {
+      "totalFilms": 1015,
+      "lastUpdated": "2026-03-25"
+    }
+  },
+  "weeklyUpdate": {
+    "weekNum": "Week 14",
+    "dateRange": "Mar 26 – Apr 1, 2026",
+    "headline": "D2 ~₹709 Cr D0-D9 · PHM India ₹4.88 Cr D1+D2 · PHM US $46.8M Wkd 2"
+  },
+  "articles": {
+    "dangal-china-box-office.html": "2026-03-26",
+    "dhurandhar2-us-boxoffice.html": "2026-03-25",
+    "dhurandhar-2-box-office.html": "2026-03-20",
+    "why-indian-cinema-never-has-a-number-2.html": "2026-03-22",
+    "india-all-time-box-office.html": "2026-03-24"
+  },
+  "changelog": [
+    {
+      "version": "3.25",
+      "date": "2026-03-27",
+      "commit": "pending",
+      "changes": [
+        "weekly-commentary.json Week 14 — D2 D9 ~₹40 Cr, D0-D9 ~₹709 Cr, PHM India ₹4.88 Cr D1+D2",
+        "us-bo-weekly.json Week 14 — PHM Wkd 2 $46.8M, They Will Kill You NEW, D2 NA $23M",
+        "editorials.json — Dangal article [0] confirmed latest"
+      ]
+    },
+    {
+      "version": "3.25",
+      "date": "2026-03-27",
+      "commit": "pending",
+      "changes": [
+        "Week 14 weekly-commentary — D9 ~₹44 Cr Boxoffy call, D0-D9 ~₹713 Cr BOI canonical",
+        "Week 14 US chart — PHM $46.8M wk2 ($156.5M 10-day), D2 $23M 10-day (surpassed Baahubali 2 NA lifetime)",
+        "PHM India entry: D1+D2 ₹4.88 Cr nett, extended OW target ₹9-11 Cr",
+        "They Will Kill You added to US chart (new, $5.5M)",
+        "boxoffy-version.json bumped to 3.25"
+      ]
+    },
+    {
+      "version": "3.24",
+      "date": "2026-03-27",
+      "commit": "7a63f82 (restored)",
+      "changes": [
+        "Week 14 weekly-commentary.json — D2 D0-D8 ₹669 Cr, D9 live, PHM India entry",
+        "Week 14 us-bo-weekly.json — PHM week 2, D2 $20M+ NA",
+        "editorials.json — Dangal article [0], recency order fixed",
+        "App.jsx restored from commit 7a63f82 after regression"
+      ]
+    },
+    {
+      "version": "3.23",
+      "date": "2026-03-26",
+      "commit": "444964a",
+      "changes": [
+        "दंगल at Ten article — full deep dive, 38-day China data, share buttons, SEO",
+        "AI summary block removed pending API key setup",
+        "editorials.json recency order fixed"
+      ]
+    },
+    {
+      "version": "3.22",
+      "date": "2026-03-25",
+      "commit": "7a63f82",
+      "changes": [
+        "D2 data reconciled — BOI/Pinkvilla canonical ₹562 Cr D0-D6",
+        "D2 vs Pushpa 2 article live",
+        "All-time rankings corrected — D2 at #10",
+        "Week 13 weekly commentary deployed"
+      ]
+    }
+  ],
+  "_meta": {
+    "purpose": "Boxoffy deployed state tracker. Claude reads this at every session start to verify correct baseline before making any edits. Never edit App.jsx without checking appJsxChars matches this file.",
+    "appJsxRule": "Good App.jsx = 346,239 chars. If outputs/App.jsx is unavailable or char count is wrong, DO NOT PROCEED — ask PB to run: git checkout 7a63f82 -- src/App.jsx",
+    "updateProtocol": "After every deploy: bump version (3.24 → 3.25), update deployedAt, gitCommit, and relevant dataFiles entries."
+  }
+}
