@@ -714,13 +714,12 @@ function NavBar({ activeSection, setActiveSection, setForceAllTime }) {
           {/* Right side — search + update stamp */}
           <div style={{ marginLeft:"auto", display:"flex", alignItems:"center", gap:12, flexShrink:0 }}>
             <SearchBar />
-            <div style={{ display:"flex", flexDirection:"column", alignItems:"flex-end", borderRight:`1px solid #E5E7EB`, paddingRight:12, marginRight:12 }}>
-              <span style={{ fontFamily:"'Barlow Condensed', sans-serif", fontWeight:700, fontSize:13, color:T.accent, letterSpacing:"0.03em" }}>WEEK 14 · 2026</span>
-              <span style={{ fontFamily:"'DM Sans', sans-serif", fontSize:8, color:"#9CA3AF", letterSpacing:"0.1em", textTransform:"uppercase" }}>Box Office Period</span>
-            </div>
-            <div style={{ display:"flex", flexDirection:"column", alignItems:"flex-end" }}>
-              <span style={{ fontFamily:"'Barlow Condensed', sans-serif", fontWeight:700, fontSize:13, color:"#374151", letterSpacing:"0.03em" }}>Mar 28, 2026 · D0–D10 ₹773 Cr (BOI) · D10 ₹62.35 Cr ✅ · D11 Boxoffy call ₹65–70 Cr</span>
-              <span style={{ fontFamily:"'DM Sans', sans-serif", fontSize:8, color:"#9CA3AF", letterSpacing:"0.1em", textTransform:"uppercase" }}>Last Updated</span>
+            <div style={{ display:"flex", flexDirection:"column", alignItems:"flex-end", gap:2 }}>
+              <span style={{ fontFamily:"'Barlow Condensed', sans-serif", fontWeight:800, fontSize:13, color:T.accent, letterSpacing:"0.06em" }}>
+                WEEK 14 · 2026
+                <span style={{ color:"#6B7280", fontWeight:500, fontSize:12, marginLeft:8 }}>D0–D10 ₹773 Cr · WW ~₹1,186 Cr</span>
+              </span>
+              <span style={{ fontFamily:"'DM Sans', sans-serif", fontSize:8, color:"#9CA3AF", letterSpacing:"0.1em", textTransform:"uppercase" }}>Mar 26 – Apr 1, 2026 · Updated Mar 28</span>
             </div>
           </div>
         </>}
@@ -2394,8 +2393,8 @@ function WeeklyChartRow({ movie, rank, prevRank }) {
           </div>
           {isEstimated && (
             <div style={{ display:"flex", alignItems:"center", gap:6, marginBottom:4 }}>
-              <span style={{ background:"#FEF3C7", color:"#92400E", border:"1px solid #FCD34D", fontFamily:"'IBM Plex Mono', monospace", fontSize:8, fontWeight:700, letterSpacing:"0.12em", textTransform:"uppercase", padding:"2px 7px", borderRadius:2 }}>BOXOFFY DAY 1 CALL</span>
-              <span style={{ fontFamily:"'DM Sans', sans-serif", fontSize:9, color:"#92400E" }}>3-model BETA v2 · Bear ₹80 Cr · Base ₹95 Cr · Bull ₹110 Cr · Boxoffy call: ₹95 Cr · Actual: ₹102.55 Cr ✓</span>
+              <span style={{ background:"#DCFCE7", color:"#166534", border:"1px solid #86EFAC", fontFamily:"'IBM Plex Mono', monospace", fontSize:8, fontWeight:700, letterSpacing:"0.12em", textTransform:"uppercase", padding:"2px 7px", borderRadius:2 }}>BOXOFFY D1 CALL ✓</span>
+              <span style={{ fontFamily:"'DM Sans', sans-serif", fontSize:9, color:"#166534" }}>D1 actual ₹102.55 Cr · Boxoffy call ₹95 Cr · +7.9% · All-time Hindi D1 record</span>
             </div>
           )}
           {movie.weeklyNote && (
@@ -3703,7 +3702,7 @@ function BoxOfficeSection({ onNavigate, forceAllTime, onClearForceAllTime }) {
               </div>
               <div style={{ display:"flex", alignItems:"center", gap:10, flexWrap:"wrap" }}>
                 <span style={{ fontFamily:"'DM Sans', sans-serif", fontSize:11, color:T.textMuted }}>
-                  Ranveer Singh · Dir. Aditya Dhar · D0 ₹43 · D1 ₹102.55 · D2 ₹80.72 · D3 ₹113 · D4 ₹114.85 · D5 ₹65 ✅ · D6 ₹56.55 ✅ · D7 ~₹50 Cr ⚡ Ram Navami D8 🚀
+                  Ranveer Singh · Dir. Aditya Dhar · D0 ₹43 · D1 ₹102.55 · D2 ₹80.72 · D3 ₹113 · D4 ₹114.85 · D5 ₹60 (BOI) · D6 ₹56.55 · D7 ₹48.75 · D8 ₹49.70 · D9 ₹41.75 · D10 ₹62.35 ✅
                 </span>
               </div>
             </div>
