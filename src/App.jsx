@@ -715,7 +715,7 @@ function NavBar({ activeSection, setActiveSection, setForceAllTime }) {
           <div style={{ marginLeft:"auto", display:"flex", alignItems:"center", gap:12, flexShrink:0 }}>
             <SearchBar />
             <div style={{ display:"flex", flexDirection:"column", alignItems:"flex-end", borderRight:`1px solid #E5E7EB`, paddingRight:12, marginRight:12 }}>
-              <span style={{ fontFamily:"'Barlow Condensed', sans-serif", fontWeight:700, fontSize:13, color:T.accent, letterSpacing:"0.03em" }}>WEEK 13 · 2026</span>
+              <span style={{ fontFamily:"'Barlow Condensed', sans-serif", fontWeight:700, fontSize:13, color:T.accent, letterSpacing:"0.03em" }}>WEEK 14 · 2026</span>
               <span style={{ fontFamily:"'DM Sans', sans-serif", fontSize:8, color:"#9CA3AF", letterSpacing:"0.1em", textTransform:"uppercase" }}>Box Office Period</span>
             </div>
             <div style={{ display:"flex", flexDirection:"column", alignItems:"flex-end" }}>
@@ -3206,7 +3206,7 @@ function ForeignFilmsPanel({ movies }) {
 
       {/* ── Global view: US BO Top 10 ─────────────────────────── */}
       {viewMode === "global"
-        ? <USBoTop10 weekData={US_BO_WEEKLY["Week 13, 2026"]} />
+        ? <USBoTop10 weekData={US_BO_WEEKLY["Week 14, 2026"]} />
         : <>
           {/* ── Column headers ──────────────────────────────────── */}
           <BogColHeaders viewMode={viewMode} />
@@ -3686,7 +3686,7 @@ function BoxOfficeSection({ onNavigate, forceAllTime, onClearForceAllTime }) {
                   letterSpacing:"0.14em", textTransform:"uppercase",
                   color:T.accent, background:"#FEE2E2",
                   padding:"2px 8px", borderRadius:2,
-                }}>WEEK 13 · LEAD STORY</span>
+                }}>WEEK 14 · LEAD STORY</span>
                 <span style={{ fontFamily:"'DM Sans', sans-serif", fontSize:10, color:T.textMuted }}>Mon, 24 Mar 2026</span>
               </div>
               <div style={{
@@ -3888,7 +3888,7 @@ function BoxOfficeSection({ onNavigate, forceAllTime, onClearForceAllTime }) {
             </h2>
           </div>
           <p style={{ fontFamily:"'DM Sans', sans-serif", fontSize:13, color:T.textMuted, marginLeft:12 }}>
-            {showWeekly ? "Week 13, 2026 — D0–D7 ~₹562 Cr nett · WW ₹1,006.50 Cr · D7 ~₹50 Cr ⚡ · Ram Navami D8 · Week 1 target ₹620+ Cr" : "Top Indian films by worldwide gross · Industry tracking data"}
+            {showWeekly ? "Week 14, 2026 — D2 D0–D9 ~₹709 Cr · PHM India ₹4.88 Cr · US: PHM .8M Wkd 2" : "Top Indian films by worldwide gross · Industry tracking data"}
           </p>
         </div>
         {topFilm && (
@@ -4012,7 +4012,7 @@ function BoxOfficeSection({ onNavigate, forceAllTime, onClearForceAllTime }) {
               ● LIVE
             </span>
             <span style={{ fontFamily:"'DM Sans', sans-serif", fontSize:11, color:T.textMuted }}>
-              Week 13 · Mar 25, 2026 · D0–D7 ~₹562 Cr nett · WW ₹1,006.50 Cr · D7 ~₹50 Cr ⚡ Boxoffy call · Ram Navami D8 🚀
+              Week 14 · Mar 27, 2026 · D2 D0–D9 ~₹709 Cr · PHM India ₹4.88 Cr · WW ~₹1,091 Cr
             </span>
             <span style={{ background:"#FEF3C7", border:"1px solid #FCD34D", fontFamily:"'DM Sans', sans-serif", fontSize:10, color:"#92400E", fontWeight:700, padding:"2px 8px", borderRadius:2 }}>
               ✅ D0–D7 CONFIRMED ~₹562 Cr · D7 Wed ~₹50 Cr ⚡ · Ram Navami D8 Thu holiday · WW ₹1,006.50 Cr · Week 1 projection ₹620+ Cr
@@ -4021,7 +4021,7 @@ function BoxOfficeSection({ onNavigate, forceAllTime, onClearForceAllTime }) {
               UBS ~₹63 Cr 7-day FLOP · TK OTT JioHotstar TODAY Mar 26 · Kerala Story 2 done ~₹42 Cr
             </span>
             <span style={{ marginLeft:"auto", fontFamily:"'DM Sans', sans-serif", fontSize:10, color:T.textMuted, fontStyle:"italic" }}>
-              Boxoffy Intelligence · Week 13, 2026 · Updated Mar 24 · D0–D7 ~₹562 Cr
+              Boxoffy Intelligence · Week 14, 2026 · Updated Mar 27 · D0–D9 ~₹709 Cr
             </span>
           </div>
         </div>
@@ -4581,7 +4581,7 @@ const OTT_CALENDAR = [
 /* OTT Weekly Editorial — updated every Thursday                            */
 const OTT_EDITORIAL = [
   {
-    week:      "Week 13 · Mar 19–22, 2026",
+    week:      "Week 14 · Mar 26–29, 2026",
     headline:  "Prime Video Goes Big. Very Big.",
     subline:   "55 titles, a new theatrical slate, and Farzi S2. Amazon just fired back at Netflix.",
     body:      "Amazon Prime Video's 'It Starts Here' slate event on March 19 was a statement. Farzi Season 2, Panchayat Season 5, Aspirants Season 3 (already live), The Revolutionaries with Bhuvan Bam, Dahaad Season 2, Call Me Bae Season 2 — and a five-film theatrical slate including Rajkummar Rao's Raftaar. The headline from Prime's own data: over half of the most-watched Top 50 non-English titles globally in 2025 came from Prime India. And 25% of their Indian content audience is outside India. That number is the real story — Indian OTT originals are becoming a global export business.",
@@ -6261,3 +6261,6 @@ export default function App() {
     </div>
   );
 }
+
+
+
