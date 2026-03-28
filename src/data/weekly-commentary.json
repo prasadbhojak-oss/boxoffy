@@ -2,20 +2,20 @@
   {
     "weekNum": "Week 14",
     "dateRange": "Mar 26 – Apr 1, 2026",
-    "headline": "D2 ₹709 Cr India D0–D9 · PHM ₹4.88 Cr India D1+D2 · US: PHM $46.8M Wkd 2",
-    "subline": "D9 Fri ~₹40 Cr night est (addatoday) · D0–D9 BOI canonical ₹709 Cr · WW ~₹1,091 Cr · PHM India D1+D2 ₹4.88 Cr · IMAX 5→60 screens · PHM US Wkd 2 ~$46.8M (Deadline) · D2 NA ₹23M running",
+    "headline": "D2 ₹773 Cr India D0–D10 · D11 Boxoffy Call ₹65–70 Cr · Could Match Dhurandhar 1 Lifetime in 11 Days",
+    "subline": "D9 ₹41.75 Cr confirmed (Filmibeat/TheWeek) · D10 ₹62.35 Cr (Filmibeat, 64-65% night occupancy) · D0–D10 BOI canonical ₹773 Cr · WW ~₹1,186 Cr gross · D11 Sun Boxoffy call ₹65–70 Cr → D0-D11 ~₹840 Cr = Dhurandhar 1 lifetime in 11 days · PHM India D1+D2 ₹4.88 Cr · PHM US Wkd 2 confirmed $46.8M (Deadline)",
     "status": "current",
     "scoreboard": [
       {
         "film": "Dhurandhar: The Revenge",
-        "week": "Week 2 D9 (live)",
-        "collection": "D0–D9 ~₹709 Cr nett (BOI canonical, D9 ~₹40 Cr night est) · WW ~₹1,091 Cr gross",
-        "verdict": "BLOCKBUSTER"
+        "week": "Week 2 — D10 confirmed",
+        "collection": "D0–D10 ₹773 Cr nett (BOI canonical) · D9 ₹41.75 Cr · D10 ₹62.35 Cr · WW ~₹1,186 Cr gross · D11 Boxoffy call ₹65–70 Cr",
+        "verdict": "ALL-TIME BLOCKBUSTER"
       },
       {
         "film": "Project Hail Mary",
-        "week": "Week 1 India D1–D2",
-        "collection": "D1 ₹2.25 Cr · D2 ₹2.63 Cr · Running ₹4.88 Cr nett · IMAX expanded 5→60 screens",
+        "week": "Week 1 India — D1+D2",
+        "collection": "D1 ₹2.25 Cr · D2 ₹2.63 Cr · Running ₹4.88 Cr nett · IMAX expanded 5→60 screens · Extended OW ₹9–11 Cr (Pinkvilla)",
         "verdict": "TRACKING"
       },
       {
@@ -27,7 +27,7 @@
       {
         "film": "Thaai Kizhavi",
         "week": "Week 5 — OTT",
-        "collection": "~₹57 Cr nett · WW ~₹78 Cr · JioHotstar Mar 26",
+        "collection": "~₹57 Cr nett · JioHotstar Mar 26",
         "verdict": "SUPER HIT"
       }
     ],
@@ -36,33 +36,33 @@
         "name": "Box Office India",
         "handle": "@boxofficeindia",
         "color": "#1A3A6B",
-        "take": "D5 ₹60 Cr canonical (not ₹65 Sacnilk) · D0–D8 ₹669 Cr · D9 ~₹40 Cr night est · D0–D9 ~₹709 Cr · WW ~₹1,091 Cr gross",
+        "take": "D5 ₹60 Cr canonical · D0–D8 ₹669 Cr · D9 ₹41.75 Cr · D10 ₹62.35 Cr · D0–D10 ₹773 Cr · WW ~₹1,186 Cr",
         "type": "trade"
       },
       {
         "name": "Sacnilk",
         "handle": "@SacnilkEntmt",
         "color": "#E8631A",
-        "take": "Week 1 ₹624.47 Cr · D8 ₹49.70 Cr · D9 partial ₹15.06 Cr by 5pm · PHM D1 ₹2.25 Cr / D2 ₹2.63 Cr nett · PHM running ₹4.88 Cr",
+        "take": "Week 1 ₹624.47 Cr (D5=₹65) · D8 ₹49.70 Cr · D9 ₹41.75 Cr · D10 Sacnilk: ₹62.35 Cr, 54.9% occupancy · PHM D1 ₹2.25 Cr / D2 ₹2.63 Cr",
         "type": "trade"
       },
       {
         "name": "Pinkvilla",
         "handle": "@pinkvilla",
         "color": "#E91E8C",
-        "take": "PHM D1 ₹3 Cr gross · Extended OW ₹9–11 Cr · IMAX screen scarcity key factor for PHM",
+        "take": "PHM D1 ₹3 Cr gross · Extended OW ₹9–11 Cr · D10 occupancy 64-65% night shows · D2 vs Pushpa 2 Wkd 2 race",
         "type": "trade"
       },
       {
         "name": "Deadline / Boxoffice Pro",
         "handle": "@DEADLINE",
         "color": "#1A1A2E",
-        "take": "PHM Wkd 2 ~$46.8M (Deadline confirmed Fri PM) · D2 NA $1.4M Fri · $5M Wkd 2 · D2 running $23M NA · PHM 10-day $156.5M",
+        "take": "PHM Wkd 2 confirmed $46.8M · D2 NA $5M Wkd 2 · running $23M NA · D2 has beaten Baahubali 2 $22M NA lifetime",
         "type": "trade"
       }
     ],
-    "interval_take": "D9 (Friday Mar 27) delivered ~₹40 Cr India nett per night estimates — occupancy held at 40–41% overall with 60% night shows (addatoday). This is a marginal drop from D8 ₹49.70 Cr but still exceptional for a second Friday. D0–D9 BOI canonical total: ~₹709 Cr. Sacnilk's higher D5 figure (₹65 Cr vs BOI ₹60 Cr) means their cumulative is ~₹14 Cr higher — not adopted by Boxoffy. Project Hail Mary India story is IMAX: the film was initially given just 5 IMAX screens (13 shows) across 34 IMAX theatres in India — all occupied by D2. Fan backlash prompted expansion to 60 IMAX screens by D2. PHM is tracking ₹9–11 Cr extended OW (Pinkvilla). US: PHM dominating Wkd 2 at ~$46.8M (-42%), comparable to Dune: Part Two's 2nd weekend. D2 NA running $23M — has beaten Baahubali 2's $22M NA lifetime.",
-    "nextWeek": "D10 Sat Mar 28 bank holiday — D2 targeting ₹80–90 Cr · D11 Sun ₹85–95 Cr · D0–D11 could cross ₹880 Cr India nett by Sun night · PHM Wkd 1 India locks Monday · ₹1,000 Cr India nett for D2 by Tue–Wed per Rohit Jaiswal · PHM US $50M Wkd 2 in play (Deadline) · Super Mario Galaxy Movie Apr 1 is next major US competition",
+    "interval_take": "D10 Saturday was a bank holiday and D2 exploded — ₹62.35 Cr, 64-65% night occupancy, 9.5 lakh+ tickets sold in advance (₹34 Cr nett advance alone before first show). This is the second-best second Saturday for any Indian film, fractionally behind Pushpa 2's ₹63 Cr. D0–D10 BOI canonical: ₹773 Cr. The editorial call: D11 Sunday Boxoffy projects ₹65–70 Cr, which would take D0–D11 to ~₹840 Cr — exactly matching Dhurandhar 1's entire India lifetime, in 11 days. D2 is now the second-highest grossing Bollywood film ever domestically (behind only Dhurandhar 1's ₹840 Cr) and will surpass it by D13–D14 (Mon–Tue). On the Hollywood side, Project Hail Mary confirmed $46.8M Wkd 2 (-42%) — better than Dune: Part Two's second weekend, with 10-day domestic at $156.5M. D2 NA has crossed $23M — beating Baahubali 2's $22M NA lifetime in Week 2.",
+    "nextWeek": "D11 Sun Mar 29 Boxoffy call ₹65–70 Cr · D0–D11 ~₹840 Cr = matches Dhurandhar 1 lifetime · D2 to surpass D1 India nett ₹840 Cr by D13 Mon Apr 1 · ₹1,000 Cr India nett Boxoffy call: D15–D16 (Wed–Thu next week) · PHM India extended OW locks Monday · PHM US tracking for $50M+ Wkd 2 · Super Mario Galaxy Apr 1 next US competition",
     "boxoffy_note": "D9 marked ESTIMATED — Sacnilk running total derived (₹715.72 Cr minus ₹674.17 Cr D0–D8 = ₹41.55 Cr). IndiaTV News partial estimate (5pm capture) showed ₹24 Cr. Final BOI D9 confirmation expected Sat morning. D5 BOI canonical ₹60 Cr used throughout (not Sacnilk all-lang ₹65 Cr). PHM figures per Sacnilk/Pinkvilla cross-reference."
   },
   {

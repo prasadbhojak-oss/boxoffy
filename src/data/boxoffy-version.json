@@ -1,6 +1,6 @@
 {
-  "version": "3.25",
-  "deployedAt": "2026-03-27",
+  "version": "3.26",
+  "deployedAt": "2026-03-28",
   "gitCommit": "7a63f82",
   "appJsxChars": 346239,
   "dataFiles": {
@@ -30,16 +30,28 @@
   "weeklyUpdate": {
     "weekNum": "Week 14",
     "dateRange": "Mar 26 – Apr 1, 2026",
-    "headline": "D2 ~₹709 Cr D0-D9 · PHM India ₹4.88 Cr D1+D2 · PHM US $46.8M Wkd 2"
+    "headline": "D2 ₹773 Cr D0-D10 · D11 Boxoffy call ₹65-70 Cr · PHM US $46.8M Wkd 2"
   },
   "articles": {
     "dangal-china-box-office.html": "2026-03-26",
     "dhurandhar2-us-boxoffice.html": "2026-03-25",
-    "dhurandhar-2-box-office.html": "2026-03-20",
+    "dhurandhar-2-box-office.html": "2026-03-28",
     "why-indian-cinema-never-has-a-number-2.html": "2026-03-22",
-    "india-all-time-box-office.html": "2026-03-24"
+    "india-all-time-box-office.html": "2026-03-24",
+    "dhurandhar-box-office-d1-vs-d2.html": "2026-03-28"
   },
   "changelog": [
+    {
+      "version": "3.26",
+      "date": "2026-03-28",
+      "commit": "pending",
+      "changes": [
+        "D10 confirmed ₹62.35 Cr · D0-D10 ₹773 Cr BOI canonical",
+        "D9 locked ₹41.75 Cr (Filmibeat/TheWeek)",
+        "D11 Boxoffy call ₹65-70 Cr → D0-D11 ~₹840 Cr = Dhurandhar 1 lifetime",
+        "PHM US confirmed $46.8M Wkd 2 · D2 NA $23M beats Baahubali 2 lifetime"
+      ]
+    },
     {
       "version": "3.25",
       "date": "2026-03-27",
