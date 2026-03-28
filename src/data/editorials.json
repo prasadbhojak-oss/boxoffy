@@ -25,7 +25,8 @@
     "date": "Mar 22, 2026",
     "readTime": "9 min read",
     "url": "why-indian-cinema-never-has-a-number-2.html",
-    "subline": "ROI blindness · Counter-programming · Broadway hypothesis"
+    "subline": "ROI blindness · Counter-programming · Broadway hypothesis",
+    "featured": false
   },
   {
     "tag": "VERDICT",
@@ -35,7 +36,8 @@
     "date": "Mar 20, 2026",
     "readTime": "4 min read",
     "url": "dhurandhar2-advance-article.html",
-    "subline": ""
+    "subline": "",
+    "featured": false
   },
   {
     "tag": "US BOX OFFICE",
@@ -44,7 +46,8 @@
     "author": "The Boxoffy Team",
     "date": "Mar 20, 2026",
     "readTime": "3 min read",
-    "url": "dhurandhar2-us-boxoffice.html"
+    "url": "dhurandhar2-us-boxoffice.html",
+    "featured": false
   },
   {
     "tag": "COMPARISON",
@@ -53,7 +56,8 @@
     "author": "The Boxoffy Team",
     "date": "Mar 19, 2026",
     "readTime": "5 min read",
-    "url": "dhurandhar-box-office-d1-vs-d2.html"
+    "url": "dhurandhar-box-office-d1-vs-d2.html",
+    "featured": false
   },
   {
     "tag": "DATA ANALYSIS",
@@ -62,7 +66,8 @@
     "author": "The Boxoffy Team",
     "date": "Mar 15, 2026",
     "readTime": "6 min read",
-    "url": "100-crore-day-one-club-box-office.html"
+    "url": "100-crore-day-one-club-box-office.html",
+    "featured": false
   },
   {
     "tag": "PRICING ANALYSIS",
@@ -71,7 +76,8 @@
     "author": "The Boxoffy Team",
     "date": "Mar 13, 2026",
     "readTime": "5 min read",
-    "url": "dhurandhar-comparison.html"
+    "url": "dhurandhar-comparison.html",
+    "featured": false
   },
   {
     "tag": "DEEP DIVE",
@@ -80,7 +86,8 @@
     "author": "The Boxoffy Team",
     "date": "Mar 10, 2026",
     "readTime": "15 min read",
-    "url": "india-boxoffice-how-it-works.html"
+    "url": "india-boxoffice-how-it-works.html",
+    "featured": false
   },
   {
     "tag": "ANALYSIS",
@@ -89,6 +96,7 @@
     "author": "The Boxoffy Team",
     "date": "Mar 8, 2026",
     "readTime": "6 min read",
-    "url": "dhurandhar2-editorial.html"
+    "url": "dhurandhar2-editorial.html",
+    "featured": false
   }
 ]
