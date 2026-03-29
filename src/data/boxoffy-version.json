@@ -1,14 +1,14 @@
 {
-  "version": "3.26",
-  "deployedAt": "2026-03-28",
-  "gitCommit": "7a63f82",
-  "appJsxChars": 346239,
+  "version": "3.27",
+  "deployedAt": "2026-03-29",
+  "gitCommit": "pending",
+  "appJsxChars": 345797,
   "dataFiles": {
     "weekly-commentary.json": {
       "weekNum": "Week 14",
       "dateRange": "Mar 26 – Apr 1, 2026",
-      "lastUpdated": "2026-03-27",
-      "headline": "D2 ₹713 Cr D0–D9 · PHM India entry · 2nd weekend"
+      "lastUpdated": "2026-03-29",
+      "headline": "Dhurandhar Juggernaut Continues — D0–D11 ₹841 Cr"
     },
     "us-bo-weekly.json": {
       "week": "Week 14, 2026",
@@ -30,17 +30,32 @@
   "weeklyUpdate": {
     "weekNum": "Week 14",
     "dateRange": "Mar 26 – Apr 1, 2026",
-    "headline": "D2 ₹773 Cr D0-D10 · D11 Boxoffy call ₹65-70 Cr · PHM US $46.8M Wkd 2"
+    "headline": "D2 D0–D11 ₹841 Cr · Crosses D1 lifetime · India gross ₹1,000 Cr · WW ~₹1,360 Cr"
   },
   "articles": {
     "dangal-china-box-office.html": "2026-03-26",
     "dhurandhar2-us-boxoffice.html": "2026-03-25",
-    "dhurandhar-2-box-office.html": "2026-03-28",
+    "dhurandhar-2-box-office.html": "2026-03-29",
     "why-indian-cinema-never-has-a-number-2.html": "2026-03-22",
     "india-all-time-box-office.html": "2026-03-24",
-    "dhurandhar-box-office-d1-vs-d2.html": "2026-03-28"
+    "dhurandhar-box-office-d1-vs-d2.html": "2026-03-29"
   },
   "changelog": [
+    {
+      "version": "3.27",
+      "date": "2026-03-29",
+      "commit": "pending",
+      "changes": [
+        "D11 confirmed ₹68 Cr (Sacnilk final) · D0–D11 ₹841 Cr BOI canonical",
+        "D10 updated to ₹62.85 Cr (Sacnilk final, was ₹62.35 early estimate)",
+        "D5 corrected to ₹60 Cr BOI in lede paragraph (was ₹65 Sacnilk — data error fixed)",
+        "WW updated ~₹1,360 Cr · India gross ₹1,000 Cr crossed D11",
+        "D2 crosses D1 lifetime (₹840.20 Cr) in 11 days",
+        "D1 vs D2 card updated — D2 ₹841 Cr (D0–D11) now shown",
+        "weekly-commentary.json Week 14 — D11 final scoreboard, Dhurandhar Juggernaut headline",
+        "App.jsx 18 targeted replacements · zero stale refs"
+      ]
+    },
     {
       "version": "3.26",
       "date": "2026-03-28",
@@ -60,18 +75,6 @@
         "weekly-commentary.json Week 14 — D2 D9 ~₹40 Cr, D0-D9 ~₹709 Cr, PHM India ₹4.88 Cr D1+D2",
         "us-bo-weekly.json Week 14 — PHM Wkd 2 $46.8M, They Will Kill You NEW, D2 NA $23M",
         "editorials.json — Dangal article [0] confirmed latest"
-      ]
-    },
-    {
-      "version": "3.25",
-      "date": "2026-03-27",
-      "commit": "pending",
-      "changes": [
-        "Week 14 weekly-commentary — D9 ~₹44 Cr Boxoffy call, D0-D9 ~₹713 Cr BOI canonical",
-        "Week 14 US chart — PHM $46.8M wk2 ($156.5M 10-day), D2 $23M 10-day (surpassed Baahubali 2 NA lifetime)",
-        "PHM India entry: D1+D2 ₹4.88 Cr nett, extended OW target ₹9-11 Cr",
-        "They Will Kill You added to US chart (new, $5.5M)",
-        "boxoffy-version.json bumped to 3.25"
       ]
     },
     {
@@ -109,7 +112,7 @@
   ],
   "_meta": {
     "purpose": "Boxoffy deployed state tracker. Claude reads this at every session start to verify correct baseline before making any edits. Never edit App.jsx without checking appJsxChars matches this file.",
-    "appJsxRule": "Good App.jsx = 346,239 chars. If outputs/App.jsx is unavailable or char count is wrong, DO NOT PROCEED — ask PB to run: git checkout 7a63f82 -- src/App.jsx",
-    "updateProtocol": "After every deploy: bump version (3.24 → 3.25), update deployedAt, gitCommit, and relevant dataFiles entries."
+    "appJsxRule": "Good App.jsx = 345,797 chars (v3.27). If outputs/App.jsx is unavailable or char count is wrong, DO NOT PROCEED — ask PB to run: git checkout 7a63f82 -- src/App.jsx",
+    "updateProtocol": "After every deploy: bump version, update deployedAt, gitCommit, and relevant dataFiles entries."
   }
 }

@@ -714,12 +714,13 @@ function NavBar({ activeSection, setActiveSection, setForceAllTime }) {
           {/* Right side — search + update stamp */}
           <div style={{ marginLeft:"auto", display:"flex", alignItems:"center", gap:12, flexShrink:0 }}>
             <SearchBar />
-            <div style={{ display:"flex", flexDirection:"column", alignItems:"flex-end", gap:2 }}>
-              <span style={{ fontFamily:"'Barlow Condensed', sans-serif", fontWeight:800, fontSize:13, color:T.accent, letterSpacing:"0.06em" }}>
-                WEEK 14 · 2026
-                <span style={{ color:"#6B7280", fontWeight:500, fontSize:12, marginLeft:8 }}>D0–D10 ₹773 Cr · WW ~₹1,186 Cr</span>
-              </span>
-              <span style={{ fontFamily:"'DM Sans', sans-serif", fontSize:8, color:"#9CA3AF", letterSpacing:"0.1em", textTransform:"uppercase" }}>Mar 26 – Apr 1, 2026 · Updated Mar 28</span>
+            <div style={{ display:"flex", flexDirection:"column", alignItems:"flex-end", borderRight:`1px solid #E5E7EB`, paddingRight:12, marginRight:12 }}>
+              <span style={{ fontFamily:"'Barlow Condensed', sans-serif", fontWeight:700, fontSize:13, color:T.accent, letterSpacing:"0.03em" }}>WEEK 13 · 2026</span>
+              <span style={{ fontFamily:"'DM Sans', sans-serif", fontSize:8, color:"#9CA3AF", letterSpacing:"0.1em", textTransform:"uppercase" }}>Box Office Period</span>
+            </div>
+            <div style={{ display:"flex", flexDirection:"column", alignItems:"flex-end" }}>
+              <span style={{ fontFamily:"'Barlow Condensed', sans-serif", fontWeight:700, fontSize:13, color:"#374151", letterSpacing:"0.03em" }}>Wed, 25 Mar 2026 · D7 ₹42 Cr (BOI) · ~₹562 Cr total · ⚠ Figures vary by tracker · Boxoffy uses BOI/PV</span>
+              <span style={{ fontFamily:"'DM Sans', sans-serif", fontSize:8, color:"#9CA3AF", letterSpacing:"0.1em", textTransform:"uppercase" }}>Last Updated</span>
             </div>
           </div>
         </>}
@@ -789,7 +790,7 @@ function NavBar({ activeSection, setActiveSection, setForceAllTime }) {
             borderLeft:"3px solid transparent",
           }}>About</a>
           <div style={{ padding:"10px 20px", background:"#F9FAFB", borderTop:"1px solid #F3F4F6" }}>
-            <span style={{ fontFamily:"'DM Sans', sans-serif", fontSize:12, color:"#9CA3AF" }}>Mar 28, 2026 · D0–D10 ₹773 Cr (BOI) · D10 ₹62.35 Cr ✅ · D11 Boxoffy call ₹65–70 Cr</span>
+            <span style={{ fontFamily:"'DM Sans', sans-serif", fontSize:12, color:"#9CA3AF" }}>Wed, 25 Mar 2026 · D7 ₹42 Cr (BOI) · ~₹562 Cr total · ⚠ Figures vary by tracker · Boxoffy uses BOI/PV</span>
           </div>
         </div>
       )}
@@ -2393,8 +2394,8 @@ function WeeklyChartRow({ movie, rank, prevRank }) {
           </div>
           {isEstimated && (
             <div style={{ display:"flex", alignItems:"center", gap:6, marginBottom:4 }}>
-              <span style={{ background:"#DCFCE7", color:"#166534", border:"1px solid #86EFAC", fontFamily:"'IBM Plex Mono', monospace", fontSize:8, fontWeight:700, letterSpacing:"0.12em", textTransform:"uppercase", padding:"2px 7px", borderRadius:2 }}>BOXOFFY D1 CALL ✓</span>
-              <span style={{ fontFamily:"'DM Sans', sans-serif", fontSize:9, color:"#166534" }}>D1 actual ₹102.55 Cr · Boxoffy call ₹95 Cr · +7.9% · All-time Hindi D1 record</span>
+              <span style={{ background:"#FEF3C7", color:"#92400E", border:"1px solid #FCD34D", fontFamily:"'IBM Plex Mono', monospace", fontSize:8, fontWeight:700, letterSpacing:"0.12em", textTransform:"uppercase", padding:"2px 7px", borderRadius:2 }}>BOXOFFY DAY 1 CALL</span>
+              <span style={{ fontFamily:"'DM Sans', sans-serif", fontSize:9, color:"#92400E" }}>3-model BETA v2 · Bear ₹80 Cr · Base ₹95 Cr · Bull ₹110 Cr · Boxoffy call: ₹95 Cr · Actual: ₹102.55 Cr ✓</span>
             </div>
           )}
           {movie.weeklyNote && (
@@ -3205,7 +3206,7 @@ function ForeignFilmsPanel({ movies }) {
 
       {/* ── Global view: US BO Top 10 ─────────────────────────── */}
       {viewMode === "global"
-        ? <USBoTop10 weekData={US_BO_WEEKLY["Week 14, 2026"]} />
+        ? <USBoTop10 weekData={US_BO_WEEKLY["Week 13, 2026"]} />
         : <>
           {/* ── Column headers ──────────────────────────────────── */}
           <BogColHeaders viewMode={viewMode} />
@@ -3643,10 +3644,10 @@ function BoxOfficeSection({ onNavigate, forceAllTime, onClearForceAllTime }) {
     { label:"D1 Nett ✅",             val:"₹102.55 Cr",    src:"Sacnilk · Filmibeat · The Week · IndiaTV" },
     { label:"D2 Nett ✅",             val:"₹80.72 Cr",     src:"Sacnilk · Filmibeat · IndiaTV" },
     { label:"D3 Nett ✅",             val:"₹113 Cr",       src:"Sacnilk · IndiaTV · Filmibeat — Eid Sat +40%" },
-    { label:"4-Day India Nett ✅",     val:"₹454.12 Cr",   src:"BOI confirmed D0–D4" },
+    { label:"4-Day India Nett ✅",     val:"₹454 Cr",       src:"Sacnilk confirmed D0–D4" },
     { label:"D5 Monday ✅",           val:"₹60 Cr",        src:"Sacnilk · The Week · Republic confirmed" },
-    { label:"D0–D10 India Nett ✅",   val:"₹773 Cr",     src:"BOI · Filmibeat · TheWeek confirmed" },
-    { label:"WW Gross D0–D10 ✅",     val:"~₹1,186 Cr",  src:"Sacnilk · D10 night est · Overseas ~₹286 Cr" },
+    { label:"7-Day India Nett ✅",    val:"~₹562 Cr",    src:"Sacnilk/Republic/The Week confirmed" },
+    { label:"7-Day WW Gross",         val:"₹1,006.50 Cr",      src:"Sacnilk confirmed · Overseas ₹231.57 Cr" },
     { label:"JioHotstar OTT Deal",    val:"₹150 Cr",       src:"Film Information · Wikipedia" },
   ];
 
@@ -3685,7 +3686,7 @@ function BoxOfficeSection({ onNavigate, forceAllTime, onClearForceAllTime }) {
                   letterSpacing:"0.14em", textTransform:"uppercase",
                   color:T.accent, background:"#FEE2E2",
                   padding:"2px 8px", borderRadius:2,
-                }}>WEEK 14 · LEAD STORY</span>
+                }}>WEEK 13 · LEAD STORY</span>
                 <span style={{ fontFamily:"'DM Sans', sans-serif", fontSize:10, color:T.textMuted }}>Mon, 24 Mar 2026</span>
               </div>
               <div style={{
@@ -3698,11 +3699,11 @@ function BoxOfficeSection({ onNavigate, forceAllTime, onClearForceAllTime }) {
                 marginBottom:9,
               }}>
                 Dhurandhar: The Revenge —{" "}
-                <span style={{ color:T.accent }}>D0–D10 ₹773 Cr. D11 Boxoffy ₹65–70 Cr. WW ~₹1,186 Cr.</span>
+                <span style={{ color:T.accent }}>₹563 Cr in 6 Days. Week 1 Targeting ₹620+ Cr. WW ₹1,006.50 Cr.</span>
               </div>
               <div style={{ display:"flex", alignItems:"center", gap:10, flexWrap:"wrap" }}>
                 <span style={{ fontFamily:"'DM Sans', sans-serif", fontSize:11, color:T.textMuted }}>
-                  Ranveer Singh · Dir. Aditya Dhar · D0 ₹43 · D1 ₹102.55 · D2 ₹80.72 · D3 ₹113 · D4 ₹114.85 · D5 ₹60 (BOI) · D6 ₹56.55 · D7 ₹48.75 · D8 ₹49.70 · D9 ₹41.75 · D10 ₹62.35 ✅
+                  Ranveer Singh · Dir. Aditya Dhar · D0 ₹43 · D1 ₹102.55 · D2 ₹80.72 · D3 ₹113 · D4 ₹114.85 · D5 ₹65 ✅ · D6 ₹56.55 ✅ · D7 ~₹50 Cr ⚡ Ram Navami D8 🚀
                 </span>
               </div>
             </div>
@@ -3713,7 +3714,7 @@ function BoxOfficeSection({ onNavigate, forceAllTime, onClearForceAllTime }) {
                 { label:"D0 Nett ✅", val:"₹43 Cr",      sub:"Mar 18 previews · Sacnilk/Filmibeat" },
                 { label:"D1 Nett ✅", val:"₹102.55 Cr", sub:"Mar 19 · All-time Hindi Day 1 record" },
                 { label:"D2 Nett ✅", val:"₹80.72 Cr",  sub:"Mar 20 · Sacnilk/Filmibeat confirmed" },
-                { label:"D0–D10 India Nett ✅", val:"₹773 Cr", sub:"BOI confirmed · D10 ₹62.35 Cr · D11 ₹65–70 Cr call" },
+                { label:"7-Day India Nett ✅", val:"~₹562 Cr", sub:"D0-D6 confirmed · Sacnilk/Republic/The Week" },
               ].map((s,i) => (
                 <div key={i} style={{
                   padding:"0 18px", borderRight:`1px solid ${T.border}`, textAlign:"right",
@@ -3758,8 +3759,8 @@ function BoxOfficeSection({ onNavigate, forceAllTime, onClearForceAllTime }) {
                     fontSize:"clamp(26px,3.6vw,42px)", color:T.text,
                     lineHeight:1.05, letterSpacing:"-0.02em", margin:"0 0 12px",
                   }}>
-                    Dhurandhar: The Revenge — Week 2 Live. D0–D10 ₹773 Cr.<br/>
-                    <span style={{ color:"#22C55E" }}>D10 ₹62.35 Cr ✅ · D11 Boxoffy call ₹65–70 Cr · WW ~₹1,186 Cr · D0–D10 BOI confirmed.</span>
+                    Dhurandhar: The Revenge — ₹575 Cr. Week 1 Record.<br/>
+                    <span style={{ color:"#22C55E" }}>~₹562 Cr D0–D7 · D7 ~₹50 Cr ⚡ · Ram Navami D8 · WW ₹1,006.50 Cr.</span>
                   </h1>
                   <div style={{ fontFamily:"'DM Sans', sans-serif", fontSize:12, color:T.textMuted, display:"flex", gap:12, flexWrap:"wrap" }}>
                     <span>Ranveer Singh · Dir. Aditya Dhar</span>
@@ -3790,7 +3791,7 @@ function BoxOfficeSection({ onNavigate, forceAllTime, onClearForceAllTime }) {
                     lineHeight:1.8, margin:0,
                     borderLeft:`3px solid ${T.border}`, paddingLeft:16,
                   }}>
-                    Dhurandhar: The Revenge has delivered the greatest opening run in Hindi cinema history. ₹102.55 Cr D1. ₹113 Cr Eid Saturday. ₹114.85 Cr Sunday — three days above ₹100 Cr nett, a first for any Indian film. D5 Mon ₹65 Cr (highest ever Bollywood first weekday). D6 ₹56.55 Cr. D8 ₹49.70 Cr bounce. D9 ₹41.75 Cr. D10 ₹62.35 Cr (bank holiday Sat). D0–D10 ₹773 Cr nett (BOI). WW ~₹1,186 Cr. D11 Boxoffy call ₹65–70 Cr expected to spike. Week 1 targeting ₹620+ Cr — the greatest opening week in Hindi cinema history.
+                    Dhurandhar: The Revenge has delivered the greatest opening run in Hindi cinema history. ₹102.55 Cr D1. ₹113 Cr Eid Saturday. ₹114.85 Cr Sunday — three days above ₹100 Cr nett, a first for any Indian film. D5 Mon ₹65 Cr (highest ever Bollywood first weekday). D6 Tue ₹56.55 Cr. D0–D7 total ~₹562 Cr India nett. WW ₹1,006.50 Cr. D7 Wednesday pending — Boxoffy call ~₹50 Cr. Ram Navami holiday D8 expected to spike. Week 1 targeting ₹620+ Cr — the greatest opening week in Hindi cinema history.
                   </p>
 
                   {/* BMS Advance Data — clean table style */}
@@ -3830,7 +3831,7 @@ function BoxOfficeSection({ onNavigate, forceAllTime, onClearForceAllTime }) {
                         { label:"D4 Sunday Nett ✅",      val:"₹114.85 Cr",    sub:"Mar 22 · Sacnilk confirmed · All-time Hindi Sunday" },
                         { label:"4-Day India Nett ✅",    val:"₹454.12 Cr",    sub:"D0–D4 Sacnilk confirmed" },
                         { label:"D5 Monday ✅",           val:"₹60 Cr",        sub:"Confirmed · Highest ever Bollywood 1st Monday · beats Tiger 3 ₹59.25" },
-                        { label:"D6 Tuesday ✅",           val:"₹56.55 Cr",    sub:"BOI/Sacnilk confirmed · D0–D10 ₹773 Cr nett" },
+                        { label:"D6 Tuesday ✅",           val:"₹56.55 Cr",    sub:"Sacnilk/Republic confirmed · D0-D6 ~₹562 Cr nett" },
                         { label:"BMS All-Time #1",        val:"14.81L tickets", sub:"Highest-ever Hindi film on BookMyShow" },
                         { label:"JioHotstar OTT Deal",    val:"₹150 Cr",       sub:"Non-theatrical total ₹245 Cr" },
                       ].map((s,i) => (
@@ -3850,7 +3851,7 @@ function BoxOfficeSection({ onNavigate, forceAllTime, onClearForceAllTime }) {
                       Boxoffy Take
                     </div>
                     <p style={{ fontFamily:"'DM Sans', sans-serif", fontSize:14, color:T.textMid, lineHeight:1.8, margin:0 }}>
-                      Dhurandhar: The Revenge has shattered every record in Hindi cinema. ₹102.55 Cr Day 1. ₹113 Cr Eid Saturday. ₹102 Cr Sunday. Three days above ₹100 Cr nett — no Hindi film has ever done that. D0–D10 ₹773 Cr India nett. WW ~₹1,186 Cr. $23M in North America — Indian cinema's all-time NA 4-day record. A generational opening.
+                      Dhurandhar: The Revenge has shattered every record in Hindi cinema. ₹102.55 Cr Day 1. ₹113 Cr Eid Saturday. ₹102 Cr Sunday. Three days above ₹100 Cr nett — no Hindi film has ever done that. D0–D7 total ~₹562 Cr India nett. ₹1,006.50 Cr worldwide. $13.5M in North America — Indian cinema's all-time NA 4-day record. A generational opening.
                     </p>
                   </div>
 
@@ -3887,7 +3888,7 @@ function BoxOfficeSection({ onNavigate, forceAllTime, onClearForceAllTime }) {
             </h2>
           </div>
           <p style={{ fontFamily:"'DM Sans', sans-serif", fontSize:13, color:T.textMuted, marginLeft:12 }}>
-            {showWeekly ? "Week 14, 2026 — D2 D0–D10 ₹773 Cr · D11 Boxoffy call ₹65–70 Cr · PHM India ₹4.88 Cr" : "Top Indian films by worldwide gross · Industry tracking data"}
+            {showWeekly ? "Week 13, 2026 — D0–D7 ~₹562 Cr nett · WW ₹1,006.50 Cr · D7 ~₹50 Cr ⚡ · Ram Navami D8 · Week 1 target ₹620+ Cr" : "Top Indian films by worldwide gross · Industry tracking data"}
           </p>
         </div>
         {topFilm && (
@@ -4011,16 +4012,16 @@ function BoxOfficeSection({ onNavigate, forceAllTime, onClearForceAllTime }) {
               ● LIVE
             </span>
             <span style={{ fontFamily:"'DM Sans', sans-serif", fontSize:11, color:T.textMuted }}>
-              Week 14 · Mar 28, 2026 · D2 D0–D10 ₹773 Cr · D11 Boxoffy ₹65–70 Cr · WW ~₹1,186 Cr
+              Week 13 · Mar 25, 2026 · D0–D7 ~₹562 Cr nett · WW ₹1,006.50 Cr · D7 ~₹50 Cr ⚡ Boxoffy call · Ram Navami D8 🚀
             </span>
             <span style={{ background:"#FEF3C7", border:"1px solid #FCD34D", fontFamily:"'DM Sans', sans-serif", fontSize:10, color:"#92400E", fontWeight:700, padding:"2px 8px", borderRadius:2 }}>
-              ✅ D0–D10 CONFIRMED ₹773 Cr · D10 Sat ₹62.35 Cr ✅ · D11 Boxoffy call ₹65–70 Cr · WW ~₹1,186 Cr · Week 1 projection ₹620+ Cr
+              ✅ D0–D7 CONFIRMED ~₹562 Cr · D7 Wed ~₹50 Cr ⚡ · Ram Navami D8 Thu holiday · WW ₹1,006.50 Cr · Week 1 projection ₹620+ Cr
             </span>
             <span style={{ background:T.surface, border:`1px solid ${T.border}`, fontFamily:"'DM Sans', sans-serif", fontSize:10, color:T.textMid, padding:"2px 8px", borderRadius:2 }}>
               UBS ~₹63 Cr 7-day FLOP · TK OTT JioHotstar TODAY Mar 26 · Kerala Story 2 done ~₹42 Cr
             </span>
             <span style={{ marginLeft:"auto", fontFamily:"'DM Sans', sans-serif", fontSize:10, color:T.textMuted, fontStyle:"italic" }}>
-              Boxoffy Intelligence · Week 14, 2026 · Updated Mar 28 · D0–D10 ₹773 Cr
+              Boxoffy Intelligence · Week 13, 2026 · Updated Mar 24 · D0–D7 ~₹562 Cr
             </span>
           </div>
         </div>
@@ -4580,7 +4581,7 @@ const OTT_CALENDAR = [
 /* OTT Weekly Editorial — updated every Thursday                            */
 const OTT_EDITORIAL = [
   {
-    week:      "Week 14 · Mar 26–29, 2026",
+    week:      "Week 13 · Mar 19–22, 2026",
     headline:  "Prime Video Goes Big. Very Big.",
     subline:   "55 titles, a new theatrical slate, and Farzi S2. Amazon just fired back at Netflix.",
     body:      "Amazon Prime Video's 'It Starts Here' slate event on March 19 was a statement. Farzi Season 2, Panchayat Season 5, Aspirants Season 3 (already live), The Revolutionaries with Bhuvan Bam, Dahaad Season 2, Call Me Bae Season 2 — and a five-film theatrical slate including Rajkummar Rao's Raftaar. The headline from Prime's own data: over half of the most-watched Top 50 non-English titles globally in 2025 came from Prime India. And 25% of their Indian content audience is outside India. That number is the real story — Indian OTT originals are becoming a global export business.",
@@ -5298,7 +5299,7 @@ function HeaderSnapshotCards({ activeSection }) {
             lineHeight:1.1, marginBottom:10, letterSpacing:"-0.01em",
           }}>
             Dhurandhar: The Revenge —{" "}
-            <span style={{ color:T.accent }}>D0–D10 ₹773 Cr. D11 Boxoffy ₹65–70 Cr. WW ~₹1,186 Cr.</span>
+            <span style={{ color:T.accent }}>~₹562 Cr in 6 Days. Week 1 Above ₹600 Cr. WW ₹1,006.50 Cr.</span>
           </div>
           <div style={{ display:"flex", gap:20, flexWrap:"wrap" }}>
             {[
@@ -5306,7 +5307,7 @@ function HeaderSnapshotCards({ activeSection }) {
               { label:"D5 Mon ✅",      val:"₹60 Cr" },
               { label:"D6 Tue ✅",      val:"₹56.55 Cr" },
               { label:"D7 Wed ⚡",      val:"~₹50 Cr" },
-              { label:"WW Gross D0–D10 ✅", val:"~₹1,186 Cr" },
+              { label:"WW Gross",       val:"₹1,006.50 Cr" },
               { label:"NA 4-Day ✅",    val:"$13.5M" },
             ].map(s => (
               <div key={s.label}>
@@ -5362,7 +5363,7 @@ function HeaderSnapshotCards({ activeSection }) {
               lineHeight:1.2, letterSpacing:"-0.01em",
             }}>
               Dhurandhar vs Dhurandhar 2{" "}
-              <span style={{ color:"#2563EB" }}>— D1 ₹838.5 Cr Final vs D2 ₹339.27 Cr (D0–D3) · WW ₹550 Cr</span>
+              <span style={{ color:"#2563EB" }}>— D1 ₹840.20 Cr Lifetime · D2 ₹841 Cr (D0–D11) · D2 crosses D1 in 11 days</span>
             </div>
             <div style={{ fontFamily:"'DM Sans', sans-serif", fontSize:10, color:"#9CA3AF", marginTop:4 }}>
               Day-wise · Week-wise · Budget · Verdict →
@@ -6260,6 +6261,3 @@ export default function App() {
     </div>
   );
 }
-
-
-
