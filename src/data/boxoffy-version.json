@@ -1,14 +1,14 @@
 {
   "version": "3.27",
   "deployedAt": "2026-03-29",
-  "gitCommit": "pending",
-  "appJsxChars": 345797,
+  "gitCommit": "7a63f82",
+  "appJsxChars": 346413,
   "dataFiles": {
     "weekly-commentary.json": {
       "weekNum": "Week 14",
       "dateRange": "Mar 26 – Apr 1, 2026",
-      "lastUpdated": "2026-03-29",
-      "headline": "Dhurandhar Juggernaut Continues — D0–D11 ₹841 Cr"
+      "lastUpdated": "2026-03-27",
+      "headline": "D2 ₹713 Cr D0–D9 · PHM India entry · 2nd weekend"
     },
     "us-bo-weekly.json": {
       "week": "Week 14, 2026",
@@ -17,10 +17,10 @@
       "headline": "PHM $46.8M wk2 · D2 $23M NA · They Will Kill You opens"
     },
     "editorials.json": {
-      "entries": 10,
-      "latest": "दंगल at Ten: The Data, The Doubters, and Why the Arithmetic Ends the Debate",
-      "latestDate": "Mar 26, 2026",
-      "lastUpdated": "2026-03-27"
+      "entries": 11,
+      "latest": "Driver or Multiplier? The Top 20 Bollywood Songs vs Box Office",
+      "latestDate": "Mar 29, 2026",
+      "lastUpdated": "2026-03-29"
     },
     "films.json": {
       "totalFilms": 1015,
@@ -35,10 +35,11 @@
   "articles": {
     "dangal-china-box-office.html": "2026-03-26",
     "dhurandhar2-us-boxoffice.html": "2026-03-25",
-    "dhurandhar-2-box-office.html": "2026-03-29",
+    "dhurandhar-2-box-office.html": "2026-03-28",
     "why-indian-cinema-never-has-a-number-2.html": "2026-03-22",
     "india-all-time-box-office.html": "2026-03-24",
-    "dhurandhar-box-office-d1-vs-d2.html": "2026-03-29"
+    "dhurandhar-box-office-d1-vs-d2.html": "2026-03-28",
+    "bollywood-music-box-office.html": "2026-03-29"
   },
   "changelog": [
     {
@@ -46,14 +47,13 @@
       "date": "2026-03-29",
       "commit": "pending",
       "changes": [
-        "D11 confirmed ₹68 Cr (Sacnilk final) · D0–D11 ₹841 Cr BOI canonical",
-        "D10 updated to ₹62.85 Cr (Sacnilk final, was ₹62.35 early estimate)",
-        "D5 corrected to ₹60 Cr BOI in lede paragraph (was ₹65 Sacnilk — data error fixed)",
-        "WW updated ~₹1,360 Cr · India gross ₹1,000 Cr crossed D11",
-        "D2 crosses D1 lifetime (₹840.20 Cr) in 11 days",
-        "D1 vs D2 card updated — D2 ₹841 Cr (D0–D11) now shown",
-        "weekly-commentary.json Week 14 — D11 final scoreboard, Dhurandhar Juggernaut headline",
-        "App.jsx 18 targeted replacements · zero stale refs"
+        "New article: bollywood-music-box-office.html — Top 20 Bollywood Songs Driver/Multiplier analysis",
+        "D11 confirmed ₹68 Cr · D0–D11 ₹841 Cr BOI · WW ~₹1,360 Cr · India gross ₹1,000 Cr",
+        "D5 fixed to ₹60 Cr BOI · D1 vs D2 card updated",
+        "App.jsx 22 replacements · zero stale refs · 346,413 chars",
+        "weekly-commentary.json Week 14 — Dhurandhar Juggernaut Continues",
+        "editorials.json — new article at [0]",
+        "sitemap.xml — bollywood-music-box-office.html added"
       ]
     },
     {
@@ -112,7 +112,7 @@
   ],
   "_meta": {
     "purpose": "Boxoffy deployed state tracker. Claude reads this at every session start to verify correct baseline before making any edits. Never edit App.jsx without checking appJsxChars matches this file.",
-    "appJsxRule": "Good App.jsx = 345,797 chars (v3.27). If outputs/App.jsx is unavailable or char count is wrong, DO NOT PROCEED — ask PB to run: git checkout 7a63f82 -- src/App.jsx",
-    "updateProtocol": "After every deploy: bump version, update deployedAt, gitCommit, and relevant dataFiles entries."
+    "appJsxRule": "Good App.jsx = 346,239 chars. If outputs/App.jsx is unavailable or char count is wrong, DO NOT PROCEED — ask PB to run: git checkout 7a63f82 -- src/App.jsx",
+    "updateProtocol": "After every deploy: bump version (3.24 → 3.25), update deployedAt, gitCommit, and relevant dataFiles entries."
   }
 }
