@@ -1,8 +1,8 @@
 {
-  "version": "3.27",
-  "deployedAt": "2026-03-29",
+  "version": "3.28",
+  "deployedAt": "2026-03-30",
   "gitCommit": "7a63f82",
-  "appJsxChars": 346413,
+  "appJsxChars": 346300,
   "dataFiles": {
     "weekly-commentary.json": {
       "weekNum": "Week 14",
@@ -30,7 +30,7 @@
   "weeklyUpdate": {
     "weekNum": "Week 14",
     "dateRange": "Mar 26 – Apr 1, 2026",
-    "headline": "D2 D0–D11 ₹841 Cr · Crosses D1 lifetime · India gross ₹1,000 Cr · WW ~₹1,360 Cr"
+    "headline": "D0-D12 ₹867 Cr · D11 ₹68 Cr Sun · D12 ₹25.30 Cr Mon · WW ~₹1,392 Cr"
   },
   "articles": {
     "dangal-china-box-office.html": "2026-03-26",
@@ -42,6 +42,18 @@
     "bollywood-music-box-office.html": "2026-03-29"
   },
   "changelog": [
+    {
+      "version": "3.28",
+      "date": "2026-03-30",
+      "changes": [
+        "App.jsx: Week 13→14, D0-D12 ₹867 Cr, top-right D11/D12/India/WW stats",
+        "App.jsx: sources cleaned to BOI/Sacnilk/Pinkvilla only, no Filmibeat/Republic/TheWeek",
+        "D1 vs D2 page: D5-D12 bars filled with BOI data, week table W1/W2 confirmed",
+        "D1 vs D2 page: hero stats ₹867 Cr / ~₹1,392 Cr WW updated",
+        "weekly-commentary.json: Week 14 ₹867 Cr confirmed",
+        "us-bo-weekly.json: Week 14 present with $23M+ D2 NA record"
+      ]
+    },
     {
       "version": "3.27",
       "date": "2026-03-29",

@@ -68,13 +68,13 @@ body{background:var(--bg);color:var(--text);font-family:"DM Sans",sans-serif;-we
 .artist-card-name{position:absolute;bottom:0;left:0;right:0;padding:14px 12px 10px}
 .acn-title{font-family:"Barlow Condensed",sans-serif;font-weight:900;font-size:14px;color:#fff;letter-spacing:.02em;line-height:1.1}
 .acn-role{font-family:"IBM Plex Mono",monospace;font-size:8px;color:rgba(255,255,255,.5);letter-spacing:.1em;text-transform:uppercase;margin-top:2px}
-.artist-placeholder{width:100%;height:100%;background:linear-gradient(135deg,var(--surface),var(--card));display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px}
-.artist-initials{font-family:"Archivo Black",sans-serif;font-size:36px;color:rgba(255,255,255,.12)}
+.artist-placeholder{width:100%;height:100%;background:linear-gradient(135deg,#14141E,#1E1E2E);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px}
+.artist-initials{font-family:"Archivo Black",sans-serif;font-size:42px;color:rgba(255,255,255,.25)}
 @media(max-width:768px){.artist-row{grid-template-columns:repeat(3,1fr)}}
 
 /* STREAMING BADGES */
 .streaming-bar{background:var(--surface);border-bottom:1px solid var(--rule);padding:16px 40px}
-.streaming-bar-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.streaming-bar-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
 .streaming-lbl{font-family:"IBM Plex Mono",monospace;font-size:9px;color:var(--muted);letter-spacing:.14em;text-transform:uppercase;margin-right:4px}
 .svc-badge{display:inline-flex;align-items:center;gap:5px;padding:5px 12px;border-radius:20px;font-family:"DM Sans",sans-serif;font-size:11px;font-weight:700;letter-spacing:.02em;white-space:nowrap}
 .svc-spotify{background:rgba(29,185,84,.15);color:#1DB954;border:1px solid rgba(29,185,84,.3)}
@@ -194,13 +194,80 @@ footer{background:var(--bg);border-top:1px solid var(--rule);padding:20px 40px;d
 .flink{font-size:11px;color:#555;text-decoration:none}
 .flink:hover{color:#fff}
 
+/* ── MOBILE RESPONSIVE ── */
+@media(max-width:900px){
+  .hero{grid-template-columns:1fr}
+  .hero-right{display:none}
+}
+@media(max-width:768px){
+  .artist-row{grid-template-columns:repeat(3,1fr)}
+}
 @media(max-width:640px){
-  .nav,.sharebar,footer{padding-left:20px;padding-right:20px}
-  .hero-inner,.artist-gallery,.streaming-bar-inner{padding-left:20px;padding-right:20px}
-  .content{padding:40px 20px 72px}
-  .integrated-section{padding:24px 20px}
-  .social-section{padding:24px 20px}
-  .hero-stats{gap:20px}
+  /* Nav */
+  .nav,.sharebar,footer{padding-left:16px;padding-right:16px}
+  .nav-links{gap:14px}
+  .nav-links a{font-size:10px}
+  /* Hero */
+  .hero-inner{padding:40px 16px 0}
+  .hero-title{font-size:clamp(36px,9vw,52px);letter-spacing:-.025em}
+  .hero-dek{font-size:14px}
+  .hero-stats{gap:16px;flex-wrap:wrap}
+  .hero-stat-val{font-size:24px}
+  /* Artist gallery */
+  .artist-gallery{padding:0 16px 24px}
+  .artist-row{grid-template-columns:repeat(2,1fr)}
+  /* Streaming bar */
+  .streaming-bar{padding:12px 16px}
+  .streaming-bar-inner{gap:6px}
+  .svc-badge{font-size:10px;padding:4px 9px}
+  /* Content */
+  .content{padding:32px 16px 64px}
+  .intro-para{font-size:17px}
+  .intro-para::first-letter{font-size:64px;margin-right:6px}
+  .prose p{font-size:14px;line-height:1.8}
+  /* Section labels */
+  h2.sec,.sec{margin:40px 0 20px;font-size:8px}
+  /* Framework */
+  .fw-row{grid-template-columns:1fr}
+  .fw-card{padding:20px 18px}
+  /* Pull quotes */
+  .pq{padding-left:14px;margin:24px 0}
+  .pq-text{font-size:18px}
+  /* Song cards */
+  .song-card-inner{grid-template-columns:52px 1fr}
+  .song-rank{min-height:auto;padding:16px 6px}
+  .rank-num{font-size:24px}
+  .song-body-wrap{padding:12px 14px}
+  .song-title-text{font-size:15px}
+  .song-film-text{font-size:10px}
+  .stats{flex-wrap:wrap}
+  .stat{min-width:calc(50% - 1px);padding:9px 10px}
+  .stat-v{font-size:15px}
+  .song-analysis-text{font-size:12px;line-height:1.7}
+  .song-callout{padding:9px 14px;font-size:10px;margin:8px -14px -12px}
+  /* Social section */
+  .social-section{padding:24px 18px;margin:32px 0}
+  .social-q{font-size:16px}
+  /* Findings */
+  .findings{grid-template-columns:1fr}
+  .fn{font-size:44px}
+  /* Scene callouts */
+  .dhurandhar-scenes{grid-template-columns:1fr !important}
+  /* Inline share bars */
+  .inline-share{padding:12px 14px}
+  /* Conclusion */
+  .conclusion-box{padding:24px 18px}
+  .conclusion-box h2{font-size:clamp(20px,5vw,28px)}
+  /* Related */
+  .related{grid-template-columns:1fr 1fr}
+  /* Footer */
+  footer{padding:16px;flex-direction:column;text-align:center;gap:10px}
+}
+@media(max-width:420px){
+  .artist-row{grid-template-columns:repeat(2,1fr)}
+  .song-card-inner{grid-template-columns:44px 1fr}
+  .rank-num{font-size:20px}
+  .related{grid-template-columns:1fr}
 }
 </style>
 <script type="application/ld+json">
@@ -308,7 +375,7 @@ footer{background:var(--bg);border-top:1px solid var(--rule);padding:20px 40px;d
 
 </div>
 
-<div style="background:#F2EDE6;border:1px solid #E0DBD3;padding:14px 20px;margin:40px 0;display:flex;align-items:center;gap:10px;flex-wrap:wrap">
+<div class="inline-share" style="background:#F2EDE6;border:1px solid #E0DBD3;padding:14px 20px;margin:40px 0;display:flex;align-items:center;gap:10px;flex-wrap:wrap">
   <span style="font-family:'IBM Plex Mono',monospace;font-size:9px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#888;flex-shrink:0;margin-right:4px">Share</span>
   <a href="#" onclick="this.href='https://api.whatsapp.com/send?text='+encodeURIComponent(document.title+' — '+window.location.href);return true" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;background:#25D366;color:#fff;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:10px;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;padding:6px 13px;border-radius:2px">WhatsApp</a>
   <a href="#" onclick="this.href='https://twitter.com/intent/tweet?text='+encodeURIComponent(document.title)+'&url='+encodeURIComponent(window.location.href)+'&via=boxoffy';return true" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;background:#000;color:#fff;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:10px;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;padding:6px 13px;border-radius:2px;border:1px solid #333">Post on X</a>
@@ -563,7 +630,7 @@ footer{background:var(--bg);border-top:1px solid var(--rule);padding:20px 40px;d
       </div>
     </div>
   </div>
-<div style="background:#F2EDE6;border:1px solid #E0DBD3;padding:14px 20px;margin:40px 0;display:flex;align-items:center;gap:10px;flex-wrap:wrap">
+<div class="inline-share" style="background:#F2EDE6;border:1px solid #E0DBD3;padding:14px 20px;margin:40px 0;display:flex;align-items:center;gap:10px;flex-wrap:wrap">
   <span style="font-family:'IBM Plex Mono',monospace;font-size:9px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#888;flex-shrink:0;margin-right:4px">Share</span>
   <a href="#" onclick="this.href='https://api.whatsapp.com/send?text='+encodeURIComponent(document.title+' — '+window.location.href);return true" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;background:#25D366;color:#fff;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:10px;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;padding:6px 13px;border-radius:2px">WhatsApp</a>
   <a href="#" onclick="this.href='https://twitter.com/intent/tweet?text='+encodeURIComponent(document.title)+'&url='+encodeURIComponent(window.location.href)+'&via=boxoffy';return true" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;background:#000;color:#fff;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:10px;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;padding:6px 13px;border-radius:2px;border:1px solid #333">Post on X</a>
@@ -714,7 +781,7 @@ footer{background:var(--bg);border-top:1px solid var(--rule);padding:20px 40px;d
       </div>
     </div>
   </div>
-<div style="background:#F2EDE6;border:1px solid #E0DBD3;padding:14px 20px;margin:40px 0;display:flex;align-items:center;gap:10px;flex-wrap:wrap">
+<div class="inline-share" style="background:#F2EDE6;border:1px solid #E0DBD3;padding:14px 20px;margin:40px 0;display:flex;align-items:center;gap:10px;flex-wrap:wrap">
   <span style="font-family:'IBM Plex Mono',monospace;font-size:9px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#888;flex-shrink:0;margin-right:4px">Share</span>
   <a href="#" onclick="this.href='https://api.whatsapp.com/send?text='+encodeURIComponent(document.title+' — '+window.location.href);return true" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;background:#25D366;color:#fff;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:10px;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;padding:6px 13px;border-radius:2px">WhatsApp</a>
   <a href="#" onclick="this.href='https://twitter.com/intent/tweet?text='+encodeURIComponent(document.title)+'&url='+encodeURIComponent(window.location.href)+'&via=boxoffy';return true" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;background:#000;color:#fff;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:10px;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;padding:6px 13px;border-radius:2px;border:1px solid #333">Post on X</a>
@@ -831,14 +898,13 @@ footer{background:var(--bg);border-top:1px solid var(--rule);padding:20px 40px;d
   </div>
 
   <!-- Two scene callouts side by side -->
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:3px;margin-top:4px">
+  <div class="dhurandhar-scenes" style="display:grid;grid-template-columns:1fr 1fr;gap:3px;margin-top:4px">
 
     <!-- Dhurandhar 1 — Bike Chase -->
     <div style="background:#111420;overflow:hidden">
       <div style="position:relative;aspect-ratio:16/9;overflow:hidden;background:#0a0a14">
-        <img id="still-d1" src="" alt="Dhurandhar bike chase scene" 
-          style="width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .4s"
-          onload="this.style.opacity='0.8'">
+        <img id="still-d1" src="https://image.tmdb.org/t/p/w780/8FHOtUpNIk5ZPEay2N2EY5lrxkv.jpg" alt="Dhurandhar"
+          style="width:100%;height:100%;object-fit:cover;opacity:0.75">
         <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(8,8,20,.95) 0%,rgba(8,8,20,.3) 60%,transparent 100%)"></div>
         <div style="position:absolute;top:10px;left:12px">
           <span style="font-family:'IBM Plex Mono',monospace;font-size:8px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:3px 8px;background:rgba(245,158,11,.2);color:#F59E0B;border:1px solid rgba(245,158,11,.3)">Dhurandhar · 2025</span>
@@ -858,9 +924,8 @@ footer{background:var(--bg);border-top:1px solid var(--rule);padding:20px 40px;d
     <!-- Dhurandhar 2 — Opening Action Block -->
     <div style="background:#111420;overflow:hidden">
       <div style="position:relative;aspect-ratio:16/9;overflow:hidden;background:#0a0a14">
-        <img id="still-d2" src="" alt="Dhurandhar 2 Ranveer Singh action scene"
-          style="width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .4s"
-          onload="this.style.opacity='0.8'">
+        <img id="still-d2" src="https://image.tmdb.org/t/p/w780/ov8vrRLZGoXHpYjSY9Vpv1tHJX7.jpg" alt="Dhurandhar 2"
+          style="width:100%;height:100%;object-fit:cover;opacity:0.75">
         <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(8,8,20,.95) 0%,rgba(8,8,20,.3) 60%,transparent 100%)"></div>
         <div style="position:absolute;top:10px;left:12px">
           <span style="font-family:'IBM Plex Mono',monospace;font-size:8px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:3px 8px;background:rgba(239,68,68,.15);color:#EF4444;border:1px solid rgba(239,68,68,.25)">Dhurandhar: The Revenge · 2026</span>
@@ -881,7 +946,7 @@ footer{background:var(--bg);border-top:1px solid var(--rule);padding:20px 40px;d
   <div style="padding:12px 0 0;font-size:11px;color:rgba(255,255,255,.25);font-style:italic">Images: TMDB · © Jio Studios &amp; B62 Studios</div>
 </div>
 
-<div style="background:#F2EDE6;border:1px solid #E0DBD3;padding:14px 20px;margin:40px 0;display:flex;align-items:center;gap:10px;flex-wrap:wrap">
+<div class="inline-share" style="background:#F2EDE6;border:1px solid #E0DBD3;padding:14px 20px;margin:40px 0;display:flex;align-items:center;gap:10px;flex-wrap:wrap">
   <span style="font-family:'IBM Plex Mono',monospace;font-size:9px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#888;flex-shrink:0;margin-right:4px">Share</span>
   <a href="#" onclick="this.href='https://api.whatsapp.com/send?text='+encodeURIComponent(document.title+' — '+window.location.href);return true" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;background:#25D366;color:#fff;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:10px;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;padding:6px 13px;border-radius:2px">WhatsApp</a>
   <a href="#" onclick="this.href='https://twitter.com/intent/tweet?text='+encodeURIComponent(document.title)+'&url='+encodeURIComponent(window.location.href)+'&via=boxoffy';return true" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;background:#000;color:#fff;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:10px;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;padding:6px 13px;border-radius:2px;border:1px solid #333">Post on X</a>
@@ -1010,7 +1075,7 @@ footer{background:var(--bg);border-top:1px solid var(--rule);padding:20px 40px;d
 </div>
 
 <!-- CONCLUSION -->
-<div style="margin:56px 0 0;background:#fff;border:1px solid #E0DBD3;border-top:4px solid #EF4444;padding:40px 44px">
+<div class="conclusion-box" style="margin:56px 0 0;background:#fff;border:1px solid #E0DBD3;border-top:4px solid #EF4444;padding:40px 44px">
 
   <div style="font-family:'IBM Plex Mono',monospace;font-size:9px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#EF4444;margin-bottom:18px">Boxoffy Closing Take</div>
 
@@ -1103,21 +1168,6 @@ async function loadArtist(a){
 }
 artists.forEach(loadArtist);
 
-// Load movie stills for Dhurandhar scene callouts
-async function loadMovieStill(movieId, imgId, preferIndex) {
-  try {
-    const r = await fetch(`https://api.themoviedb.org/3/movie/${movieId}/images?language=en`,
-      {headers:{"Authorization":"Bearer "+TK,"Accept":"application/json"}});
-    const d = await r.json();
-    const backdrops = (d.backdrops||[]).filter(b=>b.file_path);
-    if(!backdrops.length) return;
-    const bd = backdrops[Math.min(preferIndex, backdrops.length-1)];
-    const el = document.getElementById(imgId);
-    if(el) el.src = "https://image.tmdb.org/t/p/w780" + bd.file_path;
-  } catch(e){}
-}
-loadMovieStill(1291608, "still-d1", 2);
-loadMovieStill(1582770, "still-d2", 1);
 </script>
 </body>
 </html>

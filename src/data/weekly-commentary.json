@@ -2,14 +2,14 @@
   {
     "weekNum": "Week 14",
     "dateRange": "Mar 26 – Apr 1, 2026",
-    "headline": "Dhurandhar Juggernaut Continues",
-    "subline": "D0–D11 ₹841 Cr nett (BOI) · D11 ₹68 Cr ✅ · D2 crosses D1 lifetime in 11 days · India gross ₹1,000 Cr · WW ~₹1,360 Cr",
+    "headline": "Dhurandhar Juggernaut Continues — Eyes ₹1,000 Cr Nett",
+    "subline": "D0–D12 ₹867 Cr nett (BOI) · D12 ₹25.30 Cr Mon ✅ · D11 ₹68 Cr Sun ✅ · WW ~₹1,392 Cr · ₹1,000 Cr nett in sight",
     "status": "current",
     "scoreboard": [
       {
         "film": "Dhurandhar: The Revenge",
-        "week": "Week 2 — D11 confirmed",
-        "collection": "D0–D11 ₹841 Cr nett (BOI) · D10 ₹62.85 Cr · D11 ₹68 Cr · WW ~₹1,360 Cr · India gross crossed ₹1,000 Cr on D11",
+        "week": "Week 2 — D12 confirmed",
+        "collection": "D0–D12 ₹867 Cr nett (BOI) · D11 ₹68 Cr · D12 ₹25.30 Cr · WW ~₹1,392 Cr",
         "verdict": "ALL-TIME BLOCKBUSTER"
       },
       {
@@ -36,33 +36,26 @@
         "name": "Box Office India",
         "handle": "@boxofficeindia",
         "color": "#1A3A6B",
-        "take": "D5 ₹60 Cr canonical · D0–D11 ₹841 Cr · D10 ₹62.85 Cr · D11 ₹68 Cr confirmed",
+        "take": "D5 ₹60 Cr canonical · D0–D12 ~₹866 Cr · D11 ₹68 Cr · D12 ₹25.30 Cr · WW ~₹1,392 Cr",
         "type": "trade"
       },
       {
         "name": "Sacnilk",
         "handle": "@SacnilkEntmt",
         "color": "#E8631A",
-        "take": "D11 final ₹68.10 Cr · D0–D11 India gross ₹1,011.95 Cr · WW ~₹1,360 Cr · PHM D1 ₹2.25 Cr / D2 ₹2.63 Cr",
+        "take": "D12 final ₹25.30 Cr · D0–D12 ₹872 Cr (Sacnilk incl. D5 ₹65 Cr) · BOI call ₹867 Cr (D5 ₹60 Cr) · WW ~₹1,392 Cr",
         "type": "trade"
       },
       {
         "name": "Pinkvilla",
         "handle": "@pinkvilla",
         "color": "#E91E8C",
-        "take": "PHM extended OW ₹9–11 Cr · D2 D10 occupancy confirmed 44.8% · D11 occupancy 48.5%",
-        "type": "trade"
-      },
-      {
-        "name": "Deadline / Boxoffice Pro",
-        "handle": "@DEADLINE",
-        "color": "#1A1A2E",
-        "take": "PHM Wkd 2 confirmed $46.8M · D2 NA running $23M+ · beats Baahubali 2 $22M NA lifetime",
+        "take": "PHM India OW ₹9.75 Cr final · D12 IPL dip expected · D2 eyes KGF Chapter 2 lifetime (₹859.7 Cr nett)",
         "type": "trade"
       }
     ],
-    "interval_take": "Dhurandhar: The Revenge crossed Dhurandhar 1's lifetime collection (₹840.20 Cr) on its 2nd Sunday — Day 11. India gross crossed ₹1,000 Cr the same day. The second weekend delivered ₹172.60 Cr (D9 ₹41.75 + D10 ₹62.85 + D11 ₹68 Cr) — more than some films make in their entire run. In North America, D2 has crossed Baahubali 2's all-time NA collection at $23M, becoming the highest-grossing Indian film ever in that market.",
-    "nextWeek": "D12 Mon Mar 30 · ₹1,000 Cr India nett target by Wed–Thu Apr 1–2 · PHM India OW final locks Monday · IPL headwind from evening slots · No major Hindi release — D2 has clear screens through Week 3"
+    "interval_take": "D12 Monday came in at ₹25.30 Cr — a natural dip as IPL 2026 began and the second weekday cycle settled. D0–D12 India nett stands at ₹867 Cr on BOI basis (Sacnilk calculates ₹872 Cr using D5 ₹65 Cr — Boxoffy takes BOI's ₹60 Cr). KGF Chapter 2's India lifetime (₹859.7 Cr nett) has been passed. ₹1,000 Cr nett is the next milestone — at D8-D12 averaging ₹49.5 Cr/day, the film needs 3–4 more strong days. WW stands at ~₹1,392 Cr. NA has already broken Baahubali 2's all-time Indian film record at $23M+. D2 is now the #2 Hindi film of all time in India nett behind Pathaan (₹543 Cr? No) — actually #1 Hindi film of all time.",
+    "nextWeek": "D13 Tue + D14 Wed key — ₹1,000 Cr India nett target by Thu Apr 2. IPL headwind manageable on weekdays. D2 eyes Pathaan overseas record. No new major Hindi competition until mid-April."
   },
   {
     "weekNum": "Week 13",
