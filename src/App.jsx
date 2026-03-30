@@ -3686,8 +3686,8 @@ function BoxOfficeSection({ onNavigate, forceAllTime, onClearForceAllTime }) {
                   letterSpacing:"0.14em", textTransform:"uppercase",
                   color:T.accent, background:"#FEE2E2",
                   padding:"2px 8px", borderRadius:2,
-                }}>WEEK 13 · LEAD STORY</span>
-                <span style={{ fontFamily:"'DM Sans', sans-serif", fontSize:10, color:T.textMuted }}>Mon, 24 Mar 2026</span>
+                }}>WEEK 14 · LEAD STORY</span>
+                <span style={{ fontFamily:"'DM Sans', sans-serif", fontSize:10, color:T.textMuted }}>Mon, 30 Mar 2026</span>
               </div>
               <div style={{
                 fontFamily:"'Barlow Condensed', sans-serif",
@@ -3708,23 +3708,7 @@ function BoxOfficeSection({ onNavigate, forceAllTime, onClearForceAllTime }) {
               </div>
             </div>
 
-            {/* Right — 4 key numbers, static, clean */}
-            <div style={{ display:"flex", gap:0, borderLeft:`1px solid ${T.border}`, flexShrink:0 }}>
-              {[
-                { label:"D11 Nett (Sun) ✅", val:"₹68 Cr",      sub:"Mar 29 · Sacnilk confirmed" },
-                { label:"D12 Nett (Mon) ✅", val:"₹25.30 Cr",  sub:"Mar 30 · BOI / Sacnilk" },
-                { label:"India Nett D0–D12 ✅", val:"₹867 Cr",   sub:"Week 14 · All-Time Blockbuster" },
-                { label:"WW Gross (D0–D12)",   val:"~₹1,392 Cr", sub:"Boxoffy estimate · Overseas ~₹525 Cr" },
-              ].map((s,i) => (
-                <div key={i} style={{
-                  padding:"0 18px", borderRight:`1px solid ${T.border}`, textAlign:"right",
-                }}>
-                  <div style={{ fontFamily:"'Barlow Condensed', sans-serif", fontWeight:800, fontSize:19, color:T.accent, lineHeight:1 }}>{s.val}</div>
-                  <div style={{ fontFamily:"'DM Sans', sans-serif", fontSize:9, color:T.textMuted, marginTop:3, letterSpacing:"0.08em", textTransform:"uppercase" }}>{s.label}</div>
-                  <div style={{ fontFamily:"'DM Sans', sans-serif", fontSize:10, color:T.textMid, marginTop:1 }}>{s.sub}</div>
-                </div>
-              ))}
-            </div>
+            
           </div>
 
           {/* ── ARTICLE MODAL — fully light, editorial ─────────────── */}
@@ -3791,7 +3775,7 @@ function BoxOfficeSection({ onNavigate, forceAllTime, onClearForceAllTime }) {
                     lineHeight:1.8, margin:0,
                     borderLeft:`3px solid ${T.border}`, paddingLeft:16,
                   }}>
-                    Dhurandhar: The Revenge has delivered the greatest opening run in Hindi cinema history. ₹102.55 Cr D1. ₹113 Cr Eid Saturday. ₹114.85 Cr Sunday — three days above ₹100 Cr nett, a first for any Indian film. D5 Mon ₹65 Cr (highest ever Bollywood first weekday). D6 Tue ₹56.55 Cr. D0–D12 ₹867 Cr India nett. WW ~₹1,392 Cr. D7 Wednesday pending — D7 ₹48.75 Cr ✅. Ram Navami holiday D8 expected to spike. ALL-TIME BLOCKBUSTER — ₹867 Cr in 13 days.
+                    Dhurandhar: The Revenge has delivered the greatest opening run in Hindi cinema history. ₹102.55 Cr D1. ₹113 Cr Eid Saturday. ₹114.85 Cr Sunday — three days above ₹100 Cr nett, a first for any Indian film. D5 Mon ₹65 Cr (highest ever Bollywood first weekday). D6 Tue ₹56.55 Cr. D0–D12 ₹867 Cr India nett. D11 ₹68 Cr (Sun) ✅ · D12 ₹25.30 Cr (Mon) ✅ — first major Monday dip as IPL 2026 began. ₹1,000 Cr nett target in sight. WW ~₹1,392 Cr. ALL-TIME BLOCKBUSTER.
                   </p>
 
                   {/* BMS Advance Data — clean table style */}
@@ -4405,9 +4389,9 @@ function NewsSection({ category }) {
    ─────────────────────────────────────────────────────────────────────────── */
 
 const OTT_META = {
-  updatedDate: "Mar 25, 2026",
-  weekRange:   "Mar 19–24, 2026",
-  nextUpdate:  "Mar 26, 2026",
+  updatedDate: "Mar 30, 2026",
+  weekRange:   "Mar 24–30, 2026",
+  nextUpdate:  "Apr 6, 2026",
 };
 
 /* Netflix India — Official Tudum weekly chart (most recent: 2/2–2/8)
@@ -4418,16 +4402,16 @@ const OTT_NETFLIX = {
     source: "Netflix Tudum (Official)",
     sourceUrl: "https://www.netflix.com/tudum/top10/india/films",
     films: [
-      { rank:1,  title:"Dhurandhar",              lang:"Hindi",   weeks:9,  views:"23M total",  note:"101.3M hrs · India's highest for a Hindi film ever", hot:true },
-      { rank:2,  title:"Accused",                  lang:"Hindi",   weeks:3,  views:"15M+ wk 2",  note:"Top 10 in 72 countries · Karan Johar production", hot:true },
-      { rank:3,  title:"Made in Korea",            lang:"Tamil",   weeks:2,  views:"~4M",        note:"Tamil-Korean crossover · Priyanka Mohan" },
-      { rank:4,  title:"Tere Ishk Mein",           lang:"Hindi",   weeks:7,  views:"~3.5M",      note:"7 consecutive weeks · Subcontinent hold" },
-      { rank:5,  title:"Jolly LLB 3",              lang:"Hindi",   weeks:10, views:"~3M",        note:"10-week marathon · Akshay Kumar courtroom comedy" },
-      { rank:6,  title:"Mardaani 2",               lang:"Hindi",   weeks:5,  views:"~2.5M",      note:"Rani Mukerji franchise library resurge" },
-      { rank:7,  title:"De De Pyaar De 2",         lang:"Hindi",   weeks:8,  views:"~2M",        note:"8 weeks · India + Bangladesh + Pakistan" },
-      { rank:8,  title:"Champion",                 lang:"Korean",  weeks:3,  views:"~1.8M",      note:"Korean action drama trending India" },
-      { rank:9,  title:"Akhanda 2: Thaandavam",    lang:"Telugu",  weeks:5,  views:"~1.5M",      note:"Telugu mass blockbuster · Balakrishna" },
-      { rank:10, title:"Haq",                      lang:"Hindi",   weeks:6,  views:"~1.2M",      note:"Hindi legal drama · 6-week run" },
+      { rank:1,  title:"Dhurandhar", trend:"same",              lang:"Hindi",   weeks:9,  views:"23M total",  note:"101.3M hrs · India's highest for a Hindi film ever", hot:true },
+      { rank:2,  title:"Accused", trend:"up",                  lang:"Hindi",   weeks:3,  views:"15M+ wk 2",  note:"Top 10 in 72 countries · Karan Johar production", hot:true },
+      { rank:3,  title:"Made in Korea", trend:"new",            lang:"Tamil",   weeks:2,  views:"~4M",        note:"Tamil-Korean crossover · Priyanka Mohan" },
+      { rank:4,  title:"Tere Ishk Mein", trend:"down",           lang:"Hindi",   weeks:7,  views:"~3.5M",      note:"7 consecutive weeks · Subcontinent hold" },
+      { rank:5,  title:"Jolly LLB 3", trend:"down",              lang:"Hindi",   weeks:10, views:"~3M",        note:"10-week marathon · Akshay Kumar courtroom comedy" },
+      { rank:6,  title:"Mardaani 2", trend:"down",               lang:"Hindi",   weeks:5,  views:"~2.5M",      note:"Rani Mukerji franchise library resurge" },
+      { rank:7,  title:"De De Pyaar De 2", trend:"down",         lang:"Hindi",   weeks:8,  views:"~2M",        note:"8 weeks · India + Bangladesh + Pakistan" },
+      { rank:8,  title:"Champion", trend:"same",                 lang:"Korean",  weeks:3,  views:"~1.8M",      note:"Korean action drama trending India" },
+      { rank:9,  title:"Akhanda 2: Thaandavam", trend:"down",    lang:"Telugu",  weeks:5,  views:"~1.5M",      note:"Telugu mass blockbuster · Balakrishna" },
+      { rank:10, title:"Haq", trend:"down",                      lang:"Hindi",   weeks:6,  views:"~1.2M",      note:"Hindi legal drama · 6-week run" },
     ],
   },
   shows: {
@@ -4435,16 +4419,16 @@ const OTT_NETFLIX = {
     source: "Netflix Tudum (Official)",
     sourceUrl: "https://www.netflix.com/tudum/top10/india/tv",
     films: [
-      { rank:1,  title:"One Piece Season 2",       lang:"Intl · Dubbed", weeks:1, views:"Top 10 · 64 countries", note:"Luffy's Grand Line journey begins · March 10 premiere", hot:true },
-      { rank:2,  title:"Virgin River Season 7",    lang:"Intl",    weeks:2,  views:"Global #1",   note:"Netflix's most consistent romance hit" },
-      { rank:3,  title:"Hello Bachhon",            lang:"Hindi",   weeks:2,  views:"~5M",        note:"TVF · Inspired by Alakh Pandey · 6 March premiere", hot:true },
-      { rank:4,  title:"Boyfriend on Demand",      lang:"Korean",  weeks:2,  views:"~4M",        note:"Jisoo (BLACKPINK) · 6 March premiere · massive fan pre-save" },
-      { rank:5,  title:"Aspirants Season 3",       lang:"Hindi",   weeks:1,  views:"~3.5M",      note:"TVF · March 13 · UPSC drama returns", hot:true },
-      { rank:6,  title:"Panchayat Season 4",       lang:"Hindi",   weeks:5,  views:"~3M",        note:"5-week India run · streaming heartland" },
-      { rank:7,  title:"Squid Game Season 3",      lang:"Korean",  weeks:4,  views:"~2.8M",      note:"Korean thriller global hold" },
-      { rank:8,  title:"The Night Agent S3",       lang:"Intl",    weeks:3,  views:"~2.5M",      note:"American thriller maintaining India chart" },
-      { rank:9,  title:"Family Man Season 3",      lang:"Hindi",   weeks:8,  views:"~2M",        note:"Manoj Bajpayee · 8 weeks of India chart presence" },
-      { rank:10, title:"Firebreak",                lang:"Spanish", weeks:4,  views:"~1.5M",      note:"#1 in 26 countries globally · Spain survival drama" },
+      { rank:1,  title:"One Piece Season 2", trend:"same",       lang:"Intl · Dubbed", weeks:1, views:"Top 10 · 64 countries", note:"Luffy's Grand Line journey begins · March 10 premiere", hot:true },
+      { rank:2,  title:"Virgin River Season 7", trend:"down",    lang:"Intl",    weeks:2,  views:"Global #1",   note:"Netflix's most consistent romance hit" },
+      { rank:3,  title:"Hello Bachhon", trend:"new",            lang:"Hindi",   weeks:2,  views:"~5M",        note:"TVF · Inspired by Alakh Pandey · 6 March premiere", hot:true },
+      { rank:4,  title:"Boyfriend on Demand", trend:"new",      lang:"Korean",  weeks:2,  views:"~4M",        note:"Jisoo (BLACKPINK) · 6 March premiere · massive fan pre-save" },
+      { rank:5,  title:"Aspirants Season 3", trend:"up",       lang:"Hindi",   weeks:1,  views:"~3.5M",      note:"TVF · March 13 · UPSC drama returns", hot:true },
+      { rank:6,  title:"Panchayat Season 4", trend:"down",       lang:"Hindi",   weeks:5,  views:"~3M",        note:"5-week India run · streaming heartland" },
+      { rank:7,  title:"Squid Game Season 3", trend:"up",      lang:"Korean",  weeks:4,  views:"~2.8M",      note:"Korean thriller global hold" },
+      { rank:8,  title:"The Night Agent S3", trend:"down",       lang:"Intl",    weeks:3,  views:"~2.5M",      note:"American thriller maintaining India chart" },
+      { rank:9,  title:"Family Man Season 3", trend:"down",      lang:"Hindi",   weeks:8,  views:"~2M",        note:"Manoj Bajpayee · 8 weeks of India chart presence" },
+      { rank:10, title:"Firebreak", trend:"new",                lang:"Spanish", weeks:4,  views:"~1.5M",      note:"#1 in 26 countries globally · Spain survival drama" },
     ],
   },
 };
@@ -4581,7 +4565,7 @@ const OTT_CALENDAR = [
 /* OTT Weekly Editorial — updated every Thursday                            */
 const OTT_EDITORIAL = [
   {
-    week:      "Week 14 · Mar 19–22, 2026",
+    week:      "Week 14 · Mar 24–30, 2026",
     headline:  "Prime Video Goes Big. Very Big.",
     subline:   "55 titles, a new theatrical slate, and Farzi S2. Amazon just fired back at Netflix.",
     body:      "Amazon Prime Video's 'It Starts Here' slate event on March 19 was a statement. Farzi Season 2, Panchayat Season 5, Aspirants Season 3 (already live), The Revolutionaries with Bhuvan Bam, Dahaad Season 2, Call Me Bae Season 2 — and a five-film theatrical slate including Rajkummar Rao's Raftaar. The headline from Prime's own data: over half of the most-watched Top 50 non-English titles globally in 2025 came from Prime India. And 25% of their Indian content audience is outside India. That number is the real story — Indian OTT originals are becoming a global export business.",
@@ -4712,6 +4696,10 @@ function OTTRankingsSection() {
           fontSize: film.rank<=3?20:15, width:24, flexShrink:0, textAlign:"center",
           color: film.rank===1?"#B8860B":film.rank<=3?"#E50914":T.textMuted,
         }}>{film.rank}</div>
+        {film.trend && <div style={{ fontFamily:"'IBM Plex Mono',monospace", fontSize:9, fontWeight:800,
+          color:film.trend==="up"?"#16A34A":film.trend==="down"?"#DC2626":film.trend==="new"?"#2563EB":"#6B7280",
+          letterSpacing:"0em", lineHeight:1, marginTop:1, textAlign:"center",
+        }}>{film.trend==="up"?"↑":film.trend==="down"?"↓":film.trend==="new"?"★":"→"}</div>}
         <div style={{ width:1, height:28, background:T.border, flexShrink:0 }} />
         <div style={{ flex:1, minWidth:0 }}>
           <div style={{ fontFamily:"'Barlow Condensed',sans-serif", fontWeight:isHot?800:700,
