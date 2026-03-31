@@ -27,7 +27,7 @@
 <meta property="og:title" content="Ramayana Part One — Box Office Preview & Opening Predictions | Boxoffy">
 <meta property="og:description" content="Ranbir Kapoor as Ram. Sai Pallavi as Sita. Yash as Ravana. Sunny Deol as Hanuman. Budget ₹835 Cr+. Day 1 India estimate ₹140–160 Cr. Diwali Nov 8, 2026.">
 <meta property="og:url" content="https://boxoffy.com/ramayana-part-one-box-office.html">
-<meta property="og:image" content="https://img.youtube.com/vi/OgXxQizJi7Y/maxresdefault.jpg">
+<meta property="og:image" content="https://boxoffy.com/og-image.png">
 <meta property="og:image:width" content="1280">
 <meta property="og:image:height" content="720">
 <meta property="og:image:alt" content="Ramayana Part One 2026 — Ranbir Kapoor, Sai Pallavi, Yash, Sunny Deol">
@@ -47,7 +47,7 @@
 <meta name="twitter:creator" content="@boxoffy">
 <meta name="twitter:title" content="Ramayana Part One — Day 1 ₹140–160 Cr? Opening Predictions | Boxoffy">
 <meta name="twitter:description" content="Ranbir Kapoor as Ram. Diwali Nov 8, 2026. Budget ₹835 Cr+. Nitesh Tiwari directs. Boxoffy opening estimates, ATP analysis, and Diwali day-wise schedule.">
-<meta name="twitter:image" content="https://img.youtube.com/vi/OgXxQizJi7Y/maxresdefault.jpg">
+<meta name="twitter:image" content="https://boxoffy.com/og-image.png">
 <meta name="twitter:image:alt" content="Ramayana Part One 2026 — Official Teaser Still">
 
 <!-- ═══ STRUCTURED DATA — Movie entity ═══ -->
@@ -77,12 +77,12 @@
     {"@type": "Organization", "name": "Prime Focus Studios"},
     {"@type": "Organization", "name": "Monster Mind Creations"}
   ],
-  "image": "https://img.youtube.com/vi/OgXxQizJi7Y/maxresdefault.jpg",
+  "image": "https://boxoffy.com/og-image.png",
   "trailer": {
     "@type": "VideoObject",
     "name": "Ramayana: The Introduction — Official Teaser",
-    "embedUrl": "https://www.youtube.com/embed/OgXxQizJi7Y",
-    "thumbnailUrl": "https://img.youtube.com/vi/OgXxQizJi7Y/maxresdefault.jpg",
+    "embedUrl": "https://www.youtube.com/@WorldOfRamayana",
+    "thumbnailUrl": "https://boxoffy.com/og-image.png",
     "uploadDate": "2025-07-03"
   },
   "url": "https://boxoffy.com/ramayana-part-one-box-office.html"
@@ -106,7 +106,7 @@
     "url": "https://boxoffy.com",
     "logo": {"@type": "ImageObject", "url": "https://boxoffy.com/og-image.png"}
   },
-  "image": {"@type": "ImageObject", "url": "https://img.youtube.com/vi/OgXxQizJi7Y/maxresdefault.jpg", "width": 1280, "height": 720},
+  "image": {"@type": "ImageObject", "url": "https://boxoffy.com/og-image.png"},
   "mainEntityOfPage": {"@type": "WebPage", "@id": "https://boxoffy.com/ramayana-part-one-box-office.html"},
   "about": {"@type": "Movie", "name": "Ramayana: Part One"}
 }
@@ -232,9 +232,9 @@ body{background:var(--paper);color:var(--ink);font-family:'DM Sans',sans-serif;-
 
 /* HERO POSTER */
 .hero-poster-wrap{position:relative}
-.hero-poster{width:100%;border-radius:4px;overflow:hidden;background:#1a1a14;aspect-ratio:2/3;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 40px rgba(0,0,0,.6);border:1px solid rgba(255,255,255,.08)}
-.hero-poster img{width:100%;height:100%;object-fit:cover;display:block}
-.poster-loading{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:24px}
+.hero-poster{width:100%;border-radius:4px;overflow:hidden;background:#0D0A06;aspect-ratio:2/3;display:flex;align-items:stretch;justify-content:stretch;box-shadow:0 8px 40px rgba(0,0,0,.7),0 0 0 1px rgba(232,148,58,.15);border:none;position:relative}
+.hero-poster img{width:100%;height:100%;object-fit:cover;display:block;position:absolute;inset:0}
+.poster-loading{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0;padding:0;width:100%;height:100%;position:relative;background:linear-gradient(170deg,#1A0F00 0%,#0D0804 40%,#090604 100%)}
 .poster-title-fallback{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:28px;color:rgba(255,255,255,.15);text-align:center;letter-spacing:.04em;text-transform:uppercase;line-height:1.1}
 .release-badge{position:absolute;top:10px;left:10px;background:var(--saffron);color:#fff;font-family:'IBM Plex Mono',monospace;font-size:8px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:3px 8px;border-radius:1px}
 
@@ -514,10 +514,39 @@ footer{background:var(--ink);padding:20px 32px;display:flex;align-items:center;j
     <!-- Right: TMDB poster -->
     <div class="hero-poster-wrap">
       <div class="hero-poster" id="posterWrap">
+        <!-- Designed card — shows if no poster image loads -->
         <div class="poster-loading" id="posterLoading">
-          <div class="poster-title-fallback">RAMAYANA<br>PART ONE</div>
+          <!-- Gradient layers -->
+          <div style="position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 50% 35%,rgba(232,148,58,.18) 0%,transparent 65%),radial-gradient(ellipse 50% 40% at 50% 90%,rgba(139,69,0,.25) 0%,transparent 60%)"></div>
+          <!-- Arrow SVG — Ramayana's iconic symbol -->
+          <svg viewBox="0 0 120 220" style="position:absolute;top:12%;left:50%;transform:translateX(-50%);width:38%;opacity:.9;filter:drop-shadow(0 0 18px rgba(232,148,58,.5))" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="arrowGrad" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#FFF0C0"/>
+                <stop offset="35%" stop-color="#E8943A"/>
+                <stop offset="100%" stop-color="#8B4500"/>
+              </linearGradient>
+            </defs>
+            <!-- Arrow shaft -->
+            <rect x="54" y="30" width="12" height="150" rx="2" fill="url(#arrowGrad)" opacity=".95"/>
+            <!-- Arrowhead -->
+            <polygon points="60,0 85,55 75,48 75,58 45,58 45,48 35,55" fill="url(#arrowGrad)" opacity="1"/>
+            <!-- Tail fletching -->
+            <polygon points="60,210 48,175 60,185 72,175" fill="url(#arrowGrad)" opacity=".7"/>
+            <!-- Notch -->
+            <rect x="52" y="178" width="16" height="8" rx="2" fill="#FFF0C0" opacity=".5"/>
+          </svg>
+          <!-- Bottom text area -->
+          <div style="position:absolute;bottom:0;left:0;right:0;padding:20px 16px 18px;background:linear-gradient(to top,rgba(8,5,2,.98) 0%,rgba(8,5,2,.7) 60%,transparent 100%);text-align:center">
+            <div style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:28px;color:#FFF0C0;letter-spacing:.12em;text-transform:uppercase;line-height:1;margin-bottom:4px;text-shadow:0 2px 12px rgba(232,148,58,.6)">RAMAYANA</div>
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:7.5px;color:rgba(255,240,192,.45);letter-spacing:.22em;text-transform:uppercase;margin-bottom:10px">PART ONE · DIWALI 2026</div>
+            <div style="width:40px;height:1px;background:linear-gradient(90deg,transparent,rgba(232,148,58,.5),transparent);margin:0 auto 10px"></div>
+            <div style="font-family:'DM Sans',sans-serif;font-size:9px;color:rgba(255,240,192,.35);letter-spacing:.06em;line-height:1.6">RANBIR KAPOOR · SAI PALLAVI<br>YASH · SUNNY DEOL</div>
+            <div style="margin-top:8px;font-family:'IBM Plex Mono',monospace;font-size:7px;color:rgba(232,148,58,.4);letter-spacing:.14em;text-transform:uppercase">OUR TRUTH · OUR STORY</div>
+          </div>
         </div>
-        <img id="posterImg" style="display:none" alt="Ramayana Part One poster">
+        <!-- TMDB poster loads here if available -->
+        <img id="posterImg" style="display:none;position:absolute;inset:0;width:100%;height:100%;object-fit:cover" alt="Ramayana Part One 2026 official poster">
       </div>
       <div class="release-badge">Diwali 2026</div>
     </div>
@@ -583,13 +612,46 @@ footer{background:var(--ink);padding:20px 32px;display:flex;align-items:center;j
       <div class="sc-body">A pre-cut version of Ramayana Part One was screened at Cinemark Playa Vista, Los Angeles on February 23, 2026 for a select audience aged 18–60, including film students. Attendees reportedly gave the film an enthusiastic reception — with special praise for its unprecedented VFX scale, performances of the lead cast, and the rooted, authentic approach to the source material. The experience confirmed for the makers that the film's appeal transcends its core Indian audience. The team of Ranbir Kapoor, Nitesh Tiwari, and Namit Malhotra have since been in the US conducting media interactions and exclusive previews as the first international promotional push begins in earnest.</div>
     </div>
 
-    <!-- THE TEASER EMBED -->
+    <!-- THE TEASER — YouTube link card -->
     <section class="sec">
       <div class="sec-label">Ramayana: The Introduction — Official Teaser · Jul 3, 2025</div>
-      <div class="teaser-wrap">
-        <iframe src="https://www.youtube.com/embed/OgXxQizJi7Y?rel=0&modestbranding=1" title="Ramayana: The Introduction — Official Teaser" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-      </div>
-      <div class="teaser-caption">RAMAYANA: THE INTRODUCTION · Official First Glimpse · Jul 3, 2025 · Music: Hans Zimmer + AR Rahman</div>
+
+      <a href="https://www.youtube.com/@WorldOfRamayana" target="_blank" rel="noopener"
+         style="display:block;position:relative;aspect-ratio:16/9;overflow:hidden;background:#0D0A06;border-radius:4px;text-decoration:none;cursor:pointer"
+         onmouseover="this.querySelector('.teaser-overlay').style.opacity='1';this.querySelector('.play-ring').style.transform='scale(1.1)'"
+         onmouseout="this.querySelector('.teaser-overlay').style.opacity='0';this.querySelector('.play-ring').style.transform='scale(1)'">
+        <!-- Background: styled teaser visual using CSS -->
+        <div style="position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 50% 40%,rgba(139,90,20,.35),rgba(8,5,2,.9)),linear-gradient(135deg,#1A0F04,#0D0704 60%,#08050200);display:flex;align-items:center;justify-content:center">
+          <!-- Arrow symbol -->
+          <svg viewBox="0 0 80 150" width="60" opacity=".25" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%)" xmlns="http://www.w3.org/2000/svg">
+            <rect x="36" y="20" width="8" height="100" rx="1" fill="#E8943A"/>
+            <polygon points="40,0 57,38 51,32 51,40 29,40 29,32 23,38" fill="#E8943A"/>
+          </svg>
+          <!-- Title text -->
+          <div style="text-align:center;position:relative;z-index:2">
+            <div style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:clamp(20px,3vw,36px);color:rgba(255,240,192,.75);letter-spacing:.18em;text-transform:uppercase;line-height:1;margin-bottom:6px">RAMAYANA</div>
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:rgba(255,240,192,.35);letter-spacing:.2em;text-transform:uppercase">The Introduction · Jul 3, 2025</div>
+          </div>
+        </div>
+        <!-- Play button overlay -->
+        <div class="teaser-overlay" style="position:absolute;inset:0;background:rgba(0,0,0,.3);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;opacity:0;transition:opacity .2s">
+        </div>
+        <!-- Always-visible play button -->
+        <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px">
+          <div class="play-ring" style="width:68px;height:68px;background:rgba(255,0,0,.85);border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 24px rgba(200,0,0,.5);transition:transform .2s">
+            <svg viewBox="0 0 24 24" width="30" height="30" fill="#fff"><path d="M8 5v14l11-7z"/></svg>
+          </div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:9px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.7)">Watch on YouTube →</div>
+        </div>
+        <!-- Corner label -->
+        <div style="position:absolute;bottom:10px;left:12px;background:rgba(0,0,0,.75);color:rgba(255,255,255,.6);font-family:'IBM Plex Mono',monospace;font-size:8px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:3px 9px;border-radius:1px">World Of Ramayana · Official Channel</div>
+        <!-- YT logo badge -->
+        <div style="position:absolute;top:10px;right:12px;background:#FF0000;border-radius:3px;padding:3px 8px;display:flex;align-items:center;gap:4px">
+          <svg viewBox="0 0 24 24" width="12" height="12" fill="#fff"><path d="M8 5v14l11-7z"/></svg>
+          <span style="font-family:'DM Sans',sans-serif;font-size:9px;font-weight:700;color:#fff;letter-spacing:.04em">YouTube</span>
+        </div>
+      </a>
+      <div class="teaser-caption">RAMAYANA: THE INTRODUCTION · Official First Glimpse · Jul 3, 2025 · Music: Hans Zimmer + AR Rahman · Opens official YouTube channel</div>
     </section>
 
     <!-- ═══ BOXOFFY ESTIMATES ═══ -->
@@ -1350,26 +1412,22 @@ footer{background:var(--ink);padding:20px 32px;display:flex;align-items:center;j
 </footer>
 
 <script>
-// Load poster: YouTube maxres thumbnail as primary, TMDB as upgrade
+// Poster: CSS card is default. Try TMDB silently — if poster exists, overlay it.
 (function(){
-  const img = document.getElementById("posterImg");
-  const loading = document.getElementById("posterLoading");
-  // Use Ramayana teaser YouTube maxres thumbnail — guaranteed to render
-  const ytThumb = "https://img.youtube.com/vi/OgXxQizJi7Y/maxresdefault.jpg";
-  img.src = ytThumb;
-  img.style.objectPosition = "center top";
-  img.onload = () => { loading.style.display = "none"; img.style.display = "block"; };
-  img.onerror = () => {
-    // fallback: hqdefault
-    img.src = "https://img.youtube.com/vi/OgXxQizJi7Y/hqdefault.jpg";
-    img.onload = () => { loading.style.display = "none"; img.style.display = "block"; };
-  };
-  // Attempt TMDB upgrade in background
   const TK = "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2YWM1OTY0NzEyZTA0NGRmMmJjMmFiYzFlMTFlZGMyYyIsIm5iZiI6MTc3Mzg4NTMxMS42MzIsInN1YiI6IjY5YmI1NzdmYjgyMzJhNzc5MjIxZWZjOCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.QxWkqL_4_3PfTnIVgcZYE0zlXQd9M2y5QL-oWNwq6dE";
-  fetch("https://api.themoviedb.org/3/movie/656908?language=en-US",{headers:{"Authorization":"Bearer "+TK}})
-    .then(r=>r.json()).then(d=>{
-      if(d.poster_path){const p=new Image();p.src="https://image.tmdb.org/t/p/w500"+d.poster_path;
-      p.onload=()=>{img.src=p.src;};}}).catch(()=>{});
+  fetch("https://api.themoviedb.org/3/movie/656908?language=en-US",{
+    headers:{"Authorization":"Bearer "+TK,"Accept":"application/json"}
+  }).then(r=>r.json()).then(d=>{
+    if(d.poster_path){
+      const img = document.getElementById("posterImg");
+      const loading = document.getElementById("posterLoading");
+      img.src = "https://image.tmdb.org/t/p/w500" + d.poster_path;
+      img.onload = () => {
+        loading.style.display = "none";
+        img.style.display = "block";
+      };
+    }
+  }).catch(()=>{/* CSS poster remains shown — that's fine */});
 })();
 
 function copyLink(btn) {
