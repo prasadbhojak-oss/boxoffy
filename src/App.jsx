@@ -282,15 +282,15 @@ function SharePanel({ movie, onClose }) {
   const [copied, setCopied] = React.useState(null);
 
   const title   = movie.title || "";
-  const wk      = movie.weeklyCollection > 0 ? "\u20b9" + movie.weeklyCollection + " Cr" : "";
-  const total   = movie.totalCollection  > 0 ? "\u20b9" + movie.totalCollection  + " Cr" : "";
+  const wk      = movie.weeklyCollection > 0 ? "₹" + movie.weeklyCollection + " Cr" : "";
+  const total   = movie.totalCollection  > 0 ? "₹" + movie.totalCollection  + " Cr" : "";
   const verdict = movie.verdict || "";
   const wkNum   = movie.weekNum > 0 ? "Wk " + movie.weekNum : "";
   const url     = "https://boxoffy.com" + (movie.pageUrl ? "/" + movie.pageUrl : "");
 
-  const tX  = title + (wk ? " \u2014 " + wk + " this week" : "") + (total ? " \u00b7 " + total + " total" : "") + (verdict ? ". " + verdict : "") + ". #BoxOffice\n" + url;
-  const tWA = "*" + title + "*" + (wkNum ? " \u00b7 " + wkNum : "") + "\n" + (wk ? "This week: *" + wk + "*\n" : "") + (total ? "Total: *" + total + "*\n" : "") + (verdict ? "Verdict: *" + verdict + "*\n" : "") + "\n" + url;
-  const tIG = title + (wk ? " | " + wk + " this week" : "") + (total ? " | " + total + " total" : "") + (verdict ? "\n\n" + verdict + " \ud83c\udfa6" : "") + "\n\nTrack every rupee \u2192 boxoffy.com\n.\n.\n.\n#BoxOffice #Bollywood #IndianCinema #BoxoffyIndia";
+  const tX  = title + (wk ? " — " + wk + " this week" : "") + (total ? " · " + total + " total" : "") + (verdict ? ". " + verdict : "") + ". #BoxOffice\n" + url;
+  const tWA = "*" + title + "*" + (wkNum ? " · " + wkNum : "") + "\n" + (wk ? "This week: *" + wk + "*\n" : "") + (total ? "Total: *" + total + "*\n" : "") + (verdict ? "Verdict: *" + verdict + "*\n" : "") + "\n" + url;
+  const tIG = title + (wk ? " | " + wk + " this week" : "") + (total ? " | " + total + " total" : "") + (verdict ? "\n\n" + verdict + " \ud83c\udfa6" : "") + "\n\nTrack every rupee → boxoffy.com\n.\n.\n.\n#BoxOffice #Bollywood #IndianCinema #BoxoffyIndia";
   const tTT = title + " just did " + wk + " this week \ud83d\udd25" + (total ? " " + total + " total and " + verdict.toLowerCase() + "." : "") + " Drop the number you predicted \ud83d\udc47 #BoxOffice #Bollywood #" + title.replace(/[^a-zA-Z0-9]/g,"").slice(0,18);
 
   const platforms = [
@@ -4394,175 +4394,166 @@ const OTT_META = {
   nextUpdate:  "Apr 6, 2026",
 };
 
-/* Netflix India — Official Tudum weekly chart (most recent: 2/2–2/8)
-   + March trending from Sacnilk/Zee News confirmed through Mar 17           */
 const OTT_NETFLIX = {
   movies: {
-    weekRange: "Mar 9–15, 2026",
-    source: "Netflix Tudum (Official)",
+    weekRange: "Mar 24–30, 2026",
+    source: "Netflix Tudum (Official) + Zee News · ZeenewsIndia confirmed Mar 24",
     sourceUrl: "https://www.netflix.com/tudum/top10/india/films",
     films: [
-      { rank:1,  title:"Dhurandhar", trend:"same",              lang:"Hindi",   weeks:9,  views:"23M total",  note:"101.3M hrs · India's highest for a Hindi film ever", hot:true },
-      { rank:2,  title:"Accused", trend:"up",                  lang:"Hindi",   weeks:3,  views:"15M+ wk 2",  note:"Top 10 in 72 countries · Karan Johar production", hot:true },
-      { rank:3,  title:"Made in Korea", trend:"new",            lang:"Tamil",   weeks:2,  views:"~4M",        note:"Tamil-Korean crossover · Priyanka Mohan" },
-      { rank:4,  title:"Tere Ishk Mein", trend:"down",           lang:"Hindi",   weeks:7,  views:"~3.5M",      note:"7 consecutive weeks · Subcontinent hold" },
-      { rank:5,  title:"Jolly LLB 3", trend:"down",              lang:"Hindi",   weeks:10, views:"~3M",        note:"10-week marathon · Akshay Kumar courtroom comedy" },
-      { rank:6,  title:"Mardaani 2", trend:"down",               lang:"Hindi",   weeks:5,  views:"~2.5M",      note:"Rani Mukerji franchise library resurge" },
-      { rank:7,  title:"De De Pyaar De 2", trend:"down",         lang:"Hindi",   weeks:8,  views:"~2M",        note:"8 weeks · India + Bangladesh + Pakistan" },
-      { rank:8,  title:"Champion", trend:"same",                 lang:"Korean",  weeks:3,  views:"~1.8M",      note:"Korean action drama trending India" },
-      { rank:9,  title:"Akhanda 2: Thaandavam", trend:"down",    lang:"Telugu",  weeks:5,  views:"~1.5M",      note:"Telugu mass blockbuster · Balakrishna" },
-      { rank:10, title:"Haq", trend:"down",                      lang:"Hindi",   weeks:6,  views:"~1.2M",      note:"Hindi legal drama · 6-week run" },
+      { rank:1,  title:"Dhurandhar",                    trend:"same", lang:"Hindi",   weeks:11, views:"25M+ total",  note:"101.3M hrs · India’s highest Hindi film ever · 11 weeks #1", hot:true },
+      { rank:2,  title:"Border 2",                      trend:"new",  lang:"Hindi",   weeks:2,  views:"~8M",         note:"New · Streamed Mar 20 · Sunny Deol, Varun Dhawan · 1971 war epic", hot:true },
+      { rank:3,  title:"Peaky Blinders: The Immortal Man", trend:"new", lang:"English", weeks:2, views:"Global Top 10 · 48 countries", note:"New · Streamed Mar 20 · Cillian Murphy · WWII finale", hot:true },
+      { rank:4,  title:"Made in Korea",                 trend:"same", lang:"Tamil",   weeks:4,  views:"~5M",         note:"Tamil\u2013Korean crossover · Priyanka Mohan · holding well" },
+      { rank:5,  title:"With Love",                     trend:"same", lang:"Tamil",   weeks:5,  views:"~4.5M",       note:"Tamil teen rom-com · 5 weeks · Subcontinent + diaspora hold" },
+      { rank:6,  title:"Accused",                       trend:"down", lang:"Hindi",   weeks:5,  views:"~4M",         note:"Karan Johar production · Top 10 in 72 countries at peak" },
+      { rank:7,  title:"Anora",                         trend:"new",  lang:"English", weeks:2,  views:"~3M",         note:"Oscar Best Picture 2025 · Sean Baker · library surge post-Oscars" },
+      { rank:8,  title:"Tere Ishk Mein",                trend:"down", lang:"Hindi",   weeks:9,  views:"~2.5M",       note:"9 consecutive weeks · romance drama Subcontinent hold" },
+      { rank:9,  title:"Jolly LLB 3",                   trend:"down", lang:"Hindi",   weeks:12, views:"~2M",         note:"12-week marathon · Akshay Kumar courtroom comedy · tail end" },
+      { rank:10, title:"Pennum Porattam",               trend:"new",  lang:"Malayalam",weeks:2, views:"~1.8M",       note:"Malayalam absurdist satire · strong Kerala + diaspora viewership" },
     ],
   },
   shows: {
-    weekRange: "Mar 9–15, 2026",
+    weekRange: "Mar 24–30, 2026",
     source: "Netflix Tudum (Official)",
     sourceUrl: "https://www.netflix.com/tudum/top10/india/tv",
     films: [
-      { rank:1,  title:"One Piece Season 2", trend:"same",       lang:"Intl · Dubbed", weeks:1, views:"Top 10 · 64 countries", note:"Luffy's Grand Line journey begins · March 10 premiere", hot:true },
-      { rank:2,  title:"Virgin River Season 7", trend:"down",    lang:"Intl",    weeks:2,  views:"Global #1",   note:"Netflix's most consistent romance hit" },
-      { rank:3,  title:"Hello Bachhon", trend:"new",            lang:"Hindi",   weeks:2,  views:"~5M",        note:"TVF · Inspired by Alakh Pandey · 6 March premiere", hot:true },
-      { rank:4,  title:"Boyfriend on Demand", trend:"new",      lang:"Korean",  weeks:2,  views:"~4M",        note:"Jisoo (BLACKPINK) · 6 March premiere · massive fan pre-save" },
-      { rank:5,  title:"Aspirants Season 3", trend:"up",       lang:"Hindi",   weeks:1,  views:"~3.5M",      note:"TVF · March 13 · UPSC drama returns", hot:true },
-      { rank:6,  title:"Panchayat Season 4", trend:"down",       lang:"Hindi",   weeks:5,  views:"~3M",        note:"5-week India run · streaming heartland" },
-      { rank:7,  title:"Squid Game Season 3", trend:"up",      lang:"Korean",  weeks:4,  views:"~2.8M",      note:"Korean thriller global hold" },
-      { rank:8,  title:"The Night Agent S3", trend:"down",       lang:"Intl",    weeks:3,  views:"~2.5M",      note:"American thriller maintaining India chart" },
-      { rank:9,  title:"Family Man Season 3", trend:"down",      lang:"Hindi",   weeks:8,  views:"~2M",        note:"Manoj Bajpayee · 8 weeks of India chart presence" },
-      { rank:10, title:"Firebreak", trend:"new",                lang:"Spanish", weeks:4,  views:"~1.5M",      note:"#1 in 26 countries globally · Spain survival drama" },
+      { rank:1,  title:"Aspirants Season 3",    trend:"up",   lang:"Hindi",        weeks:3,  views:"~7M",         note:"TVF × Netflix · UPSC drama · became #1 show in India this week", hot:true },
+      { rank:2,  title:"One Piece Season 2",    trend:"down", lang:"Intl · Dubbed", weeks:3, views:"Top 10 · 56 countries", note:"Grand Line saga · holding strong global presence", hot:true },
+      { rank:3,  title:"Squid Game Season 3",   trend:"up",   lang:"Korean",       weeks:6,  views:"~5.5M",       note:"6-week India run · Korean thriller global hold", hot:true },
+      { rank:4,  title:"Family Man Season 3",   trend:"same", lang:"Hindi",        weeks:10, views:"~4M",         note:"Manoj Bajpayee · 10 weeks of India chart presence" },
+      { rank:5,  title:"Hello Bachhon",         trend:"same", lang:"Hindi",        weeks:4,  views:"~3.5M",       note:"TVF · Inspired by Alakh Pandey · physics teacher biopic" },
+      { rank:6,  title:"Panchayat Season 4",    trend:"down", lang:"Hindi",        weeks:7,  views:"~3M",         note:"7-week India run · streaming heartland of rural India" },
+      { rank:7,  title:"Virgin River Season 7", trend:"down", lang:"Intl",         weeks:4,  views:"~2.5M",       note:"Netflix’s most consistent romance · global hold" },
+      { rank:8,  title:"The Night Agent S3",    trend:"down", lang:"Intl",         weeks:5,  views:"~2M",         note:"American thriller · maintaining India chart presence" },
+      { rank:9,  title:"Boyfriend on Demand",   trend:"down", lang:"Korean",       weeks:4,  views:"~1.8M",       note:"Jisoo (BLACKPINK) × Seo In-guk · K-drama India crossover" },
+      { rank:10, title:"Firebreak",             trend:"same", lang:"Spanish",      weeks:6,  views:"~1.5M",       note:"Survival drama · #1 in 26 countries globally at peak" },
     ],
   },
 };
 
-/* Amazon Prime Video — No official weekly chart. Showing Known Trending
-   based on trade sources: Ormax OTT Intelligence + Prime Video India blog  */
 const OTT_PRIME = {
   movies: {
-    weekRange: "Mar 2026",
-    source: "Ormax OTT Intelligence + Trade",
+    weekRange: "Mar 24–30, 2026",
+    source: "Ormax OTT Intelligence + Prime Video India blog",
     sourceUrl: "https://www.aboutamazon.in/news/entertainment/prime-video-lineup-2026",
-    note: "Prime Video does not publish official weekly ranked charts. Figures from Ormax OTT Intelligence (primary research) and Prime Video India trade blog.",
+    note: "Prime Video does not publish official weekly ranked charts. Figures from Ormax OTT Intelligence and Prime Video India trade blog.",
     films: [
-      { rank:1,  title:"Subedaar",               lang:"Hindi",   weeks:3,  note:"Anil Kapoor · sand mafia drama · strong word-of-mouth", hot:true },
-      { rank:2,  title:"Aspirants Season 3",     lang:"Hindi",   weeks:1,  note:"TVF · March 13 premiere — also on Netflix India", hot:true },
-      { rank:3,  title:"Jawan",                  lang:"Hindi",   weeks:55, note:"Library anchor · SRK · still pulling India + diaspora viewership" },
-      { rank:4,  title:"Panchayat Season 4",     lang:"Hindi",   weeks:12, note:"Most-watched rural comedy on Prime India" },
-      { rank:5,  title:"Young Sherlock",         lang:"Intl",    weeks:2,  note:"Guy Ritchie · Hero Fiennes Tiffin · Amazon Original March 4" },
-      { rank:6,  title:"The Family Man S2",      lang:"Hindi",   weeks:100, note:"Library evergreen · Manoj Bajpayee · still charting" },
-      { rank:7,  title:"Farzi Season 1",         lang:"Hindi",   weeks:150, note:"37M+ views all-time · Amazon India record · Farzi S2 announced 2026", hot:true },
-      { rank:8,  title:"KGF: Chapter 2",         lang:"Kannada/Hindi", weeks:80, note:"100M+ views · Pan-India catalogue anchor" },
-      { rank:9,  title:"Scarpetta",              lang:"Intl",    weeks:1,  note:"Nicole Kidman · Patricia Cornwell adaptation · March 11" },
-      { rank:10, title:"RRR",                    lang:"Telugu/Hindi", weeks:100, note:"Oscar winner · One of Prime India's global performers" },
+      { rank:1,  title:"Project Hail Mary",     trend:"new",  lang:"Hollywood",        weeks:1,  note:"New · Mar 26 India release · Ryan Gosling · Amazon MGM · $300M+ WW · IMAX 6→60 screens", hot:true },
+      { rank:2,  title:"Subedaar",              trend:"down", lang:"Hindi",             weeks:5,  note:"Anil Kapoor · sand mafia crime drama · sustained word-of-mouth" },
+      { rank:3,  title:"Pretty Lethal",         trend:"new",  lang:"Hollywood",         weeks:2,  note:"New · Action thriller · Prime Video Mar 25 premiere" },
+      { rank:4,  title:"Jawan",                 trend:"same", lang:"Hindi",             weeks:57, note:"Library anchor · SRK · pulling India + global diaspora viewership" },
+      { rank:5,  title:"Panchayat Season 4",    trend:"down", lang:"Hindi",             weeks:14, note:"Most-watched rural comedy on Prime India · cross-platform" },
+      { rank:6,  title:"Young Sherlock",        trend:"down", lang:"Intl",              weeks:4,  note:"Guy Ritchie · Hero Fiennes Tiffin · Amazon Original" },
+      { rank:7,  title:"The Family Man S2",     trend:"same", lang:"Hindi",             weeks:102,note:"Library evergreen · Manoj Bajpayee · still charting" },
+      { rank:8,  title:"Farzi Season 1",        trend:"same", lang:"Hindi",             weeks:152,note:"37M+ views all-time · Amazon India record · Farzi S2 in production", hot:true },
+      { rank:9,  title:"KGF: Chapter 2",        trend:"same", lang:"Kannada/Hindi",     weeks:82, note:"100M+ views · Pan-India catalogue anchor" },
+      { rank:10, title:"RRR",                   trend:"same", lang:"Telugu/Hindi",      weeks:102,note:"Oscar winner · one of Prime India’s top global performers" },
     ],
   },
   shows: {
-    weekRange: "Mar 2026",
+    weekRange: "Mar 24–30, 2026",
     source: "Ormax OTT Intelligence",
     sourceUrl: "https://www.aboutamazon.in/news/entertainment/prime-video-lineup-2026",
     note: "Based on Ormax weekly primary research across India OTT universe.",
     films: [
-      { rank:1,  title:"Mirzapur Season 3",      lang:"Hindi",   weeks:20, note:"All-time Prime India record · ₹37M+ views S3", hot:true },
-      { rank:2,  title:"Panchayat Season 4",     lang:"Hindi",   weeks:12, note:"Sustained rural India + diaspora viewership" },
-      { rank:3,  title:"Aspirants Season 3",     lang:"Hindi",   weeks:1,  note:"March 13 · TVF school · UPSC drama", hot:true },
-      { rank:4,  title:"The Family Man S3",      lang:"Hindi",   weeks:8,  note:"Raj & DK · Manoj Bajpayee's third season" },
-      { rank:5,  title:"Citadel: Honey Bunny",   lang:"Hindi",   weeks:15, note:"Samantha + Varun Dhawan spy action · global crossover" },
-      { rank:6,  title:"Made in Heaven S2",      lang:"Hindi",   weeks:40, note:"Zoya Akhtar · sustained prestige viewership" },
-      { rank:7,  title:"Tandav",                 lang:"Hindi",   weeks:100, note:"Political thriller library evergreen" },
-      { rank:8,  title:"Dahaad Season 1",        lang:"Hindi",   weeks:50, note:"Sonakshi Sinha · crime drama ahead of S2 announcement" },
-      { rank:9,  title:"Farzi Season 1",         lang:"Hindi",   weeks:150, note:"Rewatch surge ahead of Farzi S2 announcement" },
-      { rank:10, title:"Daldal",                 lang:"Hindi",   weeks:8,  note:"Bhumi Pednekar · serial killer crime thriller · Jan 30" },
+      { rank:1,  title:"Mirzapur Season 3",     trend:"same", lang:"Hindi",   weeks:22, note:"All-time Prime India record · 37M+ views S3", hot:true },
+      { rank:2,  title:"Aspirants Season 3",    trend:"up",   lang:"Hindi",   weeks:3,  note:"TVF × Prime · UPSC drama · also cross-charting Netflix India", hot:true },
+      { rank:3,  title:"Panchayat Season 4",    trend:"down", lang:"Hindi",   weeks:14, note:"Sustained rural India + diaspora viewership" },
+      { rank:4,  title:"The Family Man S3",     trend:"same", lang:"Hindi",   weeks:10, note:"Raj & DK · Manoj Bajpayee · 10-week presence" },
+      { rank:5,  title:"Citadel: Honey Bunny",  trend:"same", lang:"Hindi",   weeks:17, note:"Samantha + Varun Dhawan spy action · global crossover" },
+      { rank:6,  title:"Made in Heaven S2",     trend:"same", lang:"Hindi",   weeks:42, note:"Zoya Akhtar · sustained prestige viewership" },
+      { rank:7,  title:"Dahaad Season 1",       trend:"up",   lang:"Hindi",   weeks:52, note:"Sonakshi Sinha · rewatch surge ahead of S2 announcement" },
+      { rank:8,  title:"Farzi Season 1",        trend:"same", lang:"Hindi",   weeks:152,note:"Rewatch surge ahead of Farzi S2 currently in production" },
+      { rank:9,  title:"Daldal",                trend:"down", lang:"Hindi",   weeks:10, note:"Bhumi Pednekar · serial killer crime thriller" },
+      { rank:10, title:"Anarth",                trend:"new",  lang:"Hindi",   weeks:2,  note:"New horror thriller · unveiled Mar 19 · Prime Video Original" },
     ],
   },
   slate2026: [
-    { title:"Farzi Season 2",       cast:"Shahid Kapoor, Vijay Sethupathi", status:"Announced", note:"Raj & DK return · biggest Prime India sequel of 2026" },
-    { title:"Panchayat Season 5",   cast:"Jitendra Kumar, Neena Gupta",    status:"Announced", note:"TVF · rural India comedy returns" },
-    { title:"The Revolutionaries",  cast:"Bhuvan Bam",                     status:"Announced", note:"Nikkhil Advani · political saga" },
-    { title:"Call Me Bae Season 2", cast:"Ananya Panday, Vir Das",         status:"Announced", note:"Dharmatic Entertainment · comedy sequel" },
-    { title:"Dahaad Season 2",      cast:"Sonakshi Sinha",                 status:"Announced", note:"Zoya Akhtar crime drama returns" },
-    { title:"O'Romeo",              cast:"Shahid Kapoor",                  status:"Announced", note:"Vishal Bharadwaj · gangster love story" },
-    { title:"Matka King",           cast:"Vijay Varma",                    status:"Announced", note:"Crime drama · Emmay Entertainment" },
-    { title:"Anarth",               cast:"TBC",                            status:"Announced", note:"Horror thriller · unveiled Mar 19, 2026" },
+    { title:"Farzi Season 2",       cast:"Shahid Kapoor, Vijay Sethupathi", status:"In Production", note:"Raj & DK return · biggest Prime India sequel of 2026" },
+    { title:"Panchayat Season 5",   cast:"Jitendra Kumar, Neena Gupta",    status:"Announced",     note:"TVF × Prime · rural India comedy returns" },
+    { title:"The Revolutionaries",  cast:"Bhuvan Bam",                     status:"Announced",     note:"Nikkhil Advani · political saga" },
+    { title:"Call Me Bae Season 2", cast:"Ananya Panday, Vir Das",         status:"Announced",     note:"Dharmatic Entertainment · comedy sequel" },
+    { title:"Dahaad Season 2",      cast:"Sonakshi Sinha",                 status:"Announced",     note:"Zoya Akhtar crime drama returns" },
+    { title:"Matka King",           cast:"Vijay Varma",                    status:"Announced",     note:"Crime drama · Emmay Entertainment" },
+    { title:"Anarth",               cast:"TBC",                            status:"Streaming",     note:"Horror thriller · streaming now on Prime Video" },
   ],
 };
 
-/* Zee5 — India's third-largest SVOD. No public weekly chart.
-   Known trending based on Zee5 social + trade reports.                     */
 const OTT_ZEE5 = {
-  weekRange: "Mar 2026",
+  weekRange: "Mar 24–30, 2026",
   source: "Zee5 Official + Trade Reports",
   sourceUrl: "https://www.zee5.com",
-  note: "Zee5 does not publish official weekly ranked charts. Content sourced from Zee5 social media announcements and trade reports.",
+  note: "Zee5 does not publish official weekly ranked charts. Coming this week: Maamla Legal Hai Season 2 (Apr 3) and Bhabiji Ghar Par Hain: Fun on the Run (Apr 3).",
   films: [
-    { rank:1,  title:"Jwala",                  lang:"Hindi",   type:"Series",  note:"Zee5 Original · crime thriller dominating platform", hot:true },
-    { rank:2,  title:"Chhaava",                lang:"Hindi",   type:"Film",    note:"Vicky Kaushal historical epic · post-theatrical premiere", hot:true },
-    { rank:3,  title:"Tanaav Season 2",        lang:"Hindi",   type:"Series",  note:"Kashmir conflict drama · Zee5 Original continuing run" },
-    { rank:4,  title:"Aabha",                  lang:"Hindi",   type:"Series",  note:"Political drama series · strong female-led viewership" },
-    { rank:5,  title:"Mangal Lakshmi",         lang:"Hindi",   type:"Series",  note:"Star Plus drama on Zee5 · mass family viewership" },
-    { rank:6,  title:"Scam 2003",              lang:"Hindi",   type:"Series",  note:"Hansal Mehta · SonyLIV original now on Zee5 library" },
-    { rank:7,  title:"Dharam Yudh",            lang:"Hindi",   type:"Series",  note:"Manoj Bajpayee Zee5 Original · sustained 2-month run" },
-    { rank:8,  title:"Sunflower Season 2",     lang:"Hindi",   type:"Series",  note:"Sunil Grover comedy series on Zee5" },
-    { rank:9,  title:"The Broken News S2",     lang:"Hindi",   type:"Series",  note:"Media industry thriller · Zee5 Original" },
-    { rank:10, title:"Kaala Paani",            lang:"Hindi",   type:"Series",  note:"Netflix crossover library title on Zee5 bundle" },
+    { rank:1,  title:"Jwala",                  lang:"Hindi",   type:"Series", note:"Zee5 Original · crime thriller dominating platform", hot:true },
+    { rank:2,  title:"Chhaava",                lang:"Hindi",   type:"Film",   note:"Vicky Kaushal historical epic · post-theatrical streaming", hot:true },
+    { rank:3,  title:"Tanaav Season 2",        lang:"Hindi",   type:"Series", note:"Kashmir conflict drama · Zee5 Original continuing run" },
+    { rank:4,  title:"Aabha",                  lang:"Hindi",   type:"Series", note:"Political drama · strong female-led viewership" },
+    { rank:5,  title:"Dharam Yudh",            lang:"Hindi",   type:"Series", note:"Manoj Bajpayee Zee5 Original · sustained run" },
+    { rank:6,  title:"Scam 2003",              lang:"Hindi",   type:"Series", note:"Hansal Mehta · library evergreen" },
+    { rank:7,  title:"Sunflower Season 2",     lang:"Hindi",   type:"Series", note:"Sunil Grover comedy series on Zee5" },
+    { rank:8,  title:"The Broken News S2",     lang:"Hindi",   type:"Series", note:"Media industry thriller · Zee5 Original" },
+    { rank:9,  title:"Mangal Lakshmi",         lang:"Hindi",   type:"Series", note:"Mass family viewership · linear-to-OTT crossover" },
+    { rank:10, title:"Kaala Paani",            lang:"Hindi",   type:"Series", note:"Netflix crossover library title on Zee5 bundle" },
+  ],
+  coming: [
+    { title:"Maamla Legal Hai Season 2", platform:"ZEE5", date:"Apr 3, 2026", note:"Ravi Kishan returns as VD Tyagi · courtroom comedy · Kusha Kapila joins cast" },
+    { title:"Bhabiji Ghar Par Hain: Fun on the Run", platform:"ZEE5", date:"Apr 3, 2026", note:"Comedy-drama film based on popular TV show · Aasif Sheikh, Rohitashv Gour" },
   ],
 };
 
-/* MX Player — AVOD (free, ad-supported). Aashram dominates all-time.
-   No official ranked chart published. Known popular content only.          */
 const OTT_MX = {
-  weekRange: "Mar 2026",
+  weekRange: "Mar 24–30, 2026",
   source: "Ormax OTT Intelligence (AVOD universe)",
   sourceUrl: "https://www.mxplayer.in",
-  note: "MX Player is India's largest AVOD platform (~300M MAU). Does not publish official ranked charts. Showing historically high-performing and currently trending titles based on Ormax AVOD tracking.",
+  note: "MX Player is India’s largest AVOD platform (~300M MAU). Does not publish official ranked charts.",
   films: [
-    { rank:1,  title:"Aashram Season 3",        lang:"Hindi",   type:"Series",  note:"Bobby Deol · all-time most-watched Indian web series incl. AVOD · 150M+ views", hot:true },
-    { rank:2,  title:"Raktanchal Season 2",     lang:"Hindi",   type:"Series",  note:"Gangster drama · MX Original · consistently highest-ranked" },
-    { rank:3,  title:"Bhaukaal Season 2",       lang:"Hindi",   type:"Series",  note:"UP police drama · MX Original · mass Hindi market" },
-    { rank:4,  title:"Hello Mini Season 3",     lang:"Hindi",   type:"Series",  note:"Psychological thriller · MX Originals female-led hit" },
-    { rank:5,  title:"Queen Season 1",          lang:"Hindi",   type:"Series",  note:"Ramya Krishnan political biopic · rewatch peak" },
-    { rank:6,  title:"Aashram Season 4",        lang:"Hindi",   type:"Series",  note:"Bobby Deol franchise continues · 2026 new season" },
-    { rank:7,  title:"Poison Season 2",         lang:"Hindi",   type:"Series",  note:"Arbaaz Khan crime drama" },
-    { rank:8,  title:"Campus Beats Season 2",   lang:"Hindi",   type:"Series",  note:"Youth drama · college audience stronghold" },
-    { rank:9,  title:"Vikrant Rona",            lang:"Kannada", type:"Film",    note:"Kiccha Sudeep action · South cinema access on MX" },
-    { rank:10, title:"Poran Jai Jaliya Re",     lang:"Bengali", type:"Series",  note:"Bengali regional OTT growing fast on MX Player" },
+    { rank:1,  title:"Aashram Season 4",        lang:"Hindi",   type:"Series", note:"Bobby Deol franchise · new 2026 season · AVOD — all-time most-watched category", hot:true },
+    { rank:2,  title:"Aashram Season 3",        lang:"Hindi",   type:"Series", note:"Bobby Deol · 150M+ views all-time · rewatch driven by S4 release", hot:true },
+    { rank:3,  title:"Raktanchal Season 2",     lang:"Hindi",   type:"Series", note:"Gangster drama · MX Original · consistently highest-ranked AVOD series" },
+    { rank:4,  title:"Bhaukaal Season 2",       lang:"Hindi",   type:"Series", note:"UP police drama · MX Original · mass Hindi market" },
+    { rank:5,  title:"Hello Mini Season 3",     lang:"Hindi",   type:"Series", note:"Psychological thriller · MX Originals female-led hit" },
+    { rank:6,  title:"Queen Season 1",          lang:"Hindi",   type:"Series", note:"Ramya Krishnan political biopic · rewatch peak" },
+    { rank:7,  title:"Poison Season 2",         lang:"Hindi",   type:"Series", note:"Arbaaz Khan crime drama" },
+    { rank:8,  title:"Campus Beats Season 2",   lang:"Hindi",   type:"Series", note:"Youth drama · college audience stronghold" },
+    { rank:9,  title:"Vikrant Rona",            lang:"Kannada", type:"Film",   note:"Kiccha Sudeep action · South cinema access on MX" },
+    { rank:10, title:"Poran Jai Jaliya Re",     lang:"Bengali", type:"Series", note:"Bengali regional OTT growing fast on MX Player" },
   ],
 };
 
-/* Combined Most Watched — Cross-platform composite
-   Methodology: Netflix official views data + Ormax primary research
-   for Prime/others. Streaming hours not comparable across platforms.
-   All figures are approximate composite estimates.                          */
 const OTT_COMBINED = {
-  weekRange: "Mar 9–15, 2026",
+  weekRange: "Mar 24–30, 2026",
   source: "Netflix Tudum (Official) + Ormax OTT Intelligence + Trade",
-  note: "Cross-platform chart is a composite — Netflix figures are official weekly views, Prime/Zee5/MX are Ormax primary research estimates. Not directly comparable due to differing methodologies.",
+  note: "Cross-platform chart is a composite — Netflix figures are official weekly views, Prime/Zee5/JioHotstar are Ormax primary research estimates.",
   films: [
-    { rank:1,  title:"One Piece Season 2",     platform:"Netflix",       lang:"Dubbed", type:"Show",  note:"Netflix global #1 · 64 countries top 10 · March 10 premiere", hot:true },
-    { rank:2,  title:"Dhurandhar",             platform:"Netflix",       lang:"Hindi",  type:"Film",  note:"101.3M hrs all-time · still holding chart after 9 weeks", hot:true },
-    { rank:3,  title:"Hello Bachhon",          platform:"Netflix",       lang:"Hindi",  type:"Show",  note:"TVF × Netflix · Alakh Pandey biopic · March 6 debut", hot:true },
-    { rank:4,  title:"Accused",                platform:"Netflix",       lang:"Hindi",  type:"Film",  note:"Karan Johar × Anubhuti Kashyap · 15M+ views in 2 wks" },
-    { rank:5,  title:"Aspirants Season 3",     platform:"Prime Video",   lang:"Hindi",  type:"Show",  note:"TVF × Prime · UPSC drama · also charting Netflix India", hot:true },
-    { rank:6,  title:"Mirzapur Season 3",      platform:"Prime Video",   lang:"Hindi",  type:"Show",  note:"37M+ lifetime views · Prime India all-time record" },
-    { rank:7,  title:"Boyfriend on Demand",    platform:"Netflix",       lang:"Korean", type:"Show",  note:"Jisoo (BLACKPINK) × Seo In-guk · K-drama India crossover" },
-    { rank:8,  title:"Subedaar",               platform:"Prime Video",   lang:"Hindi",  type:"Film",  note:"Anil Kapoor OTT film · strong Prime India debut" },
-    { rank:9,  title:"Panchayat Season 4",     platform:"Prime Video",   lang:"Hindi",  type:"Show",  note:"Multi-platform hit · India's most-watched rural show" },
-    { rank:10, title:"Aashram Season 4",       platform:"MX Player",     lang:"Hindi",  type:"Show",  note:"Bobby Deol franchise · India's biggest AVOD show continues" },
+    { rank:1,  title:"Dhurandhar",                platform:"Netflix",       lang:"Hindi",        type:"Film",  note:"101.3M hrs all-time · still #1 after 11 weeks · Indian streaming record", hot:true },
+    { rank:2,  title:"Project Hail Mary",         platform:"Prime Video",   lang:"Hollywood",    type:"Film",  note:"New Mar 26 · Ryan Gosling · Amazon MGM · $300M+ WW · top of Prime India", hot:true },
+    { rank:3,  title:"Aspirants Season 3",        platform:"Prime/Netflix", lang:"Hindi",        type:"Show",  note:"TVF × Prime · UPSC drama · cross-platform #1 show India this week", hot:true },
+    { rank:4,  title:"Border 2",                  platform:"Netflix",       lang:"Hindi",        type:"Film",  note:"New Mar 20 Netflix · Sunny Deol, Varun Dhawan · 1971 war epic" },
+    { rank:5,  title:"Thaai Kizhavi",             platform:"JioHotstar",    lang:"Tamil",        type:"Film",  note:"New Mar 26 · Tamil comedy-drama · SUPER HIT · ₹57 Cr theatrical · JioHotstar debut", hot:true },
+    { rank:6,  title:"Squid Game Season 3",       platform:"Netflix",       lang:"Korean",       type:"Show",  note:"6-week India run · Korean thriller global hold" },
+    { rank:7,  title:"Peaky Blinders: The Immortal Man", platform:"Netflix", lang:"English",     type:"Film",  note:"New Mar 20 · Cillian Murphy · WWII Tommy Shelby finale" },
+    { rank:8,  title:"Mirzapur Season 3",         platform:"Prime Video",   lang:"Hindi",        type:"Show",  note:"37M+ lifetime views · Prime India all-time record" },
+    { rank:9,  title:"Family Man Season 3",       platform:"Netflix",       lang:"Hindi",        type:"Show",  note:"Manoj Bajpayee · 10 weeks · dual Netflix + Prime presence" },
+    { rank:10, title:"Maamla Legal Hai Season 2", platform:"ZEE5",          lang:"Hindi",        type:"Show",  note:"Coming Apr 3 · Ravi Kishan returns · most anticipated Zee5 release this week" },
   ],
 };
 
-/* Streaming Calendar — OTT premiere dates (upcoming + recent)              */
 const OTT_CALENDAR = [
-  { film:"Peaky Blinders: The Immortal Man", platform:"Netflix",     estreaming:"Mar 20, 2026", status:"streaming", lang:"English",       note:"Cillian Murphy's Tommy Shelby in WWII · cinematic finale" },
-  { film:"Border 2",                         platform:"Netflix",     estreaming:"Mar 20, 2026", status:"streaming", lang:"Hindi",          note:"Sunny Deol, Varun Dhawan, Diljit Dosanjh · 1971 war drama" },
-  { film:"Landlord",                         platform:"Prime Video", estreaming:"Mar 21, 2026", status:"streaming", lang:"Hindi/Telugu",   note:"₹37 Cr theatrical · rural India labour story" },
-  { film:"Dhurandhar 2: The Revenge",        platform:"JioHotstar",  estreaming:"~May 15, 2026",status:"confirmed", lang:"Hindi · Pan-India", note:"₹150 Cr deal · 8-week theatrical window · D2 sequel" },
-  { film:"Ustaad Bhagat Singh",              platform:"Netflix",     estreaming:"~May 19, 2026",status:"confirmed", lang:"Telugu · Pan-India", note:"Pawan Kalyan · 8-week window · ₹90 Cr deal (est.)" },
-  { film:"The Kerala Story 2: Goes Beyond",  platform:"Netflix",     estreaming:"~Apr 30, 2026",status:"expected",  lang:"Malayalam",      note:"₹40 Cr theatrical run → 6-week window" },
-  { film:"O'Romeo",                          platform:"Prime Video", estreaming:"~May 2026",    status:"expected",  lang:"Hindi",          note:"Shahid Kapoor × Vishal Bharadwaj gangster film" },
-  { film:"Bhooth Bangla",                    platform:"Netflix",     estreaming:"~Jul 2026",    status:"expected",  lang:"Hindi",          note:"Akshay Kumar horror comedy · Priyadarshan direction" },
-  { film:"Farzi Season 2",                   platform:"Prime Video", estreaming:"H2 2026",      status:"announced", lang:"Hindi",          note:"Shahid Kapoor + Vijay Sethupathi return · Raj & DK" },
-  { film:"Panchayat Season 5",               platform:"Prime Video", estreaming:"H2 2026",      status:"announced", lang:"Hindi",          note:"TVF × Prime · Jitendra Kumar rural comedy" },
+  { film:"Thaai Kizhavi",                   platform:"JioHotstar",  estreaming:"Mar 26, 2026", status:"streaming", lang:"Tamil",          note:"LIVE NOW · Tamil comedy-drama · ₹57 Cr theatrical SUPER HIT · Raadhika Sarathkumar" },
+  { film:"Border 2",                         platform:"Netflix",     estreaming:"Mar 20, 2026", status:"streaming", lang:"Hindi",          note:"STREAMING · Sunny Deol, Varun Dhawan, Diljit Dosanjh · 1971 war epic" },
+  { film:"Peaky Blinders: The Immortal Man", platform:"Netflix",     estreaming:"Mar 20, 2026", status:"streaming", lang:"English",        note:"STREAMING · Cillian Murphy · Tommy Shelby WWII finale" },
+  { film:"Pretty Lethal",                    platform:"Prime Video", estreaming:"Mar 25, 2026", status:"streaming", lang:"Hollywood",      note:"STREAMING · Action thriller · Prime Video" },
+  { film:"Happy Patel: Khatarnak Jasoos",    platform:"Netflix",     estreaming:"Apr 1, 2026",  status:"confirmed", lang:"Hindi",          note:"Vir Das + Mithila Palkar · spy-comedy · Netflix Apr 1" },
+  { film:"Vadh 2",                           platform:"Netflix",     estreaming:"Apr 3, 2026",  status:"confirmed", lang:"Hindi",          note:"Sanjay Mishra + Neena Gupta · crime thriller sequel · Netflix Apr 3" },
+  { film:"Bloodhounds Season 2",             platform:"Netflix",     estreaming:"Apr 3, 2026",  status:"confirmed", lang:"Korean",         note:"Korean action series sequel · Netflix Apr 3" },
+  { film:"Maamla Legal Hai Season 2",        platform:"ZEE5",        estreaming:"Apr 3, 2026",  status:"confirmed", lang:"Hindi",          note:"Ravi Kishan returns · Kusha Kapila joins · courtroom comedy · ZEE5" },
+  { film:"Sitaare Zameen Par",               platform:"SonyLIV",     estreaming:"Apr 3, 2026",  status:"confirmed", lang:"Hindi",          note:"Aamir Khan + Genelia Deshmukh · spiritual successor to Taare Zameen Par · SonyLIV" },
+  { film:"Dhurandhar 2: The Revenge",        platform:"JioHotstar",  estreaming:"~May 15, 2026",status:"confirmed", lang:"Hindi · Pan-India", note:"₹150 Cr deal · 8-week theatrical window · JioHotstar" },
+  { film:"Ustaad Bhagat Singh",              platform:"Netflix",     estreaming:"~May 19, 2026",status:"confirmed", lang:"Telugu",         note:"Pawan Kalyan · 8-week window · ₹90 Cr deal est." },
+  { film:"Farzi Season 2",                   platform:"Prime Video", estreaming:"H2 2026",      status:"announced", lang:"Hindi",          note:"Shahid Kapoor + Vijay Sethupathi · Raj & DK · currently in production" },
 ];
 
-/* OTT Weekly Editorial — updated every Thursday                            */
 const OTT_EDITORIAL = [
   {
     week:      "Week 14 · Mar 24–30, 2026",
