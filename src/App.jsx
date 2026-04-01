@@ -715,13 +715,10 @@ function NavBar({ activeSection, setActiveSection, setForceAllTime }) {
           <div style={{ marginLeft:"auto", display:"flex", alignItems:"center", gap:12, flexShrink:0 }}>
             <SearchBar />
             <div style={{ display:"flex", flexDirection:"column", alignItems:"flex-end", borderRight:`1px solid #E5E7EB`, paddingRight:12, marginRight:12 }}>
-              <span style={{ fontFamily:"'Barlow Condensed', sans-serif", fontWeight:700, fontSize:13, color:T.accent, letterSpacing:"0.03em" }}>WEEK 13 · 2026</span>
+              <span style={{ fontFamily:"'Barlow Condensed', sans-serif", fontWeight:700, fontSize:13, color:T.accent, letterSpacing:"0.03em" }}>WEEK 14 · 2026</span>
               <span style={{ fontFamily:"'DM Sans', sans-serif", fontSize:8, color:"#9CA3AF", letterSpacing:"0.1em", textTransform:"uppercase" }}>Box Office Period</span>
             </div>
-            <div style={{ display:"flex", flexDirection:"column", alignItems:"flex-end" }}>
-              <span style={{ fontFamily:"'Barlow Condensed', sans-serif", fontWeight:700, fontSize:13, color:"#374151", letterSpacing:"0.03em" }}>Mar 31, 2026 · D13 ₹27.75 Cr (Filmibeat) · D0–D13 ~₹895 Cr India nett · WW ~₹1,420 Cr · eyeing ₹900 Cr tonight</span>
-              <span style={{ fontFamily:"'DM Sans', sans-serif", fontSize:8, color:"#9CA3AF", letterSpacing:"0.1em", textTransform:"uppercase" }}>Last Updated</span>
-            </div>
+
           </div>
         </>}
 
@@ -790,7 +787,7 @@ function NavBar({ activeSection, setActiveSection, setForceAllTime }) {
             borderLeft:"3px solid transparent",
           }}>About</a>
           <div style={{ padding:"10px 20px", background:"#F9FAFB", borderTop:"1px solid #F3F4F6" }}>
-            <span style={{ fontFamily:"'DM Sans', sans-serif", fontSize:12, color:"#9CA3AF" }}>Mar 31, 2026 · D13 ₹27.75 Cr (Filmibeat) · D0–D13 ~₹895 Cr India nett · WW ~₹1,420 Cr · eyeing ₹900 Cr tonight</span>
+
           </div>
         </div>
       )}
@@ -3223,15 +3220,71 @@ function ForeignFilmsPanel({ movies }) {
           </>}
 
           {/* ── Upcoming ──────────────────────────────────────────── */}
-          {upcoming.length > 0 && <>
-            <BogDivider
-              label="Upcoming Releases"
-              color="#B45309" bg="#FFFEF5" dotColor="#D97706"
-            />
-            {upcoming.map((m, i) => (
-              <BogRow key={m.title} movie={m} viewMode={viewMode} rank={i+1} isNew={false} />
-            ))}
-          </>}
+          {upcoming.length > 0 && (() => {
+            // Group upcoming by month, sort ascending by date
+            const monthOrder = {};
+            upcoming.forEach(m => {
+              const rd = m.releaseDate || "";
+              // Parse month key for sorting
+              let sortKey = "2099-12";
+              let monthLabel = "TBD";
+              const monthNames = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+              // Try YYYY-MM-DD
+              const full = rd.match(/^(\d{4})-(\d{2})/);
+              if (full) {
+                sortKey = `${full[1]}-${full[2]}`;
+                monthLabel = `${monthNames[parseInt(full[2])-1]} ${full[1]}`;
+              } else {
+                // Try "Apr 3, 2026" style
+                const alt = rd.match(/(\w+)\s+\d+,\s+(\d{4})/);
+                if (alt) {
+                  const mIdx = monthNames.indexOf(alt[1].slice(0,3));
+                  if (mIdx >= 0) { sortKey = `${alt[2]}-${String(mIdx+1).padStart(2,"0")}`; monthLabel = `${alt[1].slice(0,3)} ${alt[2]}`; }
+                } else {
+                  // Try "Aug 2026" style
+                  const mOnly = rd.match(/(\w+)\s+(\d{4})/);
+                  if (mOnly) {
+                    const mIdx = monthNames.indexOf(mOnly[1].slice(0,3));
+                    if (mIdx >= 0) { sortKey = `${mOnly[2]}-${String(mIdx+1).padStart(2,"0")}`; monthLabel = `${mOnly[1].slice(0,3)} ${mOnly[2]}`; }
+                  } else if (rd.includes("Diwali")) { sortKey = "2026-11"; monthLabel = "Nov 2026"; }
+                  else if (rd.includes("2027")) { sortKey = "2027-01"; monthLabel = "2027"; }
+                }
+              }
+              if (!monthOrder[sortKey]) monthOrder[sortKey] = { label: monthLabel, films: [] };
+              monthOrder[sortKey].films.push(m);
+            });
+            const sortedMonths = Object.keys(monthOrder).sort();
+            return (
+              <>
+                <BogDivider label="Upcoming — 2026 Release Calendar" color="#B45309" bg="#FFFEF5" dotColor="#D97706" />
+                {sortedMonths.map(key => {
+                  const { label, films } = monthOrder[key];
+                  return (
+                    <React.Fragment key={key}>
+                      {/* Month header */}
+                      <div style={{
+                        background:"#FFF8F0",
+                        borderBottom:"1px solid #FDE8C8",
+                        borderTop:"1px solid #FDE8C8",
+                        padding:"6px 20px",
+                        display:"flex", alignItems:"center", gap:10,
+                      }}>
+                        <span style={{ fontFamily:"'Barlow Condensed', sans-serif", fontWeight:900, fontSize:15, color:"#B45309", letterSpacing:"0.04em", textTransform:"uppercase" }}>
+                          {label}
+                        </span>
+                        <span style={{ fontFamily:"'DM Sans', sans-serif", fontSize:10, color:"#D97706" }}>
+                          {films.length} film{films.length > 1 ? "s" : ""}
+                        </span>
+                      </div>
+                      {films.sort((a,b) => (a.releaseDate||"").localeCompare(b.releaseDate||"")).map((m, i) => (
+                        <BogRow key={m.title} movie={m} viewMode={viewMode} rank={i+1} isNew={false} />
+                      ))}
+                    </React.Fragment>
+                  );
+                })}
+              </>
+            );
+          })()}
 
           {/* ── OTT / Closed ──────────────────────────────────────── */}
           {otts.length > 0 && <>
@@ -3646,8 +3699,8 @@ function BoxOfficeSection({ onNavigate, forceAllTime, onClearForceAllTime }) {
     { label:"D3 Nett ✅",             val:"₹113 Cr",       src:"Sacnilk · IndiaTV · Sacnilk — Eid Sat +40%" },
     { label:"4-Day India Nett ✅",     val:"₹454 Cr",       src:"Sacnilk confirmed D0–D4" },
     { label:"D5 Monday ✅",           val:"₹60 Cr",        src:"BOI / Sacnilk confirmed" },
-    { label:"7-Day India Nett ✅",    val:"₹867 Cr",     src:"BOI / Sacnilk / Pinkvilla · D0–D12" },
-    { label:"7-Day WW Gross",         val:"~₹1,392 Cr",        src:"Boxoffy estimate · Overseas ~₹525 Cr" },
+    { label:"13-Day India Nett ✅",   val:"~₹895 Cr",    src:"BOI / Filmibeat · D0–D13 · D13 ₹27.75 Cr" },
+    { label:"13-Day WW Gross",        val:"~₹1,420 Cr",        src:"Variety / BOI · Overseas ~₹530 Cr" },
     { label:"JioHotstar OTT Deal",    val:"₹150 Cr",       src:"Film Information · Wikipedia" },
   ];
 
@@ -3660,356 +3713,7 @@ function BoxOfficeSection({ onNavigate, forceAllTime, onClearForceAllTime }) {
         <EditorialSection onNavigate={onNavigate} />
       )}
 
-      {/* ── WEEKLY HEADLINE BANNER ──────────────────────────────────── */}
-      {year === 2026 && showWeekly && (
-        <>
-          {/* Banner strip — white surface, red left border, editorial feel */}
-          <div
-            onClick={() => setShowHeadlineModal(true)}
-            style={{
-              background:T.surface,
-              borderLeft:`5px solid ${T.accent}`,
-              borderBottom:`1px solid ${T.border}`,
-              padding:"20px 28px 18px 24px",
-              cursor:"pointer",
-              display:"flex", alignItems:"flex-start", justifyContent:"space-between",
-              gap:24, flexWrap:"wrap",
-            }}
-            onMouseEnter={e => e.currentTarget.style.background=T.surfaceAlt}
-            onMouseLeave={e => e.currentTarget.style.background=T.surface}
-          >
-            {/* Left — label + headline */}
-            <div style={{ flex:1, minWidth:260 }}>
-              <div style={{ display:"flex", alignItems:"center", gap:8, marginBottom:9 }}>
-                <span style={{
-                  fontFamily:"'DM Sans', sans-serif", fontWeight:700, fontSize:9,
-                  letterSpacing:"0.14em", textTransform:"uppercase",
-                  color:T.accent, background:"#FEE2E2",
-                  padding:"2px 8px", borderRadius:2,
-                }}>WEEK 14 · LEAD STORY</span>
-                <span style={{ fontFamily:"'DM Sans', sans-serif", fontSize:10, color:T.textMuted }}>Mon, 30 Mar 2026</span>
-              </div>
-              <div style={{
-                fontFamily:"'Barlow Condensed', sans-serif",
-                fontWeight:800,
-                fontSize:"clamp(20px, 2.6vw, 30px)",
-                color:T.text,
-                lineHeight:1.1,
-                letterSpacing:"-0.01em",
-                marginBottom:9,
-              }}>
-                Dhurandhar: The Revenge —{" "}
-                <span style={{ color:T.accent }}>₹867 Cr in 13 Days. D0–D12 Complete. WW ~₹1,392 Cr.</span>
-              </div>
-              <div style={{ display:"flex", alignItems:"center", gap:10, flexWrap:"wrap" }}>
-                <span style={{ fontFamily:"'DM Sans', sans-serif", fontSize:11, color:T.textMuted }}>
-                  Ranveer Singh · Dir. Aditya Dhar · D0 ₹43 · D1 ₹102.55 · D2 ₹80.72 · D3 ₹113 · D4 ₹114.85 · D5 ₹60 ✅ · D6 ₹56.55 ✅ · D7 ₹48.75 ✅ · D8 ₹49.70 ✅ · D9 ₹41.75 ✅ · D10 ₹62.85 ✅ · D11 ₹68 ✅ · D12 ₹25.30 ✅
-                </span>
-              </div>
-            </div>
-
-            
-          </div>
-
-          {/* ── ARTICLE MODAL — fully light, editorial ─────────────── */}
-          {showHeadlineModal && (
-            <div
-              onClick={() => setShowHeadlineModal(false)}
-              style={{
-                position:"fixed", inset:0, zIndex:500,
-                background:"rgba(17,24,39,0.45)",
-                display:"flex", alignItems:"flex-start", justifyContent:"center",
-                overflowY:"auto", padding:"40px 16px 60px",
-              }}
-            >
-              <div
-                onClick={e => e.stopPropagation()}
-                style={{
-                  background:T.surface,
-                  maxWidth:800, width:"100%",
-                  borderRadius:3,
-                  overflow:"hidden",
-                  boxShadow:"0 8px 48px rgba(17,24,39,0.18)",
-                }}
-              >
-                {/* Article header — white with red accent bar */}
-                <div style={{ borderTop:`5px solid ${T.accent}`, padding:"28px 36px 22px", borderBottom:`1px solid ${T.border}`, position:"relative" }}>
-                  <div style={{ display:"flex", alignItems:"center", gap:8, marginBottom:12 }}>
-                    <span style={{ fontFamily:"'DM Sans', sans-serif", fontWeight:700, fontSize:9, letterSpacing:"0.14em", textTransform:"uppercase", color:"#22C55E", background:"#DCFCE7", padding:"2px 8px", borderRadius:2 }}>✅ DAY 1 CONFIRMED</span>
-                    <span style={{ fontFamily:"'DM Sans', sans-serif", fontSize:10, color:T.textMuted }}>Mar 20, 2026</span>
-                  </div>
-                  <h1 style={{
-                    fontFamily:"'Barlow Condensed', sans-serif", fontWeight:800,
-                    fontSize:"clamp(26px,3.6vw,42px)", color:T.text,
-                    lineHeight:1.05, letterSpacing:"-0.02em", margin:"0 0 12px",
-                  }}>
-                    Dhurandhar: The Revenge — ₹867 Cr. ALL-TIME BLOCKBUSTER.<br/>
-                    <span style={{ color:"#22C55E" }}>D0–D12 ₹867 Cr · D11 ₹68 Cr ✅ · D12 ₹25.30 Cr ✅ · WW ~₹1,392 Cr.</span>
-                  </h1>
-                  <div style={{ fontFamily:"'DM Sans', sans-serif", fontSize:12, color:T.textMuted, display:"flex", gap:12, flexWrap:"wrap" }}>
-                    <span>Ranveer Singh · Dir. Aditya Dhar</span>
-                    <span style={{ color:T.border }}>|</span>
-                    <span>Jio Studios &amp; B62 Studios</span>
-                    <span style={{ color:T.border }}>|</span>
-                    <span>March 19, 2026 · Eid + Gudi Padwa + Ugadi</span>
-                  </div>
-                  <button
-                    onClick={() => setShowHeadlineModal(false)}
-                    style={{
-                      position:"absolute", top:24, right:24,
-                      background:"transparent", border:`1px solid ${T.border}`,
-                      color:T.textMuted, fontSize:14, borderRadius:3,
-                      width:30, height:30, cursor:"pointer",
-                      display:"flex", alignItems:"center", justifyContent:"center",
-                      fontFamily:"'DM Sans', sans-serif",
-                    }}
-                  >✕</button>
-                </div>
-
-                {/* Article body */}
-                <div style={{ padding:"28px 36px", display:"flex", flexDirection:"column", gap:28 }}>
-
-                  {/* Lede paragraph */}
-                  <p style={{
-                    fontFamily:"'DM Sans', sans-serif", fontSize:15, color:T.textMid,
-                    lineHeight:1.8, margin:0,
-                    borderLeft:`3px solid ${T.border}`, paddingLeft:16,
-                  }}>
-                    Dhurandhar: The Revenge has delivered the greatest opening run in Hindi cinema history. ₹102.55 Cr D1. ₹113 Cr Eid Saturday. ₹114.85 Cr Sunday — three days above ₹100 Cr nett, a first for any Indian film. D5 Mon ₹65 Cr (highest ever Bollywood first weekday). D6 Tue ₹56.55 Cr. D0–D12 ₹867 Cr India nett. D11 ₹68 Cr (Sun) ✅ · D12 ₹25.30 Cr (Mon) ✅ — first major Monday dip as IPL 2026 began. ₹1,000 Cr nett target in sight. WW ~₹1,392 Cr. ALL-TIME BLOCKBUSTER.
-                  </p>
-
-                  {/* BMS Advance Data — clean table style */}
-                  <div>
-                    <div style={{ fontFamily:"'Barlow Condensed', sans-serif", fontWeight:800, fontSize:17, color:T.text, letterSpacing:"0.04em", textTransform:"uppercase", marginBottom:12, display:"flex", alignItems:"center", gap:10 }}>
-                      <div style={{ width:3, height:18, background:T.accent, borderRadius:2 }} />
-                      Premiere Actuals + Advance Data — Mar 18–19, 2026
-                    </div>
-                    <div style={{ display:"grid", gridTemplateColumns:"repeat(auto-fill, minmax(180px, 1fr))", gap:1, border:`1px solid ${T.border}`, borderRadius:3, overflow:"hidden" }}>
-                      {bmsStats.map((s,i) => (
-                        <div key={i} style={{
-                          background: i % 2 === 0 ? T.surface : T.surfaceAlt,
-                          padding:"12px 16px",
-                          borderRight:`1px solid ${T.border}`,
-                          borderBottom:`1px solid ${T.border}`,
-                        }}>
-                          <div style={{ fontFamily:"'Barlow Condensed', sans-serif", fontWeight:800, fontSize:20, color:T.accent, lineHeight:1 }}>{s.val}</div>
-                          <div style={{ fontFamily:"'DM Sans', sans-serif", fontSize:10, color:T.text, fontWeight:600, marginTop:3 }}>{s.label}</div>
-                          <div style={{ fontFamily:"'DM Sans', sans-serif", fontSize:9, color:T.textMuted, marginTop:2, letterSpacing:"0.04em" }}>{[].concat(s.src.split(",")).map(n=>parseInt(n.trim())).filter(Boolean).map(n=><Fn key={n} n={n} />)}</div>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-
-                  {/* Full prediction grid */}
-                  <div>
-                    <div style={{ fontFamily:"'Barlow Condensed', sans-serif", fontWeight:800, fontSize:17, color:T.text, letterSpacing:"0.04em", textTransform:"uppercase", marginBottom:12, display:"flex", alignItems:"center", gap:10 }}>
-                      <div style={{ width:3, height:18, background:T.accent, borderRadius:2 }} />
-                      Full Prediction Range
-                    </div>
-                    <div style={{ display:"grid", gridTemplateColumns:"repeat(auto-fill, minmax(170px, 1fr))", gap:8 }}>
-                      {[
-                        { label:"D0 Preview ✅",          val:"₹43 Cr",        sub:"Mar 18 · All-time India preview record · Sacnilk" },
-                        { label:"D1 Nett ✅",             val:"₹102.55 Cr",    sub:"Mar 19 · All-time Hindi D1 record · Sacnilk/Pinkvilla" },
-                        { label:"D2 Nett ✅",             val:"₹80.72 Cr",     sub:"Mar 20 · -21.3% · Sacnilk" },
-                        { label:"D3 Nett ✅",             val:"₹113 Cr",       sub:"Mar 21 Eid Sat · +40% · Hindi ₹105 Cr · Sacnilk/IndiaTV" },
-                        { label:"D4 Sunday Nett ✅",      val:"₹114.85 Cr",    sub:"Mar 22 · Sacnilk confirmed · All-time Hindi Sunday" },
-                        { label:"4-Day India Nett ✅",    val:"₹454.12 Cr",    sub:"D0–D4 Sacnilk confirmed" },
-                        { label:"D5 Monday ✅",           val:"₹60 Cr",        sub:"Confirmed · Highest ever Bollywood 1st Monday · beats Tiger 3 ₹59.25" },
-                        { label:"D6 Tuesday ✅",           val:"₹56.55 Cr",    sub:"Sacnilk/BOI / Sacnilk confirmed · D0-D6 ₹867 Cr nett" },
-                        { label:"BMS All-Time #1",        val:"14.81L tickets", sub:"Highest-ever Hindi film on BookMyShow" },
-                        { label:"JioHotstar OTT Deal",    val:"₹150 Cr",       sub:"Non-theatrical total ₹245 Cr" },
-                      ].map((s,i) => (
-                        <div key={i} style={{ background:T.surfaceAlt, border:`1px solid ${T.border}`, borderRadius:3, padding:"11px 14px" }}>
-                          <div style={{ fontFamily:"'Barlow Condensed', sans-serif", fontWeight:800, fontSize:20, color:T.accent, lineHeight:1 }}>{s.val}</div>
-                          <div style={{ fontFamily:"'DM Sans', sans-serif", fontSize:10, color:T.text, fontWeight:600, marginTop:3 }}>{s.label}</div>
-                          <div style={{ fontFamily:"'DM Sans', sans-serif", fontSize:9, color:T.textMuted, marginTop:2 }}>{s.sub}</div>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-
-                  {/* Boxoffy Commentary */}
-                  <div style={{ background:T.surfaceAlt, border:`1px solid ${T.border}`, borderRadius:3, padding:"20px 24px" }}>
-                    <div style={{ fontFamily:"'Barlow Condensed', sans-serif", fontWeight:800, fontSize:17, color:T.text, letterSpacing:"0.04em", textTransform:"uppercase", marginBottom:14, display:"flex", alignItems:"center", gap:10 }}>
-                      <div style={{ width:3, height:18, background:T.accent, borderRadius:2 }} />
-                      Boxoffy Take
-                    </div>
-                    <p style={{ fontFamily:"'DM Sans', sans-serif", fontSize:14, color:T.textMid, lineHeight:1.8, margin:0 }}>
-                      Dhurandhar: The Revenge has shattered every record in Hindi cinema. ₹102.55 Cr Day 1. ₹113 Cr Eid Saturday. ₹102 Cr Sunday. Three days above ₹100 Cr nett — no Hindi film has ever done that. D0–D12 ₹867 Cr India nett. ~₹1,392 Cr worldwide. $13.5M in North America — Indian cinema's all-time NA 4-day record. A generational opening.
-                    </p>
-                  </div>
-
-                  {/* Footer close */}
-                  <div style={{ borderTop:`1px solid ${T.border}`, paddingTop:20, display:"flex", justifyContent:"space-between", alignItems:"center" }}>
-                    <span style={{ fontFamily:"'DM Sans', sans-serif", fontSize:11, color:T.textMuted }}>
-                      Trade & industry data
-                    </span>
-                    <button onClick={() => setShowHeadlineModal(false)} style={{
-                      background:T.accent, color:"#fff", border:"none",
-                      fontFamily:"'DM Sans', sans-serif", fontWeight:700, fontSize:11,
-                      padding:"9px 24px", borderRadius:2, cursor:"pointer",
-                      letterSpacing:"0.08em", textTransform:"uppercase",
-                    }}>Close</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          )}
-        </>
-      )}
-
-      {/* Section title bar */}
-      <div style={{
-        borderBottom:`2px solid ${T.border}`,
-        padding:"20px 24px 16px",
-        display:"flex", alignItems:"flex-end", justifyContent:"space-between", flexWrap:"wrap", gap:12,
-      }}>
-        <div>
-          <div style={{ display:"flex", alignItems:"center", gap:8, marginBottom:4 }}>
-            <div style={{ width:4, height:22, background:T.accent, borderRadius:2 }} />
-            <h2 style={{ fontFamily:"'Barlow Condensed', sans-serif", fontWeight:800, fontSize:28, color:T.text, letterSpacing:"-0.01em", lineHeight:1 }}>
-              BOX OFFICE CHART
-            </h2>
-          </div>
-          <p style={{ fontFamily:"'DM Sans', sans-serif", fontSize:13, color:T.textMuted, marginLeft:12 }}>
-            {showWeekly ? "Week 14, 2026 — D0–D13 ~₹895 Cr nett · D13 ₹27.75 Cr (Tue Mar 31) · WW ~₹1,420 Cr · GST ₹122.2 Cr · OTT ₹245 Cr · ALL-TIME BLOCKBUSTER" : "Top Indian films by worldwide gross · Industry tracking data"}
-          </p>
-        </div>
-        {topFilm && (
-          <div style={{ display:"flex", gap:16 }}>
-            <div style={{ textAlign:"right" }}>
-              <div style={{ fontFamily:"'Barlow Condensed', sans-serif", fontWeight:800, fontSize:20, color:T.accent }}>
-                ₹{totalWW.toLocaleString("en-IN")} Cr
-              </div>
-              <div style={{ fontFamily:"'DM Sans', sans-serif", fontSize:10, color:T.textMuted, letterSpacing:"0.06em", textTransform:"uppercase" }}>
-                {year} Combined WW
-              </div>
-            </div>
-          </div>
-        )}
-      </div>
-
-      {/* Year tabs */}
-      <div style={{ padding:"12px 24px", borderBottom:`1px solid ${T.border}`, display:"flex", gap:4, flexWrap:"wrap", alignItems:"center", background:T.surfaceAlt }}>
-        <span style={{ fontFamily:"'DM Sans', sans-serif", fontSize:11, color:T.textMuted, fontWeight:600, marginRight:6, letterSpacing:"0.08em", textTransform:"uppercase" }}>Year:</span>
-        {YEARS.map(y => {
-          const ya = YEAR_ACCENT[y];
-          const active = y === year;
-          return (
-            <button key={y} onClick={() => { setYear(y); setFilter("All"); setSortBy("collection"); setView(y === 2026 ? "weekly" : "alltime"); }} style={{
-              fontFamily:"'Barlow Condensed', sans-serif", fontWeight:700, fontSize:15,
-              background: active ? T.text : "transparent",
-              color: active ? "#fff" : T.textMid,
-              border: `1px solid ${active ? T.text : T.border}`,
-              borderRadius:3, padding:"4px 12px", cursor:"pointer",
-              transition:"all 0.15s",
-              position:"relative",
-            }}>
-              {y}
-              {y === 2026 && <span style={{ position:"absolute", top:-6, right:-4, background:T.accent, color:"#fff", fontSize:7, fontFamily:"'DM Sans',sans-serif", fontWeight:800, padding:"1px 4px", borderRadius:2, letterSpacing:"0.05em" }}>LIVE</span>}
-            </button>
-          );
-        })}
-
-        <div style={{ width:1, height:20, background:T.border, margin:"0 8px" }} />
-
-        {/* Archive years 2010-2019 — link out to dedicated pages */}
-        <span style={{ fontFamily:"'DM Sans', sans-serif", fontSize:11, color:"#C8201A", fontWeight:700, letterSpacing:"0.08em", textTransform:"uppercase" }}>Archives:</span>
-        {ARCHIVE_YEARS.map(y => (
-          <a key={y} href={`/india-box-office-${y}.html`} style={{
-            fontFamily:"'Barlow Condensed', sans-serif", fontWeight:700, fontSize:15,
-            background:"transparent", color:"#9CA3AF",
-            border:"1px solid #333", borderRadius:3,
-            padding:"4px 12px", cursor:"pointer",
-            transition:"all 0.15s", textDecoration:"none", display:"inline-block",
-          }}
-            onMouseEnter={e => { e.currentTarget.style.color="#fff"; e.currentTarget.style.borderColor="#555"; e.currentTarget.style.background="#1a1a1a"; }}
-            onMouseLeave={e => { e.currentTarget.style.color="#9CA3AF"; e.currentTarget.style.borderColor="#333"; e.currentTarget.style.background="transparent"; }}
-          >
-            {y}
-          </a>
-        ))}
-
-        <div style={{ width:1, height:20, background:T.border, margin:"0 8px" }} />
-
-        {/* 2026-specific: Weekly / All-Time toggle */}
-        {year === 2026 && (
-          <>
-            <span style={{ fontFamily:"'DM Sans', sans-serif", fontSize:11, color:T.textMuted, fontWeight:600, letterSpacing:"0.08em", textTransform:"uppercase" }}>View:</span>
-            {[["weekly","📊 Weekly Chart"],["alltime","🏆 All-Time Rank"]].map(([v, label]) => (
-              <button key={v} onClick={() => setView(v)} style={{
-                fontFamily:"'DM Sans', sans-serif", fontWeight:view===v ? 700 : 500, fontSize:12,
-                background: view===v ? T.accent : "transparent",
-                color: view===v ? "#fff" : T.textMid,
-                border:`1px solid ${view===v ? T.accent : T.border}`,
-                borderRadius:3, padding:"4px 10px", cursor:"pointer", transition:"all 0.15s",
-              }}>{label}</button>
-            ))}
-            <div style={{ width:1, height:20, background:T.border, margin:"0 8px" }} />
-          </>
-        )}
-
-        {!showWeekly && (
-          <>
-            <span style={{ fontFamily:"'DM Sans', sans-serif", fontSize:11, color:T.textMuted, fontWeight:600, letterSpacing:"0.08em", textTransform:"uppercase" }}>Lang:</span>
-            {LANGUAGES.map(l => (
-              <button key={l} onClick={() => setFilter(l)} style={{
-                fontFamily:"'DM Sans', sans-serif", fontWeight:filter === l ? 700 : 500, fontSize:12,
-                background: filter === l ? T.accent : "transparent",
-                color: filter === l ? "#fff" : T.textMid,
-                border:`1px solid ${filter === l ? T.accent : T.border}`,
-                borderRadius:3, padding:"4px 10px", cursor:"pointer", transition:"all 0.15s",
-              }}>{l}</button>
-            ))}
-            <div style={{ marginLeft:"auto", display:"flex", gap:4 }}>
-              {["collection","weeks"].map(s => (
-                <button key={s} onClick={() => setSortBy(s)} style={{
-                  fontFamily:"'DM Sans', sans-serif", fontWeight:sortBy===s ? 700 : 500, fontSize:11,
-                  background: sortBy===s ? T.text : "transparent",
-                  color: sortBy===s ? "#fff" : T.textMid,
-                  border:`1px solid ${sortBy===s ? T.text : T.border}`,
-                  borderRadius:3, padding:"4px 10px", cursor:"pointer", transition:"all 0.15s",
-                  letterSpacing:"0.04em",
-                }}>↕ {s === "collection" ? "Collection" : "Weeks"}</button>
-              ))}
-            </div>
-          </>
-        )}
-      </div>
-
-      {/* Year note */}
-      {(liveNotes || YEAR_NOTES)[year] && (
-        <div style={{
-          background: year === 2020 || year === 2021 ? "#FFF3CD" : year === 2026 ? "#FFF5F5" : "#F0FDF4",
-          borderLeft:`4px solid ${year === 2020 || year === 2021 ? T.gold : year === 2026 ? T.accent : T.green}`,
-          padding:"10px 24px",
-          fontFamily:"'DM Sans', sans-serif", fontSize:12, color:T.textMid,
-          borderBottom:`1px solid ${T.border}`,
-        }}>{(liveNotes || YEAR_NOTES)[year]}</div>
-      )}
-
-      {/* ── LIVE STATUS STRIP (2026 only — static, no API calls) ── */}
-      {year === 2026 && (
-        <div style={{ borderBottom:`1px solid ${T.border}`, background:T.surfaceAlt }}>
-          <div style={{ display:"flex", alignItems:"center", gap:12, padding:"8px 24px", flexWrap:"wrap" }}>
-            <span style={{ fontFamily:"'DM Sans', sans-serif", fontSize:9, color:"#4ADE80", fontWeight:800, letterSpacing:"0.15em", textTransform:"uppercase" }}>
-              ● LIVE
-            </span>
-            <span style={{ fontFamily:"'DM Sans', sans-serif", fontSize:11, color:T.textMuted }}>
-              Week 14 · Mar 31, 2026 · D0–D13 ~₹895 Cr nett · D13 ₹27.75 Cr ✅ · WW ~₹1,420 Cr · eyeing ₹900 Cr tonight
-            </span>
-            <span style={{ background:"#FEF3C7", border:"1px solid #FCD34D", fontFamily:"'DM Sans', sans-serif", fontSize:10, color:"#92400E", fontWeight:700, padding:"2px 8px", borderRadius:2 }}>
-              ✅ D0–D12 CONFIRMED ₹867 Cr · D7 Wed ₹48.75 Cr ⚡ ·  Thu holiday · WW ~₹1,392 Cr · Week 1 projection ALL-TIME BLOCKBUSTER
-            </span>
-            <span style={{ background:T.surface, border:`1px solid ${T.border}`, fontFamily:"'DM Sans', sans-serif", fontSize:10, color:T.textMid, padding:"2px 8px", borderRadius:2 }}>
-              UBS ~₹63 Cr 7-day FLOP · TK OTT JioHotstar TODAY Mar 26 · Kerala Story 2 done ~₹42 Cr
-            </span>
-            <span style={{ marginLeft:"auto", fontFamily:"'DM Sans', sans-serif", fontSize:10, color:T.textMuted, fontStyle:"italic" }}>
-              Boxoffy Intelligence · Week 14, 2026 · Updated Mar 31 · D0–D13 ~₹895 Cr · ₹900 Cr tonight
-            </span>
-          </div>
-        </div>
-      )}
+      
 
       {/* ── WEEKLY CHART VIEW ── */}
       {showWeekly ? (
@@ -5253,107 +4957,6 @@ function EditorialSection({ onNavigate }) {
 }
 
 /* ── HEADER SNAPSHOT CARDS ──────────────────────────────────── */
-function HeaderSnapshotCards({ activeSection }) {
-  const isMobile = useIsMobile();
-  return (
-    <div style={{ display:"flex", flexDirection:"column", gap:8, flexShrink:0, maxWidth: isMobile ? "100%" : 480 }}>
-
-      {/* Card 1 — D2 Opening Weekend confirmed */}
-      <a
-        href="/dhurandhar2-advance-article.html"
-        style={{ textDecoration:"none", display:"block" }}
-      >
-        <div style={{
-          background:"#FFFFFF", borderBottom:`1px solid #E5E7EB`,
-          borderLeft:`4px solid ${T.accent}`, padding:"12px 18px",
-          cursor:"pointer",
-        }}>
-          <div style={{
-            fontFamily:"'IBM Plex Mono', monospace", fontSize:9, fontWeight:700,
-            color:"#22C55E", letterSpacing:"0.16em", textTransform:"uppercase", marginBottom:5,
-          }}>✅ D11 ₹68 Cr · D12 ₹25.30 Cr · 13-DAY INDIA NETT ₹867 Cr</div>
-          <div style={{
-            fontFamily:"'Barlow Condensed', sans-serif", fontWeight:900,
-            fontSize:"clamp(14px, 1.8vw, 18px)", color:"#111827",
-            lineHeight:1.1, marginBottom:10, letterSpacing:"-0.01em",
-          }}>
-            Dhurandhar: The Revenge —{" "}
-            <span style={{ color:T.accent }}>₹867 Cr in 13 Days. D0–D12 Complete. WW ~₹1,392 Cr.</span>
-          </div>
-          <div style={{ display:"flex", gap:20, flexWrap:"wrap" }}>
-            {[
-              { label:"D10 Fri ✅",      val:"₹62.85 Cr" },
-              { label:"D11 Sun ✅",     val:"₹68 Cr" },
-              { label:"D12 Mon ✅",     val:"₹25.30 Cr" },
-              { label:"India Nett D0–D12", val:"₹867 Cr" },
-              { label:"WW Gross",       val:"~₹1,392 Cr" },
-              { label:"NA 4-Day ✅",    val:"$13.5M" },
-            ].map(s => (
-              <div key={s.label}>
-                <div style={{ fontFamily:"'Barlow Condensed', sans-serif", fontWeight:900, fontSize:17, color:"#111827", lineHeight:1 }}>{s.val}</div>
-                <div style={{ fontFamily:"'DM Sans', sans-serif", fontSize:8, color:"#9CA3AF", letterSpacing:"0.1em", textTransform:"uppercase", marginTop:2 }}>{s.label}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </a>
-
-      {/* Card 2 — D1 vs D2 poster comparison */}
-      <a
-        href="/dhurandhar-box-office-d1-vs-d2.html"
-        style={{ textDecoration:"none", display:"block" }}
-      >
-        <div style={{
-          background:"#F9FAFB", borderBottom:`1px solid #E5E7EB`,
-          borderLeft:`4px solid #2563EB`, padding:"12px 18px",
-          cursor:"pointer", display:"flex", alignItems:"center", gap:16,
-        }}>
-          {/* Poster pair */}
-          <div style={{ display:"flex", alignItems:"center", flexShrink:0 }}>
-            <img
-              src="https://image.tmdb.org/t/p/w185/8FHOtUpNIk5ZPEay2N2EY5lrxkv.jpg"
-              alt="Dhurandhar"
-              style={{ width:44, height:66, objectFit:"cover", borderRadius:3, border:"1px solid #D1D5DB" }}
-              onError={e => { e.target.style.display="none"; }}
-            />
-            <div style={{
-              width:26, height:26, borderRadius:"50%", background:"#1E3A8A",
-              display:"flex", alignItems:"center", justifyContent:"center",
-              fontFamily:"'Barlow Condensed', sans-serif", fontWeight:900, fontSize:9,
-              color:"#FFFFFF", letterSpacing:"0.06em", flexShrink:0,
-              margin:"0 -3px", zIndex:1, boxShadow:"0 0 0 2px #F9FAFB",
-            }}>VS</div>
-            <img
-              src="https://image.tmdb.org/t/p/w185/ov8vrRLZGoXHpYjSY9Vpv1tHJX7.jpg"
-              alt="Dhurandhar: The Revenge"
-              style={{ width:44, height:66, objectFit:"cover", borderRadius:3, border:"1px solid #D1D5DB" }}
-              onError={e => { e.target.style.display="none"; }}
-            />
-          </div>
-          {/* Text */}
-          <div style={{ flex:1, minWidth:0 }}>
-            <div style={{
-              fontFamily:"'IBM Plex Mono', monospace", fontSize:9, fontWeight:700,
-              color:"#2563EB", letterSpacing:"0.14em", textTransform:"uppercase", marginBottom:4,
-            }}>⚔ HEAD-TO-HEAD COMPARISON</div>
-            <div style={{
-              fontFamily:"'Barlow Condensed', sans-serif", fontWeight:900,
-              fontSize:"clamp(13px, 1.6vw, 16px)", color:"#111827",
-              lineHeight:1.2, letterSpacing:"-0.01em",
-            }}>
-              Dhurandhar vs Dhurandhar 2{" "}
-              <span style={{ color:"#2563EB" }}>— D1 ₹838.5 Cr Final vs D2 ₹339.27 Cr (D0–D3) · WW ₹550 Cr</span>
-            </div>
-            <div style={{ fontFamily:"'DM Sans', sans-serif", fontSize:10, color:"#9CA3AF", marginTop:4 }}>
-              Day-wise · Week-wise · Budget · Verdict →
-            </div>
-          </div>
-        </div>
-      </a>
-
-    </div>
-  );
-}
 
 function getConsent() {
   try { return localStorage.getItem(CONSENT_KEY); } catch { return null; }
@@ -6124,8 +5727,7 @@ export default function App() {
           </div>
         </div>
 
-        {/* ── Snapshot Cards ─────────────────────────────────────── */}
-        <HeaderSnapshotCards activeSection={activeSection} />
+
       </div>
 
 

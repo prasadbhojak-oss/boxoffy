@@ -1,8 +1,8 @@
 {
-  "version": "v3.29",
+  "version": "v3.30",
   "deployedAt": "2026-03-31",
   "gitCommit": "7a63f82",
-  "appJsxChars": 346604,
+  "appJsxChars": 322009,
   "dataFiles": {
     "weekly-commentary.json": {
       "weekNum": "Week 14",
@@ -129,5 +129,5 @@
     "appJsxRule": "Good App.jsx = 346,239 chars. If outputs/App.jsx is unavailable or char count is wrong, DO NOT PROCEED — ask PB to run: git checkout 7a63f82 -- src/App.jsx",
     "updateProtocol": "After every deploy: bump version (3.24 → 3.25), update deployedAt, gitCommit, and relevant dataFiles entries."
   },
-  "notes": "v3.29 — Week 14 full update: D2 ₹867Cr sealed, GST ₹122.2Cr, OTT ₹245Cr. PHM W2 data. US BO confirmed finals. ForeignFilmsPanel WKD 14. Weekly commentary W14."
+  "notes": "v3.30 — Remove top-right ticker (HeaderSnapshotCards), weekly ticker, Lead Story confirmed gone. Upcoming = calendar month groups. PHM in main chart. All D2 stats = D13 ₹895Cr."
 }
