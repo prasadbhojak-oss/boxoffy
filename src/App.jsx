@@ -719,7 +719,7 @@ function NavBar({ activeSection, setActiveSection, setForceAllTime }) {
               <span style={{ fontFamily:"'DM Sans', sans-serif", fontSize:8, color:"#9CA3AF", letterSpacing:"0.1em", textTransform:"uppercase" }}>Box Office Period</span>
             </div>
             <div style={{ display:"flex", flexDirection:"column", alignItems:"flex-end" }}>
-              <span style={{ fontFamily:"'Barlow Condensed', sans-serif", fontWeight:700, fontSize:13, color:"#374151", letterSpacing:"0.03em" }}>Mar 31, 2026 · D0–D12 ₹867 Cr India nett (BOI) · WW ~₹1,392 Cr · GST ₹122.2 Cr to Govt · OTT pkg ₹245 Cr · 3.23 Cr footfalls</span>
+              <span style={{ fontFamily:"'Barlow Condensed', sans-serif", fontWeight:700, fontSize:13, color:"#374151", letterSpacing:"0.03em" }}>Mar 31, 2026 · D13 ₹27.75 Cr (Filmibeat) · D0–D13 ~₹895 Cr India nett · WW ~₹1,420 Cr · eyeing ₹900 Cr tonight</span>
               <span style={{ fontFamily:"'DM Sans', sans-serif", fontSize:8, color:"#9CA3AF", letterSpacing:"0.1em", textTransform:"uppercase" }}>Last Updated</span>
             </div>
           </div>
@@ -790,7 +790,7 @@ function NavBar({ activeSection, setActiveSection, setForceAllTime }) {
             borderLeft:"3px solid transparent",
           }}>About</a>
           <div style={{ padding:"10px 20px", background:"#F9FAFB", borderTop:"1px solid #F3F4F6" }}>
-            <span style={{ fontFamily:"'DM Sans', sans-serif", fontSize:12, color:"#9CA3AF" }}>Mar 31, 2026 · D0–D12 ₹867 Cr India nett (BOI) · WW ~₹1,392 Cr · GST ₹122.2 Cr to Govt · OTT pkg ₹245 Cr · 3.23 Cr footfalls</span>
+            <span style={{ fontFamily:"'DM Sans', sans-serif", fontSize:12, color:"#9CA3AF" }}>Mar 31, 2026 · D13 ₹27.75 Cr (Filmibeat) · D0–D13 ~₹895 Cr India nett · WW ~₹1,420 Cr · eyeing ₹900 Cr tonight</span>
           </div>
         </div>
       )}
@@ -3606,7 +3606,7 @@ function BoxOfficeSection({ onNavigate, forceAllTime, onClearForceAllTime }) {
   // Weekly chart: sort by this week's collection (active films first, then OTT, then upcoming)
   // Hollywood films are separated out into their own section
   const weeklyChartMovies = year === 2026
-    ? [...movies].filter(m => m.language !== "Hollywood").sort((a,b) => {
+    ? [...movies].filter(m => m.language !== "Hollywood" || m.showInMainChart === true).sort((a,b) => {
         if (a.status === "Upcoming" && b.status !== "Upcoming") return 1;
         if (b.status === "Upcoming" && a.status !== "Upcoming") return -1;
         if (a.status === "OTT" && b.status !== "OTT") return 1;
@@ -3872,7 +3872,7 @@ function BoxOfficeSection({ onNavigate, forceAllTime, onClearForceAllTime }) {
             </h2>
           </div>
           <p style={{ fontFamily:"'DM Sans', sans-serif", fontSize:13, color:T.textMuted, marginLeft:12 }}>
-            {showWeekly ? "Week 14, 2026 — D0–D12 ₹867 Cr nett · WW ~₹1,392 Cr · GST ₹122.2 Cr to Govt · 3.23 Cr footfalls · OTT ₹245 Cr · ALL-TIME BLOCKBUSTER" : "Top Indian films by worldwide gross · Industry tracking data"}
+            {showWeekly ? "Week 14, 2026 — D0–D13 ~₹895 Cr nett · D13 ₹27.75 Cr (Tue Mar 31) · WW ~₹1,420 Cr · GST ₹122.2 Cr · OTT ₹245 Cr · ALL-TIME BLOCKBUSTER" : "Top Indian films by worldwide gross · Industry tracking data"}
           </p>
         </div>
         {topFilm && (
@@ -3996,7 +3996,7 @@ function BoxOfficeSection({ onNavigate, forceAllTime, onClearForceAllTime }) {
               ● LIVE
             </span>
             <span style={{ fontFamily:"'DM Sans', sans-serif", fontSize:11, color:T.textMuted }}>
-              Week 14 · Mar 30, 2026 · D0–D12 ₹867 Cr nett · WW ~₹1,392 Cr · GST ₹122.2 Cr · 3.23 Cr footfalls · OTT pkg ₹245 Cr
+              Week 14 · Mar 31, 2026 · D0–D13 ~₹895 Cr nett · D13 ₹27.75 Cr ✅ · WW ~₹1,420 Cr · eyeing ₹900 Cr tonight
             </span>
             <span style={{ background:"#FEF3C7", border:"1px solid #FCD34D", fontFamily:"'DM Sans', sans-serif", fontSize:10, color:"#92400E", fontWeight:700, padding:"2px 8px", borderRadius:2 }}>
               ✅ D0–D12 CONFIRMED ₹867 Cr · D7 Wed ₹48.75 Cr ⚡ ·  Thu holiday · WW ~₹1,392 Cr · Week 1 projection ALL-TIME BLOCKBUSTER
@@ -4005,7 +4005,7 @@ function BoxOfficeSection({ onNavigate, forceAllTime, onClearForceAllTime }) {
               UBS ~₹63 Cr 7-day FLOP · TK OTT JioHotstar TODAY Mar 26 · Kerala Story 2 done ~₹42 Cr
             </span>
             <span style={{ marginLeft:"auto", fontFamily:"'DM Sans', sans-serif", fontSize:10, color:T.textMuted, fontStyle:"italic" }}>
-              Boxoffy Intelligence · Week 14, 2026 · Updated Mar 31 · D0–D12 ₹867 Cr · GST ₹122.2 Cr · OTT ₹245 Cr
+              Boxoffy Intelligence · Week 14, 2026 · Updated Mar 31 · D0–D13 ~₹895 Cr · ₹900 Cr tonight
             </span>
           </div>
         </div>
