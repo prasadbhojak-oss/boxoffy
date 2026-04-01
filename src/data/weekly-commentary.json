@@ -1,7 +1,54 @@
 [
   {
     "weekNum": "Week 14",
-    "dateRange": "Mar 26 – Apr 1, 2026",
+    "dateRange": "Mar 27 – Apr 1, 2026",
+    "headline": "D2 Seals ₹867 Cr, GST Sends ₹122 Cr to Government. Project Hail Mary ₹17 Cr in India.",
+    "subline": "Dhurandhar: The Revenge completes its canonical D0–D12 run at ₹867 Cr India nett. WW ~₹1,392 Cr. IPL 2026 starts Monday — begins the seasonal compression of weekday cinema. Project Hail Mary takes Week 2 at ₹7 Cr India est. US box office confirms PHM $54.5M Wkd 2 — beats Oppenheimer's Wkd 2 hold.",
+    "status": "Live",
+    "scoreboard": [
+      {
+        "title": "Dhurandhar: The Revenge",
+        "weekCollection": "₹25.30 Cr",
+        "totalIndia": "₹867 Cr nett",
+        "verdict": "ALL-TIME BLOCKBUSTER",
+        "note": "D12 ₹25.30 Cr ✅ · D0–D12 locked · GST ₹122.2 Cr to Govt · 3.23 Cr footfalls · OTT ₹245 Cr (JioHotstar ₹150 Cr + Star Gold ₹50 Cr + T-Series ₹45 Cr) · WW ~₹1,392 Cr · NA $22.8M all-time Hindi record"
+      },
+      {
+        "title": "Project Hail Mary",
+        "weekCollection": "~₹7 Cr",
+        "totalIndia": "~₹17 Cr nett",
+        "verdict": "HIT",
+        "note": "India D1–D5: ₹16.75 Cr · WW $300M+ (10 days) · US Wkd 2 $54.5M confirmed (-32%) · beats Oppenheimer (-43%) Wkd 2 hold · #1 US for 2nd consecutive wkd · Amazon MGM all-time record"
+      },
+      {
+        "title": "Ustaad Bhagat Singh",
+        "weekCollection": "~₹3.5 Cr",
+        "totalIndia": "~₹63 Cr nett",
+        "verdict": "DISASTER",
+        "note": "W3 · limping to close · budget ₹150 Cr · deep red · IPL will accelerate the exit"
+      },
+      {
+        "title": "Phule: The Maverick Mind",
+        "weekCollection": "₹9.75 Cr",
+        "totalIndia": "₹17 Cr nett",
+        "verdict": "HIT",
+        "note": "OW ₹9.75 Cr (D1 ₹2.25 Cr · D2 ₹2.90 Cr · D3 ₹4.60 Cr) · punches above its weight · Pratik Gandhi delivering on awards season momentum"
+      }
+    ],
+    "sources": [
+      "BOI",
+      "Sacnilk",
+      "Deadline",
+      "Variety",
+      "The Numbers",
+      "Comscore"
+    ],
+    "interval_take": "The number that doesn't make headlines but should: ₹122.2 Cr. That's how much GST Dhurandhar: The Revenge sent to government treasuries across India — split 50/50 between centre and states. Every blockbuster is also, quietly, a tax event. The audience paying ₹400 for a multiplex ticket sent ₹61.02 of it straight to the government before a single rupee reached the producer's P&L. Meanwhile, IPL 2026 begins this week. Weekday collections will compress. Ramayana's April 2 Hanuman Jayanti teaser drops tomorrow.",
+    "nextWeek": "Apr 3–5, 2026 · Vadh 2 releases · OTT: Happy Patel (Apr 1) · Sitaare Zameen Par (SonyLIV Apr 3) · Super Mario Galaxy Movie opens US · D2 enters Week 3 tail"
+  },
+  {
+    "weekNum": "Week 13",
+    "dateRange": "Mar 19 – Mar 25, 2026",
     "headline": "Dhurandhar Juggernaut Continues — Eyes ₹1,000 Cr Nett",
     "subline": "D0–D12 ₹867 Cr nett (BOI) · D12 ₹25.30 Cr Mon ✅ · D11 ₹68 Cr Sun ✅ · WW ~₹1,392 Cr · ₹1,000 Cr nett in sight",
     "status": "current",

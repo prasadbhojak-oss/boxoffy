@@ -719,7 +719,7 @@ function NavBar({ activeSection, setActiveSection, setForceAllTime }) {
               <span style={{ fontFamily:"'DM Sans', sans-serif", fontSize:8, color:"#9CA3AF", letterSpacing:"0.1em", textTransform:"uppercase" }}>Box Office Period</span>
             </div>
             <div style={{ display:"flex", flexDirection:"column", alignItems:"flex-end" }}>
-              <span style={{ fontFamily:"'Barlow Condensed', sans-serif", fontWeight:700, fontSize:13, color:"#374151", letterSpacing:"0.03em" }}>Wed, 25 Mar 2026 · D7 ₹42 Cr (BOI) · ₹867 Cr total · ⚠ Figures vary by tracker · Boxoffy uses BOI/PV</span>
+              <span style={{ fontFamily:"'Barlow Condensed', sans-serif", fontWeight:700, fontSize:13, color:"#374151", letterSpacing:"0.03em" }}>Mar 31, 2026 · D0–D12 ₹867 Cr India nett (BOI) · WW ~₹1,392 Cr · GST ₹122.2 Cr to Govt · OTT pkg ₹245 Cr · 3.23 Cr footfalls</span>
               <span style={{ fontFamily:"'DM Sans', sans-serif", fontSize:8, color:"#9CA3AF", letterSpacing:"0.1em", textTransform:"uppercase" }}>Last Updated</span>
             </div>
           </div>
@@ -790,7 +790,7 @@ function NavBar({ activeSection, setActiveSection, setForceAllTime }) {
             borderLeft:"3px solid transparent",
           }}>About</a>
           <div style={{ padding:"10px 20px", background:"#F9FAFB", borderTop:"1px solid #F3F4F6" }}>
-            <span style={{ fontFamily:"'DM Sans', sans-serif", fontSize:12, color:"#9CA3AF" }}>Wed, 25 Mar 2026 · D7 ₹42 Cr (BOI) · ₹867 Cr total · ⚠ Figures vary by tracker · Boxoffy uses BOI/PV</span>
+            <span style={{ fontFamily:"'DM Sans', sans-serif", fontSize:12, color:"#9CA3AF" }}>Mar 31, 2026 · D0–D12 ₹867 Cr India nett (BOI) · WW ~₹1,392 Cr · GST ₹122.2 Cr to Govt · OTT pkg ₹245 Cr · 3.23 Cr footfalls</span>
           </div>
         </div>
       )}
@@ -3160,7 +3160,7 @@ function ForeignFilmsPanel({ movies }) {
             </span>
           </div>
           <div style={{ fontFamily:"'DM Sans',sans-serif", fontSize:9, color:T.textMuted, letterSpacing:"0.18em", textTransform:"uppercase", marginTop:2 }}>
-            BOXOFFY · WKD 13 · MAR 21–23, 2026
+            BOXOFFY · WKD 14 · MAR 27–29, 2026
           </div>
         </div>
 
@@ -3872,7 +3872,7 @@ function BoxOfficeSection({ onNavigate, forceAllTime, onClearForceAllTime }) {
             </h2>
           </div>
           <p style={{ fontFamily:"'DM Sans', sans-serif", fontSize:13, color:T.textMuted, marginLeft:12 }}>
-            {showWeekly ? "Week 14, 2026 — D0–D12 ₹867 Cr nett · WW ~₹1,392 Cr · D11 ₹68 Cr ✅ · D12 ₹25.30 Cr ✅ · ALL-TIME BLOCKBUSTER" : "Top Indian films by worldwide gross · Industry tracking data"}
+            {showWeekly ? "Week 14, 2026 — D0–D12 ₹867 Cr nett · WW ~₹1,392 Cr · GST ₹122.2 Cr to Govt · 3.23 Cr footfalls · OTT ₹245 Cr · ALL-TIME BLOCKBUSTER" : "Top Indian films by worldwide gross · Industry tracking data"}
           </p>
         </div>
         {topFilm && (
@@ -3996,7 +3996,7 @@ function BoxOfficeSection({ onNavigate, forceAllTime, onClearForceAllTime }) {
               ● LIVE
             </span>
             <span style={{ fontFamily:"'DM Sans', sans-serif", fontSize:11, color:T.textMuted }}>
-              Week 14 · Mar 30, 2026 · D0–D12 ₹867 Cr nett · WW ~₹1,392 Cr · D12 ₹25.30 Cr ✅ Mon
+              Week 14 · Mar 30, 2026 · D0–D12 ₹867 Cr nett · WW ~₹1,392 Cr · GST ₹122.2 Cr · 3.23 Cr footfalls · OTT pkg ₹245 Cr
             </span>
             <span style={{ background:"#FEF3C7", border:"1px solid #FCD34D", fontFamily:"'DM Sans', sans-serif", fontSize:10, color:"#92400E", fontWeight:700, padding:"2px 8px", borderRadius:2 }}>
               ✅ D0–D12 CONFIRMED ₹867 Cr · D7 Wed ₹48.75 Cr ⚡ ·  Thu holiday · WW ~₹1,392 Cr · Week 1 projection ALL-TIME BLOCKBUSTER
@@ -4005,7 +4005,7 @@ function BoxOfficeSection({ onNavigate, forceAllTime, onClearForceAllTime }) {
               UBS ~₹63 Cr 7-day FLOP · TK OTT JioHotstar TODAY Mar 26 · Kerala Story 2 done ~₹42 Cr
             </span>
             <span style={{ marginLeft:"auto", fontFamily:"'DM Sans', sans-serif", fontSize:10, color:T.textMuted, fontStyle:"italic" }}>
-              Boxoffy Intelligence · Week 14, 2026 · Updated Mar 30 · D0–D12 ₹867 Cr
+              Boxoffy Intelligence · Week 14, 2026 · Updated Mar 31 · D0–D12 ₹867 Cr · GST ₹122.2 Cr · OTT ₹245 Cr
             </span>
           </div>
         </div>
@@ -4438,7 +4438,7 @@ const OTT_PRIME = {
     sourceUrl: "https://www.aboutamazon.in/news/entertainment/prime-video-lineup-2026",
     note: "Prime Video does not publish official weekly ranked charts. Figures from Ormax OTT Intelligence and Prime Video India trade blog.",
     films: [
-      { rank:1,  title:"Project Hail Mary",     trend:"new",  lang:"Hollywood",        weeks:1,  note:"New · Mar 26 India release · Ryan Gosling · Amazon MGM · $300M+ WW · IMAX 6→60 screens", hot:true },
+      { rank:1,  title:"Project Hail Mary",     trend:"up",   lang:"Hollywood",        weeks:2,  note:"Wkd 2 · ₹16.75 Cr India nett D1–D5 · WW $300M+ (10 days) · US $164.3M · #1 US 2nd wkd $54.5M (-32%) beats Oppenheimer hold · HIT", hot:true },
       { rank:2,  title:"Subedaar",              trend:"down", lang:"Hindi",             weeks:5,  note:"Anil Kapoor · sand mafia crime drama · sustained word-of-mouth" },
       { rank:3,  title:"Pretty Lethal",         trend:"new",  lang:"Hollywood",         weeks:2,  note:"New · Action thriller · Prime Video Mar 25 premiere" },
       { rank:4,  title:"Jawan",                 trend:"same", lang:"Hindi",             weeks:57, note:"Library anchor · SRK · pulling India + global diaspora viewership" },
@@ -4527,7 +4527,7 @@ const OTT_COMBINED = {
   note: "Cross-platform chart is a composite — Netflix figures are official weekly views, Prime/Zee5/JioHotstar are Ormax primary research estimates.",
   films: [
     { rank:1,  title:"Dhurandhar",                platform:"Netflix",       lang:"Hindi",        type:"Film",  note:"101.3M hrs all-time · still #1 after 11 weeks · Indian streaming record", hot:true },
-    { rank:2,  title:"Project Hail Mary",         platform:"Prime Video",   lang:"Hollywood",    type:"Film",  note:"New Mar 26 · Ryan Gosling · Amazon MGM · $300M+ WW · top of Prime India", hot:true },
+    { rank:2,  title:"Project Hail Mary",         platform:"Prime Video",   lang:"Hollywood",    type:"Film",  note:"Wkd 2 · ₹16.75 Cr India nett · WW $300M+ · US $164.3M · now streaming India Mar 26", hot:true },
     { rank:3,  title:"Aspirants Season 3",        platform:"Prime/Netflix", lang:"Hindi",        type:"Show",  note:"TVF × Prime · UPSC drama · cross-platform #1 show India this week", hot:true },
     { rank:4,  title:"Border 2",                  platform:"Netflix",       lang:"Hindi",        type:"Film",  note:"New Mar 20 Netflix · Sunny Deol, Varun Dhawan · 1971 war epic" },
     { rank:5,  title:"Thaai Kizhavi",             platform:"JioHotstar",    lang:"Tamil",        type:"Film",  note:"New Mar 26 · Tamil comedy-drama · SUPER HIT · ₹57 Cr theatrical · JioHotstar debut", hot:true },

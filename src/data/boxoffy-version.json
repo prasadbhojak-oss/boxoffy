@@ -1,8 +1,8 @@
 {
-  "version": "3.28",
-  "deployedAt": "2026-03-30",
+  "version": "v3.29",
+  "deployedAt": "2026-03-31",
   "gitCommit": "7a63f82",
-  "appJsxChars": 346300,
+  "appJsxChars": 346604,
   "dataFiles": {
     "weekly-commentary.json": {
       "weekNum": "Week 14",
@@ -25,12 +25,14 @@
     "films.json": {
       "totalFilms": 1015,
       "lastUpdated": "2026-03-25"
-    }
+    },
+    "usBoWeekly": "Week 14 final confirmed · Mar 27-29, 2026",
+    "filmsJson": "PHM wk2 · D2 GST/footfall/OTT added",
+    "weeklyCommentary": "Week 14 comprehensive entry added"
   },
   "weeklyUpdate": {
-    "weekNum": "Week 14",
-    "dateRange": "Mar 26 – Apr 1, 2026",
-    "headline": "D0-D12 ₹867 Cr · D11 ₹68 Cr Sun · D12 ₹25.30 Cr Mon · WW ~₹1,392 Cr"
+    "weekNum": 14,
+    "dateRange": "Mar 27 – Apr 1, 2026"
   },
   "articles": {
     "dangal-china-box-office.html": "2026-03-26",
@@ -126,5 +128,6 @@
     "purpose": "Boxoffy deployed state tracker. Claude reads this at every session start to verify correct baseline before making any edits. Never edit App.jsx without checking appJsxChars matches this file.",
     "appJsxRule": "Good App.jsx = 346,239 chars. If outputs/App.jsx is unavailable or char count is wrong, DO NOT PROCEED — ask PB to run: git checkout 7a63f82 -- src/App.jsx",
     "updateProtocol": "After every deploy: bump version (3.24 → 3.25), update deployedAt, gitCommit, and relevant dataFiles entries."
-  }
+  },
+  "notes": "v3.29 — Week 14 full update: D2 ₹867Cr sealed, GST ₹122.2Cr, OTT ₹245Cr. PHM W2 data. US BO confirmed finals. ForeignFilmsPanel WKD 14. Weekly commentary W14."
 }
