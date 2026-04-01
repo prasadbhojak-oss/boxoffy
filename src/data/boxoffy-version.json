@@ -2,7 +2,7 @@
   "version": "v3.30",
   "deployedAt": "2026-03-31",
   "gitCommit": "7a63f82",
-  "appJsxChars": 322009,
+  "appJsxChars": 324688,
   "dataFiles": {
     "weekly-commentary.json": {
       "weekNum": "Week 14",
@@ -129,5 +129,5 @@
     "appJsxRule": "Good App.jsx = 346,239 chars. If outputs/App.jsx is unavailable or char count is wrong, DO NOT PROCEED — ask PB to run: git checkout 7a63f82 -- src/App.jsx",
     "updateProtocol": "After every deploy: bump version (3.24 → 3.25), update deployedAt, gitCommit, and relevant dataFiles entries."
   },
-  "notes": "v3.30 — Remove top-right ticker (HeaderSnapshotCards), weekly ticker, Lead Story confirmed gone. Upcoming = calendar month groups. PHM in main chart. All D2 stats = D13 ₹895Cr."
+  "notes": "v3.30 — Single comparison card top-right (no D2 stats block, no ticker). Lead Story removed. Calendar upcoming. All D2 data D13 consistent. PHM in main chart."
 }
