@@ -4931,6 +4931,10 @@ function EditorialSection({ onNavigate }) {
     "VERDICT":          { bg:"#FEE2E2", text:"#991B1B" },
     "COMPARISON":       { bg:"#DBEAFE", text:"#1E40AF" },
     "DATA ANALYSIS":    { bg:"#FEF3C7", text:"#92400E" },
+    "REVIEW":           { bg:"#FEE2E2", text:"#991B1B" },
+    "OTT":              { bg:"#EDE9FE", text:"#5B21B6" },
+    "TV":               { bg:"#DCFCE7", text:"#166534" },
+    "PREVIEW":          { bg:"#FEF3C7", text:"#92400E" },
   };
 
   const parseDate = (d) => { try { return new Date(d); } catch(e) { return new Date(0); } };
