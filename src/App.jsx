@@ -675,16 +675,32 @@ function NavBar({ activeSection, setActiveSection, setForceAllTime }) {
         {/* Desktop nav */}
         {!isMobile && <>
           <div style={{ width:1, height:20, background:"#E5E7EB", marginRight:24, flexShrink:0 }} />
-          {navLinks.map(s => (
-            <button key={s} onClick={() => setActiveSection(s)} style={{
-              background:"transparent", border:"none", cursor:"pointer",
-              fontFamily:"'DM Sans', sans-serif", fontWeight:600, fontSize:13,
-              color: activeSection === s ? "#111827" : "#9CA3AF",
-              padding:"18px 14px",
-              borderBottom: activeSection === s ? `2px solid ${T.accent}` : "2px solid transparent",
-              marginBottom:"-2px", letterSpacing:"0.04em", transition:"color 0.15s", flexShrink:0,
-            }}>{s}</button>
-          ))}
+          {navLinks.map(s => {
+            const extLink = s === "OTT" ? "/ott-releases.html" : s === "TV" ? "/tv-ratings.html" : null;
+            if (extLink) return (
+              <a key={s} href={extLink} style={{
+                fontFamily:"'DM Sans', sans-serif", fontWeight:600, fontSize:13,
+                color:"#9CA3AF", textDecoration:"none",
+                padding:"18px 14px",
+                borderBottom:"2px solid transparent",
+                marginBottom:"-2px", letterSpacing:"0.04em", transition:"color 0.15s", flexShrink:0,
+                display:"inline-block",
+              }}
+                onMouseEnter={e => { e.currentTarget.style.color="#111827"; }}
+                onMouseLeave={e => { e.currentTarget.style.color="#9CA3AF"; }}
+              >{s}</a>
+            );
+            return (
+              <button key={s} onClick={() => setActiveSection(s)} style={{
+                background:"transparent", border:"none", cursor:"pointer",
+                fontFamily:"'DM Sans', sans-serif", fontWeight:600, fontSize:13,
+                color: activeSection === s ? "#111827" : "#9CA3AF",
+                padding:"18px 14px",
+                borderBottom: activeSection === s ? `2px solid ${T.accent}` : "2px solid transparent",
+                marginBottom:"-2px", letterSpacing:"0.04em", transition:"color 0.15s", flexShrink:0,
+              }}>{s}</button>
+            );
+          })}
           <div style={{ width:1, height:20, background:"#E5E7EB", margin:"0 6px", flexShrink:0 }} />
           <a href="/production-houses.html" style={{
             fontFamily:"'DM Sans', sans-serif", fontWeight:700, fontSize:13,
@@ -755,17 +771,30 @@ function NavBar({ activeSection, setActiveSection, setForceAllTime }) {
           <div style={{ padding:"10px 16px", borderBottom:"1px solid #F3F4F6" }}>
             <SearchBar />
           </div>
-          {navLinks.map(s => (
-            <button key={s} onClick={() => { setActiveSection(s); setMenuOpen(false); }} style={{
-              display:"block", width:"100%", textAlign:"left",
-              background: activeSection === s ? "#FFF5F5" : "transparent",
-              border:"none", borderBottom:"1px solid #F3F4F6",
-              fontFamily:"'DM Sans', sans-serif", fontWeight:600, fontSize:15,
-              color: activeSection === s ? T.accent : "#374151",
-              padding:"14px 20px", cursor:"pointer",
-              borderLeft: activeSection === s ? `3px solid ${T.accent}` : "3px solid transparent",
-            }}>{s}</button>
-          ))}
+          {navLinks.map(s => {
+            const extLink = s === "OTT" ? "/ott-releases.html" : s === "TV" ? "/tv-ratings.html" : null;
+            if (extLink) return (
+              <a key={s} href={extLink} style={{
+                display:"block", width:"100%", textAlign:"left",
+                borderBottom:"1px solid #F3F4F6",
+                fontFamily:"'DM Sans', sans-serif", fontWeight:600, fontSize:15,
+                color:"#374151", textDecoration:"none",
+                padding:"14px 20px",
+                borderLeft:"3px solid transparent",
+              }}>{s}</a>
+            );
+            return (
+              <button key={s} onClick={() => { setActiveSection(s); setMenuOpen(false); }} style={{
+                display:"block", width:"100%", textAlign:"left",
+                background: activeSection === s ? "#FFF5F5" : "transparent",
+                border:"none", borderBottom:"1px solid #F3F4F6",
+                fontFamily:"'DM Sans', sans-serif", fontWeight:600, fontSize:15,
+                color: activeSection === s ? T.accent : "#374151",
+                padding:"14px 20px", cursor:"pointer",
+                borderLeft: activeSection === s ? `3px solid ${T.accent}` : "3px solid transparent",
+              }}>{s}</button>
+            );
+          })}
           <a href="/production-houses.html" style={{
             display:"flex", alignItems:"center", gap:8,
             fontFamily:"'DM Sans', sans-serif", fontWeight:700, fontSize:15,
@@ -5810,14 +5839,24 @@ export default function App() {
             <span style={{ fontFamily:"'DM Sans', sans-serif", fontSize:10, color:T.textMuted, marginLeft:10, letterSpacing:"0.18em", textTransform:"uppercase" }}>Box Office Intelligence</span>
           </div>
           <div style={{ display:"flex", gap:24, flexWrap:"wrap", marginBottom:10, alignItems:"center" }}>
-            {["Box Office","Bollywood","OTT","TV","Weekly"].map(s => (
-              <span key={s}
-                onClick={() => { setActiveSection(s); window.scrollTo({top:0,behavior:"smooth"}); }}
-                onMouseEnter={e => e.target.style.color=T.accent}
-                onMouseLeave={e => e.target.style.color=T.textMuted}
-                style={{ color:T.textMuted, fontSize:11, fontWeight:600, letterSpacing:"0.06em", cursor:"pointer", transition:"color 0.15s" }}
-              >{s}</span>
-            ))}
+            {["Box Office","Bollywood","OTT","TV","Weekly"].map(s => {
+              const extLink = s === "OTT" ? "/ott-releases.html" : s === "TV" ? "/tv-ratings.html" : null;
+              if (extLink) return (
+                <a key={s} href={extLink}
+                  onMouseEnter={e => e.currentTarget.style.color=T.accent}
+                  onMouseLeave={e => e.currentTarget.style.color=T.textMuted}
+                  style={{ color:T.textMuted, fontSize:11, fontWeight:600, letterSpacing:"0.06em", cursor:"pointer", transition:"color 0.15s", textDecoration:"none" }}
+                >{s}</a>
+              );
+              return (
+                <span key={s}
+                  onClick={() => { setActiveSection(s); window.scrollTo({top:0,behavior:"smooth"}); }}
+                  onMouseEnter={e => e.target.style.color=T.accent}
+                  onMouseLeave={e => e.target.style.color=T.textMuted}
+                  style={{ color:T.textMuted, fontSize:11, fontWeight:600, letterSpacing:"0.06em", cursor:"pointer", transition:"color 0.15s" }}
+                >{s}</span>
+              );
+            })}
             <span style={{ color:T.border }}>·</span>
             <a
               href="/production-houses.html"
