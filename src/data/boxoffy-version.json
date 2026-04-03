@@ -1,6 +1,6 @@
 {
-  "version": "v3.30",
-  "deployedAt": "2026-03-31",
+  "version": "v3.31",
+  "deployedAt": "2026-04-02",
   "gitCommit": "7a63f82",
   "appJsxChars": 324688,
   "dataFiles": {
@@ -129,5 +129,5 @@
     "appJsxRule": "Good App.jsx = 346,239 chars. If outputs/App.jsx is unavailable or char count is wrong, DO NOT PROCEED — ask PB to run: git checkout 7a63f82 -- src/App.jsx",
     "updateProtocol": "After every deploy: bump version (3.24 → 3.25), update deployedAt, gitCommit, and relevant dataFiles entries."
   },
-  "notes": "v3.30 — Single comparison card top-right (no D2 stats block, no ticker). Lead Story removed. Calendar upcoming. All D2 data D13 consistent. PHM in main chart."
+  "notes": "v3.31 — D2 D14 ₹920Cr, Mrithyunjay OTT Netflix, duplicates removed, Varanasi TBD 2027, Awarapan 2 TBD, Bhooth Bangla Apr 17, Toxic Jun 4, Peddi Apr 30, Dacoit Apr 10 added, Week 15 commentary, UBS/Funky week numbers fixed."
 }
