@@ -211,6 +211,31 @@ import US_BO_WEEKLY       from "./data/us-bo-weekly.json";
 import EDITORIALS         from "./data/editorials.json";
 import YEAR_NOTES         from "./data/year-notes.json";
 import ARTICLES           from "./data/articles.json";
+
+// ── TMDB poster support ─────────────────────────────────────────────────────
+const TMDB_BEARER = "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2YWM1OTY0NzEyZTA0NGRmMmJjMmFiYzFlMTFlZGMyYyIsIm5iZiI6MTc3Mzg4NTMxMS42MzIsInN1YiI6IjY5YmI1NzdmYjgyMzJhNzc5MjIxZWZjOCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.QxWkqL_4_3PfTnIVgcZYE0zlXQd9M2y5QL-oWNwq6dE";
+const tmdbPosterCache = {};
+function useTMDBPoster(title, year) {
+  const [url, setUrl] = React.useState(null);
+  React.useEffect(() => {
+    if (!title) return;
+    const key = title + (year || "");
+    if (tmdbPosterCache[key] !== undefined) { setUrl(tmdbPosterCache[key]); return; }
+    const qs = "https://api.themoviedb.org/3/search/multi?query=" + encodeURIComponent(title) + (year ? "&year=" + year : "") + "&language=en-US&page=1";
+    fetch(qs, {
+      headers: { "Authorization": "Bearer " + TMDB_BEARER, "accept": "application/json" }
+    })
+    .then(function(r) { return r.json(); })
+    .then(function(d) {
+      const hit = (d.results || []).find(function(r) { return r.poster_path; });
+      const posterUrl = hit ? "https://image.tmdb.org/t/p/w92" + hit.poster_path : null;
+      tmdbPosterCache[key] = posterUrl;
+      setUrl(posterUrl);
+    })
+    .catch(function() { tmdbPosterCache[key] = null; });
+  }, [title, year]);
+  return url;
+}
 import FOOTNOTES          from "./data/footnotes.json";
 import WEEKLY_COMMENTARY  from "./data/weekly-commentary.json";
 import HISTORICAL_DATA    from "./data/films-historical.json";
@@ -4175,14 +4200,14 @@ function NewsSection({ category }) {
    ─────────────────────────────────────────────────────────────────────────── */
 
 const OTT_META = {
-  updatedDate: "Mar 30, 2026",
-  weekRange:   "Mar 24–30, 2026",
-  nextUpdate:  "Apr 6, 2026",
+  updatedDate: "Apr 6, 2026",
+  weekRange:   "Mar 31–Apr 6, 2026",
+  nextUpdate:  "Apr 13, 2026",
 };
 
 const OTT_NETFLIX = {
   movies: {
-    weekRange: "Mar 24–30, 2026",
+    weekRange: "Mar 31–Apr 6, 2026",
     source: "Netflix Tudum (Official) + Zee News · ZeenewsIndia confirmed Mar 24",
     sourceUrl: "https://www.netflix.com/tudum/top10/india/films",
     films: [
@@ -4199,7 +4224,7 @@ const OTT_NETFLIX = {
     ],
   },
   shows: {
-    weekRange: "Mar 24–30, 2026",
+    weekRange: "Mar 31–Apr 6, 2026",
     source: "Netflix Tudum (Official)",
     sourceUrl: "https://www.netflix.com/tudum/top10/india/tv",
     films: [
@@ -4219,12 +4244,12 @@ const OTT_NETFLIX = {
 
 const OTT_PRIME = {
   movies: {
-    weekRange: "Mar 24–30, 2026",
+    weekRange: "Mar 31–Apr 6, 2026",
     source: "Ormax OTT Intelligence + Prime Video India blog",
     sourceUrl: "https://www.aboutamazon.in/news/entertainment/prime-video-lineup-2026",
     note: "Prime Video does not publish official weekly ranked charts. Figures from Ormax OTT Intelligence and Prime Video India trade blog.",
     films: [
-      { rank:1,  title:"Project Hail Mary",     trend:"up",   lang:"Hollywood",        weeks:2,  note:"Wkd 2 · ₹16.75 Cr India nett D1–D5 · WW $300M+ (10 days) · US $164.3M · #1 US 2nd wkd $54.5M (-32%) beats Oppenheimer hold · HIT", hot:true },
+      { rank:1,  title:"O'Romeo",              trend:"new",  lang:"Hindi",            weeks:2,  note:"Prime Video Mar 27 · Shahid Kapoor, Triptii Dimri · Vishal Bhardwaj · 1990s Mumbai crime drama · 5.8 IMDB", hot:true },
       { rank:2,  title:"Subedaar",              trend:"down", lang:"Hindi",             weeks:5,  note:"Anil Kapoor · sand mafia crime drama · sustained word-of-mouth" },
       { rank:3,  title:"Pretty Lethal",         trend:"new",  lang:"Hollywood",         weeks:2,  note:"New · Action thriller · Prime Video Mar 25 premiere" },
       { rank:4,  title:"Jawan",                 trend:"same", lang:"Hindi",             weeks:57, note:"Library anchor · SRK · pulling India + global diaspora viewership" },
@@ -4237,7 +4262,7 @@ const OTT_PRIME = {
     ],
   },
   shows: {
-    weekRange: "Mar 24–30, 2026",
+    weekRange: "Mar 31–Apr 6, 2026",
     source: "Ormax OTT Intelligence",
     sourceUrl: "https://www.aboutamazon.in/news/entertainment/prime-video-lineup-2026",
     note: "Based on Ormax weekly primary research across India OTT universe.",
@@ -4266,12 +4291,12 @@ const OTT_PRIME = {
 };
 
 const OTT_ZEE5 = {
-  weekRange: "Mar 24–30, 2026",
+  weekRange: "Mar 31–Apr 6, 2026",
   source: "Zee5 Official + Trade Reports",
   sourceUrl: "https://www.zee5.com",
   note: "Zee5 does not publish official weekly ranked charts. Coming this week: Maamla Legal Hai Season 2 (Apr 3) and Bhabiji Ghar Par Hain: Fun on the Run (Apr 3).",
   films: [
-    { rank:1,  title:"Jwala",                  lang:"Hindi",   type:"Series", note:"Zee5 Original · crime thriller dominating platform", hot:true },
+    { rank:1,  title:"Maamla Legal Hai 2",     lang:"Hindi",   type:"Series", note:"Zee5 Apr 3 · Ravi Kishan as VD Tyagi · Kusha Kapila joins · courtroom comedy · massive opening week", hot:true },
     { rank:2,  title:"Chhaava",                lang:"Hindi",   type:"Film",   note:"Vicky Kaushal historical epic · post-theatrical streaming", hot:true },
     { rank:3,  title:"Tanaav Season 2",        lang:"Hindi",   type:"Series", note:"Kashmir conflict drama · Zee5 Original continuing run" },
     { rank:4,  title:"Aabha",                  lang:"Hindi",   type:"Series", note:"Political drama · strong female-led viewership" },
@@ -4283,13 +4308,13 @@ const OTT_ZEE5 = {
     { rank:10, title:"Kaala Paani",            lang:"Hindi",   type:"Series", note:"Netflix crossover library title on Zee5 bundle" },
   ],
   coming: [
-    { title:"Maamla Legal Hai Season 2", platform:"ZEE5", date:"Apr 3, 2026", note:"Ravi Kishan returns as VD Tyagi · courtroom comedy · Kusha Kapila joins cast" },
+    { title:"Mrs. Deshpande", platform:"ZEE5", date:"Apr 10, 2026", note:"New Zee5 Original · family drama" },
     { title:"Bhabiji Ghar Par Hain: Fun on the Run", platform:"ZEE5", date:"Apr 3, 2026", note:"Comedy-drama film based on popular TV show · Aasif Sheikh, Rohitashv Gour" },
   ],
 };
 
 const OTT_MX = {
-  weekRange: "Mar 24–30, 2026",
+  weekRange: "Mar 31–Apr 6, 2026",
   source: "Ormax OTT Intelligence (AVOD universe)",
   sourceUrl: "https://www.mxplayer.in",
   note: "MX Player is India’s largest AVOD platform (~300M MAU). Does not publish official ranked charts.",
@@ -4308,22 +4333,22 @@ const OTT_MX = {
 };
 
 const OTT_COMBINED = {
-  weekRange: "Mar 24–30, 2026",
+  weekRange: "Mar 31–Apr 6, 2026",
   source: "Netflix Tudum (Official) + Ormax OTT Intelligence + Trade",
   note: "Cross-platform chart is a composite — Netflix figures are official weekly views, Prime/Zee5/JioHotstar are Ormax primary research estimates.",
   films: [
-    { rank:1,  title:"Dhurandhar",                platform:"Netflix",       lang:"Hindi",        type:"Film",  note:"101.3M hrs all-time · still #1 after 11 weeks · Indian streaming record", hot:true },
-    { rank:2,  title:"Project Hail Mary",         platform:"Prime Video",   lang:"Hollywood",    type:"Film",  note:"Wkd 2 · ₹16.75 Cr India nett · WW $300M+ · US $164.3M · now streaming India Mar 26", hot:true },
-    { rank:3,  title:"Aspirants Season 3",        platform:"Prime/Netflix", lang:"Hindi",        type:"Show",  note:"TVF × Prime · UPSC drama · cross-platform #1 show India this week", hot:true },
-    { rank:4,  title:"Border 2",                  platform:"Netflix",       lang:"Hindi",        type:"Film",  note:"New Mar 20 Netflix · Sunny Deol, Varun Dhawan · 1971 war epic" },
-    { rank:5,  title:"Thaai Kizhavi",             platform:"JioHotstar",    lang:"Tamil",        type:"Film",  note:"New Mar 26 · Tamil comedy-drama · SUPER HIT · ₹57 Cr theatrical · JioHotstar debut", hot:true },
-    { rank:6,  title:"Squid Game Season 3",       platform:"Netflix",       lang:"Korean",       type:"Show",  note:"6-week India run · Korean thriller global hold" },
-    { rank:7,  title:"Peaky Blinders: The Immortal Man", platform:"Netflix", lang:"English",     type:"Film",  note:"New Mar 20 · Cillian Murphy · WWII Tommy Shelby finale" },
-    { rank:8,  title:"Mirzapur Season 3",         platform:"Prime Video",   lang:"Hindi",        type:"Show",  note:"37M+ lifetime views · Prime India all-time record" },
-    { rank:9,  title:"Family Man Season 3",       platform:"Netflix",       lang:"Hindi",        type:"Show",  note:"Manoj Bajpayee · 10 weeks · dual Netflix + Prime presence" },
-    { rank:10, title:"Maamla Legal Hai Season 2", platform:"ZEE5",          lang:"Hindi",        type:"Show",  note:"Coming Apr 3 · Ravi Kishan returns · most anticipated Zee5 release this week" },
+    { rank:1,  title:"Vadh 2",                  platform:"Netflix",     lang:"Hindi",    type:"Film",   note:"#1 Netflix India in 24hrs · Sanjay Mishra, Neena Gupta · crime thriller · Apr 3", hot:true, tmdbYear:2026 },
+    { rank:2,  title:"Maamla Legal Hai 2",       platform:"Zee5",       lang:"Hindi",    type:"Series", note:"Zee5 Apr 3 · Ravi Kishan returns as VD Tyagi · Kusha Kapila joins · biggest Zee5 comedy launch 2026", hot:true },
+    { rank:3,  title:"Mardaani 3",               platform:"Netflix",    lang:"Hindi",    type:"Film",   note:"Was #1 Netflix Apr 2 · Rani Mukerji · 7.5M+ views total · YRF franchise resurgence", hot:true, tmdbYear:2026 },
+    { rank:4,  title:"O\'Romeo",               platform:"Prime Video",lang:"Hindi",    type:"Film",   note:"Prime Video Mar 27 · Shahid Kapoor, Triptii Dimri · dir. Vishal Bhardwaj · 1990s Mumbai crime", hot:true, tmdbYear:2026 },
+    { rank:5,  title:"Border 2",                 platform:"Netflix",    lang:"Hindi",    type:"Film",   note:"Wk3 Netflix · 6.1M views · 20.5M total viewing hrs · Sunny Deol, Varun Dhawan, Diljit", tmdbYear:2026 },
+    { rank:6,  title:"Dhurandhar",               platform:"Netflix",    lang:"Hindi",    type:"Film",   note:"Wk12 · 29.3M views all-time · 7th most-watched Indian on Netflix ever · still charting", tmdbYear:2025 },
+    { rank:7,  title:"Aspirants Season 3",       platform:"Netflix",    lang:"Hindi",    type:"Series", note:"TVF × Netflix · UPSC drama · #1 show India this week · also cross-charting Prime", hot:true },
+    { rank:8,  title:"Sitaare Zameen Par",        platform:"SonyLIV",   lang:"Hindi",    type:"Film",   note:"SonyLIV Apr 3 · Aamir Khan · neurodivergent sports drama · ₹167 Cr theatrical hit", tmdbYear:2025 },
+    { rank:9,  title:"Daredevil: Born Again S2", platform:"JioHotstar", lang:"English",  type:"Series", note:"JioHotstar Mar 24 · Marvel · most-watched international series in India Apr week 1", hot:true },
+    { rank:10, title:"Subedaar",                 platform:"Prime Video",lang:"Hindi",    type:"Film",   note:"Anil Kapoor · sand mafia crime drama · sustained Prime India chart · strong word-of-mouth", tmdbYear:2026 },
   ],
-};
+};;
 
 const OTT_CALENDAR = [
   { film:"Thaai Kizhavi",                   platform:"JioHotstar",  estreaming:"Mar 26, 2026", status:"streaming", lang:"Tamil",          note:"LIVE NOW · Tamil comedy-drama · ₹57 Cr theatrical SUPER HIT · Raadhika Sarathkumar" },
@@ -4432,6 +4457,21 @@ const OTT_PLATFORMS = [
 ];
 
 /* ── OTT LANDING PAGE ─────────────────────────────────────────────────── */
+// TMDB poster thumbnail for OTT rows
+function TMDBPosterThumb({ title, year }) {
+  const url = useTMDBPoster(title, year);
+  return (
+    <div style={{ width:36, height:50, flexShrink:0, borderRadius:3, overflow:"hidden",
+      background:"#1a1a2e", display:"flex", alignItems:"center", justifyContent:"center" }}>
+      {url
+        ? <img src={url} alt={title} style={{ width:"100%", height:"100%", objectFit:"cover" }} />
+        : <span style={{ fontFamily:"'Barlow Condensed',sans-serif", fontSize:9, color:"#555",
+            textAlign:"center", padding:2, lineHeight:1.2 }}>{title.slice(0,6)}</span>
+      }
+    </div>
+  );
+}
+
 function OTTRankingsSection() {
   const [tab, setTab] = React.useState("combined");
   const [netflixSub, setNetflixSub] = React.useState("movies");
@@ -4478,6 +4518,7 @@ function OTTRankingsSection() {
           letterSpacing:"0em", lineHeight:1, marginTop:1, textAlign:"center",
         }}>{film.trend==="up"?"↑":film.trend==="down"?"↓":film.trend==="new"?"★":"→"}</div>}
         <div style={{ width:1, height:28, background:T.border, flexShrink:0 }} />
+        <TMDBPosterThumb title={film.title} year={film.tmdbYear} />
         <div style={{ flex:1, minWidth:0 }}>
           <div style={{ fontFamily:"'Barlow Condensed',sans-serif", fontWeight:isHot?800:700,
             fontSize:15, color:T.text, whiteSpace:"nowrap", overflow:"hidden", textOverflow:"ellipsis",
