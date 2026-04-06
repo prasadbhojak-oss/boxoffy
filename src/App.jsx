@@ -652,7 +652,7 @@ function NavBar({ activeSection, setActiveSection, setForceAllTime }) {
   const isMobile = useIsMobile();
   const [menuOpen, setMenuOpen] = React.useState(false);
 
-  const navLinks = ["Box Office","Bollywood","OTT","TV","Weekly"];
+  const navLinks = ["Box Office","OTT","TV","Weekly"];
 
   return (
     <div style={{ position:"sticky", top:0, zIndex:100 }}>
@@ -3186,7 +3186,7 @@ function ForeignFilmsPanel({ movies }) {
             </span>
           </div>
           <div style={{ fontFamily:"'DM Sans',sans-serif", fontSize:9, color:T.textMuted, letterSpacing:"0.18em", textTransform:"uppercase", marginTop:2 }}>
-            BOXOFFY · WKD 14 · MAR 27–29, 2026
+            BOXOFFY · WKD 15 · APR 3–5, 2026
           </div>
         </div>
 
@@ -3232,7 +3232,7 @@ function ForeignFilmsPanel({ movies }) {
 
       {/* ── Global view: US BO Top 10 ─────────────────────────── */}
       {viewMode === "global"
-        ? <USBoTop10 weekData={US_BO_WEEKLY["Week 14, 2026"]} />
+        ? <USBoTop10 weekData={US_BO_WEEKLY["Week 15, 2026"]} />
         : <>
           {/* ── Column headers ──────────────────────────────────── */}
           <BogColHeaders viewMode={viewMode} />
@@ -5748,7 +5748,6 @@ export default function App() {
   }, []);
 
   const newsCategory =
-    activeSection === "Bollywood" ? "Bollywood" :
     activeSection === "OTT" ? "OTT" :
     activeSection === "TV" ? "TV" : null;
 
@@ -5805,7 +5804,6 @@ export default function App() {
           <div style={{ display:"flex", alignItems:"center", gap:12, marginTop:10 }}>
             <span style={{ fontFamily:"'DM Sans', sans-serif", fontSize:12, color:T.textMid, borderLeft:`2px solid ${T.accent}`, paddingLeft:8, lineHeight:1.5 }}>
               {activeSection === "Box Office" && "Box Office · Verified worldwide data · 2020–2026"}
-              {activeSection === "Bollywood" && "Trade news · Releases · Controversy · Analysis"}
               {activeSection === "OTT" && "Netflix · Prime Video · JioCinema · Hotstar · SonyLIV"}
               {activeSection === "TV" && "TRP ratings · Reality · Drama serials · Channel intelligence"}
               {activeSection === "Weekly" && "Weekly Box Office Commentary · Boxoffy"}
@@ -5843,7 +5841,7 @@ export default function App() {
             <span style={{ fontFamily:"'DM Sans', sans-serif", fontSize:10, color:T.textMuted, marginLeft:10, letterSpacing:"0.18em", textTransform:"uppercase" }}>Box Office Intelligence</span>
           </div>
           <div style={{ display:"flex", gap:24, flexWrap:"wrap", marginBottom:10, alignItems:"center" }}>
-            {["Box Office","Bollywood","OTT","TV","Weekly"].map(s => {
+            {["Box Office","OTT","TV","Weekly"].map(s => {
               const extLink = s === "OTT" ? "/ott-releases.html" : s === "TV" ? "/tv-ratings.html" : null;
               if (extLink) return (
                 <a key={s} href={extLink}
