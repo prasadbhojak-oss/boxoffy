@@ -2,49 +2,68 @@
   {
     "weekNum": "Week 15",
     "dateRange": "Apr 3–9, 2026",
-    "headline": "D2 Crosses ₹920 Cr on D14. Bhooth Bangla Blinks. ₹1,000 Cr India This Week.",
-    "subline": "D14 ₹20.10 Cr (Wed Apr 1) confirmed by Sacnilk. D0–D14 ₹920.02 Cr India nett. Bhooth Bangla moved to Apr 17 giving D2 a clear W3 window. ₹1,000 Cr India nett — first ever for a Hindi film — is the conversation this week. Super Mario Galaxy opens globally. IPL underway.",
+    "headline": "D2 ₹925 Cr All-India After D18. BOI Verified. 3rd Weekend ₹68 Cr. ₹1,000 Cr This Week.",
+    "subline": "BOI Hindi ₹887.33 Cr (confirmed) · Boxoffy all-India ~₹925 Cr (BOI + Pinkvilla cross-verified) · Sacnilk ₹1,013 Cr — 9.5% inflated, rejected · 3rd weekend ₹68 Cr (₹20+₹23+₹25 BOI) · ₹1,000 Cr all-India ETA: D22–D25.",
     "status": "live",
     "scoreboard": [
       {
-        "title": "Dhurandhar: The Revenge",
-        "weekCollection": "₹20.10 Cr",
-        "totalIndia": "~₹920 Cr nett",
+        "film": "Dhurandhar: The Revenge",
+        "week": "Wk 3",
+        "wkCollection": "₹86 Cr",
+        "total": "~₹925 Cr",
         "verdict": "ALL-TIME BLOCKBUSTER",
-        "note": "D14 ₹20.10 Cr ✅ (Sacnilk) · D0–D14 ₹920.02 Cr · WW ~₹1,466 Cr · D15 Hanuman Jayanti est ₹10 Cr · Bhooth Bangla cleared field → clean W3"
+        "color": "#92400E"
       },
       {
-        "title": "Project Hail Mary",
-        "weekCollection": "~₹4.5 Cr",
-        "totalIndia": "~₹22 Cr nett",
+        "film": "Super Mario Galaxy",
+        "week": "Wk 1",
+        "wkCollection": "₹4.5 Cr",
+        "total": "₹4.5 Cr",
+        "verdict": "Hollywood",
+        "color": "#1D4ED8"
+      },
+      {
+        "film": "Project Hail Mary",
+        "week": "Wk 3 India",
+        "wkCollection": "~₹2 Cr",
+        "total": "~₹24 Cr",
         "verdict": "HIT",
-        "note": "W2 India ~₹4.5 Cr est · US $164.3M cume · WW $300M+ · Super Mario Galaxy opens this weekend — PHM shifts to #2"
+        "color": "#1D4ED8"
       },
       {
-        "title": "Funky",
-        "weekCollection": "~₹1.5 Cr",
-        "totalIndia": "~₹14 Cr nett",
-        "verdict": "FLOP",
-        "note": "Week 3 tailing · Telugu"
-      },
-      {
-        "title": "Ustaad Bhagat Singh",
-        "weekCollection": "~₹1 Cr",
-        "totalIndia": "~₹66 Cr nett",
-        "verdict": "DISASTER",
-        "note": "W3 scraps · Netflix Apr 23"
+        "film": "Youth (Tamil)",
+        "week": "Wk 3",
+        "wkCollection": "~₹5.5 Cr",
+        "total": "~₹51 Cr",
+        "verdict": "AVERAGE",
+        "color": "#374151"
       }
     ],
     "sources": [
-      "BOI",
-      "Sacnilk",
-      "Deadline",
-      "Variety",
-      "The Numbers",
-      "Comscore"
+      {
+        "name": "Box Office India",
+        "handle": "@boxofficeindia",
+        "color": "#1A3A6B",
+        "quote": "D2 Hindi nett ₹887.33 Cr through D18. 3rd weekend ₹68 Cr (₹20+₹23+₹25). Film on target for ₹1,000 Cr nett — biggest BLOCKBUSTER of recent times, footfalls to cross 4 Cr.",
+        "analysis": "BOI breakdown (Hindi): Week 1 ₹590.36 Cr · Week 2 ₹228.97 Cr · 3rd Fri ₹20 Cr · 3rd Sat ₹23 Cr · 3rd Sun ₹25 Cr · Total ₹887.33 Cr. BOI explicitly tracks Hindi. Drop vs Week 2 is 55-60% including holiday adjustment on Friday. Week 3 expected to deliver ~₹100 Cr. Week 4 also expected good with no competition. BOI verdict: film remains on track for ₹1,000 Cr nett — a milestone dependent on the next few weeks staying healthy."
+      },
+      {
+        "name": "Pinkvilla",
+        "handle": "@pinkvilla",
+        "color": "#E91E8C",
+        "quote": "All-India nett ~₹925 Cr after D18. Hindi ₹870 Cr. South-dubbed versions contributing ~₹55 Cr total. ₹1,000 Cr all-India easily achievable — Hindi alone now difficult.",
+        "analysis": "Pinkvilla tracked Hindi at ₹870 Cr through D18 (Wk1 ₹571 Cr + Wk2 ₹230.50 Cr + Wknd3 ₹68.50 Cr). South-dubbed versions: ₹49 Cr through D16 + D17-D18 additions ≈ ₹55 Cr total. All-India nett ~₹925 Cr after D18, confirms ₹900 Cr mark crossed on 3rd Sunday. Pinkvilla notes the 3rd Saturday of ₹23 Cr is the second-highest 3rd Saturday of all time, trailing only Dhurandhar Part 1. ₹1,000 Cr all-India will likely be achieved in Week 4 (D22-D25). Hindi alone crossing ₹1,000 Cr is now described as 'difficult' — may fall short of that specific milestone."
+      },
+      {
+        "name": "Sacnilk",
+        "handle": "@SacnilkEntmt",
+        "color": "#E8631A",
+        "quote": "Sacnilk all-version tracking: ₹1,013 Cr through D18. 3rd weekend ₹75.95 Cr. Boxoffy call: 9.5% inflated vs BOI/Pinkvilla — not used for canonical data.",
+        "analysis": "Sacnilk all-version total through D18: ₹1,013 Cr. 3rd weekend: D16 ₹21.55 + D17 ₹25.65 + D18 ₹28.75 = ₹75.95 Cr. Sacnilk claims ₹1,000 Cr nett already crossed. Boxoffy position: Sacnilk is running 9.5% above BOI and Pinkvilla on cumulative totals. The three-source triangulation (BOI Hindi ₹887.33 + Pinkvilla all-India ₹925 Cr) converges at ~₹925 Cr. Sacnilk occupancy and show-count data remains reliable — only their cumulative totals are rejected. Sacnilk's WW gross (~₹1,525 Cr through D18) is not disputed as distributor-sourced data is harder to inflate."
+      }
     ],
-    "interval_take": "₹920 Cr in 14 days. Bhooth Bangla — which had already moved once — moved again, citing D2's run. That is the truest indicator of a cultural phenomenon. When competing films rearrange their own release calendars around you, the box office has spoken. ₹1,000 Cr India nett would be the first time a Hindi film has crossed that number. Baahubali 2 did it, Pushpa 2 did it — both Telugu. Dhurandhar 2 is two weekends away from making history in Hindi cinema's own language.",
-    "nextWeek": "Bhooth Bangla (Apr 17, Akshay Kumar + Priyadarshan) · Dacoit (Apr 10, Adivi Sesh) · Super Mario Galaxy Movie now in India · D2 eyes ₹1,000 Cr India nett"
+    "interval_take": "BOI confirmed it today: Hindi nett ₹887.33 Cr through D18. Add ~₹38 Cr from South-dubbed versions (Pinkvilla-verified), and the all-India nett lands at ~₹925 Cr. Sacnilk's ₹1,013 Cr is a 9.5% overcount — this is the inflation PB flagged, now confirmed by cross-referencing. The ₹1,000 Cr all-India milestone has NOT been crossed yet. It's ~₹75 Cr away. At the current Week 4 pace, D2 will cross ₹1,000 Cr India nett around D22–D25 (Apr 9-12). BOI's own call: 'on target but dependent on next few weeks.' Hindi-alone ₹1,000 Cr looks unlikely — Pinkvilla says as much. But all-version? That's a certainty, and it will make D2 only the third Indian film ever to hit that mark after Pushpa 2 and Baahubali 2.",
+    "nextWeek": "Bhooth Bangla (Apr 17, Akshay Kumar + Priyadarshan · paid previews Apr 16) · Dacoit (Apr 10, Adivi Sesh Telugu) · D2 eyes ₹1,000 Cr all-India nett in Week 4 · BARC Week 13 TV ratings"
   },
   {
     "weekNum": "Week 14",

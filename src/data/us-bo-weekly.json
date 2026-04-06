@@ -274,9 +274,141 @@
     ]
   },
   "Week 15, 2026": {
-    "dateRange": "Apr 3-5, 2026",
-    "status": "pending",
-    "note": "Super Mario Galaxy Movie (Illumination/Universal) opened Wed Apr 2 with $34.5M Day 1 — record April opening day. Weekend Apr 3-5 results not yet available. PHM eyes strong 3rd weekend.",
-    "chart": []
+    "dateRange": "Apr 3–5, 2026",
+    "status": "confirmed",
+    "headline": "Super Mario Galaxy Movie $130.9M Weekend · $190.1M 5-Day Easter Opening · PHM Crosses $200M; D2 $26M NA All-Time Bollywood Record",
+    "source": "Deadline · Variety · THR · Rotten Tomatoes · AP · Comscore · Exhibitor Relations",
+    "chart": [
+      {
+        "rank": 1,
+        "title": "The Super Mario Galaxy Movie",
+        "studio": "Universal / Illumination",
+        "genre": "Animation",
+        "weekend": "$130.9M",
+        "total": "$190.1M",
+        "theaters": 4252,
+        "change": "NEW",
+        "weeks": 1,
+        "rtScore": "A-",
+        "admitsNote": "5-day Easter opening $190.1M — year's biggest domestic debut · WW $372.5M · 2nd biggest Illumination opening ever · $190M trails only first Mario Bros' $204M · CinemaScore A-"
+      },
+      {
+        "rank": 2,
+        "title": "Project Hail Mary",
+        "studio": "Amazon MGM",
+        "genre": "Sci-Fi",
+        "weekend": "$30.6M",
+        "total": "$217.2M",
+        "theaters": 3902,
+        "change": "-43%",
+        "weeks": 3,
+        "rtScore": "97%",
+        "admitsNote": "$200M domestic milestone crossed · 3rd weekend -43% · WW $420.7M · Amazon MGM's highest-grossing film ever · Ryan Gosling confirmed global lead"
+      },
+      {
+        "rank": 3,
+        "title": "The Drama",
+        "studio": "A24",
+        "genre": "Drama",
+        "weekend": "$14.1M",
+        "total": "$14.1M",
+        "theaters": 3087,
+        "change": "NEW",
+        "weeks": 1,
+        "rtScore": "81%RT",
+        "admitsNote": "Zendaya + Robert Pattinson · B CinemaScore · $28M global opening · 81% audience RT · $28M budget nearly covered in opening weekend · A24 adult drama strong debut"
+      },
+      {
+        "rank": 4,
+        "title": "Hoppers",
+        "studio": "Disney / Pixar",
+        "genre": "Animation",
+        "weekend": "$5.8M",
+        "total": "$149.6M",
+        "theaters": 3200,
+        "change": "-52%",
+        "weeks": 5,
+        "rtScore": "91%",
+        "admitsNote": "5th weekend · WW $332M · yields to Super Mario · Pixar original with solid legs · $149.6M domestic"
+      },
+      {
+        "rank": 5,
+        "title": "Reminders of Him",
+        "studio": "Universal",
+        "genre": "Romance / Drama",
+        "weekend": "$2.3M",
+        "total": "$45.3M",
+        "theaters": 2100,
+        "change": "-38%",
+        "weeks": 4,
+        "rtScore": "74%",
+        "admitsNote": "Colleen Hoover adaptation · $79M WW · $25M budget profitable · 4th weekend solid hold"
+      },
+      {
+        "rank": 6,
+        "title": "They Will Kill You",
+        "studio": "WB / New Line",
+        "genre": "Horror",
+        "weekend": "$1.9M",
+        "total": "$6.8M",
+        "theaters": 2400,
+        "change": "-61%",
+        "weeks": 2,
+        "rtScore": "54%",
+        "admitsNote": "Sophomore horror collapse -61% · $20M budget · well below expectations · horror calendar overcrowded in March-April"
+      },
+      {
+        "rank": 7,
+        "title": "Dhurandhar: The Revenge",
+        "studio": "Moviegoers Ent.",
+        "genre": "Action / Spy",
+        "weekend": "$1.82M",
+        "total": "$26M",
+        "theaters": 600,
+        "change": "-wk3",
+        "weeks": 3,
+        "rtScore": "N/A",
+        "admitsNote": "$26M NA all-time Bollywood record · 3rd consecutive top-10 finish · strong hold on limited screens · BOI Hindi India ₹887.33 Cr · Boxoffy all-India ~₹925 Cr verified"
+      },
+      {
+        "rank": 8,
+        "title": "A Great Awakening",
+        "studio": "Roadside Attractions",
+        "genre": "Drama",
+        "weekend": "$1.2M",
+        "total": "$1.2M",
+        "theaters": 800,
+        "change": "NEW",
+        "weeks": 1,
+        "rtScore": "—",
+        "admitsNote": "Roadside Attractions limited release · specialty debut"
+      },
+      {
+        "rank": 9,
+        "title": "GOAT",
+        "studio": "Sony",
+        "genre": "Animation",
+        "weekend": "$1.1M",
+        "total": "$102M",
+        "theaters": 1800,
+        "change": "-50%",
+        "weeks": 8,
+        "rtScore": "88%",
+        "admitsNote": "8th weekend · crossed $100M domestic · finishing its run · Sony animation original · $185M WW"
+      },
+      {
+        "rank": 10,
+        "title": "Scream 7",
+        "studio": "Paramount",
+        "genre": "Horror",
+        "weekend": "$1.0M",
+        "total": "$120M",
+        "theaters": 1200,
+        "change": "-62%",
+        "weeks": 6,
+        "rtScore": "79%",
+        "admitsNote": "6th weekend winding down · $120M domestic milestone crossed · franchise-high domestic for Scream series"
+      }
+    ]
   }
 }

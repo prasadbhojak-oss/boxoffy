@@ -1,20 +1,20 @@
 {
-  "version": "v3.31",
-  "deployedAt": "2026-04-02",
+  "version": "v3.32",
+  "deployedAt": "2026-04-06",
   "gitCommit": "7a63f82",
-  "appJsxChars": 324688,
+  "appJsxChars": 336189,
   "dataFiles": {
     "weekly-commentary.json": {
-      "weekNum": "Week 14",
-      "dateRange": "Mar 26 – Apr 1, 2026",
-      "lastUpdated": "2026-03-27",
-      "headline": "D2 ₹713 Cr D0–D9 · PHM India entry · 2nd weekend"
+      "weekNum": "Week 15",
+      "dateRange": "Apr 3-9, 2026",
+      "lastUpdated": "2026-04-06",
+      "headline": "D2 ₹925 Cr All-India D18 · BOI+PV verified · Sacnilk 9.5% inflated rejected"
     },
     "us-bo-weekly.json": {
-      "week": "Week 14, 2026",
-      "dateRange": "Mar 27–29, 2026",
-      "lastUpdated": "2026-03-27",
-      "headline": "PHM $46.8M wk2 · D2 $23M NA · They Will Kill You opens"
+      "week": "Week 15, 2026",
+      "dateRange": "Apr 3-5, 2026",
+      "lastUpdated": "2026-04-06",
+      "headline": "Week 15: Mario $130.9M · PHM $217M · D2 $26M NA all-time Bollywood record"
     },
     "editorials.json": {
       "entries": 11,
@@ -24,15 +24,15 @@
     },
     "films.json": {
       "totalFilms": 1015,
-      "lastUpdated": "2026-03-25"
+      "lastUpdated": "2026-04-06"
     },
     "usBoWeekly": "Week 14 final confirmed · Mar 27-29, 2026",
     "filmsJson": "PHM wk2 · D2 GST/footfall/OTT added",
     "weeklyCommentary": "Week 14 comprehensive entry added"
   },
   "weeklyUpdate": {
-    "weekNum": 14,
-    "dateRange": "Mar 27 – Apr 1, 2026"
+    "weekNum": 15,
+    "dateRange": "Apr 3-9, 2026"
   },
   "articles": {
     "dangal-china-box-office.html": "2026-03-26",
@@ -44,6 +44,18 @@
     "bollywood-music-box-office.html": "2026-03-29"
   },
   "changelog": [
+    {
+      "version": "3.32",
+      "date": "2026-04-06",
+      "changes": [
+        "films.json D2: totalNum 920.02→925.0, weeklyCollection 20.1→86, daysInRelease 15→19, indiaNet ~₹920→~₹925 Cr",
+        "us-bo-weekly.json: Week 15 full chart — Mario $130.9M, PHM $30.6M, The Drama $14.1M, 10 entries confirmed",
+        "weekly-commentary.json Week 15: updated D18 data, 3-source triangulation, correct scoreboard schema",
+        "App.jsx: WKD14→WKD15 APR 3-5, US BO ref Week 14→Week 15",
+        "Sacnilk 9.5% inflation confirmed and rejected vs BOI/Pinkvilla cross-reference",
+        "BOI paste direct: Hindi ₹887.33 Cr D18 · Boxoffy all-India call: ~₹925 Cr"
+      ]
+    },
     {
       "version": "3.28",
       "date": "2026-03-30",
@@ -126,8 +138,8 @@
   ],
   "_meta": {
     "purpose": "Boxoffy deployed state tracker. Claude reads this at every session start to verify correct baseline before making any edits. Never edit App.jsx without checking appJsxChars matches this file.",
-    "appJsxRule": "Good App.jsx = 346,239 chars. If outputs/App.jsx is unavailable or char count is wrong, DO NOT PROCEED — ask PB to run: git checkout 7a63f82 -- src/App.jsx",
+    "appJsxRule": "Good App.jsx = 336,189 chars. If outputs/App.jsx is unavailable or char count is wrong, DO NOT PROCEED — ask PB to run: git checkout 7a63f82 -- src/App.jsx",
     "updateProtocol": "After every deploy: bump version (3.24 → 3.25), update deployedAt, gitCommit, and relevant dataFiles entries."
   },
-  "notes": "v3.31 — D2 D14 ₹920Cr, Mrithyunjay OTT Netflix, duplicates removed, Varanasi TBD 2027, Awarapan 2 TBD, Bhooth Bangla Apr 17, Toxic Jun 4, Peddi Apr 30, Dacoit Apr 10 added, Week 15 commentary, UBS/Funky week numbers fixed."
+  "notes": "v3.32 Apr 6 2026 — D2 D18 ₹925 Cr BOI+PV verified (BOI Hindi ₹887.33 Cr direct confirmed). Sacnilk 9.5% inflation confirmed rejected. Week 15 US BO: Mario $130.9M #1, PHM $30.6M, Drama $14.1M, D2 $26M NA all-time Bollywood record. WKD14→15, US BO ref Week 14→15. All 8 Dhurandhar HTML pages updated. 12 files in outputs ready to deploy."
 }
