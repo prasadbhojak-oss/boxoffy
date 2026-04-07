@@ -3822,6 +3822,117 @@ function BoxOfficeSection({ onNavigate, forceAllTime, onClearForceAllTime }) {
 
       
 
+      {/* ══ YEAR / VIEW TAB BAR ═══════════════════════════════════════════ */}
+      <div style={{ background:T.surface, borderBottom:`1px solid ${T.border}`, position:"sticky", top:48, zIndex:50 }}>
+
+        {/* Main year tabs */}
+        <div style={{ display:"flex", alignItems:"stretch", overflowX:"auto", gap:0 }}>
+
+          <button
+            onClick={() => { setYear(2026); setView("weekly"); }}
+            style={{
+              fontFamily:"'Barlow Condensed', sans-serif", fontWeight:800, fontSize:13,
+              letterSpacing:"0.08em", textTransform:"uppercase", padding:"12px 18px",
+              background: showWeekly ? T.accent : "transparent",
+              color: showWeekly ? "#fff" : T.textMuted,
+              border:"none", cursor:"pointer", flexShrink:0,
+              borderBottom: showWeekly ? `2px solid ${T.accent}` : "2px solid transparent",
+              marginBottom:"-1px", transition:"all 0.12s",
+            }}
+          >⚡ Weekly</button>
+
+          <div style={{ width:1, background:T.border, margin:"8px 0", flexShrink:0 }} />
+
+          {[...YEARS].reverse().map(y => {
+            const isActive = year === y && !showWeekly;
+            const acc = YEAR_ACCENT[y] || T.accent;
+            return (
+              <button key={y} onClick={() => { setYear(y); setView("alltime"); }} style={{
+                fontFamily:"'Barlow Condensed', sans-serif", fontWeight:700, fontSize:13,
+                letterSpacing:"0.06em", padding:"12px 14px",
+                background: isActive ? `${acc}18` : "transparent",
+                color: isActive ? acc : T.textMuted,
+                border:"none", cursor:"pointer", flexShrink:0,
+                borderBottom: isActive ? `2px solid ${acc}` : "2px solid transparent",
+                marginBottom:"-1px", transition:"all 0.12s",
+              }}>{y}</button>
+            );
+          })}
+
+          <div style={{ width:1, background:T.border, margin:"8px 4px", flexShrink:0 }} />
+          <span style={{
+            fontFamily:"'DM Sans', sans-serif", fontSize:9, fontWeight:700,
+            color:T.textMuted, letterSpacing:"0.12em", textTransform:"uppercase",
+            padding:"0 8px", display:"flex", alignItems:"center", flexShrink:0,
+          }}>Archive</span>
+
+          {ARCHIVE_YEARS.map(y => {
+            const isActive = year === y && !showWeekly;
+            return (
+              <button key={y} onClick={() => { setYear(y); setView("alltime"); }} style={{
+                fontFamily:"'Barlow Condensed', sans-serif", fontWeight:600, fontSize:12,
+                letterSpacing:"0.04em", padding:"12px 10px",
+                background: isActive ? "#F3F4F6" : "transparent",
+                color: isActive ? T.text : T.textMuted,
+                border:"none", cursor:"pointer", flexShrink:0,
+                borderBottom: isActive ? `2px solid ${T.textMuted}` : "2px solid transparent",
+                marginBottom:"-1px", transition:"all 0.12s",
+              }}>{y}</button>
+            );
+          })}
+        </div>
+
+        {/* Filter + sort — alltime view only */}
+        {!showWeekly && (
+          <div style={{
+            display:"flex", alignItems:"center", gap:8, padding:"8px 16px",
+            background:T.surfaceAlt, borderTop:`1px solid ${T.border}`, flexWrap:"wrap",
+          }}>
+            <div style={{ display:"flex", gap:4, flexWrap:"wrap" }}>
+              {LANGUAGES.map(lang => (
+                <button key={lang} onClick={() => setFilter(lang)} style={{
+                  fontFamily:"'DM Sans', sans-serif", fontWeight:600, fontSize:11,
+                  padding:"4px 10px", borderRadius:3,
+                  background: filter === lang ? T.text : "transparent",
+                  color: filter === lang ? "#fff" : T.textMuted,
+                  border:`1px solid ${filter === lang ? T.text : T.border}`,
+                  cursor:"pointer", transition:"all 0.12s",
+                }}>{lang}</button>
+              ))}
+            </div>
+            <div style={{ width:1, height:20, background:T.border, margin:"0 4px" }} />
+            <div style={{ display:"flex", gap:4 }}>
+              {[["collection","By Collection"],["weeks","By Weeks"]].map(([key, label]) => (
+                <button key={key} onClick={() => setSortBy(key)} style={{
+                  fontFamily:"'DM Sans', sans-serif", fontWeight:600, fontSize:11,
+                  padding:"4px 10px", borderRadius:3,
+                  background: sortBy === key ? T.accent : "transparent",
+                  color: sortBy === key ? "#fff" : T.textMuted,
+                  border:`1px solid ${sortBy === key ? T.accent : T.border}`,
+                  cursor:"pointer", transition:"all 0.12s",
+                }}>{label}</button>
+              ))}
+            </div>
+            <div style={{ marginLeft:"auto", display:"flex", gap:16, alignItems:"center" }}>
+              {released.length > 0 && <>
+                <div style={{ textAlign:"right" }}>
+                  <div style={{ fontFamily:"'Barlow Condensed', sans-serif", fontWeight:800, fontSize:16, color:T.accent, lineHeight:1 }}>
+                    ₹{Math.round(totalWW)} Cr
+                  </div>
+                  <div style={{ fontFamily:"'DM Sans', sans-serif", fontSize:9, color:T.textMuted, letterSpacing:"0.08em", textTransform:"uppercase" }}>
+                    {year} Total WW
+                  </div>
+                </div>
+                {topFilm && <div style={{ textAlign:"right" }}>
+                  <div style={{ fontFamily:"'Barlow Condensed', sans-serif", fontWeight:700, fontSize:13, color:T.text, lineHeight:1 }}>{topFilm.title}</div>
+                  <div style={{ fontFamily:"'DM Sans', sans-serif", fontSize:9, color:T.textMuted, letterSpacing:"0.08em", textTransform:"uppercase" }}>#1 Film {year}</div>
+                </div>}
+              </>}
+            </div>
+          </div>
+        )}
+      </div>
+
       {/* ── WEEKLY CHART VIEW ── */}
       {showWeekly ? (
         <div style={{ animation:"fadeIn 0.25s ease both" }}>
