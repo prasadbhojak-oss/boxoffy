@@ -5087,6 +5087,7 @@ function EditorialSection({ onNavigate }) {
     "OTT":              { bg:"#EDE9FE", text:"#5B21B6" },
     "TV":               { bg:"#DCFCE7", text:"#166534" },
     "PREVIEW":          { bg:"#FEF3C7", text:"#92400E" },
+    "SPECIAL EDITION":  { bg:"#111111", text:"#C8201A" },
   };
 
   const parseDate = (d) => { try { return new Date(d); } catch(e) { return new Date(0); } };
