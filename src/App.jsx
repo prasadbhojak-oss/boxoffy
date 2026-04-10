@@ -3211,7 +3211,7 @@ function ForeignFilmsPanel({ movies }) {
             </span>
           </div>
           <div style={{ fontFamily:"'DM Sans',sans-serif", fontSize:9, color:T.textMuted, letterSpacing:"0.18em", textTransform:"uppercase", marginTop:2 }}>
-            BOXOFFY · WKD 15 · APR 3–5, 2026
+            BOXOFFY · WKD 16 · APR 10–12, 2026
           </div>
         </div>
 
@@ -3696,10 +3696,10 @@ function HeaderSnapshotCards({ activeSection }) {
   const isMobile = useIsMobile();
   return (
     <div style={{ display:"flex", flexDirection:"column", gap:0, flexShrink:0, maxWidth: isMobile ? "100%" : 380 }}>
-      <a href="/dhurandhar-box-office-d1-vs-d2.html" style={{ textDecoration:"none", display:"block" }}>
+      <a href="/dhurandhar-2-vs-pushpa-2-box-office.html" style={{ textDecoration:"none", display:"block" }}>
         <div style={{
           background:"#F9FAFB", border:`0.5px solid #E5E7EB`,
-          borderLeft:`4px solid #2563EB`, padding:"14px 18px",
+          borderLeft:`4px solid #C8201A`, padding:"14px 18px",
           cursor:"pointer", display:"flex", alignItems:"center", gap:14,
         }}
           onMouseEnter={e => e.currentTarget.style.background="#FFFFFF"}
@@ -3707,23 +3707,23 @@ function HeaderSnapshotCards({ activeSection }) {
         >
           <div style={{ display:"flex", alignItems:"center", flexShrink:0 }}>
             <img
-              src="https://image.tmdb.org/t/p/w185/8FHOtUpNIk5ZPEay2N2EY5lrxkv.jpg"
-              alt="Dhurandhar"
+              src="https://image.tmdb.org/t/p/w185/ov8vrRLZGoXHpYjSY9Vpv1tHJX7.jpg"
+              alt="Dhurandhar: The Revenge"
               style={{ width:42, height:63, objectFit:"cover", borderRadius:3, border:"0.5px solid #D1D5DB" }}
-              onError={e => { e.target.style.background="#E5E7EB"; e.target.removeAttribute("src"); }}
+              onError={e => { e.target.style.background="#DBEAFE"; e.target.removeAttribute("src"); }}
             />
             <div style={{
-              width:24, height:24, borderRadius:"50%", background:"#1E3A8A",
+              width:24, height:24, borderRadius:"50%", background:"#C8201A",
               display:"flex", alignItems:"center", justifyContent:"center",
               fontFamily:"'Barlow Condensed', sans-serif", fontWeight:900, fontSize:8,
               color:"#FFFFFF", letterSpacing:"0.04em", flexShrink:0,
               margin:"0 -3px", zIndex:1, outline:"2px solid #F9FAFB",
             }}>VS</div>
             <img
-              src="https://image.tmdb.org/t/p/w185/ov8vrRLZGoXHpYjSY9Vpv1tHJX7.jpg"
-              alt="Dhurandhar: The Revenge"
+              src="https://image.tmdb.org/t/p/w185/t5ePZYRibJ0EEK1FK3GhihVkDW5.jpg"
+              alt="Pushpa 2: The Rule"
               style={{ width:42, height:63, objectFit:"cover", borderRadius:3, border:"0.5px solid #D1D5DB" }}
-              onError={e => { e.target.style.background="#DBEAFE"; e.target.removeAttribute("src"); }}
+              onError={e => { e.target.style.background="#FEF3C7"; e.target.removeAttribute("src"); }}
             />
           </div>
           <div style={{ flex:1, minWidth:0 }}>
@@ -3732,10 +3732,10 @@ function HeaderSnapshotCards({ activeSection }) {
               fontSize:"clamp(14px, 1.6vw, 16px)", color:"#111827",
               lineHeight:1.25, letterSpacing:"-0.01em",
             }}>
-              Dhurandhar vs Dhurandhar: The Revenge Comparison
+              Dhurandhar: The Revenge vs Pushpa 2
             </div>
             <div style={{ fontFamily:"'DM Sans', sans-serif", fontSize:10, color:"#9CA3AF", marginTop:5 }}>
-              Day-wise · Week-wise · Budget · Verdict →
+              India · WW · Lifetime · Statistical Tie →
             </div>
           </div>
         </div>

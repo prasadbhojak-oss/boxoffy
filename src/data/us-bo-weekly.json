@@ -410,5 +410,143 @@
         "admitsNote": "6th weekend winding down · $120M domestic milestone crossed · franchise-high domestic for Scream series"
       }
     ]
+  },
+  "Week 16, 2026": {
+    "dateRange": "Apr 10–12, 2026",
+    "status": "weekend-in-progress",
+    "headline": "Super Mario Galaxy Movie #1 Again · $55M Est 2nd Weekend · PHM Crosses $230M · Dacoit US Premieres",
+    "source": "Deadline / Exhibitor Relations estimates",
+    "chart": [
+      {
+        "rank": 1,
+        "title": "The Super Mario Galaxy Movie",
+        "studio": "Universal / Illumination",
+        "genre": "Animation",
+        "weekend": "$55.0M*",
+        "total": "$245M*",
+        "theaters": 4252,
+        "change": "-58%*",
+        "weeks": 2,
+        "rtScore": "A-",
+        "admitsNote": "2nd weekend est. $55M (tracking $50-60M) · Massive -58% drop from $130.9M Easter debut — expected after holiday inflated opening · Domestic $245M est · WW heading past $500M this weekend · First film of 2026 to $1B globally on horizon"
+      },
+      {
+        "rank": 2,
+        "title": "Project Hail Mary",
+        "studio": "Amazon MGM",
+        "genre": "Sci-Fi",
+        "weekend": "$16.0M*",
+        "total": "$233M*",
+        "theaters": 3750,
+        "change": "-48%*",
+        "weeks": 4,
+        "rtScore": "97%",
+        "admitsNote": "$230M+ domestic · WW $430M+ · Strong 4th weekend hold · Ryan Gosling confirmed global lead · Amazon MGM's biggest domestic film ever"
+      },
+      {
+        "rank": 3,
+        "title": "The Drama",
+        "studio": "A24",
+        "genre": "Drama",
+        "weekend": "$7.5M*",
+        "total": "$21.6M*",
+        "theaters": 3087,
+        "change": "-47%*",
+        "weeks": 2,
+        "rtScore": "81%",
+        "admitsNote": "Zendaya + Robert Pattinson · Solid 2nd weekend · $21M domestic · A24 adult drama holding well · WW $35M+"
+      },
+      {
+        "rank": 4,
+        "title": "Hoppers",
+        "studio": "Disney / Pixar",
+        "genre": "Animation",
+        "weekend": "$4.8M*",
+        "total": "$154.4M*",
+        "theaters": 2900,
+        "change": "-17%*",
+        "weeks": 6,
+        "rtScore": "91%",
+        "admitsNote": "Strong 6-week legs · $154M domestic · WW $340M+ · Pixar original proving durable · Mario competition manageable for family animated"
+      },
+      {
+        "rank": 5,
+        "title": "Reminders of Him",
+        "studio": "Universal",
+        "genre": "Romance",
+        "weekend": "$1.8M*",
+        "total": "$47.1M*",
+        "theaters": 1800,
+        "change": "-22%*",
+        "weeks": 5,
+        "rtScore": "74%",
+        "admitsNote": "Colleen Hoover adaptation · Quietly profitable at $47M domestic · $82M WW · Solid OTT setup"
+      },
+      {
+        "rank": 6,
+        "title": "A Great Awakening",
+        "studio": "Roadside Attractions",
+        "genre": "Faith / Drama",
+        "weekend": "$1.9M*",
+        "total": "$3.9M*",
+        "theaters": 1289,
+        "change": "-10%*",
+        "weeks": 2,
+        "rtScore": "77%",
+        "admitsNote": "Faith-based · History buffs · Strong specialty box office hold · America 250th anniversary tie-in"
+      },
+      {
+        "rank": 7,
+        "title": "Dacoit (US Premiere)",
+        "studio": "PVR INOX / Annapurna",
+        "genre": "Action / Romance",
+        "weekend": "$1.8M*",
+        "total": "$1.8M*",
+        "theaters": 380,
+        "change": "NEW",
+        "weeks": 1,
+        "rtScore": "N/A",
+        "admitsNote": "Adivi Sesh · Mrunal Thakur · Anurag Kashyap · Telugu/Hindi · US premiere Apr 9 sold $100K+ · Strong Telugu diaspora turnout expected · India D1 Apr 10 · Budget ₹60 Cr needs ₹65 Cr WW break-even"
+      },
+      {
+        "rank": 8,
+        "title": "Dhurandhar: The Revenge",
+        "studio": "Jio Studios",
+        "genre": "Action / Spy",
+        "weekend": "$1.2M*",
+        "total": "$27.0M*",
+        "theaters": 285,
+        "change": "-40%*",
+        "weeks": 4,
+        "rtScore": "N/A",
+        "admitsNote": "~$27M cumulative NA — all-time Bollywood record. 4th US weekend on reduced screens. India total ~₹950 Cr BOI canonical D21. Projected lifetime ~$30M NA total. Week 4 India run in progress — ₹1,000 Cr milestone projected Apr 17."
+      },
+      {
+        "rank": 9,
+        "title": "GOAT",
+        "studio": "Sony",
+        "genre": "Action",
+        "weekend": "$0.8M*",
+        "total": "$102.4M*",
+        "theaters": 1100,
+        "change": "-30%*",
+        "weeks": 9,
+        "rtScore": "68%",
+        "admitsNote": "9th weekend · Domestic total $102M on $90M budget · WW $82M international · Long-running action title"
+      },
+      {
+        "rank": 10,
+        "title": "Scream 7",
+        "studio": "Paramount",
+        "genre": "Horror",
+        "weekend": "$0.7M*",
+        "total": "$68.5M*",
+        "theaters": 1200,
+        "change": "-45%*",
+        "weeks": 4,
+        "rtScore": "72%",
+        "admitsNote": "4th weekend · $68M domestic · Franchise entry with modest but profitable run"
+      }
+    ]
   }
 }
