@@ -14,7 +14,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>OTT Releases India April 2026 — Netflix, Prime Video, JioHotstar This Week | Boxoffy</title>
-<meta name="description" content="OTT releases India April 2026. The Boys S5 (Apr 8, Prime), Maamla Legal Hai S2 (Apr 3, Netflix), BEEF S2 (Apr 16, Netflix), Mrithyunjay (Netflix), Vadh 2 (Netflix). Full weekly guide — what to watch on Netflix, JioHotstar, Prime Video, SonyLIV.">
+<meta name="description" content="OTT releases India April 2026. The Boys S5 (Apr 8, Prime), Maamla Legal Hai S2 (Apr 3, ZEE5), BEEF S2 (Apr 16, Netflix), Mrithyunjay (Netflix), Vadh 2 (Netflix). Full weekly guide — what to watch on Netflix, JioHotstar, Prime Video, SonyLIV.">
 <meta name="keywords" content="OTT releases India April 2026, what to watch Netflix India this week, new shows Prime Video April 2026, JioHotstar new releases, The Boys Season 5 India, Maamla Legal Hai Season 2, OTT this week India 2026">
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
 <meta name="news_keywords" content="The Boys Season 5, Maamla Legal Hai Season 2, BEEF Season 2, Mrithyunjay Netflix, Sitaare Zameen Par SonyLIV, OTT India April 2026, Netflix new releases India">
@@ -45,10 +45,10 @@
     "@context": "https://schema.org",
     "@type": "NewsArticle",
     "headline": "OTT Releases India April 2026 — Netflix, Prime Video, JioHotstar This Week",
-    "description": "Complete OTT releases calendar India April 2026. The Boys S5 (Apr 8, Prime Video), Maamla Legal Hai S2 (Apr 3, Netflix), BEEF S2 (Apr 16, Netflix), Mrithyunjay (Apr 3, Netflix), Sitaare Zameen Par (Apr 3, SonyLIV). Updated weekly.",
+    "description": "Complete OTT releases calendar India April 2026. The Boys S5 (Apr 8, Prime Video), Maamla Legal Hai S2 (Apr 3, ZEE5), BEEF S2 (Apr 16, Netflix), Mrithyunjay (Apr 3, Netflix), Sitaare Zameen Par (Apr 3, SonyLIV). Updated weekly.",
     "url": "https://boxoffy.com/ott-releases.html",
     "datePublished": "2026-04-02",
-    "dateModified": "2026-04-02",
+    "dateModified": "2026-04-06",
     "image": "https://boxoffy.com/og-image.png",
     "author": {"@type": "Organization","name": "Boxoffy","url": "https://boxoffy.com"},
     "publisher": {"@type": "Organization","name": "Boxoffy","url": "https://boxoffy.com","logo": {"@type": "ImageObject","url": "https://boxoffy.com/og-image.png","width": 1200,"height": 630}},
@@ -86,7 +86,7 @@
       {
         "@type": "Question",
         "name": "When does Maamla Legal Hai Season 2 release on Netflix?",
-        "acceptedAnswer": {"@type": "Answer","text": "Maamla Legal Hai Season 2 releases on April 3, 2026 on Netflix India. It stars Ravi Kishan and has 10 new episodes. The courtroom comedy-satire premiered its first season on Netflix and trended at number 3 in India."}
+        "acceptedAnswer": {"@type": "Answer","text": "Maamla Legal Hai Season 2 releases on April 3, 2026 on ZEE5 India. It stars Ravi Kishan and has 10 new episodes. The courtroom comedy-satire premiered its first season on Netflix and trended at number 3 in India."}
       },
       {
         "@type": "Question",
@@ -106,7 +106,7 @@
       {
         "@type": "Question",
         "name": "What are the best OTT releases in India this week?",
-        "acceptedAnswer": {"@type": "Answer","text": "The best OTT releases in India this week (April 3–10, 2026) are: (1) The Boys Season 5 on Prime Video — April 8, the final season; (2) Maamla Legal Hai Season 2 on Netflix — April 3; (3) Sitaare Zameen Par on SonyLIV — April 3 (Aamir Khan); (4) Mrithyunjay on Netflix — April 3 (Telugu thriller); (5) Vadh 2 on Netflix — April 3. BEEF Season 2 follows on Netflix on April 16."}
+        "acceptedAnswer": {"@type": "Answer","text": "The best OTT releases in India this week (April 3–10, 2026) are: (1) The Boys Season 5 on Prime Video — April 8, the final season; (2) Maamla Legal Hai Season 2 on ZEE5 — April 3; (3) Sitaare Zameen Par on SonyLIV — April 3 (Aamir Khan); (4) Mrithyunjay on Netflix — April 3 (Telugu thriller); (5) Vadh 2 on Netflix — April 3. BEEF Season 2 follows on Netflix on April 16."}
       },
       {
         "@type": "Question",
@@ -185,14 +185,21 @@ a:hover{text-decoration:underline}
 .sec-badge{font-family:'DM Sans',sans-serif;font-size:9px;font-weight:700;padding:2px 7px;border-radius:2px;letter-spacing:.06em;text-transform:uppercase;margin-left:6px}
 
 /* RELEASE CARDS */
-.releases-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px;margin-bottom:8px}
-.rl-card{background:var(--surface);border:1px solid var(--rule);border-radius:6px;overflow:hidden;transition:border-color .15s}
+.releases-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:14px;margin-bottom:8px}
+.rl-card{background:var(--surface);border:1px solid var(--rule);border-radius:6px;overflow:hidden;transition:border-color .15s;display:flex;flex-direction:column}
 .rl-card:hover{border-color:#6B6457}
-.rl-header{padding:14px 16px 10px;border-bottom:0.5px solid var(--rule);display:flex;align-items:flex-start;justify-content:space-between;gap:10px}
+/* Poster + header row */
+.rl-top{display:flex;gap:0;align-items:stretch;border-bottom:0.5px solid var(--rule)}
+.rl-poster-wrap{width:88px;flex-shrink:0;background:#111;position:relative;overflow:hidden;min-height:120px}
+.rl-poster-wrap img{width:100%;height:100%;object-fit:cover;display:block;opacity:0;transition:opacity .3s}
+.rl-poster-wrap img.loaded{opacity:1}
+.rl-poster-placeholder{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:10px;color:#444;letter-spacing:.08em;text-transform:uppercase;padding:4px;text-align:center;line-height:1.2}
+.rl-header{padding:12px 14px 10px;flex:1;display:flex;flex-direction:column;justify-content:space-between;gap:6px}
+.rl-header-top{display:flex;align-items:flex-start;justify-content:space-between;gap:8px}
 .rl-title{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:18px;color:var(--ink);line-height:1.1;flex:1}
-.rl-plat{font-family:'DM Sans',sans-serif;font-size:9px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:3px 8px;border-radius:2px;flex-shrink:0;margin-top:2px}
-.rl-body{padding:10px 16px 14px}
-.rl-date{font-family:'DM Sans',sans-serif;font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
+.rl-plat{font-family:'DM Sans',sans-serif;font-size:9px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:3px 8px;border-radius:2px;flex-shrink:0;white-space:nowrap}
+.rl-body{padding:10px 14px 14px;flex:1}
+.rl-date{font-family:'DM Sans',sans-serif;font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:5px}
 .rl-desc{font-family:'DM Sans',sans-serif;font-size:12px;color:#374151;line-height:1.6}
 .rl-genre{font-family:'DM Sans',sans-serif;font-size:9px;font-weight:600;color:var(--muted);margin-top:6px;letter-spacing:.06em;text-transform:uppercase}
 .rl-must{border-left:3px solid var(--red)}
@@ -249,7 +256,7 @@ footer{background:var(--ink);border-top:2px solid #1F1F1F;padding:22px 32px;disp
 <div class="week-banner">
   <div class="week-dot"></div>
   <span class="week-text">OTT Week</span>
-  <span class="week-sub">&nbsp;&middot;&nbsp; Apr 3–10 releases live &nbsp;&middot;&nbsp; The Boys S5 Apr 8 &middot; Maamla Legal Hai S2 Apr 3 &middot; BEEF S2 Apr 16 &middot; Updated Apr 2, 2026</span>
+  <span class="week-sub">&nbsp;&middot;&nbsp; Apr 6–12 · Week 2 of April &nbsp;&middot;&nbsp; The Boys S5 Apr 8 &middot; Vadh 2 #1 Netflix · The Boys S5 Apr 8 · BEEF S2 Apr 16 · Updated Apr 6, 2026</span>
 </div>
 
 <section class="hero">
@@ -260,7 +267,7 @@ footer{background:var(--ink);border-top:2px solid #1F1F1F;padding:22px 32px;disp
       <span class="badge" style="background:#15803D;color:#fff">Updated Weekly</span>
     </div>
     <h1 class="hero-title">OTT <span class="acc">INDIA</span><br>THIS WEEK</h1>
-    <p class="hero-dek speakable">The Boys delivers its final season on Prime Video. Netflix opens April with the Maamla Legal Hai comeback and BEEF's anthology second chapter. JioHotstar holds Dhurandhar 2's OTT rights. Here's everything worth watching.</p>
+    <p class="hero-dek speakable">Vadh 2 is #1 on Netflix India. The Boys S5 drops April 8 on Prime. BEEF S2 arrives April 16. Maamla Legal Hai S2 is dominating Zee5. JioHotstar holds Dhurandhar 2 at ₹150 Cr. Here's the full picture.</p>
     <div class="platform-strip">
       <span class="plat nf">&#9654; Netflix</span>
       <span class="plat prime">&#9654; Prime Video</span>
@@ -276,7 +283,7 @@ footer{background:var(--ink);border-top:2px solid #1F1F1F;padding:22px 32px;disp
 <div class="byline">
   <span class="byline-name">Boxoffy OTT Desk</span>
   <span class="byline-sep">&middot;</span>
-  <span class="byline-info">Updated Apr 2, 2026</span>
+  <span class="byline-info">Updated Apr 6, 2026</span>
   <span class="byline-sep">&middot;</span>
   <span class="byline-info">Sources: Platform official announcements &middot; Filmibeat &middot; Sacnilk &middot; OTT release confirmed dates only</span>
 </div>
@@ -293,8 +300,8 @@ footer{background:var(--ink);border-top:2px solid #1F1F1F;padding:22px 32px;disp
       </div>
       <div style="background:#111;border:0.5px solid #1F2937;padding:10px 14px">
         <div style="font-family:'DM Sans',sans-serif;font-size:9px;font-weight:700;color:#6B7280;letter-spacing:.1em;text-transform:uppercase;margin-bottom:3px">Maamla Legal Hai S2</div>
-        <div style="font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:16px;color:#fff">Apr 3, 2026 &middot; Netflix</div>
-        <div style="font-family:'DM Sans',sans-serif;font-size:10px;color:#6B7280;margin-top:2px">10 episodes &middot; Ravi Kishan &middot; Hindi</div>
+        <div style="font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:16px;color:#fff">Apr 3, 2026 &middot; ZEE5</div>
+        <div style="font-family:'DM Sans',sans-serif;font-size:10px;color:#6B7280;margin-top:2px">10 episodes &middot; Ravi Kishan, Kusha Kapila &middot; Hindi</div>
       </div>
       <div style="background:#111;border:0.5px solid #1F2937;padding:10px 14px">
         <div style="font-family:'DM Sans',sans-serif;font-size:9px;font-weight:700;color:#6B7280;letter-spacing:.1em;text-transform:uppercase;margin-bottom:3px">BEEF Season 2</div>
@@ -321,112 +328,517 @@ footer{background:var(--ink);border-top:2px solid #1F1F1F;padding:22px 32px;disp
 </div>
 
 
+
+<section id="ott-rankings" style="background:#0A0A0A;border-bottom:3px solid #C8201A">
+  <style>
+    .rankings-wrap{max-width:1100px;margin:0 auto;padding:32px 32px 40px}
+    .rank-section{margin-bottom:32px}.rank-section:last-child{margin-bottom:0}
+    .rank-section-head{display:flex;align-items:center;gap:10px;border-bottom:1px solid #1F2937;padding-bottom:10px;margin-bottom:12px;flex-wrap:wrap}
+    .rank-section-title{font-family:"Barlow Condensed",sans-serif;font-weight:900;font-size:14px;letter-spacing:.12em;text-transform:uppercase;color:#fff}
+    .rank-section-sub{font-family:"DM Sans",sans-serif;font-size:10px;color:#4B5563}
+    .rank-plat-badge{font-family:"DM Sans",sans-serif;font-weight:700;font-size:9px;letter-spacing:.08em;text-transform:uppercase;padding:2px 8px;border-radius:2px}
+    .rank-rows{display:flex;flex-direction:column}
+    .rank-row{display:flex;align-items:center;gap:12px;padding:8px 0;border-bottom:1px solid #111;transition:background .12s}
+    .rank-row:hover{background:#0F0F0F}.rank-row:last-child{border-bottom:none}
+    .rank-num{font-family:"Barlow Condensed",sans-serif;font-weight:900;font-size:20px;width:26px;text-align:center;flex-shrink:0;line-height:1}
+    .rank-num.top1{color:#B8860B}.rank-num.top3{color:#C8201A}.rank-num.rest{color:#374151}
+    .rank-poster{width:36px;height:52px;flex-shrink:0;border-radius:3px;background:#111;overflow:hidden;position:relative;display:flex;align-items:center;justify-content:center}
+    .rank-poster img{width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .3s;display:block;position:absolute;inset:0}
+    .rank-poster img.loaded{opacity:1}
+    .rank-poster-init{font-family:"Barlow Condensed",sans-serif;font-weight:900;font-size:9px;color:#333;text-align:center;padding:2px;line-height:1.2}
+    .rank-info{flex:1;min-width:0}
+    .rank-title{font-family:"Barlow Condensed",sans-serif;font-weight:800;font-size:15px;color:#E5E7EB;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;line-height:1.2}
+    .rank-meta{font-family:"DM Sans",sans-serif;font-size:10px;color:#4B5563;margin-top:2px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+    .rank-hot{font-family:"DM Sans",sans-serif;font-size:8px;font-weight:700;background:#7F1D1D;color:#FCA5A5;padding:2px 6px;border-radius:2px;letter-spacing:.08em;text-transform:uppercase;flex-shrink:0}
+    @media(max-width:640px){.rankings-wrap{padding:20px 16px 28px}.rank-meta{white-space:normal}}
+  </style>
+
+  <div class="rankings-wrap">
+    <div style="display:flex;align-items:flex-end;gap:12px;margin-bottom:28px;flex-wrap:wrap;border-bottom:1px solid #1F2937;padding-bottom:20px">
+      <div>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:9px;font-weight:700;color:#C8201A;letter-spacing:.2em;text-transform:uppercase;margin-bottom:6px">Boxoffy OTT Intelligence</div>
+        <h2 style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:clamp(22px,3.5vw,30px);color:#fff;line-height:1;letter-spacing:-.01em;margin:0">WHAT INDIA IS WATCHING</h2>
+      </div>
+      <div style="margin-left:auto;font-family:'IBM Plex Mono',monospace;font-size:9px;color:#374151;letter-spacing:.1em;line-height:1.7;text-align:right">Apr 6, 2026<br>Watch hrs + Social buzz</div>
+    </div>
+
+    <div class="rank-section" style="margin-bottom:32px">
+      <div class="rank-section-head">
+        <span class="rank-section-title">&#128293; Combined Most Watched</span>
+        <span class="rank-plat-badge" style="background:#C8201A;color:#fff">Cross-Platform</span>
+        <span class="rank-section-sub">Watch hours + social buzz &middot; all platforms</span>
+      </div>
+      <div class="rank-rows"><div class="rank-row" data-tmdb="Vadh 2" data-year="2026">
+          <div class="rank-num top1">1</div>
+          <div class="rank-poster"><div class="rank-poster-init">V2</div><img src="" alt="Vadh 2"></div>
+          <div class="rank-info">
+            <div class="rank-title">Vadh 2</div>
+            <div class="rank-meta"><span style="font-family:'DM Sans',sans-serif;font-size:8px;font-weight:700;background:#E5091422;color:#E50914;padding:1px 5px;border-radius:2px;letter-spacing:.06em;text-transform:uppercase;margin-right:6px">Netflix</span><span style="color:#6B7280">Hindi &middot; Film</span><span style="color:#4B5563;margin-left:6px">#1 Netflix India in 24hrs &middot; Sanjay Mishra, Neena Gupta</span></div>
+          </div>
+          <span class="rank-hot">HOT</span>
+        </div><div class="rank-row" data-tmdb="Maamla Legal Hai" data-year="2026">
+          <div class="rank-num top3">2</div>
+          <div class="rank-poster"><div class="rank-poster-init">MLH</div><img src="" alt="Maamla Legal Hai 2"></div>
+          <div class="rank-info">
+            <div class="rank-title">Maamla Legal Hai 2</div>
+            <div class="rank-meta"><span style="font-family:'DM Sans',sans-serif;font-size:8px;font-weight:700;background:#E5091422;color:#E50914;padding:1px 5px;border-radius:2px;letter-spacing:.06em;text-transform:uppercase;margin-right:6px">Netflix</span><span style="color:#6B7280">Hindi &middot; Series</span><span style="color:#4B5563;margin-left:6px">Biggest Netflix comedy debut 2026 &middot; Ravi Kishan, Kusha Kapila</span></div>
+          </div>
+          <span class="rank-hot">HOT</span>
+        </div><div class="rank-row" data-tmdb="Mardaani 3" data-year="2026">
+          <div class="rank-num top3">3</div>
+          <div class="rank-poster"><div class="rank-poster-init">M3</div><img src="" alt="Mardaani 3"></div>
+          <div class="rank-info">
+            <div class="rank-title">Mardaani 3</div>
+            <div class="rank-meta"><span style="font-family:'DM Sans',sans-serif;font-size:8px;font-weight:700;background:#E5091422;color:#E50914;padding:1px 5px;border-radius:2px;letter-spacing:.06em;text-transform:uppercase;margin-right:6px">Netflix</span><span style="color:#6B7280">Hindi &middot; Film</span><span style="color:#4B5563;margin-left:6px">7.5M+ views &middot; Rani Mukerji &middot; entire franchise trending</span></div>
+          </div>
+          
+        </div><div class="rank-row" data-tmdb="O Romeo" data-year="2026">
+          <div class="rank-num rest">4</div>
+          <div class="rank-poster"><div class="rank-poster-init">O</div><img src="" alt="O&#39;Romeo"></div>
+          <div class="rank-info">
+            <div class="rank-title">O&#39;Romeo</div>
+            <div class="rank-meta"><span style="font-family:'DM Sans',sans-serif;font-size:8px;font-weight:700;background:#00A8E122;color:#00A8E1;padding:1px 5px;border-radius:2px;letter-spacing:.06em;text-transform:uppercase;margin-right:6px">Prime Video</span><span style="color:#6B7280">Hindi &middot; Film</span><span style="color:#4B5563;margin-left:6px">Shahid Kapoor, Triptii Dimri &middot; Vishal Bhardwaj</span></div>
+          </div>
+          <span class="rank-hot">HOT</span>
+        </div><div class="rank-row" data-tmdb="Aspirants" data-year="2024">
+          <div class="rank-num rest">5</div>
+          <div class="rank-poster"><div class="rank-poster-init">AS3</div><img src="" alt="Aspirants Season 3"></div>
+          <div class="rank-info">
+            <div class="rank-title">Aspirants Season 3</div>
+            <div class="rank-meta"><span style="font-family:'DM Sans',sans-serif;font-size:8px;font-weight:700;background:#E5091422;color:#E50914;padding:1px 5px;border-radius:2px;letter-spacing:.06em;text-transform:uppercase;margin-right:6px">Netflix</span><span style="color:#6B7280">Hindi &middot; Series</span><span style="color:#4B5563;margin-left:6px">TVF &times; Netflix &middot; #1 show India &middot; also on Prime</span></div>
+          </div>
+          <span class="rank-hot">HOT</span>
+        </div><div class="rank-row" data-tmdb="Daredevil Born Again" data-year="2025">
+          <div class="rank-num rest">6</div>
+          <div class="rank-poster"><div class="rank-poster-init">DBA</div><img src="" alt="Daredevil: Born Again S2"></div>
+          <div class="rank-info">
+            <div class="rank-title">Daredevil: Born Again S2</div>
+            <div class="rank-meta"><span style="font-family:'DM Sans',sans-serif;font-size:8px;font-weight:700;background:#0066FF22;color:#0066FF;padding:1px 5px;border-radius:2px;letter-spacing:.06em;text-transform:uppercase;margin-right:6px">JioHotstar</span><span style="color:#6B7280">English &middot; Series</span><span style="color:#4B5563;margin-left:6px">Most-watched intl series India &middot; Marvel &middot; Mar 24</span></div>
+          </div>
+          <span class="rank-hot">HOT</span>
+        </div><div class="rank-row" data-tmdb="Border 2" data-year="2026">
+          <div class="rank-num rest">7</div>
+          <div class="rank-poster"><div class="rank-poster-init">B2</div><img src="" alt="Border 2"></div>
+          <div class="rank-info">
+            <div class="rank-title">Border 2</div>
+            <div class="rank-meta"><span style="font-family:'DM Sans',sans-serif;font-size:8px;font-weight:700;background:#E5091422;color:#E50914;padding:1px 5px;border-radius:2px;letter-spacing:.06em;text-transform:uppercase;margin-right:6px">Netflix</span><span style="color:#6B7280">Hindi &middot; Film</span><span style="color:#4B5563;margin-left:6px">Wk 3 &middot; 6.1M views &middot; Sunny Deol, Varun Dhawan</span></div>
+          </div>
+          
+        </div><div class="rank-row" data-tmdb="Dhurandhar" data-year="2025">
+          <div class="rank-num rest">8</div>
+          <div class="rank-poster"><div class="rank-poster-init">D</div><img src="" alt="Dhurandhar"></div>
+          <div class="rank-info">
+            <div class="rank-title">Dhurandhar</div>
+            <div class="rank-meta"><span style="font-family:'DM Sans',sans-serif;font-size:8px;font-weight:700;background:#E5091422;color:#E50914;padding:1px 5px;border-radius:2px;letter-spacing:.06em;text-transform:uppercase;margin-right:6px">Netflix</span><span style="color:#6B7280">Hindi &middot; Film</span><span style="color:#4B5563;margin-left:6px">Wk 12 &middot; 29.3M views all-time &middot; 7th most-watched Indian on Netflix</span></div>
+          </div>
+          
+        </div><div class="rank-row" data-tmdb="Sitaare Zameen Par" data-year="2025">
+          <div class="rank-num rest">9</div>
+          <div class="rank-poster"><div class="rank-poster-init">SZP</div><img src="" alt="Sitaare Zameen Par"></div>
+          <div class="rank-info">
+            <div class="rank-title">Sitaare Zameen Par</div>
+            <div class="rank-meta"><span style="font-family:'DM Sans',sans-serif;font-size:8px;font-weight:700;background:#0071C522;color:#0071C5;padding:1px 5px;border-radius:2px;letter-spacing:.06em;text-transform:uppercase;margin-right:6px">SonyLIV</span><span style="color:#6B7280">Hindi &middot; Film</span><span style="color:#4B5563;margin-left:6px">Apr 3 &middot; Aamir Khan &middot; &#8377;167 Cr theatrical hit</span></div>
+          </div>
+          
+        </div><div class="rank-row" data-tmdb="Mirzapur" data-year="2024">
+          <div class="rank-num rest">10</div>
+          <div class="rank-poster"><div class="rank-poster-init">MS3</div><img src="" alt="Mirzapur Season 3"></div>
+          <div class="rank-info">
+            <div class="rank-title">Mirzapur Season 3</div>
+            <div class="rank-meta"><span style="font-family:'DM Sans',sans-serif;font-size:8px;font-weight:700;background:#00A8E122;color:#00A8E1;padding:1px 5px;border-radius:2px;letter-spacing:.06em;text-transform:uppercase;margin-right:6px">Prime Video</span><span style="color:#6B7280">Hindi &middot; Series</span><span style="color:#4B5563;margin-left:6px">37M+ views all-time &middot; Amazon India record</span></div>
+          </div>
+          
+        </div></div>
+    </div>
+    <div class="rank-section" style="margin-bottom:32px">
+      <div class="rank-section-head">
+        <span class="rank-section-title">Netflix India</span>
+        <span class="rank-plat-badge" style="background:#E50914;color:#fff">Official Tudum</span>
+        <span class="rank-section-sub">Apr 3&ndash;6, 2026</span>
+      </div>
+      <div class="rank-rows"><div class="rank-row" data-tmdb="Vadh 2" data-year="2026">
+          <div class="rank-num top1">1</div>
+          <div class="rank-poster"><div class="rank-poster-init">V2</div><img src="" alt="Vadh 2"></div>
+          <div class="rank-info">
+            <div class="rank-title">Vadh 2</div>
+            <div class="rank-meta"><span style="font-family:'DM Sans',sans-serif;font-size:8px;font-weight:700;background:#E5091422;color:#E50914;padding:1px 5px;border-radius:2px;letter-spacing:.06em;text-transform:uppercase;margin-right:6px">Netflix</span><span style="color:#6B7280">Hindi &middot; Film</span><span style="color:#4B5563;margin-left:6px">#1 in 24 hours &middot; Sanjay Mishra, Neena Gupta &middot; Apr 3</span></div>
+          </div>
+          <span class="rank-hot">HOT</span>
+        </div><div class="rank-row" data-tmdb="Maamla Legal Hai" data-year="2026">
+          <div class="rank-num top3">2</div>
+          <div class="rank-poster"><div class="rank-poster-init">MLH</div><img src="" alt="Maamla Legal Hai 2"></div>
+          <div class="rank-info">
+            <div class="rank-title">Maamla Legal Hai 2</div>
+            <div class="rank-meta"><span style="font-family:'DM Sans',sans-serif;font-size:8px;font-weight:700;background:#E5091422;color:#E50914;padding:1px 5px;border-radius:2px;letter-spacing:.06em;text-transform:uppercase;margin-right:6px">Netflix</span><span style="color:#6B7280">Hindi &middot; Series</span><span style="color:#4B5563;margin-left:6px">Apr 3 &middot; Ravi Kishan returns &middot; Kusha Kapila joins &middot; 8 episodes</span></div>
+          </div>
+          <span class="rank-hot">HOT</span>
+        </div><div class="rank-row" data-tmdb="Mrityunjay" data-year="2026">
+          <div class="rank-num top3">3</div>
+          <div class="rank-poster"><div class="rank-poster-init">M</div><img src="" alt="Mrityunjay"></div>
+          <div class="rank-info">
+            <div class="rank-title">Mrityunjay</div>
+            <div class="rank-meta"><span style="font-family:'DM Sans',sans-serif;font-size:8px;font-weight:700;background:#E5091422;color:#E50914;padding:1px 5px;border-radius:2px;letter-spacing:.06em;text-transform:uppercase;margin-right:6px">Netflix</span><span style="color:#6B7280">Telugu &middot; Film</span><span style="color:#4B5563;margin-left:6px">Telugu action thriller &middot; OTT debut &middot; Sri Vishnu</span></div>
+          </div>
+          
+        </div><div class="rank-row" data-tmdb="Mardaani 3" data-year="2026">
+          <div class="rank-num rest">4</div>
+          <div class="rank-poster"><div class="rank-poster-init">M3</div><img src="" alt="Mardaani 3"></div>
+          <div class="rank-info">
+            <div class="rank-title">Mardaani 3</div>
+            <div class="rank-meta"><span style="font-family:'DM Sans',sans-serif;font-size:8px;font-weight:700;background:#E5091422;color:#E50914;padding:1px 5px;border-radius:2px;letter-spacing:.06em;text-transform:uppercase;margin-right:6px">Netflix</span><span style="color:#6B7280">Hindi &middot; Film</span><span style="color:#4B5563;margin-left:6px">Was #1 Apr 2 &middot; Rani Mukerji &middot; YRF franchise resurgence</span></div>
+          </div>
+          
+        </div><div class="rank-row" data-tmdb="Aspirants" data-year="2024">
+          <div class="rank-num rest">5</div>
+          <div class="rank-poster"><div class="rank-poster-init">AS3</div><img src="" alt="Aspirants Season 3"></div>
+          <div class="rank-info">
+            <div class="rank-title">Aspirants Season 3</div>
+            <div class="rank-meta"><span style="font-family:'DM Sans',sans-serif;font-size:8px;font-weight:700;background:#E5091422;color:#E50914;padding:1px 5px;border-radius:2px;letter-spacing:.06em;text-transform:uppercase;margin-right:6px">Netflix</span><span style="color:#6B7280">Hindi &middot; Series</span><span style="color:#4B5563;margin-left:6px">TVF &middot; UPSC drama &middot; #1 show India this week</span></div>
+          </div>
+          
+        </div><div class="rank-row" data-tmdb="Border 2" data-year="2026">
+          <div class="rank-num rest">6</div>
+          <div class="rank-poster"><div class="rank-poster-init">B2</div><img src="" alt="Border 2"></div>
+          <div class="rank-info">
+            <div class="rank-title">Border 2</div>
+            <div class="rank-meta"><span style="font-family:'DM Sans',sans-serif;font-size:8px;font-weight:700;background:#E5091422;color:#E50914;padding:1px 5px;border-radius:2px;letter-spacing:.06em;text-transform:uppercase;margin-right:6px">Netflix</span><span style="color:#6B7280">Hindi &middot; Film</span><span style="color:#4B5563;margin-left:6px">Wk 3 &middot; 6.1M views &middot; Sunny Deol, Varun Dhawan</span></div>
+          </div>
+          
+        </div><div class="rank-row" data-tmdb="Dhurandhar" data-year="2025">
+          <div class="rank-num rest">7</div>
+          <div class="rank-poster"><div class="rank-poster-init">D</div><img src="" alt="Dhurandhar"></div>
+          <div class="rank-info">
+            <div class="rank-title">Dhurandhar</div>
+            <div class="rank-meta"><span style="font-family:'DM Sans',sans-serif;font-size:8px;font-weight:700;background:#E5091422;color:#E50914;padding:1px 5px;border-radius:2px;letter-spacing:.06em;text-transform:uppercase;margin-right:6px">Netflix</span><span style="color:#6B7280">Hindi &middot; Film</span><span style="color:#4B5563;margin-left:6px">Wk 12 &middot; 29.3M views all-time &middot; still charting</span></div>
+          </div>
+          
+        </div></div>
+    </div>
+    <div class="rank-section" style="margin-bottom:32px">
+      <div class="rank-section-head">
+        <span class="rank-section-title">Prime Video India</span>
+        <span class="rank-plat-badge" style="background:#00A8E1;color:#fff">Ormax Estimate</span>
+        <span class="rank-section-sub">Week Apr 3&ndash;6, 2026</span>
+      </div>
+      <div class="rank-rows"><div class="rank-row" data-tmdb="O Romeo" data-year="2026">
+          <div class="rank-num top1">1</div>
+          <div class="rank-poster"><div class="rank-poster-init">O</div><img src="" alt="O&#39;Romeo"></div>
+          <div class="rank-info">
+            <div class="rank-title">O&#39;Romeo</div>
+            <div class="rank-meta"><span style="font-family:'DM Sans',sans-serif;font-size:8px;font-weight:700;background:#00A8E122;color:#00A8E1;padding:1px 5px;border-radius:2px;letter-spacing:.06em;text-transform:uppercase;margin-right:6px">Prime Video</span><span style="color:#6B7280">Hindi &middot; Film</span><span style="color:#4B5563;margin-left:6px">Mar 27 &middot; Shahid Kapoor, Triptii Dimri &middot; Vishal Bhardwaj</span></div>
+          </div>
+          <span class="rank-hot">HOT</span>
+        </div><div class="rank-row" data-tmdb="Mirzapur" data-year="2024">
+          <div class="rank-num top3">2</div>
+          <div class="rank-poster"><div class="rank-poster-init">MS3</div><img src="" alt="Mirzapur Season 3"></div>
+          <div class="rank-info">
+            <div class="rank-title">Mirzapur Season 3</div>
+            <div class="rank-meta"><span style="font-family:'DM Sans',sans-serif;font-size:8px;font-weight:700;background:#00A8E122;color:#00A8E1;padding:1px 5px;border-radius:2px;letter-spacing:.06em;text-transform:uppercase;margin-right:6px">Prime Video</span><span style="color:#6B7280">Hindi &middot; Series</span><span style="color:#4B5563;margin-left:6px">37M+ views all-time &middot; Amazon India all-time record</span></div>
+          </div>
+          
+        </div><div class="rank-row" data-tmdb="Aspirants" data-year="2024">
+          <div class="rank-num top3">3</div>
+          <div class="rank-poster"><div class="rank-poster-init">AS3</div><img src="" alt="Aspirants Season 3"></div>
+          <div class="rank-info">
+            <div class="rank-title">Aspirants Season 3</div>
+            <div class="rank-meta"><span style="font-family:'DM Sans',sans-serif;font-size:8px;font-weight:700;background:#00A8E122;color:#00A8E1;padding:1px 5px;border-radius:2px;letter-spacing:.06em;text-transform:uppercase;margin-right:6px">Prime Video</span><span style="color:#6B7280">Hindi &middot; Series</span><span style="color:#4B5563;margin-left:6px">TVF &times; Netflix/Prime &middot; UPSC drama &middot; cross-platform charting</span></div>
+          </div>
+          
+        </div><div class="rank-row" data-tmdb="Subedaar" data-year="2026">
+          <div class="rank-num rest">4</div>
+          <div class="rank-poster"><div class="rank-poster-init">S</div><img src="" alt="Subedaar"></div>
+          <div class="rank-info">
+            <div class="rank-title">Subedaar</div>
+            <div class="rank-meta"><span style="font-family:'DM Sans',sans-serif;font-size:8px;font-weight:700;background:#00A8E122;color:#00A8E1;padding:1px 5px;border-radius:2px;letter-spacing:.06em;text-transform:uppercase;margin-right:6px">Prime Video</span><span style="color:#6B7280">Hindi &middot; Film</span><span style="color:#4B5563;margin-left:6px">Anil Kapoor &middot; sand mafia crime drama &middot; strong WOM</span></div>
+          </div>
+          
+        </div><div class="rank-row" data-tmdb="Farzi" data-year="2023">
+          <div class="rank-num rest">5</div>
+          <div class="rank-poster"><div class="rank-poster-init">FS1</div><img src="" alt="Farzi Season 1"></div>
+          <div class="rank-info">
+            <div class="rank-title">Farzi Season 1</div>
+            <div class="rank-meta"><span style="font-family:'DM Sans',sans-serif;font-size:8px;font-weight:700;background:#00A8E122;color:#00A8E1;padding:1px 5px;border-radius:2px;letter-spacing:.06em;text-transform:uppercase;margin-right:6px">Prime Video</span><span style="color:#6B7280">Hindi &middot; Series</span><span style="color:#4B5563;margin-left:6px">Rewatch surge ahead of S2 in production &middot; Shahid Kapoor</span></div>
+          </div>
+          
+        </div><div class="rank-row" data-tmdb="Jawan" data-year="2023">
+          <div class="rank-num rest">6</div>
+          <div class="rank-poster"><div class="rank-poster-init">J</div><img src="" alt="Jawan"></div>
+          <div class="rank-info">
+            <div class="rank-title">Jawan</div>
+            <div class="rank-meta"><span style="font-family:'DM Sans',sans-serif;font-size:8px;font-weight:700;background:#00A8E122;color:#00A8E1;padding:1px 5px;border-radius:2px;letter-spacing:.06em;text-transform:uppercase;margin-right:6px">Prime Video</span><span style="color:#6B7280">Hindi &middot; Film</span><span style="color:#4B5563;margin-left:6px">Library anchor &middot; SRK &middot; still pulling diaspora views</span></div>
+          </div>
+          
+        </div></div>
+    </div>
+    <div class="rank-section" style="margin-bottom:32px">
+      <div class="rank-section-head">
+        <span class="rank-section-title">ZEE5 India</span>
+        <span class="rank-plat-badge" style="background:#7C3AED;color:#fff">Trade Reports</span>
+        <span class="rank-section-sub">Week Apr 3&ndash;6, 2026</span>
+      </div>
+      <div class="rank-rows"><div class="rank-row" data-tmdb="Bhabiji Ghar Par Hain" data-year="2026">
+          <div class="rank-num top1">1</div>
+          <div class="rank-poster"><div class="rank-poster-init">BGP</div><img src="" alt="Bhabiji Ghar Par Hain: Fun on the Run"></div>
+          <div class="rank-info">
+            <div class="rank-title">Bhabiji Ghar Par Hain: Fun on the Run</div>
+            <div class="rank-meta"><span style="font-family:'DM Sans',sans-serif;font-size:8px;font-weight:700;background:#7C3AED22;color:#7C3AED;padding:1px 5px;border-radius:2px;letter-spacing:.06em;text-transform:uppercase;margin-right:6px">ZEE5</span><span style="color:#6B7280">Hindi &middot; Film</span><span style="color:#4B5563;margin-left:6px">Apr 3 &middot; Aasif Sheikh, Rohitashv Gour &middot; TV spin-off road comedy</span></div>
+          </div>
+          <span class="rank-hot">HOT</span>
+        </div><div class="rank-row" data-tmdb="Chhaava" data-year="2025">
+          <div class="rank-num top3">2</div>
+          <div class="rank-poster"><div class="rank-poster-init">C</div><img src="" alt="Chhaava"></div>
+          <div class="rank-info">
+            <div class="rank-title">Chhaava</div>
+            <div class="rank-meta"><span style="font-family:'DM Sans',sans-serif;font-size:8px;font-weight:700;background:#7C3AED22;color:#7C3AED;padding:1px 5px;border-radius:2px;letter-spacing:.06em;text-transform:uppercase;margin-right:6px">ZEE5</span><span style="color:#6B7280">Hindi &middot; Film</span><span style="color:#4B5563;margin-left:6px">Vicky Kaushal &middot; historical epic &middot; post-theatrical streaming</span></div>
+          </div>
+          
+        </div><div class="rank-row" data-tmdb="Tanaav" data-year="2024">
+          <div class="rank-num top3">3</div>
+          <div class="rank-poster"><div class="rank-poster-init">TS2</div><img src="" alt="Tanaav Season 2"></div>
+          <div class="rank-info">
+            <div class="rank-title">Tanaav Season 2</div>
+            <div class="rank-meta"><span style="font-family:'DM Sans',sans-serif;font-size:8px;font-weight:700;background:#7C3AED22;color:#7C3AED;padding:1px 5px;border-radius:2px;letter-spacing:.06em;text-transform:uppercase;margin-right:6px">ZEE5</span><span style="color:#6B7280">Hindi &middot; Series</span><span style="color:#4B5563;margin-left:6px">Kashmir conflict drama &middot; Zee5 Original</span></div>
+          </div>
+          
+        </div><div class="rank-row" data-tmdb="Scam 2003" data-year="2023">
+          <div class="rank-num rest">4</div>
+          <div class="rank-poster"><div class="rank-poster-init">S2</div><img src="" alt="Scam 2003"></div>
+          <div class="rank-info">
+            <div class="rank-title">Scam 2003</div>
+            <div class="rank-meta"><span style="font-family:'DM Sans',sans-serif;font-size:8px;font-weight:700;background:#7C3AED22;color:#7C3AED;padding:1px 5px;border-radius:2px;letter-spacing:.06em;text-transform:uppercase;margin-right:6px">ZEE5</span><span style="color:#6B7280">Hindi &middot; Series</span><span style="color:#4B5563;margin-left:6px">Hansal Mehta &middot; Abdul Karim Telgi saga &middot; library evergreen</span></div>
+          </div>
+          
+        </div><div class="rank-row" data-tmdb="Sunflower" data-year="2024">
+          <div class="rank-num rest">5</div>
+          <div class="rank-poster"><div class="rank-poster-init">SS2</div><img src="" alt="Sunflower Season 2"></div>
+          <div class="rank-info">
+            <div class="rank-title">Sunflower Season 2</div>
+            <div class="rank-meta"><span style="font-family:'DM Sans',sans-serif;font-size:8px;font-weight:700;background:#7C3AED22;color:#7C3AED;padding:1px 5px;border-radius:2px;letter-spacing:.06em;text-transform:uppercase;margin-right:6px">ZEE5</span><span style="color:#6B7280">Hindi &middot; Series</span><span style="color:#4B5563;margin-left:6px">Sunil Grover comedy &middot; Zee5 Original &middot; sustained run</span></div>
+          </div>
+          
+        </div></div>
+    </div>
+    <div class="rank-section" style="margin-bottom:0">
+      <div class="rank-section-head">
+        <span class="rank-section-title">JioHotstar</span>
+        <span class="rank-plat-badge" style="background:#0066FF;color:#fff">Trade Tracking</span>
+        <span class="rank-section-sub">Week Apr 3&ndash;6, 2026</span>
+      </div>
+      <div class="rank-rows"><div class="rank-row" data-tmdb="Daredevil Born Again" data-year="2025">
+          <div class="rank-num top1">1</div>
+          <div class="rank-poster"><div class="rank-poster-init">DBA</div><img src="" alt="Daredevil: Born Again S2"></div>
+          <div class="rank-info">
+            <div class="rank-title">Daredevil: Born Again S2</div>
+            <div class="rank-meta"><span style="font-family:'DM Sans',sans-serif;font-size:8px;font-weight:700;background:#0066FF22;color:#0066FF;padding:1px 5px;border-radius:2px;letter-spacing:.06em;text-transform:uppercase;margin-right:6px">JioHotstar</span><span style="color:#6B7280">English &middot; Series</span><span style="color:#4B5563;margin-left:6px">Mar 24 &middot; most-watched intl series India &middot; Marvel</span></div>
+          </div>
+          <span class="rank-hot">HOT</span>
+        </div><div class="rank-row" data-tmdb="IPL cricket" data-year="None">
+          <div class="rank-num top3">2</div>
+          <div class="rank-poster"><div class="rank-poster-init">I2</div><img src="" alt="IPL 2026"></div>
+          <div class="rank-info">
+            <div class="rank-title">IPL 2026</div>
+            <div class="rank-meta"><span style="font-family:'DM Sans',sans-serif;font-size:8px;font-weight:700;background:#0066FF22;color:#0066FF;padding:1px 5px;border-radius:2px;letter-spacing:.06em;text-transform:uppercase;margin-right:6px">JioHotstar</span><span style="color:#6B7280">Hindi/English &middot; Live Sport</span><span style="color:#4B5563;margin-left:6px">Live cricket &middot; India vs Pakistan Apr 11 &middot; record concurrent viewers</span></div>
+          </div>
+          <span class="rank-hot">HOT</span>
+        </div><div class="rank-row" data-tmdb="Thaai Kizhavi" data-year="2026">
+          <div class="rank-num top3">3</div>
+          <div class="rank-poster"><div class="rank-poster-init">TK</div><img src="" alt="Thaai Kizhavi"></div>
+          <div class="rank-info">
+            <div class="rank-title">Thaai Kizhavi</div>
+            <div class="rank-meta"><span style="font-family:'DM Sans',sans-serif;font-size:8px;font-weight:700;background:#0066FF22;color:#0066FF;padding:1px 5px;border-radius:2px;letter-spacing:.06em;text-transform:uppercase;margin-right:6px">JioHotstar</span><span style="color:#6B7280">Tamil &middot; Film</span><span style="color:#4B5563;margin-left:6px">Mar 26 &middot; &#8377;57 Cr theatrical Super Hit &middot; Tamil comedy-drama</span></div>
+          </div>
+          
+        </div><div class="rank-row" data-tmdb="Anupamaa" data-year="2024">
+          <div class="rank-num rest">4</div>
+          <div class="rank-poster"><div class="rank-poster-init">A</div><img src="" alt="Anupamaa"></div>
+          <div class="rank-info">
+            <div class="rank-title">Anupamaa</div>
+            <div class="rank-meta"><span style="font-family:'DM Sans',sans-serif;font-size:8px;font-weight:700;background:#0066FF22;color:#0066FF;padding:1px 5px;border-radius:2px;letter-spacing:.06em;text-transform:uppercase;margin-right:6px">JioHotstar</span><span style="color:#6B7280">Hindi &middot; Series</span><span style="color:#4B5563;margin-left:6px">Star Plus &middot; #1 GRP Hindi GEC for 200+ weeks &middot; available on JioHotstar</span></div>
+          </div>
+          
+        </div><div class="rank-row" data-tmdb="Dhurandhar The Revenge" data-year="2026">
+          <div class="rank-num rest">5</div>
+          <div class="rank-poster"><div class="rank-poster-init">DTR</div><img src="" alt="Dhurandhar: The Revenge"></div>
+          <div class="rank-info">
+            <div class="rank-title">Dhurandhar: The Revenge</div>
+            <div class="rank-meta"><span style="font-family:'DM Sans',sans-serif;font-size:8px;font-weight:700;background:#0066FF22;color:#0066FF;padding:1px 5px;border-radius:2px;letter-spacing:.06em;text-transform:uppercase;margin-right:6px">JioHotstar</span><span style="color:#6B7280">Hindi &middot; Film</span><span style="color:#4B5563;margin-left:6px">Coming soon &middot; &#8377;150 Cr deal &middot; est. May 2026 &middot; Ranveer Singh</span></div>
+          </div>
+          <span class="rank-hot">SOON</span>
+        </div></div>
+    </div>
+  </div>
+
+  <script>
+  (function(){
+    var K="eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2YWM1OTY0NzEyZTA0NGRmMmJjMmFiYzFlMTFlZGMyYyIsIm5iZiI6MTc3Mzg4NTMxMS42MzIsInN1YiI6IjY5YmI1NzdmYjgyMzJhNzc5MjIxZWZjOCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.QxWkqL_4_3PfTnIVgcZYE0zlXQd9M2y5QL-oWNwq6dE";
+    document.querySelectorAll('#ott-rankings .rank-row[data-tmdb]').forEach(function(row){
+      var q=row.getAttribute('data-tmdb'),y=row.getAttribute('data-year')||'';
+      var img=row.querySelector('.rank-poster img');if(!img)return;
+      fetch('https://api.themoviedb.org/3/search/multi?query='+encodeURIComponent(q)+(y?'&year='+y:'')+'&language=en-US&page=1',{headers:{'Authorization':'Bearer '+K,'accept':'application/json'}})
+      .then(function(r){return r.json();})
+      .then(function(d){
+        var hit=(d.results||[]).find(function(r){return r.poster_path;});
+        if(hit&&hit.poster_path){
+          img.onload=function(){img.classList.add('loaded');var i=img.previousElementSibling;if(i)i.style.display='none';};
+          img.src='https://image.tmdb.org/t/p/w92'+hit.poster_path;
+        }
+      }).catch(function(){});
+    });
+  })();
+  </script>
+</section>
+
 <main class="content">
 
   <!-- MUST WATCH THIS WEEK -->
   <div class="sec-head" style="margin-top:0;padding-top:36px">
     <span class="sec-eyebrow">This Week</span>
-    <h2 class="sec-title" style="font-size:22px;margin:0">Must Watch — Apr 3–10, 2026</h2>
+    <h2 class="sec-title" style="font-size:22px;margin:0">Must Watch — Apr 6–12, 2026</h2>
     <span class="sec-badge" style="background:#FEE2E2;color:var(--red)">&#9733; Editor's Picks</span>
   </div>
 
   <div class="releases-grid">
 
-    <div class="rl-card rl-must">
-      <div class="rl-header">
-        <div>
-          <div class="must-tag">&#127942; BIGGEST OF THE WEEK</div>
-          <div class="rl-title">The Boys — Season 5</div>
+    <!-- 1: The Boys S5 -->
+    <div class="rl-card rl-must" data-tmdb="The Boys" data-year="2024">
+      <div class="rl-top">
+        <div class="rl-poster-wrap"><div class="rl-poster-placeholder">PRM</div><img src="" alt="The Boys Season 5" loading="lazy"></div>
+        <div class="rl-header">
+          <div class="rl-header-top">
+            <div><div class="must-tag">&#127942; BIGGEST OF THE WEEK</div><div class="rl-title">The Boys — Season 5</div></div>
+            <span class="rl-plat" style="background:#00A8E0;color:#fff">Prime Video</span>
+          </div>
+          <div class="rl-date">Apr 8, 2026 — Final Season</div>
         </div>
-        <span class="rl-plat" style="background:#00A8E0;color:#fff">Prime Video</span>
       </div>
       <div class="rl-body">
-        <div class="rl-date">Apr 8, 2026 — Final Season</div>
-        <div class="rl-desc">The definitive finale. Karl Urban, Jack Quaid, Antony Starr. The most watched Prime Video original in India for three consecutive seasons. If you haven't started the show — start now. If you've watched every season — this is the one you've been waiting for.</div>
-        <div class="rl-genre">Superhero Satire &middot; English &middot; Hindi Dubbed Available</div>
+        <div class="rl-desc">The definitive finale. Karl Urban, Jack Quaid, Antony Starr. The most watched Prime Video original in India for three consecutive seasons. If you haven't started — start now. If you've watched every season — this is the one.</div>
+        <div class="rl-genre">Superhero Satire &middot; English &middot; Hindi Dubbed</div>
       </div>
     </div>
 
-    <div class="rl-card">
-      <div class="rl-header">
-        <div class="rl-title">Maamla Legal Hai — Season 2</div>
-        <span class="rl-plat" style="background:#E50914;color:#fff">Netflix</span>
+    <!-- 2: Vadh 2 -->
+    <div class="rl-card" data-tmdb="Vadh 2" data-year="2026">
+      <div class="rl-top">
+        <div class="rl-poster-wrap"><div class="rl-poster-placeholder">NF</div><img src="" alt="Vadh 2" loading="lazy"></div>
+        <div class="rl-header">
+          <div class="rl-header-top">
+            <div><div class="rl-title">Vadh 2 <span style="font-size:10px;font-family:'DM Sans',sans-serif;background:#15803D;color:#fff;padding:2px 6px;border-radius:2px;margin-left:4px;vertical-align:middle">#1 Netflix</span></div></div>
+            <span class="rl-plat" style="background:#E50914;color:#fff">Netflix</span>
+          </div>
+          <div class="rl-date">Apr 3, 2026 — Streaming Now</div>
+        </div>
       </div>
       <div class="rl-body">
-        <div class="rl-date">Apr 3, 2026</div>
-        <div class="rl-desc">Ravi Kishan is back in District Court Patparganj. The courtroom satire that trended #3 in India in its debut run returns with 10 new episodes. Nidhi Bisht, Naila Grewal. One of the few Hindi originals that actually got funnier in its second season — historically speaking.</div>
-        <div class="rl-genre">Legal Comedy · Hindi · 10 Episodes</div>
+        <div class="rl-desc">Sanjay Mishra and Neena Gupta. Hit #1 on Netflix India within 24 hours — beating Mardaani 3 and Dhurandhar 2 to the top spot. A theatrical flop that found its audience on streaming. Crime thriller sequel done right.</div>
+        <div class="rl-genre">Crime Thriller &middot; Hindi &middot; Netflix</div>
       </div>
     </div>
 
-    <div class="rl-card">
-      <div class="rl-header">
-        <div class="rl-title">Mrithyunjay</div>
-        <span class="rl-plat" style="background:#E50914;color:#fff">Netflix</span>
+    <!-- 3: Maamla Legal Hai S2 -->
+    <div class="rl-card" data-tmdb="Maamla Legal Hai" data-year="2026">
+      <div class="rl-top">
+        <div class="rl-poster-wrap"><div class="rl-poster-placeholder">ZEE5</div><img src="" alt="Maamla Legal Hai Season 2" loading="lazy"></div>
+        <div class="rl-header">
+          <div class="rl-header-top">
+            <div><div class="rl-title">Maamla Legal Hai — Season 2</div></div>
+            <span class="rl-plat" style="background:#7C3AED;color:#fff">ZEE5</span>
+          </div>
+          <div class="rl-date">Apr 3, 2026 — ZEE5 Original</div>
+        </div>
       </div>
       <div class="rl-body">
-        <div class="rl-date">Apr 3, 2026 — OTT premiere</div>
-        <div class="rl-desc">Sree Vishnu stars in this Telugu investigative thriller about a marketing professional who stumbles into a dangerous conspiracy. Available in Telugu, Tamil, Kannada, Malayalam, and Hindi. The theatrical verdict was Average — the OTT audience tends to be kinder to content-driven films.</div>
-        <div class="rl-genre">Thriller &middot; Telugu/Multi &middot; Theatrical-to-OTT</div>
+        <div class="rl-desc">Ravi Kishan and Kusha Kapila in 10 new episodes. Note: this is ZEE5 — not Netflix. District Court Patparganj's courtroom satire is back. Season 1 trended #1 on Zee5; Season 2 opened bigger.</div>
+        <div class="rl-genre">Legal Comedy &middot; Hindi &middot; 10 Episodes</div>
       </div>
     </div>
 
-    <div class="rl-card">
-      <div class="rl-header">
-        <div class="rl-title">Vadh 2</div>
-        <span class="rl-plat" style="background:#E50914;color:#fff">Netflix</span>
+    <!-- 4: Mrithyunjay -->
+    <div class="rl-card" data-tmdb="Mrityunjay" data-year="2026">
+      <div class="rl-top">
+        <div class="rl-poster-wrap"><div class="rl-poster-placeholder">NF</div><img src="" alt="Mrithyunjay" loading="lazy"></div>
+        <div class="rl-header">
+          <div class="rl-header-top">
+            <div><div class="rl-title">Mrithyunjay</div></div>
+            <span class="rl-plat" style="background:#E50914;color:#fff">Netflix</span>
+          </div>
+          <div class="rl-date">Apr 3, 2026 — OTT Premiere</div>
+        </div>
       </div>
       <div class="rl-body">
-        <div class="rl-date">Apr 3, 2026</div>
-        <div class="rl-desc">Sequel to Vadh (2022), the tight crime thriller with Sanjay Mishra and Neena Gupta. The original had strong word of mouth on OTT. The sequel follows the aftermath. Directed by Jaspal Singh Sandhu and Rajeev Barnwal — the same duo who made the first one work.</div>
-        <div class="rl-genre">Crime Thriller &middot; Hindi &middot; Netflix Original</div>
+        <div class="rl-desc">Sree Vishnu in a Telugu investigative thriller. Marketing professional stumbles into a dangerous conspiracy. Available in Telugu, Tamil, Kannada, Malayalam and Hindi. OTT audiences tend to be kinder to content-driven thrillers.</div>
+        <div class="rl-genre">Thriller &middot; Telugu / Multi &middot; Theatrical-to-OTT</div>
       </div>
     </div>
 
-    <div class="rl-card">
-      <div class="rl-header">
-        <div class="rl-title">Sitaare Zameen Par</div>
-        <span class="rl-plat" style="background:#0071C5;color:#fff">SonyLIV</span>
+    <!-- 5: Sitaare Zameen Par -->
+    <div class="rl-card" data-tmdb="Sitaare Zameen Par" data-year="2025">
+      <div class="rl-top">
+        <div class="rl-poster-wrap"><div class="rl-poster-placeholder">SONY</div><img src="" alt="Sitaare Zameen Par" loading="lazy"></div>
+        <div class="rl-header">
+          <div class="rl-header-top">
+            <div><div class="rl-title">Sitaare Zameen Par</div></div>
+            <span class="rl-plat" style="background:#0071C5;color:#fff">SonyLIV</span>
+          </div>
+          <div class="rl-date">Apr 3, 2026 — OTT Premiere</div>
+        </div>
       </div>
       <div class="rl-body">
-        <div class="rl-date">Apr 3, 2026 — OTT premiere</div>
-        <div class="rl-desc">Aamir Khan's sports drama about a basketball coach and a team of neurodivergent players — a spiritual successor to Taare Zameen Par. Gentle, important, and reportedly Aamir's best in years. Theatrical run was decent; OTT should amplify it significantly.</div>
+        <div class="rl-desc">Aamir Khan's sports drama about a basketball coach and neurodivergent players — a spiritual successor to Taare Zameen Par. Gentle, important, and reportedly Aamir's best in years. OTT should amplify it significantly.</div>
         <div class="rl-genre">Sports Drama &middot; Hindi &middot; Aamir Khan</div>
       </div>
     </div>
 
-    <div class="rl-card">
-      <div class="rl-header">
-        <div class="rl-title">Maa Ka Sum</div>
-        <span class="rl-plat" style="background:#00A8E0;color:#fff">Prime Video</span>
+    <!-- 6: Maa Ka Sum -->
+    <div class="rl-card" data-tmdb="Maa Ka Sum" data-year="2026">
+      <div class="rl-top">
+        <div class="rl-poster-wrap"><div class="rl-poster-placeholder">PRM</div><img src="" alt="Maa Ka Sum" loading="lazy"></div>
+        <div class="rl-header">
+          <div class="rl-header-top">
+            <div><div class="rl-title">Maa Ka Sum</div></div>
+            <span class="rl-plat" style="background:#00A8E0;color:#fff">Prime Video</span>
+          </div>
+          <div class="rl-date">Apr 3, 2026 — Prime Original</div>
+        </div>
       </div>
       <div class="rl-body">
-        <div class="rl-date">Apr 3, 2026 — Original</div>
-        <div class="rl-desc">Mona Singh leads this Prime Video India original about a teenage math prodigy who uses algorithms to find a partner for his single mother. Directed by Nicholas Kharkongor — known for grounded, warm storytelling. This is counter-programming to The Boys on the same platform.</div>
+        <div class="rl-desc">Mona Singh leads this Prime Original about a teenage math prodigy using algorithms to find a partner for his single mother. Dir. Nicholas Kharkongor. Counter-programming to The Boys on the same platform.</div>
         <div class="rl-genre">Family Comedy-Drama &middot; Hindi &middot; Prime Original</div>
       </div>
     </div>
 
-    <div class="rl-card">
-      <div class="rl-header">
-        <div class="rl-title">XO, Kitty — Season 3</div>
-        <span class="rl-plat" style="background:#E50914;color:#fff">Netflix</span>
+    <!-- 7: XO Kitty S3 -->
+    <div class="rl-card" data-tmdb="XO Kitty" data-year="2023">
+      <div class="rl-top">
+        <div class="rl-poster-wrap"><div class="rl-poster-placeholder">NF</div><img src="" alt="XO Kitty Season 3" loading="lazy"></div>
+        <div class="rl-header">
+          <div class="rl-header-top">
+            <div><div class="rl-title">XO, Kitty — Season 3</div></div>
+            <span class="rl-plat" style="background:#E50914;color:#fff">Netflix</span>
+          </div>
+          <div class="rl-date">Mar 30, 2026 — Streaming Now</div>
+        </div>
       </div>
       <div class="rl-body">
-        <div class="rl-date">Mar 30, 2026 (streaming now)</div>
-        <div class="rl-desc">Anna Cathcart returns as Kitty Song for her senior year in Seoul. Consistently one of Netflix's top-performing teen romance series globally. Season 3 navigates relationships, family revelations and emotional milestones. Strong watch with the 16–24 demographic in India.</div>
+        <div class="rl-desc">Anna Cathcart returns as Kitty Song for her senior year in Seoul. Consistently one of Netflix's top-performing teen romance series globally. Strong with the 16–24 demographic in India.</div>
         <div class="rl-genre">Teen Romance &middot; English &middot; Global</div>
       </div>
     </div>
 
-    <div class="rl-card">
-      <div class="rl-header">
-        <div class="rl-title">Kaptaan</div>
-        <span class="rl-plat" style="background:#FF6B00;color:#fff">Amazon MX</span>
+    <!-- 8: Kaptaan -->
+    <div class="rl-card" data-tmdb="Kaptaan" data-year="2026">
+      <div class="rl-top">
+        <div class="rl-poster-wrap"><div class="rl-poster-placeholder">MX</div><img src="" alt="Kaptaan" loading="lazy"></div>
+        <div class="rl-header">
+          <div class="rl-header-top">
+            <div><div class="rl-title">Kaptaan</div></div>
+            <span class="rl-plat" style="background:#FF6B00;color:#fff">MX Player</span>
+          </div>
+          <div class="rl-date">Apr 3, 2026 — Free to Stream</div>
+        </div>
       </div>
       <div class="rl-body">
-        <div class="rl-date">Apr 3, 2026 — Free to stream</div>
-        <div class="rl-desc">Hindi crime thriller web series set in the fictional town of Jwalabad. SSP Samardeep (fearless cop) vs Kabir (man driven by revenge). Amazon MX Player original — free, no subscription needed. Good find for thriller fans.</div>
+        <div class="rl-desc">Hindi crime thriller set in fictional Jwalabad. SSP Samardeep vs Kabir. Amazon MX Player original — free, no subscription. Good find for thriller fans who don't want another platform bill.</div>
         <div class="rl-genre">Crime Thriller &middot; Hindi &middot; Free on MX Player</div>
       </div>
     </div>
@@ -710,5 +1122,38 @@ footer{background:var(--ink);border-top:2px solid #1F1F1F;padding:22px 32px;disp
 <div class="disclaimer">
   <p>Boxoffy.com is an independent entertainment intelligence platform. OTT release dates are sourced from official platform announcements and trade publications. Dates are subject to change — verify on platform before watching. Boxoffy is not affiliated with Netflix India, Amazon Prime Video India, JioHotstar, SonyLIV, ZEE5 or any streaming platform. Editorial opinions are protected expression under Article 19(1)(a) of the Constitution of India. &copy; 2026 Boxoffy.com &middot; <a href="/" style="color:#C8201A">boxoffy.com</a></p>
 </div>
+
+<style>
+.rl-poster-wrap { background: #111; display: flex; align-items: center; justify-content: center; }
+.rl-top { display: flex; align-items: stretch; border-bottom: 0.5px solid var(--rule); }
+.rl-poster-wrap { width: 90px; min-height: 120px; flex-shrink: 0; position: relative; overflow: hidden; }
+.rl-poster-wrap img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity .3s; }
+.rl-poster-wrap img.loaded { opacity: 1; }
+.rl-poster-placeholder { font-family: 'Barlow Condensed', sans-serif; font-size: 10px; font-weight: 900; color: #444; letter-spacing: .08em; text-align: center; padding: 8px 4px; line-height: 1.3; }
+.rl-header { flex: 1; padding: 12px 14px; display: flex; flex-direction: column; gap: 6px; }
+.rl-header-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 8px; }
+.rl-date { font-family: 'DM Sans', sans-serif; font-size: 10px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+</style>
+<script>
+const TMDB_KEY = "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2YWM1OTY0NzEyZTA0NGRmMmJjMmFiYzFlMTFlZGMyYyIsIm5iZiI6MTc3Mzg4NTMxMS42MzIsInN1YiI6IjY5YmI1NzdmYjgyMzJhNzc5MjIxZWZjOCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.QxWkqL_4_3PfTnIVgcZYE0zlXQd9M2y5QL-oWNwq6dE";
+document.querySelectorAll('[data-tmdb]').forEach(function(card) {
+  var q = card.getAttribute('data-tmdb');
+  var y = card.getAttribute('data-year') || '';
+  var img = card.querySelector('.rl-poster-wrap img');
+  if (!img) return;
+  fetch('https://api.themoviedb.org/3/search/multi?query=' + encodeURIComponent(q) + (y ? '&year=' + y : '') + '&language=en-US&page=1', {
+    headers: { 'Authorization': 'Bearer ' + TMDB_KEY, 'accept': 'application/json' }
+  })
+  .then(function(r) { return r.json(); })
+  .then(function(d) {
+    var hit = (d.results || []).find(function(r) { return r.poster_path; });
+    if (hit && hit.poster_path) {
+      img.onload = function() { img.classList.add('loaded'); card.querySelector('.rl-poster-placeholder').style.display = 'none'; };
+      img.src = 'https://image.tmdb.org/t/p/w154' + hit.poster_path;
+    }
+  })
+  .catch(function() {});
+});
+</script>
 </body>
 </html>

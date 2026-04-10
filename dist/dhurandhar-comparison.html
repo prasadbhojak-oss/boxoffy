@@ -1,664 +1,729 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-      <!-- Google Analytics — consent-gated (DPDP Act 2023 compliant) -->
   <script>
-  (function(){
-    var c=null;try{c=localStorage.getItem("boxoffy_cookie_consent");}catch(e){}
-    if(c==="accepted"){
-      var s=document.createElement("script");s.async=true;
-      s.src="https://www.googletagmanager.com/gtag/js?id=G-K6C9EVRFH4";
-      document.head.appendChild(s);
-      window.dataLayer=window.dataLayer||[];
-      window.gtag=function(){window.dataLayer.push(arguments);};
-      gtag("js",new Date());gtag("config","G-K6C9EVRFH4",{anonymize_ip:true});
-    }
-  })();
+  (function(){var c=null;try{c=localStorage.getItem("boxoffy_cookie_consent");}catch(e){}
+  if(c==="accepted"){var s=document.createElement("script");s.async=true;
+  s.src="https://www.googletagmanager.com/gtag/js?id=G-K6C9EVRFH4";
+  document.head.appendChild(s);window.dataLayer=window.dataLayer||[];
+  window.gtag=function(){window.dataLayer.push(arguments);};
+  gtag("js",new Date());gtag("config","G-K6C9EVRFH4",{anonymize_ip:true});}})();
   </script>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dhurandhar 2 vs Dhurandhar 1 — Pricing Power, ATP Math and Gross Scenarios | Boxoffy</title>
-  <meta name="description" content="A deep-dive comparison of Dhurandhar 1 and Dhurandhar 2: pricing strategy, ATP math, premium formats, footfalls logic, and what equal admissions could mean for gross.">
-  <meta name="robots" content="index, follow">
-  <meta property="og:title" content="Dhurandhar 1 vs Dhurandhar 2 — The Real ATP Story">
-  <meta property="og:description" content="A clean comparison of Dhurandhar 1 and Dhurandhar 2 pricing power, premiumization, and what equal footfalls could mean for final gross.">
-  <meta property="og:type" content="article">
-  <meta property="og:url" content="https://boxoffy.com/dhurandhar-comparison.html">
-  <meta property="og:site_name" content="Boxoffy — India Box Office Intelligence">
-  <meta property="og:image" content="https://boxoffy.com/og-image.png">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta property="og:locale" content="en_IN">
-  <meta property="article:published_time" content="2026-03-13T00:00:00+05:30">
-  <meta property="article:modified_time" content="2026-03-13T00:00:00+05:30">
-  <meta property="article:author" content="https://boxoffy.com/about.html">
-  <meta property="article:section" content="Analysis">
-  <meta property="article:tag" content="Dhurandhar 2">
-  <meta property="article:tag" content="Box Office Analysis">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:site" content="@boxoffy">
-  <meta name="twitter:title" content="Dhurandhar 1 vs Dhurandhar 2 — The Real ATP Story">
-  <meta name="twitter:description" content="A clean comparison of Dhurandhar 1 and Dhurandhar 2 pricing power, premiumization, and what equal footfalls could mean for final gross.">
-  <meta name="twitter:image" content="https://boxoffy.com/og-image.png">
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "NewsArticle",
-    "headline": "Dhurandhar 2 Is Not Just Bigger. It Is Priced Bigger.",
-    "description": "Deep-dive comparison of Dhurandhar 1 and Dhurandhar 2 pricing strategy, ATP math, footfalls logic and gross scenarios.",
-    "url": "https://boxoffy.com/dhurandhar-comparison.html",
-    "datePublished": "2026-03-13",
-    "dateModified": "2026-03-13",
-    "image": "https://boxoffy.com/og-image.png",
-    "author": { "@type": "Person", "name": "The Boxoffy Team", "url": "https://boxoffy.com/about.html" },
-    "publisher": {
-      "@type": "Organization",
-      "name": "Boxoffy",
-      "url": "https://boxoffy.com",
-      "logo": { "@type": "ImageObject", "url": "https://boxoffy.com/og-image.png", "width": 1200, "height": 630 }
-    },
-    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://boxoffy.com/dhurandhar-comparison.html" },
-    "about": { "@type": "Movie", "name": "Dhurandhar: The Revenge", "dateCreated": "2026-03-19" }
-  }
-  </script>
-  <link rel="canonical" href="https://boxoffy.com/dhurandhar-comparison.html">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Barlow+Condensed:wght@400;600;700;800&family=Lora:ital,wght@0,400;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <style>
-    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-    :root{
-      --ink:#0D0D0D;--paper:#F7F3EC;--red:#C8201A;--red-dark:#8B1612;
-      --gold:#B8860B;--gold-light:#E8C547;--blue:#1A3A6B;--blue-light:#3B82F6;
-      --muted:#6B6457;--rule:#D4C9B4;--surface:#FFFFFF;
-    }
-    html{scroll-behavior:smooth}
-    body{background:var(--paper);color:var(--ink);font-family:'Lora',Georgia,serif;font-size:18px;line-height:1.75;-webkit-font-smoothing:antialiased;}
-    .masthead{background:var(--ink);padding:14px 40px;display:flex;align-items:center;gap:20px;}
-    .masthead-logo{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:28px;letter-spacing:-0.02em;color:#fff;text-decoration:none;}
-    .masthead-logo span{color:var(--red)}
-    .masthead-tag{font-family:'Barlow Condensed',sans-serif;font-size:11px;color:#9CA3AF;letter-spacing:0.18em;text-transform:uppercase;flex:1;}
-    .masthead-back{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:12px;letter-spacing:0.15em;text-transform:uppercase;color:#fff;text-decoration:none;background:var(--red);padding:7px 16px;}
-    .category-strip{background:var(--ink);padding:9px 40px;display:flex;align-items:center;gap:10px;border-top:1px solid #1F2937;}
-    .cat-tag{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--blue-light);background:rgba(59,130,246,0.12);border:1px solid rgba(59,130,246,0.3);padding:3px 10px;border-radius:2px;}
-    .cat-breadcrumb{font-family:'Barlow Condensed',sans-serif;font-size:11px;color:#6B7280;letter-spacing:0.1em;}
-    .cat-dot{color:#374151}
-    .cat-read-time{font-family:'IBM Plex Mono',monospace;font-size:10px;color:#6B7280;margin-left:auto;}
-    .update-badge{background:#0F1E3A;border:1px solid #1E3A6B;padding:10px 40px;font-family:'Barlow Condensed',sans-serif;font-size:11px;letter-spacing:0.14em;color:#93C5FD;text-transform:uppercase;}
-    .update-badge strong{color:#BFDBFE;}
-    .article-wrap{max-width:760px;margin:0 auto;padding:52px 40px 80px;}
-    .kicker{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:var(--blue-light);margin-bottom:14px;}
-    .headline{font-family:'Playfair Display',Georgia,serif;font-weight:900;font-size:clamp(32px,5vw,50px);line-height:1.08;color:var(--ink);margin-bottom:20px;}
-    .headline em{color:var(--red);font-style:normal;}
-    .dek{font-family:'Lora',Georgia,serif;font-size:19px;line-height:1.6;color:#3B3530;margin-bottom:28px;font-style:italic;}
-    .byline{font-family:'Barlow Condensed',sans-serif;font-size:13px;color:var(--muted);letter-spacing:0.08em;text-transform:uppercase;padding-bottom:24px;border-bottom:2px solid var(--ink);margin-bottom:32px;display:flex;align-items:center;gap:16px;flex-wrap:wrap;}
-    .byline strong{color:var(--ink)}
-    .record-alert{background:var(--blue);padding:14px 20px;margin-bottom:28px;display:flex;align-items:center;gap:14px;}
-    .record-alert-icon{font-size:20px;flex-shrink:0;}
-    .record-alert-text{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:14px;letter-spacing:0.06em;color:#fff;line-height:1.4;}
-    .record-alert-text span{display:block;font-weight:400;font-size:12px;opacity:.9;margin-top:2px;}
-    .stats-strip{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:0;border:1px solid var(--rule);margin-bottom:36px;}
-    .stat-cell{padding:16px 20px;border-right:1px solid var(--rule);background:var(--surface);text-align:center;}
-    .stat-cell:last-child{border-right:none}
-    .stat-num{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:26px;color:var(--blue);line-height:1;}
-    .stat-num.red{color:var(--red)}
-    .stat-label{font-family:'Barlow Condensed',sans-serif;font-size:10px;color:var(--muted);letter-spacing:0.14em;text-transform:uppercase;margin-top:4px;}
-    .body-copy p{margin-bottom:1.4em;}
-    .body-copy p:last-child{margin-bottom:0}
-    .pull-quote{margin:36px 0;padding:24px 32px;background:var(--ink);border-left:4px solid var(--blue-light);}
-    .pull-quote blockquote{font-family:'Playfair Display',Georgia,serif;font-size:20px;font-style:italic;color:#fff;line-height:1.5;margin-bottom:10px;}
-    .pull-quote cite{font-family:'Barlow Condensed',sans-serif;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--blue-light);}
-    .data-table{width:100%;border-collapse:collapse;margin:28px 0;font-family:'IBM Plex Mono',monospace;font-size:12px;}
-    .data-table th{background:var(--ink);color:#fff;padding:8px 14px;text-align:left;font-family:'Barlow Condensed',sans-serif;font-size:10px;letter-spacing:0.15em;text-transform:uppercase;font-weight:700;}
-    .data-table th:last-child{text-align:right}
-    .data-table td{padding:8px 14px;border-bottom:1px solid var(--rule);color:var(--ink);vertical-align:top;}
-    .data-table td:last-child{text-align:right;font-weight:500;}
-    .data-table tr:nth-child(even) td{background:#FAF8F4}
-    .data-table tr.highlight td{background:#EFF6FF;font-weight:600;}
-    .data-table tr.highlight td:first-child{border-left:3px solid var(--blue-light);}
-    .data-table tr.dim td{color:#9B9080;}
-    .section-head{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:13px;letter-spacing:0.2em;text-transform:uppercase;color:var(--ink);border-bottom:2px solid var(--ink);padding-bottom:8px;margin:36px 0 20px;}
-    .prediction-box{border:2px solid var(--red);padding:28px;margin:36px 0;background:var(--surface);}
-    .prediction-box-label{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:10px;letter-spacing:0.22em;text-transform:uppercase;color:var(--red);margin-bottom:14px;}
-    .prediction-box h3{font-family:'Playfair Display',serif;font-weight:900;font-size:22px;line-height:1.2;color:var(--ink);margin-bottom:14px;}
-    .prediction-row{display:flex;justify-content:space-between;align-items:baseline;padding:8px 0;border-bottom:1px solid var(--rule);font-family:'Barlow Condensed',sans-serif;gap:20px;}
-    .prediction-row:last-child{border-bottom:none}
-    .prediction-label{font-size:13px;color:var(--muted);letter-spacing:0.06em;text-transform:uppercase;}
-    .prediction-val{font-size:18px;font-weight:800;color:var(--ink);text-align:right;}
-    .prediction-val.accent{color:var(--red);}
-    .timeline{border-left:2px solid var(--rule);padding-left:24px;margin:20px 0;}
-    .tl-item{margin-bottom:18px;position:relative;}
-    .tl-item::before{content:'';position:absolute;left:-30px;top:6px;width:10px;height:10px;border-radius:50%;background:var(--rule);border:2px solid var(--surface);}
-    .tl-item.active::before{background:var(--blue-light);}
-    .tl-date{font-family:'IBM Plex Mono',monospace;font-size:10px;color:var(--muted);margin-bottom:3px;}
-    .tl-text{font-family:'Barlow Condensed',sans-serif;font-size:15px;font-weight:600;color:var(--ink);line-height:1.3;}
-    .tl-sub{font-family:'Barlow Condensed',sans-serif;font-size:12px;color:var(--muted);}
-    .footnotes{margin-top:48px;padding-top:24px;border-top:1px solid var(--rule);}
-    .footnotes p{font-family:'Barlow Condensed',sans-serif;font-size:11px;color:var(--muted);letter-spacing:0.04em;line-height:1.7;margin-bottom:6px;}
-    .footnotes strong{color:var(--ink);}
-    .related-strip{background:var(--ink);padding:28px 40px;margin-top:60px;}
-    .related-label{font-family:'Barlow Condensed',sans-serif;font-size:10px;letter-spacing:0.22em;text-transform:uppercase;color:#6B7280;margin-bottom:16px;}
-    .related-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;}
-    .related-card{border-top:2px solid #374151;padding-top:12px;}
-    .related-card-tag{font-family:'Barlow Condensed',sans-serif;font-size:10px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--red);margin-bottom:6px;}
-    .related-card a{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:15px;color:#fff;text-decoration:none;line-height:1.3;display:block;}
-    .note{background:#fff;border:1px solid var(--rule);padding:16px 18px;margin:20px 0;font-size:15px;color:#3B3530;}
-    @media(max-width:600px){
-      .masthead,.category-strip,.update-badge{padding-left:20px;padding-right:20px;}
-      .article-wrap{padding:32px 20px 60px;}
-      .related-strip{padding:24px 20px;}
-      .stat-num{font-size:22px;}
-      .stats-strip{grid-template-columns:repeat(2,1fr);}
-      .prediction-row{align-items:flex-start;flex-direction:column;gap:2px;}
-      .prediction-val{text-align:left;}
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dhurandhar vs Dhurandhar 2 — Day Wise Box Office Comparison | Boxoffy</title>
+<meta name="description" content="Dhurandhar vs Dhurandhar: The Revenge — complete day-wise, week-wise and ATP comparison. D1: ₹838.5 Cr India Nett · D2: Premiere ₹40 Cr · Week-by-week breakdown and ticket price analysis.">
+<meta name="keywords" content="Dhurandhar vs Dhurandhar 2 box office comparison, Dhurandhar day wise collection, Dhurandhar The Revenge comparison, D1 D2 box office">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<meta property="og:title" content="Dhurandhar vs Dhurandhar 2 — Day-Wise Box Office Comparison | Boxoffy">
+<meta property="og:description" content="D1: ₹838.5 Cr India Nett (78 days) · D2: Premiere ₹40 Cr and counting. Complete day-by-day, week-by-week ATP comparison.">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Boxoffy — India Box Office Intelligence">
+<meta property="og:url" content="https://boxoffy.com/dhurandhar-comparison.html">
+<meta property="og:image" content="https://boxoffy.com/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Dhurandhar vs Dhurandhar 2 — Day-Wise Comparison">
+<meta name="twitter:description" content="D1 ₹838.5 Cr vs D2 Premiere ₹40 Cr — complete day-wise + ATP comparison">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Dhurandhar vs Dhurandhar: The Revenge — Day-Wise Box Office Comparison","description":"Complete day-wise, week-wise and ATP comparison between Dhurandhar (2025) and Dhurandhar: The Revenge (2026).","url":"https://boxoffy.com/dhurandhar-comparison.html","datePublished":"2026-03-19","dateModified":"2026-03-19","author":{"@type":"Organization","name":"Boxoffy"},"publisher":{"@type":"Organization","name":"Boxoffy","url":"https://boxoffy.com"}}</script>
+<link rel="canonical" href="https://boxoffy.com/dhurandhar-comparison.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--ink:#0D0D0D;--paper:#F7F3EC;--red:#C8201A;--gold:#B8860B;--gold-light:#E8C547;--muted:#6B6457;--rule:#D4C9B4;--surface:#FFFFFF;--d1:#C8201A;--d2:#2563EB}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font-family:'DM Sans',sans-serif;-webkit-font-smoothing:antialiased}
+
+/* NAV */
+.nav{background:#fff;padding:0 32px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;border-bottom:3px solid var(--red);height:52px;box-shadow:0 2px 8px rgba(0,0,0,.06)}
+.nav-logo{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:22px;color:var(--ink);letter-spacing:-.02em;text-decoration:none}
+.nav-logo span{color:var(--red)}
+.nav-links{display:flex;gap:20px;align-items:center}
+.nav-links a{font-family:'DM Sans',sans-serif;font-size:12px;font-weight:600;color:#6B7280;text-decoration:none;letter-spacing:.05em;text-transform:uppercase;transition:color .15s}
+.nav-links a:hover,.nav-links a.active{color:var(--red)}
+
+/* LIVE TICKER */
+.live-ticker{background:var(--red);padding:8px 32px;display:flex;align-items:center;gap:12px}
+.live-dot{width:7px;height:7px;border-radius:50%;background:#fff;animation:pulse 1.5s ease-in-out infinite;flex-shrink:0}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(.8)}}
+.live-text{font-family:'DM Sans',sans-serif;font-size:11px;font-weight:700;color:#fff;letter-spacing:.08em;text-transform:uppercase}
+.live-sub{font-family:'DM Sans',sans-serif;font-size:11px;color:rgba(255,255,255,.75)}
+
+/* HERO */
+.hero{background:var(--ink);position:relative;overflow:hidden;border-bottom:4px solid var(--red)}
+.hero-inner{position:relative;max-width:1100px;margin:0 auto;padding:48px 32px 36px}
+.hero-eyebrow{display:flex;align-items:center;gap:10px;margin-bottom:16px;flex-wrap:wrap}
+.badge{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:10px;letter-spacing:.2em;text-transform:uppercase;padding:4px 12px;border-radius:2px}
+.badge-vs{background:var(--red);color:#fff}
+.badge-live{background:#16A34A;color:#fff}
+.badge-completed{background:#4B5563;color:#fff}
+
+/* HEAD-TO-HEAD */
+.h2h{display:grid;grid-template-columns:1fr auto 1fr;gap:0;align-items:center;margin-bottom:32px}
+.h2h-film{padding:24px;border:1px solid rgba(255,255,255,.08)}
+.h2h-film.d1{border-right:none;border-left:1px solid rgba(200,32,26,.3);border-top:3px solid var(--d1)}
+.h2h-film.d2{border-left:none;border-right:1px solid rgba(37,99,235,.3);border-top:3px solid var(--d2)}
+.h2h-vs{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:28px;color:#333;padding:0 20px;text-align:center;flex-shrink:0}
+.h2h-label{font-family:'DM Sans',sans-serif;font-size:9px;font-weight:700;color:#6B7280;letter-spacing:.16em;text-transform:uppercase;margin-bottom:4px}
+.h2h-title{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:22px;line-height:1.1;margin-bottom:2px}
+.h2h-film.d1 .h2h-title{color:#FCA5A5}
+.h2h-film.d2 .h2h-title{color:#93C5FD}
+.h2h-meta{font-family:'DM Sans',sans-serif;font-size:11px;color:#6B7280;margin-bottom:12px}
+.h2h-stat{margin-bottom:6px}
+.h2h-stat-label{font-family:'DM Sans',sans-serif;font-size:8px;font-weight:700;color:#4B5563;letter-spacing:.12em;text-transform:uppercase}
+.h2h-stat-val{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:18px;color:#fff;line-height:1.1}
+.h2h-stat-sub{font-family:'DM Sans',sans-serif;font-size:10px;color:#6B7280}
+@media(max-width:640px){.h2h{grid-template-columns:1fr}.h2h-vs{display:none}.h2h-film.d1,.h2h-film.d2{border:1px solid rgba(255,255,255,.08);border-top-width:3px;margin-bottom:1px}}
+
+/* CONTENT */
+.content{max-width:1100px;margin:0 auto;padding:40px 32px 80px}
+.sec-head{display:flex;align-items:center;gap:14px;padding-bottom:12px;border-bottom:2px solid var(--rule);margin-bottom:20px;margin-top:40px;flex-wrap:wrap}
+.sec-eyebrow{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted)}
+.sec-title{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:22px;color:var(--ink)}
+.sec-note{font-family:'DM Sans',sans-serif;font-size:11px;color:var(--muted);margin-left:auto}
+
+/* LEGEND */
+.legend{display:flex;gap:20px;align-items:center;margin-bottom:16px;flex-wrap:wrap}
+.legend-item{display:flex;align-items:center;gap:6px;font-family:'DM Sans',sans-serif;font-size:12px;font-weight:600;color:var(--muted)}
+.legend-dot{width:12px;height:12px;border-radius:2px;flex-shrink:0}
+
+/* DAY CHART */
+.day-chart{background:var(--surface);border:1px solid var(--rule);border-radius:4px;overflow:hidden;margin-bottom:8px}
+.day-chart-header{display:grid;grid-template-columns:110px 1fr 90px 36px;gap:0;background:var(--ink);padding:8px 16px;align-items:center}
+.dch-label{font-family:'DM Sans',sans-serif;font-size:9px;font-weight:700;color:#6B7280;letter-spacing:.1em;text-transform:uppercase}
+.day-row{display:grid;grid-template-columns:110px 1fr 90px 36px;gap:0;border-bottom:1px solid var(--rule);align-items:center;padding:4px 16px}
+.day-row:last-child{border-bottom:none}
+.day-row:hover{background:var(--paper)}
+.day-label{font-family:'DM Sans',sans-serif;font-size:.72rem;color:var(--muted);font-weight:600;padding:4px 0}
+.day-bars{padding:4px 12px 4px 0}
+.bar-pair{display:flex;flex-direction:column;gap:2px}
+.bar-d1{height:14px;border-radius:2px;display:flex;align-items:center;padding:0 4px;min-width:2px;position:relative;transition:width .3s}
+.bar-label-inner{font-family:'Barlow Condensed',sans-serif;font-size:10px;font-weight:700;color:#fff;white-space:nowrap;position:absolute;left:calc(100% + 4px);color:var(--muted)}
+.bar-d2{height:14px;border-radius:2px;background:rgba(37,99,235,.15);border:1px dashed #2563EB;position:relative}
+.bar-d2-pending::after{content:'D2 — Pending';font-family:'DM Sans',sans-serif;font-size:9px;color:#2563EB;position:absolute;left:4px;top:50%;transform:translateY(-50%);white-space:nowrap;font-weight:600}
+.day-running{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:.85rem;color:var(--ink);text-align:right;white-space:nowrap}
+.day-week-badge{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:.72rem;text-align:center}
+
+/* WEEK TABLE */
+.week-table-wrap{overflow-x:auto;border:1px solid var(--rule);border-radius:4px;margin-bottom:8px}
+.week-table{width:100%;border-collapse:collapse;min-width:500px}
+.week-table thead tr{background:var(--ink)}
+.week-table th{padding:10px 16px;text-align:left;color:#9CA3AF;font-size:9px;font-family:'DM Sans',sans-serif;font-weight:700;letter-spacing:.12em;text-transform:uppercase}
+.week-table tr{border-bottom:1px solid var(--rule)}
+.week-table tr:hover{background:var(--paper)}
+.week-table tr:last-child{border-bottom:none}
+.week-table td:nth-child(odd){background:rgba(0,0,0,.02)}
+
+/* ATP COMPARISON */
+.atp-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--rule);border:1px solid var(--rule);border-radius:4px;overflow:hidden;margin-bottom:8px}
+@media(max-width:640px){.atp-grid{grid-template-columns:1fr}}
+.atp-card{background:var(--surface);padding:24px}
+.atp-card.d1-card{border-top:4px solid var(--d1)}
+.atp-card.d2-card{border-top:4px solid var(--d2)}
+.atp-film-label{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:16px;margin-bottom:16px}
+.atp-card.d1-card .atp-film-label{color:var(--d1)}
+.atp-card.d2-card .atp-film-label{color:var(--d2)}
+.atp-row{display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid var(--rule)}
+.atp-row:last-child{border-bottom:none}
+.atp-row-label{font-family:'DM Sans',sans-serif;font-size:.78rem;color:var(--muted)}
+.atp-row-val{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:1rem;color:var(--ink)}
+
+/* KEY STATS COMPARISON */
+.ks-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1px;background:var(--rule);border:1px solid var(--rule);border-radius:4px;overflow:hidden;margin-bottom:8px}
+@media(max-width:640px){.ks-grid{grid-template-columns:1fr}}
+.ks-card{background:var(--surface);padding:20px;text-align:center}
+.ks-label{font-family:'DM Sans',sans-serif;font-size:9px;font-weight:700;color:var(--muted);letter-spacing:.12em;text-transform:uppercase;margin-bottom:8px}
+.ks-d1{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:22px;color:var(--d1);line-height:1}
+.ks-d1-sub{font-family:'DM Sans',sans-serif;font-size:.7rem;color:var(--muted);margin-bottom:6px}
+.ks-vs{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:12px;color:var(--rule);margin:4px 0}
+.ks-d2{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:22px;color:var(--d2);line-height:1}
+.ks-d2-sub{font-family:'DM Sans',sans-serif;font-size:.7rem;color:var(--muted)}
+
+/* SHARE BAR */
+.share-bar{display:flex;align-items:center;gap:8px;padding:20px 0;border-top:1px solid var(--rule);flex-wrap:wrap;margin-top:32px}
+.share-label{font-family:'DM Sans',sans-serif;font-size:11px;font-weight:700;color:var(--muted);letter-spacing:.1em;text-transform:uppercase;margin-right:4px}
+.share-btn{display:inline-block;padding:7px 16px;border-radius:3px;font-family:'DM Sans',sans-serif;font-size:12px;font-weight:700;text-decoration:none;cursor:pointer;border:none;transition:opacity .15s}
+.share-btn:hover{opacity:.8}
+.wa{background:#25D366;color:#fff}.x{background:#000;color:#fff}.fb{background:#1877F2;color:#fff}.copy{background:var(--ink);color:#fff}
+
+/* FOOTER */
+.footer{background:var(--ink);color:#4B5563;padding:32px;text-align:center;font-family:'DM Sans',sans-serif;font-size:11px;border-top:3px solid var(--red)}
+.footer a{color:#6B7280;text-decoration:none}.footer a:hover{color:#fff}
+
+@media(max-width:768px){.hero-inner,.content{padding-left:20px;padding-right:20px}.nav{padding:0 20px}.day-chart-header,.day-row{grid-template-columns:90px 1fr 80px 0}}
+</style>
 </head>
 <body>
 
-<header class="masthead">
-  <a href="/" class="masthead-logo">BOXOF<span>FY</span></a>
-  <span class="masthead-tag">India Box Office Intelligence</span>
-  <a href="/" class="masthead-back">← Back to Charts</a>
-</header>
+<nav class="nav">
+  <a href="/" class="nav-logo">BOX<span>OFFY</span></a>
+  <div class="nav-links">
+    <a href="/">Box Office</a>
+    <a href="/dhurandhar-box-office.html">D1 Tracker</a>
+    <a href="/dhurandhar-2-box-office.html">D2 Live</a>
+    <a href="/dhurandhar-comparison.html" class="active">D1 vs D2</a>
+  </div>
+</nav>
 
-<div class="category-strip">
-  <span class="cat-tag">Deep Dive</span>
-  <span class="cat-dot">·</span>
-  <span class="cat-breadcrumb">Dhurandhar Franchise · ATP · Footfalls · Gross Logic</span>
-  <span class="cat-read-time">5 min read</span>
+<!-- Live ticker -->
+<div class="live-ticker">
+  <div class="live-dot"></div>
+  <span class="live-text">Live Comparison</span>
+  <span class="live-sub">D2 in theatres now · Premiere ₹40 Cr confirmed · D1 actuals complete · Updated Mar 19, 2026</span>
 </div>
 
-<div class="update-badge">
-  <strong>Boxoffy Analysis</strong> · Mar 13, 2026 · Sources: Sacnilk · Pinkvilla · Bollymoviereviewz · Boxoffy Verified
-</div>
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-eyebrow">
+      <span class="badge badge-vs">⚔ Head-to-Head</span>
+      <span class="badge badge-completed">D1 Closed ₹838.5 Cr</span>
+      <span class="badge badge-live">D2 Live Now</span>
+    </div>
 
-<div class="article-wrap">
-
-  <p class="kicker">Franchise Pricing Analysis</p>
-
-  <h1 class="headline">Dhurandhar 2 Is Not Just Bigger. <em>It Is Priced Bigger.</em></h1>
-
-  <p class="dek">Dhurandhar 1 built the franchise. Dhurandhar 2 is trying to cash in on that trust from day one. The real story is not just hype, or even the ₹2,100 screenshots. It is the jump in average ticket price, the spread of premium inventory, and what that means if admissions land anywhere close to part one.</p>
-
-  <div class="byline">
-    <strong>The Boxoffy Team</strong>
-    <span>·</span>
-    <span>Mar 13, 2026</span>
-    <span>·</span>
-    <span>5 min read</span>
+    <!-- Head-to-Head grid -->
+    <div class="h2h">
+      <div class="h2h-film d1">
+        <div class="h2h-label">Dhurandhar · 2025</div>
+        <div class="h2h-title">Dhurandhar</div>
+        <div class="h2h-meta">Aditya Dhar · Ranveer Singh · Mar 2025</div>
+        <div class="h2h-stat">
+          <div class="h2h-stat-label">India Nett (Lifetime)</div>
+          <div class="h2h-stat-val">₹838.5 Cr</div>
+          <div class="h2h-stat-sub">BOI verified · 78-day run</div>
+        </div>
+        <div class="h2h-stat" style="margin-top:10px">
+          <div class="h2h-stat-label">Worldwide</div>
+          <div class="h2h-stat-val" style="font-size:15px">₹1,305.35 Cr</div>
+        </div>
+        <div class="h2h-stat" style="margin-top:10px">
+          <div class="h2h-stat-label">Footfalls (India)</div>
+          <div class="h2h-stat-val" style="font-size:15px">4.30 Cr</div>
+          <div class="h2h-stat-sub">India Nett ÷ ATP ₹195</div>
+        </div>
+        <div class="h2h-stat" style="margin-top:10px">
+          <div class="h2h-stat-label">OTT</div>
+          <div class="h2h-stat-val" style="font-size:13px">Netflix · 23M Views</div>
+          <div class="h2h-stat-sub">101.3M hours · ₹285 Cr deal</div>
+        </div>
+      </div>
+      <div class="h2h-vs">VS</div>
+      <div class="h2h-film d2">
+        <div class="h2h-label">Dhurandhar: The Revenge · 2026</div>
+        <div class="h2h-title">Dhurandhar 2</div>
+        <div class="h2h-meta">Aditya Dhar · Ranveer Singh · Mar 19, 2026</div>
+        <div class="h2h-stat">
+          <div class="h2h-stat-label">India Nett (Running)</div>
+          <div class="h2h-stat-val" style="color:#93C5FD">₹40 Cr+</div>
+          <div class="h2h-stat-sub">Premiere only · Day 1 actuals Mar 20</div>
+        </div>
+        <div class="h2h-stat" style="margin-top:10px">
+          <div class="h2h-stat-label">Premiere WW</div>
+          <div class="h2h-stat-val" style="font-size:15px;color:#93C5FD">₹69 Cr</div>
+          <div class="h2h-stat-sub">Overseas ₹22.25 Cr · Sacnilk</div>
+        </div>
+        <div class="h2h-stat" style="margin-top:10px">
+          <div class="h2h-stat-label">BPREDICT v1 Target</div>
+          <div class="h2h-stat-val" style="font-size:15px;color:#93C5FD">₹110–120 Cr</div>
+          <div class="h2h-stat-sub">Combined Day 0+1 estimate</div>
+        </div>
+        <div class="h2h-stat" style="margin-top:10px">
+          <div class="h2h-stat-label">OTT</div>
+          <div class="h2h-stat-val" style="font-size:13px">Netflix (confirmed)</div>
+          <div class="h2h-stat-sub">Netflix Pandaga 2026 lineup</div>
+        </div>
+      </div>
+    </div>
   </div>
+</section>
 
-  <div class="record-alert">
-    <span class="record-alert-icon">🎟️</span>
-    <div class="record-alert-text">
-      THE BIG SIGNAL IS ATP, NOT JUST A VIRAL SCREENSHOT
-      <span>Dhurandhar 2 is tracking meaningfully above Dhurandhar 1 on pricing power. That means equal footfalls would almost certainly translate into a larger gross.</span>
+<main class="content">
+
+  <nav aria-label="breadcrumb" style="margin-bottom:24px;font-family:'DM Sans',sans-serif;font-size:12px;color:var(--muted)">
+    <a href="/" style="color:var(--muted);text-decoration:none">Boxoffy</a>
+    <span style="margin:0 6px">›</span>
+    <a href="/dhurandhar-box-office.html" style="color:var(--muted);text-decoration:none">Dhurandhar</a>
+    <span style="margin:0 6px">›</span>
+    <span style="color:var(--ink);font-weight:600">D1 vs D2 Comparison</span>
+  </nav>
+
+  <!-- Key stats comparison -->
+  <div class="sec-head">
+    <div><div class="sec-eyebrow">Head-to-Head</div><div class="sec-title">Key Metrics Compared</div></div>
+  </div>
+  <div class="ks-grid">
+    
+    <div class="ks-card">
+      <div class="ks-label">Day 1 (Opening Day)</div>
+      <div class="ks-d1">₹28 Cr</div>
+      <div class="ks-d1-sub">D1 · BOI</div>
+      <div class="ks-vs">vs</div>
+      <div class="ks-d2">Pending</div>
+      <div class="ks-d2-sub">D2 · Expected ₹70–80 Cr (BPREDICT)</div>
+    </div>
+    <div class="ks-card">
+      <div class="ks-label">Week 1 Total</div>
+      <div class="ks-d1">₹207.25 Cr</div>
+      <div class="ks-d1-sub">D1 · BOI</div>
+      <div class="ks-vs">vs</div>
+      <div class="ks-d2">Pending</div>
+      <div class="ks-d2-sub">D2 · Est. ₹350–380 Cr (advance-based)</div>
+    </div>
+    <div class="ks-card">
+      <div class="ks-label">Premiere Night</div>
+      <div class="ks-d1">—</div>
+      <div class="ks-d1-sub">D1 · No Premiere Night</div>
+      <div class="ks-vs">vs</div>
+      <div class="ks-d2">₹40 Cr</div>
+      <div class="ks-d2-sub">D2 · Pinkvilla cross-ref · Mar 18</div>
+    </div>
+    <div class="ks-card">
+      <div class="ks-label">Opening Weekend</div>
+      <div class="ks-d1">₹103 Cr</div>
+      <div class="ks-d1-sub">D1 · Day 1–3</div>
+      <div class="ks-vs">vs</div>
+      <div class="ks-d2">Pending</div>
+      <div class="ks-d2-sub">D2 · Expected ₹210–230 Cr</div>
+    </div>
+    <div class="ks-card">
+      <div class="ks-label">Blended ATP</div>
+      <div class="ks-d1">₹195</div>
+      <div class="ks-d1-sub">D1 · 2025 multiplex-weighted</div>
+      <div class="ks-vs">vs</div>
+      <div class="ks-d2">₹300+</div>
+      <div class="ks-d2-sub">D2 · Higher PLF + Eid premium pricing</div>
+    </div>
+    <div class="ks-card">
+      <div class="ks-label">Advance Booking</div>
+      <div class="ks-d1">~₹5 Cr</div>
+      <div class="ks-d1-sub">D1 · Moderate advance</div>
+      <div class="ks-vs">vs</div>
+      <div class="ks-d2">₹30.51 Cr</div>
+      <div class="ks-d2-sub">D2 · Record OG all-time Day 1 advance</div>
+    </div>
+    <div class="ks-card">
+      <div class="ks-label">BMS Record</div>
+      <div class="ks-d1">—</div>
+      <div class="ks-d1-sub">D1</div>
+      <div class="ks-vs">vs</div>
+      <div class="ks-d2">14.81L Tickets</div>
+      <div class="ks-d2-sub">D2 · All-time BMS record, broke Jawan</div>
+    </div>
+    <div class="ks-card">
+      <div class="ks-label">WW Lifetime</div>
+      <div class="ks-d1">₹1,305 Cr</div>
+      <div class="ks-d1-sub">D1 · Final</div>
+      <div class="ks-vs">vs</div>
+      <div class="ks-d2">TBD</div>
+      <div class="ks-d2-sub">D2 · In theatres</div>
     </div>
   </div>
 
-  <div class="stats-strip">
-    <div class="stat-cell">
-      <div class="stat-num">₹307</div>
-      <div class="stat-label">D1 Regular Ticket Benchmark</div>
+  <!-- Day-wise chart -->
+  <div class="sec-head" style="margin-top:40px">
+    <div><div class="sec-eyebrow">Daily Collections</div><div class="sec-title">Day-Wise India Nett (Weeks 1–3)</div></div>
+    <div class="sec-note">D1 complete · D2 pending Day 1 actuals</div>
+  </div>
+  <div class="legend">
+    <div class="legend-item"><div class="legend-dot" style="background:#C8201A"></div> Dhurandhar (D1) — Week 1</div>
+    <div class="legend-item"><div class="legend-dot" style="background:#D97706"></div> Dhurandhar (D1) — Week 2</div>
+    <div class="legend-item"><div class="legend-dot" style="background:#2563EB"></div> Dhurandhar (D1) — Week 3</div>
+    <div class="legend-item"><div class="legend-dot" style="background:rgba(37,99,235,.15);border:1px dashed #2563EB"></div> Dhurandhar 2 — Pending</div>
+  </div>
+  <div class="day-chart">
+    <div class="day-chart-header">
+      <span class="dch-label">Day</span>
+      <span class="dch-label" style="padding-left:12px">D1 (red/amber/blue) vs D2 (dashed)</span>
+      <span class="dch-label" style="text-align:right">D1 Running</span>
+      <span class="dch-label"></span>
     </div>
-    <div class="stat-cell">
-      <div class="stat-num">₹414</div>
-      <div class="stat-label">D2 Hindi 2D Preview ATP</div>
+    
+  <div class="day-row">
+    <div class="day-label">Day 1 (Fri)</div>
+    <div class="day-bars">
+      <div class="bar-pair">
+        <div class="bar-d1" style="width:48.3%;background:#C8201A">
+          <span class="bar-label-inner">₹28 Cr</span>
+        </div>
+        <div class="bar-d2 bar-d2-pending"></div>
+      </div>
     </div>
-    <div class="stat-cell">
-      <div class="stat-num red">₹512</div>
-      <div class="stat-label">D2 Implied Preview ATP (updated)</div>
+    <div class="day-running">₹28 Cr</div>
+    <div class="day-week-badge" style="color:#C8201A">W1</div>
+  </div>
+  <div class="day-row">
+    <div class="day-label">Day 2 (Sat)</div>
+    <div class="day-bars">
+      <div class="bar-pair">
+        <div class="bar-d1" style="width:55.2%;background:#C8201A">
+          <span class="bar-label-inner">₹32 Cr</span>
+        </div>
+        <div class="bar-d2 bar-d2-pending"></div>
+      </div>
     </div>
-    <div class="stat-cell">
-      <div class="stat-num">₹3,100</div>
-      <div class="stat-label">D2 Top-End Mumbai Premium</div>
+    <div class="day-running">₹60 Cr</div>
+    <div class="day-week-badge" style="color:#C8201A">W1</div>
+  </div>
+  <div class="day-row">
+    <div class="day-label">Day 3 (Sun)</div>
+    <div class="day-bars">
+      <div class="bar-pair">
+        <div class="bar-d1" style="width:74.1%;background:#C8201A">
+          <span class="bar-label-inner">₹43 Cr</span>
+        </div>
+        <div class="bar-d2 bar-d2-pending"></div>
+      </div>
     </div>
+    <div class="day-running">₹103 Cr</div>
+    <div class="day-week-badge" style="color:#C8201A">W1</div>
   </div>
-
-  <div class="body-copy">
-    <p>Dhurandhar 1 and Dhurandhar 2 should not be compared only through gross headlines. The smarter lens is much simpler: <strong>footfalls multiplied by average ticket price</strong>. Part one proved that the franchise could pull audiences in large numbers. Part two is testing whether the market will pay significantly more for the same event.</p>
-
-    <p>That is why the sequel feels so aggressive on BookMyShow. Yes, the luxury-seat pricing is eye-catching. But the deeper signal is that even the more normal benchmark has moved up. The jump from a reported ₹307 average regular ticket for Dhurandhar 1 to a reported ₹414 Hindi 2D average on Dhurandhar 2 is not cosmetic. It changes the entire revenue equation.</p>
-  </div>
-
-  <div class="section-head">Dhurandhar 1 vs Dhurandhar 2 — the clean comparison</div>
-
-  <table class="data-table">
-    <thead>
-      <tr>
-        <th>Metric</th>
-        <th>Dhurandhar 1</th>
-        <th>Dhurandhar 2</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Regular Hindi ticket benchmark</td>
-        <td>₹307</td>
-        <td>₹414</td>
-      </tr>
-      <tr class="highlight">
-        <td>Pricing jump vs D1</td>
-        <td>—</td>
-        <td>+34.9%</td>
-      </tr>
-      <tr>
-        <td>Implied preview ATP</td>
-        <td>Not cleanly published</td>
-        <td>₹512</td>
-      </tr>
-      <tr>
-        <td>Top premium ceiling, Mumbai</td>
-        <td>~₹1,610+</td>
-        <td>₹3,100</td>
-      </tr>
-      <tr class="highlight">
-        <td>Top premium jump, Mumbai</td>
-        <td>—</td>
-        <td>+92.5%</td>
-      </tr>
-      <tr>
-        <td>Advance / preview scale</td>
-        <td>~₹11 crore advance (premiere)</td>
-        <td>4.84 lakh preview tickets · ₹24.76 crore gross (no blocks) / ₹29.69 crore with blocks</td>
-      </tr>
-      <tr>
-        <td>Opening day</td>
-        <td>₹27 crore</td>
-        <td>Pending</td>
-      </tr>
-      <tr>
-        <td>Domestic milestone</td>
-        <td>₹648.5 crore in 22 days</td>
-        <td>Pending</td>
-      </tr>
-      <tr>
-        <td>Worldwide milestone</td>
-        <td>₹1,000+ crore in 22 days</td>
-        <td>Pending</td>
-      </tr>
-    </tbody>
-  </table>
-
-  <div class="note">
-    <strong>What matters most:</strong> even without using the ultra-premium seats, the sequel is already showing much richer ticket yield than part one. That alone gives it a major gross advantage if admissions hold up.
-  </div>
-
-  <div class="section-head">How the franchise evolved</div>
-
-  <div class="timeline">
-    <div class="tl-item">
-      <div class="tl-date">Dhurandhar 1</div>
-      <div class="tl-text">Built trust the old-fashioned way: big opening, strong word of mouth, long theatrical legs</div>
-      <div class="tl-sub">The market did not just sample it. The market stayed with it.</div>
+  <div class="day-row">
+    <div class="day-label">Day 4 (Mon)</div>
+    <div class="day-bars">
+      <div class="bar-pair">
+        <div class="bar-d1" style="width:40.1%;background:#C8201A">
+          <span class="bar-label-inner">₹23.25 Cr</span>
+        </div>
+        <div class="bar-d2 bar-d2-pending"></div>
+      </div>
     </div>
-    <div class="tl-item">
-      <div class="tl-date">Between films</div>
-      <div class="tl-text">The franchise converted from a hit into a theatrical event brand</div>
-      <div class="tl-sub">That is the bridge between part one’s breadth and part two’s pricing power.</div>
+    <div class="day-running">₹126.25 Cr</div>
+    <div class="day-week-badge" style="color:#C8201A">W1</div>
+  </div>
+  <div class="day-row">
+    <div class="day-label">Day 5 (Tue)</div>
+    <div class="day-bars">
+      <div class="bar-pair">
+        <div class="bar-d1" style="width:46.6%;background:#C8201A">
+          <span class="bar-label-inner">₹27 Cr</span>
+        </div>
+        <div class="bar-d2 bar-d2-pending"></div>
+      </div>
     </div>
-    <div class="tl-item active">
-      <div class="tl-date">Dhurandhar 2</div>
-      <div class="tl-text">Asks audiences to pay more before they have seen the film</div>
-      <div class="tl-sub">That is the clearest sign that exhibitors and distributors believe franchise trust is now bankable.</div>
+    <div class="day-running">₹153.25 Cr</div>
+    <div class="day-week-badge" style="color:#C8201A">W1</div>
+  </div>
+  <div class="day-row">
+    <div class="day-label">Day 6 (Wed)</div>
+    <div class="day-bars">
+      <div class="bar-pair">
+        <div class="bar-d1" style="width:46.6%;background:#C8201A">
+          <span class="bar-label-inner">₹27 Cr</span>
+        </div>
+        <div class="bar-d2 bar-d2-pending"></div>
+      </div>
     </div>
+    <div class="day-running">₹180.25 Cr</div>
+    <div class="day-week-badge" style="color:#C8201A">W1</div>
   </div>
-
-  <div class="pull-quote">
-    <blockquote>"Dhurandhar 1 sold the audience on the franchise. Dhurandhar 2 is trying to monetize that belief upfront."</blockquote>
-    <cite>— Boxoffy Analysis, Mar 13, 2026</cite>
-  </div>
-
-  <div class="section-head">Equal footfalls, different gross — what changes?</div>
-
-  <div class="body-copy">
-    <p>Once you hold admissions constant, the math becomes brutally simple. If Dhurandhar 2 achieves the same footfalls as Dhurandhar 1, then the difference in gross will come primarily from ATP. On the conservative comparison, the sequel’s ₹414 benchmark implies around <strong>1.36x</strong> the gross of part one. On the more aggressive preview-style ATP of ₹512, that multiple rises to roughly <strong>1.74x</strong>.</p>
-
-    <p>That is why the sequel does not need identical audience breadth to challenge or surpass part one’s gross. It simply needs enough admissions to keep the pricing machine running beyond the first weekend.</p>
-  </div>
-
-  <table class="data-table">
-    <thead>
-      <tr>
-        <th>Scenario</th>
-        <th>Same Footfalls As D1</th>
-        <th>Implied Gross Index</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>D1 baseline</td>
-        <td>100%</td>
-        <td>100</td>
-      </tr>
-      <tr class="highlight">
-        <td>D2 at ₹414 ATP</td>
-        <td>100%</td>
-        <td>134.9</td>
-      </tr>
-      <tr class="highlight">
-        <td>D2 at ₹512 ATP</td>
-        <td>100%</td>
-        <td>166.7</td>
-      </tr>
-      <tr class="dim">
-        <td>Important caution</td>
-        <td>—</td>
-        <td>Preview ATP is usually richer than full-run ATP</td>
-      </tr>
-    </tbody>
-  </table>
-
-  <div class="section-head">Using D1’s domestic milestone as a live model</div>
-
-  <div class="prediction-box">
-    <div class="prediction-box-label">Equal-Admissions Gross Model</div>
-    <h3>If D2 matches D1 admissions, the gross ceiling rises sharply</h3>
-    <div class="prediction-row">
-      <span class="prediction-label">D1 domestic milestone</span>
-      <span class="prediction-val">₹648.5 crore</span>
+  <div class="day-row">
+    <div class="day-label">Day 7 (Thu)</div>
+    <div class="day-bars">
+      <div class="bar-pair">
+        <div class="bar-d1" style="width:46.6%;background:#C8201A">
+          <span class="bar-label-inner">₹27 Cr</span>
+        </div>
+        <div class="bar-d2 bar-d2-pending"></div>
+      </div>
     </div>
-    <div class="prediction-row">
-      <span class="prediction-label">D2 at ₹414 ATP equivalent</span>
-      <span class="prediction-val accent">~₹874.8 crore</span>
+    <div class="day-running">₹207.25 Cr</div>
+    <div class="day-week-badge" style="color:#C8201A">W1</div>
+  </div>
+  <div class="day-row">
+    <div class="day-label">Day 8 (Fri)</div>
+    <div class="day-bars">
+      <div class="bar-pair">
+        <div class="bar-d1" style="width:56.0%;background:#D97706">
+          <span class="bar-label-inner">₹32.5 Cr</span>
+        </div>
+        <div class="bar-d2 bar-d2-pending"></div>
+      </div>
     </div>
-    <div class="prediction-row">
-      <span class="prediction-label">D2 at ₹512 ATP equivalent</span>
-      <span class="prediction-val accent">~₹1,081 crore</span>
+    <div class="day-running">₹239.75 Cr</div>
+    <div class="day-week-badge" style="color:#D97706">W2</div>
+  </div>
+  <div class="day-row">
+    <div class="day-label">Day 9 (Sat)</div>
+    <div class="day-bars">
+      <div class="bar-pair">
+        <div class="bar-d1" style="width:91.4%;background:#D97706">
+          <span class="bar-label-inner">₹53 Cr</span>
+        </div>
+        <div class="bar-d2 bar-d2-pending"></div>
+      </div>
     </div>
-    <div class="prediction-row">
-      <span class="prediction-label">The honest read</span>
-      <span class="prediction-val">₹414 is the safer benchmark</span>
+    <div class="day-running">₹292.75 Cr</div>
+    <div class="day-week-badge" style="color:#D97706">W2</div>
+  </div>
+  <div class="day-row">
+    <div class="day-label">Day 10 (Sun)</div>
+    <div class="day-bars">
+      <div class="bar-pair">
+        <div class="bar-d1" style="width:100.0%;background:#D97706">
+          <span class="bar-label-inner">₹58 Cr</span>
+        </div>
+        <div class="bar-d2 bar-d2-pending"></div>
+      </div>
     </div>
-    <div style="margin-top:18px;font-family:'Lora',serif;font-size:14px;color:var(--muted);line-height:1.6;">
-      The higher ₹512 number comes from preview-period gross divided by preview tickets. It is useful as an upper-end monetization case, but it would be too aggressive to assume that level holds through an entire run.
+    <div class="day-running">₹350.75 Cr</div>
+    <div class="day-week-badge" style="color:#D97706">W2</div>
+  </div>
+  <div class="day-row">
+    <div class="day-label">Day 11 (Mon)</div>
+    <div class="day-bars">
+      <div class="bar-pair">
+        <div class="bar-d1" style="width:52.6%;background:#D97706">
+          <span class="bar-label-inner">₹30.5 Cr</span>
+        </div>
+        <div class="bar-d2 bar-d2-pending"></div>
+      </div>
     </div>
+    <div class="day-running">₹381.25 Cr</div>
+    <div class="day-week-badge" style="color:#D97706">W2</div>
   </div>
-
-
-  <div class="section-head">Technical methodology — how this pricing strategy actually works</div>
-
-  <div class="body-copy">
-    <p>To understand why Dhurandhar 2 feels so expensive, you have to move beyond screenshots and think like an exhibitor. A multiplex does not price a film randomly. It prices against four variables at once: <strong>seat mix, show rotation, expected occupancy, and yield per screen</strong>. Once those variables shift in the right direction, the chain can raise ATP without needing every seat in the auditorium to sell out.</p>
-
-    <p>The simplest starting formula is this:</p>
-  </div>
-
-  <div class="prediction-box" style="border-color: var(--blue);">
-    <div class="prediction-box-label" style="color: var(--blue);">Core Revenue Formula</div>
-    <h3>Gross per show = Occupied seats × Average realized ticket price</h3>
-    <div style="font-family:'Lora',serif;font-size:15px;color:var(--muted);line-height:1.7;margin-top:10px;">
-      Realized ticket price matters more than listed ticket price. A show with a few very expensive premium seats can produce much more revenue than a uniformly priced show, even when occupancy is lower.
+  <div class="day-row">
+    <div class="day-label">Day 12 (Tue)</div>
+    <div class="day-bars">
+      <div class="bar-pair">
+        <div class="bar-d1" style="width:52.6%;background:#D97706">
+          <span class="bar-label-inner">₹30.5 Cr</span>
+        </div>
+        <div class="bar-d2 bar-d2-pending"></div>
+      </div>
     </div>
+    <div class="day-running">₹411.75 Cr</div>
+    <div class="day-week-badge" style="color:#D97706">W2</div>
   </div>
-
-  <div class="body-copy">
-    <p>That is the first hidden lever. Not every seat needs to be sold at ₹2,100. The chain only needs enough premium inventory in the mix to lift the average realized price of the whole show. In practice, this means luxury recliners, IMAX rows, premium lounges, and prime evening slots do the heavy lifting while standard seats maintain volume.</p>
-  </div>
-
-  <table class="data-table">
-    <thead>
-      <tr>
-        <th>Example seat mix</th>
-        <th>Seats sold</th>
-        <th>Price</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Standard seats</td>
-        <td>180</td>
-        <td>₹420</td>
-      </tr>
-      <tr>
-        <td>Premium seats</td>
-        <td>35</td>
-        <td>₹950</td>
-      </tr>
-      <tr>
-        <td>Luxury seats</td>
-        <td>12</td>
-        <td>₹2,100</td>
-      </tr>
-      <tr class="highlight">
-        <td>Blended realized ATP</td>
-        <td>227 total</td>
-        <td>~₹584</td>
-      </tr>
-    </tbody>
-  </table>
-
-  <div class="body-copy">
-    <p>That blended ATP is the second key idea. Even though most customers did not pay ₹2,100, the show still monetized at roughly ₹584 a ticket. That is why top-end pricing can materially change the economics without becoming the true mass-market rate.</p>
-  </div>
-
-  <div class="section-head">Why runtime changes ticket strategy</div>
-
-  <div class="body-copy">
-    <p>Long runtimes are one of the clearest triggers for premium pricing. A film running close to four hours reduces the number of possible daily rotations per screen. Fewer rotations mean fewer total seats available to sell across the day. When capacity drops, the exhibitor’s next lever is yield.</p>
-  </div>
-
-  <table class="data-table">
-    <thead>
-      <tr>
-        <th>Screen economics</th>
-        <th>Standard film</th>
-        <th>Long-runtime film</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Approx. runtime block</td>
-        <td>3.0 hrs incl. turnaround</td>
-        <td>4.25 hrs incl. turnaround</td>
-      </tr>
-      <tr>
-        <td>Possible daily shows</td>
-        <td>5</td>
-        <td>3</td>
-      </tr>
-      <tr>
-        <td>Seat inventory per day (250-seat hall)</td>
-        <td>1,250</td>
-        <td>750</td>
-      </tr>
-      <tr class="highlight">
-        <td>Inventory reduction</td>
-        <td>—</td>
-        <td>-40%</td>
-      </tr>
-    </tbody>
-  </table>
-
-  <div class="body-copy">
-    <p>If a screen loses roughly 40% of its daily capacity, the exhibitor will try to recover a portion of that lost throughput through higher pricing. That does not mean prices rise one-for-one with the inventory loss, but it does explain why long event films are more likely to be premiumized than regular releases.</p>
-  </div>
-
-  <div class="section-head">The math behind ATP lift</div>
-
-  <div class="body-copy">
-    <p>Students studying box office economics should think in terms of weighted averages. The formula looks like this:</p>
-  </div>
-
-  <div class="prediction-box" style="border-color: var(--gold);">
-    <div class="prediction-box-label" style="color: var(--gold);">Weighted Average Ticket Price</div>
-    <h3>ATP = Σ (tickets sold in each category × category price) ÷ total tickets sold</h3>
-    <div style="font-family:'Lora',serif;font-size:15px;color:var(--muted);line-height:1.7;margin-top:10px;">
-      This is why a premium-heavy seat mix can lift the entire film’s ATP even when most admissions still come from standard seats.
+  <div class="day-row">
+    <div class="day-label">Day 13 (Wed)</div>
+    <div class="day-bars">
+      <div class="bar-pair">
+        <div class="bar-d1" style="width:44.0%;background:#D97706">
+          <span class="bar-label-inner">₹25.5 Cr</span>
+        </div>
+        <div class="bar-d2 bar-d2-pending"></div>
+      </div>
     </div>
+    <div class="day-running">₹437.25 Cr</div>
+    <div class="day-week-badge" style="color:#D97706">W2</div>
   </div>
-
-  <table class="data-table">
-    <thead>
-      <tr>
-        <th>Scenario</th>
-        <th>Tickets</th>
-        <th>Gross</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>All seats at ₹420</td>
-        <td>227</td>
-        <td>₹95,340</td>
-      </tr>
-      <tr class="highlight">
-        <td>Mixed pricing structure</td>
-        <td>227</td>
-        <td>₹132,530</td>
-      </tr>
-      <tr class="highlight">
-        <td>Revenue lift</td>
-        <td>Same admissions</td>
-        <td>+39.0%</td>
-      </tr>
-    </tbody>
-  </table>
-
-  <div class="body-copy">
-    <p>That is the heart of the strategy. The exhibitor is not always trying to maximize footfalls alone. Often, the real target is <strong>yield optimization</strong>: how much revenue can be extracted from each show, each screen, and each prime-time slot.</p>
-  </div>
-
-  <div class="section-head">What distributors and exhibitors are probably optimizing</div>
-
-  <div class="body-copy">
-    <p>From a technical standpoint, the pricing logic behind a film like Dhurandhar 2 can be framed as a simple optimization problem:</p>
-  </div>
-
-  <div class="prediction-box" style="border-color: var(--red-dark);">
-    <div class="prediction-box-label" style="color: var(--red-dark);">Yield Optimization Objective</div>
-    <h3>Maximize daily gross = Σ (show count × occupancy × realized ATP)</h3>
-    <div style="font-family:'Lora',serif;font-size:15px;color:var(--muted);line-height:1.7;margin-top:10px;">
-      If show count is constrained by runtime, the pressure shifts to occupancy quality and ATP quality. Premium formats become the most efficient tool for pushing that number up.
+  <div class="day-row">
+    <div class="day-label">Day 14 (Thu)</div>
+    <div class="day-bars">
+      <div class="bar-pair">
+        <div class="bar-d1" style="width:40.1%;background:#D97706">
+          <span class="bar-label-inner">₹23.25 Cr</span>
+        </div>
+        <div class="bar-d2 bar-d2-pending"></div>
+      </div>
     </div>
+    <div class="day-running">₹460.5 Cr</div>
+    <div class="day-week-badge" style="color:#D97706">W2</div>
   </div>
-
-  <div class="body-copy">
-    <p>That is also why premiumization tends to show up first in metros. The same film can carry very different pricing curves in Mumbai, NCR, or Bengaluru than it can in smaller circuits. The chain is effectively price-discriminating by venue quality, city income profile, and likely urgency of demand.</p>
-
-    <p>In academic terms, this is a blend of <strong>dynamic pricing, inventory segmentation, and willingness-to-pay extraction</strong>. In plain English, the chain is charging more to the audience segment that values premium access, opening-weekend status, and better viewing formats the most.</p>
-  </div>
-
-  <div class="section-head">Why this matters for box office analysis</div>
-
-  <div class="body-copy">
-    <p>Many public conversations stop at the highest listed ticket. That misses the real mechanism. The serious analyst tracks how many seats sit in each pricing bucket, how full those buckets are, and whether the premium mix is broad enough to move the film’s blended ATP. That is what turns a flashy pricing story into a genuine box office edge.</p>
-
-    <p>For students, this makes Dhurandhar 2 a strong case study in modern theatrical monetization. It is a clear example of how franchise trust, long runtime, premium formats, and opening-weekend urgency can combine to create a richer revenue model without requiring Baahubali-level admissions.</p>
-  </div>
-
-
-  <div class="section-head">What the premium ticket headlines are really saying</div>
-
-  <div class="body-copy">
-    <p>The ₹2,100 and ₹3,100 screenshots are real signals, but they are not the whole market. Those numbers mostly live in the top-end premium ecosystem: IMAX, recliners, Insignia-style luxury inventory, and prestige venues in metro clusters. They matter because they lift ATP, but they do not automatically prove wider mass penetration.</p>
-
-    <p>The stronger reading is this: part one already showed that the franchise could stretch ticket pricing. Part two is stretching it further, and with more confidence. That tells you the market sees Dhurandhar as an event property now, not just a successful title returning for a sequel.</p>
-  </div>
-
-  <div class="pull-quote">
-    <blockquote>"A sequel can outgross the original without matching its footfalls. That becomes possible the moment the ticket yield rises faster than admissions fall."</blockquote>
-    <cite>— The real Dhurandhar 2 betting line</cite>
-  </div>
-
-  <div class="section-head">The truthful bottom line</div>
-
-  <div class="body-copy">
-    <p>Dhurandhar 1 was powered by audience breadth and staying power. Dhurandhar 2 is opening with far stronger pricing power. That does not guarantee a bigger legacy, because word of mouth still decides whether premium pricing survives beyond the opening rush. But it does mean the sequel has a built-in financial advantage that part one did not enjoy.</p>
-
-    <p>So the cleanest conclusion is this: <strong>Dhurandhar 1 created the franchise premium. Dhurandhar 2 is trying to fully harvest it.</strong> If the sequel comes anywhere close to part one on admissions, the gross should land materially higher. If it falls meaningfully short on mass acceptance, then the premium ATP may flatter the opening while hiding the gap in true audience reach.</p>
-  </div>
-
-  <div class="footnotes">
-    <p><strong>Boxoffy Verified:</strong> ATP and ticket figures cross-referenced from Sacnilk, Pinkvilla and Bollymoviereviewz. D1 domestic milestone from Box Office India final tally. Preview ATP derived from Boxoffy Calc: ₹24.76 Cr gross ÷ 4.84 lakh tickets = ₹512 blended (updated from Mar 11 data). Equal-footfalls gross scenarios are illustrative models, not official forecasts.</p>
-    <p><strong>Modeling note:</strong> Equal-footfalls scenarios are illustrative, not official forecasts. They are meant to show how ATP changes gross potential when admissions are held constant.</p>
-    <p><strong>Caution:</strong> Preview-period ATP is not the same thing as final-run ATP. Premium-heavy opening demand can cool once the first weekend passes.</p>
-  </div>
-
-</div>
-
-
-<!-- ── SHARE BAR ──────────────────────────────────────────────────────────────
-     Boxoffy ShareBar — WhatsApp / X / Facebook / LinkedIn / Copy Link
-     Inject above <footer> on every article page
-     ─────────────────────────────────────────────────────────────────────── -->
-<div id="boxoffy-sharebar" style="background:#0D0D0D;padding:20px 32px;border-top:3px solid #C8201A;border-bottom:1px solid #1F2937;">
-  <div style="max-width:760px;margin:0 auto;display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
-    <span style="font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:#6B7280;flex-shrink:0;">Share this</span>
-
-    <!-- WhatsApp -->
-    <a id="sb-whatsapp" href="#" target="_blank" rel="noopener noreferrer"
-       onclick="this.href='https://api.whatsapp.com/send?text='+encodeURIComponent(document.title+' — '+window.location.href)"
-       style="display:inline-flex;align-items:center;gap:7px;background:#25D366;color:#fff;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:12px;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;padding:8px 16px;border-radius:2px;transition:opacity 0.15s;"
-       onmouseover="this.style.opacity='.85'" onmouseout="this.style.opacity='1'">
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-      WhatsApp
-    </a>
-
-    <!-- X / Twitter -->
-    <a id="sb-twitter" href="#" target="_blank" rel="noopener noreferrer"
-       onclick="this.href='https://twitter.com/intent/tweet?text='+encodeURIComponent(document.title)+'&url='+encodeURIComponent(window.location.href)+'&via=boxoffy'"
-       style="display:inline-flex;align-items:center;gap:7px;background:#000;color:#fff;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:12px;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;padding:8px 16px;border-radius:2px;border:1px solid #333;transition:opacity 0.15s;"
-       onmouseover="this.style.opacity='.85'" onmouseout="this.style.opacity='1'">
-      <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.748l7.73-8.835L1.254 2.25H8.08l4.259 5.629 5.905-5.629zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-      Post
-    </a>
-
-    <!-- Facebook -->
-    <a id="sb-facebook" href="#" target="_blank" rel="noopener noreferrer"
-       onclick="this.href='https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(window.location.href)"
-       style="display:inline-flex;align-items:center;gap:7px;background:#1877F2;color:#fff;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:12px;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;padding:8px 16px;border-radius:2px;transition:opacity 0.15s;"
-       onmouseover="this.style.opacity='.85'" onmouseout="this.style.opacity='1'">
-      <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-      Share
-    </a>
-
-    <!-- LinkedIn -->
-    <a id="sb-linkedin" href="#" target="_blank" rel="noopener noreferrer"
-       onclick="this.href='https://www.linkedin.com/sharing/share-offsite/?url='+encodeURIComponent(window.location.href)"
-       style="display:inline-flex;align-items:center;gap:7px;background:#0A66C2;color:#fff;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:12px;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;padding:8px 16px;border-radius:2px;transition:opacity 0.15s;"
-       onmouseover="this.style.opacity='.85'" onmouseout="this.style.opacity='1'">
-      <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-      LinkedIn
-    </a>
-
-    <!-- Copy Link -->
-    <button id="sb-copy"
-       onclick="navigator.clipboard.writeText(window.location.href).then(()=>{this.textContent='✓ Copied!';this.style.background='#15803D';setTimeout(()=>{this.textContent='Copy Link';this.style.background='#1F2937';},2000);})"
-       style="display:inline-flex;align-items:center;gap:7px;background:#1F2937;color:#9CA3AF;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:12px;letter-spacing:0.1em;text-transform:uppercase;border:1px solid #374151;padding:8px 16px;border-radius:2px;cursor:pointer;transition:all 0.15s;"
-       onmouseover="this.style.color='#fff';this.style.borderColor='#6B7280'" onmouseout="this.style.color='#9CA3AF';this.style.borderColor='#374151'">
-      Copy Link
-    </button>
-  </div>
-</div>
-<!-- ── END SHARE BAR ── -->
-
-<div class="related-strip">
-  <div class="related-label">More from Boxoffy</div>
-  <div class="related-grid">
-    <div class="related-card">
-      <div class="related-card-tag">Deep Dive</div>
-      <a href="/india-boxoffice-how-it-works.html">How Bollywood Box Office Money Actually Works</a>
+  <div class="day-row">
+    <div class="day-label">Day 15 (Fri)</div>
+    <div class="day-bars">
+      <div class="bar-pair">
+        <div class="bar-d1" style="width:38.8%;background:#2563EB">
+          <span class="bar-label-inner">₹22.5 Cr</span>
+        </div>
+        <div class="bar-d2 bar-d2-pending"></div>
+      </div>
     </div>
-    <div class="related-card">
-      <div class="related-card-tag">Deep Dive</div>
-      <a href="/dhurandhar2-advance-article.html">D2 Advance Booking — ₹29.69 Cr, OG Record BROKEN</a>
+    <div class="day-running">₹483 Cr</div>
+    <div class="day-week-badge" style="color:#2563EB">W3</div>
+  </div>
+  <div class="day-row">
+    <div class="day-label">Day 16 (Sat)</div>
+    <div class="day-bars">
+      <div class="bar-pair">
+        <div class="bar-d1" style="width:59.1%;background:#2563EB">
+          <span class="bar-label-inner">₹34.25 Cr</span>
+        </div>
+        <div class="bar-d2 bar-d2-pending"></div>
+      </div>
     </div>
-    <div class="related-card">
-      <div class="related-card-tag">US Box Office</div>
-      <a href="/dhurandhar2-us-boxoffice.html">Dhurandhar 2 US — $3.65M Advance, Top 5 Incoming</a>
+    <div class="day-running">₹517.25 Cr</div>
+    <div class="day-week-badge" style="color:#2563EB">W3</div>
+  </div>
+  <div class="day-row">
+    <div class="day-label">Day 17 (Sun)</div>
+    <div class="day-bars">
+      <div class="bar-pair">
+        <div class="bar-d1" style="width:66.4%;background:#2563EB">
+          <span class="bar-label-inner">₹38.5 Cr</span>
+        </div>
+        <div class="bar-d2 bar-d2-pending"></div>
+      </div>
+    </div>
+    <div class="day-running">₹555.75 Cr</div>
+    <div class="day-week-badge" style="color:#2563EB">W3</div>
+  </div>
+  <div class="day-row">
+    <div class="day-label">Day 18 (Mon)</div>
+    <div class="day-bars">
+      <div class="bar-pair">
+        <div class="bar-d1" style="width:28.4%;background:#2563EB">
+          <span class="bar-label-inner">₹16.5 Cr</span>
+        </div>
+        <div class="bar-d2 bar-d2-pending"></div>
+      </div>
+    </div>
+    <div class="day-running">₹572.25 Cr</div>
+    <div class="day-week-badge" style="color:#2563EB">W3</div>
+  </div>
+  <div class="day-row">
+    <div class="day-label">Day 19 (Tue)</div>
+    <div class="day-bars">
+      <div class="bar-pair">
+        <div class="bar-d1" style="width:29.7%;background:#2563EB">
+          <span class="bar-label-inner">₹17.25 Cr</span>
+        </div>
+        <div class="bar-d2 bar-d2-pending"></div>
+      </div>
+    </div>
+    <div class="day-running">₹589.5 Cr</div>
+    <div class="day-week-badge" style="color:#2563EB">W3</div>
+  </div>
+  <div class="day-row">
+    <div class="day-label">Day 20 (Wed)</div>
+    <div class="day-bars">
+      <div class="bar-pair">
+        <div class="bar-d1" style="width:31.0%;background:#2563EB">
+          <span class="bar-label-inner">₹18 Cr</span>
+        </div>
+        <div class="bar-d2 bar-d2-pending"></div>
+      </div>
+    </div>
+    <div class="day-running">₹607.5 Cr</div>
+    <div class="day-week-badge" style="color:#2563EB">W3</div>
+  </div>
+  <div class="day-row">
+    <div class="day-label">Day 21 (Thu)</div>
+    <div class="day-bars">
+      <div class="bar-pair">
+        <div class="bar-d1" style="width:43.1%;background:#2563EB">
+          <span class="bar-label-inner">₹25 Cr</span>
+        </div>
+        <div class="bar-d2 bar-d2-pending"></div>
+      </div>
+    </div>
+    <div class="day-running">₹632.5 Cr</div>
+    <div class="day-week-badge" style="color:#2563EB">W3</div>
+  </div>
+  </div>
+  <p style="font-family:'DM Sans',sans-serif;font-size:.7rem;color:var(--muted);margin-bottom:0">Source: Sacnilk (D1 day-wise). D2 Day 1+ pending BOI/Sacnilk confirmation.</p>
+
+  <!-- Week comparison -->
+  <div class="sec-head" style="margin-top:40px">
+    <div><div class="sec-eyebrow">Week-Wise</div><div class="sec-title">Weekly Breakdown — D1 Complete vs D2 Live</div></div>
+  </div>
+  <div class="week-table-wrap">
+    <table class="week-table">
+      <thead><tr>
+        <th>Week</th><th>Days</th>
+        <th style="text-align:right;color:#FCA5A5">D1 India Nett</th>
+        <th style="text-align:center">D1 Change</th>
+        <th style="text-align:right;color:#93C5FD">D2 India Nett</th>
+        <th style="text-align:center">D2 Status</th>
+      </tr></thead>
+      <tbody>
+        <!-- Premiere row (D2 only) -->
+        <tr style="background:#0A0A0A">
+          <td style="padding:12px 16px;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1rem;color:#6B7280">Pre</td>
+          <td style="padding:12px 16px;font-family:'DM Sans',sans-serif;font-size:.8rem;color:#6B7280">Premiere</td>
+          <td style="padding:12px 16px;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:.9rem;color:#4B5563;text-align:right">— (no premiere)</td>
+          <td style="text-align:center">—</td>
+          <td style="padding:12px 16px;font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:1.1rem;color:#2563EB;text-align:right">₹40 Cr ✓</td>
+          <td style="padding:12px 16px;text-align:center"><span style="background:#1E3A5F;color:#93C5FD;font-family:'DM Sans',sans-serif;font-size:.63rem;font-weight:700;padding:2px 6px;border-radius:2px">CONFIRMED</span></td>
+        </tr>
+        
+  <tr>
+    <td style="padding:12px 16px;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1rem;color:#C8201A">Week 1</td>
+    <td style="padding:12px 16px;font-family:'DM Sans',sans-serif;font-size:.8rem;color:#6B7280">Day 1–7</td>
+    <td style="padding:12px 16px;font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:1.1rem;color:#C8201A;text-align:right">₹207.25 Cr</td>
+    <td style="padding:12px 16px;font-family:'Barlow Condensed',sans-serif;font-size:.9rem;color:#DC2626;text-align:center">—</td>
+    <td style="padding:12px 16px;font-family:'DM Sans',sans-serif;font-size:.75rem;color:#9CA3AF;text-align:right">Pending</td>
+    <td style="padding:12px 16px;text-align:center"><span style="background:#1a1a1a;color:#4B5563;font-family:'DM Sans',sans-serif;font-size:.63rem;font-weight:700;padding:2px 6px;border-radius:2px">IN THEATRES</span></td>
+  </tr>
+  <tr>
+    <td style="padding:12px 16px;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1rem;color:#D97706">Week 2</td>
+    <td style="padding:12px 16px;font-family:'DM Sans',sans-serif;font-size:.8rem;color:#6B7280">Day 8–14</td>
+    <td style="padding:12px 16px;font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:1.1rem;color:#C8201A;text-align:right">₹253.25 Cr</td>
+    <td style="padding:12px 16px;font-family:'Barlow Condensed',sans-serif;font-size:.9rem;color:#16A34A;text-align:center">+22.2%</td>
+    <td style="padding:12px 16px;font-family:'DM Sans',sans-serif;font-size:.75rem;color:#9CA3AF;text-align:right">Pending</td>
+    <td style="padding:12px 16px;text-align:center"><span style="background:#1a1a1a;color:#4B5563;font-family:'DM Sans',sans-serif;font-size:.63rem;font-weight:700;padding:2px 6px;border-radius:2px">IN THEATRES</span></td>
+  </tr>
+  <tr>
+    <td style="padding:12px 16px;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1rem;color:#2563EB">Week 3</td>
+    <td style="padding:12px 16px;font-family:'DM Sans',sans-serif;font-size:.8rem;color:#6B7280">Day 15–21</td>
+    <td style="padding:12px 16px;font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:1.1rem;color:#C8201A;text-align:right">₹172 Cr</td>
+    <td style="padding:12px 16px;font-family:'Barlow Condensed',sans-serif;font-size:.9rem;color:#DC2626;text-align:center">-32.1%</td>
+    <td style="padding:12px 16px;font-family:'DM Sans',sans-serif;font-size:.75rem;color:#9CA3AF;text-align:right">Pending</td>
+    <td style="padding:12px 16px;text-align:center"><span style="background:#1a1a1a;color:#4B5563;font-family:'DM Sans',sans-serif;font-size:.63rem;font-weight:700;padding:2px 6px;border-radius:2px">IN THEATRES</span></td>
+  </tr>
+  <tr>
+    <td style="padding:12px 16px;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1rem;color:#6B7280">Week 4</td>
+    <td style="padding:12px 16px;font-family:'DM Sans',sans-serif;font-size:.8rem;color:#6B7280">Day 22–28</td>
+    <td style="padding:12px 16px;font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:1.1rem;color:#C8201A;text-align:right">₹125 Cr</td>
+    <td style="padding:12px 16px;font-family:'Barlow Condensed',sans-serif;font-size:.9rem;color:#DC2626;text-align:center">-27.3%</td>
+    <td style="padding:12px 16px;font-family:'DM Sans',sans-serif;font-size:.75rem;color:#9CA3AF;text-align:right">Pending</td>
+    <td style="padding:12px 16px;text-align:center"><span style="background:#1a1a1a;color:#4B5563;font-family:'DM Sans',sans-serif;font-size:.63rem;font-weight:700;padding:2px 6px;border-radius:2px">IN THEATRES</span></td>
+  </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ATP Comparison -->
+  <div class="sec-head" style="margin-top:40px">
+    <div><div class="sec-eyebrow">Ticket Intelligence</div><div class="sec-title">ATP — Average Ticket Price Comparison</div></div>
+  </div>
+  <div class="atp-grid">
+    <div class="atp-card d1-card">
+      <div class="atp-film-label">Dhurandhar (2025)</div>
+      <div class="atp-row"><span class="atp-row-label">Multiplex Effective ATP</span><span class="atp-row-val">₹289</span></div><div class="atp-row"><span class="atp-row-label">Single Screen ATP (est.)</span><span class="atp-row-val">₹120</span></div><div class="atp-row"><span class="atp-row-label">Blended India ATP</span><span class="atp-row-val">₹195</span></div><div class="atp-row"><span class="atp-row-label">Premiere Night ATP</span><span class="atp-row-val">₹310</span></div><div class="atp-row"><span class="atp-row-label">Weekend Blend (Wk 1)</span><span class="atp-row-val">₹245</span></div><div class="atp-row"><span class="atp-row-label">Weekday Blend (Wk 1)</span><span class="atp-row-val">₹165</span></div><div class="atp-row"><span class="atp-row-label">Implied Footfalls</span><span class="atp-row-val">4.30 Cr tickets</span></div>
+    </div>
+    <div class="atp-card d2-card">
+      <div class="atp-film-label">Dhurandhar: The Revenge (2026)</div>
+      <div class="atp-row"><span class="atp-row-label">Multiplex Effective ATP (est.)</span><span class="atp-row-val" style="font-size:.82rem;max-width:160px;text-align:right">₹310+</span></div><div class="atp-row"><span class="atp-row-label">Single Screen ATP (est.)</span><span class="atp-row-val" style="font-size:.82rem;max-width:160px;text-align:right">₹130</span></div><div class="atp-row"><span class="atp-row-label">Premiere Blended ATP</span><span class="atp-row-val" style="font-size:.82rem;max-width:160px;text-align:right">₹300</span></div><div class="atp-row"><span class="atp-row-label">Premiere Premium ATP</span><span class="atp-row-val" style="font-size:.82rem;max-width:160px;text-align:right">₹320</span></div><div class="atp-row"><span class="atp-row-label">Weekend Blend (est.)</span><span class="atp-row-val" style="font-size:.82rem;max-width:160px;text-align:right">₹280</span></div><div class="atp-row"><span class="atp-row-label">GST Component (18%)</span><span class="atp-row-val" style="font-size:.82rem;max-width:160px;text-align:right">~₹50 per ₹280 ticket</span></div><div class="atp-row"><span class="atp-row-label">Note</span><span class="atp-row-val" style="font-size:.82rem;max-width:160px;text-align:right">Higher GST-era pricing + IMAX/PLF premium</span></div>
+      <div style="margin-top:16px;padding:12px;background:#0A1628;border-radius:4px;font-family:'DM Sans',sans-serif;font-size:.75rem;color:#93C5FD;line-height:1.6">
+        <strong style="display:block;margin-bottom:4px">Why D2 ATP is higher than D1</strong>
+        D2 released on Eid (Mar 19) — premium pricing on holidays. IMAX/4DX/PLF screens account for higher share. Inflation: ₹ purchasing power erosion since 2025. BMS All-Time record of 14.81L tickets suggests high multiplex concentration.
+      </div>
     </div>
   </div>
-</div>
+  <p style="font-family:'DM Sans',sans-serif;font-size:.7rem;color:var(--muted);margin-bottom:0">ATP estimates from Film Information / Sacnilk / Boxoffy analysis. D2 ATP pending confirmed Day 1 nett and footfall data from BOI.</p>
 
-<div style="background:#1A1A1A;padding:20px 32px;font-family:'Barlow Condensed',sans-serif;margin-top:0;">
-  <div style="max-width:720px;margin:0 auto;">
-    <div style="font-size:9px;color:#4B5563;text-transform:uppercase;letter-spacing:0.14em;margin-bottom:8px;padding-bottom:8px;border-bottom:1px solid #2D2D2D;">
-      Data Disclaimer &amp; Legal Notice
+  <!-- OTT Comparison -->
+  <div class="sec-head" style="margin-top:40px">
+    <div><div class="sec-eyebrow">Streaming Intelligence</div><div class="sec-title">OTT Performance</div></div>
+  </div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--rule);border:1px solid var(--rule);border-radius:4px;overflow:hidden;margin-bottom:8px">
+    <div style="background:var(--surface);padding:24px;border-top:4px solid var(--d1)">
+      <div style="font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:16px;color:var(--d1);margin-bottom:16px">Dhurandhar (D1) — OTT Final</div>
+      <div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--rule);font-family:'DM Sans',sans-serif;font-size:.78rem"><span style="color:var(--muted)">Platform</span><span style="color:var(--ink);font-weight:600;text-align:right;max-width:180px">Netflix India</span></div><div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--rule);font-family:'DM Sans',sans-serif;font-size:.78rem"><span style="color:var(--muted)">OTT Deal Value</span><span style="color:var(--ink);font-weight:600;text-align:right;max-width:180px">₹285 Cr (India record at time)</span></div><div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--rule);font-family:'DM Sans',sans-serif;font-size:.78rem"><span style="color:var(--muted)">Total Views</span><span style="color:var(--ink);font-weight:600;text-align:right;max-width:180px">23 Million views</span></div><div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--rule);font-family:'DM Sans',sans-serif;font-size:.78rem"><span style="color:var(--muted)">Total Watch Hours</span><span style="color:var(--ink);font-weight:600;text-align:right;max-width:180px">101.3 Million hours</span></div><div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--rule);font-family:'DM Sans',sans-serif;font-size:.78rem"><span style="color:var(--muted)">OTT Release (est.)</span><span style="color:var(--ink);font-weight:600;text-align:right;max-width:180px">~78 days post-theatrical</span></div><div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--rule);font-family:'DM Sans',sans-serif;font-size:.78rem"><span style="color:var(--muted)">Rank (Netflix India)</span><span style="color:var(--ink);font-weight:600;text-align:right;max-width:180px">#1 Most Watched Indian film (2025)</span></div>
     </div>
-    <p style="font-size:9px;color:#4B5563;line-height:1.7;margin:0 0 8px 0;">
-      Boxoffy.com is an independent box office intelligence platform that aggregates and analyses publicly available entertainment industry data sourced from third-party trade publications including Box Office India, Sacnilk, Venky Box Office and Koimoi. All figures represent estimates based on available information at time of publication and are not official figures unless expressly stated. Boxoffy.com is not affiliated with any film production house, studio, distributor or exhibitor. Editorial opinions and predictions are protected expression under Article 19(1)(a) of the Constitution of India. Boxoffy.com claims intermediary protections under Section 79 of the Information Technology Act, 2000 and fair dealing provisions of Section 52 of the Copyright Act, 1957.
-    </p>
-    <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;font-size:9px;color:#4B5563;">
-      <span>© 2026 Boxoffy.com · India Box Office Intelligence · All figures in ₹ Crores unless stated</span>
-      <a href="/cdn-cgi/l/email-protection#81e8efe7eec1e3eef9eee7e7f8afe2eeec" style="color:#C8201A;text-decoration:none;font-weight:700;"><span class="__cf_email__"
+    <div style="background:var(--surface);padding:24px;border-top:4px solid var(--d2)">
+      <div style="font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:16px;color:var(--d2);margin-bottom:16px">Dhurandhar 2 — OTT Upcoming</div>
+      <div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--rule);font-family:'DM Sans',sans-serif;font-size:.78rem"><span style="color:var(--muted)">Platform</span><span style="color:var(--ink);font-weight:600;text-align:right;max-width:180px">Netflix India (confirmed)</span></div><div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--rule);font-family:'DM Sans',sans-serif;font-size:.78rem"><span style="color:var(--muted)">OTT Lineup</span><span style="color:var(--ink);font-weight:600;text-align:right;max-width:180px">Netflix Pandaga 2026</span></div><div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--rule);font-family:'DM Sans',sans-serif;font-size:.78rem"><span style="color:var(--muted)">Expected Window</span><span style="color:var(--ink);font-weight:600;text-align:right;max-width:180px">45–60 days post-theatrical</span></div><div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--rule);font-family:'DM Sans',sans-serif;font-size:.78rem"><span style="color:var(--muted)">Expected Release</span><span style="color:var(--ink);font-weight:600;text-align:right;max-width:180px">May–June 2026 (est.)</span></div><div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--rule);font-family:'DM Sans',sans-serif;font-size:.78rem"><span style="color:var(--muted)">D1 OTT Benchmark</span><span style="color:var(--ink);font-weight:600;text-align:right;max-width:180px">₹285 Cr / 101.3M hours to beat</span></div><div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--rule);font-family:'DM Sans',sans-serif;font-size:.78rem"><span style="color:var(--muted)">Status</span><span style="color:var(--ink);font-weight:600;text-align:right;max-width:180px">In Theatres — OTT date TBD</span></div>
+    </div>
+  </div>
+
+  <!-- Share bar -->
+  <div class="share-bar">
+    <span class="share-label">Share</span>
+    <a href="https://wa.me/?text=Dhurandhar%20vs%20Dhurandhar%202%20%E2%80%94%20Day-Wise%20Box%20Office%20Comparison%20%7C%20Boxoffy%20https%3A%2F%2Fboxoffy.com%2Fdhurandhar-comparison.html" target="_blank" rel="noopener" class="share-btn wa">WhatsApp</a>
+    <a href="https://twitter.com/intent/tweet?text=Dhurandhar%20vs%20Dhurandhar%202%20%E2%80%94%20complete%20day-wise%2C%20week-wise%20and%20ATP%20comparison.%20D1%20%E2%82%B9838.5%20Cr%20vs%20D2%20in%20theatres%20now.&url=https%3A%2F%2Fboxoffy.com%2Fdhurandhar-comparison.html" target="_blank" rel="noopener" class="share-btn x">𝕏</a>
+    <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fboxoffy.com%2Fdhurandhar-comparison.html" target="_blank" rel="noopener" class="share-btn fb">Facebook</a>
+    <button onclick="navigator.clipboard.writeText('https://boxoffy.com/dhurandhar-comparison.html').then(()=>{this.textContent='Copied!';setTimeout(()=>this.textContent='Copy Link',2000)})" class="share-btn copy">Copy Link</button>
+  </div>
+
+</main>
+
+<footer class="footer">
+  <p style="margin-bottom:8px;font-size:13px;color:#9CA3AF;font-family:'Barlow Condensed',sans-serif;font-weight:700;letter-spacing:.1em">BOXOFFY · BOX OFFICE INTELLIGENCE</p>
+  <p>D1 data: <a href="https://boxofficeindia.com" target="_blank" rel="noopener">Box Office India</a> · <a href="https://sacnilk.com" target="_blank" rel="noopener">Sacnilk</a> · D2 data: Sacnilk + Pinkvilla (cross-ref) · Updated Mar 19, 2026 &nbsp;·&nbsp; <a href="/dhurandhar-2-box-office.html">D2 Live Tracker</a> &nbsp;·&nbsp; <a href="/">Live 2026</a></p>
+  <p style="margin-top:8px">© 2026 Boxoffy.com · Page updates as D2 actuals arrive · Next update: Mar 20 morning (BOI Day 1)</p>
+</footer>
+
+</body>
+</html>
