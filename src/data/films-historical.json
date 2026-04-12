@@ -5,7 +5,7 @@
       "avgATP": 140,
       "topGrosser": "War",
       "era": "GST",
-      "note": "War became 2019 #1 despite releasing Oct 2. Kabir Singh grossed highest India nett at ₹276 Cr. Uri: The Surgical Strike was Jan surprise blockbuster at ₹244 Cr."
+      "note": "Uri at ₹244 Cr on ₹50 Cr budget — +388% ROI — was the most efficient blockbuster of the decade. War at ₹295 Cr gave YRF its homegrown franchise blockbuster at full scale. Kabir Singh at ₹276 Cr was commercially undeniable regardless of controversy. Good Newwz, Mission Mangal, and Chhichhore all delivered strong ROI on disciplined budgets. Saaho's ₹350 Cr budget vs ₹149 Cr Hindi return was the Disaster that ended an era of unchecked budget inflation — right before COVID arrived and reset everything."
     },
     "films": [
       {
@@ -68,10 +68,11 @@
         "cast": "Salman Khan, Katrina Kaif, Sunil Grover",
         "releaseDate": "2019-06-05",
         "indiaNetCr": 197.35,
-        "verdict": "Average",
+        "verdict": "Semi Hit",
         "genre": "Drama",
         "budgetCr": 155,
-        "ottPlatform": "Zee5"
+        "ottPlatform": "Zee5",
+        "dataNote": "₹197 Cr on ₹155 Cr budget (+27% ROI) — decent, underperformed Salman expectations"
       },
       {
         "rank": 6,
@@ -133,10 +134,11 @@
         "cast": "Prabhas, Shraddha Kapoor, Jackie Shroff",
         "releaseDate": "2019-08-30",
         "indiaNetCr": 148.84,
-        "verdict": "Average",
+        "verdict": "Disaster",
         "genre": "Action",
         "budgetCr": 350,
-        "ottPlatform": "Amazon Prime"
+        "ottPlatform": "Amazon Prime",
+        "dataNote": "₹149 Cr Hindi India on ₹350 Cr budget (-57% ROI) — catastrophic loss"
       },
       {
         "rank": 11,
@@ -211,7 +213,7 @@
       "avgATP": 125,
       "topGrosser": "Sanju",
       "era": "GST",
-      "note": "Sanju became the first Bollywood solo (non-franchise) film to cross ₹300 Cr. Padmaavat overcame controversy to post ₹282 Cr. Stree and Badhaai Ho overperformed budgets massively."
+      "note": "Sanju at ₹341 Cr was Hirani and Ranbir Singh firing together. Padmaavat overcame a months-long controversy to deliver ₹282 Cr. Stree on ₹25 Cr to ₹125 Cr invented the modern horror-comedy — the formula that would lead to Stree 2. Badhaai Ho on ₹23 Cr to ₹134 Cr was the year's most efficient blockbuster. Thugs of Hindostan and 2.0 — two massive budgets, two theatrical disasters — taught the industry that scale without story is the most expensive mistake."
     },
     "films": [
       {
@@ -261,10 +263,11 @@
         "cast": "Rajinikanth, Akshay Kumar, Amy Jackson",
         "releaseDate": "2018-11-29",
         "indiaNetCr": 185.89,
-        "verdict": "Super Hit",
+        "verdict": "Flop",
         "genre": "Sci-Fi/Action",
         "budgetCr": 543,
-        "ottPlatform": "Amazon Prime"
+        "ottPlatform": "Amazon Prime",
+        "dataNote": "₹186 Cr India all-lang on ₹543 Cr budget (-66% ROI) — theatrical Flop"
       },
       {
         "rank": 5,
@@ -417,7 +420,7 @@
       "avgATP": 134,
       "topGrosser": "Bahubali 2",
       "era": "GST (from Jul 2017)",
-      "note": "Bahubali 2 created history at ₹510 Cr India nett — still the all-time Bollywood/Indian record for a non-Bollywood film crossing ₹500 Cr. Tiger Zinda Hai became Salman's biggest film at ₹339 Cr."
+      "note": "Baahubali 2 at ₹511 Cr Hindi India nett was a civilisational event — the first film to make ₹500 Cr look small. Tiger Zinda Hai at ₹339 Cr in December showed YRF's franchise mastery. Tubelight's failure proved Salman Khan's star power had a ceiling when content failed. Secret Superstar at ₹770 Cr in China on a ₹30 Cr India budget was the first preview of Indian cinema's global commercial ambition. Raees, Jolly LLB 2, Hindi Medium — the mid-budget formula was consistently delivering in 2017."
     },
     "films": [
       {
@@ -493,10 +496,11 @@
         "cast": "Shah Rukh Khan, Mahira Khan, Nawazuddin Siddiqui",
         "releaseDate": "2017-01-25",
         "indiaNetCr": 128.78,
-        "verdict": "Average",
+        "verdict": "Hit",
         "genre": "Crime/Action",
         "budgetCr": 90,
-        "ottPlatform": "Netflix"
+        "ottPlatform": "Netflix",
+        "dataNote": "₹129 Cr on ₹90 Cr budget (+43% ROI) — trade consensus Hit"
       },
       {
         "rank": 7,
@@ -506,10 +510,11 @@
         "cast": "Salman Khan, Sohail Khan, Zhu Zhu",
         "releaseDate": "2017-06-23",
         "indiaNetCr": 114.57,
-        "verdict": "Disaster",
+        "verdict": "Flop",
         "genre": "Drama/War",
         "budgetCr": 145,
-        "ottPlatform": "Amazon Prime"
+        "ottPlatform": "Amazon Prime",
+        "dataNote": "₹115 Cr on ₹145 Cr budget (-21% ROI) — Flop; Disaster implies -40%+"
       },
       {
         "rank": 8,
@@ -571,10 +576,11 @@
         "cast": "Ajay Devgn, Emraan Hashmi, Ileana D'Cruz",
         "releaseDate": "2017-09-01",
         "indiaNetCr": 65.78,
-        "verdict": "Average",
+        "verdict": "Flop",
         "genre": "Action/Thriller",
         "budgetCr": 90,
-        "ottPlatform": "Disney+ Hotstar"
+        "ottPlatform": "Disney+ Hotstar",
+        "dataNote": "₹66 Cr on ₹90 Cr budget (-27% ROI) — significant loss"
       },
       {
         "rank": 13,
@@ -597,10 +603,11 @@
         "cast": "Aamir Khan, Zaira Wasim, Meher Vij",
         "releaseDate": "2017-10-19",
         "indiaNetCr": 62.63,
-        "verdict": "Average",
+        "verdict": "Super Hit",
         "genre": "Drama/Music",
         "budgetCr": 30,
-        "ottPlatform": "Disney+ Hotstar"
+        "ottPlatform": "Disney+ Hotstar",
+        "dataNote": "₹63 Cr on ₹30 Cr budget (+109% ROI) + ₹770 Cr China = Super Hit"
       },
       {
         "rank": 15,
@@ -623,7 +630,7 @@
       "avgATP": 132,
       "topGrosser": "Dangal",
       "era": "Entertainment Tax",
-      "note": "Dangal crossed ₹374 Cr making it India's #2 all-time behind Baahubali 2 at the time. Sultan ₹300 Cr. Kabali (Rajinikanth, Tamil) and Vikram Vedha (Tamil) are major South films not fully tracked by BOI."
+      "note": "Dangal at ₹387 Cr India nett. ₹2,070 Cr worldwide with China. The greatest Hindi box office performance of all time — until 2026. Sultan crossed ₹300 Cr. Rustom and Airlift both delivered 140%+ ROI on modest budgets. 2016 was Bollywood's best year to date — content-driven and star-driven cinema both thriving. Fan and Shivaay proved even the biggest stars couldn't rescue weak content."
     },
     "films": [
       {
@@ -713,10 +720,11 @@
         "cast": "Akshay Kumar, Riteish Deshmukh, Abhishek Bachchan",
         "releaseDate": "2016-06-03",
         "indiaNetCr": 108.07,
-        "verdict": "Hit",
+        "verdict": "Average",
         "genre": "Comedy",
         "budgetCr": 115,
-        "ottPlatform": "Zee5"
+        "ottPlatform": "Zee5",
+        "dataNote": "₹108 Cr on ₹115 Cr budget (-6% ROI) — below break-even theatrically"
       },
       {
         "rank": 8,
@@ -726,10 +734,11 @@
         "cast": "Ranbir Kapoor, Anushka Sharma, Aishwarya Rai",
         "releaseDate": "2016-10-28",
         "indiaNetCr": 106.48,
-        "verdict": "Hit",
+        "verdict": "Average",
         "genre": "Romance/Drama",
         "budgetCr": 110,
-        "ottPlatform": "Netflix"
+        "ottPlatform": "Netflix",
+        "dataNote": "₹106 Cr on ₹110 Cr budget (-3% ROI) — marginally below break-even"
       },
       {
         "rank": 9,
@@ -831,7 +840,7 @@
       "avgATP": 126,
       "topGrosser": "Bajrangi Bhaijaan",
       "era": "Entertainment Tax",
-      "note": "Bajrangi Bhaijaan crossed ₹315 Cr — only Baahubali 2 (2017) has surpassed it since. Bahubali: The Beginning was a crossover success at ₹119 Cr. Prem Ratan Dhan Payo ₹194 Cr, Bajirao Mastani ₹183 Cr in December blockbuster clash."
+      "note": "Bajrangi Bhaijaan at ₹315 Cr was the emotional blockbuster that proved Bollywood could be mass and meaningful simultaneously. Prem Ratan Dhan Payo and Bajirao Mastani — two genuine Blockbusters — arrived in the same fortnight. Tanu Weds Manu Returns on ₹35 Cr to ₹149 Cr was the mid-budget miracle of the year. Baahubali: The Beginning's ₹119 Cr Hindi nett obscured the full picture: the Telugu version was quietly rewriting the rules of pan-India cinema."
     },
     "films": [
       {
@@ -855,10 +864,11 @@
         "cast": "Salman Khan, Sonam Kapoor, Neil Nitin Mukesh",
         "releaseDate": "2015-11-12",
         "indiaNetCr": 194.31,
-        "verdict": "Hit",
+        "verdict": "Blockbuster",
         "genre": "Romance/Drama",
         "budgetCr": 100,
-        "ottPlatform": "Amazon Prime"
+        "ottPlatform": "Amazon Prime",
+        "dataNote": "₹194 Cr on ₹100 Cr budget (+94% ROI) — clear Blockbuster"
       },
       {
         "rank": 3,
@@ -868,10 +878,11 @@
         "cast": "Ranveer Singh, Deepika Padukone, Priyanka Chopra",
         "releaseDate": "2015-12-18",
         "indiaNetCr": 183.75,
-        "verdict": "Hit",
+        "verdict": "Blockbuster",
         "genre": "Historical/Romance",
         "budgetCr": 120,
-        "ottPlatform": "Netflix"
+        "ottPlatform": "Netflix",
+        "dataNote": "₹184 Cr on ₹120 Cr budget (+53% ROI) — trade verdict Blockbuster"
       },
       {
         "rank": 4,
@@ -894,10 +905,11 @@
         "cast": "Shah Rukh Khan, Kajol, Varun Dhawan, Kriti Sanon",
         "releaseDate": "2015-12-18",
         "indiaNetCr": 139.98,
-        "verdict": "Semi Hit",
+        "verdict": "Average",
         "genre": "Action/Romance",
         "budgetCr": 140,
-        "ottPlatform": "Amazon Prime"
+        "ottPlatform": "Amazon Prime",
+        "dataNote": "₹140 Cr on ₹140 Cr budget (0% ROI) — break-even"
       },
       {
         "rank": 6,
@@ -1024,10 +1036,11 @@
         "cast": "Ajay Devgn, Tabu, Shriya Saran",
         "releaseDate": "2015-07-31",
         "indiaNetCr": 68.67,
-        "verdict": "Average",
+        "verdict": "Hit",
         "genre": "Thriller/Drama",
         "budgetCr": 40,
-        "ottPlatform": "Zee5"
+        "ottPlatform": "Zee5",
+        "dataNote": "₹69 Cr on ₹40 Cr budget (+72% ROI) — trade called it Hit"
       }
     ]
   },
@@ -1037,7 +1050,7 @@
       "avgATP": 118,
       "topGrosser": "PK",
       "era": "Entertainment Tax",
-      "note": "PK became the first Bollywood solo film to cross ₹300 Cr in India. Aamir Khan dominated with three hits across PK, Dhoom 3 (which released in 2013 but ran into 2014). Kick was Salman's biggest film at the time at ₹211 Cr."
+      "note": "PK at ₹338 Cr shattered the ₹300 Cr barrier. Kick was Salman Khan operating as pure commercial machinery. 2 States and Ek Villain delivered 150-200% ROI on disciplined budgets. Queen on ₹12 Cr to ₹61 Cr — Kangana Ranaut's breakthrough — was the year's most efficient film. Haider showed Shakespeare adaptations could work commercially. The year's lesson: star power and content working together, not instead of each other."
     },
     "films": [
       {
@@ -1126,10 +1139,11 @@
         "cast": "Salman Khan, Tabu, Aditya Pancholi",
         "releaseDate": "2014-01-24",
         "indiaNetCr": 109.36,
-        "verdict": "Flop",
+        "verdict": "Average",
         "genre": "Action/Drama",
         "budgetCr": 100,
-        "ottPlatform": "Amazon Prime"
+        "ottPlatform": "Amazon Prime",
+        "dataNote": "₹109 Cr on ₹100 Cr budget (+9% ROI) — covered costs"
       },
       {
         "rank": 8,
@@ -1165,10 +1179,11 @@
         "cast": "Ranveer Singh, Arjun Kapoor, Priyanka Chopra",
         "releaseDate": "2014-02-14",
         "indiaNetCr": 73.28,
-        "verdict": "Semi Hit",
+        "verdict": "Flop",
         "genre": "Action/Drama",
         "budgetCr": 90,
-        "ottPlatform": "Zee5"
+        "ottPlatform": "Zee5",
+        "dataNote": "₹73 Cr on ₹90 Cr budget (-19% ROI) — lost money"
       },
       {
         "rank": 11,
@@ -1191,10 +1206,11 @@
         "cast": "Akshay Kumar, Tamannaah, Mithun Chakraborty",
         "releaseDate": "2014-08-08",
         "indiaNetCr": 64.3,
-        "verdict": "Flop",
+        "verdict": "Below Average",
         "genre": "Comedy",
         "budgetCr": 70,
-        "ottPlatform": "Amazon Prime"
+        "ottPlatform": "Amazon Prime",
+        "dataNote": "₹64 Cr on ₹70 Cr budget (-8% ROI) — small loss, not Flop threshold"
       },
       {
         "rank": 13,
@@ -1230,10 +1246,11 @@
         "cast": "Shahid Kapoor, Tabu, Shraddha Kapoor",
         "releaseDate": "2014-10-02",
         "indiaNetCr": 49.19,
-        "verdict": "Average",
+        "verdict": "Hit",
         "genre": "Thriller/Drama",
         "budgetCr": 35,
-        "ottPlatform": "Amazon Prime"
+        "ottPlatform": "Amazon Prime",
+        "dataNote": "₹49 Cr on ₹35 Cr budget (+41% ROI) — critical darling and profitable"
       }
     ]
   },
@@ -1243,7 +1260,7 @@
       "avgATP": 110,
       "topGrosser": "Dhoom 3",
       "era": "Entertainment Tax",
-      "note": "Dhoom 3 crossed ₹260 Cr — first Bollywood film to do so. Chennai Express ₹207 Cr was SRK's biggest. Yeh Jawaani Hai Deewani and Krrish 3 both crossed ₹175 Cr. Aashiqui 2 was the surprise blockbuster of the year."
+      "note": "Dhoom 3 crossed ₹260 Cr — a number that felt impossible for Hindi cinema. Chennai Express was mass commercial cinema at its absolute loudest and most profitable. Aashiqui 2 on ₹14 Cr to ₹78 Cr was a phenomenon carried entirely on music. Grand Masti on ₹15 Cr to ₹92 Cr revealed the massive untapped appetite for adult comedy. Seven films crossed ₹100 Cr for the first time — the ₹100 Cr mark was no longer exceptional, it was the new entry ticket."
     },
     "films": [
       {
@@ -1345,10 +1362,11 @@
         "cast": "Riteish Deshmukh, Vivek Oberoi, Aftab Shivdasani",
         "releaseDate": "2013-09-13",
         "indiaNetCr": 91.66,
-        "verdict": "Super Hit",
+        "verdict": "Blockbuster",
         "genre": "Comedy/Adult",
         "budgetCr": 15,
-        "ottPlatform": "ZEE5"
+        "ottPlatform": "ZEE5",
+        "dataNote": "₹92 Cr on ₹15 Cr budget (+511% ROI) — must be Blockbuster at this multiple"
       },
       {
         "rank": 9,
@@ -1436,10 +1454,11 @@
         "cast": "Sushant Singh Rajput, Raj Kumar Yadav, Amit Sadh",
         "releaseDate": "2013-02-22",
         "indiaNetCr": 43.58,
-        "verdict": "Semi Hit",
+        "verdict": "Hit",
         "genre": "Drama/Sports",
         "budgetCr": 30,
-        "ottPlatform": "Zee5"
+        "ottPlatform": "Zee5",
+        "dataNote": "₹44 Cr on ₹30 Cr budget (+45% ROI) — solidly profitable"
       }
     ]
   },
@@ -1449,7 +1468,7 @@
       "avgATP": 102,
       "topGrosser": "Ek Tha Tiger",
       "era": "Entertainment Tax",
-      "note": "Ek Tha Tiger ₹186 Cr set a new record. Salman and Dabangg 2 both crushed. This was the year of Barfi! winning hearts, OMG winning wallets, and Kahaani becoming one of Indian cinema's best thrillers."
+      "note": "Ek Tha Tiger opened what would become the YRF spy universe. Dabangg 2 proved sequels could match originals. Barfi! delivered Ranbir Kapoor's finest work and India's first arthouse blockbuster. Kahaani on ₹8 Cr reaching ₹58 Cr — a thriller with a female lead and no songs charting — remains one of Bollywood's greatest efficiency stories. Four films crossed ₹100 Cr. The industry had never seen such density at the top."
     },
     "films": [
       {
@@ -1564,10 +1583,11 @@
         "cast": "Aamir Khan, Rani Mukerji, Kareena Kapoor",
         "releaseDate": "2012-11-30",
         "indiaNetCr": 91.24,
-        "verdict": "Semi Hit",
+        "verdict": "Hit",
         "genre": "Thriller/Mystery",
         "budgetCr": 70,
-        "ottPlatform": "Zee5"
+        "ottPlatform": "Zee5",
+        "dataNote": "₹91 Cr on ₹70 Cr budget (+30% ROI) — trade called it Hit; satellite further recovered"
       },
       {
         "rank": 10,
@@ -1655,7 +1675,7 @@
       "avgATP": 95,
       "topGrosser": "Bodyguard",
       "era": "Entertainment Tax",
-      "note": "Bodyguard ₹144 Cr was the biggest of the year. Ready ₹120 Cr made Salman and Ajay Devgn the undisputed mass entertainers of the era. ZNMD became an iconic travel film. Ra.One was SRK's ambitious sci-fi attempt."
+      "note": "Eid 2011 belonged to Bodyguard. ₹140 Cr in a week rewrote what a first week could look like. Ready proved Salman was a franchise by himself. Ra.One proved SRK's ₹150 Cr VFX bet was a risk too far — India theatrics didn't recover the investment. The Dirty Picture delivered Vidya Balan's career-defining performance and 150%+ ROI. Delhi Belly launched Aamir's niche multiplex play. 2011 was the year the India-overseas revenue split began mattering differently for different stars."
     },
     "films": [
       {
@@ -1692,10 +1712,11 @@
         "cast": "Shah Rukh Khan, Kareena Kapoor, Arjun Rampal",
         "releaseDate": "2011-10-26",
         "indiaNetCr": 113.95,
-        "verdict": "Hit",
+        "verdict": "Flop",
         "genre": "Action/Sci-Fi",
         "budgetCr": 150,
-        "ottPlatform": "Amazon Prime"
+        "ottPlatform": "Amazon Prime",
+        "dataNote": "₹114 Cr on ₹150 Cr budget (-24% ROI) — VFX overspend not recovered theatrically"
       },
       {
         "rank": 4,
@@ -1861,7 +1882,7 @@
       "avgATP": 89,
       "topGrosser": "Dabangg",
       "era": "Entertainment Tax",
-      "note": "Dabangg launched Salman Khan's mass commercial empire at ₹141 Cr. My Name Is Khan was SRK's biggest overseas earner. Raajneeti proved political films could work. Golmaal 3 delivered Diwali gold for Rohit Shetty."
+      "note": "The year Salman Khan became commercially untouchable. Dabangg at ₹141 Cr invented the modern mass entertainer — loud, proud, unapologetically populist. My Name Is Khan was SRK's overseas-first gamble that stumbled at home. Peepli Live at ₹29 Cr on ₹5 Cr budget proved sharp writing was its own box office strategy. The ₹100 Cr club had just three members this year — and each earned it the hard way."
     },
     "films": [
       {
@@ -1911,10 +1932,11 @@
         "cast": "Shah Rukh Khan, Kajol, Jimmy Shergill",
         "releaseDate": "2010-02-12",
         "indiaNetCr": 72.83,
-        "verdict": "Hit",
+        "verdict": "Average",
         "genre": "Drama",
         "budgetCr": 90,
-        "ottPlatform": "Amazon Prime"
+        "ottPlatform": "Amazon Prime",
+        "dataNote": "₹73 Cr on ₹90 Cr budget India (-19% ROI) — overseas giant, India underperformed"
       },
       {
         "rank": 5,
