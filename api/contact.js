@@ -30,13 +30,13 @@ export default async function handler(req, res) {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        from: "Boxoffy Contact <contact@boxoffy.com>",
+        from: "Boxoffy <info@boxoffy.com>",
         to:   ["info@boxoffy.com"],
         reply_to: email,
-        subject: `Boxoffy Contact: ${name}`,
+        subject: `Boxoffy Enquiry: ${name}`,
         html: `
           <div style="font-family: sans-serif; max-width: 600px; padding: 24px;">
-            <h2 style="color: #EF4444; margin-bottom: 4px;">New Contact Form Submission</h2>
+            <h2 style="color: #C8201A; margin-bottom: 4px;">New Contact Form Submission</h2>
             <p style="color: #6B7280; font-size: 13px; margin-top: 0;">via boxoffy.com</p>
             <hr style="border: 1px solid #E5E7EB; margin: 16px 0;" />
             <table style="width: 100%; border-collapse: collapse;">
@@ -55,10 +55,10 @@ export default async function handler(req, res) {
             </table>
             <hr style="border: 1px solid #E5E7EB; margin: 16px 0;" />
             <p style="font-weight: 700; color: #111827; margin-bottom: 8px;">Message</p>
-            <div style="background: #F9FAFB; border-left: 3px solid #EF4444; padding: 16px; color: #374151; line-height: 1.6;">
+            <div style="background: #F9FAFB; border-left: 3px solid #C8201A; padding: 16px; color: #374151; line-height: 1.6;">
               ${message.replace(/\n/g, "<br/>")}
             </div>
-            <p style="font-size: 11px; color: #9CA3AF; margin-top: 24px;">Sent from boxoffy.com contact form</p>
+            <p style="font-size: 11px; color: #9CA3AF; margin-top: 24px;">Sent via boxoffy.com contact form · Reply directly to this email to respond to ${name}</p>
           </div>
         `,
       }),
@@ -67,10 +67,11 @@ export default async function handler(req, res) {
     if (!response.ok) {
       const err = await response.text();
       console.error("Resend error:", err);
-      return res.status(500).json({ error: "Failed to send email" });
+      return res.status(500).json({ error: "Failed to send email", detail: err });
     }
 
     return res.status(200).json({ success: true });
+
   } catch (err) {
     console.error("Contact handler error:", err);
     return res.status(500).json({ error: "Internal server error" });

@@ -3088,16 +3088,17 @@ function USBoTop10({ weekData }) {
         /* Mobile card */
         <div key={i} style={{
           borderBottom:`1px solid ${T.border}`,
-          background: film.rank === 1 ? "#FFFDF5" : T.surface,
+          background: film.isIndian ? "#FFFBF0" : film.rank === 1 ? "#FFFDF5" : T.surface,
           padding:"11px 14px",
-          borderLeft: film.rank === 1 ? `3px solid ${T.accent}` : "3px solid transparent",
+          borderLeft: film.isIndian ? "3px solid #D97706" : film.rank === 1 ? `3px solid ${T.accent}` : "3px solid transparent",
         }}>
           <div style={{ display:"flex", justifyContent:"space-between", alignItems:"flex-start", marginBottom:5 }}>
             <div style={{ display:"flex", alignItems:"center", gap:8 }}>
               {film.rank <= 3
                 ? <span style={{ fontSize:20 }}>{["🥇","🥈","🥉"][film.rank-1]}</span>
-                : <span style={{ fontFamily:"'Barlow Condensed',sans-serif", fontWeight:700, fontSize:18, color:getRankColor(film.rank) }}>#{film.rank}</span>
+                : <span style={{ fontFamily:"'Barlow Condensed',sans-serif", fontWeight:700, fontSize:18, color:film.isIndian ? "#D97706" : getRankColor(film.rank) }}>#{film.rank}</span>
               }
+              {film.isIndian && <span style={{ fontSize:13 }}>🇮🇳</span>}
               <span style={{ fontFamily:"'DM Sans',sans-serif", fontSize:10, color:getChangeColor(film.change), fontWeight:700 }}>
                 {film.change === "NEW" ? "★ NEW" : film.change === "LTD" ? "LIMITED" : film.change}
               </span>
@@ -3106,9 +3107,9 @@ function USBoTop10({ weekData }) {
               <span style={{ fontFamily:"'DM Sans',sans-serif", fontSize:10, color:"#DC2626", fontWeight:700 }}>🍅 {film.rtScore}</span>
             )}
           </div>
-          <div style={{ fontFamily:"'Barlow Condensed',sans-serif", fontWeight:700, fontSize:18, color:T.text, lineHeight:1.1, marginBottom:5 }}>{film.title}</div>
+          <div style={{ fontFamily:"'Barlow Condensed',sans-serif", fontWeight:700, fontSize:18, color: film.isIndian ? "#92400E" : T.text, lineHeight:1.1, marginBottom:5 }}>{film.title}</div>
           <div style={{ display:"flex", gap:14, alignItems:"center", flexWrap:"wrap", marginBottom:4 }}>
-            <span style={{ fontFamily:"'Barlow Condensed',sans-serif", fontWeight:800, fontSize:21, color: film.rank === 1 ? T.accent : T.text }}>{film.weekend}</span>
+            <span style={{ fontFamily:"'Barlow Condensed',sans-serif", fontWeight:800, fontSize:21, color: film.rank === 1 ? T.accent : film.isIndian ? "#D97706" : T.text }}>{film.weekend}</span>
             <span style={{ fontFamily:"'DM Sans',sans-serif", fontSize:11, color:T.textMuted }}>Total: {film.total}</span>
             <span style={{ fontFamily:"'DM Sans',sans-serif", fontSize:11, color:T.textMuted }}>{film.theaters.toLocaleString()} thtr</span>
           </div>
@@ -3120,14 +3121,15 @@ function USBoTop10({ weekData }) {
           display:"grid",
           gridTemplateColumns:"36px 28px 1fr 100px 110px 80px 70px 60px",
           borderBottom:`1px solid ${T.border}`,
-          background: film.rank === 1 ? "#FFFDF5" : i % 2 === 0 ? T.surface : "#FAFAF9",
+          background: film.isIndian ? "#FFFBF0" : film.rank === 1 ? "#FFFDF5" : i % 2 === 0 ? T.surface : "#FAFAF9",
           alignItems:"center",
           minHeight:48,
+          borderLeft: film.isIndian ? "3px solid #D97706" : "none",
         }}>
           <div style={{ textAlign:"center", padding:"0 4px" }}>
             {film.rank <= 3
               ? <span style={{ fontSize:18 }}>{["🥇","🥈","🥉"][film.rank-1]}</span>
-              : <span style={{ fontFamily:"'Barlow Condensed',sans-serif", fontWeight:700, fontSize:18, color:getRankColor(film.rank) }}>#{film.rank}</span>
+              : <span style={{ fontFamily:"'Barlow Condensed',sans-serif", fontWeight:700, fontSize:18, color: film.isIndian ? "#D97706" : getRankColor(film.rank) }}>#{film.rank}</span>
             }
           </div>
           <div style={{ textAlign:"center", padding:"0 2px" }}>
@@ -3136,7 +3138,10 @@ function USBoTop10({ weekData }) {
             </span>
           </div>
           <div style={{ padding:"8px 12px" }}>
-            <div style={{ fontFamily:"'Barlow Condensed',sans-serif", fontWeight:700, fontSize:15, color:T.text, lineHeight:1.1 }}>{film.title}</div>
+            <div style={{ display:"flex", alignItems:"center", gap:5 }}>
+              {film.isIndian && <span style={{ fontSize:12, lineHeight:1 }}>🇮🇳</span>}
+              <div style={{ fontFamily:"'Barlow Condensed',sans-serif", fontWeight:700, fontSize:15, color: film.isIndian ? "#92400E" : T.text, lineHeight:1.1 }}>{film.title}</div>
+            </div>
             <div style={{ display:"flex", gap:6, marginTop:2, alignItems:"center", flexWrap:"wrap" }}>
               <span style={{ fontFamily:"'DM Sans',sans-serif", fontSize:10, color:T.textMuted }}>{film.studio}</span>
               <span style={{ background:"#F3F4F6", border:`1px solid ${T.border}`, fontFamily:"'DM Sans',sans-serif", fontSize:9, color:T.textMuted, padding:"1px 5px", borderRadius:2 }}>{film.genre}</span>
@@ -3144,7 +3149,7 @@ function USBoTop10({ weekData }) {
             </div>
           </div>
           <div style={{ padding:"0 8px", textAlign:"right" }}>
-            <div style={{ fontFamily:"'Barlow Condensed',sans-serif", fontWeight:700, fontSize:17, color: film.rank === 1 ? T.accent : T.text }}>{film.weekend}</div>
+            <div style={{ fontFamily:"'Barlow Condensed',sans-serif", fontWeight:700, fontSize:17, color: film.isIndian ? "#D97706" : film.rank === 1 ? T.accent : T.text }}>{film.weekend}</div>
             <div style={{ fontFamily:"'DM Sans',sans-serif", fontSize:9, color:T.textMuted, marginTop:1 }}>Wk {film.weeks} · {film.theaters.toLocaleString()} thtr</div>
           </div>
           <div style={{ padding:"0 8px", textAlign:"right" }}>
@@ -3163,6 +3168,65 @@ function USBoTop10({ weekData }) {
           </div>
         </div>
       ))}
+
+      {/* India Spotlight — Indian films ranked outside the top 10 */}
+      {weekData.indianSpotlight && weekData.indianSpotlight.length > 0 && (
+        <div>
+          <div style={{ background:"#FFFBF0", borderTop:`2px solid #D97706`, borderBottom:`1px solid #FDE68A`, padding:"6px 16px", display:"flex", alignItems:"center", gap:8 }}>
+            <span style={{ fontSize:14 }}>🇮🇳</span>
+            <span style={{ fontFamily:"'Barlow Condensed',sans-serif", fontWeight:900, fontSize:11, letterSpacing:"0.18em", textTransform:"uppercase", color:"#92400E" }}>India at the US Box Office</span>
+            <span style={{ fontFamily:"'DM Sans',sans-serif", fontSize:9, color:"#B45309" }}>— ranked outside top 10, shown separately</span>
+          </div>
+          {weekData.indianSpotlight.map((film, i) => isMobile ? (
+            <div key={i} style={{ borderBottom:`1px solid #FDE68A`, background:"#FFFBF0", padding:"11px 14px", borderLeft:"3px solid #D97706" }}>
+              <div style={{ display:"flex", alignItems:"center", gap:8, marginBottom:4 }}>
+                <span style={{ fontFamily:"'Barlow Condensed',sans-serif", fontWeight:900, fontSize:16, color:"#D97706" }}>#{film.rank}</span>
+                <span style={{ fontSize:13 }}>🇮🇳</span>
+                <span style={{ fontFamily:"'DM Sans',sans-serif", fontSize:10, color:getChangeColor(film.change), fontWeight:700 }}>{film.change === "NEW" ? "★ NEW" : film.change}</span>
+              </div>
+              <div style={{ fontFamily:"'Barlow Condensed',sans-serif", fontWeight:700, fontSize:18, color:"#92400E", marginBottom:4 }}>{film.title}</div>
+              <div style={{ display:"flex", gap:12, flexWrap:"wrap" }}>
+                <span style={{ fontFamily:"'Barlow Condensed',sans-serif", fontWeight:800, fontSize:18, color:"#D97706" }}>{film.weekend}</span>
+                <span style={{ fontFamily:"'DM Sans',sans-serif", fontSize:11, color:"#92400E" }}>Total: {film.total}</span>
+                <span style={{ fontFamily:"'DM Sans',sans-serif", fontSize:11, color:"#92400E" }}>{film.theaters} thtr</span>
+              </div>
+              <div style={{ fontFamily:"'DM Sans',sans-serif", fontSize:10, color:"#B45309", marginTop:4 }}>{film.admitsNote}</div>
+            </div>
+          ) : (
+            <div key={i} style={{ display:"grid", gridTemplateColumns:"36px 28px 1fr 100px 110px 80px 70px 60px", borderBottom:`1px solid #FDE68A`, background:"#FFFBF0", alignItems:"center", minHeight:48, borderLeft:"3px solid #D97706" }}>
+              <div style={{ textAlign:"center", padding:"0 4px" }}>
+                <span style={{ fontFamily:"'Barlow Condensed',sans-serif", fontWeight:700, fontSize:18, color:"#D97706" }}>#{film.rank}</span>
+              </div>
+              <div style={{ textAlign:"center" }}><span style={{ fontSize:13 }}>🇮🇳</span></div>
+              <div style={{ padding:"8px 12px" }}>
+                <div style={{ fontFamily:"'Barlow Condensed',sans-serif", fontWeight:700, fontSize:15, color:"#92400E" }}>{film.title}</div>
+                <div style={{ display:"flex", gap:6, marginTop:2 }}>
+                  <span style={{ fontFamily:"'DM Sans',sans-serif", fontSize:10, color:"#B45309" }}>{film.studio}</span>
+                  <span style={{ background:"#FEF3C7", border:"1px solid #FDE68A", fontFamily:"'DM Sans',sans-serif", fontSize:9, color:"#92400E", padding:"1px 5px", borderRadius:2 }}>{film.genre}</span>
+                </div>
+              </div>
+              <div style={{ padding:"0 8px", textAlign:"right" }}>
+                <div style={{ fontFamily:"'Barlow Condensed',sans-serif", fontWeight:700, fontSize:17, color:"#D97706" }}>{film.weekend}</div>
+                <div style={{ fontFamily:"'DM Sans',sans-serif", fontSize:9, color:"#B45309", marginTop:1 }}>Wk {film.weeks} · {film.theaters} thtr</div>
+              </div>
+              <div style={{ padding:"0 8px", textAlign:"right" }}>
+                <div style={{ fontFamily:"'Barlow Condensed',sans-serif", fontWeight:700, fontSize:15, color:"#92400E" }}>{film.total}</div>
+                <div style={{ fontFamily:"'DM Sans',sans-serif", fontSize:9, color:"#B45309", marginTop:1 }}>NA Cumulative</div>
+              </div>
+              <div style={{ padding:"0 8px", textAlign:"right" }}>
+                <div style={{ fontFamily:"'Barlow Condensed',sans-serif", fontWeight:600, fontSize:14, color:"#92400E" }}>{film.theaters}</div>
+                <div style={{ fontFamily:"'DM Sans',sans-serif", fontSize:9, color:"#B45309" }}>Locations</div>
+              </div>
+              <div style={{ padding:"0 8px", textAlign:"right" }}>
+                <span style={{ fontFamily:"'Barlow Condensed',sans-serif", fontWeight:700, fontSize:13, color:getChangeColor(film.change) }}>{film.change}</span>
+              </div>
+              <div style={{ padding:"0 8px", textAlign:"right" }}>
+                <div style={{ fontFamily:"'DM Sans',sans-serif", fontSize:10, color:"#B45309", lineHeight:1.3 }}>{film.admitsNote}</div>
+              </div>
+            </div>
+          ))}
+        </div>
+      )}
 
       {/* Footer */}
       <div style={{ padding:"8px 16px", background:"#F9FAFB", borderTop:`1px solid ${T.border}`, display:"flex", alignItems:"center", gap:12, flexWrap:"wrap" }}>

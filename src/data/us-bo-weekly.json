@@ -41,7 +41,8 @@
         "change": "NEW",
         "weeks": 1,
         "rtScore": "N/A",
-        "admitsNote": "$14.02M 5-day extended ✅ (Venky BO/Deadline/Variety) · $10M 3-day · $1.05M Monday (all-time Indian film NA Mon record) · ~$1.3M Tuesday · ~$16.49M through D7 Wed (TheWeek) · D8 Thu Boxoffy call: ~$0.70M · Running ~$17.2M · Baahubali 2 NA lifetime ($22M) in Week 2 range"
+        "admitsNote": "$14.02M 5-day extended ✅ (Venky BO/Deadline/Variety) · $10M 3-day · $1.05M Monday (all-time Indian film NA Mon record) · ~$1.3M Tuesday · ~$16.49M through D7 Wed (TheWeek) · D8 Thu Boxoffy call: ~$0.70M · Running ~$17.2M · Baahubali 2 NA lifetime ($22M) in Week 2 range",
+        "isIndian": true
       },
       {
         "rank": 4,
@@ -134,7 +135,8 @@
         "rtScore": "78%",
         "admitsNote": "~33K · Winding down — $83M+ domestic run"
       }
-    ]
+    ],
+    "indianSpotlight": []
   },
   "Week 14, 2026": {
     "dateRange": "Mar 27–29, 2026",
@@ -191,7 +193,8 @@
         "change": "-53%",
         "weeks": 2,
         "rtScore": "—",
-        "admitsNote": "Second consecutive Top 5 — rare for a Bollywood title · $22.8M 10-day cume is all-time record for Hindi film in North America · beats original Dhurandhar and Baahubali 2 ($20.2M lifetime) · Deadline confirms No. 4 on 987 screens"
+        "admitsNote": "Second consecutive Top 5 — rare for a Bollywood title · $22.8M 10-day cume is all-time record for Hindi film in North America · beats original Dhurandhar and Baahubali 2 ($20.2M lifetime) · Deadline confirms No. 4 on 987 screens",
+        "isIndian": true
       },
       {
         "rank": 5,
@@ -271,7 +274,8 @@
         "rtScore": "—",
         "admitsNote": "IFC's 3rd largest release ever · 1,525 theaters · $1.17M below their comparable openers (Good Boy $2.34M, Dangerous Animals $1.56M) · specialty solid"
       }
-    ]
+    ],
+    "indianSpotlight": []
   },
   "Week 15, 2026": {
     "dateRange": "Apr 3–5, 2026",
@@ -368,7 +372,8 @@
         "change": "-wk3",
         "weeks": 3,
         "rtScore": "N/A",
-        "admitsNote": "$26M NA all-time Bollywood record · 3rd consecutive top-10 finish · strong hold on limited screens · BOI Hindi India ₹887.33 Cr · Boxoffy all-India ~₹925 Cr verified"
+        "admitsNote": "$26M NA all-time Bollywood record · 3rd consecutive top-10 finish · strong hold on limited screens · BOI Hindi India ₹887.33 Cr · Boxoffy all-India ~₹925 Cr verified",
+        "isIndian": true
       },
       {
         "rank": 8,
@@ -409,12 +414,13 @@
         "rtScore": "79%",
         "admitsNote": "6th weekend winding down · $120M domestic milestone crossed · franchise-high domestic for Scream series"
       }
-    ]
+    ],
+    "indianSpotlight": []
   },
   "Week 16, 2026": {
     "dateRange": "Apr 10–12, 2026",
     "status": "weekend-in-progress",
-    "headline": "Super Mario Galaxy Movie #1 Again · $55M Est 2nd Weekend · PHM Crosses $230M · Dacoit US Premieres",
+    "headline": "Super Mario Galaxy #1 Est $55M 2nd Wknd · Dacoit US Premiere D1 $1.1M · PHM $233M+ Domestic · D2 $27M NA Cumulative",
     "source": "Deadline / Exhibitor Relations estimates",
     "chart": [
       {
@@ -497,29 +503,31 @@
       },
       {
         "rank": 7,
-        "title": "Dacoit (US Premiere)",
-        "studio": "PVR INOX / Annapurna",
+        "title": "Dacoit",
+        "studio": "Annapurna / PVR INOX",
         "genre": "Action / Romance",
-        "weekend": "$1.8M*",
-        "total": "$1.8M*",
-        "theaters": 380,
+        "weekend": "$1.1M*",
+        "total": "$1.1M*",
+        "theaters": 280,
         "change": "NEW",
         "weeks": 1,
         "rtScore": "N/A",
-        "admitsNote": "Adivi Sesh · Mrunal Thakur · Anurag Kashyap · Telugu/Hindi · US premiere Apr 9 sold $100K+ · Strong Telugu diaspora turnout expected · India D1 Apr 10 · Budget ₹60 Cr needs ₹65 Cr WW break-even"
+        "admitsNote": "Adivi Sesh + Mrunal Thakur · Telugu/Hindi · US D1 April 10 · India D1 confirmed ₹6.55 Cr (Sacnilk) — career best Adivi Sesh · Telugu-dominant opening (₹5.45 Cr) with Hindi ₹1.1 Cr · WW ₹13.63 Cr D1 · Budget ₹60-80 Cr needs ₹60 Cr WW break-even",
+        "isIndian": true
       },
       {
         "rank": 8,
         "title": "Dhurandhar: The Revenge",
         "studio": "Jio Studios",
         "genre": "Action / Spy",
-        "weekend": "$1.2M*",
+        "weekend": "$0.9M*",
         "total": "$27.0M*",
-        "theaters": 285,
+        "theaters": 265,
         "change": "-40%*",
         "weeks": 4,
         "rtScore": "N/A",
-        "admitsNote": "~$27M cumulative NA — all-time Bollywood record. 4th US weekend on reduced screens. India total ~₹950 Cr BOI canonical D21. Projected lifetime ~$30M NA total. Week 4 India run in progress — ₹1,000 Cr milestone projected Apr 17."
+        "admitsNote": "~$27M cumulative NA — all-time Bollywood record. 4th US weekend on reduced screens. India: Hindi nett ₹1,000+ Cr crossed D24 (Apr 11) · BOI canonical ~₹963 Cr D23 · ₹1,000 Cr BOI canonical call: Apr 17 (D30)",
+        "isIndian": true
       },
       {
         "rank": 9,
@@ -547,6 +555,7 @@
         "rtScore": "72%",
         "admitsNote": "4th weekend · $68M domestic · Franchise entry with modest but profitable run"
       }
-    ]
+    ],
+    "indianSpotlight": []
   }
 }
