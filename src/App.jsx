@@ -3784,6 +3784,7 @@ function getPollState() {
 
 function savePollState(vote) {
   try { localStorage.setItem(POLL_KEY, JSON.stringify({ vote, ts: Date.now() })); } catch {}
+  try { if (window.gtag) window.gtag("event", "poll_vote", { poll_id: "bb_theaters_2026", poll_answer: vote }); } catch {}
 }
 
 function usePollCounts() {
