@@ -1,5 +1,60 @@
 [
   {
+    "weekNum": 17,
+    "dateRange": "Apr 17–23, 2026",
+    "headline": "Bhooth Bangla D1 Tonight. D2 BOI Canonical ₹1,000 Cr Watch. Dacoit Struggles.",
+    "subline": "D2 BOI canonical ~₹983 Cr D26 · D30 Apr 17 our ₹1,000 Cr call · BB previews 9PM tonight · Dacoit D5 trajectory: Flop",
+    "status": "live",
+    "scoreboard": [
+      {
+        "title": "Dhurandhar: The Revenge",
+        "day": "D27",
+        "collection": "~₹983 Cr",
+        "note": "BOI canonical · Sacnilk all-lang ₹1,088 Cr D26 · WW ₹1,718 Cr · ₹1,000 Cr BOI watch Apr 17-18",
+        "verdict": "ALL-TIME BLOCKBUSTER"
+      },
+      {
+        "title": "Bhooth Bangla",
+        "day": "Previews",
+        "collection": "—",
+        "note": "Apr 16 9PM previews · Apr 17 full release · D1 call ₹15.8 Cr · Actuals reported Friday",
+        "verdict": "Verdict Friday"
+      },
+      {
+        "title": "Project Hail Mary",
+        "day": "D20",
+        "collection": "~₹56 Cr",
+        "note": "India nett D19 confirmed ₹56.12 Cr · WW $520M+ · US domestic $256.7M",
+        "verdict": "HIT"
+      },
+      {
+        "title": "Dacoit",
+        "day": "D5",
+        "collection": "~₹25 Cr",
+        "note": "D4 Mon ₹2.70 Cr · 60%+ weekday drop · Budget ₹60-80 Cr · Flop trajectory",
+        "verdict": "Flop (projected)"
+      },
+      {
+        "title": "Super Mario Galaxy",
+        "day": "D14",
+        "collection": "~₹8 Cr",
+        "note": "WW $628.8M · US #1 2026 · India limited screens",
+        "verdict": "BLOCKBUSTER (WW)"
+      }
+    ],
+    "sources": [
+      "Box Office India",
+      "Sacnilk",
+      "Pinkvilla",
+      "Gold Derby",
+      "Hollywood Reporter",
+      "Comscore",
+      "Box Office Mojo"
+    ],
+    "interval_take": "The week that Dhurandhar 2's stranglehold on the market finally meets its first real challenger. Bhooth Bangla previews begin tonight at 9 PM — the first major new Hindi release in four weeks. Akshay Kumar, Priyadarshan, and the Bhool Bhulaiyaa ensemble arrive with a ₹120 crore budget and a break-even ceiling of ₹184 crore. Boxoffy's four-technique model calls D1 at ₹15.8 crore. Meanwhile, D2's BOI canonical total sits at approximately ₹983 crore through Day 26. Our April 17 (D30) call for BOI canonical ₹1,000 crore certification is now within ₹17 crore — live tracking in the dashboard. Dacoit told its story in four days. The Monday number (₹2.70 crore) after a ₹6.55 crore opening is a Flop trajectory on a ₹60-80 crore budget — it needed sustained WOM and got none. Bhooth Bangla's first weekend will determine whether the post-D2 market has genuinely re-opened or whether audience appetite has been reset to a higher bar.",
+    "nextWeek": "Bhooth Bangla week 1 full verdict · D2 BOI ₹1,000 Cr official certification expected · PHM 4th weekend · South Indian new releases tracking"
+  },
+  {
     "weekNum": 16,
     "dateRange": "Apr 10–16, 2026",
     "headline": "D2 Hindi Nett ₹1,000 Cr Crossed D24. BOI Canonical ~₹963 Cr Through D23. Dacoit D1 ₹6.55 Cr — Career Best.",

@@ -3275,7 +3275,7 @@ function ForeignFilmsPanel({ movies }) {
             </span>
           </div>
           <div style={{ fontFamily:"'DM Sans',sans-serif", fontSize:9, color:T.textMuted, letterSpacing:"0.18em", textTransform:"uppercase", marginTop:2 }}>
-            BOXOFFY · WKD 16 · APR 10–12, 2026
+            BOXOFFY · WKD 17 · APR 17–19, 2026
           </div>
         </div>
 
@@ -3321,7 +3321,7 @@ function ForeignFilmsPanel({ movies }) {
 
       {/* ── Global view: US BO Top 10 ─────────────────────────── */}
       {viewMode === "global"
-        ? <USBoTop10 weekData={US_BO_WEEKLY["Week 15, 2026"]} />
+        ? <USBoTop10 weekData={US_BO_WEEKLY["Week 17, 2026"]} />
         : <>
           {/* ── Column headers ──────────────────────────────────── */}
           <BogColHeaders viewMode={viewMode} />
