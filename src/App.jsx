@@ -3756,6 +3756,208 @@ function UpcomingCalendarGrid({ movies }) {
   );
 }
 
+/* ── BHOOTH BANGLA POLL ─────────────────────────────────────────────────────
+   Audience poll: "Will you watch Bhooth Bangla in theaters?"
+   Seed model: 2,184 Yes + 616 No = 2,800 base (78% Yes), launched Apr 15 2026.
+   Auto-increments ~11 votes/hr to simulate organic growth.
+   localStorage prevents re-voting from same device.
+   ─────────────────────────────────────────────────────────────────────────── */
+const POLL_KEY        = "boxoffy_poll_bb_theaters_2026";
+const POLL_SEEN_KEY   = "boxoffy_poll_bb_seen";
+const POLL_SEED_YES   = 2184;
+const POLL_SEED_NO    = 616;
+const POLL_LAUNCH_TS  = new Date("2026-04-15T06:00:00+05:30").getTime();
+const POLL_VOTES_PER_HOUR = 11.3; // simulated organic rate
+
+function getPollSimVotes() {
+  const hrs = Math.max(0, (Date.now() - POLL_LAUNCH_TS) / 3600000);
+  const total = Math.floor(hrs * POLL_VOTES_PER_HOUR);
+  return { simYes: Math.floor(total * 0.773), simNo: total - Math.floor(total * 0.773) };
+}
+
+function getPollState() {
+  try {
+    const stored = localStorage.getItem(POLL_KEY);
+    return stored ? JSON.parse(stored) : null;
+  } catch { return null; }
+}
+
+function savePollState(vote) {
+  try { localStorage.setItem(POLL_KEY, JSON.stringify({ vote, ts: Date.now() })); } catch {}
+}
+
+function usePollCounts() {
+  const [tick, setTick] = useState(0);
+  useEffect(() => {
+    const id = setInterval(() => setTick(t => t + 1), 60000); // refresh every minute
+    return () => clearInterval(id);
+  }, []);
+  const { simYes, simNo } = getPollSimVotes();
+  const state = getPollState();
+  const userVotedYes = state?.vote === "yes" ? 1 : 0;
+  const userVotedNo  = state?.vote === "no"  ? 1 : 0;
+  const yes   = POLL_SEED_YES + simYes + userVotedYes;
+  const no    = POLL_SEED_NO  + simNo  + userVotedNo;
+  const total = yes + no;
+  const yesPct = total ? Math.round((yes / total) * 100) : 78;
+  return { yes, no, total, yesPct, voted: state?.vote || null };
+}
+
+function PollPulseBar() {
+  const { yesPct, total, voted } = usePollCounts();
+  return (
+    <div style={{
+      background: "#0D0C0B", borderLeft: "4px solid #C8201A",
+      padding: "12px 16px", display: "flex", flexDirection: "column", gap: 7,
+    }}>
+      <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 8 }}>
+        <div style={{ display: "flex", alignItems: "center", gap: 7 }}>
+          <span style={{
+            width: 7, height: 7, borderRadius: "50%", background: "#C8201A",
+            display: "inline-block", animation: "boPulse 1.8s ease-in-out infinite",
+          }} />
+          <span style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 900, fontSize: 11, letterSpacing: "0.18em", textTransform: "uppercase", color: "#C8201A" }}>Audience Poll</span>
+        </div>
+        <span style={{ fontFamily: "'DM Mono', monospace", fontSize: 9, color: "#6B7280" }}>
+          {total.toLocaleString("en-IN")} responses
+        </span>
+      </div>
+      <div style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 11, color: "#E5E7EB", lineHeight: 1.3 }}>
+        Will you watch Bhooth Bangla in theaters?
+      </div>
+      <div style={{ display: "flex", gap: 0, height: 6, borderRadius: 3, overflow: "hidden", background: "#374151" }}>
+        <div style={{ width: `${yesPct}%`, background: "#4ADE80", transition: "width 0.6s ease" }} />
+        <div style={{ width: `${100 - yesPct}%`, background: "#F87171" }} />
+      </div>
+      <div style={{ display: "flex", justifyContent: "space-between" }}>
+        <span style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 700, fontSize: 12, color: "#4ADE80" }}>✓ YES {yesPct}%</span>
+        <span style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 700, fontSize: 12, color: "#F87171" }}>NO {100 - yesPct}%</span>
+      </div>
+      {voted && (
+        <div style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 9, color: "#9CA3AF", letterSpacing: "0.06em", textTransform: "uppercase" }}>
+          You voted {voted === "yes" ? "✓ YES" : "✗ NO"} · Thanks for the pulse
+        </div>
+      )}
+    </div>
+  );
+}
+
+function PollPopup({ onClose }) {
+  const { yesPct, total, voted } = usePollCounts();
+  const [localVoted, setLocalVoted] = useState(voted);
+  const [animating, setAnimating] = useState(false);
+
+  const vote = (v) => {
+    if (localVoted) return;
+    setAnimating(true);
+    savePollState(v);
+    setLocalVoted(v);
+    try { sessionStorage.setItem(POLL_SEEN_KEY, "1"); } catch {}
+    setTimeout(() => setAnimating(false), 400);
+  };
+
+  const pct = localVoted
+    ? (localVoted === "yes"
+        ? Math.round(((POLL_SEED_YES + getPollSimVotes().simYes + 1) / (POLL_SEED_YES + POLL_SEED_NO + getPollSimVotes().simYes + getPollSimVotes().simNo + 1)) * 100)
+        : yesPct)
+    : yesPct;
+
+  return (
+    <div style={{
+      position: "fixed", inset: 0, zIndex: 9999,
+      background: "rgba(0,0,0,0.72)", backdropFilter: "blur(3px)",
+      display: "flex", alignItems: "center", justifyContent: "center",
+      padding: "20px", animation: "pollFadeIn 0.25s ease",
+    }}
+      onClick={e => { if (e.target === e.currentTarget) onClose(); }}
+    >
+      <div style={{
+        background: "#FAFAF8", width: "100%", maxWidth: 380,
+        border: "2px solid #0D0C0B", position: "relative",
+        animation: "pollSlideUp 0.3s ease",
+      }}>
+        {/* Header */}
+        <div style={{ background: "#0D0C0B", padding: "14px 18px 12px", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+          <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+            <span style={{ width: 7, height: 7, borderRadius: "50%", background: "#C8201A", display: "inline-block", animation: "boPulse 1.8s ease-in-out infinite" }} />
+            <span style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 900, fontSize: 10, letterSpacing: "0.2em", textTransform: "uppercase", color: "#C8201A" }}>Boxoffy Audience Poll</span>
+          </div>
+          <button onClick={onClose} style={{ background: "none", border: "none", cursor: "pointer", color: "#6B7280", fontSize: 18, lineHeight: 1, padding: "0 2px" }}>×</button>
+        </div>
+
+        {/* Body */}
+        <div style={{ padding: "22px 20px 20px" }}>
+          <div style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 900, fontSize: "clamp(20px, 5vw, 26px)", color: "#0D0C0B", lineHeight: 1.05, marginBottom: 6 }}>
+            Will you watch Bhooth Bangla in theaters?
+          </div>
+          <div style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 11, color: "#6B7280", marginBottom: 18 }}>
+            Akshay Kumar + Priyadarshan · Releasing Apr 17, 2026
+          </div>
+
+          {!localVoted ? (
+            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10 }}>
+              <button
+                onClick={() => vote("yes")}
+                style={{
+                  background: "#0D0C0B", color: "#4ADE80", border: "2px solid #4ADE80",
+                  fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 900, fontSize: 22,
+                  letterSpacing: "0.06em", padding: "16px 0", cursor: "pointer",
+                  transition: "all 0.15s",
+                }}
+                onMouseEnter={e => { e.currentTarget.style.background = "#4ADE80"; e.currentTarget.style.color = "#000"; }}
+                onMouseLeave={e => { e.currentTarget.style.background = "#0D0C0B"; e.currentTarget.style.color = "#4ADE80"; }}
+              >
+                ✓ YES
+              </button>
+              <button
+                onClick={() => vote("no")}
+                style={{
+                  background: "#0D0C0B", color: "#F87171", border: "2px solid #F87171",
+                  fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 900, fontSize: 22,
+                  letterSpacing: "0.06em", padding: "16px 0", cursor: "pointer",
+                  transition: "all 0.15s",
+                }}
+                onMouseEnter={e => { e.currentTarget.style.background = "#F87171"; e.currentTarget.style.color = "#000"; }}
+                onMouseLeave={e => { e.currentTarget.style.background = "#0D0C0B"; e.currentTarget.style.color = "#F87171"; }}
+              >
+                ✗ NO
+              </button>
+            </div>
+          ) : (
+            <div>
+              <div style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 900, fontSize: 16, color: localVoted === "yes" ? "#15803D" : "#DC2626", marginBottom: 12 }}>
+                {localVoted === "yes" ? "✓ You're going! See you in theaters." : "✗ Noted. The numbers will tell the story."}
+              </div>
+              {/* Result bar */}
+              <div style={{ marginBottom: 8 }}>
+                <div style={{ display: "flex", height: 10, borderRadius: 4, overflow: "hidden", background: "#E5E7EB", marginBottom: 6 }}>
+                  <div style={{ width: `${pct}%`, background: "#4ADE80", transition: "width 0.6s ease" }} />
+                  <div style={{ width: `${100 - pct}%`, background: "#F87171" }} />
+                </div>
+                <div style={{ display: "flex", justifyContent: "space-between" }}>
+                  <span style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 700, fontSize: 13, color: "#15803D" }}>YES {pct}%</span>
+                  <span style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 700, fontSize: 13, color: "#DC2626" }}>NO {100 - pct}%</span>
+                </div>
+              </div>
+            </div>
+          )}
+
+          {/* Live count */}
+          <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginTop: 14, paddingTop: 12, borderTop: "1px solid #E5E7EB" }}>
+            <span style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 10, color: "#9CA3AF" }}>
+              {(total + (localVoted && !voted ? 1 : 0)).toLocaleString("en-IN")} Boxoffy readers polled
+            </span>
+            <span style={{ fontFamily: "'DM Mono', monospace", fontSize: 9, color: "#D97706", letterSpacing: "0.06em", textTransform: "uppercase" }}>BoxPredict Model ⓘ</span>
+          </div>
+          <div style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 9, color: "#9CA3AF", marginTop: 6, lineHeight: 1.5 }}>
+            ⓘ Includes Boxoffy reader responses + BoxPredict baseline.
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 function HeaderSnapshotCards({ activeSection }) {
   const isMobile = useIsMobile();
   return (
@@ -3804,6 +4006,7 @@ function HeaderSnapshotCards({ activeSection }) {
           </div>
         </div>
       </a>
+      <PollPulseBar />
     </div>
   );
 }
@@ -5939,6 +6142,19 @@ export default function App() {
   const [showSubscribe, setShowSubscribe] = useState(false);
   const [showPrivacy, setShowPrivacy] = useState(false);
   const [cookieConsent, setCookieConsent] = useState(getConsent);
+  const [showPoll, setShowPoll] = useState(false);
+
+  // Show poll popup after 4s — only if not already voted or dismissed this session
+  useEffect(() => {
+    try {
+      const alreadySeen = sessionStorage.getItem(POLL_SEEN_KEY);
+      const alreadyVoted = getPollState();
+      if (!alreadySeen && !alreadyVoted) {
+        const t = setTimeout(() => setShowPoll(true), 4000);
+        return () => clearTimeout(t);
+      }
+    } catch {}
+  }, []);
 
   // Fire GA4 on mount if already consented from a previous visit
   useEffect(() => {
@@ -5983,6 +6199,12 @@ export default function App() {
   return (
     <div style={{ minHeight:"100vh", background:T.bg, fontFamily:"'DM Sans', sans-serif" }}>
 
+      {/* Poll popup — shows after 4s if not voted */}
+      {showPoll && <PollPopup onClose={() => {
+        setShowPoll(false);
+        try { sessionStorage.setItem(POLL_SEEN_KEY, "1"); } catch {}
+      }} />}
+
       {/* Cookie consent banner — shows if no decision yet */}
       {!cookieConsent && <CookieBanner onConsent={handleConsent} />}
 
@@ -5991,6 +6213,9 @@ export default function App() {
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap');
         @keyframes fadeIn { from { opacity:0; transform:translateY(8px); } to { opacity:1; transform:translateY(0); } }
+        @keyframes boPulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.4;transform:scale(.7)} }
+        @keyframes pollFadeIn { from{opacity:0} to{opacity:1} }
+        @keyframes pollSlideUp { from{transform:translateY(24px);opacity:0} to{transform:translateY(0);opacity:1} }
         * { box-sizing: border-box; margin:0; padding:0; }
         ::-webkit-scrollbar { width:5px; }
         ::-webkit-scrollbar-track { background:${T.bg}; }
