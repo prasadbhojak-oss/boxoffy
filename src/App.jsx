@@ -5945,6 +5945,18 @@ export default function App() {
     if (getConsent() === "accepted") loadGA4();
   }, []);
 
+  // Dynamic document title per section — helps Google index section-level content
+  useEffect(() => {
+    const titles = {
+      "Box Office":  "India Box Office 2026 — Live Rankings & Verdicts | Boxoffy",
+      "Weekly":      "Weekly Box Office Report India 2026 | Boxoffy",
+      "US Box Office":"Indian Films US Box Office 2026 — Chart & Records | Boxoffy",
+      "Historical":  "Bollywood Box Office History 2010–2026 | Boxoffy",
+      "OTT":         "OTT Releases India 2026 — Netflix, Prime, JioHotstar | Boxoffy",
+    };
+    document.title = titles[activeSection] || "Boxoffy — India Box Office Intelligence";
+  }, [activeSection]);
+
   const handleConsent = (val) => setCookieConsent(val);
 
   const resetCookies = () => {
