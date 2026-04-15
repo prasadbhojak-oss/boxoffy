@@ -1,11 +1,48 @@
 [
   {
+    "headline": "Hindi Music Top 10 — April 2026: The Dhurandhar Effect",
+    "dek": "Shashwat Sachdev holds 4 of India's Spotify top 10 simultaneously. Real chart data, Spotify previews, stream counts and full credits. Bairan #1 with 66M streams. Sahiba at 376M total.",
+    "url": "music-top-10-hindi-april-2026.html",
+    "tag": "MUSIC CHARTS",
+    "date": "Apr 14, 2026",
+    "readTime": "5 min",
+    "featured": true
+  },
+  {
     "headline": "Box Office Beyond the Dhurandhar Storm — Bhooth Bangla Arrives with a Wide Release",
     "dek": "₹120 Cr budget. Break-even ₹184 Cr. 16 years since Khatta Meetha. Boxoffy's 4-technique DS model: D1 central ₹15.8 Cr. The math is steeper than the trade is letting on.",
     "url": "bhooth-bangla-box-office-preview.html",
     "tag": "PREVIEW",
     "date": "Apr 14, 2026",
     "readTime": "5 min",
+    "featured": true
+  },
+  {
+    "headline": "Dhurandhar 2 vs Pushpa 2 — ₹983 Cr vs ₹1,266 Cr. The Full Comparison.",
+    "dek": "D2 ~₹983 Cr India nett D26 · WW ₹1,718 Cr vs ₹1,785 Cr · ₹24 Cr from Pushpa 2 worldwide. Boxoffy data science verdict with week-wise breakdown and ROI analysis.",
+    "url": "dhurandhar-2-vs-pushpa-2-box-office.html",
+    "tag": "COMPARISON",
+    "date": "Apr 14, 2026",
+    "readTime": "7 min read",
+    "featured": true
+  },
+  {
+    "tag": "COMPARISON",
+    "headline": "Dhurandhar vs Dhurandhar 2 — Complete Day-Wise Box Office Comparison",
+    "dek": "D1 ₹840 Cr vs D2 ₹983 Cr India nett through D26. Week-by-week, ATP and footfalls compared. How the sequel dominated every stage — and where the original still wins.",
+    "author": "The Boxoffy Team",
+    "date": "Apr 14, 2026",
+    "readTime": "5 min read",
+    "url": "dhurandhar-box-office-d1-vs-d2.html",
+    "featured": false
+  },
+  {
+    "headline": "OTT India Apr 13–19 — Euphoria S3, Toaster, Matka King, Assi This Week",
+    "dek": "Euphoria S3 drops Apr 15 on JioHotstar. Toaster (Rajkummar Rao) on Netflix Apr 15. Matka King (Vijay Varma) Prime Apr 17. Ustaad Bhagat Singh Netflix Apr 16. Full rankings + viewership.",
+    "url": "ott-releases.html",
+    "tag": "OTT",
+    "date": "Apr 14, 2026",
+    "readTime": "4 min",
     "featured": true
   },
   {
@@ -38,25 +75,16 @@
   {
     "headline": "Ramayana — Rama First Look Review: ARR Delivers, CGI Has Room, Tiwari's Instinct Is the Bet",
     "dek": "Ranbir Kapoor's calm first look works. ARR and Zimmer's score is right for the character. The early CGI draws debate — but DNEG has six months. Boxoffy's full take on the teaser.",
-    "url": "/ramayana-rama-first-look-review.html",
+    "url": "ramayana-rama-first-look-review.html",
     "tag": "REVIEW",
     "date": "Apr 02, 2026",
     "readTime": "5 min",
     "featured": true
   },
   {
-    "headline": "OTT India April 2026 — Netflix, Prime Video, JioHotstar: What to Watch This Week",
-    "dek": "The Boys S5 finale, Maamla Legal Hai S2, BEEF S2, Mrithyunjay, Vadh 2, Sitaare Zameen Par. Full April OTT calendar + platform guide. Updated weekly.",
-    "url": "/ott-releases.html",
-    "tag": "OTT",
-    "date": "Apr 02, 2026",
-    "readTime": "4 min",
-    "featured": true
-  },
-  {
     "headline": "BARC TRP Ratings Week 12 — Kyunki KSBKBT2 Holds #1, Tum Se Tum Tak Surges to #2, Anupamaa at #4",
     "dek": "Full BARC Top 10 Hindi TV shows for Week 12 (Mar 21–27, 2026). IPL effect begins. Zee TV counter-punch. Star Plus five-show dominance. Boxoffy commentary.",
-    "url": "/tv-ratings.html",
+    "url": "tv-ratings.html",
     "tag": "TV",
     "date": "Apr 02, 2026",
     "readTime": "5 min",
@@ -83,19 +111,10 @@
   {
     "headline": "दंगल at Ten: The Data, The Doubters, and Why the Arithmetic Ends the Debate",
     "dek": "China: ₹1,235 Cr. 4.31 crore tickets. Maoyan-verified. Xi Jinping confirmed it to PM Modi — twice. Government extension. Day-by-day data. ATP inflation. Money laundering demolished. The full case.",
-    "url": "/dangal-china-box-office.html",
+    "url": "dangal-china-box-office.html",
     "tag": "Deep Dive",
     "date": "Mar 26, 2026",
     "readTime": "12 min",
-    "featured": true
-  },
-  {
-    "headline": "Dhurandhar 2 vs Pushpa 2 — India & Global Box Office Comparison",
-    "dek": "D2: ₹925 Cr India D18 · WW ~₹1,525 Cr · $26M NA record. Pushpa 2: ₹1,266 Cr India final · WW ₹1,786 Cr. The complete data-driven breakdown.",
-    "url": "dhurandhar-2-vs-pushpa-2-box-office.html",
-    "tag": "COMPARISON",
-    "date": "Mar 25, 2026",
-    "readTime": "7 min read",
     "featured": true
   },
   {
@@ -128,16 +147,6 @@
     "date": "Mar 20, 2026",
     "readTime": "3 min read",
     "url": "dhurandhar2-us-boxoffice.html",
-    "featured": false
-  },
-  {
-    "tag": "COMPARISON",
-    "headline": "Dhurandhar vs Dhurandhar: The Revenge — Day-Wise, Week-Wise Full Comparison",
-    "dek": "D1 ₹838.5 Cr vs D2 ₹925 Cr India nett · day-by-day bars · ATP math · week-by-week breakdown. Who leads where and by how much.",
-    "author": "The Boxoffy Team",
-    "date": "Mar 19, 2026",
-    "readTime": "5 min read",
-    "url": "dhurandhar-box-office-d1-vs-d2.html",
     "featured": false
   },
   {
