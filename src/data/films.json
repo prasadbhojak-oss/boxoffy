@@ -169,7 +169,8 @@
       "weekNum": 0,
       "betaModel": false,
       "pageUrl": "enthiran-box-office.html",
-      "posterUrl": ""
+      "posterUrl": "",
+      "note": "Shankar's Enthiran is the most ambitious science fiction film in Indian cinema history — a robot-love-story-action spectacular that set new benchmarks for visual effects, production scale and the specific form of Rajinikanth stardom that converts technical spectacle into spiritual experience. A.R. Rahman's score gave the film a sonic texture that matched its visual ambition. The ₹180 Cr Tamil collection made it the highest-grossing Tamil film to that point and demonstrated that South Indian cinema could operate at a global production scale."
     },
     {
       "title": "Vinnaithaandi Varuvaayaa",
@@ -197,7 +198,8 @@
       "weekNum": 0,
       "betaModel": false,
       "pageUrl": "vinnaithaandi-varuvaayaa-box-office.html",
-      "posterUrl": ""
+      "posterUrl": "",
+      "note": "Gautham Menon's Vinnaithaandi Varuvaayaa is the most formally accomplished Tamil romantic film of its era — a love story whose failure is not the result of external obstacles but of the internal incompatibilities between two otherwise compatible people. Simbu and Trisha generate a chemistry that the film's extended sequences trust to carry without plot intervention. A.R. Rahman's score is among his most intimate, and the film's cult status has grown consistently in the years since its release."
     },
     {
       "title": "Singam",
@@ -226,7 +228,8 @@
       "weekNum": 0,
       "betaModel": false,
       "pageUrl": "singam-box-office.html",
-      "posterUrl": ""
+      "posterUrl": "",
+      "note": "Hari's Singam gave Suriya the mass action hero identity he had been building toward for a decade — an honest, relentless police officer whose physical and moral invulnerability the audience needed to believe in completely. The film's appeal cut across Tamil Nadu's social geography in a way that more nuanced films couldn't, because the Singam character's directness was the point. D. Imman's score, particularly the title track, became the decade's defining Tamil action anthem."
     },
     {
       "title": "Toy Story 3",
@@ -502,7 +505,7 @@
       "indiaNet": "₹95 Cr",
       "wwGross": "₹108 Cr",
       "overseas": "₹13 Cr",
-      "verdict": "Blockbuster",
+      "verdict": "Hit",
       "distributor": "Eros International",
       "openingDay": "11",
       "openingWeekend": "38",
@@ -515,7 +518,8 @@
       "weekNum": 0,
       "betaModel": false,
       "pageUrl": "housefull-box-office.html",
-      "posterUrl": ""
+      "posterUrl": "",
+      "note": "Sajid Khan's Housefull is the debut of a franchise built around one axiom: that the maximum concentration of comedy talent in one frame produces the maximum entertainment. Akshay Kumar, Riteish Deshmukh and Arjun Rampal anchor a farce whose comic engine runs on mistaken identities and physical escalation. The film's Hit verdict on a substantial budget established the franchise formula that would be repeated and refined across three sequels."
     },
     {
       "title": "Once Upon a Time in Mumbaai",
@@ -531,7 +535,7 @@
       "indiaNet": "₹94 Cr",
       "wwGross": "₹100 Cr",
       "overseas": "₹6 Cr",
-      "verdict": "Blockbuster",
+      "verdict": "Hit",
       "distributor": "Balaji Motion Pictures",
       "openingDay": "7",
       "openingWeekend": "25",
@@ -544,7 +548,8 @@
       "weekNum": 0,
       "betaModel": false,
       "pageUrl": "once-upon-a-time-in-mumbaai-box-office.html",
-      "posterUrl": ""
+      "posterUrl": "",
+      "note": "Milan Luthria's Once Upon a Time in Mumbaai is the definitive Hindi film about the 1970s Bombay underworld — a portrait of two men, Sultan and Shoaib, whose criminal ambitions and personal codes create the city's mythology. Ajay Devgn's Sultan is among the finest performances of the decade, a man of complete moral consistency in an amoral world. Emraan Hashmi's Shoaib is the necessary corruption — the newer generation that has desire without code. The film's period reconstruction gives it a melancholy that gangster films rarely achieve."
     },
     {
       "title": "Dabangg",
@@ -560,7 +565,7 @@
       "indiaNet": "₹140 Cr",
       "wwGross": "₹168 Cr",
       "overseas": "₹28 Cr",
-      "verdict": "All-Time Blockbuster",
+      "verdict": "Blockbuster",
       "distributor": "Reliance BIG Pictures",
       "openingDay": "14.5",
       "openingWeekend": "52",
@@ -573,7 +578,8 @@
       "weekNum": 0,
       "betaModel": false,
       "pageUrl": "dabangg-box-office.html",
-      "posterUrl": ""
+      "posterUrl": "",
+      "note": "Abhinav Kashyap's Dabangg is the film that converted Salman Khan from a bankable star into an institution — Chulbul Pandey's swaggering, corrupt-but-lovable UP cop became the decade's most imitated character and the most durable franchise identity in Hindi commercial cinema. The film's deliberate throwback to 1970s masala aesthetics was not nostalgia but a calculated observation that this register had been abandoned, not exhausted. At ₹140 Cr on a ₹35 Cr budget, it was the most efficient Blockbuster of 2010."
     },
     {
       "title": "Golmaal 3",
@@ -589,7 +595,7 @@
       "indiaNet": "₹113 Cr",
       "wwGross": "₹130 Cr",
       "overseas": "₹17 Cr",
-      "verdict": "All-Time Blockbuster",
+      "verdict": "Blockbuster",
       "distributor": "Reliance Entertainment",
       "openingDay": "13",
       "openingWeekend": "45",
@@ -602,7 +608,8 @@
       "weekNum": 0,
       "betaModel": false,
       "pageUrl": "golmaal-3-box-office.html",
-      "posterUrl": ""
+      "posterUrl": "",
+      "note": "Rohit Shetty's Golmaal 3 extended the franchise's commercial logic to its maximum permissible intensity — a film of such sustained and deliberate noise that it functions as a kind of sensory event rather than a narrative. The ensemble assembled across three films had by this point developed a shorthand that made individual scenes feel less scripted than inherited. The ₹113 Cr collection confirmed Shetty as the decade's most reliable architect of commercial Hindi entertainment."
     },
     {
       "title": "My Name Is Khan",
@@ -617,7 +624,7 @@
       "indiaNet": "₹70 Cr",
       "wwGross": "₹200 Cr",
       "overseas": "₹130 Cr",
-      "verdict": "Blockbuster",
+      "verdict": "Average",
       "distributor": "Dharma Productions",
       "openingDay": "8",
       "openingWeekend": "28",
@@ -630,7 +637,8 @@
       "weekNum": 0,
       "betaModel": false,
       "pageUrl": "my-name-is-khan-box-office.html",
-      "posterUrl": ""
+      "posterUrl": "",
+      "note": "Karan Johar's My Name Is Khan asked a large Hindi commercial film to carry the weight of post-9/11 anti-Muslim discrimination in America — a subject that required Johar to make a film more politically serious than anything in his previous filmography. Shah Rukh Khan's performance as an autistic Muslim man navigating American suspicion is his most internally committed work. The film's ₹70 Cr India performance, an Average verdict on its budget, reflected the difficulty of integrating its political ambition with commercial entertainment requirements."
     }
   ],
   "2011": [
@@ -1194,7 +1202,7 @@
       "indiaNet": "₹230 Cr",
       "wwGross": "₹302 Cr",
       "overseas": "₹72 Cr",
-      "verdict": "All-Time Blockbuster",
+      "verdict": "Blockbuster",
       "distributor": "Reliance Entertainment",
       "openingDay": "21",
       "openingWeekend": "78",
@@ -1207,7 +1215,8 @@
       "weekNum": 0,
       "betaModel": false,
       "pageUrl": "bodyguard-box-office.html",
-      "posterUrl": ""
+      "posterUrl": "",
+      "note": "Ali Abbas Zafar's Bodyguard is the most straightforwardly pleasurable Hindi blockbuster of 2011 — a film about a bodyguard who falls in love with the person he's protecting that delivers every promised entertainment exactly when promised. Salman Khan's Lovely Singh is a performance of complete confidence in the film's own formula, and Katrina Kaif's charm functions as the necessary counterweight. The ₹230 Cr collection on a reasonable budget made it the decade's first genuine Blockbuster at scale."
     },
     {
       "title": "Ra.One",
@@ -1223,7 +1232,7 @@
       "indiaNet": "₹110 Cr",
       "wwGross": "₹215 Cr",
       "overseas": "₹105 Cr",
-      "verdict": "Hit",
+      "verdict": "Flop",
       "distributor": "Eros International",
       "openingDay": "18",
       "openingWeekend": "65",
@@ -1236,7 +1245,8 @@
       "weekNum": 0,
       "betaModel": false,
       "pageUrl": "raone-box-office.html",
-      "posterUrl": ""
+      "posterUrl": "",
+      "note": "Anubhav Sinha's Ra.One is one of Hindi cinema's most expensive experiments and one of its most instructive commercial failures — a superhero film whose production ambition and marketing investment vastly exceeded the film's ability to emotionally engage its audience. Shah Rukh Khan's dual performance as the villain-villain and hero required a kind of tonal consistency the film couldn't maintain across two and a half hours. The ₹110 Cr on a ₹150 Cr budget produced a Flop verdict that the industry has cited in every superhero film discussion since."
     },
     {
       "title": "Don 2",
@@ -1252,7 +1262,7 @@
       "indiaNet": "₹135 Cr",
       "wwGross": "₹235 Cr",
       "overseas": "₹100 Cr",
-      "verdict": "Blockbuster",
+      "verdict": "Hit",
       "distributor": "Excel Entertainment",
       "openingDay": "12",
       "openingWeekend": "50",
@@ -1265,7 +1275,8 @@
       "weekNum": 0,
       "betaModel": false,
       "pageUrl": "don-2-box-office.html",
-      "posterUrl": ""
+      "posterUrl": "",
+      "note": "Farhan Akhtar's Don 2 is the most stylish Hindi action film of 2011 — a European heist thriller that operates entirely in cool, with Shah Rukh Khan's Don functioning as pure cinematic attitude rather than developed character. The film's Berlin and Amsterdam locations gave it a visual grammar more associated with international spy thrillers than Hindi commercial cinema, and the action sequences are choreographed with a precision that the original Don's update deserved. A Hit that was more aesthetically satisfying than its audience numbers suggested."
     },
     {
       "title": "Singham",
@@ -1281,7 +1292,7 @@
       "indiaNet": "₹110 Cr",
       "wwGross": "₹125 Cr",
       "overseas": "₹15 Cr",
-      "verdict": "All-Time Blockbuster",
+      "verdict": "Super Hit",
       "distributor": "Reliance Entertainment",
       "openingDay": "13",
       "openingWeekend": "48",
@@ -1294,7 +1305,8 @@
       "weekNum": 0,
       "betaModel": false,
       "pageUrl": "singham-box-office.html",
-      "posterUrl": ""
+      "posterUrl": "",
+      "note": "Rohit Shetty's Singham launched Ajay Devgn's second major commercial identity and initiated a cop universe that would anchor Shetty's subsequent decade of filmmaking. The mass entertainment formula — an honest cop who works within the system until the system fails him — is executed with a confidence that comes from a director who knows his audience precisely. ₹110 Cr on a ₹50 Cr budget; Super Hit verdict is accurate."
     },
     {
       "title": "Zindagi Na Milegi Dobara",
@@ -1311,7 +1323,7 @@
       "indiaNet": "₹155 Cr",
       "wwGross": "₹213 Cr",
       "overseas": "₹58 Cr",
-      "verdict": "All-Time Blockbuster",
+      "verdict": "Blockbuster",
       "distributor": "Excel Entertainment",
       "openingDay": "9",
       "openingWeekend": "38",
@@ -1324,7 +1336,8 @@
       "weekNum": 0,
       "betaModel": false,
       "pageUrl": "zindagi-na-milegi-dobara-box-office.html",
-      "posterUrl": ""
+      "posterUrl": "",
+      "note": "Zoya Akhtar's ZNMD is the Hindi film that made the European road trip a legitimate aspirational experience for the urban Indian audience — three men, three European countries, one summer of confronting what they'd become versus who they wanted to be. Hrithik Roshan, Farhan Akhtar and Abhay Deol generate a male friendship whose ease and conflict both feel completely earned. Shankar-Ehsaan-Loy's score gave the film its emotional texture; Zoya Akhtar's direction gave it an emotional intelligence that road movies rarely achieve."
     },
     {
       "title": "Ready",
@@ -1340,7 +1353,7 @@
       "indiaNet": "₹195 Cr",
       "wwGross": "₹235 Cr",
       "overseas": "₹40 Cr",
-      "verdict": "All-Time Blockbuster",
+      "verdict": "Blockbuster",
       "distributor": "Eros International",
       "openingDay": "19",
       "openingWeekend": "70",
@@ -1353,7 +1366,8 @@
       "weekNum": 0,
       "betaModel": false,
       "pageUrl": "ready-box-office.html",
-      "posterUrl": ""
+      "posterUrl": "",
+      "note": "Anees Bazmee's Ready is the Salman Khan film that most precisely defines the parameters of his post-Wanted commercial identity — physically imposing, narratively unconcerned, emotionally direct and entirely comfortable with its own lack of subtlety. The film's logic operates in its own universe and the audience's willingness to enter that universe is the entire transaction. At ₹195 Cr it confirmed that the Salman formula had achieved a durability independent of story quality."
     }
   ],
   "2012": [
@@ -1384,7 +1398,8 @@
       "weekNum": 0,
       "betaModel": false,
       "pageUrl": "eega-box-office.html",
-      "posterUrl": ""
+      "posterUrl": "",
+      "note": "S.S. Rajamouli's Eega is the most singular achievement in Indian popular cinema of the decade — a revenge film whose protagonist is a housefly, and whose emotional conviction in that premise is so complete that the film generates genuine dramatic tension from the perspective of an insect. The visual effects work is technically extraordinary, but the achievement is primarily conceptual: Rajamouli identified a premise whose absurdity he could render entirely believable through craft. The film is unlike anything before or after it."
     },
     {
       "title": "Julayi",
@@ -1525,7 +1540,8 @@
       "weekNum": 0,
       "betaModel": false,
       "pageUrl": "thuppakki-box-office.html",
-      "posterUrl": ""
+      "posterUrl": "",
+      "note": "A.R. Murugadoss's Thuppakki gave Vijay his most commercially and critically significant film to that point — an intelligence-inflected action film about urban terrorism that combined the mass commercial register with a subject usually reserved for more serious filmmaking. The film's ₹110 Cr Tamil collection established Vijay as a pan-Tamil Nadu commercial force independent of the star hierarchy. The Hindi dubbed version, Soldier, reached a secondary audience."
     },
     {
       "title": "Kadal",
@@ -1669,7 +1685,8 @@
       "weekNum": 0,
       "betaModel": false,
       "pageUrl": "the-avengers-box-office.html",
-      "posterUrl": ""
+      "posterUrl": "",
+      "note": "Joss Whedon's The Avengers was Indian cinema's introduction to the Marvel franchise as an event rather than individual films — the first MCU film to cross ₹100 Cr in India, demonstrating that superhero team-up cinema had found a mass audience beyond the English-speaking urban multiplex. The ₹102 Cr collection was, at that point, the highest for any Hollywood film in India and marked the beginning of Marvel's sustained Indian commercial dominance."
     },
     {
       "title": "Ek Tha Tiger",
@@ -1684,7 +1701,7 @@
       "indiaNet": "₹225 Cr",
       "wwGross": "₹320 Cr",
       "overseas": "₹95 Cr",
-      "verdict": "All-Time Blockbuster",
+      "verdict": "Blockbuster",
       "distributor": "Yash Raj Films",
       "openingDay": "23",
       "openingWeekend": "82",
@@ -1697,7 +1714,8 @@
       "weekNum": 0,
       "betaModel": false,
       "pageUrl": "ek-tha-tiger-box-office.html",
-      "posterUrl": ""
+      "posterUrl": "",
+      "note": "Kabir Khan's Ek Tha Tiger is the Hindi film that initiated the Tiger franchise and extended Shah Rukh Khan's Salim-character from Dabangg into spy territory — Salman Khan as a RAW agent who falls in love with a Pakistani ISI operative, a premise whose political charge the film navigates without compromising either the romance or the action. Katrina Kaif's action choreography performance was a genuine surprise. At ₹225 Cr it confirmed that Salman could sustain blockbuster returns in a genre different from his established masala template."
     },
     {
       "title": "Agneepath",
@@ -1713,7 +1731,7 @@
       "indiaNet": "₹125 Cr",
       "wwGross": "₹170 Cr",
       "overseas": "₹45 Cr",
-      "verdict": "All-Time Blockbuster",
+      "verdict": "Super Hit",
       "distributor": "Dharma Productions",
       "openingDay": "14",
       "openingWeekend": "52",
@@ -1726,7 +1744,8 @@
       "weekNum": 0,
       "betaModel": false,
       "pageUrl": "agneepath-box-office.html",
-      "posterUrl": ""
+      "posterUrl": "",
+      "note": "Karan Malhotra's Agneepath remake is the decade's most passionate attempt to honour a classic while making it entirely contemporary — Hrithik Roshan's Vijay Deenanath Chauhan is not Bachchan's but is genuinely conceived as a character who could carry the same moral weight. Sanjay Dutt's Kancha is the most visually terrifying performance of his career. The film's ₹125 Cr on ₹80 Cr budget, Super Hit verdict, reflects a film that achieved its ambition without becoming a franchise."
     },
     {
       "title": "Dabangg 2",
@@ -1741,7 +1760,7 @@
       "indiaNet": "₹210 Cr",
       "wwGross": "₹253 Cr",
       "overseas": "₹43 Cr",
-      "verdict": "All-Time Blockbuster",
+      "verdict": "Blockbuster",
       "distributor": "Reliance Entertainment",
       "openingDay": "21",
       "openingWeekend": "75",
@@ -1754,7 +1773,8 @@
       "weekNum": 0,
       "betaModel": false,
       "pageUrl": "dabangg-2-box-office.html",
-      "posterUrl": ""
+      "posterUrl": "",
+      "note": "Arbaaz Khan's Dabangg 2 is the first Hindi sequel of the decade to replicate its predecessor's commercial logic almost exactly — a film that understood the Chulbul formula so completely that it reproduced it without diminishing it. Salman Khan's ease within the character had by this point become a form of mastery, and the film's willingness to simply be the sequel its audience wanted is a commercial intelligence often dismissed as laziness. ₹210 Cr confirmed the franchise's durability."
     },
     {
       "title": "Barfi!",
@@ -1770,7 +1790,7 @@
       "indiaNet": "₹135 Cr",
       "wwGross": "₹165 Cr",
       "overseas": "₹30 Cr",
-      "verdict": "All-Time Blockbuster",
+      "verdict": "Blockbuster",
       "distributor": "UTV Motion Pictures",
       "openingDay": "8.5",
       "openingWeekend": "32",
@@ -1783,7 +1803,8 @@
       "weekNum": 0,
       "betaModel": false,
       "pageUrl": "barfi-box-office.html",
-      "posterUrl": ""
+      "posterUrl": "",
+      "note": "Anurag Basu's Barfi! is the most formally inventive mainstream Hindi film of 2012 — a silent-era-influenced romantic comedy set in 1970s Darjeeling, with a deaf-mute protagonist and an autistic love interest, told through visual storytelling of a precision that Hindi commercial cinema rarely attempts. Ranbir Kapoor's Barfi is a performance of complete physical intelligence, and Priyanka Chopra's Jhilmil is one of the finest portrayals of autism in mainstream Indian film. The ₹135 Cr collection confirmed that formal ambition and commercial success weren't mutually exclusive."
     },
     {
       "title": "Rowdy Rathore",
@@ -1798,7 +1819,7 @@
       "indiaNet": "₹140 Cr",
       "wwGross": "₹157 Cr",
       "overseas": "₹17 Cr",
-      "verdict": "All-Time Blockbuster",
+      "verdict": "Blockbuster",
       "distributor": "UTV Motion Pictures",
       "openingDay": "14",
       "openingWeekend": "50",
@@ -1811,7 +1832,8 @@
       "weekNum": 0,
       "betaModel": false,
       "pageUrl": "rowdy-rathore-box-office.html",
-      "posterUrl": ""
+      "posterUrl": "",
+      "note": "Prabhu Deva's Rowdy Rathore is the most commercially successful translation of Vikramarkudu into Hindi — a film that gave Akshay Kumar his most pure mass action vehicle since Mohra and demonstrated that the South Indian commercial grammar of dual-role action comedy could find its Hindi audience without adaptation. The film's ₹140 Cr collection reconfirmed what Wanted had established: that the Telugu commercial formula, transplanted wholesale into Hindi, works."
     }
   ],
   "2013": [
@@ -1828,7 +1850,7 @@
       "indiaNet": "₹227 Cr",
       "wwGross": "₹424 Cr",
       "overseas": "₹197 Cr",
-      "verdict": "All-Time Blockbuster",
+      "verdict": "Blockbuster",
       "distributor": "Eros International",
       "openingDay": "33",
       "openingWeekend": "100",
@@ -1841,7 +1863,8 @@
       "weekNum": 0,
       "betaModel": false,
       "pageUrl": "chennai-express-box-office.html",
-      "posterUrl": ""
+      "posterUrl": "",
+      "note": "Rohit Shetty's Chennai Express is the Hindi film that made the South-North cultural contrast a mainstream commercial premise — Shah Rukh Khan's Rahul, a Gujarati fleeing his family, ends up in Tamil Nadu's interior with results that are simultaneously slapstick and surprisingly affectionate toward both cultures. Deepika Padukone's Meenamma is a comic performance that demonstrated range her earlier films hadn't asked for. At ₹227 Cr it was 2013's biggest Hindi blockbuster before Dhoom 3."
     },
     {
       "title": "Dhoom 3",
@@ -1870,7 +1893,8 @@
       "weekNum": 0,
       "betaModel": false,
       "pageUrl": "dhoom-3-box-office.html",
-      "posterUrl": ""
+      "posterUrl": "",
+      "note": "Vijay Krishna Acharya's Dhoom 3 is the most technically ambitious Hindi action film ever produced at that point — a circus performer's revenge in Chicago, shot with production values that would not embarrass a mid-tier Hollywood production. Aamir Khan playing both a tragic performer and his deranged twin required two completely different internal logics that the film manages more successfully than its box office narrative — a ₹284 Cr collection on ₹175 Cr budget producing an All-Time Blockbuster verdict that BOI confirmed was era-appropriate. The franchise's most complete entertainment."
     },
     {
       "title": "Yeh Jawaani Hai Deewani",
@@ -1885,7 +1909,7 @@
       "indiaNet": "₹195 Cr",
       "wwGross": "₹260 Cr",
       "overseas": "₹65 Cr",
-      "verdict": "All-Time Blockbuster",
+      "verdict": "Blockbuster",
       "distributor": "Dharma Productions",
       "openingDay": "18",
       "openingWeekend": "65",
@@ -1898,7 +1922,8 @@
       "weekNum": 0,
       "betaModel": false,
       "pageUrl": "yeh-jawaani-hai-deewani-box-office.html",
-      "posterUrl": ""
+      "posterUrl": "",
+      "note": "Ayan Mukerji's Yeh Jawaani Hai Deewani is the film that made Ranbir Kapoor and Deepika Padukone the decade's defining romantic pairing — a story about friendship and ambition and the specific loss that comes from wanting the world so much you forget to want the people in it. Shankar-Ehsaan-Loy's score gave 'Balam Pichkari' and 'Badtameez Dil' to the decade's celebratory vocabulary. The film's ₹195 Cr collection confirmed Ranbir Kapoor's commercial peak."
     },
     {
       "title": "Krrish 3",
@@ -1914,7 +1939,7 @@
       "indiaNet": "₹245 Cr",
       "wwGross": "₹305 Cr",
       "overseas": "₹60 Cr",
-      "verdict": "All-Time Blockbuster",
+      "verdict": "Blockbuster",
       "distributor": "Film Kraft / Eros",
       "openingDay": "36",
       "openingWeekend": "112",
@@ -1927,7 +1952,8 @@
       "weekNum": 0,
       "betaModel": false,
       "pageUrl": "krrish-3-box-office.html",
-      "posterUrl": ""
+      "posterUrl": "",
+      "note": "Rakesh Roshan's Krrish 3 took the superhero franchise to its logical domestic extreme — a fully CGI-inflected universe with mutants, a villain whose power rivals the hero's, and Hrithik Roshan doing the physical work that the franchise's credibility requires. The film's ₹245 Cr on ₹175 Cr budget produced a Blockbuster verdict that reflected solid profit despite the enormous production investment. The franchise demonstrated that Indian superhero cinema could sustain itself across multiple films when anchored by genuine star power."
     },
     {
       "title": "Grand Masti",
@@ -1943,7 +1969,7 @@
       "indiaNet": "₹72 Cr",
       "wwGross": "₹80 Cr",
       "overseas": "₹8 Cr",
-      "verdict": "All-Time Blockbuster",
+      "verdict": "Blockbuster",
       "distributor": "Balaji Motion Pictures",
       "openingDay": "7.5",
       "openingWeekend": "28",
@@ -1971,7 +1997,7 @@
       "indiaNet": "₹138 Cr",
       "wwGross": "₹158 Cr",
       "overseas": "₹20 Cr",
-      "verdict": "All-Time Blockbuster",
+      "verdict": "Blockbuster",
       "distributor": "Viacom18 / Excel",
       "openingDay": "8",
       "openingWeekend": "32",
@@ -1984,7 +2010,8 @@
       "weekNum": 0,
       "betaModel": false,
       "pageUrl": "bhaag-milkha-bhaag-box-office.html",
-      "posterUrl": ""
+      "posterUrl": "",
+      "note": "Rakeysh Omprakash Mehra's Bhaag Milkha Bhaag is the definitive Hindi sports biopic — Farhan Akhtar's physical and emotional transformation into Milka Singh is so complete that the distinction between performance and subject becomes genuinely uncertain. The film's Partition sequences give the athletic narrative its tragic dimension, the understanding that the Flying Sikh runs from something as much as toward something. ₹138 Cr on ₹75 Cr budget, Blockbuster verdict; one of the decade's films that deserves both commercial and critical respect."
     },
     {
       "title": "Race 2",
@@ -2000,7 +2027,7 @@
       "indiaNet": "₹105 Cr",
       "wwGross": "₹148 Cr",
       "overseas": "₹43 Cr",
-      "verdict": "All-Time Blockbuster",
+      "verdict": "Average",
       "distributor": "Tips / Eros",
       "openingDay": "14",
       "openingWeekend": "48",
@@ -2013,7 +2040,8 @@
       "weekNum": 0,
       "betaModel": false,
       "pageUrl": "race-2-box-office.html",
-      "posterUrl": ""
+      "posterUrl": "",
+      "note": "Abbas-Mustan's Race 2 is what happens when a franchise sequel doubles down on everything its original did well without adding new substance — the betrayals multiply, the exotic locations proliferate, the logic becomes completely optional. Saif Ali Khan and John Abraham generate a villain-hero antagonism that the film is too busy plotting to develop. An Average verdict on its budget is the honest accounting."
     },
     {
       "title": "Ram-Leela",
@@ -2028,7 +2056,7 @@
       "indiaNet": "₹180 Cr",
       "wwGross": "₹220 Cr",
       "overseas": "₹40 Cr",
-      "verdict": "All-Time Blockbuster",
+      "verdict": "Hit",
       "distributor": "Eros / Bhansali Productions",
       "openingDay": "16",
       "openingWeekend": "55",
@@ -2041,7 +2069,8 @@
       "weekNum": 0,
       "betaModel": false,
       "pageUrl": "ramleela-box-office.html",
-      "posterUrl": ""
+      "posterUrl": "",
+      "note": "Sanjay Leela Bhansali's Goliyon Ki Rasleela Ram-Leela is his most sensual film — a Romeo and Juliet set in Rajasthan's clan-war culture where desire and death operate at the same temperature. Ranveer Singh and Deepika Padukone's physical chemistry is the film's most powerful element, a combustible pairing that gave Hindi cinema its most visceral romantic lead combination of the decade. The Hit verdict on its ₹90 Cr budget reflects the film finding its audience more slowly than its quality deserved."
     },
     {
       "title": "Jolly LLB",
@@ -2099,7 +2128,8 @@
       "weekNum": 0,
       "betaModel": false,
       "pageUrl": "attarintiki-daredi-box-office.html",
-      "posterUrl": ""
+      "posterUrl": "",
+      "note": "Trivikram Srinivas's Attarintiki Daredi is the Telugu commercial film that most completely fulfils the promise of Pawan Kalyan's specific screen charisma — a grandfather's mission to bring his granddaughter home, executed as a series of escalating confrontations that each serve as a showcase for the star's ability to be simultaneously funny, fierce and affecting. The film's ₹88 Cr Telugu collection remains among the highest for a Pawan Kalyan vehicle."
     },
     {
       "title": "Naayak",
@@ -2200,7 +2230,7 @@
       "indiaNet": "₹82 Cr",
       "wwGross": "₹95 Cr",
       "overseas": "₹13 Cr",
-      "verdict": "All-Time Blockbuster",
+      "verdict": "Blockbuster",
       "distributor": "Vaaraahi Chalana Chitram",
       "openingDay": "10",
       "openingWeekend": "35",
@@ -2532,7 +2562,8 @@
       "weekNum": 0,
       "betaModel": false,
       "pageUrl": "pk-box-office.html",
-      "posterUrl": ""
+      "posterUrl": "",
+      "note": "Rajkumar Hirani's PK is the most commercially successful film about religious hypocrisy in Indian cinema history — a gentle alien who asks sincere questions about why humans believe what they believe, directed with enough comedy to make the critique feel like an embrace rather than an attack. Aamir Khan's physical performance, built around wide-eyed curiosity and a Bhojpuri accent, is one of his most complete character constructions. The ₹340 Cr India nett gave it a justified All-Time Blockbuster verdict — the highest-grossing Hindi film until Baahubali 2."
     },
     {
       "title": "Happy New Year",
@@ -2548,7 +2579,7 @@
       "indiaNet": "₹201 Cr",
       "wwGross": "₹350 Cr",
       "overseas": "₹149 Cr",
-      "verdict": "All-Time Blockbuster",
+      "verdict": "Super Hit",
       "distributor": "Red Chillies / Eros",
       "openingDay": "44",
       "openingWeekend": "121",
@@ -2561,7 +2592,8 @@
       "weekNum": 0,
       "betaModel": false,
       "pageUrl": "happy-new-year-box-office.html",
-      "posterUrl": ""
+      "posterUrl": "",
+      "note": "Farah Khan's Happy New Year is a film that decided the task of entertaining its audience was more important than the task of making sense, and on that singular measure it frequently succeeds. Shah Rukh Khan, Deepika Padukone, Abhishek Bachchan, Sonu Sood and Boman Irani each bring a specific performance register that the film shuffles without apology. The ₹201 Cr on ₹150 Cr budget, Super Hit verdict, reflects a production that extracted its profits through audience affection for its stars."
     },
     {
       "title": "Bang Bang!",
@@ -2576,7 +2608,7 @@
       "indiaNet": "₹180 Cr",
       "wwGross": "₹325 Cr",
       "overseas": "₹145 Cr",
-      "verdict": "All-Time Blockbuster",
+      "verdict": "Semi Hit",
       "distributor": "Fox Star / YRF",
       "openingDay": "27",
       "openingWeekend": "100",
@@ -2589,7 +2621,8 @@
       "weekNum": 0,
       "betaModel": false,
       "pageUrl": "bang-bang-box-office.html",
-      "posterUrl": ""
+      "posterUrl": "",
+      "note": "Siddharth Anand's Bang Bang! is a Mission: Impossible template transplanted into Hindi cinema — Hrithik Roshan's action work is the most technically accomplished of his career, and the production's international scale (Czechoslovakia, London, Morocco) gave Hindi action cinema a visual register it had been attempting for years. But ₹180 Cr on ₹150 Cr budget produces only a Semi Hit verdict — a reminder that spectacle alone doesn't recover production costs when the narrative scaffolding is insufficient."
     },
     {
       "title": "Kick",
@@ -2605,7 +2638,7 @@
       "indiaNet": "₹232 Cr",
       "wwGross": "₹335 Cr",
       "overseas": "₹103 Cr",
-      "verdict": "All-Time Blockbuster",
+      "verdict": "Blockbuster",
       "distributor": "Eros / Nadiadwala",
       "openingDay": "27",
       "openingWeekend": "95",
@@ -2618,7 +2651,8 @@
       "weekNum": 0,
       "betaModel": false,
       "pageUrl": "kick-box-office.html",
-      "posterUrl": ""
+      "posterUrl": "",
+      "note": "Sajid Nadiadwala's Kick is the film that confirmed Salman Khan could sustain blockbuster collections in pure action territory without the masala context that Dabangg required. Randeep Hooda's villain and Salman's Devil are the decade's most efficiently contrasted antagonistic pair. The ₹232 Cr on ₹100 Cr budget produced the decade's strongest Blockbuster return-on-investment alongside Dabangg — confirmation that the Salman formula had become its own economic law."
     },
     {
       "title": "2 States",
@@ -2633,7 +2667,7 @@
       "indiaNet": "₹102 Cr",
       "wwGross": "₹130 Cr",
       "overseas": "₹28 Cr",
-      "verdict": "All-Time Blockbuster",
+      "verdict": "Blockbuster",
       "distributor": "Dharma / Fox",
       "openingDay": "8",
       "openingWeekend": "32",
@@ -2646,7 +2680,8 @@
       "weekNum": 0,
       "betaModel": false,
       "pageUrl": "2-states-box-office.html",
-      "posterUrl": ""
+      "posterUrl": "",
+      "note": "Abhishek Varman's 2 States is the decade's best adaptation of Chetan Bhagat — a film that understood the novel's comedy of North-South cultural misunderstanding without losing its genuine warmth about what those differences cost and what they produce. Arjun Kapoor and Alia Bhatt's first pairing generated an easy chemistry appropriate to the material. The ₹102 Cr on a modest budget produced a Blockbuster verdict that confirmed Bhagat adaptations as a reliable commercial category."
     },
     {
       "title": "Queen",
@@ -2662,7 +2697,7 @@
       "indiaNet": "₹62 Cr",
       "wwGross": "₹75 Cr",
       "overseas": "₹13 Cr",
-      "verdict": "All-Time Blockbuster",
+      "verdict": "Super Hit",
       "distributor": "Viacom18 Motion Pictures",
       "openingDay": "3",
       "openingWeekend": "12",
@@ -2675,7 +2710,8 @@
       "weekNum": 0,
       "betaModel": false,
       "pageUrl": "queen-box-office.html",
-      "posterUrl": ""
+      "posterUrl": "",
+      "note": "Vikas Bahl's Queen is the decade's most emotionally precise small film — a woman who goes on her honeymoon alone after her wedding is called off, discovering Europe and herself simultaneously. Kangana Ranaut's Rani is one of the great central performances in Hindi cinema, a character whose transformation from timidity to confidence is shown rather than declared. The Super Hit verdict on a ₹12 Cr budget represents one of the decade's best returns on investment and confirmed Ranaut as a performer whose commercial value exceeded her star status."
     },
     {
       "title": "Ek Villain",
@@ -2691,7 +2727,7 @@
       "indiaNet": "₹105 Cr",
       "wwGross": "₹130 Cr",
       "overseas": "₹25 Cr",
-      "verdict": "All-Time Blockbuster",
+      "verdict": "Super Hit",
       "distributor": "Balaji Motion Pictures",
       "openingDay": "12",
       "openingWeekend": "40",
@@ -2704,7 +2740,8 @@
       "weekNum": 0,
       "betaModel": false,
       "pageUrl": "ek-villain-box-office.html",
-      "posterUrl": ""
+      "posterUrl": "",
+      "note": "Mohit Suri's Ek Villain is a romantic thriller that gave Riteish Deshmukh his most dramatically serious role and Shraddha Kapoor one of the decade's most affecting female performances. The film's structure — which villain is the protagonist? — asks more of its audience than most commercial Hindi films, and the ₹105 Cr on a reasonable budget rewarded that structural ambition. Mithoon's songs, particularly 'Galliyan', became defining music for the year's emotional register."
     },
     {
       "title": "Haider",
@@ -2733,7 +2770,8 @@
       "weekNum": 0,
       "betaModel": false,
       "pageUrl": "haider-box-office.html",
-      "posterUrl": ""
+      "posterUrl": "",
+      "note": "Vishal Bhardwaj's Haider — his Hamlet — is the finest Shakespeare adaptation in Hindi cinema and his most politically courageous film, set in 1995 Kashmir at the height of the militancy with a moral compass that refuses easy positions. Shahid Kapoor's performance is the most complete of his career, inhabiting a Hamlet whose madness is entirely justified by his political reality. The Hit verdict on its modest budget reflects a film that found a dedicated audience rather than a mass one."
     },
     {
       "title": "Highway",
@@ -2761,7 +2799,8 @@
       "weekNum": 0,
       "betaModel": false,
       "pageUrl": "highway-box-office.html",
-      "posterUrl": ""
+      "posterUrl": "",
+      "note": "Imtiaz Ali's Highway is his most vulnerable film — a kidnapping narrative that becomes a study of trauma, Stockholm syndrome, and what freedom actually means for a woman who has always been protected from it. Alia Bhatt's performance announced a dramatic range that her debut films had not asked for, and her confrontation scene with her abuser in the film's final act is among the decade's most emotionally devastating moments. The Hit verdict on a small budget reflects a film that needed to be made regardless of commercial logic."
     },
     {
       "title": "Mary Kom",
@@ -2776,7 +2815,7 @@
       "indiaNet": "₹57 Cr",
       "wwGross": "₹65 Cr",
       "overseas": "₹8 Cr",
-      "verdict": "Super Hit",
+      "verdict": "Hit",
       "distributor": "Viacom18 Motion Pictures",
       "openingDay": "4.5",
       "openingWeekend": "17",
@@ -2804,7 +2843,7 @@
       "indiaNet": "₹82 Cr",
       "wwGross": "₹95 Cr",
       "overseas": "₹13 Cr",
-      "verdict": "All-Time Blockbuster",
+      "verdict": "Blockbuster",
       "distributor": "Vaaraahi Chalana Chitram",
       "openingDay": "10",
       "openingWeekend": "35",
@@ -2986,7 +3025,8 @@
       "weekNum": 0,
       "betaModel": false,
       "pageUrl": "kaththi-box-office.html",
-      "posterUrl": ""
+      "posterUrl": "",
+      "note": "A.R. Murugadoss's Kaththi gave Vijay his most politically engaged commercial vehicle — a dual-role film whose second character, a social activist fighting for farmer rights against corporate land acquisition, gave the Tamil mass entertainment formula genuine ideological content. The film's ₹100 Cr Tamil collection confirmed Vijay's ability to sustain commercial blockbusters across consecutive years."
     },
     {
       "title": "Yennai Arindhaal",
@@ -3015,7 +3055,8 @@
       "weekNum": 0,
       "betaModel": false,
       "pageUrl": "yennai-arindhaal-box-office.html",
-      "posterUrl": ""
+      "posterUrl": "",
+      "note": "Gautham Menon's Yennai Arindhaal is the director's finest action film — a Mumbai encounter specialist navigating retirement, old enemies and a teenage daughter he barely knows. Ajith Kumar's performance operates in a register of restrained authority that contrasts with Tamil commercial cinema's usual expressiveness. Harris Jayaraj's score gives the film its emotional continuity across an unusually fractured narrative structure."
     },
     {
       "title": "Kochadaiiyaan",
@@ -3219,7 +3260,8 @@
       "weekNum": 0,
       "betaModel": false,
       "pageUrl": "bajrangi-bhaijaan-box-office.html",
-      "posterUrl": ""
+      "posterUrl": "",
+      "note": "Kabir Khan's Bajrangi Bhaijaan is the most emotionally complete Hindi film of the decade — a Pakistani Muslim girl lost in India, a devotee of Hanuman determined to return her, a journey across the India-Pakistan border that converts political hostility into human connection. Salman Khan's Pawan Kumar Chaturvedi requires him to be simple without being stupid, and the performance is the most precisely calibrated of his career. The ₹321 Cr collection and All-Time Blockbuster verdict are both exactly right."
     },
     {
       "title": "Prem Ratan Dhan Payo",
@@ -3234,7 +3276,7 @@
       "indiaNet": "₹210 Cr",
       "wwGross": "₹310 Cr",
       "overseas": "₹100 Cr",
-      "verdict": "All-Time Blockbuster",
+      "verdict": "Blockbuster",
       "distributor": "Rajshri Productions",
       "openingDay": "40",
       "openingWeekend": "120",
@@ -3247,7 +3289,8 @@
       "weekNum": 0,
       "betaModel": false,
       "pageUrl": "prem-ratan-dhan-payo-box-office.html",
-      "posterUrl": ""
+      "posterUrl": "",
+      "note": "Sooraj Barjatya's PRDP is the last Salman Khan family entertainer at the scale that Barjatya had established — a Rajput palace setting, dual role, and the full emotional grammar of Maine Pyar Kiya extended into contemporary aesthetics. The ₹210 Cr on ₹140 Cr budget, Blockbuster verdict, reflects a film that delivered its audience's expectations precisely but did not exceed them. Barjatya's commitment to his formal register is genuine and admirable."
     },
     {
       "title": "Bajirao Mastani",
@@ -3263,7 +3306,7 @@
       "indiaNet": "₹185 Cr",
       "wwGross": "₹270 Cr",
       "overseas": "₹85 Cr",
-      "verdict": "All-Time Blockbuster",
+      "verdict": "Blockbuster",
       "distributor": "Eros / Bhansali Productions",
       "openingDay": "12",
       "openingWeekend": "50",
@@ -3276,7 +3319,8 @@
       "weekNum": 0,
       "betaModel": false,
       "pageUrl": "bajirao-mastani-box-office.html",
-      "posterUrl": ""
+      "posterUrl": "",
+      "note": "Sanjay Leela Bhansali's Bajirao Mastani is his most formally complete film — a historical epic about the Peshwa warrior and his second wife that treats Indian history as an occasion for cinematic beauty of an almost overwhelming density. Ranveer Singh and Deepika Padukone's performances are among the decade's finest, and Priyanka Chopra's Kashibai is the film's moral centre. The Blockbuster verdict on its ₹145 Cr budget reflects a film whose ambition and commercial performance were both exceptional."
     },
     {
       "title": "Dilwale",
@@ -3293,7 +3337,7 @@
       "indiaNet": "₹140 Cr",
       "wwGross": "₹262 Cr",
       "overseas": "₹122 Cr",
-      "verdict": "Hit",
+      "verdict": "Average",
       "distributor": "Red Chillies / Eros",
       "openingDay": "22",
       "openingWeekend": "70",
@@ -3306,7 +3350,8 @@
       "weekNum": 0,
       "betaModel": false,
       "pageUrl": "dilwale-box-office.html",
-      "posterUrl": ""
+      "posterUrl": "",
+      "note": "Rohit Shetty's Dilwale is a film that had the right ingredients — Shah Rukh Khan, Kajol, comedy, action — assembled in a ratio that produced diminishing returns. The ₹140 Cr on a substantial budget produced only an Average verdict, confirmation that star chemistry cannot compensate for a narrative that doesn't know what it wants to be. The simultaneous release with Bajirao Mastani, which it was commercially compared to constantly, didn't help."
     },
     {
       "title": "ABCD 2",
@@ -3321,7 +3366,7 @@
       "indiaNet": "₹133 Cr",
       "wwGross": "₹152 Cr",
       "overseas": "₹19 Cr",
-      "verdict": "All-Time Blockbuster",
+      "verdict": "Super Hit",
       "distributor": "UTV / Disney",
       "openingDay": "12",
       "openingWeekend": "45",
@@ -3334,7 +3379,8 @@
       "weekNum": 0,
       "betaModel": false,
       "pageUrl": "abcd-2-box-office.html",
-      "posterUrl": ""
+      "posterUrl": "",
+      "note": "Remo D'Souza's ABCD 2 gave Varun Dhawan a platform for his most specific gift — the ability to make physically demanding choreography look emotionally meaningful — and in Shraddha Kapoor found a partner who matched his performance register exactly. The film's Las Vegas competition setting gave it an international aspiration that worked commercially. Super Hit on its budget."
     },
     {
       "title": "Tanu Weds Manu Returns",
@@ -3349,7 +3395,7 @@
       "indiaNet": "₹148 Cr",
       "wwGross": "₹165 Cr",
       "overseas": "₹17 Cr",
-      "verdict": "All-Time Blockbuster",
+      "verdict": "Blockbuster",
       "distributor": "Eros International",
       "openingDay": "11",
       "openingWeekend": "40",
@@ -3362,7 +3408,8 @@
       "weekNum": 0,
       "betaModel": false,
       "pageUrl": "tanu-weds-manu-returns-box-office.html",
-      "posterUrl": ""
+      "posterUrl": "",
+      "note": "Aanand L. Rai's Tanu Weds Manu Returns is the rare Hindi sequel that surpassed its original — a film about a marriage dissolving, a husband falling for a woman who looks like his wife, and the specific comic savagery that intimacy allows. Kangana Ranaut's dual performance as Tanu and Datto is technically and comedically extraordinary. The ₹148 Cr on a modest budget produced a genuine Blockbuster and confirmed Ranaut as a commercial force independent of conventional star-system logic."
     },
     {
       "title": "Dil Dhadakne Do",
@@ -3378,7 +3425,7 @@
       "indiaNet": "₹75 Cr",
       "wwGross": "₹105 Cr",
       "overseas": "₹30 Cr",
-      "verdict": "Hit",
+      "verdict": "Average",
       "distributor": "Excel Entertainment",
       "openingDay": "6",
       "openingWeekend": "24",
@@ -3506,7 +3553,8 @@
       "weekNum": 0,
       "betaModel": false,
       "pageUrl": "baahubali-the-beginning-box-office.html",
-      "posterUrl": ""
+      "posterUrl": "",
+      "note": "S.S. Rajamouli's Baahubali: The Beginning is the film that redefined what Indian cinema could produce — a historical epic whose scale, visual effects and emotional ambition had no precedent in the industry. The question 'Why did Katappa kill Baahubali?' became the most discussed unanswered question in Indian popular culture, sustaining anticipation for a sequel for two years. The ₹250 Cr Telugu collection and All-Time Blockbuster verdict marked the beginning of the pan-India era."
     },
     {
       "title": "Srimanthudu",
@@ -3675,7 +3723,8 @@
       "weekNum": 0,
       "betaModel": false,
       "pageUrl": "theri-box-office.html",
-      "posterUrl": ""
+      "posterUrl": "",
+      "note": "Atlee's Theri is the film that established Vijay's relationship with director Atlee as the decade's most commercially reliable Tamil pairing — a film about a police officer hiding his identity that gives Vijay both the emotional material and the action showcase the mass audience required simultaneously. G.V. Prakash Kumar's score and the father-daughter dynamic at the film's core gave it an emotional dimension that pure action films lack."
     },
     {
       "title": "Yennai Arindhaal",
@@ -3819,7 +3868,8 @@
       "weekNum": 0,
       "betaModel": false,
       "pageUrl": "premam-box-office.html",
-      "posterUrl": ""
+      "posterUrl": "",
+      "note": "Alphonse Puthren's Premam is Malayalam cinema's most culturally significant romantic film — a film that captured three stages of a man's love life with a lightness and visual intelligence that felt genuinely new in the Malayalam commercial space. Nivin Pauly's Georgie is a performance of complete naturalness, and the film's non-linear structure reflects a filmmaker who trusted his audience's intelligence. Its repeated theatrical runs and OTT numbers suggest it is watched differently each time."
     },
     {
       "title": "Drishyam",
@@ -3848,7 +3898,8 @@
       "weekNum": 0,
       "betaModel": false,
       "pageUrl": "drishyam-box-office.html",
-      "posterUrl": ""
+      "posterUrl": "",
+      "note": "Jeethu Joseph's Drishyam Malayalam original is the definitive Indian crime thriller — a man who uses cinema knowledge to construct an alibi for his family, a story about how far love will take someone. Mohanlal's Georgekutty is a performance of complete internal consistency: a man who knows exactly what he's doing at every moment and shows the audience just enough to make them complicit. The remakes in Telugu, Tamil, Hindi and Kannada are testament to the original's structural perfection."
     },
     {
       "title": "Ennu Ninte Moideen",
@@ -3978,7 +4029,7 @@
       "indiaNet": "₹300 Cr",
       "wwGross": "₹586 Cr",
       "overseas": "₹286 Cr",
-      "verdict": "All-Time Blockbuster",
+      "verdict": "Blockbuster",
       "distributor": "Yash Raj Films",
       "openingDay": "36",
       "openingWeekend": "105",
@@ -3991,7 +4042,8 @@
       "weekNum": 0,
       "betaModel": false,
       "pageUrl": "sultan-box-office.html",
-      "posterUrl": ""
+      "posterUrl": "",
+      "note": "Ali Abbas Zafar's Sultan is a Salman Khan film that understood the biographical sports film format and used it to examine aging, ambition and the specific cost of competitive obsession. Salman Khan's physical transformation and emotional vulnerability in the wrestling scenes are both genuine. The ₹300 Cr on ₹145 Cr budget gave it a solid Blockbuster verdict, but the film is more interested in asking questions about its protagonist than most Salman Khan films dare to be."
     },
     {
       "title": "Ae Dil Hai Mushkil",
@@ -4007,7 +4059,7 @@
       "indiaNet": "₹115 Cr",
       "wwGross": "₹175 Cr",
       "overseas": "₹60 Cr",
-      "verdict": "Hit",
+      "verdict": "Average",
       "distributor": "Dharma Productions",
       "openingDay": "16",
       "openingWeekend": "50",
@@ -4020,7 +4072,8 @@
       "weekNum": 0,
       "betaModel": false,
       "pageUrl": "ae-dil-hai-mushkil-box-office.html",
-      "posterUrl": ""
+      "posterUrl": "",
+      "note": "Karan Johar's Ae Dil Hai Mushkil is a film about unrequited love that refuses the conventional resolution — Ranbir Kapoor's Ayan loves Anushka Sharma's Alizeh who loves someone else, and the film's refusal to punish anyone for this misalignment makes it more emotionally honest than most Hindi romantic films. The ₹115 Cr on substantial budget produced an Average verdict, reflecting a film whose emotional intelligence found a specific audience rather than the mass one."
     },
     {
       "title": "Rustom",
@@ -4035,7 +4088,7 @@
       "indiaNet": "₹127 Cr",
       "wwGross": "₹160 Cr",
       "overseas": "₹33 Cr",
-      "verdict": "All-Time Blockbuster",
+      "verdict": "Super Hit",
       "distributor": "Universal / Zee",
       "openingDay": "14",
       "openingWeekend": "50",
@@ -4048,7 +4101,8 @@
       "weekNum": 0,
       "betaModel": false,
       "pageUrl": "rustom-box-office.html",
-      "posterUrl": ""
+      "posterUrl": "",
+      "note": "Tinu Suresh Desai's Rustom is a courtroom thriller based on the Nanavati case — a Naval officer who kills his wife's lover and is then defended by public opinion as much as by his lawyer. Akshay Kumar's uniformed authority is the film's commercial engine, and the film's understanding that the original case was won in newspapers before it was argued in courts gives it a media literacy unusual for the genre. Super Hit verdict on its budget."
     },
     {
       "title": "MS Dhoni: The Untold Story",
@@ -4064,7 +4118,7 @@
       "indiaNet": "₹134 Cr",
       "wwGross": "₹215 Cr",
       "overseas": "₹81 Cr",
-      "verdict": "All-Time Blockbuster",
+      "verdict": "Hit",
       "distributor": "Fox Star Studios",
       "openingDay": "21",
       "openingWeekend": "70",
@@ -4077,7 +4131,8 @@
       "weekNum": 0,
       "betaModel": false,
       "pageUrl": "ms-dhoni-the-untold-story-box-office.html",
-      "posterUrl": ""
+      "posterUrl": "",
+      "note": "Neeraj Pandey's MS Dhoni biopic is the most commercially successful Indian sports biopic — a film that had access to its subject's cooperation and used it to present a portrait that is affectionate but not hagiographic. Sushant Singh Rajput's performance captures Dhoni's specific stillness under pressure, a quality that conventional acting technique would have over-emoted. The Hit verdict on its budget is accurate; the film's cultural presence was larger than its box office."
     },
     {
       "title": "Airlift",
@@ -4092,7 +4147,7 @@
       "indiaNet": "₹130 Cr",
       "wwGross": "₹148 Cr",
       "overseas": "₹18 Cr",
-      "verdict": "All-Time Blockbuster",
+      "verdict": "Super Hit",
       "distributor": "T-Series / Reliance",
       "openingDay": "12",
       "openingWeekend": "42",
@@ -4105,7 +4160,8 @@
       "weekNum": 0,
       "betaModel": false,
       "pageUrl": "airlift-box-office.html",
-      "posterUrl": ""
+      "posterUrl": "",
+      "note": "Raja Krishna Menon's Airlift is the decade's finest Hindi patriotic thriller — the 1990 evacuation of Indians from Kuwait, organised by a businessman who had to become more than he had previously been. Akshay Kumar's Ranjit Katyal begins the film as a compromised, self-interested man and ends it having moved over 100,000 people to safety; the transformation is shown, not declared. Super Hit on its budget."
     },
     {
       "title": "Neerja",
@@ -4120,7 +4176,7 @@
       "indiaNet": "₹76 Cr",
       "wwGross": "₹83 Cr",
       "overseas": "₹7 Cr",
-      "verdict": "All-Time Blockbuster",
+      "verdict": "Hit",
       "distributor": "Fox Star Studios",
       "openingDay": "5",
       "openingWeekend": "18",
@@ -4133,7 +4189,8 @@
       "weekNum": 0,
       "betaModel": false,
       "pageUrl": "neerja-box-office.html",
-      "posterUrl": ""
+      "posterUrl": "",
+      "note": "Ram Madhvani's Neerja is the finest Hindi film about a real tragedy — the 1986 Pan Am hijacking in which a flight attendant saved passenger lives at the cost of her own. Sonam Kapoor's performance is the most disciplined of her career, inhabiting a specific bravery without performing it. The Hit verdict on a minimal budget represents exceptional commercial efficiency for such serious material."
     },
     {
       "title": "Kapoor & Sons",
@@ -4149,7 +4206,7 @@
       "indiaNet": "₹72 Cr",
       "wwGross": "₹85 Cr",
       "overseas": "₹13 Cr",
-      "verdict": "Super Hit",
+      "verdict": "Hit",
       "distributor": "Dharma Productions",
       "openingDay": "5.5",
       "openingWeekend": "22",
@@ -4190,7 +4247,8 @@
       "weekNum": 0,
       "betaModel": false,
       "pageUrl": "fan-box-office.html",
-      "posterUrl": ""
+      "posterUrl": "",
+      "note": "Maneesh Sharma's Fan is Shah Rukh Khan's most conceptually interesting film — a star and his obsessive fan who looks exactly like him, a premise that allows Khan to examine and critique his own screen persona from the outside. The darker implications about the nature of celebrity worship are genuinely thought-provoking. The Flop verdict on a substantial budget reflects the film's experimental nature finding insufficient audience."
     },
     {
       "title": "Fitoor",
@@ -4234,7 +4292,7 @@
       "indiaNet": "₹47 Cr",
       "wwGross": "₹58 Cr",
       "overseas": "₹11 Cr",
-      "verdict": "All-Time Blockbuster",
+      "verdict": "Blockbuster",
       "distributor": "Aashirvad Cinemas",
       "openingDay": "2.5",
       "openingWeekend": "10",
@@ -4448,7 +4506,8 @@
       "weekNum": 0,
       "betaModel": false,
       "pageUrl": "kabali-box-office.html",
-      "posterUrl": ""
+      "posterUrl": "",
+      "note": "Pa. Ranjith's Kabali is the most politically significant Tamil mass entertainer in a generation — a film about a Tamil labour activist in Malaysia that carries a critique of caste oppression and racial discrimination inside Rajinikanth's commercial framework. The political content is not decoration but the film's actual argument, and Pa. Ranjith's ability to deliver that argument through the most commercial possible vehicle is his singular achievement. Blockbuster verdict on its budget."
     },
     {
       "title": "Theri",
@@ -4679,7 +4738,8 @@
       "weekNum": 0,
       "betaModel": false,
       "pageUrl": "captain-america-civil-war-box-office.html",
-      "posterUrl": ""
+      "posterUrl": "",
+      "note": "The Russo Brothers' Civil War found its Indian audience through the Marvel infrastructure that had been built consistently since The Avengers — the superhero conflict as political allegory translated without friction because the film's fundamental question, whose authority is legitimate, is universally resonant. The ₹75 Cr India collection marked Marvel's confirmation as the dominant Hollywood commercial force in the Indian market."
     },
     {
       "title": "The Jungle Book",
@@ -4782,7 +4842,7 @@
       "indiaNet": "₹339 Cr",
       "wwGross": "₹565 Cr",
       "overseas": "₹226 Cr",
-      "verdict": "All-Time Blockbuster",
+      "verdict": "Blockbuster",
       "distributor": "Yash Raj Films",
       "openingDay": "34",
       "openingWeekend": "114",
@@ -4795,7 +4855,8 @@
       "weekNum": 0,
       "betaModel": false,
       "pageUrl": "tiger-zinda-hai-box-office.html",
-      "posterUrl": ""
+      "posterUrl": "",
+      "note": "Ali Abbas Zafar's Tiger Zinda Hai is the most technically accomplished Hindi action film of the decade — a Mosul rescue mission that gave the Ek Tha Tiger franchise an international scale that matched its ambition. Salman Khan and Katrina Kaif's action work is the best of their respective careers, and the film's Middle East setting gave Hindi commercial cinema a visual and narrative geography it had barely explored. The ₹339 Cr on ₹150 Cr budget produced the decade's cleanest Blockbuster verdict."
     },
     {
       "title": "Toilet: Ek Prem Katha",
@@ -4810,7 +4871,7 @@
       "indiaNet": "₹134 Cr",
       "wwGross": "₹162 Cr",
       "overseas": "₹28 Cr",
-      "verdict": "All-Time Blockbuster",
+      "verdict": "Super Hit",
       "distributor": "Viacom18 Motion Pictures",
       "openingDay": "13",
       "openingWeekend": "46",
@@ -4823,7 +4884,8 @@
       "weekNum": 0,
       "betaModel": false,
       "pageUrl": "toilet-ek-prem-katha-box-office.html",
-      "posterUrl": ""
+      "posterUrl": "",
+      "note": "Shree Narayan Singh's Toilet: Ek Prem Katha is the decade's most successful government-scheme film — a Swachh Bharat initiative wrapped in a romantic comedy about a woman who won't live in a house without a toilet. Akshay Kumar's ability to make a sanitation argument entertaining without making it preachy is the film's primary achievement. Super Hit verdict on its budget."
     },
     {
       "title": "Judwaa 2",
@@ -4839,7 +4901,7 @@
       "indiaNet": "₹138 Cr",
       "wwGross": "₹155 Cr",
       "overseas": "₹17 Cr",
-      "verdict": "All-Time Blockbuster",
+      "verdict": "Super Hit",
       "distributor": "Nadiadwala Grandson",
       "openingDay": "16",
       "openingWeekend": "55",
@@ -4852,7 +4914,8 @@
       "weekNum": 0,
       "betaModel": false,
       "pageUrl": "judwaa-2-box-office.html",
-      "posterUrl": ""
+      "posterUrl": "",
+      "note": "David Dhawan's Judwaa 2 is a loving reconstruction of the original 1997 film with Varun Dhawan replacing his father's role — a double-role comedy of mistaken identities that functions as both a sequel and a tribute. The film's Super Hit verdict reflects a moderate budget generating solid returns through nostalgia and Varun Dhawan's growing commercial presence."
     },
     {
       "title": "Baahubali 2: The Conclusion (Hindi)",
@@ -4896,7 +4959,7 @@
       "indiaNet": "₹117 Cr",
       "wwGross": "₹132 Cr",
       "overseas": "₹15 Cr",
-      "verdict": "All-Time Blockbuster",
+      "verdict": "Hit",
       "distributor": "Fox Star Studios",
       "openingDay": "12",
       "openingWeekend": "40",
@@ -4909,7 +4972,8 @@
       "weekNum": 0,
       "betaModel": false,
       "pageUrl": "jolly-llb-2-box-office.html",
-      "posterUrl": ""
+      "posterUrl": "",
+      "note": "Subhash Kapoor's Jolly LLB 2 is the finest Indian courtroom comedy — Akshay Kumar's bumbling lawyer versus the system's corruption, told with enough affection for the legal process to make the comedy feel like critique rather than dismissal. The Hit verdict on its budget is accurate; the film's cultural presence, particularly its dialogue, exceeded its commercial numbers."
     },
     {
       "title": "Badrinath Ki Dulhania",
@@ -4924,7 +4988,7 @@
       "indiaNet": "₹116 Cr",
       "wwGross": "₹130 Cr",
       "overseas": "₹14 Cr",
-      "verdict": "All-Time Blockbuster",
+      "verdict": "Super Hit",
       "distributor": "Dharma Productions",
       "openingDay": "12",
       "openingWeekend": "42",
@@ -4937,7 +5001,8 @@
       "weekNum": 0,
       "betaModel": false,
       "pageUrl": "badrinath-ki-dulhania-box-office.html",
-      "posterUrl": ""
+      "posterUrl": "",
+      "note": "Shashank Khaitan's Badrinath Ki Dulhania is the best of the Humpty Sharma Ki Dulhania franchise — a film about a traditional man confronting the independence of a modern woman that is more honest about gender dynamics than its masala register suggests. Varun Dhawan and Alia Bhatt's second pairing has a comfort with each other that generates genuine romantic chemistry. Super Hit verdict on its modest budget."
     },
     {
       "title": "Hindi Medium",
@@ -4965,7 +5030,8 @@
       "weekNum": 0,
       "betaModel": false,
       "pageUrl": "hindi-medium-box-office.html",
-      "posterUrl": ""
+      "posterUrl": "",
+      "note": "Saket Chaudhary's Hindi Medium is the decade's finest social satire — a film about the English-medium school admission process in Delhi that examines class aspiration, parental anxiety and the specific humiliation of trying to perform an identity you haven't been born into. Irrfan Khan's performance is his most effortlessly funny, and the film's structural reversal — parents going to live among the poor to qualify for government school quota — is one of Hindi cinema's most satisfying satirical constructions. Super Hit on a tiny budget."
     },
     {
       "title": "Tubelight",
@@ -4993,7 +5059,8 @@
       "weekNum": 0,
       "betaModel": false,
       "pageUrl": "tubelight-box-office.html",
-      "posterUrl": ""
+      "posterUrl": "",
+      "note": "Kabir Khan's Tubelight is a commercial failure whose ambitions were genuine — a Salman Khan film about faith and love during the 1962 Sino-Indian war that asked him to play a simple, vulnerable man without his usual physical authority. The Disaster verdict on its substantial budget was the most discussed commercial failure of 2017, and it remains an interesting failure — a film more honest than its marketing suggested."
     },
     {
       "title": "Jab Harry Met Sejal",
@@ -5036,7 +5103,7 @@
       "indiaNet": "₹117 Cr",
       "wwGross": "₹150 Cr",
       "overseas": "₹33 Cr",
-      "verdict": "All-Time Blockbuster",
+      "verdict": "Hit",
       "distributor": "FilmKraft / Eros",
       "openingDay": "12",
       "openingWeekend": "42",
@@ -5049,7 +5116,8 @@
       "weekNum": 0,
       "betaModel": false,
       "pageUrl": "kaabil-box-office.html",
-      "posterUrl": ""
+      "posterUrl": "",
+      "note": "Sanjay Gupta's Kaabil gave Hrithik Roshan his most interesting dramatic premise of the decade — a blind man pursuing justice for the rape and death of his blind wife, in a film that refuses to make victimhood passive. The Hit verdict on its budget reflects a film that found a dedicated audience for its specific emotional register."
     },
     {
       "title": "Baahubali 2: The Conclusion",
@@ -5079,7 +5147,8 @@
       "weekNum": 0,
       "betaModel": false,
       "pageUrl": "baahubali-2-the-conclusion-box-office.html",
-      "posterUrl": ""
+      "posterUrl": "",
+      "note": "S.S. Rajamouli's Baahubali 2 is the most commercially successful Indian film ever made and the definitive argument that Indian popular cinema could compete at a global spectacle level without sacrificing narrative or emotional intelligence. The ₹511 Cr Hindi collection and ₹825 Cr Telugu collection are numbers that reshaped how the industry thought about production scale, release strategy and the pan-India market. 'Why did Katappa kill Baahubali?' was answered, and the answer was worth the wait."
     },
     {
       "title": "Fidaa",
@@ -5107,7 +5176,8 @@
       "weekNum": 0,
       "betaModel": false,
       "pageUrl": "fidaa-box-office.html",
-      "posterUrl": ""
+      "posterUrl": "",
+      "note": "Shekhar Kammula's Fidaa is the most purely satisfying Telugu romantic film of the decade — a Telangana village girl and a Telugu-American whose romance is handled with a lightness and specificity of cultural observation that mainstream Telugu cinema rarely achieves. Sai Pallavi's debut performance in Telugu made her a phenomenon overnight; the Fidaa character's directness and warmth are among the most complete heroine constructions of the period. All-Time Blockbuster verdict on a small budget."
     },
     {
       "title": "Arjun Reddy",
@@ -5135,7 +5205,8 @@
       "weekNum": 0,
       "betaModel": false,
       "pageUrl": "arjun-reddy-box-office.html",
-      "posterUrl": ""
+      "posterUrl": "",
+      "note": "Sandeep Vanga Reddy's Arjun Reddy is the most polarising Telugu film of the decade — a portrait of a brilliant, self-destructive doctor whose toxic masculinity the film depicts with an intimacy that either reads as critique or endorsement depending entirely on what the viewer brings to it. Vijay Deverakonda's performance is total commitment to a character the script refuses to simplify. The All-Time Blockbuster verdict on its budget reflects extraordinary RoI for what was essentially an art film that accidentally became a phenomenon."
     },
     {
       "title": "Rangasthalam",
@@ -5164,7 +5235,8 @@
       "weekNum": 0,
       "betaModel": false,
       "pageUrl": "rangasthalam-box-office.html",
-      "posterUrl": ""
+      "posterUrl": "",
+      "note": "Sukumar's Rangasthalam gave Ram Charan his career-defining role — a deaf man in a 1980s Andhra village caught between a murderous landlord's power and his community's survival. The film's period setting and its Godavari delta authenticity gave Telugu commercial cinema an unusual social realism. Ram Charan's physical and emotional performance is the best of his career, and the film's ₹180 Cr collection on a moderate budget produced a justified All-Time Blockbuster verdict."
     },
     {
       "title": "Spyder",
@@ -5221,7 +5293,8 @@
       "weekNum": 0,
       "betaModel": false,
       "pageUrl": "khaidi-no-150-box-office.html",
-      "posterUrl": ""
+      "posterUrl": "",
+      "note": "Vakkantham Vamsi's Khaidi No. 150 is Chiranjeevi's comeback film after a decade in politics — a remake of Tamil hit Kaththi that gave him a double role and a platform that confirmed his fanbase had waited rather than moved on. The All-Time Blockbuster verdict on its budget reflects the extraordinary commercial loyalty of the Chiru fanbase."
     },
     {
       "title": "Mersal (Telugu)",
@@ -5280,7 +5353,8 @@
       "weekNum": 0,
       "betaModel": false,
       "pageUrl": "mersal-box-office.html",
-      "posterUrl": ""
+      "posterUrl": "",
+      "note": "Atlee's Mersal is the Tamil mass entertainer that most efficiently converted political anger into entertainment fuel — Vijay's triple role includes a character whose direct critique of GST and Modi government policy generated controversy that the film's box office absorbed entirely. The ₹175 Cr Tamil collection confirmed the Atlee-Vijay combination as the decade's most reliable Tamil commercial engine. The film's argument that healthcare and governance affect the poor more directly than the rich is made in the language of action cinema."
     },
     {
       "title": "Vivegam",
@@ -5496,7 +5570,7 @@
       "indiaNet": "₹25 Cr",
       "wwGross": "₹28 Cr",
       "overseas": "₹3 Cr",
-      "verdict": "All-Time Blockbuster",
+      "verdict": "Super Hit",
       "distributor": "Friday Film House",
       "openingDay": "1.5",
       "openingWeekend": "5",
@@ -5525,7 +5599,7 @@
       "indiaNet": "₹75 Cr",
       "wwGross": "₹88 Cr",
       "overseas": "₹13 Cr",
-      "verdict": "All-Time Blockbuster",
+      "verdict": "Blockbuster",
       "distributor": "Panorama Studios",
       "openingDay": "5.5",
       "openingWeekend": "22",
@@ -5701,7 +5775,7 @@
       "indiaNet": "₹342 Cr",
       "wwGross": "₹586 Cr",
       "overseas": "₹244 Cr",
-      "verdict": "All-Time Blockbuster",
+      "verdict": "Blockbuster",
       "distributor": "Vinod Chopra / Fox",
       "openingDay": "34",
       "openingWeekend": "120",
@@ -5714,7 +5788,8 @@
       "weekNum": 0,
       "betaModel": false,
       "pageUrl": "sanju-box-office.html",
-      "posterUrl": ""
+      "posterUrl": "",
+      "note": "Rajkumar Hirani's Sanju is the most watched Hindi biopic of the decade — a film about Sanjay Dutt's drug addiction, wrongful imprisonment and complicated relationship with his father that manages to be simultaneously critical and deeply sympathetic. Ranbir Kapoor's physical and emotional transformation is total, and the film's moral intelligence in presenting a man who is genuinely flawed without condemning him is Hirani's trademark. The ₹342 Cr on a moderate budget produced a solid Blockbuster verdict."
     },
     {
       "title": "Padmaavat",
@@ -5730,7 +5805,7 @@
       "indiaNet": "₹302 Cr",
       "wwGross": "₹585 Cr",
       "overseas": "₹283 Cr",
-      "verdict": "All-Time Blockbuster",
+      "verdict": "Blockbuster",
       "distributor": "Viacom18 / Bhansali",
       "openingDay": "19",
       "openingWeekend": "95",
@@ -5743,7 +5818,8 @@
       "weekNum": 0,
       "betaModel": false,
       "pageUrl": "padmaavat-box-office.html",
-      "posterUrl": ""
+      "posterUrl": "",
+      "note": "Sanjay Leela Bhansali's Padmaavat is the most politically contested Hindi film of the decade — its production was attacked, its release delayed, its content protested by Rajput groups who had not seen it. The film itself is Bhansali's most visually complete work, and Ranveer Singh's Alauddin Khilji is among the most committed villain performances in Hindi cinema. The ₹302 Cr on ₹215 Cr budget produced a Blockbuster verdict that the film's pre-release controversy made even more notable."
     },
     {
       "title": "Baaghi 2",
@@ -5758,7 +5834,7 @@
       "indiaNet": "₹253 Cr",
       "wwGross": "₹330 Cr",
       "overseas": "₹77 Cr",
-      "verdict": "All-Time Blockbuster",
+      "verdict": "Blockbuster",
       "distributor": "Fox Star / Nadiadwala",
       "openingDay": "25",
       "openingWeekend": "95",
@@ -5771,7 +5847,8 @@
       "weekNum": 0,
       "betaModel": false,
       "pageUrl": "baaghi-2-box-office.html",
-      "posterUrl": ""
+      "posterUrl": "",
+      "note": "Ahmed Khan's Baaghi 2 is Bollywood's most commercially successful action sequel — a film that took the Baaghi franchise from its intimate Bollywood-esque origins into a full-scale military action register. Tiger Shroff's physical work is the most technically accomplished of his career, and the film's willingness to be straightforwardly about combat spectacle gave it a clarity that confused films in this register usually lack. Blockbuster on its budget."
     },
     {
       "title": "Stree",
@@ -5786,7 +5863,7 @@
       "indiaNet": "₹180 Cr",
       "wwGross": "₹210 Cr",
       "overseas": "₹30 Cr",
-      "verdict": "All-Time Blockbuster",
+      "verdict": "Super Hit",
       "distributor": "Maddock Films / Dinesh Vijan",
       "openingDay": "10",
       "openingWeekend": "38",
@@ -5799,7 +5876,8 @@
       "weekNum": 0,
       "betaModel": false,
       "pageUrl": "stree-box-office.html",
-      "posterUrl": ""
+      "posterUrl": "",
+      "note": "Amar Kaushik's Stree is the finest Hindi horror-comedy of the decade — a film set in a Madhya Pradesh town annually terrorised by a female spirit that uses the supernatural premise to examine small-town masculinity and its anxieties about female power. Rajkummar Rao and Pankaj Tripathi anchor an ensemble comedy of complete precision, and the film's feminist undertow is fully intentional. The Super Hit verdict on its minimal budget represents one of the decade's best returns."
     },
     {
       "title": "Andhadhun",
@@ -5815,7 +5893,7 @@
       "indiaNet": "₹78 Cr",
       "wwGross": "₹460 Cr",
       "overseas": "₹382 Cr",
-      "verdict": "All-Time Blockbuster",
+      "verdict": "Hit",
       "distributor": "Viacom18 Motion Pictures",
       "openingDay": "3",
       "openingWeekend": "13",
@@ -5828,7 +5906,8 @@
       "weekNum": 0,
       "betaModel": false,
       "pageUrl": "andhadhun-box-office.html",
-      "posterUrl": ""
+      "posterUrl": "",
+      "note": "Sriram Raghavan's Andhadhun is the most formally accomplished Hindi thriller since Kahaani — a blind pianist, a murdered actor, an unfaithful wife and a cornea transplant plot that generates reversals with a mechanism so precise that the film is impossible to stop watching once started. Ayushmann Khurrana's performance requires him to be simultaneously unreliable, sympathetic and opaque, and he manages all three simultaneously. Hit verdict on a tiny budget is accurate; the film's cultural presence exceeded its box office considerably."
     },
     {
       "title": "Badhaai Ho",
@@ -5844,7 +5923,7 @@
       "indiaNet": "₹137 Cr",
       "wwGross": "₹158 Cr",
       "overseas": "₹21 Cr",
-      "verdict": "All-Time Blockbuster",
+      "verdict": "Blockbuster",
       "distributor": "Junglee Pictures",
       "openingDay": "7",
       "openingWeekend": "28",
@@ -5857,7 +5936,8 @@
       "weekNum": 0,
       "betaModel": false,
       "pageUrl": "badhaai-ho-box-office.html",
-      "posterUrl": ""
+      "posterUrl": "",
+      "note": "Amit Sharma's Badhaai Ho is a comedy of domestic embarrassment — a middle-aged couple's unexpected pregnancy, a son who can't face his friends, a mother-in-law who makes everything worse. Neena Gupta and Gajraj Rao anchor a film whose comedy comes from recognising these specific family dynamics rather than watching characters perform them. The Blockbuster verdict on its minimal budget made it the decade's most efficient commercial surprise."
     },
     {
       "title": "Raazi",
@@ -5872,7 +5952,7 @@
       "indiaNet": "₹122 Cr",
       "wwGross": "₹150 Cr",
       "overseas": "₹28 Cr",
-      "verdict": "All-Time Blockbuster",
+      "verdict": "Super Hit",
       "distributor": "Dharma / Junglee",
       "openingDay": "7.5",
       "openingWeekend": "28",
@@ -5885,7 +5965,8 @@
       "weekNum": 0,
       "betaModel": false,
       "pageUrl": "raazi-box-office.html",
-      "posterUrl": ""
+      "posterUrl": "",
+      "note": "Meghna Gulzar's Raazi is the finest Hindi espionage film — an Indian woman married into a Pakistani military family who transmits intelligence during the 1971 war, a premise whose moral complexity the film inhabits without simplifying. Alia Bhatt's performance is her career's most technically demanding, and the film's refusal to make the enemy one-dimensional is what distinguishes it from patriotic action cinema. Super Hit on its modest budget."
     },
     {
       "title": "Race 3",
@@ -5901,7 +5982,7 @@
       "indiaNet": "₹166 Cr",
       "wwGross": "₹305 Cr",
       "overseas": "₹139 Cr",
-      "verdict": "Flop",
+      "verdict": "Disaster",
       "distributor": "Tips / Eros",
       "openingDay": "29",
       "openingWeekend": "90",
@@ -5914,7 +5995,8 @@
       "weekNum": 0,
       "betaModel": false,
       "pageUrl": "race-3-box-office.html",
-      "posterUrl": ""
+      "posterUrl": "",
+      "note": "Remo D'Souza's Race 3 is the most honest commercial Disaster of the decade — a film whose Abbas-Mustan franchise inheritance it understood neither structurally nor tonally, producing a self-parodying thriller whose reception became a cultural event in itself. The ₹166 Cr on a substantial budget failed to recoup, and the film's dialogue entered meme culture immediately. Disaster verdict."
     },
     {
       "title": "Gold",
@@ -6027,7 +6109,8 @@
       "weekNum": 0,
       "betaModel": false,
       "pageUrl": "bharat-ane-nenu-box-office.html",
-      "posterUrl": ""
+      "posterUrl": "",
+      "note": "Koratala Siva's Bharat Ane Nenu is the most politically serious Telugu mass entertainer of the decade — a chief minister who arrives in office with genuine reforming intent and discovers what the system actually is. Mahesh Babu's performance combines the star's physical authority with an intellectual rigour that the character's administrative intelligence requires. The All-Time Blockbuster verdict on its budget reflects extraordinary returns."
     },
     {
       "title": "F2: Fun and Frustration",
@@ -6200,7 +6283,8 @@
       "weekNum": 0,
       "betaModel": false,
       "pageUrl": "sarkar-box-office.html",
-      "posterUrl": ""
+      "posterUrl": "",
+      "note": "A.R. Murugadoss's Sarkar gave Vijay a political vehicle whose critique of the ruling party was direct enough to generate government response. The film's Tamil Nadu political context — voter welfare schemes, anti-incumbency, the mechanics of vote buying — is specific but the anger driving it is universal. The All-Time Blockbuster verdict on its budget."
     },
     {
       "title": "2.0",
@@ -6229,7 +6313,8 @@
       "weekNum": 0,
       "betaModel": false,
       "pageUrl": "20-box-office.html",
-      "posterUrl": ""
+      "posterUrl": "",
+      "note": "Shankar's 2.0 is Tamil cinema's most expensive production — a sequel to Enthiran that imagines the revenge of the ecological consciousness against smartphone culture, with Akshay Kumar as a scientist-turned-giant-bird-villain. The visual effects are the most technically ambitious in Indian cinema, and the film's environmental argument, delivered through robot-vs-giant-bird spectacle, is more coherent than it sounds. The ₹380 Cr Tamil+Hindi combined collection produced a justified All-Time Blockbuster verdict."
     },
     {
       "title": "Junga",
@@ -6273,7 +6358,7 @@
       "indiaNet": "₹25 Cr",
       "wwGross": "₹35 Cr",
       "overseas": "₹10 Cr",
-      "verdict": "All-Time Blockbuster",
+      "verdict": "Super Hit",
       "distributor": "Passion Studios",
       "openingDay": "2",
       "openingWeekend": "8",
@@ -6286,7 +6371,8 @@
       "weekNum": 0,
       "betaModel": false,
       "pageUrl": "96-box-office.html",
-      "posterUrl": ""
+      "posterUrl": "",
+      "note": "C. Prem Kumar's 96 is Tamil cinema's most delicate romantic film — two former classmates who loved each other twenty years ago, meeting again, neither able to say what they both know. Vijay Sethupathi and Trisha Krishnan's performances depend entirely on restraint, on what is not said, and both honour that requirement completely. A.R. Rahman's score operates in the same register. Super Hit on its minimal budget represents excellent RoI."
     },
     {
       "title": "Iruttu Araiyil Murattu Kuththu 2",
@@ -6329,7 +6415,7 @@
       "indiaNet": "₹28 Cr",
       "wwGross": "₹35 Cr",
       "overseas": "₹7 Cr",
-      "verdict": "All-Time Blockbuster",
+      "verdict": "Super Hit",
       "distributor": "Axess Film Factory",
       "openingDay": "2",
       "openingWeekend": "8",
@@ -6342,7 +6428,8 @@
       "weekNum": 0,
       "betaModel": false,
       "pageUrl": "ratchasan-box-office.html",
-      "posterUrl": ""
+      "posterUrl": "",
+      "note": "Ram Kumar's Ratchasan is the finest Tamil serial killer thriller — a police procedural that takes its genre seriously enough to actually frighten its audience, anchored by Vishnu Vishal's detective and a genuinely unsettling antagonist. The film's clinical attention to the procedural detail of investigation gives it a credibility that distinguishes it from Tamil crime cinema's more spectacular tendencies. Super Hit on its budget."
     },
     {
       "title": "Lucifer",
@@ -6457,7 +6544,8 @@
       "weekNum": 0,
       "betaModel": false,
       "pageUrl": "kgf-chapter-1-box-office.html",
-      "posterUrl": ""
+      "posterUrl": "",
+      "note": "Prashanth Neel's KGF: Chapter 1 announced a Kannada film as a pan-India commercial event before either term was in common use — a gold mine epic set in the 1970s that gave Yash the screen presence of a Tamil or Telugu mass hero without any of those industries' infrastructure. The ₹250 Cr all-language collection rewrote how the industry thought about Kannada cinema's ceiling. The All-Time Blockbuster verdict is unambiguous."
     },
     {
       "title": "Avengers: Infinity War",
@@ -6486,7 +6574,8 @@
       "weekNum": 0,
       "betaModel": false,
       "pageUrl": "avengers-infinity-war-box-office.html",
-      "posterUrl": ""
+      "posterUrl": "",
+      "note": "The Russo Brothers' Infinity War was the MCU's most daring commercial film — killing its heroes, ending on a genuinely tragic note, treating its audience as capable of handling unresolved darkness. The ₹210 Cr India collection set a new Hollywood record in India and confirmed that the Marvel franchise had achieved a devotion in the Indian multiplex audience comparable to domestic blockbusters."
     },
     {
       "title": "Black Panther",
@@ -6649,7 +6738,7 @@
       "indiaNet": "₹317 Cr",
       "wwGross": "₹475 Cr",
       "overseas": "₹158 Cr",
-      "verdict": "All-Time Blockbuster",
+      "verdict": "Blockbuster",
       "distributor": "Yash Raj Films",
       "openingDay": "51",
       "openingWeekend": "166",
@@ -6662,7 +6751,8 @@
       "weekNum": 0,
       "betaModel": false,
       "pageUrl": "war-box-office.html",
-      "posterUrl": ""
+      "posterUrl": "",
+      "note": "Siddharth Anand's War is the most technically accomplished Hindi action film and the most profitable single-day grosser of the decade at that point — Hrithik Roshan and Tiger Shroff's mentor-turned-enemy conflict structured around a series of individually designed action sequences that each demonstrate a different physical register. The Blockbuster verdict on its ₹150 Cr budget is accurate; the film's ₹317 Cr gives it strong but not extraordinary profitability."
     },
     {
       "title": "Kabir Singh",
@@ -6677,7 +6767,7 @@
       "indiaNet": "₹280 Cr",
       "wwGross": "₹379 Cr",
       "overseas": "₹99 Cr",
-      "verdict": "All-Time Blockbuster",
+      "verdict": "Blockbuster",
       "distributor": "T-Series / Cine1",
       "openingDay": "20",
       "openingWeekend": "78",
@@ -6690,7 +6780,8 @@
       "weekNum": 0,
       "betaModel": false,
       "pageUrl": "kabir-singh-box-office.html",
-      "posterUrl": ""
+      "posterUrl": "",
+      "note": "Sandeep Vanga Reddy's Kabir Singh replicated Arjun Reddy's commercial success in Hindi with exactly the same moral logic — a brilliant man destroyed by his own toxicity, presented with an intimacy that refuses judgment while demanding engagement. Shahid Kapoor's performance is the most complete of his career, inhabiting the character's self-destruction with a specificity that makes the discomfort intentional rather than incidental. Blockbuster on its budget."
     },
     {
       "title": "Uri: The Surgical Strike",
@@ -6718,7 +6809,8 @@
       "weekNum": 0,
       "betaModel": false,
       "pageUrl": "uri-the-surgical-strike-box-office.html",
-      "posterUrl": ""
+      "posterUrl": "",
+      "note": "Aditya Dhar's Uri is the decade's most significant patriotic action film and arguably its most politically effective entertainment — a re-enactment of the 2016 surgical strikes that gave the 2019 pre-election audience both cathartic nationalism and genuine procedural intelligence. Vicky Kaushal's understated performance as Major Karan Shergill grounds the film's military action in individual cost. The ₹244 Cr on an ₹80 Cr budget produced an All-Time Blockbuster verdict that BOI confirmed — the most efficient large-scale Hindi commercial film of 2019."
     },
     {
       "title": "Good Newwz",
@@ -6734,7 +6826,7 @@
       "indiaNet": "₹206 Cr",
       "wwGross": "₹318 Cr",
       "overseas": "₹112 Cr",
-      "verdict": "All-Time Blockbuster",
+      "verdict": "Super Hit",
       "distributor": "Dharma / Zee",
       "openingDay": "17",
       "openingWeekend": "68",
@@ -6762,7 +6854,7 @@
       "indiaNet": "₹211 Cr",
       "wwGross": "₹325 Cr",
       "overseas": "₹114 Cr",
-      "verdict": "All-Time Blockbuster",
+      "verdict": "Average",
       "distributor": "T-Series / Reel Life",
       "openingDay": "43",
       "openingWeekend": "126",
@@ -6775,7 +6867,8 @@
       "weekNum": 0,
       "betaModel": false,
       "pageUrl": "bharat-box-office.html",
-      "posterUrl": ""
+      "posterUrl": "",
+      "note": "Ali Abbas Zafar's Bharat is a film about India's 70 years of independence mapped onto one man's life — an ambitious concept that the film executes unevenly across its episodes. Salman Khan's ability to age convincingly across the film's decades is its most consistent achievement. The Average verdict on its ₹170 Cr budget accurately reflects a film that spent more than its idea could sustain."
     },
     {
       "title": "Kesari",
@@ -6790,7 +6883,7 @@
       "indiaNet": "₹155 Cr",
       "wwGross": "₹210 Cr",
       "overseas": "₹55 Cr",
-      "verdict": "All-Time Blockbuster",
+      "verdict": "Hit",
       "distributor": "Dharma / Cape of Good Films",
       "openingDay": "21",
       "openingWeekend": "72",
@@ -6818,7 +6911,7 @@
       "indiaNet": "₹151 Cr",
       "wwGross": "₹200 Cr",
       "overseas": "₹49 Cr",
-      "verdict": "All-Time Blockbuster",
+      "verdict": "Super Hit",
       "distributor": "Fox Star / Nadiadwala",
       "openingDay": "7",
       "openingWeekend": "28",
@@ -6831,7 +6924,8 @@
       "weekNum": 0,
       "betaModel": false,
       "pageUrl": "chhichhore-box-office.html",
-      "posterUrl": ""
+      "posterUrl": "",
+      "note": "Nitesh Tiwari's Chhichhore is a film about college friendships and their middle-aged aftermath, structured around a hospitalised son whose father must explain to him why failure isn't terminal. The IIT setting and the 1990s-versus-present dual timeline gave the film a specificity of nostalgia that resonated strongly with its target demographic. Super Hit verdict on a modest budget."
     },
     {
       "title": "Super 30",
@@ -6846,7 +6940,7 @@
       "indiaNet": "₹148 Cr",
       "wwGross": "₹170 Cr",
       "overseas": "₹22 Cr",
-      "verdict": "All-Time Blockbuster",
+      "verdict": "Hit",
       "distributor": "Reliance Entertainment",
       "openingDay": "11",
       "openingWeekend": "40",
@@ -6859,7 +6953,8 @@
       "weekNum": 0,
       "betaModel": false,
       "pageUrl": "super-30-box-office.html",
-      "posterUrl": ""
+      "posterUrl": "",
+      "note": "Vikas Bahl's Super 30 is a biopic about Anand Kumar's coaching programme for underprivileged IIT aspirants — a subject that Hindi inspirational cinema is better suited to than Bhansali spectacle, and the film's Hit verdict on its budget reflects adequate but not exceptional returns for its marketing spend."
     },
     {
       "title": "De De Pyaar De",
@@ -6960,7 +7055,7 @@
       "indiaNet": "₹203 Cr",
       "wwGross": "₹290 Cr",
       "overseas": "₹87 Cr",
-      "verdict": "All-Time Blockbuster",
+      "verdict": "Super Hit",
       "distributor": "Fox Star / Hope Productions",
       "openingDay": "29",
       "openingWeekend": "95",
@@ -6973,7 +7068,8 @@
       "weekNum": 0,
       "betaModel": false,
       "pageUrl": "mission-mangal-box-office.html",
-      "posterUrl": ""
+      "posterUrl": "",
+      "note": "Jagan Shakti's Mission Mangal is the ISRO Mars mission film — an ensemble of women scientists, each given a domestic subplot, working toward the Mangalyaan launch. The film's Super Hit verdict on its budget reflects strong commercial performance for a science-patriotism hybrid, though the domestic subplots risk reducing the scientists to their family roles rather than their professional achievements."
     },
     {
       "title": "Saaho",
@@ -7002,7 +7098,8 @@
       "weekNum": 0,
       "betaModel": false,
       "pageUrl": "saaho-box-office.html",
-      "posterUrl": ""
+      "posterUrl": "",
+      "note": "Sujeeth's Saaho was the most expensive Telugu production and one of its most significant commercial disappointments — a Prabhas vehicle whose international ambitions exceeded its narrative coherence by a considerable margin. The ₹250 Cr Telugu collection on a ₹350 Cr budget produced the Flop verdict that the film's marketing couldn't prevent."
     },
     {
       "title": "Maharshi",
@@ -7086,7 +7183,8 @@
       "weekNum": 0,
       "betaModel": false,
       "pageUrl": "geetha-govindam-box-office.html",
-      "posterUrl": ""
+      "posterUrl": "",
+      "note": "Parasuram's Geetha Govindam gave Vijay Deverakonda his most commercially successful romantic film — a boy who accidentally behaves badly toward a girl who turns out to be his sister's teacher, a misunderstanding-comedy that the film extends with more patience than the premise deserves. Rashmika Mandanna's debut in Telugu established her immediately as a presence the industry would build films around. All-Time Blockbuster on its budget."
     },
     {
       "title": "DevaDas",
@@ -7172,7 +7270,8 @@
       "weekNum": 0,
       "betaModel": false,
       "pageUrl": "ala-vaikunthapurramuloo-box-office.html",
-      "posterUrl": ""
+      "posterUrl": "",
+      "note": "Trivikram Srinivas's Ala Vaikunthapurramuloo is the most complete Telugu mass entertainer of the decade's end — a switched-at-birth narrative whose emotional architecture gives Allu Arjun the full range of the commercial Telugu hero simultaneously: comedy, romance, action, family drama. Thaman's score gave the film 'Buttabomma', the decade's most replayed Telugu romantic song. All-Time Blockbuster verdict on its budget."
     },
     {
       "title": "Bheeshma",
@@ -7229,7 +7328,8 @@
       "weekNum": 0,
       "betaModel": false,
       "pageUrl": "bigil-box-office.html",
-      "posterUrl": ""
+      "posterUrl": "",
+      "note": "Atlee's Bigil is the Vijay-Atlee combination's most complete entertainment — a sports film about a women's football team coached by a gangster's son, structured around Vijay's dual role as the gangster father and footballer son. The feminist sports narrative is the film's commercial logic as much as its social argument. The ₹300 Cr Tamil collection confirmed the combination's ability to sustain this collection tier consistently."
     },
     {
       "title": "Petta",
@@ -7245,7 +7345,7 @@
       "indiaNet": "₹195 Cr",
       "wwGross": "₹255 Cr",
       "overseas": "₹60 Cr",
-      "verdict": "All-Time Blockbuster",
+      "verdict": "Blockbuster",
       "distributor": "Sun Pictures",
       "openingDay": "30",
       "openingWeekend": "90",
@@ -7258,7 +7358,8 @@
       "weekNum": 0,
       "betaModel": false,
       "pageUrl": "petta-box-office.html",
-      "posterUrl": ""
+      "posterUrl": "",
+      "note": "Karthik Subbaraj's Petta is a Rajinikanth fan film in the best sense — a film made by a director who loves Rajinikanth's filmography so much that he built a new film from its components, giving the star a character that honours the old archetypes while refreshing them. The Blockbuster verdict on its substantial budget is accurate."
     },
     {
       "title": "Kaithi",
@@ -7287,7 +7388,8 @@
       "weekNum": 0,
       "betaModel": false,
       "pageUrl": "kaithi-box-office.html",
-      "posterUrl": ""
+      "posterUrl": "",
+      "note": "Lokesh Kanagaraj's Kaithi is Tamil cinema's most formally rigorous action film — a single night, one location (mostly), an ex-prisoner who has never met his daughter trying to get medical supplies to a police station full of poisoned officers. The film's action choreography is constructed with a narrative logic that makes every fight feel consequential. All-Time Blockbuster verdict on its minimal budget represents extraordinary RoI."
     },
     {
       "title": "Viswasam",
@@ -7315,7 +7417,8 @@
       "weekNum": 0,
       "betaModel": false,
       "pageUrl": "viswasam-box-office.html",
-      "posterUrl": ""
+      "posterUrl": "",
+      "note": "Siva's Viswasam is the Tamil film that demonstrably won the National Award at the expense of Andhadhun, generating the decade's most discussed film-political controversy. Ajith Kumar's performance as the father is the most affecting of his career, working in a register of ordinary domestic love rather than heroic exceptionalism. The ₹175 Cr Tamil collection and All-Time Blockbuster verdict reflect a film that found precisely its audience."
     },
     {
       "title": "Super Deluxe",
@@ -7459,7 +7562,8 @@
       "weekNum": 0,
       "betaModel": false,
       "pageUrl": "lucifer-box-office.html",
-      "posterUrl": ""
+      "posterUrl": "",
+      "note": "Prithviraj Sukumaran's directorial debut is Malayalam cinema's most commercially ambitious film — a Mohanlal political thriller that constructed a universe of power and conspiracy around the star's specific gravitas. The ₹200 Cr all-language collection is the highest for a Malayalam film to that point. All-Time Blockbuster verdict."
     },
     {
       "title": "Kumbalangi Nights",
@@ -7544,7 +7648,8 @@
       "weekNum": 0,
       "betaModel": false,
       "pageUrl": "drishyam-2-box-office.html",
-      "posterUrl": ""
+      "posterUrl": "",
+      "note": "Jeethu Joseph's Drishyam 2 is the rarest sequel — one that deepens the original's emotional stakes rather than repeating them. Eight years later, Georgekutty's alibi still holds, but the psychological cost of sustaining it has not. Mohanlal's performance carries the accumulated weight of the original and adds the specific weariness of a man who has lived inside a secret for eight years. All-Time Blockbuster verdict."
     },
     {
       "title": "Trance",
@@ -7629,7 +7734,8 @@
       "weekNum": 0,
       "betaModel": false,
       "pageUrl": "avengers-endgame-box-office.html",
-      "posterUrl": ""
+      "posterUrl": "",
+      "note": "The Russo Brothers' Endgame was the most-attended Hollywood film in Indian cinema history — a three-hour conclusion to a decade of MCU storytelling that delivered emotional payoff across its 22-film narrative in a way that no comparable franchise event had attempted. The ₹368 Cr India collection remains the highest ever for a Hollywood film in India. All-Time Blockbuster verdict: unambiguous."
     },
     {
       "title": "The Lion King",
