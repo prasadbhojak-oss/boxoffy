@@ -415,7 +415,7 @@ const SEARCH_INDEX = (() => {
         pageUrl:  f.pageUrl,
         posterUrl:f.posterUrl || "",
         // pre-lowercase for fast matching
-        _q: (f.title + " " + (f.director||"") + " " + (f.cast||[]).join(" ")).toLowerCase(),
+        _q: (f.title + " " + (f.director||"") + " " + (Array.isArray(f.cast) ? f.cast.join(" ") : (f.cast||""))).toLowerCase(),
       });
     });
   });
