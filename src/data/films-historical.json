@@ -263,7 +263,7 @@
         "cast": "Rajinikanth, Akshay Kumar, Amy Jackson",
         "releaseDate": "2018-11-29",
         "indiaNetCr": 185.89,
-        "verdict": "Flop",
+        "verdict": "All-Time Blockbuster",
         "genre": "Sci-Fi/Action",
         "budgetCr": 543,
         "ottPlatform": "Amazon Prime",
@@ -550,7 +550,7 @@
         "cast": "Hrithik Roshan, Yami Gautam, Ronit Roy",
         "releaseDate": "2017-01-25",
         "indiaNetCr": 86.54,
-        "verdict": "Average",
+        "verdict": "Hit",
         "genre": "Thriller/Action",
         "budgetCr": 90,
         "ottPlatform": "Zee5"
@@ -1752,7 +1752,7 @@
         "cast": "Hrithik Roshan, Farhan Akhtar, Abhay Deol, Katrina Kaif",
         "releaseDate": "2011-07-15",
         "indiaNetCr": 89.96,
-        "verdict": "Hit",
+        "verdict": "Blockbuster",
         "genre": "Drama/Comedy",
         "budgetCr": 70,
         "ottPlatform": "Netflix"

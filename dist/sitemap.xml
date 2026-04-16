@@ -3853,6 +3853,12 @@
     <priority>0.85</priority>
   </url>
   <url>
+    <loc>https://boxoffy.com/dangal-box-office.html</loc>
+    <lastmod>2016-12-31</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
     <loc>https://boxoffy.com/sultan-box-office.html</loc>
     <lastmod>2016-12-31</lastmod>
     <changefreq>yearly</changefreq>
@@ -4159,24 +4165,6 @@
     <priority>0.75</priority>
   </url>
   <url>
-    <loc>https://boxoffy.com/vineeth-sreenivasan-jacobinte-swargarajyam-box-office.html</loc>
-    <lastmod>2017-12-31</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://boxoffy.com/lucifer-box-office.html</loc>
-    <lastmod>2017-12-31</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://boxoffy.com/kumbalangi-nights-box-office.html</loc>
-    <lastmod>2017-12-31</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.75</priority>
-  </url>
-  <url>
     <loc>https://boxoffy.com/drishyam-hindi-box-office.html</loc>
     <lastmod>2017-12-31</lastmod>
     <changefreq>yearly</changefreq>
@@ -4351,24 +4339,6 @@
     <priority>0.75</priority>
   </url>
   <url>
-    <loc>https://boxoffy.com/lucifer-box-office.html</loc>
-    <lastmod>2018-12-31</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://boxoffy.com/bangalore-days-box-office.html</loc>
-    <lastmod>2018-12-31</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://boxoffy.com/charlie-box-office.html</loc>
-    <lastmod>2018-12-31</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
     <loc>https://boxoffy.com/kgf-chapter-1-box-office.html</loc>
     <lastmod>2018-12-31</lastmod>
     <changefreq>yearly</changefreq>
@@ -4406,6 +4376,12 @@
   </url>
   <url>
     <loc>https://boxoffy.com/incredibles-2-box-office.html</loc>
+    <lastmod>2018-12-31</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://boxoffy.com/geetha-govindam-box-office.html</loc>
     <lastmod>2018-12-31</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.85</priority>
@@ -4501,12 +4477,6 @@
     <priority>0.55</priority>
   </url>
   <url>
-    <loc>https://boxoffy.com/geetha-govindam-box-office.html</loc>
-    <lastmod>2019-12-31</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
     <loc>https://boxoffy.com/devadas-box-office.html</loc>
     <lastmod>2019-12-31</lastmod>
     <changefreq>yearly</changefreq>
@@ -4595,12 +4565,6 @@
     <lastmod>2019-12-31</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.75</priority>
-  </url>
-  <url>
-    <loc>https://boxoffy.com/drishyam-2-box-office.html</loc>
-    <lastmod>2019-12-31</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.85</priority>
   </url>
   <url>
     <loc>https://boxoffy.com/trance-box-office.html</loc>
