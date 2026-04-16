@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.boxoffy.com/sitemap.xml
+Sitemap: https://boxoffy.com/sitemap.xml
