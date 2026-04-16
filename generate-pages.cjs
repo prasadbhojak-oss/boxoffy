@@ -473,6 +473,9 @@ a{color:var(--accent);text-decoration:none}
 .ott-label{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--fog)}
 .ott-val{font-size:13px;color:var(--ink)}
 .year-context{font-size:14px;color:#374151;line-height:1.8;background:#FFFBF0;border:1px solid #FDE68A;border-left:4px solid #D97706;padding:16px 18px}
+.boxoffy-read{background:#0D0C0B;border-left:4px solid #C8201A;padding:18px 22px;margin-bottom:32px}
+.boxoffy-read-eyebrow{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:#C8201A;margin-bottom:8px}
+.boxoffy-read-text{font-size:14px;color:rgba(255,255,255,.85);line-height:1.8;font-style:italic}
 .comp-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:12px}
 .comp-card{display:block;background:var(--surface);border:1px solid var(--rule);padding:14px;text-decoration:none;transition:border-color .15s}
 .comp-card:hover{border-color:#9CA3AF}
@@ -559,6 +562,12 @@ footer{background:#0D0C0B;border-top:2px solid #1F2937;padding:22px 24px;display
     </div>
   </div>
 
+  <!-- Boxoffy Read — editorial commentary (only when note exists) -->
+  ${film.note ? `<div class="boxoffy-read">
+    <div class="boxoffy-read-eyebrow">Boxoffy Read</div>
+    <div class="boxoffy-read-text">${esc(film.note)}</div>
+  </div>` : ''}
+
   <!-- ROI analysis -->
   ${roiBlock}
 
@@ -584,7 +593,7 @@ footer{background:#0D0C0B;border-top:2px solid #1F2937;padding:22px 24px;display
   </div>
 
   <p style="font-size:10px;font-family:'DM Sans',sans-serif;color:var(--fog);line-height:1.75;margin-top:24px;padding-top:16px;border-top:1px solid var(--rule)">
-    <strong>Source:</strong> Box Office India (canonical India nett) · Sacnilk (day-wise tracking) · Pinkvilla (cross-reference). All figures are estimates based on publicly available trade data. India nett represents collections after GST extraction. Last updated ${TODAY}. © 2026 Boxoffy.com
+    <strong>Source:</strong> Box Office India (canonical India nett) · Sacnilk (day-wise tracking) · Pinkvilla (cross-reference). All figures are estimates based on publicly available trade data. India nett represents collections after GST extraction. ${film.eraNominal ? 'Figures for pre-1990 films are nominal era-contemporary collections and are not inflation-adjusted — ₹1 Cr in 1975 represents substantially greater value in today\'s currency. ' : ''}Last updated ${TODAY}. © 2026 Boxoffy.com
   </p>
 
 </main>
