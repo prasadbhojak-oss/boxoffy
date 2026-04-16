@@ -2293,10 +2293,6 @@ function WeeklyChartRow({ movie, rank, prevRank }) {
   const isEstimated = movie.estimated === true || movie.betaModel === true;
   const isHollywood = movie.language === "Hollywood";
 
-  // Bar width for this week's collection vs max (Border 2 at 24 Cr)
-  const maxWk = 24;
-  const barPct = movie.weeklyCollection > 0 ? Math.min((movie.weeklyCollection / maxWk) * 100, 100) : 0;
-
   const isMobile = useIsMobile();
 
   const [shareOpen, setShareOpen] = React.useState(false);
@@ -2445,13 +2441,12 @@ function WeeklyChartRow({ movie, rank, prevRank }) {
           </div>
           {isEstimated && (
             <div style={{ display:"flex", alignItems:"center", gap:6, marginBottom:4 }}>
-              <span style={{ background:"#FEF3C7", color:"#92400E", border:"1px solid #FCD34D", fontFamily:"'IBM Plex Mono', monospace", fontSize:8, fontWeight:700, letterSpacing:"0.12em", textTransform:"uppercase", padding:"2px 7px", borderRadius:2 }}>BOXOFFY DAY 1 CALL</span>
-              <span style={{ fontFamily:"'DM Sans', sans-serif", fontSize:9, color:"#92400E" }}>3-model BETA v2 · Bear ₹80 Cr · Base ₹95 Cr · Bull ₹110 Cr · Boxoffy call: ₹95 Cr · Actual: ₹102.55 Cr ✓</span>
+              <span style={{ background:"#FEF3C7", color:"#92400E", border:"1px solid #FCD34D", fontFamily:"'IBM Plex Mono', monospace", fontSize:8, fontWeight:700, letterSpacing:"0.12em", textTransform:"uppercase", padding:"2px 7px", borderRadius:2 }}>BOXOFFY CALL</span>
             </div>
           )}
           {movie.weeklyNote && (
-            <div style={{ fontFamily:"'DM Sans', sans-serif", fontSize:10.5, color:T.textMid, marginTop:4, lineHeight:1.5, fontStyle:"italic" }}>
-              {movie.weeklyNote}
+            <div style={{ fontFamily:"'DM Sans', sans-serif", fontSize:10.5, color:T.textMid, marginTop:4, lineHeight:1.5 }}>
+              {movie.weeklyNote.length > 100 ? movie.weeklyNote.slice(0, 100).trimEnd() + "…" : movie.weeklyNote}
             </div>
           )}
           {/* Opening Day Prediction — shown for Upcoming films */}
@@ -2482,12 +2477,7 @@ function WeeklyChartRow({ movie, rank, prevRank }) {
               </div>
             </div>
           )}
-          {/* Mini bar */}
-          {barPct > 0 && (
-            <div style={{ marginTop:6, height:3, background:T.border, borderRadius:2, width:"80%", maxWidth:200 }}>
-              <div style={{ height:"100%", width:`${barPct}%`, background: isNew ? "#16A34A" : T.accent, borderRadius:2, transition:"width 0.4s" }} />
-            </div>
-          )}
+
           </div>{/* end text block */}
         </div>{/* end film info */}
 
