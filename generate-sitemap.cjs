@@ -1,133 +1,129 @@
 #!/usr/bin/env node
 /**
- * Boxoffy Sitemap Generator — Session C
- * Reads src/data/pages-manifest.json and rebuilds sitemap.xml
- * with all hand-crafted pages + all generated film pages.
+ * Boxoffy Sitemap Generator — v3
+ * ────────────────────────────────
+ * Builds sitemap.xml with:
+ *   1. Homepage
+ *   2. All hand-crafted editorial articles
+ *   3. ALL generated film pages (films with totalNum > 0)
  *
  * Usage: node generate-sitemap.cjs
- * Run from project root: C:\Users\palla\boxoffy\
  */
 
 const fs   = require('fs');
 const path = require('path');
 
-const TODAY    = new Date().toISOString().slice(0, 10);
-const MANIFEST = JSON.parse(fs.readFileSync('./src/data/pages-manifest.json', 'utf8'));
+const TODAY   = new Date().toISOString().slice(0, 10);
+const BASE    = 'https://boxoffy.com';
+const DATA    = JSON.parse(fs.readFileSync('./src/data/films.json', 'utf8'));
 
-// Priority by verdict
-function priority(verdict) {
-  if (!verdict) return '0.6';
-  const v = verdict.toLowerCase();
-  if (v.includes('all-time blockbuster')) return '0.9';
-  if (v.includes('blockbuster'))          return '0.8';
-  if (v.includes('super hit'))            return '0.8';
-  if (v.includes('hit'))                  return '0.7';
-  return '0.6';
+const HAND_CRAFTED = new Set([
+  'dhurandhar-2-box-office.html','dhurandhar-box-office.html',
+  'dhurandhar2-advance-article.html','dhurandhar2-us-boxoffice.html',
+  'dhurandhar-comparison.html','dhurandhar-2-vs-pushpa-2-box-office.html',
+  'dhurandhar-box-office-d1-vs-d2.html','dhurandhar-2-1000-crore.html',
+  'dhurandhar-the-revenge-ode.html','dhurandhar2-editorial.html',
+  'bhooth-bangla-box-office-preview.html','bhooth-bangla-trailer-review.html',
+  'india-all-time-box-office.html','india-boxoffice-how-it-works.html',
+  'ott-releases.html','ramayana-part-one-box-office.html',
+]);
+
+function slugify(t) {
+  return t.toLowerCase().replace(/[^a-z0-9\s-]/g,'').replace(/\s+/g,'-').replace(/-+/g,'-').replace(/^-|-$/g,'');
 }
 
-// Change frequency by year
-function changefreq(year) {
-  const currentYear = new Date().getFullYear();
-  if (parseInt(year) >= currentYear) return 'weekly';
-  if (parseInt(year) === currentYear - 1) return 'monthly';
-  return 'yearly';
-}
-
-function url(loc, lastmod, freq, pri, newsBlock = '') {
+function urlEntry(loc, mod, freq, pri, news='') {
   return `
   <url>
     <loc>${loc}</loc>
-    <lastmod>${lastmod}</lastmod>
+    <lastmod>${mod}</lastmod>
     <changefreq>${freq}</changefreq>
-    <priority>${pri}</priority>${newsBlock}
+    <priority>${pri}</priority>${news}
   </url>`;
 }
 
-function newsBlock(pubDate, title) {
+function newsEntry(date, title) {
+  const safe = title.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
   return `
     <news:news>
-      <news:publication>
-        <news:name>Boxoffy</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>${pubDate}</news:publication_date>
-      <news:title>${title.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')}</news:title>
+      <news:publication><news:name>Boxoffy</news:name><news:language>en</news:language></news:publication>
+      <news:publication_date>${date}</news:publication_date>
+      <news:title>${safe}</news:title>
     </news:news>`;
 }
 
-// ── Build sitemap ──────────────────────────────────────────────
+function verdictPriority(verdict) {
+  if (!verdict) return '0.5';
+  const v = verdict.toLowerCase();
+  if (v.includes('all-time')) return '0.85';
+  if (v.includes('blockbuster') || v.includes('super hit')) return '0.75';
+  if (v.includes('hit')) return '0.65';
+  return '0.55';
+}
+
+// ── 1. Editorial pages ────────────────────────────────────────────────────────
 let xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
+  <!--
+    Boxoffy Sitemap v3 · ${TODAY}
+    Editorial articles + all generated film pages with real data
+  -->
 
-  <!-- ═══ HOMEPAGE ═══ -->
-${url('https://boxoffy.com/', TODAY, 'daily', '1.0')}
+  <!-- HOMEPAGE -->
+${urlEntry(`${BASE}/`, TODAY, 'daily', '1.0')}
 
-  <!-- ═══ HAND-CRAFTED FILM TRACKER PAGES ═══ -->
-${url(
-  'https://boxoffy.com/dhurandhar-2-box-office.html',
-  TODAY, 'daily', '0.9',
-  newsBlock('2026-03-01', 'Dhurandhar 2 Box Office Collection — Live Tracker | ₹29.69 Cr Advance | OG Record BROKEN')
-)}
-${url(
-  'https://boxoffy.com/dhurandhar-box-office.html',
-  TODAY, 'weekly', '0.9',
-  newsBlock('2026-01-15', 'Dhurandhar Box Office Collection — ₹1,305 Cr WW | All-Time Hindi Record')
-)}
+  <!-- EDITORIAL ARTICLES -->
+${urlEntry(`${BASE}/music-top-10-hindi-april-2026.html`, '2026-04-14', 'weekly', '0.8', newsEntry('2026-04-14','Hindi Music Top 10 — April 2026: The Dhurandhar Effect'))}
+${urlEntry(`${BASE}/bhooth-bangla-box-office-preview.html`, TODAY, 'daily', '0.9', newsEntry('2026-04-14','Bhooth Bangla Box Office Preview — D1 Prediction'))}
+${urlEntry(`${BASE}/bhooth-bangla-trailer-review.html`, '2026-04-06', 'weekly', '0.7', newsEntry('2026-04-06','Bhooth Bangla Trailer Review — The OG Cast Is Back'))}
+${urlEntry(`${BASE}/dhurandhar-2-box-office.html`, TODAY, 'daily', '0.9', newsEntry('2026-03-19','Dhurandhar 2 Box Office Collection Day-Wise Tracker'))}
+${urlEntry(`${BASE}/dhurandhar-2-1000-crore.html`, '2026-04-14', 'weekly', '0.9', newsEntry('2026-04-10','Dhurandhar 2 — ₹1,000 Crore Hindi Nett. Monumental.'))}
+${urlEntry(`${BASE}/dhurandhar-2-vs-pushpa-2-box-office.html`, '2026-04-14', 'weekly', '0.8', newsEntry('2026-03-25','Dhurandhar 2 vs Pushpa 2 — Full Box Office Comparison'))}
+${urlEntry(`${BASE}/dhurandhar-box-office-d1-vs-d2.html`, '2026-04-14', 'weekly', '0.8', newsEntry('2026-03-19','Dhurandhar vs Dhurandhar 2 — Day-Wise Comparison'))}
+${urlEntry(`${BASE}/dhurandhar-comparison.html`, '2026-04-14', 'weekly', '0.7', newsEntry('2026-03-13','Dhurandhar 2 Is Not Just Bigger. It Is Priced Bigger.'))}
+${urlEntry(`${BASE}/dhurandhar2-us-boxoffice.html`, '2026-04-14', 'weekly', '0.8', newsEntry('2026-03-13','Dhurandhar 2 North America — $27M All-Time Record'))}
+${urlEntry(`${BASE}/dhurandhar2-advance-article.html`, '2026-04-14', 'monthly', '0.7', newsEntry('2026-03-09','Dhurandhar 2 Pre-Release Analysis'))}
+${urlEntry(`${BASE}/dhurandhar2-editorial.html`, '2026-03-08', 'monthly', '0.6', newsEntry('2026-03-08','Dhurandhar 2 The Revenge Pre-Release Analysis'))}
+${urlEntry(`${BASE}/dhurandhar-the-revenge-ode.html`, '2026-04-07', 'monthly', '0.7', newsEntry('2026-04-07','An Ode to Dhurandhar: The Revenge — Seven Chapters'))}
+${urlEntry(`${BASE}/dhurandhar-box-office.html`, TODAY, 'monthly', '0.8', newsEntry('2026-01-15','Dhurandhar Box Office Collection — ₹840 Cr All-Time Blockbuster'))}
+${urlEntry(`${BASE}/india-boxoffice-how-it-works.html`, '2026-04-14', 'monthly', '0.8', newsEntry('2026-03-10','India Box Office — Nett, Gross and Verdicts Explained'))}
+${urlEntry(`${BASE}/india-all-time-box-office.html`, '2026-04-14', 'monthly', '0.8', newsEntry('2026-03-15','All-Time Highest Grossing Indian Films Worldwide'))}
+${urlEntry(`${BASE}/100-crore-day-one-club-box-office.html`, '2026-03-15', 'monthly', '0.7', newsEntry('2026-03-15','The ₹100 Crore Day 1 Club — Every Indian Film That Made It'))}
+${urlEntry(`${BASE}/ott-releases.html`, '2026-04-14', 'weekly', '0.8', newsEntry('2026-04-14','OTT India Apr 13–19 — Euphoria S3, Toaster, Matka King'))}
+${urlEntry(`${BASE}/ramayana-part-one-box-office.html`, '2026-03-30', 'monthly', '0.7', newsEntry('2026-03-30','Ramayana: Part One Box Office Preview'))}
+${urlEntry(`${BASE}/why-indian-cinema-never-has-a-number-2.html`, '2026-03-22', 'monthly', '0.6', newsEntry('2026-03-22','Why Indian Cinema Will Never Have a Number 2'))}
 
-  <!-- ═══ EDITORIAL / ANALYSIS ARTICLES ═══ -->
-${url(
-  'https://boxoffy.com/dhurandhar2-editorial.html',
-  TODAY, 'weekly', '0.8',
-  newsBlock('2026-03-08', 'Dhurandhar 2 The Revenge Pre-Release Analysis — You Are STILL Not Ready')
-)}
-${url(
-  'https://boxoffy.com/dhurandhar2-advance-article.html',
-  TODAY, 'weekly', '0.8',
-  newsBlock('2026-03-09', 'Dhurandhar 2 Advance Booking — ₹29.69 Crore, OG Record BROKEN, WW ₹60 Crore')
-)}
-${url(
-  'https://boxoffy.com/dhurandhar2-us-boxoffice.html',
-  TODAY, 'weekly', '0.8',
-  newsBlock('2026-03-13', 'Dhurandhar The Revenge Running Riot in North American Box Office — Heading for $12M Opening')
-)}
-${url(
-  'https://boxoffy.com/dhurandhar-comparison.html',
-  TODAY, 'weekly', '0.7',
-  newsBlock('2026-03-13', 'Dhurandhar 2 Is Not Just Bigger. It Is Priced Bigger.')
-)}
+  <!-- GENERATED FILM PAGES -->`;
 
-  <!-- ═══ DEEP DIVE / EVERGREEN ═══ -->
-${url(
-  'https://boxoffy.com/india-boxoffice-how-it-works.html',
-  TODAY, 'monthly', '0.8',
-  newsBlock('2026-03-10', 'From Script to Screen — How Indian Box Office Really Works')
-)}
+// ── 2. Generated film pages ───────────────────────────────────────────────────
+let filmCount = 0;
+for (const [year, films] of Object.entries(DATA)) {
+  for (const film of films) {
+    const total = parseFloat(film.totalNum) || 0;
+    if (total <= 0 || film.verdict === 'Upcoming' || film.status === 'Upcoming') continue;
 
-  <!-- ═══ SITE PAGES ═══ -->
-${url('https://boxoffy.com/about.html', '2026-03-01', 'monthly', '0.4')}
+    const slug = film.pageUrl || `${slugify(film.title)}-box-office.html`;
+    if (HAND_CRAFTED.has(slug)) continue;
 
-  <!-- ═══ GENERATED FILM PAGES (${MANIFEST.length} films · 2020–2026) ═══ -->`;
+    const yr   = parseInt(year);
+    const freq = yr >= 2025 ? 'weekly' : yr >= 2020 ? 'monthly' : 'yearly';
+    const mod  = yr >= 2025 ? TODAY : yr >= 2020 ? `${year}-12-31` : `${year}-12-31`;
+    const pri  = verdictPriority(film.verdict);
 
-// Add all generated film pages
-for (const film of MANIFEST) {
-  const loc   = `https://boxoffy.com/${film.slug}`;
-  const pri   = priority(film.verdict);
-  const freq  = changefreq(film.year);
-  const lmod  = parseInt(film.year) >= 2025 ? TODAY : `${film.year}-12-31`;
-  const title = `${film.title} Box Office Collection — ${film.verdict} | Boxoffy`;
-
-  xml += url(loc, lmod, freq, pri);
+    xml += urlEntry(`${BASE}/${slug}`, mod, freq, pri);
+    filmCount++;
+  }
 }
 
-xml += `\n\n</urlset>`;
+xml += `\n\n</urlset>\n`;
 
-// Write sitemap
 fs.writeFileSync('./public/sitemap.xml', xml);
 
-const totalUrls = 9 + MANIFEST.length;
+const editorialCount = 19;
 console.log(`\n✅ sitemap.xml generated`);
-console.log(`   Hand-crafted pages: 9`);
-console.log(`   Generated film pages: ${MANIFEST.length}`);
-console.log(`   Total URLs: ${totalUrls}`);
-console.log(`   Output: public/sitemap.xml`);
+console.log(`   Editorial pages: ${editorialCount}`);
+console.log(`   Generated film pages: ${filmCount}`);
+console.log(`   Total URLs: ${editorialCount + 1 + filmCount}`);
+console.log(`\n   Submit to GSC: https://boxoffy.com/sitemap.xml`);
+console.log(`   Submit to Bing: https://www.bing.com/webmasters`);
