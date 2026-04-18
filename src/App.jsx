@@ -2264,6 +2264,144 @@ function BRSBadge({ brs, compact = false }) {
   return null; // full-size variant reserved for film pages
 }
 
+/* ═══════════════════════════════════════════════════════════════
+   NATIONAL TOP 10 ROW — BCM Weekly Chart (Apr 2026+)
+   Columns: Rank | Poster | Film+Studio | This Wk | Last Wk | Chg | Domestic | Global
+   ═══════════════════════════════════════════════════════════════ */
+function NationalTop10Row({ movie, rank }) {
+  const isMobile = useIsMobile();
+  const isNew    = !movie.lastWeekCollection || movie.weekNum <= 1;
+  const isHolly  = movie.language === "Hollywood";
+
+  const chgPct = movie.lastWeekCollection > 0
+    ? Math.round(((movie.weeklyCollection - movie.lastWeekCollection) / movie.lastWeekCollection) * 100)
+    : null;
+
+  const GRID_DESKTOP = "28px 38px 1fr 92px 92px 46px 106px 106px";
+  const GRID_MOBILE  = "24px 34px 1fr 82px 44px 90px";
+
+  const rankColor = rank === 1 ? "#B8860B" : rank === 2 ? "#6B7280" : rank === 3 ? "#B45309" : T.textMuted;
+
+  const cellBase = { display:"flex", flexDirection:"column", justifyContent:"center", textAlign:"right", padding:"0 10px" };
+
+  const atbTag = (label) => label ? (
+    <span style={{ display:"inline-block", fontFamily:"'IBM Plex Mono',monospace", fontSize:7.5, fontWeight:700, letterSpacing:"0.06em", padding:"1px 5px", borderRadius:2, background:"#FEF3C7", color:"#92400E", marginTop:3 }}>{label}</span>
+  ) : null;
+
+  const topTag = (label) => label ? (
+    <span style={{ display:"inline-block", fontFamily:"'IBM Plex Mono',monospace", fontSize:7.5, fontWeight:700, letterSpacing:"0.06em", padding:"1px 5px", borderRadius:2, background:"#D1FAE5", color:"#065F46", marginTop:3 }}>{label}</span>
+  ) : null;
+
+  const row = (
+    <div style={{
+      display:"grid",
+      gridTemplateColumns: isMobile ? GRID_MOBILE : GRID_DESKTOP,
+      alignItems:"center",
+      borderBottom:`0.5px solid ${T.border}`,
+      borderLeft: isNew ? `3px solid ${T.accent}` : `3px solid transparent`,
+      background: isNew ? "rgba(196,30,58,0.03)" : T.surface,
+      transition:"background 0.12s",
+      minHeight:60,
+    }}
+      onMouseEnter={e => { if (!isNew) e.currentTarget.style.background = T.surfaceAlt; }}
+      onMouseLeave={e => { e.currentTarget.style.background = isNew ? "rgba(196,30,58,0.03)" : T.surface; }}
+    >
+      {/* Rank */}
+      <div style={{ display:"flex", flexDirection:"column", alignItems:"center", justifyContent:"center", padding:"0 2px" }}>
+        <span style={{ fontFamily:"'Barlow Condensed',sans-serif", fontWeight:900, fontSize:20, color:rankColor, lineHeight:1 }}>{rank}</span>
+        {isNew && <span style={{ fontFamily:"'IBM Plex Mono',monospace", fontSize:7, fontWeight:700, color:"#fff", background:T.accent, padding:"1px 3px", borderRadius:2, marginTop:2, letterSpacing:"0.08em" }}>NEW</span>}
+      </div>
+
+      {/* Poster */}
+      {movie.posterUrl
+        ? <img src={movie.posterUrl} alt={movie.title} style={{ width:30, height:45, objectFit:"cover", borderRadius:3, display:"block", border:`0.5px solid ${T.border}` }} onError={e => e.target.style.display="none"} />
+        : <div style={{ width:30, height:45, borderRadius:3, background:isHolly?"#1E3A5F":T.navy||"#0F2340", display:"flex", alignItems:"center", justifyContent:"center" }}>
+            <span style={{ fontFamily:"'Barlow Condensed',sans-serif", fontWeight:900, fontSize:9, color:"rgba(255,255,255,0.5)" }}>
+              {(movie.title||"").split(" ").map(w=>w[0]).join("").slice(0,3).toUpperCase()}
+            </span>
+          </div>
+      }
+
+      {/* Film + Studio */}
+      <div style={{ padding:"0 10px", minWidth:0 }}>
+        <div style={{ fontFamily:"'DM Sans',sans-serif", fontWeight:600, fontSize:isMobile?12:13.5, color:T.text, lineHeight:1.2, overflow:"hidden", textOverflow:"ellipsis", whiteSpace:"nowrap" }}>
+          {movie.pageUrl ? <a href={`/${movie.pageUrl}`} style={{ color:T.text, textDecoration:"none" }}>{movie.title}</a> : movie.title}
+        </div>
+        {movie.studio && <div style={{ fontFamily:"'DM Sans',sans-serif", fontSize:10, color:T.textMuted, marginTop:2, overflow:"hidden", textOverflow:"ellipsis", whiteSpace:"nowrap" }}>{movie.studio}</div>}
+        <div style={{ fontFamily:"'IBM Plex Mono',monospace", fontSize:8, fontWeight:500, letterSpacing:"0.06em", textTransform:"uppercase", color:T.textMuted, marginTop:3 }}>
+          {movie.language}{movie.weekNum > 0 ? ` · W${movie.weekNum}` : ""}
+          {movie.verdict && ` · ${movie.verdict}`}
+        </div>
+      </div>
+
+      {/* This Week */}
+      <div style={cellBase}>
+        <div style={{ fontFamily:"'Barlow Condensed',sans-serif", fontWeight:900, fontSize:isMobile?15:17, color: movie.estimated||movie.betaModel ? "#D97706" : T.accent, lineHeight:1 }}>
+          {movie.weeklyCollection > 0 ? `₹${movie.weeklyCollection} Cr` : "—"}
+        </div>
+        {movie.bcmConfidence && movie.weeklyCollection > 0 && (
+          <div style={{ fontFamily:"'IBM Plex Mono',monospace", fontSize:7, fontWeight:600, color: movie.bcmConfidence >= 85 ? "#15803D" : "#D97706", marginTop:3 }}>
+            {movie.bcmConfidence}% conf.
+          </div>
+        )}
+        {(movie.estimated || movie.betaModel) && movie.weeklyCollection > 0 && (
+          <div style={{ fontFamily:"'IBM Plex Mono',monospace", fontSize:7, color:"#D97706", marginTop:1, letterSpacing:"0.06em" }}>BCM EST.</div>
+        )}
+      </div>
+
+      {/* Last Week — hidden on mobile */}
+      {!isMobile && (
+        <div style={cellBase}>
+          <div style={{ fontFamily:"'IBM Plex Mono',monospace", fontSize:13, fontWeight:500, color:T.textMuted, lineHeight:1 }}>
+            {movie.lastWeekCollection > 0 ? `₹${movie.lastWeekCollection} Cr` : "—"}
+          </div>
+          <div style={{ fontFamily:"'DM Sans',sans-serif", fontSize:8, color:T.textMuted, marginTop:3 }}>
+            {movie.lastWeekRange || ""}
+          </div>
+        </div>
+      )}
+
+      {/* Chg % */}
+      <div style={{ ...cellBase, padding:"0 6px" }}>
+        {chgPct !== null
+          ? <span style={{ fontFamily:"'IBM Plex Mono',monospace", fontSize:11, fontWeight:700, color: chgPct >= 0 ? "#16A34A" : "#DC2626" }}>
+              {chgPct >= 0 ? `+${chgPct}` : chgPct}%
+            </span>
+          : <span style={{ fontFamily:"'DM Sans',sans-serif", fontSize:9, color:T.textMuted }}>
+              {isNew ? "W1" : "—"}
+            </span>
+        }
+      </div>
+
+      {/* Cumulative Domestic — hidden on mobile */}
+      {!isMobile && (
+        <div style={cellBase}>
+          <div style={{ fontFamily:"'Barlow Condensed',sans-serif", fontWeight:900, fontSize:15, color:T.text, lineHeight:1 }}>
+            {movie.indiaNet || (movie.totalNum > 0 ? `₹${movie.totalNum} Cr` : "—")}
+          </div>
+          {movie.domesticATB && atbTag(movie.domesticATB)}
+          {movie.weeklyNote && movie.weeklyNote.includes("called") && (
+            <div style={{ fontFamily:"'IBM Plex Mono',monospace", fontSize:7, color:"#065F46", background:"#D1FAE5", padding:"1px 4px", borderRadius:2, marginTop:3 }}>✓ BOXOFFY CALL</div>
+          )}
+        </div>
+      )}
+
+      {/* Global WW */}
+      <div style={cellBase}>
+        <div style={{ fontFamily:"'Barlow Condensed',sans-serif", fontWeight:900, fontSize:isMobile?13:15, color: isHolly ? "#1D4ED8" : T.text, lineHeight:1 }}>
+          {movie.ww || movie.wwGross || movie.totalCollection || "—"}
+        </div>
+        {movie.globalATB && topTag(movie.globalATB)}
+        {isMobile && movie.indiaNet && (
+          <div style={{ fontFamily:"'DM Sans',sans-serif", fontSize:8, color:T.textMuted, marginTop:3 }}>{movie.indiaNet}</div>
+        )}
+      </div>
+    </div>
+  );
+
+  return row;
+}
+
 function WeeklyChartRow({ movie, rank, prevRank }) {
   const [hov, setHov] = useState(false);
   const [expanded, setExpanded] = useState(false);
@@ -4050,42 +4188,46 @@ function BoxOfficeSection({ onNavigate, forceAllTime, onClearForceAllTime }) {
       {/* ── WEEKLY CHART VIEW ── */}
       {showWeekly ? (
         <div style={{ animation:"fadeIn 0.25s ease both" }}>
-          {/* Weekly chart header — desktop only */}
+          {/* ── NATIONAL TOP 10 — BCM Weekly Chart ── */}
+          {/* Column headers */}
           <div style={{
             display: typeof window !== "undefined" && window.innerWidth < 640 ? "none" : "grid",
-            gridTemplateColumns:"36px 28px 1fr 120px 120px 110px 80px",
-            background:T.surfaceAlt, borderBottom:`2px solid ${T.borderDark}`, padding:"8px 0",
+            gridTemplateColumns:"28px 38px 1fr 92px 92px 46px 106px 106px",
+            background:T.surfaceAlt, borderBottom:`2px solid ${T.borderDark}`, padding:"6px 0",
           }}>
             {[
-              ["#","center"],
-              ["±","center"],
-              ["FILM · DIRECTOR · THIS WEEK'S NOTE","16px"],
-              ["THIS WEEK","right"],
-              ["INDIA NET","right"],
-              ["WORLDWIDE","right"],
-              ["BUDGET/STATUS","center"],
+              ["#","center"],["","center"],
+              ["Film · Studio","16px"],
+              ["This Week","right"],[`Last Week`, "right"],["Chg","right"],
+              ["Domestic Nett + Rank","right"],["Global WW + Rank","right"],
             ].map(([label, align], i) => (
-              <div key={i} style={{
-                fontFamily:"'DM Sans', sans-serif", fontWeight:700, fontSize:9,
-                color:T.textMuted, letterSpacing:"0.1em", textTransform:"uppercase",
-                padding:`0 ${align === "center" ? "4px" : "14px"}`,
-                textAlign:align,
-                borderLeft: i > 0 ? `1px solid ${T.border}` : "none",
-              }}>{label}</div>
+              <div key={i} style={{ fontFamily:"'IBM Plex Mono',sans-serif", fontWeight:700, fontSize:8, color:T.textMuted, letterSpacing:"0.1em", textTransform:"uppercase", padding:`0 ${align==="center"?"4px":"10px"}`, textAlign:align }}>
+                {label}
+              </div>
             ))}
           </div>
 
-          {/* Active films section */}
-          <div style={{ padding:"6px 12px 4px", background:"#F0FDF4", borderBottom:`1px solid ${T.border}`, display:"flex", alignItems:"center", gap:8 }}>
-            <span style={{ width:8, height:8, borderRadius:"50%", background:"#16A34A", display:"inline-block", flexShrink:0 }} />
-            <span style={{ fontFamily:"'DM Sans', sans-serif", fontSize:10, fontWeight:700, color:"#16A34A", letterSpacing:"0.1em", textTransform:"uppercase" }}>
-              NOW IN CINEMAS — {weeklyChartMovies.filter(m => m.status === "Running").length} ACTIVE INDIAN RELEASES · RANKED BY THIS WEEK'S COLLECTION · <span style={{color:"#D97706",fontWeight:700}}>AMBER = BOXOFFY BETA ESTIMATE</span>
+          {/* Top 10 live rows */}
+          <div style={{ padding:"4px 8px 2px", background:"#FEF2F2", borderBottom:`1px solid ${T.border}`, display:"flex", alignItems:"center", gap:8 }}>
+            <span style={{ width:7, height:7, borderRadius:"50%", background:T.accent, display:"inline-block", animation:"boPulse 1.8s ease-in-out infinite" }} />
+            <span style={{ fontFamily:"'DM Sans',sans-serif", fontSize:10, fontWeight:700, color:T.accent, letterSpacing:"0.08em", textTransform:"uppercase" }}>
+              INDIA NATIONAL TOP 10 · WEEK 17 · APR 17–23 · BCM 12-SOURCE MODEL · <span style={{ color:"#D97706" }}>AMBER = BCM ESTIMATE</span>
             </span>
           </div>
 
-          {weeklyChartMovies.filter(m => m.status === "Running").map((m, i) => (
-            <WeeklyChartRow key={m.title} movie={m} rank={i+1} prevRank={m.lastWeekRank} />
+          {weeklyChartMovies.filter(m => m.status === "Running").slice(0, 10).map((m, i) => (
+            <NationalTop10Row key={m.title} movie={m} rank={i + 1} />
           ))}
+
+          {/* Footer note */}
+          <div style={{ padding:"8px 14px", borderTop:`1px solid ${T.border}`, display:"flex", alignItems:"center", justifyContent:"space-between", flexWrap:"wrap", gap:6 }}>
+            <span style={{ fontFamily:"'DM Sans',sans-serif", fontSize:10, color:T.textMuted }}>
+              Domestic = India nett · Global = worldwide gross · ATB = all-time rank nominal · Conf. = BCM confidence
+            </span>
+            <span style={{ fontFamily:"'IBM Plex Mono',monospace", fontSize:8, color:T.textMuted, letterSpacing:"0.06em" }}>
+              BOI · SACNILK · TARAN ADARSH · FILM INFO · NISHIT SHAW · PINKVILLA · HUNGAMA · RAMESH BALA · COMSCORE · BOM · DEADLINE
+            </span>
+          </div>
 
           {/* Closed / OTT divider */}
           <div style={{ padding:"6px 12px 4px", background:T.surfaceAlt, borderBottom:`1px solid ${T.border}`, borderTop:`1px solid ${T.border}`, display:"flex", alignItems:"center", gap:8, marginTop:4 }}>
@@ -5989,21 +6131,6 @@ export default function App() {
   const [showSubscribe, setShowSubscribe] = useState(false);
   const [showPrivacy, setShowPrivacy] = useState(false);
   const [cookieConsent, setCookieConsent] = useState(getConsent);
-  const [showPoll, setShowPoll] = useState(false);
-
-  // Show poll popup after 4s — only if not already voted or dismissed this session
-  useEffect(() => {
-    try {
-      const alreadySeen = sessionStorage.getItem(POLL_SEEN_KEY);
-      const alreadyVoted = getPollState();
-      if (!alreadySeen && !alreadyVoted) {
-        const t = setTimeout(() => setShowPoll(true), 4000);
-        return () => clearTimeout(t);
-      }
-    } catch {}
-  }, []);
-
-  // Fire GA4 on mount if already consented from a previous visit
   useEffect(() => {
     if (getConsent() === "accepted") loadGA4();
   }, []);
@@ -6046,12 +6173,6 @@ export default function App() {
   return (
     <div style={{ minHeight:"100vh", background:T.bg, fontFamily:"'DM Sans', sans-serif" }}>
 
-      {/* Poll popup — shows after 4s if not voted */}
-      {showPoll && <PollPopup onClose={() => {
-        setShowPoll(false);
-        try { sessionStorage.setItem(POLL_SEEN_KEY, "1"); } catch {}
-      }} />}
-
       {/* Cookie consent banner — shows if no decision yet */}
       {!cookieConsent && <CookieBanner onConsent={handleConsent} />}
 
@@ -6061,8 +6182,6 @@ export default function App() {
         @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap');
         @keyframes fadeIn { from { opacity:0; transform:translateY(8px); } to { opacity:1; transform:translateY(0); } }
         @keyframes boPulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.4;transform:scale(.7)} }
-        @keyframes pollFadeIn { from{opacity:0} to{opacity:1} }
-        @keyframes pollSlideUp { from{transform:translateY(24px);opacity:0} to{transform:translateY(0);opacity:1} }
         * { box-sizing: border-box; margin:0; padding:0; }
         ::-webkit-scrollbar { width:5px; }
         ::-webkit-scrollbar-track { background:${T.bg}; }
