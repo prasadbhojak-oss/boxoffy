@@ -4251,7 +4251,7 @@ function BoxOfficeSection({ onNavigate, forceAllTime, onClearForceAllTime }) {
           <div style={{ padding:"4px 8px 2px", background:"#FEF2F2", borderBottom:`1px solid ${T.border}`, display:"flex", alignItems:"center", gap:8 }}>
             <span style={{ width:7, height:7, borderRadius:"50%", background:T.accent, display:"inline-block", animation:"boPulse 1.8s ease-in-out infinite" }} />
             <span style={{ fontFamily:"'DM Sans',sans-serif", fontSize:10, fontWeight:700, color:T.accent, letterSpacing:"0.08em", textTransform:"uppercase" }}>
-              INDIA NATIONAL TOP 10 · WEEK 17 · APR 17–23 · BCM 12-SOURCE MODEL · <span style={{ color:"#D97706" }}>AMBER = BCM ESTIMATE</span>
+              INDIA NATIONAL TOP 10 · WEEK 17 · APR 17–23 · BCM 13-SOURCE · <span style={{ color:"#D97706" }}>~ = BCM ESTIMATE</span>
             </span>
           </div>
 
@@ -4265,7 +4265,7 @@ function BoxOfficeSection({ onNavigate, forceAllTime, onClearForceAllTime }) {
               Domestic = India nett · Global = worldwide gross · ATB = all-time rank nominal · Conf. = BCM confidence
             </span>
             <span style={{ fontFamily:"'IBM Plex Mono',monospace", fontSize:8, color:T.textMuted, letterSpacing:"0.06em" }}>
-              BOI · SACNILK · TARAN ADARSH · FILM INFO · NISHIT SHAW · PINKVILLA · HUNGAMA · RAMESH BALA · COMSCORE · BOM · DEADLINE
+              BOI · SACNILK · TARAN ADARSH · FILM INFO · NISHIT SHAW · PINKVILLA · HUNGAMA · RAMESH BALA · VENKY BO · COMSCORE · BOM · DEADLINE · TRACKTOLLYWOOD
             </span>
           </div>
 
