@@ -14804,7 +14804,9 @@
       "admitsNote": "Final: India nett ₹329 Cr · WW ₹449.69 Cr · Netflix OTT Mar 20 · HIT",
       "estimated": false,
       "betaModel": false,
-      "cast": []
+      "cast": [],
+      "ottPackage": "Netflix",
+      "studio": "Zee Studios · JP Films"
     },
     {
       "title": "O'Romeo",
@@ -14840,7 +14842,9 @@
       "note": "Film Information Wk4: ₹2.15 Cr (rep+unrep). Grand total ₹59.50 Cr (FI). Closing screens for D2.",
       "posterUrl": "https://image.tmdb.org/t/p/w185/2raQOPxWxnY30x4gwg93O2eOblR.jpg",
       "betaModel": false,
-      "cast": []
+      "cast": [],
+      "ottPackage": "Amazon Prime Video",
+      "studio": "Mythri Movie Makers"
     },
     {
       "title": "Mardaani 3",
@@ -14878,7 +14882,9 @@
       "note": "Film Information Wk6: ₹0.86 Cr (rep+unrep). Grand total ₹52.31 Cr. Almost done.",
       "posterUrl": "https://image.tmdb.org/t/p/w185/jLo8qcDOw9CD1COzMLBouOqHtqX.jpg",
       "betaModel": false,
-      "cast": []
+      "cast": [],
+      "ottPackage": "Amazon Prime Video",
+      "studio": "Yash Raj Films"
     },
     {
       "title": "Assi",
@@ -14890,7 +14896,7 @@
       "indiaNet": "₹12.50 Cr",
       "overseas": "1 Cr",
       "weeksInTop10": 0,
-      "status": "OTT",
+      "status": "Closed",
       "budget": "40 Cr",
       "verdict": "SEMI HIT",
       "weeklyCollection": 0.0,
@@ -15022,7 +15028,9 @@
       "admitsNote": "~₹50.5 Cr India nett · PLUS verdict · Closing run",
       "estimated": false,
       "betaModel": false,
-      "cast": []
+      "cast": [],
+      "ottPackage": "Zee5",
+      "studio": "Sunshine Pictures"
     },
     {
       "title": "Dhurandhar",
@@ -15058,7 +15066,9 @@
       "wwGross": "₹1,355 Cr",
       "posterUrl": "https://image.tmdb.org/t/p/w185/8FHOtUpNIk5ZPEay2N2EY5lrxkv.jpg",
       "betaModel": false,
-      "cast": []
+      "cast": [],
+      "ottPackage": "Netflix",
+      "studio": "Jio Studios · B62 Studios"
     },
     {
       "title": "The Raja Saab",
@@ -15094,7 +15104,9 @@
       "note": "Closed. On OTT.",
       "posterUrl": "https://image.tmdb.org/t/p/w185/nvK6gYa4diCnQkDVN42uoYXPrdT.jpg",
       "betaModel": false,
-      "cast": []
+      "cast": [],
+      "ottPackage": "Amazon Prime Video",
+      "studio": "People Media Factory"
     },
     {
       "title": "Anaganaga Oka Raju",
@@ -15106,7 +15118,7 @@
       "indiaNet": "146 Cr",
       "overseas": "34 Cr",
       "weeksInTop10": 5,
-      "status": "OTT",
+      "status": "Closed",
       "budget": "400 Cr",
       "verdict": "DISASTER",
       "weeklyCollection": 0,
@@ -15165,7 +15177,9 @@
       "pageUrl": "ikkis-box-office.html",
       "posterUrl": "https://image.tmdb.org/t/p/w185/8PWu0V10nMqG5SrA13wLRXTD2fH.jpg",
       "betaModel": false,
-      "cast": []
+      "cast": [],
+      "ottPackage": "Amazon Prime Video",
+      "studio": "Dharma Productions"
     },
     {
       "title": "Landlord",
@@ -15200,7 +15214,9 @@
       "pageUrl": "landlord-box-office.html",
       "posterUrl": "https://image.tmdb.org/t/p/w185/wsRknSymCpLhKpjSUGRxGl6DaGY.jpg",
       "betaModel": false,
-      "cast": []
+      "cast": [],
+      "ottPackage": "Amazon Prime Video",
+      "studio": "Pen Studios"
     },
     {
       "title": "Vadh 2",
@@ -15212,7 +15228,7 @@
       "indiaNet": "5 Cr",
       "overseas": "0.5 Cr",
       "weeksInTop10": 0,
-      "status": "OTT",
+      "status": "Closed",
       "budget": "30 Cr",
       "verdict": "Disaster",
       "weeklyCollection": 0,
@@ -15246,7 +15262,7 @@
       "indiaNet": "215 Cr",
       "overseas": "43 Cr",
       "weeksInTop10": 5,
-      "status": "OTT",
+      "status": "Closed",
       "budget": "180 Cr",
       "verdict": "Blockbuster",
       "note": "Sankranthi winner. Chiranjeevi + Nayanthara. ₹215 Cr India net. WW ₹300 Cr. On Zee5.",
@@ -15281,7 +15297,7 @@
       "indiaNet": "26 Cr",
       "overseas": "20 Cr",
       "weeksInTop10": 3,
-      "status": "OTT",
+      "status": "Closed",
       "budget": "50 Cr",
       "verdict": "Hit",
       "note": "Sharwanand romantic comedy. ₹64 Cr WW. Hit verdict.",
@@ -15339,7 +15355,9 @@
       "pageUrl": "parasakthi-box-office.html",
       "posterUrl": "https://image.tmdb.org/t/p/w185/cpKJGYU8Z1iSXzkgDl8vhazk5EQ.jpg",
       "betaModel": false,
-      "cast": []
+      "cast": [],
+      "ottPackage": "Zee5",
+      "studio": "Lyca Productions"
     },
     {
       "title": "With Love",
@@ -15351,7 +15369,7 @@
       "indiaNet": "30 Cr",
       "overseas": "3.5 Cr",
       "weeksInTop10": 4,
-      "status": "OTT",
+      "status": "Closed",
       "budget": "4 Cr",
       "verdict": "Blockbuster",
       "note": "Abishan Jeevinth & Anaswara Rajan. ₹30 Cr India net on ₹4 Cr budget = 644% ROI. #2 highest-grossing Tamil film 2026. On Netflix from Mar 6.",
@@ -15386,7 +15404,7 @@
       "indiaNet": "~₹57 Cr",
       "overseas": "~₹9.6 Cr",
       "weeksInTop10": 3,
-      "status": "OTT",
+      "status": "Closed",
       "budget": "9 Cr",
       "verdict": "SUPER HIT",
       "weeklyCollection": 1.5,
@@ -15477,7 +15495,7 @@
       "indiaNet": "16 Cr",
       "overseas": "15 Cr",
       "weeksInTop10": 4,
-      "status": "OTT",
+      "status": "Closed",
       "budget": "15 Cr",
       "verdict": "Blockbuster",
       "note": "Mammootty wrestling comedy. ₹33 Cr WW on ₹15 Cr budget. BLOCKBUSTER ROI.",
@@ -15611,7 +15629,9 @@
       "wwGross": "$162.8M",
       "posterUrl": "https://image.tmdb.org/t/p/w185/wfuqMlaExcoYiUEvKfVpUTt1v4u.jpg",
       "betaModel": false,
-      "cast": []
+      "cast": [],
+      "ottPackage": "Netflix",
+      "studio": "Agni Studios"
     },
     {
       "title": "Avatar: Fire & Ash",
@@ -15662,7 +15682,9 @@
       "pageUrl": "avatar-fire-ash-box-office.html",
       "posterUrl": "https://image.tmdb.org/t/p/w185/bRBeSHfGHwkEpImlhxPmOcUsaeg.jpg",
       "betaModel": false,
-      "cast": []
+      "cast": [],
+      "ottPackage": "Disney+ Hotstar",
+      "studio": "Disney · 20th Century Studios"
     },
     {
       "title": "Zootopia 2",
@@ -15713,7 +15735,9 @@
       "pageUrl": "zootopia-2-box-office.html",
       "posterUrl": "https://image.tmdb.org/t/p/w185/oJ7g2CifqpStmoYQyaLQgEU32qO.jpg",
       "betaModel": false,
-      "cast": []
+      "cast": [],
+      "ottPackage": "Disney+ Hotstar",
+      "studio": "Walt Disney Animation"
     },
     {
       "title": "Captain America: Brave New World",
@@ -15764,7 +15788,9 @@
       "pageUrl": "captain-america-brave-new-world-box-office.html",
       "posterUrl": "https://image.tmdb.org/t/p/w185/pzIddUEMWhWzfvLI3TwxUG2wGoi.jpg",
       "betaModel": false,
-      "cast": []
+      "cast": [],
+      "ottPackage": "Disney+ Hotstar",
+      "studio": "Marvel Studios"
     },
     {
       "title": "Scream 7",
@@ -16858,7 +16884,7 @@
         "Marathi ensemble cast"
       ],
       "releaseDate": "Jan 3, 2026",
-      "status": "OTT",
+      "status": "Closed",
       "verdict": "HIT",
       "weeklyCollection": 0.0,
       "weekNum": 10,
@@ -16884,7 +16910,7 @@
         "Sree Vishnu · Reba Monica John"
       ],
       "releaseDate": "Mar 6, 2026",
-      "status": "OTT",
+      "status": "Closed",
       "verdict": "AVERAGE",
       "weeklyCollection": 0,
       "weekNum": 2,

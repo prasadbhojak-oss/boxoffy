@@ -4002,6 +4002,7 @@ function BoxOfficeSection({ onNavigate, forceAllTime, onClearForceAllTime }) {
   const [filter, setFilter] = useState("All");
   const [sortBy, setSortBy] = useState("collection");
   const [view, setView] = useState("weekly");
+  const [showOTT, setShowOTT] = useState(false);
   const movies = (liveData || DATA)[year] || [];
   const accent = YEAR_ACCENT[year];
 
@@ -4229,15 +4230,38 @@ function BoxOfficeSection({ onNavigate, forceAllTime, onClearForceAllTime }) {
             </span>
           </div>
 
-          {/* Closed / OTT divider */}
-          <div style={{ padding:"6px 12px 4px", background:T.surfaceAlt, borderBottom:`1px solid ${T.border}`, borderTop:`1px solid ${T.border}`, display:"flex", alignItems:"center", gap:8, marginTop:4 }}>
-            <span style={{ fontFamily:"'DM Sans', sans-serif", fontSize:10, fontWeight:700, color:T.textMuted, letterSpacing:"0.1em", textTransform:"uppercase" }}>
-              ◎ RECENTLY CLOSED / MOVED TO OTT
-            </span>
-          </div>
-          {weeklyChartMovies.filter(m => m.status === "OTT").map((m, i) => (
-            <WeeklyChartRow key={m.title} movie={m} rank={"—"} prevRank={null} />
-          ))}
+          {/* ── RECENTLY CLOSED / MOVED TO OTT — Collapsible ── */}
+          {(() => {
+            const ottFilms = weeklyChartMovies.filter(m => m.status === "OTT");
+            return ottFilms.length > 0 ? (
+              <>
+                <button
+                  onClick={() => setShowOTT(v => !v)}
+                  style={{
+                    width:"100%", display:"flex", alignItems:"center", justifyContent:"space-between",
+                    padding:"8px 14px", background:T.surfaceAlt,
+                    borderBottom:`1px solid ${T.border}`, borderTop:`1px solid ${T.border}`,
+                    marginTop:4, cursor:"pointer", border:"none", textAlign:"left",
+                  }}
+                >
+                  <div style={{ display:"flex", alignItems:"center", gap:8 }}>
+                    <span style={{ fontFamily:"'DM Sans',sans-serif", fontSize:10, fontWeight:700, color:T.textMuted, letterSpacing:"0.1em", textTransform:"uppercase" }}>
+                      ◎ Recently Closed · Moved to OTT
+                    </span>
+                    <span style={{ fontFamily:"'IBM Plex Mono',monospace", fontSize:9, color:T.textMuted, background:T.surface, border:`1px solid ${T.border}`, padding:"1px 6px", borderRadius:2 }}>
+                      {ottFilms.length} titles
+                    </span>
+                  </div>
+                  <span style={{ fontFamily:"'IBM Plex Mono',monospace", fontSize:9, fontWeight:700, color:T.textMuted, letterSpacing:"0.08em" }}>
+                    {showOTT ? "HIDE ▲" : "SHOW ▼"}
+                  </span>
+                </button>
+                {showOTT && ottFilms.map((m, i) => (
+                  <WeeklyChartRow key={m.title} movie={m} rank={"—"} prevRank={null} />
+                ))}
+              </>
+            ) : null;
+          })()}
 
           {/* Upcoming — Calendar Grid */}
           <UpcomingCalendarGrid movies={weeklyChartMovies.filter(m => m.status === "Upcoming")} />
