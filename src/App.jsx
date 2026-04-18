@@ -308,56 +308,83 @@ function SharePanel({ movie, onClose }) {
 
   const title   = movie.title || "";
   const wk      = movie.weeklyCollection > 0 ? "₹" + movie.weeklyCollection + " Cr" : "";
-  const total   = movie.totalCollection  > 0 ? "₹" + movie.totalCollection  + " Cr" : "";
+  const total   = movie.indiaNet || (movie.totalNum > 0 ? "₹" + movie.totalNum + " Cr" : "");
   const verdict = movie.verdict || "";
   const wkNum   = movie.weekNum > 0 ? "Wk " + movie.weekNum : "";
-  const url     = "https://boxoffy.com" + (movie.pageUrl ? "/" + movie.pageUrl : "");
+  const pageUrl = "https://boxoffy.com" + (movie.pageUrl ? "/" + movie.pageUrl : "");
+  const siteUrl = "https://boxoffy.com";
 
-  const tX  = title + (wk ? " — " + wk + " this week" : "") + (total ? " · " + total + " total" : "") + (verdict ? ". " + verdict : "") + ". #BoxOffice\n" + url;
-  const tWA = "*" + title + "*" + (wkNum ? " · " + wkNum : "") + "\n" + (wk ? "This week: *" + wk + "*\n" : "") + (total ? "Total: *" + total + "*\n" : "") + (verdict ? "Verdict: *" + verdict + "*\n" : "") + "\n" + url;
-  const tIG = title + (wk ? " | " + wk + " this week" : "") + (total ? " | " + total + " total" : "") + (verdict ? "\n\n" + verdict + " \ud83c\udfa6" : "") + "\n\nTrack every rupee → boxoffy.com\n.\n.\n.\n#BoxOffice #Bollywood #IndianCinema #BoxoffyIndia";
-  const tTT = title + " just did " + wk + " this week \ud83d\udd25" + (total ? " " + total + " total and " + verdict.toLowerCase() + "." : "") + " Drop the number you predicted \ud83d\udc47 #BoxOffice #Bollywood #" + title.replace(/[^a-zA-Z0-9]/g,"").slice(0,18);
+  const tX       = title + (wk ? " — " + wk + " this week" : "") + (total ? " · " + total + " total" : "") + (verdict ? ". " + verdict + "." : "") + " #BoxOffice #Bollywood\n" + pageUrl;
+  const tThreads = title + (wk ? " collected " + wk + " this week" : "") + (total ? " · " + total + " total" : "") + (verdict ? " · " + verdict : "") + "\n\nFull data & BCM model → " + pageUrl;
+  const tFB      = title + (wkNum ? " (" + wkNum + ")" : "") + (wk ? "\nThis week: " + wk : "") + (total ? "\nTotal India nett: " + total : "") + (verdict ? "\nVerdict: " + verdict : "") + "\n\nBoxoffy — India Box Office Intelligence\n" + pageUrl;
+  const tIG      = title + (wk ? " | " + wk + " this week" : "") + (total ? " | " + total + " total" : "") + (verdict ? "\n\n" + verdict + " 🎬" : "") + "\n\nTrack every rupee → boxoffy.com\n.\n.\n.\n#BoxOffice #Bollywood #IndianCinema #Boxoffy";
+  const tWA      = "*" + title + "*" + (wkNum ? " · " + wkNum : "") + "\n" + (wk ? "This week: *" + wk + "*\n" : "") + (total ? "India nett: *" + total + "*\n" : "") + (verdict ? "Verdict: *" + verdict + "*\n" : "") + "\nBoxoffy → " + pageUrl;
 
   const platforms = [
-    { id:"x",  label:"X / Twitter", color:"#000",    text:tX,  openUrl:"https://twitter.com/intent/tweet?text=" + encodeURIComponent(tX),  canOpen:true  },
-    { id:"wa", label:"WhatsApp",    color:"#25D366", text:tWA, openUrl:"https://wa.me/?text=" + encodeURIComponent(tWA),                    canOpen:true  },
-    { id:"ig", label:"Instagram",   color:"#E1306C", text:tIG, canOpen:false },
-    { id:"tt", label:"TikTok",      color:"#111",    text:tTT, canOpen:false },
+    { id:"x",       label:"X / Twitter", icon:"𝕏", color:"#000",    text:tX,       openUrl:"https://twitter.com/intent/tweet?text=" + encodeURIComponent(tX),              canOpen:true  },
+    { id:"threads", label:"Threads",     icon:"@", color:"#000",    text:tThreads, openUrl:"https://www.threads.net/intent/post?text=" + encodeURIComponent(tThreads),      canOpen:true  },
+    { id:"fb",      label:"Facebook",    icon:"f", color:"#1877F2", text:tFB,      openUrl:"https://www.facebook.com/sharer/sharer.php?u=" + encodeURIComponent(pageUrl),   canOpen:true  },
+    { id:"wa",      label:"WhatsApp",    icon:"W", color:"#25D366", text:tWA,      openUrl:"https://wa.me/?text=" + encodeURIComponent(tWA),                                canOpen:true  },
+    { id:"ig",      label:"Instagram",   icon:"IG",color:"#E1306C", text:tIG,      canOpen:false },
+    { id:"link",    label:"Copy Link",   icon:"🔗",color:"#374151", text:pageUrl,  canOpen:false },
   ];
 
   const copy = (id, text) => {
     navigator.clipboard.writeText(text).then(() => {
       setCopied(id);
       setTimeout(() => setCopied(null), 2000);
-    });
+    }).catch(() => {});
   };
 
   return (
-    <div style={{ background:"#F8F9FA", borderTop:"2px solid #E5E7EB", padding:"12px 14px" }}>
+    <div style={{ background:"#F8F9FA", borderTop:`2px solid ${T.border}`, padding:"12px 14px" }}>
       <div style={{ display:"flex", justifyContent:"space-between", alignItems:"center", marginBottom:10 }}>
-        <span style={{ fontFamily:"'Barlow Condensed', sans-serif", fontWeight:800, fontSize:15, color:"#111827", letterSpacing:"0.06em", textTransform:"uppercase" }}>Share</span>
-        <button onClick={onClose} style={{ background:"transparent", border:"none", cursor:"pointer", fontSize:18, color:"#9CA3AF", padding:"0 4px", lineHeight:1 }}>&times;</button>
+        <span style={{ fontFamily:"'Barlow Condensed',sans-serif", fontWeight:800, fontSize:15, color:T.text, letterSpacing:"0.06em", textTransform:"uppercase" }}>
+          Share · {title.length > 22 ? title.slice(0,22)+"…" : title}
+        </span>
+        <button onClick={onClose} style={{ background:"transparent", border:"none", cursor:"pointer", fontSize:18, color:T.textMuted, padding:"0 4px", lineHeight:1 }}>&times;</button>
       </div>
-      <div style={{ display:"flex", flexDirection:"column", gap:8 }}>
-        {platforms.map(p => (
-          <div key={p.id} style={{ background:"#fff", border:"1px solid #E5E7EB", borderRadius:6, overflow:"hidden" }}>
-            <div style={{ display:"flex", alignItems:"center", padding:"8px 10px", gap:8 }}>
-              <span style={{ fontFamily:"'DM Sans', sans-serif", fontWeight:700, fontSize:13, color:"#111827", flex:1 }}>{p.label}</span>
+
+      {/* Quick-tap row for open-able platforms */}
+      <div style={{ display:"flex", gap:8, marginBottom:10, flexWrap:"wrap" }}>
+        {platforms.filter(p => p.canOpen).map(p => (
+          <a key={p.id} href={p.openUrl} target="_blank" rel="noopener noreferrer" style={{
+            display:"inline-flex", alignItems:"center", gap:5,
+            background:p.color, color:"#fff",
+            fontFamily:"'DM Sans',sans-serif", fontWeight:700, fontSize:12,
+            padding:"7px 14px", borderRadius:4, textDecoration:"none", flexShrink:0,
+          }}>
+            <span style={{ fontSize:13, lineHeight:1 }}>{p.icon}</span>
+            {p.label}
+          </a>
+        ))}
+        <button onClick={() => copy("link", pageUrl)} style={{
+          display:"inline-flex", alignItems:"center", gap:5,
+          background: copied === "link" ? "#D1FAE5" : "#F3F4F6",
+          color: copied === "link" ? "#065F46" : "#374151",
+          fontFamily:"'DM Sans',sans-serif", fontWeight:700, fontSize:12,
+          padding:"7px 14px", borderRadius:4, border:"none", cursor:"pointer", flexShrink:0,
+        }}>
+          🔗 {copied === "link" ? "Copied!" : "Copy Link"}
+        </button>
+      </div>
+
+      {/* Copy-text rows for Instagram + all platforms */}
+      <div style={{ display:"flex", flexDirection:"column", gap:6 }}>
+        {platforms.filter(p => !p.canOpen).map(p => (
+          <div key={p.id} style={{ background:"#fff", border:`1px solid ${T.border}`, borderRadius:5, overflow:"hidden" }}>
+            <div style={{ display:"flex", alignItems:"center", padding:"7px 10px", gap:8, borderBottom:`1px solid #F3F4F6` }}>
+              <span style={{ fontFamily:"'DM Sans',sans-serif", fontWeight:700, fontSize:12, color:T.text, flex:1 }}>
+                {p.label} <span style={{ color:T.textMuted, fontWeight:400, fontSize:10 }}>— copy caption</span>
+              </span>
               <button onClick={() => copy(p.id, p.text)} style={{
-                fontFamily:"'DM Sans', sans-serif", fontWeight:700, fontSize:11,
-                background: copied === p.id ? "#DCFCE7" : "#F3F4F6",
-                color: copied === p.id ? "#15803D" : "#374151",
-                border:"none", borderRadius:4, padding:"5px 11px", cursor:"pointer", flexShrink:0,
-              }}>{copied === p.id ? "\u2713 Copied!" : "Copy"}</button>
-              {p.canOpen && (
-                <a href={p.openUrl} target="_blank" rel="noopener noreferrer" style={{
-                  fontFamily:"'DM Sans', sans-serif", fontWeight:700, fontSize:11,
-                  background:p.color, color:"#fff", borderRadius:4, padding:"5px 11px",
-                  textDecoration:"none", flexShrink:0,
-                }}>Open \u2197</a>
-              )}
+                fontFamily:"'DM Sans',sans-serif", fontWeight:700, fontSize:11,
+                background: copied === p.id ? "#D1FAE5" : "#F3F4F6",
+                color: copied === p.id ? "#065F46" : "#374151",
+                border:"none", borderRadius:4, padding:"4px 10px", cursor:"pointer",
+              }}>{copied === p.id ? "✓ Copied!" : "Copy"}</button>
             </div>
-            <div style={{ padding:"6px 10px 9px", fontFamily:"'DM Sans', sans-serif", fontSize:11, color:"#6B7280", lineHeight:1.55, whiteSpace:"pre-wrap", borderTop:"1px solid #F3F4F6" }}>
+            <div style={{ padding:"6px 10px 8px", fontFamily:"'DM Sans',sans-serif", fontSize:10.5, color:T.textMuted, lineHeight:1.6, whiteSpace:"pre-wrap" }}>
               {p.text}
             </div>
           </div>
@@ -2272,6 +2299,7 @@ function NationalTop10Row({ movie, rank }) {
   const isMobile = useIsMobile();
   const isNew    = !movie.lastWeekCollection || movie.weekNum <= 1;
   const isHolly  = movie.language === "Hollywood";
+  const [shareOpen, setShareOpen] = React.useState(false);
 
   const chgPct = movie.lastWeekCollection > 0
     ? Math.round(((movie.weeklyCollection - movie.lastWeekCollection) / movie.lastWeekCollection) * 100)
@@ -2293,11 +2321,13 @@ function NationalTop10Row({ movie, rank }) {
   ) : null;
 
   const row = (
+    <div>
+      {shareOpen && <SharePanel movie={movie} onClose={() => setShareOpen(false)} />}
     <div style={{
       display:"grid",
       gridTemplateColumns: isMobile ? GRID_MOBILE : GRID_DESKTOP,
       alignItems:"center",
-      borderBottom:`0.5px solid ${T.border}`,
+      borderBottom: shareOpen ? "none" : `0.5px solid ${T.border}`,
       borderLeft: isNew ? `3px solid ${T.accent}` : `3px solid transparent`,
       background: isNew ? "rgba(196,30,58,0.03)" : T.surface,
       transition:"background 0.12s",
@@ -2332,6 +2362,15 @@ function NationalTop10Row({ movie, rank }) {
           {movie.language}{movie.weekNum > 0 ? ` · W${movie.weekNum}` : ""}
           {movie.verdict && ` · ${movie.verdict}`}
         </div>
+        {isMobile && (
+          <button onClick={() => setShareOpen(v => !v)} style={{
+            marginTop:5, fontFamily:"'DM Sans',sans-serif", fontWeight:700, fontSize:10,
+            background: shareOpen ? T.accent : "#F3F4F6",
+            color: shareOpen ? "#fff" : "#374151",
+            border:"none", borderRadius:4, padding:"3px 10px", cursor:"pointer",
+            display:"inline-flex", alignItems:"center", gap:4,
+          }}>↗ Share</button>
+        )}
       </div>
 
       {/* This Week */}
@@ -2396,6 +2435,7 @@ function NationalTop10Row({ movie, rank }) {
           <div style={{ fontFamily:"'DM Sans',sans-serif", fontSize:8, color:T.textMuted, marginTop:3 }}>{movie.indiaNet}</div>
         )}
       </div>
+    </div>
     </div>
   );
 
