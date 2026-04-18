@@ -311,8 +311,7 @@ function SharePanel({ movie, onClose }) {
   const total   = movie.indiaNet || (movie.totalNum > 0 ? "₹" + movie.totalNum + " Cr" : "");
   const verdict = movie.verdict || "";
   const wkNum   = movie.weekNum > 0 ? "Wk " + movie.weekNum : "";
-  const pageUrl = "https://boxoffy.com" + (movie.pageUrl ? "/" + movie.pageUrl : "");
-  const siteUrl = "https://boxoffy.com";
+  const pageUrl = "https://boxoffy.com";   // always link to live weekly chart, not static film pages
 
   const tX       = title + (wk ? " — " + wk + " this week" : "") + (total ? " · " + total + " total" : "") + (verdict ? ". " + verdict + "." : "") + " #BoxOffice #Bollywood\n" + pageUrl;
   const tThreads = title + (wk ? " collected " + wk + " this week" : "") + (total ? " · " + total + " total" : "") + (verdict ? " · " + verdict : "") + "\n\nFull data & BCM model → " + pageUrl;
