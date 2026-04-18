@@ -733,6 +733,58 @@ footer a { color: rgba(255,255,255,0.55); text-decoration: none; }
   .hero-title { font-size: 32px; }
   .bcm-box::before { display: none; }
 }
+/* ── SHARE STRIPS ── */
+.share-strip {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 32px 0;
+  padding: 14px 16px;
+  background: var(--surface-alt);
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  flex-wrap: wrap;
+}
+.share-label {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--text-muted);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  flex-shrink: 0;
+  margin-right: 4px;
+}
+.share-ctx {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 12px;
+  color: var(--text-muted);
+  flex: 1;
+  min-width: 120px;
+  font-style: italic;
+}
+.share-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 13px;
+  border-radius: 3px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: opacity 0.15s, transform 0.1s;
+  flex-shrink: 0;
+}
+.share-btn:hover { opacity: 0.88; transform: translateY(-1px); }
+.share-btn svg { width: 14px; height: 14px; flex-shrink: 0; }
+.share-wa  { background: #25D366; color: #fff; }
+.share-x   { background: #000; color: #fff; }
+.share-th  { background: #000; color: #fff; }
+.share-copy { background: var(--navy); color: #fff; }
+.share-copy.copied { background: var(--green); }
 </style>
 </head>
 <body>
@@ -957,6 +1009,15 @@ footer a { color: rgba(255,255,255,0.55); text-decoration: none; }
     <p class="body-text">
       The revised BCM applies <strong>λ = 0.71</strong> — recalibrated after stress-testing the model against Sitaare Zameen Par and Housefull 5, two directly comparable 2025 films. See the full comparable analysis below. The critical watch point remains D3 Sunday and the first Monday — if Monday holds above ₹5 Cr, BB is firmly on the ₹118 Cr base-case trajectory.
     </p>
+
+    <div class="share-strip">
+      <span class="share-label">Share</span>
+      <span class="share-ctx">Boxoffy BCM: BB headed for ₹118 Cr lifetime</span>
+      <a class="share-btn share-x" href="https://twitter.com/intent/tweet?text=Bhooth+Bangla+headed+for+%E2%82%B9118+Cr+India+nett+%E2%80%94+Boxoffy+BCM+13-source+model+revised+after+SZP+%26+HF5+comparable+challenge.+%23BhoothBangla+%23BoxOffice%0Ahttps://boxoffy.com/bhooth-bangla-box-office.html" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>X</a>
+      <a class="share-btn share-th" href="https://www.threads.net/intent/post?text=Bhooth+Bangla+headed+for+%E2%82%B9118+Cr+India+nett+%E2%80%94+Boxoffy+BCM+model+revised+%CE%BB%3D0.71+after+Sitaare+Zameen+Par+%26+Housefull+5+challenge.+%23BhoothBangla%0Ahttps://boxoffy.com/bhooth-bangla-box-office.html" target="_blank" rel="noopener">@ Threads</a>
+      <a class="share-btn share-wa" href="https://api.whatsapp.com/send?text=Bhooth+Bangla+headed+for+%E2%82%B9118+Cr+India+nett+%E2%80%94+Boxoffy+BCM+13-source+model.+Track+here%3A+https://boxoffy.com/bhooth-bangla-box-office.html" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/></svg>WhatsApp</a>
+      <button class="share-btn share-copy" onclick="copyToClipboard(this,'https://boxoffy.com/bhooth-bangla-box-office.html')">🔗 Copy Link</button>
+    </div>
   </section>
 
   <!-- COMPARABLE FILM CHALLENGE -->
@@ -1070,6 +1131,15 @@ footer a { color: rgba(255,255,255,0.55); text-decoration: none; }
 
     <div class="callout">
       <p>The BCM recalibration: applying SZP's λ=0.57 to BB gives an unrealistic ₹175+ Cr. Applying HF5's λ=0.82 yields a pessimistic ₹88 Cr. The calibrated answer — BB's intermediate D2 jump (+55%), IMDB 7.0, mixed WOM, and the clean run structural advantage — is <strong>λ=0.71 → ₹118 Cr base case</strong>. Revised upward from the original ₹100 Cr. The model challenge was correct.</p>
+    </div>
+
+    <div class="share-strip">
+      <span class="share-label">Share</span>
+      <span class="share-ctx">BB D2 jump +55% vs SZP +87% vs HF5 +29%</span>
+      <a class="share-btn share-x" href="https://twitter.com/intent/tweet?text=Bhooth+Bangla+D2+jump+%2B55%25+%E2%80%94+between+Sitaare+Zameen+Par+(%2B87%25)+%26+Housefull+5+(%2B29%25).+Boxoffy+BCM+comparable+model+%CE%BB%3D0.71+%E2%86%92+%E2%82%B9118+Cr+lifetime.+%23BhoothBangla+%23BoxOffice%0Ahttps://boxoffy.com/bhooth-bangla-box-office.html" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>X</a>
+      <a class="share-btn share-th" href="https://www.threads.net/intent/post?text=Bhooth+Bangla+D2+%2B55%25+sits+between+SZP+%2B87%25+and+HF5+%2B29%25.+BCM+comparable+model+says+%E2%82%B9118+Cr+lifetime.+Boxoffy+data+science.%0Ahttps://boxoffy.com/bhooth-bangla-box-office.html" target="_blank" rel="noopener">@ Threads</a>
+      <a class="share-btn share-wa" href="https://api.whatsapp.com/send?text=Bhooth+Bangla+vs+Sitaare+Zameen+Par+vs+Housefull+5+%E2%80%94+full+BCM+comparable+model.+Track+here%3A+https://boxoffy.com/bhooth-bangla-box-office.html" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/></svg>WhatsApp</a>
+      <button class="share-btn share-copy" onclick="copyToClipboard(this,'https://boxoffy.com/bhooth-bangla-box-office.html')">🔗 Copy Link</button>
     </div>
   </section>
 
@@ -1238,6 +1308,18 @@ footer a { color: rgba(255,255,255,0.55); text-decoration: none; }
   </section>
 </main>
 
+<!-- END SHARE STRIP -->
+<div style="max-width:780px;margin:40px auto 0;padding:0 24px;">
+  <div class="share-strip" style="background:var(--navy);border-color:var(--navy);">
+    <span class="share-label" style="color:rgba(255,255,255,0.5);">Share this article</span>
+    <a class="share-btn share-x" href="https://twitter.com/intent/tweet?text=Bhooth+Bangla+headed+for+success+%E2%80%94+%E2%82%B9118+Cr+BCM+lifetime+model.+Full+analysis+on+%40boxoffy+%23BhoothBangla+%23BoxOffice%0Ahttps://boxoffy.com/bhooth-bangla-box-office.html" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>X / Twitter</a>
+    <a class="share-btn share-th" style="background:#333;" href="https://www.threads.net/intent/post?text=Bhooth+Bangla+headed+for+success+%E2%80%94+%E2%82%B9118+Cr+BCM+lifetime.+Track+here%3A+https://boxoffy.com/bhooth-bangla-box-office.html" target="_blank" rel="noopener">@ Threads</a>
+    <a class="share-btn share-wa" href="https://api.whatsapp.com/send?text=Bhooth+Bangla+headed+for+success+%E2%80%94+track+the+box+office+journey+on+Boxoffy%3A+https://boxoffy.com/bhooth-bangla-box-office.html" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/></svg>WhatsApp</a>
+    <a class="share-btn" style="background:#1877F2;color:#fff;" href="https://www.facebook.com/sharer/sharer.php?u=https://boxoffy.com/bhooth-bangla-box-office.html" target="_blank" rel="noopener">f Facebook</a>
+    <button class="share-btn share-copy" onclick="copyToClipboard(this,'https://boxoffy.com/bhooth-bangla-box-office.html')">🔗 Copy Link</button>
+  </div>
+</div>
+
 <!-- RELATED ARTICLES -->
 <div class="related-section">
   <div class="related-inner">
@@ -1268,6 +1350,16 @@ footer a { color: rgba(255,255,255,0.55); text-decoration: none; }
 </footer>
 
 <script>
+// Copy link handler
+function copyToClipboard(btn, url) {
+  navigator.clipboard.writeText(url).then(() => {
+    const orig = btn.innerHTML;
+    btn.innerHTML = '✓ Copied!';
+    btn.classList.add('copied');
+    setTimeout(() => { btn.innerHTML = orig; btn.classList.remove('copied'); }, 2000);
+  }).catch(() => {});
+}
+
 // TMDB poster fetch — ID 1239134
 (function(){
   const TMDB_ID = 1239134;
