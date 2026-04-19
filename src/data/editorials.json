@@ -1,5 +1,14 @@
 [
   {
+    "headline": "Bhooth Bangla Runs on Nostalgia and Earns Its Horror Backstory. This Has Legs.",
+    "dek": "Packed house Saturday. Audience in splits. Akshay + Asrani + Rajpal in prime form. Vadhusur origin well-crafted. Screenplay honest problems named. 3.5/5 — go watch it with your family.",
+    "url": "bhooth-bangla-review.html",
+    "tag": "REVIEW",
+    "date": "Apr 19, 2026",
+    "readTime": "5 min",
+    "featured": true
+  },
+  {
     "headline": "Bhooth Bangla Headed for Success — Track Here",
     "dek": "D2 confirmed ₹19 Cr (+55%). BCM λ revised from 0.78 → 0.71 after stress-testing against Sitaare Zameen Par (+87% D2 jump) and Housefull 5 (+29%). Boxoffy Score 62/100. Clean run worth ₹10–15 Cr incremental lifetime.",
     "url": "bhooth-bangla-box-office.html",
@@ -10,7 +19,7 @@
   },
   {
     "headline": "Record Revenue. Fewer Seats. The Real State of Indian Cinema.",
-    "dek": "The box office hit \u20b913,395 crore in 2025. Fewer people went to the cinema than any year since the pandemic. Five anomalies the industry isn't talking about \u2014 and what genuinely thriving would actually look like.",
+    "dek": "The box office hit ₹13,395 crore in 2025. Fewer people went to the cinema than any year since the pandemic. Five anomalies the industry isn't talking about — and what genuinely thriving would actually look like.",
     "url": "/india-cinema-state-2026.html",
     "tag": "DATA SCIENCE",
     "date": "Apr 2026",
@@ -18,7 +27,7 @@
     "featured": true
   },
   {
-    "headline": "Hindi Music Top 10 \u2014 April 2026: The Dhurandhar Effect",
+    "headline": "Hindi Music Top 10 — April 2026: The Dhurandhar Effect",
     "dek": "Shashwat Sachdev holds 4 of India's Spotify top 10 simultaneously. Real chart data, Spotify previews, stream counts and full credits. Bairan #1 with 66M streams. Sahiba at 376M total.",
     "url": "music-top-10-hindi-april-2026.html",
     "tag": "MUSIC CHARTS",
@@ -27,8 +36,8 @@
     "featured": true
   },
   {
-    "headline": "Box Office Beyond the Dhurandhar Storm \u2014 Bhooth Bangla Arrives with a Wide Release",
-    "dek": "\u20b9120 Cr budget. Break-even \u20b9184 Cr. 16 years since Khatta Meetha. Boxoffy's 4-technique DS model: D1 central \u20b915.8 Cr. The math is steeper than the trade is letting on.",
+    "headline": "Box Office Beyond the Dhurandhar Storm — Bhooth Bangla Arrives with a Wide Release",
+    "dek": "₹120 Cr budget. Break-even ₹184 Cr. 16 years since Khatta Meetha. Boxoffy's 4-technique DS model: D1 central ₹15.8 Cr. The math is steeper than the trade is letting on.",
     "url": "bhooth-bangla-box-office-preview.html",
     "tag": "PREVIEW",
     "date": "Apr 14, 2026",
@@ -36,8 +45,8 @@
     "featured": true
   },
   {
-    "headline": "Dhurandhar 2 vs Pushpa 2 \u2014 \u20b9983 Cr vs \u20b91,266 Cr. The Full Comparison.",
-    "dek": "D2 ~\u20b9983 Cr India nett D26 \u00b7 WW \u20b91,718 Cr vs \u20b91,785 Cr \u00b7 \u20b924 Cr from Pushpa 2 worldwide. Boxoffy data science verdict with week-wise breakdown and ROI analysis.",
+    "headline": "Dhurandhar 2 vs Pushpa 2 — ₹983 Cr vs ₹1,266 Cr. The Full Comparison.",
+    "dek": "D2 ~₹983 Cr India nett D26 · WW ₹1,718 Cr vs ₹1,785 Cr · ₹24 Cr from Pushpa 2 worldwide. Boxoffy data science verdict with week-wise breakdown and ROI analysis.",
     "url": "dhurandhar-2-vs-pushpa-2-box-office.html",
     "tag": "COMPARISON",
     "date": "Apr 14, 2026",
@@ -46,8 +55,8 @@
   },
   {
     "tag": "COMPARISON",
-    "headline": "Dhurandhar vs Dhurandhar 2 \u2014 Complete Day-Wise Box Office Comparison",
-    "dek": "D1 \u20b9840 Cr vs D2 \u20b9983 Cr India nett through D26. Week-by-week, ATP and footfalls compared. How the sequel dominated every stage \u2014 and where the original still wins.",
+    "headline": "Dhurandhar vs Dhurandhar 2 — Complete Day-Wise Box Office Comparison",
+    "dek": "D1 ₹840 Cr vs D2 ₹983 Cr India nett through D26. Week-by-week, ATP and footfalls compared. How the sequel dominated every stage — and where the original still wins.",
     "author": "The Boxoffy Team",
     "date": "Apr 14, 2026",
     "readTime": "5 min read",
@@ -55,7 +64,7 @@
     "featured": false
   },
   {
-    "headline": "OTT India Apr 13\u201319 \u2014 Euphoria S3, Toaster, Matka King, Assi This Week",
+    "headline": "OTT India Apr 13–19 — Euphoria S3, Toaster, Matka King, Assi This Week",
     "dek": "Euphoria S3 drops Apr 15 on JioHotstar. Toaster (Rajkummar Rao) on Netflix Apr 15. Matka King (Vijay Varma) Prime Apr 17. Ustaad Bhagat Singh Netflix Apr 16. Full rankings + viewership.",
     "url": "ott-releases.html",
     "tag": "OTT",
@@ -64,8 +73,8 @@
     "featured": true
   },
   {
-    "headline": "Dhurandhar: The Revenge \u2014 Hindi Nett \u20b91,000 Crore. Monumental.",
-    "dek": "No Hindi film has ever done this. Boxoffy's four-technique data science model \u2014 regression calibration, exponential decay, footfall cross-validation, screen shock analysis \u2014 projects the exact date and the final lifetime number.",
+    "headline": "Dhurandhar: The Revenge — Hindi Nett ₹1,000 Crore. Monumental.",
+    "dek": "No Hindi film has ever done this. Boxoffy's four-technique data science model — regression calibration, exponential decay, footfall cross-validation, screen shock analysis — projects the exact date and the final lifetime number.",
     "url": "dhurandhar-2-1000-crore.html",
     "tag": "DATA SCIENCE",
     "date": "Apr 10, 2026",
@@ -73,8 +82,8 @@
     "featured": true
   },
   {
-    "headline": "An Ode to Dhurandhar: The Revenge \u2014 Seven Chapters. One Spy. Balidan Parmo Dharma.",
-    "dek": "A Boxoffy Special Edition noir ode to Aditya Dhar, Ranveer Singh and Shashwat Sachdev. From Rehman Dakait's death to Jaskirat at the gate. The seamless fusion of music, action and character that Indian cinema rarely achieves \u2014 and never quite like this.",
+    "headline": "An Ode to Dhurandhar: The Revenge — Seven Chapters. One Spy. Balidan Parmo Dharma.",
+    "dek": "A Boxoffy Special Edition noir ode to Aditya Dhar, Ranveer Singh and Shashwat Sachdev. From Rehman Dakait's death to Jaskirat at the gate. The seamless fusion of music, action and character that Indian cinema rarely achieves — and never quite like this.",
     "url": "dhurandhar-the-revenge-ode.html",
     "tag": "SPECIAL EDITION",
     "date": "Apr 07, 2026",
@@ -82,8 +91,8 @@
     "featured": true
   },
   {
-    "headline": "Bhooth Bangla Trailer Review \u2014 The OG Cast Is Back. But Is the Audience?",
-    "dek": "Priyadarshan reunites the full Bhool Bhulaiyaa cast \u2014 Akshay Kumar, Paresh Rawal, Rajpal Yadav, Asrani. Songs, BMS data, delay analysis and Boxoffy's D1 prediction. Score: 3/5 \u00b7 Familiar Energy.",
+    "headline": "Bhooth Bangla Trailer Review — The OG Cast Is Back. But Is the Audience?",
+    "dek": "Priyadarshan reunites the full Bhool Bhulaiyaa cast — Akshay Kumar, Paresh Rawal, Rajpal Yadav, Asrani. Songs, BMS data, delay analysis and Boxoffy's D1 prediction. Score: 3/5 · Familiar Energy.",
     "url": "bhooth-bangla-trailer-review.html",
     "tag": "REVIEW",
     "date": "Apr 06, 2026",
@@ -91,8 +100,8 @@
     "featured": true
   },
   {
-    "headline": "Ramayana \u2014 Rama First Look Review: ARR Delivers, CGI Has Room, Tiwari's Instinct Is the Bet",
-    "dek": "Ranbir Kapoor's calm first look works. ARR and Zimmer's score is right for the character. The early CGI draws debate \u2014 but DNEG has six months. Boxoffy's full take on the teaser.",
+    "headline": "Ramayana — Rama First Look Review: ARR Delivers, CGI Has Room, Tiwari's Instinct Is the Bet",
+    "dek": "Ranbir Kapoor's calm first look works. ARR and Zimmer's score is right for the character. The early CGI draws debate — but DNEG has six months. Boxoffy's full take on the teaser.",
     "url": "ramayana-rama-first-look-review.html",
     "tag": "REVIEW",
     "date": "Apr 02, 2026",
@@ -100,8 +109,8 @@
     "featured": true
   },
   {
-    "headline": "BARC TRP Ratings Week 12 \u2014 Kyunki KSBKBT2 Holds #1, Tum Se Tum Tak Surges to #2, Anupamaa at #4",
-    "dek": "Full BARC Top 10 Hindi TV shows for Week 12 (Mar 21\u201327, 2026). IPL effect begins. Zee TV counter-punch. Star Plus five-show dominance. Boxoffy commentary.",
+    "headline": "BARC TRP Ratings Week 12 — Kyunki KSBKBT2 Holds #1, Tum Se Tum Tak Surges to #2, Anupamaa at #4",
+    "dek": "Full BARC Top 10 Hindi TV shows for Week 12 (Mar 21–27, 2026). IPL effect begins. Zee TV counter-punch. Star Plus five-show dominance. Boxoffy commentary.",
     "url": "tv-ratings.html",
     "tag": "TV",
     "date": "Apr 02, 2026",
@@ -109,8 +118,8 @@
     "featured": true
   },
   {
-    "headline": "Ramayana: Part One \u2014 The Most Ambitious Indian Film Ever Made. What Will It Take?",
-    "dek": "\u20b9835 Cr budget. DNEG VFX. Hans Zimmer + AR Rahman. Ranbir Kapoor as Ram. LA test screening 'roaring response'. 'Rama' glimpse drops April 2. Boxoffy's full preview \u2014 cast, scale, and box office outlook.",
+    "headline": "Ramayana: Part One — The Most Ambitious Indian Film Ever Made. What Will It Take?",
+    "dek": "₹835 Cr budget. DNEG VFX. Hans Zimmer + AR Rahman. Ranbir Kapoor as Ram. LA test screening 'roaring response'. 'Rama' glimpse drops April 2. Boxoffy's full preview — cast, scale, and box office outlook.",
     "url": "ramayana-part-one-box-office.html",
     "tag": "PREVIEW",
     "date": "Mar 30, 2026",
@@ -118,8 +127,8 @@
     "featured": true
   },
   {
-    "headline": "Driver or Multiplier? The Top 20 Bollywood Songs vs Box Office \u2014 Ranked",
-    "dek": "Do hit Bollywood songs drive box office \u2014 or does the film make the song? Boxoffy ranks the 20 biggest Indian film songs of 2021\u20132026 on Spotify, YouTube, Apple Music and Amazon Music, maps each against box office reality, and adds the science. With Shashwat Sachdev, DSP, Anirudh, Arijit Singh and more.",
+    "headline": "Driver or Multiplier? The Top 20 Bollywood Songs vs Box Office — Ranked",
+    "dek": "Do hit Bollywood songs drive box office — or does the film make the song? Boxoffy ranks the 20 biggest Indian film songs of 2021–2026 on Spotify, YouTube, Apple Music and Amazon Music, maps each against box office reality, and adds the science. With Shashwat Sachdev, DSP, Anirudh, Arijit Singh and more.",
     "url": "bollywood-music-box-office.html",
     "tag": "ANALYSIS",
     "date": "Mar 29, 2026",
@@ -127,8 +136,8 @@
     "featured": true
   },
   {
-    "headline": "\u0926\u0902\u0917\u0932 at Ten: The Data, The Doubters, and Why the Arithmetic Ends the Debate",
-    "dek": "China: \u20b91,235 Cr. 4.31 crore tickets. Maoyan-verified. Xi Jinping confirmed it to PM Modi \u2014 twice. Government extension. Day-by-day data. ATP inflation. Money laundering demolished. The full case.",
+    "headline": "दंगल at Ten: The Data, The Doubters, and Why the Arithmetic Ends the Debate",
+    "dek": "China: ₹1,235 Cr. 4.31 crore tickets. Maoyan-verified. Xi Jinping confirmed it to PM Modi — twice. Government extension. Day-by-day data. ATP inflation. Money laundering demolished. The full case.",
     "url": "dangal-china-box-office.html",
     "tag": "Deep Dive",
     "date": "Mar 26, 2026",
@@ -143,13 +152,13 @@
     "date": "Mar 22, 2026",
     "readTime": "9 min read",
     "url": "why-indian-cinema-never-has-a-number-2.html",
-    "subline": "ROI blindness \u00b7 Counter-programming \u00b7 Broadway hypothesis",
+    "subline": "ROI blindness · Counter-programming · Broadway hypothesis",
     "featured": false
   },
   {
     "tag": "VERDICT",
-    "headline": "\u20b9623.97 Cr in 7 Days. \u20b91,006 Cr Worldwide. 31 Records. Dhurandhar 2 Is Historic.",
-    "dek": "D5 Monday \u20b960 Cr (BOI/Pinkvilla) \u2014 the highest first weekday in Bollywood history. D6 Tuesday \u20b956.55 Cr. Week 1 targeting \u20b9625+ Cr nett. $81M 5-day global per Deadline \u2014 second biggest Indian opening ever. $14M NA 5-day at 987 sites \u2014 all-time Bollywood North America record.",
+    "headline": "₹623.97 Cr in 7 Days. ₹1,006 Cr Worldwide. 31 Records. Dhurandhar 2 Is Historic.",
+    "dek": "D5 Monday ₹60 Cr (BOI/Pinkvilla) — the highest first weekday in Bollywood history. D6 Tuesday ₹56.55 Cr. Week 1 targeting ₹625+ Cr nett. $81M 5-day global per Deadline — second biggest Indian opening ever. $14M NA 5-day at 987 sites — all-time Bollywood North America record.",
     "author": "The Boxoffy Team",
     "date": "Mar 20, 2026",
     "readTime": "4 min read",
@@ -159,7 +168,7 @@
   },
   {
     "tag": "US BOX OFFICE",
-    "headline": "Dhurandhar 2 in North America \u2014 $14M 5-Day Record. All-Time Bollywood NA Opening.",
+    "headline": "Dhurandhar 2 in North America — $14M 5-Day Record. All-Time Bollywood NA Opening.",
     "dek": "$14M 5-day at 987 sites in North America per Exhibitor Relations and Deadline. Surpasses Pathaan ($9.5M 5-day), Jawan, and KGF Chapter 2. Slightly behind Baahubali 2 ($10.4M 3-day) in NA opening weekend. Box Office Guru: \"an incredible opening for a four-hour movie playing to 3% of the population.\"",
     "author": "The Boxoffy Team",
     "date": "Mar 20, 2026",
@@ -169,8 +178,8 @@
   },
   {
     "tag": "DATA ANALYSIS",
-    "headline": "The \u20b9100 Crore Day 1 Club \u2014 Every Indian Film That Made It, and Why No Hindi Film Has",
-    "dek": "Pushpa 2 \u20b9144 Cr. RRR, Baahubali 2, KGF2 \u2014 all \u20b9100\u2013110 Cr. Four films. All South Indian. Zero Bollywood. Dhurandhar 2 attempts it March 19. Footfall math + ATP breakdown.",
+    "headline": "The ₹100 Crore Day 1 Club — Every Indian Film That Made It, and Why No Hindi Film Has",
+    "dek": "Pushpa 2 ₹144 Cr. RRR, Baahubali 2, KGF2 — all ₹100–110 Cr. Four films. All South Indian. Zero Bollywood. Dhurandhar 2 attempts it March 19. Footfall math + ATP breakdown.",
     "author": "The Boxoffy Team",
     "date": "Mar 15, 2026",
     "readTime": "6 min read",
@@ -180,7 +189,7 @@
   {
     "tag": "PRICING ANALYSIS",
     "headline": "Dhurandhar 2 Is Not Just Bigger. It Is Priced Bigger.",
-    "dek": "From \u20b9307 to \u20b9414 ATP \u2014 a 34.9% jump in pricing power. What equal footfalls would mean for the gross. The ATP math, seat mix logic, and why runtime changes everything.",
+    "dek": "From ₹307 to ₹414 ATP — a 34.9% jump in pricing power. What equal footfalls would mean for the gross. The ATP math, seat mix logic, and why runtime changes everything.",
     "author": "The Boxoffy Team",
     "date": "Mar 13, 2026",
     "readTime": "5 min read",
@@ -189,8 +198,8 @@
   },
   {
     "tag": "DEEP DIVE",
-    "headline": "Bollywood Box Office Explained \u2014 How Producers, Distributors & Exhibitors Share Your Ticket Money",
-    "dek": "Who keeps your \u20b9300 PVR ticket? The complete guide to how Indian cinema's money chain works \u2014 from the producer's budget to PVR vs Raj Mandir revenue splits, the MG model, and why Week 1 changes everything.",
+    "headline": "Bollywood Box Office Explained — How Producers, Distributors & Exhibitors Share Your Ticket Money",
+    "dek": "Who keeps your ₹300 PVR ticket? The complete guide to how Indian cinema's money chain works — from the producer's budget to PVR vs Raj Mandir revenue splits, the MG model, and why Week 1 changes everything.",
     "author": "The Boxoffy Team",
     "date": "Mar 10, 2026",
     "readTime": "15 min read",
@@ -199,8 +208,8 @@
   },
   {
     "tag": "ANALYSIS",
-    "headline": "Dhurandhar 2 The Revenge Pre-Release Analysis \u2014 Ladies and Gentlemen, You Are STILL Not Ready",
-    "dek": "\u20b980\u2013100 Cr Day 1. 5 languages. The biggest commercial bet Indian cinema has made since Pushpa 2. Boxoffy's full pre-release breakdown.",
+    "headline": "Dhurandhar 2 The Revenge Pre-Release Analysis — Ladies and Gentlemen, You Are STILL Not Ready",
+    "dek": "₹80–100 Cr Day 1. 5 languages. The biggest commercial bet Indian cinema has made since Pushpa 2. Boxoffy's full pre-release breakdown.",
     "author": "The Boxoffy Team",
     "date": "Mar 08, 2026",
     "readTime": "6 min read",
