@@ -2353,8 +2353,11 @@ function NationalTop10Row({ movie, rank }) {
 
       {/* Film + Studio */}
       <div style={{ padding:"0 10px", minWidth:0 }}>
-        <div style={{ fontFamily:"'DM Sans',sans-serif", fontWeight:600, fontSize:isMobile?12:13.5, color:T.text, lineHeight:1.2, overflow:"hidden", textOverflow:"ellipsis", whiteSpace:"nowrap" }}>
+        <div style={{ fontFamily:"'DM Sans',sans-serif", fontWeight:600, fontSize:isMobile?12:13.5, color:T.text, lineHeight:1.2, overflow:"hidden", textOverflow:"ellipsis", whiteSpace:"nowrap", display:"flex", alignItems:"center", gap:5 }}>
           {movie.pageUrl ? <a href={`/${movie.pageUrl}`} style={{ color:T.text, textDecoration:"none" }}>{movie.title}</a> : movie.title}
+          {movie.weeklyNote && (movie.weeklyNote.includes("Super Sunday") || movie.weeklyNote.includes("BCM CALL")) && (
+            <span style={{ fontFamily:"'IBM Plex Mono',monospace", fontSize:9, fontWeight:700, color:"#15803D", background:"#D1FAE5", padding:"1px 5px", borderRadius:3, flexShrink:0 }}>↗ UPSWING</span>
+          )}
         </div>
         {movie.studio && <div style={{ fontFamily:"'DM Sans',sans-serif", fontSize:10, color:T.textMuted, marginTop:2, overflow:"hidden", textOverflow:"ellipsis", whiteSpace:"nowrap" }}>{movie.studio}</div>}
         <div style={{ fontFamily:"'IBM Plex Mono',monospace", fontSize:8, fontWeight:500, letterSpacing:"0.06em", textTransform:"uppercase", color:T.textMuted, marginTop:3 }}>
@@ -2418,7 +2421,7 @@ function NationalTop10Row({ movie, rank }) {
             {movie.indiaNet || (movie.totalNum > 0 ? `₹${movie.totalNum} Cr` : "—")}
           </div>
           {movie.domesticATB && atbTag(movie.domesticATB)}
-          {movie.weeklyNote && movie.weeklyNote.includes("called") && (
+          {movie.weeklyNote && (movie.weeklyNote.includes("called") || movie.weeklyNote.includes("BCM CALL")) && (
             <div style={{ fontFamily:"'IBM Plex Mono',monospace", fontSize:7, color:"#065F46", background:"#D1FAE5", padding:"1px 4px", borderRadius:2, marginTop:3 }}>✓ BOXOFFY CALL</div>
           )}
         </div>
