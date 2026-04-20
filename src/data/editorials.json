@@ -1,119 +1,55 @@
 [
   {
-    "headline": "Bhooth Bangla Runs on Nostalgia and Earns Its Horror Backstory. This Has Legs.",
-    "dek": "Packed house Saturday. Audience in splits. Akshay + Asrani + Rajpal in prime form. Vadhusur origin well-crafted. Screenplay honest problems named. 3.5/5 — go watch it with your family.",
-    "url": "bhooth-bangla-review.html",
-    "tag": "REVIEW",
-    "date": "Apr 19, 2026",
-    "readTime": "5 min",
-    "featured": true
-  },
-  {
-    "headline": "Bhooth Bangla Headed for Success — Track Here",
-    "dek": "D2 confirmed ₹19 Cr (+55%). BCM λ revised from 0.78 → 0.71 after stress-testing against Sitaare Zameen Par (+87% D2 jump) and Housefull 5 (+29%). Boxoffy Score 62/100. Clean run worth ₹10–15 Cr incremental lifetime.",
-    "url": "bhooth-bangla-box-office.html",
+    "headline": "India's Greatest #2s — 50 Films That Never Led The Chart But Won Anyway",
+    "dek": "India has no official weekly chart. So we built one. KGF vs Zero. Lagaan vs Gadar. Raazi vs Avengers. Masaan vs Bajrangi. 50 films ranked by Boxoffy BCM — commercial win, cultural win, or both.",
+    "url": "/india-never-number-one.html",
     "tag": "DATA SCIENCE",
-    "date": "Apr 18, 2026",
-    "readTime": "9 min",
-    "featured": true
-  },
-  {
-    "headline": "Record Revenue. Fewer Seats. The Real State of Indian Cinema.",
-    "dek": "The box office hit ₹13,395 crore in 2025. Fewer people went to the cinema than any year since the pandemic. Five anomalies the industry isn't talking about — and what genuinely thriving would actually look like.",
-    "url": "/india-cinema-state-2026.html",
-    "tag": "DATA SCIENCE",
-    "date": "Apr 2026",
+    "date": "2026-04-19",
     "readTime": "12 min",
     "featured": true
   },
   {
-    "headline": "Hindi Music Top 10 — April 2026: The Dhurandhar Effect",
-    "dek": "Shashwat Sachdev holds 4 of India's Spotify top 10 simultaneously. Real chart data, Spotify previews, stream counts and full credits. Bairan #1 with 66M streams. Sahiba at 376M total.",
-    "url": "music-top-10-hindi-april-2026.html",
-    "tag": "MUSIC CHARTS",
-    "date": "Apr 14, 2026",
-    "readTime": "5 min",
+    "headline": "All-Time Top 100 Indian Films — Footfall-Adjusted | Boxoffy BCM Rankings",
+    "dek": "Sholay at #1 (15 Cr footfalls). Mughal-e-Azam at #3. Dhurandhar 2 at #15. The chart that finally answers which film India really watched the most — era ATP-adjusted, 1943–2026.",
+    "url": "/india-all-time-box-office.html",
+    "tag": "DATA SCIENCE",
+    "date": "2026-04-19",
+    "readTime": "8 min",
     "featured": true
   },
   {
-    "headline": "Box Office Beyond the Dhurandhar Storm — Bhooth Bangla Arrives with a Wide Release",
-    "dek": "₹120 Cr budget. Break-even ₹184 Cr. 16 years since Khatta Meetha. Boxoffy's 4-technique DS model: D1 central ₹15.8 Cr. The math is steeper than the trade is letting on.",
-    "url": "bhooth-bangla-box-office-preview.html",
-    "tag": "PREVIEW",
-    "date": "Apr 14, 2026",
-    "readTime": "5 min",
-    "featured": true
-  },
-  {
-    "headline": "Dhurandhar 2 vs Pushpa 2 — ₹983 Cr vs ₹1,266 Cr. The Full Comparison.",
-    "dek": "D2 ~₹983 Cr India nett D26 · WW ₹1,718 Cr vs ₹1,785 Cr · ₹24 Cr from Pushpa 2 worldwide. Boxoffy data science verdict with week-wise breakdown and ROI analysis.",
-    "url": "dhurandhar-2-vs-pushpa-2-box-office.html",
-    "tag": "COMPARISON",
-    "date": "Apr 14, 2026",
-    "readTime": "7 min read",
-    "featured": true
-  },
-  {
-    "tag": "COMPARISON",
-    "headline": "Dhurandhar vs Dhurandhar 2 — Complete Day-Wise Box Office Comparison",
-    "dek": "D1 ₹840 Cr vs D2 ₹983 Cr India nett through D26. Week-by-week, ATP and footfalls compared. How the sequel dominated every stage — and where the original still wins.",
-    "author": "The Boxoffy Team",
-    "date": "Apr 14, 2026",
-    "readTime": "5 min read",
-    "url": "dhurandhar-box-office-d1-vs-d2.html",
-    "featured": false
-  },
-  {
-    "headline": "OTT India Apr 13–19 — Euphoria S3, Toaster, Matka King, Assi This Week",
-    "dek": "Euphoria S3 drops Apr 15 on JioHotstar. Toaster (Rajkummar Rao) on Netflix Apr 15. Matka King (Vijay Varma) Prime Apr 17. Ustaad Bhagat Singh Netflix Apr 16. Full rankings + viewership.",
-    "url": "ott-releases.html",
+    "headline": "OTT India Week 3 — BEEF S2 #1 Netflix · Euphoria S3 JioHotstar · Matka King Prime · Watch Hours & Rankings",
+    "dek": "India's OTT weekly chart Apr 13–19. Cross-platform rankings, India viewership, global rank, and movement. Plus: 60.1 Cr total viewers, 14.8 Cr paid subs, language audience breakdown. Updated weekly.",
+    "url": "/ott-releases.html",
     "tag": "OTT",
-    "date": "Apr 14, 2026",
-    "readTime": "4 min",
+    "date": "2026-04-19",
+    "readTime": "6 min",
     "featured": true
   },
   {
-    "headline": "Dhurandhar: The Revenge — Hindi Nett ₹1,000 Crore. Monumental.",
-    "dek": "No Hindi film has ever done this. Boxoffy's four-technique data science model — regression calibration, exponential decay, footfall cross-validation, screen shock analysis — projects the exact date and the final lifetime number.",
-    "url": "dhurandhar-2-1000-crore.html",
-    "tag": "DATA SCIENCE",
-    "date": "Apr 10, 2026",
+    "headline": "India Cinema 2026 — The State of Play: ₹13,600 Cr Industry, Four Languages, One Renaissance",
+    "dek": "The numbers behind India's box office revival. Bollywood's comeback. South cinema's global moment. OTT's disruption. The 2026 full report — where the money goes, who's winning, and what breaks next.",
+    "url": "/india-cinema-state-2026.html",
+    "tag": "ANALYSIS",
+    "date": "2026-04-16",
     "readTime": "12 min",
-    "featured": true
-  },
-  {
-    "headline": "An Ode to Dhurandhar: The Revenge — Seven Chapters. One Spy. Balidan Parmo Dharma.",
-    "dek": "A Boxoffy Special Edition noir ode to Aditya Dhar, Ranveer Singh and Shashwat Sachdev. From Rehman Dakait's death to Jaskirat at the gate. The seamless fusion of music, action and character that Indian cinema rarely achieves — and never quite like this.",
-    "url": "dhurandhar-the-revenge-ode.html",
-    "tag": "SPECIAL EDITION",
-    "date": "Apr 07, 2026",
-    "readTime": "18 min read",
-    "featured": true
-  },
-  {
-    "headline": "Bhooth Bangla Trailer Review — The OG Cast Is Back. But Is the Audience?",
-    "dek": "Priyadarshan reunites the full Bhool Bhulaiyaa cast — Akshay Kumar, Paresh Rawal, Rajpal Yadav, Asrani. Songs, BMS data, delay analysis and Boxoffy's D1 prediction. Score: 3/5 · Familiar Energy.",
-    "url": "bhooth-bangla-trailer-review.html",
-    "tag": "REVIEW",
-    "date": "Apr 06, 2026",
-    "readTime": "6 min read",
     "featured": true
   },
   {
     "headline": "Ramayana — Rama First Look Review: ARR Delivers, CGI Has Room, Tiwari's Instinct Is the Bet",
     "dek": "Ranbir Kapoor's calm first look works. ARR and Zimmer's score is right for the character. The early CGI draws debate — but DNEG has six months. Boxoffy's full take on the teaser.",
-    "url": "ramayana-rama-first-look-review.html",
+    "url": "/ramayana-rama-first-look-review.html",
     "tag": "REVIEW",
-    "date": "Apr 02, 2026",
+    "date": "2026-04-02",
     "readTime": "5 min",
     "featured": true
   },
   {
     "headline": "BARC TRP Ratings Week 12 — Kyunki KSBKBT2 Holds #1, Tum Se Tum Tak Surges to #2, Anupamaa at #4",
     "dek": "Full BARC Top 10 Hindi TV shows for Week 12 (Mar 21–27, 2026). IPL effect begins. Zee TV counter-punch. Star Plus five-show dominance. Boxoffy commentary.",
-    "url": "tv-ratings.html",
+    "url": "/tv-ratings.html",
     "tag": "TV",
-    "date": "Apr 02, 2026",
+    "date": "2026-04-02",
     "readTime": "5 min",
     "featured": true
   },
@@ -138,10 +74,19 @@
   {
     "headline": "दंगल at Ten: The Data, The Doubters, and Why the Arithmetic Ends the Debate",
     "dek": "China: ₹1,235 Cr. 4.31 crore tickets. Maoyan-verified. Xi Jinping confirmed it to PM Modi — twice. Government extension. Day-by-day data. ATP inflation. Money laundering demolished. The full case.",
-    "url": "dangal-china-box-office.html",
+    "url": "/dangal-china-box-office.html",
     "tag": "Deep Dive",
     "date": "Mar 26, 2026",
     "readTime": "12 min",
+    "featured": true
+  },
+  {
+    "headline": "Dhurandhar vs Dhurandhar: The Revenge — The Full Comparison",
+    "dek": "India nett, global, week-by-week, ROI — the complete side-by-side.",
+    "url": "dhurandhar-2-vs-pushpa-2-box-office.html",
+    "tag": "COMPARISON",
+    "date": "Mar 25, 2026",
+    "readTime": "7 min read",
     "featured": true
   },
   {
@@ -174,6 +119,16 @@
     "date": "Mar 20, 2026",
     "readTime": "3 min read",
     "url": "dhurandhar2-us-boxoffice.html",
+    "featured": false
+  },
+  {
+    "tag": "COMPARISON",
+    "headline": "Dhurandhar vs Dhurandhar: The Revenge — The Full Comparison",
+    "dek": "India nett, global, week-by-week, ROI — the complete side-by-side.",
+    "author": "The Boxoffy Team",
+    "date": "Mar 19, 2026",
+    "readTime": "5 min read",
+    "url": "dhurandhar-box-office-d1-vs-d2.html",
     "featured": false
   },
   {
@@ -211,7 +166,7 @@
     "headline": "Dhurandhar 2 The Revenge Pre-Release Analysis — Ladies and Gentlemen, You Are STILL Not Ready",
     "dek": "₹80–100 Cr Day 1. 5 languages. The biggest commercial bet Indian cinema has made since Pushpa 2. Boxoffy's full pre-release breakdown.",
     "author": "The Boxoffy Team",
-    "date": "Mar 08, 2026",
+    "date": "Mar 8, 2026",
     "readTime": "6 min read",
     "url": "dhurandhar2-editorial.html",
     "featured": false
