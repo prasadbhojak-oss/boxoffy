@@ -594,7 +594,7 @@
   "Week 17, 2026": {
     "dateRange": "Apr 17–19, 2026",
     "status": "actuals-friday",
-    "headline": "Super Mario Galaxy Leads W3 · BB Opens #8 NA BCM $1.1M · Hail Mary $274M+ · D3 BCM Super Sunday",
+    "headline": "BB #9 US Confirmed $0.95M · ₹58 Cr India · ₹95.87 Cr WW Opening Weekend · D2 WW ₹1,748 Cr (surpassed Pushpa 2)",
     "chart": [
       {
         "rank": 1,
@@ -688,17 +688,17 @@
         "admitsNote": "IFC limited"
       },
       {
-        "rank": 8,
+        "rank": 9,
         "title": "Bhooth Bangla",
         "studio": "Pen Marudhar / Balaji",
         "genre": "Horror/Comedy",
-        "weekend": "~$1.1M BCM",
-        "total": "~$1.1M BCM",
+        "weekend": "$0.95M",
+        "total": "$0.95M",
         "theaters": 375,
         "change": "NEW",
         "weeks": 1,
         "rtScore": "N/A",
-        "admitsNote": "🇮🇳 Akshay Kumar + Priyadarshan · Boxoffy BCM 13-source · Derived from overseas gross: D1 ₹9.5 Cr + D2 ₹10 Cr + D3 BCM ₹9 Cr = ₹28.5 Cr gross overseas · NA 32% share · ~$3,000/theater · Confirming Monday BOM · Venky BO awaited",
+        "admitsNote": "🇮🇳 Akshay Kumar + Priyadarshan · BOM confirmed #9 · $0.95M weekend (just shy of $1M) · 375 locations · ~$2,530/theater avg · Boxoffy BCM called $1.1M — actual NA share 30% vs assumed 35% (Gulf-dominant distribution) · Box Office Guru excluded (below $1M threshold) · BOM includes it at #9 · Confirmed US domestic top 10 ✅",
         "isIndian": true
       },
       {
@@ -731,16 +731,16 @@
     ],
     "indianSpotlight": [
       {
-        "rank": 8,
+        "rank": 9,
         "title": "Bhooth Bangla",
         "studio": "Pen Marudhar / Balaji Motion Pictures",
         "genre": "Horror/Comedy",
-        "weekend": "~$1.1M",
-        "total": "~$1.1M",
+        "weekend": "$0.95M",
+        "total": "$0.95M",
         "theaters": 375,
         "change": "NEW",
         "weeks": 1,
-        "admitsNote": "Boxoffy BCM NA derivation · Overseas confirmed D1 ₹9.5 Cr + D2 ₹10 Cr + D3 BCM ₹9 Cr → NA 32% = ~$1.08M · 375 locations AMC/Regal/Cinemark/Cineplex · ~$2,900/theater avg · Strong NRI markets: NYC/NJ · Houston · Bay Area · Chicago · DFW · Final BOM actuals Monday · Venky BO update awaited"
+        "admitsNote": "BOM confirmed #9 US weekend · $0.95M (just below $1M) · 375 locations · ~$2,530/theater · BCM called $1.1M — NA share 30% vs 35% assumed · Gulf-dominant overseas distribution explains gap · US top 10 ✅ confirmed"
       },
       {
         "rank": 10,
@@ -755,6 +755,6 @@
         "admitsNote": "All-time Indian film NA record $27.5M+ · W5 hold · India nett ₹1,024 Cr · Worldwide ₹1,750 Cr"
       }
     ],
-    "source": "Deadline · Variety · Comscore · Box Office Mojo · Venky BO (@Venky_BO) · Exhibitor Relations · EntTelligence · Sacnilk overseas"
+    "source": "Box Office Mojo (BOM) · Deadline · Variety · Comscore · Sacnilk overseas · Pinkvilla · EntTelligence"
   }
 }
