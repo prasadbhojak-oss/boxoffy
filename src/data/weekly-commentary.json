@@ -1,108 +1,97 @@
 [
   {
-    "weekNum": 17,
+    "weekNum": "Week 17",
     "dateRange": "Apr 17–23, 2026",
-    "headline": "₹1,000 Crore. History Made. Bhooth Bangla Opens.",
-    "subline": "D2 becomes the first Hindi film to cross ₹1,000 Cr India nett. Akshay Kumar's horror-comedy Bhooth Bangla enters the frame on Day 1.",
+    "headline": "Bhooth Bangla Lands. D2 Stays. Horror Comedy Wins the Weekend.",
+    "subline": "BB D0-D3 ₹58 Cr ✅ · D4 BCM ~₹7 Cr (13-src, 71% conf) · WW ₹107 Cr · NA $1M ✅ BOI confirmed · D2 W5 ~₹16 Cr · India ₹1,119 Cr · WW ₹1,757 Cr · #3 Indian film all-time",
     "status": "live",
     "scoreboard": [
       {
-        "rank": 1,
-        "film": "Dhurandhar: The Revenge",
-        "language": "Hindi",
-        "wkCollection": "~₹3 Cr",
-        "total": "₹1,000 Cr",
-        "week": "W5",
-        "verdict": "ALL-TIME BLOCKBUSTER",
-        "note": "BOI canonical ₹1,000 Cr confirmed D29. First Hindi film ever. Sacnilk ₹1,103 Cr. WW ₹1,737 Cr."
-      },
-      {
-        "rank": 2,
-        "film": "Bhooth Bangla",
-        "language": "Hindi",
-        "wkCollection": "₹3-4 Cr",
-        "total": "₹3-4 Cr",
-        "week": "W1 D0",
-        "verdict": "Releasing",
-        "note": "Paid previews Apr 16 9PM. Full release D1 Apr 17. Projected ₹13-14 Cr on D1 (excl previews). Reviews positive."
-      },
-      {
-        "rank": 3,
-        "film": "Project Hail Mary",
-        "language": "Hollywood",
-        "wkCollection": "₹1.5 Cr",
-        "total": "₹56.12 Cr",
-        "week": "W4",
+        "title": "Bhooth Bangla",
+        "weekCollection": "~₹65 Cr",
+        "totalIndia": "~₹65 Cr nett",
         "verdict": "HIT",
-        "note": "₹56.12 Cr India nett confirmed D19. Ryan Gosling. Holding in limited screens."
+        "note": "D0 ₹3.75 Cr · D1 ₹12.25 Cr · D2 ₹19 Cr · D3 ₹23 Cr ✅ · D4 BCM ~₹7 Cr (71%) · NA $1M ✅ BOI · Gulf $800K ✅ · WW ~₹107 Cr · Budget ₹100-120 Cr · HIT trajectory"
       },
       {
-        "rank": 4,
-        "film": "Dacoit",
-        "language": "Telugu",
-        "wkCollection": "₹27 Cr",
-        "total": "₹27 Cr",
-        "week": "W1",
-        "verdict": "Flop",
-        "note": "₹27 Cr India nett D5. WW ₹42 Cr on ₹62-70 Cr budget. Sharp Monday drop, Flop trajectory."
+        "title": "Dhurandhar: The Revenge",
+        "weekCollection": "~₹16 Cr",
+        "totalIndia": "~₹1,119 Cr nett",
+        "verdict": "ALL-TIME BLOCKBUSTER",
+        "note": "W5 D30 ₹2.60 Cr · D31 ₹4.65 Cr · D32 ₹5.20 Cr · D33 ~₹3.50 Cr est · India ~₹1,119 Cr · WW ₹1,757 Cr · #3 Indian film all-time · ₹54 Cr from Baahubali 2 (₹1,788 Cr) · 8.26% D33 morning occ"
+      },
+      {
+        "title": "Project Hail Mary",
+        "weekCollection": "~₹3.5 Cr",
+        "totalIndia": "~₹52 Cr nett",
+        "verdict": "HIT",
+        "note": "W4 holding · ~₹52 Cr India nett est · US ~$164M cume · Ryan Gosling sci-fi legs intact · BB launch pushes to #3 this week"
       }
     ],
     "sources": [
-      "Box Office India (BOI) — canonical ₹1,000 Cr India nett D29",
-      "Sacnilk — D29 all-lang ₹1,103 Cr · WW ₹1,737 Cr",
-      "Bollywood Hungama — BB D1 prediction ₹16-18 Cr",
-      "Pinkvilla — Dacoit 4-day collection confirmed",
-      "Taran Adarsh X — BB review 3.5★"
+      "BOI",
+      "Sacnilk",
+      "Pinkvilla",
+      "Bollywood Hungama",
+      "TrackTollywood",
+      "Box Office Guru",
+      "Exhibitor Relations",
+      "Venky Box Office X",
+      "Koimoi",
+      "Film Information",
+      "Taran Adarsh X",
+      "Nishit Shaw X",
+      "Comscore"
     ],
-    "interval_take": "D2 crossed ₹1,000 Cr BOI nett on Day 29 — the first Hindi film in history to do so. Bhooth Bangla's paid previews begin tonight; D1 projections of ₹13-14 Cr would put Akshay Kumar back on track after a lean 2025-26 run.",
-    "nextWeek": "BB first weekend numbers will set the verdict trajectory. D2 closes out its theatrical run — final BOI certification expected at ₹1,010-1,025 Cr."
+    "interval_take": "Bhooth Bangla did what it needed to do. ₹58 Cr confirmed opening weekend — the third biggest for Akshay Kumar post-pandemic, behind only Sooryavanshi and Housefull 5. The North American number ($1M confirmed BOI) and Gulf ($800K) give it the overseas credibility a franchise-starter needs. The Monday number will matter: BCM is calling ~₹7 Cr (13-source, 71% confidence), which would make it a solid HIT trajectory at ₹120-125 Cr lifetime. The mixed-review second half is the drag weight. If it holds ₹6+ Cr through Tuesday-Wednesday, the HIT call locks in.\n\nD2 continues to write a chapter of Indian cinema history nobody scripted. ₹1,119 Cr in 33 days. Still doing ₹5 Cr on a 5th Sunday. Now ₹54 Cr from Baahubali 2 for #2 all-time globally. The film it’s chasing did it with China + Gulf. D2 is doing it without either.",
+    "nextWeek": "BB D5-D7 weekday hold is the story · D2 eyes Baahubali 2 (₹1,788 Cr WW) · No major new Hindi release · PHM continues W5"
   },
   {
-    "weekNum": 16,
-    "dateRange": "Apr 10–16, 2026",
-    "headline": "D2 Hindi Nett ₹1,000 Cr Crossed D24. BOI Canonical ~₹963 Cr Through D23. Dacoit D1 ₹6.55 Cr — Career Best.",
-    "subline": "Sacnilk all-language D23: ₹1,055 Cr · BOI canonical (our model): ~₹963 Cr · Hindi nett milestone: D24 (Apr 11) · Bhooth Bangla previews Apr 16",
+    "weekNum": "Week 15",
+    "dateRange": "Apr 3–9, 2026",
+    "headline": "D2 Crosses ₹920 Cr on D14. Bhooth Bangla Blinks. ₹1,000 Cr India This Week.",
+    "subline": "D14 ₹20.10 Cr (Wed Apr 1) confirmed by Sacnilk. D0–D14 ₹920.02 Cr India nett. Bhooth Bangla moved to Apr 17 giving D2 a clear W3 window. ₹1,000 Cr India nett — first ever for a Hindi film — is the conversation this week. Super Mario Galaxy opens globally. IPL underway.",
     "status": "live",
     "scoreboard": [
       {
         "title": "Dhurandhar: The Revenge",
-        "day": "D24",
-        "collection": "~₹963 Cr",
-        "note": "BOI canonical · Sacnilk all-lang ₹1,055 Cr · Hindi nett ₹1,000+ Cr crossed D24",
-        "verdict": "ALL-TIME BLOCKBUSTER"
+        "weekCollection": "₹20.10 Cr",
+        "totalIndia": "~₹920 Cr nett",
+        "verdict": "ALL-TIME BLOCKBUSTER",
+        "note": "D14 ₹20.10 Cr ✅ (Sacnilk) · D0–D14 ₹920.02 Cr · WW ~₹1,466 Cr · D15 Hanuman Jayanti est ₹10 Cr · Bhooth Bangla cleared field → clean W3"
       },
       {
         "title": "Project Hail Mary",
-        "day": "D17",
-        "collection": "~₹46 Cr",
-        "note": "India nett · WW $440M+ · 3rd wknd in progress",
-        "verdict": "HIT"
+        "weekCollection": "~₹4.5 Cr",
+        "totalIndia": "~₹22 Cr nett",
+        "verdict": "HIT",
+        "note": "W2 India ~₹4.5 Cr est · US $164.3M cume · WW $300M+ · Super Mario Galaxy opens this weekend — PHM shifts to #2"
       },
       {
-        "title": "Dacoit",
-        "day": "D2",
-        "collection": "~₹7 Cr",
-        "note": "D1 ₹6.55 Cr confirmed · Telugu ₹5.45 Cr + Hindi ₹1.1 Cr · D2 Sat growing",
-        "verdict": "Verdict Sunday"
+        "title": "Funky",
+        "weekCollection": "~₹1.5 Cr",
+        "totalIndia": "~₹14 Cr nett",
+        "verdict": "FLOP",
+        "note": "Week 3 tailing · Telugu"
       },
       {
-        "title": "Super Mario Galaxy",
-        "day": "D11",
-        "collection": "~₹5 Cr",
-        "note": "India limited · WW $500M+ 2nd wknd est",
-        "verdict": "BLOCKBUSTER (WW)"
+        "title": "Ustaad Bhagat Singh",
+        "weekCollection": "~₹1 Cr",
+        "totalIndia": "~₹66 Cr nett",
+        "verdict": "DISASTER",
+        "note": "W3 scraps · Netflix Apr 23"
       }
     ],
     "sources": [
-      "Box Office India",
+      "BOI",
       "Sacnilk",
-      "Pinkvilla",
-      "Filmibeat",
-      "Outlook India",
-      "Business Today"
+      "Deadline",
+      "Variety",
+      "The Numbers",
+      "Comscore"
     ],
-    "interval_take": "The week that Hindi cinema makes history — twice over. Dhurandhar: The Revenge crossed ₹1,000 crore net in Hindi alone on Day 24 (April 11, Saturday) — the first film in any single language ever to do so at the Indian box office. Sacnilk all-language cumulative through D23 stands at ₹1,055 crore. Boxoffy BOI canonical model puts the total at ~₹963 crore through D23, applying the confirmed 0.903 calibration ratio — our April 17 (D30) call for BOI canonical ₹1,000 crore remains live. Dacoit opened to ₹6.55 crore on D1 — career best for Adivi Sesh, but the film needs a strong weekend to justify its ₹60-80 crore budget. Telugu-heavy opening (₹5.45 Cr) with ₹1.1 Cr from Hindi. The trade verdict arrives Sunday evening. Bhooth Bangla previews begin Thursday April 16 — the real screen war starts then.",
-    "nextWeek": "Bhooth Bangla D1 April 17 (Akshay Kumar + Priyadarshan) · D2 BOI canonical ₹1,000 Cr watch (D30 Apr 17 central call) · Dacoit week 1 final verdict · PHM 4th weekend hold"
+    "interval_take": "₹920 Cr in 14 days. Bhooth Bangla — which had already moved once — moved again, citing D2's run. That is the truest indicator of a cultural phenomenon. When competing films rearrange their own release calendars around you, the box office has spoken. ₹1,000 Cr India nett would be the first time a Hindi film has crossed that number. Baahubali 2 did it, Pushpa 2 did it — both Telugu. Dhurandhar 2 is two weekends away from making history in Hindi cinema's own language.",
+    "nextWeek": "Bhooth Bangla (Apr 17, Akshay Kumar + Priyadarshan) · Dacoit (Apr 10, Adivi Sesh) · Super Mario Galaxy Movie now in India · D2 eyes ₹1,000 Cr India nett"
   },
   {
     "weekNum": "Week 14",
