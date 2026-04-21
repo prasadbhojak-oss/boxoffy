@@ -19,7 +19,7 @@ import React, { useState, useEffect } from "react";
                          Weekly_Commentary | Analyst_Predictions
    See SHEETS_SETUP.md in the sheets-export/ folder for full guide.
 ──────────────────────────────────────────────────────────────── */
-const SHEETS_ID = "";   // ← PASTE YOUR SHEET ID HERE
+const SHEETS_ID = "1j7TrH2hVR9WjiMX2eExM4vgyjcedm2BJ9sF2D38_3Bk";   // ← PASTE YOUR SHEET ID HERE
 
 const SHEETS_BASE = SHEETS_ID
   ? `https://docs.google.com/spreadsheets/d/${SHEETS_ID}/gviz/tq?tqx=out:csv&sheet=`
