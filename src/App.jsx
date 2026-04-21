@@ -19,7 +19,7 @@ import React, { useState, useEffect } from "react";
                          Weekly_Commentary | Analyst_Predictions
    See SHEETS_SETUP.md in the sheets-export/ folder for full guide.
 ──────────────────────────────────────────────────────────────── */
-const SHEETS_ID = "1j7TrH2hVR9WjiMX2eExM4vgyjcedm2BJ9sF2D38_3Bk";   // ← PASTE YOUR SHEET ID HERE
+const SHEETS_ID = "";   // ← PASTE YOUR SHEET ID HERE
 
 const SHEETS_BASE = SHEETS_ID
   ? `https://docs.google.com/spreadsheets/d/${SHEETS_ID}/gviz/tq?tqx=out:csv&sheet=`
@@ -84,6 +84,8 @@ function rowToFilm(row) {
     studio:row.studio||null,
     betaModel:parseBool(row.betaModel),
     wkTrend:row.wkTrend||null,
+    screenCount:row.screenCount ? parseInt(row.screenCount) : null,
+    occupancy:row.occupancy||null,
     openingPrediction: row.op_low ? {
       low:parseFloat(row.op_low), mid:parseFloat(row.op_mid),
       high:parseFloat(row.op_high), allLanguages:parseFloat(row.op_allLang)||0,
@@ -2703,6 +2705,24 @@ function WeeklyChartRow({ movie, rank, prevRank }) {
           {movie.weeklyNote && (
             <div style={{ fontFamily:"'DM Sans', sans-serif", fontSize:10.5, color:T.textMid, marginTop:4, lineHeight:1.5 }}>
               {movie.weeklyNote.length > 100 ? movie.weeklyNote.slice(0, 100).trimEnd() + "…" : movie.weeklyNote}
+            </div>
+          )}
+          {(movie.screenCount || movie.occupancy) && (
+            <div style={{ display:"flex", gap:6, marginTop:5, flexWrap:"wrap" }}>
+              {movie.screenCount && (
+                <span style={{ fontFamily:"'DM Sans', sans-serif", fontSize:9, fontWeight:600, color:"#374151", background:"#F3F4F6", border:"1px solid #E5E7EB", padding:"2px 7px", borderRadius:3, letterSpacing:"0.04em" }}>
+                  {movie.screenCount.toLocaleString("en-IN")} screens
+                </span>
+              )}
+              {movie.occupancy && (
+                <span style={{ fontFamily:"'DM Sans', sans-serif", fontSize:9, fontWeight:600,
+                  color: parseFloat(movie.occupancy) >= 60 ? "#065F46" : parseFloat(movie.occupancy) >= 35 ? "#92400E" : "#6B7280",
+                  background: parseFloat(movie.occupancy) >= 60 ? "#D1FAE5" : parseFloat(movie.occupancy) >= 35 ? "#FEF3C7" : "#F3F4F6",
+                  border: `1px solid ${parseFloat(movie.occupancy) >= 60 ? "#6EE7B7" : parseFloat(movie.occupancy) >= 35 ? "#FCD34D" : "#E5E7EB"}`,
+                  padding:"2px 7px", borderRadius:3, letterSpacing:"0.04em" }}>
+                  {movie.occupancy} occ
+                </span>
+              )}
             </div>
           )}
           {/* Opening Day Prediction — shown for Upcoming films */}
