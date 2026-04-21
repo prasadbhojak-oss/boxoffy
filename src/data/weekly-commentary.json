@@ -7,24 +7,30 @@
     "status": "live",
     "scoreboard": [
       {
-        "title": "Bhooth Bangla",
-        "weekCollection": "~₹65 Cr",
-        "totalIndia": "~₹65 Cr nett",
+        "film": "Bhooth Bangla",
+        "week": "W17",
+        "wkCollection": "~₹65 Cr",
+        "total": "~₹65 Cr nett",
         "verdict": "HIT",
+        "color": "#6B7280",
         "note": "D0 ₹3.75 Cr · D1 ₹12.25 Cr · D2 ₹19 Cr · D3 ₹23 Cr ✅ · D4 BCM ~₹7 Cr (71%) · NA $1M ✅ BOI · Gulf $800K ✅ · WW ~₹107 Cr · Budget ₹100-120 Cr · HIT trajectory"
       },
       {
-        "title": "Dhurandhar: The Revenge",
-        "weekCollection": "~₹16 Cr",
-        "totalIndia": "~₹1,119 Cr nett",
+        "film": "Dhurandhar: The Revenge",
+        "week": "W17",
+        "wkCollection": "~₹16 Cr",
+        "total": "~₹1,119 Cr nett",
         "verdict": "ALL-TIME BLOCKBUSTER",
+        "color": "#6B7280",
         "note": "W5 D30 ₹2.60 Cr · D31 ₹4.65 Cr · D32 ₹5.20 Cr · D33 ~₹3.50 Cr est · India ~₹1,119 Cr · WW ₹1,757 Cr · #3 Indian film all-time · ₹54 Cr from Baahubali 2 (₹1,788 Cr) · 8.26% D33 morning occ"
       },
       {
-        "title": "Project Hail Mary",
-        "weekCollection": "~₹3.5 Cr",
-        "totalIndia": "~₹52 Cr nett",
+        "film": "Project Hail Mary",
+        "week": "W17",
+        "wkCollection": "~₹3.5 Cr",
+        "total": "~₹52 Cr nett",
         "verdict": "HIT",
+        "color": "#6B7280",
         "note": "W4 holding · ~₹52 Cr India nett est · US ~$164M cume · Ryan Gosling sci-fi legs intact · BB launch pushes to #3 this week"
       }
     ],
@@ -54,31 +60,39 @@
     "status": "live",
     "scoreboard": [
       {
-        "title": "Dhurandhar: The Revenge",
-        "weekCollection": "₹20.10 Cr",
-        "totalIndia": "~₹920 Cr nett",
+        "film": "Dhurandhar: The Revenge",
+        "week": "W15",
+        "wkCollection": "₹20.10 Cr",
+        "total": "~₹920 Cr nett",
         "verdict": "ALL-TIME BLOCKBUSTER",
+        "color": "#6B7280",
         "note": "D14 ₹20.10 Cr ✅ (Sacnilk) · D0–D14 ₹920.02 Cr · WW ~₹1,466 Cr · D15 Hanuman Jayanti est ₹10 Cr · Bhooth Bangla cleared field → clean W3"
       },
       {
-        "title": "Project Hail Mary",
-        "weekCollection": "~₹4.5 Cr",
-        "totalIndia": "~₹22 Cr nett",
+        "film": "Project Hail Mary",
+        "week": "W15",
+        "wkCollection": "~₹4.5 Cr",
+        "total": "~₹22 Cr nett",
         "verdict": "HIT",
+        "color": "#6B7280",
         "note": "W2 India ~₹4.5 Cr est · US $164.3M cume · WW $300M+ · Super Mario Galaxy opens this weekend — PHM shifts to #2"
       },
       {
-        "title": "Funky",
-        "weekCollection": "~₹1.5 Cr",
-        "totalIndia": "~₹14 Cr nett",
+        "film": "Funky",
+        "week": "W15",
+        "wkCollection": "~₹1.5 Cr",
+        "total": "~₹14 Cr nett",
         "verdict": "FLOP",
+        "color": "#6B7280",
         "note": "Week 3 tailing · Telugu"
       },
       {
-        "title": "Ustaad Bhagat Singh",
-        "weekCollection": "~₹1 Cr",
-        "totalIndia": "~₹66 Cr nett",
+        "film": "Ustaad Bhagat Singh",
+        "week": "W15",
+        "wkCollection": "~₹1 Cr",
+        "total": "~₹66 Cr nett",
         "verdict": "DISASTER",
+        "color": "#6B7280",
         "note": "W3 scraps · Netflix Apr 23"
       }
     ],
@@ -103,26 +117,38 @@
       {
         "film": "Dhurandhar: The Revenge",
         "week": "Week 2 — D12 confirmed",
-        "collection": "D0–D12 ₹867 Cr nett (BOI) · D11 ₹68 Cr · D12 ₹25.30 Cr · WW ~₹1,392 Cr",
-        "verdict": "ALL-TIME BLOCKBUSTER"
+        "wkCollection": "",
+        "total": "",
+        "verdict": "ALL-TIME BLOCKBUSTER",
+        "color": "#6B7280",
+        "note": ""
       },
       {
         "film": "Project Hail Mary",
         "week": "Week 1 India — D1+D2",
-        "collection": "D1 ₹2.25 Cr · D2 ₹2.90 Cr · D3 ₹4.60 Cr · OW ₹9.75 Cr nett (Sacnilk) · IMAX 5→60 screens",
-        "verdict": "TRACKING — strong OW"
+        "wkCollection": "",
+        "total": "",
+        "verdict": "TRACKING — strong OW",
+        "color": "#6B7280",
+        "note": ""
       },
       {
         "film": "Ustaad Bhagat Singh",
         "week": "Week 2 — done",
-        "collection": "~₹63 Cr India nett lifetime",
-        "verdict": "FLOP"
+        "wkCollection": "",
+        "total": "",
+        "verdict": "FLOP",
+        "color": "#6B7280",
+        "note": ""
       },
       {
         "film": "Thaai Kizhavi",
         "week": "OTT",
-        "collection": "~₹57 Cr nett · JioHotstar Mar 26",
-        "verdict": "SUPER HIT"
+        "wkCollection": "",
+        "total": "",
+        "verdict": "SUPER HIT",
+        "color": "#6B7280",
+        "note": ""
       }
     ],
     "sources": [
@@ -161,26 +187,38 @@
       {
         "film": "Dhurandhar: The Revenge",
         "week": "Week 1 (D0–D6 confirmed)",
-        "collection": "~₹562 Cr nett (D0–D7 BOI/PV reconciled) · WW ₹1,006.50 Cr",
-        "verdict": "BLOCKBUSTER"
+        "wkCollection": "",
+        "total": "",
+        "verdict": "BLOCKBUSTER",
+        "color": "#6B7280",
+        "note": ""
       },
       {
         "film": "Ustaad Bhagat Singh",
         "week": "Week 1 (6-day)",
-        "collection": "~₹63.33 Cr nett India",
-        "verdict": "FLOP"
+        "wkCollection": "",
+        "total": "",
+        "verdict": "FLOP",
+        "color": "#6B7280",
+        "note": ""
       },
       {
         "film": "Thaai Kizhavi",
         "week": "Week 4 final",
-        "collection": "~₹57 Cr nett · WW ~₹78 Cr",
-        "verdict": "SUPER HIT"
+        "wkCollection": "",
+        "total": "",
+        "verdict": "SUPER HIT",
+        "color": "#6B7280",
+        "note": ""
       },
       {
         "film": "The Kerala Story 2",
         "week": "Week 3 wrap",
-        "collection": "~₹41.5 Cr nett",
-        "verdict": "AVERAGE"
+        "wkCollection": "",
+        "total": "",
+        "verdict": "AVERAGE",
+        "color": "#6B7280",
+        "note": ""
       }
     ],
     "sources": [

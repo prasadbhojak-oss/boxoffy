@@ -19,7 +19,7 @@ import React, { useState, useEffect } from "react";
                          Weekly_Commentary | Analyst_Predictions
    See SHEETS_SETUP.md in the sheets-export/ folder for full guide.
 ──────────────────────────────────────────────────────────────── */
-const SHEETS_ID = "";   // ← PASTE YOUR SHEET ID HERE
+const SHEETS_ID = "1j7TrH2hVR9WjiMX2eExM4vgyjcedm2BJ9sF2D38_3Bk";   // ← PASTE YOUR SHEET ID HERE
 
 const SHEETS_BASE = SHEETS_ID
   ? `https://docs.google.com/spreadsheets/d/${SHEETS_ID}/gviz/tq?tqx=out:csv&sheet=`
@@ -58,6 +58,9 @@ async function fetchTab(tab) {
 
 // ── Row → film object ──
 function rowToFilm(row) {
+  const parseBool = v => v === "true" || v === true;
+  const parseNullInt = v => (v !== "" && v != null) ? parseInt(v) : null;
+  const parseNullFloat = v => (v !== "" && v != null) ? parseFloat(v) : null;
   return {
     title:row.title||"", language:row.language||"Hindi", director:row.director||"",
     releaseDate:row.releaseDate||"", totalCollection:row.totalCollection||"—",
@@ -68,6 +71,19 @@ function rowToFilm(row) {
     weeklyCollection:parseFloat(row.weeklyCollection)||0,
     weekNum:parseInt(row.weekNum)||0, daysInRelease:parseInt(row.daysInRelease)||0,
     weeklyNote:row.weeklyNote||"",
+    ww:row.ww||null,
+    wwGross:row.wwGross||null,
+    lastWeekCollection:parseNullFloat(row.lastWeekCollection),
+    lastWeekRange:row.lastWeekRange||null,
+    lastWeekRank:parseNullInt(row.lastWeekRank),
+    showInMainChart:parseBool(row.showInMainChart),
+    bogRank:parseNullInt(row.bogRank),
+    estimated:parseBool(row.estimated),
+    pageUrl:row.pageUrl||null,
+    posterUrl:row.posterUrl||null,
+    studio:row.studio||null,
+    betaModel:parseBool(row.betaModel),
+    wkTrend:row.wkTrend||null,
     openingPrediction: row.op_low ? {
       low:parseFloat(row.op_low), mid:parseFloat(row.op_mid),
       high:parseFloat(row.op_high), allLanguages:parseFloat(row.op_allLang)||0,
@@ -87,6 +103,9 @@ async function loadFromSheets() {
   const out = {};
 
   if (films?.length) {
+    // rawFilms: used for overlay merge against bundled JSON (only overrides matching titles)
+    out.rawFilms = films.map(rowToFilm);
+    // year-keyed structure: used when Sheet is the sole data source
     const d = {};
     films.forEach(r => {
       const y = parseInt(r.year); if (!y) return;
@@ -119,15 +138,29 @@ async function loadFromSheets() {
       const scoreboard = [];
       for (let i=1;i<=6;i++) {
         if (!r[`film${i}`]) continue;
-        scoreboard.push({ film:r[`film${i}`], week:r[`film${i}_week`]||"",
-          wkCollection:r[`film${i}_collection`]||"", total:r[`film${i}_total`]||"",
-          verdict:r[`film${i}_verdict`]||"", color:r[`film${i}_color`]||"#6B7280" });
+        // field names match ScoreboardRow props: film, wkCollection, total
+        scoreboard.push({
+          film:r[`film${i}`],
+          week:r[`film${i}_week`]||"",
+          wkCollection:r[`film${i}_collection`]||"",
+          total:r[`film${i}_total`]||"",
+          verdict:r[`film${i}_verdict`]||"",
+          color:r[`film${i}_color`]||"#6B7280",
+        });
       }
-      return { weekNum:r.weekNum||"", dateRange:r.dateRange||"",
+      // sources: comma-separated string in sheet → array of name-only objects
+      const srcArr = r.sources
+        ? r.sources.split(",").map(s => ({ name:s.trim(), handle:"", quote:"", analysis:"", color:"#6B7280" }))
+        : [];
+      return {
+        weekNum:r.weekNum||"", dateRange:r.dateRange||"",
         headline:r.headline||"", subline:r.subline||"",
         status:r.status||"archive", scoreboard,
-        boxoffyTake:r.boxoffyTake||"", interval_take:r.intervalTake||"",
-        sources:[] };
+        boxoffyTake:r.boxoffyTake||"",
+        interval_take:r.intervalTake||r.interval_take||"",
+        nextWeek:r.nextWeek||"",
+        sources:srcArr,
+      };
     });
   }
 
@@ -137,10 +170,51 @@ async function loadFromSheets() {
   return out;
 }
 
-// ── Preview stubs (Google Sheets disabled in preview)
-const liveData = null;
-const liveWeekly = null;
-const liveNotes = null;
+// ── Merge Sheet override into bundled JSON ──
+// Sheet contains only Running/active films. Bundled JSON has all historical data.
+// For each film in Sheet, find matching film in bundled by title and override live fields.
+function mergeSheetsIntoData(bundledData, rawFilms) {
+  if (!rawFilms?.length) return bundledData;
+  const overrides = {};
+  rawFilms.forEach(f => { if (f.title) overrides[f.title.toLowerCase()] = f; });
+
+  const merged = {};
+  Object.entries(bundledData).forEach(([year, films]) => {
+    merged[year] = films.map(f => {
+      const ov = overrides[f.title?.toLowerCase()];
+      return ov ? { ...f, ...ov } : f;
+    });
+  });
+
+  // Add Sheet-only films not yet in bundled JSON (brand-new releases)
+  const bundledTitles = new Set(
+    Object.values(bundledData).flat().map(f => f.title?.toLowerCase())
+  );
+  const newFilms = rawFilms.filter(f => f.title && !bundledTitles.has(f.title.toLowerCase()));
+  if (newFilms.length) {
+    const yr = String(new Date().getFullYear());
+    if (!merged[yr]) merged[yr] = [];
+    merged[yr] = [...newFilms, ...merged[yr]];
+  }
+  return merged;
+}
+
+// ── Live data layer — starts as null, populated from Sheets on mount ──
+// Components subscribe via useSheetData() to re-render when data arrives.
+let liveData = null;
+let liveWeekly = null;
+const _sheetCallbacks = new Set();
+function useSheetData() {
+  const [, forceUpdate] = React.useState(0);
+  React.useEffect(() => {
+    const fn = () => forceUpdate(n => n + 1);
+    _sheetCallbacks.add(fn);
+    return () => _sheetCallbacks.delete(fn);
+  }, []);
+}
+function triggerSheetRefresh() {
+  _sheetCallbacks.forEach(fn => fn());
+}
 const T = {
   bg:         "#F4F5F7",
   surface:    "#FFFFFF",
@@ -951,8 +1025,10 @@ function SourceCard({ source }) {
 }
 
 function WeeklyCommentarySection() {
+  useSheetData(); // re-render when live data arrives
   const [activeWeek, setActiveWeek] = useState(0);
-  const week = WEEKLY_COMMENTARY[activeWeek];
+  const weeklyData = liveWeekly || WEEKLY_COMMENTARY;
+  const week = weeklyData[activeWeek];
   return (
     <div style={{ maxWidth:1100, margin:"0 auto", padding:"32px 24px" }}>
       {/* Header */}
@@ -972,7 +1048,7 @@ function WeeklyCommentarySection() {
 
       {/* Week tabs */}
       <div style={{ display:"flex", gap:0, marginBottom:28, borderBottom:`1px solid ${T.border}`, overflowX:"auto" }}>
-        {(liveWeekly || WEEKLY_COMMENTARY).map((w, i) => (
+        {weeklyData.map((w, i) => (
           <button key={i} onClick={() => setActiveWeek(i)} style={{
             background:"transparent", border:"none", cursor:"pointer",
             padding:"10px 18px", borderBottom: i === activeWeek ? `3px solid ${T.accent}` : "3px solid transparent",
@@ -4040,6 +4116,7 @@ function HeaderSnapshotCards({ activeSection }) {
 
 
 function BoxOfficeSection({ onNavigate, forceAllTime, onClearForceAllTime }) {
+  useSheetData(); // re-render when live data arrives
   const [year, setYear] = useState(2026);
   const [filter, setFilter] = useState("All");
   const [sortBy, setSortBy] = useState("collection");
@@ -6199,6 +6276,19 @@ export default function App() {
   const [cookieConsent, setCookieConsent] = useState(getConsent);
   useEffect(() => {
     if (getConsent() === "accepted") loadGA4();
+  }, []);
+
+  // ── Google Sheets live data — fetch on mount if SHEETS_ID is set ──
+  useSheetData();
+  useEffect(() => {
+    if (!SHEETS_ID) return;
+    loadFromSheets().then(out => {
+      if (!out) return;
+      if (out.rawFilms) liveData = mergeSheetsIntoData(DATA, out.rawFilms);
+      if (out.weeklyCommentary?.length) liveWeekly = out.weeklyCommentary;
+      triggerSheetRefresh();
+      console.log("[Boxoffy] Live data loaded from Google Sheets ✓");
+    }).catch(e => console.warn("[Boxoffy] Sheets fetch failed, using bundled data:", e));
   }, []);
 
   // Dynamic document title per section — helps Google index section-level content
