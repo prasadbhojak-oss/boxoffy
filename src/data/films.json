@@ -14587,7 +14587,7 @@
       "language": "Hindi",
       "director": "Aditya Dhar",
       "releaseDate": "Mar 19, 2026",
-      "totalCollection": "~₹920 Cr India nett D0–D14 · WW ~₹1,466 Cr · ALL-TIME BLOCKBUSTER",
+      "totalCollection": "~₹1,757 Cr WW",
       "totalNum": 1119,
       "indiaNet": "~₹1,119 Cr",
       "overseas": "₹231.57 Cr",
@@ -14672,7 +14672,9 @@
       "gstToGovt": "₹122.2 Cr",
       "footfalls": "3.23 Cr",
       "ottPackage": "₹245 Cr (JioHotstar ₹150 Cr + Star Gold ₹50 Cr + T-Series ₹45 Cr)",
-      "bogRank": 2
+      "bogRank": 2,
+      "lastWeekCollection": 24,
+      "lastWeekRange": "Apr 10–16"
     },
     {
       "title": "Project Hail Mary",
@@ -14692,7 +14694,7 @@
       "indiaNet": "~₹52 Cr",
       "totalNum": 52,
       "weeklyCollection": 3.5,
-      "totalCollection": "~₹17 Cr India nett D1–D5 · WW $300M+ · US $164.3M 10-day · #1 US 2nd wkd $54.5M",
+      "totalCollection": "$300M+ WW",
       "wwGross": "$300M+ WW",
       "verdict": "HIT",
       "status": "Running",
@@ -14710,7 +14712,9 @@
       "lastWeekRank": 2,
       "weeksInTop10": 4,
       "daysInRelease": 25,
-      "showInMainChart": true
+      "showInMainChart": true,
+      "lastWeekCollection": 5,
+      "lastWeekRange": "Apr 10–16"
     },
     {
       "title": "Border 2",
@@ -15413,7 +15417,7 @@
       "language": "Telugu",
       "director": "Vamshi Paidipally",
       "releaseDate": "Feb 13, 2026",
-      "totalCollection": "12 Cr",
+      "totalCollection": "~₹12 Cr WW",
       "totalNum": 12.5,
       "indiaNet": "9 Cr",
       "overseas": "3 Cr",
@@ -15442,7 +15446,9 @@
       "posterUrl": "https://image.tmdb.org/t/p/w185/iICU2CBNat7q9tm88SzrUFwR1hA.jpg",
       "betaModel": false,
       "cast": [],
-      "wwGross": "~₹12 Cr WW"
+      "wwGross": "~₹12 Cr WW",
+      "lastWeekCollection": 0.7,
+      "lastWeekRange": "Apr 10–16"
     },
     {
       "title": "Chatha Pacha: The Ring of Rowdies",
@@ -15530,7 +15536,9 @@
       "posterUrl": "https://image.tmdb.org/t/p/w185/3YBce6dTh1D5oCMITXk2S5QhPt.jpg",
       "betaModel": false,
       "cast": [],
-      "showInMainChart": true
+      "showInMainChart": true,
+      "lastWeekCollection": 0.5,
+      "lastWeekRange": "Apr 10–16"
     },
     {
       "title": "GOAT",
@@ -15913,7 +15921,7 @@
       "language": "Hindi",
       "director": "Priyadarshan",
       "releaseDate": "Apr 17, 2026",
-      "totalCollection": "₹65 Cr India nett (D0-D4 BCM est.)",
+      "totalCollection": "~₹107 Cr WW",
       "totalNum": 65,
       "indiaNet": "₹65 Cr",
       "overseas": null,
@@ -16739,13 +16747,15 @@
       "lastWeekRank": 6,
       "note": "Week 2 Telugu comedy. Modest run.",
       "indiaNet": "₹11.89 Cr",
-      "totalCollection": "₹16.90 Cr",
+      "totalCollection": "₹16.60 Cr WW",
       "posterUrl": "https://image.tmdb.org/t/p/w185/5ACLnlafSgtE8mlylhnWLLHfoZJ.jpg",
       "betaModel": false,
       "weeksInTop10": 3,
       "cast": [],
       "daysInRelease": 14,
-      "weeklyNote": "₹11.89 Cr · Week 3 · Tamil film · tailing"
+      "weeklyNote": "₹11.89 Cr · Week 3 · Tamil film · tailing",
+      "lastWeekCollection": 2,
+      "lastWeekRange": "Apr 10–16"
     },
     {
       "title": "Ustaad Bhagat Singh",
@@ -17152,7 +17162,7 @@
       "releaseDate": "Apr 10, 2026",
       "status": "Running",
       "totalNum": 38,
-      "totalCollection": "~₹38 Cr India nett D10",
+      "totalCollection": "~₹46 Cr WW",
       "indiaNet": "~₹38 Cr",
       "weeklyCollection": 4,
       "weekNum": 2,
@@ -17175,7 +17185,7 @@
       "language": "Tamil",
       "director": "Pradeep Ranganathan",
       "releaseDate": "Apr 10, 2026",
-      "totalCollection": "~₹39 Cr India nett D10",
+      "totalCollection": "~₹48 Cr WW",
       "totalNum": 39,
       "indiaNet": "~₹39 Cr",
       "overseas": "~₹10 Cr",
@@ -17205,7 +17215,7 @@
       "language": "Malayalam",
       "director": "Arun Gopy",
       "releaseDate": "Apr 2, 2026",
-      "totalCollection": "~₹102 Cr India nett D18 · WW ~₹200 Cr · ALL-TIME BLOCKBUSTER",
+      "totalCollection": "~₹200 Cr WW",
       "totalNum": 102,
       "indiaNet": "~₹102 Cr",
       "overseas": "~₹98 Cr",
