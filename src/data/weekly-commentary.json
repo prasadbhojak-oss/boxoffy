@@ -2,53 +2,52 @@
   {
     "weekNum": "Week 17",
     "dateRange": "Apr 17–23, 2026",
-    "headline": "Bhooth Bangla ₹79 Cr in 6 Days. D2 Crosses ₹1,121 Cr. Vaazha 2 Joins ₹200 Cr WW Club.",
-    "subline": "BB D6 Wed BCM ₹6.85 Cr (86% conf) · 23% mid-week dip · WW ~₹128 Cr · NA $1.23M · D2 D35 ₹1.70 Cr Sacnilk-confirmed (92%) · India ₹1,121 Cr · WW ₹1,764 Cr · UK overtaken Pathaan as biggest Indian grosser · Vaazha 2 ₹113 Cr India / ₹213 Cr WW",
+    "headline": "Bhooth Bangla Closes ₹89 Cr Week 1. D2 Crosses ₹1,121 Cr. Vaazha 2 Past ₹213 Cr WW.",
+    "subline": "BB W1 close ₹89 Cr India / ₹137 Cr WW (Taran + BH consensus, BCM 91%) · D2 W6 begins at ₹1,121 Cr India / ₹1,764 Cr WW · UK overtaken Pathaan as biggest Indian grosser · Vaazha 2 lifetime ₹113 Cr India / ₹213 Cr WW · 5th Malayalam film in 200 Cr club · Total chart take ~₹133 Cr",
     "status": "live",
     "scoreboard": [
       {
         "film": "Bhooth Bangla",
-        "week": "W17",
-        "wkCollection": "~₹79 Cr",
-        "total": "~₹79 Cr nett",
+        "week": "W1",
+        "wkCollection": "~₹89 Cr",
+        "total": "~₹89 Cr nett",
         "verdict": "HIT",
         "color": "#6B7280",
-        "note": "D0 ₹3.75 · D1 ₹12.25 · D2 ₹19 · D3 ₹23 ✅ · D4 ₹6.75 · D5 Tue ₹7.65 ✅ · D6 Wed BCM ₹6.85 Cr (86%) · WW ~₹128 Cr · NA $1.23M (5d) · Studio: Balaji Motion Pictures + Cape of Good Films · HIT trajectory toward ₹160 Cr lifetime"
+        "note": "D0 ₹3.75 · D1 ₹12.25 · D2 ₹19 · D3 ₹23 · D4 ₹6.75 · D5 ₹8 · D6 ₹6.80 · D7 ~₹5.50 BCM. Taran Adarsh + BH: ₹89.45 Cr 6-day · ₹105.86 Cr gross · $3.40M overseas. WW ₹137 Cr. Studio: Balaji Motion Pictures + Cape of Good Films."
       },
       {
         "film": "Dhurandhar: The Revenge",
-        "week": "W17",
-        "wkCollection": "~₹17 Cr",
+        "week": "W6",
+        "wkCollection": "~₹16.5 Cr",
         "total": "~₹1,121 Cr nett",
         "verdict": "ALL-TIME BLOCKBUSTER",
         "color": "#6B7280",
-        "note": "W5 D30 ₹2.60 · D31 ₹4.65 · D32 ₹5.20 · D33 ₹1.62 ✅ · D34 ₹0.90 · D35 Wed ₹1.70 Cr Sacnilk-confirmed (92%) · India ₹1,121 Cr · WW ₹1,764 Cr · #3 Indian film all-time · UK overtaken Pathaan as biggest Indian grosser · ₹24 Cr from Baahubali 2 (₹1,788 Cr)"
+        "note": "W5 close ₹16.5 Cr · W6 begins D36. Sacnilk-confirmed lifetime ₹1,121.09 Cr India / ₹1,764.15 Cr WW. UK overtaken Pathaan (£4.39M). 18M+ BMS tickets — 2nd film ever. ₹24 Cr from Baahubali 2."
       },
       {
         "film": "Vaazha 2: Biopic of a Billion Bros",
-        "week": "W17",
-        "wkCollection": "~₹16 Cr",
+        "week": "W3",
+        "wkCollection": "~₹14.5 Cr",
         "total": "~₹113 Cr nett",
         "verdict": "ALL-TIME BLOCKBUSTER",
         "color": "#6B7280",
-        "note": "W3 D16-D21 ~₹16 Cr · D21 Wed BCM ~₹1.60 Cr · Lifetime ₹113 Cr India / ₹213 Cr WW · 5th Malayalam film over ₹200 Cr WW · 7th to cross ₹100 Cr India nett · Lifetime corrected from ₹102 Cr (under-counted by ₹11 Cr)"
+        "note": "W3 ₹14.5 Cr · D22 lifetime ₹112.55 Cr India net / ₹130 Cr gross / ₹213 Cr WW. 5th Malayalam film over ₹200 Cr WW · 7th over ₹100 Cr India nett · Fastest Kerala 100 Cr (16 days)."
       }
     ],
     "sources": [
-      "BOI",
+      "Taran Adarsh (X)",
+      "Bollywood Hungama",
+      "Box Office India",
       "Sacnilk",
       "Pinkvilla",
-      "Bollywood Hungama",
       "Box Office Worldwide",
-      "Glamsham",
-      "Lokmat",
-      "Venky Box Office X",
-      "Ramesh Bala X",
-      "Comscore",
-      "Wikipedia (BB studio fix)"
+      "Filmibeat (occupancy only)",
+      "Koimoi (advance only)",
+      "Asianet Newsable",
+      "Wikipedia (BB studio)"
     ],
-    "interval_take": "Three structural stories this week. First: Bhooth Bangla's 23% Wednesday drop (₹8 Cr Tue → ₹6.85 Cr Wed BCM) is sharper than the W1 horror-comedy template. Bhool Bhulaiyaa 2 held flat into 1st Wed; Stree 2 jumped. BB's softer hold signals a HIT (₹160 Cr lifetime trajectory) not a SUPER HIT. Second weekend will decide the verdict ceiling. Second: D2 entering deep weekday rhythm at ₹1.70 Cr/day is a textbook All-Time Blockbuster decay (λ ≈ 0.55) — exactly what BCM modelled. The Pathaan UK overtake is the milestone story this week. Third: Vaazha 2 has quietly become 2026's most over-performing film at ₹113 Cr India nett against a sub-₹15 Cr budget. Trade press has been under-reporting the lifetime by ₹10+ Cr — Boxoffy correction issued.",
-    "nextWeek": "Week 18 (Apr 24–30) opens with no major Hindi release. BB takes the wide-release slot uncontested · 2nd weekend BCM range ₹35-42 Cr at 80% conf · D2 enters W6 with ~₹6 Cr expected · Telugu: Vishwambhara (Chiranjeevi) opens — early advance booking suggests ₹15-18 Cr Day 1 BCM"
+    "interval_take": "Three structural calls this week. First: Bhooth Bangla's ₹89 Cr W1 close locks the HIT verdict — Akshay Kumar's third-best post-pandemic opening behind only Sooryavanshi and Housefull 5. The Sacnilk-vs-Taran/BH ₹10.5 Cr gap is BCM's textbook Hindi inflation pattern (~13% over-attribution on Sacnilk Hindi numbers). Going with Taran + BH consensus on this one. Second: D2 enters W6 having crossed ₹1,121 Cr India and ₹1,764 Cr WW — only ₹24 Cr from Baahubali 2's ₹1,788 Cr lifetime WW record. Pathaan UK overtake on Apr 22 is the milestone of the week. Third: Vaazha 2 is now a ₹213 Cr WW film against a sub-₹15 Cr budget — likely the highest-ROI Malayalam release of the year, full stop. Trade press has been under-counting it; Boxoffy correction is in the chart.",
+    "nextWeek": "Week 18 (Apr 24-30) opens with Hollywood biggie Michael (paid previews tonight, full release Apr 24) — first wide Hollywood India release in 4 weeks. BB show count already cut 50% to make room. BB W2 tracking ₹35-42 Cr at 80% conf. D2 W6 ~₹6 Cr expected. South: Vishwambhara (Chiranjeevi) advance booking suggests ₹15-18 Cr Day 1 BCM."
   },
   {
     "weekNum": "Week 15",

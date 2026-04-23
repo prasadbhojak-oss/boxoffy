@@ -1,14 +1,14 @@
 {
-  "version": "v3.33",
-  "deployedAt": "2026-04-22",
+  "version": "v3.34",
+  "deployedAt": "2026-04-23",
   "gitCommit": "pending",
   "appJsxChars": 371697,
   "dataFiles": {
     "weekly-commentary.json": {
       "weekNum": "Week 17",
       "dateRange": "Apr 17–23, 2026",
-      "lastUpdated": "2026-04-22",
-      "headline": "Bhooth Bangla ₹79 Cr in 6 Days. D2 Crosses ₹1,121 Cr. Vaazha 2 Joins ₹200 Cr WW Club."
+      "lastUpdated": "2026-04-23",
+      "headline": "Bhooth Bangla Closes ₹89 Cr Week 1. D2 Crosses ₹1,121 Cr. Vaazha 2 Past ₹213 Cr WW."
     },
     "us-bo-weekly.json": {
       "week": "Week 15, 2026",
@@ -24,8 +24,8 @@
     },
     "films.json": {
       "totalFilms": 1015,
-      "lastUpdated": "2026-04-22",
-      "note": "Week 17 D6 Wed close — 10 chart films + BB studio fix"
+      "lastUpdated": "2026-04-23",
+      "note": "BCM v2: 4-source recalibration (Taran + BH + Sacnilk + BOI). 10 chart films · 3-field WW sync."
     },
     "usBoWeekly": "Week 14 final confirmed · Mar 27-29, 2026",
     "filmsJson": "PHM wk2 · D2 GST/footfall/OTT added",
@@ -46,19 +46,19 @@
   },
   "changelog": [
     {
-      "version": "3.33",
-      "date": "2026-04-22",
+      "version": "3.34",
+      "date": "2026-04-23",
       "commit": "pending",
       "changes": [
-        "films.json: Week 17 D6 (Wed Apr 22) BCM close — 10 chart films updated",
-        "BB: D6 Wed BCM ₹6.85 Cr (86% conf) · Lifetime ₹79.25 Cr · WW ~₹128 Cr",
-        "BB studio fix: 'Jio Studios' → 'Balaji Motion Pictures + Cape of Good Films' (Wikipedia confirmed)",
-        "D2: D35 Wed ₹1.70 Cr Sacnilk-confirmed · Lifetime ₹1,121 Cr · WW ₹1,764 Cr · UK overtaken Pathaan",
-        "Vaazha 2 lifetime corrected: ₹102 → ₹113 Cr India nett (was under-counted by ₹11 Cr per Sacnilk D19)",
-        "Dacoit verdict: HIT → FLOP (per Pinkvilla; ₹39 Cr lifetime on ₹13.60 Cr opener)",
-        "LIK verdict: HIT → Below Average (₹43 Cr lifetime on ₹60 Cr budget)",
-        "weekly-commentary.json [0] Week 17 D6 Wed close — scoreboard refreshed (BB/D2/Vaazha 2)",
-        "Day-numbering correction: D2 today is D35 (was D33 in stale data)"
+        "BCM v2 recalibration with Taran Adarsh + BH + Sacnilk + BOI 4-source weighting",
+        "Bhooth Bangla W1 close: ₹89 Cr India / ₹137 Cr WW (Taran + BH consensus, Sacnilk underread by ₹10.5 Cr)",
+        "BB studio confirmed: Balaji Motion Pictures + Cape of Good Films (NOT Jio)",
+        "D2 enters W6 D36 — lifetime ₹1,121 Cr India / ₹1,764 Cr WW; UK overtaken Pathaan",
+        "Vaazha 2 D22 lifetime ₹113 Cr / ₹213 Cr WW (5th Malayalam film in 200 Cr club)",
+        "All 10 chart films: 3-field WW sync (totalCollection + wwGross + ww) — fixes drift bug from v3.33.1",
+        "LIK verdict: HIT → Below Average · Dacoit verdict: HIT → FLOP",
+        "Studio fixes: BB, LIK (Sun→Rowdy+Seven Screen), Dacoit, Vaazha 2",
+        "weekly-commentary.json [0]: Week 17 final close with BCM source breakdown"
       ]
     },
     {
@@ -158,5 +158,5 @@
     "appJsxRule": "Good App.jsx = 336,189 chars. If outputs/App.jsx is unavailable or char count is wrong, DO NOT PROCEED — ask PB to run: git checkout 7a63f82 -- src/App.jsx",
     "updateProtocol": "After every deploy: bump version (3.24 → 3.25), update deployedAt, gitCommit, and relevant dataFiles entries."
   },
-  "notes": "v3.33 Apr 22 2026 — Week 17 D6 Wed close. BB ₹79 Cr / D2 ₹1,121 Cr / Vaazha 2 ₹113 Cr. BB studio fix Jio→Balaji+Cape of Good Films. Dacoit verdict HIT→FLOP. LIK HIT→Below Avg. Day numbering corrected (D2=D35 today). 3 files in deploy bundle."
+  "notes": "v3.34 Apr 23 2026 — BCM v2 4-source recalibration. BB W1 ₹89 Cr / D2 ₹1,121 Cr / Vaazha 2 ₹113 Cr. All 3 WW fields synced to fix v3.33.1 chart-display drift bug. Taran Adarsh + BH consensus prioritized over Sacnilk where they diverge."
 }
