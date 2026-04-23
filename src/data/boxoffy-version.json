@@ -1,14 +1,14 @@
 {
-  "version": "v3.32",
-  "deployedAt": "2026-04-06",
-  "gitCommit": "7a63f82",
-  "appJsxChars": 336189,
+  "version": "v3.33",
+  "deployedAt": "2026-04-22",
+  "gitCommit": "pending",
+  "appJsxChars": 371697,
   "dataFiles": {
     "weekly-commentary.json": {
-      "weekNum": "Week 15",
-      "dateRange": "Apr 3-9, 2026",
-      "lastUpdated": "2026-04-06",
-      "headline": "D2 ₹925 Cr All-India D18 · BOI+PV verified · Sacnilk 9.5% inflated rejected"
+      "weekNum": "Week 17",
+      "dateRange": "Apr 17–23, 2026",
+      "lastUpdated": "2026-04-22",
+      "headline": "Bhooth Bangla ₹79 Cr in 6 Days. D2 Crosses ₹1,121 Cr. Vaazha 2 Joins ₹200 Cr WW Club."
     },
     "us-bo-weekly.json": {
       "week": "Week 15, 2026",
@@ -24,15 +24,16 @@
     },
     "films.json": {
       "totalFilms": 1015,
-      "lastUpdated": "2026-04-06"
+      "lastUpdated": "2026-04-22",
+      "note": "Week 17 D6 Wed close — 10 chart films + BB studio fix"
     },
     "usBoWeekly": "Week 14 final confirmed · Mar 27-29, 2026",
     "filmsJson": "PHM wk2 · D2 GST/footfall/OTT added",
     "weeklyCommentary": "Week 14 comprehensive entry added"
   },
   "weeklyUpdate": {
-    "weekNum": 15,
-    "dateRange": "Apr 3-9, 2026"
+    "weekNum": 17,
+    "dateRange": "Apr 17–23, 2026"
   },
   "articles": {
     "dangal-china-box-office.html": "2026-03-26",
@@ -44,6 +45,22 @@
     "bollywood-music-box-office.html": "2026-03-29"
   },
   "changelog": [
+    {
+      "version": "3.33",
+      "date": "2026-04-22",
+      "commit": "pending",
+      "changes": [
+        "films.json: Week 17 D6 (Wed Apr 22) BCM close — 10 chart films updated",
+        "BB: D6 Wed BCM ₹6.85 Cr (86% conf) · Lifetime ₹79.25 Cr · WW ~₹128 Cr",
+        "BB studio fix: 'Jio Studios' → 'Balaji Motion Pictures + Cape of Good Films' (Wikipedia confirmed)",
+        "D2: D35 Wed ₹1.70 Cr Sacnilk-confirmed · Lifetime ₹1,121 Cr · WW ₹1,764 Cr · UK overtaken Pathaan",
+        "Vaazha 2 lifetime corrected: ₹102 → ₹113 Cr India nett (was under-counted by ₹11 Cr per Sacnilk D19)",
+        "Dacoit verdict: HIT → FLOP (per Pinkvilla; ₹39 Cr lifetime on ₹13.60 Cr opener)",
+        "LIK verdict: HIT → Below Average (₹43 Cr lifetime on ₹60 Cr budget)",
+        "weekly-commentary.json [0] Week 17 D6 Wed close — scoreboard refreshed (BB/D2/Vaazha 2)",
+        "Day-numbering correction: D2 today is D35 (was D33 in stale data)"
+      ]
+    },
     {
       "version": "3.32",
       "date": "2026-04-06",
@@ -141,5 +158,5 @@
     "appJsxRule": "Good App.jsx = 336,189 chars. If outputs/App.jsx is unavailable or char count is wrong, DO NOT PROCEED — ask PB to run: git checkout 7a63f82 -- src/App.jsx",
     "updateProtocol": "After every deploy: bump version (3.24 → 3.25), update deployedAt, gitCommit, and relevant dataFiles entries."
   },
-  "notes": "v3.32 Apr 6 2026 — D2 D18 ₹925 Cr BOI+PV verified (BOI Hindi ₹887.33 Cr direct confirmed). Sacnilk 9.5% inflation confirmed rejected. Week 15 US BO: Mario $130.9M #1, PHM $30.6M, Drama $14.1M, D2 $26M NA all-time Bollywood record. WKD14→15, US BO ref Week 14→15. All 8 Dhurandhar HTML pages updated. 12 files in outputs ready to deploy."
+  "notes": "v3.33 Apr 22 2026 — Week 17 D6 Wed close. BB ₹79 Cr / D2 ₹1,121 Cr / Vaazha 2 ₹113 Cr. BB studio fix Jio→Balaji+Cape of Good Films. Dacoit verdict HIT→FLOP. LIK HIT→Below Avg. Day numbering corrected (D2=D35 today). 3 files in deploy bundle."
 }

@@ -2,36 +2,36 @@
   {
     "weekNum": "Week 17",
     "dateRange": "Apr 17–23, 2026",
-    "headline": "Bhooth Bangla Lands. D2 Stays. Horror Comedy Wins the Weekend.",
-    "subline": "BB D0-D3 ₹58 Cr ✅ · D4 BCM ~₹7 Cr (13-src, 71% conf) · WW ₹107 Cr · NA $1M ✅ BOI confirmed · D2 W5 ~₹16 Cr · India ₹1,119 Cr · WW ₹1,757 Cr · #3 Indian film all-time",
+    "headline": "Bhooth Bangla ₹79 Cr in 6 Days. D2 Crosses ₹1,121 Cr. Vaazha 2 Joins ₹200 Cr WW Club.",
+    "subline": "BB D6 Wed BCM ₹6.85 Cr (86% conf) · 23% mid-week dip · WW ~₹128 Cr · NA $1.23M · D2 D35 ₹1.70 Cr Sacnilk-confirmed (92%) · India ₹1,121 Cr · WW ₹1,764 Cr · UK overtaken Pathaan as biggest Indian grosser · Vaazha 2 ₹113 Cr India / ₹213 Cr WW",
     "status": "live",
     "scoreboard": [
       {
         "film": "Bhooth Bangla",
         "week": "W17",
-        "wkCollection": "~₹65 Cr",
-        "total": "~₹65 Cr nett",
+        "wkCollection": "~₹79 Cr",
+        "total": "~₹79 Cr nett",
         "verdict": "HIT",
         "color": "#6B7280",
-        "note": "D0 ₹3.75 Cr · D1 ₹12.25 Cr · D2 ₹19 Cr · D3 ₹23 Cr ✅ · D4 BCM ~₹7 Cr (71%) · NA $1M ✅ BOI · Gulf $800K ✅ · WW ~₹107 Cr · Budget ₹100-120 Cr · HIT trajectory"
+        "note": "D0 ₹3.75 · D1 ₹12.25 · D2 ₹19 · D3 ₹23 ✅ · D4 ₹6.75 · D5 Tue ₹7.65 ✅ · D6 Wed BCM ₹6.85 Cr (86%) · WW ~₹128 Cr · NA $1.23M (5d) · Studio: Balaji Motion Pictures + Cape of Good Films · HIT trajectory toward ₹160 Cr lifetime"
       },
       {
         "film": "Dhurandhar: The Revenge",
         "week": "W17",
-        "wkCollection": "~₹16 Cr",
-        "total": "~₹1,119 Cr nett",
+        "wkCollection": "~₹17 Cr",
+        "total": "~₹1,121 Cr nett",
         "verdict": "ALL-TIME BLOCKBUSTER",
         "color": "#6B7280",
-        "note": "W5 D30 ₹2.60 Cr · D31 ₹4.65 Cr · D32 ₹5.20 Cr · D33 ~₹3.50 Cr est · India ~₹1,119 Cr · WW ₹1,757 Cr · #3 Indian film all-time · ₹54 Cr from Baahubali 2 (₹1,788 Cr) · 8.26% D33 morning occ"
+        "note": "W5 D30 ₹2.60 · D31 ₹4.65 · D32 ₹5.20 · D33 ₹1.62 ✅ · D34 ₹0.90 · D35 Wed ₹1.70 Cr Sacnilk-confirmed (92%) · India ₹1,121 Cr · WW ₹1,764 Cr · #3 Indian film all-time · UK overtaken Pathaan as biggest Indian grosser · ₹24 Cr from Baahubali 2 (₹1,788 Cr)"
       },
       {
-        "film": "Project Hail Mary",
+        "film": "Vaazha 2: Biopic of a Billion Bros",
         "week": "W17",
-        "wkCollection": "~₹3.5 Cr",
-        "total": "~₹52 Cr nett",
-        "verdict": "HIT",
+        "wkCollection": "~₹16 Cr",
+        "total": "~₹113 Cr nett",
+        "verdict": "ALL-TIME BLOCKBUSTER",
         "color": "#6B7280",
-        "note": "W4 holding · ~₹52 Cr India nett est · US ~$164M cume · Ryan Gosling sci-fi legs intact · BB launch pushes to #3 this week"
+        "note": "W3 D16-D21 ~₹16 Cr · D21 Wed BCM ~₹1.60 Cr · Lifetime ₹113 Cr India / ₹213 Cr WW · 5th Malayalam film over ₹200 Cr WW · 7th to cross ₹100 Cr India nett · Lifetime corrected from ₹102 Cr (under-counted by ₹11 Cr)"
       }
     ],
     "sources": [
@@ -39,18 +39,16 @@
       "Sacnilk",
       "Pinkvilla",
       "Bollywood Hungama",
-      "TrackTollywood",
-      "Box Office Guru",
-      "Exhibitor Relations",
+      "Box Office Worldwide",
+      "Glamsham",
+      "Lokmat",
       "Venky Box Office X",
-      "Koimoi",
-      "Film Information",
-      "Taran Adarsh X",
-      "Nishit Shaw X",
-      "Comscore"
+      "Ramesh Bala X",
+      "Comscore",
+      "Wikipedia (BB studio fix)"
     ],
-    "interval_take": "Bhooth Bangla did what it needed to do. ₹58 Cr confirmed opening weekend — the third biggest for Akshay Kumar post-pandemic, behind only Sooryavanshi and Housefull 5. The North American number ($1M confirmed BOI) and Gulf ($800K) give it the overseas credibility a franchise-starter needs. The Monday number will matter: BCM is calling ~₹7 Cr (13-source, 71% confidence), which would make it a solid HIT trajectory at ₹120-125 Cr lifetime. The mixed-review second half is the drag weight. If it holds ₹6+ Cr through Tuesday-Wednesday, the HIT call locks in.\n\nD2 continues to write a chapter of Indian cinema history nobody scripted. ₹1,119 Cr in 33 days. Still doing ₹5 Cr on a 5th Sunday. Now ₹54 Cr from Baahubali 2 for #2 all-time globally. The film it’s chasing did it with China + Gulf. D2 is doing it without either.",
-    "nextWeek": "BB D5-D7 weekday hold is the story · D2 eyes Baahubali 2 (₹1,788 Cr WW) · No major new Hindi release · PHM continues W5"
+    "interval_take": "Three structural stories this week. First: Bhooth Bangla's 23% Wednesday drop (₹8 Cr Tue → ₹6.85 Cr Wed BCM) is sharper than the W1 horror-comedy template. Bhool Bhulaiyaa 2 held flat into 1st Wed; Stree 2 jumped. BB's softer hold signals a HIT (₹160 Cr lifetime trajectory) not a SUPER HIT. Second weekend will decide the verdict ceiling. Second: D2 entering deep weekday rhythm at ₹1.70 Cr/day is a textbook All-Time Blockbuster decay (λ ≈ 0.55) — exactly what BCM modelled. The Pathaan UK overtake is the milestone story this week. Third: Vaazha 2 has quietly become 2026's most over-performing film at ₹113 Cr India nett against a sub-₹15 Cr budget. Trade press has been under-reporting the lifetime by ₹10+ Cr — Boxoffy correction issued.",
+    "nextWeek": "Week 18 (Apr 24–30) opens with no major Hindi release. BB takes the wide-release slot uncontested · 2nd weekend BCM range ₹35-42 Cr at 80% conf · D2 enters W6 with ~₹6 Cr expected · Telugu: Vishwambhara (Chiranjeevi) opens — early advance booking suggests ₹15-18 Cr Day 1 BCM"
   },
   {
     "weekNum": "Week 15",
