@@ -729,32 +729,146 @@
         "isIndian": true
       }
     ],
-    "indianSpotlight": [
+    "source": "Box Office Mojo (BOM) · Deadline · Variety · Comscore · Sacnilk overseas · Pinkvilla · EntTelligence"
+  },
+  "Week 18, 2026": {
+    "dateRange": "Apr 24–26, 2026",
+    "headline": "Michael Opens $65–75M — Biggest Music Biopic Ever; Mario Galaxy at $375M Cume; PHM Crosses $300M",
+    "source": "Lionsgate · Deadline · Variety · Box Office Pro · Box Office Theory · Comscore · Funasia (BB)",
+    "status": "projected",
+    "asOf": "Tracking + advance · Thu Apr 23 evening · Friday actuals tomorrow",
+    "chart": [
       {
-        "rank": 9,
-        "title": "Bhooth Bangla",
-        "studio": "Pen Marudhar / Balaji Motion Pictures",
-        "genre": "Horror/Comedy",
-        "weekend": "$0.95M",
-        "total": "$0.95M",
-        "theaters": 375,
+        "rank": 1,
+        "title": "Michael",
+        "studio": "Lionsgate",
+        "genre": "Music Biopic",
+        "weekend": "$65–75M*",
+        "total": "$65–75M*",
+        "theaters": 3900,
         "change": "NEW",
         "weeks": 1,
-        "admitsNote": "BOM confirmed #9 US weekend · $0.95M (just below $1M) · 375 locations · ~$2,530/theater · BCM called $1.1M — NA share 30% vs 35% assumed · Gulf-dominant overseas distribution explains gap · US top 10 ✅ confirmed"
+        "rtScore": "37%",
+        "admitsNote": "Tracking $150M global · Bohemian Rhapsody record ($51M) shattered · Lionsgate's 2nd-best non-Hunger Games / Twilight opener · Jaafar Jackson"
+      },
+      {
+        "rank": 2,
+        "title": "The Super Mario Galaxy Movie",
+        "studio": "Universal/Illumination",
+        "genre": "Animation",
+        "weekend": "~$18M*",
+        "total": "~$375M*",
+        "theaters": 3800,
+        "change": "-49%*",
+        "weeks": 4,
+        "rtScore": "96%",
+        "admitsNote": "Past $750M WW · Officially 2026's #1 grossing film globally (past China's Pegasus 3)"
+      },
+      {
+        "rank": 3,
+        "title": "Project Hail Mary",
+        "studio": "Amazon MGM",
+        "genre": "Sci-Fi",
+        "weekend": "~$12M*",
+        "total": "~$298M*",
+        "theaters": 3400,
+        "change": "-42%*",
+        "weeks": 5,
+        "rtScore": "95%",
+        "admitsNote": "$300M domestic crossed by Sat · Trending Jungle Book 2016 lifetime · Best Amazon MGM ever"
+      },
+      {
+        "rank": 4,
+        "title": "Lee Cronin's The Mummy",
+        "studio": "New Line/Blumhouse",
+        "genre": "Horror",
+        "weekend": "~$6M*",
+        "total": "~$24M*",
+        "theaters": 2900,
+        "change": "-55%*",
+        "weeks": 2,
+        "rtScore": "45%",
+        "admitsNote": "Soft 2nd-week hold · 4th-best horror debut of 2026 · Critics tepid (45% RT)"
+      },
+      {
+        "rank": 5,
+        "title": "The Drama",
+        "studio": "A24",
+        "genre": "Drama",
+        "weekend": "~$2.8M*",
+        "total": "~$40M*",
+        "theaters": 1400,
+        "change": "-42%*",
+        "weeks": 4,
+        "rtScore": "81%",
+        "admitsNote": "A24's 8th-biggest ever lifetime trajectory · Borgli direction"
+      },
+      {
+        "rank": 6,
+        "title": "You, Me & Tuscany",
+        "studio": "Sony",
+        "genre": "Romance",
+        "weekend": "~$2.5M*",
+        "total": "~$16M*",
+        "theaters": 2600,
+        "change": "-45%*",
+        "weeks": 3,
+        "rtScore": "62%",
+        "admitsNote": "$20M lifetime ceiling likely"
+      },
+      {
+        "rank": 7,
+        "title": "Hoppers",
+        "studio": "Disney/Pixar",
+        "genre": "Animation",
+        "weekend": "~$2M*",
+        "total": "~$160M*",
+        "theaters": 1800,
+        "change": "-38%*",
+        "weeks": 7,
+        "rtScore": "91%",
+        "admitsNote": "Long Pixar tail continues · Past $750M WW family demand"
+      },
+      {
+        "rank": 8,
+        "title": "Bhooth Bangla",
+        "studio": "Funasia · Balaji Motion Pictures",
+        "genre": "Hindi Horror-Comedy",
+        "weekend": "~$0.55M*",
+        "total": "~$1.65M*",
+        "theaters": 480,
+        "change": "-42%*",
+        "weeks": 2,
+        "rtScore": "N/A",
+        "admitsNote": "Holding well · Strong Canada · 5th-biggest Akshay Kumar NA opener post-pandemic · Funasia distrib",
+        "isIndian": true
+      },
+      {
+        "rank": 9,
+        "title": "Busboys",
+        "studio": "Mind Blowing Films",
+        "genre": "Comedy",
+        "weekend": "~$0.9M*",
+        "total": "~$2.8M*",
+        "theaters": 700,
+        "change": "-45%*",
+        "weeks": 2,
+        "rtScore": "12%",
+        "admitsNote": "Spade/Theo Von vehicle fading fast · Critically panned"
       },
       {
         "rank": 10,
-        "title": "Dhurandhar: The Revenge",
-        "studio": "Jio Studios / Moviegoer Entertainment",
-        "genre": "Action/Spy",
-        "weekend": "~$0.5M",
-        "total": "~$27.5M",
-        "theaters": 185,
-        "change": "-44%",
-        "weeks": 5,
-        "admitsNote": "All-time Indian film NA record $27.5M+ · W5 hold · India nett ₹1,024 Cr · Worldwide ₹1,750 Cr"
+        "title": "They Will Kill You",
+        "studio": "Amazon MGM",
+        "genre": "Thriller",
+        "weekend": "~$0.7M*",
+        "total": "~$11M*",
+        "theaters": 900,
+        "change": "-36%*",
+        "weeks": 4,
+        "rtScore": "71%",
+        "admitsNote": "Genre programmer holding"
       }
-    ],
-    "source": "Box Office Mojo (BOM) · Deadline · Variety · Comscore · Sacnilk overseas · Pinkvilla · EntTelligence"
+    ]
   }
 }
