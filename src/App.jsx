@@ -4355,7 +4355,7 @@ function BoxOfficeSection({ onNavigate, forceAllTime, onClearForceAllTime }) {
             </span>
           </div>
 
-          {weeklyChartMovies.filter(m => m.status === "Running").slice(0, 10).map((m, i) => (
+          {weeklyChartMovies.filter(m => m.status === "Running" && m.showInMainChart === true).slice(0, 10).map((m, i) => (
             <NationalTop10Row key={m.title} movie={m} rank={i + 1} />
           ))}
 
