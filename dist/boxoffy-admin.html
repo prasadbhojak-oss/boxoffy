@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Boxoffy Admin</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',system-ui,sans-serif;background:#F4F5F7;color:#111827;font-size:14px}
+/* ── Password gate ── */
+#gate{position:fixed;inset:0;background:#111827;display:flex;align-items:center;justify-content:center;z-index:999}
+#gate.hidden{display:none}
+.gate-box{background:#1F2937;border-radius:8px;padding:40px;width:340px;text-align:center}
+.gate-logo{font-weight:800;font-size:24px;color:#fff;letter-spacing:-.02em;margin-bottom:4px}
+.gate-logo span{color:#E8261A}
+.gate-sub{font-size:12px;color:#6B7280;margin-bottom:28px}
+.gate-box input{width:100%;padding:10px 14px;border-radius:4px;border:1px solid #374151;background:#111827;color:#fff;font-size:14px;outline:none;margin-bottom:12px;text-align:center;letter-spacing:.08em}
+.gate-box input:focus{border-color:#E8261A}
+.gate-btn{width:100%;padding:10px;background:#E8261A;color:#fff;border:none;border-radius:4px;font-weight:700;font-size:14px;cursor:pointer}
+.gate-err{font-size:12px;color:#FCA5A5;margin-top:8px;display:none}
+.gate-err.show{display:block}
+/* ── Nav ── */
+.nav{background:#111827;padding:0 24px;height:48px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:10}
+.logo{font-weight:800;font-size:18px;color:#fff;letter-spacing:-.02em}.logo span{color:#E8261A}
+.badge{font-size:9px;font-weight:700;padding:2px 8px;border-radius:2px;letter-spacing:.08em;text-transform:uppercase}
+.on{background:#16A34A;color:#fff}.off{background:#6B7280;color:#fff}
+/* ── Config ── */
+.config{background:#fff;border-bottom:1px solid #E2E5EA;padding:12px 24px;display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.config input{font-size:12px;padding:6px 10px;border:1px solid #D1D5DB;border-radius:4px;outline:none;font-family:monospace}
+.config input:focus{border-color:#111827}
+.iw{width:420px}.ip{width:130px}
+.btn{font-size:12px;font-weight:600;padding:6px 14px;border:none;border-radius:4px;cursor:pointer;transition:filter .15s}
+.btn:hover{filter:brightness(.9)}
+.dark{background:#111827;color:#fff}.green{background:#16A34A;color:#fff}
+.ghost{background:transparent;border:1px solid #D1D5DB;color:#374151}
+.sm{font-size:11px;padding:4px 10px}
+.msg{font-size:12px;font-weight:600;padding:4px 10px;border-radius:3px;display:none}
+.msg.show{display:inline-block}.ok{background:#D1FAE5;color:#065F46}.er{background:#FEE2E2;color:#991B1B}
+/* ── Tabs ── */
+.tabs{display:flex;background:#fff;border-bottom:2px solid #E2E5EA;padding:0 24px}
+.tab{padding:10px 18px;font-weight:600;font-size:13px;cursor:pointer;border:none;border-bottom:3px solid transparent;margin-bottom:-2px;color:#6B7280;background:none}
+.tab.active{color:#111827;border-bottom-color:#E8261A}
+.main{max-width:1100px;margin:0 auto;padding:24px}
+.rh{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px}
+.st{font-size:17px;font-weight:700}.hint{font-size:12px;color:#9CA3AF;margin-top:2px}
+/* ── Table ── */
+.tw{background:#fff;border-radius:6px;border:1px solid #E2E5EA;overflow:auto}
+table{width:100%;border-collapse:collapse;min-width:880px}
+th{background:#F9FAFB;font-size:10px;font-weight:700;color:#6B7280;letter-spacing:.07em;text-transform:uppercase;padding:8px 10px;text-align:left;border-bottom:1px solid #E2E5EA;white-space:nowrap}
+td{padding:5px 8px;border-bottom:1px solid #F3F4F6;vertical-align:middle}
+tr:last-child td{border-bottom:none}tr:hover td{background:#FAFAFA}
+.ft{font-weight:700;font-size:13px}.fm{font-size:10px;color:#9CA3AF;margin-top:1px}
+.ei{font-size:12px;padding:3px 6px;border:1px solid #E2E5EA;border-radius:3px;width:100%;outline:none;font-family:monospace;background:#fff}
+.ei:focus{border-color:#3B82F6;background:#EFF6FF}.ei.dirty{border-color:#D97706;background:#FEF9C3}
+.sb{font-size:11px;padding:3px 10px;border:1px solid #D1D5DB;border-radius:3px;background:#fff;cursor:pointer}
+.sb:hover{background:#111827;color:#fff;border-color:#111827}
+.ld{text-align:center;padding:40px;color:#9CA3AF;font-size:13px}
+/* ── Weekly ── */
+.wc{background:#fff;border:1px solid #E2E5EA;border-radius:6px;margin-bottom:12px;overflow:hidden}
+.wh{padding:11px 16px;border-bottom:1px solid #E2E5EA;display:flex;align-items:center;gap:12px;cursor:pointer;user-select:none}
+.wh:hover{background:#FAFAFA}.wn{font-weight:800;font-size:15px}.wr{font-size:12px;color:#6B7280}
+.wb{padding:16px;display:none}.wb.open{display:block}
+.fg{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:12px}
+.fr{display:flex;flex-direction:column;gap:3px}
+.fl{font-size:10px;font-weight:700;color:#6B7280;letter-spacing:.06em;text-transform:uppercase}
+.fi{font-size:12px;padding:5px 8px;border:1px solid #E2E5EA;border-radius:4px;outline:none;width:100%}
+.fi:focus{border-color:#111827}textarea.fi{resize:vertical;height:60px;font-family:inherit}
+.sg{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:12px}
+.sc{background:#F9FAFB;border:1px solid #E2E5EA;border-radius:4px;padding:10px}
+.sl{font-size:10px;font-weight:700;color:#6B7280;letter-spacing:.06em;margin-bottom:6px}
+/* ── BCM ── */
+.bw{background:#fff;border:2px dashed #D1D5DB;border-radius:6px;padding:18px;margin-bottom:18px}
+.bw label{display:block;font-size:11px;font-weight:700;color:#6B7280;letter-spacing:.08em;text-transform:uppercase;margin-bottom:6px}
+.bw textarea{width:100%;height:200px;font-family:monospace;font-size:12px;padding:10px;border:1px solid #E2E5EA;border-radius:4px;resize:vertical;outline:none;line-height:1.6}
+.bw textarea:focus{border-color:#111827}
+.rb{background:#fff;border:1px solid #E2E5EA;border-radius:6px;padding:16px;margin-top:14px}
+.rt{font-size:11px;font-weight:700;color:#374151;text-transform:uppercase;letter-spacing:.06em;margin-bottom:8px}
+pre{font-size:11px;color:#6B7280;line-height:1.7;white-space:pre-wrap;font-family:monospace}
+.ub{background:#FEF3C7;border-bottom:1px solid #FCD34D;padding:7px 24px;font-size:12px;color:#92400E;font-weight:600;display:none}
+.ub.show{display:block}
+</style>
+</head>
+<body>
+
+<!-- Password gate -->
+<div id="gate">
+  <div class="gate-box">
+    <div class="gate-logo">BOXOF<span>FY</span></div>
+    <div class="gate-sub">Admin Access</div>
+    <input type="password" id="gate-pw" placeholder="Enter admin password" onkeydown="if(event.key==='Enter')unlock()"/>
+    <button class="gate-btn" onclick="unlock()">Enter</button>
+    <div class="gate-err" id="gate-err">Incorrect password</div>
+  </div>
+</div>
+
+<nav class="nav">
+  <div class="logo">BOXOF<span>FY</span><span style="font-size:11px;color:#6B7280;font-weight:400;margin-left:8px">Admin · Live Data</span></div>
+  <div id="cb" class="badge off">NOT CONNECTED</div>
+</nav>
+<div class="ub" id="ub">⚠ Unsaved changes — Save row or Save All</div>
+<div class="config">
+  <input class="iw" id="su" placeholder="Apps Script URL"/>
+  <input class="ip" id="tk" type="password" placeholder="Token"/>
+  <button class="btn dark" onclick="connect()">Connect</button>
+  <button class="btn ghost" onclick="saveCfg()">Save Config</button>
+  <span id="cm" class="msg"></span>
+</div>
+<div class="tabs">
+  <button class="tab active" onclick="showTab('f',this)">Running Films</button>
+  <button class="tab" onclick="showTab('w',this)">Weekly Commentary</button>
+  <button class="tab" onclick="showTab('b',this)">BCM Update</button>
+</div>
+<div class="main">
+  <div id="tf">
+    <div class="rh">
+      <div><div class="st">Running Films <span id="fc" style="font-size:13px;font-weight:400;color:#9CA3AF"></span></div>
+        <div class="hint">Edit any cell → Save row or Save All Changed</div></div>
+      <div style="display:flex;gap:8px">
+        <button class="btn ghost sm" onclick="loadFilms()">↻ Refresh</button>
+        <button class="btn green sm" onclick="saveAll()">Save All Changed</button>
+      </div>
+    </div>
+    <div id="fw" class="ld">Connect to load data</div>
+  </div>
+  <div id="tw" style="display:none">
+    <div class="rh">
+      <div><div class="st">Weekly Commentary</div><div class="hint">Expand a week to edit</div></div>
+      <button class="btn ghost sm" onclick="loadWeekly()">↻ Refresh</button>
+    </div>
+    <div id="ww" class="ld">Connect to load data</div>
+  </div>
+  <div id="tb" style="display:none">
+    <div class="rh"><div><div class="st">Apply BCM Update</div>
+      <div class="hint">Paste JSON from Claude → Apply → Sheet updates instantly</div></div></div>
+    <div class="bw">
+      <label>BCM Update Payload</label>
+      <textarea id="bp" placeholder="Paste the SHEET UPDATE block from Claude here..."></textarea>
+      <div style="display:flex;gap:8px;margin-top:10px;align-items:center">
+        <button class="btn dark" onclick="applyBCM()">Apply to Sheet →</button>
+        <button class="btn ghost sm" onclick="document.getElementById('bp').value=''">Clear</button>
+        <span id="bm" class="msg"></span>
+      </div>
+    </div>
+    <div class="rb">
+      <div class="rt">Claude generates this format automatically after every BCM session</div>
+      <pre>{
+  "updates": [
+    {
+      "title": "Bhooth Bangla",
+      "fields": {
+        "weeklyCollection": 7,
+        "indiaNet": "₹72 Cr",
+        "ww": "~₹114 Cr",
+        "totalNum": 72,
+        "weekNum": 1,
+        "daysInRelease": 5,
+        "verdict": "HIT",
+        "weeklyNote": "D4 ₹7 Cr BOI confirmed · W1 total ₹72 Cr"
+      }
+    }
+  ],
+  "weeklyUpdate": {
+    "weekNum": "Week 17",
+    "fields": {
+      "headline": "Bhooth Bangla opens strong.",
+      "film1": "Bhooth Bangla",
+      "film1_collection": "~₹72 Cr",
+      "film1_total": "~₹72 Cr",
+      "film1_verdict": "HIT"
+    }
+  }
+}</pre>
+    </div>
+  </div>
+</div>
+
+<script>
+// ── Gate password (separate from Apps Script token) ──
+const GATE_PW = "boxoffy2026";
+
+function unlock() {
+  const pw = document.getElementById("gate-pw").value;
+  if (pw === GATE_PW) {
+    document.getElementById("gate").classList.add("hidden");
+    init();
+  } else {
+    document.getElementById("gate-err").classList.add("show");
+    document.getElementById("gate-pw").value = "";
+  }
+}
+
+function init() {
+  const c = JSON.parse(localStorage.getItem("bx")||"{}");
+  if (c.s) document.getElementById("su").value = c.s;
+  if (c.t) document.getElementById("tk").value = c.t;
+  if (c.s && c.t) connect();
+}
+
+let S="", T="", films=[], dirty=new Set();
+
+function saveCfg() {
+  localStorage.setItem("bx", JSON.stringify({
+    s: document.getElementById("su").value.trim(),
+    t: document.getElementById("tk").value.trim()
+  }));
+  fl("cm","Config saved","ok");
+}
+
+async function connect() {
+  S = document.getElementById("su").value.trim();
+  T = document.getElementById("tk").value.trim();
+  if (!S||!T) return fl("cm","Enter URL and token","er");
+  fl("cm","Connecting…","ok");
+  const r = await gget({ping:1});
+  if (r?.ok) {
+    document.getElementById("cb").textContent = "CONNECTED";
+    document.getElementById("cb").className = "badge on";
+    fl("cm","Connected ✓","ok");
+    loadFilms();
+  } else {
+    fl("cm","Failed — check URL / token","er");
+  }
+}
+
+async function gget(p) {
+  const qs = new URLSearchParams({...p, token:T}).toString();
+  try {
+    const r = await fetch(`${S}?${qs}`, { mode:"cors", redirect:"follow" });
+    const text = await r.text();
+    const json = JSON.parse(text);
+    // Accept both {ok:true} and {status:"ok"} (old script compat)
+    if (json.pong || json.status === "ok") json.ok = true;
+    return json;
+  } catch(e) {
+    console.error("GET error:", e);
+    fl("cm", "Error: " + e.message, "er");
+    return null;
+  }
+}
+
+// All writes via GET — Apps Script POST redirect drops the body
+async function ppost(b) {
+  const params = { token:T, action:b.action };
+  if (b.title)   params.title   = b.title;
+  if (b.weekNum) params.weekNum = b.weekNum;
+  if (b.fields)  params.fields  = JSON.stringify(b.fields);
+  if (b.updates) params.updates = JSON.stringify(b.updates);
+  const qs = new URLSearchParams(params).toString();
+  try {
+    const r = await fetch(`${S}?${qs}`, {redirect:"follow"});
+    const text = await r.text();
+    return JSON.parse(text);
+  } catch(e) {
+    console.error("Write error:", e);
+    return { ok:false, error: e.message };
+  }
+}
+
+async function loadFilms() {
+  document.getElementById("fw").innerHTML = '<div class="ld">Loading…</div>';
+  const r = await gget({action:"getFilms"});
+  if (!r?.ok) return document.getElementById("fw").innerHTML = `<div class="ld">Error: ${r?.error||"check connection"}</div>`;
+  films = r.films||[];
+  document.getElementById("fc").textContent = `(${films.length} running)`;
+  renderFilms();
+}
+
+const VC = {"ALL-TIME BLOCKBUSTER":"#92400E","Blockbuster":"#065F46","Super Hit":"#166534","Hit":"#1E40AF","HIT":"#1E40AF","Average":"#374151","Flop":"#991B1B","FLOP":"#991B1B","Disaster":"#9D174D"};
+
+function renderFilms() {
+  dirty.clear();
+  document.getElementById("ub").classList.remove("show");
+  const COLS = ["weeklyCollection","indiaNet","ww","weekNum","daysInRelease","lastWeekCollection","verdict","weeklyNote"];
+  const W    = [80,110,110,44,44,64,70,180];
+  const h = `<div class="tw"><table>
+    <thead><tr><th>#</th><th>Film</th>${COLS.map((c,i)=>`<th style="min-width:${W[i]}px">${c}</th>`).join("")}<th></th></tr></thead>
+    <tbody>${films.map((f,i)=>`<tr id="r${i}">
+      <td style="color:#9CA3AF;font-weight:700;font-size:12px;width:28px">${i+1}</td>
+      <td style="min-width:150px"><div class="ft">${f.title||""}</div><div class="fm">${f.language||""} · ${f.releaseDate||""}</div></td>
+      ${COLS.map((c,ci)=>`<td><input class="ei" style="min-width:${W[ci]}px" data-r="${i}" data-f="${c}" value="${e(String(f[c]===null?"":f[c]))}" oninput="mk(this,${i})"/></td>`).join("")}
+      <td><button class="sb" onclick="saveRow(${i})">Save</button></td>
+    </tr>`).join("")}</tbody></table></div>`;
+  document.getElementById("fw").innerHTML = h;
+}
+
+function mk(el,i) { el.classList.add("dirty"); dirty.add(i); films[i][el.dataset.f]=el.value; document.getElementById("ub").classList.add("show"); }
+
+async function saveRow(i) {
+  const f=films[i], fs={};
+  document.querySelectorAll(`[data-r="${i}"]`).forEach(el=>fs[el.dataset.f]=el.value);
+  sw(fs);
+  const r = await ppost({action:"updateFilm", title:f.title, fields:fs});
+  if (r?.ok) {
+    document.querySelectorAll(`[data-r="${i}"]`).forEach(el=>el.classList.remove("dirty"));
+    dirty.delete(i);
+    if (!dirty.size) document.getElementById("ub").classList.remove("show");
+    fl("cm",`✓ ${f.title}`,"ok");
+  } else fl("cm",`Error: ${r?.error}`,"er");
+}
+
+async function saveAll() {
+  if (!dirty.size) return;
+  const upd=[];
+  dirty.forEach(i=>{
+    const f=films[i], fs={};
+    document.querySelectorAll(`[data-r="${i}"]`).forEach(el=>fs[el.dataset.f]=el.value);
+    sw(fs); upd.push({title:f.title, fields:fs});
+  });
+  const r = await ppost({action:"bulkUpdate", updates:upd});
+  if (r?.ok) {
+    dirty.clear();
+    document.querySelectorAll(".dirty").forEach(el=>el.classList.remove("dirty"));
+    document.getElementById("ub").classList.remove("show");
+    fl("cm",`✓ ${upd.length} saved`,"ok");
+  } else fl("cm",`Error: ${r?.error}`,"er");
+}
+
+function sw(fs) { if(fs.ww){fs.wwGross=fs.ww.includes("WW")?fs.ww:fs.ww+" WW"; fs.totalCollection=fs.wwGross;} }
+
+async function loadWeekly() {
+  document.getElementById("ww").innerHTML = '<div class="ld">Loading…</div>';
+  const r = await gget({action:"getWeekly"});
+  if (!r?.ok) return document.getElementById("ww").innerHTML = `<div class="ld">Error: ${r?.error}</div>`;
+  const entries = r.entries||[];
+  const h = entries.map((row,i)=>`
+    <div class="wc"><div class="wh" onclick="twk(${i})">
+      <span class="wn">${row.weekNum||"—"}</span><span class="wr">${row.dateRange||""}</span>
+      <span style="font-size:10px;color:#9CA3AF;margin-left:auto">${row.status||""} ▾</span>
+    </div>
+    <div class="wb" id="wb${i}">
+      <div class="fg">
+        <div class="fr"><span class="fl">Headline</span><input class="fi" id="w${i}headline" value="${e(row.headline)}"/></div>
+        <div class="fr"><span class="fl">Subline</span><input class="fi" id="w${i}subline" value="${e(row.subline)}"/></div>
+      </div>
+      <div class="sg">${[1,2,3].map(n=>`<div class="sc"><div class="sl">Film ${n}</div>
+        <input class="fi" style="margin-bottom:4px" id="w${i}f${n}" placeholder="Title" value="${e(row['film'+n])}"/>
+        <input class="fi" style="margin-bottom:4px" id="w${i}f${n}c" placeholder="This week" value="${e(row['film'+n+'_collection'])}"/>
+        <input class="fi" style="margin-bottom:4px" id="w${i}f${n}t" placeholder="Total" value="${e(row['film'+n+'_total'])}"/>
+        <input class="fi" id="w${i}f${n}v" placeholder="Verdict" value="${e(row['film'+n+'_verdict'])}"/></div>`).join("")}</div>
+      <div class="fr" style="margin-bottom:8px"><span class="fl">Interval Take</span>
+        <textarea class="fi" id="w${i}it">${e(row.intervalTake||row.interval_take)}</textarea></div>
+      <div class="fr" style="margin-bottom:12px"><span class="fl">Next Week</span>
+        <input class="fi" id="w${i}nw" value="${e(row.nextWeek)}"/></div>
+      <div style="display:flex;align-items:center;gap:10px">
+        <button class="btn dark sm" onclick="saveWk(${i},'${e(String(row.weekNum))}')">Save ${row.weekNum||""}</button>
+        <span id="wm${i}" class="msg"></span></div>
+    </div></div>`).join("");
+  document.getElementById("ww").innerHTML = h||'<div class="ld">No entries</div>';
+}
+
+function twk(i) { document.getElementById(`wb${i}`).classList.toggle("open"); }
+
+async function saveWk(i,wn) {
+  const fs={};
+  [["headline",`w${i}headline`],["subline",`w${i}subline`],["intervalTake",`w${i}it`],["nextWeek",`w${i}nw`],
+   ...[1,2,3].flatMap(n=>[["film"+n,`w${i}f${n}`],["film"+n+"_collection",`w${i}f${n}c`],["film"+n+"_total",`w${i}f${n}t`],["film"+n+"_verdict",`w${i}f${n}v`]])
+  ].forEach(([k,id])=>{ const el=document.getElementById(id); if(el) fs[k]=el.value; });
+  const r = await ppost({action:"updateWeek", weekNum:wn, fields:fs});
+  fl(`wm${i}`, r?.ok?"✓ Saved":`Error: ${r?.error}`, r?.ok?"ok":"er");
+}
+
+async function applyBCM() {
+  const raw = document.getElementById("bp").value.trim();
+  if (!raw) return fl("bm","Nothing to apply","er");
+  let p; try { p=JSON.parse(raw); } catch { return fl("bm","Invalid JSON","er"); }
+  fl("bm","Applying…","ok");
+  const calls=[];
+  if (p.updates?.length) calls.push(ppost({action:"bulkUpdate", updates:p.updates}));
+  if (p.weeklyUpdate)    calls.push(ppost({action:"updateWeek", weekNum:p.weeklyUpdate.weekNum, fields:p.weeklyUpdate.fields}));
+  if (p.title&&p.fields) calls.push(ppost({action:"updateFilm", title:p.title, fields:p.fields}));
+  const rs = await Promise.all(calls);
+  const allOk = rs.every(r=>r?.ok);
+  fl("bm", allOk?`✓ ${rs.length} update(s) applied`:"Some updates failed — check console", allOk?"ok":"er");
+  if (allOk) { document.getElementById("bp").value=""; setTimeout(loadFilms,1000); }
+}
+
+function showTab(n,btn) {
+  ["f","w","b"].forEach(t=>document.getElementById("t"+t).style.display=t===n?"":"none");
+  document.querySelectorAll(".tab").forEach(b=>b.classList.remove("active")); btn.classList.add("active");
+  if (n==="w"&&S) loadWeekly();
+}
+
+function fl(id,txt,type) {
+  const el=document.getElementById(id); if(!el)return;
+  el.textContent=txt; el.className=`msg show ${type}`;
+  setTimeout(()=>el.classList.remove("show"),4000);
+}
+function e(s){return(s||"").replace(/&/g,"&amp;").replace(/"/g,"&quot;").replace(/</g,"&lt;");}
+</script>
+</body>
+</html>

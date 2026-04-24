@@ -379,40 +379,21 @@ function Fn({ n, style = {} }) {
 
 /* ── SHARE SHEET ─────────────────────────────────────────────── */
 /* ── SHARE PANEL (inline — no fixed positioning) ── */
-function SharePanel({ movie, onClose, mode = "india" }) {
+function SharePanel({ movie, onClose }) {
   const [copied, setCopied] = React.useState(null);
 
   const title   = movie.title || "";
+  const wk      = movie.weeklyCollection > 0 ? "₹" + movie.weeklyCollection + " Cr" : "";
+  const total   = movie.indiaNet || (movie.totalNum > 0 ? "₹" + movie.totalNum + " Cr" : "");
+  const verdict = movie.verdict || "";
+  const wkNum   = movie.weekNum > 0 ? "Wk " + movie.weekNum : "";
   const pageUrl = "https://boxoffy.com";   // always link to live weekly chart, not static film pages
 
-  // Build captions based on mode — India films use ₹/Cr/India nett, US films use $/wknd/cume/theaters
-  let tX, tThreads, tFB, tIG, tWA;
-  if (mode === "us") {
-    const wknd     = movie.weekend || "";
-    const cume     = movie.total || "";
-    const wkNum    = movie.weeks > 0 ? "Wk " + movie.weeks : "";
-    const studio   = movie.studio || "";
-    const thtrs    = movie.theaters > 0 ? movie.theaters.toLocaleString() + " theaters" : "";
-    const indianTag = movie.isIndian ? " 🇮🇳" : "";
-
-    tX       = title + indianTag + (wknd ? " — " + wknd + " weekend" : "") + (cume ? " · " + cume + " cume" : "") + (wkNum ? " · " + wkNum : "") + " #USBoxOffice #BoxOffice\n" + pageUrl;
-    tThreads = title + indianTag + (wknd ? " grossed " + wknd + " this weekend" : "") + (cume ? " · " + cume + " domestic cume" : "") + (wkNum ? " · " + wkNum : "") + "\n\nFull US chart → " + pageUrl;
-    tFB      = title + indianTag + (wkNum ? " (" + wkNum + ")" : "") + (wknd ? "\nWeekend: " + wknd : "") + (cume ? "\nDomestic cume: " + cume : "") + (thtrs ? "\nIn " + thtrs : "") + (studio ? "\nStudio: " + studio : "") + "\n\nBoxoffy — US Box Office\n" + pageUrl;
-    tIG      = title + indianTag + (wknd ? " | " + wknd + " wknd" : "") + (cume ? " | " + cume + " cume" : "") + "\n\nFull US chart → boxoffy.com\n.\n.\n.\n#USBoxOffice #BoxOffice #Boxoffy" + (movie.isIndian ? " #IndianCinema" : "");
-    tWA      = "*" + title + "*" + indianTag + (wkNum ? " · " + wkNum : "") + "\n" + (wknd ? "Weekend: *" + wknd + "*\n" : "") + (cume ? "Domestic cume: *" + cume + "*\n" : "") + (thtrs ? thtrs + "\n" : "") + "\nBoxoffy → " + pageUrl;
-  } else {
-    // India mode (default — unchanged)
-    const wk      = movie.weeklyCollection > 0 ? "₹" + movie.weeklyCollection + " Cr" : "";
-    const total   = movie.indiaNet || (movie.totalNum > 0 ? "₹" + movie.totalNum + " Cr" : "");
-    const verdict = movie.verdict || "";
-    const wkNum   = movie.weekNum > 0 ? "Wk " + movie.weekNum : "";
-
-    tX       = title + (wk ? " — " + wk + " this week" : "") + (total ? " · " + total + " total" : "") + (verdict ? ". " + verdict + "." : "") + " #BoxOffice #Bollywood\n" + pageUrl;
-    tThreads = title + (wk ? " collected " + wk + " this week" : "") + (total ? " · " + total + " total" : "") + (verdict ? " · " + verdict : "") + "\n\nFull data & BCM model → " + pageUrl;
-    tFB      = title + (wkNum ? " (" + wkNum + ")" : "") + (wk ? "\nThis week: " + wk : "") + (total ? "\nTotal India nett: " + total : "") + (verdict ? "\nVerdict: " + verdict : "") + "\n\nBoxoffy — India Box Office Intelligence\n" + pageUrl;
-    tIG      = title + (wk ? " | " + wk + " this week" : "") + (total ? " | " + total + " total" : "") + (verdict ? "\n\n" + verdict + " 🎬" : "") + "\n\nTrack every rupee → boxoffy.com\n.\n.\n.\n#BoxOffice #Bollywood #IndianCinema #Boxoffy";
-    tWA      = "*" + title + "*" + (wkNum ? " · " + wkNum : "") + "\n" + (wk ? "This week: *" + wk + "*\n" : "") + (total ? "India nett: *" + total + "*\n" : "") + (verdict ? "Verdict: *" + verdict + "*\n" : "") + "\nBoxoffy → " + pageUrl;
-  }
+  const tX       = title + (wk ? " — " + wk + " this week" : "") + (total ? " · " + total + " total" : "") + (verdict ? ". " + verdict + "." : "") + " #BoxOffice #Bollywood\n" + pageUrl;
+  const tThreads = title + (wk ? " collected " + wk + " this week" : "") + (total ? " · " + total + " total" : "") + (verdict ? " · " + verdict : "") + "\n\nFull data & BCM model → " + pageUrl;
+  const tFB      = title + (wkNum ? " (" + wkNum + ")" : "") + (wk ? "\nThis week: " + wk : "") + (total ? "\nTotal India nett: " + total : "") + (verdict ? "\nVerdict: " + verdict : "") + "\n\nBoxoffy — India Box Office Intelligence\n" + pageUrl;
+  const tIG      = title + (wk ? " | " + wk + " this week" : "") + (total ? " | " + total + " total" : "") + (verdict ? "\n\n" + verdict + " 🎬" : "") + "\n\nTrack every rupee → boxoffy.com\n.\n.\n.\n#BoxOffice #Bollywood #IndianCinema #Boxoffy";
+  const tWA      = "*" + title + "*" + (wkNum ? " · " + wkNum : "") + "\n" + (wk ? "This week: *" + wk + "*\n" : "") + (total ? "India nett: *" + total + "*\n" : "") + (verdict ? "Verdict: *" + verdict + "*\n" : "") + "\nBoxoffy → " + pageUrl;
 
   const platforms = [
     { id:"x",       label:"X / Twitter", icon:"𝕏", color:"#000",    text:tX,       openUrl:"https://twitter.com/intent/tweet?text=" + encodeURIComponent(tX),              canOpen:true  },
@@ -798,7 +779,7 @@ function NavBar({ activeSection, setActiveSection, setForceAllTime }) {
   const isMobile = useIsMobile();
   const [menuOpen, setMenuOpen] = React.useState(false);
 
-  const navLinks = ["Box Office","OTT","TV","Weekly"];
+  const navLinks = ["Box Office","OTT","TV","Music","Weekly"];
 
   return (
     <div style={{ position:"sticky", top:0, zIndex:100 }}>
@@ -822,7 +803,7 @@ function NavBar({ activeSection, setActiveSection, setForceAllTime }) {
         {!isMobile && <>
           <div style={{ width:1, height:20, background:"#E5E7EB", marginRight:24, flexShrink:0 }} />
           {navLinks.map(s => {
-            const extLink = s === "OTT" ? "/ott-releases.html" : s === "TV" ? "/tv-ratings.html" : null;
+            const extLink = s === "OTT" ? "/ott-releases.html" : s === "TV" ? "/tv-ratings.html" : s === "Music" ? "/music-crossplatform-top-10-hindi-april-2026.html" : null;
             if (extLink) return (
               <a key={s} href={extLink} style={{
                 fontFamily:"'DM Sans', sans-serif", fontWeight:600, fontSize:13,
@@ -918,7 +899,7 @@ function NavBar({ activeSection, setActiveSection, setForceAllTime }) {
             <SearchBar />
           </div>
           {navLinks.map(s => {
-            const extLink = s === "OTT" ? "/ott-releases.html" : s === "TV" ? "/tv-ratings.html" : null;
+            const extLink = s === "OTT" ? "/ott-releases.html" : s === "TV" ? "/tv-ratings.html" : s === "Music" ? "/music-crossplatform-top-10-hindi-april-2026.html" : null;
             if (extLink) return (
               <a key={s} href={extLink} style={{
                 display:"block", width:"100%", textAlign:"left",
@@ -3313,54 +3294,6 @@ function BogDivider({ label, color, bg, dotColor }) {
 // ── Main Panel ───────────────────────────────────────────────────────
 
 /* ── US BOX OFFICE TOP 10 PANEL ─────────────────────────── */
-/* ── US BO MOBILE CARD (per-row wrapper for share state) ── */
-function USBoMobileCard({ film, getRankColor, getChangeColor }) {
-  const [shareOpen, setShareOpen] = React.useState(false);
-  return (
-    <div>
-      {shareOpen && <SharePanel movie={film} mode="us" onClose={() => setShareOpen(false)} />}
-      <div style={{
-        borderBottom:`1px solid ${T.border}`,
-        background: film.isIndian ? "#FFFBF0" : film.rank === 1 ? "#FFFDF5" : T.surface,
-        padding:"11px 14px",
-        borderLeft: film.isIndian ? "3px solid #D97706" : film.rank === 1 ? `3px solid ${T.accent}` : "3px solid transparent",
-      }}>
-        <div style={{ display:"flex", justifyContent:"space-between", alignItems:"flex-start", marginBottom:5 }}>
-          <div style={{ display:"flex", alignItems:"center", gap:8 }}>
-            {film.rank <= 3
-              ? <span style={{ fontSize:20 }}>{["🥇","🥈","🥉"][film.rank-1]}</span>
-              : <span style={{ fontFamily:"'Barlow Condensed',sans-serif", fontWeight:700, fontSize:18, color:film.isIndian ? "#D97706" : getRankColor(film.rank) }}>#{film.rank}</span>
-            }
-            {film.isIndian && <span style={{ fontSize:13 }}>🇮🇳</span>}
-            <span style={{ fontFamily:"'DM Sans',sans-serif", fontSize:10, color:getChangeColor(film.change), fontWeight:700 }}>
-              {film.change === "NEW" ? "★ NEW" : film.change === "LTD" ? "LIMITED" : film.change}
-            </span>
-          </div>
-          {film.rtScore && film.rtScore !== "N/A" && (
-            <span style={{ fontFamily:"'DM Sans',sans-serif", fontSize:10, color:"#DC2626", fontWeight:700 }}>🍅 {film.rtScore}</span>
-          )}
-        </div>
-        <div style={{ fontFamily:"'Barlow Condensed',sans-serif", fontWeight:700, fontSize:18, color: film.isIndian ? "#92400E" : T.text, lineHeight:1.1, marginBottom:5 }}>{film.title}</div>
-        <div style={{ display:"flex", gap:14, alignItems:"center", flexWrap:"wrap", marginBottom:4 }}>
-          <span style={{ fontFamily:"'Barlow Condensed',sans-serif", fontWeight:800, fontSize:21, color: film.rank === 1 ? T.accent : film.isIndian ? "#D97706" : T.text }}>{film.weekend}</span>
-          <span style={{ fontFamily:"'DM Sans',sans-serif", fontSize:11, color:T.textMuted }}>Total: {film.total}</span>
-          <span style={{ fontFamily:"'DM Sans',sans-serif", fontSize:11, color:T.textMuted }}>{film.theaters.toLocaleString()} thtr</span>
-        </div>
-        <div style={{ display:"flex", justifyContent:"space-between", alignItems:"center", gap:8 }}>
-          <div style={{ fontFamily:"'DM Sans',sans-serif", fontSize:10, color:T.textMuted, flex:1, minWidth:0, overflow:"hidden", textOverflow:"ellipsis", whiteSpace:"nowrap" }}>{film.studio} · {film.genre} · Wk {film.weeks}</div>
-          <button onClick={() => setShareOpen(v => !v)} style={{
-            fontFamily:"'DM Sans',sans-serif", fontWeight:700, fontSize:10,
-            background: shareOpen ? T.accent : "#F3F4F6",
-            color: shareOpen ? "#fff" : "#374151",
-            border:"none", borderRadius:4, padding:"3px 10px", cursor:"pointer",
-            display:"inline-flex", alignItems:"center", gap:4, flexShrink:0,
-          }}>↗ Share</button>
-        </div>
-      </div>
-    </div>
-  );
-}
-
 function USBoTop10({ weekData }) {
   if (!weekData) return <div style={{ padding:24, color:T.textMuted, fontFamily:"'DM Sans',sans-serif", fontSize:12 }}>No US BO data available.</div>;
 
@@ -3418,7 +3351,36 @@ function USBoTop10({ weekData }) {
 
       {/* Rows */}
       {weekData.chart.map((film, i) => isMobile ? (
-        <USBoMobileCard key={i} film={film} getRankColor={getRankColor} getChangeColor={getChangeColor} />
+        /* Mobile card */
+        <div key={i} style={{
+          borderBottom:`1px solid ${T.border}`,
+          background: film.isIndian ? "#FFFBF0" : film.rank === 1 ? "#FFFDF5" : T.surface,
+          padding:"11px 14px",
+          borderLeft: film.isIndian ? "3px solid #D97706" : film.rank === 1 ? `3px solid ${T.accent}` : "3px solid transparent",
+        }}>
+          <div style={{ display:"flex", justifyContent:"space-between", alignItems:"flex-start", marginBottom:5 }}>
+            <div style={{ display:"flex", alignItems:"center", gap:8 }}>
+              {film.rank <= 3
+                ? <span style={{ fontSize:20 }}>{["🥇","🥈","🥉"][film.rank-1]}</span>
+                : <span style={{ fontFamily:"'Barlow Condensed',sans-serif", fontWeight:700, fontSize:18, color:film.isIndian ? "#D97706" : getRankColor(film.rank) }}>#{film.rank}</span>
+              }
+              {film.isIndian && <span style={{ fontSize:13 }}>🇮🇳</span>}
+              <span style={{ fontFamily:"'DM Sans',sans-serif", fontSize:10, color:getChangeColor(film.change), fontWeight:700 }}>
+                {film.change === "NEW" ? "★ NEW" : film.change === "LTD" ? "LIMITED" : film.change}
+              </span>
+            </div>
+            {film.rtScore && film.rtScore !== "N/A" && (
+              <span style={{ fontFamily:"'DM Sans',sans-serif", fontSize:10, color:"#DC2626", fontWeight:700 }}>🍅 {film.rtScore}</span>
+            )}
+          </div>
+          <div style={{ fontFamily:"'Barlow Condensed',sans-serif", fontWeight:700, fontSize:18, color: film.isIndian ? "#92400E" : T.text, lineHeight:1.1, marginBottom:5 }}>{film.title}</div>
+          <div style={{ display:"flex", gap:14, alignItems:"center", flexWrap:"wrap", marginBottom:4 }}>
+            <span style={{ fontFamily:"'Barlow Condensed',sans-serif", fontWeight:800, fontSize:21, color: film.rank === 1 ? T.accent : film.isIndian ? "#D97706" : T.text }}>{film.weekend}</span>
+            <span style={{ fontFamily:"'DM Sans',sans-serif", fontSize:11, color:T.textMuted }}>Total: {film.total}</span>
+            <span style={{ fontFamily:"'DM Sans',sans-serif", fontSize:11, color:T.textMuted }}>{film.theaters.toLocaleString()} thtr</span>
+          </div>
+          <div style={{ fontFamily:"'DM Sans',sans-serif", fontSize:10, color:T.textMuted }}>{film.studio} · {film.genre} · Wk {film.weeks}</div>
+        </div>
       ) : (
         /* Desktop row */
         <div key={i} style={{
@@ -3473,7 +3435,64 @@ function USBoTop10({ weekData }) {
         </div>
       ))}
 
-      {/* India Spotlight section REMOVED v3.34.2 — Indian films now inline in main top 10 with amber border + 🇮🇳 flag */}
+      {/* India Spotlight — Indian films ranked outside the top 10 */}
+      {weekData.indianSpotlight && weekData.indianSpotlight.length > 0 && (
+        <div>
+          <div style={{ background:"#FFFBF0", borderTop:`2px solid #D97706`, borderBottom:`1px solid #FDE68A`, padding:"6px 16px", display:"flex", alignItems:"center", gap:8 }}>
+            <span style={{ fontSize:14 }}>🇮🇳</span>
+            <span style={{ fontFamily:"'Barlow Condensed',sans-serif", fontWeight:900, fontSize:11, letterSpacing:"0.18em", textTransform:"uppercase", color:"#92400E" }}>India at the US Box Office</span>
+            <span style={{ fontFamily:"'DM Sans',sans-serif", fontSize:9, color:"#B45309" }}>— ranked outside top 10, shown separately</span>
+          </div>
+          {weekData.indianSpotlight.map((film, i) => isMobile ? (
+            <div key={i} style={{ borderBottom:`1px solid #FDE68A`, background:"#FFFBF0", padding:"11px 14px", borderLeft:"3px solid #D97706" }}>
+              <div style={{ display:"flex", alignItems:"center", gap:8, marginBottom:4 }}>
+                <span style={{ fontFamily:"'Barlow Condensed',sans-serif", fontWeight:900, fontSize:16, color:"#D97706" }}>#{film.rank}</span>
+                <span style={{ fontSize:13 }}>🇮🇳</span>
+                <span style={{ fontFamily:"'DM Sans',sans-serif", fontSize:10, color:getChangeColor(film.change), fontWeight:700 }}>{film.change === "NEW" ? "★ NEW" : film.change}</span>
+              </div>
+              <div style={{ fontFamily:"'Barlow Condensed',sans-serif", fontWeight:700, fontSize:18, color:"#92400E", marginBottom:4 }}>{film.title}</div>
+              <div style={{ display:"flex", gap:12, flexWrap:"wrap" }}>
+                <span style={{ fontFamily:"'Barlow Condensed',sans-serif", fontWeight:800, fontSize:18, color:"#D97706" }}>{film.weekend}</span>
+                <span style={{ fontFamily:"'DM Sans',sans-serif", fontSize:11, color:"#92400E" }}>Total: {film.total}</span>
+                <span style={{ fontFamily:"'DM Sans',sans-serif", fontSize:11, color:"#92400E" }}>{film.theaters} thtr</span>
+              </div>
+              <div style={{ fontFamily:"'DM Sans',sans-serif", fontSize:10, color:"#B45309", marginTop:4 }}>{film.admitsNote}</div>
+            </div>
+          ) : (
+            <div key={i} style={{ display:"grid", gridTemplateColumns:"36px 28px 1fr 100px 110px 80px 70px 60px", borderBottom:`1px solid #FDE68A`, background:"#FFFBF0", alignItems:"center", minHeight:48, borderLeft:"3px solid #D97706" }}>
+              <div style={{ textAlign:"center", padding:"0 4px" }}>
+                <span style={{ fontFamily:"'Barlow Condensed',sans-serif", fontWeight:700, fontSize:18, color:"#D97706" }}>#{film.rank}</span>
+              </div>
+              <div style={{ textAlign:"center" }}><span style={{ fontSize:13 }}>🇮🇳</span></div>
+              <div style={{ padding:"8px 12px" }}>
+                <div style={{ fontFamily:"'Barlow Condensed',sans-serif", fontWeight:700, fontSize:15, color:"#92400E" }}>{film.title}</div>
+                <div style={{ display:"flex", gap:6, marginTop:2 }}>
+                  <span style={{ fontFamily:"'DM Sans',sans-serif", fontSize:10, color:"#B45309" }}>{film.studio}</span>
+                  <span style={{ background:"#FEF3C7", border:"1px solid #FDE68A", fontFamily:"'DM Sans',sans-serif", fontSize:9, color:"#92400E", padding:"1px 5px", borderRadius:2 }}>{film.genre}</span>
+                </div>
+              </div>
+              <div style={{ padding:"0 8px", textAlign:"right" }}>
+                <div style={{ fontFamily:"'Barlow Condensed',sans-serif", fontWeight:700, fontSize:17, color:"#D97706" }}>{film.weekend}</div>
+                <div style={{ fontFamily:"'DM Sans',sans-serif", fontSize:9, color:"#B45309", marginTop:1 }}>Wk {film.weeks} · {film.theaters} thtr</div>
+              </div>
+              <div style={{ padding:"0 8px", textAlign:"right" }}>
+                <div style={{ fontFamily:"'Barlow Condensed',sans-serif", fontWeight:700, fontSize:15, color:"#92400E" }}>{film.total}</div>
+                <div style={{ fontFamily:"'DM Sans',sans-serif", fontSize:9, color:"#B45309", marginTop:1 }}>NA Cumulative</div>
+              </div>
+              <div style={{ padding:"0 8px", textAlign:"right" }}>
+                <div style={{ fontFamily:"'Barlow Condensed',sans-serif", fontWeight:600, fontSize:14, color:"#92400E" }}>{film.theaters}</div>
+                <div style={{ fontFamily:"'DM Sans',sans-serif", fontSize:9, color:"#B45309" }}>Locations</div>
+              </div>
+              <div style={{ padding:"0 8px", textAlign:"right" }}>
+                <span style={{ fontFamily:"'Barlow Condensed',sans-serif", fontWeight:700, fontSize:13, color:getChangeColor(film.change) }}>{film.change}</span>
+              </div>
+              <div style={{ padding:"0 8px", textAlign:"right" }}>
+                <div style={{ fontFamily:"'DM Sans',sans-serif", fontSize:10, color:"#B45309", lineHeight:1.3 }}>{film.admitsNote}</div>
+              </div>
+            </div>
+          ))}
+        </div>
+      )}
 
       {/* Footer */}
       <div style={{ padding:"8px 16px", background:"#F9FAFB", borderTop:`1px solid ${T.border}`, display:"flex", alignItems:"center", gap:12, flexWrap:"wrap" }}>
@@ -3568,7 +3587,7 @@ function ForeignFilmsPanel({ movies }) {
 
       {/* ── Global view: US BO Top 10 ─────────────────────────── */}
       {viewMode === "global"
-        ? <USBoTop10 weekData={US_BO_WEEKLY["Week 18, 2026"] || US_BO_WEEKLY["Week 17, 2026"]} />
+        ? <USBoTop10 weekData={US_BO_WEEKLY["Week 17, 2026"]} />
         : <>
           {/* ── Column headers ──────────────────────────────────── */}
           <BogColHeaders viewMode={viewMode} />
@@ -5487,6 +5506,9 @@ function EditorialSection({ onNavigate }) {
     "OTT":              { bg:"#EDE9FE", text:"#5B21B6" },
     "TV":               { bg:"#DCFCE7", text:"#166534" },
     "PREVIEW":          { bg:"#FEF3C7", text:"#92400E" },
+    "MUSIC":            { bg:"#DCFCE7", text:"#15803D" },
+    "TRACKER":          { bg:"#FEF3C7", text:"#92400E" },
+    "DATA SCIENCE":     { bg:"#DBEAFE", text:"#1E40AF" },
     "SPECIAL EDITION":  { bg:"#111111", text:"#C8201A" },
   };
 
@@ -6418,8 +6440,8 @@ export default function App() {
             <span style={{ fontFamily:"'DM Sans', sans-serif", fontSize:10, color:T.textMuted, marginLeft:10, letterSpacing:"0.18em", textTransform:"uppercase" }}>Box Office Intelligence</span>
           </div>
           <div style={{ display:"flex", gap:24, flexWrap:"wrap", marginBottom:10, alignItems:"center" }}>
-            {["Box Office","OTT","TV","Weekly"].map(s => {
-              const extLink = s === "OTT" ? "/ott-releases.html" : s === "TV" ? "/tv-ratings.html" : null;
+            {["Box Office","OTT","TV","Music","Weekly"].map(s => {
+              const extLink = s === "OTT" ? "/ott-releases.html" : s === "TV" ? "/tv-ratings.html" : s === "Music" ? "/music-crossplatform-top-10-hindi-april-2026.html" : null;
               if (extLink) return (
                 <a key={s} href={extLink}
                   onMouseEnter={e => e.currentTarget.style.color=T.accent}
