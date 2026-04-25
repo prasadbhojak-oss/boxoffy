@@ -1,5 +1,23 @@
 [
   {
+    "headline": "Why we're publishing pre-release box office forecasts",
+    "dek": "Introducing the Boxoffy Hype Index and the BCM v4.0 model behind it. Built on 82 historical comparables, segment-routed, with explicit confidence intervals and editorial outlier flags. Here's how it works — and where it doesn't.",
+    "url": "/launching-the-hype-index.html",
+    "tag": "METHODOLOGY",
+    "date": "2026-04-25",
+    "readTime": "9 min",
+    "featured": true
+  },
+  {
+    "headline": "The Boxoffy Hype Index — BCM Forecasts for 11 Upcoming Indian Films",
+    "dek": "Pre-release box office forecasts ranked by anticipated theatrical performance. Per-film BCM forecasts, 90% confidence intervals, segment routing, and editorial outlier flags. Updated weekly.",
+    "url": "/hype-index.html",
+    "tag": "HYPE INDEX",
+    "date": "2026-04-25",
+    "readTime": "8 min",
+    "featured": true
+  },
+  {
     "headline": "Hindi Music Cross-Platform Top 10 — BMCM Ranks 5 Platforms Into One Chart",
     "dek": "For the first time, a single Hindi chart aggregating Spotify, YouTube Music, Apple Music, Amazon Music & JioSaavn. Gehra Hua #1 cross-platform (BMCM 9.4). Sahiba jumps +5 vs Spotify. Methodology, weights, all 10 tracks.",
     "url": "/music-crossplatform-top-10-hindi-april-2026.html",

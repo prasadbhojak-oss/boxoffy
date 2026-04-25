@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Why We're Publishing Pre-Release Box Office Forecasts | Boxoffy</title>
+
+<!-- SEO Meta -->
+<meta name="description" content="The Boxoffy Confidence Model (BCM) and Hype Index explained: why we built a pre-release box office forecasting model, how it differs from trade analyst guesses, and what it gets right and wrong. Our methodology, our limits, our track record.">
+<meta name="keywords" content="Boxoffy Confidence Model, BCM, box office forecast India, opening day prediction, Hindi cinema forecast, Hype Index, Boxoffy methodology, pre-release box office, India box office prediction, BCM v4.0">
+<meta name="author" content="Boxoffy Editorial">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta name="news_keywords" content="Boxoffy Hype Index, BCM forecast, box office prediction India, pre-release forecast, opening day forecast Bollywood">
+<link rel="canonical" href="https://boxoffy.com/launching-the-hype-index.html">
+
+<!-- Open Graph -->
+<meta property="og:type" content="article">
+<meta property="og:title" content="Why We're Publishing Pre-Release Box Office Forecasts">
+<meta property="og:description" content="Introducing the Boxoffy Hype Index and the BCM v4.0 methodology behind it. Built on 82 historical comparables, segment-routed, with explicit confidence intervals and outlier flags.">
+<meta property="og:url" content="https://boxoffy.com/launching-the-hype-index.html">
+<meta property="og:image" content="https://boxoffy.com/og-images/launching-hype-index.png">
+<meta property="og:site_name" content="Boxoffy">
+<meta property="article:published_time" content="2026-04-25">
+<meta property="article:section" content="Methodology">
+<meta property="article:author" content="Boxoffy Editorial">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@boxoffy">
+<meta name="twitter:title" content="Why We're Publishing Pre-Release Box Office Forecasts">
+<meta name="twitter:description" content="Introducing the Boxoffy Hype Index and the BCM v4.0 methodology behind it.">
+<meta name="twitter:image" content="https://boxoffy.com/og-images/launching-hype-index.png">
+
+<!-- Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  "headline": "Why We're Publishing Pre-Release Box Office Forecasts",
+  "description": "The Boxoffy Confidence Model (BCM) and Hype Index explained — methodology, limits, and track record.",
+  "image": "https://boxoffy.com/og-images/launching-hype-index.png",
+  "datePublished": "2026-04-25",
+  "dateModified": "2026-04-25",
+  "author": { "@type": "Organization", "name": "Boxoffy Editorial", "url": "https://boxoffy.com" },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Boxoffy",
+    "logo": { "@type": "ImageObject", "url": "https://boxoffy.com/logo.png" }
+  },
+  "mainEntityOfPage": { "@type": "WebPage", "@id": "https://boxoffy.com/launching-the-hype-index.html" }
+}
+</script>
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700;9..144,800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+    --boxoffy-navy: #0f4c81;
+    --boxoffy-navy-deep: #0a3a66;
+    --boxoffy-red: #c41e3a;
+    --boxoffy-amber: #d97706;
+    --boxoffy-bg: #fafaf7;
+    --boxoffy-paper: #ffffff;
+    --boxoffy-ink: #0a0a0a;
+    --boxoffy-ink-soft: #404040;
+    --boxoffy-rule: #d4d4d4;
+    --boxoffy-rule-soft: #e7e5e0;
+    --boxoffy-muted: #737373;
+    --font-display: "Fraunces", Georgia, serif;
+    --font-body: "Inter", -apple-system, sans-serif;
+    --font-mono: "JetBrains Mono", monospace;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+body {
+    margin: 0;
+    font-family: var(--font-body);
+    background: var(--boxoffy-bg);
+    color: var(--boxoffy-ink);
+    line-height: 1.6;
+    font-size: 17px;
+}
+.container { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+
+/* Nav */
+.nav-bar { background: white; border-bottom: 1px solid var(--boxoffy-rule); padding: 14px 0; position: sticky; top: 0; z-index: 100; }
+.nav-inner { max-width: 1180px; margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; align-items: center; }
+.nav-brand { font-family: var(--font-display); font-weight: 800; font-size: 20px; color: var(--boxoffy-navy); text-decoration: none; letter-spacing: -0.02em; }
+.nav-brand span { color: var(--boxoffy-red); }
+.nav-links a { color: var(--boxoffy-ink-soft); text-decoration: none; margin-left: 28px; font-size: 13px; font-weight: 500; }
+.nav-links a:hover { color: var(--boxoffy-navy); }
+.back-home { color: var(--boxoffy-navy); text-decoration: none; font-size: 13px; font-weight: 500; padding: 14px 0 0; display: inline-block; }
+.back-home:hover { text-decoration: underline; }
+
+/* Article header */
+.article-header { padding: 60px 0 40px; border-bottom: 2px solid var(--boxoffy-navy); }
+.kicker { font-family: var(--font-mono); font-size: 12px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--boxoffy-red); margin-bottom: 18px; }
+h1 {
+    font-family: var(--font-display);
+    font-size: clamp(34px, 5vw, 52px);
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -0.025em;
+    margin: 0 0 24px;
+    color: var(--boxoffy-ink);
+}
+h1 em { font-style: italic; color: var(--boxoffy-navy); font-weight: 700; }
+.dek {
+    font-family: var(--font-display);
+    font-size: 21px;
+    line-height: 1.5;
+    color: var(--boxoffy-ink-soft);
+    font-weight: 400;
+    margin: 0 0 28px;
+    max-width: 620px;
+}
+.byline-row { display: flex; gap: 24px; flex-wrap: wrap; font-size: 13px; color: var(--boxoffy-muted); }
+.byline-row strong { color: var(--boxoffy-ink); font-weight: 600; }
+
+/* Article body */
+.article-body { padding: 48px 0 60px; }
+.article-body p {
+    font-size: 18px;
+    line-height: 1.7;
+    margin: 0 0 24px;
+    color: var(--boxoffy-ink-soft);
+}
+.article-body p:first-of-type::first-letter {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 0.85;
+    float: left;
+    margin: 6px 12px 0 0;
+    color: var(--boxoffy-navy);
+}
+.article-body h2 {
+    font-family: var(--font-display);
+    font-size: 30px;
+    font-weight: 700;
+    margin: 56px 0 20px;
+    line-height: 1.2;
+    letter-spacing: -0.015em;
+    color: var(--boxoffy-ink);
+}
+.article-body h3 {
+    font-family: var(--font-display);
+    font-size: 22px;
+    font-weight: 700;
+    margin: 36px 0 12px;
+    line-height: 1.3;
+    color: var(--boxoffy-navy);
+}
+.article-body strong { color: var(--boxoffy-ink); font-weight: 600; }
+.article-body em { color: var(--boxoffy-ink); }
+.article-body a { color: var(--boxoffy-navy); text-decoration: underline; text-decoration-color: var(--boxoffy-rule); text-underline-offset: 3px; }
+.article-body a:hover { text-decoration-color: var(--boxoffy-red); }
+
+/* Pull-quote */
+.pullquote {
+    font-family: var(--font-display);
+    font-size: 28px;
+    font-weight: 500;
+    font-style: italic;
+    line-height: 1.4;
+    color: var(--boxoffy-navy);
+    border-left: 4px solid var(--boxoffy-red);
+    padding: 8px 0 8px 28px;
+    margin: 40px 0;
+    letter-spacing: -0.01em;
+}
+
+/* Data callout */
+.data-callout {
+    background: white;
+    border: 1px solid var(--boxoffy-rule);
+    border-left: 4px solid var(--boxoffy-navy);
+    padding: 24px 28px;
+    margin: 36px 0;
+    border-radius: 0 4px 4px 0;
+}
+.data-callout-label {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--boxoffy-red);
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+.data-callout-body { font-size: 16px; line-height: 1.6; color: var(--boxoffy-ink); margin: 0; }
+.data-callout strong { color: var(--boxoffy-navy); }
+
+/* Comparison table inline */
+.compare-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 32px 0;
+    background: white;
+    border: 1px solid var(--boxoffy-rule);
+    font-size: 14px;
+}
+.compare-table th, .compare-table td {
+    padding: 12px 14px;
+    text-align: left;
+    border-bottom: 1px solid var(--boxoffy-rule-soft);
+}
+.compare-table th {
+    background: var(--boxoffy-bg);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--boxoffy-ink-soft);
+    font-weight: 600;
+}
+.compare-table td.num { font-family: var(--font-mono); text-align: right; font-variant-numeric: tabular-nums; }
+
+/* Inline share strips */
+.share-strip-inline {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 18px 20px;
+    margin: 36px 0;
+    background: white;
+    border: 1px solid var(--boxoffy-rule-soft);
+    border-radius: 4px;
+}
+.share-strip-inline-label {
+    font-size: 12px;
+    color: var(--boxoffy-muted);
+    font-weight: 500;
+    margin-right: 6px;
+}
+.share-strip-inline a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: var(--boxoffy-bg);
+    border: 1px solid var(--boxoffy-rule);
+    color: var(--boxoffy-ink-soft);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+    font-family: var(--font-display);
+    transition: all 0.15s ease;
+}
+.share-strip-inline a:hover {
+    background: var(--boxoffy-navy);
+    color: white;
+    border-color: var(--boxoffy-navy);
+    transform: translateY(-1px);
+}
+
+/* Final share strip */
+.share-strip-final {
+    background: var(--boxoffy-navy);
+    color: white;
+    padding: 32px 28px;
+    border-radius: 4px;
+    margin: 56px 0 40px;
+    text-align: center;
+}
+.share-strip-final-title {
+    font-family: var(--font-display);
+    font-size: 22px;
+    font-weight: 600;
+    margin: 0 0 16px;
+    line-height: 1.3;
+}
+.share-strip-final-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 18px;
+}
+.share-strip-final a, .share-strip-final button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 18px;
+    background: white;
+    color: var(--boxoffy-navy);
+    border: none;
+    border-radius: 3px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+    font-family: var(--font-body);
+    cursor: pointer;
+    transition: all 0.15s ease;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+.share-strip-final a:hover, .share-strip-final button:hover {
+    background: var(--boxoffy-amber);
+    color: white;
+    transform: translateY(-1px);
+}
+
+/* CTA box */
+.cta-box {
+    background: linear-gradient(135deg, #0f4c81, #0a3a66);
+    color: white;
+    padding: 36px 32px;
+    border-radius: 4px;
+    margin: 48px 0;
+    text-align: center;
+}
+.cta-box-kicker { font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; opacity: 0.85; font-weight: 600; margin-bottom: 12px; }
+.cta-box-title { font-family: var(--font-display); font-size: 28px; font-weight: 700; margin: 0 0 12px; }
+.cta-box-body { font-size: 16px; line-height: 1.6; opacity: 0.92; margin: 0 0 24px; }
+.cta-box a {
+    display: inline-block;
+    background: white;
+    color: var(--boxoffy-navy);
+    padding: 12px 28px;
+    border-radius: 3px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+.cta-box a:hover { background: var(--boxoffy-amber); color: white; }
+
+/* Related articles */
+.related {
+    margin: 60px 0 40px;
+    padding: 36px 0;
+    border-top: 2px solid var(--boxoffy-navy);
+    border-bottom: 1px solid var(--boxoffy-rule);
+}
+.related h3 {
+    font-family: var(--font-display);
+    font-size: 22px;
+    font-weight: 700;
+    margin: 0 0 24px;
+    color: var(--boxoffy-ink);
+}
+.related-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+.related-card {
+    background: white;
+    border: 1px solid var(--boxoffy-rule);
+    padding: 20px;
+    border-radius: 3px;
+    text-decoration: none;
+    color: var(--boxoffy-ink);
+    transition: all 0.15s ease;
+}
+.related-card:hover { border-color: var(--boxoffy-navy); transform: translateY(-2px); }
+.related-tag {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--boxoffy-red);
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+.related-headline { font-family: var(--font-display); font-size: 16px; font-weight: 600; line-height: 1.35; }
+
+footer {
+    padding: 32px 0 60px;
+    color: var(--boxoffy-muted);
+    font-size: 12px;
+    text-align: center;
+}
+footer a { color: var(--boxoffy-navy); text-decoration: none; }
+
+@media (max-width: 768px) {
+    .container { padding: 0 18px; }
+    .nav-links a { margin-left: 14px; font-size: 12px; }
+    .article-body p { font-size: 16px; }
+    .pullquote { font-size: 22px; padding-left: 18px; }
+    h1 { font-size: 32px; }
+    .dek { font-size: 18px; }
+    .related-grid { grid-template-columns: 1fr; }
+    .compare-table { font-size: 12px; }
+}
+</style>
+</head>
+
+<body>
+
+<nav class="nav-bar">
+    <div class="nav-inner">
+        <a href="/" class="nav-brand">Box<span>offy</span></a>
+        <div class="nav-links">
+            <a href="/">← Home</a>
+            <a href="/hype-index.html">Hype Index</a>
+            <a href="/india-boxoffice-how-it-works.html">How It Works</a>
+            <a href="/india-cinema-state-2026.html">State of Cinema</a>
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+
+<header class="article-header">
+    <div class="kicker">Methodology · Boxoffy Editorial</div>
+    <h1>Why we're publishing <em>pre-release</em> box office forecasts</h1>
+    <p class="dek">Introducing the Boxoffy Hype Index and the BCM v4.0 model behind it. Built on 82 historical comparables, segment-routed, with explicit confidence intervals and editorial outlier flags. Here's how it works — and where it doesn't.</p>
+    <div class="byline-row">
+        <span><strong>Boxoffy Editorial</strong></span>
+        <span>April 25, 2026</span>
+        <span>9 min read</span>
+        <span>Tag: <strong>Methodology</strong></span>
+    </div>
+</header>
+
+<article class="article-body">
+
+<p>The Indian box office reporting landscape is loud, fast, and largely vibes-driven. Trade analysts make pre-release predictions on television panels with no methodology disclosure, no historical accuracy track record, and no error bars. Sacnilk publishes a number every morning that becomes the default headline by lunchtime — even when it's later revised. Trade Twitter calls "blockbuster" or "disaster" within 36 hours, often before audiences in tier-2 markets have even shown up.</p>
+
+<p>None of this is wrong, exactly. Trade analysts have decades of pattern recognition. Sacnilk's daily numbers are directionally useful. Trade Twitter is fast. But there's no model behind any of it that you can audit, replicate, or hold to account when it's wrong. And it's wrong often — sometimes by 200%.</p>
+
+<p>So we built one.</p>
+
+<div class="data-callout">
+    <div class="data-callout-label">The Headline</div>
+    <p class="data-callout-body">The <strong>Boxoffy Confidence Model (BCM) v4.0</strong> is a transparent box office forecasting model for India. It produces a Day 1 forecast with a 90% confidence interval for any film with sufficient pre-release signal. On a 23-film historical backtest, it hits in-band <strong>87% of the time</strong> with a Mean Absolute Error of <strong>₹8.6 Cr</strong>. The <strong>Hype Index</strong> is the public-facing ranking of upcoming releases driven by BCM.</p>
+</div>
+
+<h2>What's wrong with the existing forecasts</h2>
+
+<p>Three things. First, <strong>nobody publishes their accuracy</strong>. When a trade analyst predicts ₹50 Cr Day 1 and the film opens to ₹22 Cr, there's no follow-up post calibrating the miss. You're supposed to forget. The next prediction lands without context.</p>
+
+<p>Second, <strong>nobody publishes their methodology</strong>. Predictions arrive as singular numbers with phrases like "looks like it'll do" and "industry whispers suggest" — no model, no comparables, no error bars. You're trusting the analyst's reputation, not their math.</p>
+
+<p>Third, and most importantly, <strong>nobody publishes uncertainty</strong>. A film 60 days from release has wildly different signal quality than one 5 days out. Treating both predictions as equally confident is dishonest. Real forecasts should look noisy when the future is noisy.</p>
+
+<div class="pullquote">"Boxoffy's stance is simple: if you can't show your work, your prediction is an opinion, not a forecast."</div>
+
+<h2>How BCM works in plain language</h2>
+
+<p>BCM is essentially structured pattern matching with explicit uncertainty. For any upcoming film, the model does five things:</p>
+
+<h3>1. Routes the film to a segment</h3>
+<p>Indian cinema isn't one market. A Telugu mass tentpole (Pushpa 2) and a Hindi multiplex drama (Mardaani 3) play in completely different exhibition circuits with different audiences and different success criteria. BCM hard-routes each film into one of five segments — <em>mass-tentpole, mass-multiplex, multiplex-genre, indie-art, south-mass</em> — plus a Hollywood-India special module for Marvel/Avatar-class releases.</p>
+
+<h3>2. Pulls the closest historical comparables</h3>
+<p>Within the routed segment, BCM finds the most similar past films using a "genome distance" calculation across 12 features: star tier, language, audience type, director archetype, predecessor strength, genre, budget tier, franchise status, holiday window, season, screen count, and runtime. Every segment has its own weights — <em>mass-tentpole</em> weights star+holiday heavily; <em>indie-art</em> weights director archetype+genre.</p>
+
+<h3>3. Computes a base prior</h3>
+<p>The closest comparables (typically 5–8 films) generate a prior distribution in log-rupees. This handles the heavy-tailed nature of box office well — the difference between a ₹3 Cr opening and a ₹30 Cr opening is one log unit, same as ₹30 Cr to ₹300 Cr. Working in log space prevents the few mega-blockbusters from dominating the model.</p>
+
+<h3>4. Applies pre-release signals</h3>
+<p>Three signal categories shift the prior up or down: <strong>Awareness</strong> (Wikipedia views, Google Trends), <strong>Engagement</strong> (YouTube interactions, social chatter), and <strong>Intent</strong> (BookMyShow advance ticket sales). Each signal is normalized as standard deviations above or below segment baseline. A film at +2σ on all three signals at T-7 will receive a substantial upward adjustment; a film with weak signals at T-90 will see only minor adjustment.</p>
+
+<h3>5. Outputs a forecast with explicit confidence</h3>
+<p>BCM produces three things: a point forecast (₹X Cr Day 1), a 90% credible interval (₹low – ₹high), and a confidence tier (High / Medium / Low). Confidence is hard-capped: no forecast more than 30 days from release can be labeled High Confidence. No forecast more than 60 days out can be labeled Medium. This is a deliberate guardrail — <em>studios should never receive a confidently wrong forecast simply because the math produced one.</em></p>
+
+<div class="share-strip-inline">
+    <span class="share-strip-inline-label">Found this useful so far?</span>
+    <a href="https://twitter.com/intent/tweet?text=Boxoffy%20just%20launched%20the%20Hype%20Index%20%E2%80%94%20pre-release%20box%20office%20forecasts%20with%20methodology%20you%20can%20audit&url=https://boxoffy.com/launching-the-hype-index.html" target="_blank" rel="noopener">𝕏</a>
+    <a href="https://wa.me/?text=Boxoffy%20Hype%20Index%20launched%20-%20pre-release%20box%20office%20forecasts%20with%20transparent%20methodology%20https://boxoffy.com/launching-the-hype-index.html" target="_blank" rel="noopener">WA</a>
+    <a href="https://www.threads.net/intent/post?text=Boxoffy%20Hype%20Index%20launched%20https://boxoffy.com/launching-the-hype-index.html" target="_blank" rel="noopener">@</a>
+    <a href="https://www.facebook.com/sharer/sharer.php?u=https://boxoffy.com/launching-the-hype-index.html" target="_blank" rel="noopener">f</a>
+</div>
+
+<h2>A worked example: King at T-244</h2>
+
+<p>Let's take a film currently in the Hype Index: <strong>King</strong>, the SRK-Suhana-Deepika action film directed by Siddharth Anand, slated for Christmas 2026. As of today, the film is 244 days from release.</p>
+
+<p>BCM routes <em>King</em> to the <strong>mass-tentpole</strong> segment (Hindi, A+ star, mass audience type, 5,000+ screen scale). The pool for this segment is 22 films — Pathaan, Jawan, War, Tiger 3, Animal, Tubelight, Bharat, Sultan, and so on.</p>
+
+<p>The closest comparables, weighted by genome distance:</p>
+
+<table class="compare-table">
+    <thead>
+        <tr>
+            <th>Weight</th>
+            <th>Comparable Film</th>
+            <th class="num">Day 1 Actual</th>
+            <th>Why it matched</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr><td>0.18</td><td>Pathaan (2023)</td><td class="num">₹57.0 Cr</td><td>SRK · spy_action · Holiday window</td></tr>
+        <tr><td>0.14</td><td>War (2019)</td><td class="num">₹53.4 Cr</td><td>Siddharth Anand · spy_action</td></tr>
+        <tr><td>0.13</td><td>Tiger Zinda Hai (2017)</td><td class="num">₹33.75 Cr</td><td>Christmas window · A+ tier · spy_action</td></tr>
+        <tr><td>0.11</td><td>Jawan (2023)</td><td class="num">₹75.0 Cr</td><td>SRK · mass action · same year as Pathaan</td></tr>
+    </tbody>
+</table>
+
+<p>The weighted prior produces a base estimate around ₹49 Cr Day 1. Pre-release signals (Awareness +1.4σ from announcement coverage, Engagement +0.8σ from teaser trailer reactions) lift the forecast to <strong>₹58.8 Cr</strong>. The 90% confidence interval is <strong>₹39.4 – ₹87.9 Cr</strong>.</p>
+
+<p>Confidence: <strong>Low</strong>, hard-capped because King is more than 60 days from release. As we get closer to Christmas — once full trailer drops, music releases, advance bookings open — both the point forecast and the confidence will firm up. By T-7, if all goes as expected, BCM will likely show King at <em>Medium or High Confidence</em> with a tighter range.</p>
+
+<div class="data-callout">
+    <div class="data-callout-label">Why a Range, Not a Number</div>
+    <p class="data-callout-body">A point forecast of "₹58.8 Cr" sounds precise but isn't. The actual D1 of King could land anywhere from ₹39 Cr to ₹88 Cr and still be consistent with what the model knows today. <strong>The range is the honest answer.</strong> If a film opens outside the range, the model was wrong — and we publish that too.</p>
+</div>
+
+<h2>What BCM gets right — and where it doesn't</h2>
+
+<p>On the 23-film historical backtest (films we knew the actual D1 for), BCM v4.0 hit 87% in-band. The misses cluster in three patterns we openly disclose:</p>
+
+<h3>Pattern 1: ATB-class outliers (Dhurandhar 2, Saiyaara, Pushpa 2)</h3>
+<p>BCM under-forecasts mega-anomalies. Dhurandhar 2 opened at ₹102.5 Cr; the model predicted ₹118.9 Cr (in band but high). Saiyaara opened at ₹21.5 Cr against a forecast of ₹8.4 Cr (out of band). The reason is structural: ATB-class films happen 1–2 times per year, which means the model genuinely lacks enough comparables to price them. Forcing it to nail them would mean overfitting to noise. We instead flag them with an "Outlier Event" indicator when signals warrant.</p>
+
+<h3>Pattern 2: Hybrid films (Sam Bahadur, Brahmastra, Border 2)</h3>
+<p>Hard segment routing breaks on films that genuinely belong to two segments. Border 2 routed to mass-multiplex (which dragged the prior down via Shamshera/Sky Force comparables) when it was arguably mass-tentpole. We're working on soft routing for v4.1 — a 70/20/10 weighted blend across primary segment, secondary segment, and global prior — but it requires more data than we have today.</p>
+
+<h3>Pattern 3: Word-of-mouth black swans (Stree, Munjya, Drishyam)</h3>
+<p>Films with weak pre-release signals that build through word-of-mouth post-release are inherently invisible to a Day 1 forecast. BCM's job is to predict opening day, not lifetime collections. For lifetime forecasting, we'll be releasing a complementary <em>Trajectory Model</em> later this year that adjusts opening forecasts forward day-by-day based on actual collections.</p>
+
+<div class="pullquote">"Outlier flags exist to invite manual editorial review, not to predict the magnitude of the deviation."</div>
+
+<h2>Why the Hype Score is its own number</h2>
+
+<p>Confidence and Hype are different things. A film can be <em>high confidence, low hype</em> (a small indie that BCM is confident will open at ₹2 Cr) or <em>low confidence, high hype</em> (Ramayana at T-198, where signals are strong but the model knows the future is uncertain).</p>
+
+<p>The Hype Score (0–100) is a composite that blends four things:</p>
+<ul style="font-size:18px; line-height:1.7; color:var(--boxoffy-ink-soft); padding-left: 24px;">
+    <li><strong>Forecast tier (40%)</strong> — ATB Watch / Blockbuster / Hit / Average / Underperformer / Disaster Watch</li>
+    <li><strong>Signal strength (30%)</strong> — average of available pre-release signals</li>
+    <li><strong>Proximity (20%)</strong> — closer to release = more crystallized hype</li>
+    <li><strong>Confidence (10%)</strong> — bonus weight for forecasts the model trusts</li>
+</ul>
+
+<p>The result is a single number that captures "how loud is this film, how big does the math say it could be, and how soon are we finding out?" It's deliberately rougher than the BCM forecast itself — a vibe distillation rather than a financial prediction.</p>
+
+<h2>What you can do with this</h2>
+
+<p>Three uses, depending on who you are:</p>
+
+<p><strong>If you're a cinephile</strong>, the Hype Index is a calibrated signal of which upcoming releases are getting taken seriously by a model that doesn't care about PR cycles. When something rated MODERATE suddenly jumps to HIGH HYPE in the final week, that's worth paying attention to.</p>
+
+<p><strong>If you're trade-aware</strong>, the per-film analyst cards show you the comparable cluster, the segment assignment, the confidence calibration, and the outlier flags. Disagree with the routing? The methodology is in your hands. Argue with us — we publish failure case studies.</p>
+
+<p><strong>If you're a studio or distributor</strong>, BCM is what we use internally for our pre-release reports. The public Hype Index shows directionally what those reports look like. We're separately working on a B2B tier with film-specific deep dives — reach out if interested.</p>
+
+<div class="cta-box">
+    <div class="cta-box-kicker">Now Live</div>
+    <div class="cta-box-title">The Boxoffy Hype Index</div>
+    <p class="cta-box-body">11 upcoming Indian films ranked by anticipated theatrical performance. Per-film BCM forecasts, 90% confidence intervals, segment routing, and editorial outlier flags. Updated weekly.</p>
+    <a href="/hype-index.html">Open the Hype Index →</a>
+</div>
+
+<h2>What's coming next</h2>
+
+<p>BCM v4.0 is the first public release. We have three things on the roadmap:</p>
+
+<p><strong>v4.1 — Soft routing.</strong> Hybrid films will route to a primary segment + secondary segment with a global prior fallback. This fixes the Border 2 / Sam Bahadur / Brahmastra cluster of misses. Requires us to grow the historical pool to ~100 films per segment.</p>
+
+<p><strong>v4.2 — Live signals.</strong> Today we manually input awareness/engagement/intent signals based on news and social monitoring. v4.2 plugs in real-time scrapers for Wikipedia views, Google Trends, BookMyShow advance velocity, YouTube engagement metrics, and music streaming. This activates five additional outlier triggers and dramatically tightens late-window forecasts.</p>
+
+<p><strong>v5.0 — Trajectory model.</strong> Day 1 forecasting is one piece. The harder problem is predicting Days 2–28. v5.0 will model opening-to-lifetime trajectory by genre and audience type, accounting for Monday drops, weekend recovery patterns, holiday extensions, and word-of-mouth amplification curves.</p>
+
+<h2>The honest version</h2>
+
+<p>BCM is not magic. It's structured pattern matching against historical data, with explicit calibration and uncertainty. It will be wrong sometimes — especially on outliers, sometimes by significant margins. The 87% in-band accuracy means roughly one in eight forecasts will land outside the 90% range we publish.</p>
+
+<p>What it offers that doesn't exist today is <em>auditability</em>. Every forecast comes with the segment it routed to, the comparables it used, the signals that adjusted the prior, the confidence caps applied, and the outlier flags raised. When BCM is wrong, the methodology is on the page. You don't have to take our word for it. You can read the math.</p>
+
+<p>That, more than the accuracy itself, is the case for publishing pre-release forecasts. Indian cinema deserves better than vibes. Here's our attempt at one.</p>
+
+<div class="share-strip-final">
+    <div class="share-strip-final-title">If this resonated, help us launch BCM properly.</div>
+    <p style="opacity:0.85; font-size:14px; margin: 0 0 8px;">Sharing this article matters more than any single forecast — it builds the audience BCM needs to keep getting better.</p>
+    <div class="share-strip-final-buttons">
+        <a href="https://twitter.com/intent/tweet?text=Boxoffy%20just%20launched%20the%20Hype%20Index%20%E2%80%94%20pre-release%20box%20office%20forecasts%20with%20methodology%20you%20can%20actually%20audit%20%F0%9F%93%8A&url=https://boxoffy.com/launching-the-hype-index.html" target="_blank" rel="noopener">Share on 𝕏</a>
+        <a href="https://wa.me/?text=Boxoffy%20Hype%20Index%20launched%20-%20pre-release%20box%20office%20forecasts%20with%20transparent%20methodology%20https://boxoffy.com/launching-the-hype-index.html" target="_blank" rel="noopener">WhatsApp</a>
+        <a href="https://www.threads.net/intent/post?text=Boxoffy%20Hype%20Index%20launched%20%E2%80%94%20pre-release%20box%20office%20forecasts%20with%20transparent%20methodology%20https%3A//boxoffy.com/launching-the-hype-index.html" target="_blank" rel="noopener">Threads</a>
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https://boxoffy.com/launching-the-hype-index.html" target="_blank" rel="noopener">Facebook</a>
+        <button onclick="navigator.clipboard.writeText('https://boxoffy.com/launching-the-hype-index.html').then(()=>this.innerText='Copied ✓')">Copy Link</button>
+    </div>
+</div>
+
+</article>
+
+<section class="related">
+    <h3>Related from Boxoffy</h3>
+    <div class="related-grid">
+        <a class="related-card" href="/hype-index.html">
+            <div class="related-tag">Live</div>
+            <div class="related-headline">The Boxoffy Hype Index — Pre-release forecasts for 11 upcoming films</div>
+        </a>
+        <a class="related-card" href="/india-boxoffice-how-it-works.html">
+            <div class="related-tag">Methodology</div>
+            <div class="related-headline">India Box Office Explained — How Nett, Gross & Verdicts Work</div>
+        </a>
+        <a class="related-card" href="/india-cinema-state-2026.html">
+            <div class="related-tag">Industry</div>
+            <div class="related-headline">The State of Indian Cinema, 2026 — A data-backed reckoning</div>
+        </a>
+        <a class="related-card" href="/dhurandhar-the-revenge-ode.html">
+            <div class="related-tag">Editorial</div>
+            <div class="related-headline">Dhurandhar 2: An Ode to the Revenge — How a phenomenon was made</div>
+        </a>
+    </div>
+</section>
+
+</div>
+
+<footer>
+    <p>Boxoffy · Verified numbers, editorial verdicts, no PR fluff.</p>
+    <p>Methodology open. Forecasts calibrated. Errors disclosed.</p>
+    <p style="margin-top:14px"><a href="/">Home</a> · <a href="/hype-index.html">Hype Index</a> · <a href="/india-boxoffice-how-it-works.html">Methodology</a></p>
+</footer>
+
+</body>
+</html>
