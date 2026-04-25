@@ -80,7 +80,7 @@ function rowToFilm(row) {
     bogRank:parseNullInt(row.bogRank),
     estimated:parseBool(row.estimated),
     pageUrl:row.pageUrl||null,
-    posterUrl:row.posterUrl||null,
+    posterUrl:(row.posterUrl && typeof row.posterUrl === "string" && row.posterUrl.trim().replace(/\?+/g, "") !== "" && row.posterUrl.trim().startsWith("http")) ? row.posterUrl.trim() : null,
     studio:row.studio||null,
     betaModel:parseBool(row.betaModel),
     wkTrend:row.wkTrend||null,
@@ -2378,6 +2378,10 @@ function NationalTop10Row({ movie, rank }) {
   const isHolly  = movie.language === "Hollywood";
   const [shareOpen, setShareOpen] = React.useState(false);
 
+  // Auto-fetch poster from TMDB if sheet doesn't have one
+  const tmdbPoster = useTMDBPoster(movie.posterUrl ? null : movie.title, movie.releaseDate ? movie.releaseDate.slice(0,4) : null);
+  const posterSrc = movie.posterUrl || tmdbPoster;
+
   const chgPct = movie.lastWeekCollection > 0
     ? Math.round(((movie.weeklyCollection - movie.lastWeekCollection) / movie.lastWeekCollection) * 100)
     : null;
@@ -2419,9 +2423,9 @@ function NationalTop10Row({ movie, rank }) {
         {isNew && <span style={{ fontFamily:"'IBM Plex Mono',monospace", fontSize:7, fontWeight:700, color:"#fff", background:T.accent, padding:"1px 3px", borderRadius:2, marginTop:2, letterSpacing:"0.08em" }}>NEW</span>}
       </div>
 
-      {/* Poster */}
-      {movie.posterUrl
-        ? <img src={movie.posterUrl} alt={movie.title} style={{ width:30, height:45, objectFit:"cover", borderRadius:3, display:"block", border:`0.5px solid ${T.border}` }} onError={e => e.target.style.display="none"} />
+      {/* Poster — uses sheet posterUrl if present, falls back to TMDB auto-fetch */}
+      {posterSrc
+        ? <img src={posterSrc} alt={movie.title} style={{ width:30, height:45, objectFit:"cover", borderRadius:3, display:"block", border:`0.5px solid ${T.border}` }} onError={e => e.target.style.display="none"} />
         : <div style={{ width:30, height:45, borderRadius:3, background:isHolly?"#1E3A5F":T.navy||"#0F2340", display:"flex", alignItems:"center", justifyContent:"center" }}>
             <span style={{ fontFamily:"'Barlow Condensed',sans-serif", fontWeight:900, fontSize:9, color:"rgba(255,255,255,0.5)" }}>
               {(movie.title||"").split(" ").map(w=>w[0]).join("").slice(0,3).toUpperCase()}
