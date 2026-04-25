@@ -78,6 +78,43 @@ tr:last-child td{border-bottom:none}tr:hover td{background:#FAFAFA}
 pre{font-size:11px;color:#6B7280;line-height:1.7;white-space:pre-wrap;font-family:monospace}
 .ub{background:#FEF3C7;border-bottom:1px solid #FCD34D;padding:7px 24px;font-size:12px;color:#92400E;font-weight:600;display:none}
 .ub.show{display:block}
+/* ── Weekly Update Wizard ── */
+.wuz-hero{background:linear-gradient(135deg,#1F2937 0%,#111827 100%);color:#fff;border-radius:8px;padding:20px 24px;margin-bottom:18px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.wuz-hero h2{font-size:20px;font-weight:800;letter-spacing:-.01em;margin-bottom:4px}
+.wuz-hero p{font-size:12px;color:#9CA3AF;line-height:1.55;max-width:520px}
+.wuz-hero .btn-mega{background:#16A34A;color:#fff;font-size:14px;font-weight:700;padding:11px 24px;border:none;border-radius:6px;cursor:pointer;letter-spacing:.02em;box-shadow:0 2px 8px rgba(22,163,74,.4)}
+.wuz-hero .btn-mega:hover{filter:brightness(1.1)}
+.wuz-hero .btn-mega:disabled{background:#6B7280;cursor:not-allowed;box-shadow:none}
+.wuz-section{background:#fff;border:1px solid #E2E5EA;border-radius:6px;margin-bottom:14px;overflow:hidden}
+.wuz-sechdr{padding:11px 16px;background:#F9FAFB;border-bottom:1px solid #E2E5EA;display:flex;align-items:center;justify-content:space-between;font-size:12px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:#374151}
+.wuz-sechdr .count{font-weight:400;color:#9CA3AF;letter-spacing:.02em;text-transform:none;font-size:11px}
+.wuz-secbody{padding:14px 16px}
+.wuz-row{display:grid;grid-template-columns:200px 90px 110px 110px 70px 80px 110px 1fr 70px;gap:8px;align-items:center;padding:8px 0;border-bottom:1px solid #F3F4F6;font-size:12px}
+.wuz-row:last-child{border-bottom:none}
+.wuz-row .ti{font-weight:700;color:#111827}
+.wuz-row .lg{font-size:10px;color:#6B7280;margin-top:2px;text-transform:uppercase;letter-spacing:.04em}
+.wuz-row input,.wuz-row select{font-size:11px;padding:5px 7px;border:1px solid #E2E5EA;border-radius:3px;outline:none;width:100%;font-family:inherit}
+.wuz-row input:focus,.wuz-row select:focus{border-color:#111827}
+.wuz-row .auto-bg{background:#FEF3C7}
+.wuz-toggle{display:inline-flex;align-items:center;cursor:pointer;user-select:none}
+.wuz-toggle input{display:none}
+.wuz-toggle .pill{width:34px;height:18px;background:#D1D5DB;border-radius:9px;position:relative;transition:background .15s}
+.wuz-toggle .pill::after{content:"";position:absolute;top:2px;left:2px;width:14px;height:14px;background:#fff;border-radius:50%;transition:transform .15s}
+.wuz-toggle input:checked+.pill{background:#16A34A}
+.wuz-toggle input:checked+.pill::after{transform:translateX(16px)}
+.wuz-newrow{background:#ECFDF5;border:1px dashed #16A34A}
+.wuz-droprow{background:#FEF2F2;opacity:.7}
+.wuz-add-form{background:#F0FDF4;border:1px dashed #16A34A;border-radius:6px;padding:12px;margin-top:10px;display:none}
+.wuz-add-form.show{display:block}
+.wuz-add-form input,.wuz-add-form select{font-size:11px;padding:5px 7px;border:1px solid #BBF7D0;border-radius:3px;outline:none;font-family:inherit}
+.wuz-add-grid{display:grid;grid-template-columns:1fr 100px 100px 80px 80px 80px 80px 100px;gap:6px;margin-bottom:8px}
+.wuz-progress{background:#F3F4F6;border-radius:4px;padding:10px 12px;font-size:12px;font-family:monospace;color:#374151;margin-top:12px;display:none;max-height:180px;overflow-y:auto;line-height:1.7}
+.wuz-progress.show{display:block}
+.wuz-progress .ok{color:#16A34A;font-weight:600}
+.wuz-progress .er{color:#991B1B;font-weight:600}
+.wuz-progress .info{color:#6B7280}
+.wuz-help{font-size:11px;color:#6B7280;padding:10px 16px;background:#F9FAFB;border-top:1px solid #F3F4F6;line-height:1.6}
+.wuz-help code{background:#fff;padding:1px 5px;border:1px solid #E2E5EA;border-radius:2px;font-size:10px}
 </style>
 </head>
 <body>
@@ -106,12 +143,114 @@ pre{font-size:11px;color:#6B7280;line-height:1.7;white-space:pre-wrap;font-famil
   <span id="cm" class="msg"></span>
 </div>
 <div class="tabs">
-  <button class="tab active" onclick="showTab('f',this)">Running Films</button>
+  <button class="tab active" onclick="showTab('z',this)">⚡ Weekly Update</button>
+  <button class="tab" onclick="showTab('f',this)">Running Films</button>
   <button class="tab" onclick="showTab('w',this)">Weekly Commentary</button>
-  <button class="tab" onclick="showTab('b',this)">BCM Update</button>
+  <button class="tab" onclick="showTab('b',this)">BCM Update (legacy)</button>
 </div>
 <div class="main">
-  <div id="tf">
+  <!-- ═══════ NEW: WEEKLY UPDATE WIZARD ═══════ -->
+  <div id="tz">
+    <div class="wuz-hero">
+      <div>
+        <h2>⚡ Weekly Update Wizard</h2>
+        <p>Connect → Click "Load Current Chart" → Edit numbers → Add new films inline → Click "Apply Weekly Update" once. All changes batch in one server call.</p>
+      </div>
+      <button class="btn-mega" id="wuz-apply-btn" onclick="wuzApplyAll()" disabled>Apply Weekly Update →</button>
+    </div>
+
+    <!-- Section 1: Existing chart films -->
+    <div class="wuz-section">
+      <div class="wuz-sechdr">
+        <span>📺 Films Currently In Chart <span class="count" id="wuz-existing-count"></span></span>
+        <button class="btn ghost sm" onclick="wuzLoadCurrent()">↻ Load Current Chart</button>
+      </div>
+      <div class="wuz-secbody" id="wuz-existing-body">
+        <div class="ld" style="padding:24px">Click "Load Current Chart" to begin</div>
+      </div>
+      <div class="wuz-help">
+        <strong>Tip:</strong> Yellow-highlighted cells are auto-incremented (week+1, days+7) — override if needed.
+        Toggle <strong>In Chart</strong> off to drop a film. Updates batch with <code>bulkUpdate</code>.
+      </div>
+    </div>
+
+    <!-- Section 2: Add new films -->
+    <div class="wuz-section">
+      <div class="wuz-sechdr">
+        <span>➕ Add New Films This Week <span class="count" id="wuz-new-count">(0 queued)</span></span>
+        <button class="btn green sm" onclick="wuzShowAddForm()">+ Add New Film</button>
+      </div>
+      <div class="wuz-secbody">
+        <div id="wuz-new-list"></div>
+        <div class="wuz-add-form" id="wuz-add-form">
+          <div class="wuz-add-grid">
+            <input id="naf-title" placeholder="Title (e.g. Lee Cronin's The Mummy)"/>
+            <select id="naf-language">
+              <option value="Hindi">Hindi</option>
+              <option value="Hollywood">Hollywood</option>
+              <option value="Tamil">Tamil</option>
+              <option value="Telugu">Telugu</option>
+              <option value="Malayalam">Malayalam</option>
+              <option value="Kannada">Kannada</option>
+            </select>
+            <input id="naf-genre" placeholder="Genre"/>
+            <input id="naf-weekly" placeholder="Weekly ₹Cr" type="number" step="0.01"/>
+            <input id="naf-india" placeholder="Cumul ₹Cr" type="number" step="0.01"/>
+            <input id="naf-days" placeholder="Days" type="number" value="1"/>
+            <input id="naf-week" placeholder="Wk#" type="number" value="1"/>
+            <select id="naf-verdict">
+              <option value="Average">Average</option>
+              <option value="Hit">Hit</option>
+              <option value="Super Hit">Super Hit</option>
+              <option value="Blockbuster">Blockbuster</option>
+              <option value="ALL-TIME BLOCKBUSTER">All-Time BB</option>
+              <option value="Flop">Flop</option>
+              <option value="Disaster">Disaster</option>
+            </select>
+          </div>
+          <input id="naf-note" placeholder="Weekly note (e.g. 'W1 ₹14 Cr nett · Warner Bros · Hit trajectory')" style="width:100%;margin-bottom:8px"/>
+          <div style="display:flex;gap:8px">
+            <button class="btn green sm" onclick="wuzQueueNew()">Queue This Film</button>
+            <button class="btn ghost sm" onclick="wuzCancelAdd()">Cancel</button>
+          </div>
+        </div>
+      </div>
+      <div class="wuz-help">
+        New films get queued locally. On Apply, the wizard tries <code>action=addFilm</code> on your Apps Script. If unsupported, it'll output exact rows to paste into the Sheet manually.
+      </div>
+    </div>
+
+    <!-- Section 3: Weekly commentary (optional) -->
+    <div class="wuz-section">
+      <div class="wuz-sechdr">
+        <span>📝 Weekly Commentary <span class="count">(optional)</span></span>
+      </div>
+      <div class="wuz-secbody">
+        <div class="fg">
+          <div class="fr">
+            <label class="fl">Week Number</label>
+            <input class="fi" id="wuz-wnum" placeholder="e.g. Week 17 · Apr 17-23"/>
+          </div>
+          <div class="fr">
+            <label class="fl">Headline</label>
+            <input class="fi" id="wuz-whead" placeholder="e.g. Bhooth Bangla lands ₹89 Cr · D2 hits ₹1,121 Cr lifetime"/>
+          </div>
+        </div>
+        <div class="fr" style="margin-bottom:8px">
+          <label class="fl">Take (1-2 sentences)</label>
+          <textarea class="fi" id="wuz-wtake" placeholder="Boxoffy take on the week..."></textarea>
+        </div>
+      </div>
+      <div class="wuz-help">
+        Sends via <code>action=updateWeek</code>. Leave blank to skip the commentary update.
+      </div>
+    </div>
+
+    <!-- Apply progress log -->
+    <div class="wuz-progress" id="wuz-progress"></div>
+  </div>
+
+  <div id="tf" style="display:none">
     <div class="rh">
       <div><div class="st">Running Films <span id="fc" style="font-size:13px;font-weight:400;color:#9CA3AF"></span></div>
         <div class="hint">Edit any cell → Save row or Save All Changed</div></div>
@@ -217,6 +356,7 @@ async function connect() {
     document.getElementById("cb").className = "badge on";
     fl("cm","Connected ✓","ok");
     loadFilms();
+    wuzLoadCurrent(); // also pre-load the wizard
   } else {
     fl("cm","Failed — check URL / token","er");
   }
@@ -375,9 +515,10 @@ async function applyBCM() {
 }
 
 function showTab(n,btn) {
-  ["f","w","b"].forEach(t=>document.getElementById("t"+t).style.display=t===n?"":"none");
+  ["z","f","w","b"].forEach(t=>document.getElementById("t"+t).style.display=t===n?"":"none");
   document.querySelectorAll(".tab").forEach(b=>b.classList.remove("active")); btn.classList.add("active");
   if (n==="w"&&S) loadWeekly();
+  if (n==="z"&&S&&!wuzLoaded) wuzLoadCurrent();
 }
 
 function fl(id,txt,type) {
@@ -386,6 +527,237 @@ function fl(id,txt,type) {
   setTimeout(()=>el.classList.remove("show"),4000);
 }
 function e(s){return(s||"").replace(/&/g,"&amp;").replace(/"/g,"&quot;").replace(/</g,"&lt;");}
+
+// ════════════════════════════════════════════════════════════════
+// ⚡ WEEKLY UPDATE WIZARD — one-click batch update
+// ════════════════════════════════════════════════════════════════
+let wuzLoaded=false, wuzExisting=[], wuzNewQueue=[];
+
+async function wuzLoadCurrent() {
+  if (!S) return wuzLog("Connect to Apps Script first", "er");
+  document.getElementById("wuz-existing-body").innerHTML = '<div class="ld" style="padding:24px">Loading current chart…</div>';
+  const r = await gget({action:"getFilms"});
+  if (!r?.ok) {
+    document.getElementById("wuz-existing-body").innerHTML = `<div class="ld" style="padding:24px;color:#991B1B">Error: ${r?.error||"check connection"}</div>`;
+    return;
+  }
+  wuzExisting = (r.films||[]).map(f => ({
+    title: f.title||"",
+    language: f.language||"",
+    weeklyCollection_orig: f.weeklyCollection,
+    indiaNet_orig: f.indiaNet,
+    weekNum_orig: f.weekNum,
+    daysInRelease_orig: f.daysInRelease,
+    verdict_orig: f.verdict,
+    note_orig: f.weeklyNote,
+    showInChart_orig: f.showInMainChart!==false, // default true if undefined
+    // Edited values (start as auto-incremented suggestions)
+    weeklyCollection: "",
+    indiaNet: f.indiaNet||"",
+    weekNum: (parseInt(f.weekNum)||0)+1,
+    daysInRelease: (parseInt(f.daysInRelease)||0)+7,
+    lastWeekCollection: f.weeklyCollection||"",
+    verdict: f.verdict||"",
+    note: "",
+    showInChart: f.showInMainChart!==false,
+    dirty: false
+  }));
+  wuzLoaded = true;
+  document.getElementById("wuz-existing-count").textContent = `(${wuzExisting.length} films)`;
+  wuzRenderExisting();
+  document.getElementById("wuz-apply-btn").disabled = false;
+}
+
+function wuzRenderExisting() {
+  if (!wuzExisting.length) {
+    document.getElementById("wuz-existing-body").innerHTML = '<div class="ld" style="padding:24px">No films currently in chart. Add new ones below ↓</div>';
+    return;
+  }
+  const verdicts = ["Average","Hit","HIT","Super Hit","Blockbuster","ALL-TIME BLOCKBUSTER","Flop","FLOP","Disaster"];
+  const hdr = `<div class="wuz-row" style="font-weight:700;color:#6B7280;font-size:10px;text-transform:uppercase;letter-spacing:.06em;border-bottom:2px solid #E2E5EA">
+    <div>Film</div><div>Wk Coll ₹</div><div>Cumul India ₹</div><div>Last Wk ₹</div><div>Wk#</div><div>Days</div><div>Verdict</div><div>Note</div><div style="text-align:center">In Chart</div>
+  </div>`;
+  const rows = wuzExisting.map((f,i)=>`
+    <div class="wuz-row ${!f.showInChart?'wuz-droprow':''}">
+      <div><div class="ti">${e(f.title)}</div><div class="lg">${e(f.language)}</div></div>
+      <div><input type="number" step="0.01" data-i="${i}" data-k="weeklyCollection" value="${e(String(f.weeklyCollection))}" placeholder="${e(String(f.weeklyCollection_orig||''))}" oninput="wuzEdit(this)"/></div>
+      <div><input type="number" step="0.01" data-i="${i}" data-k="indiaNet" value="${e(String(f.indiaNet))}" oninput="wuzEdit(this)"/></div>
+      <div><input type="number" step="0.01" data-i="${i}" data-k="lastWeekCollection" value="${e(String(f.lastWeekCollection))}" oninput="wuzEdit(this)"/></div>
+      <div><input class="auto-bg" type="number" data-i="${i}" data-k="weekNum" value="${e(String(f.weekNum))}" oninput="wuzEdit(this)"/></div>
+      <div><input class="auto-bg" type="number" data-i="${i}" data-k="daysInRelease" value="${e(String(f.daysInRelease))}" oninput="wuzEdit(this)"/></div>
+      <div><select data-i="${i}" data-k="verdict" onchange="wuzEdit(this)">${verdicts.map(v=>`<option value="${v}" ${f.verdict===v?'selected':''}>${v}</option>`).join('')}</select></div>
+      <div><input data-i="${i}" data-k="note" value="${e(f.note)}" placeholder="Wk update note" oninput="wuzEdit(this)"/></div>
+      <div style="text-align:center"><label class="wuz-toggle"><input type="checkbox" data-i="${i}" data-k="showInChart" ${f.showInChart?'checked':''} onchange="wuzEdit(this)"/><span class="pill"></span></label></div>
+    </div>`).join("");
+  document.getElementById("wuz-existing-body").innerHTML = hdr + rows;
+}
+
+function wuzEdit(el) {
+  const i = +el.dataset.i, k = el.dataset.k;
+  const v = el.type==="checkbox" ? el.checked : el.value;
+  wuzExisting[i][k] = v;
+  wuzExisting[i].dirty = true;
+  // Re-render only if visibility toggled (to update drop-row styling)
+  if (k === "showInChart") wuzRenderExisting();
+}
+
+function wuzShowAddForm() {
+  document.getElementById("wuz-add-form").classList.add("show");
+}
+function wuzCancelAdd() {
+  document.getElementById("wuz-add-form").classList.remove("show");
+  ["naf-title","naf-genre","naf-weekly","naf-india","naf-note"].forEach(id=>document.getElementById(id).value="");
+}
+
+function wuzQueueNew() {
+  const t = document.getElementById("naf-title").value.trim();
+  if (!t) return wuzLog("New film needs a title", "er");
+  const film = {
+    title: t,
+    language: document.getElementById("naf-language").value,
+    genre: document.getElementById("naf-genre").value.trim(),
+    weeklyCollection: document.getElementById("naf-weekly").value || "0",
+    indiaNet: document.getElementById("naf-india").value || "0",
+    daysInRelease: document.getElementById("naf-days").value || "1",
+    weekNum: document.getElementById("naf-week").value || "1",
+    verdict: document.getElementById("naf-verdict").value,
+    weeklyNote: document.getElementById("naf-note").value.trim(),
+    showInMainChart: true,
+    releaseDate: new Date().toISOString().split("T")[0],
+    pageUrl: t.toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"") + "-box-office.html"
+  };
+  wuzNewQueue.push(film);
+  wuzCancelAdd();
+  wuzRenderNewList();
+}
+
+function wuzRenderNewList() {
+  document.getElementById("wuz-new-count").textContent = `(${wuzNewQueue.length} queued)`;
+  if (!wuzNewQueue.length) {
+    document.getElementById("wuz-new-list").innerHTML = "";
+    return;
+  }
+  document.getElementById("wuz-new-list").innerHTML = wuzNewQueue.map((f,i)=>`
+    <div style="background:#ECFDF5;border:1px solid #BBF7D0;border-radius:4px;padding:10px 12px;margin-bottom:6px;display:flex;align-items:center;justify-content:space-between;font-size:12px">
+      <div>
+        <strong>${e(f.title)}</strong> · <span style="color:#6B7280">${e(f.language)} · ${e(f.genre)} · W${f.weekNum} D${f.daysInRelease} · ₹${f.weeklyCollection} Cr (cumul ₹${f.indiaNet} Cr) · ${e(f.verdict)}</strong>
+        <div style="font-size:11px;color:#6B7280;margin-top:2px">${e(f.weeklyNote)}</div>
+      </div>
+      <button class="btn ghost sm" onclick="wuzNewQueue.splice(${i},1);wuzRenderNewList()">✕ Remove</button>
+    </div>`).join("");
+}
+
+function wuzLog(msg, type) {
+  const el = document.getElementById("wuz-progress");
+  el.classList.add("show");
+  const cls = type || "info";
+  const ts = new Date().toLocaleTimeString().split(" ")[0];
+  el.innerHTML += `<div class="${cls}">[${ts}] ${msg}</div>`;
+  el.scrollTop = el.scrollHeight;
+}
+
+async function wuzApplyAll() {
+  if (!S) return alert("Connect first");
+  const dirtyExisting = wuzExisting.filter(f=>f.dirty);
+  const newFilms = wuzNewQueue.slice();
+  const wnum = document.getElementById("wuz-wnum").value.trim();
+  const whead = document.getElementById("wuz-whead").value.trim();
+  const wtake = document.getElementById("wuz-wtake").value.trim();
+  const hasCommentary = wnum && (whead || wtake);
+
+  if (!dirtyExisting.length && !newFilms.length && !hasCommentary) {
+    return alert("Nothing to apply. Edit a film, queue a new one, or fill commentary.");
+  }
+
+  if (!confirm(`Apply ${dirtyExisting.length} update(s), ${newFilms.length} new film(s)${hasCommentary?", + commentary":""}?\n\nThis will write to the live Google Sheet.`)) return;
+
+  document.getElementById("wuz-progress").innerHTML = "";
+  wuzLog(`Starting weekly update batch...`, "info");
+  document.getElementById("wuz-apply-btn").disabled = true;
+
+  // ──────── 1. Bulk-update existing films ────────
+  if (dirtyExisting.length) {
+    const updates = dirtyExisting.map(f=>{
+      const fields = {};
+      if (f.weeklyCollection !== "") fields.weeklyCollection = f.weeklyCollection;
+      if (f.indiaNet !== "") fields.indiaNet = f.indiaNet;
+      if (f.lastWeekCollection !== "") fields.lastWeekCollection = f.lastWeekCollection;
+      if (f.weekNum !== "") fields.weekNum = f.weekNum;
+      if (f.daysInRelease !== "") fields.daysInRelease = f.daysInRelease;
+      if (f.verdict) fields.verdict = f.verdict;
+      if (f.note) fields.weeklyNote = f.note;
+      // Always include showInChart since we want to be able to toggle it
+      fields.showInMainChart = f.showInChart ? "TRUE" : "FALSE";
+      return { title: f.title, fields: fields };
+    });
+    wuzLog(`Sending bulkUpdate for ${updates.length} films...`, "info");
+    const r = await ppost({action:"bulkUpdate", updates: updates});
+    if (r?.ok) {
+      wuzLog(`✓ ${updates.length} existing films updated`, "ok");
+    } else {
+      wuzLog(`✗ Bulk update failed: ${r?.error||"unknown error"}`, "er");
+    }
+  }
+
+  // ──────── 2. Add new films (try addFilm action) ────────
+  const failedAdds = [];
+  for (const f of newFilms) {
+    wuzLog(`Adding new film: ${f.title}...`, "info");
+    // Try addFilm action
+    let r = await ppost({action:"addFilm", title:f.title, fields:f});
+    if (r?.ok) {
+      wuzLog(`✓ ${f.title} added`, "ok");
+      continue;
+    }
+    // Fallback: try createFilm
+    r = await ppost({action:"createFilm", title:f.title, fields:f});
+    if (r?.ok) {
+      wuzLog(`✓ ${f.title} added (via createFilm)`, "ok");
+      continue;
+    }
+    // Fallback: try insertFilm
+    r = await ppost({action:"insertFilm", title:f.title, fields:f});
+    if (r?.ok) {
+      wuzLog(`✓ ${f.title} added (via insertFilm)`, "ok");
+      continue;
+    }
+    // All failed — flag for manual addition
+    wuzLog(`⚠ ${f.title} — server doesn't support row creation. Need manual add.`, "er");
+    failedAdds.push(f);
+  }
+
+  // ──────── 3. Update weekly commentary ────────
+  if (hasCommentary) {
+    wuzLog(`Sending weekly commentary update for ${wnum}...`, "info");
+    const fields = {};
+    if (whead) fields.headline = whead;
+    if (wtake) fields.take = wtake;
+    const r = await ppost({action:"updateWeek", weekNum:wnum, fields:fields});
+    if (r?.ok) wuzLog(`✓ Weekly commentary updated`, "ok");
+    else wuzLog(`✗ Commentary update failed: ${r?.error||"unknown"}`, "er");
+  }
+
+  // ──────── 4. Failed-add manual instructions ────────
+  if (failedAdds.length) {
+    wuzLog(`━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━`, "info");
+    wuzLog(`MANUAL ACTION NEEDED for ${failedAdds.length} new film(s):`, "info");
+    wuzLog(`Open Sheet: https://docs.google.com/spreadsheets/d/1j7TrH2hVR9WjiMX2eExM4vgyjcedm2BJ9sF2D38_3Bk/edit`, "info");
+    wuzLog(`Go to Films tab → scroll to bottom → add these rows:`, "info");
+    failedAdds.forEach(f => {
+      wuzLog(`━━━ ${f.title} ━━━`, "info");
+      Object.entries(f).forEach(([k,v]) => wuzLog(`   ${k} = ${v}`, "info"));
+    });
+  }
+
+  wuzLog(`━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━`, "info");
+  wuzLog(`Done. Refreshing chart in 2s...`, "ok");
+  document.getElementById("wuz-apply-btn").disabled = false;
+  setTimeout(() => {
+    wuzNewQueue = [];
+    wuzRenderNewList();
+    wuzLoadCurrent();
+  }, 2000);
+}
 </script>
 </body>
 </html>
