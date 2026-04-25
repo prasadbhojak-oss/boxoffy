@@ -58,7 +58,7 @@ async function fetchTab(tab) {
 
 // ── Row → film object ──
 function rowToFilm(row) {
-  const parseBool = v => v === "true" || v === true;
+  const parseBool = v => v === true || v === 1 || (typeof v === "string" && v.trim().toLowerCase() === "true");
   const parseNullInt = v => (v !== "" && v != null) ? parseInt(v) : null;
   const parseNullFloat = v => (v !== "" && v != null) ? parseFloat(v) : null;
   return {
