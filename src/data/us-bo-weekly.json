@@ -733,10 +733,10 @@
   },
   "Week 18, 2026": {
     "dateRange": "Apr 24–26, 2026",
-    "headline": "Michael Crashes In With $39.5M Friday — Tracking $94–100M Wknd, Biggest Music Biopic Opening Ever; PHM Past $300M Domestic; Dhurandhar 2 NA Cume Hits $28.4M",
-    "source": "Lionsgate · Deadline · Variety · Hollywood Reporter · Box Office Mojo · Rotten Tomatoes · Comscore · Exhibitor Relations · Box Office Guru · Venky_BO · BoxofficePro · Funasia (BB)",
+    "headline": "Michael's $94-100M Opens Biggest Music Biopic Ever — PHM Past $300M, D2 NA Cume $28.4M",
+    "source": "Lionsgate · Deadline · Variety · Hollywood Reporter · Box Office Mojo · Comscore · Exhibitor Relations · Box Office Guru · Venky_BO · Funasia",
     "status": "live",
-    "asOf": "Sun Apr 26 evening · Friday confirmed (Venky_BO/Deadline) · Sat/Sun BCM forecasts · Monday AM final",
+    "asOf": "Sun Apr 26 · Fri confirmed · Sat/Sun BCM forecast · Mon AM final",
     "chart": [
       {
         "rank": 1,
@@ -749,7 +749,7 @@
         "change": "NEW",
         "weeks": 1,
         "rtScore": "40% / Aud 96%",
-        "admitsNote": "🎤 Friday $39.5M actual (incl $12.6M previews) — biggest biopic opening day ever, beating Oppenheimer's $33M. $206M+ global Day 1-3 (incl $111.4M from 82 international territories). Shatters Bohemian Rhapsody ($51M) and Straight Outta Compton ($60.2M) musical biopic records. Antoine Fuqua's biggest opening, Graham King's biggest, John Logan's biggest. CinemaScore A-, RT audience 96% (best ever for biopic genre), PostTrak 90% positive. IMAX/PLF drove 48% of weekend tickets. Black moviegoers 38%, female 61%. Lionsgate's 6th-biggest opening ever (behind Hunger Games 1-4 + final Twilight)."
+        "admitsNote": "Biggest music biopic ever · A- CinemaScore · $206M+ global D1-3"
       },
       {
         "rank": 2,
@@ -762,7 +762,7 @@
         "change": "-44%",
         "weeks": 4,
         "rtScore": "96%",
-        "admitsNote": "Past $750M WW — officially 2026's #1 globally. Beat China's Pegasus 3 ($647.8M). Mario franchise total now past $2B with two films. Friday $4.5M (-40%), 3-day $20.5M (-44%). Holding strong despite Michael's screen pressure (lost 552 theaters)."
+        "admitsNote": "Past $750M WW · 2026's #1 globally · Mario franchise past $2B"
       },
       {
         "rank": 3,
@@ -775,12 +775,12 @@
         "change": "-41%",
         "weeks": 6,
         "rtScore": "95%",
-        "admitsNote": "Crossed $300M domestic this weekend — past Dune Part Two's $282M lifetime. WW $573M+. Year's highest-earning original. Friday $3.2M (-37%). Lost 310 theaters but holding 95% RT. Best original sci-fi run since Interstellar."
+        "admitsNote": "Past $300M domestic · beat Dune 2 lifetime · WW $573M+"
       },
       {
         "rank": 4,
         "title": "Lee Cronin's The Mummy",
-        "studio": "WB / New Line / Blumhouse",
+        "studio": "WB / New Line",
         "genre": "Horror",
         "weekend": "$5.5M",
         "total": "$23.3M",
@@ -788,7 +788,7 @@
         "change": "-59%",
         "weeks": 2,
         "rtScore": "46%",
-        "admitsNote": "Friday $1.6M (-70% from W1 Fri). 3-day -59% W2 hold actually broke 2026's horror genre curse — most 2026 horror dropped 70%+ in W2 (Wolf Man, Scream 7, We Bury the Dead). Past $50M WW vs $22M budget — projected breakeven by next weekend."
+        "admitsNote": "Best 2026 horror W2 hold · past $50M WW vs $22M budget"
       },
       {
         "rank": 5,
@@ -801,7 +801,7 @@
         "change": "-47%",
         "weeks": 4,
         "rtScore": "81%",
-        "admitsNote": "Friday $816K (-46%). Pattinson + Zendaya + Borgli. Now A24's 8th-biggest film ever lifetime — targeting $50-55M finish, would be 3rd R-rated $50M+ film of 2026. Lost 807 theaters with Michael's expansion."
+        "admitsNote": "A24's 8th-biggest ever · targeting $50-55M finish"
       },
       {
         "rank": 6,
@@ -814,7 +814,7 @@
         "change": "-40%",
         "weeks": 8,
         "rtScore": "91%",
-        "admitsNote": "Friday $370K. Long Pixar tail — best-holding original since Inside Out 2. Lost 475 theaters but families still showing up."
+        "admitsNote": "Long Pixar tail · best original since Inside Out 2"
       },
       {
         "rank": 7,
@@ -827,7 +827,7 @@
         "change": "-53%*",
         "weeks": 3,
         "rtScore": "92% Aud",
-        "admitsNote": "Halle Bailey + Regé-Jean Page. W3 estimate — last week's $3.8M dropped sharply with Michael's screen pressure. May struggle to reach $20M lifetime ceiling."
+        "admitsNote": "Halle Bailey + Regé-Jean Page · $20M ceiling"
       },
       {
         "rank": 8,
@@ -840,7 +840,7 @@
         "change": "-55%*",
         "weeks": 2,
         "rtScore": "C+ CS",
-        "admitsNote": "Bob Odenkirk action vehicle (Ben Wheatley dir). W1 was Magnolia's biggest opening ever ($2.65M) — but C+ CinemaScore signals steep W2 fade. Heading to ~$5-6M lifetime."
+        "admitsNote": "Odenkirk action · C+ CS = steep W2 fade"
       },
       {
         "rank": 9,
@@ -853,7 +853,7 @@
         "change": "-48%*",
         "weeks": 3,
         "rtScore": "12%",
-        "admitsNote": "Spade / Theo Von vehicle fading fast. Critically panned. Wrap likely $4M lifetime."
+        "admitsNote": "Spade/Theo Von vehicle · wrap ~$4M"
       },
       {
         "rank": 10,
@@ -866,14 +866,14 @@
         "change": "-45%*",
         "weeks": 5,
         "rtScore": "71%",
-        "admitsNote": "Genre programmer holding into W5 with steady -45% drops."
+        "admitsNote": "Genre programmer holding into W5"
       }
     ],
     "indianSpotlight": [
       {
         "rank": 11,
         "title": "Bhooth Bangla",
-        "studio": "Funasia · Balaji Motion Pictures",
+        "studio": "Funasia · Balaji MP",
         "genre": "Hindi Horror-Comedy",
         "weekend": "~$0.45M*",
         "total": "~$1.94M*",
@@ -881,13 +881,13 @@
         "change": "-53%*",
         "weeks": 2,
         "rtScore": "N/A",
-        "admitsNote": "🇮🇳 Friday $112K confirmed (Venky_BO) · cume $1.61M thru Fri. BCM Sat ~$185K · Sun ~$152K · Wknd ~$449K · EOD Sun cume ~$1.94M. Akshay's 30th $1M+ NA grosser — only Shah Rukh Khan (32) has more all-time. NA is the #2 overseas market for the film after UAE-GCC. 5th biggest Akshay NA opener post-COVID. India: BB crossed ₹100 Cr nett today on D9 with D9 ₹10.75 Cr (+87% over Fri) — Akshay's 20th 100Cr nett grosser, most for any Indian actor.",
+        "admitsNote": "Akshay's 30th $1M+ NA grosser · 2nd to SRK (32) all-time",
         "isIndian": true
       },
       {
         "rank": 14,
         "title": "Dhurandhar: The Revenge",
-        "studio": "Jio Studios / Moviegoer Ent.",
+        "studio": "Jio Studios",
         "genre": "Action / Spy",
         "weekend": "~$0.155M*",
         "total": "~$28.41M*",
@@ -895,21 +895,21 @@
         "change": "-50%*",
         "weeks": 6,
         "rtScore": "N/A",
-        "admitsNote": "🏆 Friday $42K confirmed (Venky_BO) · cume $28.30M thru Fri. BCM Sat ~$63K · Sun ~$50K · Wknd ~$155K · EOD Sun cume ~$28.41M. All-time Indian film NA record holder. Past Baahubali 2's $20.78M (held 9 yrs). First Indian film ever past $28M in NA — likely $28.5M+ lifetime. WW ₹1,772 Cr — only Dangal (₹2,059 Cr) has more globally for an Indian film. India lifetime ₹1,127 Cr nett, all-time blockbuster locked.",
+        "admitsNote": "🏆 First Indian film past $28M NA · all-time record",
         "isIndian": true
       },
       {
         "rank": 22,
-        "title": "Vaazha 2: Biopic of a Billion Bros",
+        "title": "Vaazha 2",
         "studio": "Imagin / WBTS",
-        "genre": "Malayalam Comedy",
+        "genre": "Malayalam",
         "weekend": "~$0.07M*",
         "total": "~$0.94M*",
         "theaters": 75,
         "change": "-40%*",
         "weeks": 4,
         "rtScore": "N/A",
-        "admitsNote": "🇮🇳 Niche Mollywood release. Strong Kerala diaspora pull in NJ/TX/CA. ₹13 Cr budget → ₹220 Cr WW = 16.9× ROI. 5th Malayalam film ever past ₹200 Cr WW.",
+        "admitsNote": "5th Mal film past ₹200 Cr WW · 16.9× ROI",
         "isIndian": true
       }
     ]
