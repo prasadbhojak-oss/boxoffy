@@ -370,9 +370,62 @@ h2 .label-prefix {
   font-weight: 600;
 }
 
+/* SHARE ROW */
+.share-row {
+  margin: 2.5rem 0 0;
+  padding: 1.5rem 0 0.5rem;
+  border-top: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+}
+.share-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-right: 0.5rem;
+}
+.share-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.5rem 0.85rem;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 100px;
+  color: var(--ink);
+  text-decoration: none;
+  font-size: 0.78rem;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  transition: all 0.15s;
+  line-height: 1;
+}
+.share-btn:hover {
+  border-color: var(--navy);
+  background: var(--navy);
+  color: #fff;
+  transform: translateY(-1px);
+}
+.share-btn svg {
+  width: 14px;
+  height: 14px;
+  fill: currentColor;
+  flex-shrink: 0;
+}
+.share-btn.copied {
+  background: var(--emerald) !important;
+  color: #fff !important;
+  border-color: var(--emerald) !important;
+}
+
 /* BACK NAV + FOOTER */
 .back-nav {
-  margin: 2.5rem 0 1rem;
+  margin: 1rem 0 1rem;
   padding-top: 1.5rem;
   border-top: 1px solid var(--line);
   font-size: 0.9rem;
@@ -551,6 +604,26 @@ footer.site .src {
   </div>
 </div>
 
+<div class="share-row">
+  <span class="share-label">Share</span>
+  <a href="https://x.com/intent/post?text=Vels%20Film%20International%20%E2%80%94%20Production%20House%20Profile%20%7C%20Boxoffy&url=https%3A%2F%2Fboxoffy.com%2Fvels-film-international-production-house.html" target="_blank" rel="noopener" class="share-btn" aria-label="Share on X">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+    Post on X
+  </a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fboxoffy.com%2Fvels-film-international-production-house.html" target="_blank" rel="noopener" class="share-btn" aria-label="Share on Facebook">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.198 21.5h4v-8.01h3.604l.396-3.98h-4V7.5a1 1 0 011-1h3v-4h-3a5 5 0 00-5 5v2.51h-2l-.396 3.98h2.396v8.01z"/></svg>
+    Facebook
+  </a>
+  <a href="https://www.threads.net/intent/post?text=Vels%20Film%20International%20%E2%80%94%20Production%20House%20Profile%20%7C%20Boxoffy%0A%0Ahttps%3A%2F%2Fboxoffy.com%2Fvels-film-international-production-house.html" target="_blank" rel="noopener" class="share-btn" aria-label="Share on Threads">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12.186 24h-.007c-3.581-.024-6.334-1.205-8.184-3.509C2.35 18.44 1.5 15.586 1.472 12.01v-.017c.03-3.579.879-6.43 2.525-8.482C5.845 1.205 8.6.024 12.18 0h.014c2.746.02 5.043.725 6.826 2.098 1.677 1.29 2.858 3.13 3.509 5.467l-2.04.569c-1.104-3.96-3.898-5.984-8.304-6.015-2.91.022-5.11.936-6.54 2.717C4.307 6.504 3.616 8.914 3.589 12c.027 3.086.718 5.496 2.057 7.164 1.43 1.781 3.631 2.695 6.54 2.717 2.623-.02 4.358-.631 5.8-2.045 1.647-1.613 1.618-3.593 1.09-4.798-.31-.71-.873-1.3-1.634-1.75-.192 1.352-.622 2.446-1.284 3.272-.886 1.102-2.14 1.704-3.73 1.79-1.202.065-2.361-.218-3.259-.801-1.063-.689-1.685-1.74-1.752-2.964-.065-1.19.408-2.285 1.33-3.082.88-.76 2.119-1.207 3.583-1.291a13.853 13.853 0 013.02.142c-.126-.742-.375-1.332-.745-1.757-.498-.567-1.273-.857-2.305-.866h-.024c-.86 0-2.114.213-2.97 1.487l-1.728-1.16c1.116-1.66 2.928-2.572 5.114-2.572h.034c3.654.022 5.83 2.236 6.045 6.094.122.052.243.107.362.164 1.668.787 2.888 1.98 3.527 3.45.892 2.05.974 5.392-1.671 7.93-2.024 1.94-4.38 2.85-7.71 2.872z"/></svg>
+    Threads
+  </a>
+  <button type="button" class="share-btn" onclick="copyPageLink(this)" aria-label="Copy link">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg>
+    <span class="copy-label">Copy link</span>
+  </button>
+</div>
+
 <div class="back-nav">
   <a href="/production-houses.html">← All Production Houses</a>
 </div>
@@ -564,6 +637,43 @@ footer.site .src {
     <p class="src">All figures are Boxoffy estimates based on publicly available trade data. Sources: BCM-12 (Sacnilk, Box Office India, Pinkvilla, Bollywood Hungama, Variety, Deadline, Comscore, Exhibitor Relations, Box Office Guru, Boxoffice Pro, Venky_BO, Funasia). Boxoffy is not affiliated with any production house, studio or distributor. All figures and dates subject to change. Last updated May 2, 2026.</p>
   </div>
 </footer>
+
+<script>
+function copyPageLink(btn) {
+  const url = window.location.href;
+  const showCopied = () => {
+    const label = btn.querySelector('.copy-label');
+    const original = label.textContent;
+    label.textContent = 'Copied!';
+    btn.classList.add('copied');
+    setTimeout(() => {
+      label.textContent = original;
+      btn.classList.remove('copied');
+    }, 2000);
+  };
+  if (navigator.clipboard && window.isSecureContext) {
+    navigator.clipboard.writeText(url).then(showCopied).catch(() => {
+      const ta = document.createElement('textarea');
+      ta.value = url;
+      ta.style.position = 'fixed';
+      ta.style.opacity = '0';
+      document.body.appendChild(ta);
+      ta.select();
+      try { document.execCommand('copy'); showCopied(); } catch(e) {}
+      document.body.removeChild(ta);
+    });
+  } else {
+    const ta = document.createElement('textarea');
+    ta.value = url;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand('copy'); showCopied(); } catch(e) {}
+    document.body.removeChild(ta);
+  }
+}
+</script>
 
 </body>
 </html>
