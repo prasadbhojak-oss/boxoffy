@@ -3298,6 +3298,80 @@ function BogDivider({ label, color, bg, dotColor }) {
 // ── Main Panel ───────────────────────────────────────────────────────
 
 /* ── US BOX OFFICE TOP 10 PANEL ─────────────────────────── */
+function USBoShareRow({ weekData }) {
+  const [copied, setCopied] = React.useState(null);
+
+  const dateRange = weekData?.dateRange || "";
+  const headline  = weekData?.headline  || "";
+  const top3      = (weekData?.chart || []).slice(0, 3);
+  const pageUrl   = "https://boxoffy.com";
+
+  const tX = `🇺🇸 US Box Office · ${dateRange}\n\n` +
+    top3.map((f, i) => `${i+1}. ${f.title} ${f.weekend}`).join("\n") +
+    `\n\nFull chart → ${pageUrl}\n@BoxoffyMI`;
+
+  const tThreads = `🇺🇸 US Box Office Weekend · ${dateRange}\n\n` +
+    top3.map((f, i) => `${i+1}. ${f.title} — ${f.weekend} (${f.total})`).join("\n") +
+    `\n\nFull breakdown + Indian Spotlight → ${pageUrl}`;
+
+  const tFB = `US Box Office Weekend · ${dateRange}\n\n${headline}\n\n` +
+    top3.map((f, i) => `${i+1}. ${f.title} (${f.studio}) — ${f.weekend} weekend / ${f.total} total`).join("\n") +
+    `\n\nBoxoffy — Box Office Intelligence\n${pageUrl}`;
+
+  const tWA = `*🇺🇸 US Box Office · ${dateRange}*\n\n` +
+    top3.map((f, i) => `${i+1}. *${f.title}* — ${f.weekend}`).join("\n") +
+    `\n\nFull chart → ${pageUrl}`;
+
+  const platforms = [
+    { id:"x",       label:"Post on X",  icon:"𝕏", color:"#000",    openUrl:"https://twitter.com/intent/tweet?text=" + encodeURIComponent(tX) },
+    { id:"threads", label:"Threads",    icon:"@", color:"#000",    openUrl:"https://www.threads.net/intent/post?text=" + encodeURIComponent(tThreads) },
+    { id:"fb",      label:"Facebook",   icon:"f", color:"#1877F2", openUrl:"https://www.facebook.com/sharer/sharer.php?u=" + encodeURIComponent(pageUrl) },
+    { id:"wa",      label:"WhatsApp",   icon:"W", color:"#25D366", openUrl:"https://wa.me/?text=" + encodeURIComponent(tWA) },
+  ];
+
+  const copyLink = () => {
+    navigator.clipboard.writeText(pageUrl).then(() => {
+      setCopied("link");
+      setTimeout(() => setCopied(null), 2000);
+    }).catch(() => {});
+  };
+
+  return (
+    <div style={{
+      padding:"8px 16px",
+      background:"#1F2937",
+      borderTop:"1px solid #374151",
+      display:"flex", alignItems:"center", gap:6, flexWrap:"wrap"
+    }}>
+      <span style={{
+        fontFamily:"'DM Sans',sans-serif", fontWeight:700, fontSize:9,
+        color:"#9CA3AF", letterSpacing:"0.12em", textTransform:"uppercase",
+        marginRight:6
+      }}>Share Chart</span>
+      {platforms.map(p => (
+        <a key={p.id} href={p.openUrl} target="_blank" rel="noopener noreferrer" style={{
+          display:"inline-flex", alignItems:"center", gap:4,
+          background:p.color, color:"#fff",
+          fontFamily:"'DM Sans',sans-serif", fontWeight:700, fontSize:11,
+          padding:"5px 10px", borderRadius:3, textDecoration:"none",
+        }}>
+          <span style={{ fontSize:11, lineHeight:1 }}>{p.icon}</span>
+          {p.label}
+        </a>
+      ))}
+      <button onClick={copyLink} style={{
+        display:"inline-flex", alignItems:"center", gap:4,
+        background: copied === "link" ? "#16A34A" : "#374151",
+        color:"#fff",
+        fontFamily:"'DM Sans',sans-serif", fontWeight:700, fontSize:11,
+        padding:"5px 10px", borderRadius:3, border:"none", cursor:"pointer",
+      }}>
+        🔗 {copied === "link" ? "Copied!" : "Copy Link"}
+      </button>
+    </div>
+  );
+}
+
 function USBoTop10({ weekData }) {
   if (!weekData) return <div style={{ padding:24, color:T.textMuted, fontFamily:"'DM Sans',sans-serif", fontSize:12 }}>No US BO data available.</div>;
 
@@ -3334,6 +3408,9 @@ function USBoTop10({ weekData }) {
           {weekData.headline}
         </div>
       </div>
+
+      {/* Share row — matches India BO pattern */}
+      <USBoShareRow weekData={weekData} />
 
       {/* Column headers — desktop only */}
       {!isMobile && (
@@ -3591,7 +3668,7 @@ function ForeignFilmsPanel({ movies }) {
 
       {/* ── Global view: US BO Top 10 ─────────────────────────── */}
       {viewMode === "global"
-        ? <USBoTop10 weekData={US_BO_WEEKLY["Week 18, 2026"]} />
+        ? <USBoTop10 weekData={US_BO_WEEKLY["Week 19, 2026"]} />
         : <>
           {/* ── Column headers ──────────────────────────────────── */}
           <BogColHeaders viewMode={viewMode} />

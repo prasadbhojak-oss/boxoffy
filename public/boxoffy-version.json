@@ -1,1 +1,162 @@
-{"version":"1.4.7","updated":"2026-05-05T23:00:00+05:30","note":"Boxoffice This Week - May 1-3 update block added"} 
+{
+  "version": "v3.34",
+  "deployedAt": "2026-04-23",
+  "gitCommit": "pending",
+  "appJsxChars": 371697,
+  "dataFiles": {
+    "weekly-commentary.json": {
+      "weekNum": "Week 17",
+      "dateRange": "Apr 17–23, 2026",
+      "lastUpdated": "2026-04-23",
+      "headline": "Bhooth Bangla Closes ₹89 Cr Week 1. D2 Crosses ₹1,121 Cr. Vaazha 2 Past ₹213 Cr WW."
+    },
+    "us-bo-weekly.json": {
+      "week": "Week 15, 2026",
+      "dateRange": "Apr 3-5, 2026",
+      "lastUpdated": "2026-04-06",
+      "headline": "Week 15: Mario $130.9M · PHM $217M · D2 $26M NA all-time Bollywood record"
+    },
+    "editorials.json": {
+      "entries": 11,
+      "latest": "Driver or Multiplier? The Top 20 Bollywood Songs vs Box Office",
+      "latestDate": "Mar 29, 2026",
+      "lastUpdated": "2026-03-29"
+    },
+    "films.json": {
+      "totalFilms": 1015,
+      "lastUpdated": "2026-04-23",
+      "note": "BCM v2: 4-source recalibration (Taran + BH + Sacnilk + BOI). 10 chart films · 3-field WW sync."
+    },
+    "usBoWeekly": "Week 14 final confirmed · Mar 27-29, 2026",
+    "filmsJson": "PHM wk2 · D2 GST/footfall/OTT added",
+    "weeklyCommentary": "Week 14 comprehensive entry added"
+  },
+  "weeklyUpdate": {
+    "weekNum": 17,
+    "dateRange": "Apr 17–23, 2026"
+  },
+  "articles": {
+    "dangal-china-box-office.html": "2026-03-26",
+    "dhurandhar2-us-boxoffice.html": "2026-03-25",
+    "dhurandhar-2-box-office.html": "2026-03-28",
+    "why-indian-cinema-never-has-a-number-2.html": "2026-03-22",
+    "india-all-time-box-office.html": "2026-03-24",
+    "dhurandhar-box-office-d1-vs-d2.html": "2026-03-28",
+    "bollywood-music-box-office.html": "2026-03-29"
+  },
+  "changelog": [
+    {
+      "version": "3.34",
+      "date": "2026-04-23",
+      "commit": "pending",
+      "changes": [
+        "BCM v2 recalibration with Taran Adarsh + BH + Sacnilk + BOI 4-source weighting",
+        "Bhooth Bangla W1 close: ₹89 Cr India / ₹137 Cr WW (Taran + BH consensus, Sacnilk underread by ₹10.5 Cr)",
+        "BB studio confirmed: Balaji Motion Pictures + Cape of Good Films (NOT Jio)",
+        "D2 enters W6 D36 — lifetime ₹1,121 Cr India / ₹1,764 Cr WW; UK overtaken Pathaan",
+        "Vaazha 2 D22 lifetime ₹113 Cr / ₹213 Cr WW (5th Malayalam film in 200 Cr club)",
+        "All 10 chart films: 3-field WW sync (totalCollection + wwGross + ww) — fixes drift bug from v3.33.1",
+        "LIK verdict: HIT → Below Average · Dacoit verdict: HIT → FLOP",
+        "Studio fixes: BB, LIK (Sun→Rowdy+Seven Screen), Dacoit, Vaazha 2",
+        "weekly-commentary.json [0]: Week 17 final close with BCM source breakdown"
+      ]
+    },
+    {
+      "version": "3.32",
+      "date": "2026-04-06",
+      "changes": [
+        "films.json D2: totalNum 920.02→925.0, weeklyCollection 20.1→86, daysInRelease 15→19, indiaNet ~₹920→~₹925 Cr",
+        "us-bo-weekly.json: Week 15 full chart — Mario $130.9M, PHM $30.6M, The Drama $14.1M, 10 entries confirmed",
+        "weekly-commentary.json Week 15: updated D18 data, 3-source triangulation, correct scoreboard schema",
+        "App.jsx: WKD14→WKD15 APR 3-5, US BO ref Week 14→Week 15",
+        "Sacnilk 9.5% inflation confirmed and rejected vs BOI/Pinkvilla cross-reference",
+        "BOI paste direct: Hindi ₹887.33 Cr D18 · Boxoffy all-India call: ~₹925 Cr"
+      ]
+    },
+    {
+      "version": "3.28",
+      "date": "2026-03-30",
+      "changes": [
+        "App.jsx: Week 13→14, D0-D12 ₹867 Cr, top-right D11/D12/India/WW stats",
+        "App.jsx: sources cleaned to BOI/Sacnilk/Pinkvilla only, no Filmibeat/Republic/TheWeek",
+        "D1 vs D2 page: D5-D12 bars filled with BOI data, week table W1/W2 confirmed",
+        "D1 vs D2 page: hero stats ₹867 Cr / ~₹1,392 Cr WW updated",
+        "weekly-commentary.json: Week 14 ₹867 Cr confirmed",
+        "us-bo-weekly.json: Week 14 present with $23M+ D2 NA record"
+      ]
+    },
+    {
+      "version": "3.27",
+      "date": "2026-03-29",
+      "commit": "pending",
+      "changes": [
+        "New article: bollywood-music-box-office.html — Top 20 Bollywood Songs Driver/Multiplier analysis",
+        "D11 confirmed ₹68 Cr · D0–D11 ₹841 Cr BOI · WW ~₹1,360 Cr · India gross ₹1,000 Cr",
+        "D5 fixed to ₹60 Cr BOI · D1 vs D2 card updated",
+        "App.jsx 22 replacements · zero stale refs · 346,413 chars",
+        "weekly-commentary.json Week 14 — Dhurandhar Juggernaut Continues",
+        "editorials.json — new article at [0]",
+        "sitemap.xml — bollywood-music-box-office.html added"
+      ]
+    },
+    {
+      "version": "3.26",
+      "date": "2026-03-28",
+      "commit": "pending",
+      "changes": [
+        "D10 confirmed ₹62.35 Cr · D0-D10 ₹773 Cr BOI canonical",
+        "D9 locked ₹41.75 Cr (Filmibeat/TheWeek)",
+        "D11 Boxoffy call ₹65-70 Cr → D0-D11 ~₹840 Cr = Dhurandhar 1 lifetime",
+        "PHM US confirmed $46.8M Wkd 2 · D2 NA $23M beats Baahubali 2 lifetime"
+      ]
+    },
+    {
+      "version": "3.25",
+      "date": "2026-03-27",
+      "commit": "pending",
+      "changes": [
+        "weekly-commentary.json Week 14 — D2 D9 ~₹40 Cr, D0-D9 ~₹709 Cr, PHM India ₹4.88 Cr D1+D2",
+        "us-bo-weekly.json Week 14 — PHM Wkd 2 $46.8M, They Will Kill You NEW, D2 NA $23M",
+        "editorials.json — Dangal article [0] confirmed latest"
+      ]
+    },
+    {
+      "version": "3.24",
+      "date": "2026-03-27",
+      "commit": "7a63f82 (restored)",
+      "changes": [
+        "Week 14 weekly-commentary.json — D2 D0-D8 ₹669 Cr, D9 live, PHM India entry",
+        "Week 14 us-bo-weekly.json — PHM week 2, D2 $20M+ NA",
+        "editorials.json — Dangal article [0], recency order fixed",
+        "App.jsx restored from commit 7a63f82 after regression"
+      ]
+    },
+    {
+      "version": "3.23",
+      "date": "2026-03-26",
+      "commit": "444964a",
+      "changes": [
+        "दंगल at Ten article — full deep dive, 38-day China data, share buttons, SEO",
+        "AI summary block removed pending API key setup",
+        "editorials.json recency order fixed"
+      ]
+    },
+    {
+      "version": "3.22",
+      "date": "2026-03-25",
+      "commit": "7a63f82",
+      "changes": [
+        "D2 data reconciled — BOI/Pinkvilla canonical ₹562 Cr D0-D6",
+        "D2 vs Pushpa 2 article live",
+        "All-time rankings corrected — D2 at #10",
+        "Week 13 weekly commentary deployed"
+      ]
+    }
+  ],
+  "_meta": {
+    "purpose": "Boxoffy deployed state tracker. Claude reads this at every session start to verify correct baseline before making any edits. Never edit App.jsx without checking appJsxChars matches this file.",
+    "appJsxRule": "Good App.jsx = 336,189 chars. If outputs/App.jsx is unavailable or char count is wrong, DO NOT PROCEED — ask PB to run: git checkout 7a63f82 -- src/App.jsx",
+    "updateProtocol": "After every deploy: bump version (3.24 → 3.25), update deployedAt, gitCommit, and relevant dataFiles entries."
+  },
+  "notes": "v3.34 Apr 23 2026 — BCM v2 4-source recalibration. BB W1 ₹89 Cr / D2 ₹1,121 Cr / Vaazha 2 ₹113 Cr. All 3 WW fields synced to fix v3.33.1 chart-display drift bug. Taran Adarsh + BH consensus prioritized over Sacnilk where they diverge."
+}

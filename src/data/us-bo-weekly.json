@@ -913,5 +913,209 @@
         "isIndian": true
       }
     ]
+  },
+  "Week 19, 2026": {
+    "dateRange": "May 1–3, 2026",
+    "headline": "Devil Wears Prada 2 Opens to $77M Domestic ($233.6M WW); Michael W2 $54M Crosses $400M Global; Mario Galaxy First 2026 Film Past $400M Domestic",
+    "source": "Exhibitor Relations · Box Office Guru · Comscore · Deadline · Variety · Hollywood Reporter · Box Office Mojo · Boxoffice Pro · Venky_BO · Funasia · Sacnilk overseas · The Week",
+    "chart": [
+      {
+        "rank": 1,
+        "title": "The Devil Wears Prada 2",
+        "studio": "20th Century / Disney",
+        "genre": "Comedy / Sequel",
+        "weekend": "$77.0M",
+        "total": "$77.0M",
+        "theaters": 4150,
+        "change": "NEW",
+        "weeks": 1,
+        "rtScore": "78%",
+        "admitsNote": "$233.6M WW · 2nd-best 2026 global debut · Italy $16.6M opener"
+      },
+      {
+        "rank": 2,
+        "title": "Michael",
+        "studio": "Lionsgate",
+        "genre": "Music Biopic",
+        "weekend": "$54.0M",
+        "total": "$183.8M",
+        "theaters": 3955,
+        "change": "-44%",
+        "weeks": 2,
+        "rtScore": "40% / Aud 96%",
+        "admitsNote": "Crossed $400M WW · #2 musical biopic ever (Bohemian leads)"
+      },
+      {
+        "rank": 3,
+        "title": "The Super Mario Galaxy Movie",
+        "studio": "Universal / Illumination",
+        "genre": "Animation",
+        "weekend": "$11.2M",
+        "total": "$401.8M",
+        "theaters": 3412,
+        "change": "-45%",
+        "weeks": 5,
+        "rtScore": "96%",
+        "admitsNote": "First 2026 film past $400M dom · $897M WW · $1B imminent"
+      },
+      {
+        "rank": 4,
+        "title": "Project Hail Mary",
+        "studio": "Amazon MGM",
+        "genre": "Sci-Fi",
+        "weekend": "$8.5M",
+        "total": "$318.7M",
+        "theaters": 3017,
+        "change": "-29%",
+        "weeks": 7,
+        "rtScore": "95%",
+        "admitsNote": "7-week top 5 streak · longest since Avatar 2 · $638M WW"
+      },
+      {
+        "rank": 5,
+        "title": "Hokum",
+        "studio": "Neon",
+        "genre": "Horror",
+        "weekend": "$6.4M",
+        "total": "$6.4M",
+        "theaters": 1855,
+        "change": "NEW",
+        "weeks": 1,
+        "rtScore": "86%",
+        "admitsNote": "Neon's best opener of 2026 · Adam Scott · B CinemaScore"
+      },
+      {
+        "rank": 6,
+        "title": "Lee Cronin's The Mummy",
+        "studio": "New Line",
+        "genre": "Horror",
+        "weekend": "$3.5M",
+        "total": "~$60M",
+        "theaters": 2450,
+        "change": "-53%",
+        "weeks": 3,
+        "rtScore": "72%",
+        "admitsNote": "$140M WW · solid horror reboot legs"
+      },
+      {
+        "rank": 7,
+        "title": "Animal Farm",
+        "studio": "Angel Studios",
+        "genre": "Animation",
+        "weekend": "$2.8M",
+        "total": "$2.8M",
+        "theaters": 1130,
+        "change": "NEW",
+        "weeks": 1,
+        "rtScore": "65%",
+        "admitsNote": "Andy Serkis · Orwell adaptation · soft start"
+      },
+      {
+        "rank": 8,
+        "title": "Casa Grande",
+        "studio": "Bleecker Street",
+        "genre": "Drama",
+        "weekend": "$1.9M",
+        "total": "$1.9M",
+        "theaters": 1280,
+        "change": "NEW",
+        "weeks": 1,
+        "rtScore": "58%",
+        "admitsNote": "Sub-$2M open · loss confirmed"
+      },
+      {
+        "rank": 9,
+        "title": "Reincarnated as a Slime: Tears of Azure Sea",
+        "studio": "Crunchyroll",
+        "genre": "Anime",
+        "weekend": "$1.5M",
+        "total": "$1.5M",
+        "theaters": 980,
+        "change": "NEW",
+        "weeks": 1,
+        "rtScore": "N/A",
+        "admitsNote": "Niche anime release · core fan opening"
+      },
+      {
+        "rank": 10,
+        "title": "Deep Water",
+        "studio": "Vertical",
+        "genre": "Horror",
+        "weekend": "$1.2M",
+        "total": "$1.2M",
+        "theaters": 850,
+        "change": "NEW",
+        "weeks": 1,
+        "rtScore": "42%",
+        "admitsNote": "5th 2023 shelf-cleaning horror dump of 2026"
+      }
+    ],
+    "indianSpotlight": [
+      {
+        "rank": 12,
+        "title": "Patriot",
+        "studio": "Wayfarer Films",
+        "genre": "Action / Spy",
+        "weekend": "$0.33M",
+        "total": "$0.44M",
+        "theaters": 220,
+        "change": "NEW",
+        "weeks": 1,
+        "isIndian": true,
+        "admitsNote": "$177K D1 · 3rd-biggest Mollywood NA opener · Mammootty + Mohanlal"
+      },
+      {
+        "rank": 14,
+        "title": "Kara",
+        "studio": "Vels Film Intl.",
+        "genre": "Tamil Action",
+        "weekend": "$0.20M",
+        "total": "$0.40M",
+        "theaters": 180,
+        "change": "NEW",
+        "weeks": 1,
+        "isIndian": true,
+        "admitsNote": "Dhanush thriller · NA softer than India weekday tank"
+      },
+      {
+        "rank": 15,
+        "title": "Bhooth Bangla",
+        "studio": "Cape of Good Films",
+        "genre": "Horror Comedy",
+        "weekend": "$0.18M",
+        "total": "$2.0M",
+        "theaters": 165,
+        "change": "-42%",
+        "weeks": 3,
+        "isIndian": true,
+        "admitsNote": "Akshay W3 hold strong · India W3 ₹14 Cr nett · WW ₹235 Cr"
+      },
+      {
+        "rank": 19,
+        "title": "Dhurandhar: The Revenge",
+        "studio": "Moviegoer Ent.",
+        "genre": "Action / Spy",
+        "weekend": "$0.10M",
+        "total": "$28.51M",
+        "theaters": 95,
+        "change": "-65%",
+        "weeks": 7,
+        "isIndian": true,
+        "admitsNote": "#1 NA all-time Indian film · D2 broke BB2 WW record on Sat"
+      },
+      {
+        "rank": 25,
+        "title": "Vaazha 2",
+        "studio": "OPM Cinemas",
+        "genre": "Malayalam Comedy",
+        "weekend": "$0.04M",
+        "total": "$0.99M",
+        "theaters": 45,
+        "change": "-58%",
+        "weeks": 5,
+        "isIndian": true,
+        "admitsNote": "Mollywood mid-budget hit · ₹125 Cr India · ₹230 Cr WW lifetime"
+      }
+    ]
   }
 }
