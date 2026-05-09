@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Boxoffy · Weekend Collage May 8-10 — Generator</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Inter', -apple-system, sans-serif; background: #f5f5f7; padding: 30px 20px; min-height: 100vh; }
+  .controls { max-width: 1280px; margin: 0 auto 20px; display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
+  .controls h1 { flex: 1; font-size: 22px; color: #111; }
+  .btn { background: #0F2340; color: #fff; border: none; padding: 11px 20px; border-radius: 6px; cursor: pointer; font-size: 13px; font-weight: 600; letter-spacing: 0.02em; }
+  .btn:hover { background: #1a3a5f; }
+  .btn-green { background: #16A34A; }
+  .btn-green:hover { background: #15803D; }
+  .status { background: #FEF3C7; padding: 10px 16px; border-radius: 6px; color: #92400E; font-size: 13px; font-weight: 600; display: none; max-width: 1280px; margin: 0 auto 16px; }
+  .status.show { display: block; }
+  .status.error { background: #FEE2E2; color: #991B1B; }
+  .status.success { background: #D1FAE5; color: #065F46; }
+
+  /* The actual collage canvas — 1200x675 for social/X (16:9) */
+  .collage-wrap { max-width: 1280px; margin: 0 auto; }
+  #collage {
+    width: 1200px;
+    height: 675px;
+    background: linear-gradient(135deg, #0F2340 0%, #1a3a5f 50%, #0F2340 100%);
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+  }
+  
+  /* Decorative diagonal lines pattern */
+  #collage::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-image: repeating-linear-gradient(45deg, transparent, transparent 60px, rgba(255,255,255,0.02) 60px, rgba(255,255,255,0.02) 61px);
+    pointer-events: none;
+  }
+
+  /* Header overlay */
+  .collage-header {
+    position: absolute;
+    top: 24px;
+    left: 32px;
+    right: 32px;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .brand {
+    color: #fff;
+    font-size: 26px;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    line-height: 1;
+  }
+  .brand .logo-dot {
+    color: #DC2626;
+    font-size: 30px;
+  }
+  .brand .domain {
+    font-size: 12px;
+    font-weight: 500;
+    color: rgba(255,255,255,0.65);
+    margin-top: 3px;
+    letter-spacing: 0.05em;
+  }
+  .header-meta {
+    text-align: right;
+    color: #fff;
+  }
+  .header-meta .label {
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    color: #DC2626;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+  .header-meta .date {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.1;
+  }
+  .header-meta .total {
+    font-size: 11px;
+    color: rgba(255,255,255,0.75);
+    margin-top: 4px;
+    letter-spacing: 0.02em;
+  }
+
+  /* Posters area — 4×3 grid for 12 films */
+  .posters-grid {
+    position: absolute;
+    top: 95px;
+    left: 32px;
+    right: 32px;
+    bottom: 70px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px;
+  }
+  .poster-cell {
+    position: relative;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.5);
+    background: #0a1428;
+  }
+  .poster-cell img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .poster-cell .placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: rgba(255,255,255,0.4);
+    background: linear-gradient(135deg, #1a3a5f 0%, #0F2340 100%);
+    font-size: 22px;
+    font-weight: 800;
+    text-align: center;
+    padding: 12px;
+  }
+  .poster-cell .placeholder .ph-title {
+    font-size: 11px;
+    font-weight: 600;
+    color: rgba(255,255,255,0.7);
+    margin-top: 8px;
+    letter-spacing: -0.01em;
+    line-height: 1.15;
+  }
+
+  /* Signal badge top-left */
+  .signal-badge {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    background: rgba(0,0,0,0.85);
+    color: #fff;
+    padding: 3px 7px;
+    border-radius: 3px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+    z-index: 2;
+  }
+  .signal-badge.fire { background: #EA580C; }
+  .signal-badge.hold { background: #15803D; }
+  .signal-badge.fade { background: #B45309; }
+  .signal-badge.crash { background: #991B1B; }
+  .signal-badge.new { background: #1E40AF; }
+  .signal-badge.ott { background: #7C3AED; }
+
+  /* Bottom info strip on each poster */
+  .info-strip {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.96) 0%, rgba(0,0,0,0.7) 55%, transparent 100%);
+    padding: 24px 8px 8px;
+  }
+  .info-strip .film {
+    color: #fff;
+    font-size: 11px;
+    font-weight: 700;
+    line-height: 1.15;
+    margin-bottom: 2px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+  .info-strip .meta {
+    color: rgba(255,255,255,0.7);
+    font-size: 8.5px;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    margin-bottom: 1px;
+  }
+  .info-strip .num {
+    color: #DC2626;
+    font-size: 13px;
+    font-weight: 800;
+    margin-top: 2px;
+    line-height: 1;
+  }
+  .info-strip .num.green { color: #34D399; }
+  .info-strip .num.gold { color: #FBBF24; }
+  .info-strip .num.muted { color: rgba(255,255,255,0.55); font-size: 11px; }
+
+  /* Footer ribbon */
+  .collage-footer {
+    position: absolute;
+    bottom: 22px;
+    left: 32px;
+    right: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: rgba(255,255,255,0.85);
+    font-size: 11px;
+  }
+  .collage-footer .left {
+    font-weight: 600;
+  }
+  .collage-footer .total-strip {
+    background: rgba(220,38,38,0.18);
+    border: 1px solid rgba(220,38,38,0.45);
+    padding: 5px 14px;
+    border-radius: 18px;
+    color: #fff;
+    font-weight: 700;
+    font-size: 11px;
+  }
+  .collage-footer .right {
+    font-size: 10px;
+    color: rgba(255,255,255,0.55);
+    letter-spacing: 0.04em;
+  }
+</style>
+</head>
+<body>
+
+<div class="controls">
+  <h1>🎨 Boxoffy Weekend Collage — May 8–10, 2026</h1>
+  <button class="btn" onclick="loadPosters()">↻ Reload Posters</button>
+  <button class="btn btn-green" onclick="downloadAsPNG()">⬇ Download PNG</button>
+</div>
+
+<div class="status" id="status"></div>
+
+<div class="collage-wrap">
+  <div id="collage">
+    
+    <!-- Header -->
+    <div class="collage-header">
+      <div class="brand">
+        BOXOFFY<span class="logo-dot">.</span>
+        <div class="domain">boxoffy.com</div>
+      </div>
+      <div class="header-meta">
+        <div class="label">▎WEEKEND PREVIEW</div>
+        <div class="date">May 8 – 10, 2026</div>
+        <div class="total">Top 10 holdovers · 1 new theatrical · 1 OTT debut</div>
+      </div>
+    </div>
+
+    <!-- 12-poster grid -->
+    <div class="posters-grid" id="posters-grid">
+      <!-- Films injected by JS -->
+    </div>
+
+    <!-- Footer -->
+    <div class="collage-footer">
+      <div class="left">BCM Forecast · India weekend total ₹110-125 Cr nett</div>
+      <div class="total-strip">🔥 Raja Shivaji rewriting Marathi records · BB closes ₹150 Cr</div>
+      <div class="right">boxoffy.com · @BoxoffyMI</div>
+    </div>
+
+  </div>
+</div>
+
+<script>
+// ⚠️ SECURITY NOTE: Same client-side TMDB token pattern as prior collage builder.
+// PB has flagged this token for rotation — generate a new one at https://www.themoviedb.org/settings/api
+// before sharing this file outside the local environment.
+const TMDB_BEARER = "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2YWM1OTY0NzEyZTA0NGRmMmJjMmFiYzFlMTFlZGMyYyIsIm5iZiI6MTc3Mzg4NTMxMS42MzIsInN1YiI6IjY5YmI1NzdmYjgyMzJhNzc5MjIxZWZjOCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.QxWkqL_4_3PfTnIVgcZYE0zlXQd9M2y5QL-oWNwq6dE";
+
+// 12 films for May 8-10 weekend — 10 box office + 1 new theatrical + 1 OTT debut
+const films = [
+  // Holdovers carrying the weekend
+  {
+    title: "Raja Shivaji",
+    searchTitle: "Raja Shivaji",
+    year: 2026,
+    lang: "Marathi · W2",
+    num: "₹49 Cr",
+    cumul: "Wknd +₹18-22 Cr",
+    signal: "🔥 HOT",
+    signalClass: "fire"
+  },
+  {
+    title: "Bhooth Bangla",
+    searchTitle: "Bhooth Bangla",
+    year: 2026,
+    lang: "Hindi · W4",
+    num: "₹144.25 Cr",
+    cumul: "Wknd +₹6-8 Cr",
+    signal: "✅ HOLD",
+    signalClass: "hold"
+  },
+  {
+    title: "Patriot",
+    searchTitle: "Patriot Mammootty",
+    year: 2026,
+    lang: "Malayalam · W2",
+    num: "₹26 Cr",
+    cumul: "Wknd +₹8-10 Cr",
+    signal: "✅ HOLD",
+    signalClass: "hold"
+  },
+  {
+    title: "Kara",
+    searchTitle: "Kara Dhanush",
+    year: 2026,
+    lang: "Tamil · W2",
+    num: "₹30.26 Cr",
+    cumul: "Wknd +₹4-5 Cr",
+    signal: "⚠ FADE",
+    signalClass: "fade"
+  },
+  {
+    title: "The Devil Wears Prada 2",
+    searchTitle: "The Devil Wears Prada 2",
+    year: 2026,
+    lang: "Hollywood · W2",
+    num: "₹17 Cr",
+    cumul: "Wknd +₹6-8 Cr",
+    signal: "✅ HOLD",
+    signalClass: "hold"
+  },
+  {
+    title: "Michael",
+    searchTitle: "Michael Jackson biopic",
+    year: 2026,
+    lang: "Hollywood · W3",
+    num: "₹52 Cr",
+    cumul: "Wknd +₹3-4 Cr",
+    signal: "⚠ FADE",
+    signalClass: "fade"
+  },
+  // New theatrical entry
+  {
+    title: "Mortal Kombat 2",
+    searchTitle: "Mortal Kombat 2",
+    year: 2026,
+    lang: "Hollywood · W1",
+    num: "₹14-18 Cr",
+    cumul: "OW projected",
+    signal: "🆕 NEW",
+    signalClass: "new"
+  },
+  {
+    title: "Project Hail Mary",
+    searchTitle: "Project Hail Mary",
+    year: 2026,
+    lang: "Hollywood · W7",
+    num: "₹38 Cr est",
+    cumul: "Wknd +₹1-2 Cr",
+    signal: "⚠ FADE",
+    signalClass: "fade"
+  },
+  {
+    title: "Krishnavataram Pt 1",
+    searchTitle: "Krishnavataram",
+    year: 2026,
+    lang: "Multi · W1",
+    num: "₹0.42 Cr",
+    cumul: "Day 1 below mark",
+    signal: "📉 CRASH",
+    signalClass: "crash"
+  },
+  {
+    title: "Ek Din",
+    searchTitle: "Ek Din Junaid Khan",
+    year: 2026,
+    lang: "Hindi · W2",
+    num: "₹3.81 Cr",
+    cumul: "Wknd +₹0.5-1 Cr",
+    signal: "📉 CRASH",
+    signalClass: "crash"
+  },
+  // OTT debut anchor
+  {
+    title: "Lukkhe",
+    searchTitle: "Lukkhe King",
+    year: 2026,
+    lang: "Prime Video · OTT",
+    num: "8 EPS",
+    cumul: "King's debut",
+    signal: "🟣 OTT",
+    signalClass: "ott"
+  },
+  {
+    title: "Bharathanatyam 2",
+    searchTitle: "Bharathanatyam Mohiniyattam",
+    year: 2026,
+    lang: "Netflix · OTT",
+    num: "MAY 8",
+    cumul: "Mollywood",
+    signal: "🟣 OTT",
+    signalClass: "ott"
+  }
+];
+
+const status = document.getElementById('status');
+
+function showStatus(msg, type) {
+  status.textContent = msg;
+  status.className = 'status show' + (type ? ' ' + type : '');
+}
+
+async function fetchPoster(film) {
+  try {
+    const url = `https://api.themoviedb.org/3/search/multi?query=${encodeURIComponent(film.searchTitle)}&language=en-US&page=1`;
+    const r = await fetch(url, {
+      headers: {
+        "Authorization": "Bearer " + TMDB_BEARER,
+        "accept": "application/json"
+      }
+    });
+    if (!r.ok) {
+      console.warn(`TMDB ${r.status} for ${film.title}`);
+      return null;
+    }
+    const data = await r.json();
+    // Prefer movie or TV result with a year match if possible
+    let hit = (data.results || []).find(m => 
+      m.poster_path && (
+        (m.release_date && m.release_date.startsWith(String(film.year))) ||
+        (m.first_air_date && m.first_air_date.startsWith(String(film.year)))
+      )
+    );
+    // Fallback: any result with poster_path
+    if (!hit) {
+      hit = (data.results || []).find(m => m.poster_path);
+    }
+    return hit ? `https://image.tmdb.org/t/p/w500${hit.poster_path}` : null;
+  } catch (err) {
+    console.error(`Failed to fetch ${film.title}:`, err);
+    return null;
+  }
+}
+
+async function loadPosters() {
+  showStatus('🔍 Querying TMDB for 12 posters...', '');
+  const grid = document.getElementById('posters-grid');
+  grid.innerHTML = '';
+
+  // Render placeholder cells first
+  films.forEach((film, i) => {
+    const cell = document.createElement('div');
+    cell.className = 'poster-cell';
+    const numClass = film.signalClass === 'fire' ? 'gold' : (film.signalClass === 'hold' ? 'green' : (film.signalClass === 'crash' ? 'muted' : ''));
+    cell.innerHTML = `
+      <div class="placeholder">
+        <div>🎬</div>
+        <div class="ph-title">${film.title}</div>
+      </div>
+      <div class="signal-badge ${film.signalClass}">${film.signal}</div>
+      <div class="info-strip">
+        <div class="meta">${film.lang}</div>
+        <div class="film">${film.title}</div>
+        <div class="num ${numClass}">${film.num}</div>
+        <div class="meta" style="margin-top:2px">${film.cumul}</div>
+      </div>
+    `;
+    cell.id = `cell-${i}`;
+    grid.appendChild(cell);
+  });
+
+  // Fetch all posters in parallel
+  const results = await Promise.all(films.map((f, i) => fetchPoster(f).then(url => ({film: f, idx: i, url}))));
+  
+  let hits = 0, misses = 0;
+  results.forEach(({film, idx, url}) => {
+    const cell = document.getElementById(`cell-${idx}`);
+    if (url) {
+      const img = document.createElement('img');
+      img.src = url;
+      img.alt = film.title;
+      img.crossOrigin = "anonymous";
+      img.onerror = () => {
+        console.warn(`Image load failed for ${film.title}`);
+      };
+      const placeholder = cell.querySelector('.placeholder');
+      if (placeholder) placeholder.replaceWith(img);
+      hits++;
+    } else {
+      misses++;
+    }
+  });
+
+  if (misses === 0) {
+    showStatus(`✅ All ${hits} posters loaded from TMDB. Click "Download PNG" to save.`, 'success');
+  } else if (hits > 0) {
+    showStatus(`⚠ Loaded ${hits} of ${films.length} posters. ${misses} missing — placeholder shown for those.`, '');
+  } else {
+    showStatus(`❌ Could not load any posters. TMDB may be down or your network is blocking image.tmdb.org.`, 'error');
+  }
+}
+
+async function downloadAsPNG() {
+  showStatus('📸 Generating PNG (loading html2canvas)...', '');
+  
+  if (typeof html2canvas === 'undefined') {
+    await new Promise((resolve, reject) => {
+      const script = document.createElement('script');
+      script.src = 'https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js';
+      script.onload = resolve;
+      script.onerror = reject;
+      document.head.appendChild(script);
+    });
+  }
+  
+  try {
+    const canvas = await html2canvas(document.getElementById('collage'), {
+      useCORS: true,
+      allowTaint: false,
+      backgroundColor: null,
+      scale: 2,
+      logging: false
+    });
+    
+    canvas.toBlob(blob => {
+      if (!blob) {
+        showStatus('❌ PNG generation failed (blob empty). Try right-click → Save image.', 'error');
+        return;
+      }
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `boxoffy-weekend-collage-may-8-10-2026.png`;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+      showStatus('✅ Downloaded! Check your Downloads folder.', 'success');
+    }, 'image/png');
+  } catch (err) {
+    showStatus(`❌ PNG export failed: ${err.message}. Try right-click the collage and "Save image as".`, 'error');
+    console.error(err);
+  }
+}
+
+// Auto-load on page open
+window.addEventListener('DOMContentLoaded', () => {
+  setTimeout(loadPosters, 200);
+});
+</script>
+
+</body>
+</html>

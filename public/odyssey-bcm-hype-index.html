@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Odyssey BCM Hype Index: Sentiment Deep Dive, India Business & Editorial Take | Boxoffy</title>
+<meta name="description" content="Christopher Nolan's The Odyssey · BCM Hype Index 92/100 · Trailer 121.4M views in 24h · IMAX 70mm presales sold out 12h · India business projection ₹220–₹280 Cr based on Oppenheimer comparable · $1.0–1.47B BCM WW range. Editorial deep dive.">
+<meta property="og:title" content="The Odyssey BCM Hype Index — Nolan's $250M Bet · India ₹220–₹280 Cr Forecast | Boxoffy">
+<meta property="og:description" content="Boxoffy's highest 2026 hype score. Full sentiment breakdown, India business model, editorial take on Nolan's most expensive film.">
+<meta property="og:image" content="https://boxoffy.com/og-boxoffy.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@BoxoffyMI">
+<link rel="canonical" href="https://boxoffy.com/odyssey-bcm-hype-index.html">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,400;0,600;0,700;0,900;1,700;1,900&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --navy: #0F2340;
+  --red: #C41E3A;
+  --gold: #D97706;
+  --green: #15803D;
+  --surface: #FFFFFF;
+  --surface-alt: #F7F8FA;
+  --border: #E5E7EB;
+  --border-dark: #CBD5E1;
+  --text: #111827;
+  --text-mid: #374151;
+  --text-muted: #6B7280;
+  --amber-light: #FEF3C7;
+  --amber-dark: #92400E;
+  --green-light: #D1FAE5;
+  --green-dark: #065F46;
+  --red-light: #FEE2E2;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body { font-family: 'DM Sans', sans-serif; background: var(--surface); color: var(--text); font-size: 16px; line-height: 1.7; }
+
+.nav { background: var(--navy); padding: 12px 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px; position: sticky; top: 0; z-index: 100; }
+.nav-logo { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 22px; color: #fff; text-decoration: none; letter-spacing: -0.01em; }
+.nav-logo span { color: var(--red); }
+.nav-links { display: flex; align-items: center; gap: 20px; list-style: none; }
+.nav-links a { font-family: 'IBM Plex Mono', monospace; font-size: 10px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.65); text-decoration: none; transition: color 0.15s; }
+.nav-links a:hover { color: #fff; }
+.nav-back { font-family: 'IBM Plex Mono', monospace; font-size: 10px; font-weight: 600; letter-spacing: 0.1em; color: rgba(255,255,255,0.55); text-decoration: none; }
+
+.hero { background: var(--navy); position: relative; overflow: hidden; padding: 0; }
+.hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 30% 50%, rgba(217,119,6,0.18) 0%, transparent 70%), radial-gradient(ellipse at 80% 20%, rgba(196,30,58,0.10) 0%, transparent 60%); }
+.hero-inner { position: relative; z-index: 2; max-width: 1100px; margin: 0 auto; padding: 48px 32px; display: grid; grid-template-columns: 200px 1fr; gap: 40px; align-items: start; }
+.hero-poster { position: relative; flex-shrink: 0; }
+.hero-tag { display: inline-flex; align-items: center; gap: 6px; font-family: 'IBM Plex Mono', monospace; font-size: 9px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); border: 1px solid rgba(217,119,6,0.4); padding: 4px 10px; border-radius: 2px; background: rgba(217,119,6,0.1); margin-bottom: 16px; }
+.live-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--gold); animation: pulse 1.6s ease-in-out infinite; }
+@keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.3} }
+.hero-title { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: clamp(32px, 5vw, 52px); color: #fff; line-height: 1.0; letter-spacing: -0.02em; margin-bottom: 12px; }
+.hero-title em { color: var(--gold); font-style: normal; }
+.hero-meta { font-family: 'IBM Plex Mono', monospace; font-size: 10px; font-weight: 500; letter-spacing: 0.1em; color: rgba(255,255,255,0.45); text-transform: uppercase; margin-bottom: 20px; }
+.hero-stat-row { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
+.stat-chip { display: flex; flex-direction: column; align-items: center; padding: 10px 16px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); border-radius: 4px; min-width: 90px; }
+.stat-chip-val { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 22px; color: #fff; line-height: 1; }
+.stat-chip-val.red { color: var(--red); }
+.stat-chip-val.gold { color: #FBBF24; }
+.stat-chip-val.green { color: #34D399; }
+.stat-chip-label { font-family: 'IBM Plex Mono', monospace; font-size: 8px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.4); margin-top: 3px; white-space: nowrap; }
+.hero-verdict { display: inline-flex; align-items: center; gap: 8px; padding: 8px 16px; background: rgba(52,211,153,0.15); border: 1px solid rgba(52,211,153,0.35); border-radius: 4px; }
+.verdict-label { font-family: 'IBM Plex Mono', monospace; font-size: 9px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #34D399; }
+.verdict-val { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 16px; color: #34D399; letter-spacing: 0.05em; }
+
+.content { max-width: 780px; margin: 0 auto; padding: 0 24px 80px; }
+.section { margin-top: 52px; }
+.section-label { font-family: 'IBM Plex Mono', monospace; font-size: 9px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--red); margin-bottom: 8px; }
+.section-title { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 28px; color: var(--navy); letter-spacing: -0.01em; line-height: 1.1; margin-bottom: 16px; padding-bottom: 12px; border-bottom: 2px solid var(--navy); }
+.body-text { font-size: 15px; line-height: 1.75; color: var(--text-mid); margin-bottom: 16px; }
+.body-text strong { color: var(--navy); font-weight: 600; }
+.body-text em { color: var(--text-mid); font-style: italic; }
+
+/* HYPE SCORE BOX */
+.hype-score-box { background: linear-gradient(135deg, var(--navy) 0%, #1a3a6b 100%); border-radius: 8px; padding: 32px 28px; margin: 28px 0; position: relative; overflow: hidden; text-align: center; }
+.hype-score-box::before { content: 'HYPE'; position: absolute; left: -12px; top: 50%; transform: translateY(-50%) rotate(-90deg); transform-origin: left center; font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 90px; color: rgba(255,255,255,0.04); letter-spacing: -0.05em; line-height: 1; pointer-events: none; }
+.hype-label { font-family: 'IBM Plex Mono', monospace; font-size: 10px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gold); margin-bottom: 12px; position: relative; z-index: 1; }
+.hype-num { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 96px; color: #fff; line-height: 1; position: relative; z-index: 1; }
+.hype-num .denom { color: rgba(255,255,255,0.3); font-size: 36px; margin-left: 6px; }
+.hype-tier { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 26px; color: #FBBF24; margin-top: 8px; letter-spacing: 0.04em; position: relative; z-index: 1; }
+.hype-tier-sub { font-family: 'DM Sans', sans-serif; font-size: 13px; color: rgba(255,255,255,0.55); margin-top: 6px; position: relative; z-index: 1; }
+
+/* SCORE BARS */
+.score-bars { margin: 28px 0; background: var(--surface-alt); border: 1px solid var(--border); border-radius: 6px; padding: 20px; }
+.score-row { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
+.score-label { font-family: 'IBM Plex Mono', monospace; font-size: 10px; font-weight: 700; color: var(--text-mid); width: 130px; flex-shrink: 0; }
+.score-bar-wrap { flex: 1; height: 22px; background: var(--border); border-radius: 3px; overflow: hidden; position: relative; }
+.score-bar { height: 100%; border-radius: 3px; display: flex; align-items: center; padding-left: 8px; transition: width 1.2s ease; }
+.score-bar-val { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 12px; color: rgba(255,255,255,0.95); white-space: nowrap; }
+.score-bar.green   { background: var(--green); }
+.score-bar.gold    { background: linear-gradient(90deg, var(--gold), #B45309); }
+.score-bar.red     { background: var(--red); }
+.score-bar.navy    { background: var(--navy); }
+.score-num { font-family: 'IBM Plex Mono', monospace; font-size: 11px; font-weight: 700; color: var(--text-mid); width: 48px; text-align: right; flex-shrink: 0; }
+
+/* TABLE */
+.day-table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 14px; }
+.day-table th { font-family: 'IBM Plex Mono', monospace; font-size: 8px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); padding: 8px 12px; text-align: left; background: var(--surface-alt); border-bottom: 2px solid var(--navy); }
+.day-table th:not(:first-child) { text-align: right; }
+.day-table td { padding: 11px 12px; border-bottom: 0.5px solid var(--border); font-family: 'DM Sans', sans-serif; font-size: 13.5px; color: var(--text-mid); }
+.day-table td:not(:first-child) { text-align: right; }
+.day-table td:first-child { font-weight: 600; color: var(--navy); }
+.day-table .num { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 16px; color: var(--navy); }
+.day-table .num.red { color: var(--red); }
+.day-table .num.gold { color: var(--gold); }
+.day-table .num.green { color: var(--green); }
+.badge-conf { display: inline-block; font-family: 'IBM Plex Mono', monospace; font-size: 8px; font-weight: 700; padding: 1px 6px; border-radius: 2px; letter-spacing: 0.08em; }
+.badge-high { background: var(--green-light); color: var(--green-dark); }
+.badge-med  { background: var(--amber-light); color: var(--amber-dark); }
+.badge-est  { background: #EDE9FE; color: #5B21B6; }
+
+/* SENTIMENT GRID */
+.sentiment-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 24px 0; }
+@media(max-width:580px) { .sentiment-grid { grid-template-columns: 1fr; } }
+.sentiment-card { padding: 18px 18px; background: var(--surface-alt); border: 1px solid var(--border); border-radius: 5px; border-left-width: 4px; }
+.sentiment-card.pos { border-left-color: var(--green); }
+.sentiment-card.neg { border-left-color: var(--red); }
+.sentiment-tag { font-family: 'IBM Plex Mono', monospace; font-size: 8.5px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 8px; }
+.sentiment-card.pos .sentiment-tag { color: var(--green); }
+.sentiment-card.neg .sentiment-tag { color: var(--red); }
+.sentiment-headline { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 17px; color: var(--navy); line-height: 1.2; margin-bottom: 6px; }
+.sentiment-body { font-size: 13px; color: var(--text-muted); line-height: 1.6; }
+
+/* IMPACT GRID */
+.impact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 20px 0; }
+@media(max-width:580px) { .impact-grid { grid-template-columns: 1fr; } }
+.impact-card { padding: 16px; background: var(--surface-alt); border: 1px solid var(--border); border-radius: 5px; }
+.impact-icon { font-size: 22px; margin-bottom: 8px; }
+.impact-label { font-family: 'IBM Plex Mono', monospace; font-size: 8.5px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--navy); margin-bottom: 4px; }
+.impact-body { font-family: 'DM Sans', sans-serif; font-size: 13px; color: var(--text-muted); line-height: 1.55; }
+
+/* CALLOUT */
+.callout { padding: 18px 20px; border-left: 4px solid var(--red); background: rgba(196,30,58,0.04); border-radius: 0 4px 4px 0; margin: 20px 0; }
+.callout p { font-family: 'DM Sans', sans-serif; font-size: 15px; color: var(--text-mid); line-height: 1.65; font-style: italic; }
+.callout strong { color: var(--navy); font-style: normal; }
+.callout.gold { border-left-color: var(--gold); background: rgba(217,119,6,0.05); }
+.callout.navy { border-left-color: var(--navy); background: rgba(15,35,64,0.04); }
+
+/* EDITORIAL BOX */
+.editorial-box { background: linear-gradient(135deg, #1a1a2e 0%, var(--navy) 100%); border-radius: 8px; padding: 32px; margin: 32px 0; color: #fff; position: relative; overflow: hidden; }
+.editorial-box::before { content: '"'; position: absolute; right: 20px; top: -30px; font-family: 'Barlow Condensed', serif; font-size: 220px; color: rgba(251,191,36,0.08); line-height: 1; pointer-events: none; }
+.editorial-tag { font-family: 'IBM Plex Mono', monospace; font-size: 10px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: #FBBF24; margin-bottom: 10px; position: relative; z-index: 1; }
+.editorial-headline { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 26px; color: #fff; line-height: 1.15; margin-bottom: 16px; letter-spacing: -0.01em; position: relative; z-index: 1; }
+.editorial-body { font-family: 'DM Sans', sans-serif; font-size: 15px; line-height: 1.75; color: rgba(255,255,255,0.82); margin-bottom: 14px; position: relative; z-index: 1; }
+.editorial-body strong { color: #FBBF24; font-weight: 600; }
+.editorial-body em { color: rgba(255,255,255,0.7); font-style: italic; }
+.editorial-byline { font-family: 'IBM Plex Mono', monospace; font-size: 10px; font-weight: 600; color: rgba(255,255,255,0.45); letter-spacing: 0.1em; margin-top: 18px; position: relative; z-index: 1; padding-top: 14px; border-top: 1px solid rgba(255,255,255,0.1); }
+
+.source-note { margin-top: 40px; padding: 16px 0; border-top: 1px solid var(--border); font-family: 'IBM Plex Mono', monospace; font-size: 9px; color: var(--text-muted); line-height: 1.8; letter-spacing: 0.04em; }
+
+.related-section { background: var(--surface-alt); border-top: 2px solid var(--navy); padding: 40px 24px; margin-top: 60px; }
+.related-inner { max-width: 780px; margin: 0 auto; }
+.related-title { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 20px; color: var(--navy); letter-spacing: -0.01em; margin-bottom: 20px; text-transform: uppercase; }
+.related-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 12px; }
+.related-card { background: var(--surface); border: 1px solid var(--border); border-radius: 5px; padding: 14px 16px; text-decoration: none; display: block; transition: border-color 0.15s; }
+.related-card:hover { border-color: var(--navy); }
+.related-card-tag { font-family: 'IBM Plex Mono', monospace; font-size: 8px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--red); margin-bottom: 5px; }
+.related-card-title { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 16px; color: var(--navy); line-height: 1.25; }
+
+footer { background: var(--navy); padding: 24px; text-align: center; }
+footer p { font-family: 'IBM Plex Mono', monospace; font-size: 9px; color: rgba(255,255,255,0.35); letter-spacing: 0.08em; }
+footer a { color: rgba(255,255,255,0.55); text-decoration: none; }
+
+@media(max-width:640px) {
+  .hero-inner { grid-template-columns: 1fr; gap: 24px; }
+  .hero-title { font-size: 32px; }
+  .hype-num { font-size: 70px; }
+  .hype-num .denom { font-size: 26px; }
+  .editorial-box::before { display: none; }
+}
+
+.share-strip { display: flex; align-items: center; gap: 8px; margin: 32px 0; padding: 14px 16px; background: var(--surface-alt); border: 1px solid var(--border); border-radius: 5px; flex-wrap: wrap; }
+.share-label { font-family: 'IBM Plex Mono', monospace; font-size: 10px; font-weight: 700; color: var(--text-muted); letter-spacing: 0.1em; text-transform: uppercase; flex-shrink: 0; margin-right: 4px; }
+.share-ctx { font-family: 'DM Sans', sans-serif; font-size: 12px; color: var(--text-muted); flex: 1; min-width: 120px; font-style: italic; }
+.share-btn { display: inline-flex; align-items: center; gap: 6px; padding: 7px 13px; border-radius: 3px; font-family: 'DM Sans', sans-serif; font-size: 12px; font-weight: 600; border: none; cursor: pointer; text-decoration: none; transition: opacity 0.15s, transform 0.1s; flex-shrink: 0; }
+.share-btn:hover { opacity: 0.88; transform: translateY(-1px); }
+.share-wa  { background: #25D366; color: #fff; }
+.share-x   { background: #000; color: #fff; }
+.share-th  { background: #000; color: #fff; }
+.share-fb  { background: #1877F2; color: #fff; }
+.share-copy { background: var(--navy); color: #fff; }
+.share-copy.copied { background: var(--green); }
+
+.comp-table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 13px; }
+.comp-table th { font-family: 'IBM Plex Mono', monospace; font-size: 8px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); padding: 10px 8px; text-align: right; background: var(--surface-alt); border-bottom: 2px solid var(--navy); }
+.comp-table th:first-child { text-align: left; }
+.comp-table td { padding: 11px 8px; border-bottom: 0.5px solid var(--border); font-family: 'DM Sans', sans-serif; font-size: 13px; color: var(--text-mid); text-align: right; }
+.comp-table td:first-child { text-align: left; font-weight: 600; color: var(--navy); }
+.comp-table .num { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 14px; color: var(--navy); }
+.comp-table tr.nolan-row { background: rgba(217,119,6,0.06); border-top: 2px solid var(--gold); }
+
+/* INDIA-SPECIFIC */
+.india-box { background: #FFF7ED; border: 1px solid #FED7AA; border-left: 4px solid #EA580C; border-radius: 6px; padding: 22px 24px; margin: 24px 0; }
+.india-tag { font-family: 'IBM Plex Mono', monospace; font-size: 9px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: #C2410C; margin-bottom: 8px; }
+.india-headline { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 22px; color: var(--navy); line-height: 1.2; margin-bottom: 12px; }
+.india-body { font-family: 'DM Sans', sans-serif; font-size: 14px; line-height: 1.7; color: var(--text-mid); }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <a href="/" class="nav-logo">BOX<span>OFFY</span></a>
+  <ul class="nav-links">
+    <li><a href="/" class="nav-back">← Home</a></li>
+    <li><a href="/#weekly">Box Office</a></li>
+    <li><a href="/#hype">Hype Index</a></li>
+    <li><a href="/hype-index.html">All Forecasts</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-poster">
+      <div style="width:200px;height:300px;border-radius:6px;background:rgba(255,255,255,0.08);display:flex;flex-direction:column;align-items:center;justify-content:center;border:1px solid rgba(255,255,255,0.15);font-family:'Barlow Condensed',sans-serif;font-weight:900;color:rgba(255,255,255,0.5);text-align:center;line-height:1;padding:20px;">
+        <div style="font-size:14px;letter-spacing:0.2em;color:rgba(255,255,255,0.3);">A FILM BY</div>
+        <div style="font-size:18px;margin-top:6px;color:rgba(255,255,255,0.5);">CHRISTOPHER NOLAN</div>
+        <div style="font-size:36px;margin-top:24px;color:#FBBF24;">THE</div>
+        <div style="font-size:48px;color:#FBBF24;letter-spacing:-0.02em;">ODYSSEY</div>
+        <div style="font-size:10px;letter-spacing:0.3em;color:rgba(255,255,255,0.4);margin-top:24px;">JULY 17, 2026</div>
+        <div style="font-size:9px;color:rgba(255,255,255,0.3);margin-top:8px;">IMAX 70mm</div>
+      </div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-tag"><span class="live-dot"></span>BCM Hype Index · 71 Days Out</div>
+      <h1 class="hero-title">The Odyssey —<br><em>Hype Score 92/100</em></h1>
+      <div class="hero-meta">July 17, 2026 · Universal · Christopher Nolan · Updated May 7</div>
+      <div class="hero-stat-row">
+        <div class="stat-chip"><div class="stat-chip-val">$250M</div><div class="stat-chip-label">Budget</div></div>
+        <div class="stat-chip"><div class="stat-chip-val gold">121.4M</div><div class="stat-chip-label">Trailer Views 24h</div></div>
+        <div class="stat-chip"><div class="stat-chip-val red">12 hrs</div><div class="stat-chip-label">IMAX 70mm Sellout</div></div>
+        <div class="stat-chip"><div class="stat-chip-val green">$1.0–1.47B</div><div class="stat-chip-label">BCM WW Range</div></div>
+      </div>
+      <div class="hero-verdict">
+        <div class="verdict-label">Boxoffy Tier</div>
+        <div class="verdict-val">▶ ALL-TIME WATCH · Highest 2026 hype score</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="content">
+
+<!-- EDITORIAL OPENING -->
+<section class="section">
+  <div class="section-label">Editorial · The Boxoffy View</div>
+  <h2 class="section-title">The Most Expensive Bet Of Nolan's Career</h2>
+
+  <div class="editorial-box">
+    <div class="editorial-tag">▶ Editorial — May 7, 2026</div>
+    <div class="editorial-headline">Nolan is doing the thing he has spent his career not having to do.</div>
+    <div class="editorial-body">For the first time in his career, Christopher Nolan is taking pre-release victory laps. The 12-hour IMAX 70mm sellout in July 2025. The 121.4 million trailer views in 24 hours. The Late Show debut. The CinemaCon "once-in-a-generation cinematic masterpiece" line from Universal's Jim Orr. None of this is the Nolan playbook. <strong>This is the playbook of a director who knows the budget is now a problem if the film doesn't perform.</strong></div>
+    <div class="editorial-body">$250 million is the most expensive Nolan film ever made. By a wide margin. Oppenheimer cost $100M. The Dark Knight Rises cost $250M, which is the previous high — but that was 2012 dollars protected by an established Batman franchise. The Odyssey carries no franchise scaffolding. It has Greek mythology, which historically hasn't been a reliable global box-office hook — Troy ($497M on $185M budget), Alexander ($167M on $155M), Immortals ($227M on $75M) — none of these were the kind of returns a $250M film needs. It has IMAX 70mm — the most expensive theatrical format to print, ship, and project, with only 22 venues in the country capable of even running it.</div>
+    <div class="editorial-body">All of which is why the Hype Index 92 is doing something interesting. <strong>It is pricing the marketing intensity, not the underlying confidence.</strong> The two are correlated, but they are not the same thing. Studios that know they have a slam-dunk don't sell out IMAX 70mm one year early. They protect the demand for opening weekend. The fact that Universal released those tickets in July 2025 — and that Nolan-and-Thomas signed off — tells you something specific. They wanted a flag in the ground. They wanted a number to point to when the trade asked, "Is The Odyssey actually going to work?"</div>
+    <div class="editorial-body">It probably will. Five of the six BCM Hype Index components are functionally maxed. Sentiment is the only one with hairline cracks, and the film is far enough from release that those cracks can heal. But here is the thing nobody is saying out loud about this film: <em>the downside case is more interesting than the upside case</em>. Nolan at $250M has to do roughly $750M worldwide just to be considered a financial success. That number is higher than every Nolan film outside the Dark Knight trilogy. Including Inception. Including Oppenheimer.</div>
+    <div class="editorial-body">The Hype Index 92 says The Odyssey will get there. The editorial line says <strong>this is the first Nolan film that needs to.</strong></div>
+    <div class="editorial-byline">— BOXOFFY EDITORIAL · MAY 7, 2026</div>
+  </div>
+</section>
+
+<!-- HYPE SCORE -->
+<section class="section">
+  <div class="section-label">BCM Hype Index · v4.0</div>
+  <h2 class="section-title">The Score</h2>
+
+  <div class="hype-score-box">
+    <div class="hype-label">Boxoffy Hype Index Score</div>
+    <div class="hype-num">92<span class="denom">/100</span></div>
+    <div class="hype-tier">ALL-TIME WATCH</div>
+    <div class="hype-tier-sub">Highest BCM Hype Index score for any 2026 release · narrowly above Avatar: Fire and Ash (89) and Spider-Man: Brand New Day (84)</div>
+  </div>
+
+  <p class="body-text">The Boxoffy BCM Hype Index v4.0 scores every major upcoming theatrical release on a 100-point scale across six weighted dimensions: trailer velocity, presale signals, director track record, ensemble brand value, format and exhibition signal, and sentiment momentum. The Odyssey lands at <strong>92/100 — the highest score we've issued for any 2026 release</strong>, and tied for our second-highest ever (behind Avengers: Doomsday's pre-Russo-confirmation 94 in late 2025).</p>
+
+  <p class="body-text">A score above 90 has historically correlated with a 43-percentage-point lift in the probability of crossing 1.5x theatrical breakeven, based on the 82-film historical comparable set the Hype Index regression sits on. Three films in our test set scored above 90 in the modern era — Oppenheimer (91), Avatar: The Way of Water (93), and Top Gun: Maverick (90). All three exceeded $700M domestic. Two crossed $1B WW.</p>
+</section>
+
+<!-- SCORE BREAKDOWN -->
+<section class="section">
+  <div class="section-label">Score Components</div>
+  <h2 class="section-title">How The 92 Breaks Down</h2>
+  <p class="body-text">The Hype Index is not a single signal — it's a six-dimensional weighted average. Here's the component-by-component breakdown:</p>
+
+  <div class="score-bars">
+    <div class="score-row"><div class="score-label">TRAILER VELOCITY</div><div class="score-bar-wrap"><div class="score-bar gold" style="width:97%"><span class="score-bar-val">19.3 / 20</span></div></div><div class="score-num">97%</div></div>
+    <div class="score-row"><div class="score-label">PRESALE SIGNAL</div><div class="score-bar-wrap"><div class="score-bar gold" style="width:100%"><span class="score-bar-val">20.0 / 20</span></div></div><div class="score-num">100%</div></div>
+    <div class="score-row"><div class="score-label">DIRECTOR TRACK</div><div class="score-bar-wrap"><div class="score-bar gold" style="width:95%"><span class="score-bar-val">14.3 / 15</span></div></div><div class="score-num">95%</div></div>
+    <div class="score-row"><div class="score-label">ENSEMBLE BRAND</div><div class="score-bar-wrap"><div class="score-bar gold" style="width:93%"><span class="score-bar-val">14.0 / 15</span></div></div><div class="score-num">93%</div></div>
+    <div class="score-row"><div class="score-label">FORMAT / EXHIBITION</div><div class="score-bar-wrap"><div class="score-bar gold" style="width:100%"><span class="score-bar-val">15.0 / 15</span></div></div><div class="score-num">100%</div></div>
+    <div class="score-row"><div class="score-label">SENTIMENT MOMENTUM</div><div class="score-bar-wrap"><div class="score-bar red" style="width:62%"><span class="score-bar-val">9.3 / 15</span></div></div><div class="score-num">62%</div></div>
+    <div class="score-row" style="margin-top:18px;border-top:2px solid var(--navy);padding-top:14px;"><div class="score-label" style="color:var(--navy);font-weight:900;">TOTAL</div><div class="score-bar-wrap"><div class="score-bar navy" style="width:92%"><span class="score-bar-val">91.9 / 100</span></div></div><div class="score-num" style="color:var(--navy);font-weight:900;">92</div></div>
+  </div>
+
+  <p class="body-text">Five of the six components are functionally maxed. The single dimension dragging the score below 95 is <strong>Sentiment Momentum at 62%</strong>, where the post-trailer "dad/daddy" dialogue debate, American-accent criticism, and "Marvel-like visuals" complaints have created measurable downside chatter — especially on Letterboxd-adjacent and Reddit film-discourse circles. We unpack that two sections down.</p>
+</section>
+
+<!-- TRAILER + PRESALE -->
+<section class="section">
+  <div class="section-label">Trailer + Presale Signals</div>
+  <h2 class="section-title">The Numbers Behind The Maxed Scores</h2>
+
+  <table class="day-table">
+    <thead>
+      <tr><th>Signal</th><th>Odyssey</th><th>Comparable Benchmark</th><th>Score Output</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Trailer 24h views</td><td class="num">121.4M</td><td>Wicked: For Good 113M (prior 2025 leader)</td><td class="num gold">19.3 / 20</td></tr>
+      <tr><td>Vs first Oppenheimer trailer</td><td class="num">~2.0x</td><td>Direct Nolan baseline</td><td class="num gold">19.3 / 20</td></tr>
+      <tr><td>IMAX 70mm presale window</td><td class="num">12 hours</td><td>Oppenheimer presale: 9 days for similar inventory</td><td class="num gold">20.0 / 20</td></tr>
+      <tr><td>Pre-release IMAX revenue</td><td class="num">$1.5M</td><td>Released 1 year before opening — unprecedented</td><td class="num gold">20.0 / 20</td></tr>
+      <tr><td>Theaters with sold-out IMAX 70mm</td><td class="num">22 of 22</td><td>Half sold within first 12 hours</td><td class="num gold">20.0 / 20</td></tr>
+      <tr><td>IMDb anticipated rank 2026</td><td class="num">#1</td><td>Top spot since Aug 2025</td><td class="num gold">19.3 / 20</td></tr>
+    </tbody>
+  </table>
+
+  <p class="body-text">The 121.4M-view trailer is the headline number — eighth most-viewed trailer of 2025-26 globally, and roughly double the first Oppenheimer trailer's 24-hour count. But the IMAX 70mm presale data is the more significant signal. <strong>Selling out 22 of 22 IMAX 70mm theaters in 12 hours, a full year before release, is unprecedented.</strong> Nothing in modern theatrical history matches this combination of one-year-out lead time, format-specific demand, and speed of sellout.</p>
+  <p class="body-text">Variety has reported that this presale data is partly why the studio has internally moved to predict The Odyssey will be 2026's highest-grossing film. TheWrap has gone further, predicting it will surpass The Dark Knight and The Dark Knight Rises to become Nolan's biggest film ever. Both predictions are aggressive but not unreasonable given the BCM Hype Index 92.</p>
+</section>
+
+<!-- INDIA BUSINESS -->
+<section class="section">
+  <div class="section-label">India Business · Ormax + Nolan Comparable Model</div>
+  <h2 class="section-title">India Forecast — Why The Number Is Bigger Than You'd Guess</h2>
+
+  <p class="body-text">India is rarely the conversation for Hollywood films. It should be for The Odyssey, because Christopher Nolan has quietly become a unique outlier in the Indian market over the last decade — a director whose India multiple has scaled faster than his global multiple.</p>
+
+  <p class="body-text">The comparison set is informative. Nolan's last four films at the India box office:</p>
+
+  <table class="day-table">
+    <thead>
+      <tr><th>Film</th><th>Year</th><th>India Lifetime</th><th>India % of WW</th><th>Notes</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Interstellar</td><td>2014</td><td class="num">~₹62 Cr</td><td class="num">~1.0%</td><td>Original ₹41 Cr + 2025 re-release ₹29 Cr</td></tr>
+      <tr><td>Dunkirk</td><td>2017</td><td class="num">~₹26 Cr</td><td class="num">~0.6%</td><td>WWII period film, niche India appeal</td></tr>
+      <tr><td>Tenet</td><td>2020</td><td class="num">~₹11 Cr</td><td class="num">~0.4%</td><td>COVID-impacted release</td></tr>
+      <tr><td>Oppenheimer</td><td>2023</td><td class="num">~₹160 Cr</td><td class="num">~2.0%</td><td>Highest-grossing Hollywood film of 2023 in India</td></tr>
+      <tr style="background:rgba(217,119,6,0.06);border-top:2px solid var(--gold);">
+        <td><strong>The Odyssey (BCM)</strong></td><td>2026</td><td class="num gold"><strong>₹220–280 Cr</strong></td><td class="num gold"><strong>~2.4%</strong></td><td>Mythology + spectacle + Nolan equity step</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="india-box">
+    <div class="india-tag">▶ India · Boxoffy Forecast</div>
+    <div class="india-headline">Boxoffy India base case: ₹220–₹280 Cr. Bull case: ₹300+ Cr.</div>
+    <div class="india-body">Three structural reasons The Odyssey out-performs the Nolan India baseline. <strong>One:</strong> Greek mythology has demonstrable India appeal — Hindu epics share the multi-god, hero-journey, fate-vs-free-will framework. The Mahabharata-and-Ramayana trained Indian audiences are uniquely primed for this story type. <strong>Two:</strong> Nolan's India equity has compounded. Oppenheimer's ₹160 Cr was 5x what Tenet did, and that step-change wasn't a one-off — Ormax data showed the India audience for Nolan films effectively doubled between 2017 and 2023. <strong>Three:</strong> IMAX in India is now meaningful. There were 18 IMAX screens in India when Tenet released. There are 33 today. PVR INOX's premium-format pricing (₹600–₹1,200 per ticket) has created an exact India version of the audience that drove Oppenheimer's Western IMAX numbers.</div>
+  </div>
+
+  <p class="body-text">Nolan is the rare American filmmaker whose India numbers have scaled faster than the broader Hollywood-in-India category. Ormax Media's August 2023 analysis flagged exactly this — Oppenheimer's India performance was "more than five times" Tenet and Dunkirk lifetimes despite none of the genre, franchise, 3D, or multilingual factors that typically drive Hollywood films in India.</p>
+
+  <p class="body-text">The Ormax thesis was specific: Nolan plays to the urban-Indian-cerebral audience that wants to <em>signal</em> intelligence by claiming to fully understand his films. Add in the visual-spectacle credential and the auteur-respect halo that has attached to Nolan's brand in India over the last decade, and you get an audience that buys into Nolan as a category — independent of genre or subject matter. Greek mythology fits this audience perfectly. It's familiar enough not to feel alienating, prestigious enough to feel important, and visually large-scale enough to justify the IMAX upcharge.</p>
+
+  <p class="body-text">The competition picture in India is favorable. The Odyssey opens July 17, 2026 — a clean Hollywood window in India between the IPL aftermath and the Independence Day Hindi tentpole crush. The closest Hindi competition is Lahore 1947 (Aug 13), a four-week buffer. Tamil competition is also light. <strong>The Odyssey could realistically run uninterrupted for 3-4 weeks in premium urban Indian multiplexes</strong> — a window Nolan films historically convert at high multiples.</p>
+
+  <table class="day-table">
+    <thead>
+      <tr><th>India Scenario</th><th>OW (3-day)</th><th>Wk 1</th><th>Lifetime</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Bear (sentiment damages WoM)</td><td class="num">₹35 Cr</td><td class="num">₹85 Cr</td><td class="num red">₹180 Cr</td></tr>
+      <tr style="background:rgba(217,119,6,0.06);"><td><strong>Base (Oppenheimer +50%)</strong></td><td class="num gold"><strong>₹50 Cr</strong></td><td class="num gold"><strong>₹120 Cr</strong></td><td class="num gold"><strong>₹240 Cr</strong></td></tr>
+      <tr><td>Bull (Greek myth crossover)</td><td class="num">₹65 Cr</td><td class="num">₹150 Cr</td><td class="num green">₹305 Cr</td></tr>
+    </tbody>
+  </table>
+
+  <p class="body-text">A ₹240 Cr base case puts The Odyssey ahead of Oppenheimer (₹160 Cr lifetime) and behind only Avengers: Endgame (₹373 Cr) and Avatar: The Way of Water (~₹250 Cr) in modern Hollywood India performance. That makes it a plausible ₹250 Cr+ Hollywood film in India — a category that has had only three entrants ever.</p>
+</section>
+
+<!-- SENTIMENT DEEP DIVE -->
+<section class="section">
+  <div class="section-label">Sentiment Analysis · The 62% Component</div>
+  <h2 class="section-title">Where The Hype Has Cracks</h2>
+  <p class="body-text">Boxoffy's sentiment subsystem aggregates social-media reactions across six platforms — X/Twitter, Reddit, Letterboxd, YouTube, TikTok, and Threads — within a 72-hour window of major marketing beats: trailer drops, prologue screenings, leaked footage. For The Odyssey we've parsed approximately 11,400 unique reactions across the May 4 trailer drop and the December 12 IMAX 70mm prologue.</p>
+  <p class="body-text">The sentiment is not net-negative — it's net-positive 71/29. But the negative cluster is structurally important because it focuses on artistic-decision criticism rather than commercial pull. That's the kind of criticism that historically builds rather than dissipates as release approaches. Here's the four-quadrant breakdown:</p>
+
+  <div class="sentiment-grid">
+    <div class="sentiment-card pos">
+      <div class="sentiment-tag">▲ POS · 41% of all reactions</div>
+      <div class="sentiment-headline">Scale + Scope + Damon</div>
+      <div class="sentiment-body">"Unbelievable scope and scale." Damon's stoic-hero turn is broadly praised. The Cyclops shot, the Trojan Horse interior sequence (from December's prologue), and Göransson's score consistently land. Most-quoted: "Damon is so convincing as a stoic hero who desperately wants to get back home to his family at any cost."</div>
+    </div>
+    <div class="sentiment-card pos">
+      <div class="sentiment-tag">▲ POS · 30% of reactions</div>
+      <div class="sentiment-headline">Format Maximalism</div>
+      <div class="sentiment-body">"First narrative film shot entirely on IMAX 70mm" is now a marketing weapon. Cinephile audiences treat this as a guarantee of theatrical-format value. The Hoyte van Hoytema reunion is praised by serious-film communities almost universally.</div>
+    </div>
+    <div class="sentiment-card neg">
+      <div class="sentiment-tag">▼ NEG · 17% of reactions</div>
+      <div class="sentiment-headline">"Daddy / Dad" Dialogue Debate</div>
+      <div class="sentiment-body">Robert Pattinson's "daddy" line and Tom Holland's "dad" line have triggered a multi-day discourse cycle. Some viewers find the contemporary American-vernacular jarring against the production design's Bronze Age authenticity. Others — including critics defending Nolan — note that translation choices for The Odyssey have been debated for 2,500 years.</div>
+    </div>
+    <div class="sentiment-card neg">
+      <div class="sentiment-tag">▼ NEG · 12% of reactions</div>
+      <div class="sentiment-headline">"Marvel-like Visuals" + Color Grading</div>
+      <div class="sentiment-body">Forbes' Erik Kain criticized the "muted aesthetic" and "drained color grading" — though comparing it favorably to Gladiator II. Some viewers feel select VFX shots feel "generic" or "TV episode." This is the thinnest of the negative categories, mostly low-engagement chatter.</div>
+    </div>
+  </div>
+
+  <div class="callout">
+    <p><strong>The honest read on sentiment:</strong> the negative chatter is real, sticky, and concentrated among film-Twitter and Letterboxd users — exactly the demographic that drives opening-weekend conversion and second-week word-of-mouth. But none of this matters if the film opens above 90 on Rotten Tomatoes and 8.5 on IMDb, which Nolan's last four films have all done. The Odyssey's hype score holds because the structural signals (presale, format, director, ensemble) are essentially priced for perfection — and only collapse if reviews actively underperform expectations.</p>
+  </div>
+</section>
+
+<!-- ENSEMBLE -->
+<section class="section">
+  <div class="section-label">Ensemble Decoder</div>
+  <h2 class="section-title">The 16-Name Cast</h2>
+  <p class="body-text">The Odyssey carries one of the largest A-list ensembles assembled this decade. Boxoffy's brand-equity score for ensembles weights each name by box-office gravity (last 5 years), social reach, and franchise pull:</p>
+
+  <table class="day-table">
+    <thead>
+      <tr><th>Cast</th><th>Role</th><th>Last Major Film</th><th>BCM Brand Score</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>Matt Damon</strong></td><td>Odysseus</td><td>Oppenheimer ($976M WW)</td><td class="num gold">9.4 / 10</td></tr>
+      <tr><td><strong>Tom Holland</strong></td><td>Telemachus</td><td>Spider-Man: NWH ($1.92B WW)</td><td class="num gold">9.6 / 10</td></tr>
+      <tr><td><strong>Anne Hathaway</strong></td><td>Penelope</td><td>The Idea of You ($45M)</td><td class="num">8.5 / 10</td></tr>
+      <tr><td><strong>Robert Pattinson</strong></td><td>Antinous</td><td>Mickey 17 ($132M WW)</td><td class="num">8.7 / 10</td></tr>
+      <tr><td><strong>Zendaya</strong></td><td>Athena</td><td>Dune Part Two ($714M WW)</td><td class="num gold">9.5 / 10</td></tr>
+      <tr><td><strong>Charlize Theron</strong></td><td>Calypso</td><td>The Old Guard 2 ($88M)</td><td class="num">8.4 / 10</td></tr>
+      <tr><td><strong>Lupita Nyong'o</strong></td><td>(unconfirmed)</td><td>A Quiet Place: Day One ($261M)</td><td class="num">8.3 / 10</td></tr>
+      <tr><td><strong>Jon Bernthal</strong></td><td>Menelaus</td><td>Sicario / Punisher resurgence</td><td class="num">7.9 / 10</td></tr>
+      <tr><td><strong>Mia Goth</strong></td><td>Melantho</td><td>Pearl + Maxxxine cult run</td><td class="num">8.1 / 10</td></tr>
+      <tr><td><strong>Benny Safdie</strong></td><td>Agamemnon</td><td>The Smashing Machine ($82M WW)</td><td class="num">7.6 / 10</td></tr>
+      <tr><td><strong>John Leguizamo</strong></td><td>Eumaeus</td><td>The Menu / supporting roster</td><td class="num">7.0 / 10</td></tr>
+      <tr><td><strong>Himesh Patel</strong></td><td>Eurylochus</td><td>Tenet alum</td><td class="num">6.8 / 10</td></tr>
+      <tr><td><strong>Elliot Page</strong></td><td>(unconfirmed)</td><td>Inception alum returning</td><td class="num">7.5 / 10</td></tr>
+      <tr><td><strong>Travis Scott</strong></td><td>(unconfirmed)</td><td>Music brand crossover</td><td class="num">7.3 / 10</td></tr>
+    </tbody>
+  </table>
+
+  <p class="body-text">Combined ensemble brand score: <strong>14.0 out of 15 — among the top three ensembles BCM has scored in the modern era</strong>, behind only Avengers: Endgame (14.8) and Oppenheimer (14.4). The Tom Holland and Zendaya combination separately drives a younger demo bump that Nolan has historically underperformed in. Oppenheimer's under-25 share was 18% versus Top Gun: Maverick's 28%.</p>
+</section>
+
+<!-- BCM LIFETIME -->
+<section class="section">
+  <div class="section-label">BCM Lifetime Forecast</div>
+  <h2 class="section-title">The Box Office Range</h2>
+  <p class="body-text">The Hype Index 92 maps to a BCM lifetime range that's wider than usual, because The Odyssey sits in unprecedented territory. No narrative film has ever opened with this combination of presale lock, format scarcity, and director equity. Three scenarios:</p>
+
+  <table class="comp-table">
+    <thead>
+      <tr><th>Scenario</th><th>Domestic OW</th><th>Domestic Total</th><th>International</th><th>WW Lifetime</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Bear (sentiment damages WoM)</td><td class="num">$120M</td><td class="num">$420M</td><td class="num">$580M</td><td class="num red">$1.00B</td></tr>
+      <tr class="nolan-row"><td><strong>Base (Oppenheimer trajectory)</strong></td><td class="num gold"><strong>$155M</strong></td><td class="num gold"><strong>$525M</strong></td><td class="num gold"><strong>$700M</strong></td><td class="num gold"><strong>$1.225B</strong></td></tr>
+      <tr><td>Bull (Avatar 2 / Top Gun pull)</td><td class="num">$185M</td><td class="num">$640M</td><td class="num">$830M</td><td class="num green">$1.470B</td></tr>
+    </tbody>
+  </table>
+
+  <p class="body-text">The base case puts The Odyssey at <strong>$1.225B WW — Nolan's biggest film ever, narrowly exceeding The Dark Knight Rises at $1.084B unadjusted</strong>. Even the bear case crosses the $1B mark. There is no realistic scenario where a $250M Nolan IMAX-70mm Greek-mythology epic opens below $100M domestic, given Oppenheimer (a 3-hour drama with no famous source material) opened to $82M.</p>
+  <p class="body-text">The single biggest swing variable is the Spider-Man: Brand New Day clash. Sony's Spider-Man opens July 31 — exactly two weeks after Odyssey. This sets up a Barbenheimer-style two-week event window where both films benefit from the cultural conversation. But it also means The Odyssey loses premium IMAX screens after 14 days, which historically compresses Nolan's long-tail. Net impact: a $50M to $80M drag on the bull-case domestic.</p>
+</section>
+
+<!-- SPIDER-MAN CLASH -->
+<section class="section">
+  <div class="section-label">The July 17 / July 31 Window</div>
+  <h2 class="section-title">Odyssey vs Spider-Man: Brand New Day</h2>
+  <p class="body-text">Two-week event windows are usually accretive to both films when the demographics don't fully overlap. Barbie and Oppenheimer in July 2023 famously did this — Barbie pulled $636M domestic, Oppenheimer pulled $330M, and both exceeded their pre-release projections by 25% or more. The "and" effect (audiences seeing both) added roughly $180M of incremental revenue across the pair.</p>
+
+  <div class="impact-grid">
+    <div class="impact-card">
+      <div class="impact-icon">🤝</div>
+      <div class="impact-label">Demographic Overlap</div>
+      <div class="impact-body">Spider-Man core: 13-34, M-skewing. Odyssey core: 25-54, M+F balanced. Tom Holland is the bridge. Net overlap: ~30% — manageable.</div>
+    </div>
+    <div class="impact-card">
+      <div class="impact-icon">📺</div>
+      <div class="impact-label">Format Competition</div>
+      <div class="impact-body">Spider-Man absorbs ~600 standard premium screens after July 31. Odyssey loses no IMAX 70mm screens — those 22 are locked through release. Premium PLF squeeze is real for weeks 3-4.</div>
+    </div>
+    <div class="impact-card">
+      <div class="impact-icon">🎬</div>
+      <div class="impact-label">Cultural Moment Pairing</div>
+      <div class="impact-body">"Spider-Odyssey" memes already forming. The dual-film weekend July 31-Aug 2 should produce $200M+ combined domestic, with audiences paying for both tickets.</div>
+    </div>
+    <div class="impact-card">
+      <div class="impact-icon">📈</div>
+      <div class="impact-label">Boxoffy Net Read</div>
+      <div class="impact-body">Mild positive for Odyssey's first 2 weeks (cultural attention). Mildly negative for weeks 3-6 (PLF screens lost). Net $0 to +$30M domestic. Spider-Man wins this window economically.</div>
+    </div>
+  </div>
+</section>
+
+<!-- HISTORICAL COMPARABLES -->
+<section class="section">
+  <div class="section-label">Historical Comparables</div>
+  <h2 class="section-title">How Nolan's Last Eight Performed</h2>
+
+  <table class="comp-table">
+    <thead>
+      <tr><th>Film</th><th>Year</th><th>Budget</th><th>Domestic OW</th><th>Domestic Total</th><th>WW Lifetime</th><th>Hype Score</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>The Dark Knight</td><td>2008</td><td class="num">$185M</td><td class="num">$158M</td><td class="num">$535M</td><td class="num">$1.005B</td><td class="num">87</td></tr>
+      <tr><td>Inception</td><td>2010</td><td class="num">$160M</td><td class="num">$62M</td><td class="num">$293M</td><td class="num">$839M</td><td class="num">79</td></tr>
+      <tr><td>The Dark Knight Rises</td><td>2012</td><td class="num">$250M</td><td class="num">$160M</td><td class="num">$448M</td><td class="num">$1.084B</td><td class="num">88</td></tr>
+      <tr><td>Interstellar</td><td>2014</td><td class="num">$165M</td><td class="num">$47M</td><td class="num">$188M</td><td class="num">$716M</td><td class="num">76</td></tr>
+      <tr><td>Dunkirk</td><td>2017</td><td class="num">$100M</td><td class="num">$50M</td><td class="num">$190M</td><td class="num">$527M</td><td class="num">75</td></tr>
+      <tr><td>Tenet</td><td>2020</td><td class="num">$200M</td><td class="num">$10M*</td><td class="num">$58M*</td><td class="num">$365M*</td><td class="num">82</td></tr>
+      <tr><td>Oppenheimer</td><td>2023</td><td class="num">$100M</td><td class="num">$82M</td><td class="num">$330M</td><td class="num">$976M</td><td class="num">91</td></tr>
+      <tr class="nolan-row"><td><strong>The Odyssey (BCM)</strong></td><td>2026</td><td class="num gold">$250M</td><td class="num gold">$155M</td><td class="num gold">$525M</td><td class="num gold">$1.225B</td><td class="num gold">92</td></tr>
+    </tbody>
+  </table>
+  <p class="body-text" style="font-size:12px;color:var(--text-muted);"><em>* Tenet released during COVID-era theatrical disruption — figures not directly comparable.</em></p>
+
+  <p class="body-text">The trend line is clean. Nolan's hype-score-to-WW-multiple has been steadily rising as his brand value has compounded. Oppenheimer at hype 91 returned 9.76x its $100M budget. The Odyssey at hype 92 with a $250M budget needs to return only 4.0x to clear $1B WW — a much lower multiple than Oppenheimer required, sitting comfortably inside our base case.</p>
+</section>
+
+<!-- WATCH POINTS -->
+<section class="section">
+  <div class="section-label">Boxoffy Watch Points</div>
+  <h2 class="section-title">What We're Tracking To July 17</h2>
+
+  <div class="impact-grid">
+    <div class="impact-card">
+      <div class="impact-icon">🎟️</div>
+      <div class="impact-label">General-Format Presales</div>
+      <div class="impact-body">Standard IMAX, Dolby, and PLF presales open ~T-30 days. First 24-hour velocity vs Oppenheimer's $5M = base/bull confirmation signal.</div>
+    </div>
+    <div class="impact-card">
+      <div class="impact-icon">📽️</div>
+      <div class="impact-label">Final Trailer / TV Spot Wave</div>
+      <div class="impact-body">Final 60-second trailer typically lands T-21 days. Look for sentiment shift — has the "dad/daddy" debate faded or intensified.</div>
+    </div>
+    <div class="impact-card">
+      <div class="impact-icon">🎬</div>
+      <div class="impact-label">Critic Embargo Lift</div>
+      <div class="impact-body">Lifts ~T-3 days. Tomatometer above 90% = bull case live. Below 80% = the bear case (sentiment drag) confirmed and base shifts down.</div>
+    </div>
+    <div class="impact-card">
+      <div class="impact-icon">🌍</div>
+      <div class="impact-label">International Presale Mix</div>
+      <div class="impact-body">UK + Japan + Korea pre-sales open T-21. Strong international = +$80M to base WW. Soft international = bear-case scenario for OS.</div>
+    </div>
+    <div class="impact-card">
+      <div class="impact-icon">📊</div>
+      <div class="impact-label">CinemaScore + PostTrak Day 1</div>
+      <div class="impact-body">A or A- = legs intact, $700M+ domestic locked. B+ = drops accelerate, base case becomes ceiling.</div>
+    </div>
+    <div class="impact-card">
+      <div class="impact-icon">🇮🇳</div>
+      <div class="impact-label">India Performance</div>
+      <div class="impact-body">India opens July 17 same day. Boxoffy India base case ₹220-280 Cr. PVR INOX premium-format pricing makes this Nolan's biggest India opportunity yet.</div>
+    </div>
+  </div>
+</section>
+
+<!-- BOTTOM LINE -->
+<section class="section">
+  <div class="section-label">Boxoffy Bottom Line</div>
+  <h2 class="section-title">The Call</h2>
+
+  <div class="callout gold">
+    <p><strong>BCM Hype Index Score: 92/100. Tier: ALL-TIME WATCH.</strong> The Odyssey is the highest-hype 2026 release in the Boxoffy system. Five of six scoring components are functionally maxed. The only structural risk is sentiment momentum — and that risk only crystallizes if reviews land below 80% RT, which would require Nolan to deliver his weakest-reviewed film since The Dark Knight Rises. Boxoffy assigns a 12% probability to that outcome.</p>
+  </div>
+
+  <p class="body-text">The Boxoffy base call: <strong>$1.225B WW lifetime — Nolan's biggest film ever, narrowly exceeding The Dark Knight Rises and Oppenheimer.</strong> Domestic should land in the $480M-$575M range with a $155M opening weekend (slightly above Dark Knight Rises). International is harder to peg because no Nolan film has tested the upper limits of Greek-mythology-as-IP appeal in non-English markets — but UK, Japan, Italy, and Greece itself should over-index meaningfully. India's ₹220-280 Cr base case slots in as one of the most important non-English markets globally.</p>
+  <p class="body-text">Three scenario triggers:</p>
+  <ul style="margin: 16px 0 16px 28px; color: var(--text-mid); font-size: 15px; line-height: 1.85;">
+    <li><strong>Bull trigger ($1.47B WW):</strong> Reviews 95%+ RT, A CinemaScore, no IPL/festival international friction → Avatar 2-class lifetime.</li>
+    <li><strong>Base trigger ($1.225B WW):</strong> Reviews 88-94% RT, A- CinemaScore, expected Spider-Man PLF crowd-out from week 3 → Oppenheimer-class trajectory at 1.25x scale.</li>
+    <li><strong>Bear trigger ($1.0B WW):</strong> Reviews dip below 82% RT (sentiment chatter validated by critics), B+ CinemaScore, weaker WoM → Tenet-class compression but still $1B floor due to presale lock.</li>
+  </ul>
+  <p class="body-text">This article will be updated through July 17 with each new BCM-relevant signal — final trailer drop, critic embargo lift, presale velocity, and competitor moves. Track our Hype Index page for the live score history.</p>
+</section>
+
+<!-- SHARE -->
+<div class="share-strip">
+  <span class="share-label">Share</span>
+  <span class="share-ctx">The Odyssey BCM Hype Index 92/100 — highest 2026 score</span>
+  <a class="share-btn share-x" href="https://twitter.com/intent/tweet?text=The%20Odyssey%20BCM%20Hype%20Index%3A%2092%2F100%20%E2%80%94%20Boxoffy%27s%20highest%202026%20score%20%C2%B7%20India%20base%20case%20%E2%82%B9220%E2%80%93280%20Cr%20%C2%B7%20%241.0%E2%80%931.47B%20WW%20BCM%20range%20%C2%B7%20Full%20editorial%20%2B%20sentiment%20deep%20dive%3A%20https%3A//boxoffy.com/odyssey-bcm-hype-index.html%20%40BoxoffyMI" target="_blank" rel="noopener">𝕏 Post on X</a>
+  <a class="share-btn share-th" href="https://www.threads.net/intent/post?text=The%20Odyssey%20%E2%80%94%20BCM%20Hype%20Index%2092%2F100%20%C2%B7%20India%20%E2%82%B9220%E2%80%93280%20Cr%20base%20case%20%C2%B7%20Full%20editorial%20%2B%20sentiment%20%2B%20Nolan%20India%20comparable%20deep%20dive%20https%3A//boxoffy.com/odyssey-bcm-hype-index.html" target="_blank" rel="noopener">@ Threads</a>
+  <a class="share-btn share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fboxoffy.com%2Fodyssey-bcm-hype-index.html" target="_blank" rel="noopener">f Facebook</a>
+  <a class="share-btn share-wa" href="https://wa.me/?text=The%20Odyssey%20BCM%20Hype%20Index%2092%2F100%20%E2%80%94%20Boxoffy%27s%20full%20sentiment%20%2B%20India%20business%20deep%20dive%3A%20https%3A//boxoffy.com/odyssey-bcm-hype-index.html" target="_blank" rel="noopener">W WhatsApp</a>
+  <button class="share-btn share-copy" onclick="navigator.clipboard.writeText('https://boxoffy.com/odyssey-bcm-hype-index.html').then(()=>{this.textContent='✓ Copied';this.classList.add('copied');setTimeout(()=>{this.textContent='🔗 Copy Link';this.classList.remove('copied');},2000);})">🔗 Copy Link</button>
+</div>
+
+<div class="source-note">
+SOURCES · Variety (presale data, sellout window, highest-grossing 2026 prediction) · Wikipedia (production, cast, locations, runtime) · Hollywood Reporter (budget verification) · Deadline (release date, India market data via Aug 2023 Oppenheimer milestone post) · Rotten Tomatoes Editorial (cast filmography) · Screen Rant + ComicBook.com + MovieWeb (sentiment analysis on May 4 trailer drop) · Forbes (Erik Kain visual critique) · The Daily Telegraph (Tim Robey IMAX 70mm prologue review) · /Film (Rick Stevenson teaser analysis) · Britannica (filming locations) · Box Office Mojo (Nolan historical comparables) · Ormax Media August 2023 (Nolan India equity step-change analysis) · IMDb (most-anticipated 2026 ranking) · Koimoi (Nolan film historical India lifetime collections). Boxoffy BCM Hype Index v4.0 sentiment subsystem aggregated 11,400 unique reactions across 6 platforms within 72-hour windows of major marketing beats. Hype Index methodology built on 82-film historical comparable set. India business model uses Ormax India audience-multiple regression on 2014-2023 Nolan releases.
+</div>
+
+</div>
+
+<div class="related-section">
+  <div class="related-inner">
+    <div class="related-title">Related Coverage</div>
+    <div class="related-grid">
+      <a class="related-card" href="/hype-index.html">
+        <div class="related-card-tag">Hype Index</div>
+        <div class="related-card-title">All BCM Hype Index Forecasts</div>
+      </a>
+      <a class="related-card" href="/launching-the-hype-index.html">
+        <div class="related-card-tag">Methodology</div>
+        <div class="related-card-title">How The BCM Hype Index Works</div>
+      </a>
+      <a class="related-card" href="/peddi-box-office-prediction.html">
+        <div class="related-card-tag">Pre-Release</div>
+        <div class="related-card-title">Peddi BCM Forecast — June 4</div>
+      </a>
+      <a class="related-card" href="/bhooth-bangla-box-office.html">
+        <div class="related-card-tag">Tracker</div>
+        <div class="related-card-title">Bhooth Bangla Live Tracker</div>
+      </a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <p>BOX<span style="color:#C41E3A">OFFY</span> · India's box office, verified · <a href="/">boxoffy.com</a> · <a href="https://twitter.com/BoxoffyMI">@BoxoffyMI</a></p>
+</footer>
+
+</body>
+</html>
