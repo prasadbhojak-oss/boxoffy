@@ -3372,6 +3372,157 @@ function USBoShareRow({ weekData }) {
   );
 }
 
+/* ── PER-FILM SHARE PANEL (US BO mobile, mirrors India BO SharePanel) ── */
+function USBoFilmSharePanel({ film, onClose }) {
+  const [copied, setCopied] = React.useState(null);
+
+  const title    = film.title || "";
+  const wkend    = film.weekend || "";
+  const total    = film.total || "";
+  const studio   = film.studio || "";
+  const chg      = film.change || "";
+  const wkNum    = film.weeks > 0 ? `Wk ${film.weeks}` : "";
+  const flag     = film.isIndian ? "🇮🇳 " : "🇺🇸 ";
+  const pageUrl  = "https://boxoffy.com";
+
+  const chgPart = chg && chg !== "NEW" && chg !== "LTD" ? ` (${chg} vs LW)` : chg === "NEW" ? " — Opening Weekend" : "";
+
+  const tX       = `${flag}${title}${wkNum ? ` · ${wkNum}` : ""}\nWeekend: ${wkend}${chgPart}\nTotal: ${total} (${studio})\n\nFull US BO chart → ${pageUrl}\n@BoxoffyMI`;
+  const tThreads = `${flag}${title}${wkNum ? ` · ${wkNum}` : ""}\n\nWeekend: ${wkend}${chgPart}\nDomestic Total: ${total}\nStudio: ${studio}\n\nFull US Top 10 + Indian Spotlight → ${pageUrl}`;
+  const tFB      = `${title} — ${wkend} weekend at the US Box Office${wkNum ? ` (${wkNum})` : ""}\n\nDomestic total: ${total}\nStudio: ${studio}${chgPart}\n\nBoxoffy — Box Office Intelligence\n${pageUrl}`;
+  const tWA      = `*${flag}${title}*${wkNum ? ` · ${wkNum}` : ""}\nWeekend: *${wkend}*${chgPart}\nTotal: *${total}* (${studio})\n\nBoxoffy → ${pageUrl}`;
+
+  const platforms = [
+    { id:"x",       label:"X / Twitter", icon:"𝕏", color:"#000",    openUrl:"https://twitter.com/intent/tweet?text=" + encodeURIComponent(tX) },
+    { id:"threads", label:"Threads",     icon:"@", color:"#000",    openUrl:"https://www.threads.net/intent/post?text=" + encodeURIComponent(tThreads) },
+    { id:"fb",      label:"Facebook",    icon:"f", color:"#1877F2", openUrl:"https://www.facebook.com/sharer/sharer.php?u=" + encodeURIComponent(pageUrl) },
+    { id:"wa",      label:"WhatsApp",    icon:"W", color:"#25D366", openUrl:"https://wa.me/?text=" + encodeURIComponent(tWA) },
+  ];
+
+  const copyLink = () => {
+    navigator.clipboard.writeText(pageUrl).then(() => {
+      setCopied("link");
+      setTimeout(() => setCopied(null), 2000);
+    }).catch(() => {});
+  };
+
+  return (
+    <div style={{ background:"#1F2937", borderTop:`2px solid #374151`, padding:"10px 14px" }}>
+      <div style={{ display:"flex", justifyContent:"space-between", alignItems:"center", marginBottom:8 }}>
+        <span style={{ fontFamily:"'Barlow Condensed',sans-serif", fontWeight:800, fontSize:13, color:"#fff", letterSpacing:"0.06em", textTransform:"uppercase" }}>
+          Share · {title.length > 22 ? title.slice(0,22) + "…" : title}
+        </span>
+        <button onClick={onClose} style={{ background:"transparent", border:"none", cursor:"pointer", fontSize:18, color:"#9CA3AF", padding:"0 4px", lineHeight:1 }}>&times;</button>
+      </div>
+      <div style={{ display:"flex", gap:6, flexWrap:"wrap" }}>
+        {platforms.map(p => (
+          <a key={p.id} href={p.openUrl} target="_blank" rel="noopener noreferrer" style={{
+            display:"inline-flex", alignItems:"center", gap:5,
+            background:p.color, color:"#fff",
+            fontFamily:"'DM Sans',sans-serif", fontWeight:700, fontSize:11,
+            padding:"6px 12px", borderRadius:4, textDecoration:"none", flexShrink:0,
+          }}>
+            <span style={{ fontSize:12, lineHeight:1 }}>{p.icon}</span>
+            {p.label}
+          </a>
+        ))}
+        <button onClick={copyLink} style={{
+          display:"inline-flex", alignItems:"center", gap:5,
+          background: copied === "link" ? "#16A34A" : "#374151",
+          color:"#fff",
+          fontFamily:"'DM Sans',sans-serif", fontWeight:700, fontSize:11,
+          padding:"6px 12px", borderRadius:4, border:"none", cursor:"pointer", flexShrink:0,
+        }}>
+          🔗 {copied === "link" ? "Copied!" : "Copy Link"}
+        </button>
+      </div>
+    </div>
+  );
+}
+
+/* ── US BO Mobile Card (extracted for per-row share state) ── */
+function USBoMobileCard({ film, getRankColor, getChangeColor }) {
+  const [shareOpen, setShareOpen] = React.useState(false);
+
+  return (
+    <div>
+      {shareOpen && <USBoFilmSharePanel film={film} onClose={() => setShareOpen(false)} />}
+      <div style={{
+        borderBottom:`1px solid ${T.border}`,
+        background: film.isIndian ? "#FFFBF0" : film.rank === 1 ? "#FFFDF5" : T.surface,
+        padding:"11px 14px",
+        borderLeft: film.isIndian ? "3px solid #D97706" : film.rank === 1 ? `3px solid ${T.accent}` : "3px solid transparent",
+      }}>
+        <div style={{ display:"flex", justifyContent:"space-between", alignItems:"flex-start", marginBottom:5 }}>
+          <div style={{ display:"flex", alignItems:"center", gap:8 }}>
+            {film.rank <= 3
+              ? <span style={{ fontSize:20 }}>{["🥇","🥈","🥉"][film.rank-1]}</span>
+              : <span style={{ fontFamily:"'Barlow Condensed',sans-serif", fontWeight:700, fontSize:18, color:film.isIndian ? "#D97706" : getRankColor(film.rank) }}>#{film.rank}</span>
+            }
+            {film.isIndian && <span style={{ fontSize:13 }}>🇮🇳</span>}
+            <span style={{ fontFamily:"'DM Sans',sans-serif", fontSize:10, color:getChangeColor(film.change), fontWeight:700 }}>
+              {film.change === "NEW" ? "★ NEW" : film.change === "LTD" ? "LIMITED" : film.change}
+            </span>
+          </div>
+          {film.rtScore && film.rtScore !== "N/A" && (
+            <span style={{ fontFamily:"'DM Sans',sans-serif", fontSize:10, color:"#DC2626", fontWeight:700 }}>🍅 {film.rtScore}</span>
+          )}
+        </div>
+        <div style={{ fontFamily:"'Barlow Condensed',sans-serif", fontWeight:700, fontSize:18, color: film.isIndian ? "#92400E" : T.text, lineHeight:1.1, marginBottom:5 }}>{film.title}</div>
+        <div style={{ display:"flex", gap:14, alignItems:"center", flexWrap:"wrap", marginBottom:4 }}>
+          <span style={{ fontFamily:"'Barlow Condensed',sans-serif", fontWeight:800, fontSize:21, color: film.rank === 1 ? T.accent : film.isIndian ? "#D97706" : T.text }}>{film.weekend}</span>
+          <span style={{ fontFamily:"'DM Sans',sans-serif", fontSize:11, color:T.textMuted }}>Total: {film.total}</span>
+          <span style={{ fontFamily:"'DM Sans',sans-serif", fontSize:11, color:T.textMuted }}>{film.theaters.toLocaleString()} thtr</span>
+        </div>
+        <div style={{ display:"flex", justifyContent:"space-between", alignItems:"center", gap:8, marginTop:6 }}>
+          <div style={{ fontFamily:"'DM Sans',sans-serif", fontSize:10, color:T.textMuted, flex:1 }}>{film.studio} · {film.genre} · Wk {film.weeks}</div>
+          <button onClick={() => setShareOpen(v => !v)} style={{
+            fontFamily:"'DM Sans',sans-serif", fontWeight:700, fontSize:10,
+            background: shareOpen ? T.accent : "#F3F4F6",
+            color: shareOpen ? "#fff" : "#374151",
+            border:"none", borderRadius:4, padding:"4px 12px", cursor:"pointer",
+            display:"inline-flex", alignItems:"center", gap:4, flexShrink:0,
+          }}>↗ Share</button>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+/* ── US BO Indian-Spotlight Mobile Card (per-row share, amber theme) ── */
+function USBoIndianMobileCard({ film, getChangeColor }) {
+  const [shareOpen, setShareOpen] = React.useState(false);
+
+  return (
+    <div>
+      {shareOpen && <USBoFilmSharePanel film={film} onClose={() => setShareOpen(false)} />}
+      <div style={{ borderBottom:`1px solid #FDE68A`, background:"#FFFBF0", padding:"11px 14px", borderLeft:"3px solid #D97706" }}>
+        <div style={{ display:"flex", alignItems:"center", gap:8, marginBottom:4 }}>
+          <span style={{ fontFamily:"'Barlow Condensed',sans-serif", fontWeight:900, fontSize:16, color:"#D97706" }}>#{film.rank}</span>
+          <span style={{ fontSize:13 }}>🇮🇳</span>
+          <span style={{ fontFamily:"'DM Sans',sans-serif", fontSize:10, color:getChangeColor(film.change), fontWeight:700 }}>{film.change === "NEW" ? "★ NEW" : film.change}</span>
+        </div>
+        <div style={{ fontFamily:"'Barlow Condensed',sans-serif", fontWeight:700, fontSize:18, color:"#92400E", marginBottom:4 }}>{film.title}</div>
+        <div style={{ display:"flex", gap:12, flexWrap:"wrap" }}>
+          <span style={{ fontFamily:"'Barlow Condensed',sans-serif", fontWeight:800, fontSize:18, color:"#D97706" }}>{film.weekend}</span>
+          <span style={{ fontFamily:"'DM Sans',sans-serif", fontSize:11, color:"#92400E" }}>Total: {film.total}</span>
+          <span style={{ fontFamily:"'DM Sans',sans-serif", fontSize:11, color:"#92400E" }}>{film.theaters} thtr</span>
+        </div>
+        <div style={{ display:"flex", justifyContent:"space-between", alignItems:"center", gap:8, marginTop:6 }}>
+          <div style={{ fontFamily:"'DM Sans',sans-serif", fontSize:10, color:"#B45309", flex:1 }}>{film.admitsNote}</div>
+          <button onClick={() => setShareOpen(v => !v)} style={{
+            fontFamily:"'DM Sans',sans-serif", fontWeight:700, fontSize:10,
+            background: shareOpen ? "#D97706" : "#FEF3C7",
+            color: shareOpen ? "#fff" : "#92400E",
+            border:"none", borderRadius:4, padding:"4px 12px", cursor:"pointer",
+            display:"inline-flex", alignItems:"center", gap:4, flexShrink:0,
+          }}>↗ Share</button>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 function USBoTop10({ weekData }) {
   if (!weekData) return <div style={{ padding:24, color:T.textMuted, fontFamily:"'DM Sans',sans-serif", fontSize:12 }}>No US BO data available.</div>;
 
@@ -3432,36 +3583,13 @@ function USBoTop10({ weekData }) {
 
       {/* Rows */}
       {weekData.chart.map((film, i) => isMobile ? (
-        /* Mobile card */
-        <div key={i} style={{
-          borderBottom:`1px solid ${T.border}`,
-          background: film.isIndian ? "#FFFBF0" : film.rank === 1 ? "#FFFDF5" : T.surface,
-          padding:"11px 14px",
-          borderLeft: film.isIndian ? "3px solid #D97706" : film.rank === 1 ? `3px solid ${T.accent}` : "3px solid transparent",
-        }}>
-          <div style={{ display:"flex", justifyContent:"space-between", alignItems:"flex-start", marginBottom:5 }}>
-            <div style={{ display:"flex", alignItems:"center", gap:8 }}>
-              {film.rank <= 3
-                ? <span style={{ fontSize:20 }}>{["🥇","🥈","🥉"][film.rank-1]}</span>
-                : <span style={{ fontFamily:"'Barlow Condensed',sans-serif", fontWeight:700, fontSize:18, color:film.isIndian ? "#D97706" : getRankColor(film.rank) }}>#{film.rank}</span>
-              }
-              {film.isIndian && <span style={{ fontSize:13 }}>🇮🇳</span>}
-              <span style={{ fontFamily:"'DM Sans',sans-serif", fontSize:10, color:getChangeColor(film.change), fontWeight:700 }}>
-                {film.change === "NEW" ? "★ NEW" : film.change === "LTD" ? "LIMITED" : film.change}
-              </span>
-            </div>
-            {film.rtScore && film.rtScore !== "N/A" && (
-              <span style={{ fontFamily:"'DM Sans',sans-serif", fontSize:10, color:"#DC2626", fontWeight:700 }}>🍅 {film.rtScore}</span>
-            )}
-          </div>
-          <div style={{ fontFamily:"'Barlow Condensed',sans-serif", fontWeight:700, fontSize:18, color: film.isIndian ? "#92400E" : T.text, lineHeight:1.1, marginBottom:5 }}>{film.title}</div>
-          <div style={{ display:"flex", gap:14, alignItems:"center", flexWrap:"wrap", marginBottom:4 }}>
-            <span style={{ fontFamily:"'Barlow Condensed',sans-serif", fontWeight:800, fontSize:21, color: film.rank === 1 ? T.accent : film.isIndian ? "#D97706" : T.text }}>{film.weekend}</span>
-            <span style={{ fontFamily:"'DM Sans',sans-serif", fontSize:11, color:T.textMuted }}>Total: {film.total}</span>
-            <span style={{ fontFamily:"'DM Sans',sans-serif", fontSize:11, color:T.textMuted }}>{film.theaters.toLocaleString()} thtr</span>
-          </div>
-          <div style={{ fontFamily:"'DM Sans',sans-serif", fontSize:10, color:T.textMuted }}>{film.studio} · {film.genre} · Wk {film.weeks}</div>
-        </div>
+        /* Mobile card — per-row share via USBoMobileCard */
+        <USBoMobileCard
+          key={i}
+          film={film}
+          getRankColor={getRankColor}
+          getChangeColor={getChangeColor}
+        />
       ) : (
         /* Desktop row */
         <div key={i} style={{
@@ -3525,20 +3653,11 @@ function USBoTop10({ weekData }) {
             <span style={{ fontFamily:"'DM Sans',sans-serif", fontSize:9, color:"#B45309" }}>— ranked outside top 10, shown separately</span>
           </div>
           {weekData.indianSpotlight.map((film, i) => isMobile ? (
-            <div key={i} style={{ borderBottom:`1px solid #FDE68A`, background:"#FFFBF0", padding:"11px 14px", borderLeft:"3px solid #D97706" }}>
-              <div style={{ display:"flex", alignItems:"center", gap:8, marginBottom:4 }}>
-                <span style={{ fontFamily:"'Barlow Condensed',sans-serif", fontWeight:900, fontSize:16, color:"#D97706" }}>#{film.rank}</span>
-                <span style={{ fontSize:13 }}>🇮🇳</span>
-                <span style={{ fontFamily:"'DM Sans',sans-serif", fontSize:10, color:getChangeColor(film.change), fontWeight:700 }}>{film.change === "NEW" ? "★ NEW" : film.change}</span>
-              </div>
-              <div style={{ fontFamily:"'Barlow Condensed',sans-serif", fontWeight:700, fontSize:18, color:"#92400E", marginBottom:4 }}>{film.title}</div>
-              <div style={{ display:"flex", gap:12, flexWrap:"wrap" }}>
-                <span style={{ fontFamily:"'Barlow Condensed',sans-serif", fontWeight:800, fontSize:18, color:"#D97706" }}>{film.weekend}</span>
-                <span style={{ fontFamily:"'DM Sans',sans-serif", fontSize:11, color:"#92400E" }}>Total: {film.total}</span>
-                <span style={{ fontFamily:"'DM Sans',sans-serif", fontSize:11, color:"#92400E" }}>{film.theaters} thtr</span>
-              </div>
-              <div style={{ fontFamily:"'DM Sans',sans-serif", fontSize:10, color:"#B45309", marginTop:4 }}>{film.admitsNote}</div>
-            </div>
+            <USBoIndianMobileCard
+              key={i}
+              film={film}
+              getChangeColor={getChangeColor}
+            />
           ) : (
             <div key={i} style={{ display:"grid", gridTemplateColumns:"36px 28px 1fr 100px 110px 80px 70px 60px", borderBottom:`1px solid #FDE68A`, background:"#FFFBF0", alignItems:"center", minHeight:48, borderLeft:"3px solid #D97706" }}>
               <div style={{ textAlign:"center", padding:"0 4px" }}>
@@ -3578,7 +3697,7 @@ function USBoTop10({ weekData }) {
       {/* Footer */}
       <div style={{ padding:"8px 16px", background:"#F9FAFB", borderTop:`1px solid ${T.border}`, display:"flex", alignItems:"center", gap:12, flexWrap:"wrap" }}>
         <span style={{ fontFamily:"'DM Sans',sans-serif", fontSize:9, color:T.textMuted, fontStyle:"italic" }}>
-          Sources: Box Office Mojo · Variety · Deadline · BoxofficePro · The Numbers · Weekend estimates, subject to revision Monday.
+          Sources: Comscore · Exhibitor Relations · Box Office Mojo · Variety · Deadline · BoxofficePro · The Numbers · Weekend estimates, subject to revision Monday.
         </span>
         <span style={{ fontFamily:"'DM Sans',sans-serif", fontSize:9, color:T.textMuted, fontStyle:"italic", marginLeft:"auto" }}>
           Admits are estimates based on avg ticket price ~$15. US Domestic = US + Canada.
