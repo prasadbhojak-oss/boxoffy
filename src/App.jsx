@@ -3787,7 +3787,7 @@ function ForeignFilmsPanel({ movies }) {
 
       {/* ── Global view: US BO Top 10 ─────────────────────────── */}
       {viewMode === "global"
-        ? <USBoTop10 weekData={US_BO_WEEKLY["Week 19, 2026"]} />
+        ? <USBoTop10 weekData={US_BO_WEEKLY[Object.keys(US_BO_WEEKLY).sort().reverse()[0]]} />
         : <>
           {/* ── Column headers ──────────────────────────────────── */}
           <BogColHeaders viewMode={viewMode} />
