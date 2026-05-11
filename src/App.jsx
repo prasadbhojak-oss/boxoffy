@@ -3787,7 +3787,7 @@ function ForeignFilmsPanel({ movies }) {
 
       {/* ── Global view: US BO Top 10 ─────────────────────────── */}
       {viewMode === "global"
-        ? <USBoTop10 weekData={US_BO_WEEKLY[Object.keys(US_BO_WEEKLY).sort().reverse()[0]]} />
+        ? <USBoTop10 weekData={US_BO_WEEKLY["Week 19, 2026"]} />
         : <>
           {/* ── Column headers ──────────────────────────────────── */}
           <BogColHeaders viewMode={viewMode} />
@@ -4407,6 +4407,11 @@ function BoxOfficeSection({ onNavigate, forceAllTime, onClearForceAllTime }) {
 
   return (
     <div>
+      {/* ── WEEKEND COVERAGE — date-card timeline of weekend preview/recap ─── */}
+      {year === 2026 && showWeekly && (
+        <WeekendCoverageSection onNavigate={onNavigate} />
+      )}
+
       {/* ── FROM THE DESK — stacked editorial articles ──────────── */}
       {year === 2026 && showWeekly && (
         <EditorialSection onNavigate={onNavigate} />
@@ -5685,6 +5690,155 @@ function FeaturedEditorialRow({ item, index, TagPill, onClick }) {
 }
 
 /* ── FROM THE DESK — Magazine split, light theme ─────────────── */
+/* ── WEEKEND COVERAGE ────────────────────────────────────────────
+   Horizontal timeline of weekend preview/recap articles.
+   Filters editorials with tag in WEEKEND_TAGS.
+   Sorted date-descending (most recent first).
+   Visually distinct from EditorialSection: date-first cards, horizontal scroll. */
+function WeekendCoverageSection({ onNavigate }) {
+  const WEEKEND_TAGS = ["WEEKEND PREVIEW", "WEEKEND RECAP"];
+
+  const parseDate = (d) => { try { return new Date(d); } catch(e) { return new Date(0); } };
+
+  const weekendArticles = EDITORIALS
+    .filter(e => WEEKEND_TAGS.includes(e.tag))
+    .sort((a, b) => parseDate(b.date) - parseDate(a.date));
+
+  if (weekendArticles.length === 0) return null;
+
+  const open = (item) => {
+    if (item.url) window.open(item.url, "_blank", "noopener");
+    else if (onNavigate && item.section) onNavigate(item.section);
+  };
+
+  // Extract weekend date range from headline e.g. "Boxoffice This Week — May 8–10 Weekend Preview..."
+  // Falls back to ISO date if pattern not found.
+  const extractWeekend = (item) => {
+    if (!item || !item.headline) return { range: "", year: "" };
+    const m = item.headline.match(/(\w+)\s+(\d+[\u2013\u2014\-]\d+)/);
+    if (m) {
+      const monthShort = m[1].slice(0, 3).toUpperCase();
+      return { range: `${monthShort} ${m[2]}`, year: (item.date || "").slice(0, 4) };
+    }
+    // Fallback: use ISO date parts
+    const d = item.date ? new Date(item.date) : null;
+    if (!d || isNaN(d)) return { range: "", year: "" };
+    const monthNames = ["JAN","FEB","MAR","APR","MAY","JUN","JUL","AUG","SEP","OCT","NOV","DEC"];
+    return { range: `${monthNames[d.getMonth()]} ${d.getDate()}`, year: String(d.getFullYear()) };
+  };
+
+  const WeekendCard = ({ item }) => {
+    const { range, year } = extractWeekend(item);
+    return (
+      <div onClick={() => open(item)}
+        style={{
+          flexShrink: 0,
+          width: 280,
+          minHeight: 168,
+          background: T.surface,
+          border: `1px solid ${T.border}`,
+          borderLeft: `4px solid ${T.accent}`,
+          padding: "14px 16px",
+          cursor: "pointer",
+          display: "flex",
+          flexDirection: "column",
+          gap: 8,
+          transition: "border-color 0.15s, transform 0.1s, box-shadow 0.15s",
+          scrollSnapAlign: "start",
+        }}
+        onMouseEnter={(e) => {
+          e.currentTarget.style.borderColor = T.accent;
+          e.currentTarget.style.boxShadow = "0 2px 12px rgba(0,0,0,0.06)";
+        }}
+        onMouseLeave={(e) => {
+          e.currentTarget.style.borderColor = T.border;
+          e.currentTarget.style.borderLeftColor = T.accent;
+          e.currentTarget.style.boxShadow = "none";
+        }}
+      >
+        {/* Date row */}
+        <div style={{ display:"flex", alignItems:"baseline", justifyContent:"space-between", gap:8 }}>
+          <div>
+            <div style={{ fontFamily:"'Barlow Condensed',sans-serif", fontWeight:900, fontSize:24, color:T.accent, letterSpacing:"-0.01em", lineHeight:1 }}>
+              {range || "WEEKEND"}
+            </div>
+            <div style={{ fontFamily:"'IBM Plex Mono',monospace", fontSize:8.5, fontWeight:600, color:T.textMuted, letterSpacing:"0.14em", marginTop:3 }}>
+              {year} · FRI–SUN
+            </div>
+          </div>
+          <span style={{
+            fontFamily:"'DM Sans',sans-serif", fontWeight:700, fontSize:8, letterSpacing:"0.1em", textTransform:"uppercase",
+            padding:"2px 7px", borderRadius:2, background: item.tag === "WEEKEND RECAP" ? "#DCFCE7" : "#FEF3C7",
+            color: item.tag === "WEEKEND RECAP" ? "#166534" : "#92400E", whiteSpace:"nowrap",
+          }}>
+            {item.tag === "WEEKEND RECAP" ? "Recap" : "Preview"}
+          </span>
+        </div>
+
+        {/* Headline */}
+        <div style={{
+          fontFamily:"'Barlow Condensed',sans-serif", fontWeight:700, fontSize:14, color:T.text, lineHeight:1.22,
+          display:"-webkit-box", WebkitLineClamp:2, WebkitBoxOrient:"vertical", overflow:"hidden",
+        }}>
+          {item.headline}
+        </div>
+
+        {/* Dek */}
+        {item.dek && (
+          <div style={{
+            fontFamily:"'DM Sans',sans-serif", fontSize:11, color:T.textMid, lineHeight:1.5,
+            display:"-webkit-box", WebkitLineClamp:2, WebkitBoxOrient:"vertical", overflow:"hidden", flex:1,
+          }}>
+            {item.dek}
+          </div>
+        )}
+
+        {/* Footer */}
+        <div style={{ display:"flex", alignItems:"center", justifyContent:"space-between", marginTop:"auto", paddingTop:4 }}>
+          <span style={{ fontFamily:"'IBM Plex Mono',monospace", fontSize:8.5, color:T.textMuted, letterSpacing:"0.06em" }}>
+            {item.readTime || "—"}
+          </span>
+          <span style={{ fontFamily:"'Barlow Condensed',sans-serif", fontWeight:700, fontSize:11, color:T.accent, letterSpacing:"0.06em", textTransform:"uppercase" }}>
+            Read →
+          </span>
+        </div>
+      </div>
+    );
+  };
+
+  return (
+    <div style={{ background:T.surface, borderTop:`1px solid ${T.border}` }}>
+      {/* Header */}
+      <div style={{ padding:"9px 22px", display:"flex", alignItems:"center", borderBottom:"2px solid #111", gap:10 }}>
+        <span style={{ fontFamily:"'Barlow Condensed',sans-serif", fontWeight:900, fontSize:11, color:T.text, letterSpacing:"0.22em", textTransform:"uppercase" }}>
+          Weekend Coverage
+        </span>
+        <span style={{
+          fontFamily:"'IBM Plex Mono',monospace", fontSize:8, fontWeight:700, color:T.accent,
+          letterSpacing:"0.14em", textTransform:"uppercase", padding:"2px 7px",
+          border:`1px solid ${T.accent}`, borderRadius:2,
+        }}>
+          ● Live
+        </span>
+        <span style={{ flex:1 }} />
+        <span style={{ fontFamily:"'DM Sans',sans-serif", fontSize:9, color:T.textMuted }}>
+          {weekendArticles.length} {weekendArticles.length === 1 ? "weekend" : "weekends"} tracked
+        </span>
+      </div>
+
+      {/* Scroller */}
+      <div style={{
+        display:"flex", gap:10, padding:"14px 22px 16px",
+        overflowX:"auto", overflowY:"hidden",
+        scrollSnapType:"x mandatory", WebkitOverflowScrolling:"touch",
+      }}>
+        {weekendArticles.map((item, i) => <WeekendCard key={i} item={item} />)}
+      </div>
+    </div>
+  );
+}
+
+
 function EditorialSection({ onNavigate }) {
   const [expanded, setExpanded] = React.useState(false);
 
@@ -5713,9 +5867,14 @@ function EditorialSection({ onNavigate }) {
   };
 
   const parseDate = (d) => { try { return new Date(d); } catch(e) { return new Date(0); } };
-  const sorted = [...EDITORIALS].sort((a, b) => {
+
+  // Weekend articles render in WeekendCoverageSection — exclude from editorial stack
+  const WEEKEND_TAGS = ["WEEKEND PREVIEW", "WEEKEND RECAP"];
+  const nonWeekend = EDITORIALS.filter(e => !WEEKEND_TAGS.includes(e.tag));
+
+  const sorted = [...nonWeekend].sort((a, b) => {
     const diff = parseDate(b.date) - parseDate(a.date);
-    return diff !== 0 ? diff : EDITORIALS.indexOf(a) - EDITORIALS.indexOf(b);
+    return diff !== 0 ? diff : nonWeekend.indexOf(a) - nonWeekend.indexOf(b);
   });
 
   const lead = sorted[0];
@@ -5759,7 +5918,7 @@ function EditorialSection({ onNavigate }) {
       <div style={{ padding:"9px 22px", display:"flex", alignItems:"center", borderBottom:"2px solid #111" }}>
         <span style={{ fontFamily:"'Barlow Condensed',sans-serif", fontWeight:900, fontSize:11, color:T.text, letterSpacing:"0.22em", textTransform:"uppercase" }}>From the Desk</span>
         <span style={{ flex:1 }} />
-        <span style={{ fontFamily:"'DM Sans',sans-serif", fontSize:9, color:T.textMuted }}>{EDITORIALS.length} pieces</span>
+        <span style={{ fontFamily:"'DM Sans',sans-serif", fontSize:9, color:T.textMuted }}>{sorted.length} pieces</span>
       </div>
 
       {/* Split */}
@@ -5804,7 +5963,7 @@ function EditorialSection({ onNavigate }) {
               onMouseLeave={e => e.currentTarget.style.background=T.surface}
             >
               <span style={{ fontFamily:"'DM Sans',sans-serif", fontSize:9, color:T.textMuted }}>
-                {expanded ? `Showing all ${EDITORIALS.length}` : `Showing ${visible.length + 1} of ${EDITORIALS.length}`}
+                {expanded ? `Showing all ${sorted.length}` : `Showing ${visible.length + 1} of ${sorted.length}`}
               </span>
               <span style={{ fontFamily:"'Barlow Condensed',sans-serif", fontWeight:700, fontSize:10, letterSpacing:"0.06em", textTransform:"uppercase", color:T.accent }}>
                 {expanded ? "Collapse ↑" : "View All ↓"}
