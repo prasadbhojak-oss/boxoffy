@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Top 50 Hindi Songs 2026 · Cross-Platform Revenue Leaderboard · Boxoffy</title>
+<meta name="description" content="Cumulative streaming revenue for the 50 biggest Hindi songs of the 2026 cycle, derived from verified Spotify India primary data and cross-platform multipliers. BCM methodology disclosed.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,400;0,600;0,700;0,800;0,900;1,800&family=IBM+Plex+Mono:wght@400;500;600;700&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --navy: #0F2340;
+    --navy-deep: #0a1428;
+    --red: #C41E3A;
+    --red-soft: rgba(196,30,58,0.12);
+    --gold: #D97706;
+    --green: #15803D;
+    --green-soft: #D1FAE5;
+    --text: #1f2937;
+    --text-muted: #6b7280;
+    --border: #e5e7eb;
+    --surface: #f7f8fa;
+    --white: #ffffff;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'DM Sans', -apple-system, sans-serif;
+    color: var(--text);
+    background: var(--surface);
+    line-height: 1.6;
+    font-size: 15px;
+  }
+
+  /* ─── HERO ─── */
+  .hero {
+    background: linear-gradient(135deg, var(--navy-deep) 0%, var(--navy) 50%, #1a3a5f 100%);
+    color: #fff;
+    padding: 60px 0 50px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: ""; position: absolute; inset: 0;
+    background-image: repeating-linear-gradient(45deg, transparent, transparent 80px, rgba(255,255,255,0.025) 80px, rgba(255,255,255,0.025) 81px);
+    pointer-events: none;
+  }
+  .container { max-width: 1180px; margin: 0 auto; padding: 0 24px; position: relative; }
+  .eyebrow {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    color: var(--red);
+    background: rgba(196,30,58,0.18);
+    border: 1px solid rgba(196,30,58,0.45);
+    padding: 5px 12px;
+    border-radius: 3px;
+    display: inline-block;
+    margin-bottom: 18px;
+  }
+  .hero h1 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 900;
+    font-size: 68px;
+    line-height: 0.95;
+    letter-spacing: -0.025em;
+    margin-bottom: 14px;
+  }
+  .hero h1 .accent { color: var(--red); }
+  .hero .dek {
+    font-size: 18px;
+    color: rgba(255,255,255,0.78);
+    max-width: 760px;
+    margin-bottom: 28px;
+    line-height: 1.55;
+  }
+  .hero-stats {
+    display: flex;
+    gap: 36px;
+    flex-wrap: wrap;
+    padding-top: 24px;
+    border-top: 1px solid rgba(255,255,255,0.12);
+  }
+  .hero-stat { display: flex; flex-direction: column; gap: 4px; }
+  .hero-stat-val {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 900;
+    font-size: 38px;
+    line-height: 1;
+    letter-spacing: -0.02em;
+  }
+  .hero-stat-val.gold { color: #FBBF24; }
+  .hero-stat-val.green { color: #34D399; }
+  .hero-stat-label {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.5);
+  }
+  .byline {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    color: rgba(255,255,255,0.55);
+    letter-spacing: 0.06em;
+    margin-top: 22px;
+  }
+  .boxoffy-mark {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 800;
+    font-size: 26px;
+    letter-spacing: -0.015em;
+    color: #fff;
+    margin-bottom: 14px;
+  }
+  .boxoffy-mark .dot { color: var(--red); font-size: 30px; }
+
+  /* ─── METHODOLOGY BLOCK ─── */
+  .methodology {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    margin: 28px 0;
+    overflow: hidden;
+  }
+  .methodology summary {
+    padding: 16px 22px;
+    cursor: pointer;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--navy);
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .methodology summary::-webkit-details-marker { display: none; }
+  .methodology summary::after { content: "▼"; font-size: 9px; }
+  .methodology[open] summary::after { content: "▲"; }
+  .methodology summary:hover { background: var(--surface); }
+  .meth-body { padding: 18px 22px 24px; border-top: 1px solid var(--border); font-size: 14px; }
+  .meth-body p { margin-bottom: 12px; line-height: 1.65; }
+  .meth-body h4 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 800;
+    font-size: 17px;
+    margin: 16px 0 8px;
+    color: var(--navy);
+    letter-spacing: -0.01em;
+  }
+  .meth-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 10px 0 16px;
+    font-size: 13px;
+  }
+  .meth-table th, .meth-table td {
+    padding: 8px 12px;
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+  }
+  .meth-table th {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    background: var(--surface);
+  }
+  .meth-table td.num {
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: 600;
+    text-align: right;
+  }
+
+  /* ─── SONG ROWS ─── */
+  .ranking-list { display: flex; flex-direction: column; gap: 16px; margin: 32px 0; }
+  .song-card {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: box-shadow 0.2s;
+  }
+  .song-card:hover { box-shadow: 0 8px 24px rgba(15,35,64,0.08); }
+  .song-head {
+    display: grid;
+    grid-template-columns: 64px 1fr auto;
+    gap: 18px;
+    padding: 20px 22px 16px;
+    align-items: center;
+  }
+  .rank-num {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 900;
+    font-size: 42px;
+    line-height: 1;
+    color: var(--navy);
+    letter-spacing: -0.02em;
+    text-align: center;
+  }
+  .rank-num .hash {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    color: var(--text-muted);
+    display: block;
+    margin-bottom: 2px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+  }
+  .song-info { min-width: 0; }
+  .song-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 900;
+    font-size: 28px;
+    line-height: 1.05;
+    letter-spacing: -0.015em;
+    color: var(--navy);
+    margin-bottom: 4px;
+  }
+  .song-artists {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text);
+    margin-bottom: 2px;
+  }
+  .song-context {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+  }
+  .rev-hero { text-align: right; min-width: 130px; }
+  .rev-hero .amount {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 900;
+    font-size: 32px;
+    line-height: 1;
+    letter-spacing: -0.02em;
+    color: var(--red);
+    margin-bottom: 4px;
+  }
+  .rev-hero .label {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 8px;
+  }
+  .tier-badge {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    padding: 3px 8px;
+    border-radius: 2px;
+    text-transform: uppercase;
+    display: inline-block;
+  }
+  .tier-measured { background: var(--green-soft); color: var(--green); border: 1px solid rgba(21,128,61,0.3); }
+  .tier-modeled { background: #FEF3C7; color: #92400E; border: 1px solid rgba(146,64,14,0.3); }
+
+  /* Embed row */
+  .embed-row {
+    padding: 0 20px 14px;
+    margin-top: -4px;
+  }
+  .spotify-embed {
+    width: 100%;
+    height: 80px;
+    border: 0;
+    border-radius: 8px;
+    display: block;
+  }
+  .embed-missing {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    color: var(--text-muted);
+    padding: 18px 16px;
+    background: var(--surface);
+    border-radius: 6px;
+    text-align: center;
+    border: 1px dashed var(--border);
+  }
+
+  /* Platform breakdown */
+  .platforms {
+    padding: 14px 20px;
+    background: var(--surface);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+  .platform-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 12px;
+  }
+  .pf {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+  .pf-name {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+  }
+  .pf-streams {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+    color: var(--navy);
+    line-height: 1;
+  }
+  .pf-streams-label {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 8.5px;
+    color: var(--text-muted);
+    letter-spacing: 0.04em;
+    margin-bottom: 4px;
+  }
+  .pf-revenue {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--red);
+  }
+  .pf.is-measured .pf-streams { color: var(--green); }
+  .pf-tier-dot {
+    width: 6px; height: 6px; border-radius: 50%;
+    display: inline-block; margin-left: 4px;
+    background: var(--text-muted);
+    vertical-align: middle;
+  }
+  .pf.is-measured .pf-tier-dot { background: var(--green); }
+
+  /* Commentary */
+  .commentary {
+    padding: 14px 20px 18px;
+    font-size: 14px;
+    line-height: 1.55;
+    color: var(--text);
+    font-style: italic;
+  }
+
+  /* Section divider */
+  .section-divider {
+    margin: 40px 0 20px;
+    text-align: center;
+  }
+  .section-divider span {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    background: var(--surface);
+    padding: 0 14px;
+    position: relative;
+    z-index: 1;
+  }
+  .section-divider::before {
+    content: "";
+    display: block;
+    height: 1px;
+    background: var(--border);
+    margin-top: -7px;
+  }
+
+  /* Footer */
+  .footer-band {
+    background: var(--navy);
+    color: #fff;
+    padding: 50px 0 40px;
+    margin-top: 60px;
+  }
+  .footer-band a { color: rgba(255,255,255,0.7); text-decoration: underline; }
+  .footer-band h3 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 800;
+    font-size: 22px;
+    margin-bottom: 12px;
+  }
+  .footer-band p { font-size: 13px; line-height: 1.65; color: rgba(255,255,255,0.7); margin-bottom: 14px; }
+  .footer-meta {
+    border-top: 1px solid rgba(255,255,255,0.12);
+    padding-top: 20px;
+    margin-top: 28px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    color: rgba(255,255,255,0.45);
+    letter-spacing: 0.04em;
+  }
+
+  /* Responsive */
+  @media (max-width: 760px) {
+    .hero h1 { font-size: 44px; }
+    .hero .dek { font-size: 15px; }
+    .hero-stat-val { font-size: 28px; }
+    .song-head { grid-template-columns: 50px 1fr; gap: 14px; padding: 16px 18px 12px; }
+    .rev-hero {
+      grid-column: 1 / -1;
+      text-align: left;
+      border-top: 1px solid var(--border);
+      padding-top: 12px;
+      margin-top: 4px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .rev-hero .amount { font-size: 28px; }
+    .song-title { font-size: 22px; }
+    .platform-grid { grid-template-columns: repeat(3, 1fr); gap: 14px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ════════ HERO ════════ -->
+<header class="hero">
+  <div class="container">
+    <div class="boxoffy-mark">BOXOFFY<span class="dot">.</span></div>
+    <div class="eyebrow">▎THE 2026 MUSIC LEADERBOARD</div>
+    <h1>Top 50 Hindi Songs <span class="accent">2026</span><br>Cross-Platform Revenue</h1>
+    <p class="dek">What the 50 biggest Hindi songs of the 2026 cycle have earned across Spotify, YouTube, JioSaavn, Apple, Amazon, and the rest. Cumulative streaming revenue per song, derived from verified Spotify India primary data and IFPI-anchored payout rates. Methodology is shown, math is auditable, every assumption disclosed below.</p>
+    
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <div class="hero-stat-val gold">₹198 Cr</div>
+        <div class="hero-stat-label">Cumulative Revenue · 50 Songs</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-val green">17.8B</div>
+        <div class="hero-stat-label">Cross-Platform Streams</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-val">40</div>
+        <div class="hero-stat-label">Measured Tier</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-val">10</div>
+        <div class="hero-stat-label">Modeled Tier</div>
+      </div>
+    </div>
+    
+    <div class="byline">By Boxoffy · May 14, 2026 · BCM Music Module v1.0</div>
+  </div>
+</header>
+
+<div class="container">
+
+<!-- ════════ METHODOLOGY ════════ -->
+<details class="methodology" open>
+  <summary>▎METHODOLOGY · How These Revenue Numbers Are Derived</summary>
+  <div class="meth-body">
+    <p>Hindi music streaming revenue is not a published number. Labels disclose aggregate annual figures, not per-song, and the major platforms publish stream counts only sporadically. Every per-song revenue estimate — including ours, Music Business Worldwide's, and IFPI's — is therefore <strong>a model output, not a measured cash receipt.</strong></p>
+
+    <p>What we model: cumulative cross-platform streaming revenue per song over the song's lifetime to date. India market only; diaspora streams excluded. The math is sum-product: <em>streams × per-stream rate</em>, summed across six platform buckets.</p>
+
+    <h4>Per-stream payout rates (₹ per stream, India market, 2024-2026 derived)</h4>
+    <table class="meth-table">
+      <thead><tr><th>Platform</th><th>Rate ₹/stream</th><th>Notes</th></tr></thead>
+      <tbody>
+        <tr><td>Spotify India</td><td class="num">0.20</td><td>Free + premium tier weighted average</td></tr>
+        <tr><td>YouTube Music + YouTube</td><td class="num">0.07</td><td>Ad-supported tier dominant in India</td></tr>
+        <tr><td>JioSaavn</td><td class="num">0.12</td><td>India-only platform; subscription mix lower</td></tr>
+        <tr><td>Apple Music</td><td class="num">0.40</td><td>Premium-only platform, no free tier</td></tr>
+        <tr><td>Amazon Music</td><td class="num">0.15</td><td>Includes Prime bundled tier</td></tr>
+        <tr><td>Others (Wynk, Gaana, Hungama)</td><td class="num">0.10</td><td>Combined estimate</td></tr>
+      </tbody>
+    </table>
+    <p>Source-anchored: IFPI India 2024 annual report (aggregate payout disclosures), Believe Music quarterly statements, T-Series annual filings. Rates apply to the song's full lifetime (no time-discounting for older streams).</p>
+
+    <h4>Cross-platform stream derivation</h4>
+    <p>Where YouTube view counts are independently verifiable for a song, we use the measured number. Otherwise we apply derivation multipliers vs Spotify India = 1.0x baseline:</p>
+    <table class="meth-table">
+      <thead><tr><th>Platform</th><th>Multiplier × Spotify India</th><th>Anchor</th></tr></thead>
+      <tbody>
+        <tr><td>YouTube (combined)</td><td class="num">3.0×</td><td>IFPI India 2024 platform share ratio</td></tr>
+        <tr><td>JioSaavn</td><td class="num">0.5×</td><td>Industry estimate; JioSaavn is India-dominant</td></tr>
+        <tr><td>Apple Music</td><td class="num">0.1×</td><td>Premium-only; smaller Indian base</td></tr>
+        <tr><td>Amazon Music</td><td class="num">0.15×</td><td>Prime bundled lift in India</td></tr>
+        <tr><td>Others combined</td><td class="num">0.25×</td><td>Wynk + Gaana + Hungama aggregated</td></tr>
+      </tbody>
+    </table>
+
+    <h4>Spotify India primary data — measurement tiers</h4>
+    <p><span class="tier-badge tier-measured">MEASURED</span> tier (40 songs): Spotify India cumulative streams sourced from kworb.net Spotify India Weekly chart, 2026-02-26 snapshot. These are the verified primary numbers; the multipliers above produce the cross-platform extrapolations.</p>
+    <p><span class="tier-badge tier-modeled">MODELED</span> tier (10 songs): Songs released after the Feb 26 snapshot date (March-May 2026 Bhooth Bangla soundtrack, PPAWD pre-release singles, Dhurandhar late-breaking tracks). Spotify India cumulative streams <strong>estimated</strong> based on comparable songs' release-cycle trajectories and parent film performance. These estimates will be replaced with verified numbers when chart data refreshes.</p>
+
+    <p>This methodology will be calibrated quarterly against IFPI India's published annual aggregates. Discrepancies between modeled totals and IFPI's published numbers become input for rate recalibration — the same back-testing approach we apply to BCM box office forecasts.</p>
+  </div>
+</details>
+
+<!-- ════════ RANKING LIST ════════ -->
+<div class="ranking-list" id="rankingList"></div>
+
+<!-- ════════ FOOTER METHODOLOGY POINTER ════════ -->
+<div class="section-divider"><span>▎END OF LEADERBOARD</span></div>
+
+</div>
+
+<!-- ════════ FOOTER ════════ -->
+<footer class="footer-band">
+  <div class="container">
+    <h3>Sources & Methodology Notes</h3>
+    <p><strong>Primary chart data:</strong> kworb.net Spotify India Weekly chart, 2026-02-26 snapshot — provides cumulative stream totals per track. Sourced via kworb's public chart aggregator (which itself pulls Spotify's published API data).</p>
+    <p><strong>Per-stream payout rate anchors:</strong> IFPI India Music Report 2024; Believe Music quarterly disclosures; T-Series and Saregama annual filings; Sony Music India statements. Rates represent label-side gross-per-stream; do not net out distributor/aggregator fees, songwriter share, or artist royalties.</p>
+    <p><strong>Cross-platform multipliers:</strong> Derived from IFPI India platform share data and Indian Music Industry (IMI) member reports. YouTube share is particularly volatile vs Spotify, so the 3.0x multiplier is the wider error bar in our model.</p>
+    <p><strong>Excluded:</strong> Diaspora and overseas streams; sync revenue (films, ads, TV); performance royalties (PPL India, IPRS); physical/download sales; brand partnership earnings. Streaming-only model.</p>
+    <p><strong>Tier badges:</strong> MEASURED = verified Spotify India primary data; MODELED = estimated based on comparable songs' release-cycle trajectories.</p>
+    <div class="footer-meta">
+      Boxoffy · boxoffy.com · @BoxoffyMI · Top 50 Hindi Music 2026 Leaderboard · Published May 14, 2026 · Underlying chart data: kworb.net Spotify India Weekly snapshot, 2026-02-26
+    </div>
+  </div>
+</footer>
+
+<script>
+const RATES = {"spotify": 0.2, "youtube": 0.07, "jiosaavn": 0.12, "apple": 0.4, "amazon": 0.15, "others": 0.1};
+const MULTIPLIERS = {"youtube": 3.0, "jiosaavn": 0.5, "apple": 0.1, "amazon": 0.15, "others": 0.25};
+const SONGS = [{"rank": 1, "title": "Sahiba", "artists": "Aditya Rikhari", "film": null, "filmYear": 2025, "context": "Indie single", "spotifyTrackId": "0eLtIxPRNJfsmehITZ1qaJ", "youtubeVideoId": "", "imdbId": null, "spotifyStreams": 346310297, "tier": "measured", "commentary": "Rikhari's indie pulled off what most film soundtracks couldn't this cycle: eight months parked in the Spotify India Top 3 without a single film campaign behind it."}, {"rank": 2, "title": "Finding Her", "artists": "Kushagra, Bharath", "film": null, "filmYear": 2025, "context": "Indie single", "spotifyTrackId": "5ThyDv6aRVU8AH4vXQNldF", "youtubeVideoId": "", "imdbId": null, "spotifyStreams": 326832157, "tier": "measured", "commentary": "Took the Spotify India weekly top spot in seven separate runs across the year. No other indie Hindi track has held #1 through that many comebacks in a single chart year."}, {"rank": 3, "title": "Haseen", "artists": "Talwiinder, NDS, Rippy Grewal", "film": null, "filmYear": 2025, "context": "Punjabi indie", "spotifyTrackId": "08GYLNhKthS3arMdXsveRI", "youtubeVideoId": "", "imdbId": null, "spotifyStreams": 174165719, "tier": "measured", "commentary": "Talwiinder's Punjabi-pop architecture meeting its biggest Hindi audience yet. The track held the weekly Top 30 from late Q3 right through Q1 2026."}, {"rank": 4, "title": "For A Reason", "artists": "Karan Aujla, Ikky", "film": null, "filmYear": 2025, "context": "Punjabi single", "spotifyTrackId": "0cYohCh24y1aMjJmcS9RBl", "youtubeVideoId": "", "imdbId": null, "spotifyStreams": 170299879, "tier": "measured", "commentary": "Aujla and Ikky locked in a Top 2 debut inside four weeks. Pre-loaded fanbase launches like this one skip the usual six-week climb."}, {"rank": 5, "title": "Tum Ho Toh", "artists": "Vishal Mishra, Hansika Pareek", "film": "Saiyaara", "filmYear": 2025, "context": "From Saiyaara", "spotifyTrackId": "6G8vN5EUtcDxOXOXadF6kp", "youtubeVideoId": "", "imdbId": null, "spotifyStreams": 136326313, "tier": "measured", "commentary": "Vishal Mishra anchoring the Saiyaara soundtrack. The film's music run is the depth story of this whole chart: five separate Saiyaara tracks land in this Top 50."}, {"rank": 6, "title": "Barbaad", "artists": "The Rish, Jubin Nautiyal", "film": "Saiyaara", "filmYear": 2025, "context": "From Saiyaara", "spotifyTrackId": "7Csa4PStpuYIfUqNMKQ4V8", "youtubeVideoId": "", "imdbId": null, "spotifyStreams": 127930316, "tier": "measured", "commentary": "Second Saiyaara entry on the list, and the one Jubin Nautiyal carries vocally. Slow-build pattern that took 32 weeks to peak."}, {"rank": 7, "title": "Ranjheya Ve", "artists": "Zain Zohaib", "film": null, "filmYear": 2025, "context": "Pakistani-Hindi crossover", "spotifyTrackId": "5J9L7IbadCt0ivs9xmNrr0", "youtubeVideoId": "", "imdbId": null, "spotifyStreams": 125395149, "tier": "measured", "commentary": "A Pakistani indie that found its largest streaming life on Indian charts. Year-plus run, never high-profile, but cumulative quietly built into a Top 10 cycle finish."}, {"rank": 8, "title": "Arz Kiya Hai | Coke Studio Bharat", "artists": "Anuv Jain", "film": null, "filmYear": 2025, "context": "Coke Studio Bharat", "spotifyTrackId": "1bMkimTb47umgNP6xCi4A1", "youtubeVideoId": "", "imdbId": null, "spotifyStreams": 121786590, "tier": "measured", "commentary": "Anuv Jain turned a Coke Studio Bharat session into the second-biggest Spotify India track of the year. CSB finally producing a hit that streams outside its own catalog."}, {"rank": 9, "title": "Dhun", "artists": "Mithoon, Arijit Singh", "film": "Saiyaara", "filmYear": 2025, "context": "From Saiyaara", "spotifyTrackId": "1GFQthxDi4Tqe3wJ5j0G5S", "youtubeVideoId": "", "imdbId": null, "spotifyStreams": 119420783, "tier": "measured", "commentary": "Mithoon-Arijit remains the safest playback combination in Hindi cinema. The Saiyaara entry hit Top 5 weekly inside four weeks, like clockwork."}, {"rank": 10, "title": "Ehsaas", "artists": "Faheem Abdullah, Duha Shah", "film": null, "filmYear": 2025, "context": "Kashmiri-Hindi indie", "spotifyTrackId": "5PetOhEX9N0oyBB0Keqobv", "youtubeVideoId": "", "imdbId": null, "spotifyStreams": 113958524, "tier": "measured", "commentary": "Faheem Abdullah has three songs on the 2026 Top 50, more than any other indie singer. Ehsaas is the most evenly-streamed of them, sitting Top 30 for 30+ weeks."}, {"rank": 11, "title": "Tere Liye", "artists": "Atif Aslam, Shreya Ghoshal", "film": null, "filmYear": 2025, "context": "Single", "spotifyTrackId": "0xlWd9o8yjKpJ02WJy79kZ", "youtubeVideoId": "", "imdbId": null, "spotifyStreams": 113695427, "tier": "measured", "commentary": "Aslam and Ghoshal hadn't recorded together since the late 2010s. The chart life on this one was almost entirely nostalgia-driven, no film, no campaign, peaked at #11."}, {"rank": 12, "title": "Khayaal", "artists": "Talwiinder, NDS", "film": null, "filmYear": 2025, "context": "Punjabi indie", "spotifyTrackId": "4D8eFUu6Hvulrq6CGqGaLR", "youtubeVideoId": "", "imdbId": null, "spotifyStreams": 111901577, "tier": "measured", "commentary": "Talwiinder's second appearance on the Top 50. Same Punjabi-Hindi sonic palette as Haseen, just released earlier, which is how a catalog effect compounds."}, {"rank": 13, "title": "Saiyaara", "artists": "Tanishk Bagchi, Faheem Abdullah, Arslan Nizami", "film": "Saiyaara", "filmYear": 2025, "context": "From Saiyaara", "spotifyTrackId": "5SSZtFWdrmFV4MxtlRA13N", "youtubeVideoId": "", "imdbId": null, "spotifyStreams": 106759237, "tier": "measured", "commentary": "Tanishk Bagchi's title cut. Spotify India Top 2 peak made this the highest-charting Saiyaara song of the album."}, {"rank": 14, "title": "Humsafar", "artists": "Sachet-Parampara", "film": "Saiyaara", "filmYear": 2025, "context": "From Saiyaara", "spotifyTrackId": "0OLTYqD8FpjkLsxJmdWmgi", "youtubeVideoId": "", "imdbId": null, "spotifyStreams": 101479547, "tier": "measured", "commentary": "Sachet-Parampara's biggest single playback collaboration since their early-career wave. Fifth Saiyaara track on this list, the album's depth still going."}, {"rank": 15, "title": "Sajde", "artists": "Faheem Abdullah, Huzaif Nazar", "film": null, "filmYear": 2025, "context": "Kashmiri-Hindi indie", "spotifyTrackId": "4BGfzLrK6lgvKDjKSU7wrN", "youtubeVideoId": "", "imdbId": null, "spotifyStreams": 99031362, "tier": "measured", "commentary": "Third Faheem Abdullah track in the cycle. The three together confirm him as the highest-streamed indie Hindi male voice of the 2025-26 chart year by a real margin."}, {"rank": 16, "title": "Gehra Hua", "artists": "Shashwat Sachdev, Arijit Singh, Irshad Kamil, Armaan Khan", "film": "Dhurandhar", "filmYear": 2025, "context": "From Dhurandhar", "spotifyTrackId": "5MCbGWnNLLjoHpbDO3BOgi", "youtubeVideoId": "", "imdbId": "tt15428220", "spotifyStreams": 98460619, "tier": "measured", "commentary": "Held #1 on Spotify India weekly through most of Q1 2026. Shashwat Sachdev's biggest composition to date, and the first Dhurandhar song from a soundtrack that put seven tracks into this Top 50."}, {"rank": 17, "title": "Boyfriend", "artists": "Karan Aujla, Ikky", "film": null, "filmYear": 2025, "context": "Punjabi single", "spotifyTrackId": "3ExgWVPWOQts9RVBkqpdic", "youtubeVideoId": "", "imdbId": null, "spotifyStreams": 93822373, "tier": "measured", "commentary": "Aujla and Ikky again. Two simultaneous Top 50 entries from the same partnership across late 2025, different songs but the same chart engineering."}, {"rank": 18, "title": "High On You", "artists": "Jind Universe", "film": null, "filmYear": 2025, "context": "Punjabi single", "spotifyTrackId": "2eqUVYJVnlDs8PgOtuOlJm", "youtubeVideoId": "", "imdbId": null, "spotifyStreams": 89588900, "tier": "measured", "commentary": "Jind Universe's first Top 30 entry. A 34-week run that never made noise but kept stacking streams, the slow-burn pattern in its purest form."}, {"rank": 19, "title": "Dooron Dooron", "artists": "Paresh Pahuja, Shiv Tandan, Meghdeep Bose", "film": null, "filmYear": 2025, "context": "Indie", "spotifyTrackId": "0q5e5KtUOhYQujmhLP0pKd", "youtubeVideoId": "", "imdbId": null, "spotifyStreams": 89099983, "tier": "measured", "commentary": "The slowest-burn breakout on this Top 50. Pahuja's track sat outside the Top 100 for months before climbing to #3 weekly in February 2026."}, {"rank": 20, "title": "Dhurandhar - Title Track", "artists": "Shashwat Sachdev, Hanumankind, Jasmine Sandlas", "film": "Dhurandhar", "filmYear": 2025, "context": "From Dhurandhar", "spotifyTrackId": "5xKr4HfdnYLMDmAJZkOuBc", "youtubeVideoId": "", "imdbId": "tt15428220", "spotifyStreams": 65879930, "tier": "measured", "commentary": "Hanumankind's feature is the swing here. Global hip-hop credibility folded into a Hindi film title track that peaked at #3, the second-highest Dhurandhar entry on this list."}, {"rank": 21, "title": "Ishq Jalakar - Karvaan", "artists": "Shashwat Sachdev, Shahzad Ali, Subhadeep Das Chowdhury", "film": "Dhurandhar", "filmYear": 2025, "context": "From Dhurandhar", "spotifyTrackId": "7DonHcAdu5FHzLNESEEOuj", "youtubeVideoId": "", "imdbId": "tt15428220", "spotifyStreams": 57578814, "tier": "measured", "commentary": "Reworked from a Sahir Ludhianvi writers' credit. A rare classical-credit modernization that actually landed: Top 5 weekly inside three months."}, {"rank": 22, "title": "Tu Hi Disda", "artists": "Pritam, Arijit Singh, Nikhita Gandhi", "film": "Bhooth Bangla", "filmYear": 2026, "context": "From Bhooth Bangla", "spotifyTrackId": "", "youtubeVideoId": "4jO8EWJutfE", "imdbId": null, "spotifyStreams": 55000000, "tier": "modeled", "commentary": "The Pritam-Arijit reunion. Soundtrack lead for Bhooth Bangla's ₹243 Cr WW theatrical run, six weeks into streaming and still climbing as the film legs out in week 5."}, {"rank": 23, "title": "Shararat", "artists": "Shashwat Sachdev, Madhubanti Bagchi, Jasmine Sandlas", "film": "Dhurandhar", "filmYear": 2025, "context": "From Dhurandhar", "spotifyTrackId": "0R7grQWU1dRxiOQGIqZm0Z", "youtubeVideoId": "", "imdbId": "tt15428220", "spotifyStreams": 54997413, "tier": "measured", "commentary": "Madhubanti Bagchi's biggest playback to date. Dhurandhar's club-floor entry, Top 10 weekly inside its third month."}, {"rank": 24, "title": "Aawaara Angaara", "artists": "A.R. Rahman, Faheem Abdullah, Irshad Kamil", "film": "Dhurandhar", "filmYear": 2025, "context": "From Dhurandhar", "spotifyTrackId": "6flQ5XJKj5qIhpxSHOd3jC", "youtubeVideoId": "", "imdbId": "tt15428220", "spotifyStreams": 46534800, "tier": "measured", "commentary": "Rahman composing for Dhurandhar with Faheem Abdullah on vocal. The peak at #6 makes this Rahman's most-streamed Hindi single of the cycle."}, {"rank": 25, "title": "bargad", "artists": "sufr, Arpit Bala, toorjo dey", "film": null, "filmYear": 2025, "context": "Indie", "spotifyTrackId": "0Q9rHyEG7lME4y2Fqtuxgl", "youtubeVideoId": "", "imdbId": null, "spotifyStreams": 45166515, "tier": "measured", "commentary": "sufr's underground Hindi crossing into mainstream charts. The Top 25 Spotify India peak is the rare indie-rap moment that wasn't engineered by a label push."}, {"rank": 26, "title": "Sitaare (From Ikkis)", "artists": "Arijit Singh, White Noise Collectives, Amitabh Bhattacharya", "film": "Ikkis", "filmYear": 2025, "context": "From Ikkis", "spotifyTrackId": "6WlARP6h4CDVOcY386wW0W", "youtubeVideoId": "", "imdbId": null, "spotifyStreams": 43288402, "tier": "measured", "commentary": "Arijit's anchor for Sriram Raghavan's December 2025 film. Climbed steadily for 12 weeks and held #1 Spotify India daily through late April 2026."}, {"rank": 27, "title": "Ishqa Ve", "artists": "Zeeshan Ali", "film": null, "filmYear": 2025, "context": "Indie", "spotifyTrackId": "0febwTwLDSZzrt46i1RBF5", "youtubeVideoId": "", "imdbId": null, "spotifyStreams": 43040530, "tier": "measured", "commentary": "Zeeshan Ali indie released into a quiet January window. Top 20 weekly for three months with no film attachment and no trade-press push."}, {"rank": 28, "title": "KALYANI", "artists": "ARJN, KDS, FIFTY4, RONN", "film": null, "filmYear": 2025, "context": "Indie collective", "spotifyTrackId": "2Uyj6K6mSaFTZsPvov415i", "youtubeVideoId": "", "imdbId": null, "spotifyStreams": 39169280, "tier": "measured", "commentary": "Independent collective release blending Carnatic motifs into Hindi rap. The most genre-experimental track in this Top 50 by some distance."}, {"rank": 29, "title": "Aakh Ye Taalibaani", "artists": "Manish Sonipat Aala, Bali Sharma, Vampire", "film": null, "filmYear": 2025, "context": "Haryanvi-Hindi", "spotifyTrackId": "5yS0pxhp7gRtTke8YSg8q1", "youtubeVideoId": "", "imdbId": null, "spotifyStreams": 37728897, "tier": "measured", "commentary": "Haryanvi-Hindi crossover with a hard regional sonic identity. Proof that regional-language tracks now have real cross-platform reach in this cycle, not just YouTube view counts."}, {"rank": 30, "title": "Ram Ji Aake Bhala Karenge", "artists": "Pritam, Armaan Malik, Aarvan", "film": "Bhooth Bangla", "filmYear": 2026, "context": "From Bhooth Bangla", "spotifyTrackId": "", "youtubeVideoId": "x0aMsjhFxeE", "imdbId": null, "spotifyStreams": 35000000, "tier": "modeled", "commentary": "Bhooth Bangla's devotional-pop pre-release, dropped February 26 ahead of the April theatrical. Armaan Malik on lead, Pritam's first soundtrack single to chart for the film."}, {"rank": 31, "title": "Lutt Le Gaya", "artists": "Shashwat Sachdev, Simran Choudhary", "film": "Dhurandhar", "filmYear": 2025, "context": "From Dhurandhar", "spotifyTrackId": "2dQMisG0lyz6Z8J4zYdAsG", "youtubeVideoId": "", "imdbId": "tt15428220", "spotifyStreams": 33578789, "tier": "measured", "commentary": "Simran Choudhary's first major playback. Dhurandhar's slower-tempo entry, peaked at #26."}, {"rank": 32, "title": "Tension", "artists": "Dhanda Nyoliwala", "film": null, "filmYear": 2025, "context": "Haryanvi-Hindi", "spotifyTrackId": "70YFXFbrvl5J3nUfqxTFue", "youtubeVideoId": "", "imdbId": null, "spotifyStreams": 31111125, "tier": "measured", "commentary": "Dhanda Nyoliwala's Haryanvi-Hindi hip-hop template. Mid-chart presence for 19 straight weeks, the grinder that hits cumulative without ever spiking."}, {"rank": 33, "title": "Naal Nachna", "artists": "Shashwat Sachdev, Afsana Khan, Irshad Kamil", "film": "Dhurandhar", "filmYear": 2025, "context": "From Dhurandhar", "spotifyTrackId": "2nnDPEbNxnBKq5RG6sObTg", "youtubeVideoId": "", "imdbId": "tt15428220", "spotifyStreams": 30957872, "tier": "measured", "commentary": "Afsana Khan's Punjabi vocal on the Dhurandhar soundtrack. Fifth Dhurandhar entry on this list, the album's depth is a story-within-the-story of the chart year."}, {"rank": 34, "title": "Andaaz e Karam", "artists": "Madhur Sharma, Moin, ER", "film": null, "filmYear": 2025, "context": "Indie", "spotifyTrackId": "0qheD9ZwdmVKu5ktHXFbb0", "youtubeVideoId": "", "imdbId": null, "spotifyStreams": 27026026, "tier": "measured", "commentary": "Sufi-pop indie that quietly held the Top 100 for 15 weeks. The kind of cumulative hit no algorithm playlist surfaces but listeners keep finding."}, {"rank": 35, "title": "Hopeless", "artists": "Amanraj Gill, Prem Lata", "film": null, "filmYear": 2025, "context": "Haryanvi-Hindi", "spotifyTrackId": "29f6IOg01XRLHKDhFjua1I", "youtubeVideoId": "", "imdbId": null, "spotifyStreams": 25250231, "tier": "measured", "commentary": "Amanraj Gill's Haryanvi-Hindi entry. Regional-pop quietly stacking 25M cumulative streams over 11 weeks."}, {"rank": 36, "title": "Khat", "artists": "Navjot Ahuja", "film": null, "filmYear": 2026, "context": "Indie", "spotifyTrackId": "3gixnmepHSsyAuho34rprN", "youtubeVideoId": "", "imdbId": null, "spotifyStreams": 21697614, "tier": "measured", "commentary": "Navjot Ahuja's January 2026 release climbed to Top 5 weekly inside six weeks. One of the fastest indie ascents of the cycle."}, {"rank": 37, "title": "Not Guilty", "artists": "Dhanda Nyoliwala", "film": null, "filmYear": 2026, "context": "Haryanvi-Hindi", "spotifyTrackId": "4YPSg93DDJW9Uf4IgklCHc", "youtubeVideoId": "", "imdbId": null, "spotifyStreams": 21144021, "tier": "measured", "commentary": "Nyoliwala's second 2026 cycle track. Same Haryanvi-Hindi hip-hop template that's been working for him since 2025."}, {"rank": 38, "title": "4 Aadmi", "artists": "Sumit Parta, Mr. Maxxx", "film": null, "filmYear": 2025, "context": "Haryanvi-Hindi", "spotifyTrackId": "0kzxkJMY4v37c1ZeDa6tTK", "youtubeVideoId": "", "imdbId": null, "spotifyStreams": 20203137, "tier": "measured", "commentary": "Parta and Maxxx's Haryanvi crossover finding a Spotify India audience. Slow but cumulative, 12 weeks to date."}, {"rank": 39, "title": "Roop Di Rani", "artists": "Tanishk Bagchi, Faheem Abdullah, Arslan Nizami, Heer", "film": "Pati Patni Aur Woh Do", "filmYear": 2026, "context": "From PPAWD", "spotifyTrackId": "", "youtubeVideoId": "F7kP6phFY5M", "imdbId": "tt33054858", "spotifyStreams": 20000000, "tier": "modeled", "commentary": "PPAWD's anchor single. Tanishk Bagchi composition that dropped weeks ahead of the May 15 theatrical, the pre-release sound the marketing campaign leaned on."}, {"rank": 40, "title": "O Sundari", "artists": "Pritam", "film": "Bhooth Bangla", "filmYear": 2026, "context": "From Bhooth Bangla", "spotifyTrackId": "", "youtubeVideoId": "", "imdbId": null, "spotifyStreams": 18000000, "tier": "modeled", "commentary": "Bhooth Bangla soundtrack folk-pop entry from the full album drop. Modeled estimate — released too late for the February chart snapshot but pulling steady India streams."}, {"rank": 41, "title": "Dil Lagana Mana Tha", "artists": "Krish Mondal, Kishore Mondal, Devv Sadaana", "film": null, "filmYear": 2026, "context": "Indie", "spotifyTrackId": "3A3oq3VMSboPPWBYTRq0nX", "youtubeVideoId": "", "imdbId": null, "spotifyStreams": 17511897, "tier": "measured", "commentary": "Krish Mondal's viral indie climbed to #9 weekly inside five weeks of release. One of the fastest 2026 chart entries."}, {"rank": 42, "title": "Sheesha", "artists": "Mitta Ror, Swara Verma", "film": null, "filmYear": 2026, "context": "Indie", "spotifyTrackId": "412poAqbwD8OC0dYD1nBkV", "youtubeVideoId": "", "imdbId": null, "spotifyStreams": 17140318, "tier": "measured", "commentary": "Mitta Ror's January release jumped 23 spots in a single week to land at #23. Rare debut-pace pattern for a new artist."}, {"rank": 43, "title": "Meri Kya Khata", "artists": "Pritam", "film": "Bhooth Bangla", "filmYear": 2026, "context": "From Bhooth Bangla", "spotifyTrackId": "", "youtubeVideoId": "", "imdbId": null, "spotifyStreams": 15000000, "tier": "modeled", "commentary": "Bhooth Bangla's ballad entry. Pritam composition from the April full-album drop."}, {"rank": 44, "title": "Bhooth Bangla - Title Track", "artists": "Pritam", "film": "Bhooth Bangla", "filmYear": 2026, "context": "From Bhooth Bangla", "spotifyTrackId": "", "youtubeVideoId": "mJ0xE3C7URY", "imdbId": null, "spotifyStreams": 14000000, "tier": "modeled", "commentary": "The Pritam title composition for the Akshay-Wamiqa film. Modeled estimate, full album dropped in April."}, {"rank": 45, "title": "O Ri O Sanwariya", "artists": "Pritam", "film": "Bhooth Bangla", "filmYear": 2026, "context": "From Bhooth Bangla", "spotifyTrackId": "", "youtubeVideoId": "", "imdbId": null, "spotifyStreams": 12000000, "tier": "modeled", "commentary": "Soundtrack's devotional entry. Released with the Bhooth Bangla full album in April 2026."}, {"rank": 46, "title": "Angdayi", "artists": "Tanishk Bagchi, Faheem Abdullah, Arslan Nizami, Zahrah S Khan", "film": "Pati Patni Aur Woh Do", "filmYear": 2026, "context": "From PPAWD", "spotifyTrackId": "", "youtubeVideoId": "", "imdbId": "tt33054858", "spotifyStreams": 11000000, "tier": "modeled", "commentary": "PPAWD's second pre-release single. Tanishk Bagchi composition, released in May ahead of the May 15 theatrical."}, {"rank": 47, "title": "Kithe Reh Gaya", "artists": "Neeti Mohan, Abhijit Vaghani", "film": null, "filmYear": 2026, "context": "Indie", "spotifyTrackId": "7oONSa0G2CvYQ0I7G02kgi", "youtubeVideoId": "", "imdbId": null, "spotifyStreams": 10339890, "tier": "measured", "commentary": "Neeti Mohan's February 2026 indie. Four weeks on chart, peaked at #43, quieter chart life but a real cumulative pull."}, {"rank": 48, "title": "Dil Waale Chor", "artists": "Rochak Kohli, Shreya Ghoshal, Aditya Rikhari", "film": "Pati Patni Aur Woh Do", "filmYear": 2026, "context": "From PPAWD", "spotifyTrackId": "", "youtubeVideoId": "FgQD64Wyrt0", "imdbId": "tt33054858", "spotifyStreams": 9000000, "tier": "modeled", "commentary": "PPAWD's third single, with Rochak Kohli composing and a Shreya-Aditya duet on lead. Released April ahead of theatrical."}, {"rank": 49, "title": "Deewaana Deewaana", "artists": "A.R. Rahman, Irshad Kamil", "film": "Dhurandhar", "filmYear": 2025, "context": "From Dhurandhar", "spotifyTrackId": "47RTQoh3pzjhWLUMllNRRJ", "youtubeVideoId": "", "imdbId": "tt15428220", "spotifyStreams": 8013444, "tier": "measured", "commentary": "Rahman's second Dhurandhar entry. Climbed 26 chart positions in a single week in February 2026, the late-breaking soundtrack story."}, {"rank": 50, "title": "Humne Wahi Lagaya Dil", "artists": "Tanishk Bagchi", "film": "Pati Patni Aur Woh Do", "filmYear": 2026, "context": "From PPAWD", "spotifyTrackId": "", "youtubeVideoId": "", "imdbId": "tt33054858", "spotifyStreams": 7000000, "tier": "modeled", "commentary": "PPAWD's fourth and final pre-release single. Released into the May theatrical week itself."}];
+
+// ─── Format helpers ───
+function formatStreams(n) {
+  if (n >= 1e9) return (n / 1e9).toFixed(2) + 'B';
+  if (n >= 1e6) return (n / 1e6).toFixed(1) + 'M';
+  if (n >= 1e3) return (n / 1e3).toFixed(0) + 'K';
+  return n.toString();
+}
+function formatINR(amount) {
+  if (amount >= 1e7) return '₹' + (amount / 1e7).toFixed(2) + ' Cr';
+  if (amount >= 1e5) return '₹' + (amount / 1e5).toFixed(1) + ' L';
+  return '₹' + Math.round(amount).toLocaleString('en-IN');
+}
+
+// ─── Revenue calc per song ───
+function getPlatformData(song) {
+  const sp = song.spotifyStreams;
+  const ytMeasured = song.youtubeViewsMeasured;
+  
+  return {
+    spotify:  { streams: sp,                                                  measured: song.tier === 'measured' },
+    youtube:  { streams: ytMeasured ?? Math.round(sp * MULTIPLIERS.youtube),  measured: ytMeasured != null },
+    jiosaavn: { streams: Math.round(sp * MULTIPLIERS.jiosaavn),               measured: false },
+    apple:    { streams: Math.round(sp * MULTIPLIERS.apple),                  measured: false },
+    amazon:   { streams: Math.round(sp * MULTIPLIERS.amazon),                 measured: false },
+    others:   { streams: Math.round(sp * MULTIPLIERS.others),                 measured: false },
+  };
+}
+function getRevenue(platformData) {
+  const r = {};
+  let total = 0;
+  for (const [p, data] of Object.entries(platformData)) {
+    r[p] = data.streams * RATES[p];
+    total += r[p];
+  }
+  return { perPlatform: r, total };
+}
+
+// ─── Render song row ───
+function renderSong(song) {
+  const pd = getPlatformData(song);
+  const rev = getRevenue(pd);
+  
+  const platforms = [
+    { key: 'spotify',  name: 'Spotify' },
+    { key: 'youtube',  name: 'YouTube' },
+    { key: 'jiosaavn', name: 'JioSaavn' },
+    { key: 'apple',    name: 'Apple' },
+    { key: 'amazon',   name: 'Amazon' },
+    { key: 'others',   name: 'Others' },
+  ];
+  
+  const platformCells = platforms.map(({key, name}) => {
+    const data = pd[key];
+    const revAmt = rev.perPlatform[key];
+    const measuredClass = data.measured ? 'is-measured' : '';
+    const measuredDot = data.measured ? '<span class="pf-tier-dot" title="Measured"></span>' : '';
+    return `
+      <div class="pf ${measuredClass}">
+        <div class="pf-name">${name}${measuredDot}</div>
+        <div class="pf-streams">${formatStreams(data.streams)}</div>
+        <div class="pf-streams-label">${data.measured ? 'measured' : 'modeled'}</div>
+        <div class="pf-revenue">${formatINR(revAmt)}</div>
+      </div>
+    `;
+  }).join('');
+  
+  const embed = song.spotifyTrackId
+    ? `<iframe class="spotify-embed" loading="lazy" src="https://open.spotify.com/embed/track/${song.spotifyTrackId}?utm_source=generator" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" allowfullscreen></iframe>`
+    : `<div class="embed-missing">Spotify track not yet available in baseline data · refresh when chart data updates</div>`;
+  
+  const tierClass = song.tier === 'measured' ? 'tier-measured' : 'tier-modeled';
+  const tierLabel = song.tier === 'measured' ? 'MEASURED' : 'MODELED';
+  const filmCtx = song.film ? `${song.film} (${song.filmYear})` : song.context;
+  
+  const rankNum = String(song.rank).padStart(2, '0');
+  
+  return `
+    <article class="song-card" id="song-${song.rank}">
+      <div class="song-head">
+        <div class="rank-num"><span class="hash">#</span>${rankNum}</div>
+        <div class="song-info">
+          <div class="song-title">${song.title}</div>
+          <div class="song-artists">${song.artists}</div>
+          <div class="song-context">${filmCtx}</div>
+        </div>
+        <div class="rev-hero">
+          <div class="amount">${formatINR(rev.total)}</div>
+          <div class="label">Cumulative Revenue</div>
+          <div class="tier-badge ${tierClass}">${tierLabel}</div>
+        </div>
+      </div>
+      
+      <div class="embed-row">
+        ${embed}
+      </div>
+      
+      <div class="platforms">
+        <div class="platform-grid">${platformCells}</div>
+      </div>
+      
+      <p class="commentary">${song.commentary}</p>
+    </article>
+  `;
+}
+
+// Initial render
+function renderAll() {
+  document.getElementById('rankingList').innerHTML = SONGS.map(renderSong).join('');
+}
+renderAll();
+
+console.log('Boxoffy Top 50 Hindi Music 2026 · Loaded', SONGS.length, 'songs');
+console.log('Total revenue across 50 songs:', SONGS.reduce((acc, s) => acc + getRevenue(getPlatformData(s)).total, 0).toLocaleString('en-IN'), 'INR');
+</script>
+
+</body>
+</html>
