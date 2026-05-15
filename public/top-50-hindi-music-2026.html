@@ -119,6 +119,89 @@
   }
   .boxoffy-mark .dot { color: var(--red); font-size: 30px; }
 
+  /* ─── HERO SHARE ROW ─── */
+  .hero-share {
+    margin-top: 22px;
+    padding-top: 22px;
+    border-top: 1px solid rgba(255,255,255,0.12);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .hero-share-label {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.5);
+    margin-right: 4px;
+  }
+  .share-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 12px;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 4px;
+    color: #fff;
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.15s, border-color 0.15s, transform 0.1s;
+  }
+  .share-btn:hover { background: rgba(255,255,255,0.16); border-color: rgba(255,255,255,0.3); }
+  .share-btn:active { transform: scale(0.97); }
+  .share-btn.s-whatsapp:hover { background: rgba(37,211,102,0.22); border-color: rgba(37,211,102,0.45); }
+  .share-btn.s-twitter:hover { background: rgba(255,255,255,0.18); border-color: #fff; }
+  .share-btn.s-facebook:hover { background: rgba(24,119,242,0.22); border-color: rgba(24,119,242,0.45); }
+  .share-btn.s-linkedin:hover { background: rgba(10,102,194,0.22); border-color: rgba(10,102,194,0.45); }
+  .share-btn svg { width: 14px; height: 14px; display: block; flex-shrink: 0; }
+
+  /* ─── PER-SONG MOBILE SHARE BUTTON ─── */
+  .song-share-btn {
+    display: none;  /* shown on mobile only via media query */
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background: var(--navy);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.15s, transform 0.1s;
+    padding: 0;
+    flex-shrink: 0;
+  }
+  .song-share-btn:active { background: var(--red); transform: scale(0.94); }
+  .song-share-btn svg { width: 16px; height: 16px; display: block; }
+  .rev-hero-main { display: block; }
+  .rev-hero-trailing { display: block; }
+
+  /* ─── TOAST ─── */
+  .toast {
+    position: fixed;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%) translateY(20px);
+    background: var(--navy);
+    color: #fff;
+    padding: 12px 22px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    z-index: 200;
+    opacity: 0;
+    transition: opacity 0.2s, transform 0.2s;
+    pointer-events: none;
+    box-shadow: 0 8px 24px rgba(15,35,64,0.25);
+  }
+  .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+
   /* ─── METHODOLOGY BLOCK ─── */
   .methodology {
     background: #fff;
@@ -413,6 +496,10 @@
     .hero h1 { font-size: 44px; }
     .hero .dek { font-size: 15px; }
     .hero-stat-val { font-size: 28px; }
+    .share-btn { padding: 7px 10px; font-size: 11px; }
+    .share-btn-label { display: none; }  /* icon-only buttons on mobile to save space */
+    .share-btn { gap: 0; padding: 8px 10px; }
+    .hero-share-label { display: none; }
     .song-head { grid-template-columns: 50px 1fr; gap: 14px; padding: 16px 18px 12px; }
     .rev-hero {
       grid-column: 1 / -1;
@@ -423,8 +510,17 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      gap: 12px;
+    }
+    .rev-hero-main { flex: 1; min-width: 0; }
+    .rev-hero-trailing {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-shrink: 0;
     }
     .rev-hero .amount { font-size: 28px; }
+    .song-share-btn { display: flex; }
     .song-title { font-size: 22px; }
     .platform-grid { grid-template-columns: repeat(3, 1fr); gap: 14px; }
   }
@@ -460,6 +556,30 @@
     </div>
     
     <div class="byline">By Boxoffy · May 14, 2026 · BCM Music Module v1.0</div>
+    
+    <div class="hero-share">
+      <span class="hero-share-label">Share:</span>
+      <button class="share-btn s-whatsapp" onclick="shareArticleOn('whatsapp')" aria-label="Share on WhatsApp">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.46 1.32 4.96L2 22l5.31-1.4c1.45.79 3.07 1.21 4.73 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01a9.82 9.82 0 0 0-7.02-2.89zm0 18.13h-.01a8.22 8.22 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.25-4.35c0-4.54 3.7-8.23 8.24-8.23a8.2 8.2 0 0 1 5.82 2.41 8.21 8.21 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.24 8.23zm4.51-6.16c-.25-.12-1.46-.72-1.68-.81-.23-.08-.39-.12-.55.12-.16.25-.64.81-.78.97-.14.16-.29.18-.54.06-.25-.12-1.04-.38-1.99-1.22-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.39.11-.51.11-.11.25-.29.37-.43.12-.14.16-.25.25-.41.08-.16.04-.31-.02-.43-.06-.12-.55-1.34-.76-1.83-.2-.48-.4-.41-.55-.42l-.47-.01a.9.9 0 0 0-.65.31c-.22.25-.86.84-.86 2.05 0 1.21.88 2.38 1 2.54.12.16 1.73 2.65 4.2 3.71.59.25 1.04.4 1.4.52.59.19 1.12.16 1.55.1.47-.07 1.46-.6 1.67-1.17.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.46-.28z"/></svg>
+        <span class="share-btn-label">WhatsApp</span>
+      </button>
+      <button class="share-btn s-twitter" onclick="shareArticleOn('twitter')" aria-label="Share on X/Twitter">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231 5.45-6.231zm-1.161 17.52h1.833L7.084 4.126H5.117l11.966 15.644z"/></svg>
+        <span class="share-btn-label">X</span>
+      </button>
+      <button class="share-btn s-facebook" onclick="shareArticleOn('facebook')" aria-label="Share on Facebook">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+        <span class="share-btn-label">Facebook</span>
+      </button>
+      <button class="share-btn s-linkedin" onclick="shareArticleOn('linkedin')" aria-label="Share on LinkedIn">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.063 2.063 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        <span class="share-btn-label">LinkedIn</span>
+      </button>
+      <button class="share-btn s-copy" onclick="shareArticleOn('copy')" aria-label="Copy link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+        <span class="share-btn-label">Copy Link</span>
+      </button>
+    </div>
   </div>
 </header>
 
@@ -622,9 +742,16 @@ function renderSong(song) {
           <div class="song-context">${filmCtx}</div>
         </div>
         <div class="rev-hero">
-          <div class="amount">${formatINR(rev.total)}</div>
-          <div class="label">Cumulative Revenue</div>
-          <div class="tier-badge ${tierClass}">${tierLabel}</div>
+          <div class="rev-hero-main">
+            <div class="amount">${formatINR(rev.total)}</div>
+            <div class="label">Cumulative Revenue</div>
+          </div>
+          <div class="rev-hero-trailing">
+            <div class="tier-badge ${tierClass}">${tierLabel}</div>
+            <button class="song-share-btn" onclick="shareSong(${song.rank})" aria-label="Share #${song.rank} ${song.title}">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+            </button>
+          </div>
         </div>
       </div>
       
@@ -639,6 +766,66 @@ function renderSong(song) {
       <p class="commentary">${song.commentary}</p>
     </article>
   `;
+}
+
+// ─── SHARE FUNCTIONS ───
+const ARTICLE_URL = 'https://boxoffy.com/top-50-hindi-music-2026.html';
+const ARTICLE_TITLE = 'Top 50 Hindi Songs of 2026 — Cross-Platform Revenue Leaderboard';
+const ARTICLE_TEXT = 'Top 50 Hindi Songs of 2026: ₹198 Cr cumulative revenue across 17.8B cross-platform streams. Full BCM methodology disclosed.';
+
+function shareArticleOn(platform) {
+  const url = encodeURIComponent(ARTICLE_URL);
+  const text = encodeURIComponent(ARTICLE_TEXT);
+  let shareUrl;
+  switch (platform) {
+    case 'whatsapp':
+      shareUrl = `https://wa.me/?text=${text}%20${url}`; break;
+    case 'twitter':
+      shareUrl = `https://twitter.com/intent/tweet?text=${text}&url=${url}&via=BoxoffyMI`; break;
+    case 'facebook':
+      shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${url}`; break;
+    case 'linkedin':
+      shareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${url}`; break;
+    case 'copy':
+      navigator.clipboard?.writeText(ARTICLE_URL).then(
+        () => showToast('Link copied to clipboard'),
+        () => showToast('Copy failed — please copy from the address bar')
+      );
+      return;
+  }
+  window.open(shareUrl, '_blank', 'noopener,noreferrer,width=620,height=580');
+}
+
+function shareSong(rank) {
+  const song = SONGS.find(s => s.rank === rank);
+  if (!song) return;
+  const rev = getRevenue(getPlatformData(song));
+  const revFormatted = formatINR(rev.total);
+  const songUrl = `${ARTICLE_URL}#song-${rank}`;
+  const songTitle = `#${rank} ${song.title} — Boxoffy Top 50`;
+  const songText = `#${rank}. ${song.title} — ${song.artists}. ${revFormatted} cumulative cross-platform revenue. Boxoffy's Top 50 Hindi Music 2026 Leaderboard.`;
+  
+  if (navigator.share) {
+    navigator.share({ title: songTitle, text: songText, url: songUrl }).catch(() => {});
+  } else {
+    // Fallback: open WhatsApp directly (heaviest share channel in India)
+    const wa = `https://wa.me/?text=${encodeURIComponent(songText + ' ' + songUrl)}`;
+    window.open(wa, '_blank', 'noopener,noreferrer');
+  }
+}
+
+function showToast(msg) {
+  let toast = document.getElementById('share-toast');
+  if (!toast) {
+    toast = document.createElement('div');
+    toast.id = 'share-toast';
+    toast.className = 'toast';
+    document.body.appendChild(toast);
+  }
+  toast.textContent = msg;
+  toast.classList.add('show');
+  clearTimeout(toast._t);
+  toast._t = setTimeout(() => toast.classList.remove('show'), 2400);
 }
 
 // Initial render
