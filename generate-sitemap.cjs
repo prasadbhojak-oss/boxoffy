@@ -94,6 +94,12 @@ ${urlEntry(`${BASE}/ott-releases.html`, '2026-04-14', 'weekly', '0.8', newsEntry
 ${urlEntry(`${BASE}/ramayana-part-one-box-office.html`, '2026-03-30', 'monthly', '0.7', newsEntry('2026-03-30','Ramayana: Part One Box Office Preview'))}
 ${urlEntry(`${BASE}/why-indian-cinema-never-has-a-number-2.html`, '2026-03-22', 'monthly', '0.6', newsEntry('2026-03-22','Why Indian Cinema Will Never Have a Number 2'))}
 
+  <!-- WEEKEND PREVIEW ARTICLES -->
+${urlEntry(`${BASE}/boxoffice-this-week-may-22-24-2026.html`, TODAY, 'daily', '0.95', newsEntry('2026-05-22','Boxoffice This Week May 22-24: Drishyam 3 Storms In, Chand Mera Dil Tests Dharma'))}
+${urlEntry(`${BASE}/boxoffice-this-week-may-15-17-2026.html`, '2026-05-21', 'weekly', '0.7', newsEntry('2026-05-15','Boxoffice This Week May 15-17: Pati Patni Aur Woh Do, Aakhri Sawal, Bhooth Bangla W5'))}
+${urlEntry(`${BASE}/boxoffice-this-week-may-8-10-2026.html`, '2026-05-14', 'monthly', '0.6', newsEntry('2026-05-08','Boxoffice This Week May 8-10: Bhooth Bangla W4 + Hindi Slate'))}
+${urlEntry(`${BASE}/boxoffice-this-week-may-1-3-2026.html`, '2026-05-07', 'monthly', '0.6', newsEntry('2026-05-01','Boxoffice This Week May 1-3: Raja Shivaji + Ek Din Launch Weekend'))}
+
   <!-- GENERATED FILM PAGES -->`;
 
 // ── 2. Generated film pages ───────────────────────────────────────────────────
@@ -120,7 +126,7 @@ xml += `\n\n</urlset>\n`;
 
 fs.writeFileSync('./public/sitemap.xml', xml);
 
-const editorialCount = 19;
+const editorialCount = 23;
 console.log(`\n✅ sitemap.xml generated`);
 console.log(`   Editorial pages: ${editorialCount}`);
 console.log(`   Generated film pages: ${filmCount}`);
