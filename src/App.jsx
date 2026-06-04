@@ -3786,8 +3786,23 @@ function ForeignFilmsPanel({ movies }) {
       </div>
 
       {/* ── Global view: US BO Top 10 ─────────────────────────── */}
+      {/* Latest-week selector: picks newest week chronologically from us-bo-weekly.json
+          keys. Supports multi-week archive structure (Week 22 / Week 21 / Week 20…).
+          Falls back to first key for backward compat. */}
       {viewMode === "global"
-        ? <USBoTop10 weekData={US_BO_WEEKLY["Week 19, 2026"]} />
+        ? <USBoTop10 weekData={(() => {
+            const keys = Object.keys(US_BO_WEEKLY || {});
+            if (!keys.length) return null;
+            // Parse "Week NN, YYYY" → sortable number; descending = newest first
+            const sorted = keys.slice().sort((a, b) => {
+              const parse = k => {
+                const m = String(k).match(/Week\s+(\d+),\s+(\d+)/i);
+                return m ? parseInt(m[2]) * 100 + parseInt(m[1]) : 0;
+              };
+              return parse(b) - parse(a);
+            });
+            return US_BO_WEEKLY[sorted[0]];
+          })()} />
         : <>
           {/* ── Column headers ──────────────────────────────────── */}
           <BogColHeaders viewMode={viewMode} />

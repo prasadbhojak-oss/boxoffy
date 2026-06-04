@@ -1,8 +1,8 @@
 {
-  "version": "v3.34",
-  "deployedAt": "2026-04-23",
+  "version": "v3.36",
+  "deployedAt": "2026-06-03",
   "gitCommit": "pending",
-  "appJsxChars": 371697,
+  "appJsxChars": 365860,
   "dataFiles": {
     "weekly-commentary.json": {
       "weekNum": "Week 17",
@@ -11,10 +11,10 @@
       "headline": "Bhooth Bangla Closes ₹89 Cr Week 1. D2 Crosses ₹1,121 Cr. Vaazha 2 Past ₹213 Cr WW."
     },
     "us-bo-weekly.json": {
-      "week": "Week 15, 2026",
-      "dateRange": "Apr 3-5, 2026",
-      "lastUpdated": "2026-04-06",
-      "headline": "Week 15: Mario $130.9M · PHM $217M · D2 $26M NA all-time Bollywood record"
+      "week": "Week 22, 2026",
+      "dateRange": "May 29-31, 2026 · Post-Memorial Day Frame",
+      "lastUpdated": "2026-06-03",
+      "headline": "Week 22: Backrooms $81M (A24 record) · Obsession crosses $100M dom W3 · Mandalorian craters -69% W2"
     },
     "editorials.json": {
       "entries": 11,
@@ -27,9 +27,15 @@
       "lastUpdated": "2026-04-23",
       "note": "BCM v2: 4-source recalibration (Taran + BH + Sacnilk + BOI). 10 chart films · 3-field WW sync."
     },
-    "usBoWeekly": "Week 14 final confirmed · Mar 27-29, 2026",
+    "usBoWeekly": "Week 22 final confirmed · May 29-31, 2026 · Backrooms A24 record opening",
     "filmsJson": "PHM wk2 · D2 GST/footfall/OTT added",
-    "weeklyCommentary": "Week 14 comprehensive entry added"
+    "weeklyCommentary": "Week 14 comprehensive entry added",
+    "foreign-films.json": {
+      "lastUpdated": "2026-06-03",
+      "topNonHollywood": "Pegasus 3 (China) $619M WW · 10th-biggest Chinese film ever",
+      "chinaYtd": "$1.9B through May 1 (-45% YoY)",
+      "note": "BCM v2.1 · Pegasus 3 lifetime cume bumped from $615M to $619M · Hollywood holdover tracker now 5 films (was 1)"
+    }
   },
   "weeklyUpdate": {
     "weekNum": 17,
@@ -45,6 +51,46 @@
     "bollywood-music-box-office.html": "2026-03-29"
   },
   "changelog": [
+    {
+      "version": "3.36",
+      "date": "2026-06-03",
+      "commit": "pending",
+      "changes": [
+        "us-bo-weekly.json Week 22 added (May 29-31 final close) — Backrooms $81.4M opening (A24 all-time record, 20yo Kane Parsons youngest #1 director ever)",
+        "Obsession crosses $100M dom in W3 ($104.7M / $130M+ WW) — 1st film since 1982 ET to grow in both W2 AND W3",
+        "Mandalorian & Grogu W2 -69% (steeper than Solo's -65%) · WW $255M against $165M budget · global flop watch",
+        "Michael W6 crosses $788M WW · approaches Bohemian Rhapsody $911M biggest music biopic ever",
+        "Devil Wears Prada 2 lifetime locked at $666.1M WW (Wikipedia confirmed) · 4th-biggest 2026 WW film",
+        "us-bo-weekly.json restructured to multi-week object (Week 22 primary + Week 21 Memorial Day + Week 20 archived)",
+        "us-bo-weekly-Week22-2026.json archive file created (matches existing Week 19 pattern)",
+        "Indian Spotlight 4 entries: Drishyam 3 M, Karuppu, Deool Band 2 (NEW Marathi), PPAWD",
+        "foreign-films.json refreshed: Pegasus 3 cume $615M → $619M (CN¥4.43B, all-time China #10)",
+        "foreign-films.json Hollywood holdover tracker expanded from 1 film to 5 (Avatar F&A, Mario Galaxy, Michael, DWP2, PHM)",
+        "foreign-films.json China YTD $1.9B (-45% YoY, improvement from May 10's -53% reading)",
+        "Memorial Day 2026 frame: $221.9M MDW 4-day, -33% YoY vs 2025's $330M (supply-thin not demand-weak)",
+        "2026 YTD domestic through May 31: $3.68B (+11.3% vs 2025)"
+      ]
+    },
+    {
+      "version": "3.35",
+      "date": "2026-05-07",
+      "commit": "pending",
+      "changes": [
+        "us-bo-weekly.json Week 19: Final Sun close numbers locked (verified Variety/Deadline/Comscore/HR)",
+        "DWP 2 final: $77.0M dom / $233.6M WW (2nd-best 2026 global debut behind Mario Galaxy)",
+        "Michael W2: $54M (-44%) / $183.8M dom / $424M WW (#2 musical biopic ever)",
+        "Mario Galaxy: First 2026 film past $400M dom / $897M WW imminent at $1B",
+        "Project Hail Mary W7: $8.5M / $318M / $638M WW (longest top-5 streak since Avatar 2)",
+        "Hokum NEW: $6.4M = Neon's best 2026 opener · 86% RT",
+        "All admitsNote fields tightened to ≤80 chars per locked rule",
+        "Indian Spotlight 5 entries preserved with finalized Sun close numbers (asterisks dropped)",
+        "App.jsx: Added USBoShareRow component (X/Threads/FB/WhatsApp/Copy Link)",
+        "App.jsx: Wired USBoShareRow into USBoTop10 below week header band",
+        "Share row dark theme matches header for visual continuity",
+        "Auto-pulls dateRange/headline/top-3 films from weekData",
+        "Babel parser test passed — App.jsx parses cleanly with JSX plugin"
+      ]
+    },
     {
       "version": "3.34",
       "date": "2026-04-23",
@@ -158,5 +204,5 @@
     "appJsxRule": "Good App.jsx = 336,189 chars. If outputs/App.jsx is unavailable or char count is wrong, DO NOT PROCEED — ask PB to run: git checkout 7a63f82 -- src/App.jsx",
     "updateProtocol": "After every deploy: bump version (3.24 → 3.25), update deployedAt, gitCommit, and relevant dataFiles entries."
   },
-  "notes": "v3.34 Apr 23 2026 — BCM v2 4-source recalibration. BB W1 ₹89 Cr / D2 ₹1,121 Cr / Vaazha 2 ₹113 Cr. All 3 WW fields synced to fix v3.33.1 chart-display drift bug. Taran Adarsh + BH consensus prioritized over Sacnilk where they diverge."
+  "notes": "v3.36 Jun 3 2026 — US BO Week 22 added (Backrooms A24 record $81M open, Obsession crosses $100M dom W3 with rare +10% growth, Mandalorian craters -69% W2). foreign-films.json refreshed with $619M Pegasus 3 lifetime + China YTD $1.9B (-45% YoY) + 5-film Hollywood holdover tracker. INCU India chart was updated separately in same session."
 }

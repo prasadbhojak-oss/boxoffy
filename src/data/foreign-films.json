@@ -1,0 +1,163 @@
+{
+  "_meta": {
+    "section_id": "foreign-films-2026",
+    "label": "Foreign Films Worldwide · 2026 Tracker",
+    "updated": "2026-06-03T16:00:00Z",
+    "fx_rate": "USD÷8.35M = ₹Cr",
+    "sources": [
+      "Variety / Artisan Gateway (China)",
+      "Box Office Mojo International",
+      "The Numbers",
+      "Hollywood Reporter Asia",
+      "Deadline Global",
+      "Maoyan (China ticketing)",
+      "CGTN / China Daily"
+    ],
+    "bcm_version": "v2.1"
+  },
+  "non_hollywood_top_grossers_2026": [
+    {
+      "rank": 1,
+      "title": "Pegasus 3",
+      "title_local": "飞驰人生3",
+      "country": "China",
+      "language": "Mandarin",
+      "director": "Han Han",
+      "lead_cast": "Shen Teng",
+      "release_date": "2026-02-17",
+      "release_window": "Chinese New Year 2026",
+      "ww_total_usd": 619000000,
+      "ww_total_inr_cr": 5168.65,
+      "domestic_china_usd": 617500000,
+      "international_usd": 1500000,
+      "cn_yuan_total": "CN¥4.43 billion",
+      "all_time_china_rank": 10,
+      "verdict": "Highest-grossing 2026 film globally · 10th-biggest Chinese film ever · 7th-biggest auto racing film of all time",
+      "audit_sources": ["Variety/Artisan Gateway", "Hollywood Reporter Asia", "China Daily", "Wikipedia (highest-grossing in China)"],
+      "confidence_score": 95
+    },
+    {
+      "rank": 2,
+      "title": "Blades of the Guardians",
+      "country": "China",
+      "language": "Mandarin",
+      "director": "Yuen Woo-ping",
+      "lead_cast": "Wu Jing · Nicholas Tse · Jet Li",
+      "release_date": "2026-02-17",
+      "ww_total_usd": 215000000,
+      "ww_total_inr_cr": 1795.25,
+      "domestic_china_usd": 215000000,
+      "verdict": "Martial arts epic · sustained CNY 2026 holds · #2 of CNY tentpoles",
+      "audit_sources": ["Variety/Artisan Gateway", "Hollywood Reporter Asia"],
+      "confidence_score": 90
+    },
+    {
+      "rank": 3,
+      "title": "Scare Out",
+      "country": "China",
+      "language": "Mandarin",
+      "director": "Zhang Yimou",
+      "release_date": "2026-02-17",
+      "ww_total_usd": 165000000,
+      "ww_total_inr_cr": 1377.75,
+      "verdict": "Zhang Yimou's commercial swing · matured to lifetime ~$165M",
+      "audit_sources": ["Variety/Artisan Gateway"],
+      "confidence_score": 85
+    }
+  ],
+  "hollywood_holdovers_in_play_jun_3": [
+    {
+      "rank": 1,
+      "title": "Avatar: Fire and Ash",
+      "studio": "20th Century / Disney",
+      "release_date": "2025-12-19",
+      "weeks_in_play": 24,
+      "ww_total_usd": 1525000000,
+      "ww_total_inr_cr": 12733.75,
+      "domestic_usd": 547000000,
+      "international_usd": 978000000,
+      "status": "Theatrical run concluded",
+      "verdict": "Final theatrical lifetime · 4th-biggest Avatar entry · profitable on $400M+ budget",
+      "audit_sources": ["BO Mojo", "Wikipedia 2026 in film"],
+      "confidence_score": 90
+    },
+    {
+      "rank": 2,
+      "title": "The Super Mario Galaxy Movie",
+      "studio": "Universal / Illumination",
+      "release_date": "2026-04-03",
+      "weeks_in_play": 9,
+      "ww_total_usd": 985000000,
+      "ww_total_inr_cr": 8224.75,
+      "domestic_usd": 428000000,
+      "international_usd": 557000000,
+      "status": "Late theatrical run · approaching $1B WW",
+      "verdict": "$1B WW achievable in W10 · 2nd-biggest 2026 film globally",
+      "audit_sources": ["Deadline Global", "Variety"],
+      "confidence_score": 92
+    },
+    {
+      "rank": 3,
+      "title": "Michael",
+      "studio": "Lionsgate / GK Films",
+      "release_date": "2026-04-24",
+      "weeks_in_play": 6,
+      "ww_total_usd": 788000000,
+      "ww_total_inr_cr": 6579.80,
+      "domestic_usd": 340000000,
+      "international_usd": 448000000,
+      "status": "Active · sequel announced",
+      "verdict": "Biggest music biopic NA history · approaching Bohemian Rhapsody $911M WW ATBB",
+      "audit_sources": ["Deadline Global", "Variety", "Box Office Mojo"],
+      "confidence_score": 92
+    },
+    {
+      "rank": 4,
+      "title": "The Devil Wears Prada 2",
+      "studio": "20th Century / Disney",
+      "release_date": "2026-05-01",
+      "weeks_in_play": 5,
+      "ww_total_usd": 666100000,
+      "ww_total_inr_cr": 5561.94,
+      "domestic_usd": 209300000,
+      "international_usd": 456800000,
+      "status": "Late W5 hold · winding down",
+      "verdict": "4th-biggest 2026 WW film · 6.66× ROI on $100M budget",
+      "audit_sources": ["Wikipedia DWP2", "Box Office Mojo"],
+      "confidence_score": 92
+    },
+    {
+      "rank": 5,
+      "title": "Project Hail Mary",
+      "studio": "Amazon MGM",
+      "release_date": "2026-03-20",
+      "weeks_in_play": 11,
+      "ww_total_usd": 712000000,
+      "ww_total_inr_cr": 5945.20,
+      "domestic_usd": 342000000,
+      "international_usd": 370000000,
+      "status": "Late theatrical · Lord & Miller biggest theatrical to date",
+      "verdict": "Longest 2026 top-10 streak (10 weeks) · A24-style sci-fi prestige hit",
+      "audit_sources": ["Box Office Mojo", "Deadline"],
+      "confidence_score": 90
+    }
+  ],
+  "context_2026_market": {
+    "china_ytd_usd": 1900000000,
+    "china_ytd_inr_cr": 15865.00,
+    "china_ytd_yuan_billion": 13.0,
+    "china_ytd_as_of": "2026-05-01 (per CGTN)",
+    "china_ytd_change_yoy_pct": -45,
+    "ne_zha_2_2025_ww_usd": 2200000000,
+    "ne_zha_2_2025_ww_inr_cr": 18370.00,
+    "context_note": "China YTD down 45% YoY (improvement from May 10's -53% reading as Pegasus 3 / Blades tail extended). Ne Zha 2 ($2.2B in 2025) remains the global comp point that the entire 2026 China slate cannot replicate. Pegasus 3 still leads 2026 globally at $619M.",
+    "global_2026_top_5_through_may_31": [
+      {"rank": 1, "title": "Pegasus 3", "ww_usd": 619000000, "country": "China"},
+      {"rank": 2, "title": "The Super Mario Galaxy Movie", "ww_usd": 985000000, "country": "USA (theatrical not concluded)"},
+      {"rank": 3, "title": "Michael", "ww_usd": 788000000, "country": "USA"},
+      {"rank": 4, "title": "Project Hail Mary", "ww_usd": 712000000, "country": "USA"},
+      {"rank": 5, "title": "The Devil Wears Prada 2", "ww_usd": 666100000, "country": "USA"}
+    ],
+    "global_2026_top_5_note": "Mario Galaxy ranked above Pegasus 3 by raw WW gross but Pegasus 3 is the LEAD non-Hollywood film globally. US dominance returns to summer slate. Memorial Day frame was $221.9M (-33% YoY) due to thinner supply not weaker demand."
+  }
+}
