@@ -1,12 +1,21 @@
 [
   {
+    "headline": "Weekend Preview · June 5–7: Peddi's ₹350 Cr Gamble, David Dhawan's Farewell, and Obsession's Strange Run",
+    "dek": "Ram Charan opens with $1.1M+ in North America presales into the summer's most crowded Hollywood weekend. Varun Dhawan headlines David Dhawan's final film; Bobby Deol's Bandar fights for screens. Obsession nears $170M on a $750K budget despite a 38-second CBFC cut. BCM hype index, opening predictions and the week's OTT Top 10.",
+    "url": "/boxoffice-weekend-preview-june-5-7-2026.html",
+    "tag": "WEEKEND PREVIEW",
+    "date": "2026-06-04",
+    "readTime": "14 min read",
+    "featured": true
+  },
+  {
     "headline": "Box Office Weekend Recap — May 29–31, 2026: Two YouTubers Took the Top 2 in Hollywood. Mandalorian Got Walked Off. India's Chart Went Mollywood-Marathi-Tamil.",
     "dek": "Belated but complete recap (PB was traveling). Before we get to India, we have to talk about Hollywood: A24's Backrooms opens $81M directed by a 20-year-old. Obsession crossed $100M domestic after growing in BOTH W2 +30% AND W3 +10% — first film since E.T. 1982 to pull that off. Mandalorian & Grogu cratered -69% W2, the steepest Star Wars second-weekend drop ever recorded. Two YouTubers punching 1 and 2. Star Wars walked off the field. Then to India: Drishyam 3 crosses ₹100 Cr (6th Malayalam ever), Karuppu is now Suriya's biggest grosser, Deool Band 2 hits 340% ROI on a ₹10 Cr Marathi budget, Bhooth Bangla holds W7 at ₹195 Cr India. BCM v1.3 verified across 12 sources.",
     "url": "/boxoffice-this-week-may-29-31-2026.html",
     "tag": "WEEKEND RECAP",
     "date": "2026-06-03",
     "readTime": "12 min",
-    "featured": true
+    "featured": false
   },
   {
     "headline": "The Emergency Years at the Box Office — 21 Months That Reshaped Hindi Cinema",
@@ -15,7 +24,7 @@
     "tag": "ARCHIVE",
     "date": "2026-05-25",
     "readTime": "8 min",
-    "featured": true
+    "featured": false
   },
   {
     "headline": "Welcome to the Jungle Hype Index — D1 ₹19 Cr Base, Lifetime ₹155 Cr. Verdict Depends on Budget.",
@@ -24,7 +33,7 @@
     "tag": "HYPE INDEX",
     "date": "2026-05-24",
     "readTime": "5 min",
-    "featured": true
+    "featured": false
   },
   {
     "headline": "Boxoffice This Week — May 22–24 Weekend Preview: Drishyam 3 Storms In, Chand Mera Dil Tests Dharma's New Math, Mandalorian Lands",
@@ -33,7 +42,7 @@
     "tag": "WEEKEND PREVIEW",
     "date": "2026-05-22",
     "readTime": "9 min",
-    "featured": true
+    "featured": false
   },
   {
     "headline": "Boxoffice This Week — May 15–17 Weekend Preview: Pati Patni Aur Woh Do Lands, Aakhri Sawal Drops, Bhooth Bangla Closes In On ₹250 Cr WW",
@@ -69,7 +78,7 @@
     "tag": "VERDICT",
     "date": "2026-05-12",
     "readTime": "8 min",
-    "featured": true
+    "featured": false
   },
   {
     "headline": "Boxoffice This Week — May 8–10 Weekend Preview: Holdovers Hold The Fort, Mortal Kombat 2 Lands, Krishnavataram Crashes",
@@ -96,7 +105,7 @@
     "tag": "HEAD-TO-HEAD",
     "date": "2026-04-28",
     "readTime": "7 min",
-    "featured": true
+    "featured": false
   },
   {
     "headline": "Why we're publishing pre-release box office forecasts",
@@ -105,7 +114,7 @@
     "tag": "METHODOLOGY",
     "date": "2026-04-25",
     "readTime": "9 min",
-    "featured": true
+    "featured": false
   },
   {
     "headline": "The Boxoffy Hype Index — BCM Forecasts for 11 Upcoming Indian Films",
@@ -114,7 +123,7 @@
     "tag": "HYPE INDEX",
     "date": "2026-04-25",
     "readTime": "8 min",
-    "featured": true
+    "featured": false
   },
   {
     "headline": "Hindi Music Cross-Platform Top 10 — BMCM Ranks 5 Platforms Into One Chart",
@@ -123,7 +132,7 @@
     "tag": "MUSIC",
     "date": "2026-04-23",
     "readTime": "7 min",
-    "featured": true
+    "featured": false
   },
   {
     "headline": "Bhooth Bangla Review: Runs on Nostalgia, Earns Its Horror Backstory. This Has Legs.",
@@ -132,7 +141,7 @@
     "tag": "REVIEW",
     "date": "2026-04-19",
     "readTime": "5 min",
-    "featured": true
+    "featured": false
   },
   {
     "headline": "India's Greatest #2s — 50 Films That Never Led The Chart But Won Anyway",
@@ -141,7 +150,7 @@
     "tag": "DATA SCIENCE",
     "date": "2026-04-19",
     "readTime": "12 min",
-    "featured": true
+    "featured": false
   },
   {
     "headline": "Bhooth Bangla Box Office — D3 Confirmed ₹58 Cr Weekend, ₹95.87 Cr WW. BCM: Hit Trajectory",
@@ -150,7 +159,7 @@
     "tag": "TRACKER",
     "date": "2026-04-19",
     "readTime": "5 min",
-    "featured": true
+    "featured": false
   },
   {
     "headline": "OTT India Week 3 — BEEF S2 #1 Netflix · Euphoria S3 JioHotstar · Matka King Prime · Watch Hours & Rankings",
@@ -159,7 +168,7 @@
     "tag": "OTT",
     "date": "2026-04-19",
     "readTime": "6 min",
-    "featured": true
+    "featured": false
   },
   {
     "headline": "Dhurandhar 2 Crosses ₹1,000 Crore India Nett — The Data Science Behind a Historic Run",
@@ -168,7 +177,7 @@
     "tag": "DATA SCIENCE",
     "date": "2026-04-19",
     "readTime": "9 min",
-    "featured": true
+    "featured": false
   },
   {
     "headline": "India Cinema 2026 — The State of Play: ₹13,600 Cr Industry, Four Languages, One Renaissance",
@@ -177,7 +186,7 @@
     "tag": "ANALYSIS",
     "date": "2026-04-16",
     "readTime": "12 min",
-    "featured": true
+    "featured": false
   },
   {
     "headline": "Hindi Music Top 10 — April 2026 | The Dhurandhar Effect on Spotify India",
@@ -186,7 +195,7 @@
     "tag": "MUSIC",
     "date": "2026-04-14",
     "readTime": "6 min",
-    "featured": true
+    "featured": false
   },
   {
     "headline": "Ramayana — Rama First Look Review: ARR Delivers, CGI Has Room, Tiwari's Instinct Is the Bet",
@@ -195,7 +204,7 @@
     "tag": "REVIEW",
     "date": "2026-04-02",
     "readTime": "5 min",
-    "featured": true
+    "featured": false
   },
   {
     "headline": "BARC TRP Ratings Week 12 — Kyunki KSBKBT2 Holds #1, Tum Se Tum Tak Surges to #2, Anupamaa at #4",
@@ -204,7 +213,7 @@
     "tag": "TV",
     "date": "2026-04-02",
     "readTime": "5 min",
-    "featured": true
+    "featured": false
   },
   {
     "headline": "Ramayana: Part One — The Most Ambitious Indian Film Ever Made. What Will It Take?",
@@ -213,7 +222,7 @@
     "tag": "PREVIEW",
     "date": "2026-03-30",
     "readTime": "8 min",
-    "featured": true
+    "featured": false
   },
   {
     "headline": "Driver or Multiplier? The Top 20 Bollywood Songs vs Box Office — Ranked",
@@ -222,7 +231,7 @@
     "tag": "ANALYSIS",
     "date": "2026-03-29",
     "readTime": "12 min",
-    "featured": true
+    "featured": false
   },
   {
     "headline": "दंगल at Ten: The Data, The Doubters, and Why the Arithmetic Ends the Debate",
@@ -231,7 +240,7 @@
     "tag": "DEEP DIVE",
     "date": "2026-03-26",
     "readTime": "12 min",
-    "featured": true
+    "featured": false
   },
   {
     "headline": "Dhurandhar vs Dhurandhar: The Revenge — The Full Comparison",
@@ -240,7 +249,7 @@
     "tag": "COMPARISON",
     "date": "2026-03-25",
     "readTime": "7 min",
-    "featured": true
+    "featured": false
   },
   {
     "headline": "Why Indian Cinema Will Never Have a Number 2",

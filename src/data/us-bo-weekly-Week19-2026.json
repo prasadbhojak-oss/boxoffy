@@ -1,0 +1,108 @@
+{
+  "Week 19, 2026": {
+    "dateRange": "May 8-10, 2026 · Mother's Day Weekend",
+    "headline": "Most-suspenseful Mother's Day frame in memory: Prada 2 holds by inches; Michael breaks NA biopic record",
+    "source": "Comscore · Exhibitor Relations · Box Office Mojo · Variety · Deadline · BoxofficePro · The Numbers",
+    "chart": [
+      {
+        "rank": 1,
+        "title": "The Devil Wears Prada 2",
+        "studio": "20th Century / Disney",
+        "genre": "Comedy-Drama",
+        "weekend": "$43.0M",
+        "total": "$144.8M",
+        "theaters": 4200,
+        "weeks": 2,
+        "change": "-44%",
+        "rtScore": "77",
+        "isIndian": false,
+        "admitsNote": "WW: $433.2M · 2nd-biggest 2026 WW debut cume"
+      },
+      {
+        "rank": 2,
+        "title": "Mortal Kombat II",
+        "studio": "New Line / Warner Bros.",
+        "genre": "Action / Video Game",
+        "weekend": "$40.0M",
+        "total": "$40.0M",
+        "theaters": 3503,
+        "weeks": 1,
+        "change": "NEW",
+        "rtScore": "77",
+        "isIndian": false,
+        "admitsNote": "WW: $63.0M · Soft vs $45-49M tracking"
+      },
+      {
+        "rank": 3,
+        "title": "Michael",
+        "studio": "Lionsgate / GK Films",
+        "genre": "Biopic",
+        "weekend": "$36.5M",
+        "total": "$188.8M",
+        "theaters": 3550,
+        "weeks": 3,
+        "change": "-33%",
+        "rtScore": "N/A",
+        "isIndian": false,
+        "admitsNote": "WW: $577M · #1 NA biopic ever · past Bohemian Rhapsody"
+      },
+      {
+        "rank": 4,
+        "title": "The Sheep Detectives",
+        "studio": "Amazon MGM",
+        "genre": "Whodunit Comedy",
+        "weekend": "$15.9M",
+        "total": "$15.9M",
+        "theaters": 3457,
+        "weeks": 1,
+        "change": "NEW",
+        "rtScore": "56",
+        "isIndian": false,
+        "admitsNote": "WW: $27.8M · Hugh Jackman vehicle underperforms"
+      },
+      {
+        "rank": 5,
+        "title": "Billie Eilish — Hit Me Hard and Soft (Live in 3D)",
+        "studio": "Paramount",
+        "genre": "Concert Film",
+        "weekend": "$7.5M",
+        "total": "$7.5M",
+        "theaters": 2613,
+        "weeks": 1,
+        "change": "NEW",
+        "rtScore": "81",
+        "isIndian": false,
+        "admitsNote": "WW: $20.1M · James Cameron 3D rig debut"
+      },
+      {
+        "rank": 6,
+        "title": "The Super Mario Galaxy Movie",
+        "studio": "Universal / Illumination",
+        "genre": "Animation",
+        "weekend": "$6.6M",
+        "total": "$401.8M",
+        "theaters": 3075,
+        "weeks": 6,
+        "change": "-45%",
+        "rtScore": "N/A",
+        "isIndian": false,
+        "admitsNote": "WW: $897.2M · Pursuing $1B WW"
+      },
+      {
+        "rank": 7,
+        "title": "Project Hail Mary",
+        "studio": "Amazon MGM",
+        "genre": "Sci-Fi",
+        "weekend": "$6.0M",
+        "total": "$268.9M",
+        "theaters": 2417,
+        "weeks": 8,
+        "change": "-29%",
+        "rtScore": "N/A",
+        "isIndian": false,
+        "admitsNote": "WW: $654.4M · Lord & Miller's biggest theatrical"
+      }
+    ],
+    "indianSpotlight": []
+  }
+}
