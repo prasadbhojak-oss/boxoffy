@@ -312,6 +312,37 @@ function useTMDBPoster(title, year) {
   }, [title, year]);
   return url;
 }
+// ── Live box-office week (ISO week, auto-derived from today) ──────────────
+const BO_WEEK = (() => {
+  const d = new Date();
+  const t = new Date(Date.UTC(d.getFullYear(), d.getMonth(), d.getDate()));
+  const day = t.getUTCDay() || 7;
+  t.setUTCDate(t.getUTCDate() + 4 - day);
+  const ys = new Date(Date.UTC(t.getUTCFullYear(), 0, 1));
+  const num = Math.ceil((((t - ys) / 86400000) + 1) / 7);
+  return { num: num, year: t.getUTCFullYear() };
+})();
+const BO_WEEK_LABEL = "WEEK " + BO_WEEK.num + " \u00b7 " + BO_WEEK.year;
+
+// ── TMDB poster by exact movie id (for pinned hero posters) ─────────────
+function useTMDBPosterById(id, size) {
+  const [url, setUrl] = React.useState(null);
+  React.useEffect(() => {
+    if (!id) return;
+    const key = "id" + id + (size || "");
+    if (tmdbPosterCache[key] !== undefined) { setUrl(tmdbPosterCache[key]); return; }
+    fetch("https://api.themoviedb.org/3/movie/" + id + "?language=en-US", {
+      headers: { "Authorization": "Bearer " + TMDB_BEARER, "accept": "application/json" }
+    })
+    .then(function(r){ return r.ok ? r.json() : null; })
+    .then(function(d){
+      const p = (d && d.poster_path) ? "https://image.tmdb.org/t/p/" + (size || "w342") + d.poster_path : null;
+      tmdbPosterCache[key] = p; setUrl(p);
+    })
+    .catch(function(){ tmdbPosterCache[key] = null; });
+  }, [id, size]);
+  return url;
+}
 import FOOTNOTES          from "./data/footnotes.json";
 import WEEKLY_COMMENTARY  from "./data/weekly-commentary.json";
 import HISTORICAL_DATA    from "./data/films-historical.json";
@@ -858,7 +889,7 @@ function NavBar({ activeSection, setActiveSection, setForceAllTime }) {
           <div style={{ marginLeft:"auto", display:"flex", alignItems:"center", gap:12, flexShrink:0 }}>
             <SearchBar />
             <div style={{ display:"flex", flexDirection:"column", alignItems:"flex-end", borderRight:`1px solid #E5E7EB`, paddingRight:12, marginRight:12 }}>
-              <span style={{ fontFamily:"'Barlow Condensed', sans-serif", fontWeight:700, fontSize:13, color:T.accent, letterSpacing:"0.03em" }}>WEEK 15 · 2026</span>
+              <span style={{ fontFamily:"'Barlow Condensed', sans-serif", fontWeight:700, fontSize:13, color:T.accent, letterSpacing:"0.03em" }}>{BO_WEEK_LABEL}</span>
               <span style={{ fontFamily:"'DM Sans', sans-serif", fontSize:8, color:"#9CA3AF", letterSpacing:"0.1em", textTransform:"uppercase" }}>Box Office Period</span>
             </div>
 
@@ -4243,54 +4274,68 @@ function UpcomingCalendarGrid({ movies }) {
    Auto-increments ~11 votes/hr to simulate organic growth.
    localStorage prevents re-voting from same device.
    ─────────────────────────────────────────────────────────────────────────── */
+function WeekendPreviewHero() {
+  const poster = useTMDBPosterById(1057265, "w342"); // Peddi
+  const [hover, setHover] = React.useState(false);
+  return (
+    <a href="/boxoffice-weekend-preview-june-5-7-2026.html" style={{ textDecoration:"none", display:"block" }}>
+      <div
+        onMouseEnter={() => setHover(true)}
+        onMouseLeave={() => setHover(false)}
+        style={{
+          background: hover ? "#0F1115" : "#14171C",
+          border:"0.5px solid #1F2937", borderLeft:"4px solid #C8201A",
+          padding:"14px 16px", cursor:"pointer", display:"flex", gap:14, alignItems:"stretch",
+          transition:"background 0.15s",
+        }}
+      >
+        <div style={{ flexShrink:0, width:78, height:117, borderRadius:4, overflow:"hidden", background:"#1F2937", border:"0.5px solid #374151", display:"flex", alignItems:"center", justifyContent:"center" }}>
+          {poster
+            ? <img src={poster} alt="Peddi" style={{ width:"100%", height:"100%", objectFit:"cover" }} />
+            : <span style={{ fontFamily:"'Barlow Condensed', sans-serif", fontWeight:900, fontSize:18, color:"#E5C882", letterSpacing:"0.04em" }}>PEDDI</span>}
+        </div>
+        <div style={{ flex:1, minWidth:0, display:"flex", flexDirection:"column", justifyContent:"center" }}>
+          <span style={{ alignSelf:"flex-start", background:"#C8201A", color:"#FFFFFF", fontFamily:"'Barlow Condensed', sans-serif", fontWeight:900, fontSize:9, letterSpacing:"0.12em", padding:"2px 7px", borderRadius:2, marginBottom:7 }}>WEEKEND PREVIEW · JUN 5–7</span>
+          <div style={{ fontFamily:"'Barlow Condensed', sans-serif", fontWeight:900, fontSize:"clamp(15px, 1.7vw, 17px)", color:"#FFFFFF", lineHeight:1.15, letterSpacing:"-0.01em" }}>
+            Peddi's ₹350 Cr Gamble · David Dhawan's Farewell
+          </div>
+          <div style={{ fontFamily:"'DM Sans', sans-serif", fontSize:10.5, color:"#9CA3AF", marginTop:5, lineHeight:1.4 }}>
+            Opening predictions, BCM hype index and the week's OTT Top 10
+          </div>
+          <span style={{ fontFamily:"'Barlow Condensed', sans-serif", fontWeight:700, fontSize:11, color:"#E5C882", letterSpacing:"0.06em", marginTop:8 }}>READ THE PREVIEW →</span>
+        </div>
+      </div>
+    </a>
+  );
+}
+
+function SocialLinks({ size }) {
+  const s = size || 30;
+  const links = [
+    { id:"x",  label:"Boxoffy on X", href:"https://x.com/BoxoffyMI",
+      path:"M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" },
+    { id:"fb", label:"Boxoffy on Facebook", href:"https://www.facebook.com/profile.php?id=61570682764023",
+      path:"M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" },
+  ];
+  return (
+    <div style={{ display:"flex", alignItems:"center", gap:8 }}>
+      {links.map(l => (
+        <a key={l.id} href={l.href} target="_blank" rel="noopener noreferrer" aria-label={l.label} title={l.label}
+          onMouseEnter={e => { e.currentTarget.style.background=T.accent; e.currentTarget.style.borderColor=T.accent; e.currentTarget.style.color="#FFFFFF"; }}
+          onMouseLeave={e => { e.currentTarget.style.background="transparent"; e.currentTarget.style.borderColor=T.border; e.currentTarget.style.color=T.textMuted; }}
+          style={{ width:s, height:s, borderRadius:6, border:"1px solid "+T.border, color:T.textMuted, display:"inline-flex", alignItems:"center", justifyContent:"center", transition:"all 0.15s", textDecoration:"none", flexShrink:0 }}>
+          <svg width={s*0.5} height={s*0.5} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d={l.path} /></svg>
+        </a>
+      ))}
+    </div>
+  );
+}
+
 function HeaderSnapshotCards({ activeSection }) {
   const isMobile = useIsMobile();
   return (
     <div style={{ display:"flex", flexDirection:"column", gap:0, flexShrink:0, maxWidth: isMobile ? "100%" : 380 }}>
-      <a href="/dhurandhar-2-vs-pushpa-2-box-office.html" style={{ textDecoration:"none", display:"block" }}>
-        <div style={{
-          background:"#F9FAFB", border:`0.5px solid #E5E7EB`,
-          borderLeft:`4px solid #C8201A`, padding:"14px 18px",
-          cursor:"pointer", display:"flex", alignItems:"center", gap:14,
-        }}
-          onMouseEnter={e => e.currentTarget.style.background="#FFFFFF"}
-          onMouseLeave={e => e.currentTarget.style.background="#F9FAFB"}
-        >
-          <div style={{ display:"flex", alignItems:"center", flexShrink:0 }}>
-            <img
-              src="https://image.tmdb.org/t/p/w185/ov8vrRLZGoXHpYjSY9Vpv1tHJX7.jpg"
-              alt="Dhurandhar: The Revenge"
-              style={{ width:42, height:63, objectFit:"cover", borderRadius:3, border:"0.5px solid #D1D5DB" }}
-              onError={e => { e.target.style.background="#DBEAFE"; e.target.removeAttribute("src"); }}
-            />
-            <div style={{
-              width:24, height:24, borderRadius:"50%", background:"#C8201A",
-              display:"flex", alignItems:"center", justifyContent:"center",
-              fontFamily:"'Barlow Condensed', sans-serif", fontWeight:900, fontSize:8,
-              color:"#FFFFFF", letterSpacing:"0.04em", flexShrink:0,
-              margin:"0 -3px", zIndex:1, outline:"2px solid #F9FAFB",
-            }}>VS</div>
-            <img
-              src="https://image.tmdb.org/t/p/w185/t5ePZYRibJ0EEK1FK3GhihVkDW5.jpg"
-              alt="Pushpa 2: The Rule"
-              style={{ width:42, height:63, objectFit:"cover", borderRadius:3, border:"0.5px solid #D1D5DB" }}
-              onError={e => { e.target.style.background="#FEF3C7"; e.target.removeAttribute("src"); }}
-            />
-          </div>
-          <div style={{ flex:1, minWidth:0 }}>
-            <div style={{
-              fontFamily:"'Barlow Condensed', sans-serif", fontWeight:900,
-              fontSize:"clamp(14px, 1.6vw, 16px)", color:"#111827",
-              lineHeight:1.25, letterSpacing:"-0.01em",
-            }}>
-              Dhurandhar: The Revenge vs Pushpa 2
-            </div>
-            <div style={{ fontFamily:"'DM Sans', sans-serif", fontSize:10, color:"#9CA3AF", marginTop:5 }}>
-              India · WW · Lifetime · Statistical Tie →
-            </div>
-          </div>
-        </div>
-      </a>
+      <WeekendPreviewHero />
 
       {/* ── PINNED: Industry Report ─────────────────────────────── */}
       <a href="/india-cinema-state-2026.html" style={{ textDecoration:"none", display:"block" }}>
@@ -6875,6 +6920,10 @@ export default function App() {
               style={{ color:T.textMuted, fontSize:11, fontWeight:600, letterSpacing:"0.06em", cursor:"pointer", transition:"color 0.15s" }}
               title="Change your cookie preferences"
             >🍪 Cookie Settings</span>
+          </div>
+          <div style={{ display:"flex", alignItems:"center", gap:10, marginBottom:12 }}>
+            <span style={{ fontFamily:"'Barlow Condensed', sans-serif", fontWeight:800, fontSize:11, letterSpacing:"0.14em", textTransform:"uppercase", color:T.textMuted }}>Follow Boxoffy</span>
+            <SocialLinks />
           </div>
           <div style={{ borderTop:`1px solid ${T.border}`, paddingTop:12, display:"flex", flexDirection:"column", gap:10 }}>
 
