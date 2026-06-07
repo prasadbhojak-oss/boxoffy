@@ -3772,7 +3772,7 @@ function ForeignFilmsPanel({ movies }) {
             </span>
           </div>
           <div style={{ fontFamily:"'DM Sans',sans-serif", fontSize:9, color:T.textMuted, letterSpacing:"0.18em", textTransform:"uppercase", marginTop:2 }}>
-            BOXOFFY · WKD 17 · APR 17–19, 2026
+            BOXOFFY · WKD 23 · JUN 5–7, 2026
           </div>
         </div>
 
@@ -4616,7 +4616,7 @@ function BoxOfficeSection({ onNavigate, forceAllTime, onClearForceAllTime }) {
           <div style={{ padding:"4px 8px 2px", background:"#FEF2F2", borderBottom:`1px solid ${T.border}`, display:"flex", alignItems:"center", gap:8 }}>
             <span style={{ width:7, height:7, borderRadius:"50%", background:T.accent, display:"inline-block", animation:"boPulse 1.8s ease-in-out infinite" }} />
             <span style={{ fontFamily:"'DM Sans',sans-serif", fontSize:10, fontWeight:700, color:T.accent, letterSpacing:"0.08em", textTransform:"uppercase" }}>
-              INDIA NATIONAL TOP 10 · WEEK 17 · APR 17–23 · BCM 13-SOURCE · <span style={{ color:"#D97706" }}>~ = BCM ESTIMATE</span>
+              INDIA NATIONAL TOP 10 · WEEK {BO_WEEK.num} · JUN 5–7 · BCM v2.1 · 12-SOURCE WEIGHTED · <span style={{ color:"#D97706" }}>~ = BCM ESTIMATE</span>
             </span>
           </div>
 
@@ -6945,7 +6945,7 @@ export default function App() {
 
             {/* Copyright strip */}
             <div style={{ display:"flex", alignItems:"center", justifyContent:"space-between", flexWrap:"wrap", gap:8, color:T.textMuted, lineHeight:1.8 }}>
-              <span style={{ fontSize:11 }}>© 2026 Boxoffy.com · Box Office Intelligence · Box office data from industry tracking sources · Current as of Mar 13, 2026 · All figures in ₹ Crores</span>
+              <span style={{ fontSize:11 }}>© 2026 Boxoffy.com · Box Office Intelligence · Box office data from industry tracking sources · Current as of Jun 6, 2026 · All figures in ₹ Crores</span>
               <a
                 href="mailto:info@boxoffy.com"
                 onMouseEnter={e => e.target.style.color=T.accent}

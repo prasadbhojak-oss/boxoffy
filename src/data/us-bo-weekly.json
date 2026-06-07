@@ -1,4 +1,200 @@
 {
+  "Week 23, 2026": {
+    "dateRange": "Jun 5–7, 2026 · Summer Season Kickoff",
+    "headline": "'Scary Movie' Scares Up Franchise-Record $55M Bow. 'Masters of the Universe' Stumbles to $31M on a $170M Budget. 'Obsession' Becomes Focus's Biggest Domestic Release Ever.",
+    "source": "Comscore · Box Office Mojo · The Numbers · Exhibitor Relations · Variety · Deadline · BoxofficePro",
+    "chart": [
+      {
+        "rank": 1,
+        "title": "Scary Movie",
+        "studio": "Paramount / Miramax",
+        "genre": "Comedy · Horror Parody",
+        "weekend": "$55M",
+        "total": "$55M",
+        "theaters": 3490,
+        "weeks": 1,
+        "change": "NEW",
+        "rtScore": "N/A",
+        "isIndian": false,
+        "admitsNote": "Franchise-record opening unadj (beats Scary Movie 3 $49.7M) · Wayans brothers reunite · panned by critics, pure brand play · WW ~$70M"
+      },
+      {
+        "rank": 2,
+        "title": "Masters of the Universe",
+        "studio": "Amazon MGM",
+        "genre": "Sci-Fi · Fantasy · Toy IP",
+        "weekend": "$31M",
+        "total": "$31M",
+        "theaters": 3677,
+        "weeks": 1,
+        "change": "NEW",
+        "rtScore": "70",
+        "isIndian": false,
+        "admitsNote": "$170M budget — soft start, big-budget risk · B CinemaScore · 88% audience · Galitzine / Elba / Leto / Mendes"
+      },
+      {
+        "rank": 3,
+        "title": "Backrooms",
+        "studio": "A24 / Chernin Entertainment",
+        "genre": "Horror · YouTube IP",
+        "weekend": "$26M",
+        "total": "$130M",
+        "theaters": 3480,
+        "weeks": 2,
+        "change": "-68%",
+        "rtScore": "82",
+        "isIndian": false,
+        "admitsNote": "WW ~$165M · A24's biggest opening ever · $10M budget · frontloaded after $81.4M debut"
+      },
+      {
+        "rank": 4,
+        "title": "Obsession",
+        "studio": "Focus Features",
+        "genre": "Horror · Romance",
+        "weekend": "$24M",
+        "total": "$151M",
+        "theaters": 2615,
+        "weeks": 4,
+        "change": "-9%",
+        "rtScore": "N/A",
+        "isIndian": false,
+        "admitsNote": "Focus's biggest domestic release EVER (passes Downton Abbey $96.8M) · sub-$1M budget · global phenom · WW ~$200M"
+      },
+      {
+        "rank": 5,
+        "title": "The Amazing Digital Circus: The Last Act",
+        "studio": "Fathom Entertainment",
+        "genre": "Animation · Web IP",
+        "weekend": "$14M",
+        "total": "$14M",
+        "theaters": 2221,
+        "weeks": 1,
+        "change": "NEW",
+        "rtScore": "N/A",
+        "isIndian": false,
+        "admitsNote": "Wed Fathom debut · led Thursday $7.8M · feature cut of the series' final two episodes"
+      },
+      {
+        "rank": 6,
+        "title": "The Mandalorian and Grogu",
+        "studio": "Disney / Lucasfilm",
+        "genre": "Sci-Fi · Star Wars",
+        "weekend": "$9.5M",
+        "total": "$210M",
+        "theaters": 3000,
+        "weeks": 3,
+        "change": "-61%",
+        "rtScore": "N/A",
+        "isIndian": false,
+        "admitsNote": "Quickest live-action Star Wars to exit domestic Top 5 · WW ~$310M on $165M net budget"
+      },
+      {
+        "rank": 7,
+        "title": "The Sheep Detectives",
+        "studio": "Amazon MGM",
+        "genre": "Family · Comedy",
+        "weekend": "$7M",
+        "total": "$52M",
+        "theaters": 3400,
+        "weeks": 3,
+        "change": "-50%",
+        "rtScore": "94",
+        "isIndian": false,
+        "admitsNote": "94% RT · family counter-programming holding · $75M budget"
+      },
+      {
+        "rank": 8,
+        "title": "Mortal Kombat II",
+        "studio": "New Line / Warner Bros.",
+        "genre": "Action · Video Game",
+        "weekend": "$6.5M",
+        "total": "$78M",
+        "theaters": 2900,
+        "weeks": 3,
+        "change": "-55%",
+        "rtScore": "N/A",
+        "isIndian": false,
+        "admitsNote": "Video-game actioner fading after $17.7M W2"
+      },
+      {
+        "rank": 9,
+        "title": "Michael",
+        "studio": "Lionsgate / GK Films",
+        "genre": "Biopic · Music",
+        "weekend": "$5M",
+        "total": "$352M",
+        "theaters": 2000,
+        "weeks": 7,
+        "change": "-40%",
+        "rtScore": "N/A",
+        "isIndian": false,
+        "admitsNote": "WW ~$800M · nearing Bohemian Rhapsody's $911M music-biopic record"
+      },
+      {
+        "rank": 10,
+        "title": "The Devil Wears Prada 2",
+        "studio": "20th Century / Disney",
+        "genre": "Comedy · Sequel",
+        "weekend": "$2.6M",
+        "total": "$218M",
+        "theaters": 1800,
+        "weeks": 6,
+        "change": "-56%",
+        "rtScore": "N/A",
+        "isIndian": false,
+        "admitsNote": "Wk6 wind-down · domestic total ~$218M"
+      }
+    ],
+    "indianSpotlight": [
+      {
+        "rank": 1,
+        "title": "Peddi (Ram Charan)",
+        "studio": "Mythri Movie Makers · Vriddhi Cinemas",
+        "weekend": "₹100.5 Cr",
+        "total": "₹170 Cr nett India · ₹270 Cr WW",
+        "weeks": 1,
+        "change": "NEW",
+        "admitsNote": "Ram Charan's biggest opening · ₹350 Cr budget · D1 ₹51 Cr + ₹18.5 Cr previews · soft reviews vs budget"
+      },
+      {
+        "rank": 2,
+        "title": "Drishyam 3 (Mohanlal)",
+        "studio": "Aashirvad Cinemas · Panorama Studios",
+        "weekend": "₹7.1 Cr",
+        "total": "₹106 Cr nett India · ₹240 Cr WW",
+        "weeks": 3,
+        "change": "W3",
+        "admitsNote": "6th Malayalam film in ₹100 Cr India club · strong overseas legs"
+      },
+      {
+        "rank": 3,
+        "title": "Karuppu (Suriya)",
+        "studio": "Sun Pictures",
+        "weekend": "₹5.6 Cr",
+        "total": "₹192 Cr nett · ₹310 Cr WW",
+        "weeks": 4,
+        "change": "W4",
+        "admitsNote": "Suriya's biggest-ever grosser · crossed ₹200 Cr gross India"
+      },
+      {
+        "rank": 4,
+        "title": "Hai Jawani Toh Ishq Hona Hai (Varun Dhawan)",
+        "studio": "Pooja Entertainment",
+        "weekend": "₹31 Cr",
+        "total": "₹31 Cr nett · ₹34 Cr WW",
+        "weeks": 1,
+        "change": "NEW",
+        "admitsNote": "5th-biggest Bollywood opening of 2026 · David Dhawan's final film"
+      }
+    ],
+    "marketContext": {
+      "totalWeekendDom": "$184.7M",
+      "yoyChange": "+64% (vs early-June 2025 frame)",
+      "ytdDomestic": "~$3.86B through Jun 7, 2026 (+~11% vs 2025 same period)",
+      "memorialDay2026Total": "$221.9M MDW 4-day frame (3rd-best post-COVID)",
+      "summer2026Outlook": "Scary Movie + MOTU + Backrooms drive $184.7M — 2nd-best Week-23 post-COVID after 2022's $214.8M · Toy Story 5 + Minions next month"
+    }
+  },
   "Week 22, 2026": {
     "dateRange": "May 29-31, 2026 · Post-Memorial Day Frame",
     "headline": "A24's $81M 'Backrooms' Shatters Studio Record. 'Obsession' Crosses $100M Dom in 3 Wks. 'Mandalorian' Craters 69% W2.",
@@ -195,7 +391,6 @@
       "summer2026Outlook": "Backrooms + Obsession deliver $107.8M from 2 horror titles · summer slate Toy Story 5 + Minions next month"
     }
   },
-
   "Week 21, 2026": {
     "dateRange": "May 22-25, 2026 · Memorial Day 4-day Weekend",
     "headline": "Mandalorian & Grogu opens $98M MDW · Obsession +30% sophomore surge · Memorial Day 3rd-best post-COVID at $221.9M",
@@ -279,7 +474,6 @@
       "memorialDayContext": "3rd-best Memorial Day frame post-COVID · supply-thin year vs 2025's 2-blockbuster window"
     }
   },
-
   "Week 20, 2026": {
     "dateRange": "May 15-17, 2026",
     "headline": "Devil Wears Prada 2 holds W3 #1 · Obsession opens to $19M · Michael continues record musical biopic run",
