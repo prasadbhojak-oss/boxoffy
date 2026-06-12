@@ -3940,7 +3940,7 @@ function ForeignFilmsPanel({ movies }) {
           <strong style={{color:T.textMid}}>India figures</strong> — Gross = includes tax (entertainment/GST). Net = post-tax collection reported by distributors. Weekend = Sat–Sun (India). Industry tracking data.
         </div>
         <div style={{ fontFamily:"'DM Sans',sans-serif", fontSize:10, color:"#8A857E", lineHeight:1.6 }}>
-          <strong style={{color:T.textMid}}>US/Global figures</strong> — Domestic = US + Canada. Weekend = Fri–Sun. CinemaScore = audience exit poll grade. RT = Rotten Tomatoes critics score. Overseas box office tracking. Updated Feb 23, 2026.
+          <strong style={{color:T.textMid}}>US/Global figures</strong> — Domestic = US + Canada. Weekend = Fri–Sun. CinemaScore = audience exit poll grade. RT = Rotten Tomatoes critics score. Overseas box office tracking. Updated Jun 6, 2026.
         </div>
       </div>
     </div>
@@ -4275,10 +4275,14 @@ function UpcomingCalendarGrid({ movies }) {
    localStorage prevents re-voting from same device.
    ─────────────────────────────────────────────────────────────────────────── */
 function WeekendPreviewHero() {
-  const poster = useTMDBPosterById(1057265, "w342"); // Peddi
+  const pPeddi = useTMDBPosterById(1057265, "w185");      // Peddi
+  const pObsession = useTMDBPosterById(1339713, "w185");  // Obsession
+  const pMVA = useTMDBPoster("Main Vaapas Aaunga", "2026");
+  const pDisc = useTMDBPoster("Disclosure Day", "2026");
+  const tiles = [ { src:pPeddi, ab:"PD" }, { src:pMVA, ab:"MV" }, { src:pObsession, ab:"OB" }, { src:pDisc, ab:"DD" } ];
   const [hover, setHover] = React.useState(false);
   return (
-    <a href="/boxoffice-weekend-preview-june-5-7-2026.html" style={{ textDecoration:"none", display:"block" }}>
+    <a href="/boxoffice-weekend-preview-june-12-14-2026.html" style={{ textDecoration:"none", display:"block" }}>
       <div
         onMouseEnter={() => setHover(true)}
         onMouseLeave={() => setHover(false)}
@@ -4289,20 +4293,24 @@ function WeekendPreviewHero() {
           transition:"background 0.15s",
         }}
       >
-        <div style={{ flexShrink:0, width:78, height:117, borderRadius:4, overflow:"hidden", background:"#1F2937", border:"0.5px solid #374151", display:"flex", alignItems:"center", justifyContent:"center" }}>
-          {poster
-            ? <img src={poster} alt="Peddi" style={{ width:"100%", height:"100%", objectFit:"cover" }} />
-            : <span style={{ fontFamily:"'Barlow Condensed', sans-serif", fontWeight:900, fontSize:18, color:"#E5C882", letterSpacing:"0.04em" }}>PEDDI</span>}
+        <div style={{ flexShrink:0, width:100, height:117, display:"grid", gridTemplateColumns:"1fr 1fr", gridTemplateRows:"1fr 1fr", gap:2, borderRadius:4, overflow:"hidden" }}>
+          {tiles.map((t, i) => (
+            <div key={i} style={{ background:"#1F2937", border:"0.5px solid #374151", overflow:"hidden", display:"flex", alignItems:"center", justifyContent:"center" }}>
+              {t.src
+                ? <img src={t.src} alt="" style={{ width:"100%", height:"100%", objectFit:"cover" }} />
+                : <span style={{ fontFamily:"'Barlow Condensed', sans-serif", fontWeight:900, fontSize:12, color:"#E5C882", letterSpacing:"0.04em" }}>{t.ab}</span>}
+            </div>
+          ))}
         </div>
         <div style={{ flex:1, minWidth:0, display:"flex", flexDirection:"column", justifyContent:"center" }}>
-          <span style={{ alignSelf:"flex-start", background:"#C8201A", color:"#FFFFFF", fontFamily:"'Barlow Condensed', sans-serif", fontWeight:900, fontSize:9, letterSpacing:"0.12em", padding:"2px 7px", borderRadius:2, marginBottom:7 }}>WEEKEND PREVIEW · JUN 5–7</span>
+          <span style={{ alignSelf:"flex-start", background:"#C8201A", color:"#FFFFFF", fontFamily:"'Barlow Condensed', sans-serif", fontWeight:900, fontSize:9, letterSpacing:"0.12em", padding:"2px 7px", borderRadius:2, marginBottom:7 }}>WEEKEND PREVIEW · JUN 12–14</span>
           <div style={{ fontFamily:"'Barlow Condensed', sans-serif", fontWeight:900, fontSize:"clamp(15px, 1.7vw, 17px)", color:"#FFFFFF", lineHeight:1.15, letterSpacing:"-0.01em" }}>
-            Peddi's ₹350 Cr Gamble · David Dhawan's Farewell
+            9 New Releases Hit One Friday · Peddi &amp; Obsession Hold
           </div>
           <div style={{ fontFamily:"'DM Sans', sans-serif", fontSize:10.5, color:"#9CA3AF", marginTop:5, lineHeight:1.4 }}>
-            Opening predictions, BCM hype index and the week's OTT Top 10
+            Hype Index + BCM projections: what opens, what holds, and where the India &amp; US Top 10s land
           </div>
-          <span style={{ fontFamily:"'Barlow Condensed', sans-serif", fontWeight:700, fontSize:11, color:"#E5C882", letterSpacing:"0.06em", marginTop:8 }}>READ THE PREVIEW →</span>
+          <span style={{ fontFamily:"'Barlow Condensed', sans-serif", fontWeight:700, fontSize:11, color:"#E5C882", letterSpacing:"0.06em", marginTop:8 }}>SEE THE PREVIEW →</span>
         </div>
       </div>
     </a>
