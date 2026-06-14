@@ -137,7 +137,9 @@ pre{font-size:11px;color:#6B7280;line-height:1.7;white-space:pre-wrap;font-famil
 <div class="ub" id="ub">⚠ Unsaved changes — Save row or Save All</div>
 <div class="config">
   <input class="iw" id="su" placeholder="Apps Script URL"/>
-  <input class="ip" id="tk" type="password" placeholder="Token"/>
+  <input class="ip" id="tk" type="password" placeholder="Apps Script Token"/>
+  <input class="ip" id="ak" type="password" placeholder="Anthropic API key (sk-ant-…)" style="min-width:190px"/>
+  <input class="iw" id="am" placeholder="Model" value="claude-sonnet-4-6" style="max-width:150px"/>
   <button class="btn dark" onclick="connect()">Connect</button>
   <button class="btn ghost" onclick="saveCfg()">Save Config</button>
   <span id="cm" class="msg"></span>
@@ -157,6 +159,36 @@ pre{font-size:11px;color:#6B7280;line-height:1.7;white-space:pre-wrap;font-famil
         <p>Connect → Click "Load Current Chart" → Edit numbers → Add new films inline → Click "Apply Weekly Update" once. All changes batch in one server call.</p>
       </div>
       <button class="btn-mega" id="wuz-apply-btn" onclick="wuzApplyAll()" disabled>Apply Weekly Update →</button>
+    </div>
+
+    <!-- ═══════ AI FILL AGENT ═══════ -->
+    <div class="wuz-section" style="border:1px solid #C7D2FE;background:#F5F7FF">
+      <div class="wuz-sechdr">
+        <span>🤖 AI Fill — Research &amp; Build the Chart</span>
+        <span style="font-size:11px;color:#6B7280;font-weight:400">Live web search · review before Apply</span>
+      </div>
+      <div class="wuz-secbody">
+        <div style="display:grid;grid-template-columns:1.4fr 0.8fr 1.2fr 1.3fr;gap:8px;margin-bottom:8px">
+          <input id="ai-week" placeholder="Chart label (e.g. Week 25 · Jun 12–18, 2026)"/>
+          <input id="ai-asof" type="date" title="Latest data available as of this date"/>
+          <select id="ai-window">
+            <option value="Opening weekend Fri–Sun (3-day)">Window: Opening weekend (Fri–Sun)</option>
+            <option value="Week-to-date: Friday through the as-of day (cumulative)">Window: Week-to-date (Fri → as-of)</option>
+            <option value="Full week Fri–Thu (7-day)">Window: Full week (Fri–Thu)</option>
+          </select>
+          <select id="ai-depth">
+            <option value="Auto — Top 10, extend to Top 15 if 10 or more films each collect >= 1 crore in the window">Depth: Auto (10, or 15 if all ≥₹1 Cr)</option>
+            <option value="Top 10">Depth: Top 10</option>
+            <option value="Top 15">Depth: Top 15</option>
+          </select>
+        </div>
+        <textarea id="ai-extra" placeholder="Optional notes for the agent (e.g. 'include Parimala and Co'; 'Obsession total ~₹47 Cr'; 'Hollywood: Disclosure Day, Backrooms, MOTU')" style="width:100%;min-height:48px;font-family:inherit;font-size:12px;padding:7px;border:1px solid #C7D2FE;border-radius:4px;margin-bottom:8px"></textarea>
+        <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">
+          <button class="btn dark" id="ai-run" onclick="aiResearch()">🔎 Research &amp; Build Chart</button>
+          <span style="font-size:11px;color:#6B7280">New films → queued below · holdovers → totals updated in the grid above. Nothing writes until you click <b>Apply Weekly Update</b>.</span>
+        </div>
+        <div id="ai-log" style="display:none;background:#0B1220;border-radius:4px;padding:8px 10px;margin-top:8px;font-family:ui-monospace,monospace;font-size:11px;line-height:1.6;max-height:170px;overflow:auto"></div>
+      </div>
     </div>
 
     <!-- Section 1: Existing chart films -->
@@ -183,8 +215,9 @@ pre{font-size:11px;color:#6B7280;line-height:1.7;white-space:pre-wrap;font-famil
       <div class="wuz-secbody">
         <div id="wuz-new-list"></div>
         <div class="wuz-add-form" id="wuz-add-form">
-          <div class="wuz-add-grid">
-            <input id="naf-title" placeholder="Title (e.g. Lee Cronin's The Mummy)"/>
+          <div oninput="nafPreview()" onchange="nafPreview()">
+          <div style="display:grid;grid-template-columns:2fr 1fr 1fr;gap:6px;margin-bottom:6px">
+            <input id="naf-title" placeholder="Title (e.g. Disclosure Day)"/>
             <select id="naf-language">
               <option value="Hindi">Hindi</option>
               <option value="Hollywood">Hollywood</option>
@@ -192,14 +225,31 @@ pre{font-size:11px;color:#6B7280;line-height:1.7;white-space:pre-wrap;font-famil
               <option value="Telugu">Telugu</option>
               <option value="Malayalam">Malayalam</option>
               <option value="Kannada">Kannada</option>
+              <option value="Marathi">Marathi</option>
             </select>
-            <input id="naf-genre" placeholder="Genre"/>
-            <input id="naf-weekly" placeholder="Weekly ₹Cr" type="number" step="0.01"/>
-            <input id="naf-india" placeholder="Cumul ₹Cr" type="number" step="0.01"/>
+            <input id="naf-genre" placeholder="Genre (e.g. Sci-Fi)"/>
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-bottom:6px">
+            <input id="naf-director" placeholder="Director"/>
+            <input id="naf-release" type="date" title="releaseDate"/>
+          </div>
+          <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-bottom:6px">
+            <input id="naf-weekly" placeholder="This-wk ₹Cr" type="number" step="0.01" title="weeklyCollection (number)"/>
+            <input id="naf-india" placeholder="Cumul net ₹Cr" type="number" step="0.01" title="becomes totalNum + indiaNet '₹X Cr'"/>
             <input id="naf-days" placeholder="Days" type="number" value="1"/>
             <input id="naf-week" placeholder="Wk#" type="number" value="1"/>
+          </div>
+          <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-bottom:6px">
+            <input id="naf-ww" placeholder="WW gross (e.g. ₹366 Cr)" title="totalCollection / wwGross"/>
+            <input id="naf-budget" placeholder="Budget (e.g. 350 Cr)"/>
+            <input id="naf-lastweek" placeholder="Last-wk ₹Cr" type="number" step="0.01" title="lastWeekCollection (optional)"/>
+            <input id="naf-lastrank" placeholder="Last rank #" type="number" title="lastWeekRank (optional)"/>
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-bottom:6px">
             <select id="naf-verdict">
+              <option value="TRACKING">Tracking (new release)</option>
               <option value="Average">Average</option>
+              <option value="Below Average">Below Average</option>
               <option value="Hit">Hit</option>
               <option value="Super Hit">Super Hit</option>
               <option value="Blockbuster">Blockbuster</option>
@@ -207,8 +257,14 @@ pre{font-size:11px;color:#6B7280;line-height:1.7;white-space:pre-wrap;font-famil
               <option value="Flop">Flop</option>
               <option value="Disaster">Disaster</option>
             </select>
+            <label style="display:flex;align-items:center;gap:6px;font-size:11px;color:#374151"><input type="checkbox" id="naf-chart" checked style="width:auto"/> Show on national chart (status=Running)</label>
           </div>
-          <input id="naf-note" placeholder="Weekly note (e.g. 'W1 ₹14 Cr nett · Warner Bros · Hit trajectory')" style="width:100%;margin-bottom:8px"/>
+          <input id="naf-poster" placeholder="Poster URL (optional — TMDB image link)" style="width:100%;margin-bottom:6px"/>
+          <input id="naf-note" placeholder="Note (e.g. 'D1 ₹1.8 Cr · Spielberg sci-fi · Hollywood #3 of 2026')" style="width:100%;margin-bottom:8px"/>
+          </div>
+          <div style="font-size:10px;color:#6B7280;margin-bottom:4px">Live films.json entry preview:</div>
+          <pre id="naf-preview" style="background:#0B1220;color:#9CE3B0;font-size:10px;line-height:1.5;padding:10px;border-radius:4px;max-height:200px;overflow:auto;margin-bottom:8px;white-space:pre-wrap">—</pre>
+          <div id="naf-err" style="font-size:11px;color:#DC2626;margin-bottom:8px;display:none"></div>
           <div style="display:flex;gap:8px">
             <button class="btn green sm" onclick="wuzQueueNew()">Queue This Film</button>
             <button class="btn ghost sm" onclick="wuzCancelAdd()">Cancel</button>
@@ -332,6 +388,8 @@ function init() {
   const c = JSON.parse(localStorage.getItem("bx")||"{}");
   if (c.s) document.getElementById("su").value = c.s;
   if (c.t) document.getElementById("tk").value = c.t;
+  if (c.k) document.getElementById("ak").value = c.k;
+  if (c.m) document.getElementById("am").value = c.m;
   if (c.s && c.t) connect();
 }
 
@@ -340,7 +398,9 @@ let S="", T="", films=[], dirty=new Set();
 function saveCfg() {
   localStorage.setItem("bx", JSON.stringify({
     s: document.getElementById("su").value.trim(),
-    t: document.getElementById("tk").value.trim()
+    t: document.getElementById("tk").value.trim(),
+    k: document.getElementById("ak").value.trim(),
+    m: document.getElementById("am").value.trim()
   }));
   fl("cm","Config saved","ok");
 }
@@ -603,32 +663,100 @@ function wuzEdit(el) {
 
 function wuzShowAddForm() {
   document.getElementById("wuz-add-form").classList.add("show");
+  nafPreview();
 }
 function wuzCancelAdd() {
   document.getElementById("wuz-add-form").classList.remove("show");
-  ["naf-title","naf-genre","naf-weekly","naf-india","naf-note"].forEach(id=>document.getElementById(id).value="");
+  ["naf-title","naf-genre","naf-director","naf-weekly","naf-india","naf-ww","naf-budget","naf-lastweek","naf-lastrank","naf-poster","naf-note"].forEach(id=>{var el=document.getElementById(id);if(el)el.value="";});
+  var rel=document.getElementById("naf-release"); if(rel) rel.value="";
+  var ch=document.getElementById("naf-chart"); if(ch) ch.checked=true;
+  var pv=document.getElementById("naf-preview"); if(pv) pv.textContent="—";
+  var er=document.getElementById("naf-err"); if(er) er.style.display="none";
+}
+
+// Build a schema-correct films.json entry from the Add-Film form.
+// Returns {film, errors}. The fragile rules are enforced HERE so a bad entry can't be queued:
+//  • indiaNet is ALWAYS a formatted string "₹X Cr" (never a raw number)
+//  • totalNum is the numeric cumulative the chart sorts on
+//  • status:"Running" + showInMainChart flag the national chart
+function nafBuild() {
+  const val = id => (document.getElementById(id) ? document.getElementById(id).value : "").trim();
+  const num = id => { const v = parseFloat(val(id)); return isNaN(v) ? null : v; };
+  const errors = [];
+  const title = val("naf-title");
+  const language = val("naf-language");
+  const weekly = num("naf-weekly");
+  const cumul = num("naf-india");
+  const verdict = val("naf-verdict");
+  if (!title) errors.push("Title required");
+  if (weekly === null) errors.push("This-wk ₹Cr required (number)");
+  if (cumul === null) errors.push("Cumul net ₹Cr required (number)");
+  const indiaNet = cumul === null ? "" : ("₹" + cumul + " Cr");      // string, always
+  const ww = val("naf-ww");
+  const lastWk = num("naf-lastweek");
+  const lastRank = num("naf-lastrank");
+  const release = val("naf-release") || new Date().toISOString().split("T")[0];
+  const slug = title.toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"");
+  const onChart = document.getElementById("naf-chart") ? document.getElementById("naf-chart").checked : true;
+  const film = {
+    title: title,
+    language: language,
+    director: val("naf-director") || null,
+    releaseDate: release,
+    genre: val("naf-genre") || null,
+    status: "Running",
+    verdict: verdict,
+    weeklyCollection: weekly === null ? 0 : weekly,
+    totalNum: cumul === null ? 0 : cumul,
+    indiaNet: indiaNet,
+    indiaNetStr: indiaNet,
+    totalCollection: ww || indiaNet,
+    ww: ww || null,
+    wwGross: ww || null,
+    budget: val("naf-budget") || null,
+    weekNum: num("naf-week") === null ? 1 : num("naf-week"),
+    daysInRelease: num("naf-days") === null ? 1 : num("naf-days"),
+    lastWeekCollection: lastWk,
+    lastWeekRank: lastRank,
+    weeklyNote: val("naf-note") || null,
+    note: val("naf-note") || null,
+    posterUrl: val("naf-poster") || null,
+    pageUrl: slug + "-box-office.html",
+    cast: [],
+    betaModel: false,
+    showInMainChart: onChart,
+    overseas: null, indiaGross: null, indiaWeekend: null, indiaWeekNo: 0,
+    weeksInTop10: 0, bogRank: null, bogRankChange: null,
+    usWeekend: null, usCumulative: null, intlCumulative: null, wwCumulative: null,
+    theaterCount: null, theaterChange: null, perTheater: null,
+    distributor: null, cinemaScore: null, rtScore: null
+  };
+  return { film: film, errors: errors };
+}
+
+function nafPreview() {
+  const r = nafBuild();
+  const pv = document.getElementById("naf-preview");
+  const er = document.getElementById("naf-err");
+  if (pv) pv.textContent = JSON.stringify(r.film, null, 2);
+  if (er) {
+    if (r.errors.length) { er.style.display = "block"; er.textContent = "⚠ " + r.errors.join(" · "); }
+    else er.style.display = "none";
+  }
+  return r.errors;
 }
 
 function wuzQueueNew() {
-  const t = document.getElementById("naf-title").value.trim();
-  if (!t) return wuzLog("New film needs a title", "er");
-  const film = {
-    title: t,
-    language: document.getElementById("naf-language").value,
-    genre: document.getElementById("naf-genre").value.trim(),
-    weeklyCollection: document.getElementById("naf-weekly").value || "0",
-    indiaNet: document.getElementById("naf-india").value || "0",
-    daysInRelease: document.getElementById("naf-days").value || "1",
-    weekNum: document.getElementById("naf-week").value || "1",
-    verdict: document.getElementById("naf-verdict").value,
-    weeklyNote: document.getElementById("naf-note").value.trim(),
-    showInMainChart: true,
-    releaseDate: new Date().toISOString().split("T")[0],
-    pageUrl: t.toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"") + "-box-office.html"
-  };
-  wuzNewQueue.push(film);
+  const r = nafBuild();
+  if (r.errors.length) { nafPreview(); return wuzLog("Fix before queueing: " + r.errors.join("; "), "er"); }
+  // Hard guard on the fragile rule — refuse to queue a raw-number indiaNet
+  if (typeof r.film.indiaNet !== "string" || /^[0-9.]+$/.test(r.film.indiaNet)) {
+    return wuzLog("indiaNet must be a formatted string like '₹8 Cr' — aborted", "er");
+  }
+  wuzNewQueue.push(r.film);
   wuzCancelAdd();
   wuzRenderNewList();
+  wuzLog(`Queued: ${r.film.title} · ${r.film.indiaNet} · ${r.film.verdict}${r.film.showInMainChart?" · on chart":" · off-chart"}`, "ok");
 }
 
 function wuzRenderNewList() {
@@ -640,7 +768,7 @@ function wuzRenderNewList() {
   document.getElementById("wuz-new-list").innerHTML = wuzNewQueue.map((f,i)=>`
     <div style="background:#ECFDF5;border:1px solid #BBF7D0;border-radius:4px;padding:10px 12px;margin-bottom:6px;display:flex;align-items:center;justify-content:space-between;font-size:12px">
       <div>
-        <strong>${e(f.title)}</strong> · <span style="color:#6B7280">${e(f.language)} · ${e(f.genre)} · W${f.weekNum} D${f.daysInRelease} · ₹${f.weeklyCollection} Cr (cumul ₹${f.indiaNet} Cr) · ${e(f.verdict)}</strong>
+        <strong>${e(f.title)}</strong> · <span style="color:#6B7280">${e(f.language)}${f.genre?" · "+e(f.genre):""} · W${f.weekNum} D${f.daysInRelease} · ₹${f.weeklyCollection} Cr wk (cumul ${e(f.indiaNet)}) · ${e(f.verdict)}${f.showInMainChart?"":" · off-chart"}</span>
         <div style="font-size:11px;color:#6B7280;margin-top:2px">${e(f.weeklyNote)}</div>
       </div>
       <button class="btn ghost sm" onclick="wuzNewQueue.splice(${i},1);wuzRenderNewList()">✕ Remove</button>
@@ -757,6 +885,159 @@ async function wuzApplyAll() {
     wuzRenderNewList();
     wuzLoadCurrent();
   }, 2000);
+}
+
+/* ═══════════════ AI FILL AGENT ═══════════════ */
+function aiVal(id){ const el=document.getElementById(id); return el ? (el.value||"").trim() : ""; }
+function aiLog(msg, type){
+  const el=document.getElementById("ai-log"); if(!el) return;
+  el.style.display="block";
+  const ts=new Date().toLocaleTimeString().split(" ")[0];
+  const color = type==="er"?"#FCA5A5":type==="ok"?"#86EFAC":"#93C5FD";
+  el.innerHTML += `<div style="color:${color}">[${ts}] ${msg}</div>`;
+  el.scrollTop=el.scrollHeight;
+}
+function normTitle(s){ return (s||"").toLowerCase().replace(/[^a-z0-9]/g,""); }
+function findLooseMatch(key){
+  for (let i=0;i<wuzExisting.length;i++){
+    const t = normTitle(wuzExisting[i].title);
+    if (t && key && (t===key || (key.length>5 && t.includes(key)) || (t.length>5 && key.includes(t)))) return i;
+  }
+  return -1;
+}
+function extractJsonArray(text){
+  const cands=[];
+  const fences = text.match(/```(?:json)?\s*([\s\S]*?)```/gi);
+  if (fences) fences.forEach(b=>cands.push(b.replace(/```(?:json)?/gi,"").trim()));
+  const i=text.indexOf("["), j=text.lastIndexOf("]");
+  if (i>=0 && j>i) cands.push(text.slice(i,j+1));
+  for (const c of cands){ try{ const v=JSON.parse(c); if(Array.isArray(v)) return v; }catch(e){} }
+  return null;
+}
+function aiSysPrompt(){
+  return [
+"You are the Boxoffy INCU agent — India National Box Office Chart Update. You research the live India theatrical box office and return a clean ranked chart as JSON.",
+"",
+"WORKFLOW:",
+"1) Find ALL films running or releasing in India for the requested week — comprehensively across Hindi, Telugu, Tamil, Malayalam, Kannada, Marathi AND Hollywood/foreign releases in India. Include brand-new releases AND holdovers still in cinemas.",
+"2) For each film, get its collection for the requested WINDOW (see user message). Opening weekend = Friday to Sunday (3-day). Week-to-date as-of a day = Friday through that day, cumulative (e.g. as-of Tuesday = Fri+Sat+Sun+Mon+Tue). Use CONFIRMED actuals for days that have already happened; if the window includes days that have not happened yet, project them and set estimate=true.",
+"3) Rank by the WINDOW collection, highest first. Default depth = Top 10. BUT if 10 or more films are EACH collecting at least 1 crore in the window, extend to Top 15. Always include both new films and holdovers in the ranking.",
+"",
+"DATA SOURCING (strict): Prefer Box Office India (BOI), then Sacnilk, then Nishit Shaw (X). Pinkvilla, Taran Adarsh, Komal Nahata / Film Information may corroborate. NEVER take figures from Sumit Kadel or Rohit Jaiswal. Filmibeat, Koimoi, BollywoodLife, The Week, Outlook, India.com may only confirm a release exists, never supply the number. Never fabricate — if a number is unknown, estimate from comparable trend and set estimate=true. Never list GCC as a theatrical market for Dhurandhar.",
+"",
+"VERDICTS: one of TRACKING, Average, Below Average, Hit, Super Hit, Blockbuster, ALL-TIME BLOCKBUSTER, Flop, Disaster. Brand-new week-1 films are usually TRACKING unless clearly a disaster or blockbuster.",
+"",
+"OUTPUT: after researching, output ONLY a JSON array (no prose), wrapped in one ```json fenced block. One object per film, ranked. Schema per object:",
+'{ "title": str, "language": "Hindi|Hollywood|Tamil|Telugu|Malayalam|Kannada|Marathi", "genre": str, "director": str, "releaseDate": "YYYY-MM-DD", "isNew": bool, "weekNum": int, "days": int, "periodNet": number, "cumulativeNet": number, "ww": str, "budget": str, "verdict": str, "estimate": bool, "lastWeekNet": number|null, "note": str }',
+"Rules for fields: periodNet = nett ₹Cr collected in the WINDOW. cumulativeNet = total India nett ₹Cr to date. ww = worldwide gross as a short string e.g. \"₹366 Cr\" or \"$205M\". All ₹Cr numbers are plain numbers (no symbols/commas). isNew=true only if the film released within this window. note <=120 chars; append \"(est)\" if estimate=true."
+  ].join("\n");
+}
+function aiUserPrompt(week, asof, win, depth, extra){
+  let w = "Build the India National Box Office Chart.";
+  if (week) w += "\nChart label: " + week + ".";
+  w += "\nAs-of date (latest data available): " + asof + ".";
+  w += "\nCollection window: " + win + ".";
+  w += "\nDepth rule: " + depth + ".";
+  if (extra) w += "\nExtra instructions: " + extra + ".";
+  w += "\nResearch now with web search, then return the JSON array exactly per the schema.";
+  return w;
+}
+function aiNormalize(raw){
+  const numv = x => { const n=parseFloat(x); return isNaN(n)?null:n; };
+  const title = (raw.title||"").trim();
+  const cumul = numv(raw.cumulativeNet);
+  const period = numv(raw.periodNet);
+  const base = (cumul!==null) ? cumul : period;                 // cumulative preferred for indiaNet
+  const indiaNet = (base===null) ? "" : ("₹" + base + " Cr");   // ALWAYS a formatted string
+  const ww = (raw.ww||"").toString().trim();
+  const slug = title.toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"");
+  let note = (raw.note||"").toString().trim();
+  if (raw.estimate && !/\(est\)/i.test(note)) note = (note ? note+" " : "") + "(est)";
+  return {
+    title: title, language: raw.language||"", director: raw.director||null,
+    releaseDate: raw.releaseDate || new Date().toISOString().split("T")[0],
+    genre: raw.genre||null, status:"Running", verdict: raw.verdict||"TRACKING",
+    weeklyCollection: period===null ? 0 : period,
+    totalNum: base===null ? 0 : base,
+    indiaNet: indiaNet, indiaNetStr: indiaNet,
+    totalCollection: ww || indiaNet, ww: ww||null, wwGross: ww||null,
+    budget: raw.budget||null,
+    weekNum: raw.weekNum!=null ? (parseInt(raw.weekNum)||1) : 1,
+    daysInRelease: raw.days!=null ? (parseInt(raw.days)||1) : 1,
+    lastWeekCollection: numv(raw.lastWeekNet), lastWeekRank: numv(raw.lastWeekRank),
+    weeklyNote: note||null, note: note||null,
+    posterUrl: raw.posterUrl||null, pageUrl: slug + "-box-office.html",
+    cast: [], betaModel:false, showInMainChart: raw.showInMainChart!==false,
+    overseas:null, indiaGross:null, indiaWeekend:null, indiaWeekNo:0, weeksInTop10:0,
+    bogRank:null, bogRankChange:null, usWeekend:null, usCumulative:null, intlCumulative:null,
+    wwCumulative:null, theaterCount:null, theaterChange:null, perTheater:null,
+    distributor:null, cinemaScore:null, rtScore:null, _isNew: raw.isNew!==false
+  };
+}
+function aiApply(arr){
+  const existMap = {};
+  wuzExisting.forEach((f,i)=> existMap[normTitle(f.title)] = i);
+  let added=0, updated=0, skipped=0;
+  arr.forEach(raw=>{
+    const f = aiNormalize(raw);
+    if (!f.title) { skipped++; return; }
+    const key = normTitle(f.title);
+    const exIdx = (key in existMap) ? existMap[key] : findLooseMatch(key);
+    if (raw.isNew === false && exIdx > -1) {
+      const ex = wuzExisting[exIdx];                 // update holdover totals in the grid
+      ex.lastWeekCollection = (ex.weeklyCollection_orig!=null && ex.weeklyCollection_orig!=="") ? ex.weeklyCollection_orig : ex.lastWeekCollection;
+      ex.weeklyCollection = f.weeklyCollection;
+      ex.indiaNet = f.indiaNet;
+      ex.weekNum = f.weekNum;
+      ex.daysInRelease = f.daysInRelease;
+      if (f.verdict) ex.verdict = f.verdict;
+      if (f.weeklyNote) ex.note = f.weeklyNote;
+      ex.dirty = true;
+      updated++;
+    } else if (exIdx > -1) {
+      skipped++;                                     // already on chart, flagged new — skip dup
+    } else {
+      delete f._isNew;
+      wuzNewQueue.push(f);                           // genuinely new → queue
+      added++;
+    }
+  });
+  if (updated) wuzRenderExisting();
+  wuzRenderNewList();
+  if (document.getElementById("wuz-apply-btn")) document.getElementById("wuz-apply-btn").disabled = false;
+  aiLog(`Built ${arr.length} films → ${added} new queued, ${updated} holdover total(s) updated, ${skipped} skipped. Review above & below, then click Apply Weekly Update.`, "ok");
+}
+async function aiResearch(){
+  const key = aiVal("ak");
+  const model = aiVal("am") || "claude-sonnet-4-6";
+  if (!key) return aiLog("Add your Anthropic API key (sk-ant-…) in the config bar, then click Save Config.", "er");
+  if (!wuzLoaded) aiLog("Tip: click 'Load Current Chart' first so holdovers get matched & updated (otherwise everything is treated as new).", "info");
+  const week=aiVal("ai-week"), asof=aiVal("ai-asof")||new Date().toISOString().split("T")[0];
+  const win=aiVal("ai-window"), depth=aiVal("ai-depth"), extra=aiVal("ai-extra");
+  aiLog("Researching live box office… web search runs server-side, ~30–90s. Hang tight.", "info");
+  const btn=document.getElementById("ai-run"); if(btn) btn.disabled=true;
+  try {
+    const res = await fetch("https://api.anthropic.com/v1/messages", {
+      method:"POST",
+      headers:{ "content-type":"application/json","x-api-key":key,"anthropic-version":"2023-06-01","anthropic-dangerous-direct-browser-access":"true" },
+      body: JSON.stringify({
+        model: model, max_tokens: 8000, system: aiSysPrompt(),
+        tools:[{type:"web_search_20250305", name:"web_search", max_uses:12}],
+        messages:[{role:"user", content: aiUserPrompt(week,asof,win,depth,extra)}]
+      })
+    });
+    const data = await res.json();
+    if (!res.ok || data.type==="error") throw new Error((data.error&&data.error.message) || ("HTTP "+res.status));
+    const text = (data.content||[]).filter(b=>b.type==="text").map(b=>b.text).join("\n");
+    const arr = extractJsonArray(text);
+    if (!arr || !arr.length) { aiLog("Couldn't parse a film array from the reply. Full text logged to console (F12).", "er"); console.log("AI raw:\n", text); return; }
+    aiApply(arr);
+  } catch(e){
+    const hint = /Failed to fetch|NetworkError|CORS/i.test(e.message) ? " — if you opened this as a local file, host it over http(s) (e.g. boxoffy.com/admin) so the browser allows the API call." : (/401|invalid|x-api-key/i.test(e.message) ? " — check the API key." : "");
+    aiLog("AI error: " + e.message + hint, "er");
+  } finally {
+    if(btn) btn.disabled=false;
+  }
 }
 </script>
 </body>
