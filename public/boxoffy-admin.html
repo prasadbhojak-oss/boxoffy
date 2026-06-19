@@ -195,14 +195,21 @@ pre{font-size:11px;color:#6B7280;line-height:1.7;white-space:pre-wrap;font-famil
     <div class="wuz-section">
       <div class="wuz-sechdr">
         <span>📺 Films Currently In Chart <span class="count" id="wuz-existing-count"></span></span>
-        <button class="btn ghost sm" onclick="wuzLoadCurrent()">↻ Load Current Chart</button>
+        <span style="display:flex;gap:6px;align-items:center;flex-wrap:wrap">
+          <button class="btn ghost sm" onclick="wuzLoadCurrent()">↻ Load Current Chart</button>
+          <input type="file" id="fjFile" accept=".json,application/json" onchange="fjLoadFile(this)" style="display:none">
+          <button class="btn ghost sm" onclick="document.getElementById('fjFile').click()">📂 Load films.json</button>
+          <button class="btn green sm" onclick="buildFilmsJson()">⬇ Build films.json</button>
+          <span id="fjMsg" style="font-size:11px"></span>
+        </span>
       </div>
       <div class="wuz-secbody" id="wuz-existing-body">
         <div class="ld" style="padding:24px">Click "Load Current Chart" to begin</div>
       </div>
       <div class="wuz-help">
-        <strong>Tip:</strong> Yellow-highlighted cells are auto-incremented (week+1, days+7) — override if needed.
-        Toggle <strong>In Chart</strong> off to drop a film. Updates batch with <code>bulkUpdate</code>.
+        <strong>Tip:</strong> Edit cells, then <code>Save All</code> (writes the Sheet). To push to the live site:
+        <strong>📂 Load films.json</strong> (your committed <code>src/data/films.json</code>) → <strong>⬇ Build films.json</strong>
+        — it merges this chart in and downloads the deploy-ready file. Toggle <strong>In Chart</strong> off to drop a film.
       </div>
     </div>
 
@@ -516,6 +523,70 @@ async function saveAll() {
 }
 
 function sw(fs) { if(fs.ww){fs.wwGross=fs.ww.includes("WW")?fs.ww:fs.ww+" WW"; fs.totalCollection=fs.wwGross;} }
+
+/* ── films.json EXPORT — closes the Sheet → films.json gap ───────────────
+   Loads your committed films.json, merges the LIVE running chart into the
+   2026 array (update-by-title, add new, drop removed), downloads the full
+   deploy-ready file. No API, no invented numbers — it serialises the Sheet.
+   Cumulative (indiaNet/totalNum) is preserved from films.json when the live
+   cell is blank, so a missing weekly entry can never wipe a real cumulative. */
+let _fjBase = null;
+function fjMsg(m,t){ const el=document.getElementById("fjMsg"); if(el){ el.textContent=m; el.style.color = t==="er"?"#B91C1C":"#15803d"; } }
+function fjLoadFile(input){
+  const f = input.files && input.files[0]; if(!f) return;
+  const rd = new FileReader();
+  rd.onload = () => { try{ _fjBase = JSON.parse(rd.result); fjMsg("Loaded films.json ("+Object.keys(_fjBase).length+" years)","ok"); }
+                      catch(e){ _fjBase=null; fjMsg("Invalid films.json: "+e.message,"er"); } };
+  rd.readAsText(f);
+}
+function _slug(t){ return String(t||"").toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,""); }
+function _norm(t){ return String(t||"").toLowerCase().replace(/[^a-z0-9]/g,""); }
+
+function _toEntry(f, prev){
+  const weekly = parseFloat(f.weeklyCollection)||0;
+  const wk   = parseInt(f.weekNum)||1;
+  const days = parseInt(f.daysInRelease)||1;
+  let cumNum = parseFloat(String(f.indiaNet||"").replace(/[^0-9.]/g,""));        // live cumulative
+  if(isNaN(cumNum) || cumNum===0) cumNum = prev ? (parseFloat(prev.totalNum)||0) : 0;  // keep prev if blank
+  const indiaNet = cumNum>0 ? ("₹"+(+cumNum.toFixed(2))+" Cr") : (prev&&prev.indiaNet || "");
+  let ww = (f.ww || f.wwGross || (prev&&prev.wwGross) || "").toString().trim();
+  if(ww && !/WW/i.test(ww)) ww = ww+" WW";
+  return Object.assign({}, prev||{}, {
+    title:f.title, language:f.language||(prev&&prev.language)||"",
+    releaseDate:f.releaseDate||(prev&&prev.releaseDate)||"",
+    status:"Running", showInMainChart:true,
+    verdict:f.verdict||(prev&&prev.verdict)||"TRACKING",
+    weeklyCollection:weekly, weekNum:wk, daysInRelease:days,
+    lastWeekCollection:parseFloat(f.lastWeekCollection)||0,
+    indiaNet:indiaNet, totalNum:+cumNum.toFixed(2),
+    wwGross:ww, weeklyNote:f.weeklyNote||(prev&&prev.weeklyNote)||"",
+    pageUrl:(prev&&prev.pageUrl) || (_slug(f.title)+"-box-office.html")
+  });
+}
+
+async function buildFilmsJson(){
+  if(!_fjBase){ fjMsg("First choose your current films.json →","er"); return; }
+  fjMsg("Fetching live chart…","ok");
+  const r = await gget({action:"getFilms"});
+  if(!r?.ok){ fjMsg("Couldn't fetch live chart: "+(r?.error||"check connection"),"er"); return; }
+  const live = r.films || [];
+  const base = JSON.parse(JSON.stringify(_fjBase));
+  const yr = base["2026"] = base["2026"] || [];
+  const idx = {}; yr.forEach((f,i)=>{ idx[_norm(f.title)] = i; });
+  const liveSet = new Set();
+  let updated=0, added=0, dropped=0;
+  live.forEach(f=>{
+    const key=_norm(f.title); liveSet.add(key);
+    if(idx[key]!=null){ yr[idx[key]] = _toEntry(f, yr[idx[key]]); updated++; }
+    else { yr.push(_toEntry(f,null)); added++; }
+  });
+  yr.forEach(f=>{ if(f.status==="Running" && !liveSet.has(_norm(f.title))){ f.status="Ended"; f.showInMainChart=false; dropped++; } });
+
+  const blob = new Blob([JSON.stringify(base,null,2)], {type:"application/json"});
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(blob); a.download = "films.json"; a.click(); URL.revokeObjectURL(a.href);
+  fjMsg("films.json built — "+updated+" updated, "+added+" added, "+dropped+" dropped. Deploy to src/data/.","ok");
+}
 
 async function loadWeekly() {
   document.getElementById("ww").innerHTML = '<div class="ld">Loading…</div>';
