@@ -4277,12 +4277,12 @@ function UpcomingCalendarGrid({ movies }) {
 function WeekendPreviewHero() {
   const pPeddi = useTMDBPosterById(1057265, "w185");      // Peddi
   const pObsession = useTMDBPosterById(1339713, "w185");  // Obsession
-  const pMVA = useTMDBPoster("Main Vaapas Aaunga", "2026");
-  const pDisc = useTMDBPoster("Disclosure Day", "2026");
-  const tiles = [ { src:pPeddi, ab:"PD" }, { src:pMVA, ab:"MV" }, { src:pObsession, ab:"OB" }, { src:pDisc, ab:"DD" } ];
+  const pCocktail = useTMDBPoster("Cocktail 2", "2026");
+  const pMaaInti = useTMDBPoster("Maa Inti Bangaaram", "2026");
+  const tiles = [ { src:pCocktail, ab:"C2" }, { src:pMaaInti, ab:"MB" }, { src:pObsession, ab:"OB" }, { src:pPeddi, ab:"PD" } ];
   const [hover, setHover] = React.useState(false);
   return (
-    <a href="/boxoffice-weekend-preview-june-12-14-2026.html" style={{ textDecoration:"none", display:"block" }}>
+    <a href="/boxoffice-weekend-update-june-19-21-2026.html" style={{ textDecoration:"none", display:"block" }}>
       <div
         onMouseEnter={() => setHover(true)}
         onMouseLeave={() => setHover(false)}
@@ -4303,14 +4303,14 @@ function WeekendPreviewHero() {
           ))}
         </div>
         <div style={{ flex:1, minWidth:0, display:"flex", flexDirection:"column", justifyContent:"center" }}>
-          <span style={{ alignSelf:"flex-start", background:"#C8201A", color:"#FFFFFF", fontFamily:"'Barlow Condensed', sans-serif", fontWeight:900, fontSize:9, letterSpacing:"0.12em", padding:"2px 7px", borderRadius:2, marginBottom:7 }}>WEEKEND PREVIEW · JUN 12–14</span>
+          <span style={{ alignSelf:"flex-start", background:"#16A34A", color:"#FFFFFF", fontFamily:"'Barlow Condensed', sans-serif", fontWeight:900, fontSize:9, letterSpacing:"0.12em", padding:"2px 7px", borderRadius:2, marginBottom:7 }}>WEEKEND RECAP · JUN 19–21</span>
           <div style={{ fontFamily:"'Barlow Condensed', sans-serif", fontWeight:900, fontSize:"clamp(15px, 1.7vw, 17px)", color:"#FFFFFF", lineHeight:1.15, letterSpacing:"-0.01em" }}>
-            9 New Releases Hit One Friday · Peddi &amp; Obsession Hold
+            Cocktail 2 Owns the Weekend · It Beat Our Hype Index
           </div>
           <div style={{ fontFamily:"'DM Sans', sans-serif", fontSize:10.5, color:"#9CA3AF", marginTop:5, lineHeight:1.4 }}>
-            Hype Index + BCM projections: what opens, what holds, and where the India &amp; US Top 10s land
+            How the weekend actually landed vs our hype index — graded film by film, with the India &amp; US Top 10
           </div>
-          <span style={{ fontFamily:"'Barlow Condensed', sans-serif", fontWeight:700, fontSize:11, color:"#E5C882", letterSpacing:"0.06em", marginTop:8 }}>SEE THE PREVIEW →</span>
+          <span style={{ fontFamily:"'Barlow Condensed', sans-serif", fontWeight:700, fontSize:11, color:"#E5C882", letterSpacing:"0.06em", marginTop:8 }}>SEE THE RECAP →</span>
         </div>
       </div>
     </a>
