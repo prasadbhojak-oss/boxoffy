@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Boxoffy · Weekend Top 15 Collage — Jun 12–18, 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=IBM+Plex+Mono:wght@500;600&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{ --ink:#0D0C0B; --red:#C8201A; --gold:#C8932A; --paper:#FBF8F2; --mut:#7A726A; }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'DM Sans',sans-serif;background:#1a1a1a;color:#eee;padding:20px;display:flex;flex-direction:column;align-items:center;gap:16px}
+  h1{font-family:'Barlow Condensed',sans-serif;font-weight:800;letter-spacing:.04em;font-size:22px}
+  .bar{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;align-items:center}
+  button,.tab{font-family:'Barlow Condensed',sans-serif;font-weight:700;letter-spacing:.06em;text-transform:uppercase;font-size:13px;
+    background:#2a2a2a;color:#eee;border:1px solid #444;padding:9px 14px;border-radius:7px;cursor:pointer;transition:.15s}
+  button:hover,.tab:hover{border-color:var(--red)}
+  .tab.on{background:var(--red);border-color:var(--red);color:#fff}
+  .fmt.on{background:var(--gold);border-color:var(--gold);color:#1a1a1a}
+  #stage{background:#000;border-radius:8px;overflow:hidden;max-width:96vw}
+  canvas{display:block;width:auto;max-width:96vw;height:auto;max-height:78vh}
+  .hint{color:#999;font-size:12px;max-width:560px;text-align:center;line-height:1.5}
+  a.dl{background:var(--red);border-color:var(--red);color:#fff;text-decoration:none;display:inline-block}
+</style>
+</head>
+<body>
+  <h1>BOXOFFY · WEEKEND BOX OFFICE TOP 15 COLLAGE</h1>
+  <div class="bar">
+    <button class="tab on" data-chart="india">🇮🇳 India Top 10</button>
+    <button class="tab" data-chart="us">🇺🇸 US Top 10</button>
+  </div>
+  <div class="bar">
+    <button class="fmt" data-fmt="square">Square 1080</button>
+    <button class="fmt on" data-fmt="portrait">Portrait 1080×1350</button>
+    <button class="fmt" data-fmt="story">Story 1080×1920</button>
+    <button id="rerender">↻ Re-render</button>
+    <a class="dl" id="download">⬇ Download PNG</a>
+  </div>
+  <div id="stage"><canvas id="cv"></canvas></div>
+  <div class="hint">Weekend chart — Fri–Sun (est, as of Sat). Posters load from TMDB in your browser; brand-new titles not yet on TMDB show a clean text tile. Right-click → Save, or use Download PNG.</div>
+
+<script>
+const BEARER = "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2YWM1OTY0NzEyZTA0NGRmMmJjMmFiYzFlMTFlZGMyYyIsIm5iZiI6MTc3Mzg4NTMxMS42MzIsInN1YiI6IjY5YmI1NzdmYjgyMzJhNzc5MjIxZWZjOCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.QxWkqL_4_3PfTnIVgcZYE0zlXQd9M2y5QL-oWNwq6dE";
+
+const DATA = {
+  india: {
+    title:"INDIA NATIONAL TOP 15", flag:"🇮🇳", sub:"WEEKEND · JUN 12–18, 2026", foot:"Fri–Sun weekend (est, as of Sat) · BOI · Sacnilk · boxoffy.com",
+    films:[
+      {r:1,t:"Peddi",m:"Telugu · W2",v:"₹11 Cr",id:1057265},
+      {r:2,t:"Haunted 3D",m:"Hindi · NEW",v:"₹7.5 Cr",q:"Haunted 3D Echoes of the Past",y:2026},
+      {r:3,t:"Disclosure Day",m:"Hollywood · NEW",v:"₹5.5 Cr",q:"Disclosure Day",y:2026},
+      {r:4,t:"Main Vaapas Aaunga",m:"Hindi · NEW",v:"₹4 Cr",q:"Main Vaapas Aaunga",y:2026},
+      {r:5,t:"Backrooms",m:"Hollywood · NEW",v:"₹3.8 Cr",q:"Backrooms",y:2026},
+      {r:6,t:"Hai Jawani Toh Ishq Hona Hai",m:"Hindi · W2",v:"₹3.5 Cr",q:"Hai Jawani Toh Ishq Hona Hai",y:2026},
+      {r:7,t:"Bharat Bhhagya Viddhaata",m:"Hindi · NEW",v:"₹3.4 Cr",q:"Bharat Bhhagya Viddhaata",y:2026},
+      {r:8,t:"Masters of the Universe",m:"Hollywood · NEW",v:"₹3.4 Cr",id:454639},
+      {r:9,t:"Governor",m:"Hindi · NEW",v:"₹3.2 Cr",q:"Governor",y:2026},
+      {r:10,t:"Obsession",m:"Hollywood · W3",v:"₹2.5 Cr",id:1339713},
+      {r:11,t:"Parimala and Co",m:"Tamil · W2",v:"₹1.2 Cr",q:"Parimala and Co",y:2026},
+      {r:12,t:"Bandar",m:"Hindi · W2",v:"₹1 Cr",q:"Bandar Bobby Deol",y:2026},
+      {r:13,t:"Deool Band 2",m:"Marathi · W4",v:"₹0.9 Cr",q:"Deool Band 2",y:2026},
+      {r:14,t:"The Narmada Story",m:"Hindi · NEW",v:"₹0.02 Cr",q:"The Narmada Story",y:2026},
+      {r:15,t:"Heer Sara",m:"Hindi · NEW",v:"₹0.01 Cr",q:"Heer Sara",y:2026},
+    ]
+  },
+  us: {
+    title:"US BOX OFFICE TOP 10", flag:"🇺🇸", sub:"WEEKEND PREVIEW · JUN 12–14, 2026", foot:"BCM PROJECTION · #1 range per Boxoffice Pro Podium · boxoffy.com",
+    films:[
+      {r:1,t:"Disclosure Day",m:"Universal · NEW",v:"$40–50M",q:"Disclosure Day",y:2026},
+      {r:2,t:"Scary Movie",m:"Paramount · W2",v:"~$24M",q:"Scary Movie",y:2026},
+      {r:3,t:"Obsession",m:"Focus · W5",v:"~$18M",id:1339713},
+      {r:4,t:"Masters of the Universe",m:"Amazon MGM · W2",v:"~$14M",id:454639},
+      {r:5,t:"Backrooms",m:"A24 · W3",v:"~$9M",q:"Backrooms",y:2026},
+      {r:6,t:"The Amazing Digital Circus",m:"Fathom",v:"~$6M",q:"The Amazing Digital Circus",y:2026},
+      {r:7,t:"The Sheep Detectives",m:"Amazon",v:"~$4.5M",q:"The Sheep Detectives",y:2026},
+      {r:8,t:"Mortal Kombat II",m:"New Line",v:"~$3.5M",q:"Mortal Kombat II",y:2026},
+      {r:9,t:"Michael",m:"Lionsgate",v:"~$3M",q:"Michael",y:2026},
+      {r:10,t:"The Devil Wears Prada 2",m:"20th",v:"~$2M",q:"The Devil Wears Prada 2",y:2026},
+    ]
+  }
+};
+
+const FMT = { square:[1080,1080], portrait:[1080,1350], story:[1080,1920] };
+let chart="india", fmt="portrait";
+const cache={};
+
+async function poster(f){
+  const key = f.id ? "id"+f.id : "q"+f.t;
+  if(cache[key]!==undefined) return cache[key];
+  try{
+    let path=null;
+    if(f.id){
+      const r=await fetch("https://api.themoviedb.org/3/movie/"+f.id+"?language=en-US",{headers:{Authorization:"Bearer "+BEARER,accept:"application/json"}});
+      const j=await r.json(); path=j.poster_path;
+    } else {
+      const url="https://api.themoviedb.org/3/search/movie?query="+encodeURIComponent(f.q)+(f.y?"&primary_release_year="+f.y:"")+"&language=en-US&page=1";
+      const r=await fetch(url,{headers:{Authorization:"Bearer "+BEARER,accept:"application/json"}});
+      const j=await r.json(); path=(j.results&&j.results[0])?j.results[0].poster_path:null;
+    }
+    if(!path){ cache[key]=null; return null; }
+    const img=new Image(); img.crossOrigin="anonymous";
+    const src="https://image.tmdb.org/t/p/w500"+path;
+    await new Promise((res)=>{ img.onload=()=>res(); img.onerror=()=>res(); img.src=src; });
+    cache[key]=img.complete&&img.naturalWidth?img:null;
+    return cache[key];
+  }catch(e){ cache[key]=null; return null; }
+}
+
+function rounded(ctx,x,y,w,h,r){ctx.beginPath();ctx.moveTo(x+r,y);ctx.arcTo(x+w,y,x+w,y+h,r);ctx.arcTo(x+w,y+h,x,y+h,r);ctx.arcTo(x,y+h,x,y,r);ctx.arcTo(x,y,x+w,y,r);ctx.closePath();}
+function fit(ctx,txt,max,base){let s=base;ctx.font="700 "+s+"px 'Barlow Condensed'";while(ctx.measureText(txt).width>max&&s>11){s--;ctx.font="700 "+s+"px 'Barlow Condensed'";}return s;}
+
+async function render(){
+  const d=DATA[chart], [W,H]=FMT[fmt];
+  const cv=document.getElementById("cv"); cv.width=W; cv.height=H;
+  const ctx=cv.getContext("2d");
+  ctx.fillStyle="#0D0C0B"; ctx.fillRect(0,0,W,H);
+  ctx.fillStyle="#C8201A"; ctx.fillRect(0,0,W,10);
+  const pad=Math.round(W*0.05);
+  ctx.textBaseline="alphabetic";
+  ctx.fillStyle="#fff"; ctx.font="900 "+Math.round(W*0.052)+"px 'Barlow Condensed'"; ctx.textAlign="left";
+  ctx.fillText("BOX", pad, pad+W*0.05);
+  const bw=ctx.measureText("BOX").width;
+  ctx.fillStyle="#C8201A"; ctx.fillText("OFFY", pad+bw, pad+W*0.05);
+  ctx.fillStyle="#C8932A"; ctx.font="700 "+Math.round(W*0.024)+"px 'Barlow Condensed'"; ctx.textAlign="right";
+  ctx.fillText(d.flag+"  "+d.sub, W-pad, pad+W*0.045);
+  ctx.fillStyle="#fff"; ctx.font="800 "+Math.round(W*0.038)+"px 'Barlow Condensed'"; ctx.textAlign="left";
+  ctx.fillText(d.title, pad, pad+W*0.095);
+  ctx.strokeStyle="#2a2825"; ctx.lineWidth=2; ctx.beginPath(); ctx.moveTo(pad,pad+W*0.11); ctx.lineTo(W-pad,pad+W*0.11); ctx.stroke();
+
+  const cols = fmt==="story" ? 2 : 5;
+  const rows = Math.ceil(d.films.length/cols);
+  const gridTop = pad+W*0.13;
+  const gridBot = H - (fmt==="story"? H*0.06 : W*0.06);
+  const gx=pad, gw=W-pad*2;
+  const gap=Math.round(W*0.018);
+  const cw=(gw-gap*(cols-1))/cols;
+  const capH=Math.round(cw*0.46);
+  const ph=Math.min((gridBot-gridTop-gap*(rows-1))/rows - capH, cw*1.5);
+
+  const imgs=await Promise.all(d.films.map(poster));
+
+  d.films.forEach((f,i)=>{
+    const c=i%cols, rw=Math.floor(i/cols);
+    const x=gx+c*(cw+gap), y=gridTop+rw*(ph+capH+gap);
+    ctx.save(); rounded(ctx,x,y,cw,ph,10); ctx.clip();
+    const im=imgs[i];
+    if(im){ const s=Math.max(cw/im.naturalWidth, ph/im.naturalHeight); const dw=im.naturalWidth*s, dh=im.naturalHeight*s; ctx.drawImage(im, x+(cw-dw)/2, y+(ph-dh)/2, dw, dh); }
+    else { const g=ctx.createLinearGradient(x,y,x,y+ph); g.addColorStop(0,"#2b2926"); g.addColorStop(1,"#16140f"); ctx.fillStyle=g; ctx.fillRect(x,y,cw,ph);
+      ctx.fillStyle="#9a9088"; ctx.textAlign="center"; const fs=fit(ctx,f.t,cw-16,Math.round(cw*0.13)); ctx.font="700 "+fs+"px 'Barlow Condensed'"; wrapC(ctx,f.t.toUpperCase(),x+cw/2,y+ph/2,cw-20,fs*1.05); }
+    ctx.restore();
+    const bs=Math.round(cw*0.30);
+    ctx.fillStyle="#C8201A"; rounded(ctx,x,y,bs,bs*0.78,8); ctx.fill();
+    ctx.fillStyle="#fff"; ctx.textAlign="center"; ctx.font="900 "+Math.round(bs*0.55)+"px 'Barlow Condensed'";
+    ctx.fillText(f.r, x+bs/2, y+bs*0.56);
+    const cy=y+ph+Math.round(capH*0.28);
+    ctx.fillStyle="#fff"; ctx.textAlign="left";
+    const ts=fit(ctx,f.t,cw,Math.round(cw*0.115)); ctx.font="700 "+ts+"px 'Barlow Condensed'";
+    ctx.fillText(f.t, x, cy);
+    ctx.fillStyle="#C8932A"; ctx.font="800 "+Math.round(cw*0.125)+"px 'Barlow Condensed'";
+    ctx.fillText(f.v, x, cy+Math.round(cw*0.16));
+    ctx.fillStyle="#8a827a"; ctx.font="600 "+Math.round(cw*0.07)+"px 'DM Sans'";
+    ctx.fillText(f.m.toUpperCase(), x, cy+Math.round(cw*0.25));
+  });
+
+  ctx.fillStyle="#6f675f"; ctx.textAlign="center"; ctx.font="600 "+Math.round(W*0.018)+"px 'IBM Plex Mono'";
+  ctx.fillText(d.foot, W/2, H-Math.round(W*0.03));
+
+  document.getElementById("download").href=cv.toDataURL("image/png");
+  document.getElementById("download").download="boxoffy-weekend-"+chart+"-top15-jun12-18-"+fmt+".png";
+}
+function wrapC(ctx,txt,cx,cy,maxw,lh){const words=txt.split(" ");let line="",lines=[];for(const w of words){const t=line?line+" "+w:w;if(ctx.measureText(t).width>maxw&&line){lines.push(line);line=w;}else line=t;}lines.push(line);const sy=cy-(lines.length-1)*lh/2;lines.forEach((l,i)=>ctx.fillText(l,cx,sy+i*lh));}
+
+document.querySelectorAll(".tab").forEach(b=>b.onclick=()=>{document.querySelectorAll(".tab").forEach(x=>x.classList.remove("on"));b.classList.add("on");chart=b.dataset.chart;render();});
+document.querySelectorAll(".fmt").forEach(b=>b.onclick=()=>{document.querySelectorAll(".fmt").forEach(x=>x.classList.remove("on"));b.classList.add("on");fmt=b.dataset.fmt;render();});
+document.getElementById("rerender").onclick=render;
+document.fonts.ready.then(render);
+</script>
+</body>
+</html>
