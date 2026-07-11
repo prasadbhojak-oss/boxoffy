@@ -4277,14 +4277,14 @@ function UpcomingCalendarGrid({ movies }) {
 function WeekendPreviewHero() {
   // If a search-by-title poster ever mismatches (WTTJ shares its title with older films),
   // pin it instead with: useTMDBPosterById(<tmdbId>, "w185").
-  const pAlpha = useTMDBPoster("Alpha", "2026");
+  const pDhamaal = useTMDBPoster("Dhamaal 4", "2026");
   const pWTTJ = useTMDBPoster("Welcome to the Jungle", "2026");
-  const pMVA = useTMDBPoster("Main Vaapas Aaunga", "2026");
-  const pMaaInti = useTMDBPoster("Maa Inti Bangaaram", "2026");
-  const tiles = [ { src:pAlpha, ab:"AL" }, { src:pWTTJ, ab:"WJ" }, { src:pMVA, ab:"VA" }, { src:pMaaInti, ab:"MB" } ];
+  const pAlpha = useTMDBPoster("Alpha", "2026");
+  const pMoana = useTMDBPoster("Moana", "2026");
+  const tiles = [ { src:pDhamaal, ab:"D4" }, { src:pWTTJ, ab:"WJ" }, { src:pAlpha, ab:"AL" }, { src:pMoana, ab:"MO" } ];
   const [hover, setHover] = React.useState(false);
   return (
-    <a href="/weekend-recap-july-3-5-2026.html" style={{ textDecoration:"none", display:"block" }}>
+    <a href="/weekend-preview-july-10-12-2026.html" style={{ textDecoration:"none", display:"block" }}>
       <div
         onMouseEnter={() => setHover(true)}
         onMouseLeave={() => setHover(false)}
@@ -4305,14 +4305,14 @@ function WeekendPreviewHero() {
           ))}
         </div>
         <div style={{ flex:1, minWidth:0, display:"flex", flexDirection:"column", justifyContent:"center" }}>
-          <span style={{ alignSelf:"flex-start", background:"#16A34A", color:"#FFFFFF", fontFamily:"'Barlow Condensed', sans-serif", fontWeight:900, fontSize:9, letterSpacing:"0.12em", padding:"2px 7px", borderRadius:2, marginBottom:7 }}>WEEKEND RECAP · JUL 3–5</span>
+          <span style={{ alignSelf:"flex-start", background:"#16A34A", color:"#FFFFFF", fontFamily:"'Barlow Condensed', sans-serif", fontWeight:900, fontSize:9, letterSpacing:"0.12em", padding:"2px 7px", borderRadius:2, marginBottom:7 }}>WEEKEND PREVIEW · JUL 10–12</span>
           <div style={{ fontFamily:"'Barlow Condensed', sans-serif", fontWeight:900, fontSize:"clamp(15px, 1.7vw, 17px)", color:"#FFFFFF", lineHeight:1.15, letterSpacing:"-0.01em" }}>
-            Alpha Opens Well Despite the Noise · Akshay Runs On
+            Dhamaal 4 Chases a Welcome to the Jungle-Sized Opening — or Bigger
           </div>
           <div style={{ fontFamily:"'DM Sans', sans-serif", fontSize:10.5, color:"#9CA3AF", marginTop:5, lineHeight:1.4 }}>
-            Alpha beats a negativity campaign to a ₹34 Cr open, Welcome to the Jungle crosses ₹169 Cr worldwide, and Main Vaapas Aaunga&apos;s dream run hits week 4 — plus the full India &amp; US Top 10
+            Dhamaal 4&apos;s Hype Index (74/100) and base case — Day 1 ₹13–19 Cr, weekend ₹52–68 Cr — plus the India &amp; US holdovers, Ikka on Netflix, and our predicted-vs-actual scorecard
           </div>
-          <span style={{ fontFamily:"'Barlow Condensed', sans-serif", fontWeight:700, fontSize:11, color:"#E5C882", letterSpacing:"0.06em", marginTop:8 }}>SEE THE RECAP →</span>
+          <span style={{ fontFamily:"'Barlow Condensed', sans-serif", fontWeight:700, fontSize:11, color:"#E5C882", letterSpacing:"0.06em", marginTop:8 }}>SEE THE PREVIEW →</span>
         </div>
       </div>
     </a>
