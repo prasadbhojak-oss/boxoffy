@@ -272,35 +272,18 @@
 </div></footer>
 
 <script>
-/* ── IMAGE LOADER ── ships token-free ──────────────────────────────────
-   Freeze CDN URLs below (public image.tmdb.org, no token needed), OR paste a
-   TMDB v4 token into BEARER LOCALLY to auto-resolve — the console logs each
-   frozen URL. Copy those in, blank BEARER, delete this loader before commit. */
-var ACTOR_PHOTO = "";   // e.g. "https://image.tmdb.org/t/p/w500/XXXX.jpg"
-var POSTERS = { "Tanhaji":"", "Singham Again":"", "Drishyam 2":"", "Golmaal Again":"", "Raid 2":"", "Total Dhamaal":"" };
-var BEARER  = "";       // paste TMDB v4 token LOCALLY to resolve; leave "" in committed file
-function place(el,url){ if(!url||!el)return; var im=new Image(); im.onload=function(){ el.insertBefore(im,el.firstChild); el.classList.add("has-img"); }; im.src=url; }
-function tmdb(p){ return "https://image.tmdb.org/t/p/w500"+p; }
-(function(){
-  var ap=document.getElementById("actorPhoto");
-  if(ACTOR_PHOTO){ place(ap,ACTOR_PHOTO); }
-  else if(BEARER){
-    var H={headers:{Authorization:"Bearer "+BEARER,accept:"application/json"}};
-    (async function(){try{var r=(await (await fetch("https://api.themoviedb.org/3/search/person?query=Ajay%20Devgn&language=en-US",H)).json()).results||[];var hit=r.find(function(x){return x.profile_path;});if(hit){var u=tmdb(hit.profile_path);place(ap,u);console.log('ACTOR_PHOTO = "'+u+'";');}}catch(e){}})();
-  }
-  document.querySelectorAll("#pstrip .pw").forEach(function(el){
-    var q=el.getAttribute("data-q"), y=el.getAttribute("data-y");
-    if(POSTERS[q]){ place(el,POSTERS[q]); return; }
-    if(!BEARER) return;
-    var H={headers:{Authorization:"Bearer "+BEARER,accept:"application/json"}};
-    (async function(){try{var u="https://api.themoviedb.org/3/search/movie?query="+encodeURIComponent(q)+"&year="+y+"&language=en-US";var r=(await (await fetch(u,H)).json()).results||[];var hit=r.find(function(x){return x.poster_path&&x.original_language==='hi';})||r.find(function(x){return x.poster_path;});if(hit){var url=tmdb(hit.poster_path);place(el,url);console.log('POSTERS["'+q+'"] = "'+url+'";');}}catch(e){}})();
-  });
-})();
-/* share — builds from canonical at runtime */
-(function(){var canon=document.querySelector('link[rel=canonical]');var url=(canon&&canon.href)||location.href;var t=encodeURIComponent("Ajay Devgn's complete box-office career: ~₹4,160 Cr net & ~60 Cr tickets across 108 films (1991-2026). The full Boxoffy ledger 👇 @BoxoffyMI"),u=encodeURIComponent(url);
+var BEARER="eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2YWM1OTY0NzEyZTA0NGRmMmJjMmFiYzFlMTFlZGMyYyIsIm5iZiI6MTc3Mzg4NTMxMS42MzIsInN1YiI6IjY5YmI1NzdmYjgyMzJhNzc5MjIxZWZjOCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.QxWkqL_4_3PfTnIVgcZYE0zlXQd9M2y5QL-oWNwq6dE", H={headers:{Authorization:"Bearer "+BEARER,accept:"application/json"}};
+function proxied(p){return "https://images.weserv.nl/?url="+encodeURIComponent("image.tmdb.org/t/p/w500"+p)+"&output=jpg";}
+function setImg(el,path,fit){if(!path)return;var im=new Image();im.crossOrigin="anonymous";im.onload=function(){el.insertBefore(im,el.firstChild);el.classList.add("has-img");};im.onerror=function(){var i2=new Image();i2.onload=function(){el.insertBefore(i2,el.firstChild);el.classList.add("has-img");};i2.src="https://image.tmdb.org/t/p/w500"+path;};im.src=proxied(path);}
+// actor photo
+(async function(){try{var r=(await (await fetch("https://api.themoviedb.org/3/search/person?query=Ajay%20Devgn&language=en-US",H)).json()).results||[];var hit=r.find(function(p){return p.profile_path;});if(hit)setImg(document.getElementById("actorPhoto"),hit.profile_path);}catch(e){}})();
+// posters
+document.querySelectorAll("#pstrip .pw").forEach(async function(el){try{var q=el.getAttribute("data-q"),y=el.getAttribute("data-y");var u="https://api.themoviedb.org/3/search/movie?query="+encodeURIComponent(q)+"&year="+y+"&language=en-US";var r=(await (await fetch(u,H)).json()).results||[];var hit=r.find(function(x){return x.poster_path&&x.original_language==='hi';})||r.find(function(x){return x.poster_path;});if(hit)setImg(el,hit.poster_path);}catch(e){}});
+// share
+(function(){var url="https://boxoffy.com/actor-ajay-devgn.html",t=encodeURIComponent("Ajay Devgn's complete box-office career: ~₹4,160 Cr net & ~60 Cr tickets across 108 films (1991-2026). The full Boxoffy ledger 👇 @BoxoffyMI"),u=encodeURIComponent(url);
 var x=document.getElementById("sx");if(x)x.href="https://twitter.com/intent/tweet?url="+u+"&text="+t+"&via=BoxoffyMI";
 var f=document.getElementById("sf");if(f)f.href="https://www.facebook.com/sharer/sharer.php?u="+u;
 var w=document.getElementById("sw");if(w)w.href="https://wa.me/?text="+t+"%20"+u;})();
-function adCopy(){var canon=document.querySelector('link[rel=canonical]');var url=(canon&&canon.href)||location.href;var d=function(){var c=document.getElementById("copied");c.classList.add("show");setTimeout(function(){c.classList.remove("show");},1500);};if(navigator.clipboard)navigator.clipboard.writeText(url).then(d,d);else d();}
+function adCopy(){var url="https://boxoffy.com/actor-ajay-devgn.html";var d=function(){var c=document.getElementById("copied");c.classList.add("show");setTimeout(function(){c.classList.remove("show");},1500);};if(navigator.clipboard)navigator.clipboard.writeText(url).then(d,d);else d();}
 </script>
 </body></html>
