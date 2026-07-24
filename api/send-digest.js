@@ -9,9 +9,9 @@
 //
 // Resend Audience ID: 6fc2744e-1719-4693-91a9-770d9e0eea36
 
-import filmsRaw        from '../src/data/films.json'    assert { type: 'json' };
-import editorialsRaw   from '../src/data/editorials.json' assert { type: 'json' };
-import commentaryRaw   from '../src/data/weekly-commentary.json' assert { type: 'json' };
+import filmsRaw        from '../src/data/films.json'    with { type: 'json' };
+import editorialsRaw   from '../src/data/editorials.json' with { type: 'json' };
+import commentaryRaw   from '../src/data/weekly-commentary.json' with { type: 'json' };
 
 const AUDIENCE_ID = '6fc2744e-1719-4693-91a9-770d9e0eea36';
 const FROM        = 'Boxoffy Brief <info@boxoffy.com>';
