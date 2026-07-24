@@ -1,10 +1,55 @@
 [
   {
+    "weekNum": "Week 30",
+    "dateRange": "Jul 17–23, 2026",
+    "headline": "NOLAN'S BIGGEST EVER — The Odyssey Takes ₹84 Cr India, $264M Global",
+    "subline": "Odyssey D1–D7 ₹84 Cr India net · ₹73 Cr gross opening weekend, Nolan's best ever in India · $264M global bow ($124.5M NA + $139.6M intl), biggest of his career · Dhamaal 4 ₹135 Cr net, first ₹100 Cr in franchise history · English share of July now 26.1% · July total ₹505 Cr across 86 releases",
+    "status": "live",
+    "scoreboard": [
+      {
+        "film": "The Odyssey",
+        "week": "W1",
+        "wkCollection": "~₹84 Cr",
+        "total": "~₹84 Cr nett",
+        "verdict": "TRACKING — BLOCKBUSTER PACE",
+        "color": "#6B7280",
+        "note": "D1 ₹17.40 · D2 ₹22 · D3 ₹21.90 · D4 ₹8 · D5 ₹8.35 · running ₹84 Cr net / ~₹100 Cr gross (Sacnilk). Opening weekend ~₹73 Cr gross ($7.5M) — Nolan's highest-grossing India opening weekend ever. IMAX ₹15.33 Cr from 34 screens in 3 days, India's biggest IMAX release. WW $311M+ after a $264M global bow ($124.5M NA / $139.6M intl), the biggest opening of Nolan's career. 'A' CinemaScore."
+      },
+      {
+        "film": "Dhamaal 4",
+        "week": "W2",
+        "wkCollection": "~₹39 Cr",
+        "total": "~₹135 Cr nett",
+        "verdict": "HIT",
+        "color": "#6B7280",
+        "note": "Week 1 closed ₹96 Cr. Crossed ₹100 Cr on D8 (₹101.50 Cr) — first ₹100 Cr film in the Dhamaal franchise. D8 ₹5.50 Cr, a controlled 8.3% drop. Held its family audience through the Odyssey weekend rather than collapsing to it."
+      },
+      {
+        "film": "Alpha",
+        "week": "W3",
+        "wkCollection": "~₹3 Cr",
+        "total": "~₹58 Cr nett",
+        "verdict": "FLOP",
+        "color": "#6B7280",
+        "note": "Released Jul 3. Weakest entry in the YRF Spy Universe to date. Daily collections now in lakhs. Verdict per trade consensus — confirm against final budget before publishing."
+      }
+    ],
+    "sources": [
+      "Sacnilk",
+      "Box Office India",
+      "Deadline",
+      "Variety",
+      "Comscore"
+    ],
+    "interval_take": "Two structural calls this week. First: The Odyssey is the biggest Hollywood story India has had in years — ₹84 Cr net in seven days, an opening weekend of ~₹73 Cr gross that is Nolan's best ever here, and ₹15.33 Cr of it from just 34 IMAX screens. That is roughly a quarter of the opening weekend from thirty-four screens, and it makes this India's biggest IMAX release on record. English now holds 26.1% of July's India box office, against Hindi's 39.3% — an unusually narrow gap that says more about premium-format pricing than about footfalls. Second: Dhamaal 4's hold is the underrated result. Franchise comedies normally break in week two against an event release; this one crossed ₹100 Cr on day 8 and is now at ₹135 Cr, the first Dhamaal film to get there. Two very different audiences ran in parallel all week without cannibalising each other. One data flag: Sacnilk's own day-wise page lists Odyssey's D1 net at ₹16.10 Cr while its news desk and every other tracker carry ₹17.40 Cr — Boxoffy uses ₹17.40 Cr pending a BOI cross-check.",
+    "nextWeek": "Jana Nayagan (Vijay) opens Jul 24 — the year's biggest Tamil release and the first real test of Odyssey's screen hold in the South. Then Spider-Man: Brand New Day on Jul 31, arriving on record presales: best first-day US sales in five years, Fandango's #1 preseller of 2026, and India advances already past Odyssey's final Day 1 pace. Boxoffy BCM call — Spider-Man India Day 1 ₹42–50 Cr net, bull case ₹55 Cr+; US opening $215–245M, bull $260M. Odyssey holds every IMAX screen through Aug 14, so Spidey opens without them."
+  },
+  {
     "weekNum": "Week 17",
     "dateRange": "Apr 17–23, 2026",
     "headline": "Bhooth Bangla Closes ₹89 Cr Week 1. D2 Crosses ₹1,121 Cr. Vaazha 2 Past ₹213 Cr WW.",
     "subline": "BB W1 close ₹89 Cr India / ₹137 Cr WW (Taran + BH consensus, BCM 91%) · D2 W6 begins at ₹1,121 Cr India / ₹1,764 Cr WW · UK overtaken Pathaan as biggest Indian grosser · Vaazha 2 lifetime ₹113 Cr India / ₹213 Cr WW · 5th Malayalam film in 200 Cr club · Total chart take ~₹133 Cr",
-    "status": "live",
+    "status": "archived",
     "scoreboard": [
       {
         "film": "Bhooth Bangla",
