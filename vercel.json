@@ -1,4 +1,12 @@
 {
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "boxoffy.com" }],
+      "destination": "https://www.boxoffy.com/:path*",
+      "permanent": true
+    }
+  ],
   "rewrites": [
     {
       "source": "/((?!.*\\.html$|.*\\.xml$|.*\\.txt$|.*\\.json$|.*\\.js$|.*\\.css$|.*\\.png$|.*\\.jpg$|.*\\.ico$|.*\\.svg$|.*\\.webp$|.*\\.woff2?$|.*\\.ttf$).*)",
