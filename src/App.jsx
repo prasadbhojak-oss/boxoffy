@@ -4277,14 +4277,14 @@ function UpcomingCalendarGrid({ movies }) {
 function WeekendPreviewHero() {
   // If a search-by-title poster ever mismatches (WTTJ shares its title with older films),
   // pin it instead with: useTMDBPosterById(<tmdbId>, "w185").
+  const pSpidey = useTMDBPoster("Spider-Man: Brand New Day", "2026");
   const pOdyssey = useTMDBPoster("The Odyssey", "2026");
   const pJana = useTMDBPoster("Jana Nayagan", "2026");
-  const pDhamaal = useTMDBPoster("Dhamaal 4", "2026");
-  const pHades = useTMDBPoster("Hadestown", "2026");
-  const tiles = [ { src:pOdyssey, ab:"OD" }, { src:pJana, ab:"JN" }, { src:pDhamaal, ab:"D4" }, { src:pHades, ab:"HT" } ];
+  const pChennai = useTMDBPoster("Chennai Love Story", "2026");
+  const tiles = [ { src:pSpidey, ab:"SM" }, { src:pOdyssey, ab:"OD" }, { src:pJana, ab:"JN" }, { src:pChennai, ab:"CL" } ];
   const [hover, setHover] = React.useState(false);
   return (
-    <a href="/boxoffice-weekend-july-24-26-2026.html" style={{ textDecoration:"none", display:"block" }}>
+    <a href="/boxoffice-weekend-august-1-3-2026.html" style={{ textDecoration:"none", display:"block" }}>
       <div
         onMouseEnter={() => setHover(true)}
         onMouseLeave={() => setHover(false)}
@@ -4305,14 +4305,14 @@ function WeekendPreviewHero() {
           ))}
         </div>
         <div style={{ flex:1, minWidth:0, display:"flex", flexDirection:"column", justifyContent:"center" }}>
-          <span style={{ alignSelf:"flex-start", background:"#16A34A", color:"#FFFFFF", fontFamily:"'Barlow Condensed', sans-serif", fontWeight:900, fontSize:9, letterSpacing:"0.12em", padding:"2px 7px", borderRadius:2, marginBottom:7 }}>WEEKEND UPDATE · JUL 24–26</span>
+          <span style={{ alignSelf:"flex-start", background:"#16A34A", color:"#FFFFFF", fontFamily:"'Barlow Condensed', sans-serif", fontWeight:900, fontSize:9, letterSpacing:"0.12em", padding:"2px 7px", borderRadius:2, marginBottom:7 }}>WEEKEND PREVIEW · AUG 1–3</span>
           <div style={{ fontFamily:"'Barlow Condensed', sans-serif", fontWeight:900, fontSize:"clamp(15px, 1.7vw, 17px)", color:"#FFFFFF", lineHeight:1.15, letterSpacing:"-0.01em" }}>
-            The Odyssey Gave IMAX Its Biggest Weekend Ever. Round Two Starts Friday.
+            Spider-Man Owns The Weekend — And He's Coming For Endgame's India Records.
           </div>
           <div style={{ fontFamily:"'DM Sans', sans-serif", fontSize:10.5, color:"#9CA3AF", marginTop:5, lineHeight:1.4 }}>
-            $52M from IMAX in three days — the format&apos;s biggest opening weekend ever — plus the national top 10, Jana Nayagan&apos;s Day 1, how our calls scored, and the Aug 14 Batwara vs Awarapan 2 rematch
+            Brand New Day tracks to the biggest Hollywood opening India has ever seen with a record BMS advance, plus how Odyssey and Jana Nayagan hold, the estimated Top 10, this week&apos;s OTT moves, and Ramayana + Batwara on the horizon
           </div>
-          <span style={{ fontFamily:"'Barlow Condensed', sans-serif", fontWeight:700, fontSize:11, color:"#E5C882", letterSpacing:"0.06em", marginTop:8 }}>SEE THE UPDATE →</span>
+          <span style={{ fontFamily:"'Barlow Condensed', sans-serif", fontWeight:700, fontSize:11, color:"#E5C882", letterSpacing:"0.06em", marginTop:8 }}>READ THE PREVIEW →</span>
         </div>
       </div>
     </a>
