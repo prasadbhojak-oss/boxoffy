@@ -277,24 +277,6 @@
   .postergrid-legend{display:flex;flex-wrap:wrap;gap:12px;margin:8px 0 22px;font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;color:#374151}
   .postergrid-legend .lg{display:inline-flex;align-items:center;gap:6px}
   .postergrid-legend .sw{width:10px;height:10px;border-radius:2px;display:inline-block}
-
-  /* Card artwork panel */
-  .postergrid .card{padding:0;overflow:hidden;position:relative}
-  .postergrid .card .media{position:relative;flex:1;min-height:0;display:flex;align-items:center;justify-content:center;padding:12px 12px 0;background:rgba(0,0,0,.2)}
-  .postergrid .card .media .artwork{width:100%;height:100%;max-height:150px;display:block}
-  .postergrid .card .info{padding:12px 13px;background:linear-gradient(180deg,transparent 0%,rgba(0,0,0,.35) 100%)}
-  .postergrid .card .pbadge{font-family:var(--mono);font-size:9px;letter-spacing:.13em;font-weight:700;text-transform:uppercase;opacity:.9;position:absolute;top:10px;left:12px;color:#fff;z-index:2;text-shadow:0 1px 2px rgba(0,0,0,.4)}
-  .postergrid .card .ttl{font-family:var(--display);font-weight:900;font-size:15px;line-height:1.05;letter-spacing:-.01em;margin:0 0 4px;color:#fff}
-  .postergrid .card .meta{font-family:var(--mono);font-size:9px;letter-spacing:.04em;color:rgba(255,255,255,.85);text-transform:uppercase;line-height:1.4}
-  .postergrid .card .num{font-family:var(--display);font-weight:900;font-size:12px;color:#ffd166;letter-spacing:.02em}
-  /* Banner tile artwork */
-  .banner-collage .tile{padding:0;overflow:hidden;position:relative;display:flex;flex-direction:column}
-  .banner-collage .tile .media{flex:1;padding:14px 12px 0;display:flex;align-items:center;justify-content:center;position:relative}
-  .banner-collage .tile .media .artwork{width:100%;height:100%;max-height:130px;display:block}
-  .banner-collage .tile .pbadge{position:absolute;top:10px;left:10px;font-family:var(--mono);font-size:8.5px;letter-spacing:.13em;font-weight:700;text-transform:uppercase;color:#fff;z-index:2;text-shadow:0 1px 2px rgba(0,0,0,.5)}
-  .banner-collage .tile .info{padding:8px 12px 14px;background:linear-gradient(180deg,transparent 0%,rgba(0,0,0,.4) 100%)}
-  .banner-collage .tile .ttl{font-family:var(--display);font-weight:900;font-size:13px;line-height:1.05;color:#fff;letter-spacing:-.005em;margin-bottom:3px}
-  .banner-collage .tile .meta{font-family:var(--mono);font-size:8.5px;letter-spacing:.05em;color:rgba(255,255,255,.75);text-transform:uppercase}
 </style>
 </head><body>
 <header class="mast">
@@ -308,58 +290,48 @@
   <section>
     <div class="banner banner-collage">
       <div class="strip">
-        <div class="tile reelshort"><div class="pbadge">ReelShort</div><div class="media"><svg class="artwork" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-  <defs><radialGradient id="moon1" cx=".7" cy=".3" r=".5"><stop offset="0" stop-color="#fff5d6" stop-opacity=".9"/><stop offset="1" stop-color="#fff5d6" stop-opacity="0"/></radialGradient></defs>
-  <circle cx="140" cy="55" r="26" fill="#fff5d6" opacity=".95"/>
-  <circle cx="140" cy="55" r="42" fill="url(#moon1)"/>
-  <path d="M 20 200 L 20 145 Q 30 120 45 115 Q 55 90 75 85 L 85 60 L 95 78 L 105 55 L 115 78 L 125 62 L 130 90 Q 145 100 155 130 Q 165 155 165 200 Z" fill="#000" opacity=".72"/>
-  <path d="M 88 118 L 96 118 L 92 128 Z M 108 118 L 116 118 L 112 128 Z" fill="#fff5d6" opacity=".9"/>
-  <path d="M 92 148 Q 100 152 108 148" stroke="#fff5d6" stroke-width="2" fill="none" opacity=".7"/>
-</svg></div><div class="info"><div class="ttl">Fated to My Forbidden Alpha</div><div class="meta">All-time #1</div></div></div>
-        <div class="tile reelshort"><div class="pbadge">ReelShort</div><div class="media"><svg class="artwork" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-  <defs><linearGradient id="sky1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffd6a5"/><stop offset="1" stop-color="#ff8fa3" stop-opacity="0"/></linearGradient></defs>
-  <rect x="0" y="60" width="200" height="80" fill="url(#sky1)" opacity=".35"/>
-  <circle cx="160" cy="70" r="18" fill="#fff5d6" opacity=".95"/>
-  <path d="M 0 200 L 0 130 L 22 130 L 22 100 L 40 100 L 40 130 L 55 130 L 55 80 L 85 80 L 85 130 L 105 130 L 105 55 L 130 55 L 130 130 L 148 130 L 148 95 L 168 95 L 168 130 L 200 130 L 200 200 Z" fill="#000" opacity=".85"/>
-  <rect x="60" y="90" width="4" height="6" fill="#ffd166" opacity=".85"/>
-  <rect x="72" y="98" width="4" height="6" fill="#ffd166" opacity=".7"/>
-  <rect x="110" y="70" width="4" height="6" fill="#ffd166" opacity=".9"/>
-  <rect x="118" y="82" width="4" height="6" fill="#ffd166" opacity=".7"/>
-</svg></div><div class="info"><div class="ttl">Double Life of My Billionaire Husband</div><div class="meta">500M+ views</div></div></div>
-        <div class="tile dramabox"><div class="pbadge">DramaBox</div><div class="media"><svg class="artwork" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-  <defs><radialGradient id="glow1" cx=".5" cy=".5" r=".7"><stop offset="0" stop-color="#ffd6d6" stop-opacity=".55"/><stop offset="1" stop-color="#ffd6d6" stop-opacity="0"/></radialGradient></defs>
-  <circle cx="100" cy="100" r="80" fill="url(#glow1)"/>
-  <path d="M 70 200 L 70 150 Q 70 130 85 125 Q 85 110 100 105 Q 115 110 115 125 Q 130 130 130 150 L 130 200 Z" fill="#000" opacity=".7"/>
-  <circle cx="100" cy="88" r="16" fill="#000" opacity=".72"/>
-  <path d="M 132 200 L 132 145 Q 132 122 152 118 Q 152 100 170 95 L 170 108 Q 155 112 155 125 Q 170 132 170 152 L 170 200 Z" fill="#000" opacity=".55"/>
-  <circle cx="153" cy="80" r="13" fill="#000" opacity=".55"/>
-  <path d="M 145 45 Q 138 35 130 45 Q 122 55 145 68 Q 168 55 160 45 Q 152 35 145 45 Z" fill="#ffd6d6" opacity=".95"/>
-</svg></div><div class="info"><div class="ttl">Bound by Honor</div><div class="meta">Novel adaptation</div></div></div>
-        <div class="tile kuku"><div class="pbadge">Kuku TV · India</div><div class="media"><svg class="artwork" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-  <defs><linearGradient id="bld1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#c8c8c8"/><stop offset=".7" stop-color="#8b0000"/><stop offset="1" stop-color="#3b0000"/></linearGradient></defs>
-  <path d="M 40 40 L 60 55 L 80 30 L 100 55 L 120 30 L 140 55 L 160 40 L 155 85 L 45 85 Z" fill="#d4af37" opacity=".95"/>
-  <rect x="45" y="82" width="110" height="8" fill="#8b6914"/>
-  <circle cx="60" cy="42" r="5" fill="#8b0000"/><circle cx="100" cy="42" r="5" fill="#8b0000"/><circle cx="140" cy="42" r="5" fill="#8b0000"/>
-  <path d="M 95 105 L 105 105 L 108 175 L 100 190 L 92 175 Z" fill="url(#bld1)"/>
-  <rect x="88" y="103" width="24" height="6" fill="#3b1c00"/>
-  <path d="M 96 175 Q 100 200 104 175" fill="#8b0000" opacity=".85"/>
-</svg></div><div class="info"><div class="ttl">Revenge of My Fake Boyfriend</div><div class="meta">India headliner</div></div></div>
-        <div class="tile pocket"><div class="pbadge">Pocket TV · India</div><div class="media"><svg class="artwork" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-  <defs><radialGradient id="spot1" cx=".5" cy=".3" r=".6"><stop offset="0" stop-color="#ffd166" stop-opacity=".4"/><stop offset="1" stop-color="#ffd166" stop-opacity="0"/></radialGradient></defs>
-  <circle cx="100" cy="60" r="70" fill="url(#spot1)"/>
-  <path d="M 130 60 L 155 90 L 155 130 L 130 160 L 90 160 L 65 130 L 65 90 L 90 60 Z" fill="#000" opacity=".8" transform="rotate(-8 110 110)"/>
-  <text x="110" y="128" font-family="Georgia, serif" font-size="42" font-weight="bold" fill="#ffd166" text-anchor="middle" opacity=".95" transform="rotate(-8 110 118)">A</text>
-  <path d="M 50 170 L 62 170 L 62 182 L 50 182 Z M 60 158 L 72 158 L 72 170 L 60 170 Z" fill="#fff" opacity=".85"/>
-  <circle cx="53" cy="173" r="1.5" fill="#000"/><circle cx="59" cy="179" r="1.5" fill="#000"/>
-</svg></div><div class="info"><div class="ttl">Gambler</div><div class="meta">63M+ views</div></div></div>
-        <div class="tile tadka"><div class="pbadge">JioHotstar Tadka</div><div class="media"><svg class="artwork" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-  <defs><radialGradient id="ball1" cx=".35" cy=".35" r=".7"><stop offset="0" stop-color="#c8201a"/><stop offset="1" stop-color="#5a0f0c"/></radialGradient></defs>
-  <ellipse cx="100" cy="180" rx="60" ry="8" fill="#000" opacity=".2"/>
-  <circle cx="100" cy="95" r="55" fill="url(#ball1)"/>
-  <path d="M 100 40 Q 100 95 100 150" stroke="#fff5d6" stroke-width="1" fill="none" opacity=".5" stroke-dasharray="4 4"/>
-  <path d="M 45 95 Q 100 95 155 95" stroke="#fff5d6" stroke-width="1" fill="none" opacity=".5" stroke-dasharray="4 4"/>
-  <circle cx="100" cy="95" r="55" fill="none" stroke="#fff5d6" stroke-width="1.5" opacity=".7"/>
-</svg></div><div class="info"><div class="ttl">Tadka slate</div><div class="meta">100M users in 3 mo.</div></div></div>
+        <div class="tile reelshort">
+          <div class="pbadge">ReelShort</div>
+          <div>
+            <div class="ttl">Fated to My Forbidden Alpha</div>
+            <div class="meta">All-time #1</div>
+          </div>
+        </div>
+        <div class="tile reelshort">
+          <div class="pbadge">ReelShort</div>
+          <div>
+            <div class="ttl">Double Life of My Billionaire Husband</div>
+            <div class="meta">500M+ views</div>
+          </div>
+        </div>
+        <div class="tile dramabox">
+          <div class="pbadge">DramaBox</div>
+          <div>
+            <div class="ttl">Bound by Honor</div>
+            <div class="meta">Novel adaptation</div>
+          </div>
+        </div>
+        <div class="tile kuku">
+          <div class="pbadge">Kuku TV · India</div>
+          <div>
+            <div class="ttl">Revenge of My Fake Boyfriend</div>
+            <div class="meta">India headliner</div>
+          </div>
+        </div>
+        <div class="tile pocket">
+          <div class="pbadge">Pocket TV · India</div>
+          <div>
+            <div class="ttl">Gambler</div>
+            <div class="meta">63M+ views</div>
+          </div>
+        </div>
+        <div class="tile tadka">
+          <div class="pbadge">JioHotstar Tadka</div>
+          <div>
+            <div class="ttl">Tadka slate</div>
+            <div class="meta">100M users in 3 mo.</div>
+          </div>
+        </div>
       </div>
       <div class="btext">
         <span class="eyebrow">Boxoffy · Format Deep Dive · Streaming Intelligence · Aug 1, 2026</span>
@@ -381,7 +353,7 @@
 
   <section>
     <p class="lead">The most important number in global streaming this year is one almost no one in the industry is quoting.</p>
-    <p>Deloitte pegs in-app microdrama revenue at <b>$7.8 billion in 2026</b>, more than double the $3.8 billion recorded in 2025. Bring in analysts who include the full Chinese ecosystem — Sensor Tower, Media Partners Asia — and the number is closer to <b>$11 billion global for 2025 alone</b>. China by itself crossed $14.6 billion in 2025. The detail worth stopping on: microdrama revenue exceeded the mainland China box office for the first time in 2024, and the gap has widened since. In the United States, quarterly revenue jumped from about $180 million in Q1 2024 to roughly $700 million a year later. That is a 4× growth rate in a category that most streaming executives could not name six months ago.</p>
+    <p>Deloitte pegs in-app microdrama revenue at <b>$7.8 billion in 2026</b>, more than double the $3.8 billion recorded in 2025. Bring in analysts who include the full Chinese ecosystem — Sensor Tower, Media Partners Asia — and the number is closer to <b>$11 billion global for 2025 alone</b>. China by itself crossed $14.6 billion in 2025, and here is the detail that should be arresting for anyone in the theatrical or streaming business: microdrama revenue exceeded the mainland China box office for the first time in 2024, and the gap has widened since. In the United States, quarterly revenue jumped from about $180 million in Q1 2024 to roughly $700 million a year later. That is a 4× growth rate in a category that most streaming executives could not name six months ago.</p>
     <div class="scale">
       <h4>The scale, honestly</h4>
       <div class="subh">In-app microdrama revenue vs. adjacent formats — 2025 actuals unless noted</div>
@@ -393,13 +365,13 @@
       <div class="bar"><span class="lbl">Netflix India (2024)</span><div class="track"><div class="fill" style="width:15%; background:linear-gradient(90deg,#6B7280,#4b5563)">~$300M</div></div></div>
       <div class="note">Sources: Deloitte (global), Sensor Tower + MPA (China), Media Partners Asia + Lumikai (India). Netflix India revenue: MPA India OTT report.</div>
     </div>
-    <p>These are not niche numbers. $7.8 billion puts microdramas in the same revenue tier as global mobile-gaming genres like match-3, Candy Crush territory rather than Netflix territory. That framing, more than any of the demographic data, is the right way to read what is happening.</p>
+    <p>These are not niche numbers. $7.8 billion puts microdramas in the same revenue tier as global mobile-gaming genres like match-3 (Candy Crush territory) rather than in Netflix territory. And that framing, more than any of the demographic data, is the correct way to read what is actually happening.</p>
   </section>
 
   <section>
     <h2>The format, plainly.</h2>
     <p>A microdrama is a 60-to-100-episode narrative series, with each episode running 60 to 120 seconds, shot vertically for phone viewing. The genres are almost entirely romance and revenge: fated-mate werewolf billionaires, contract marriages, secret heiresses, memory-loss reunions. The production model is scripted, professionally shot, and cheap; ReelShort produces most of its US-set originals for well under $500,000 per full series.</p>
-    <p>The business model is the important part. The first eight to twelve episodes are typically free. From there, viewers unlock the rest either through a weekly subscription (ReelShort charges $20 a week in the US) or through per-episode microtransactions of 40 to 80 coins, which translate to something in the region of forty cents to a dollar per unlock. The average committed viewer will spend $40 to $70 to finish a full series. Retention is engineered around a cliffhanger per episode, not per act. This is a transaction loop, not a subscription business, and it has more in common with the way <i>Genshin Impact</i> monetises a session than the way Netflix monetises a queue.</p>
+    <p>The business model is the important part. The first eight to twelve episodes are typically free. From there, viewers unlock the rest either through a weekly subscription (ReelShort charges $20 a week in the US) or through per-episode microtransactions of 40 to 80 coins, which translate to something in the region of forty cents to a dollar per unlock. The average committed viewer will spend $40 to $70 to finish a full series. Retention is engineered around cliffhangers per episode: not per act, per episode. This is a transaction loop, not a subscription business. It has more in common with the way <i>Genshin Impact</i> monetises a session than the way Netflix monetises a queue.</p>
   </section>
 
   <section>
@@ -411,92 +383,19 @@
       <span class="lg"><span class="sw" style="background:#4c1d95"></span>Pocket TV / IN</span>
     </div>
     <div class="postergrid">
-      <div class="card reelshort"><div class="pbadge">ReelShort</div><div class="media"><svg class="artwork" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-  <defs><radialGradient id="moon1" cx=".7" cy=".3" r=".5"><stop offset="0" stop-color="#fff5d6" stop-opacity=".9"/><stop offset="1" stop-color="#fff5d6" stop-opacity="0"/></radialGradient></defs>
-  <circle cx="140" cy="55" r="26" fill="#fff5d6" opacity=".95"/>
-  <circle cx="140" cy="55" r="42" fill="url(#moon1)"/>
-  <path d="M 20 200 L 20 145 Q 30 120 45 115 Q 55 90 75 85 L 85 60 L 95 78 L 105 55 L 115 78 L 125 62 L 130 90 Q 145 100 155 130 Q 165 155 165 200 Z" fill="#000" opacity=".72"/>
-  <path d="M 88 118 L 96 118 L 92 128 Z M 108 118 L 116 118 L 112 128 Z" fill="#fff5d6" opacity=".9"/>
-  <path d="M 92 148 Q 100 152 108 148" stroke="#fff5d6" stroke-width="2" fill="none" opacity=".7"/>
-</svg></div><div class="info"><div class="ttl">Fated to My Forbidden Alpha</div><div class="meta">English · romance-fantasy<br>ReelShort all-time #1</div></div></div>
-      <div class="card reelshort"><div class="pbadge">ReelShort</div><div class="media"><svg class="artwork" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-  <defs><linearGradient id="sky1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffd6a5"/><stop offset="1" stop-color="#ff8fa3" stop-opacity="0"/></linearGradient></defs>
-  <rect x="0" y="60" width="200" height="80" fill="url(#sky1)" opacity=".35"/>
-  <circle cx="160" cy="70" r="18" fill="#fff5d6" opacity=".95"/>
-  <path d="M 0 200 L 0 130 L 22 130 L 22 100 L 40 100 L 40 130 L 55 130 L 55 80 L 85 80 L 85 130 L 105 130 L 105 55 L 130 55 L 130 130 L 148 130 L 148 95 L 168 95 L 168 130 L 200 130 L 200 200 Z" fill="#000" opacity=".85"/>
-  <rect x="60" y="90" width="4" height="6" fill="#ffd166" opacity=".85"/>
-  <rect x="72" y="98" width="4" height="6" fill="#ffd166" opacity=".7"/>
-  <rect x="110" y="70" width="4" height="6" fill="#ffd166" opacity=".9"/>
-  <rect x="118" y="82" width="4" height="6" fill="#ffd166" opacity=".7"/>
-</svg></div><div class="info"><div class="ttl">The Double Life of My Billionaire Husband</div><div class="meta">English · romance<br><span class="num">500M+ views</span></div></div></div>
-      <div class="card reelshort"><div class="pbadge">ReelShort</div><div class="media"><svg class="artwork" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-  <defs><linearGradient id="gold1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffd166"/><stop offset="1" stop-color="#8b6914"/></linearGradient></defs>
-  <circle cx="70" cy="100" r="42" fill="none" stroke="url(#gold1)" stroke-width="10"/>
-  <circle cx="130" cy="100" r="42" fill="none" stroke="url(#gold1)" stroke-width="10"/>
-  <path d="M 60 60 L 80 60 L 88 45 L 78 30 L 62 30 L 52 45 Z" fill="url(#gold1)"/>
-  <circle cx="70" cy="42" r="4" fill="#fff" opacity=".9"/>
-</svg></div><div class="info"><div class="ttl">Fake Married to My Billionaire CEO</div><div class="meta">English · arrangement-romance</div></div></div>
-      <div class="card reelshort"><div class="pbadge">ReelShort</div><div class="media"><svg class="artwork" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-  <path d="M 30 110 L 50 70 L 70 100 L 100 55 L 130 100 L 150 70 L 170 110 L 170 130 L 30 130 Z" fill="#d4af37" opacity=".95"/>
-  <circle cx="100" cy="82" r="9" fill="#e0c8ff" opacity=".95"/>
-  <circle cx="60" cy="98" r="5" fill="#c8e0ff" opacity=".9"/>
-  <circle cx="140" cy="98" r="5" fill="#c8e0ff" opacity=".9"/>
-  <rect x="30" y="128" width="140" height="8" fill="#8b6914"/>
-  <path d="M 60 155 L 90 175 L 100 165 L 110 175 L 140 155 L 130 200 L 70 200 Z" fill="#000" opacity=".55"/>
-</svg></div><div class="info"><div class="ttl">True Heiress vs Fake Queen Bee</div><div class="meta">English · revenge-romance<br><span class="num">395M+ views</span></div></div></div>
-      <div class="card dramabox"><div class="pbadge">DramaBox</div><div class="media"><svg class="artwork" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-  <defs><radialGradient id="glow1" cx=".5" cy=".5" r=".7"><stop offset="0" stop-color="#ffd6d6" stop-opacity=".55"/><stop offset="1" stop-color="#ffd6d6" stop-opacity="0"/></radialGradient></defs>
-  <circle cx="100" cy="100" r="80" fill="url(#glow1)"/>
-  <path d="M 70 200 L 70 150 Q 70 130 85 125 Q 85 110 100 105 Q 115 110 115 125 Q 130 130 130 150 L 130 200 Z" fill="#000" opacity=".7"/>
-  <circle cx="100" cy="88" r="16" fill="#000" opacity=".72"/>
-  <path d="M 132 200 L 132 145 Q 132 122 152 118 Q 152 100 170 95 L 170 108 Q 155 112 155 125 Q 170 132 170 152 L 170 200 Z" fill="#000" opacity=".55"/>
-  <circle cx="153" cy="80" r="13" fill="#000" opacity=".55"/>
-  <path d="M 145 45 Q 138 35 130 45 Q 122 55 145 68 Q 168 55 160 45 Q 152 35 145 45 Z" fill="#ffd6d6" opacity=".95"/>
-</svg></div><div class="info"><div class="ttl">Bound by Honor</div><div class="meta">English · Cora Reilly novel<br>Novel adaptation</div></div></div>
-      <div class="card reelshort"><div class="pbadge">ReelShort</div><div class="media"><svg class="artwork" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-  <defs><radialGradient id="blur1" cx=".5" cy=".5" r=".6"><stop offset="0" stop-color="#e0c8ff" stop-opacity=".5"/><stop offset="1" stop-color="#e0c8ff" stop-opacity="0"/></radialGradient></defs>
-  <circle cx="100" cy="100" r="70" fill="url(#blur1)"/>
-  <circle cx="100" cy="100" r="45" fill="none" stroke="#000" stroke-width="4" opacity=".65" stroke-dasharray="8 6"/>
-  <path d="M 100 100 L 100 65" stroke="#000" stroke-width="4" opacity=".72"/>
-  <path d="M 100 100 L 130 115" stroke="#000" stroke-width="3" opacity=".55"/>
-  <circle cx="100" cy="100" r="4" fill="#000" opacity=".85"/>
-  <path d="M 60 60 Q 70 65 65 75 M 140 140 Q 130 135 135 125" stroke="#000" stroke-width="2" fill="none" opacity=".4"/>
-</svg></div><div class="info"><div class="ttl">My Billionaire Husband Doesn’t Remember Me</div><div class="meta">English · amnesia-arc</div></div></div>
-      <div class="card reelshort"><div class="pbadge">ReelShort</div><div class="media"><svg class="artwork" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-  <defs><linearGradient id="gold1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffd166"/><stop offset="1" stop-color="#8b6914"/></linearGradient></defs>
-  <circle cx="70" cy="100" r="42" fill="none" stroke="url(#gold1)" stroke-width="10"/>
-  <circle cx="130" cy="100" r="42" fill="none" stroke="url(#gold1)" stroke-width="10"/>
-  <path d="M 60 60 L 80 60 L 88 45 L 78 30 L 62 30 L 52 45 Z" fill="url(#gold1)"/>
-  <circle cx="70" cy="42" r="4" fill="#fff" opacity=".9"/>
-</svg></div><div class="info"><div class="ttl">The Substitute Bride</div><div class="meta">English · arrangement-romance<br>60+ episode structure</div></div></div>
-      <div class="card reelshort"><div class="pbadge">ReelShort</div><div class="media"><svg class="artwork" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-  <defs><radialGradient id="moon1" cx=".7" cy=".3" r=".5"><stop offset="0" stop-color="#fff5d6" stop-opacity=".9"/><stop offset="1" stop-color="#fff5d6" stop-opacity="0"/></radialGradient></defs>
-  <circle cx="140" cy="55" r="26" fill="#fff5d6" opacity=".95"/>
-  <circle cx="140" cy="55" r="42" fill="url(#moon1)"/>
-  <path d="M 20 200 L 20 145 Q 30 120 45 115 Q 55 90 75 85 L 85 60 L 95 78 L 105 55 L 115 78 L 125 62 L 130 90 Q 145 100 155 130 Q 165 155 165 200 Z" fill="#000" opacity=".72"/>
-  <path d="M 88 118 L 96 118 L 92 128 Z M 108 118 L 116 118 L 112 128 Z" fill="#fff5d6" opacity=".9"/>
-  <path d="M 92 148 Q 100 152 108 148" stroke="#fff5d6" stroke-width="2" fill="none" opacity=".7"/>
-</svg></div><div class="info"><div class="ttl">Fated to My Billionaire Call Boy</div><div class="meta">English · Fated franchise<br>8 titles in series</div></div></div>
-      <div class="card pocket"><div class="pbadge">Pocket TV · India</div><div class="media"><svg class="artwork" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-  <defs><radialGradient id="spot1" cx=".5" cy=".3" r=".6"><stop offset="0" stop-color="#ffd166" stop-opacity=".4"/><stop offset="1" stop-color="#ffd166" stop-opacity="0"/></radialGradient></defs>
-  <circle cx="100" cy="60" r="70" fill="url(#spot1)"/>
-  <path d="M 130 60 L 155 90 L 155 130 L 130 160 L 90 160 L 65 130 L 65 90 L 90 60 Z" fill="#000" opacity=".8" transform="rotate(-8 110 110)"/>
-  <text x="110" y="128" font-family="Georgia, serif" font-size="42" font-weight="bold" fill="#ffd166" text-anchor="middle" opacity=".95" transform="rotate(-8 110 118)">A</text>
-  <path d="M 50 170 L 62 170 L 62 182 L 50 182 Z M 60 158 L 72 158 L 72 170 L 60 170 Z" fill="#fff" opacity=".85"/>
-  <circle cx="53" cy="173" r="1.5" fill="#000"/><circle cx="59" cy="179" r="1.5" fill="#000"/>
-</svg></div><div class="info"><div class="ttl">Gambler</div><div class="meta">Hindi · action-drama<br><span class="num">63M+ views</span></div></div></div>
-      <div class="card kuku"><div class="pbadge">Kuku TV · India</div><div class="media"><svg class="artwork" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-  <defs><radialGradient id="flame1" cx=".5" cy=".6" r=".4"><stop offset="0" stop-color="#fff5a0"/><stop offset=".6" stop-color="#ff9a00" stop-opacity=".8"/><stop offset="1" stop-color="#ff5a00" stop-opacity="0"/></radialGradient></defs>
-  <path d="M 20 200 L 20 155 L 40 155 L 45 130 L 55 130 L 55 90 L 75 90 L 75 60 L 100 30 L 125 60 L 125 90 L 145 90 L 145 130 L 155 130 L 160 155 L 180 155 L 180 200 Z" fill="#000" opacity=".82"/>
-  <path d="M 90 130 L 90 155 L 110 155 L 110 130 Z" fill="#000" opacity=".95"/>
-  <circle cx="100" cy="55" r="4" fill="#d4af37"/>
-  <ellipse cx="100" cy="175" rx="18" ry="6" fill="url(#flame1)" opacity=".9"/>
-  <path d="M 92 175 Q 100 148 108 175 Q 105 168 100 172 Q 95 168 92 175 Z" fill="#ff9a00" opacity=".95"/>
-  <path d="M 96 172 Q 100 158 104 172" fill="#fff5a0"/>
-</svg></div><div class="info"><div class="ttl">Kuku TV Slate</div><div class="meta">Multilingual · platform-level<br><span class="num">170M+ downloads</span></div></div></div>
+      <div class="card reelshort"><div class="pbadge">ReelShort</div><div><div class="ttl">Fated to My Forbidden Alpha</div><div class="meta">English · romance-fantasy<br>ReelShort all-time #1</div></div></div>
+      <div class="card reelshort"><div class="pbadge">ReelShort</div><div><div class="ttl">The Double Life of My Billionaire Husband</div><div class="meta">English · romance<br><span class="num">500M+ views</span></div></div></div>
+      <div class="card reelshort"><div class="pbadge">ReelShort</div><div><div class="ttl">Fake Married to My Billionaire CEO</div><div class="meta">English · arrangement-romance</div></div></div>
+      <div class="card reelshort"><div class="pbadge">ReelShort</div><div><div class="ttl">True Heiress vs Fake Queen Bee</div><div class="meta">English · revenge-romance<br><span class="num">395M+ views</span></div></div></div>
+      <div class="card dramabox"><div class="pbadge">DramaBox</div><div><div class="ttl">Bound by Honor</div><div class="meta">English · Cora Reilly novel<br>Novel adaptation</div></div></div>
+      <div class="card reelshort"><div class="pbadge">ReelShort</div><div><div class="ttl">My Billionaire Husband Doesn’t Remember Me</div><div class="meta">English · amnesia-arc</div></div></div>
+      <div class="card reelshort"><div class="pbadge">ReelShort</div><div><div class="ttl">The Substitute Bride</div><div class="meta">English · arrangement-romance<br>60+ episode structure</div></div></div>
+      <div class="card reelshort"><div class="pbadge">ReelShort</div><div><div class="ttl">Fated to My Billionaire Call Boy</div><div class="meta">English · Fated franchise<br>8 titles in series</div></div></div>
+      <div class="card pocket"><div class="pbadge">Pocket TV · India</div><div><div class="ttl">Gambler</div><div class="meta">Hindi · action-drama<br><span class="num">63M+ views</span></div></div></div>
+      <div class="card kuku"><div class="pbadge">Kuku TV · India</div><div><div class="ttl">Kuku TV Slate</div><div class="meta">Multilingual · platform-level<br><span class="num">170M+ downloads</span></div></div></div>
     </div>
     <p class="postergrid-caption">Global scale-defining slate. View figures are platform-reported or press-cited.</p>
-    <p class="take">The pattern in the top 10 is worth reading. Nine of ten are ReelShort or DramaBox. All ten are romance or revenge. The one India entry that scales, Kuku TV, does so at platform level rather than at title level. That reflects a genuinely different economic reality on the ground here.</p>
+    <p class="take">The pattern in the top 10 is worth reading. Nine of ten are ReelShort or DramaBox. All ten are romance or revenge. The one India entry that scales, Kuku TV, does so at platform level rather than at title level, which reflects a fundamentally different economic reality on the ground here.</p>
   </section>
 
   <section>
@@ -516,7 +415,7 @@
       <div class="pf"><div class="pn">Paramount Skydance, Lionsgate, Hallmark</div><div class="pd">All partnering with ReelShort. Not equity yet; distribution and licensing deals.</div></div>
       <div class="pf"><div class="pn">Range Media + Google 100 Zeros</div><div class="pd">Building slates with Bachelor/American Idol/Charlie’s Angels creators. Ex-CSI writer signed to GammaTime.</div></div>
     </div>
-    <p>Notice the pattern. <b>US studios are buying access, not acquiring companies.</b> Fox’s equity in MyDrama is the one meaningful exception, and even that is a minority position. Peacock, Paramount, Lionsgate and Hallmark are all licensing catalogue and testing distribution rather than committing capital to production. That is the Hollywood playbook when a format threatens to be big but the economics are unclear: license the upside, hedge the downside.</p>
+    <p>The pattern to notice: <b>US studios are buying access, not acquiring companies</b>. Fox’s equity in MyDrama is the one meaningful exception, and even that is a minority position. Peacock, Paramount, Lionsgate and Hallmark are all licensing catalogue and testing distribution rather than committing capital to production. That is the Hollywood playbook when a format threatens to be big but the economics are unclear: license the upside, hedge the downside.</p>
     <p>India is doing the opposite. YRF has committed <b>₹150 crore</b> to a D2C microdrama platform under construction. Excel Entertainment has an in-house division. Sippy Productions is adapting Bollywood IP directly for ReelShort. The Indian industry is building; the American industry is watching.</p>
   </section>
 
@@ -524,7 +423,7 @@
     <h2>The India read.</h2>
 
     <h3>What Indians are actually watching.</h3>
-    <p>The Indian microdrama slate looks nothing like the American one. ReelShort’s American library skews 75% female, dominated by werewolf-billionaire romance and dark-romance tropes. <b>Kuku TV</b>, India’s biggest platform, runs a Hindi-first slate with regional-language expansion, weighted toward action, revenge, mythology and family drama, with romance as one strand rather than the base. The platform ranks #1 in the microdrama category on Google Play in India, has crossed <b>170 million downloads</b>, and now claims a catalogue of 5,000+ shows and movies. Kuku has hired MS Dhoni as its brand ambassador, a signal that the platform is targeting mass appeal rather than niche urban audiences.</p>
+    <p>The Indian microdrama slate looks nothing like the American one. ReelShort’s American library is 75% female-skewing, dominated by werewolf-billionaire romance and dark-romance tropes. India’s biggest platform, <b>Kuku TV</b>, runs a slate that is largely Hindi-first with regional-language expansion, weighted toward action, revenge, mythology and family drama alongside the romance base. The platform ranks #1 in the microdrama category on Google Play in India, has crossed <b>170 million downloads</b>, and now claims a catalogue of 5,000+ shows and movies. Notably, it has hired MS Dhoni as its brand ambassador, a signal that the platform is targeting mass appeal rather than niche urban audiences.</p>
 
     <p>The titles doing volume on Indian platforms right now, from platform disclosures and press coverage:</p>
     <div class="postergrid-legend">
@@ -536,76 +435,17 @@
       <span class="lg"><span class="sw" style="background:#C8201A"></span>ReelShort (Bollywood-IP)</span>
     </div>
     <div class="postergrid">
-      <div class="card kuku"><div class="pbadge">Kuku TV</div><div class="media"><svg class="artwork" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-  <defs><linearGradient id="bld1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#c8c8c8"/><stop offset=".7" stop-color="#8b0000"/><stop offset="1" stop-color="#3b0000"/></linearGradient></defs>
-  <path d="M 40 40 L 60 55 L 80 30 L 100 55 L 120 30 L 140 55 L 160 40 L 155 85 L 45 85 Z" fill="#d4af37" opacity=".95"/>
-  <rect x="45" y="82" width="110" height="8" fill="#8b6914"/>
-  <circle cx="60" cy="42" r="5" fill="#8b0000"/><circle cx="100" cy="42" r="5" fill="#8b0000"/><circle cx="140" cy="42" r="5" fill="#8b0000"/>
-  <path d="M 95 105 L 105 105 L 108 175 L 100 190 L 92 175 Z" fill="url(#bld1)"/>
-  <rect x="88" y="103" width="24" height="6" fill="#3b1c00"/>
-  <path d="M 96 175 Q 100 200 104 175" fill="#8b0000" opacity=".85"/>
-</svg></div><div class="info"><div class="ttl">Revenge of My Fake Boyfriend</div><div class="meta">Hindi · revenge-romance<br>Kuku headline title</div></div></div>
-      <div class="card pocket"><div class="pbadge">Pocket TV</div><div class="media"><svg class="artwork" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-  <defs><radialGradient id="spot1" cx=".5" cy=".3" r=".6"><stop offset="0" stop-color="#ffd166" stop-opacity=".4"/><stop offset="1" stop-color="#ffd166" stop-opacity="0"/></radialGradient></defs>
-  <circle cx="100" cy="60" r="70" fill="url(#spot1)"/>
-  <path d="M 130 60 L 155 90 L 155 130 L 130 160 L 90 160 L 65 130 L 65 90 L 90 60 Z" fill="#000" opacity=".8" transform="rotate(-8 110 110)"/>
-  <text x="110" y="128" font-family="Georgia, serif" font-size="42" font-weight="bold" fill="#ffd166" text-anchor="middle" opacity=".95" transform="rotate(-8 110 118)">A</text>
-  <path d="M 50 170 L 62 170 L 62 182 L 50 182 Z M 60 158 L 72 158 L 72 170 L 60 170 Z" fill="#fff" opacity=".85"/>
-  <circle cx="53" cy="173" r="1.5" fill="#000"/><circle cx="59" cy="179" r="1.5" fill="#000"/>
-</svg></div><div class="info"><div class="ttl">Gambler</div><div class="meta">Hindi · action-drama<br><span class="num">63M+ views</span></div></div></div>
-      <div class="card kuku"><div class="pbadge">Kuku TV</div><div class="media"><svg class="artwork" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-  <defs><radialGradient id="flame1" cx=".5" cy=".6" r=".4"><stop offset="0" stop-color="#fff5a0"/><stop offset=".6" stop-color="#ff9a00" stop-opacity=".8"/><stop offset="1" stop-color="#ff5a00" stop-opacity="0"/></radialGradient></defs>
-  <path d="M 20 200 L 20 155 L 40 155 L 45 130 L 55 130 L 55 90 L 75 90 L 75 60 L 100 30 L 125 60 L 125 90 L 145 90 L 145 130 L 155 130 L 160 155 L 180 155 L 180 200 Z" fill="#000" opacity=".82"/>
-  <path d="M 90 130 L 90 155 L 110 155 L 110 130 Z" fill="#000" opacity=".95"/>
-  <circle cx="100" cy="55" r="4" fill="#d4af37"/>
-  <ellipse cx="100" cy="175" rx="18" ry="6" fill="url(#flame1)" opacity=".9"/>
-  <path d="M 92 175 Q 100 148 108 175 Q 105 168 100 172 Q 95 168 92 175 Z" fill="#ff9a00" opacity=".95"/>
-  <path d="M 96 172 Q 100 158 104 172" fill="#fff5a0"/>
-</svg></div><div class="info"><div class="ttl">Baahubali (microdrama)</div><div class="meta">Multilingual · mythology<br>IP adaptation</div></div></div>
-      <div class="card kuku"><div class="pbadge">Kuku TV · AI slate</div><div class="media"><svg class="artwork" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-  <defs><radialGradient id="flame1" cx=".5" cy=".6" r=".4"><stop offset="0" stop-color="#fff5a0"/><stop offset=".6" stop-color="#ff9a00" stop-opacity=".8"/><stop offset="1" stop-color="#ff5a00" stop-opacity="0"/></radialGradient></defs>
-  <path d="M 20 200 L 20 155 L 40 155 L 45 130 L 55 130 L 55 90 L 75 90 L 75 60 L 100 30 L 125 60 L 125 90 L 145 90 L 145 130 L 155 130 L 160 155 L 180 155 L 180 200 Z" fill="#000" opacity=".82"/>
-  <path d="M 90 130 L 90 155 L 110 155 L 110 130 Z" fill="#000" opacity=".95"/>
-  <circle cx="100" cy="55" r="4" fill="#d4af37"/>
-  <ellipse cx="100" cy="175" rx="18" ry="6" fill="url(#flame1)" opacity=".9"/>
-  <path d="M 92 175 Q 100 148 108 175 Q 105 168 100 172 Q 95 168 92 175 Z" fill="#ff9a00" opacity=".95"/>
-  <path d="M 96 172 Q 100 158 104 172" fill="#fff5a0"/>
-</svg></div><div class="info"><div class="ttl">Mythology Originals</div><div class="meta">Hindi · AI-generated<br>India AI Summit 2026</div></div></div>
-      <div class="card tadka"><div class="pbadge">JioHotstar Tadka</div><div class="media"><svg class="artwork" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-  <defs><radialGradient id="ball1" cx=".35" cy=".35" r=".7"><stop offset="0" stop-color="#c8201a"/><stop offset="1" stop-color="#5a0f0c"/></radialGradient></defs>
-  <ellipse cx="100" cy="180" rx="60" ry="8" fill="#000" opacity=".2"/>
-  <circle cx="100" cy="95" r="55" fill="url(#ball1)"/>
-  <path d="M 100 40 Q 100 95 100 150" stroke="#fff5d6" stroke-width="1" fill="none" opacity=".5" stroke-dasharray="4 4"/>
-  <path d="M 45 95 Q 100 95 155 95" stroke="#fff5d6" stroke-width="1" fill="none" opacity=".5" stroke-dasharray="4 4"/>
-  <circle cx="100" cy="95" r="55" fill="none" stroke="#fff5d6" stroke-width="1.5" opacity=".7"/>
-</svg></div><div class="info"><div class="ttl">Tadka Originals</div><div class="meta">Multilingual · mixed genre<br><span class="num">100M users · 3 mo.</span></div></div></div>
-      <div class="card reelshort"><div class="pbadge">ReelShort · India IP</div><div class="media"><svg class="artwork" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-  <defs><linearGradient id="gold1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffd166"/><stop offset="1" stop-color="#8b6914"/></linearGradient></defs>
-  <circle cx="70" cy="100" r="42" fill="none" stroke="url(#gold1)" stroke-width="10"/>
-  <circle cx="130" cy="100" r="42" fill="none" stroke="url(#gold1)" stroke-width="10"/>
-  <path d="M 60 60 L 80 60 L 88 45 L 78 30 L 62 30 L 52 45 Z" fill="url(#gold1)"/>
-  <circle cx="70" cy="42" r="4" fill="#fff" opacity=".9"/>
-</svg></div><div class="info"><div class="ttl">The Billionaire’s Fake Wife</div><div class="meta">English · romance<br>Sippy / Kissi Se Na Kehna</div></div></div>
-      <div class="card story"><div class="pbadge">Story TV</div><div class="media"><svg class="artwork" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-  <defs><radialGradient id="glow1" cx=".5" cy=".5" r=".7"><stop offset="0" stop-color="#ffd6d6" stop-opacity=".55"/><stop offset="1" stop-color="#ffd6d6" stop-opacity="0"/></radialGradient></defs>
-  <circle cx="100" cy="100" r="80" fill="url(#glow1)"/>
-  <path d="M 70 200 L 70 150 Q 70 130 85 125 Q 85 110 100 105 Q 115 110 115 125 Q 130 130 130 150 L 130 200 Z" fill="#000" opacity=".7"/>
-  <circle cx="100" cy="88" r="16" fill="#000" opacity=".72"/>
-  <path d="M 132 200 L 132 145 Q 132 122 152 118 Q 152 100 170 95 L 170 108 Q 155 112 155 125 Q 170 132 170 152 L 170 200 Z" fill="#000" opacity=".55"/>
-  <circle cx="153" cy="80" r="13" fill="#000" opacity=".55"/>
-  <path d="M 145 45 Q 138 35 130 45 Q 122 55 145 68 Q 168 55 160 45 Q 152 35 145 45 Z" fill="#ffd6d6" opacity=".95"/>
-</svg></div><div class="info"><div class="ttl">Story TV Slate</div><div class="meta">Hindi · romance-family<br><span class="num">80M users</span></div></div></div>
-      <div class="card zee5"><div class="pbadge">ZEE5 Bullet</div><div class="media"><svg class="artwork" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-  <defs><radialGradient id="fear1" cx=".5" cy=".2" r=".6"><stop offset="0" stop-color="#ffd166" stop-opacity=".5"/><stop offset="1" stop-color="#ffd166" stop-opacity="0"/></radialGradient></defs>
-  <rect x="0" y="0" width="200" height="200" fill="url(#fear1)"/>
-  <path d="M 100 50 L 130 90 L 128 140 L 72 140 L 70 90 Z" fill="#000" opacity=".82"/>
-  <circle cx="88" cy="105" r="4" fill="#fff5a0" opacity=".95"/>
-  <circle cx="112" cy="105" r="4" fill="#fff5a0" opacity=".95"/>
-  <path d="M 20 180 L 40 200 M 180 180 L 160 200 M 100 180 L 100 200" stroke="#000" stroke-width="1.5" opacity=".4"/>
-</svg></div><div class="info"><div class="ttl">Bullet Slate</div><div class="meta">Hindi · suspense/IP<br>Jul 2025 launch</div></div></div>
+      <div class="card kuku"><div class="pbadge">Kuku TV</div><div><div class="ttl">Revenge of My Fake Boyfriend</div><div class="meta">Hindi · revenge-romance<br>Kuku headline title</div></div></div>
+      <div class="card pocket"><div class="pbadge">Pocket TV</div><div><div class="ttl">Gambler</div><div class="meta">Hindi · action-drama<br><span class="num">63M+ views</span></div></div></div>
+      <div class="card kuku"><div class="pbadge">Kuku TV</div><div><div class="ttl">Baahubali (microdrama)</div><div class="meta">Multilingual · mythology<br>IP adaptation</div></div></div>
+      <div class="card kuku"><div class="pbadge">Kuku TV · AI slate</div><div><div class="ttl">Mythology Originals</div><div class="meta">Hindi · AI-generated<br>India AI Summit 2026</div></div></div>
+      <div class="card tadka"><div class="pbadge">JioHotstar Tadka</div><div><div class="ttl">Tadka Originals</div><div class="meta">Multilingual · mixed genre<br><span class="num">100M users · 3 mo.</span></div></div></div>
+      <div class="card reelshort"><div class="pbadge">ReelShort · India IP</div><div><div class="ttl">The Billionaire’s Fake Wife</div><div class="meta">English · romance<br>Sippy / Kissi Se Na Kehna</div></div></div>
+      <div class="card story"><div class="pbadge">Story TV</div><div><div class="ttl">Story TV Slate</div><div class="meta">Hindi · romance-family<br><span class="num">80M users</span></div></div></div>
+      <div class="card zee5"><div class="pbadge">ZEE5 Bullet</div><div><div class="ttl">Bullet Slate</div><div class="meta">Hindi · suspense/IP<br>Jul 2025 launch</div></div></div>
     </div>
     <p class="postergrid-caption">Indian slate. Platform-level scale is measured; per-title view data is thin.</p>
-    <p class="take">The pattern is different from the West. Where ReelShort’s American slate is romance-first for a 75%-female audience, the India slate leads with revenge, action, mythology and family drama, built for an audience that is <b>70% male</b> per the FICCI-EY 2026 report. That is one of the two data points that reframes how to think about this market.</p>
+    <p class="take">The pattern is different from the West. Where ReelShort’s American slate is romance-first for a 75%-female audience, the India slate is revenge, action, mythology and family drama first — built for an audience that is <b>70% male</b>, per the FICCI-EY 2026 report. That is one of the two data points that reframes how anyone should think about this market.</p>
 
     <h3>Who is watching, and how.</h3>
     <p>The joint Meta-Ormax study <i>Micro Dramas: The India Story</i> (March 2026), based on 2,000 interviews across 14 states, gives the clearest demographic picture of the format’s Indian audience available anywhere. The FICCI-EY 2026 report supplements it. Together, four numbers matter:</p>
@@ -617,37 +457,37 @@
       <div class="bar"><span class="lbl">Aged 18–34</span><div class="track"><div class="fill" style="width:80%">80%</div></div></div>
       <div class="bar"><span class="lbl">Tier-II/III cities</span><div class="track"><div class="fill" style="width:68%">60–75%</div></div></div>
       <div class="bar"><span class="lbl">Prefer native lang.</span><div class="track"><div class="fill" style="width:50%">50%</div></div></div>
-      <div class="note">Discovery: 89% via social feeds (Meta-Ormax). 65% discovered format in the past 12 months. Median 3.5 hours per week across 7–8 sessions. 57% watch in "ambient mode", alongside other tasks.</div>
+      <div class="note">Discovery: 89% via social feeds (Meta-Ormax). 65% discovered format in the past 12 months. Median 3.5 hours per week across 7–8 sessions. 57% watch in "ambient mode" — alongside other tasks.</div>
     </div>
 
-    <p>The four numbers rewire the strategic map. First, this is a <b>Tier-II/III Hindi-belt male audience aged 18–34</b> driving the volume. Not the upper-metro female audience ReelShort optimised around in the US, and not the urban English-speaking Instagram demographic Bollywood tentpoles chase. It is the same viewer whose theatrical taste made <i>Dhurandhar</i> and <i>Pushpa</i> mass-scale hits, now consuming vertical content on the same phone they use for UPI and cricket highlights. That is a real audience, largely underserved by mainstream OTT, and the format found them because <b>89% discovered it through social feeds</b>, not through app-store search. Instagram and Facebook Reels are effectively the front door of Indian microdrama distribution.</p>
+    <p>The four numbers rewire the strategic map. First, this is a <b>Tier-II/III Hindi-belt male audience aged 18–34</b> that is driving the volume — not the upper-metro female audience that ReelShort optimised around in the US, and not the urban English-speaking Instagram demographic that Bollywood tentpoles chase. It is the same viewer whose theatrical taste made <i>Dhurandhar</i> and <i>Pushpa</i> mass-scale hits, now consuming vertical content on the same phone they use for UPI and cricket highlights. That is a real audience, largely underserved by mainstream OTT, and the format found them because <b>89% discovered it through social feeds</b>, not through app-store search. Instagram and Facebook Reels are effectively the front door of Indian microdrama distribution.</p>
 
-    <p>Second, the <b>3.5 hours per week across 7–8 sessions</b> pattern, with 57% of viewing in ambient mode, tells you this is not appointment viewing. It is the second-screen slot people used to give to Facebook feeds and YouTube Shorts. Microdramas are not competing for Netflix time. They are competing for scroll time. That is why the retention economics work, and why streamers underestimating the format have misread it. The audience is coming out of the social-feed pie, not the OTT one.</p>
+    <p>Second, the <b>3.5 hours per week across 7–8 sessions</b> pattern, with 57% of viewing in ambient mode, tells you this is not appointment viewing. It is the second-screen slot people used to give to Facebook feeds and YouTube Shorts. Microdramas are not competing for Netflix time; they are competing for scroll time. That is why the retention economics work and why streamers underestimating the format have been reading it wrong. It is not carving audience out of the OTT pie. It is carving audience out of the social-feed pie.</p>
 
     <h3>Which demographic scales next.</h3>
     <p>Two audiences will drive the next phase of Indian growth, and they will not be reached by the same content or the same billing.</p>
 
-    <p><b>The volume engine will be the Tier-II/III male 18–34 viewer speaking Hindi as a first language, or a South Indian language as a first language.</b> This is Kuku TV, Story TV, JioHotstar Tadka and MX Fatafat’s core. The genres that will scale are revenge, action, mythology, family drama and comedy, not the werewolf-billionaire romance that runs the American market. Monetisation will be AVOD and micro-subscription (Kuku’s ₹2-a-day trial converting to ₹199-a-month plans), not per-episode unlocks. Regional-language expansion into Tamil, Telugu, Marathi and Bengali is where the biggest incremental growth sits, because 50% of the audience already prefers native-language content and the current slates are heavily Hindi.</p>
+    <p><b>The volume engine will be the Tier-II/III male 18–34 viewer speaking Hindi as a first language, or a South Indian language as a first language.</b> This is Kuku TV, Story TV, JioHotstar Tadka and MX Fatafat’s core. The genres that will scale are revenge, action, mythology, family drama and comedy — not the werewolf-billionaire romance that runs the American market. Monetisation will be AVOD and micro-subscription (Kuku’s ₹2-a-day trial converting to ₹199-a-month plans), not per-episode unlocks. Regional-language expansion into Tamil, Telugu, Marathi and Bengali is where the biggest incremental growth sits, because 50% of the audience already prefers native-language content and the current slates are heavily Hindi.</p>
 
     <p><b>The high-ARPU engine will be a much smaller upper-metro, English-comfortable, 25–40 female audience</b> that mirrors ReelShort’s American profile. This segment will pay for pay-per-unlock content in the way American viewers do, but the total addressable market for it in India is probably 8–12 million users, not the 100 million monthly actives the mass segment reaches. Sippy Productions’ Bollywood-IP-to-ReelShort strategy is really a bet on this second audience, monetised through global distribution rather than Indian ARPU. If Indian premium romance microdramas ever scale as a paid tier, it will be here.</p>
 
-    <p>The demographic worth watching is the third one nobody is talking about yet: <b>the 40+ Tier-II Hindi-belt woman</b>, already the largest single audience for Hindi television soaps. If someone builds a microdrama slate around the same beats, saas-bahu tensions, family melodrama and moral-choice cliffhangers, at a Hindi-television production level rather than a ReelShort-tropes level, that audience alone would double the format’s Indian ceiling. This is the space Balaji Telefilms understands better than anyone, which is why Kutting’s slate over the next twelve months is worth watching closely.</p>
+    <p>The demographic worth watching is the third one nobody is talking about yet: <b>the 40+ Tier-II Hindi-belt woman</b>, already the largest single audience for Hindi television soaps. If someone builds a microdrama slate that plays into the same beats — saas-bahu tensions, family melodrama, moral-choice cliffhangers — at a Hindi-television production level rather than a ReelShort-tropes level, that audience alone would double the format’s Indian ceiling. This is the space Balaji Telefilms understands better than anyone, which is why Kutting’s slate over the next twelve months is worth watching closely.</p>
 
     <div class="callout">
       <div class="tag">The Boxoffy India Angle</div>
       <h3>Pocket FM exited microdrama. Everyone else is piling in. Both moves are correct.</h3>
       <p>Pocket FM’s decision to exit the format despite India’s 100M-user audience is the single most important data point in the Indian market. Executives cited what they called an ARPU wall: Indian users engage enthusiastically but resist per-unlock pricing at scale. ReelShort charges $20 a week in the US because the American microdrama viewer is priced comparably to a Netflix subscription. The Indian viewer, benchmarked against a ₹199-a-month Hotstar plan, will not spend ₹50 to unlock the next four episodes of a romance. That is why JioHotstar Tadka launched as free/AVOD, why Kuku TV runs a ₹2-a-day trial that converts to a monthly plan, and why Kuku’s per-user revenue is a fraction of ReelShort’s.</p>
       <p><b>So India ends up with two microdrama markets in parallel</b>. There is the mass AVOD-driven market that will scale to Lumikai’s $3.1–3.4 billion FY2030 projection but generate much lower revenue per user. And there is a boutique premium market for pay-per-unlock, likely built around Bollywood-IP crossovers targeting global rather than Indian audiences. Sippy Productions sending <i>Kissi Se Na Kehna</i> to ReelShort is the archetypal move for the second market. YRF’s ₹150 Cr D2C build is a bet on the first.</p>
-      <p>Pocket FM exiting is not a signal that the format is failing. It is a signal that the specific per-unlock model that works in the US does not work at Indian ARPU. Everyone else piling in with a modified billing model, whether AVOD, low-cost subscription, or global-audience licensing, is doing exactly the right thing. The two positions are not contradictory; they are describing the same reality from opposite ends.</p>
+      <p>Pocket FM exiting is not a signal that the format is failing. It is a signal that the specific per-unlock model that works in the US does not work at Indian ARPU. Everyone else piling in with a modified billing model — AVOD, low-cost subscription, or global-audience licensing — is doing exactly the right thing. The two positions are not contradictory; they are describing the same reality from opposite ends.</p>
     </div>
   </section>
 
   <section>
     <h2>The Boxoffy read: what streaming will actually do next.</h2>
-    <p>Every trade publication is running the same line: that microdramas will force streamers to make shorter content. That framing is almost certainly wrong. Netflix and Prime are not going to launch 90-second vertical series. The disruption here is billing, not format.</p>
-    <p>What the $7.8 billion proves is that a meaningful global audience will spend money in <b>transaction increments inside content apps</b>, if the friction is low enough and the cliffhanger tight enough. Streamers have used subscriber counts as their only monetisation dial for a decade. Microdramas have quietly shown that the same viewer, given a pay-per-unlock button, will spend two to three times what they would on a subscription. That data will not be ignored much longer.</p>
-    <p><b>Our read</b>: expect major streamers to introduce hybrid pay-per-unlock inside their existing apps within eighteen months. Prime already tests channel add-ons and PVOD windows aggressively. Netflix has publicly explored premium add-ons for tentpole releases. The next logical step is per-episode pricing on specific tentpole drops, framed at first as “early access”, then normalised as a second monetisation lane alongside subscriptions. The microdrama industry’s long-term contribution to the streaming business will be its billing model, not its content format.</p>
-    <p>The category most exposed to this shift is the mid-tier general-entertainment SVOD, both in India and the US: services with too much library to justify pure microtransactions and too little tentpole IP to command premium windows. Everyone above and below them will absorb the shift more easily. Watch the middle over the next four quarters.</p>
+    <p>The framing every trade publication is using — that microdramas will force streamers to make shorter content — is almost certainly wrong. Netflix and Prime are not going to launch 90-second vertical series. The content type is not the disruption; the pricing model is.</p>
+    <p>What the $7.8 billion actually proves is that a meaningful global audience will spend money in <b>transaction increments inside content apps</b>, if the friction is low enough and the cliffhanger is tight enough. Streamers have been chasing subscriber counts as their only monetisation dial for a decade. Microdramas have quietly demonstrated that the same viewer, given a pay-per-unlock button, will spend two to three times what they would on a subscription. That data will not be ignored much longer.</p>
+    <p><b>Our read</b>: expect major streamers to introduce hybrid pay-per-unlock inside their existing apps within eighteen months. Prime already tests channel add-ons and PVOD windows aggressively. Netflix has publicly explored premium add-ons for tentpole releases. The next logical step is per-episode pricing on specific tentpole drops, at first framed as “early access”, then normalised as a second monetisation lane alongside subscriptions. The microdrama industry’s real long-term contribution to the streaming business will not be its content. It will be its billing.</p>
+    <p>The category most exposed to this shift is the mid-tier general-entertainment SVOD, both in India and the US: the services with too much library to justify pure microtransactions and too little tentpole IP to command premium windows. Everyone above and below them will absorb the shift more easily than they will. Watch that middle carefully over the next four quarters.</p>
     <div class="sharebar end" data-share="📱 MICRODRAMAS: THE $7.8B FORMAT NOBODY IS TALKING ABOUT. Deloitte says in-app revenue triples this year. China's already past its box office. In India, Pocket FM just exited despite the boom — there's a real ARPU wall. Boxoffy analysis 👇">
       <span class="sh-label">Share</span>
       <a class="sh wa" data-net="wa" aria-label="Share on WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.9 5-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.2.1-1.9-.1-.4-.1-1-.3-1.8-.6-3-1.3-5-4.4-5.2-4.6-.1-.2-1.2-1.6-1.2-3.1s.8-2.2 1-2.5c.3-.3.6-.4.8-.4h.6c.2 0 .4 0 .7.5l.9 2.1c.1.2.1.4 0 .6l-.4.6c-.2.2-.3.4-.1.7.2.3.9 1.4 1.9 2.3 1.3 1.1 2.3 1.5 2.6 1.6.3.1.5.1.7-.1l.8-1c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.5.4.1.1.1.6-.1 1.2Z"/></svg>WhatsApp</a>
