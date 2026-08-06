@@ -3772,7 +3772,7 @@ function ForeignFilmsPanel({ movies }) {
             </span>
           </div>
           <div style={{ fontFamily:"'DM Sans',sans-serif", fontSize:9, color:T.textMuted, letterSpacing:"0.18em", textTransform:"uppercase", marginTop:2 }}>
-            BOXOFFY · WKD 23 · JUN 5–7, 2026
+            BOXOFFY · WKD 31 · JUL 31–AUG 2, 2026
           </div>
         </div>
 
@@ -4305,14 +4305,14 @@ function WeekendPreviewHero() {
           ))}
         </div>
         <div style={{ flex:1, minWidth:0, display:"flex", flexDirection:"column", justifyContent:"center" }}>
-          <span style={{ alignSelf:"flex-start", background:"#16A34A", color:"#FFFFFF", fontFamily:"'Barlow Condensed', sans-serif", fontWeight:900, fontSize:9, letterSpacing:"0.12em", padding:"2px 7px", borderRadius:2, marginBottom:7 }}>WEEKEND PREVIEW · AUG 1–3</span>
+          <span style={{ alignSelf:"flex-start", background:"#C8201A", color:"#FFFFFF", fontFamily:"'Barlow Condensed', sans-serif", fontWeight:900, fontSize:9, letterSpacing:"0.12em", padding:"2px 7px", borderRadius:2, marginBottom:7 }}>WEEKEND RECAP · $927M GLOBAL</span>
           <div style={{ fontFamily:"'Barlow Condensed', sans-serif", fontWeight:900, fontSize:"clamp(15px, 1.7vw, 17px)", color:"#FFFFFF", lineHeight:1.15, letterSpacing:"-0.01em" }}>
-            Spider-Man Owns The Weekend — And He's Coming For Endgame's India Records.
+            SPIDER-MAN OBLITERATES BOX OFFICE. $927M Global Weekend, ₹200 Cr India In 3 Days.
           </div>
           <div style={{ fontFamily:"'DM Sans', sans-serif", fontSize:10.5, color:"#9CA3AF", marginTop:5, lineHeight:1.4 }}>
-            Brand New Day tracks to the biggest Hollywood opening India has ever seen with a record BMS advance, plus how Odyssey and Jana Nayagan hold, the estimated Top 10, this week&apos;s OTT moves, and Ramayana + Batwara on the horizon
+            2nd biggest opening weekend in film history. Day 1 US $168M — all-time record. India ₹180.20 Cr net — biggest Hollywood run ever. China $119M. Our full BCM scorecard: where we called it right, where we missed low.
           </div>
-          <span style={{ fontFamily:"'Barlow Condensed', sans-serif", fontWeight:700, fontSize:11, color:"#E5C882", letterSpacing:"0.06em", marginTop:8 }}>READ THE PREVIEW →</span>
+          <span style={{ fontFamily:"'Barlow Condensed', sans-serif", fontWeight:700, fontSize:11, color:"#E5C882", letterSpacing:"0.06em", marginTop:8 }}>READ THE RECAP →</span>
         </div>
       </div>
     </a>
