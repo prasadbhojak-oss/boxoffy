@@ -4277,14 +4277,14 @@ function UpcomingCalendarGrid({ movies }) {
 function WeekendPreviewHero() {
   // If a search-by-title poster ever mismatches (WTTJ shares its title with older films),
   // pin it instead with: useTMDBPosterById(<tmdbId>, "w185").
+  const pAwarapan = useTMDBPoster("Awarapan 2", "2026");
+  const pVishwanath = useTMDBPoster("Vishwanath and Sons", "2026");
   const pSpidey = useTMDBPoster("Spider-Man: Brand New Day", "2026");
-  const pOdyssey = useTMDBPoster("The Odyssey", "2026");
-  const pJana = useTMDBPoster("Jana Nayagan", "2026");
-  const pChennai = useTMDBPoster("Chennai Love Story", "2026");
-  const tiles = [ { src:pSpidey, ab:"SM" }, { src:pOdyssey, ab:"OD" }, { src:pJana, ab:"JN" }, { src:pChennai, ab:"CL" } ];
+  const pBatwara = useTMDBPoster("Batwara 1947", "2026");
+  const tiles = [ { src:pAwarapan, ab:"A2" }, { src:pVishwanath, ab:"VS" }, { src:pSpidey, ab:"SM" }, { src:pBatwara, ab:"B47" } ];
   const [hover, setHover] = React.useState(false);
   return (
-    <a href="/boxoffice-weekend-august-1-3-2026.html" style={{ textDecoration:"none", display:"block" }}>
+    <a href="/boxoffice-weekend-august-14-16-2026.html" style={{ textDecoration:"none", display:"block" }}>
       <div
         onMouseEnter={() => setHover(true)}
         onMouseLeave={() => setHover(false)}
@@ -4305,14 +4305,14 @@ function WeekendPreviewHero() {
           ))}
         </div>
         <div style={{ flex:1, minWidth:0, display:"flex", flexDirection:"column", justifyContent:"center" }}>
-          <span style={{ alignSelf:"flex-start", background:"#C8201A", color:"#FFFFFF", fontFamily:"'Barlow Condensed', sans-serif", fontWeight:900, fontSize:9, letterSpacing:"0.12em", padding:"2px 7px", borderRadius:2, marginBottom:7 }}>WEEKEND RECAP · $927M GLOBAL</span>
+          <span style={{ alignSelf:"flex-start", background:"#C8201A", color:"#FFFFFF", fontFamily:"'Barlow Condensed', sans-serif", fontWeight:900, fontSize:9, letterSpacing:"0.12em", padding:"2px 7px", borderRadius:2, marginBottom:7 }}>🇮🇳 INDEPENDENCE DAY SPECIAL</span>
           <div style={{ fontFamily:"'Barlow Condensed', sans-serif", fontWeight:900, fontSize:"clamp(15px, 1.7vw, 17px)", color:"#FFFFFF", lineHeight:1.15, letterSpacing:"-0.01em" }}>
-            SPIDER-MAN OBLITERATES BOX OFFICE. $927M Global Weekend, ₹200 Cr India In 3 Days.
+            EMRAAN TRIPLES SUNNY DEOL. Awarapan 2 Storms Independence Day At ₹21 Cr.
           </div>
           <div style={{ fontFamily:"'DM Sans', sans-serif", fontSize:10.5, color:"#9CA3AF", marginTop:5, lineHeight:1.4 }}>
-            2nd biggest opening weekend in film history. Day 1 US $168M — all-time record. India ₹180.20 Cr net — biggest Hollywood run ever. China $119M. Our full BCM scorecard: where we called it right, where we missed low.
+            Awarapan 2 opens triple Batwara 1947; Vishwanath and Sons roars in at ₹15 Cr; Spider-Man becomes India's biggest-ever Hollywood film. Friday-led Top 10 to Aug 16, the audience split, and how our calls graded.
           </div>
-          <span style={{ fontFamily:"'Barlow Condensed', sans-serif", fontWeight:700, fontSize:11, color:"#E5C882", letterSpacing:"0.06em", marginTop:8 }}>READ THE RECAP →</span>
+          <span style={{ fontFamily:"'Barlow Condensed', sans-serif", fontWeight:700, fontSize:11, color:"#E5C882", letterSpacing:"0.06em", marginTop:8 }}>READ THE WEEKEND →</span>
         </div>
       </div>
     </a>
