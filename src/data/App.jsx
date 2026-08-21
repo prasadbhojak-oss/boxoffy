@@ -418,7 +418,7 @@ function SharePanel({ movie, onClose }) {
   const total   = movie.indiaNet || (movie.totalNum > 0 ? "₹" + movie.totalNum + " Cr" : "");
   const verdict = movie.verdict || "";
   const wkNum   = movie.weekNum > 0 ? "Wk " + movie.weekNum : "";
-  const pageUrl = "https://www.boxoffy.com";   // always link to live weekly chart, not static film pages
+  const pageUrl = "https://boxoffy.com";   // always link to live weekly chart, not static film pages
 
   const tX       = title + (wk ? " — " + wk + " this week" : "") + (total ? " · " + total + " total" : "") + (verdict ? ". " + verdict + "." : "") + " #BoxOffice #Bollywood\n" + pageUrl;
   const tThreads = title + (wk ? " collected " + wk + " this week" : "") + (total ? " · " + total + " total" : "") + (verdict ? " · " + verdict : "") + "\n\nFull data & BCM model → " + pageUrl;
@@ -3335,7 +3335,7 @@ function USBoShareRow({ weekData }) {
   const dateRange = weekData?.dateRange || "";
   const headline  = weekData?.headline  || "";
   const top3      = (weekData?.chart || []).slice(0, 3);
-  const pageUrl   = "https://www.boxoffy.com";
+  const pageUrl   = "https://boxoffy.com";
 
   const tX = `🇺🇸 US Box Office · ${dateRange}\n\n` +
     top3.map((f, i) => `${i+1}. ${f.title} ${f.weekend}`).join("\n") +
@@ -3414,7 +3414,7 @@ function USBoFilmSharePanel({ film, onClose }) {
   const chg      = film.change || "";
   const wkNum    = film.weeks > 0 ? `Wk ${film.weeks}` : "";
   const flag     = film.isIndian ? "🇮🇳 " : "🇺🇸 ";
-  const pageUrl  = "https://www.boxoffy.com";
+  const pageUrl  = "https://boxoffy.com";
 
   const chgPart = chg && chg !== "NEW" && chg !== "LTD" ? ` (${chg} vs LW)` : chg === "NEW" ? " — Opening Weekend" : "";
 
@@ -3772,7 +3772,7 @@ function ForeignFilmsPanel({ movies }) {
             </span>
           </div>
           <div style={{ fontFamily:"'DM Sans',sans-serif", fontSize:9, color:T.textMuted, letterSpacing:"0.18em", textTransform:"uppercase", marginTop:2 }}>
-            BOXOFFY · WKD 31 · JUL 31–AUG 2, 2026
+            BOXOFFY · WKD 23 · JUN 5–7, 2026
           </div>
         </div>
 
@@ -4277,14 +4277,14 @@ function UpcomingCalendarGrid({ movies }) {
 function WeekendPreviewHero() {
   // If a search-by-title poster ever mismatches (WTTJ shares its title with older films),
   // pin it instead with: useTMDBPosterById(<tmdbId>, "w185").
-  const pAwarapan = useTMDBPoster("Awarapan 2", "2026");
-  const pKhalifa = useTMDBPoster("Khalifa", "2026");
-  const pToxic = useTMDBPoster("Toxic: A Fairy Tale for Grown-Ups", "2026");
-  const pBatwara = useTMDBPoster("Batwara 1947", "2026");
-  const tiles = [ { src:pAwarapan, ab:"A2" }, { src:pKhalifa, ab:"KH" }, { src:pToxic, ab:"TX" }, { src:pBatwara, ab:"B47" } ];
+  const pDhamaal = useTMDBPoster("Dhamaal 4", "2026");
+  const pWTTJ = useTMDBPoster("Welcome to the Jungle", "2026");
+  const pAlpha = useTMDBPoster("Alpha", "2026");
+  const pMoana = useTMDBPoster("Moana", "2026");
+  const tiles = [ { src:pDhamaal, ab:"D4" }, { src:pWTTJ, ab:"WJ" }, { src:pAlpha, ab:"AL" }, { src:pMoana, ab:"MO" } ];
   const [hover, setHover] = React.useState(false);
   return (
-    <a href="/boxoffice-weekend-august-20-23-2026.html" style={{ textDecoration:"none", display:"block" }}>
+    <a href="/weekend-preview-july-10-12-2026.html" style={{ textDecoration:"none", display:"block" }}>
       <div
         onMouseEnter={() => setHover(true)}
         onMouseLeave={() => setHover(false)}
@@ -4305,14 +4305,14 @@ function WeekendPreviewHero() {
           ))}
         </div>
         <div style={{ flex:1, minWidth:0, display:"flex", flexDirection:"column", justifyContent:"center" }}>
-          <span style={{ alignSelf:"flex-start", background:"#C8201A", color:"#FFFFFF", fontFamily:"'Barlow Condensed', sans-serif", fontWeight:900, fontSize:9, letterSpacing:"0.12em", padding:"2px 7px", borderRadius:2, marginBottom:7 }}>WEEK 34 · WEEKEND REPORT</span>
+          <span style={{ alignSelf:"flex-start", background:"#16A34A", color:"#FFFFFF", fontFamily:"'Barlow Condensed', sans-serif", fontWeight:900, fontSize:9, letterSpacing:"0.12em", padding:"2px 7px", borderRadius:2, marginBottom:7 }}>WEEKEND PREVIEW · JUL 10–12</span>
           <div style={{ fontFamily:"'Barlow Condensed', sans-serif", fontWeight:900, fontSize:"clamp(15px, 1.7vw, 17px)", color:"#FFFFFF", lineHeight:1.15, letterSpacing:"-0.01em" }}>
-            AWARAPAN 2 CROSSES ₹100 CR. Batwara 1947 Stalls At ₹32 Cr.
+            Dhamaal 4 Chases a Welcome to the Jungle-Sized Opening — or Bigger
           </div>
           <div style={{ fontFamily:"'DM Sans', sans-serif", fontSize:10.5, color:"#9CA3AF", marginTop:5, lineHeight:1.4 }}>
-            Emraan Hashmi is past ₹107.50 Cr in six days; Sunny Deol's Partition drama has stalled — and 17% of its total was Independence Day, not the film. Plus the Aug 21–23 Top 10, Toxic's advance, and the US board.
+            Dhamaal 4&apos;s Hype Index (74/100) and base case — Day 1 ₹13–19 Cr, weekend ₹52–68 Cr — plus the India &amp; US holdovers, Ikka on Netflix, and our predicted-vs-actual scorecard
           </div>
-          <span style={{ fontFamily:"'Barlow Condensed', sans-serif", fontWeight:700, fontSize:11, color:"#E5C882", letterSpacing:"0.06em", marginTop:8 }}>READ THE WEEKEND →</span>
+          <span style={{ fontFamily:"'Barlow Condensed', sans-serif", fontWeight:700, fontSize:11, color:"#E5C882", letterSpacing:"0.06em", marginTop:8 }}>SEE THE PREVIEW →</span>
         </div>
       </div>
     </a>

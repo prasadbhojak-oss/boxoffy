@@ -418,7 +418,7 @@ function SharePanel({ movie, onClose }) {
   const total   = movie.indiaNet || (movie.totalNum > 0 ? "₹" + movie.totalNum + " Cr" : "");
   const verdict = movie.verdict || "";
   const wkNum   = movie.weekNum > 0 ? "Wk " + movie.weekNum : "";
-  const pageUrl = "https://www.boxoffy.com";   // always link to live weekly chart, not static film pages
+  const pageUrl = "https://boxoffy.com";   // always link to live weekly chart, not static film pages
 
   const tX       = title + (wk ? " — " + wk + " this week" : "") + (total ? " · " + total + " total" : "") + (verdict ? ". " + verdict + "." : "") + " #BoxOffice #Bollywood\n" + pageUrl;
   const tThreads = title + (wk ? " collected " + wk + " this week" : "") + (total ? " · " + total + " total" : "") + (verdict ? " · " + verdict : "") + "\n\nFull data & BCM model → " + pageUrl;
@@ -3335,7 +3335,7 @@ function USBoShareRow({ weekData }) {
   const dateRange = weekData?.dateRange || "";
   const headline  = weekData?.headline  || "";
   const top3      = (weekData?.chart || []).slice(0, 3);
-  const pageUrl   = "https://www.boxoffy.com";
+  const pageUrl   = "https://boxoffy.com";
 
   const tX = `🇺🇸 US Box Office · ${dateRange}\n\n` +
     top3.map((f, i) => `${i+1}. ${f.title} ${f.weekend}`).join("\n") +
@@ -3414,7 +3414,7 @@ function USBoFilmSharePanel({ film, onClose }) {
   const chg      = film.change || "";
   const wkNum    = film.weeks > 0 ? `Wk ${film.weeks}` : "";
   const flag     = film.isIndian ? "🇮🇳 " : "🇺🇸 ";
-  const pageUrl  = "https://www.boxoffy.com";
+  const pageUrl  = "https://boxoffy.com";
 
   const chgPart = chg && chg !== "NEW" && chg !== "LTD" ? ` (${chg} vs LW)` : chg === "NEW" ? " — Opening Weekend" : "";
 
