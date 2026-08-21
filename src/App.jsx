@@ -6048,6 +6048,11 @@ function EditorialSection({ onNavigate }) {
 
 /* ── HEADER SNAPSHOT CARDS ──────────────────────────────────── */
 
+/* Consent key — read by the GA4 gate baked into every static page in public/.
+   Must stay "boxoffy_cookie_consent"; changing it silently disables analytics
+   sitewide and leaves Consent Mode permanently denied. */
+const CONSENT_KEY = "boxoffy_cookie_consent";
+
 function getConsent() {
   try { return localStorage.getItem(CONSENT_KEY); } catch { return null; }
 }
@@ -6119,8 +6124,9 @@ function CookieBanner({ onConsent }) {
               }}>Cookie Preferences</span>
             </div>
             <p style={{ fontSize:12, color:"#9CA3AF", lineHeight:1.65, margin:0 }}>
-              Boxoffy uses Google Analytics to understand how visitors use the site.
-              No personal data is sold or shared with advertisers.{" "}
+              Boxoffy uses analytics and advertising cookies to understand how the site
+              is read and to fund independent coverage. Nothing loads until you accept,
+              and we never sell your data.{" "}
               <button
                 onClick={() => setShowDetails(d => !d)}
                 style={{ background:"none", border:"none", color:T.accent, fontSize:12,

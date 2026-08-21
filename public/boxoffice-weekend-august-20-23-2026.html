@@ -1,6 +1,16 @@
 <!doctype html>
 <html lang="en">
 <head>
+<!-- Google Consent Mode v2 — defaults DENIED, must run before AdSense/GA4 -->
+<script>
+window.dataLayer=window.dataLayer||[];
+function gtag(){dataLayer.push(arguments);}
+gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied',wait_for_update:500});
+(function(){var c=null;try{c=localStorage.getItem("boxoffy_cookie_consent");}catch(e){}
+if(c==="accepted"){gtag('consent','update',{ad_storage:'granted',ad_user_data:'granted',ad_personalization:'granted',analytics_storage:'granted'});}})();
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4390119818827949" crossorigin="anonymous"></script>
+
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Box Office Weekend (Aug 21–23): Awarapan 2 Crosses ₹100 Cr, Batwara 1947 Underperforms, Toxic on the Horizon | Boxoffy</title>
@@ -570,79 +580,112 @@
    Those are token-free and safe to commit. No bearer token is embedded in
    this file and none should be added before deploy.
 ──────────────────────────────────────────────────────────────────────── */
+/* ── POSTER LOADING ─────────────────────────────────────────────────────
+   Matches the pattern used across the other weekend pages: posters resolve
+   from TMDB at load. If POSTERS below is filled with frozen image.tmdb.org
+   URLs, those are used directly and no API call is made — run once, open the
+   console, and paste the block it prints to make this page token-free.
+──────────────────────────────────────────────────────────────────────── */
 var POSTERS = {
-  /* banner */
   "awarapan":"", "khalifa":"", "toxic":"", "batwara":"", "spidey":"",
-  /* filmstrip — theatrical top 10 */
   "irumudi":"", "vishwanath":"", "dc":"", "oakstreet":"", "dhamaal":"", "odyssey":"",
-  /* filmstrip — streaming */
   "bandar":"", "jananayagan":"", "welcomejungle":"", "chennailove":"", "modharathri":"", "lenin":""
 };
 
-/* TMDB search terms, used only by the OPTIONAL local resolver below. */
+var BEARER = "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2YWM1OTY0NzEyZTA0NGRmMmJjMmFiYzFlMTFlZGMyYyIsIm5iZiI6MTc3Mzg4NTMxMS42MzIsInN1YiI6IjY5YmI1NzdmYjgyMzJhNzc5MjIxZWZjOCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.QxWkqL_4_3PfTnIVgcZYE0zlXQd9M2y5QL-oWNwq6dE";
+
 var FILMS = {
-  "awarapan":{q:"Awarapan 2",y:2026,lang:"hi"},        "khalifa":{q:"Khalifa",y:2026,lang:"ml"},
-  "toxic":{q:"Toxic A Fairy Tale for Grown-Ups",y:2026,lang:"kn"},
-  "batwara":{q:"Batwara 1947",y:2026,lang:"hi"},       "spidey":{q:"Spider-Man: Brand New Day",y:2026,lang:"en"},
-  "irumudi":{q:"Irumudi",y:2026,lang:"te"},            "vishwanath":{q:"Vishwanath and Sons",y:2026,lang:"ta"},
-  "dc":{q:"DC",y:2026,lang:"ta"},                      "oakstreet":{q:"The End of Oak Street",y:2026,lang:"en"},
-  "dhamaal":{q:"Dhamaal 4",y:2026,lang:"hi"},          "odyssey":{q:"The Odyssey",y:2026,lang:"en"},
-  "bandar":{q:"Bandar",y:2026,lang:"hi"},              "jananayagan":{q:"Jana Nayagan",y:2026,lang:"ta"},
-  "welcomejungle":{q:"Welcome to the Jungle",y:2026,lang:"hi"},
-  "chennailove":{q:"Chennai Love Story",y:2026,lang:"ta"},
-  "modharathri":{q:"Modha Rathri",y:2026,lang:"ml"},   "lenin":{q:"Lenin",y:2026,lang:"ta"}
+  "awarapan":      { q:"Awarapan 2",                       y:2026, lang:"hi", alt:["Awarapan"] },
+  "khalifa":       { q:"Khalifa",                          y:2026, lang:"ml", alt:[] },
+  "toxic":         { q:"Toxic: A Fairy Tale for Grown-Ups",y:2026, lang:"kn", alt:["Toxic"] },
+  "batwara":       { q:"Batwara 1947",                     y:2026, lang:"hi", alt:["Lahore 1947"] },
+  "spidey":        { q:"Spider-Man: Brand New Day",        y:2026, lang:"en", alt:[] },
+  "irumudi":       { q:"Irumudi",                          y:2026, lang:"te", alt:[] },
+  "vishwanath":    { q:"Vishwanath and Sons",              y:2026, lang:"ta", alt:["Vishwanath & Sons"] },
+  "dc":            { q:"DC",                               y:2026, lang:"ta", alt:[] },
+  "oakstreet":     { q:"The End of Oak Street",            y:2026, lang:"en", alt:[] },
+  "dhamaal":       { q:"Dhamaal 4",                        y:2026, lang:"hi", alt:["Dhamaal"] },
+  "odyssey":       { q:"The Odyssey",                      y:2026, lang:"en", alt:[] },
+  "bandar":        { q:"Bandar",                           y:2026, lang:"hi", alt:["Monkey In A Cage"] },
+  "jananayagan":   { q:"Jana Nayagan",                     y:2026, lang:"ta", alt:[] },
+  "welcomejungle": { q:"Welcome to the Jungle",            y:2026, lang:"hi", alt:[] },
+  "chennailove":   { q:"Chennai Love Story",               y:2026, lang:"ta", alt:[] },
+  "modharathri":   { q:"Modha Rathri",                     y:2026, lang:"ml", alt:[] },
+  "lenin":         { q:"Lenin",                            y:2026, lang:"ta", alt:[] }
 };
 
-function paintPoster(el, url){
+function paintPoster(el, url, eager){
+  if (!el) return;
   var img = document.createElement("img");
-  img.src = url; img.alt = ""; img.loading = "lazy";
-  img.onerror = function(){ img.remove(); el.classList.remove("has-img"); };
-  el.appendChild(img); el.classList.add("has-img");
+  img.src = url; img.alt = ""; img.loading = eager ? "eager" : "lazy";
+  img.onerror = function(){
+    img.remove();
+    el.classList.remove("has-img");
+    var fr = el.closest(".fframe"); if (fr) fr.classList.remove("has-img");
+  };
+  el.appendChild(img);
+  el.classList.add("has-img");
+  var fr = el.closest(".fframe"); if (fr) fr.classList.add("has-img");
 }
 
-/* Banner slots */
-document.querySelectorAll(".pslot").forEach(function(el){
-  var k = el.getAttribute("data-key");
-  if (POSTERS[k]) paintPoster(el, POSTERS[k]);
-});
-/* Filmstrip frames — image goes inside .fposter, has-img flips on the frame */
-document.querySelectorAll(".strip .fframe").forEach(function(el){
-  var k = el.getAttribute("data-key");
-  if (POSTERS[k]) paintPoster(el.querySelector(".fposter"), POSTERS[k]), el.classList.add("has-img");
-});
-
-/* ── OPTIONAL LOCAL RESOLVER ────────────────────────────────────────────
-   Run ONCE on your machine to fill POSTERS, then delete your token again.
-   1. Set BEARER below to your TMDB v4 token.
-   2. Open this file locally, wait for the strip to paint.
-   3. Copy the POSTERS block the console prints, paste it above.
-   4. Blank BEARER and DELETE this whole block before committing.
-   ⚠ Never deploy with a token in this file. Frozen image.tmdb.org URLs only.
-──────────────────────────────────────────────────────────────────────────
-var BEARER = "";
-if (BEARER) (async function(){
-  var out = {};
-  for (var key in FILMS){
-    if (POSTERS[key]) { out[key] = POSTERS[key]; continue; }
-    var f = FILMS[key];
-    try{
-      var u = "https://api.themoviedb.org/3/search/movie?query=" + encodeURIComponent(f.q) +
-              (f.y ? "&year=" + f.y : "") + "&language=en-US&page=1";
-      var r = await fetch(u, { headers:{ Authorization:"Bearer "+BEARER, accept:"application/json" } });
-      var res = (await r.json()).results || [];
-      var hit = res.find(function(x){ return x.poster_path && x.original_language === f.lang; })
-             || res.find(function(x){ return x.poster_path; });
-      out[key] = hit ? "https://image.tmdb.org/t/p/w342" + hit.poster_path : "";
-    } catch(e){ out[key] = ""; }
-  }
-  console.log("var POSTERS = " + JSON.stringify(out, null, 2) + ";");
-  document.querySelectorAll(".strip .fframe, .pslot").forEach(function(el){
-    var k = el.getAttribute("data-key"); if (!out[k]) return;
-    var t = el.classList.contains("fframe") ? el.querySelector(".fposter") : el;
-    paintPoster(t, out[k]); el.classList.add("has-img");
+/* Every slot that wants a poster: banner .pslot + filmstrip .fframe */
+function slots(){
+  var out = [];
+  document.querySelectorAll(".pslot[data-key]").forEach(function(el){
+    out.push({ key: el.getAttribute("data-key"), target: el, eager: true });
   });
+  document.querySelectorAll(".strip .fframe[data-key]").forEach(function(el){
+    out.push({ key: el.getAttribute("data-key"), target: el.querySelector(".fposter"), eager: false });
+  });
+  return out;
+}
+
+(function(){
+  var all = slots(), pending = [], frozen = {};
+
+  all.forEach(function(s){
+    if (POSTERS[s.key]) { paintPoster(s.target, POSTERS[s.key], s.eager); frozen[s.key] = POSTERS[s.key]; }
+    else pending.push(s);
+  });
+  if (!pending.length || !BEARER || BEARER.indexOf("eyJ") !== 0) return;
+
+  var H = { headers:{ Authorization:"Bearer " + BEARER, accept:"application/json" } },
+      cache = {};
+
+  /* Try the exact title with a year filter, then without, then any alternates. */
+  async function lookup(f){
+    var queries = [];
+    queries.push({ q:f.q, y:f.y });
+    queries.push({ q:f.q, y:null });
+    (f.alt || []).forEach(function(a){ queries.push({ q:a, y:null }); });
+    for (var i = 0; i < queries.length; i++){
+      try{
+        var u = "https://api.themoviedb.org/3/search/movie?query=" + encodeURIComponent(queries[i].q) +
+                (queries[i].y ? "&year=" + queries[i].y : "") + "&language=en-US&page=1";
+        var r = await fetch(u, H);
+        if (!r.ok) continue;
+        var res = (await r.json()).results || [];
+        var hit = res.find(function(x){ return x.poster_path && x.original_language === f.lang; })
+               || res.find(function(x){ return x.poster_path; });
+        if (hit) return "https://image.tmdb.org/t/p/w500" + hit.poster_path;
+      } catch(e){ /* try the next query shape */ }
+    }
+    return null;
+  }
+
+  (async function(){
+    for (var i = 0; i < pending.length; i++){
+      var s = pending[i], f = FILMS[s.key];
+      if (!f) continue;
+      if (cache[s.key] === undefined) cache[s.key] = await lookup(f);
+      if (cache[s.key]){ paintPoster(s.target, cache[s.key], s.eager); frozen[s.key] = cache[s.key]; }
+    }
+    var missing = Object.keys(FILMS).filter(function(k){ return !frozen[k]; });
+    console.log("── FROZEN POSTERS · paste over the POSTERS block above to drop the token ──\n" +
+                "var POSTERS = " + JSON.stringify(frozen, null, 2) + ";");
+    if (missing.length) console.warn("No TMDB poster found for: " + missing.join(", "));
+  })();
 })();
-──────────────────────────────────────────────────────────────────────── */
 
 /* ── SHARE BAR WIRING ─────────────────────────────────────────────────── */
 (function(){
