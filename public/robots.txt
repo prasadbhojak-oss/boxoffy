@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /boxoffy-admin.html
 
 Sitemap: https://www.boxoffy.com/sitemap.xml

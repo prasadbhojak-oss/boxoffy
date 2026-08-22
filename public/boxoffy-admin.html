@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<meta name="robots" content="noindex, nofollow, noarchive">
 <!-- Google Consent Mode v2 — defaults DENIED, must run before AdSense/GA4 -->
 <script>
 window.dataLayer=window.dataLayer||[];
@@ -149,7 +150,7 @@ pre{font-size:11px;color:#6B7280;line-height:1.7;white-space:pre-wrap;font-famil
   <input class="iw" id="su" placeholder="Apps Script URL"/>
   <input class="ip" id="tk" type="password" placeholder="Apps Script Token"/>
   <input class="ip" id="ak" type="password" placeholder="Anthropic API key (sk-ant-…)" style="min-width:190px"/>
-  <input class="iw" id="am" placeholder="Model" value="claude-sonnet-4-6" style="max-width:150px"/>
+  <select class="iw" id="am" style="max-width:170px" title="Model used by the research agent"><option value="claude-opus-5" selected>Opus 5 (best research)</option><option value="claude-sonnet-5">Sonnet 5 (faster/cheaper)</option></select>
   <button class="btn dark" onclick="connect()">Connect</button>
   <button class="btn ghost" onclick="saveCfg()">Save Config</button>
   <span id="cm" class="msg"></span>
@@ -388,7 +389,7 @@ pre{font-size:11px;color:#6B7280;line-height:1.7;white-space:pre-wrap;font-famil
 
 <script>
 // ── Gate password (separate from Apps Script token) ──
-const GATE_PW = "boxoffy2026";
+const GATE_PW = (localStorage.getItem("bx_pw") || "boxoffy2026");
 
 function unlock() {
   const pw = document.getElementById("gate-pw").value;
@@ -997,20 +998,42 @@ function extractJsonArray(text){
 }
 function aiSysPrompt(){
   return [
-"You are the Boxoffy INCU agent — India National Box Office Chart Update. You research the live India theatrical box office and return a clean ranked chart as JSON.",
+"You are the Boxoffy INCU agent. You research the live India theatrical box office and return a ranked chart as JSON. You work like a trade desk, not a summariser: you search per film, reconcile every figure against a second source, and show nothing you cannot support.",
 "",
-"WORKFLOW:",
-"1) Find ALL films running or releasing in India for the requested week — comprehensively across Hindi, Telugu, Tamil, Malayalam, Kannada, Marathi AND Hollywood/foreign releases in India. Include brand-new releases AND holdovers still in cinemas.",
-"2) For each film, get its collection for the requested WINDOW (see user message). Opening weekend = Friday to Sunday (3-day). Week-to-date as-of a day = Friday through that day, cumulative (e.g. as-of Tuesday = Fri+Sat+Sun+Mon+Tue). Use CONFIRMED actuals for days that have already happened; if the window includes days that have not happened yet, project them and set estimate=true.",
-"3) Rank by the WINDOW collection, highest first. Default depth = Top 10. BUT if 10 or more films are EACH collecting at least 1 crore in the window, extend to Top 15. Always include both new films and holdovers in the ranking.",
+"=== SOURCE HIERARCHY (strict) ===",
+"PRIMARY (a figure may lead from these): Sacnilk, Box Office India (BOI), Taran Adarsh, Komal Nahata / Film Information, Nishit Shaw (X).",
+"CALIBRATION ONLY (corroborates, never leads a published number): BFilmy (bfilmy.pages.dev) — useful for live PIC chain advance, all-India advance, and per-language splits. Cross-check against Sacnilk before using.",
+"EXCLUDED BY NAME (never source a number, even if freshest): Filmibeat, Koimoi, Sumit Kadel, Rohit Jaiswal, BollywoodLife, The Week, India.com, Tenvow. They may only confirm that a release exists.",
+"NORTH AMERICA / GLOBAL: Comscore, Box Office Guru, Venky Box Office, Box Office Mojo, Variety, Deadline.",
 "",
-"DATA SOURCING (strict): Prefer Box Office India (BOI), then Sacnilk, then Nishit Shaw (X). Pinkvilla, Taran Adarsh, Komal Nahata / Film Information may corroborate. NEVER take figures from Sumit Kadel or Rohit Jaiswal. Filmibeat, Koimoi, BollywoodLife, The Week, Outlook, India.com may only confirm a release exists, never supply the number. Never fabricate — if a number is unknown, estimate from comparable trend and set estimate=true. Never list GCC as a theatrical market for Dhurandhar.",
+"=== PER-FILM PROCEDURE (do this for EVERY film, one search each — never one combined query) ===",
+"1) Search the film by name for its day-wise India NET series.",
+"2) Sum the day-wise series and check it equals the reported cumulative. If it does not, you have mixed two series — resolve before continuing.",
+"3) NET vs GROSS: trackers often run a parallel GROSS series roughly 1.18x the net. Never mix them in one row. If a figure looks ~18% high, you are reading gross. State which you used.",
+"4) LIVE TICKERS: mid-day 'live' figures are partial-day counters, not finals. Discard them in favour of the finalised previous day.",
+"5) Two independent methods must agree before a number ships. If only one source has it, mark confidence 'estimate'.",
+"6) DAYS IN RELEASE = (as-of date − release date) + 1. Compute it; never carry forward a +7 increment.",
+"7) WORLDWIDE = India gross + overseas gross. Never add India NET to overseas gross.",
 "",
-"VERDICTS: one of TRACKING, Average, Below Average, Hit, Super Hit, Blockbuster, ALL-TIME BLOCKBUSTER, Flop, Disaster. Brand-new week-1 films are usually TRACKING unless clearly a disaster or blockbuster.",
+"=== NUMBERS DISCIPLINE ===",
+"- ATP is always DERIVED as real advance gross ÷ block-excluded tickets. Never quote a tracker's printed ATP column; it is inconsistent with its own arithmetic.",
+"- BLOCK SEATS: block-inflated advance does NOT predict a weak opening. Never haircut a figure on block ratio alone. Report real advance; note block separately.",
+"- Never fabricate. If a number is unknown, estimate from a named comparable, say which, and set confidence 'estimate'.",
+"- Cumulative can never DECREASE week over week. If your figure is lower than last week's, you have an error — recheck.",
+"- Never list GCC countries (UAE, Qatar, Oman, Bahrain, Saudi Arabia) as Dhurandhar 2 theatrical markets.",
 "",
-"OUTPUT: after researching, output ONLY a JSON array (no prose), wrapped in one ```json fenced block. One object per film, ranked. Schema per object:",
-'{ "title": str, "language": "Hindi|Hollywood|Tamil|Telugu|Malayalam|Kannada|Marathi", "genre": str, "director": str, "releaseDate": "YYYY-MM-DD", "isNew": bool, "weekNum": int, "days": int, "periodNet": number, "cumulativeNet": number, "ww": str, "budget": str, "verdict": str, "estimate": bool, "lastWeekNet": number|null, "note": str }',
-"Rules for fields: periodNet = nett ₹Cr collected in the WINDOW. cumulativeNet = total India nett ₹Cr to date. ww = worldwide gross as a short string e.g. \"₹366 Cr\" or \"$205M\". All ₹Cr numbers are plain numbers (no symbols/commas). isNew=true only if the film released within this window. note <=120 chars; append \"(est)\" if estimate=true."
+"=== VERDICT LADDER (ascending) ===",
+"Disaster < Flop < Below Average < Average < Hit < Super Hit < Blockbuster < ALL-TIME BLOCKBUSTER. Use TRACKING for any film inside its first week, or where the recovery is not yet decidable. Do not award Hit or better before day 14 unless the film has visibly crossed break-even.",
+"",
+"=== COVERAGE ===",
+"Every film running or releasing in India this week, across Hindi, Telugu, Tamil, Malayalam, Kannada, Marathi, Punjabi AND Hollywood/foreign releases in India. New releases AND holdovers. Rank by the WINDOW collection, highest first. Default Top 10; extend to Top 15 if ten or more films each cleared 1 crore in the window.",
+"",
+"=== OUTPUT ===",
+"Search first. Then output ONLY a JSON array in one ```json fenced block, no prose before or after. One object per film, ranked:",
+'{ "title": str, "language": "Hindi|Hollywood|Tamil|Telugu|Malayalam|Kannada|Marathi|Punjabi", "genre": str, "director": str, "releaseDate": "YYYY-MM-DD", "isNew": bool, "weekNum": int, "days": int, "periodNet": number, "cumulativeNet": number, "ww": str, "budget": str, "verdict": str, "confidence": "verified|derived|estimate", "sources": [str], "estimate": bool, "lastWeekNet": number|null, "note": str }',
+"periodNet = India NET in crore for the WINDOW. cumulativeNet = total India NET in crore to date. Both plain numbers, no symbols or commas. ww = short string e.g. \"₹366 Cr\" or \"$205M\". sources = the outlets you actually used for THAT film, e.g. [\"Sacnilk\",\"BOI\"] — this is audited, so be accurate. confidence: 'verified' = two primary sources agree; 'derived' = computed from a day-wise series; 'estimate' = projected. isNew = released within this window. note ≤120 chars, append \"(est)\" when estimate is true.",
+"",
+"If you run short of output room, return fewer films rather than a truncated array. A valid Top 8 beats a broken Top 15."
   ].join("\n");
 }
 function aiUserPrompt(week, asof, win, depth, extra){
@@ -1052,7 +1075,9 @@ function aiNormalize(raw){
     overseas:null, indiaGross:null, indiaWeekend:null, indiaWeekNo:0, weeksInTop10:0,
     bogRank:null, bogRankChange:null, usWeekend:null, usCumulative:null, intlCumulative:null,
     wwCumulative:null, theaterCount:null, theaterChange:null, perTheater:null,
-    distributor:null, cinemaScore:null, rtScore:null, _isNew: raw.isNew!==false
+    distributor:null, cinemaScore:null, rtScore:null, _isNew: raw.isNew!==false,
+    _confidence: raw.confidence || (raw.estimate ? "estimate" : "derived"),
+    _sources: Array.isArray(raw.sources) ? raw.sources : []
   };
 }
 function aiApply(arr){
@@ -1090,7 +1115,7 @@ function aiApply(arr){
 }
 async function aiResearch(){
   const key = aiVal("ak");
-  const model = aiVal("am") || "claude-sonnet-4-6";
+  const model = aiVal("am") || "claude-opus-5";
   if (!key) return aiLog("Add your Anthropic API key (sk-ant-…) in the config bar, then click Save Config.", "er");
   if (!wuzLoaded) aiLog("Tip: click 'Load Current Chart' first so holdovers get matched & updated (otherwise everything is treated as new).", "info");
   const week=aiVal("ai-week"), asof=aiVal("ai-asof")||new Date().toISOString().split("T")[0];
@@ -1102,16 +1127,33 @@ async function aiResearch(){
       method:"POST",
       headers:{ "content-type":"application/json","x-api-key":key,"anthropic-version":"2023-06-01","anthropic-dangerous-direct-browser-access":"true" },
       body: JSON.stringify({
-        model: model, max_tokens: 8000, system: aiSysPrompt(),
-        tools:[{type:"web_search_20250305", name:"web_search", max_uses:12}],
+        model: model, max_tokens: 32000, effort: "high", system: aiSysPrompt(),
+        tools:[{type:"web_search_20250305", name:"web_search", max_uses:30}],
         messages:[{role:"user", content: aiUserPrompt(week,asof,win,depth,extra)}]
       })
     });
     const data = await res.json();
     if (!res.ok || data.type==="error") throw new Error((data.error&&data.error.message) || ("HTTP "+res.status));
     const text = (data.content||[]).filter(b=>b.type==="text").map(b=>b.text).join("\n");
+    const searches = (data.content||[]).filter(b=>/search/i.test(b.type||"")).length;
+    if (data.stop_reason === "max_tokens") {
+      aiLog("Reply hit the output limit — the array is probably truncated. Re-run with a smaller depth (Top 10).", "er");
+    }
     const arr = extractJsonArray(text);
-    if (!arr || !arr.length) { aiLog("Couldn't parse a film array from the reply. Full text logged to console (F12).", "er"); console.log("AI raw:\n", text); return; }
+    if (!arr || !arr.length) {
+      aiLog("Couldn't parse a film array. stop_reason=" + (data.stop_reason||"?") + ". Raw reply in console (F12).", "er");
+      console.log("AI raw:\n", text); return;
+    }
+    const u = data.usage || {};
+    aiLog("Built " + arr.length + " films · " + searches + " web searches · " +
+          (u.input_tokens||0) + " in / " + (u.output_tokens||0) + " out tokens.", "ok");
+    const weak = arr.filter(f=>f.confidence==="estimate").map(f=>f.title);
+    if (weak.length) aiLog("Estimate-only (verify before publishing): " + weak.join(", "), "info");
+    const unsourced = arr.filter(f=>!f.sources || !f.sources.length).map(f=>f.title);
+    if (unsourced.length) aiLog("⚠ No sources declared: " + unsourced.join(", "), "er");
+    window.__aiLastRun = { arr: arr, raw: text, at: new Date().toISOString() };
+    aiLog("Full JSON copied to console as __aiLastRun — paste into Claude chat to QA it.", "info");
+    console.log("__aiLastRun JSON for QA:\n" + JSON.stringify(arr, null, 2));
     aiApply(arr);
   } catch(e){
     const hint = /Failed to fetch|NetworkError|CORS/i.test(e.message) ? " — if you opened this as a local file, host it over http(s) (e.g. boxoffy.com/admin) so the browser allows the API call." : (/401|invalid|x-api-key/i.test(e.message) ? " — check the API key." : "");
