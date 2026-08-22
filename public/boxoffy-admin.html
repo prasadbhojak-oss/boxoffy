@@ -403,16 +403,24 @@ function unlock() {
 }
 
 function init() {
+  originWarn();
   const c = JSON.parse(localStorage.getItem("bx")||"{}");
   if (c.s) document.getElementById("su").value = c.s;
   if (c.t) document.getElementById("tk").value = c.t;
   if (c.k) document.getElementById("ak").value = c.k;
-  if (c.m) document.getElementById("am").value = c.m;
+  if (c.m) { const sel=document.getElementById("am");
+    if ([...sel.options].some(o=>o.value===c.m)) sel.value=c.m;   // stale ids (claude-sonnet-4-6) would blank the select
+  }
   if (c.s && c.t) connect();
 }
 
 let S="", T="", films=[], dirty=new Set();
 
+function originWarn(){
+  if (location.hostname === "boxoffy.com") {
+    fl("cm","⚠ You are on boxoffy.com — saved config lives on www.boxoffy.com. Use the www URL.","er");
+  }
+}
 function saveCfg() {
   localStorage.setItem("bx", JSON.stringify({
     s: document.getElementById("su").value.trim(),
@@ -1123,17 +1131,28 @@ async function aiResearch(){
   aiLog("Researching live box office… web search runs server-side, ~30–90s. Hang tight.", "info");
   const btn=document.getElementById("ai-run"); if(btn) btn.disabled=true;
   try {
-    const res = await fetch("https://api.anthropic.com/v1/messages", {
-      method:"POST",
-      headers:{ "content-type":"application/json","x-api-key":key,"anthropic-version":"2023-06-01","anthropic-dangerous-direct-browser-access":"true" },
-      body: JSON.stringify({
-        model: model, max_tokens: 32000, effort: "high", system: aiSysPrompt(),
-        tools:[{type:"web_search_20250305", name:"web_search", max_uses:30}],
-        messages:[{role:"user", content: aiUserPrompt(week,asof,win,depth,extra)}]
-      })
-    });
-    const data = await res.json();
-    if (!res.ok || data.type==="error") throw new Error((data.error&&data.error.message) || ("HTTP "+res.status));
+    const H = { "content-type":"application/json","x-api-key":key,
+                "anthropic-version":"2023-06-01","anthropic-dangerous-direct-browser-access":"true" };
+    const baseBody = {
+      model: model, max_tokens: 32000, system: aiSysPrompt(),
+      tools:[{type:"web_search_20250305", name:"web_search", max_uses:30}],
+      messages:[{role:"user", content: aiUserPrompt(week,asof,win,depth,extra)}]
+    };
+    async function call(body){
+      const r = await fetch("https://api.anthropic.com/v1/messages",
+                            {method:"POST", headers:H, body:JSON.stringify(body)});
+      const d = await r.json();
+      return { ok: r.ok && d.type!=="error", status:r.status, data:d,
+               msg:(d.error&&d.error.message)||("HTTP "+r.status), type:(d.error&&d.error.type)||"" };
+    }
+    // effort is model-dependent; try with it, fall back cleanly if rejected
+    let out = await call(Object.assign({effort:"high"}, baseBody));
+    if (!out.ok && /invalid_request_error|Extra inputs|permitted|effort/i.test(out.msg + out.type)) {
+      aiLog("Model rejected effort:high — retrying without it.", "info");
+      out = await call(baseBody);
+    }
+    if (!out.ok) throw new Error(out.type ? (out.type + ": " + out.msg) : out.msg);
+    const data = out.data;
     const text = (data.content||[]).filter(b=>b.type==="text").map(b=>b.text).join("\n");
     const searches = (data.content||[]).filter(b=>/search/i.test(b.type||"")).length;
     if (data.stop_reason === "max_tokens") {
@@ -1156,8 +1175,20 @@ async function aiResearch(){
     console.log("__aiLastRun JSON for QA:\n" + JSON.stringify(arr, null, 2));
     aiApply(arr);
   } catch(e){
-    const hint = /Failed to fetch|NetworkError|CORS/i.test(e.message) ? " — if you opened this as a local file, host it over http(s) (e.g. boxoffy.com/admin) so the browser allows the API call." : (/401|invalid|x-api-key/i.test(e.message) ? " — check the API key." : "");
-    aiLog("AI error: " + e.message + hint, "er");
+    var m = e.message || String(e);
+    var hint = "";
+    if (/Failed to fetch|NetworkError|CORS/i.test(m))
+      hint = " — network/CORS. Open this over https, not as a local file.";
+    else if (/authentication_error|invalid x-api-key|401/i.test(m))
+      hint = " — the API KEY was rejected. Test it: curl https://api.anthropic.com/v1/models -H \"x-api-key: KEY\" -H \"anthropic-version: 2023-06-01\"";
+    else if (/credit balance|billing/i.test(m))
+      hint = " — the key is valid but the account has no API credit. Console credit is separate from a Claude.ai subscription.";
+    else if (/not_found_error|model/i.test(m))
+      hint = " — the MODEL id was rejected, not the key.";
+    else if (/invalid_request_error|Extra inputs|unexpected keyword|permitted/i.test(m))
+      hint = " — a REQUEST PARAMETER was rejected, not the key. Retrying without optional params…";
+    aiLog("AI error: " + m + hint, "er");
+    console.log("Full API error:", e);
   } finally {
     if(btn) btn.disabled=false;
   }
