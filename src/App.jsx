@@ -4277,14 +4277,14 @@ function UpcomingCalendarGrid({ movies }) {
 function WeekendPreviewHero() {
   // If a search-by-title poster ever mismatches (WTTJ shares its title with older films),
   // pin it instead with: useTMDBPosterById(<tmdbId>, "w185").
-  const pAwarapan = useTMDBPoster("Awarapan 2", "2026");
-  const pKhalifa = useTMDBPoster("Khalifa", "2026");
   const pToxic = useTMDBPoster("Toxic: A Fairy Tale for Grown-Ups", "2026");
-  const pBatwara = useTMDBPoster("Batwara 1947", "2026");
-  const tiles = [ { src:pAwarapan, ab:"A2" }, { src:pKhalifa, ab:"KH" }, { src:pToxic, ab:"TX" }, { src:pBatwara, ab:"B47" } ];
+  const pIrumudi = useTMDBPoster("Irumudi", "2026");
+  const pHaiwaan = useTMDBPoster("Haiwaan", "2026");
+  const pAwarapan = useTMDBPoster("Awarapan 2", "2026");
+  const tiles = [ { src:pToxic, ab:"TX" }, { src:pIrumudi, ab:"IR" }, { src:pHaiwaan, ab:"HW" }, { src:pAwarapan, ab:"A2" } ];
   const [hover, setHover] = React.useState(false);
   return (
-    <a href="/boxoffice-weekend-august-20-23-2026.html" style={{ textDecoration:"none", display:"block" }}>
+    <a href="/boxoffice-weekend-preview-august-28-30-2026.html" style={{ textDecoration:"none", display:"block" }}>
       <div
         onMouseEnter={() => setHover(true)}
         onMouseLeave={() => setHover(false)}
@@ -4305,12 +4305,12 @@ function WeekendPreviewHero() {
           ))}
         </div>
         <div style={{ flex:1, minWidth:0, display:"flex", flexDirection:"column", justifyContent:"center" }}>
-          <span style={{ alignSelf:"flex-start", background:"#C8201A", color:"#FFFFFF", fontFamily:"'Barlow Condensed', sans-serif", fontWeight:900, fontSize:9, letterSpacing:"0.12em", padding:"2px 7px", borderRadius:2, marginBottom:7 }}>WEEK 34 · WEEKEND REPORT</span>
+          <span style={{ alignSelf:"flex-start", background:"#C8201A", color:"#FFFFFF", fontFamily:"'Barlow Condensed', sans-serif", fontWeight:900, fontSize:9, letterSpacing:"0.12em", padding:"2px 7px", borderRadius:2, marginBottom:7 }}>WEEK 35 · WEEKEND PREVIEW</span>
           <div style={{ fontFamily:"'Barlow Condensed', sans-serif", fontWeight:900, fontSize:"clamp(15px, 1.7vw, 17px)", color:"#FFFFFF", lineHeight:1.15, letterSpacing:"-0.01em" }}>
-            AWARAPAN 2 CROSSES ₹100 CR. Batwara 1947 Stalls At ₹32 Cr.
+            TOXIC OPENS WEDNESDAY. Boxoffy Calls ₹86 Cr Day 1 India.
           </div>
           <div style={{ fontFamily:"'DM Sans', sans-serif", fontSize:10.5, color:"#9CA3AF", marginTop:5, lineHeight:1.4 }}>
-            Emraan Hashmi is past ₹107.50 Cr in six days; Sunny Deol's Partition drama has stalled — and 17% of its total was Independence Day, not the film. Plus the Aug 21–23 Top 10, Toxic's advance, and the US board.
+            Yash returns on 12,000 screens. Hindi ₹37 Cr, Kannada ₹28 Cr, ₹128 Cr worldwide — off a chain advance ranking 7th on the all-time Hindi 24-hour board. Plus the Aug 28–30 Top 10 and the US board.
           </div>
           <span style={{ fontFamily:"'Barlow Condensed', sans-serif", fontWeight:700, fontSize:11, color:"#E5C882", letterSpacing:"0.06em", marginTop:8 }}>READ THE WEEKEND →</span>
         </div>
