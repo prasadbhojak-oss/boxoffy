@@ -4277,14 +4277,14 @@ function UpcomingCalendarGrid({ movies }) {
 function WeekendPreviewHero() {
   // If a search-by-title poster ever mismatches (WTTJ shares its title with older films),
   // pin it instead with: useTMDBPosterById(<tmdbId>, "w185").
+  const pHanuman = useTMDBPoster("Hanuman Ansh", "2026");
+  const pMirzapur = useTMDBPoster("Mirzapur: The Movie", "2026");
+  const pBethlehem = useTMDBPoster("Bethlehem Kudumba Unit", "2026");
   const pToxic = useTMDBPoster("Toxic: A Fairy Tale for Grown-Ups", "2026");
-  const pIrumudi = useTMDBPoster("Irumudi", "2026");
-  const pHaiwaan = useTMDBPoster("Haiwaan", "2026");
-  const pAwarapan = useTMDBPoster("Awarapan 2", "2026");
-  const tiles = [ { src:pToxic, ab:"TX" }, { src:pIrumudi, ab:"IR" }, { src:pHaiwaan, ab:"HW" }, { src:pAwarapan, ab:"A2" } ];
+  const tiles = [ { src:pHanuman, ab:"HA" }, { src:pMirzapur, ab:"MZ" }, { src:pBethlehem, ab:"BKU" }, { src:pToxic, ab:"TX" } ];
   const [hover, setHover] = React.useState(false);
   return (
-    <a href="/boxoffice-weekend-preview-august-28-30-2026.html" style={{ textDecoration:"none", display:"block" }}>
+    <a href="/boxoffice-weekend-recap-september-4-6-2026.html" style={{ textDecoration:"none", display:"block" }}>
       <div
         onMouseEnter={() => setHover(true)}
         onMouseLeave={() => setHover(false)}
@@ -4305,12 +4305,12 @@ function WeekendPreviewHero() {
           ))}
         </div>
         <div style={{ flex:1, minWidth:0, display:"flex", flexDirection:"column", justifyContent:"center" }}>
-          <span style={{ alignSelf:"flex-start", background:"#C8201A", color:"#FFFFFF", fontFamily:"'Barlow Condensed', sans-serif", fontWeight:900, fontSize:9, letterSpacing:"0.12em", padding:"2px 7px", borderRadius:2, marginBottom:7 }}>WEEK 35 · WEEKEND PREVIEW</span>
+          <span style={{ alignSelf:"flex-start", background:"#C8201A", color:"#FFFFFF", fontFamily:"'Barlow Condensed', sans-serif", fontWeight:900, fontSize:9, letterSpacing:"0.12em", padding:"2px 7px", borderRadius:2, marginBottom:7 }}>WEEK 36 · WEEKEND RECAP</span>
           <div style={{ fontFamily:"'Barlow Condensed', sans-serif", fontWeight:900, fontSize:"clamp(15px, 1.7vw, 17px)", color:"#FFFFFF", lineHeight:1.15, letterSpacing:"-0.01em" }}>
-            TOXIC OPENS WEDNESDAY. Boxoffy Calls ₹86 Cr Day 1 India.
+            ₹2 CR IN. ₹101 CR OUT. Hanuman Ansh Returns 51x In 30 Days.
           </div>
           <div style={{ fontFamily:"'DM Sans', sans-serif", fontSize:10.5, color:"#9CA3AF", marginTop:5, lineHeight:1.4 }}>
-            Yash returns on 12,000 screens. Hindi ₹37 Cr, Kannada ₹28 Cr, ₹128 Cr worldwide — off a chain advance ranking 7th on the all-time Hindi 24-hour board. Plus the Aug 28–30 Top 10 and the US board.
+            Its biggest day of the entire run came on day 30. Toxic returned 0.31x in the same month. Plus Mirzapur's ₹92.75 Cr opening — Excel's biggest ever — the India Top 10 and the streaming index.
           </div>
           <span style={{ fontFamily:"'Barlow Condensed', sans-serif", fontWeight:700, fontSize:11, color:"#E5C882", letterSpacing:"0.06em", marginTop:8 }}>READ THE WEEKEND →</span>
         </div>
