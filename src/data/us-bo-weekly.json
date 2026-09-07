@@ -1306,5 +1306,193 @@
       "ytdDomestic": "~$5.9B through Aug 2 (+15% vs 2025)",
       "summer2026Outlook": "Spider-Man: Brand New Day sets new records for opening weekend (2nd all-time), Day 1 (#1 all-time), and previews (#1 all-time) · Only Endgame's $357M weekend record survives · 2026 summer now on pace for the biggest summer since 2019 · India records shattered"
     }
+  },
+  "Week 36, 2026": {
+    "dateRange": "Sep 4–6, 2026 · Labor Day Weekend (3-day)",
+    "headline": "Spider-Man takes a sixth straight #1 and crosses $900M domestic — only the second film ever. Coyote vs. Acme, written off by its own studio, holds at -29%.",
+    "source": "Comscore · Box Office Mojo · The Numbers · Deadline · Gold Derby · World of Reel",
+    "marketContext": {
+      "totalWeekendDom": "$69.5M top 10 (3-day est.)",
+      "yoyChange": "Labor Day frame running ahead of 2025 on holdover strength",
+      "ytdDomestic": "~$7.4B through Sep 6 (+14% vs 2025)",
+      "summer2026Outlook": "Summer closed as the 2nd-highest-grossing 123-day season on record at ~$4.61B through Aug 31 (Comscore/Rentrak). Spider-Man: Brand New Day is ~$28M from Star Wars: The Force Awakens' all-time domestic record of $936.6M and should pass it inside two weekends. Fall opens with Practical Magic 2 on Sep 11 and Resident Evil on Sep 18."
+    },
+    "indianSpotlight": [
+      {
+        "rank": 1,
+        "title": "Mirzapur: The Movie",
+        "studio": "Excel Entertainment / Amazon MGM",
+        "weekend": "~$0.69M (est.)",
+        "total": "₹92.75 Cr India net · ₹120 Cr WW",
+        "weeks": 1,
+        "change": "NEW",
+        "isIndian": true,
+        "admitsNote": "Did not chart in the US top 10 — 11th on our combined board · Excel's biggest opening day ever at ₹25.75 Cr, ahead of Gold's ₹25.25 Cr · Saturday grew 24% off a holiday Friday · NA figure derived from a ₹10.25 Cr two-day overseas gross at a typical 38% Hindi NA share, not a published split"
+      },
+      {
+        "rank": 2,
+        "title": "I'm Game",
+        "studio": "Wayfarer Films",
+        "weekend": "~$0.40M (est.)",
+        "total": "₹21.16 Cr India net · ₹36 Cr WW",
+        "weeks": 1,
+        "change": "NEW",
+        "isIndian": true,
+        "admitsNote": "Dulquer Salmaan, released Thu 3 Sep in five languages · Overseas is 46% of its worldwide, unusually high, driven by Gulf and NA Malayali markets · NA derived at a 27% share, not published"
+      },
+      {
+        "rank": 3,
+        "title": "Hanuman Ansh",
+        "studio": "Swambhu Media Network",
+        "weekend": "$0.00M",
+        "total": "₹101.38 Cr India net through day 30",
+        "weeks": 5,
+        "change": "—",
+        "isIndian": true,
+        "admitsNote": "NO OVERSEAS RELEASE TO DATE · A ₹2 Cr film returning 51x domestically with zero international footprint · Hombale Films takes it worldwide on 11 September — that number starts from zero"
+      }
+    ],
+    "chart": [
+      {
+        "rank": 1,
+        "title": "Spider-Man: Brand New Day",
+        "studio": "Sony Pictures / Marvel Studios",
+        "genre": "Superhero",
+        "weekend": "$17.0M",
+        "total": "$908.5M",
+        "theaters": 3612,
+        "weeks": 6,
+        "change": "-23%",
+        "rtScore": "93",
+        "isIndian": false,
+        "admitsNote": "6th consecutive #1 — nothing has done that since Avatar: The Way of Water (7) in 2022 · Crosses $900M domestic, only the 2nd film ever after Star Wars: The Force Awakens ($936.6M) · ~$28M from the all-time domestic record · ~1.48M admissions at a $11.50 blended ATP"
+      },
+      {
+        "rank": 2,
+        "title": "The Odyssey",
+        "studio": "Universal",
+        "genre": "Epic",
+        "weekend": "$12.0M",
+        "total": "$584.0M",
+        "theaters": 3105,
+        "weeks": 8,
+        "change": "-16%",
+        "rtScore": "94",
+        "isIndian": false,
+        "admitsNote": "8th weekend and briefly retook #1 on Wednesday · Within striking distance of $600M domestic · IMAX and PLF screens returned after Toxic cleared · ~1.04M admissions at a $11.50 blended ATP"
+      },
+      {
+        "rank": 3,
+        "title": "Coyote vs. Acme",
+        "studio": "Ketchup Entertainment",
+        "genre": "Animation / Comedy",
+        "weekend": "$11.3M",
+        "total": "$33.0M",
+        "theaters": 3727,
+        "weeks": 2,
+        "change": "-29%",
+        "rtScore": "88",
+        "isIndian": false,
+        "admitsNote": "Widest footprint in the top 10 at 3,727 locations — wider than Spider-Man · Written off by Warner Bros. as a tax loss, acquired by Ketchup · ~$60M spent on acquisition and marketing · ~0.98M admissions at a $11.50 blended ATP"
+      },
+      {
+        "rank": 4,
+        "title": "By Any Means",
+        "studio": "Paramount",
+        "genre": "Crime Thriller",
+        "weekend": "$7.4M",
+        "total": "$7.4M",
+        "theaters": 2840,
+        "weeks": 1,
+        "change": "NEW",
+        "rtScore": "41",
+        "isIndian": false,
+        "admitsNote": "Mark Wahlberg as mob hitman Gregory Scarpa, Yahya Abdul-Mateen II · Weak opening, reviews did not support it · ~0.64M admissions at a $11.50 blended ATP"
+      },
+      {
+        "rank": 5,
+        "title": "Insidious: Out of the Further",
+        "studio": "Sony / Blumhouse",
+        "genre": "Horror",
+        "weekend": "$6.5M",
+        "total": "$54.0M",
+        "theaters": 2915,
+        "weeks": 3,
+        "change": "-36%",
+        "rtScore": "52",
+        "isIndian": false,
+        "admitsNote": "Holding better than Insidious: Chapter 2 or The Red Door at the same stage · ~0.57M admissions at a $11.50 blended ATP"
+      },
+      {
+        "rank": 6,
+        "title": "Cars (20th Anniversary)",
+        "studio": "Disney / Pixar",
+        "genre": "Animation · Re-release",
+        "weekend": "$6.1M",
+        "total": "$6.1M",
+        "theaters": 2350,
+        "weeks": 1,
+        "change": "NEW",
+        "rtScore": "74",
+        "isIndian": false,
+        "admitsNote": "2006 original back for its 20th anniversary · Family draw over the long weekend · ~0.53M admissions at a $11.50 blended ATP"
+      },
+      {
+        "rank": 7,
+        "title": "The Dog Stars",
+        "studio": "20th Century Studios",
+        "genre": "Post-apocalyptic",
+        "weekend": "$2.8M",
+        "total": "$13.4M",
+        "theaters": 2680,
+        "weeks": 2,
+        "change": "-65%",
+        "rtScore": "38",
+        "isIndian": false,
+        "admitsNote": "Ridley Scott · $80M budget against $13.4M after two weekends · Sharpest drop on the board · ~0.24M admissions at a $11.50 blended ATP"
+      },
+      {
+        "rank": 8,
+        "title": "Buddy",
+        "studio": "Roadside Attractions / Saban",
+        "genre": "Horror Comedy",
+        "weekend": "$2.4M",
+        "total": "$9.6M",
+        "theaters": 1890,
+        "weeks": 2,
+        "change": "-56%",
+        "rtScore": "67",
+        "isIndian": false,
+        "admitsNote": "Casper Kelly · Made cheaply enough that the director expects it to recoup · ~0.21M admissions at a $11.50 blended ATP"
+      },
+      {
+        "rank": 9,
+        "title": "Onslaught",
+        "studio": "A24",
+        "genre": "Action Thriller",
+        "weekend": "$2.2M",
+        "total": "$2.2M",
+        "theaters": 1640,
+        "weeks": 1,
+        "change": "NEW",
+        "rtScore": "49",
+        "isIndian": false,
+        "admitsNote": "Adam Wingard's follow-up to The Guest · Semi-wide, opened soft · ~0.19M admissions at a $11.50 blended ATP"
+      },
+      {
+        "rank": 10,
+        "title": "Akira (4K Re-Release)",
+        "studio": "Sony / Crunchyroll",
+        "genre": "Anime · Re-release",
+        "weekend": "$1.8M",
+        "total": "$1.8M",
+        "theaters": 787,
+        "weeks": 1,
+        "change": "NEW",
+        "rtScore": "90",
+        "isIndian": false,
+        "admitsNote": "Highest per-screen average in the top 10 from only 787 locations · ~0.16M admissions at a $11.50 blended ATP"
+      }
+    ]
   }
 }
