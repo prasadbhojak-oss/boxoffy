@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Collage — Week 35 Preview · LOCAL ONLY · DO NOT COMMIT</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=DM+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{--ink:#0B0F16;--accent:#E8261A;--gold:#B8841F;--gold-soft:#D4A43A;--muted:#7D8899;
+        --disp:'Barlow Condensed',sans-serif;--body:'DM Sans',sans-serif;--mono:'IBM Plex Mono',monospace}
+  *{box-sizing:border-box}
+  body{margin:0;background:#F4F2ED;font-family:var(--body)}
+  .wrap{max-width:1180px;margin:0 auto;padding:20px 18px 60px}
+  .warn{background:#FBEBEA;border:2px solid var(--accent);border-radius:4px;padding:12px 16px;margin-bottom:16px}
+  .warn b{font-family:var(--disp);font-weight:900;font-size:20px;display:block}
+  .warn p{margin:3px 0 0;font-size:13px;color:#7a1512}
+  .bar{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:14px}
+  button{font-family:var(--body);font-weight:600;font-size:13px;border:1px solid var(--ink);background:var(--ink);
+         color:#fff;border-radius:3px;padding:9px 15px;cursor:pointer}
+  button.ghost{background:#fff;color:var(--ink)} button.on{background:var(--accent);border-color:var(--accent)}
+  button:disabled{opacity:.45;cursor:default}
+  #st{font-family:var(--mono);font-size:11px;color:#6B7280}
+  .prev{border:1px solid #ddd;background:#fff;padding:12px;overflow:auto}
+  .stage{transform-origin:top left}
+
+  #cv{background:var(--ink);color:#fff;position:relative;overflow:hidden;display:flex;flex-direction:column}
+  #cv.sq{width:1080px;height:1080px}
+  #cv.ls{width:1200px;height:675px}
+  #cv.st{width:1080px;height:1920px}
+
+  .mast{padding:24px 34px 14px;border-bottom:3px double var(--accent);display:flex;
+        justify-content:space-between;align-items:flex-start;gap:14px;flex:0 0 auto}
+  .lg{font-family:var(--disp);font-weight:800;font-size:27px;letter-spacing:-.5px;line-height:1}
+  .lg b{color:var(--accent)}
+  .lg span{display:block;font-family:var(--body);font-weight:400;font-size:8.5px;letter-spacing:3px;
+           color:var(--muted);text-transform:uppercase;margin-top:4px}
+  .wk{font-family:var(--mono);font-size:11px;font-weight:700;letter-spacing:1.8px;color:var(--gold-soft);
+      border:1px solid rgba(212,164,58,.45);padding:6px 11px;white-space:nowrap;text-align:right}
+
+  .hero{flex:0 0 auto;padding:16px 34px 4px}
+  .hero .k{font-family:var(--mono);font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--accent)}
+  .hero .t{font-family:var(--disp);font-weight:900;font-size:52px;line-height:.93;text-transform:uppercase;
+    letter-spacing:-1px;margin:6px 0 4px}
+  .hero .s{font-family:var(--mono);font-size:12px;color:var(--muted);letter-spacing:.5px}
+
+  .reel{flex:1 1 auto;display:flex;min-height:0;margin-top:14px}
+  .fr{flex:1;position:relative;overflow:hidden;background:#151C27;border-right:2px solid var(--ink)}
+  .fr:last-child{border-right:none}
+  .fr img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 15%;display:block}
+  .fr .ph{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;text-align:center;
+    padding:14px;font-family:var(--disp);font-weight:900;font-size:19px;line-height:1.05;
+    color:rgba(255,255,255,.20);text-transform:uppercase}
+  .fr.has .ph{display:none}
+  .fr .gr{position:absolute;left:0;right:0;bottom:0;height:52%;
+    background:linear-gradient(180deg,transparent,rgba(11,15,22,.94) 60%,rgba(11,15,22,.99))}
+  .fr .inf{position:absolute;left:0;right:0;bottom:0;padding:12px 12px 14px;z-index:2}
+  .fr .nm{font-family:var(--disp);font-weight:800;font-size:19px;line-height:1;text-transform:uppercase}
+  .fr .lang{font-family:var(--mono);font-size:8.5px;letter-spacing:1.1px;text-transform:uppercase;color:var(--muted);margin-top:3px}
+  .fr .val{font-family:var(--mono);font-weight:700;font-size:22px;color:var(--gold-soft);margin-top:6px}
+  .fr .tag{position:absolute;top:0;left:0;z-index:3;font-family:var(--mono);font-size:9px;font-weight:700;
+    padding:3px 8px;border-radius:0 0 5px 0;letter-spacing:.5px;background:var(--gold-soft);color:var(--ink)}
+  .fr.lead .tag{background:var(--accent);color:#fff}
+  .fr.lead .val{color:#FF6B60;font-size:26px}
+  .fr.exit .tag{background:#4B5563;color:#fff}
+  .fr.exit .nm,.fr.exit .val{color:#9AA5B4}
+  .fr.exit img{filter:grayscale(.85) brightness(.65)}
+
+  .punch{flex:0 0 auto;background:rgba(212,164,58,.10);border-top:1px solid rgba(212,164,58,.32);
+    padding:13px 34px;font-family:var(--disp);font-weight:800;font-size:25px;line-height:1.14}
+  .punch em{color:var(--gold-soft);font-style:normal}
+  .ft{flex:0 0 auto;padding:12px 34px 20px;display:flex;justify-content:space-between;align-items:flex-end;gap:16px}
+  .ft .l{font-family:var(--mono);font-size:9.5px;color:var(--muted);line-height:1.6}
+  .ft .l b{color:#fff}
+  .ft .r{font-family:var(--disp);font-weight:800;font-size:16px;color:var(--gold-soft);text-align:right;white-space:nowrap}
+
+  #cv.ls .hero .t{font-size:36px} #cv.ls .mast{padding:14px 24px 8px} #cv.ls .hero{padding:10px 24px 2px}
+  #cv.ls .fr .nm{font-size:15px} #cv.ls .fr .val{font-size:17px} #cv.ls .fr.lead .val{font-size:20px}
+  #cv.ls .punch{font-size:18px;padding:9px 24px} #cv.ls .ft{padding:8px 24px 12px}
+  #cv.st .hero .t{font-size:66px} #cv.st .fr .nm{font-size:24px} #cv.st .fr .val{font-size:28px}
+  #cv.st .punch{font-size:32px}
+</style>
+</head><body><div class="wrap">
+
+<div class="warn"><b>LOCAL TOOL — DO NOT COMMIT</b>
+<p>TMDB token in plaintext below. Keep out of <code>public/</code> and the repo.</p></div>
+
+<div class="bar">
+  <button id="load">Load posters</button>
+  <button class="ghost on" data-f="sq">Square 1080</button>
+  <button class="ghost" data-f="ls">Landscape 1200×675</button>
+  <button class="ghost" data-f="st">Story 1080×1920</button>
+  <button class="ghost" id="png" disabled>Export PNG</button>
+  <span id="st">Ready.</span>
+</div>
+
+<div class="prev"><div class="stage"><div id="cv" class="sq">
+  <div class="mast">
+    <div class="lg">BOXOF<b>FY</b><span>Box Office Intelligence</span></div>
+    <div class="wk">WEEK 35 · AUG 28–30</div>
+  </div>
+  <div class="hero">
+    <div class="k">Weekend Preview · India</div>
+    <div class="t">Toxic Opens<br>Wednesday</div>
+    <div class="s">Boxoffy call · ₹86 Cr Day 1 India net · ₹128 Cr worldwide</div>
+  </div>
+  <div class="reel" id="reel"></div>
+  <div class="punch">Hindi <em>₹37 Cr</em> · Kannada <em>₹28 Cr</em> · Telugu <em>₹12 Cr</em> — off a 2.05 lakh national-chain advance.</div>
+  <div class="ft">
+    <div class="l"><b>Published before release so it can be graded after.</b><br>
+      Estimates for the Aug 28–30 frame. Grey = losing screens to Toxic.</div>
+    <div class="r">boxoffy.com<br>@BoxoffyMI</div>
+  </div>
+</div></div></div>
+
+<script>
+/* ⚠ LOCAL ONLY */
+var BEARER = "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2YWM1OTY0NzEyZTA0NGRmMmJjMmFiYzFlMTFlZGMyYyIsIm5iZiI6MTc3Mzg4NTMxMS42MzIsInN1YiI6IjY5YmI1NzdmYjgyMzJhNzc5MjIxZWZjOCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.QxWkqL_4_3PfTnIVgcZYE0zlXQd9M2y5QL-oWNwq6dE";
+
+/* key, display, language, value, tag, state, tmdb query, year, alts */
+var F=[
+ {k:"toxic",  n:"Toxic",        l:"6 languages · Day 3–5", v:"₹95–120 Cr", tag:"NEW",   st:"lead",
+  q:"Toxic: A Fairy Tale for Grown-Ups", y:2026, alt:["Toxic A Fairy Tale for Grown Ups","Toxic"]},
+ {k:"irumudi",n:"Irumudi",      l:"Telugu · Week 2",       v:"₹18–24 Cr",  tag:"HOLD",  st:"",
+  q:"Irumudi", y:2026, alt:["Irumudi Ravi Teja"]},
+ {k:"awarapan",n:"Awarapan 2",  l:"Hindi · Week 3",        v:"₹8–11 Cr",   tag:"FADE",  st:"",
+  q:"Awarapan 2", y:2026, alt:["Awarapan"]},
+ {k:"khalifa",n:"Khalifa",      l:"Malayalam · Week 2",    v:"₹6–9 Cr",    tag:"FADE",  st:"",
+  q:"Khalifa", y:2026, alt:[]},
+ {k:"vas",    n:"Vishwanath",   l:"Ta+Te · Week 3",        v:"₹3–4.5 Cr",  tag:"SCREENS CUT", st:"exit",
+  q:"Vishwanath and Sons", y:2026, alt:["Vishwanath & Sons"]}
+];
+var COUNT={sq:5,ls:5,st:5};
+
+var reel=document.getElementById("reel"), st=document.getElementById("st"),
+    cv=document.getElementById("cv"), png=document.getElementById("png"), fmt="sq", cache={};
+
+function render(){
+  reel.innerHTML="";
+  F.slice(0,COUNT[fmt]).forEach(function(f){
+    var d=document.createElement("div");
+    d.className="fr "+(f.st||""); d.id="fr_"+f.k;
+    d.innerHTML='<span class="ph">'+f.n+'</span><div class="gr"></div>'+
+      '<span class="tag">'+f.tag+'</span>'+
+      '<div class="inf"><div class="nm">'+f.n+'</div><div class="lang">'+f.l+'</div>'+
+      '<div class="val">'+f.v+'</div></div>';
+    if(cache[f.k]) attach(d,cache[f.k]);
+    reel.appendChild(d);
+  });
+  fit();
+}
+function attach(el,url){
+  var i=new Image(); i.crossOrigin="anonymous";
+  i.onload=function(){ el.insertBefore(i,el.firstChild); el.classList.add("has"); };
+  i.src=url;
+}
+function fit(){
+  var w=cv.classList.contains("ls")?1200:1080;
+  var s=Math.min(1,(document.querySelector(".prev").clientWidth-26)/w);
+  document.querySelector(".stage").style.transform="scale("+s+")";
+  document.querySelector(".prev").style.height=(cv.offsetHeight*s+26)+"px";
+}
+document.querySelectorAll("[data-f]").forEach(function(b){
+  b.addEventListener("click",function(){
+    document.querySelectorAll("[data-f]").forEach(function(x){x.classList.remove("on")});
+    b.classList.add("on"); fmt=b.dataset.f; cv.className=fmt; render();
+  });
+});
+document.getElementById("load").addEventListener("click", async function(){
+  this.disabled=true;
+  var H={headers:{Authorization:"Bearer "+BEARER,accept:"application/json"}}, hit=0, miss=[];
+  for(var i=0;i<F.length;i++){
+    var f=F[i]; st.textContent="Loading "+(i+1)+"/"+F.length+" — "+f.n;
+    if(cache[f.k]){hit++;continue;}
+    var tries=[{q:f.q,y:f.y},{q:f.q,y:null}].concat(f.alt.map(function(a){return{q:a,y:null}}));
+    var got=null;
+    for(var t=0;t<tries.length;t++){
+      try{
+        var u="https://api.themoviedb.org/3/search/movie?language=en-US&page=1&query="+
+              encodeURIComponent(tries[t].q)+(tries[t].y?"&year="+tries[t].y:"");
+        var r=await fetch(u,H);
+        if(!r.ok){ if(r.status===401) console.error("TMDB 401 — token rejected"); continue; }
+        var res=(await r.json()).results||[];
+        var m=res.find(function(x){return x.poster_path});
+        if(m){ got="https://image.tmdb.org/t/p/w500"+m.poster_path; break; }
+      }catch(e){ console.error("fetch failed:",e.message); }
+      await new Promise(function(x){setTimeout(x,110)});
+    }
+    if(got){cache[f.k]=got;hit++;console.log("ok   "+f.k+" -> "+got);}
+    else {miss.push(f.n);console.warn("MISS "+f.k+" ('"+f.q+"')");}
+  }
+  render();
+  st.textContent=hit+"/"+F.length+" loaded"+(miss.length?" · missing: "+miss.join(", "):"");
+  png.disabled=false; this.disabled=false;
+});
+png.addEventListener("click",function(){
+  st.textContent="Rendering…";
+  var p=document.querySelector(".stage").style.transform;
+  document.querySelector(".stage").style.transform="none";
+  html2canvas(cv,{backgroundColor:"#0B0F16",scale:1,useCORS:true,width:cv.offsetWidth,height:cv.offsetHeight})
+   .then(function(c){
+     var a=document.createElement("a");
+     a.download="boxoffy-week35-preview-"+fmt+".png"; a.href=c.toDataURL("image/png"); a.click();
+     document.querySelector(".stage").style.transform=p; fit(); st.textContent="Exported.";
+   }).catch(function(e){
+     document.querySelector(".stage").style.transform=p; fit(); st.textContent="Failed: "+e.message;
+   });
+});
+render(); window.addEventListener("resize",fit);
+</script>
+</div></body></html>
