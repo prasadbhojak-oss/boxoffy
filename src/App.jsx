@@ -79,7 +79,11 @@ function rowToFilm(row) {
     showInMainChart:parseBool(row.showInMainChart),
     bogRank:parseNullInt(row.bogRank),
     estimated:parseBool(row.estimated),
-    pageUrl:row.pageUrl||null,
+    pageUrl:(function(u,t){
+      if(u&&String(u).trim()) return String(u).trim().replace(/^\//,"");
+      if(!t) return null;
+      return String(t).toLowerCase().replace(/['\u2019]/g,"").replace(/[^a-z0-9]+/g,"-").replace(/^-+|-+$/g,"")+"-box-office.html";
+    })(row.pageUrl,row.title),
     posterUrl:(row.posterUrl && typeof row.posterUrl === "string" && row.posterUrl.trim().replace(/\?+/g, "") !== "" && row.posterUrl.trim().startsWith("http")) ? row.posterUrl.trim() : null,
     studio:row.studio||null,
     betaModel:parseBool(row.betaModel),
@@ -4284,7 +4288,7 @@ function WeekendPreviewHero() {
   const tiles = [ { src:pHanuman, ab:"HA" }, { src:pMirzapur, ab:"MZ" }, { src:pBethlehem, ab:"BKU" }, { src:pToxic, ab:"TX" } ];
   const [hover, setHover] = React.useState(false);
   return (
-    <a href="/boxoffice-weekend-recap-september-4-6-2026.html" style={{ textDecoration:"none", display:"block" }}>
+    <a href="/weekend-insight-september-11-13-2026.html" style={{ textDecoration:"none", display:"block" }}>
       <div
         onMouseEnter={() => setHover(true)}
         onMouseLeave={() => setHover(false)}
@@ -4305,12 +4309,12 @@ function WeekendPreviewHero() {
           ))}
         </div>
         <div style={{ flex:1, minWidth:0, display:"flex", flexDirection:"column", justifyContent:"center" }}>
-          <span style={{ alignSelf:"flex-start", background:"#C8201A", color:"#FFFFFF", fontFamily:"'Barlow Condensed', sans-serif", fontWeight:900, fontSize:9, letterSpacing:"0.12em", padding:"2px 7px", borderRadius:2, marginBottom:7 }}>WEEK 36 · WEEKEND RECAP</span>
+          <span style={{ alignSelf:"flex-start", background:"#C8201A", color:"#FFFFFF", fontFamily:"'Barlow Condensed', sans-serif", fontWeight:900, fontSize:9, letterSpacing:"0.12em", padding:"2px 7px", borderRadius:2, marginBottom:7 }}>WEEK 37 · WEEKEND INSIGHT</span>
           <div style={{ fontFamily:"'Barlow Condensed', sans-serif", fontWeight:900, fontSize:"clamp(15px, 1.7vw, 17px)", color:"#FFFFFF", lineHeight:1.15, letterSpacing:"-0.01em" }}>
-            ₹2 CR IN. ₹101 CR OUT. Hanuman Ansh Returns 51x In 30 Days.
+            A FILM NOBODY BELIEVED IN. Bajrangbali Did. Hanuman Ansh Is Still Climbing In Week 6.
           </div>
           <div style={{ fontFamily:"'DM Sans', sans-serif", fontSize:10.5, color:"#9CA3AF", marginTop:5, lineHeight:1.4 }}>
-            Its biggest day of the entire run came on day 30. Toxic returned 0.31x in the same month. Plus Mirzapur's ₹92.75 Cr opening — Excel's biggest ever — the India Top 10 and the streaming index.
+            Week 5 held at 97% of Week 4 against two new releases. Now ₹170 Cr and rising on a ₹2 Cr budget. Plus Mirzapur past ₹210 Cr worldwide, the India and US Top 10s, and Drishyam: The Conclusion's record trailer.
           </div>
           <span style={{ fontFamily:"'Barlow Condensed', sans-serif", fontWeight:700, fontSize:11, color:"#E5C882", letterSpacing:"0.06em", marginTop:8 }}>READ THE WEEKEND →</span>
         </div>
