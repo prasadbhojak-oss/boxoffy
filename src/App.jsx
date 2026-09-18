@@ -4281,14 +4281,14 @@ function UpcomingCalendarGrid({ movies }) {
 function WeekendPreviewHero() {
   // If a search-by-title poster ever mismatches (WTTJ shares its title with older films),
   // pin it instead with: useTMDBPosterById(<tmdbId>, "w185").
+  const pResidentEvil = useTMDBPoster("Resident Evil", "2026");
   const pHanuman = useTMDBPoster("Hanuman Ansh", "2026");
   const pMirzapur = useTMDBPoster("Mirzapur: The Movie", "2026");
   const pBethlehem = useTMDBPoster("Bethlehem Kudumba Unit", "2026");
-  const pToxic = useTMDBPoster("Toxic: A Fairy Tale for Grown-Ups", "2026");
-  const tiles = [ { src:pHanuman, ab:"HA" }, { src:pMirzapur, ab:"MZ" }, { src:pBethlehem, ab:"BKU" }, { src:pToxic, ab:"TX" } ];
+  const tiles = [ { src:pResidentEvil, ab:"RE" }, { src:pHanuman, ab:"HA" }, { src:pMirzapur, ab:"MZ" }, { src:pBethlehem, ab:"BKU" } ];
   const [hover, setHover] = React.useState(false);
   return (
-    <a href="/weekend-insight-september-11-13-2026.html" style={{ textDecoration:"none", display:"block" }}>
+    <a href="/boxoffice-weekend-preview-september-18-20-2026.html" style={{ textDecoration:"none", display:"block" }}>
       <div
         onMouseEnter={() => setHover(true)}
         onMouseLeave={() => setHover(false)}
@@ -4309,14 +4309,14 @@ function WeekendPreviewHero() {
           ))}
         </div>
         <div style={{ flex:1, minWidth:0, display:"flex", flexDirection:"column", justifyContent:"center" }}>
-          <span style={{ alignSelf:"flex-start", background:"#C8201A", color:"#FFFFFF", fontFamily:"'Barlow Condensed', sans-serif", fontWeight:900, fontSize:9, letterSpacing:"0.12em", padding:"2px 7px", borderRadius:2, marginBottom:7 }}>WEEK 37 · WEEKEND INSIGHT</span>
+          <span style={{ alignSelf:"flex-start", background:"#C8201A", color:"#FFFFFF", fontFamily:"'Barlow Condensed', sans-serif", fontWeight:900, fontSize:9, letterSpacing:"0.12em", padding:"2px 7px", borderRadius:2, marginBottom:7 }}>WEEK 38 · WEEKEND PREVIEW</span>
           <div style={{ fontFamily:"'Barlow Condensed', sans-serif", fontWeight:900, fontSize:"clamp(15px, 1.7vw, 17px)", color:"#FFFFFF", lineHeight:1.15, letterSpacing:"-0.01em" }}>
-            A FILM NOBODY BELIEVED IN. Bajrangbali Did. Hanuman Ansh Is Still Climbing In Week 6.
+            THE ZOMBIE, THE DEVOTIONAL, AND A RECORD THAT FELL ON A TUESDAY.
           </div>
           <div style={{ fontFamily:"'DM Sans', sans-serif", fontSize:10.5, color:"#9CA3AF", marginTop:5, lineHeight:1.4 }}>
-            Week 5 held at 97% of Week 4 against two new releases. Now ₹170 Cr and rising on a ₹2 Cr budget. Plus Mirzapur past ₹210 Cr worldwide, the India and US Top 10s, and Drishyam: The Conclusion's record trailer.
+            Resident Evil opens day-and-date in India on 96%, the best-reviewed game adaptation ever made. Hanuman Ansh fell just 11% in week six, at day 42. Plus three expected charts, the OTT five and Jai Jai Ram.
           </div>
-          <span style={{ fontFamily:"'Barlow Condensed', sans-serif", fontWeight:700, fontSize:11, color:"#E5C882", letterSpacing:"0.06em", marginTop:8 }}>READ THE WEEKEND →</span>
+          <span style={{ fontFamily:"'Barlow Condensed', sans-serif", fontWeight:700, fontSize:11, color:"#E5C882", letterSpacing:"0.06em", marginTop:8 }}>READ THE PREVIEW →</span>
         </div>
       </div>
     </a>
