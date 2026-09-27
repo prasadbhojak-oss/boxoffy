@@ -4272,23 +4272,24 @@ function UpcomingCalendarGrid({ movies }) {
   );
 }
 
-/* ── BHOOTH BANGLA POLL ─────────────────────────────────────────────────────
-   Audience poll: "Will you watch Bhooth Bangla in theaters?"
-   Seed model: 2,184 Yes + 616 No = 2,800 base (78% Yes), launched Apr 15 2026.
-   Auto-increments ~11 votes/hr to simulate organic growth.
-   localStorage prevents re-voting from same device.
+/* ── TOP-RIGHT WEEKEND BANNER ───────────────────────────────────────────────
+   The promo card at the head of the right-hand column. Points at whichever
+   weekend piece is current — swap the href, the WEEK pill, the headline, the
+   dek and the four poster tiles together, or it goes stale as a unit.
+   Poster tiles: prefer useTMDBPosterById for any title that collides with
+   another film. "Drishyam" collides with the Malayalam Drishyam 3, so it is
+   pinned to id 1269325 (Drishyam: The Conclusion, Hindi) rather than searched.
    ─────────────────────────────────────────────────────────────────────────── */
 function WeekendPreviewHero() {
-  // If a search-by-title poster ever mismatches (WTTJ shares its title with older films),
-  // pin it instead with: useTMDBPosterById(<tmdbId>, "w185").
-  const pResidentEvil = useTMDBPoster("Resident Evil", "2026");
-  const pHanuman = useTMDBPoster("Hanuman Ansh", "2026");
-  const pMirzapur = useTMDBPoster("Mirzapur: The Movie", "2026");
-  const pBethlehem = useTMDBPoster("Bethlehem Kudumba Unit", "2026");
-  const tiles = [ { src:pResidentEvil, ab:"RE" }, { src:pHanuman, ab:"HA" }, { src:pMirzapur, ab:"MZ" }, { src:pBethlehem, ab:"BKU" } ];
+  // If a search-by-title poster ever mismatches, pin it with useTMDBPosterById(<tmdbId>, "w185").
+  const pParadise = useTMDBPoster("The Paradise", "2026");
+  const pVvaan    = useTMDBPoster("The Vvaan", "2026");
+  const pHanuman  = useTMDBPoster("Hanuman Ansh", "2026");
+  const pDrishyam = useTMDBPosterById(1269325, "w185");
+  const tiles = [ { src:pParadise, ab:"TP" }, { src:pVvaan, ab:"TV" }, { src:pHanuman, ab:"HA" }, { src:pDrishyam, ab:"D3" } ];
   const [hover, setHover] = React.useState(false);
   return (
-    <a href="/boxoffice-weekend-preview-september-18-20-2026.html" style={{ textDecoration:"none", display:"block" }}>
+    <a href="/boxoffice-weekend-recap-september-25-27-2026.html" style={{ textDecoration:"none", display:"block" }}>
       <div
         onMouseEnter={() => setHover(true)}
         onMouseLeave={() => setHover(false)}
@@ -4309,14 +4310,14 @@ function WeekendPreviewHero() {
           ))}
         </div>
         <div style={{ flex:1, minWidth:0, display:"flex", flexDirection:"column", justifyContent:"center" }}>
-          <span style={{ alignSelf:"flex-start", background:"#C8201A", color:"#FFFFFF", fontFamily:"'Barlow Condensed', sans-serif", fontWeight:900, fontSize:9, letterSpacing:"0.12em", padding:"2px 7px", borderRadius:2, marginBottom:7 }}>WEEK 38 · WEEKEND PREVIEW</span>
+          <span style={{ alignSelf:"flex-start", background:"#C8201A", color:"#FFFFFF", fontFamily:"'Barlow Condensed', sans-serif", fontWeight:900, fontSize:9, letterSpacing:"0.12em", padding:"2px 7px", borderRadius:2, marginBottom:7 }}>WEEK 39 · WEEKEND RECAP</span>
           <div style={{ fontFamily:"'Barlow Condensed', sans-serif", fontWeight:900, fontSize:"clamp(15px, 1.7vw, 17px)", color:"#FFFFFF", lineHeight:1.15, letterSpacing:"-0.01em" }}>
-            THE ZOMBIE, THE DEVOTIONAL, AND A RECORD THAT FELL ON A TUESDAY.
+            THE PARADISE WINS, THE VVAAN SHOCKS, AND ANSH CLEARS ₹300 CR.
           </div>
           <div style={{ fontFamily:"'DM Sans', sans-serif", fontSize:10.5, color:"#9CA3AF", marginTop:5, lineHeight:1.4 }}>
-            Resident Evil opens day-and-date in India on 96%, the best-reviewed game adaptation ever made. Hanuman Ansh fell just 11% in week six, at day 42. Plus three expected charts, the OTT five and Jai Jai Ram.
+            The Paradise takes an estimated ₹46.15 Cr. The Vvaan, written off before release, takes ₹31 Cr — Sidharth Malhotra's biggest since 2015. And Drishyam sells 44,711 chain seats on day one of booking.
           </div>
-          <span style={{ fontFamily:"'Barlow Condensed', sans-serif", fontWeight:700, fontSize:11, color:"#E5C882", letterSpacing:"0.06em", marginTop:8 }}>READ THE PREVIEW →</span>
+          <span style={{ fontFamily:"'Barlow Condensed', sans-serif", fontWeight:700, fontSize:11, color:"#E5C882", letterSpacing:"0.06em", marginTop:8 }}>READ THE RECAP →</span>
         </div>
       </div>
     </a>
