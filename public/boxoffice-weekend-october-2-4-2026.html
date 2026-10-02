@@ -721,7 +721,34 @@ var BEARER="eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2YWM1OTY0NzEyZTA0NGRmMmJjMmFiYzFlMTF
   });
 })();
 </script>
-</body></html>
+
+<script>
+(function(){
+  var c=document.querySelector('link[rel="canonical"]');
+  var U=(c&&c.href)||location.href.split("#")[0], E=encodeURIComponent(U);
+  document.querySelectorAll(".sharebar").forEach(function(b){
+    var t=b.getAttribute("data-share")||document.title, T=encodeURIComponent(t);
+    var m={wa:"https://wa.me/?text="+encodeURIComponent(t+" "+U),
+           x:"https://twitter.com/intent/tweet?text="+T+"&url="+E+"&via=BoxoffyMI",
+           fb:"https://www.facebook.com/sharer/sharer.php?u="+E,
+           tg:"https://t.me/share/url?url="+E+"&text="+T};
+    b.querySelectorAll("a.sh").forEach(function(a){var k=a.getAttribute("data-net");
+      if(m[k]){a.href=m[k];a.target="_blank";a.rel="noopener noreferrer";}});
+    var cp=b.querySelector("button.sh.cp");
+    if(cp)cp.addEventListener("click",function(){
+      var l=cp.querySelector(".lbl");
+      function done(){cp.classList.add("copied");if(l)l.textContent="Copied";
+        setTimeout(function(){cp.classList.remove("copied");if(l)l.textContent="Copy link";},1800);}
+      function fallback(){try{var ta=document.createElement("textarea");ta.value=U;
+        ta.style.position="fixed";ta.style.opacity="0";document.body.appendChild(ta);
+        ta.select();document.execCommand("copy");ta.remove();done();}catch(e){}}
+      if(navigator.clipboard&&navigator.clipboard.writeText){
+        navigator.clipboard.writeText(U).then(done,fallback);
+      } else { fallback(); }
+    });
+  });
+})();
+</script>
 
 </body>
 </html>
