@@ -1,76 +1,434 @@
 [
   {
+    "headline": "Ajay Devgn: The Complete Box-Office Ledger — 108 Films, ₹4,160 Cr, ~60 Cr Tickets",
+    "dek": "Every film, every verdict, every rupee and ticket, 1991–2026 — the full career record of Bollywood's Singham. Career ~₹4,160 Cr India net and ~60 Cr footfalls, led by Tanhaji (₹279.4 Cr / 2.22 Cr tickets). Four distinct eras, a volatile 2020s that still crossed ₹1,000 Cr post-COVID, and the inflation-proof footfall math behind it all. BOI + Sacnilk sourced, BCM-modeled where public data is light.",
+    "url": "/actor-ajay-devgn.html",
     "tag": "DEEP DIVE",
+    "date": "2026-07-18",
+    "readTime": "10 min read",
+    "featured": true
+  },
+  {
+    "headline": "Weekend Preview · July 17–19: The Odyssey Takes World Cinema and Every IMAX, Dhamaal 4 Holds, Samantha Storms OTT",
+    "dek": "Christopher Nolan's Odyssey opens #1 in India (~₹15–17.5 Cr Day 1, his biggest-ever Indian bow, past Oppenheimer) and the US (~$115–118M) at once, sweeping the IMAX and premium screens in both markets. Dhamaal 4 holds the family crowd past ₹100 Cr net while Welcome to the Jungle and Alpha fade under the wave. Plus a to-scale IMAX 70mm vs Dolby vs 35mm format explainer, our last-weekend scorecard (we called Dhamaal 4's ₹13.75 Cr open), the full US board, and the week's OTT slate led by Samantha's Maa Inti Bangaaram.",
+    "url": "/boxoffice-weekend-preview-july-17-19-2026.html",
+    "tag": "WEEKEND PREVIEW",
+    "date": "2026-07-17",
+    "readTime": "7 min read",
+    "featured": false
+  },
+  {
+    "headline": "The Odyssey BCM Hype Index — One Week Out: Reviews Are In, and the Opening Number Gets Honest",
+    "dek": "Christopher Nolan's The Odyssey, one week from release. The first critic reactions are glowing, so we firm the BCM Hype Index from 92 to 94 — but trade tracking ($80–132M) lands below our May opening base, so we revise the debut down to ~$108M and reframe the whole call as a legs-and-lifetime play. India ₹220–280 Cr base case holds; revised $0.9–1.45B worldwide range.",
+    "url": "/odyssey-bcm-hype-index.html",
+    "tag": "HYPE INDEX",
+    "date": "2026-07-10",
+    "readTime": "11 min read",
+    "featured": false
+  },
+  {
+    "headline": "Weekend Preview (Jul 10–12): Dhamaal 4 Chases a Welcome to the Jungle-Sized Opening — or Bigger",
+    "dek": "Dhamaal 4's Hype Index and base-case numbers (Day 1 ₹13–19 Cr, weekend ₹52–68 Cr), the India + US holdover charts, Ikka's Netflix reunion of Sunny Deol & Akshaye Khanna, and Moana vs the Minions in America — plus our receipts: what we predicted against where it actually landed.",
+    "url": "/weekend-preview-july-10-12-2026.html",
+    "tag": "WEEKEND PREVIEW",
+    "date": "2026-07-09",
+    "readTime": "7 min read",
+    "featured": false
+  },
+  {
+    "headline": "Alpha Opens Well Despite a Negative Campaign, Welcome to the Jungle Keeps Running, and Main Vaapas Aaunga Continues Its Dream Run",
+    "dek": "Our July 3–5 wrap with full India & US Top 10 charts: Alpha beats the pre-release negativity to a ₹34 Cr open (and we grade our own NA call), Welcome to the Jungle crosses ₹169.76 Cr worldwide in week 2, Main Vaapas Aaunga is still climbing in week 4, and Minions & Monsters tops a quiet July 4 as Obsession passes $403M.",
+    "url": "/weekend-recap-july-3-5-2026.html",
+    "tag": "WEEKEND RECAP",
+    "date": "2026-07-08",
+    "readTime": "9 min read",
+    "featured": true
+  },
+  {
+    "headline": "Akshay Rules the Weekend, a Sleeper Won't Stop Climbing, and DC Crashes in America",
+    "dek": "Our full June 26–28 wrap: Welcome to the Jungle opens to a franchise-best ~₹65 Cr and lands exactly on our ₹19 Cr call; Main Vaapas Aaunga keeps climbing three weeks in; and a $186M Supergirl face-plants while Toy Story 5 holds #1. Full India + US Top 10s.",
+    "url": "/weekend-recap-june-26-28-2026.html",
+    "tag": "WEEKEND RECAP",
+    "date": "2026-06-28",
+    "readTime": "9 min read",
+    "featured": false
+  },
+  {
+    "headline": "Why the Movie Industry Loves Nostalgia: The Formula Behind the Feeling",
+    "dek": "If story is the art, nostalgia is the formula underneath it. From Gadar 2's ₹525 Cr on middling reviews to Top Gun: Maverick, from the reminiscence bump to the Friends rerun economy and YouTube's personalised time machine: a deep dive into why audiences pay big to go back — and what Proust, Ishiguro and Toni Morrison understood long before any studio ran a focus group.",
+    "url": "/why-the-movie-industry-loves-nostalgia.html",
+    "tag": "ESSAY",
+    "date": "2026-06-23",
+    "readTime": "15 min read",
+    "featured": false
+  },
+  {
+    "headline": "Weekend Recap · June 19–21: Cocktail 2 Tops a Field That Beat Our Hype Index",
+    "dek": "We previewed a quiet weekend. Cocktail 2 cleared ₹43 Cr, Samantha's Maa Inti Bangaaram opened to ₹23 Cr off our radar, and Obsession refused to fade. Graded film by film, with the India Top 10.",
+    "url": "/boxoffice-weekend-update-june-19-21-2026.html",
+    "tag": "WEEKEND RECAP",
+    "date": "2026-06-22",
+    "readTime": "11 min read",
+    "featured": false
+  },
+  {
+    "headline": "Gadar vs Lagaan, 25 Years On: The Greatest Box-Office Clash in Hindi Cinema History",
+    "dek": "On 15 June 2001, Gadar: Ek Prem Katha and Lagaan opened the very same Friday — and, almost impossibly, both became hits. A data-led Rewind on the era, the openings, the budgets and the verdicts, with a 2001-vs-2025 reality check and a first-person memory from Indore.",
+    "url": "/archive-gadar-vs-lagaan-june-15-2001.html",
+    "tag": "ARCHIVE",
+    "date": "2026-06-15",
+    "readTime": "9 min read",
+    "featured": false
+  },
+  {
+    "headline": "Trailer Hype Index: Cocktail 2, Welcome to the Jungle & Alpha — Opening Predictions",
+    "dek": "Three of the year's biggest Hindi trailers dropped in ten days. BCM's read on each — trailer reception, social-media sentiment and trade tracking — with opening-day and opening-weekend calls, plus why X is benchmarking Alpha against the wrong film.",
+    "url": "/trailer-hype-index-june-2026.html",
+    "tag": "ANALYSIS",
+    "date": "2026-06-11",
+    "readTime": "7 min read",
+    "featured": false
+  },
+  {
+    "headline": "Weekend Preview · June 12–14: Spielberg's Disclosure Day, Imtiaz Ali's Return, and Peddi's Second Round",
+    "dek": "Steven Spielberg's Disclosure Day opens in the US; Main Vaapas Aaunga (Imtiaz Ali / Diljit Dosanjh) and Haunted 3D hit Indian screens; Bhooth Bangla and Raakh drop on OTT. Plus the Hype Index on the new releases, BCM 3-day opening calls, and holdover-led India & US Top 10 projections — Peddi and the surging Obsession still set the pace.",
+    "url": "/boxoffice-weekend-preview-june-12-14-2026.html",
+    "tag": "WEEKEND PREVIEW",
+    "date": "2026-06-11",
+    "readTime": "8 min read",
+    "featured": true
+  },
+  {
+    "headline": "What Is a Screenplay — and Why a Screenwriter Isn't Just a \"Writer\"",
+    "dek": "A Sunday explainer on the most invisible craft in cinema: what a screenplay actually is, how a screenwriter differs from a novelist, and the lessons hidden in Sholay, Deewaar, Drishyam and Gangs of Wasseypur — plus the world's top 10 schools for learning it.",
+    "url": "/what-is-a-screenplay.html",
+    "tag": "DEEP DIVE",
+    "date": "2026-06-07",
+    "readTime": "6 min read",
+    "featured": false
+  },
+  {
+    "headline": "Weekend Preview · June 5–7: Peddi's ₹350 Cr Gamble, David Dhawan's Farewell, and Obsession's Strange Run",
+    "dek": "Ram Charan opens with $1.1M+ in North America presales into the summer's most crowded Hollywood weekend. Varun Dhawan headlines David Dhawan's final film; Bobby Deol's Bandar fights for screens. Obsession nears $170M on a $750K budget despite a 38-second CBFC cut. BCM hype index, opening predictions and the week's OTT Top 10.",
+    "url": "/boxoffice-weekend-preview-june-5-7-2026.html",
+    "tag": "WEEKEND PREVIEW",
+    "date": "2026-06-04",
+    "readTime": "14 min read",
+    "featured": false
+  },
+  {
+    "headline": "Box Office Weekend Recap — May 29–31, 2026: Two YouTubers Took the Top 2 in Hollywood. Mandalorian Got Walked Off. India's Chart Went Mollywood-Marathi-Tamil.",
+    "dek": "Belated but complete recap (PB was traveling). Before we get to India, we have to talk about Hollywood: A24's Backrooms opens $81M directed by a 20-year-old. Obsession crossed $100M domestic after growing in BOTH W2 +30% AND W3 +10% — first film since E.T. 1982 to pull that off. Mandalorian & Grogu cratered -69% W2, the steepest Star Wars second-weekend drop ever recorded. Two YouTubers punching 1 and 2. Star Wars walked off the field. Then to India: Drishyam 3 crosses ₹100 Cr (6th Malayalam ever), Karuppu is now Suriya's biggest grosser, Deool Band 2 hits 340% ROI on a ₹10 Cr Marathi budget, Bhooth Bangla holds W7 at ₹195 Cr India. BCM v1.3 verified across 12 sources.",
+    "url": "/boxoffice-this-week-may-29-31-2026.html",
+    "tag": "WEEKEND RECAP",
+    "date": "2026-06-03",
+    "readTime": "12 min",
+    "featured": false
+  },
+  {
+    "headline": "The Emergency Years at the Box Office — 21 Months That Reshaped Hindi Cinema",
+    "dek": "Boxoffy Archive Series. Between June 1975 and March 1977, Hindi cinema worked under content regulation that capped action sequences at 90 seconds. Sholay's ending was censored. Aandhi was banned mid-release. Kissa Kursi Ka's prints were physically burned. Cinema halls stayed full anyway. The multi-starrer format became dominant. Soviet Union was the largest overseas market. Ticket prices, production houses, currency context, and the full release-by-release box office archive.",
+    "url": "/emergency-years-box-office.html",
+    "tag": "ARCHIVE",
+    "date": "2026-05-25",
+    "readTime": "8 min",
+    "featured": false
+  },
+  {
+    "headline": "Welcome to the Jungle Hype Index — D1 ₹19 Cr Base, Lifetime ₹155 Cr. Verdict Depends on Budget.",
+    "dek": "Akshay's first clean solo wide release in years. Dhamaal 4 moved off June 26. 33 named cast. Hype Index 62/100. BCM v1.3 forecast: D1 ₹19 Cr base · 3-day WW ₹118 Cr · Lifetime ₹155 Cr nett. Strike-rate flipped — Akshay's hot streaks have always ended with a flop, not a hit. Verdict band scenarios at ₹180/₹220/₹275 Cr budget assumptions.",
+    "url": "/welcome-to-the-jungle-hype-index.html",
+    "tag": "HYPE INDEX",
+    "date": "2026-05-24",
+    "readTime": "5 min",
+    "featured": false
+  },
+  {
+    "headline": "Boxoffice This Week — May 22–24 Weekend Preview: Drishyam 3 Storms In, Chand Mera Dil Tests Dharma's New Math, Mandalorian Lands",
+    "dek": "Drishyam 3 opens ₹43.37 Cr WW D1 (biggest Malayalam opening 2026) · Hindi version diverges — Jaideep Ahlawat IN as new character · Chand Mera Dil tests Dharma's mid-budget math post Tu Meri's ₹48 Cr WW loss · Karuppu W1 ₹109.6 Cr nett · Raja Shivaji crosses ₹100 Cr WW · Star Wars Mandalorian first theatrical in 7 years · BCM v1.3 forecast + last week's accountability scorecard.",
+    "url": "/boxoffice-this-week-may-22-24-2026.html",
+    "tag": "WEEKEND PREVIEW",
+    "date": "2026-05-22",
+    "readTime": "9 min",
+    "featured": false
+  },
+  {
+    "headline": "Boxoffice This Week — May 15–17 Weekend Preview: Pati Patni Aur Woh Do Lands, Aakhri Sawal Drops, Bhooth Bangla Closes In On ₹250 Cr WW",
+    "dek": "Pati Patni Aur Woh Do opens (Ayushmann/Sara/Wamiqa/Rakul) · Aakhri Sawal lands (Sanjay Dutt) · Bhooth Bangla W5 approaches ₹250 Cr WW · Raja Shivaji eyes Sairat's all-time Marathi crown · Mortal Kombat 2 W2 hold · BCM v1.3 forecast.",
+    "url": "/boxoffice-this-week-may-15-17-2026.html",
+    "tag": "WEEKEND PREVIEW",
+    "date": "2026-05-15",
+    "readTime": "8 min",
+    "featured": false
+  },
+  {
+    "headline": "Before the Crore Club — How Indian Box Office Began (1913–1943)",
+    "dek": "Boxoffy Archive Series. Long before the crore club, before Friday trackers, before worldwide gross tables — three films across thirty years built the commercial story of Indian cinema. Raja Harishchandra (1913) created the audience. Zindagi (1940) created the annual crown. Kismet (1943) created the blockbuster.",
+    "url": "/before-the-crore-club-how-indian-box-office-began.html",
+    "tag": "ARCHIVE",
+    "date": "2026-05-15",
+    "readTime": "14 min",
+    "featured": false
+  },
+  {
+    "headline": "Top 50 Hindi Songs 2026 · Cross-Platform Revenue Leaderboard: ₹198 Cr Across 17.8B Streams",
+    "dek": "What the 50 biggest Hindi songs of the 2026 cycle have earned across Spotify, YouTube, JioSaavn, Apple, Amazon, and the rest. Cumulative revenue per song with full BCM Music Module v1.0 methodology. Sahiba leads at ₹19.3 Cr · 40 measured · 10 modeled.",
+    "url": "/top-50-hindi-music-2026.html",
+    "tag": "MUSIC",
+    "date": "2026-05-14",
+    "readTime": "10 min",
+    "featured": false
+  },
+  {
+    "headline": "Bhooth Bangla Day 25: ₹156 Cr India · ₹244 Cr WW · 8th Biggest Akshay Film",
+    "dek": "Cleared our BCM ceiling on Day 20. 13-source reconciled at ~₹156 Cr India (band ₹153–160 Cr · 87% conf) · ~₹244 Cr WW. Now Akshay's 8th biggest film globally and his biggest non-holiday opener ever. Full Top-12 filmography table + methodology + where we got the decay wrong.",
+    "url": "/bhooth-bangla-day-25-update.html",
+    "tag": "VERDICT",
+    "date": "2026-05-12",
+    "readTime": "8 min",
+    "featured": false
+  },
+  {
+    "headline": "Boxoffice This Week — May 8–10 Weekend Preview: Holdovers Hold The Fort, Mortal Kombat 2 Lands, Krishnavataram Crashes",
+    "dek": "May 8-10 weekend preview · Bhooth Bangla W4 · Raja Shivaji W2 · Patriot W2 · Kara W2 · Mortal Kombat 2 lands · Krishnavataram opens flat at ₹0.42 Cr · Devil Wears Prada 2 holds · Top 10 trajectory + Lukkhe + Bharathanatyam 2 OTT releases. Boxoffy weekly forecast.",
+    "url": "/boxoffice-this-week-may-8-10-2026.html",
+    "tag": "WEEKEND PREVIEW",
+    "date": "2026-05-08",
+    "readTime": "8 min",
+    "featured": false
+  },
+  {
+    "headline": "Boxoffice This Week — May 1–3, 2026 Weekend Preview & Update",
+    "dek": "The May 1-3 weekend forecast and the post-weekend reality check. Raja Shivaji broke records, Patriot collapsed, Bhooth Bangla outperformed, Dhurandhar 2 broke Baahubali 2. Updated Mon May 5, 2026.",
+    "url": "/boxoffice-this-week-may-1-3-2026.html",
+    "tag": "WEEKEND PREVIEW",
+    "date": "2026-05-01",
+    "readTime": "8 min",
+    "featured": false
+  },
+  {
+    "headline": "Dhurandhar 2 vs Baahubali 2: ₹1,768 Cr vs ₹1,810 Cr — The 9-Year Record, Just ₹42 Cr Apart",
+    "dek": "Two all-time blockbusters from two eras. D2 broke NA, UK, Australia records — but BB2's 9-year worldwide throne still holds, by ₹42 Cr. Full head-to-head: India nett, market splits, footfalls, sequel jump table, and the GCC asterisk. BCM v1.0 multi-source verified.",
+    "url": "/dhurandhar-2-vs-baahubali-2-box-office.html",
+    "tag": "HEAD-TO-HEAD",
+    "date": "2026-04-28",
+    "readTime": "7 min",
+    "featured": false
+  },
+  {
+    "headline": "Why we're publishing pre-release box office forecasts",
+    "dek": "Introducing the Boxoffy Hype Index and the BCM v4.0 model behind it. Built on 82 historical comparables, segment-routed, with explicit confidence intervals and editorial outlier flags. Here's how it works — and where it doesn't.",
+    "url": "/launching-the-hype-index.html",
+    "tag": "METHODOLOGY",
+    "date": "2026-04-25",
+    "readTime": "9 min",
+    "featured": false
+  },
+  {
+    "headline": "The Boxoffy Hype Index — BCM Forecasts for 11 Upcoming Indian Films",
+    "dek": "Pre-release box office forecasts ranked by anticipated theatrical performance. Per-film BCM forecasts, 90% confidence intervals, segment routing, and editorial outlier flags. Updated weekly.",
+    "url": "/hype-index.html",
+    "tag": "HYPE INDEX",
+    "date": "2026-04-25",
+    "readTime": "8 min",
+    "featured": false
+  },
+  {
+    "headline": "Hindi Music Cross-Platform Top 10 — BMCM Ranks 5 Platforms Into One Chart",
+    "dek": "For the first time, a single Hindi chart aggregating Spotify, YouTube Music, Apple Music, Amazon Music & JioSaavn. Gehra Hua #1 cross-platform (BMCM 9.4). Sahiba jumps +5 vs Spotify. Methodology, weights, all 10 tracks.",
+    "url": "/music-crossplatform-top-10-hindi-april-2026.html",
+    "tag": "MUSIC",
+    "date": "2026-04-23",
+    "readTime": "7 min",
+    "featured": false
+  },
+  {
+    "headline": "Bhooth Bangla Review: Runs on Nostalgia, Earns Its Horror Backstory. This Has Legs.",
+    "dek": "Packed house Saturday. Akshay + Asrani + Rajpal in prime form. Vadhusur backstory earns its weight. Screenplay problems named honestly. 3.5/5 — go watch it with your family.",
+    "url": "/bhooth-bangla-review.html",
+    "tag": "REVIEW",
+    "date": "2026-04-19",
+    "readTime": "5 min",
+    "featured": false
+  },
+  {
+    "headline": "India's Greatest #2s — 50 Films That Never Led The Chart But Won Anyway",
+    "dek": "India has no official weekly chart. So we built one. KGF vs Zero. Lagaan vs Gadar. Raazi vs Avengers. Masaan vs Bajrangi. 50 films ranked by Boxoffy BCM — commercial win, cultural win, or both.",
+    "url": "/india-never-number-one.html",
+    "tag": "DATA SCIENCE",
+    "date": "2026-04-19",
+    "readTime": "12 min",
+    "featured": false
+  },
+  {
+    "headline": "Bhooth Bangla Box Office — D3 Confirmed ₹58 Cr Weekend, ₹95.87 Cr WW. BCM: Hit Trajectory",
+    "dek": "Opening weekend confirmed: ₹58 Cr India nett · ₹69.37 Cr India gross · ₹95.87 Cr WW. NA: $0.95M D0–D3. BCM called ₹24 Cr D3 → actual ₹23 Cr (96% accuracy). Lifetime model: ₹120–128 Cr India.",
+    "url": "/bhooth-bangla-box-office.html",
+    "tag": "TRACKER",
+    "date": "2026-04-19",
+    "readTime": "5 min",
+    "featured": false
+  },
+  {
+    "headline": "OTT India Week 3 — BEEF S2 #1 Netflix · Euphoria S3 JioHotstar · Matka King Prime · Watch Hours & Rankings",
+    "dek": "India's OTT weekly chart Apr 13–19. Cross-platform rankings, India viewership, global rank, and movement. Plus: 60.1 Cr total viewers, 14.8 Cr paid subs, language audience breakdown.",
+    "url": "/ott-releases.html",
+    "tag": "OTT",
+    "date": "2026-04-19",
+    "readTime": "6 min",
+    "featured": false
+  },
+  {
+    "headline": "Dhurandhar 2 Crosses ₹1,000 Crore India Nett — The Data Science Behind a Historic Run",
+    "dek": "D29 confirmed ₹1,024 Cr India nett. First Hindi film ever to cross ₹1,000 Cr nett. Four-technique BCM model: BOI canonical, Sacnilk deflated, decay regression, milestone calibration. Lifetime: ₹1,025 Cr India / ₹1,780 Cr WW.",
+    "url": "/dhurandhar-2-1000-crore.html",
+    "tag": "DATA SCIENCE",
+    "date": "2026-04-19",
+    "readTime": "9 min",
+    "featured": false
+  },
+  {
+    "headline": "India Cinema 2026 — The State of Play: ₹13,600 Cr Industry, Four Languages, One Renaissance",
+    "dek": "The numbers behind India's box office revival. Bollywood's comeback. South cinema's global moment. OTT's disruption. The 2026 full report — where the money goes, who's winning, and what breaks next.",
+    "url": "/india-cinema-state-2026.html",
+    "tag": "ANALYSIS",
+    "date": "2026-04-16",
+    "readTime": "12 min",
+    "featured": false
+  },
+  {
+    "headline": "Hindi Music Top 10 — April 2026 | The Dhurandhar Effect on Spotify India",
+    "dek": "Shashwat Sachdev holds 4 of India's top 10 Spotify spots with the Dhurandhar 2 OST. Bairan at #1 with 66M total. Sahiba at 376M cumulative. Real Spotify India daily chart data with embeds and full credits.",
+    "url": "/music-top-10-hindi-april-2026.html",
+    "tag": "MUSIC",
+    "date": "2026-04-14",
+    "readTime": "6 min",
+    "featured": false
+  },
+  {
+    "headline": "Ramayana — Rama First Look Review: ARR Delivers, CGI Has Room, Tiwari's Instinct Is the Bet",
+    "dek": "Ranbir Kapoor's calm first look works. ARR and Zimmer's score is right for the character. The early CGI draws debate — but DNEG has six months. Boxoffy's full take on the teaser.",
+    "url": "/ramayana-rama-first-look-review.html",
+    "tag": "REVIEW",
+    "date": "2026-04-02",
+    "readTime": "5 min",
+    "featured": false
+  },
+  {
+    "headline": "BARC TRP Ratings Week 12 — Kyunki KSBKBT2 Holds #1, Tum Se Tum Tak Surges to #2, Anupamaa at #4",
+    "dek": "Full BARC Top 10 Hindi TV shows for Week 12 (Mar 21–27, 2026). IPL effect begins. Zee TV counter-punch. Star Plus five-show dominance. Boxoffy commentary.",
+    "url": "/tv-ratings.html",
+    "tag": "TV",
+    "date": "2026-04-02",
+    "readTime": "5 min",
+    "featured": false
+  },
+  {
+    "headline": "Ramayana: Part One — The Most Ambitious Indian Film Ever Made. What Will It Take?",
+    "dek": "₹835 Cr budget. DNEG VFX. Hans Zimmer + AR Rahman. Ranbir Kapoor as Ram. LA test screening 'roaring response'. Boxoffy's full preview — cast, scale, and box office outlook.",
+    "url": "ramayana-part-one-box-office.html",
+    "tag": "PREVIEW",
+    "date": "2026-03-30",
+    "readTime": "8 min",
+    "featured": false
+  },
+  {
+    "headline": "Driver or Multiplier? The Top 20 Bollywood Songs vs Box Office — Ranked",
+    "dek": "Do hit Bollywood songs drive box office — or does the film make the song? Boxoffy ranks the 20 biggest Indian film songs of 2021–2026 and maps each against box office reality.",
+    "url": "bollywood-music-box-office.html",
+    "tag": "ANALYSIS",
+    "date": "2026-03-29",
+    "readTime": "12 min",
+    "featured": false
+  },
+  {
+    "headline": "दंगल at Ten: The Data, The Doubters, and Why the Arithmetic Ends the Debate",
+    "dek": "China: ₹1,235 Cr. 4.31 crore tickets. Maoyan-verified. Xi Jinping confirmed it to PM Modi — twice. Government extension. Day-by-day data. ATP inflation. Money laundering demolished.",
+    "url": "/dangal-china-box-office.html",
+    "tag": "DEEP DIVE",
+    "date": "2026-03-26",
+    "readTime": "12 min",
+    "featured": false
+  },
+  {
+    "headline": "Dhurandhar vs Dhurandhar: The Revenge — The Full Comparison",
+    "dek": "India nett, global, week-by-week, ROI — the complete side-by-side of India's biggest franchise.",
+    "url": "dhurandhar-2-vs-pushpa-2-box-office.html",
+    "tag": "COMPARISON",
+    "date": "2026-03-25",
+    "readTime": "7 min",
+    "featured": false
+  },
+  {
     "headline": "Why Indian Cinema Will Never Have a Number 2",
     "dek": "The dinner table decision, the comparison trap, and the ego economy that keeps Bollywood a winner-take-all market. A structural autopsy.",
-    "author": "The Boxoffy Team",
-    "date": "Mar 22, 2026",
-    "readTime": "9 min read",
     "url": "why-indian-cinema-never-has-a-number-2.html",
-    "subline": "ROI blindness · Counter-programming · Broadway hypothesis"
-  },
-  {
-    "tag": "VERDICT",
-    "headline": "₹339 Crore in 4 Days. Dhurandhar 2 Just Rewrote Indian Cinema.",
-    "dek": "₹43 Cr premieres. ₹102.55 Cr Day 1. Jawan's record gone. North India hadn't even fired yet. Here's what it means.",
-    "author": "The Boxoffy Team",
-    "date": "Mar 20, 2026",
-    "readTime": "4 min read",
-    "url": "dhurandhar2-advance-article.html",
-    "subline": ""
-  },
-  {
-    "tag": "COMPARISON",
-    "headline": "Dhurandhar vs Dhurandhar 2 — A Franchise That Doubled Itself",
-    "dek": "D1 Day 1: ₹28 Cr. D2 Day 1: ₹102.55 Cr. Same director, same star, one year apart. Complete day-wise, week-wise and ATP breakdown.",
-    "author": "The Boxoffy Team",
-    "date": "Mar 19, 2026",
-    "readTime": "5 min read",
-    "url": "dhurandhar-box-office-d1-vs-d2.html"
-  },
-  {
-    "tag": "DATA ANALYSIS",
-    "headline": "The ₹100 Crore Day 1 Club — Every Indian Film That Made It, and Why No Hindi Film Has",
-    "dek": "Pushpa 2 ₹144 Cr. RRR, Baahubali 2, KGF2 — all ₹100–110 Cr. Four films. All South Indian. Zero Bollywood. Dhurandhar 2 attempts it March 19. Footfall math + ATP breakdown.",
-    "author": "The Boxoffy Team",
-    "date": "Mar 15, 2026",
-    "readTime": "6 min read",
-    "url": "100-crore-day-one-club-box-office.html"
-  },
-  {
-    "tag": "US BOX OFFICE",
-    "headline": "Dhurandhar 2 in North America — $1.43M Premiere, $15M Weekend in Sight",
-    "dek": "$1.43M premiere actual (Venky BO · 705 locations) · $2.85M NA D0+D1 · $15M Boxoffy bold call · Baahubali 2 NA record in range.",
-    "author": "The Boxoffy Team",
-    "date": "Mar 20, 2026",
-    "readTime": "3 min read",
-    "url": "dhurandhar2-us-boxoffice.html"
-  },
-  {
     "tag": "DEEP DIVE",
-    "headline": "Bollywood Box Office Explained — How Producers, Distributors & Exhibitors Share Your Ticket Money",
-    "dek": "Who keeps your ₹300 PVR ticket? The complete guide to how Indian cinema's money chain works — from the producer's budget to PVR vs Raj Mandir revenue splits, the MG model, and why Week 1 changes everything.",
-    "author": "The Boxoffy Team",
-    "date": "Mar 10, 2026",
-    "readTime": "15 min read",
-    "url": "india-boxoffice-how-it-works.html"
+    "date": "2026-03-22",
+    "readTime": "9 min",
+    "featured": false
   },
   {
-    "tag": "ANALYSIS",
-    "headline": "Dhurandhar 2 The Revenge Pre-Release Analysis — Ladies and Gentlemen, You Are STILL Not Ready",
-    "dek": "₹80–100 Cr Day 1. 5 languages. The biggest commercial bet Indian cinema has made since Pushpa 2. Boxoffy's full pre-release breakdown.",
-    "author": "The Boxoffy Team",
-    "date": "Mar 8, 2026",
-    "readTime": "6 min read",
-    "url": "dhurandhar2-editorial.html"
+    "headline": "₹623.97 Cr in 7 Days. ₹1,006 Cr Worldwide. 31 Records. Dhurandhar 2 Is Historic.",
+    "dek": "D5 Monday ₹60 Cr — the highest first weekday in Bollywood history. D6 Tuesday ₹56.55 Cr. Week 1 targeting ₹625+ Cr nett. $81M 5-day global per Deadline.",
+    "url": "dhurandhar2-advance-article.html",
+    "tag": "VERDICT",
+    "date": "2026-03-20",
+    "readTime": "4 min",
+    "featured": false
   },
   {
-    "tag": "PRICING ANALYSIS",
+    "headline": "Dhurandhar 2 in North America — $14M 5-Day Record. All-Time Bollywood NA Opening.",
+    "dek": "$14M 5-day at 987 sites. Surpasses Pathaan ($9.5M), Jawan, and KGF Chapter 2. Box Office Guru: \"an incredible opening for a four-hour movie playing to 3% of the population.\"",
+    "url": "dhurandhar2-us-boxoffice.html",
+    "tag": "US BOX OFFICE",
+    "date": "2026-03-20",
+    "readTime": "3 min",
+    "featured": false
+  },
+  {
+    "headline": "Dhurandhar vs Dhurandhar: The Revenge — D1 Head to Head",
+    "dek": "Opening day numbers, screen counts, ATP, advance booking — the complete D1 comparison between India's biggest franchise films.",
+    "url": "dhurandhar-box-office-d1-vs-d2.html",
+    "tag": "COMPARISON",
+    "date": "2026-03-19",
+    "readTime": "5 min",
+    "featured": false
+  },
+  {
+    "headline": "The ₹100 Crore Day 1 Club — Every Indian Film That Made It, and Why No Hindi Film Has",
+    "dek": "Pushpa 2 ₹144 Cr. RRR, Baahubali 2, KGF2 — all ₹100–110 Cr. Four films. All South Indian. Zero Bollywood. Dhurandhar 2 attempts it. Footfall math + ATP breakdown.",
+    "url": "100-crore-day-one-club-box-office.html",
+    "tag": "DATA ANALYSIS",
+    "date": "2026-03-15",
+    "readTime": "6 min",
+    "featured": false
+  },
+  {
     "headline": "Dhurandhar 2 Is Not Just Bigger. It Is Priced Bigger.",
     "dek": "From ₹307 to ₹414 ATP — a 34.9% jump in pricing power. What equal footfalls would mean for the gross. The ATP math, seat mix logic, and why runtime changes everything.",
-    "author": "The Boxoffy Team",
-    "date": "Mar 13, 2026",
-    "readTime": "5 min read",
-    "url": "dhurandhar-comparison.html"
+    "url": "dhurandhar-comparison.html",
+    "tag": "PRICING ANALYSIS",
+    "date": "2026-03-13",
+    "readTime": "5 min",
+    "featured": false
+  },
+  {
+    "headline": "Bollywood Box Office Explained — How Producers, Distributors & Exhibitors Share Your Ticket Money",
+    "dek": "Who keeps your ₹300 PVR ticket? The complete guide to how Indian cinema's money chain works — from the producer's budget to PVR vs Raj Mandir revenue splits.",
+    "url": "india-boxoffice-how-it-works.html",
+    "tag": "DEEP DIVE",
+    "date": "2026-03-10",
+    "readTime": "15 min",
+    "featured": false
+  },
+  {
+    "headline": "Dhurandhar 2 The Revenge Pre-Release Analysis — Ladies and Gentlemen, You Are STILL Not Ready",
+    "dek": "₹80–100 Cr Day 1. 5 languages. The biggest commercial bet Indian cinema has made since Pushpa 2. Boxoffy's full pre-release breakdown.",
+    "url": "dhurandhar2-editorial.html",
+    "tag": "ANALYSIS",
+    "date": "2026-03-08",
+    "readTime": "6 min",
+    "featured": false
   }
 ]

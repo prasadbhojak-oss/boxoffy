@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>US Weekend Preview Week 38 Collage · LOCAL ONLY · DO NOT COMMIT</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=DM+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{--ink:#080B12;--navy:#1E3A5F;--blue:#4A9EE0;--gold:#D4A43A;--accent:#E8261A;
+        --cream:#F2F6FA;--muted:#7C8899;
+        --disp:'Barlow Condensed',sans-serif;--body:'DM Sans',sans-serif;--mono:'IBM Plex Mono',monospace}
+  *{box-sizing:border-box}
+  body{margin:0;background:#EDF0F4;font-family:var(--body)}
+  .wrap{max-width:1180px;margin:0 auto;padding:18px 16px 60px}
+  .warn{background:#FBEBEA;border:2px solid var(--accent);border-radius:4px;padding:11px 15px;margin-bottom:12px}
+  .warn b{font-family:var(--disp);font-weight:900;font-size:18px;display:block}
+  .warn p{margin:3px 0 0;font-size:12.5px;color:#7a1512}
+  .bar{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:12px}
+  button,label.btn{font-family:var(--body);font-weight:600;font-size:13px;border:1px solid var(--ink);
+    background:var(--ink);color:#fff;border-radius:3px;padding:9px 15px;cursor:pointer;display:inline-block}
+  .ghost{background:#fff;color:var(--ink)} .on{background:var(--accent);border-color:var(--accent);color:#fff}
+  #st{font-family:var(--mono);font-size:11px;color:#55606E}
+  .prev{border:1px solid #ccd3dc;background:#fff;padding:12px;overflow:auto}
+  .stage{transform-origin:top left}
+
+  #cv{background:var(--ink);color:#fff;position:relative;overflow:hidden;display:block;width:1080px;height:1080px}
+  #cv.st{height:1920px}
+  #cv::before{content:"";position:absolute;inset:0;z-index:0;
+    background:radial-gradient(circle at 15% 2%,rgba(30,58,95,.55),transparent 56%),
+               radial-gradient(circle at 90% 98%,rgba(232,38,26,.18),transparent 52%)}
+
+  .mast{position:relative;z-index:2;height:146px;padding:26px 38px 10px;
+    display:flex;justify-content:space-between;align-items:flex-start;gap:16px;
+    border-bottom:1px solid rgba(74,158,224,.30)}
+  .lg{font-family:var(--disp);font-weight:800;font-size:26px;letter-spacing:-.5px;line-height:1;color:var(--cream)}
+  .lg b{color:var(--accent)}
+  .lg span{display:block;font-family:var(--body);font-weight:400;font-size:8.5px;letter-spacing:3px;
+    color:var(--muted);text-transform:uppercase;margin-top:4px}
+  .ttl{font-family:var(--disp);font-weight:900;font-size:42px;line-height:.9;text-transform:uppercase;
+    letter-spacing:-1px;color:var(--cream);margin-top:11px}
+  .ttl em{color:var(--blue);font-style:normal}
+  .wk{font-family:var(--mono);font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--blue);
+    border:1px solid rgba(74,158,224,.42);padding:8px 12px;white-space:nowrap;text-align:right;line-height:1.7}
+
+  .grid{position:relative;z-index:2;height:620px;display:grid;
+    grid-template-columns:repeat(5,1fr);grid-template-rows:repeat(2,1fr);gap:7px;padding:14px 38px}
+  .pf{position:relative;overflow:hidden;border-radius:3px;background:#101725;border:1px solid rgba(74,158,224,.16)}
+  .pf img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 14%;display:block}
+  .pf .ph{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;
+    gap:7px;text-align:center;padding:9px;background:linear-gradient(158deg,#1A2436,#0B1018)}
+  .pf .ph .t{font-family:var(--disp);font-weight:900;font-size:14px;line-height:1.02;color:rgba(242,246,250,.78);text-transform:uppercase}
+  .pf .ph .r{width:18px;height:2px;background:var(--blue)}
+  .pf.has .ph{display:none}
+  .pf .gr{position:absolute;left:0;right:0;bottom:0;height:56%;
+    background:linear-gradient(180deg,transparent,rgba(8,11,18,.96) 62%,rgba(8,11,18,.99))}
+  .pf .cap{position:absolute;left:0;right:0;bottom:0;padding:8px 8px 10px;z-index:2}
+  .pf .cap .n{font-family:var(--disp);font-weight:800;font-size:13px;line-height:1.02;color:#fff;text-transform:uppercase}
+  .pf .cap .v{font-family:var(--mono);font-weight:700;font-size:14px;color:var(--blue);margin-top:3px}
+  .pf .cap .s{font-family:var(--mono);font-size:8px;color:var(--muted);margin-top:2px;letter-spacing:.03em}
+  .pf .rk{position:absolute;top:0;left:0;z-index:3;font-family:var(--disp);font-weight:900;font-size:15px;
+    padding:2px 8px;background:var(--blue);color:var(--ink);border-radius:0 0 6px 0}
+  .pf.new .rk{background:var(--gold);color:var(--ink)}
+  .pf.hold .rk{background:#16A34A;color:#fff} .pf.hold .cap .v{color:#5EE89A}
+  .pf.drop .rk{background:var(--accent);color:#fff} .pf.drop .cap .v{color:#FF8A7E}
+  .pf.drop img{filter:grayscale(.55) brightness(.78)}
+
+  .band{position:relative;z-index:2;height:130px;margin:0 38px;background:rgba(74,158,224,.10);
+    border:1px solid rgba(74,158,224,.30);padding:14px 20px;display:flex;gap:16px;align-items:center}
+  .band .c{flex:1;text-align:center}
+  .band .c .l{font-family:var(--mono);font-size:8.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+  .band .c .v{font-family:var(--disp);font-weight:900;font-size:31px;color:var(--cream);line-height:1.05;margin-top:4px}
+  .band .c .v.hi{color:#5EE89A} .band .c .v.bl{color:var(--blue)} .band .c .v.gd{color:var(--gold)}
+  .band .c .n{font-size:10px;color:var(--muted);margin-top:2px}
+
+  .ft{position:relative;z-index:2;height:184px;padding:18px 38px 24px;display:flex;flex-direction:column;justify-content:space-between}
+  .punch{font-family:var(--disp);font-weight:800;font-size:26px;line-height:1.16;color:var(--cream)}
+  .punch em{color:var(--blue);font-style:normal} .punch b{color:var(--gold)}
+  .fm{display:flex;justify-content:space-between;align-items:flex-end;gap:18px}
+  .fm .l{font-family:var(--mono);font-size:9.5px;color:var(--muted);line-height:1.75;max-width:66%}
+  .fm .l b{color:var(--cream)}
+  .fm .r{text-align:right;white-space:nowrap}
+  .fm .r .lg2{font-family:var(--disp);font-weight:800;font-size:21px;color:var(--cream);line-height:1}
+  .fm .r .lg2 b{color:var(--accent)}
+  .fm .r .h{font-family:var(--mono);font-size:8.5px;letter-spacing:.18em;color:var(--muted);margin-top:4px}
+
+  #cv.st .mast{height:206px} #cv.st .ttl{font-size:60px}
+  #cv.st .grid{height:1190px;grid-template-columns:repeat(3,1fr);grid-template-rows:repeat(4,1fr)}
+  #cv.st .pf .cap .n{font-size:18px} #cv.st .pf .cap .v{font-size:19px}
+  #cv.st .band{height:194px} #cv.st .band .c .v{font-size:42px}
+  #cv.st .ft{height:330px} #cv.st .punch{font-size:37px}
+</style>
+</head><body><div class="wrap">
+
+<div class="warn"><b>LOCAL TOOL — DO NOT COMMIT</b>
+<p>TMDB token in plaintext below. Keep out of <code>public/</code> and the repo.</p></div>
+
+<div class="bar">
+  <button id="load">Load TMDB posters</button>
+  <button class="ghost" id="testtok">Test token</button>
+  <label class="btn ghost">Upload missing<input id="up" type="file" accept="image/*" multiple hidden></label>
+  <button class="ghost on" data-f="sq">Square 1080×1080</button>
+  <button class="ghost" data-f="st">Story 1080×1920</button>
+  <button id="png">Export PNG</button>
+  <span id="st">Ready.</span>
+</div>
+
+<div class="prev"><div class="stage"><div id="cv" class="sq">
+  <div class="mast">
+    <div>
+      <div class="lg">BOXOF<b>FY</b><span>Box Office Intelligence</span></div>
+      <div class="ttl">US Top 10<br><em>Weekend Preview</em></div>
+    </div>
+    <div class="wk">Week 38<br>Sept 18–20 · 3-day<br>Domestic · projected</div>
+  </div>
+
+  <div class="grid" id="grid"></div>
+
+  <div class="band">
+    <div class="c"><div class="l">Resident Evil · our call</div><div class="v gd">$60M</div><div class="n">band $52–72M · 3,000 theatres</div></div>
+    <div class="c"><div class="l">Resident Evil · RT</div><div class="v bl">96%</div><div class="n">121 reviews · Certified Fresh</div></div>
+    <div class="c"><div class="l">Spider-Man domestic</div><div class="v hi">$936.77M</div><div class="n">all-time record, taken Tuesday</div></div>
+    <div class="c"><div class="l">Top 10 expected</div><div class="v">$90–125M</div><div class="n">Boxoffy projection</div></div>
+  </div>
+
+  <div class="ft">
+    <div class="punch">The best-reviewed video game adaptation ever made opens<br>
+      on <b>3,000 screens</b>. The record it is opening behind fell<br>
+      on an ordinary <em>Tuesday afternoon</em>.</div>
+    <div class="fm">
+      <div class="l"><b>Weekend column is a Boxoffy projection, not a report.</b><br>
+        Cumes are floors — weekday grosses 14–17 Sep are not published per title.<br>
+        The Numbers · Deadline · Boxoffice Pro · Box Office Theory · Variety. Full board at boxoffy.com</div>
+      <div class="r"><div class="lg2">BOXOF<b>FY</b></div><div class="h">BOXOFFY.COM · @BOXOFFYMI</div></div>
+    </div>
+  </div>
+</div></div></div>
+
+<script>
+/* ⚠ LOCAL ONLY */
+var BEARER="eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2YWM1OTY0NzEyZTA0NGRmMmJjMmFiYzFlMTFlZGMyYyIsIm5iZiI6MTc3Mzg4NTMxMS42MzIsInN1YiI6IjY5YmI1NzdmYjgyMzJhNzc5MjIxZWZjOCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.QxWkqL_4_3PfTnIVgcZYE0zlXQd9M2y5QL-oWNwq6dE";
+
+var F=[
+ {k:"re",      n:"Resident Evil",  v:"$52–72M",   s:"NEW · 96% RT",       rk:"1",  cls:"new",  q:"Resident Evil", y:2026, alt:["Resident Evil 2026","Resident Evil reboot"]},
+ {k:"pm2",     n:"Practical Magic 2", v:"$14–18M",s:"WK 2 · FROM $30.0M", rk:"2",  cls:"hold", q:"Practical Magic 2", y:2026, alt:["Practical Magic 2"]},
+ {k:"spidey",  n:"Spider-Man BND",  v:"$4–6M",    s:"WK 8 · $936.77M",    rk:"3",  cls:"hold", q:"Spider-Man: Brand New Day", y:2026, alt:["Spider-Man Brand New Day"]},
+ {k:"shaun",   n:"Shaun the Sheep", v:"$4–6M",    s:"NEW · 100% RT",      rk:"4",  cls:"new",  q:"Shaun the Sheep: Beast of Mossy Bottom", y:2026, alt:["Shaun the Sheep Beast of Mossy Bottom","Shaun the Sheep"]},
+ {k:"odyssey", n:"The Odyssey",     v:"$4–5M",    s:"WK 10 · $600.7M",    rk:"5",  cls:"",     q:"The Odyssey", y:2026, alt:["Odyssey Nolan"]},
+ {k:"coyote",  n:"Coyote vs. Acme", v:"$3–4M",    s:"WK 4 · $47.9M",      rk:"6",  cls:"",     q:"Coyote vs. Acme", y:2026, alt:["Coyote vs Acme"]},
+ {k:"runner",  n:"Runner",          v:"$3–4M",    s:"WK 2 · $6.5M",       rk:"7",  cls:"",     q:"Runner", y:2026, alt:["Runner Angel Studios"]},
+ {k:"weight",  n:"The Weight",      v:"$2–4M",    s:"NEW · 93% RT",       rk:"8",  cls:"new",  q:"The Weight", y:2026, alt:["The Weight Ethan Hawke","The Weight 2026"]},
+ {k:"buddy",   n:"Buddy",           v:"$2–3M",    s:"WK 4 · $21.4M",      rk:"9",  cls:"drop", q:"Buddy", y:2026, alt:["Buddy horror"]},
+ {k:"insid",   n:"Insidious",       v:"$1.5–2.5M",s:"WK 5 · $60.6M",      rk:"10", cls:"drop", q:"Insidious: Out of the Further", y:2026, alt:["Insidious Out of the Further","Insidious"]}
+];
+var cache={}, cv=document.getElementById("cv"), st=document.getElementById("st"), G=document.getElementById("grid");
+
+function render(){
+  G.innerHTML="";
+  F.forEach(function(f){
+    var d=document.createElement("div");
+    d.className="pf "+(f.cls||"")+(cache[f.k]?" has":"");
+    d.innerHTML='<div class="ph"><div class="t">'+f.n+'</div><div class="r"></div></div>'+
+      '<div class="gr"></div><span class="rk">'+f.rk+'</span>'+
+      '<div class="cap"><div class="n">'+f.n+'</div><div class="v">'+f.v+'</div><div class="s">'+f.s+'</div></div>';
+    if(cache[f.k]){var im=document.createElement("img");im.src=cache[f.k];im.alt="";d.insertBefore(im,d.firstChild);}
+    G.appendChild(d);
+  });
+  fit();
+}
+async function inline(u){
+  try{var r=await fetch(u,{mode:"cors"});if(!r.ok)return null;var b=await r.blob();
+    return await new Promise(function(res,rej){var fr=new FileReader();fr.onload=function(){res(fr.result)};fr.onerror=rej;fr.readAsDataURL(b);});
+  }catch(e){return null;}
+}
+document.getElementById("load").addEventListener("click", async function(){
+  this.disabled=true;
+  var H={headers:{Authorization:"Bearer "+BEARER,accept:"application/json"}}, hit=0, miss=[];
+  for(var i=0;i<F.length;i++){
+    var f=F[i]; st.textContent="Loading "+(i+1)+"/"+F.length+" — "+f.n;
+    if(cache[f.k]){hit++;continue;}
+    var tries=[{q:f.q,y:f.y},{q:f.q,y:null}].concat(f.alt.map(function(a){return{q:a,y:null}}));
+    var got=null;
+    for(var t=0;t<tries.length;t++){
+      try{
+        var u="https://api.themoviedb.org/3/search/movie?query="+encodeURIComponent(tries[t].q)+
+              (tries[t].y?"&year="+tries[t].y:"")+"&language=en-US&page=1";
+        var r=await fetch(u,H);
+        if(!r.ok){ if(r.status===401) console.error("TMDB 401 — token rejected"); continue; }
+        var res=(await r.json()).results||[];
+        var m=res.find(function(x){return x.poster_path});
+        if(m){ got="https://image.tmdb.org/t/p/w780"+m.poster_path;
+               console.log("ok "+f.k+" -> "+m.title+" ("+(m.release_date||"").slice(0,4)+")"); break; }
+      }catch(e){ console.error(e.message); }
+      await new Promise(function(x){setTimeout(x,110)});
+    }
+    if(got){ cache[f.k]=(await inline(got))||got; hit++; }
+    else { miss.push(f.n); console.warn("MISS "+f.k+" ('"+f.q+"')"); }
+  }
+  render();
+  st.textContent=hit+"/"+F.length+" posters"+(miss.length?" · no TMDB image: "+miss.join(", "):"");
+  this.disabled=false;
+});
+document.getElementById("testtok").addEventListener("click", async function(){
+  st.textContent="Testing…";
+  try{var r=await fetch("https://api.themoviedb.org/3/configuration",{headers:{Authorization:"Bearer "+BEARER,accept:"application/json"}});
+    st.textContent = r.status===401 ? "TOKEN REJECTED (401)" : (r.ok ? "Token WORKS — a miss means TMDB has no image." : "HTTP "+r.status);
+  }catch(e){ st.textContent="Cannot reach TMDB: "+e.message; }
+});
+document.getElementById("up").addEventListener("change",function(e){
+  var files=[].slice.call(e.target.files), done=0;
+  var empty=F.filter(function(f){return !cache[f.k]});
+  files.slice(0,empty.length).forEach(function(file,i){
+    var rd=new FileReader();
+    rd.onload=function(ev){ cache[empty[i].k]=ev.target.result;
+      if(++done===Math.min(files.length,empty.length)){render();st.textContent="filled: "+empty.slice(0,done).map(function(x){return x.n}).join(", ");} };
+    rd.readAsDataURL(file);
+  });
+});
+document.querySelectorAll("[data-f]").forEach(function(b){
+  b.addEventListener("click",function(){
+    document.querySelectorAll("[data-f]").forEach(function(x){x.classList.remove("on")});
+    b.classList.add("on"); cv.className=b.dataset.f; render();
+  });
+});
+function fit(){
+  var s=Math.min(1,(document.querySelector(".prev").clientWidth-26)/1080);
+  document.querySelector(".stage").style.transform="scale("+s+")";
+  document.querySelector(".prev").style.height=(cv.offsetHeight*s+26)+"px";
+}
+document.getElementById("png").addEventListener("click",function(){
+  if(typeof html2canvas==="undefined"){ st.textContent="html2canvas didn't load."; return; }
+  st.textContent="Rendering…";
+  var stg=document.querySelector(".stage"), p=stg.style.transform;
+  stg.style.transform="none"; void cv.offsetHeight;
+  setTimeout(function(){
+    html2canvas(cv,{backgroundColor:"#080B12",scale:1,useCORS:true,logging:false,
+      width:cv.offsetWidth,height:cv.offsetHeight,windowWidth:cv.offsetWidth,windowHeight:cv.offsetHeight})
+    .then(function(c){
+      var a=document.createElement("a");
+      a.download="boxoffy-us-week38-preview-"+cv.className+".png"; a.href=c.toDataURL("image/png"); a.click();
+      stg.style.transform=p; fit(); st.textContent="Exported ("+cv.offsetWidth+"x"+cv.offsetHeight+").";
+    }).catch(function(e){ stg.style.transform=p; fit(); st.textContent="Failed: "+e.message; });
+  },120);
+});
+render(); window.addEventListener("resize",fit);
+</script>
+</div></body></html>

@@ -1,0 +1,69 @@
+STEP 1 - visit the Fandango film page to pick up cookies
+
+--- film page: HTTP 200  131417 bytes  ct=text/html; charset=utf-8
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    
+    <script type="importmap">
+{
+  "imports": {
+    "require-core": "https:/images.fandango.com/fandango-www/screenplay/assets/v2/javascripts/bundles/transpiled/require-core.bds6fpbd.js",
+    "base-libraries": "https:/images.fandango.com/fandango-www/screenplay/assets/v2/javascripts/bundles/transpiled/base-libraries.7rq8stbg.js",
+    "require-global": "https:/images.fandango.com/fandango-www/screenplay/assets/v2/javascripts/bundles/transpiled/require-global.7obvr3p9.js",
+    "@take-2/assets/versions": "https:/images.fandango.com/fandango-www/screenplay/assets/v2/versions.8grisf5m.js"
+  }
+}
+    </script>
+    
+
+    
+        <script src="https://images.fandango.com/assets/fandango-common.js?single"></script>
+    
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    
+    <title id="page-title">Drishyam - The Conclusion (2026) Showtimes | Fandango</title>
+    <meta name="description" content="Buy Drishyam - The Conclusion (2026) tickets and view showtimes at a theater near you. Earn double rewards when you purchase a ticket with Fandango today." />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+    <meta name="robots" content="index, follow">
+
+    
+
+    <link rel="dns-prefetch" href="//images.fandango.com/">
+    <link rel="dns-prefetch" href="//app.mps.vsnt.net">
+    <link rel="dns-prefetch" href="//assets.adobetm.com">
+    <link rel="dns-prefetch" href="//www.googletagservices.com">
+    <meta property="fb:app_id" content="5885186655">
+    <meta property="og:site_name" content="Fandango">
+    <meta property="og:title" content="Drishyam - The Conclusion (2026) Showtimes">
+    <meta prop
+
+cookies now held: ['akamai_location', 'userCountry', 'akamai_set_zip', 'userlocation', 'akamai_generated_location']
+  page contains 'theaterShowtimeGroupings': False
+  page contains 'showtimeHashCode': False
+  page contains '247556': True
+  page contains '__NEXT_DATA__': False
+
+
+STEP 2 - the napi endpoint WITH those cookies and full browser headers
+
+--- napi theaterShowtimeGroupings: HTTP 200  53255 bytes  ct=application/json; charset=utf-8
+{"hasShowtimes":true,"error":null,"markup":null,"date":"2026-10-02","filterAttempted":false,"filteredShowtimes":null,"theaterShowtimes":{"date":"2026-10-02","theaters":[{"id":"aaoxj","name":"AMC Stonebriar 24","theaterPageUrl":"/amc-stonebriar-24-aaoxj/theater-page","distance":2.0196804923484937,"isTicketing":true,"variants":[{"filmFormatHeader":"Standard","amenityGroups":[{"amenities":[{"description":"Experience movies with even more brilliant brightness, dynamic detail, and crystal-clear contrast with Laser at AMC. It’s a new era in cinema quality!","id":1478,"imageUrl":null,"name":"Laser at AMC"},{"description":"This showtime allows you to reserve your seats ahead of time.","id":2011,"imageUrl":null,"name":"Reserved seating"},{"description":"This film is presented in Hindi.","id":1103,"imageUrl":null,"name":"Hindi Language"},{"description":"Kick back in an extra-comfy recliner and enjoy the show.","id":1150,"imageUrl":null,"name":"Recliner Seats"}],"hasReservedSeating":true,"lateNightMsg":"","movieID":"247556","movieVariantId":247556,"showtimes":[{"date":"1:00p","dateLocal":"2026-10-02T13:00:00-05:00","dateUtc":"2026-10-02T18:00:00Z","expired":false,"filmFormat":[],"showtimeHashCode":"v2-37e0b8ce4080f269c57f76112523b8a96eef1267b2877fe9418bfa67aa69d12a","id":565989772,"isSoldOut":false,"screenReaderTime":"1 o'clock PM","ticketingDate":"2026-10-02+13:00","ticketingJumpPageURL":"https://tickets.fandango.com/transaction/ticketing/mobile/jump.aspx?sdate=2026-10-02%2B13%3A00&from=mov_det_showtimes&source=desktop&mid=247556&tid=aaoxj&dfam=webbrowser&showtimehashcode=v2-37e0b8ce4080f269c57f76112523b8a96eef1267b2877fe9418bfa67aa69d12a","type":"available"},{"date":"4:30p","dateLocal":"2026-10-02T16:30:00-05:00","dateUtc":"2026-10-02T21:30:00Z","expired":false,"filmFormat":[],"
+
+
+STEP 3 - bare request, no cookies, for comparison
+bare request: HTTP 200
+
+
+STEP 4 - Cineplex theatres, raw
+
+--- cineplex theatres: HTTP 200  64800 bytes  ct=application/json; charset=utf-8
+{"favouriteTheatres":[],"nearbyTheatres":[],"otherTheatres":[{"theatreId":7257,"theatreName":"Cineplex Odeon Devonshire Mall Cinemas","shortTheatreName":"Devonshire Mall","theatreUrl":"cineplex-odeon-devonshire-mall-cinemas","hasFreeParking":true,"alertMessages":null,"location":{"geoLocation":{"latitude":42.274161,"longitude":-82.999016},"distanceToOriginInMeters":1562667.2,"hasDistanceToOrigin":true,"address":"3100 Howard Avenue","city":"Windsor","provinceCode":"ON","postalCode":"N8X 3Y8"}},{"theatreId":7297,"theatreName":"Galaxy Cinemas Chatham","shortTheatreName":"Chatham","theatreUrl":"galaxy-cinemas-chatham","hasFreeParking":true,"alertMessages":null,"location":{"geoLocation":{"latitude":42.428469,"longitude":-82.216592},"distanceToOriginInMeters":1625139.1,"hasDistanceToOrigin":true,"address":"760 St. Clair Street","city":"Chatham","provinceCode":"ON","postalCode":"N7L 0E8"}},{"theatreId":7138,"theatreName":"Galaxy Cinemas Sarnia","shortTheatreName":"Sarnia","theatreUrl":"galaxy-cinemas-sarnia","hasFreeParking":true,"alertMessages":null,"location":{"geoLocation":{"latitude":42.980288,"longitude":-82.353555},"distanceToOriginInMeters":1651608.6,"hasDistanceToOrigin":true,"address":"1380 London Road","city":"Sarnia","provinceCode":"ON","postalCode":"N7S 1P7"}},{"theatreId":7267,"theatreName":"Galaxy Cinemas St. Thomas","shortTheatreName":"St. Thomas","theatreUrl":"galaxy-cinemas-st-thomas","hasFreeParking":true,"alertMessages":null,"location":{"geoLocation":{"latitude":42.774653,"longitude":-81.159557},"distanceToOriginInMeters":1718445.7,"hasDistanceToOrigin":true,"address":"417 Wellington Street","city":"St. Thomas","provinceCode":"ON","postalCode":"N5R 5J5"}},{"theatreId":7112,"theatreName":"Cineplex Odeon Westmount Cinemas and VIP","shortTheatreName":"Westmount 
+
+
+STEP 5 - Cineplex showtimes for one Toronto-area location
+
+--- cineplex showtimes: HTTP 204  0 bytes  ct=None

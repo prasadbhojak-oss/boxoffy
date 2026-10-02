@@ -1,0 +1,172 @@
+TOPUP 2026-10-01T05:56:47.564285  baseline 208 theatres / 502 showtimes
+  EXC JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+session warm-up: HTTP 0; cookies = ['akamai_location', 'userCountry', 'akamai_set_zip', 'userlocation', 'akamai_generated_location']
+FANDANGO LA 92831 +0 theatres +0 shows
+FANDANGO LA 91301 +0 theatres +0 shows
+FANDANGO LA 90501 +0 theatres +0 shows
+FANDANGO LA 92551 +2 theatres +4 shows
+FANDANGO LA 93065 +0 theatres +0 shows
+FANDANGO LA 91311 +0 theatres +0 shows
+FANDANGO LA 92509 +0 theatres +0 shows
+FANDANGO LA 90805 +0 theatres +0 shows
+FANDANGO DFW 75034 +0 theatres +0 shows
+FANDANGO DFW 75070 +0 theatres +0 shows
+FANDANGO DFW 76210 +1 theatres +2 shows
+FANDANGO DFW 75010 +0 theatres +0 shows
+FANDANGO DFW 75013 +0 theatres +0 shows
+FANDANGO DFW 75080 +1 theatres +1 shows
+FANDANGO DFW 76092 +0 theatres +0 shows
+FANDANGO DFW 75234 +0 theatres +0 shows
+FANDANGO SF Bay 94539 +0 theatres +0 shows
+FANDANGO SF Bay 95131 +0 theatres +0 shows
+FANDANGO SF Bay 94301 +0 theatres +0 shows
+FANDANGO SF Bay 94577 +0 theatres +0 shows
+FANDANGO SF Bay 95014 +0 theatres +0 shows
+FANDANGO SF Bay 94102 +0 theatres +0 shows
+FANDANGO SF Bay 94553 +0 theatres +0 shows
+FANDANGO SF Bay 95123 +0 theatres +0 shows
+FANDANGO NY/NJ 07310 +0 theatres +0 shows
+FANDANGO NY/NJ 08901 +0 theatres +0 shows
+FANDANGO NY/NJ 07102 +0 theatres +0 shows
+FANDANGO NY/NJ 11101 +0 theatres +0 shows
+FANDANGO NY/NJ 10704 +1 theatres +2 shows
+FANDANGO NY/NJ 08540 +3 theatres +6 shows
+FANDANGO NY/NJ 07728 +0 theatres +0 shows
+FANDANGO NY/NJ 11691 +4 theatres +10 shows
+FANDANGO Atlanta 30076 +0 theatres +0 shows
+FANDANGO Atlanta 30328 +0 theatres +0 shows
+FANDANGO Atlanta 30062 +0 theatres +0 shows
+FANDANGO Atlanta 30309 +3 theatres +8 shows
+FANDANGO Atlanta 30518 +0 theatres +0 shows
+FANDANGO Atlanta 30189 +0 theatres +0 shows
+FANDANGO Seattle 98004 +0 theatres +0 shows
+FANDANGO Seattle 98040 +0 theatres +0 shows
+FANDANGO Seattle 98008 +0 theatres +0 shows
+FANDANGO Seattle 98102 +0 theatres +0 shows
+FANDANGO Seattle 98272 +0 theatres +0 shows
+FANDANGO Seattle 98296 +0 theatres +0 shows
+FANDANGO N Carolina 27587 +0 theatres +0 shows
+FANDANGO N Carolina 27502 +0 theatres +0 shows
+FANDANGO N Carolina 28105 +0 theatres +0 shows
+FANDANGO N Carolina 27410 +0 theatres +0 shows
+FANDANGO N Carolina 27606 +0 theatres +0 shows
+FANDANGO N Carolina 28078 +0 theatres +0 shows
+FANDANGO Florida 33324 +0 theatres +0 shows
+FANDANGO Florida 33186 +0 theatres +0 shows
+FANDANGO Florida 33612 +0 theatres +0 shows
+FANDANGO Florida 32792 +0 theatres +0 shows
+FANDANGO Florida 33069 +0 theatres +0 shows
+FANDANGO Florida 34211 +0 theatres +0 shows
+FANDANGO Florida 33606 +0 theatres +0 shows
+FANDANGO Florida 32256 +4 theatres +10 shows
+FANDANGO Chicago 60504 +0 theatres +0 shows
+FANDANGO Chicago 60532 +0 theatres +0 shows
+FANDANGO Chicago 60103 +0 theatres +0 shows
+FANDANGO Chicago 60201 +2 theatres +3 shows
+FANDANGO Chicago 60611 +5 theatres +6 shows
+FANDANGO Chicago 60559 +0 theatres +0 shows
+FANDANGO Chicago 60446 +0 theatres +0 shows
+FANDANGO Chicago 60010 +0 theatres +0 shows
+FANDANGO Houston 77096 +0 theatres +0 shows
+FANDANGO Houston 77479 +0 theatres +0 shows
+FANDANGO Houston 77024 +0 theatres +0 shows
+FANDANGO Houston 77069 +0 theatres +0 shows
+FANDANGO Houston 77381 +0 theatres +0 shows
+FANDANGO Houston 77002 +0 theatres +0 shows
+FANDANGO DC 20852 +0 theatres +0 shows
+FANDANGO DC 22102 +0 theatres +0 shows
+FANDANGO DC 20902 +0 theatres +0 shows
+FANDANGO DC 22314 +0 theatres +0 shows
+FANDANGO DC 20705 +0 theatres +0 shows
+FANDANGO DC 21029 +0 theatres +0 shows
+FANDANGO Boston 02140 +0 theatres +0 shows
+FANDANGO Boston 01701 +0 theatres +0 shows
+FANDANGO Boston 02062 +0 theatres +0 shows
+FANDANGO Boston 01890 +0 theatres +0 shows
+FANDANGO Boston 02339 +0 theatres +0 shows
+FANDANGO Phoenix 85004 +1 theatres +1 shows
+FANDANGO Phoenix 85281 +0 theatres +0 shows
+FANDANGO Phoenix 85308 +3 theatres +6 shows
+FANDANGO Phoenix 85382 +0 theatres +0 shows
+FANDANGO Detroit 48098 +0 theatres +0 shows
+FANDANGO Detroit 48167 +0 theatres +0 shows
+FANDANGO Detroit 48316 +0 theatres +0 shows
+FANDANGO Detroit 48108 +1 theatres +1 shows
+FANDANGO Philadelphia 19406 +3 theatres +9 shows
+FANDANGO Philadelphia 19087 +1 theatres +1 shows
+FANDANGO Philadelphia 19002 +0 theatres +0 shows
+FANDANGO Philadelphia 19103 +1 theatres +2 shows
+FANDANGO Philadelphia 08002 +0 theatres +0 shows
+FANDANGO Minneapolis 55344 +6 theatres +16 shows
+FANDANGO Minneapolis 55425 +0 theatres +0 shows
+FANDANGO Minneapolis 55113 +0 theatres +0 shows
+FANDANGO Minneapolis 55439 +0 theatres +0 shows
+FANDANGO Denver 80021 +9 theatres +18 shows
+FANDANGO Denver 80112 +0 theatres +0 shows
+FANDANGO Denver 80202 +0 theatres +0 shows
+FANDANGO Denver 80027 +0 theatres +0 shows
+FANDANGO Portland 97006 +2 theatres +7 shows
+FANDANGO Portland 97223 +0 theatres +0 shows
+FANDANGO Portland 97201 +0 theatres +0 shows
+FANDANGO San Diego 92126 +4 theatres +6 shows
+FANDANGO San Diego 92127 +0 theatres +0 shows
+FANDANGO San Diego 92101 +0 theatres +0 shows
+FANDANGO Austin 78717 +6 theatres +19 shows
+FANDANGO Austin 78759 +0 theatres +0 shows
+FANDANGO Austin 78613 +0 theatres +0 shows
+FANDANGO San Antonio 78258 +3 theatres +8 shows
+FANDANGO San Antonio 78249 +0 theatres +0 shows
+FANDANGO Nashville 37067 +3 theatres +5 shows
+FANDANGO Nashville 37203 +0 theatres +0 shows
+FANDANGO Charlotte NC 28202 +0 theatres +0 shows
+FANDANGO Columbus 43016 +5 theatres +11 shows
+FANDANGO Columbus 43240 +0 theatres +0 shows
+FANDANGO Cleveland 44141 +3 theatres +8 shows
+FANDANGO Cleveland 44114 +0 theatres +0 shows
+FANDANGO Pittsburgh 15237 +4 theatres +8 shows
+FANDANGO Pittsburgh 15222 +0 theatres +0 shows
+FANDANGO Indianapolis 46032 +8 theatres +10 shows
+FANDANGO Indianapolis 46204 +0 theatres +0 shows
+FANDANGO Milwaukee 53045 +3 theatres +4 shows
+FANDANGO Milwaukee 53202 +0 theatres +0 shows
+FANDANGO St Louis 63017 +3 theatres +4 shows
+FANDANGO St Louis 63101 +0 theatres +0 shows
+FANDANGO Kansas City 66210 +4 theatres +16 shows
+FANDANGO Kansas City 64114 +0 theatres +0 shows
+FANDANGO Salt Lake 84070 +1 theatres +4 shows
+FANDANGO Salt Lake 84101 +0 theatres +0 shows
+FANDANGO Las Vegas 89135 +1 theatres +4 shows
+FANDANGO Las Vegas 89109 +0 theatres +0 shows
+FANDANGO Sacramento 95630 +6 theatres +18 shows
+FANDANGO Sacramento 95814 +0 theatres +0 shows
+FANDANGO Hartford 06032 +7 theatres +17 shows
+FANDANGO Hartford 06103 +0 theatres +0 shows
+FANDANGO Baltimore 21045 +0 theatres +0 shows
+FANDANGO Baltimore 21201 +0 theatres +0 shows
+FANDANGO Richmond 23060 +3 theatres +10 shows
+FANDANGO Virginia Bch 23455 +2 theatres +3 shows
+FANDANGO Jacksonville 32256 +0 theatres +0 shows
+FANDANGO New Orleans 70130 +1 theatres +1 shows
+FANDANGO Oklahoma City 73134 +3 theatres +4 shows
+FANDANGO Omaha 68130 +4 theatres +7 shows
+FANDANGO Buffalo 14221 +1 theatres +1 shows
+FANDANGO Rochester 14623 +2 theatres +2 shows
+FANDANGO Albany 12110 +0 theatres +0 shows
+FANDANGO Providence 02903 +0 theatres +0 shows
+FANDANGO Orlando extra 32751 +0 theatres +0 shows
+FANDANGO Tampa extra 33511 +0 theatres +0 shows
+FANDANGO Memphis 38120 +0 theatres +0 shows
+FANDANGO Louisville 40222 +1 theatres +3 shows
+FANDANGO Cincinnati 45040 +7 theatres +18 shows
+FANDANGO Des Moines 50266 +2 theatres +5 shows
+FANDANGO Madison 53719 +2 theatres +2 shows
+FANDANGO Raleigh extra 27617 +0 theatres +0 shows
+
+TOPUP SUMMARY
+new theatres     142
+new showtimes    311
+new seats        25716
+new seats sold   2027
+new occupancy    7.9%
+combined theatres  350
+combined showtimes 813

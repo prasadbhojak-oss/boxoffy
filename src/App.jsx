@@ -79,11 +79,14 @@ function rowToFilm(row) {
     showInMainChart:parseBool(row.showInMainChart),
     bogRank:parseNullInt(row.bogRank),
     estimated:parseBool(row.estimated),
-    pageUrl:(function(u,t){
-      if(u&&String(u).trim()) return String(u).trim().replace(/^\//,"");
-      if(!t) return null;
-      return String(t).toLowerCase().replace(/['\u2019]/g,"").replace(/[^a-z0-9]+/g,"-").replace(/^-+|-+$/g,"")+"-box-office.html";
-    })(row.pageUrl,row.title),
+    /* pageUrl is the sheet's alone. The old auto-slug fallback invented a URL from the
+       title for every film, so the chart always rendered a link even when no page had
+       been generated - seven of ten charted films were pointing at 404s. Every render
+       site already does `pageUrl ? <a> : plain text`, so a null here correctly renders
+       an unlinked title. Set pageUrl in the sheet only once the page actually exists. */
+    pageUrl: (row.pageUrl && String(row.pageUrl).trim())
+      ? String(row.pageUrl).trim().replace(/^\//,"")
+      : null,
     posterUrl:(row.posterUrl && typeof row.posterUrl === "string" && row.posterUrl.trim().replace(/\?+/g, "") !== "" && row.posterUrl.trim().startsWith("http")) ? row.posterUrl.trim() : null,
     studio:row.studio||null,
     betaModel:parseBool(row.betaModel),
@@ -4282,14 +4285,14 @@ function UpcomingCalendarGrid({ movies }) {
    ─────────────────────────────────────────────────────────────────────────── */
 function WeekendPreviewHero() {
   // If a search-by-title poster ever mismatches, pin it with useTMDBPosterById(<tmdbId>, "w185").
-  const pParadise = useTMDBPoster("The Paradise", "2026");
-  const pVvaan    = useTMDBPoster("The Vvaan", "2026");
-  const pHanuman  = useTMDBPoster("Hanuman Ansh", "2026");
   const pDrishyam = useTMDBPosterById(1269325, "w185");
-  const tiles = [ { src:pParadise, ab:"TP" }, { src:pVvaan, ab:"TV" }, { src:pHanuman, ab:"HA" }, { src:pDrishyam, ab:"D3" } ];
+  const pVvaan    = useTMDBPosterById(1384514, "w185");
+  const pHanuman  = useTMDBPosterById(1709391, "w185");
+  const pParadise = useTMDBPoster("The Paradise", "2026");
+  const tiles = [ { src:pDrishyam, ab:"D3" }, { src:pVvaan, ab:"TV" }, { src:pHanuman, ab:"HA" }, { src:pParadise, ab:"TP" } ];
   const [hover, setHover] = React.useState(false);
   return (
-    <a href="/boxoffice-weekend-recap-september-25-27-2026.html" style={{ textDecoration:"none", display:"block" }}>
+    <a href="/boxoffice-weekend-october-2-4-2026.html" style={{ textDecoration:"none", display:"block" }}>
       <div
         onMouseEnter={() => setHover(true)}
         onMouseLeave={() => setHover(false)}
@@ -4310,14 +4313,14 @@ function WeekendPreviewHero() {
           ))}
         </div>
         <div style={{ flex:1, minWidth:0, display:"flex", flexDirection:"column", justifyContent:"center" }}>
-          <span style={{ alignSelf:"flex-start", background:"#C8201A", color:"#FFFFFF", fontFamily:"'Barlow Condensed', sans-serif", fontWeight:900, fontSize:9, letterSpacing:"0.12em", padding:"2px 7px", borderRadius:2, marginBottom:7 }}>WEEK 39 · WEEKEND RECAP</span>
+          <span style={{ alignSelf:"flex-start", background:"#C8201A", color:"#FFFFFF", fontFamily:"'Barlow Condensed', sans-serif", fontWeight:900, fontSize:9, letterSpacing:"0.12em", padding:"2px 7px", borderRadius:2, marginBottom:7 }}>WEEK 40 · WEEKEND REPORT</span>
           <div style={{ fontFamily:"'Barlow Condensed', sans-serif", fontWeight:900, fontSize:"clamp(15px, 1.7vw, 17px)", color:"#FFFFFF", lineHeight:1.15, letterSpacing:"-0.01em" }}>
-            THE PARADISE WINS, THE VVAAN SHOCKS, AND ANSH CLEARS ₹300 CR.
+            DRISHYAM IS STARING AT AN EARTH-SHATTERING OPENING WEEKEND.
           </div>
           <div style={{ fontFamily:"'DM Sans', sans-serif", fontSize:10.5, color:"#9CA3AF", marginTop:5, lineHeight:1.4 }}>
-            The Paradise takes an estimated ₹46.15 Cr. The Vvaan, written off before release, takes ₹31 Cr — Sidharth Malhotra's biggest since 2015. And Drishyam sells 44,711 chain seats on day one of booking.
+            We counted 6,36,693 seats sold before the first show — 4,21,153 of them in the national chains, ₹26.97 Cr banked. We call ₹61 Cr on day one, ₹185 Cr across three days, and raise our lifetime to ₹580 Cr.
           </div>
-          <span style={{ fontFamily:"'Barlow Condensed', sans-serif", fontWeight:700, fontSize:11, color:"#E5C882", letterSpacing:"0.06em", marginTop:8 }}>READ THE RECAP →</span>
+          <span style={{ fontFamily:"'Barlow Condensed', sans-serif", fontWeight:700, fontSize:11, color:"#E5C882", letterSpacing:"0.06em", marginTop:8 }}>READ THE REPORT →</span>
         </div>
       </div>
     </a>

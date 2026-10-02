@@ -1,0 +1,126 @@
+PROBE 2026-10-01T08:11:52.816860   target date 2026-10-02
+Looking for: which chains serve JSON, and which already list the film.
+
+
+### VOX UAE site
+    https://uae.voxcinemas.com/movies
+    TimeoutError: The read operation timed out
+
+### VOX UAE movies json
+    https://uae.voxcinemas.com/movies?format=json
+    TimeoutError: The read operation timed out
+
+### VOX UAE showtimes
+    https://uae.voxcinemas.com/showtimes?d=2026-10-02
+    ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host
+
+### VOX UAE showtimes json
+    https://uae.voxcinemas.com/showtimes?d=2026-10-02&format=json
+    ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host
+
+### VOX UAE api movies
+    https://uae.voxcinemas.com/api/movies
+    ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host
+
+### VOX KSA site
+    https://ksa.voxcinemas.com/movies
+    TimeoutError: The read operation timed out
+
+### VOX KSA showtimes json
+    https://ksa.voxcinemas.com/showtimes?d=2026-10-02&format=json
+    TimeoutError: The read operation timed out
+
+### VOX QAT showtimes json
+    https://qat.voxcinemas.com/showtimes?d=2026-10-02&format=json
+    ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host
+
+### VOX BAH showtimes json
+    https://bah.voxcinemas.com/showtimes?d=2026-10-02&format=json
+    URLError: <urlopen error [Errno 11001] getaddrinfo failed>
+
+### VOX KWT showtimes json
+    https://kwt.voxcinemas.com/showtimes?d=2026-10-02&format=json
+    TimeoutError: The read operation timed out
+
+### VOX OMN showtimes json
+    https://omn.voxcinemas.com/showtimes?d=2026-10-02&format=json
+    URLError: <urlopen error [Errno 11001] getaddrinfo failed>
+
+### VOX LEB showtimes json
+    https://leb.voxcinemas.com/showtimes?d=2026-10-02&format=json
+    URLError: <urlopen error [Errno 11001] getaddrinfo failed>
+
+### VOX EGY showtimes json
+    https://egy.voxcinemas.com/showtimes?d=2026-10-02&format=json
+    TimeoutError: The read operation timed out
+
+### Reel site
+    https://www.reelcinemas.com/en/movies
+    HTTP 200  text/html  4,863 bytes  json=False  mentions_drishyam=False
+    api url: ['https://storage.googleapis.com', 'https://fonts.googleapis.com', 'https://storage.googleapis.com/eeg-prod-reelcinema-sb/web/assets/images/logo/logo.png', 'https://fonts.googleapis.com/css2']
+
+### Reel ae site
+    https://www.reelcinemas.ae/
+    HTTP 200  text/html  4,863 bytes  json=False  mentions_drishyam=False
+    api url: ['https://storage.googleapis.com', 'https://fonts.googleapis.com', 'https://storage.googleapis.com/eeg-prod-reelcinema-sb/web/assets/images/logo/logo.png', 'https://fonts.googleapis.com/css2']
+
+### Reel api movies
+    https://www.reelcinemas.com/api/movies
+    HTTP 200  text/html  4,863 bytes  json=False  mentions_drishyam=False
+    api url: ['https://storage.googleapis.com', 'https://fonts.googleapis.com', 'https://storage.googleapis.com/eeg-prod-reelcinema-sb/web/assets/images/logo/logo.png', 'https://fonts.googleapis.com/css2']
+
+### Novo site
+    https://www.novocinemas.com/
+    HTTP 200  text/html  36,307 bytes  json=False  mentions_drishyam=False
+
+### Novo api movies
+    https://api.novocinemas.com/api/movies
+    URLError: <urlopen error [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond>
+
+### Novo uae movies
+    https://www.novocinemas.com/en-ae/movies
+    HTTP 404
+
+### Muvi site
+    https://www.muvicinemas.com/en/movies
+    HTTP 404
+
+### Muvi api
+    https://www.muvicinemas.com/api/movies
+    HTTP 404
+
+### AMC Saudi
+    https://www.amccinemas.com/en/movies
+    HTTP 502
+
+### Empire KSA
+    https://www.empire.sa/
+    URLError: <urlopen error [Errno 11001] getaddrinfo failed>
+
+### Cinescape KW
+    https://www.cinescape.com.kw/
+    HTTP 200  text/html  5,334 bytes  json=False  mentions_drishyam=False
+
+### Grand Cinemas LB
+    https://www.grandcinemas.com/
+    HTTP 200  text/html  224,389 bytes  json=False  mentions_drishyam=False
+    api url: ['https://fonts.googleapis.com', 'https://fonts.googleapis.com/css2']
+
+### Cinepolis Gulf
+    https://cinepolisgulf.com/
+    HTTP 200  text/html  4,805 bytes  json=False  mentions_drishyam=False
+
+### Roxy UAE
+    https://www.theroxycinemas.com/
+    HTTP 403
+
+### Platinumlist UAE
+    https://dubai.platinumlist.net/movies
+    HTTP 404
+
+
+=== WHAT I NEED FROM THIS ===
+1. Which labels came back HTTP 200 with json=True
+2. Which came back mentions_drishyam=True
+3. Any 'api url' or 'NEXT buildId' lines - those name the real endpoint
+4. Anything that 403s, so I know to warm a session first like Fandango

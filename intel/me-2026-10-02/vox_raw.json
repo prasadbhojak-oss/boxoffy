@@ -1,0 +1,2639 @@
+{
+ "uae": {
+  "cc": "uae",
+  "country": "United Arab Emirates",
+  "slug": "drishyam-the-conclusion-hindi",
+  "cinemas": [
+   "Abu Dhabi Mall - Abu Dhabi",
+   "Al Hamra Mall -Ras Al Khaimah",
+   "Al Jimi Mall",
+   "Burjuman",
+   "City Centre Ajman",
+   "City Centre Al Zahia",
+   "City Centre Deira",
+   "City Centre Fujairah",
+   "City Centre Meaisem",
+   "City Centre Mirdif",
+   "City Centre Sharjah",
+   "City Centre Shindagha",
+   "Dubai Festival City Mall",
+   "Mall of the Emirates",
+   "MEGAPLEX(Cineplex Grand Hyatt)",
+   "Mercato",
+   "Nation Towers - Abu Dhabi",
+   "Palm Jumeirah Mall",
+   "Reem Mall - Abu Dhabi",
+   "The Galleria Al Maryah Island",
+   "Wafi Mall at Wafi City"
+  ],
+  "rows": [
+   {
+    "bookingId": "0036-100474",
+    "url": "https://uae.voxcinemas.com/booking/0036-100474",
+    "time": "9:50am",
+    "cinema": "Abu Dhabi Mall - Abu Dhabi",
+    "experience": "MAX",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0036-100475",
+    "url": "https://uae.voxcinemas.com/booking/0036-100475",
+    "time": "1:05pm",
+    "cinema": "Abu Dhabi Mall - Abu Dhabi",
+    "experience": "MAX",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0036-100476",
+    "url": "https://uae.voxcinemas.com/booking/0036-100476",
+    "time": "4:20pm",
+    "cinema": "Abu Dhabi Mall - Abu Dhabi",
+    "experience": "MAX",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0036-100477",
+    "url": "https://uae.voxcinemas.com/booking/0036-100477",
+    "time": "7:35pm",
+    "cinema": "Abu Dhabi Mall - Abu Dhabi",
+    "experience": "MAX",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0036-100478",
+    "url": "https://uae.voxcinemas.com/booking/0036-100478",
+    "time": "10:50pm",
+    "cinema": "Abu Dhabi Mall - Abu Dhabi",
+    "experience": "MAX",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0036-100536",
+    "url": "https://uae.voxcinemas.com/booking/0036-100536",
+    "time": "6:45pm",
+    "cinema": "Abu Dhabi Mall - Abu Dhabi",
+    "experience": "Standard",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0036-100537",
+    "url": "https://uae.voxcinemas.com/booking/0036-100537",
+    "time": "10:00pm",
+    "cinema": "Abu Dhabi Mall - Abu Dhabi",
+    "experience": "Standard",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0009-212326",
+    "url": "https://uae.voxcinemas.com/booking/0009-212326",
+    "time": "4:00pm",
+    "cinema": "Al Hamra Mall -Ras Al Khaimah",
+    "experience": "MAX",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0009-212327",
+    "url": "https://uae.voxcinemas.com/booking/0009-212327",
+    "time": "7:15pm",
+    "cinema": "Al Hamra Mall -Ras Al Khaimah",
+    "experience": "MAX",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0009-212328",
+    "url": "https://uae.voxcinemas.com/booking/0009-212328",
+    "time": "10:30pm",
+    "cinema": "Al Hamra Mall -Ras Al Khaimah",
+    "experience": "MAX",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0009-212453",
+    "url": "https://uae.voxcinemas.com/booking/0009-212453",
+    "time": "12:00pm",
+    "cinema": "Al Hamra Mall -Ras Al Khaimah",
+    "experience": "Standard",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0039-142850",
+    "url": "https://uae.voxcinemas.com/booking/0039-142850",
+    "time": "4:35pm",
+    "cinema": "Al Jimi Mall",
+    "experience": "Standard",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0013-310648",
+    "url": "https://uae.voxcinemas.com/booking/0013-310648",
+    "time": "10:00am",
+    "cinema": "Burjuman",
+    "experience": "MAX",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0013-310649",
+    "url": "https://uae.voxcinemas.com/booking/0013-310649",
+    "time": "1:15pm",
+    "cinema": "Burjuman",
+    "experience": "MAX",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0013-310650",
+    "url": "https://uae.voxcinemas.com/booking/0013-310650",
+    "time": "4:30pm",
+    "cinema": "Burjuman",
+    "experience": "MAX",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0013-310651",
+    "url": "https://uae.voxcinemas.com/booking/0013-310651",
+    "time": "7:45pm",
+    "cinema": "Burjuman",
+    "experience": "MAX",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0013-310652",
+    "url": "https://uae.voxcinemas.com/booking/0013-310652",
+    "time": "11:00pm",
+    "cinema": "Burjuman",
+    "experience": "MAX",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0013-310678",
+    "url": "https://uae.voxcinemas.com/booking/0013-310678",
+    "time": "9:00am",
+    "cinema": "Burjuman",
+    "experience": "Premium",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0013-310679",
+    "url": "https://uae.voxcinemas.com/booking/0013-310679",
+    "time": "12:15pm",
+    "cinema": "Burjuman",
+    "experience": "Premium",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0013-310680",
+    "url": "https://uae.voxcinemas.com/booking/0013-310680",
+    "time": "3:30pm",
+    "cinema": "Burjuman",
+    "experience": "Premium",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0013-310681",
+    "url": "https://uae.voxcinemas.com/booking/0013-310681",
+    "time": "6:45pm",
+    "cinema": "Burjuman",
+    "experience": "Premium",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0013-310682",
+    "url": "https://uae.voxcinemas.com/booking/0013-310682",
+    "time": "10:00pm",
+    "cinema": "Burjuman",
+    "experience": "Premium",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0013-310683",
+    "url": "https://uae.voxcinemas.com/booking/0013-310683",
+    "time": "1:15am",
+    "cinema": "Burjuman",
+    "experience": "Premium",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0013-310663",
+    "url": "https://uae.voxcinemas.com/booking/0013-310663",
+    "time": "11:00am",
+    "cinema": "Burjuman",
+    "experience": "Standard",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0013-310664",
+    "url": "https://uae.voxcinemas.com/booking/0013-310664",
+    "time": "2:15pm",
+    "cinema": "Burjuman",
+    "experience": "Standard",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0013-310665",
+    "url": "https://uae.voxcinemas.com/booking/0013-310665",
+    "time": "5:30pm",
+    "cinema": "Burjuman",
+    "experience": "Standard",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0013-310666",
+    "url": "https://uae.voxcinemas.com/booking/0013-310666",
+    "time": "8:45pm",
+    "cinema": "Burjuman",
+    "experience": "Standard",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0013-310780",
+    "url": "https://uae.voxcinemas.com/booking/0013-310780",
+    "time": "11:30pm",
+    "cinema": "Burjuman",
+    "experience": "Standard",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0013-310667",
+    "url": "https://uae.voxcinemas.com/booking/0013-310667",
+    "time": "11:55pm",
+    "cinema": "Burjuman",
+    "experience": "Standard",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0004-308652",
+    "url": "https://uae.voxcinemas.com/booking/0004-308652",
+    "time": "10:45am",
+    "cinema": "City Centre Ajman",
+    "experience": "MAX",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0004-308653",
+    "url": "https://uae.voxcinemas.com/booking/0004-308653",
+    "time": "2:00pm",
+    "cinema": "City Centre Ajman",
+    "experience": "MAX",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0004-308654",
+    "url": "https://uae.voxcinemas.com/booking/0004-308654",
+    "time": "5:15pm",
+    "cinema": "City Centre Ajman",
+    "experience": "MAX",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0004-308655",
+    "url": "https://uae.voxcinemas.com/booking/0004-308655",
+    "time": "8:30pm",
+    "cinema": "City Centre Ajman",
+    "experience": "MAX",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0004-308656",
+    "url": "https://uae.voxcinemas.com/booking/0004-308656",
+    "time": "11:45pm",
+    "cinema": "City Centre Ajman",
+    "experience": "MAX",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0004-308948",
+    "url": "https://uae.voxcinemas.com/booking/0004-308948",
+    "time": "12:45pm",
+    "cinema": "City Centre Ajman",
+    "experience": "Standard",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0004-308949",
+    "url": "https://uae.voxcinemas.com/booking/0004-308949",
+    "time": "4:00pm",
+    "cinema": "City Centre Ajman",
+    "experience": "Standard",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0004-308950",
+    "url": "https://uae.voxcinemas.com/booking/0004-308950",
+    "time": "7:15pm",
+    "cinema": "City Centre Ajman",
+    "experience": "Standard",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0004-308951",
+    "url": "https://uae.voxcinemas.com/booking/0004-308951",
+    "time": "10:30pm",
+    "cinema": "City Centre Ajman",
+    "experience": "Standard",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0004-309046",
+    "url": "https://uae.voxcinemas.com/booking/0004-309046",
+    "time": "12:30am",
+    "cinema": "City Centre Ajman",
+    "experience": "Standard",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0055-195150",
+    "url": "https://uae.voxcinemas.com/booking/0055-195150",
+    "time": "1:00pm",
+    "cinema": "City Centre Al Zahia",
+    "experience": "MAX",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0055-195151",
+    "url": "https://uae.voxcinemas.com/booking/0055-195151",
+    "time": "4:15pm",
+    "cinema": "City Centre Al Zahia",
+    "experience": "MAX",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0055-195152",
+    "url": "https://uae.voxcinemas.com/booking/0055-195152",
+    "time": "7:30pm",
+    "cinema": "City Centre Al Zahia",
+    "experience": "MAX",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0055-195153",
+    "url": "https://uae.voxcinemas.com/booking/0055-195153",
+    "time": "10:45pm",
+    "cinema": "City Centre Al Zahia",
+    "experience": "MAX",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0055-195334",
+    "url": "https://uae.voxcinemas.com/booking/0055-195334",
+    "time": "10:10am",
+    "cinema": "City Centre Al Zahia",
+    "experience": "Standard",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0055-195478",
+    "url": "https://uae.voxcinemas.com/booking/0055-195478",
+    "time": "2:00pm",
+    "cinema": "City Centre Al Zahia",
+    "experience": "Standard",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0055-195479",
+    "url": "https://uae.voxcinemas.com/booking/0055-195479",
+    "time": "5:15pm",
+    "cinema": "City Centre Al Zahia",
+    "experience": "Standard",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0055-195480",
+    "url": "https://uae.voxcinemas.com/booking/0055-195480",
+    "time": "8:30pm",
+    "cinema": "City Centre Al Zahia",
+    "experience": "Standard",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0055-195481",
+    "url": "https://uae.voxcinemas.com/booking/0055-195481",
+    "time": "11:45pm",
+    "cinema": "City Centre Al Zahia",
+    "experience": "Standard",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0001-677144",
+    "url": "https://uae.voxcinemas.com/booking/0001-677144",
+    "time": "1:00pm",
+    "cinema": "City Centre Deira",
+    "experience": "MAX",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0001-677145",
+    "url": "https://uae.voxcinemas.com/booking/0001-677145",
+    "time": "4:15pm",
+    "cinema": "City Centre Deira",
+    "experience": "MAX",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0001-677697",
+    "url": "https://uae.voxcinemas.com/booking/0001-677697",
+    "time": "5:00pm",
+    "cinema": "City Centre Deira",
+    "experience": "MAX",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0001-677146",
+    "url": "https://uae.voxcinemas.com/booking/0001-677146",
+    "time": "7:30pm",
+    "cinema": "City Centre Deira",
+    "experience": "MAX",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0001-677147",
+    "url": "https://uae.voxcinemas.com/booking/0001-677147",
+    "time": "10:45pm",
+    "cinema": "City Centre Deira",
+    "experience": "MAX",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0001-678336",
+    "url": "https://uae.voxcinemas.com/booking/0001-678336",
+    "time": "11:59pm",
+    "cinema": "City Centre Deira",
+    "experience": "MAX",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0001-678377",
+    "url": "https://uae.voxcinemas.com/booking/0001-678377",
+    "time": "3:00pm",
+    "cinema": "City Centre Deira",
+    "experience": "GOLD",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0001-678075",
+    "url": "https://uae.voxcinemas.com/booking/0001-678075",
+    "time": "3:45pm",
+    "cinema": "City Centre Deira",
+    "experience": "GOLD",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0001-678049",
+    "url": "https://uae.voxcinemas.com/booking/0001-678049",
+    "time": "4:45pm",
+    "cinema": "City Centre Deira",
+    "experience": "GOLD",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0001-678378",
+    "url": "https://uae.voxcinemas.com/booking/0001-678378",
+    "time": "6:30pm",
+    "cinema": "City Centre Deira",
+    "experience": "GOLD",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0001-678076",
+    "url": "https://uae.voxcinemas.com/booking/0001-678076",
+    "time": "7:15pm",
+    "cinema": "City Centre Deira",
+    "experience": "GOLD",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0001-678050",
+    "url": "https://uae.voxcinemas.com/booking/0001-678050",
+    "time": "8:15pm",
+    "cinema": "City Centre Deira",
+    "experience": "GOLD",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0001-678381",
+    "url": "https://uae.voxcinemas.com/booking/0001-678381",
+    "time": "9:00pm",
+    "cinema": "City Centre Deira",
+    "experience": "GOLD",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0001-678379",
+    "url": "https://uae.voxcinemas.com/booking/0001-678379",
+    "time": "10:00pm",
+    "cinema": "City Centre Deira",
+    "experience": "GOLD",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0001-678077",
+    "url": "https://uae.voxcinemas.com/booking/0001-678077",
+    "time": "10:45pm",
+    "cinema": "City Centre Deira",
+    "experience": "GOLD",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0001-678468",
+    "url": "https://uae.voxcinemas.com/booking/0001-678468",
+    "time": "11:40pm",
+    "cinema": "City Centre Deira",
+    "experience": "GOLD",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0001-678380",
+    "url": "https://uae.voxcinemas.com/booking/0001-678380",
+    "time": "12:30am",
+    "cinema": "City Centre Deira",
+    "experience": "GOLD",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0001-677157",
+    "url": "https://uae.voxcinemas.com/booking/0001-677157",
+    "time": "12:15pm",
+    "cinema": "City Centre Deira",
+    "experience": "Standard",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0001-677982",
+    "url": "https://uae.voxcinemas.com/booking/0001-677982",
+    "time": "1:45pm",
+    "cinema": "City Centre Deira",
+    "experience": "Standard",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0001-677158",
+    "url": "https://uae.voxcinemas.com/booking/0001-677158",
+    "time": "3:30pm",
+    "cinema": "City Centre Deira",
+    "experience": "Standard",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0001-677159",
+    "url": "https://uae.voxcinemas.com/booking/0001-677159",
+    "time": "6:45pm",
+    "cinema": "City Centre Deira",
+    "experience": "Standard",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0001-678491",
+    "url": "https://uae.voxcinemas.com/booking/0001-678491",
+    "time": "8:00pm",
+    "cinema": "City Centre Deira",
+    "experience": "Standard",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0001-678383",
+    "url": "https://uae.voxcinemas.com/booking/0001-678383",
+    "time": "9:00pm",
+    "cinema": "City Centre Deira",
+    "experience": "Standard",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0001-677160",
+    "url": "https://uae.voxcinemas.com/booking/0001-677160",
+    "time": "10:00pm",
+    "cinema": "City Centre Deira",
+    "experience": "Standard",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0001-677984",
+    "url": "https://uae.voxcinemas.com/booking/0001-677984",
+    "time": "11:15pm",
+    "cinema": "City Centre Deira",
+    "experience": "Standard",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0001-677725",
+    "url": "https://uae.voxcinemas.com/booking/0001-677725",
+    "time": "1:15am",
+    "cinema": "City Centre Deira",
+    "experience": "Standard",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0006-318289",
+    "url": "https://uae.voxcinemas.com/booking/0006-318289",
+    "time": "1:00pm",
+    "cinema": "City Centre Fujairah",
+    "experience": "Standard",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0006-318290",
+    "url": "https://uae.voxcinemas.com/booking/0006-318290",
+    "time": "4:15pm",
+    "cinema": "City Centre Fujairah",
+    "experience": "Standard",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0006-318291",
+    "url": "https://uae.voxcinemas.com/booking/0006-318291",
+    "time": "7:30pm",
+    "cinema": "City Centre Fujairah",
+    "experience": "Standard",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0006-318292",
+    "url": "https://uae.voxcinemas.com/booking/0006-318292",
+    "time": "10:45pm",
+    "cinema": "City Centre Fujairah",
+    "experience": "Standard",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0110-1369",
+    "url": "https://uae.voxcinemas.com/booking/0110-1369",
+    "time": "1:45pm",
+    "cinema": "City Centre Meaisem",
+    "experience": "Premier",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0110-1370",
+    "url": "https://uae.voxcinemas.com/booking/0110-1370",
+    "time": "5:00pm",
+    "cinema": "City Centre Meaisem",
+    "experience": "Premier",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0110-1371",
+    "url": "https://uae.voxcinemas.com/booking/0110-1371",
+    "time": "8:15pm",
+    "cinema": "City Centre Meaisem",
+    "experience": "Premier",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0110-1372",
+    "url": "https://uae.voxcinemas.com/booking/0110-1372",
+    "time": "11:30pm",
+    "cinema": "City Centre Meaisem",
+    "experience": "Premier",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0005-613773",
+    "url": "https://uae.voxcinemas.com/booking/0005-613773",
+    "time": "10:30am",
+    "cinema": "City Centre Mirdif",
+    "experience": "Standard",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0005-613971",
+    "url": "https://uae.voxcinemas.com/booking/0005-613971",
+    "time": "12:30pm",
+    "cinema": "City Centre Mirdif",
+    "experience": "Standard",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0005-613774",
+    "url": "https://uae.voxcinemas.com/booking/0005-613774",
+    "time": "1:45pm",
+    "cinema": "City Centre Mirdif",
+    "experience": "Standard",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0005-613972",
+    "url": "https://uae.voxcinemas.com/booking/0005-613972",
+    "time": "3:45pm",
+    "cinema": "City Centre Mirdif",
+    "experience": "Standard",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0005-613775",
+    "url": "https://uae.voxcinemas.com/booking/0005-613775",
+    "time": "5:00pm",
+    "cinema": "City Centre Mirdif",
+    "experience": "Standard",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0005-613973",
+    "url": "https://uae.voxcinemas.com/booking/0005-613973",
+    "time": "7:00pm",
+    "cinema": "City Centre Mirdif",
+    "experience": "Standard",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0005-613776",
+    "url": "https://uae.voxcinemas.com/booking/0005-613776",
+    "time": "8:15pm",
+    "cinema": "City Centre Mirdif",
+    "experience": "Standard",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0005-613974",
+    "url": "https://uae.voxcinemas.com/booking/0005-613974",
+    "time": "10:15pm",
+    "cinema": "City Centre Mirdif",
+    "experience": "Standard",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0005-613777",
+    "url": "https://uae.voxcinemas.com/booking/0005-613777",
+    "time": "11:30pm",
+    "cinema": "City Centre Mirdif",
+    "experience": "Standard",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0035-184311",
+    "url": "https://uae.voxcinemas.com/booking/0035-184311",
+    "time": "12:00pm",
+    "cinema": "City Centre Sharjah",
+    "experience": "MAX",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0035-184312",
+    "url": "https://uae.voxcinemas.com/booking/0035-184312",
+    "time": "3:15pm",
+    "cinema": "City Centre Sharjah",
+    "experience": "MAX",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0035-184313",
+    "url": "https://uae.voxcinemas.com/booking/0035-184313",
+    "time": "6:30pm",
+    "cinema": "City Centre Sharjah",
+    "experience": "MAX",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0035-184314",
+    "url": "https://uae.voxcinemas.com/booking/0035-184314",
+    "time": "9:45pm",
+    "cinema": "City Centre Sharjah",
+    "experience": "MAX",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0035-184252",
+    "url": "https://uae.voxcinemas.com/booking/0035-184252",
+    "time": "10:00am",
+    "cinema": "City Centre Sharjah",
+    "experience": "Standard",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0035-184377",
+    "url": "https://uae.voxcinemas.com/booking/0035-184377",
+    "time": "11:00am",
+    "cinema": "City Centre Sharjah",
+    "experience": "Standard",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0035-184253",
+    "url": "https://uae.voxcinemas.com/booking/0035-184253",
+    "time": "1:15pm",
+    "cinema": "City Centre Sharjah",
+    "experience": "Standard",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0035-184378",
+    "url": "https://uae.voxcinemas.com/booking/0035-184378",
+    "time": "2:15pm",
+    "cinema": "City Centre Sharjah",
+    "experience": "Standard",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0035-184254",
+    "url": "https://uae.voxcinemas.com/booking/0035-184254",
+    "time": "4:30pm",
+    "cinema": "City Centre Sharjah",
+    "experience": "Standard",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0035-184379",
+    "url": "https://uae.voxcinemas.com/booking/0035-184379",
+    "time": "5:30pm",
+    "cinema": "City Centre Sharjah",
+    "experience": "Standard",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0035-184255",
+    "url": "https://uae.voxcinemas.com/booking/0035-184255",
+    "time": "7:45pm",
+    "cinema": "City Centre Sharjah",
+    "experience": "Standard",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0035-184380",
+    "url": "https://uae.voxcinemas.com/booking/0035-184380",
+    "time": "8:45pm",
+    "cinema": "City Centre Sharjah",
+    "experience": "Standard",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0035-184256",
+    "url": "https://uae.voxcinemas.com/booking/0035-184256",
+    "time": "11:00pm",
+    "cinema": "City Centre Sharjah",
+    "experience": "Standard",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0035-184381",
+    "url": "https://uae.voxcinemas.com/booking/0035-184381",
+    "time": "12:00am",
+    "cinema": "City Centre Sharjah",
+    "experience": "Standard",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0017-158584",
+    "url": "https://uae.voxcinemas.com/booking/0017-158584",
+    "time": "10:00am",
+    "cinema": "City Centre Shindagha",
+    "experience": "Standard",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0017-158686",
+    "url": "https://uae.voxcinemas.com/booking/0017-158686",
+    "time": "11:00am",
+    "cinema": "City Centre Shindagha",
+    "experience": "Standard",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0017-158585",
+    "url": "https://uae.voxcinemas.com/booking/0017-158585",
+    "time": "1:15pm",
+    "cinema": "City Centre Shindagha",
+    "experience": "Standard",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0017-158687",
+    "url": "https://uae.voxcinemas.com/booking/0017-158687",
+    "time": "2:15pm",
+    "cinema": "City Centre Shindagha",
+    "experience": "Standard",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0017-158586",
+    "url": "https://uae.voxcinemas.com/booking/0017-158586",
+    "time": "4:30pm",
+    "cinema": "City Centre Shindagha",
+    "experience": "Standard",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0017-158688",
+    "url": "https://uae.voxcinemas.com/booking/0017-158688",
+    "time": "5:30pm",
+    "cinema": "City Centre Shindagha",
+    "experience": "Standard",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0017-158587",
+    "url": "https://uae.voxcinemas.com/booking/0017-158587",
+    "time": "7:45pm",
+    "cinema": "City Centre Shindagha",
+    "experience": "Standard",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0017-158689",
+    "url": "https://uae.voxcinemas.com/booking/0017-158689",
+    "time": "8:45pm",
+    "cinema": "City Centre Shindagha",
+    "experience": "Standard",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0017-158588",
+    "url": "https://uae.voxcinemas.com/booking/0017-158588",
+    "time": "11:00pm",
+    "cinema": "City Centre Shindagha",
+    "experience": "Standard",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0017-158690",
+    "url": "https://uae.voxcinemas.com/booking/0017-158690",
+    "time": "11:59pm",
+    "cinema": "City Centre Shindagha",
+    "experience": "Standard",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0105-102407",
+    "url": "https://uae.voxcinemas.com/booking/0105-102407",
+    "time": "12:00pm",
+    "cinema": "Dubai Festival City Mall",
+    "experience": "Standard",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0105-101892",
+    "url": "https://uae.voxcinemas.com/booking/0105-101892",
+    "time": "1:00pm",
+    "cinema": "Dubai Festival City Mall",
+    "experience": "Standard",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0105-102408",
+    "url": "https://uae.voxcinemas.com/booking/0105-102408",
+    "time": "3:15pm",
+    "cinema": "Dubai Festival City Mall",
+    "experience": "Standard",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0105-101893",
+    "url": "https://uae.voxcinemas.com/booking/0105-101893",
+    "time": "4:15pm",
+    "cinema": "Dubai Festival City Mall",
+    "experience": "Standard",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0105-102409",
+    "url": "https://uae.voxcinemas.com/booking/0105-102409",
+    "time": "6:30pm",
+    "cinema": "Dubai Festival City Mall",
+    "experience": "Standard",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0105-101894",
+    "url": "https://uae.voxcinemas.com/booking/0105-101894",
+    "time": "7:30pm",
+    "cinema": "Dubai Festival City Mall",
+    "experience": "Standard",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0105-102410",
+    "url": "https://uae.voxcinemas.com/booking/0105-102410",
+    "time": "9:45pm",
+    "cinema": "Dubai Festival City Mall",
+    "experience": "Standard",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0105-101895",
+    "url": "https://uae.voxcinemas.com/booking/0105-101895",
+    "time": "10:45pm",
+    "cinema": "Dubai Festival City Mall",
+    "experience": "Standard",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0002-631690",
+    "url": "https://uae.voxcinemas.com/booking/0002-631690",
+    "time": "10:00am",
+    "cinema": "Mall of the Emirates",
+    "experience": "Premier",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0002-631691",
+    "url": "https://uae.voxcinemas.com/booking/0002-631691",
+    "time": "1:20pm",
+    "cinema": "Mall of the Emirates",
+    "experience": "Premier",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0002-631692",
+    "url": "https://uae.voxcinemas.com/booking/0002-631692",
+    "time": "4:40pm",
+    "cinema": "Mall of the Emirates",
+    "experience": "Premier",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0002-631693",
+    "url": "https://uae.voxcinemas.com/booking/0002-631693",
+    "time": "8:00pm",
+    "cinema": "Mall of the Emirates",
+    "experience": "Premier",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0002-632011",
+    "url": "https://uae.voxcinemas.com/booking/0002-632011",
+    "time": "9:00pm",
+    "cinema": "Mall of the Emirates",
+    "experience": "Premier",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0002-632893",
+    "url": "https://uae.voxcinemas.com/booking/0002-632893",
+    "time": "9:50pm",
+    "cinema": "Mall of the Emirates",
+    "experience": "Premier",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0002-631694",
+    "url": "https://uae.voxcinemas.com/booking/0002-631694",
+    "time": "11:20pm",
+    "cinema": "Mall of the Emirates",
+    "experience": "Premier",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0002-632012",
+    "url": "https://uae.voxcinemas.com/booking/0002-632012",
+    "time": "12:15am",
+    "cinema": "Mall of the Emirates",
+    "experience": "Premier",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0002-632894",
+    "url": "https://uae.voxcinemas.com/booking/0002-632894",
+    "time": "12:30am",
+    "cinema": "Mall of the Emirates",
+    "experience": "Premier",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0015-259319",
+    "url": "https://uae.voxcinemas.com/booking/0015-259319",
+    "time": "12:00pm",
+    "cinema": "MEGAPLEX(Cineplex Grand Hyatt)",
+    "experience": "Standard",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0015-259343",
+    "url": "https://uae.voxcinemas.com/booking/0015-259343",
+    "time": "12:45pm",
+    "cinema": "MEGAPLEX(Cineplex Grand Hyatt)",
+    "experience": "Standard",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0015-259508",
+    "url": "https://uae.voxcinemas.com/booking/0015-259508",
+    "time": "1:15pm",
+    "cinema": "MEGAPLEX(Cineplex Grand Hyatt)",
+    "experience": "Standard",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0015-259367",
+    "url": "https://uae.voxcinemas.com/booking/0015-259367",
+    "time": "1:45pm",
+    "cinema": "MEGAPLEX(Cineplex Grand Hyatt)",
+    "experience": "Standard",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0015-259320",
+    "url": "https://uae.voxcinemas.com/booking/0015-259320",
+    "time": "3:20pm",
+    "cinema": "MEGAPLEX(Cineplex Grand Hyatt)",
+    "experience": "Standard",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0015-259344",
+    "url": "https://uae.voxcinemas.com/booking/0015-259344",
+    "time": "4:10pm",
+    "cinema": "MEGAPLEX(Cineplex Grand Hyatt)",
+    "experience": "Standard",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0015-259509",
+    "url": "https://uae.voxcinemas.com/booking/0015-259509",
+    "time": "4:40pm",
+    "cinema": "MEGAPLEX(Cineplex Grand Hyatt)",
+    "experience": "Standard",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0015-259368",
+    "url": "https://uae.voxcinemas.com/booking/0015-259368",
+    "time": "5:10pm",
+    "cinema": "MEGAPLEX(Cineplex Grand Hyatt)",
+    "experience": "Standard",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0015-259321",
+    "url": "https://uae.voxcinemas.com/booking/0015-259321",
+    "time": "6:45pm",
+    "cinema": "MEGAPLEX(Cineplex Grand Hyatt)",
+    "experience": "Standard",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0015-259345",
+    "url": "https://uae.voxcinemas.com/booking/0015-259345",
+    "time": "7:30pm",
+    "cinema": "MEGAPLEX(Cineplex Grand Hyatt)",
+    "experience": "Standard",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0015-259510",
+    "url": "https://uae.voxcinemas.com/booking/0015-259510",
+    "time": "8:00pm",
+    "cinema": "MEGAPLEX(Cineplex Grand Hyatt)",
+    "experience": "Standard",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0015-259369",
+    "url": "https://uae.voxcinemas.com/booking/0015-259369",
+    "time": "8:30pm",
+    "cinema": "MEGAPLEX(Cineplex Grand Hyatt)",
+    "experience": "Standard",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0015-259322",
+    "url": "https://uae.voxcinemas.com/booking/0015-259322",
+    "time": "10:15pm",
+    "cinema": "MEGAPLEX(Cineplex Grand Hyatt)",
+    "experience": "Standard",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0015-259346",
+    "url": "https://uae.voxcinemas.com/booking/0015-259346",
+    "time": "11:00pm",
+    "cinema": "MEGAPLEX(Cineplex Grand Hyatt)",
+    "experience": "Standard",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0015-259511",
+    "url": "https://uae.voxcinemas.com/booking/0015-259511",
+    "time": "11:30pm",
+    "cinema": "MEGAPLEX(Cineplex Grand Hyatt)",
+    "experience": "Standard",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0015-259370",
+    "url": "https://uae.voxcinemas.com/booking/0015-259370",
+    "time": "11:59pm",
+    "cinema": "MEGAPLEX(Cineplex Grand Hyatt)",
+    "experience": "Standard",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0007-198517",
+    "url": "https://uae.voxcinemas.com/booking/0007-198517",
+    "time": "12:45pm",
+    "cinema": "Mercato",
+    "experience": "Standard",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0007-198518",
+    "url": "https://uae.voxcinemas.com/booking/0007-198518",
+    "time": "4:00pm",
+    "cinema": "Mercato",
+    "experience": "Standard",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0007-198519",
+    "url": "https://uae.voxcinemas.com/booking/0007-198519",
+    "time": "7:15pm",
+    "cinema": "Mercato",
+    "experience": "Standard",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0007-198520",
+    "url": "https://uae.voxcinemas.com/booking/0007-198520",
+    "time": "10:30pm",
+    "cinema": "Mercato",
+    "experience": "Standard",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0014-251195",
+    "url": "https://uae.voxcinemas.com/booking/0014-251195",
+    "time": "3:15pm",
+    "cinema": "Nation Towers - Abu Dhabi",
+    "experience": "Standard",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0014-251197",
+    "url": "https://uae.voxcinemas.com/booking/0014-251197",
+    "time": "8:45pm",
+    "cinema": "Nation Towers - Abu Dhabi",
+    "experience": "Standard",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0049-207111",
+    "url": "https://uae.voxcinemas.com/booking/0049-207111",
+    "time": "12:05pm",
+    "cinema": "Palm Jumeirah Mall",
+    "experience": "Standard",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0049-207740",
+    "url": "https://uae.voxcinemas.com/booking/0049-207740",
+    "time": "1:45pm",
+    "cinema": "Palm Jumeirah Mall",
+    "experience": "Standard",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0049-207112",
+    "url": "https://uae.voxcinemas.com/booking/0049-207112",
+    "time": "3:25pm",
+    "cinema": "Palm Jumeirah Mall",
+    "experience": "Standard",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0049-207739",
+    "url": "https://uae.voxcinemas.com/booking/0049-207739",
+    "time": "5:00pm",
+    "cinema": "Palm Jumeirah Mall",
+    "experience": "Standard",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0049-207741",
+    "url": "https://uae.voxcinemas.com/booking/0049-207741",
+    "time": "6:00pm",
+    "cinema": "Palm Jumeirah Mall",
+    "experience": "Standard",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0049-207113",
+    "url": "https://uae.voxcinemas.com/booking/0049-207113",
+    "time": "6:45pm",
+    "cinema": "Palm Jumeirah Mall",
+    "experience": "Standard",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0049-207114",
+    "url": "https://uae.voxcinemas.com/booking/0049-207114",
+    "time": "10:05pm",
+    "cinema": "Palm Jumeirah Mall",
+    "experience": "Standard",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0104-59348",
+    "url": "https://uae.voxcinemas.com/booking/0104-59348",
+    "time": "12:30pm",
+    "cinema": "Reem Mall - Abu Dhabi",
+    "experience": "MAX",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0104-59349",
+    "url": "https://uae.voxcinemas.com/booking/0104-59349",
+    "time": "4:15pm",
+    "cinema": "Reem Mall - Abu Dhabi",
+    "experience": "MAX",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0104-59350",
+    "url": "https://uae.voxcinemas.com/booking/0104-59350",
+    "time": "7:35pm",
+    "cinema": "Reem Mall - Abu Dhabi",
+    "experience": "MAX",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0104-59351",
+    "url": "https://uae.voxcinemas.com/booking/0104-59351",
+    "time": "10:55pm",
+    "cinema": "Reem Mall - Abu Dhabi",
+    "experience": "MAX",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0046-312499",
+    "url": "https://uae.voxcinemas.com/booking/0046-312499",
+    "time": "12:15pm",
+    "cinema": "The Galleria Al Maryah Island",
+    "experience": "Standard",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0046-311989",
+    "url": "https://uae.voxcinemas.com/booking/0046-311989",
+    "time": "1:00pm",
+    "cinema": "The Galleria Al Maryah Island",
+    "experience": "Standard",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0046-311990",
+    "url": "https://uae.voxcinemas.com/booking/0046-311990",
+    "time": "4:15pm",
+    "cinema": "The Galleria Al Maryah Island",
+    "experience": "Standard",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0046-311991",
+    "url": "https://uae.voxcinemas.com/booking/0046-311991",
+    "time": "7:30pm",
+    "cinema": "The Galleria Al Maryah Island",
+    "experience": "Standard",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0057-150771",
+    "url": "https://uae.voxcinemas.com/booking/0057-150771",
+    "time": "2:30pm",
+    "cinema": "Wafi Mall at Wafi City",
+    "experience": "MAX",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0057-150772",
+    "url": "https://uae.voxcinemas.com/booking/0057-150772",
+    "time": "5:45pm",
+    "cinema": "Wafi Mall at Wafi City",
+    "experience": "MAX",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0057-150773",
+    "url": "https://uae.voxcinemas.com/booking/0057-150773",
+    "time": "9:00pm",
+    "cinema": "Wafi Mall at Wafi City",
+    "experience": "MAX",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0057-150774",
+    "url": "https://uae.voxcinemas.com/booking/0057-150774",
+    "time": "12:15am",
+    "cinema": "Wafi Mall at Wafi City",
+    "experience": "MAX",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0057-150802",
+    "url": "https://uae.voxcinemas.com/booking/0057-150802",
+    "time": "5:30pm",
+    "cinema": "Wafi Mall at Wafi City",
+    "experience": "THEATRE",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0057-150803",
+    "url": "https://uae.voxcinemas.com/booking/0057-150803",
+    "time": "10:00pm",
+    "cinema": "Wafi Mall at Wafi City",
+    "experience": "THEATRE",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0057-150814",
+    "url": "https://uae.voxcinemas.com/booking/0057-150814",
+    "time": "3:00pm",
+    "cinema": "Wafi Mall at Wafi City",
+    "experience": "SAMSUNG ONYX",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0057-150755",
+    "url": "https://uae.voxcinemas.com/booking/0057-150755",
+    "time": "1:30pm",
+    "cinema": "Wafi Mall at Wafi City",
+    "experience": "Standard",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0057-150756",
+    "url": "https://uae.voxcinemas.com/booking/0057-150756",
+    "time": "4:45pm",
+    "cinema": "Wafi Mall at Wafi City",
+    "experience": "Standard",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0057-151356",
+    "url": "https://uae.voxcinemas.com/booking/0057-151356",
+    "time": "7:00pm",
+    "cinema": "Wafi Mall at Wafi City",
+    "experience": "Standard",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0057-150757",
+    "url": "https://uae.voxcinemas.com/booking/0057-150757",
+    "time": "8:00pm",
+    "cinema": "Wafi Mall at Wafi City",
+    "experience": "Standard",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0057-151355",
+    "url": "https://uae.voxcinemas.com/booking/0057-151355",
+    "time": "10:15pm",
+    "cinema": "Wafi Mall at Wafi City",
+    "experience": "Standard",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0057-150758",
+    "url": "https://uae.voxcinemas.com/booking/0057-150758",
+    "time": "11:15pm",
+    "cinema": "Wafi Mall at Wafi City",
+    "experience": "Standard",
+    "country": "United Arab Emirates",
+    "cc": "uae",
+    "slug": "drishyam-the-conclusion-hindi"
+   }
+  ],
+  "bytes": 201618
+ },
+ "ksa": {
+  "cc": "ksa",
+  "country": "Saudi Arabia",
+  "slug": "drishyam-the-conclusion-hindi",
+  "cinemas": [
+   "Al Qasr Mall - Riyadh",
+   "Atyaf Mall - Riyadh",
+   "Hail Square - Hail",
+   "Jubail Galleria Mall - Jubail",
+   "Riyadh Park - Riyadh",
+   "Roshn Front - Riyadh",
+   "Sahara Mall - Riyadh",
+   "Tabuk Park - Tabuk",
+   "The Esplanade",
+   "The Roof - Riyadh",
+   "The Spot, Sheikh Jaber - Riyadh",
+   "Town Square - Jeddah",
+   "West Avenue Mall - Dammam"
+  ],
+  "rows": [
+   {
+    "bookingId": "0041-286689",
+    "url": "https://ksa.voxcinemas.com/booking/0041-286689",
+    "time": "10:00am",
+    "cinema": "Al Qasr Mall - Riyadh",
+    "experience": "Standard",
+    "country": "Saudi Arabia",
+    "cc": "ksa",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0041-286690",
+    "url": "https://ksa.voxcinemas.com/booking/0041-286690",
+    "time": "10:20am",
+    "cinema": "Al Qasr Mall - Riyadh",
+    "experience": "Standard",
+    "country": "Saudi Arabia",
+    "cc": "ksa",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0041-286055",
+    "url": "https://ksa.voxcinemas.com/booking/0041-286055",
+    "time": "1:15pm",
+    "cinema": "Al Qasr Mall - Riyadh",
+    "experience": "Standard",
+    "country": "Saudi Arabia",
+    "cc": "ksa",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0041-286240",
+    "url": "https://ksa.voxcinemas.com/booking/0041-286240",
+    "time": "1:35pm",
+    "cinema": "Al Qasr Mall - Riyadh",
+    "experience": "Standard",
+    "country": "Saudi Arabia",
+    "cc": "ksa",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0041-286701",
+    "url": "https://ksa.voxcinemas.com/booking/0041-286701",
+    "time": "1:40pm",
+    "cinema": "Al Qasr Mall - Riyadh",
+    "experience": "Standard",
+    "country": "Saudi Arabia",
+    "cc": "ksa",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0041-286056",
+    "url": "https://ksa.voxcinemas.com/booking/0041-286056",
+    "time": "4:30pm",
+    "cinema": "Al Qasr Mall - Riyadh",
+    "experience": "Standard",
+    "country": "Saudi Arabia",
+    "cc": "ksa",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0041-286241",
+    "url": "https://ksa.voxcinemas.com/booking/0041-286241",
+    "time": "4:40pm",
+    "cinema": "Al Qasr Mall - Riyadh",
+    "experience": "Standard",
+    "country": "Saudi Arabia",
+    "cc": "ksa",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0041-286242",
+    "url": "https://ksa.voxcinemas.com/booking/0041-286242",
+    "time": "7:45pm",
+    "cinema": "Al Qasr Mall - Riyadh",
+    "experience": "Standard",
+    "country": "Saudi Arabia",
+    "cc": "ksa",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0041-286694",
+    "url": "https://ksa.voxcinemas.com/booking/0041-286694",
+    "time": "8:20pm",
+    "cinema": "Al Qasr Mall - Riyadh",
+    "experience": "Standard",
+    "country": "Saudi Arabia",
+    "cc": "ksa",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0041-286057",
+    "url": "https://ksa.voxcinemas.com/booking/0041-286057",
+    "time": "9:30pm",
+    "cinema": "Al Qasr Mall - Riyadh",
+    "experience": "Standard",
+    "country": "Saudi Arabia",
+    "cc": "ksa",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0041-286243",
+    "url": "https://ksa.voxcinemas.com/booking/0041-286243",
+    "time": "11:00pm",
+    "cinema": "Al Qasr Mall - Riyadh",
+    "experience": "Standard",
+    "country": "Saudi Arabia",
+    "cc": "ksa",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0041-286058",
+    "url": "https://ksa.voxcinemas.com/booking/0041-286058",
+    "time": "12:35am",
+    "cinema": "Al Qasr Mall - Riyadh",
+    "experience": "Standard",
+    "country": "Saudi Arabia",
+    "cc": "ksa",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0041-286244",
+    "url": "https://ksa.voxcinemas.com/booking/0041-286244",
+    "time": "2:15am",
+    "cinema": "Al Qasr Mall - Riyadh",
+    "experience": "Standard",
+    "country": "Saudi Arabia",
+    "cc": "ksa",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0041-286059",
+    "url": "https://ksa.voxcinemas.com/booking/0041-286059",
+    "time": "3:40am",
+    "cinema": "Al Qasr Mall - Riyadh",
+    "experience": "Standard",
+    "country": "Saudi Arabia",
+    "cc": "ksa",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0050-184927",
+    "url": "https://ksa.voxcinemas.com/booking/0050-184927",
+    "time": "11:00am",
+    "cinema": "Atyaf Mall - Riyadh",
+    "experience": "Standard",
+    "country": "Saudi Arabia",
+    "cc": "ksa",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0050-184929",
+    "url": "https://ksa.voxcinemas.com/booking/0050-184929",
+    "time": "11:30am",
+    "cinema": "Atyaf Mall - Riyadh",
+    "experience": "Standard",
+    "country": "Saudi Arabia",
+    "cc": "ksa",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0050-184928",
+    "url": "https://ksa.voxcinemas.com/booking/0050-184928",
+    "time": "11:55am",
+    "cinema": "Atyaf Mall - Riyadh",
+    "experience": "Standard",
+    "country": "Saudi Arabia",
+    "cc": "ksa",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0050-184703",
+    "url": "https://ksa.voxcinemas.com/booking/0050-184703",
+    "time": "1:15pm",
+    "cinema": "Atyaf Mall - Riyadh",
+    "experience": "Standard",
+    "country": "Saudi Arabia",
+    "cc": "ksa",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0050-184743",
+    "url": "https://ksa.voxcinemas.com/booking/0050-184743",
+    "time": "2:15pm",
+    "cinema": "Atyaf Mall - Riyadh",
+    "experience": "Standard",
+    "country": "Saudi Arabia",
+    "cc": "ksa",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0050-184704",
+    "url": "https://ksa.voxcinemas.com/booking/0050-184704",
+    "time": "4:15pm",
+    "cinema": "Atyaf Mall - Riyadh",
+    "experience": "Standard",
+    "country": "Saudi Arabia",
+    "cc": "ksa",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0050-184744",
+    "url": "https://ksa.voxcinemas.com/booking/0050-184744",
+    "time": "5:15pm",
+    "cinema": "Atyaf Mall - Riyadh",
+    "experience": "Standard",
+    "country": "Saudi Arabia",
+    "cc": "ksa",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0050-184705",
+    "url": "https://ksa.voxcinemas.com/booking/0050-184705",
+    "time": "7:15pm",
+    "cinema": "Atyaf Mall - Riyadh",
+    "experience": "Standard",
+    "country": "Saudi Arabia",
+    "cc": "ksa",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0050-184745",
+    "url": "https://ksa.voxcinemas.com/booking/0050-184745",
+    "time": "8:30pm",
+    "cinema": "Atyaf Mall - Riyadh",
+    "experience": "Standard",
+    "country": "Saudi Arabia",
+    "cc": "ksa",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0050-184706",
+    "url": "https://ksa.voxcinemas.com/booking/0050-184706",
+    "time": "10:20pm",
+    "cinema": "Atyaf Mall - Riyadh",
+    "experience": "Standard",
+    "country": "Saudi Arabia",
+    "cc": "ksa",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0050-184746",
+    "url": "https://ksa.voxcinemas.com/booking/0050-184746",
+    "time": "11:35pm",
+    "cinema": "Atyaf Mall - Riyadh",
+    "experience": "Standard",
+    "country": "Saudi Arabia",
+    "cc": "ksa",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0050-184707",
+    "url": "https://ksa.voxcinemas.com/booking/0050-184707",
+    "time": "1:30am",
+    "cinema": "Atyaf Mall - Riyadh",
+    "experience": "Standard",
+    "country": "Saudi Arabia",
+    "cc": "ksa",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0050-184747",
+    "url": "https://ksa.voxcinemas.com/booking/0050-184747",
+    "time": "2:45am",
+    "cinema": "Atyaf Mall - Riyadh",
+    "experience": "Standard",
+    "country": "Saudi Arabia",
+    "cc": "ksa",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0056-100195",
+    "url": "https://ksa.voxcinemas.com/booking/0056-100195",
+    "time": "4:00pm",
+    "cinema": "Hail Square - Hail",
+    "experience": "Standard",
+    "country": "Saudi Arabia",
+    "cc": "ksa",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0056-100196",
+    "url": "https://ksa.voxcinemas.com/booking/0056-100196",
+    "time": "7:15pm",
+    "cinema": "Hail Square - Hail",
+    "experience": "Standard",
+    "country": "Saudi Arabia",
+    "cc": "ksa",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0056-100197",
+    "url": "https://ksa.voxcinemas.com/booking/0056-100197",
+    "time": "10:20pm",
+    "cinema": "Hail Square - Hail",
+    "experience": "Standard",
+    "country": "Saudi Arabia",
+    "cc": "ksa",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0056-100198",
+    "url": "https://ksa.voxcinemas.com/booking/0056-100198",
+    "time": "1:30am",
+    "cinema": "Hail Square - Hail",
+    "experience": "Standard",
+    "country": "Saudi Arabia",
+    "cc": "ksa",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0062-54556",
+    "url": "https://ksa.voxcinemas.com/booking/0062-54556",
+    "time": "1:30pm",
+    "cinema": "Jubail Galleria Mall - Jubail",
+    "experience": "Standard",
+    "country": "Saudi Arabia",
+    "cc": "ksa",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0062-54521",
+    "url": "https://ksa.voxcinemas.com/booking/0062-54521",
+    "time": "4:35pm",
+    "cinema": "Jubail Galleria Mall - Jubail",
+    "experience": "Standard",
+    "country": "Saudi Arabia",
+    "cc": "ksa",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0062-54555",
+    "url": "https://ksa.voxcinemas.com/booking/0062-54555",
+    "time": "7:45pm",
+    "cinema": "Jubail Galleria Mall - Jubail",
+    "experience": "Standard",
+    "country": "Saudi Arabia",
+    "cc": "ksa",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0062-54523",
+    "url": "https://ksa.voxcinemas.com/booking/0062-54523",
+    "time": "11:10pm",
+    "cinema": "Jubail Galleria Mall - Jubail",
+    "experience": "Standard",
+    "country": "Saudi Arabia",
+    "cc": "ksa",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0034-224932",
+    "url": "https://ksa.voxcinemas.com/booking/0034-224932",
+    "time": "3:45pm",
+    "cinema": "Riyadh Park - Riyadh",
+    "experience": "Standard",
+    "country": "Saudi Arabia",
+    "cc": "ksa",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0048-359616",
+    "url": "https://ksa.voxcinemas.com/booking/0048-359616",
+    "time": "10:30am",
+    "cinema": "Roshn Front - Riyadh",
+    "experience": "Standard",
+    "country": "Saudi Arabia",
+    "cc": "ksa",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0048-359617",
+    "url": "https://ksa.voxcinemas.com/booking/0048-359617",
+    "time": "1:40pm",
+    "cinema": "Roshn Front - Riyadh",
+    "experience": "Standard",
+    "country": "Saudi Arabia",
+    "cc": "ksa",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0048-359619",
+    "url": "https://ksa.voxcinemas.com/booking/0048-359619",
+    "time": "7:00pm",
+    "cinema": "Roshn Front - Riyadh",
+    "experience": "Standard",
+    "country": "Saudi Arabia",
+    "cc": "ksa",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0052-180795",
+    "url": "https://ksa.voxcinemas.com/booking/0052-180795",
+    "time": "1:15pm",
+    "cinema": "Sahara Mall - Riyadh",
+    "experience": "Standard",
+    "country": "Saudi Arabia",
+    "cc": "ksa",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0052-180796",
+    "url": "https://ksa.voxcinemas.com/booking/0052-180796",
+    "time": "4:30pm",
+    "cinema": "Sahara Mall - Riyadh",
+    "experience": "Standard",
+    "country": "Saudi Arabia",
+    "cc": "ksa",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0052-180703",
+    "url": "https://ksa.voxcinemas.com/booking/0052-180703",
+    "time": "8:30pm",
+    "cinema": "Sahara Mall - Riyadh",
+    "experience": "Standard",
+    "country": "Saudi Arabia",
+    "cc": "ksa",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0052-180704",
+    "url": "https://ksa.voxcinemas.com/booking/0052-180704",
+    "time": "11:40pm",
+    "cinema": "Sahara Mall - Riyadh",
+    "experience": "Standard",
+    "country": "Saudi Arabia",
+    "cc": "ksa",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0052-181252",
+    "url": "https://ksa.voxcinemas.com/booking/0052-181252",
+    "time": "3:00am",
+    "cinema": "Sahara Mall - Riyadh",
+    "experience": "Standard",
+    "country": "Saudi Arabia",
+    "cc": "ksa",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0053-119732",
+    "url": "https://ksa.voxcinemas.com/booking/0053-119732",
+    "time": "3:00pm",
+    "cinema": "Tabuk Park - Tabuk",
+    "experience": "Standard",
+    "country": "Saudi Arabia",
+    "cc": "ksa",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0053-119733",
+    "url": "https://ksa.voxcinemas.com/booking/0053-119733",
+    "time": "6:15pm",
+    "cinema": "Tabuk Park - Tabuk",
+    "experience": "Standard",
+    "country": "Saudi Arabia",
+    "cc": "ksa",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0053-119734",
+    "url": "https://ksa.voxcinemas.com/booking/0053-119734",
+    "time": "9:30pm",
+    "cinema": "Tabuk Park - Tabuk",
+    "experience": "Standard",
+    "country": "Saudi Arabia",
+    "cc": "ksa",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0059-101281",
+    "url": "https://ksa.voxcinemas.com/booking/0059-101281",
+    "time": "1:00pm",
+    "cinema": "The Esplanade",
+    "experience": "Standard",
+    "country": "Saudi Arabia",
+    "cc": "ksa",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0059-101282",
+    "url": "https://ksa.voxcinemas.com/booking/0059-101282",
+    "time": "4:05pm",
+    "cinema": "The Esplanade",
+    "experience": "Standard",
+    "country": "Saudi Arabia",
+    "cc": "ksa",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0042-168189",
+    "url": "https://ksa.voxcinemas.com/booking/0042-168189",
+    "time": "1:15pm",
+    "cinema": "The Roof - Riyadh",
+    "experience": "Standard",
+    "country": "Saudi Arabia",
+    "cc": "ksa",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0042-168192",
+    "url": "https://ksa.voxcinemas.com/booking/0042-168192",
+    "time": "1:00am",
+    "cinema": "The Roof - Riyadh",
+    "experience": "Standard",
+    "country": "Saudi Arabia",
+    "cc": "ksa",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0058-80755",
+    "url": "https://ksa.voxcinemas.com/booking/0058-80755",
+    "time": "4:15pm",
+    "cinema": "The Spot, Sheikh Jaber - Riyadh",
+    "experience": "Standard",
+    "country": "Saudi Arabia",
+    "cc": "ksa",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0058-80757",
+    "url": "https://ksa.voxcinemas.com/booking/0058-80757",
+    "time": "9:15pm",
+    "cinema": "The Spot, Sheikh Jaber - Riyadh",
+    "experience": "Standard",
+    "country": "Saudi Arabia",
+    "cc": "ksa",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0058-80759",
+    "url": "https://ksa.voxcinemas.com/booking/0058-80759",
+    "time": "2:15am",
+    "cinema": "The Spot, Sheikh Jaber - Riyadh",
+    "experience": "Standard",
+    "country": "Saudi Arabia",
+    "cc": "ksa",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0054-203767",
+    "url": "https://ksa.voxcinemas.com/booking/0054-203767",
+    "time": "1:20pm",
+    "cinema": "Town Square - Jeddah",
+    "experience": "Standard",
+    "country": "Saudi Arabia",
+    "cc": "ksa",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0054-203858",
+    "url": "https://ksa.voxcinemas.com/booking/0054-203858",
+    "time": "3:00pm",
+    "cinema": "Town Square - Jeddah",
+    "experience": "Standard",
+    "country": "Saudi Arabia",
+    "cc": "ksa",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0054-203862",
+    "url": "https://ksa.voxcinemas.com/booking/0054-203862",
+    "time": "4:30pm",
+    "cinema": "Town Square - Jeddah",
+    "experience": "Standard",
+    "country": "Saudi Arabia",
+    "cc": "ksa",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0054-203769",
+    "url": "https://ksa.voxcinemas.com/booking/0054-203769",
+    "time": "7:50pm",
+    "cinema": "Town Square - Jeddah",
+    "experience": "Standard",
+    "country": "Saudi Arabia",
+    "cc": "ksa",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0054-203859",
+    "url": "https://ksa.voxcinemas.com/booking/0054-203859",
+    "time": "10:30pm",
+    "cinema": "Town Square - Jeddah",
+    "experience": "Standard",
+    "country": "Saudi Arabia",
+    "cc": "ksa",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0054-203863",
+    "url": "https://ksa.voxcinemas.com/booking/0054-203863",
+    "time": "11:00pm",
+    "cinema": "Town Square - Jeddah",
+    "experience": "Standard",
+    "country": "Saudi Arabia",
+    "cc": "ksa",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0054-203771",
+    "url": "https://ksa.voxcinemas.com/booking/0054-203771",
+    "time": "2:15am",
+    "cinema": "Town Square - Jeddah",
+    "experience": "Standard",
+    "country": "Saudi Arabia",
+    "cc": "ksa",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0044-100796",
+    "url": "https://ksa.voxcinemas.com/booking/0044-100796",
+    "time": "10:30am",
+    "cinema": "West Avenue Mall - Dammam",
+    "experience": "Standard",
+    "country": "Saudi Arabia",
+    "cc": "ksa",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0044-100756",
+    "url": "https://ksa.voxcinemas.com/booking/0044-100756",
+    "time": "1:45pm",
+    "cinema": "West Avenue Mall - Dammam",
+    "experience": "Standard",
+    "country": "Saudi Arabia",
+    "cc": "ksa",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0044-100795",
+    "url": "https://ksa.voxcinemas.com/booking/0044-100795",
+    "time": "5:00pm",
+    "cinema": "West Avenue Mall - Dammam",
+    "experience": "Standard",
+    "country": "Saudi Arabia",
+    "cc": "ksa",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0044-100760",
+    "url": "https://ksa.voxcinemas.com/booking/0044-100760",
+    "time": "1:45am",
+    "cinema": "West Avenue Mall - Dammam",
+    "experience": "Standard",
+    "country": "Saudi Arabia",
+    "cc": "ksa",
+    "slug": "drishyam-the-conclusion-hindi"
+   }
+  ],
+  "bytes": 144084
+ },
+ "kwt": {
+  "cc": "kwt",
+  "country": "Kuwait",
+  "slug": "drishyam-the-conclusion-hindi",
+  "cinemas": [
+   "The Avenues - Kuwait"
+  ],
+  "rows": [
+   {
+    "bookingId": "0033-497915",
+    "url": "https://kwt.voxcinemas.com/booking/0033-497915",
+    "time": "1:50pm",
+    "cinema": "The Avenues - Kuwait",
+    "experience": "Standard",
+    "country": "Kuwait",
+    "cc": "kwt",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0033-498003",
+    "url": "https://kwt.voxcinemas.com/booking/0033-498003",
+    "time": "5:10pm",
+    "cinema": "The Avenues - Kuwait",
+    "experience": "Standard",
+    "country": "Kuwait",
+    "cc": "kwt",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0033-497917",
+    "url": "https://kwt.voxcinemas.com/booking/0033-497917",
+    "time": "8:35pm",
+    "cinema": "The Avenues - Kuwait",
+    "experience": "Standard",
+    "country": "Kuwait",
+    "cc": "kwt",
+    "slug": "drishyam-the-conclusion-hindi"
+   }
+  ],
+  "bytes": 102204
+ },
+ "bhr": {
+  "cc": "bhr",
+  "country": "Bahrain",
+  "slug": "drishyam-the-conclusion-hindi",
+  "cinemas": [
+   "City Centre Bahrain",
+   "VOX Cinemas The Avenues"
+  ],
+  "rows": [
+   {
+    "bookingId": "0030-424802",
+    "url": "https://bhr.voxcinemas.com/booking/0030-424802",
+    "time": "11:40am",
+    "cinema": "City Centre Bahrain",
+    "experience": "Standard",
+    "country": "Bahrain",
+    "cc": "bhr",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0030-424803",
+    "url": "https://bhr.voxcinemas.com/booking/0030-424803",
+    "time": "2:50pm",
+    "cinema": "City Centre Bahrain",
+    "experience": "Standard",
+    "country": "Bahrain",
+    "cc": "bhr",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0030-424804",
+    "url": "https://bhr.voxcinemas.com/booking/0030-424804",
+    "time": "5:55pm",
+    "cinema": "City Centre Bahrain",
+    "experience": "Standard",
+    "country": "Bahrain",
+    "cc": "bhr",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0030-424805",
+    "url": "https://bhr.voxcinemas.com/booking/0030-424805",
+    "time": "9:00pm",
+    "cinema": "City Centre Bahrain",
+    "experience": "Standard",
+    "country": "Bahrain",
+    "cc": "bhr",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0030-424806",
+    "url": "https://bhr.voxcinemas.com/booking/0030-424806",
+    "time": "12:05am",
+    "cinema": "City Centre Bahrain",
+    "experience": "Standard",
+    "country": "Bahrain",
+    "cc": "bhr",
+    "slug": "drishyam-the-conclusion-hindi"
+   },
+   {
+    "bookingId": "0031-215875",
+    "url": "https://bhr.voxcinemas.com/booking/0031-215875",
+    "time": "4:45pm",
+    "cinema": "VOX Cinemas The Avenues",
+    "experience": "Standard",
+    "country": "Bahrain",
+    "cc": "bhr",
+    "slug": "drishyam-the-conclusion-hindi"
+   }
+  ],
+  "bytes": 112684
+ }
+}
