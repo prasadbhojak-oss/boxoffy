@@ -1,0 +1,79 @@
+<!DOCTYPE html><html><head><script data-test-id=js-enabled-script>document.documentElement.classList.add('js-enabled');
+
+    function ios() {
+      let userAgent = window.navigator.userAgent.toLowerCase()
+      let safari = /safari/.test(userAgent)
+      let ios = /iphone|ipod|ipad/.test(userAgent) || (/macintosh/.test(userAgent) && window.navigator.maxTouchPoints > 0)
+
+      return ios && !safari
+    }
+
+    if (ios()) {
+      window._capacitorNative = true
+      window._cordovaNative = true
+    }
+
+    const loadingMessage = [
+      'Popping the popcorn',
+      'Starting the projectors',
+      'Contacting Hollywood',
+      'Negotiating Distribution Deals',
+      'Splicing the Film',
+      'Sweeping the Auditorium'
+    ]
+    function showDelayLoadMessage(attempt = 1) {
+      const loadDelayMessageElement = document.getElementById('indy-load-delay-message')
+
+      if (!loadDelayMessageElement) return
+
+      if (attempt === 1) {
+        loadDelayMessageElement.style.display = "block"
+      } else {
+        loadDelayMessageElement.children[0].textContent = loadingMessage[(attempt - 2) % loadingMessage.length]
+      }
+
+      setTimeout(() => {
+        showDelayLoadMessage(attempt + 1)
+      }, 5000)
+    }
+    setTimeout(() => {
+      showDelayLoadMessage()
+    }, 7500)</script><title>LOOK Dine-in Cinemas</title><meta charset=utf-8><meta name=description content="Check showtimes and buy tickets at your local theater"><meta name=format-detection content="telephone=no"><meta name=msapplication-tap-highlight content=no><meta name=viewport content="user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1,width=device-width,viewport-fit=cover"><meta name=apple-mobile-web-app-capable content=yes><meta name=apple-mobile-web-app-status-bar-style content=black><link rel=icon type=image/png sizes=128x128 href="https://indy-systems.imgix.net/dr3g01vsp3awoef45g7vlf3gub8a?fm=png&w=128&h=128&fit=fill&fill=solid&auto=format,compress"><link rel=icon type=image/png sizes=96x96 href="https://indy-systems.imgix.net/dr3g01vsp3awoef45g7vlf3gub8a?fm=png&w=96&h=96&fit=fill&fill=solid&auto=format,compress"><link rel=icon type=image/png sizes=32x32 href="https://indy-systems.imgix.net/dr3g01vsp3awoef45g7vlf3gub8a?fm=png&w=32&h=32&fit=fill&fill=solid&auto=format,compress"><link rel=icon type=image/png sizes=16x16 href="https://indy-systems.imgix.net/dr3g01vsp3awoef45g7vlf3gub8a?fm=png&w=16&h=16&fit=fill&fill=solid&auto=format,compress"><link href=/fontawesome/css/fontawesome.min.css rel=stylesheet><link href=/fontawesome/css/light.min.css rel=stylesheet><link href=/fontawesome/css/solid.min.css rel=stylesheet><link href=/fontawesome/css/brands.min.css rel=stylesheet><link rel=icon type=image/ico href="https://indy-systems.imgix.net/z08wmrc1o3wntbffthkazrzxhkmi?fm=png&w=32&h=32&fit=fill&fill=solid&auto=format,compress"><link rel="shortcut icon" href="https://indy-systems.imgix.net/dr3g01vsp3awoef45g7vlf3gub8a?fm=png&w=128&h=128&fit=fill&fill=solid&auto=format,compress"><link rel=apple-touch-icon href="https://indy-systems.imgix.net/f9oqcblcvnfq7uudhoe6aau6fb8b?fm=png&w=128&h=128&fit=fill&fill=solid&pad=9&fill-color=5fad42&bg=5fad42&auto=format,compress"><link rel=apple-touch-startup-image media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2)" href="https://indy-systems.imgix.net/tulbu6255cz6ekmn3vkvz4gem6hk?fm=png&w=828&h=1792&fit=fillmax&fill=solid&pad=60&fill-color=000000&bg=000000&auto=format,compress"><link rel=apple-touch-startup-image media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3)" href="https://indy-systems.imgix.net/tulbu6255cz6ekmn3vkvz4gem6hk?fm=png&w=1125&h=2436&fit=fillmax&fill=solid&pad=60&fill-color=000000&bg=000000&auto=format,compress"><link rel=apple-touch-startup-image media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3)" href="https://indy-systems.imgix.net/tulbu6255cz6ekmn3vkvz4gem6hk?fm=png&w=1242&h=2688&fit=fillmax&fill=solid&pad=60&fill-color=000000&bg=000000&auto=format,compress"><link rel=apple-touch-startup-image media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)" href="https://indy-systems.imgix.net/tulbu6255cz6ekmn3vkvz4gem6hk?fm=png&w=750&h=1334&fit=fillmax&fill=solid&pad=60&fill-color=5fad42&bg=5fad42&auto=format,compress"><link rel=apple-touch-startup-image media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3)" href="https://indy-systems.imgix.net/tulbu6255cz6ekmn3vkvz4gem6hk?fm=png&w=1242&h=2208&fit=fillmax&fill=solid&pad=60&fill-color=5fad42&bg=5fad42&auto=format,compress"><link rel=apple-touch-startup-image media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" href="https://indy-systems.imgix.net/tulbu6255cz6ekmn3vkvz4gem6hk?fm=png&w=640&h=1136&fit=fillmax&fill=solid&pad=60&fill-color=5fad42&bg=5fad42&auto=format,compress"><link rel=apple-touch-startup-image media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2)" href="https://indy-systems.imgix.net/tulbu6255cz6ekmn3vkvz4gem6hk?fm=png&w=1536&h=2048&fit=fillmax&fill=solid&pad=60&fill-color=5fad42&bg=5fad42&auto=format,compress"><link rel=apple-touch-startup-image media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2)" href="https://indy-systems.imgix.net/tulbu6255cz6ekmn3vkvz4gem6hk?fm=png&w=1668&h=2224&fit=fillmax&fill=solid&pad=60&fill-color=5fad42&bg=5fad42&auto=format,compress"><link rel=apple-touch-startup-image media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2)" href="https://indy-systems.imgix.net/tulbu6255cz6ekmn3vkvz4gem6hk?fm=png&w=1668&h=2388&fit=fillmax&fill=solid&pad=60&fill-color=5fad42&bg=5fad42&auto=format,compress"><link rel=apple-touch-startup-image media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2)" href="https://indy-systems.imgix.net/tulbu6255cz6ekmn3vkvz4gem6hk?fm=png&w=2048&h=2732&fit=fillmax&fill=solid&pad=60&fill-color=5fad42&bg=5fad42&auto=format,compress"><link rel=stylesheet href=https://use.typekit.net/hwu0dkh.css><style>@font-face {
+      font-family: "bebas-neue";
+      src: url("/fonts/BebasNeue-Regular.ttf") format("opentype");
+      font-display: auto;
+      font-style: normal;
+      font-weight: 400;
+      letter-spacing: 0.05em;
+    }
+
+    body {
+      font-family: brandon-grotesque, sans-serif;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    .text-h1,
+    .text-h2,
+    .text-h3,
+    .text-h4,
+    .text-h5,
+    .text-h6 {
+      font-family: bebas-neue, sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      letter-spacing: 0.05em;
+    }
+
+    .q-header .menu .q-btn {
+      font-family: bebas-neue, sans-serif;
+      font-size: calc(1em + 0.5vmin);
+      font-style: normal;
+      font-weight: 400;
+      letter-spacing: 0.05em;
+    }</style><!-- Google Tag Manager --><script>(function(w,d,s,l,i){ w[l]=w[l]||[]; w[l].push({'gtm.start': new Date().getTime(), event:'gtm.js'}); var f=d.getElementsByTagName(s)[0], j=d.createElement(s), dl=l!='dataLayer' ? 'TEMPLATE_CUSTOM_HEADER_CONTENTl='+l : ''; j.async=true; j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl; f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-K9LG374M');</script><!-- End Google Tag Manager --><!-- MovieNewsletters referral tracking --><script async src="https://www.movienewsletters.net/referral/live/lookcinemas.js"></script><!-- Skip INDY legacy cookie prompt --><script>try { localStorage.setItem("acceptedCookieNotification", "true");} catch (e) { console.warn("Could not set INDY cookie notification preference", e);}</script><!-- Rokt Launcher Script --><script>(function () { if (window.RoktLauncherScriptPromise) return; window.RoktLauncherScriptPromise = new Promise(function(resolve, reject) { var target = document.head || document.body; var script = document.createElement("script"); script.type = "text/javascript"; script.src = "https://apps.rokt.com/wsdk/integrations/launcher.js"; script.async = true; script.crossOrigin = "anonymous"; script.id = "rokt-launcher"; script.onload = resolve; script.onerror = reject; target.appendChild(script); });})();</script><script defer src=/js/vendor.18b1b163.js></script><script defer src=/js/app.affeaac6.js></script><link href=/css/app.d313a078.css rel=stylesheet></head><body style="background-color: var(--q-background, #141414)"><script> (function(){ var s = document.createElement('script'); var h = document.querySelector('head') || document.body; s.src = 'https://acsbapp.com/apps/app/dist/js/app.js'; s.async = true; s.onload = function(){ acsbJS.init({ statementLink : '', footerHtml : '', hideMobile : false, hideTrigger : false, disableBgProcess : false, language : 'en', position : 'right', leadColor : '#5fad42', triggerColor : '#5fad42', triggerRadius : '50%', triggerPositionX : 'right', triggerPositionY : 'bottom', triggerIcon : 'people', triggerSize : 'medium', triggerOffsetX : 20, triggerOffsetY : 20, mobile : { triggerSize : 'small', triggerPositionX : 'right', triggerPositionY : 'bottom', triggerOffsetX : 10, triggerOffsetY : 85, triggerRadius : '50%' } }); }; h.appendChild(s); })(); </script><div id=q-app-splash-screen class=q-app-splash-screen style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-color: #000000;"><div style="height: 100%; width: 100%;"><div style="text-align: center;"><div style="width: 90%; max-width: 600px; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);"><img alt=LOOK Dine-in Cinemas src="https://indy-systems.imgix.net/tulbu6255cz6ekmn3vkvz4gem6hk?w=1200&auto=format,compress" style="width: 100%" id=splash-image></div></div><div id=indy-load-delay-message style="position: absolute; bottom: 30px; left: 0; right: 0; text-align: center; display: none;"><span style="padding: 10px 20px; background-color: #00000066; color: white; font-size: large; font-weight: bold; border-radius: 10px;">Loading...</span></div></div></div><div id=q-app></div><script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v4bc70e2c01a94c73b74392e4234840661791215815920" integrity="sha512-L0ha0OXavK/8okipN9F8BtP84dg9DUhPERbBXzwI6dgTA55d2+yweo3pn5CSFYs45/r8md2+xvUPtTdvTNRfjA==" data-cf-beacon='{"version":"2024.11.0","token":"03f13992397d47319ae624060535987e","r":1,"spa":2}' crossorigin="anonymous"></script>
+</body></html>

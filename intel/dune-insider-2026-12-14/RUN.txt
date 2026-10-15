@@ -1,0 +1,79 @@
+Dune: Part Three Insider Screenings  (dune-insider)   fandango 246861   cineplex n/a
+dates ['2026-12-14', '2026-12-15', '2026-12-16']   401 postcodes   10 workers   pace 0.12s
+  session warm-up HTTP 200; cookies ['akamai_location', 'userCountry', 'akamai_set_zip', 'userlocation', 'akamai_generated_location']
+RUN 2026-10-03T20:58:46.214272 film=dune-insider date=2026-12-14 workers=10 pace=0.12 SEATS
+
+### Dune: Part Three Insider Screenings · 2026-12-14 -> intel\dune-insider-2026-12-14
+  21 sites, 22 showtimes
+Seat maps...
+  22 showtimes, 22 unique seat maps, 22 to read
+  10 workers, starting pace 0.12s -> about 0 min if nothing throttles
+  22/22 · 0.1 min · 6.1 req/s · ~0 min left · pace 0.12s · 7 failed · 0 throttled
+  WARNING 7 seat maps failed. Those rows are BLANK, not zero. Re-run with --resume to retry only those.
+Cineplex (Canada)...
+  Canada skipped: no cineplex filmId for this listing.
+  0 Canadian showtimes
+
+=== Dune: Part Three Insider Screenings · 2026-12-14 · PRESALE ===
+  sites                       21
+  showtimes                   22
+  seat maps read              14   63.6% of showtimes
+  seats on sale            5,014
+  TICKETS SOLD             4,442   88.6% of those seats
+  sold-out shows               7
+  Presale: nothing has played, no seat map withdrawn, so this is a
+  cumulative total rather than a floor.
+
+  no earlier read with seat data on disk, so no velocity yet.
+  This read is the baseline. Run again in a few hours.
+
+  BY FORMAT
+    Premium Format           14 sites     14 sh     5,014 seats    4,442 sold  88.6%
+
+  BY CHAIN
+    Regal                     7 sites      7 sh     2,344 seats    1,953 sold  83.3%
+    Independent               4 sites      4 sh     1,762 seats    1,688 sold  95.8%
+    AMC                       1 sites      1 sh       437 seats      410 sold  93.8%
+    Cinemark                  2 sites      2 sh       471 seats      391 sold  83.0%
+
+  BY METRO
+    LA                        4 sites      4 sh     2,040 seats    1,817 sold  89.1%
+    SF Bay                    2 sites      2 sh       690 seats      638 sold  92.5%
+    Colorado                  2 sites      2 sh       614 seats      490 sold  79.8%
+    Boston                    1 sites      1 sh       378 seats      371 sold  98.1%
+    Sacramento                1 sites      1 sh       386 seats      333 sold  86.3%
+    Tennessee                 1 sites      1 sh       345 seats      277 sold  80.3%
+    Georgia                   1 sites      1 sh       248 seats      235 sold  94.8%
+    Upstate NY                1 sites      1 sh       218 seats      189 sold  86.7%
+    Nevada                    1 sites      1 sh        95 seats       92 sold  96.8%
+
+  BY TIME OF DAY (local, per-hour density so wide buckets do not lie)
+    6-12                  0 sh (     0/hr)         0 seats        0 sold   0.0%
+    12-4pm                0 sh (     0/hr)         0 seats        0 sold   0.0%
+    4-7pm                14 sh (     5/hr)     5,014 seats    4,442 sold  88.6%
+    7-9pm                 0 sh (     0/hr)         0 seats        0 sold   0.0%
+    9pm+                  0 sh (     0/hr)         0 seats        0 sold   0.0%
+    after midnight        0 sh (     0/hr)         0 seats        0 sold   0.0%
+
+  === DOLLARS ON WHAT WE MEASURED ===
+  ATP assumed: Standard $12.50, 3D $15.50, Premium Format $18.50   (ASSUMPTION - override with --atp-* flags)
+  observed presale gross  $82,177
+  seat coverage is 63.6%, so scaled to all showtimes
+  that is about $129,135 - an ESTIMATE, label it as one.
+
+  === WHAT THIS IMPLIES FOR THE OPENING ===
+  We have NO measured presale-to-final ratio for a Marvel title.
+  The $43.21 factor we calibrated on Drishyam was a same-day
+  walk-up factor and does not transfer. So this is a sensitivity
+  table, not a forecast. Pick a row only if you can defend it.
+    presale is       implied 3-day gross
+      10% of final             1,291,353
+      15% of final               860,902
+      20% of final               645,676
+      25% of final               516,541
+      30% of final               430,451
+  Publish the measured presale number. Do not publish a row of
+  this table as our estimate until we have calibrated the ratio.
+
+  === CANADA ===
+  no Canadian rows in this read.

@@ -1,0 +1,189 @@
+
+######################################################################
+#  BOXOFFY  -  JAILER 2 NORTH AMERICA SWEEP
+#  2026-10-11 23:07   fandango 247862   65 zips
+#
+#  TAMIL FILM. Cineplex carries Hindi and Punjabi, so Canada
+#  runs through the GTA Indian-only independents instead.
+#  Baseline on disk: 3 Oct, 101 sites / 272 shows / 635 sold -
+#  but that run swept 15-18 Oct ONLY and MISSED PREMIERE NIGHT.
+#  So it is NOT comparable to any published presale figure.
+#  Premiere date 2026-10-14 is now first in the list and
+#  gets its own ATP tier. Compare premiere to premiere only.
+######################################################################
+  session warm-up HTTP 200
+
+=== Jailer 2 · 2026-10-14 -> intel\jailer2-v2-2026-10-14-20261011-2307
+      [ 20/65] 129 sites, 501 showtimes
+      [ 40/65] 218 sites, 699 showtimes
+      [ 60/65] 283 sites, 850 showtimes
+      [ 65/65] 294 sites, 869 showtimes
+  294 sites, 869 showtimes
+  Seat maps...
+      869 showtimes, 869 unique seat maps to read
+      100/869 read, 92 with seats
+      200/869 read, 186 with seats
+      300/869 read, 286 with seats
+      400/869 read, 385 with seats
+      500/869 read, 484 with seats
+      600/869 read, 584 with seats
+      700/869 read, 683 with seats
+      800/869 read, 777 with seats
+      WARNING 25 seat maps did not return. Those rows are
+      BLANK, NOT ZERO, and are excluded from the sell-through.
+
+  --- CANADA ---
+      Cineplex carries Hindi and Punjabi, NOT reliably Tamil.
+      So Cineplex alone would report zero and be wrong. Reading
+      the Indian-only independents through CinemaClock too.
+      Cineplex catalogue HTTP 200   Jailer 2 filmId: NOT LISTED
+      Not listed is the EXPECTED answer for a Tamil title and
+      is a finding, not a failure. Do not report it as zero
+      Canadian showtimes - report it as not carried.
+             Woodside Cinemas (Agincourt ON)
+             York Cinemas (Richmond Hill ON)
+             Central Parkway (Mississauga ON)
+             Albion Cinemas (Etobicoke ON)
+             Cineplex Scarborough
+             Cineplex Strawberry Hill (Surrey BC)
+      LISTED  Surrey (market page)
+
+  --- US CHAIN PROBES ---
+      AMC not fetched: https://www.amctheatres.com/ (robots-disallowed, open by hand)
+      404  Cinemark Jailer 2                 
+      200  Cinemark Jailer 2 Tamil             LISTED
+      403  Regal Jailer 2                    
+      200  Marcus coming soon                
+      200  Harkins coming soon               
+      200  Atom Tickets search                 LISTED
+      200  Emagine movies                      LISTED
+      200  Galaxy Theatres                   
+
+======================================================================
+  Jailer 2 · 2026-10-14 · PRESALE
+======================================================================
+    sites                       294
+    showtimes                   869
+    seat maps read              844   97.1% of showtimes
+    seats on sale           110,855
+    TICKETS SOLD            110,855   100.0% of those seats
+    sold-out shows              844
+    ⚠️ 25 seat maps BLANK, not zero. Excluded from the
+       percentage above. Re-run with --resume to retry.
+
+    No earlier read with seat data on disk. This is the
+    baseline; velocity needs a second run.
+
+    BY FORMAT
+      Standard                 282 sites   662 sh   72,836 seats 72,836 sold 100.0%
+      Premium Format            81 sites   207 sh   38,019 seats 38,019 sold 100.0%
+
+    BY CHAIN
+      Cinemark                  89 sites   445 sh   55,849 seats 55,849 sold 100.0%
+      Regal                    106 sites   220 sh   33,496 seats 33,496 sold 100.0%
+      AMC                       65 sites   114 sh   11,270 seats 11,270 sold 100.0%
+      Independent               17 sites    52 sh    5,814 seats  5,814 sold 100.0%
+      Marcus                    11 sites    23 sh    1,771 seats  1,771 sold 100.0%
+      Galaxy                     2 sites     6 sh    1,319 seats  1,319 sold 100.0%
+      MJR                        2 sites     6 sh      862 seats    862 sold 100.0%
+      Emagine                    2 sites     3 sh      474 seats    474 sold 100.0%
+
+    BY METRO
+      DFW                       23 sites   151 sh   19,022 seats 19,022 sold 100.0%
+      SF Bay                    11 sites    56 sh    6,844 seats  6,844 sold 100.0%
+      Houston                   13 sites    43 sh    6,088 seats  6,088 sold 100.0%
+      Atlanta                   13 sites    38 sh    5,948 seats  5,948 sold 100.0%
+      Seattle                    7 sites    29 sh    5,693 seats  5,693 sold 100.0%
+      Philadelphia              14 sites    35 sh    5,109 seats  5,109 sold 100.0%
+      Irvine CA                 14 sites    31 sh    5,044 seats  5,044 sold 100.0%
+      DC/MD/VA                  11 sites    43 sh    4,782 seats  4,782 sold 100.0%
+      Chicago                   15 sites    36 sh    4,417 seats  4,417 sold 100.0%
+      Boston                    10 sites    20 sh    3,641 seats  3,641 sold 100.0%
+      Austin                     6 sites    27 sh    3,000 seats  3,000 sold 100.0%
+      Edison NJ                  4 sites    16 sh    2,554 seats  2,554 sold 100.0%
+      Sacramento                 8 sites    17 sh    2,479 seats  2,479 sold 100.0%
+      Detroit                    6 sites    16 sh    2,115 seats  2,115 sold 100.0%
+      Oklahoma                   2 sites    10 sh    1,737 seats  1,737 sold 100.0%
+
+    BY TIME OF DAY (per-hour density so wide buckets do not lie)
+      6-12          0 sh (    0/hr)        0 seats      0 sold   0.0%
+      12-4pm        0 sh (    0/hr)        0 seats      0 sold   0.0%
+      4-7pm         0 sh (    0/hr)        0 seats      0 sold   0.0%
+      7-9pm         0 sh (    0/hr)        0 seats      0 sold   0.0%
+      9pm+          0 sh (    0/hr)        0 seats      0 sold   0.0%
+
+    === DOLLARS ON WHAT WE MEASURED ===
+    PREMIERE TIER. This date is premiere night and is priced
+    as a special event, not as a regular show.
+    ATP BACKED OUT of VenkyBO 10 Oct ($704,382 / 25,465 tix
+    = $27.66), not assumed by us:
+      Standard $27.66 · 3D $29.00 · Premium Format $32.00 · IMAX $35.00
+    observed presale gross  $3,231,252
+    The per-ticket figure is observed; the format spread above
+    Standard is still ours. Say which is which if published.
+
+======================================================================
+  RECONCILIATION vs VenkyBO (@Venky_BO), published 2026-10-10
+  USA ONLY. PREMIERE SHOWS ONLY. SINGLE-SOURCED.
+======================================================================
+                        ours       Venky    cover
+    locations            294         412    71.4%
+    shows                869         961    90.4%
+    tickets          110,855      25,465   435.3%
+    gross $        3,231,251     704,382   458.7%
+
+    our implied ATP   $29.15
+    his implied ATP   $27.66
+
+    READ THE COVERAGE COLUMN BEFORE PUBLISHING ANYTHING. We sweep
+    a zip list, not the country. A low percentage is a statement
+    about our sampling, NOT a claim that his number is wrong.
+    Where ours EXCEEDS his, that is the interesting case: it means
+    we are seeing showtimes his read does not include.
+
+    HIS SERIES (his numbers, his basis)
+      2026-10-04  $  45,805    54 loc     - sh       - tix
+      2026-10-07  $ 469,981   375 loc   791 sh  16,721 tix   +$141,392/day
+      2026-10-10  $ 704,382   412 loc   961 sh  25,465 tix   +$78,134/day
+    Tickets +52% between 7 and 10 Oct against shows +21%. Shows
+    are filling, not just being added. That is the strong signal
+    in his series and it is independent of his ATP.
+
+    JAILER (2023) AT THE SAME STAGE - same source, same basis
+      T-2 premiere advance  $663,817  285 loc  690 sh  30,201 tix
+      final premiere adv    $802,628  340 loc  815 sh  37,116 tix
+      premiere night        $948,000
+      NA lifetime           $6.8-7.0M  (Venky $6.84M, Sacnilk $7.25M,
+                            The Numbers $4.09M - CONTESTED, and
+                            Box Office Mojo has NO domestic data
+                            for Jailer 2023. Never cite Mojo here.
+
+    ⚠️ THE HEAD-TO-HEAD - AND THE STAGES DO NOT MATCH:
+      gross     +6%
+      locations +45%
+      TICKETS   -16%
+      ATP       $27.66 vs $21.98
+
+      ⚠️ DO NOT PUBLISH THAT TICKET GAP AS A CLEAN COMPARISON.
+      Venky's 10 Oct post says '4 Days Till Premieres', so the
+      Jailer 2 read is T-4. The Jailer 2023 row above is T-2.
+      Jailer 2 still has two selling days the benchmark has
+      already banked, and those two days were worth a LOT to
+      Jailer 2023:
+        its last 2 days added 6,915 tickets / $138,811
+        T-2 was only 81% of its final premiere advance
+      So the fair statement is: at T-4, with two days still to
+      run, Jailer 2 is AHEAD on dollars and footprint and BEHIND
+      on bodies. The dollar lead is price inflation plus a wider
+      release rather than stronger demand - but the ticket gap
+      is NOT yet a final verdict and may close. Say both halves.
+      To settle it, re-read when Venky posts his T-2 figure and
+      compare that to the Jailer 2023 T-2 row directly.
+======================================================================
+
+    === CANADA, REPORTED SEPARATELY ===
+    Cineplex filmId: NOT CARRIED (expected for Tamil)
+      no Canadian venue listed it in this pass
+======================================================================
+
+  PASTE BACK the PRESALE block and the VELOCITY block.

@@ -1,0 +1,609 @@
+session warm-up: HTTP 0; cookies = ['akamai_location', 'userCountry', 'akamai_set_zip', 'userlocation', 'akamai_generated_location']
+RUN 2026-10-03T18:50:24.741852  film=doomsday date=2026-12-17  385 postcodes  workers=5  NO-SEATS
+FANDANGO LA 91744 +29 theatres +330 shows
+FANDANGO LA 92805 +15 theatres +197 shows
+FANDANGO LA 91745 +0 theatres +0 shows
+FANDANGO LA 90630 +2 theatres +44 shows
+FANDANGO LA 92618 +7 theatres +46 shows
+FANDANGO LA 91767 +6 theatres +85 shows
+FANDANGO LA 91406 +28 theatres +243 shows
+FANDANGO LA 90703 +0 theatres +0 shows
+FANDANGO LA 92683 +0 theatres +0 shows
+FANDANGO LA 91789 +0 theatres +0 shows
+FANDANGO LA 92831 +0 theatres +0 shows
+FANDANGO LA 91301 +5 theatres +37 shows
+FANDANGO LA 90501 +10 theatres +123 shows
+FANDANGO LA 92551 +6 theatres +68 shows
+FANDANGO LA 93065 +6 theatres +73 shows
+FANDANGO LA 91311 +0 theatres +0 shows
+FANDANGO LA 92509 +5 theatres +76 shows
+FANDANGO LA 90805 +1 theatres +6 shows
+FANDANGO LA 92604 +0 theatres +0 shows
+FANDANGO LA 91214 +1 theatres +6 shows
+FANDANGO LA 92677 +1 theatres +3 shows
+FANDANGO LA 90802 +0 theatres +0 shows
+FANDANGO LA 93003 +1 theatres +10 shows
+FANDANGO LA 92374 +0 theatres +0 shows
+FANDANGO SF Bay 94538 +14 theatres +185 shows
+FANDANGO SF Bay 95035 +34 theatres +356 shows
+FANDANGO SF Bay 94085 +0 theatres +0 shows
+FANDANGO SF Bay 94566 +5 theatres +72 shows
+FANDANGO SF Bay 95133 +0 theatres +0 shows
+FANDANGO SF Bay 94587 +0 theatres +0 shows
+FANDANGO SF Bay 94536 +0 theatres +0 shows
+FANDANGO SF Bay 95054 +0 theatres +0 shows
+FANDANGO SF Bay 94555 +0 theatres +0 shows
+FANDANGO SF Bay 94560 +1 theatres +6 shows
+FANDANGO SF Bay 94539 +0 theatres +0 shows
+FANDANGO SF Bay 95131 +0 theatres +0 shows
+FANDANGO SF Bay 94301 +0 theatres +0 shows
+FANDANGO SF Bay 94577 +4 theatres +31 shows
+FANDANGO SF Bay 95014 +0 theatres +0 shows
+FANDANGO SF Bay 94102 +1 theatres +11 shows
+FANDANGO SF Bay 94553 +1 theatres +7 shows
+FANDANGO SF Bay 95123 +2 theatres +32 shows
+FANDANGO SF Bay 94501 +0 theatres +0 shows
+FANDANGO SF Bay 95050 +0 theatres +0 shows
+FANDANGO SF Bay 94904 +1 theatres +7 shows
+FANDANGO SF Bay 95020 +1 theatres +12 shows
+FANDANGO SF Bay 94589 +2 theatres +8 shows
+FANDANGO Sacramento 95630 +10 theatres +143 shows
+FANDANGO Sacramento 95814 +6 theatres +88 shows
+FANDANGO Sacramento 95758 +6 theatres +45 shows
+FANDANGO Sacramento 95678 +0 theatres +0 shows
+FANDANGO Sacramento 95826 +0 theatres +0 shows
+FANDANGO San Diego 92126 +11 theatres +125 shows
+FANDANGO San Diego 92127 +4 theatres +41 shows
+FANDANGO San Diego 92101 +5 theatres +53 shows
+FANDANGO San Diego 92122 +0 theatres +0 shows
+FANDANGO San Diego 92078 +5 theatres +49 shows
+FANDANGO Fresno/Cent CA 93720 +8 theatres +87 shows
+FANDANGO Fresno/Cent CA 93291 +3 theatres +19 shows
+FANDANGO Fresno/Cent CA 93311 +5 theatres +42 shows
+FANDANGO DFW 75024 +25 theatres +299 shows
+FANDANGO DFW 75035 +0 theatres +0 shows
+FANDANGO DFW 75063 +19 theatres +157 shows
+FANDANGO DFW 76013 +14 theatres +133 shows
+FANDANGO DFW 75093 +1 theatres +6 shows
+FANDANGO DFW 75252 +0 theatres +0 shows
+FANDANGO DFW 75038 +0 theatres +0 shows
+FANDANGO DFW 75075 +0 theatres +0 shows
+FANDANGO DFW 76006 +0 theatres +0 shows
+FANDANGO DFW 75287 +0 theatres +0 shows
+FANDANGO DFW 75034 +0 theatres +0 shows
+FANDANGO DFW 75070 +0 theatres +0 shows
+FANDANGO DFW 76210 +3 theatres +29 shows
+FANDANGO DFW 75010 +0 theatres +0 shows
+FANDANGO DFW 75013 +0 theatres +0 shows
+FANDANGO DFW 75080 +1 theatres +27 shows
+FANDANGO DFW 76092 +1 theatres +24 shows
+FANDANGO DFW 75234 +0 theatres +0 shows
+FANDANGO DFW 75201 +1 theatres +12 shows
+FANDANGO DFW 76051 +0 theatres +0 shows
+FANDANGO DFW 75056 +0 theatres +0 shows
+FANDANGO DFW 76244 +2 theatres +18 shows
+FANDANGO DFW 75248 +0 theatres +0 shows
+FANDANGO Houston 77450 +9 theatres +152 shows
+FANDANGO Houston 77494 +29 theatres +379 shows
+FANDANGO Houston 77082 +0 theatres +0 shows
+FANDANGO Houston 77584 +0 theatres +0 shows
+FANDANGO Houston 77096 +0 theatres +0 shows
+FANDANGO Houston 77479 +0 theatres +0 shows
+FANDANGO Houston 77024 +0 theatres +0 shows
+FANDANGO Houston 77069 +0 theatres +0 shows
+FANDANGO Houston 77381 +0 theatres +0 shows
+FANDANGO Houston 77002 +0 theatres +0 shows
+FANDANGO Houston 77379 +0 theatres +0 shows
+FANDANGO Houston 77546 +1 theatres +3 shows
+FANDANGO Houston 77036 +0 theatres +0 shows
+FANDANGO Austin 78717 +16 theatres +156 shows
+FANDANGO Austin 78759 +7 theatres +55 shows
+FANDANGO Austin 78613 +0 theatres +0 shows
+FANDANGO Austin 78745 +4 theatres +41 shows
+FANDANGO Austin 78660 +0 theatres +0 shows
+FANDANGO San Antonio 78258 +16 theatres +167 shows
+FANDANGO San Antonio 78249 +4 theatres +29 shows
+FANDANGO San Antonio 78209 +3 theatres +15 shows
+FANDANGO NY/NJ 08873 +9 theatres +102 shows
+FANDANGO NY/NJ 07302 +39 theatres +428 shows
+FANDANGO NY/NJ 11375 +8 theatres +70 shows
+FANDANGO NY/NJ 08837 +3 theatres +29 shows
+FANDANGO NY/NJ 07666 +9 theatres +80 shows
+FANDANGO NY/NJ 10016 +0 theatres +0 shows
+FANDANGO NY/NJ 08820 +0 theatres +0 shows
+FANDANGO NY/NJ 07030 +0 theatres +0 shows
+FANDANGO NY/NJ 11354 +2 theatres +15 shows
+FANDANGO NY/NJ 08854 +0 theatres +0 shows
+FANDANGO NY/NJ 07310 +0 theatres +0 shows
+FANDANGO NY/NJ 08901 +0 theatres +0 shows
+FANDANGO NY/NJ 07102 +1 theatres +13 shows
+FANDANGO NY/NJ 11101 +0 theatres +0 shows
+FANDANGO NY/NJ 10704 +2 theatres +22 shows
+FANDANGO NY/NJ 08540 +1 theatres +14 shows
+FANDANGO NY/NJ 07728 +24 theatres +244 shows
+FANDANGO NY/NJ 11691 +0 theatres +0 shows
+FANDANGO NY/NJ 10001 +0 theatres +0 shows
+FANDANGO NY/NJ 11235 +0 theatres +0 shows
+FANDANGO NY/NJ 07047 +0 theatres +0 shows
+FANDANGO NY/NJ 08816 +0 theatres +0 shows
+FANDANGO NY/NJ 10977 +0 theatres +0 shows
+FANDANGO NY/NJ 11803 +7 theatres +71 shows
+FANDANGO NY/NJ 10583 +2 theatres +15 shows
+FANDANGO NY/NJ 08831 +0 theatres +0 shows
+FANDANGO NY/NJ 07410 +0 theatres +0 shows
+FANDANGO NY/NJ 11530 +0 theatres +0 shows
+FANDANGO NY/NJ 10956 +1 theatres +12 shows
+FANDANGO NY/NJ 08648 +20 theatres +144 shows
+FANDANGO Upstate NY 14221 +8 theatres +66 shows
+FANDANGO Upstate NY 14623 +6 theatres +59 shows
+FANDANGO Upstate NY 12110 +5 theatres +53 shows
+FANDANGO Upstate NY 13057 +9 theatres +63 shows
+FANDANGO Upstate NY 12866 +2 theatres +14 shows
+FANDANGO Philadelphia 19406 +1 theatres +6 shows
+FANDANGO Philadelphia 19087 +2 theatres +20 shows
+FANDANGO Philadelphia 19002 +0 theatres +0 shows
+FANDANGO Philadelphia 19103 +0 theatres +0 shows
+FANDANGO Philadelphia 08002 +0 theatres +0 shows
+FANDANGO Philadelphia 19355 +1 theatres +15 shows
+FANDANGO Philadelphia 19382 +1 theatres +9 shows
+FANDANGO Philadelphia 08054 +0 theatres +0 shows
+FANDANGO Philadelphia 19020 +0 theatres +0 shows
+FANDANGO Boston 01803 +13 theatres +109 shows
+FANDANGO Boston 02451 +2 theatres +13 shows
+FANDANGO Boston 01720 +2 theatres +23 shows
+FANDANGO Boston 02140 +1 theatres +8 shows
+FANDANGO Boston 01701 +1 theatres +10 shows
+FANDANGO Boston 02062 +1 theatres +24 shows
+FANDANGO Boston 01890 +0 theatres +0 shows
+FANDANGO Boston 02339 +12 theatres +88 shows
+FANDANGO Boston 02215 +0 theatres +0 shows
+FANDANGO Boston 01821 +0 theatres +0 shows
+FANDANGO Boston 01960 +0 theatres +0 shows
+FANDANGO Boston 02368 +0 theatres +0 shows
+FANDANGO Hartford/CT 06032 +20 theatres +198 shows
+FANDANGO Hartford/CT 06103 +1 theatres +3 shows
+FANDANGO Hartford/CT 06810 +9 theatres +85 shows
+FANDANGO Hartford/CT 06511 +2 theatres +7 shows
+FANDANGO Baltimore/DC 20171 +16 theatres +150 shows
+FANDANGO Baltimore/DC 22031 +15 theatres +144 shows
+FANDANGO Baltimore/DC 20850 +7 theatres +80 shows
+FANDANGO Baltimore/DC 20147 +0 theatres +0 shows
+FANDANGO Baltimore/DC 20852 +2 theatres +18 shows
+FANDANGO Baltimore/DC 22102 +3 theatres +26 shows
+FANDANGO Baltimore/DC 20902 +0 theatres +0 shows
+FANDANGO Baltimore/DC 22314 +1 theatres +6 shows
+FANDANGO Baltimore/DC 20705 +3 theatres +38 shows
+FANDANGO Baltimore/DC 21029 +2 theatres +10 shows
+FANDANGO Baltimore/DC 21045 +2 theatres +24 shows
+FANDANGO Baltimore/DC 21201 +4 theatres +60 shows
+FANDANGO Baltimore/DC 20874 +0 theatres +0 shows
+FANDANGO Baltimore/DC 22182 +0 theatres +0 shows
+FANDANGO Baltimore/DC 20109 +0 theatres +0 shows
+FANDANGO Baltimore/DC 21703 +9 theatres +63 shows
+FANDANGO Richmond/VA 23060 +7 theatres +62 shows
+FANDANGO Richmond/VA 23455 +7 theatres +49 shows
+FANDANGO Richmond/VA 23234 +3 theatres +32 shows
+FANDANGO Richmond/VA 22408 +3 theatres +24 shows
+FANDANGO N Carolina 27560 +15 theatres +135 shows
+FANDANGO N Carolina 28277 +9 theatres +88 shows
+FANDANGO N Carolina 27519 +0 theatres +0 shows
+FANDANGO N Carolina 27703 +1 theatres +4 shows
+FANDANGO N Carolina 28273 +1 theatres +10 shows
+FANDANGO N Carolina 27613 +0 theatres +0 shows
+FANDANGO N Carolina 27265 +5 theatres +37 shows
+FANDANGO N Carolina 28226 +0 theatres +0 shows
+FANDANGO N Carolina 27587 +0 theatres +0 shows
+FANDANGO N Carolina 27502 +0 theatres +0 shows
+FANDANGO N Carolina 28105 +1 theatres +12 shows
+FANDANGO N Carolina 27410 +0 theatres +0 shows
+FANDANGO N Carolina 27606 +0 theatres +0 shows
+FANDANGO N Carolina 28078 +5 theatres +51 shows
+FANDANGO N Carolina 27617 +0 theatres +0 shows
+FANDANGO N Carolina 28412 +2 theatres +18 shows
+FANDANGO N Carolina 27455 +5 theatres +34 shows
+FANDANGO N Carolina 28806 +4 theatres +39 shows
+FANDANGO S Carolina 29212 +6 theatres +54 shows
+FANDANGO S Carolina 29464 +6 theatres +45 shows
+FANDANGO S Carolina 29681 +10 theatres +89 shows
+FANDANGO Georgia 30097 +20 theatres +178 shows
+FANDANGO Georgia 30022 +3 theatres +24 shows
+FANDANGO Georgia 30043 +0 theatres +0 shows
+FANDANGO Georgia 30350 +7 theatres +68 shows
+FANDANGO Georgia 30024 +0 theatres +0 shows
+FANDANGO Georgia 30092 +0 theatres +0 shows
+FANDANGO Georgia 30075 +2 theatres +16 shows
+FANDANGO Georgia 30044 +0 theatres +0 shows
+FANDANGO Georgia 30076 +0 theatres +0 shows
+FANDANGO Georgia 30328 +1 theatres +10 shows
+FANDANGO Georgia 30062 +1 theatres +8 shows
+FANDANGO Georgia 30309 +1 theatres +8 shows
+FANDANGO Georgia 30518 +0 theatres +0 shows
+FANDANGO Georgia 30189 +1 theatres +8 shows
+FANDANGO Georgia 31907 +5 theatres +38 shows
+FANDANGO Georgia 30907 +3 theatres +31 shows
+FANDANGO Georgia 30016 +11 theatres +128 shows
+FANDANGO Georgia 30269 +4 theatres +45 shows
+FANDANGO Florida 33331 +12 theatres +132 shows
+FANDANGO Florida 32819 +11 theatres +155 shows
+FANDANGO Florida 33647 +6 theatres +63 shows
+FANDANGO Florida 33029 +2 theatres +28 shows
+FANDANGO Florida 34747 +1 theatres +6 shows
+FANDANGO Florida 33162 +4 theatres +38 shows
+FANDANGO Florida 33351 +6 theatres +57 shows
+FANDANGO Florida 33584 +3 theatres +19 shows
+FANDANGO Florida 32828 +13 theatres +126 shows
+FANDANGO Florida 33496 +3 theatres +36 shows
+FANDANGO Florida 33324 +0 theatres +0 shows
+FANDANGO Florida 33186 +7 theatres +101 shows
+FANDANGO Florida 33612 +2 theatres +15 shows
+FANDANGO Florida 32792 +0 theatres +0 shows
+FANDANGO Florida 33069 +0 theatres +0 shows
+FANDANGO Florida 34211 +5 theatres +32 shows
+FANDANGO Florida 33606 +0 theatres +0 shows
+FANDANGO Florida 32256 +7 theatres +135 shows
+FANDANGO Florida 32216 +0 theatres +0 shows
+FANDANGO Florida 33409 +6 theatres +62 shows
+FANDANGO Florida 34292 +6 theatres +53 shows
+FANDANGO Florida 33919 +2 theatres +25 shows
+FANDANGO Florida 33076 +0 theatres +0 shows
+FANDANGO Florida 34787 +0 theatres +0 shows
+FANDANGO Florida 33411 +0 theatres +0 shows
+FANDANGO Chicago 60563 +17 theatres +164 shows
+FANDANGO Chicago 60540 +3 theatres +35 shows
+FANDANGO Chicago 60169 +12 theatres +104 shows
+FANDANGO Chicago 60089 +5 theatres +40 shows
+FANDANGO Chicago 60504 +0 theatres +0 shows
+FANDANGO Chicago 60532 +2 theatres +20 shows
+FANDANGO Chicago 60103 +0 theatres +0 shows
+FANDANGO Chicago 60201 +14 theatres +140 shows
+FANDANGO Chicago 60611 +2 theatres +18 shows
+FANDANGO Chicago 60559 +1 theatres +6 shows
+FANDANGO Chicago 60446 +2 theatres +10 shows
+FANDANGO Chicago 60010 +1 theatres +6 shows
+FANDANGO Chicago 60074 +0 theatres +0 shows
+FANDANGO Chicago 60453 +4 theatres +45 shows
+FANDANGO Chicago 60139 +0 theatres +0 shows
+FANDANGO Chicago 60564 +0 theatres +0 shows
+FANDANGO Detroit 48377 +8 theatres +97 shows
+FANDANGO Detroit 48375 +1 theatres +7 shows
+FANDANGO Detroit 48098 +11 theatres +116 shows
+FANDANGO Detroit 48167 +0 theatres +0 shows
+FANDANGO Detroit 48316 +2 theatres +14 shows
+FANDANGO Detroit 48108 +14 theatres +151 shows
+FANDANGO Detroit 48073 +0 theatres +0 shows
+FANDANGO Detroit 48170 +0 theatres +0 shows
+FANDANGO Detroit 48322 +0 theatres +0 shows
+FANDANGO Ohio 43016 +7 theatres +89 shows
+FANDANGO Ohio 43240 +0 theatres +0 shows
+FANDANGO Ohio 44141 +9 theatres +69 shows
+FANDANGO Ohio 44114 +4 theatres +40 shows
+FANDANGO Ohio 45040 +8 theatres +63 shows
+FANDANGO Ohio 45202 +6 theatres +73 shows
+FANDANGO Ohio 43235 +0 theatres +0 shows
+FANDANGO Ohio 44236 +2 theatres +7 shows
+FANDANGO Ohio 45458 +4 theatres +44 shows
+FANDANGO Ohio 44122 +1 theatres +15 shows
+FANDANGO Ohio 45069 +1 theatres +2 shows
+FANDANGO Indiana 46032 +11 theatres +85 shows
+FANDANGO Indiana 46204 +6 theatres +62 shows
+FANDANGO Indiana 46835 +5 theatres +43 shows
+FANDANGO Indiana 46385 +11 theatres +101 shows
+FANDANGO Wisconsin 53045 +8 theatres +64 shows
+FANDANGO Wisconsin 53202 +2 theatres +16 shows
+FANDANGO Wisconsin 53719 +7 theatres +59 shows
+FANDANGO Wisconsin 53158 +6 theatres +56 shows
+FANDANGO Minnesota 55344 +10 theatres +81 shows
+FANDANGO Minnesota 55425 +4 theatres +40 shows
+FANDANGO Minnesota 55113 +5 theatres +36 shows
+FANDANGO Minnesota 55439 +0 theatres +0 shows
+FANDANGO Minnesota 55901 +4 theatres +16 shows
+FANDANGO Minnesota 55304 +4 theatres +22 shows
+FANDANGO Missouri/KS 63017 +16 theatres +114 shows
+FANDANGO Missouri/KS 63101 +2 theatres +14 shows
+FANDANGO Missouri/KS 66210 +8 theatres +89 shows
+FANDANGO Missouri/KS 64114 +2 theatres +15 shows
+FANDANGO Missouri/KS 65804 +7 theatres +32 shows
+FANDANGO Missouri/KS 66061 +0 theatres +0 shows
+FANDANGO Missouri/KS 66215 +1 theatres +11 shows
+FANDANGO Iowa/Nebraska 50266 +5 theatres +35 shows
+FANDANGO Iowa/Nebraska 50010 +4 theatres +14 shows
+FANDANGO Iowa/Nebraska 68130 +8 theatres +81 shows
+FANDANGO Iowa/Nebraska 68505 +5 theatres +33 shows
+FANDANGO Dakotas/MT 57106 +3 theatres +26 shows
+FANDANGO Dakotas/MT 58103 +2 theatres +14 shows
+FANDANGO Dakotas/MT 59102 +2 theatres +7 shows
+FANDANGO Colorado 80021 +12 theatres +133 shows
+FANDANGO Colorado 80112 +13 theatres +136 shows
+FANDANGO Colorado 80202 +0 theatres +0 shows
+FANDANGO Colorado 80027 +1 theatres +8 shows
+FANDANGO Colorado 80920 +5 theatres +81 shows
+FANDANGO Colorado 80537 +7 theatres +58 shows
+FANDANGO Colorado 80134 +0 theatres +0 shows
+FANDANGO Utah 84070 +20 theatres +263 shows
+FANDANGO Utah 84101 +1 theatres +18 shows
+FANDANGO Utah 84604 +4 theatres +52 shows
+FANDANGO Arizona 85226 +15 theatres +163 shows
+FANDANGO Arizona 85248 +3 theatres +21 shows
+FANDANGO Arizona 85308 +16 theatres +167 shows
+FANDANGO Arizona 85382 +1 theatres +16 shows
+FANDANGO Arizona 85004 +2 theatres +15 shows
+FANDANGO Arizona 85281 +1 theatres +4 shows
+FANDANGO Arizona 85718 +8 theatres +101 shows
+FANDANGO Arizona 85249 +1 theatres +10 shows
+FANDANGO Nevada 89135 +19 theatres +234 shows
+FANDANGO Nevada 89109 +1 theatres +10 shows
+FANDANGO Nevada 89502 +6 theatres +70 shows
+FANDANGO New Mexico 87114 +7 theatres +41 shows
+FANDANGO New Mexico 88001 +11 theatres +112 shows
+FANDANGO Seattle 98052 +16 theatres +161 shows
+FANDANGO Seattle 98007 +1 theatres +17 shows
+FANDANGO Seattle 98375 +7 theatres +85 shows
+FANDANGO Seattle 98033 +0 theatres +0 shows
+FANDANGO Seattle 98011 +1 theatres +14 shows
+FANDANGO Seattle 98034 +0 theatres +0 shows
+FANDANGO Seattle 98201 +1 theatres +10 shows
+FANDANGO Seattle 98003 +3 theatres +52 shows
+FANDANGO Seattle 98004 +0 theatres +0 shows
+FANDANGO Seattle 98040 +0 theatres +0 shows
+FANDANGO Seattle 98008 +0 theatres +0 shows
+FANDANGO Seattle 98102 +1 theatres +3 shows
+FANDANGO Seattle 98272 +4 theatres +29 shows
+FANDANGO Seattle 98296 +0 theatres +0 shows
+FANDANGO Seattle 99206 +5 theatres +44 shows
+FANDANGO Seattle 98029 +0 theatres +0 shows
+FANDANGO Seattle 98074 +0 theatres +0 shows
+FANDANGO Portland/OR 97006 +12 theatres +162 shows
+FANDANGO Portland/OR 97223 +1 theatres +8 shows
+FANDANGO Portland/OR 97201 +5 theatres +60 shows
+FANDANGO Portland/OR 97477 +4 theatres +47 shows
+FANDANGO Idaho/WY 83704 +5 theatres +72 shows
+FANDANGO Idaho/WY 82001 +1 theatres +6 shows
+FANDANGO Tennessee 37067 +6 theatres +65 shows
+FANDANGO Tennessee 37203 +3 theatres +38 shows
+FANDANGO Tennessee 38120 +9 theatres +32 shows
+FANDANGO Tennessee 37922 +6 theatres +61 shows
+FANDANGO Tennessee 37402 +5 theatres +44 shows
+FANDANGO Tennessee 37043 +5 theatres +60 shows
+FANDANGO Kentucky 40222 +7 theatres +62 shows
+FANDANGO Kentucky 40503 +5 theatres +62 shows
+FANDANGO Alabama/MS 35242 +7 theatres +61 shows
+FANDANGO Alabama/MS 36830 +2 theatres +24 shows
+FANDANGO Alabama/MS 39232 +5 theatres +30 shows
+FANDANGO Louisiana/AR 70130 +8 theatres +74 shows
+FANDANGO Louisiana/AR 70503 +2 theatres +17 shows
+FANDANGO Louisiana/AR 72223 +5 theatres +43 shows
+FANDANGO Oklahoma 73134 +10 theatres +83 shows
+FANDANGO Oklahoma 74136 +8 theatres +70 shows
+FANDANGO Pittsburgh 15237 +9 theatres +94 shows
+FANDANGO Pittsburgh 15222 +0 theatres +0 shows
+FANDANGO Pittsburgh 15108 +1 theatres +10 shows
+FANDANGO Alaska/Hawaii 99508 +5 theatres +40 shows
+FANDANGO Alaska/Hawaii 96814 +8 theatres +59 shows
+FANDANGO Rhode I/NH/ME/VT 02903 +1 theatres +5 shows
+FANDANGO Rhode I/NH/ME/VT 03079 +1 theatres +4 shows
+FANDANGO Rhode I/NH/ME/VT 04101 +5 theatres +27 shows
+FANDANGO Rhode I/NH/ME/VT 05403 +2 theatres +8 shows
+FANDANGO Delaware/WV 19711 +2 theatres +36 shows
+FANDANGO Delaware/WV 25304 +7 theatres +49 shows
+CINEPLEX 152 theatres in master list
+CINEPLEX Cineplex Odeon Devonshire Mall Cinemas (Windsor) -> 6 shows
+CINEPLEX Galaxy Cinemas Chatham (Chatham) -> 3 shows
+CINEPLEX Galaxy Cinemas Sarnia (Sarnia) -> 3 shows
+CINEPLEX Galaxy Cinemas St. Thomas (St. Thomas) -> 3 shows
+CINEPLEX Cineplex Odeon Westmount Cinemas and VIP (London) -> 3 shows
+CINEPLEX SilverCity London Cinemas (London) -> 6 shows
+CINEPLEX SilverCity Thunder Bay Cinemas (Thunder Bay) -> 3 shows
+CINEPLEX Galaxy Cinemas Brantford (Brantford) -> 3 shows
+CINEPLEX Cineplex Cinemas Kitchener and VIP (Kitchener) -> 9 shows
+CINEPLEX Galaxy Cinemas Sault Ste Marie (Sault Ste. Marie) -> 2 shows
+CINEPLEX Cineplex Cinemas Cambridge (Cambridge) -> 3 shows
+CINEPLEX Galaxy Cinemas Guelph (Guelph) -> 6 shows
+CINEPLEX Cineplex Cinemas Ancaster (Hamilton) -> 3 shows
+CINEPLEX Galaxy Cinemas Pergola Commons (Guelph) -> 3 shows
+CINEPLEX Cineplex Cinemas Hamilton Mountain (Hamilton) -> 6 shows
+CINEPLEX SilverCity Burlington Cinemas (Burlington) -> 3 shows
+CINEPLEX Galaxy Cinemas Owen Sound (Owen Sound) -> 2 shows
+CINEPLEX Cineplex Odeon McGillivray Cinemas and VIP (Winnipeg) -> 6 shows
+CINEPLEX SilverCity St. Vital Cinemas (Winnipeg) -> 9 shows
+CINEPLEX Cineplex Cinemas Oakville and VIP (Oakville) -> 3 shows
+CINEPLEX Cineplex Cinemas Milton (Milton) -> 3 shows
+CINEPLEX Scotiabank Theatre Winnipeg (Winnipeg) -> 9 shows
+CINEPLEX Cineplex Junxion Kildonan Place (Winnipeg) -> 6 shows
+CINEPLEX Galaxy Cinemas Orangeville (Orangeville) -> 3 shows
+CINEPLEX Cineplex Cinemas Winston Churchill & VIP (Oakville) -> 9 shows
+CINEPLEX Cineplex Odeon Seaway Mall Cinemas (Welland) -> 3 shows
+CINEPLEX Cineplex Cinemas Mississauga Square One (Mississauga) -> 6 shows
+CINEPLEX Cineplex Cinemas Courtney Park (Mississauga) -> 6 shows
+CINEPLEX SilverCity Brampton Cinemas (Brampton) -> 9 shows
+CINEPLEX Cineplex Odeon Niagara Square Cinemas (Niagara Falls) -> 3 shows
+CINEPLEX Cineplex Cinemas Queensway and VIP (Toronto) -> 15 shows
+CINEPLEX Galaxy Cinemas Collingwood (Collingwood) -> 2 shows
+CINEPLEX Cineplex Cinemas Vaughan (Vaughan) -> 3 shows
+CINEPLEX Cineplex Cinemas Yorkdale (Toronto) -> 6 shows
+CINEPLEX Scotiabank Theatre Toronto (Toronto) -> 9 shows
+CINEPLEX Cineplex Cinemas Yonge-Dundas and VIP (Toronto) -> 12 shows
+CINEPLEX Cineplex Cinemas Varsity and VIP (Toronto) -> 6 shows
+CINEPLEX Cineplex Cinemas Yonge-Eglinton and VIP (Toronto) -> 9 shows
+CINEPLEX Cineplex Cinemas Empress Walk (Toronto) -> 6 shows
+CINEPLEX Cineplex VIP Cinemas Don Mills (age restricted 19+) (Toronto) -> 3 shows
+CINEPLEX SilverCity Richmond Hill Cinemas (Richmond Hill) -> 6 shows
+CINEPLEX Cineplex Cinemas Fairview Mall (Toronto) -> 3 shows
+CINEPLEX Cineplex Odeon Eglinton Town Centre Cinemas (Toronto) -> 3 shows
+CINEPLEX Cineplex Cinemas Markham and VIP (Markham) -> 9 shows
+CINEPLEX Cineplex Cinemas Scarborough (Toronto) -> 3 shows
+CINEPLEX Cineplex Odeon Aurora Cinemas (Aurora) -> 2 shows
+CINEPLEX SilverCity Newmarket Cinemas and XSCAPE Entertainment Centre (East Gwillimbury) -> 6 shows
+CINEPLEX Cineplex Odeon Morningside Cinemas (Toronto) -> 2 shows
+CINEPLEX Galaxy Cinemas Barrie (Barrie) -> 4 shows
+CINEPLEX Cineplex Cinemas North Barrie (Barrie) -> 4 shows
+CINEPLEX Cineplex Cinemas Pickering and VIP (Pickering) -> 6 shows
+CINEPLEX Cineplex Odeon Ajax Cinemas (Ajax) -> 3 shows
+CINEPLEX Galaxy Cinemas Orillia (Orillia) -> 2 shows
+CINEPLEX Cineplex Odeon Oshawa Cinemas (Oshawa) -> 6 shows
+CINEPLEX Cineplex Odeon Clarington Place Cinemas (Clarington) -> 1 shows
+CINEPLEX SilverCity Sudbury Cinemas (Sudbury) -> 3 shows
+CINEPLEX Galaxy Cinemas Peterborough (Peterborough) -> 3 shows
+CINEPLEX Cineplex Cinemas Southland (Regina) -> 3 shows
+CINEPLEX Cineplex Cinemas Normanview (Regina) -> 6 shows
+CINEPLEX Galaxy Cinemas Moose Jaw (Moose Jaw) -> 2 shows
+CINEPLEX Galaxy Cinemas North Bay (North Bay) -> 4 shows
+CINEPLEX Galaxy Cinemas Belleville (Belleville) -> 6 shows
+CINEPLEX Cineplex Odeon Gardiners Road Cinemas (Kingston) -> 9 shows
+CINEPLEX Galaxy Cinemas Medicine Hat (Medicine Hat) -> 2 shows
+CINEPLEX Cineplex Odeon Barrhaven Cinemas (Ottawa) -> 2 shows
+CINEPLEX Cineplex Cinemas Ottawa (Ottawa) -> 6 shows
+CINEPLEX Cinéma Starcité Gatineau (Gatineau) -> 3 shows
+CINEPLEX Cineplex Odeon South Keys Cinemas (Ottawa) -> 3 shows
+CINEPLEX Cineplex Cinemas Lansdowne and VIP (Ottawa) -> 6 shows
+CINEPLEX Scotiabank Theatre Ottawa (Ottawa) -> 3 shows
+CINEPLEX Cineplex Cinemas at The Centre (Saskatoon) -> 3 shows
+CINEPLEX Scotiabank Theatre Saskatoon and VIP (Saskatoon) -> 9 shows
+CINEPLEX Galaxy Cinemas Lethbridge (Lethbridge) -> 6 shows
+CINEPLEX Galaxy Cinemas Cornwall (Cornwall) -> 2 shows
+CINEPLEX Galaxy Cinemas Prince Albert (Prince Albert) -> 3 shows
+CINEPLEX Cinéma Cineplex Kirkland (Kirkland) -> 3 shows
+CINEPLEX Cinéma Cineplex Laval (Laval) -> 3 shows
+CINEPLEX Cinéma Cineplex Royalmount (Mont-Royal) -> 6 shows
+CINEPLEX Cinéma Famous Players Carrefour Angrignon (Montréal) -> 3 shows
+CINEPLEX Cinéma Cineplex Forum et VIP (Montréal) -> 6 shows
+CINEPLEX Cinéma Banque Scotia Montréal (Montréal) -> 3 shows
+CINEPLEX Cinéma Cineplex Odeon Brossard et VIP (Brossard) -> 6 shows
+CINEPLEX Cineplex Cinemas Seton and VIP (Calgary) -> 12 shows
+CINEPLEX Scotiabank Theatre Chinook (Calgary) -> 3 shows
+CINEPLEX Cineplex Odeon Sunridge Spectrum Cinemas (Calgary) -> 6 shows
+CINEPLEX Cineplex Odeon Westhills Cinemas (Calgary) -> 3 shows
+CINEPLEX Cineplex VIP Cinemas University District (age restricted 18+) (Calgary) -> 6 shows
+CINEPLEX Cineplex Odeon Crowfoot Crossing Cinemas (Calgary) -> 6 shows
+CINEPLEX Galaxy Cinemas Red Deer (Red Deer) -> 2 shows
+CINEPLEX Cinéma Cineplex Odeon Sainte-Foy (Québec) -> 3 shows
+CINEPLEX Cineplex Odeon South Edmonton Cinemas (Edmonton) -> 9 shows
+CINEPLEX Cineplex Cinemas Sherwood Park (Sherwood Park) -> 3 shows
+CINEPLEX Cineplex Odeon Windermere Cinemas and VIP (Edmonton) -> 6 shows
+CINEPLEX Cineplex Cinemas Manning Town Centre (Edmonton) -> 3 shows
+CINEPLEX Scotiabank Theatre Edmonton (Edmonton) -> 6 shows
+CINEPLEX Cineplex Cinemas North Edmonton and VIP (Edmonton) -> 9 shows
+CINEPLEX Cineplex Cinemas Orchard Plaza (Kelowna) -> 3 shows
+CINEPLEX Galaxy Cinemas Vernon (Vernon) -> 3 shows
+CINEPLEX Cineplex Cinemas Aberdeen Mall (Kamloops) -> 4 shows
+CINEPLEX Cineplex Cinemas Abbotsford and VIP (Abbotsford) -> 4 shows
+CINEPLEX SilverCity Mission Cinemas (Mission) -> 4 shows
+CINEPLEX Cineplex Cinemas Langley (Langley) -> 9 shows
+CINEPLEX Cineplex Odeon Meadowtown Cinemas (Pitt Meadows) -> 3 shows
+CINEPLEX Cineplex Odeon Victoria Cinemas (Victoria) -> 3 shows
+CINEPLEX SilverCity Victoria Cinemas (Victoria) -> 6 shows
+CINEPLEX Cineplex Cinemas Strawberry Hill (Surrey) -> 6 shows
+CINEPLEX Cineplex Cinemas Coquitlam and VIP (Coquitlam) -> 9 shows
+CINEPLEX Cineplex Odeon Westshore Cinemas (Langford) -> 2 shows
+CINEPLEX SilverCity Riverport Cinemas (Richmond) -> 9 shows
+CINEPLEX Cineplex Cinemas Metropolis (Burnaby) -> 6 shows
+CINEPLEX Cineplex VIP Cinemas Brentwood (age restricted 19+) (Burnaby) -> 6 shows
+CINEPLEX Cineplex Cinemas Marine Gateway and VIP (Vancouver) -> 6 shows
+CINEPLEX Cineplex Odeon International Village Cinemas (Vancouver) -> 3 shows
+CINEPLEX Scotiabank Theatre Vancouver (Vancouver) -> 9 shows
+CINEPLEX Cineplex Cinemas Park Royal and VIP (West Vancouver) -> 6 shows
+CINEPLEX Galaxy Cinemas Nanaimo (Nanaimo) -> 3 shows
+CINEPLEX Cineplex Cinemas Yarmouth (Yarmouth) -> 3 shows
+CINEPLEX Cineplex Cinemas Fredericton (Fredericton) -> 1 shows
+CINEPLEX Cineplex Cinemas Saint John (Saint John) -> 3 shows
+CINEPLEX Cineplex Odeon Grande Prairie Cinemas (Grande Prairie) -> 2 shows
+CINEPLEX Cineplex Cinemas New Minas (New Minas) -> 3 shows
+CINEPLEX Cineplex Cinemas Trinity Drive (Moncton) -> 6 shows
+CINEPLEX Cineplex Cinemas Dieppe (Dieppe) -> 6 shows
+CINEPLEX Famous Players 6 Cinemas (Prince George) -> 2 shows
+CINEPLEX Scotiabank Theatre Halifax (Halifax) -> 3 shows
+CINEPLEX Cineplex Cinemas Lower Sackville (Lower Sackville) -> 3 shows
+CINEPLEX Cineplex Cinemas Dartmouth Crossing (Dartmouth) -> 4 shows
+CINEPLEX Cineplex Cinemas Summerside (Summerside) -> 2 shows
+CINEPLEX Cineplex Cinemas Truro (Truro) -> 3 shows
+CINEPLEX Cineplex Cinemas Charlottetown (Charlottetown) -> 6 shows
+CINEPLEX Cineplex Cinemas New Glasgow (New Glasgow) -> 3 shows
+CINEPLEX Cineplex Cinemas Sydney (Sydney) -> 3 shows
+CINEPLEX Scotiabank Theatre St. John's (St. John's) -> 6 shows
+
+=== Avengers: Doomsday · 2026-12-17 · US TOTALS ===
+  no earlier read of this date on disk. This run becomes the
+  baseline; the next one will diff against it.
+  theatres           1,588  (first read of this date)
+  showtimes         15,829  (first read of this date)
+  sold-out shows       329
+
+=== BY CHAIN ===
+  AMC                       397 sites  4453 shows        0 seats       0 sold   0.0%
+  Regal                     310 sites  3675 shows        0 seats       0 sold   0.0%
+  Independent/Desi          466 sites  2760 shows        0 seats       0 sold   0.0%
+  Cinepolis                  21 sites   140 shows        0 seats       0 sold   0.0%
+  Harkins                    26 sites   302 shows        0 seats       0 sold   0.0%
+  Cinemark                  207 sites  3415 shows        0 seats       0 sold   0.0%
+  LOOK                        6 sites    43 shows        0 seats       0 sold   0.0%
+  SMG                        15 sites    91 shows        0 seats       0 sold   0.0%
+  Alamo                      36 sites   155 shows        0 seats       0 sold   0.0%
+  B&B                        24 sites    74 shows        0 seats       0 sold   0.0%
+  Showcase                   10 sites    54 shows        0 seats       0 sold   0.0%
+  Marcus                     40 sites   378 shows        0 seats       0 sold   0.0%
+  Emagine                    20 sites   184 shows        0 seats       0 sold   0.0%
+  MJR                        10 sites   105 shows        0 seats       0 sold   0.0%
+
+  NATIONAL CHAINS  914 sites, 11,543 shows, 0 seats, 0 sold, 0.0%
+  EVERYTHING ELSE  674 sites, 4,286 shows, 0 seats, 0 sold, 0.0%
+  Marcus, Harkins, B&B, Emagine and the independents are in that
+  second line ONLY where they sell through Fandango. The probe
+  rounds found no other NA circuit exposes seat counts, so any
+  site selling only on its own website is invisible here.
+
+=== BY FORMAT ===
+  Premium Format            774 sites  3242 shows        0 seats       0 sold   0.0%
+  3D                       1109 sites  3411 shows        0 seats       0 sold   0.0%
+  Standard                 1511 sites  9176 shows        0 seats       0 sold   0.0%
+  -> non-Standard showtimes: 6653 of 15829 (42.0%)
+  -> IMAX showtimes: 0
+     Zero IMAX is EXPECTED: Dune holds a 3-week IMAX
+     exclusivity. Contract, not demand.
+
+=== BY METRO ===
+  LA                        123 sites  1347 shows        0 seats       0 sold   0.0%
+  SF Bay                     66 sites   727 shows        0 seats       0 sold   0.0%
+  Sacramento                 22 sites   276 shows        0 seats       0 sold   0.0%
+  San Diego                  25 sites   268 shows        0 seats       0 sold   0.0%
+  Fresno/Cent CA             16 sites   148 shows        0 seats       0 sold   0.0%
+  DFW                        67 sites   705 shows        0 seats       0 sold   0.0%
+  Houston                    39 sites   534 shows        0 seats       0 sold   0.0%
+  Austin                     27 sites   252 shows        0 seats       0 sold   0.0%
+  San Antonio                23 sites   211 shows        0 seats       0 sold   0.0%
+  NY/NJ                     128 sites  1259 shows        0 seats       0 sold   0.0%
+  Upstate NY                 30 sites   255 shows        0 seats       0 sold   0.0%
+  Philadelphia                5 sites    50 shows        0 seats       0 sold   0.0%
+  Boston                     32 sites   275 shows        0 seats       0 sold   0.0%
+  Hartford/CT                32 sites   293 shows        0 seats       0 sold   0.0%
+  Baltimore/DC               64 sites   619 shows        0 seats       0 sold   0.0%
+  Richmond/VA                20 sites   167 shows        0 seats       0 sold   0.0%
+  N Carolina                 48 sites   428 shows        0 seats       0 sold   0.0%
+  S Carolina                 22 sites   188 shows        0 seats       0 sold   0.0%
+  Georgia                    59 sites   562 shows        0 seats       0 sold   0.0%
+  Florida                    96 sites  1083 shows        0 seats       0 sold   0.0%
+
+=== BY TIME OF DAY (local) ===
+  before noon    901 shows        0 seats       0 sold   0.0%
+  12-4pm        4572 shows        0 seats       0 sold   0.0%
+  4-7pm         3978 shows        0 seats       0 sold   0.0%
+  7-9pm         2554 shows        0 seats       0 sold   0.0%
+  9pm+          3824 shows        0 seats       0 sold   0.0%
+
+=== CANADA ===
+  theatres 133   showtimes 627  (first read of this date)
+  seats still available 78,011
+    ON    290
+    BC    106
+    AB     84
+    QC     36
+    MB     30
+    SK     26
+    NS     25
+    NB     16
+    PE      8
+    NL      6
+  Cineplex publishes seats AVAILABLE but not seats TOTAL, so
+  Canadian occupancy is NOT computable. The fall in the number
+  above between two reads IS tickets sold, and needs no
+  capacity assumption. That is the honest Canadian figure -
+  do not scale it from showtime share.
+  first show 2026-12-17 13:00, 1794h away - clean presale

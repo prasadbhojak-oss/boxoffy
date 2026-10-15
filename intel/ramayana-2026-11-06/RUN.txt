@@ -1,0 +1,92 @@
+Ramayana  (ramayana)   fandango 245446   cineplex n/a
+dates ['2026-11-06']   401 postcodes   10 workers   pace 0.12s
+  session warm-up HTTP 200; cookies ['akamai_location', 'userCountry', 'akamai_set_zip', 'userlocation', 'akamai_generated_location']
+RUN 2026-10-09T23:16:33.571480 film=ramayana date=2026-11-06 workers=10 pace=0.12 SEATS
+
+### Ramayana · 2026-11-06 -> intel\ramayana-2026-11-06
+  18 sites, 33 showtimes
+Seat maps...
+  33 showtimes, 33 unique seat maps, 33 to read
+  10 workers, starting pace 0.12s -> about 0 min if nothing throttles
+  33/33 · 0.1 min · 5.2 req/s · ~0 min left · pace 0.12s · 2 failed · 0 throttled
+  WARNING 2 seat maps failed. Those rows are BLANK, not zero. Re-run with --resume to retry only those.
+Cineplex (Canada)...
+  Canada skipped: no cineplex filmId for this listing.
+  0 Canadian showtimes
+
+=== Ramayana · 2026-11-06 · PRESALE ===
+  sites                       18
+  showtimes                   33
+  seat maps read              31   93.9% of showtimes
+  seats on sale            3,296
+  TICKETS SOLD                88   2.7% of those seats
+  sold-out shows               0
+  Presale: nothing has played, no seat map withdrawn, so this is a
+  cumulative total rather than a floor.
+
+  === VELOCITY vs ramayana-2026-11-06-prev-1637 ===
+  showtimes in both reads       22
+  sold then 88 -> now 88   +0
+  9 newly mapped showtimes excluded from that delta, so
+  added inventory cannot inflate the rate.
+  6.7h apart -> 0 tickets/hour
+  27 days out. NO extrapolation printed on purpose:
+  multiplying an hourly rate by 75 days gives a number in
+  the tens of millions of tickets, which is garbage. The
+  rate is a pulse reading, not a forecast. Extrapolation
+  starts making sense inside the last fortnight, when the
+  curve is steep but short.
+
+  BY FORMAT
+    Standard                 16 sites     26 sh     2,690 seats       88 sold   3.3%
+    3D                        4 sites      5 sh       606 seats        0 sold   0.0%
+
+  BY CHAIN
+    Independent               1 sites      4 sh       400 seats       88 sold  22.0%
+    Regal                     7 sites     16 sh     1,991 seats        0 sold   0.0%
+    SMG                       6 sites      9 sh       703 seats        0 sold   0.0%
+    Emagine                   2 sites      2 sh       202 seats        0 sold   0.0%
+
+  BY METRO
+    Chicago                   1 sites      4 sh       400 seats       88 sold  22.0%
+    SF Bay                    1 sites      1 sh        81 seats        0 sold   0.0%
+    DFW                       2 sites      2 sh       147 seats        0 sold   0.0%
+    Houston                   1 sites      2 sh       144 seats        0 sold   0.0%
+    NY/NJ                     1 sites      3 sh       438 seats        0 sold   0.0%
+    Upstate NY                1 sites      3 sh       474 seats        0 sold   0.0%
+    N Carolina                1 sites      3 sh       486 seats        0 sold   0.0%
+    Georgia                   1 sites      2 sh       158 seats        0 sold   0.0%
+    Florida                   4 sites      6 sh       556 seats        0 sold   0.0%
+    Minnesota                 2 sites      2 sh       202 seats        0 sold   0.0%
+    Missouri/KS               1 sites      3 sh       210 seats        0 sold   0.0%
+
+  BY TIME OF DAY (local, per-hour density so wide buckets do not lie)
+    6-12                  1 sh (     0/hr)       122 seats        0 sold   0.0%
+    12-4pm               14 sh (     4/hr)     1,512 seats       44 sold   2.9%
+    4-7pm                 3 sh (     1/hr)       378 seats        0 sold   0.0%
+    7-9pm                10 sh (     5/hr)       952 seats       22 sold   2.3%
+    9pm+                  3 sh (     1/hr)       332 seats       22 sold   6.6%
+    after midnight        0 sh (     0/hr)         0 seats        0 sold   0.0%
+
+  === DOLLARS ON WHAT WE MEASURED ===
+  ATP assumed: Standard $17.00, 3D $20.00, Premium Format $24.00, IMAX $26.00   (ASSUMPTION - override with --atp-* flags)
+  observed presale gross  $1,496
+  seat coverage is 93.9%, so scaled to all showtimes
+  that is about $1,593 - an ESTIMATE, label it as one.
+
+  === WHAT THIS IMPLIES FOR THE OPENING ===
+  We have NO measured presale-to-final ratio for a Marvel title.
+  The $43.21 factor we calibrated on Drishyam was a same-day
+  walk-up factor and does not transfer. So this is a sensitivity
+  table, not a forecast. Pick a row only if you can defend it.
+    presale is       implied 3-day gross
+      10% of final                15,925
+      15% of final                10,617
+      20% of final                 7,963
+      25% of final                 6,370
+      30% of final                 5,308
+  Publish the measured presale number. Do not publish a row of
+  this table as our estimate until we have calibrated the ratio.
+
+  === CANADA ===
+  no Canadian rows in this read.

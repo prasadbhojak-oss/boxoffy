@@ -1,0 +1,267 @@
+
+########################################################################
+#  BOXOFFY  -  CANADA SWEEP
+#  2026-10-09 23:57   workers 6
+#
+#  Cineplex 152/1595 - Landmark 36/299 - Imagine 11/72 -
+#  Cine Starz 8 - plus 4 Indian-only GTA independents that
+#  have no API and no online ticketing at all.
+#
+#  Canada is 25-40% of US+Canada for a Hindi film and 10-25%
+#  for Telugu. Per-screen runs about 4x the US. It is not a
+#  rounding error and it was not being measured properly.
+########################################################################
+========================================================================
+  Ramayana: Rise of a Legend
+  dates: 2026-11-04, 2026-11-05, 2026-11-06, 2026-11-07, 2026-11-08
+========================================================================
+
+--- CINEPLEX: national theatre list --------------------------------
+    200  +152  …v1/theatres?language=en
+    200  +0    …v1/theatres?language=en&range=100000&skip=0&take=1000
+    200  +0    …v1/theatres?language=en-us&range=100000&skip=0&take=1000
+    400  +0    …v1/theatres/playingnearby?language=en&accuracyKm=100000
+    404  +0    https://www.cineplex.com/api/v1/theatres?language=en-us&range=100000&skip=0&take=1000
+
+    CINEPLEX THEATRE LIST: 152 locations
+    That is close to the published 152 - treat as national.
+
+--- CINEPLEX: resolve film id --------------------------------------
+    200  267   …v1/movies?language=en
+    200  102   …v1/movies/bookable?language=en
+    200  267   …v1/movies?language=en-us&movieType=1&showTimeType=0&showtimeStatus=0&skip=0&take=500
+    404  0     https://www.cineplex.com/api/v1/movies?language=en-us&movieType=1&showTimeType=0&showtim
+    MATCH  filmId 62087   Ramayana
+    also   filmId 62087   Ramayana   <- ambiguous, check this
+
+    showtimes 2026-11-04
+      national form gave 200/0 - walking 152 theatres
+      40/152 theatres, 0 showtimes
+      80/152 theatres, 0 showtimes
+      120/152 theatres, 0 showtimes
+      2026-11-04: 0 showtimes at 0 sites
+
+    showtimes 2026-11-05
+      national form gave 200/0 - walking 152 theatres
+      40/152 theatres, 0 showtimes
+      80/152 theatres, 0 showtimes
+      120/152 theatres, 0 showtimes
+      2026-11-05: 0 showtimes at 0 sites
+
+    showtimes 2026-11-06
+      national form gave 200/0 - walking 152 theatres
+      40/152 theatres, 0 showtimes
+      80/152 theatres, 0 showtimes
+      120/152 theatres, 0 showtimes
+      2026-11-06: 0 showtimes at 0 sites
+
+    showtimes 2026-11-07
+      national form gave 200/0 - walking 152 theatres
+      40/152 theatres, 0 showtimes
+      80/152 theatres, 0 showtimes
+      120/152 theatres, 0 showtimes
+      2026-11-07: 0 showtimes at 0 sites
+
+    showtimes 2026-11-08
+      national form gave 200/0 - walking 152 theatres
+      40/152 theatres, 0 showtimes
+      80/152 theatres, 0 showtimes
+      120/152 theatres, 0 showtimes
+      2026-11-08: 0 showtimes at 0 sites
+
+--- LANDMARK: probe for the JSON behind Vista ---------------------
+    403  -     https://www.landmarkcinemas.com/api/now-playing
+    403  -     https://www.landmarkcinemas.com/api/films
+    403  -     https://www.landmarkcinemas.com/api/sessions
+    403  -     https://www.landmarkcinemas.com/showtimes/api/films
+    403  -     https://www.landmarkcinemas.com/WSVistaWebClient/ocapi/v1/browsing/master-data/showtimes
+    403  -     https://www.landmarkcinemas.com/WSVistaWebClient/RESTTicketing.svc/GetFilmsBySite
+    403  -     https://web1.landmarkcinemas.com/api/films
+    403  -     https://web5.landmarkcinemas.com/api/films
+    403  -     https://pc.landmarkcinemas.com/api/films
+    403  -     https://cms.landmarkcinemas.com/api/films
+    403  -     https://filmdb.landmarkcinemas.com/
+
+--- CINEMACLOCK: markets -------------------------------------------
+    Toronto       not listed   [200 /toronto-on/movies-now-playing]
+    Brampton      not listed   [200 /brampton-on/movies-now-playing]
+    Mississauga   not listed   [200 /mississauga-on/movies-now-playing]
+    Scarborough   not listed   [200 /scarborough-on/movies-now-playing]
+    Surrey        not listed   [200 /surrey-bc/movies-now-playing]
+    Vancouver     not listed   [200 /vancouver-bc/movies-now-playing]
+    Calgary       not listed   [200 /calgary-ab/movies-now-playing]
+    Edmonton      not listed   [200 /edmonton-ab/movies-now-playing]
+    Winnipeg      not listed   [200 /winnipeg-mb/movies-now-playing]
+    Ottawa        not listed   [200 /ottawa-on/movies-now-playing]
+    Montreal      not listed   [200 /montreal-qc/movies-now-playing]
+
+--- CINEMACLOCK: the Indian-only independents ---------------------
+    These four have NO online ticketing. If a South Indian
+    title is playing Canada and these are blank, we are blind.
+           Albion Cinemas (Etobicoke)           not listed   0 times 
+           Woodside Cinemas (Agincourt)         not listed   0 times 
+           York Cinemas (Richmond Hill)         not listed   0 times 
+           Central Parkway (Mississauga)        not listed   0 times 
+           Cineplex Strawberry Hill (Surrey)    not listed   0 times 
+           SilverCity Brampton                  not listed   0 times 
+
+--- CINE STARZ ----------------------------------------------------
+    not listed at any Cine Starz location
+
+--- IMAGINE (Omniterm, dated endpoint) ----------------------------
+    not listed at any Imagine location for 2026-11-04
+
+--- TRIBUTE.CA forward calendar -----------------------------------
+    not listed
+
+========================================================================
+  VERDICT  -  Ramayana: Rise of a Legend
+========================================================================
+    Cineplex film id          62087
+    Cineplex locations read   152  (published total 152)
+    Cineplex showtimes        0  at 0 sites
+    CinemaClock showtimes     0  across 0 of 11 markets
+    Indian-only indies        0 of 6 listed
+    Cine Starz                0 locations
+    Imagine                   0 locations
+    Landmark                  not listed   json feeds found: 0
+    Tribute forward calendar  not listed
+
+    ZERO EVERYWHERE, AND ZERO IS WHAT WE EXPECTED.
+    Read the control block below before believing it.
+
+    NO TICKET COUNT. Cineplex gives seatsAvailable and never
+    seatsTotal, so there is no denominator and no occupancy.
+    Canada is a footprint read only. Any Canadian ticket or
+    dollar figure in our output would be fabricated.
+========================================================================
+
+
+########################################################################
+#  CONTROL FILM
+#  Drishyam: The Conclusion opened 2 Oct on 74-78 Canadian
+#  screens and was verified playing at Cineplex Strawberry
+#  Hill, Landmark chain-wide, Albion, York and Central
+#  Parkway as of 9 Oct.
+#
+#  IF THE CONTROL ALSO COMES BACK ZERO, THE SWEEP IS
+#  BROKEN AND THE TARGET'S ZERO MEANS NOTHING.
+########################################################################
+========================================================================
+  Drishyam: The Conclusion
+  dates: 2026-10-09, 2026-10-10
+========================================================================
+
+--- CINEPLEX: national theatre list --------------------------------
+    200  +152  …v1/theatres?language=en
+    200  +0    …v1/theatres?language=en&range=100000&skip=0&take=1000
+    200  +0    …v1/theatres?language=en-us&range=100000&skip=0&take=1000
+    400  +0    …v1/theatres/playingnearby?language=en&accuracyKm=100000
+    404  +0    https://www.cineplex.com/api/v1/theatres?language=en-us&range=100000&skip=0&take=1000
+
+    CINEPLEX THEATRE LIST: 152 locations
+    That is close to the published 152 - treat as national.
+
+--- CINEPLEX: resolve film id --------------------------------------
+    200  267   …v1/movies?language=en
+    200  102   …v1/movies/bookable?language=en
+    200  267   …v1/movies?language=en-us&movieType=1&showTimeType=0&showtimeStatus=0&skip=0&take=500
+    404  0     https://www.cineplex.com/api/v1/movies?language=en-us&movieType=1&showTimeType=0&showtim
+    collision guard rejected: Ramayana
+    MATCH  filmId 62159   Drishyam - The Conclusion (Hindi w/e.s.t.)
+    also   filmId 62159   Drishyam - The Conclusion (Hindi w/e.s.t.)   <- ambiguous, check this
+    also   filmId 62159   Drishyam - The Conclusion (Hindi w/e.s.t.)   <- ambiguous, check this
+
+    showtimes 2026-10-09
+      national form gave 200/thin - walking 152 theatres
+      40/152 theatres, 0 showtimes
+      80/152 theatres, 0 showtimes
+      120/152 theatres, 2 showtimes
+      2026-10-09: 3 showtimes at 3 sites
+
+    showtimes 2026-10-10
+      national form answered: 217 showtimes in 1 call
+      2026-10-10: 217 showtimes at 0 sites
+
+--- LANDMARK: probe for the JSON behind Vista ---------------------
+    403  -     https://www.landmarkcinemas.com/api/now-playing
+    403  -     https://www.landmarkcinemas.com/api/films
+    403  -     https://www.landmarkcinemas.com/api/sessions
+    403  -     https://www.landmarkcinemas.com/showtimes/api/films
+    403  -     https://www.landmarkcinemas.com/WSVistaWebClient/ocapi/v1/browsing/master-data/showtimes
+    403  -     https://www.landmarkcinemas.com/WSVistaWebClient/RESTTicketing.svc/GetFilmsBySite
+    403  -     https://web1.landmarkcinemas.com/api/films
+    403  -     https://web5.landmarkcinemas.com/api/films
+    403  -     https://pc.landmarkcinemas.com/api/films
+    403  -     https://cms.landmarkcinemas.com/api/films
+    403  -     https://filmdb.landmarkcinemas.com/
+
+--- CINEMACLOCK: markets -------------------------------------------
+    Toronto       LISTED     0 showtimes   Hindi   wk 2
+    Brampton      LISTED     0 showtimes   Hindi   wk 2
+    Mississauga   LISTED     0 showtimes   Hindi   wk 2
+    Scarborough   LISTED     0 showtimes   Hindi   wk 2
+    Surrey        LISTED     0 showtimes   Hindi   wk 2
+    Vancouver     LISTED     0 showtimes   Hindi   wk 2
+    Calgary       LISTED     0 showtimes   Hindi   wk 2
+    Edmonton      LISTED     0 showtimes   Hindi   wk 2
+    Winnipeg      LISTED     0 showtimes   Hindi   wk ?
+    Ottawa        LISTED     0 showtimes   Hindi   wk 2
+    Montreal      LISTED     0 showtimes   Hindi   wk 2
+
+--- CINEMACLOCK: the Indian-only independents ---------------------
+    These four have NO online ticketing. If a South Indian
+    title is playing Canada and these are blank, we are blind.
+    LISTED Albion Cinemas (Etobicoke)           LISTED       0 times Hindi
+           Woodside Cinemas (Agincourt)         not listed   0 times 
+    LISTED York Cinemas (Richmond Hill)         LISTED       0 times Hindi
+    LISTED Central Parkway (Mississauga)        LISTED       0 times Hindi
+    LISTED Cineplex Strawberry Hill (Surrey)    LISTED       0 times Hindi
+           SilverCity Brampton                  not listed   0 times 
+
+--- CINE STARZ ----------------------------------------------------
+    not listed at any Cine Starz location
+
+--- IMAGINE (Omniterm, dated endpoint) ----------------------------
+    not listed at any Imagine location for 2026-10-09
+
+--- TRIBUTE.CA forward calendar -----------------------------------
+    not listed
+
+========================================================================
+  VERDICT  -  Drishyam: The Conclusion
+========================================================================
+    Cineplex film id          62159
+    Cineplex locations read   152  (published total 152)
+    Cineplex showtimes        220  at 3 sites
+    CinemaClock showtimes     0  across 11 of 11 markets
+    Indian-only indies        4 of 6 listed
+    Cine Starz                0 locations
+    Imagine                   0 locations
+    Landmark                  not listed   json feeds found: 0
+    Tribute forward calendar  not listed
+
+    220 showtimes found. Footprint is real.
+
+    NO TICKET COUNT. Cineplex gives seatsAvailable and never
+    seatsTotal, so there is no denominator and no occupancy.
+    Canada is a footprint read only. Any Canadian ticket or
+    dollar figure in our output would be fabricated.
+========================================================================
+
+========================================================================
+  TARGET vs CONTROL  -  this is the only line that matters
+========================================================================
+    target   Ramayana: Rise of a Legend                      0 showtimes
+    control  Drishyam: The Conclusion                      220 showtimes
+
+    Control reads fine, target is zero. So the target
+    genuinely is NOT ON SALE IN CANADA. That is a
+    finding and it is publishable.
+========================================================================
+
+  csv + json:  intel\canada-ramayana-20261009-2357
+  full log:    canada_sweep.txt
+
+  PASTE BACK: the VERDICT block, and the TARGET vs CONTROL
+  block. Those two are enough for me to work from.

@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script data-test-id="js-enabled-script">
+    function ios() {
+      let userAgent = window.navigator.userAgent.toLowerCase()
+      let safari = /safari/.test(userAgent)
+      let ios = /iphone|ipod|ipad/.test(userAgent) || (/macintosh/.test(userAgent) && window.navigator.maxTouchPoints > 0)
+
+      return ios && !safari
+    }
+
+    const loadingMessage = [
+      'Popping the popcorn',
+      'Starting the projectors',
+      'Contacting Hollywood',
+      'Negotiating Distribution Deals',
+      'Splicing the Film',
+      'Sweeping the Auditorium'
+    ]
+    function showDelayLoadMessage(attempt = 1) {
+      const loadDelayMessageElement = document.getElementById('indy-load-delay-message')
+
+      if (!loadDelayMessageElement) return
+
+      if (attempt === 1) {
+        loadDelayMessageElement.style.display = "block"
+      } else {
+        loadDelayMessageElement.children[0].textContent = loadingMessage[(attempt - 2) % loadingMessage.length]
+      }
+
+      setTimeout(() => {
+        showDelayLoadMessage(attempt + 1)
+      }, 5000)
+    }
+    setTimeout(() => {
+      showDelayLoadMessage()
+    }, 7500)
+  </script>
+  <script data-test-id="splash-image-script">
+    const splashImageEl = document.getElementById('splash-image')
+    const qAppEl = document.getElementById('q-app-splash-screen')
+
+    if (splashImageEl && qAppEl && localStorage.splashImageUrl && localStorage.splashBackgroundColor) {
+      splashImageEl.src = localStorage.splashImageUrl
+
+      splashImageEl.onload = function () {
+        if (splashImageEl.naturalWidth > 0 && splashImageEl.naturalHeight > 0) {
+          rendered()
+          return
+        }
+        const interval = setInterval(() => {
+          if (splashImageEl.naturalWidth > 0 && splashImageEl.naturalHeight > 0) {
+            clearInterval(interval);
+            rendered();
+          }
+        }, 5);
+      }
+      function rendered() {
+        qAppEl.style.backgroundColor = localStorage.splashBackgroundColor
+      }
+    }
+  </script>
+  <script type="application/ld+json" data-test-id="schema-org-data">
+    {"@context":"https://schema.org","@type":"MovieTheater","name":"Reel Hospitality LLC | Hollywood Blvd. Cinema","brand":"Reel Hospitality LLC","description":"Hollywood Blvd Cinema in Woodridge, IL offers new movies, dining and cocktails, special events, classic films, private theater rentals and unforgettable movie experiences.","address":{"@type":"PostalAddress","streetAddress":"1001 W 75TH ST. ","addressLocality":"WOODRIDGE","postalCode":"60517","addressRegion":"IL","addressCountry":"US"},"telephone":"630 427 1880","email":"info@hblvd.com","geo":{"@type":"GeoCoordinates","latitude":41.7504578,"longitude":-88.0151427},"screenCount":14,"url":"https://hollywoodblvdcinema.com/"}
+  </script>
+  <title>Reel Hospitality LLC | Hollywood Blvd. Cinema | Ramayana</title>
+  <link rel="canonical" href="https://hollywoodblvdcinema.com/movie/ramayana/">
+  <meta charset=utf-8>
+  <meta name="description" content="An ancient epic follows a young prince and princess whose marriage and subsequent exile mark the beginning of a legendary journey. Their story of love, duty and destiny sets the stage for greater challenges ahead.
+
+Starring Ranbir Kapoor, Sai Pallavi, Yash">
+  <meta property="og:description" content="An ancient epic follows a young prince and princess whose marriage and subsequent exile mark the beginning of a legendary journey. Their story of love, duty and destiny sets the stage for greater challenges ahead.
+
+Starring Ranbir Kapoor, Sai Pallavi, Yash">
+  <meta name="twitter:description" content="An ancient epic follows a young prince and princess whose marriage and subsequent exile mark the beginning of a legendary journey. Their story of love, duty and destiny sets the stage for greater challenges ahead.
+
+Starring Ranbir Kapoor, Sai Pallavi, Yash">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="msapplication-tap-highlight" content="no">
+  <meta name="viewport"
+    content="user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1,width=device-width,viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="twitter:title" content="Ramayana"><meta name="twitter:site" content="@"><meta name="twitter:url" content="https://hollywoodblvdcinema.com/movie/ramayana"><meta name="twitter:card" content="summary"><meta property="og:title" content="Ramayana"><meta property="og:site_name" content="Hollywood Blvd. Cinema"><meta property="og:type" content="website"><meta name="description" content="An ancient epic follows a young prince and princess whose marriage and subsequent exile mark the beginning of a legendary journey. Their story of love, duty and destiny sets the stage for greater challenges ahead.
+
+Starring Ranbir Kapoor, Sai Pallavi, Yash"><meta property="og:url" content="https://hollywoodblvdcinema.com/movie/ramayana"><meta property="og:description" content="An ancient epic follows a young prince and princess whose marriage and subsequent exile mark the beginning of a legendary journey. Their story of love, duty and destiny sets the stage for greater challenges ahead.
+
+Starring Ranbir Kapoor, Sai Pallavi, Yash"><meta name="twitter:description" content="An ancient epic follows a young prince and princess whose marriage and subsequent exile mark the beginning of a legendary journey. Their story of love, duty and destiny sets the stage for greater challenges ahead.
+
+Starring Ranbir Kapoor, Sai Pallavi, Yash"><meta name="image" content="https://indy-systems.imgix.net/mblegc5w8hc4jbnt10hl2uh3rndf?fit=crop&w=1000&height=500&fm=jpeg&auto=format"><meta name="twitter:image" content="https://indy-systems.imgix.net/mblegc5w8hc4jbnt10hl2uh3rndf?fit=crop&w=1000&height=500&fm=jpeg&auto=format"><meta property="og:image" content="https://indy-systems.imgix.net/mblegc5w8hc4jbnt10hl2uh3rndf?fit=crop&w=1000&height=500&fm=jpeg&auto=format"><script type="application/ld+json" data-test-id="schema-org-data">{"@context":"https://schema.org","@type":"Movie","name":"Ramayana","description":"An ancient epic follows a young prince and princess whose marriage and subsequent exile mark the beginning of a legendary journey. Their story of love, duty and destiny sets the stage for greater challenges ahead.","genre":"Fantasy","duration":"PT2H","contentRating":"NR","dateCreated":"2026-11-05","keywords":"","sameAs":"https://hollywoodblvdcinema.com/movie/ramayana","actor":[{"@type":"Person","name":"Ranbir Kapoor"},{"@type":"Person","name":"Sai Pallavi"},{"@type":"Person","name":"Yash"}],"director":[{"@type":"Person","name":"Nitesh Tiwari"}],"producer":[{"@type":"Person","name":"Namit Malhotra"}],"thumbnailUrl":"https://indy-systems.imgix.net/mblegc5w8hc4jbnt10hl2uh3rndf?fit=crop\u0026w=1000\u0026h=500\u0026fm=jpeg\u0026auto=format","image":"https://indy-systems.imgix.net/mblegc5w8hc4jbnt10hl2uh3rndf?fit=crop\u0026w=1000\u0026h=500\u0026fm=jpeg\u0026auto=format","trailer":{"@type":"VideoObject","@id":"https://www.youtube.com/embed/74nF-FWAS6M","name":"Ramayana","description":"An ancient epic follows a young prince and princess whose marriage and subsequent exile mark the beginning of a legendary journey. Their story of love, duty and destiny sets the stage for greater challenges ahead.","thumbnail":"https://i.ytimg.com/vi_webp/74nF-FWAS6M/maxresdefault.webp"}}</script>
+  <link rel=icon type=image/png sizes=128x128
+    href="https://indy-systems.imgix.net/zxas6hw77rg2foxmiyi78rgs7tdb?fm=png&w=128&h=128&fit=fill&fill=solid&auto=format">
+  <link rel=icon type=image/png sizes=96x96
+    href="https://indy-systems.imgix.net/zxas6hw77rg2foxmiyi78rgs7tdb?fm=png&w=96&h=96&fit=fill&fill=solid&auto=format">
+  <link rel=icon type=image/png sizes=32x32
+    href="https://indy-systems.imgix.net/zxas6hw77rg2foxmiyi78rgs7tdb?fm=png&w=32&h=32&fit=fill&fill=solid&auto=format">
+  <link rel=icon type=image/png sizes=16x16
+    href="https://indy-systems.imgix.net/zxas6hw77rg2foxmiyi78rgs7tdb?fm=png&w=16&h=16&fit=fill&fill=solid&auto=format">
+  <link href="/fontawesome/css/fontawesome.min.css" rel="stylesheet">
+  <link href="/fontawesome/css/light.min.css" rel="stylesheet">
+  <link href="/fontawesome/css/solid.min.css" rel="stylesheet">
+  <link href="/fontawesome/css/brands.min.css" rel="stylesheet">
+  <link rel=icon type=image/ico href="https://indy-systems.imgix.net/0v05zavvqfcq1pcza1itf5b29t3p?fm=png&w=32&h=32&fit=fill&fill=solid&auto=format">
+  <link rel="shortcut icon" href="https://indy-systems.imgix.net/zxas6hw77rg2foxmiyi78rgs7tdb?fm=png&w=128&h=128&fit=fill&fill=solid&auto=format">
+  <link rel=apple-touch-icon
+    href="https://indy-systems.imgix.net/7i0uym92rubgjctw3ecykvxvzr5b?fm=png&w=128&h=128&fit=fill&fill=solid&pad=9&fill-color=f4cb18&bg=f4cb18&auto=format">
+  <link rel=apple-touch-startup-image
+    media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2)"
+    href="https://indy-systems.imgix.net/0mu11z9synrg0rftf4pwpdqob3ke?fm=png&w=828&h=1792&fit=fillmax&fill=solid&pad=60&fill-color=ffffff&bg=ffffff&auto=format">
+  <link rel=apple-touch-startup-image
+    media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3)"
+    href="https://indy-systems.imgix.net/0mu11z9synrg0rftf4pwpdqob3ke?fm=png&w=1125&h=2436&fit=fillmax&fill=solid&pad=60&fill-color=ffffff&bg=ffffff&auto=format">
+  <link rel=apple-touch-startup-image
+    media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3)"
+    href="https://indy-systems.imgix.net/0mu11z9synrg0rftf4pwpdqob3ke?fm=png&w=1242&h=2688&fit=fillmax&fill=solid&pad=60&fill-color=ffffff&bg=ffffff&auto=format">
+  <link rel=apple-touch-startup-image
+    media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)"
+    href="https://indy-systems.imgix.net/0mu11z9synrg0rftf4pwpdqob3ke?fm=png&w=750&h=1334&fit=fillmax&fill=solid&pad=60&fill-color=f4cb18&bg=f4cb18&auto=format">
+  <link rel=apple-touch-startup-image
+    media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3)"
+    href="https://indy-systems.imgix.net/0mu11z9synrg0rftf4pwpdqob3ke?fm=png&w=1242&h=2208&fit=fillmax&fill=solid&pad=60&fill-color=f4cb18&bg=f4cb18&auto=format">
+  <link rel=apple-touch-startup-image
+    media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)"
+    href="https://indy-systems.imgix.net/0mu11z9synrg0rftf4pwpdqob3ke?fm=png&w=640&h=1136&fit=fillmax&fill=solid&pad=60&fill-color=f4cb18&bg=f4cb18&auto=format">
+  <link rel=apple-touch-startup-image
+    media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2)"
+    href="https://indy-systems.imgix.net/0mu11z9synrg0rftf4pwpdqob3ke?fm=png&w=1536&h=2048&fit=fillmax&fill=solid&pad=60&fill-color=f4cb18&bg=f4cb18&auto=format">
+  <link rel=apple-touch-startup-image
+    media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2)"
+    href="https://indy-systems.imgix.net/0mu11z9synrg0rftf4pwpdqob3ke?fm=png&w=1668&h=2224&fit=fillmax&fill=solid&pad=60&fill-color=f4cb18&bg=f4cb18&auto=format">
+  <link rel=apple-touch-startup-image
+    media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2)"
+    href="https://indy-systems.imgix.net/0mu11z9synrg0rftf4pwpdqob3ke?fm=png&w=1668&h=2388&fit=fillmax&fill=solid&pad=60&fill-color=f4cb18&bg=f4cb18&auto=format">
+  <link rel=apple-touch-startup-image
+    media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2)"
+    href="https://indy-systems.imgix.net/0mu11z9synrg0rftf4pwpdqob3ke?fm=png&w=2048&h=2732&fit=fillmax&fill=solid&pad=60&fill-color=f4cb18&bg=f4cb18&auto=format">
+  <link rel=stylesheet href=https://use.typekit.net/hwu0dkh.css>
+  <style>
+    @font-face {
+      font-family: "bebas-neue";
+      src: url("/fonts/BebasNeue-Regular.ttf") format("opentype");
+      font-display: auto;
+      font-style: normal;
+      font-weight: 400;
+      letter-spacing: 0.05em;
+    }
+
+    body {
+      font-family: brandon-grotesque, sans-serif;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    .text-h1,
+    .text-h2,
+    .text-h3,
+    .text-h4,
+    .text-h5,
+    .text-h6 {
+      font-family: bebas-neue, sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      letter-spacing: 0.05em;
+    }
+
+    .q-header .menu .q-btn {
+      font-family: bebas-neue, sans-serif;
+      font-size: calc(1em + 0.5vmin);
+      font-style: normal;
+      font-weight: 400;
+      letter-spacing: 0.05em;
+    }
+  </style>
+  <link href=/css/ rel=stylesheet>
+  <link href=/css/app.d313a078.css rel=stylesheet>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1WTBGMSGJ3"></script>
+<script>
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
+ gtag('config', 'G-1WTBGMSGJ3');
+</script>
+
+<script>
+function updatePageClasses() {
+ if (!document.body) return;
+
+ const slug = window.location.pathname
+ .split('/')
+ .filter(Boolean)
+ .pop();
+
+ const accountPages = [
+ 'account',
+ 'my-membership',
+ 'account-information',
+ 'orders',
+ 'update-payment-method',
+ 'my-movies',
+ 'marketing-preferences',
+ 'manage-friends'
+ ];
+
+ if (accountPages.includes(slug)) {
+ document.body.classList.add('account-page');
+ } else {
+ document.body.classList.remove('account-page');
+ }
+
+ if (window.location.pathname.startsWith('/checkout/')) {
+ document.body.classList.add('checkout-page');
+ } else {
+ document.body.classList.remove('checkout-page');
+ }
+}
+
+window.addEventListener('load', function () {
+ updatePageClasses();
+
+ let currentPath = window.location.pathname;
+
+ setInterval(function () {
+ if (window.location.pathname !== currentPath) {
+ currentPath = window.location.pathname;
+ updatePageClasses();
+ }
+ }, 250);
+});
+</script>
+
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '36988883154035963');
+fbq('track', 'PageView');
+</script>
+
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=36988883154035963&ev=PageView&noscript=1"
+/></noscript> 
+</head>
+
+<body style="background-color: #000000;">
+  
+  <div id="q-app">
+    <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; overflow: hidden; z-index: -1000;">
+      <div itemscope itemtype="https://schema.org/Movie"><h1 itemprop="name">Ramayana</h1><span itemprop="description">An ancient epic follows a young prince and princess whose marriage and subsequent exile mark the beginning of a legendary journey. Their story of love, duty and destiny sets the stage for greater challenges ahead.</span><span itemprop="genre">Fantasy</span><span itemprop="duration">PT2H</span><span itemprop="contentRating">NR</span><span itemprop="dateCreated">2026-11-05</span><span itemprop="countryOfOrigin">IN</span><span itemprop="originalLanguage">hi</span><div itemprop="actor" itemscope itemtype="https://schema.org/Person"><span itemprop="name">Ranbir Kapoor</span></div><div itemprop="actor" itemscope itemtype="https://schema.org/Person"><span itemprop="name">Sai Pallavi</span></div><div itemprop="actor" itemscope itemtype="https://schema.org/Person"><span itemprop="name">Yash</span></div><div itemprop="director" itemscope itemtype="https://schema.org/Person"><span itemprop="name">Nitesh Tiwari</span></div><div itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">Nitesh Tiwari</span></div><div itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">Shridhar Raghavan</span></div><div itemprop="producer" itemscope itemtype="https://schema.org/Person"><span itemprop="name">Namit Malhotra</span></div><a itemprop="thumbnailUrl" href="https://indy-systems.imgix.net/mblegc5w8hc4jbnt10hl2uh3rndf?fit=crop&w=1000&h=500&fm=jpeg&auto=format">Ramayana"</a><a itemprop="image" href="https://indy-systems.imgix.net/mblegc5w8hc4jbnt10hl2uh3rndf?fit=crop&w=1000&h=500&fm=jpeg&auto=format">Ramayana"</a></div><h1>Showtimes</h1><h2><a href="https://hollywoodblvdcinema.com/checkout/showing/ramayana/4055200">November 6, 12:30 pm</a></h2><h2><a href="https://hollywoodblvdcinema.com/checkout/showing/ramayana/4055201">November 6, 3:45 pm</a></h2><h2><a href="https://hollywoodblvdcinema.com/checkout/showing/ramayana/4055202">November 6, 7:00 pm</a></h2><h2><a href="https://hollywoodblvdcinema.com/checkout/showing/ramayana/4055203">November 6, 10:15 pm</a></h2><h2><a href="https://hollywoodblvdcinema.com/checkout/showing/ramayana/4055204">November 7, 12:30 pm</a></h2><h2><a href="https://hollywoodblvdcinema.com/checkout/showing/ramayana/4055205">November 7, 3:45 pm</a></h2><h2><a href="https://hollywoodblvdcinema.com/checkout/showing/ramayana/4055206">November 7, 7:00 pm</a></h2><h2><a href="https://hollywoodblvdcinema.com/checkout/showing/ramayana/4055207">November 7, 10:15 pm</a></h2><h2><a href="https://hollywoodblvdcinema.com/checkout/showing/ramayana/4055186">November 8, 12:30 pm</a></h2><h2><a href="https://hollywoodblvdcinema.com/checkout/showing/ramayana/4055187">November 8, 3:45 pm</a></h2><h2><a href="https://hollywoodblvdcinema.com/checkout/showing/ramayana/4055188">November 8, 7:00 pm</a></h2><h2><a href="https://hollywoodblvdcinema.com/checkout/showing/ramayana/4055189">November 8, 10:15 pm</a></h2><h2><a href="https://hollywoodblvdcinema.com/checkout/showing/ramayana/4055190">November 9, 12:45 pm</a></h2><h2><a href="https://hollywoodblvdcinema.com/checkout/showing/ramayana/4055191">November 9, 10:00 pm</a></h2><h2><a href="https://hollywoodblvdcinema.com/checkout/showing/ramayana/4055192">November 10, 12:45 pm</a></h2><h2><a href="https://hollywoodblvdcinema.com/checkout/showing/ramayana/4055193">November 10, 10:00 pm</a></h2><h2><a href="https://hollywoodblvdcinema.com/checkout/showing/ramayana/4055194">November 11, 12:45 pm</a></h2><h2><a href="https://hollywoodblvdcinema.com/checkout/showing/ramayana/4055195">November 11, 10:00 pm</a></h2><h2><a href="https://hollywoodblvdcinema.com/checkout/showing/ramayana/4055196">November 12, 12:30 pm</a></h2><h2><a href="https://hollywoodblvdcinema.com/checkout/showing/ramayana/4055197">November 12, 3:45 pm</a></h2><h2><a href="https://hollywoodblvdcinema.com/checkout/showing/ramayana/4055198">November 12, 7:00 pm</a></h2><h2><a href="https://hollywoodblvdcinema.com/checkout/showing/ramayana/4055199">November 12, 10:15 pm</a></h2>
+    </div>
+    <div
+      id="q-app-splash-screen"
+      class="q-app-splash-screen"
+      style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-color: #ffffff;">
+      <div style="height: 100%; width: 100%;">
+        <div style="text-align: center;">
+          <div
+            style="width: 90%; max-width: 600px; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+            <img alt="Welcome Page"
+              src="https://indy-systems.imgix.net/0mu11z9synrg0rftf4pwpdqob3ke?w=1200&auto=format"
+              style="width: 100%" id="splash-image">
+          </div>
+        </div>
+        <div id="indy-load-delay-message"
+          style="position: absolute; bottom: 30px; left: 0; right: 0; text-align: center; display: none;">
+          <span
+            style="padding: 10px 20px; background-color: #00000066; color: white; font-size: large; font-weight: bold; border-radius: 10px;">
+            Loading...
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src=/js/vendor.18b1b163.js></script>
+  <script src=/js/app.affeaac6.js></script>
+</body>
+</html>

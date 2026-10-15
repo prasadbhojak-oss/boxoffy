@@ -1,0 +1,149 @@
+NA GAP PROBE ROUND 3  2026-10-02T16:49:59.628191
+Chasing only what round 2 actually found. Scoring rule for this run:
+  COUNTS  = a real seat number        -> worth building
+  SEATMAP = per-seat sold/available   -> worth building, best case
+  soldOut boolean only                -> NOT occupancy, not money
+
+========================================================================
+1 - HARKINS: follow sessionId -> ticketingUrl -> seat map
+    The embedded blob gives sessionId and soldOut. The question is
+    whether the ticketing route behind it gives a NUMBER.
+========================================================================
+
+### Harkins film page /drishyam-the-conclusion
+    https://www.harkins.com/movies/drishyam-the-conclusion
+    HTTP 404
+
+### Harkins film page /drishyam-3
+    https://www.harkins.com/movies/drishyam-3
+    HTTP 404
+
+### Harkins film page /drishyam
+    https://www.harkins.com/movies/drishyam
+    HTTP 404
+
+    film not found under those slugs - testing the ticketing route
+    on a film Harkins definitely has, so we still learn the shape
+
+    /verity: 396 sessionIds, 396 ticketingUrls
+      sessionIds e.g. ['560443', '560442', '557555', '560444', '557561', '560438']
+      ticketingUrl e.g. https://harkins.com/ticketing/theatre/10/movie/HO00015652/session/560443/date/2026-10-02
+
+### Harkins TICKETING page
+    https://harkins.com/ticketing/theatre/10/movie/HO00015652/session/560443/date/2026-10-02
+    HTTP 200  text/html  6,144B  film=False  COUNTS=0  SEATMAP=False  soldOutFlags=0
+
+### Harkins TICKETING page
+    https://harkins.com/ticketing/theatre/10/movie/HO00015652/session/560442/date/2026-10-02
+    HTTP 200  text/html  6,144B  film=False  COUNTS=0  SEATMAP=False  soldOutFlags=0
+
+### Harkins TICKETING page
+    https://harkins.com/ticketing/theatre/10/movie/HO00016070/session/557555/date/2026-10-02
+    HTTP 200  text/html  6,144B  film=False  COUNTS=0  SEATMAP=False  soldOutFlags=0
+
+========================================================================
+2 - LANDMARK CA: the endpoint behind the Mustache template
+    Round 2's SEATS=True here was my regex hitting {{#SoldOut}} in the
+    template. Wrong, and corrected. The data route is in the JS.
+========================================================================
+
+    homepage 200, 75,513B
+    5 candidate bundles; reading up to 5
+      angular.min.js 240,396B  endpoints=0
+      angular-paging.min.js 3,866B  endpoints=0
+      angular-scroll.min.js 9,074B  endpoints=0
+      angularScripts.js 7,918B  endpoints=4
+         /umbraco/api/ListingApi/GetVideosOverview
+         /umbraco/api/ListingApi/GetComingSoon
+         /umbraco/api/ListingApi/GetMovieNews
+         /umbraco/api/ListingApi/GetNowPlaying
+      addthis_widget.js#pubid=ra-5731febee974658c HTTP 0
+
+### Landmark endpoint
+    https://www.landmarkcinemas.com/umbraco/api/ListingApi/GetVideosOverview
+    HTTP 200  application/xml  6,204B  film=True  COUNTS=0  SEATMAP=False  soldOutFlags=0
+
+### Landmark endpoint
+    https://www.landmarkcinemas.com/umbraco/api/ListingApi/GetComingSoon
+    HTTP 200  application/xml  4,928B  film=True  COUNTS=0  SEATMAP=False  soldOutFlags=0
+
+### Landmark endpoint
+    https://www.landmarkcinemas.com/umbraco/api/ListingApi/GetMovieNews
+    HTTP 200  application/xml  4,906B  film=False  COUNTS=0  SEATMAP=False  soldOutFlags=0
+
+### Landmark endpoint
+    https://www.landmarkcinemas.com/umbraco/api/ListingApi/GetNowPlaying
+    HTTP 200  application/xml  2,994B  film=True  COUNTS=0  SEATMAP=False  soldOutFlags=0
+
+========================================================================
+3 - SHOWTIMES.COM /movie-times/ - the route I failed to follow
+    No seats here ever. What it buys is a national theatre count, so
+    we finally know if 382 is the market or a slice.
+========================================================================
+
+### showtimes.com movie-times
+    https://www.showtimes.com/movies/drishyam-the-conclusion-200472/movie-times/
+    HTTP 200  text/html  38,998B  film=True  COUNTS=0  SEATMAP=False  soldOutFlags=0
+    theatre slugs 0   names 1
+      e.g. ['My Theaters']
+      route: /26924457/showtimes/ros_leaderboard_atf
+      route: /26924457/showtimes/ros_rec_atf
+      route: /26924457/showtimes/ros_rec_btf1
+      route: /26924457/showtimes/ros_rec_btf2
+      route: /movie-times/
+
+### showtimes.com mt + zip 75024
+    https://www.showtimes.com/movies/drishyam-the-conclusion-200472/movie-times/?zip=75024
+    HTTP 200  text/html  39,008B  film=True  COUNTS=0  SEATMAP=False  soldOutFlags=0
+    theatre slugs 0   names 1
+      e.g. ['My Theaters']
+      route: /26924457/showtimes/ros_leaderboard_atf
+      route: /26924457/showtimes/ros_rec_atf
+      route: /26924457/showtimes/ros_rec_btf1
+      route: /26924457/showtimes/ros_rec_btf2
+      route: /movie-times/
+
+### showtimes.com mt + zip 08817
+    https://www.showtimes.com/movies/drishyam-the-conclusion-200472/movie-times/?zip=08817
+    HTTP 200  text/html  39,008B  film=True  COUNTS=0  SEATMAP=False  soldOutFlags=0
+    theatre slugs 0   names 1
+      e.g. ['My Theaters']
+      route: /26924457/showtimes/ros_leaderboard_atf
+      route: /26924457/showtimes/ros_rec_atf
+      route: /26924457/showtimes/ros_rec_btf1
+      route: /26924457/showtimes/ros_rec_btf2
+      route: /movie-times/
+
+========================================================================
+4 - PHOENIX THEATRES, MARCUS, MEGAPLEX
+    For Marcus and Megaplex the first question is not 'can we parse
+    it' but 'did they book the film at all'. No point building either.
+========================================================================
+
+--- Phoenix Theatres ---
+    homepage 200, 165,520B, film_on_homepage=False
+    /movies: 200, 134,072B, film=False
+    /now-playing: HTTP 404
+    /showtimes: HTTP 404
+
+--- Marcus ---
+    homepage 200, 28,846B, film_on_homepage=False
+    /movies: 200, 212B, film=False
+    /now-playing: 200, 212B, film=False
+    /showtimes: 200, 212B, film=False
+
+--- Megaplex ---
+    homepage 200, 62,294B, film_on_homepage=False
+    /movies: 200, 212B, film=False
+    /now-playing: 200, 212B, film=False
+    /showtimes: 200, 212B, film=False
+
+========================================================================
+SUMMARY
+========================================================================
+
+  No seat numbers and no seat maps. Three rounds in, the finding
+  is settled and worth stating in the method note: outside Fandango
+  and Cineplex, North American exhibitors do not publish machine-
+  readable seat availability. We can add FOOTPRINT from these
+  chains - theatres and shows - and we should not imply more.

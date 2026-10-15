@@ -1,0 +1,198 @@
+Avengers: Doomsday  (doomsday)   fandango 237176   cineplex 34362
+dates ['2026-12-18']   401 postcodes   10 workers   pace 0.12s
+  session warm-up HTTP 200; cookies ['akamai_location', 'userCountry', 'akamai_set_zip', 'userlocation', 'akamai_generated_location']
+RUN 2026-10-03T19:19:31.260894 film=doomsday date=2026-12-18 workers=10 pace=0.12 SEATS
+
+### Avengers: Doomsday · 2026-12-18 -> intel\doomsday-2026-12-18
+  1,606 sites, 22,322 showtimes
+Seat maps...
+  22,322 showtimes, 22,322 unique seat maps, 22,322 to read
+  10 workers, starting pace 0.12s -> about 45 min if nothing throttles
+  250/22,322 · 0.8 min · 5.0 req/s · ~74 min left · pace 0.11s · 4 failed · 0 throttled
+  500/22,322 · 1.6 min · 5.3 req/s · ~69 min left · pace 0.10s · 19 failed · 0 throttled
+  750/22,322 · 2.3 min · 5.5 req/s · ~65 min left · pace 0.09s · 24 failed · 0 throttled
+  1,000/22,322 · 3.0 min · 5.6 req/s · ~64 min left · pace 0.08s · 30 failed · 0 throttled
+  1,250/22,322 · 3.8 min · 5.4 req/s · ~64 min left · pace 0.08s · 35 failed · 0 throttled
+  1,500/22,322 · 4.6 min · 5.5 req/s · ~64 min left · pace 0.08s · 36 failed · 0 throttled
+  1,750/22,322 · 5.2 min · 5.6 req/s · ~61 min left · pace 0.08s · 49 failed · 0 throttled
+  2,000/22,322 · 6.0 min · 5.5 req/s · ~61 min left · pace 0.08s · 57 failed · 0 throttled
+  2,250/22,322 · 6.9 min · 5.4 req/s · ~62 min left · pace 0.08s · 67 failed · 0 throttled
+  2,500/22,322 · 7.5 min · 5.5 req/s · ~60 min left · pace 0.08s · 74 failed · 0 throttled
+  2,750/22,322 · 8.2 min · 5.6 req/s · ~58 min left · pace 0.08s · 74 failed · 0 throttled
+  3,000/22,322 · 8.8 min · 5.7 req/s · ~57 min left · pace 0.08s · 80 failed · 0 throttled
+  3,250/22,322 · 9.4 min · 5.8 req/s · ~55 min left · pace 0.08s · 91 failed · 0 throttled
+  3,500/22,322 · 10.2 min · 5.7 req/s · ~55 min left · pace 0.08s · 97 failed · 0 throttled
+  3,750/22,322 · 11.2 min · 5.6 req/s · ~56 min left · pace 0.08s · 110 failed · 0 throttled
+  4,000/22,322 · 11.8 min · 5.6 req/s · ~54 min left · pace 0.08s · 130 failed · 0 throttled
+  4,250/22,322 · 12.4 min · 5.7 req/s · ~53 min left · pace 0.08s · 155 failed · 0 throttled
+  4,500/22,322 · 13.1 min · 5.7 req/s · ~52 min left · pace 0.08s · 160 failed · 0 throttled
+  4,750/22,322 · 13.8 min · 5.7 req/s · ~51 min left · pace 0.08s · 167 failed · 0 throttled
+  5,000/22,322 · 14.5 min · 5.7 req/s · ~50 min left · pace 0.08s · 177 failed · 0 throttled
+  5,250/22,322 · 15.1 min · 5.8 req/s · ~49 min left · pace 0.08s · 179 failed · 0 throttled
+  5,500/22,322 · 15.8 min · 5.8 req/s · ~48 min left · pace 0.08s · 179 failed · 0 throttled
+  5,750/22,322 · 16.3 min · 5.9 req/s · ~47 min left · pace 0.08s · 189 failed · 0 throttled
+  6,000/22,322 · 17.4 min · 5.8 req/s · ~47 min left · pace 0.08s · 199 failed · 0 throttled
+  6,250/22,322 · 17.9 min · 5.8 req/s · ~46 min left · pace 0.08s · 200 failed · 0 throttled
+  6,500/22,322 · 18.5 min · 5.8 req/s · ~45 min left · pace 0.08s · 202 failed · 0 throttled
+  6,750/22,322 · 19.1 min · 5.9 req/s · ~44 min left · pace 0.08s · 224 failed · 0 throttled
+  7,000/22,322 · 19.7 min · 5.9 req/s · ~43 min left · pace 0.08s · 227 failed · 0 throttled
+  7,250/22,322 · 20.4 min · 5.9 req/s · ~42 min left · pace 0.08s · 236 failed · 0 throttled
+  7,500/22,322 · 21.3 min · 5.9 req/s · ~42 min left · pace 0.08s · 244 failed · 0 throttled
+  7,750/22,322 · 22.0 min · 5.9 req/s · ~41 min left · pace 0.08s · 249 failed · 0 throttled
+  8,000/22,322 · 22.8 min · 5.8 req/s · ~41 min left · pace 0.08s · 259 failed · 0 throttled
+  8,250/22,322 · 23.5 min · 5.8 req/s · ~40 min left · pace 0.08s · 303 failed · 0 throttled
+  8,500/22,322 · 24.2 min · 5.8 req/s · ~39 min left · pace 0.08s · 337 failed · 0 throttled
+  8,750/22,322 · 25.0 min · 5.8 req/s · ~39 min left · pace 0.08s · 344 failed · 0 throttled
+  9,000/22,322 · 25.7 min · 5.8 req/s · ~38 min left · pace 0.08s · 344 failed · 0 throttled
+  9,250/22,322 · 26.4 min · 5.8 req/s · ~37 min left · pace 0.08s · 375 failed · 0 throttled
+  9,500/22,322 · 27.0 min · 5.9 req/s · ~36 min left · pace 0.08s · 376 failed · 0 throttled
+  9,750/22,322 · 27.7 min · 5.9 req/s · ~36 min left · pace 0.08s · 376 failed · 0 throttled
+  10,000/22,322 · 28.5 min · 5.9 req/s · ~35 min left · pace 0.08s · 381 failed · 0 throttled
+  10,250/22,322 · 29.1 min · 5.9 req/s · ~34 min left · pace 0.08s · 388 failed · 0 throttled
+  10,500/22,322 · 29.9 min · 5.9 req/s · ~34 min left · pace 0.08s · 388 failed · 0 throttled
+  10,750/22,322 · 30.6 min · 5.9 req/s · ~33 min left · pace 0.08s · 396 failed · 0 throttled
+  11,000/22,322 · 31.3 min · 5.8 req/s · ~32 min left · pace 0.08s · 410 failed · 0 throttled
+  11,250/22,322 · 32.0 min · 5.9 req/s · ~31 min left · pace 0.08s · 432 failed · 0 throttled
+  11,500/22,322 · 32.7 min · 5.9 req/s · ~31 min left · pace 0.08s · 432 failed · 0 throttled
+  11,750/22,322 · 33.4 min · 5.9 req/s · ~30 min left · pace 0.08s · 440 failed · 0 throttled
+  12,000/22,322 · 34.2 min · 5.9 req/s · ~29 min left · pace 0.08s · 479 failed · 0 throttled
+  12,250/22,322 · 34.9 min · 5.9 req/s · ~29 min left · pace 0.08s · 479 failed · 0 throttled
+  12,500/22,322 · 35.6 min · 5.9 req/s · ~28 min left · pace 0.08s · 479 failed · 0 throttled
+  12,750/22,322 · 36.3 min · 5.8 req/s · ~27 min left · pace 0.08s · 496 failed · 0 throttled
+  13,000/22,322 · 37.1 min · 5.8 req/s · ~27 min left · pace 0.08s · 525 failed · 0 throttled
+  13,250/22,322 · 37.8 min · 5.8 req/s · ~26 min left · pace 0.08s · 535 failed · 0 throttled
+  13,500/22,322 · 38.5 min · 5.8 req/s · ~25 min left · pace 0.08s · 551 failed · 0 throttled
+  13,750/22,322 · 39.1 min · 5.9 req/s · ~24 min left · pace 0.08s · 561 failed · 0 throttled
+  14,000/22,322 · 39.8 min · 5.9 req/s · ~24 min left · pace 0.08s · 564 failed · 0 throttled
+  14,250/22,322 · 40.5 min · 5.9 req/s · ~23 min left · pace 0.08s · 565 failed · 0 throttled
+  14,500/22,322 · 41.3 min · 5.9 req/s · ~22 min left · pace 0.08s · 565 failed · 0 throttled
+  14,750/22,322 · 42.0 min · 5.9 req/s · ~22 min left · pace 0.08s · 566 failed · 0 throttled
+  15,000/22,322 · 42.6 min · 5.9 req/s · ~21 min left · pace 0.08s · 574 failed · 0 throttled
+  15,250/22,322 · 43.5 min · 5.8 req/s · ~20 min left · pace 0.08s · 581 failed · 0 throttled
+  15,500/22,322 · 44.1 min · 5.9 req/s · ~19 min left · pace 0.08s · 595 failed · 0 throttled
+  15,750/22,322 · 44.8 min · 5.9 req/s · ~19 min left · pace 0.08s · 625 failed · 0 throttled
+  16,000/22,322 · 45.5 min · 5.9 req/s · ~18 min left · pace 0.08s · 670 failed · 0 throttled
+  16,250/22,322 · 46.1 min · 5.9 req/s · ~17 min left · pace 0.08s · 693 failed · 0 throttled
+  16,500/22,322 · 46.8 min · 5.9 req/s · ~17 min left · pace 0.08s · 714 failed · 0 throttled
+  16,750/22,322 · 47.5 min · 5.9 req/s · ~16 min left · pace 0.08s · 733 failed · 0 throttled
+  17,000/22,322 · 48.6 min · 5.8 req/s · ~15 min left · pace 0.08s · 754 failed · 0 throttled
+  17,250/22,322 · 49.3 min · 5.8 req/s · ~15 min left · pace 0.08s · 763 failed · 0 throttled
+  17,500/22,322 · 50.0 min · 5.8 req/s · ~14 min left · pace 0.08s · 764 failed · 0 throttled
+  17,750/22,322 · 50.7 min · 5.8 req/s · ~13 min left · pace 0.08s · 774 failed · 0 throttled
+  18,000/22,322 · 51.3 min · 5.8 req/s · ~12 min left · pace 0.08s · 781 failed · 0 throttled
+  18,250/22,322 · 51.9 min · 5.9 req/s · ~12 min left · pace 0.08s · 786 failed · 0 throttled
+  18,500/22,322 · 52.5 min · 5.9 req/s · ~11 min left · pace 0.08s · 786 failed · 0 throttled
+  18,750/22,322 · 53.1 min · 5.9 req/s · ~10 min left · pace 0.08s · 786 failed · 0 throttled
+  19,000/22,322 · 53.7 min · 5.9 req/s · ~9 min left · pace 0.08s · 786 failed · 0 throttled
+  19,250/22,322 · 54.2 min · 5.9 req/s · ~9 min left · pace 0.08s · 799 failed · 0 throttled
+  19,500/22,322 · 54.9 min · 5.9 req/s · ~8 min left · pace 0.08s · 810 failed · 0 throttled
+  19,750/22,322 · 55.5 min · 5.9 req/s · ~7 min left · pace 0.08s · 817 failed · 0 throttled
+  20,000/22,322 · 56.3 min · 5.9 req/s · ~7 min left · pace 0.08s · 822 failed · 0 throttled
+  20,250/22,322 · 57.1 min · 5.9 req/s · ~6 min left · pace 0.08s · 835 failed · 0 throttled
+  20,500/22,322 · 57.8 min · 5.9 req/s · ~5 min left · pace 0.08s · 839 failed · 0 throttled
+  20,750/22,322 · 58.5 min · 5.9 req/s · ~4 min left · pace 0.08s · 856 failed · 0 throttled
+  21,000/22,322 · 59.2 min · 5.9 req/s · ~4 min left · pace 0.08s · 856 failed · 0 throttled
+  21,250/22,322 · 59.9 min · 5.9 req/s · ~3 min left · pace 0.08s · 870 failed · 0 throttled
+  21,500/22,322 · 60.7 min · 5.9 req/s · ~2 min left · pace 0.08s · 886 failed · 0 throttled
+  21,750/22,322 · 61.4 min · 5.9 req/s · ~2 min left · pace 0.08s · 886 failed · 0 throttled
+  22,000/22,322 · 62.2 min · 5.9 req/s · ~1 min left · pace 0.08s · 905 failed · 0 throttled
+  22,250/22,322 · 62.9 min · 5.9 req/s · ~0 min left · pace 0.08s · 919 failed · 0 throttled
+  22,322/22,322 · 63.1 min · 5.9 req/s · ~0 min left · pace 0.08s · 929 failed · 0 throttled
+  WARNING 929 seat maps failed. Those rows are BLANK, not zero. Re-run with --resume to retry only those.
+Cineplex (Canada)...
+  789 Canadian showtimes
+
+=== Avengers: Doomsday · 2026-12-18 · PRESALE ===
+  sites                    1,606
+  showtimes               22,322
+  seat maps read          21,386   95.8% of showtimes
+  seats on sale        3,326,044
+  TICKETS SOLD           654,234   19.7% of those seats
+  sold-out shows             188
+  Presale: nothing has played, no seat map withdrawn, so this is a
+  cumulative total rather than a floor.
+
+  no earlier read with seat data on disk, so no velocity yet.
+  This read is the baseline. Run again in a few hours.
+
+  BY FORMAT
+    Premium Format          766 sites  3,858 sh   659,576 seats  344,659 sold  52.3%
+    Standard               1465 sites 12,832 sh 2,022,679 seats  248,420 sold  12.3%
+    3D                     1117 sites  4,696 sh   643,789 seats   61,155 sold   9.5%
+
+  BY CHAIN
+    AMC                     384 sites  5,808 sh   975,710 seats  229,804 sold  23.6%
+    Independent             433 sites  3,626 sh   540,248 seats  126,110 sold  23.3%
+    Cinemark                207 sites  4,634 sh   540,240 seats  113,131 sold  20.9%
+    Regal                   311 sites  5,375 sh   956,127 seats  110,138 sold  11.5%
+    Harkins                  26 sites    422 sh    95,349 seats   18,131 sold  19.0%
+    Marcus                   40 sites    504 sh    74,131 seats   16,348 sold  22.1%
+    Emagine                  21 sites    260 sh    35,784 seats   12,088 sold  33.8%
+    Alamo                    35 sites    204 sh    29,406 seats   11,472 sold  39.0%
+    MJR                      10 sites    145 sh    20,402 seats    3,621 sold  17.7%
+    LOOK                      7 sites     56 sh     8,706 seats    3,575 sold  41.1%
+    Showcase                 10 sites    112 sh    15,712 seats    3,486 sold  22.2%
+    Cinepolis                 4 sites     35 sh     4,508 seats    2,653 sold  58.9%
+    B&B                      18 sites     66 sh     9,468 seats    2,120 sold  22.4%
+    SMG                      14 sites    139 sh    20,253 seats    1,557 sold   7.7%
+
+  BY METRO
+    LA                      123 sites  1,801 sh   307,094 seats   86,820 sold  28.3%
+    NY/NJ                   121 sites  1,656 sh   261,241 seats   79,345 sold  30.4%
+    Florida                  91 sites  1,444 sh   230,743 seats   47,781 sold  20.7%
+    SF Bay                   64 sites    991 sh   145,832 seats   30,922 sold  21.2%
+    DFW                      65 sites    962 sh   127,589 seats   30,738 sold  24.1%
+    Houston                  38 sites    737 sh   103,158 seats   23,282 sold  22.6%
+    Chicago                  62 sites    828 sh   129,466 seats   23,155 sold  17.9%
+    Baltimore/DC             64 sites    856 sh   121,627 seats   22,507 sold  18.5%
+    Arizona                  48 sites    704 sh   121,445 seats   22,255 sold  18.3%
+    Georgia                  55 sites    729 sh   126,683 seats   18,803 sold  14.8%
+    N Carolina               45 sites    586 sh    79,104 seats   17,701 sold  22.4%
+    Boston                   32 sites    403 sh    62,399 seats   15,685 sold  25.1%
+    Ohio                     36 sites    512 sh    77,286 seats   14,751 sold  19.1%
+    Hartford/CT              29 sites    392 sh    52,748 seats   12,834 sold  24.3%
+    Detroit                  35 sites    521 sh    88,206 seats   12,783 sold  14.5%
+
+  BY TIME OF DAY (local, per-hour density so wide buckets do not lie)
+    6-12              5,338 sh (   890/hr)   836,866 seats  111,169 sold  13.3%
+    12-4pm            5,240 sh (  1310/hr)   815,571 seats  115,593 sold  14.2%
+    4-7pm             3,469 sh (  1156/hr)   536,399 seats  155,211 sold  28.9%
+    7-9pm             2,820 sh (  1410/hr)   444,355 seats  133,567 sold  30.1%
+    9pm+              3,766 sh (  1255/hr)   586,495 seats  120,967 sold  20.6%
+    after midnight      753 sh (   126/hr)   106,358 seats   17,727 sold  16.7%
+
+  === DOLLARS ON WHAT WE MEASURED ===
+  ATP assumed: Standard $12.50, 3D $15.50, Premium Format $18.50   (ASSUMPTION - override with --atp-* flags)
+  observed presale gross  $10,429,344
+  seat coverage is 95.8%, so scaled to all showtimes
+  that is about $10,885,805 - an ESTIMATE, label it as one.
+
+  === WHAT THIS IMPLIES FOR THE OPENING ===
+  We have NO measured presale-to-final ratio for a Marvel title.
+  The $43.21 factor we calibrated on Drishyam was a same-day
+  walk-up factor and does not transfer. So this is a sensitivity
+  table, not a forecast. Pick a row only if you can defend it.
+    presale is       implied 3-day gross
+      10% of final           108,858,046
+      15% of final            72,572,031
+      20% of final            54,429,023
+      25% of final            43,543,218
+      30% of final            36,286,015
+  Publish the measured presale number. Do not publish a row of
+  this table as our estimate until we have calibrated the ratio.
+
+  === CANADA ===
+  sites 134   showtimes 789   seats available 135,780
+  Cineplex gives availability but not capacity, so occupancy
+  is not computable. The DROP between two reads is the ticket
+  number - this read is the baseline for it.
+    ON     369
+    BC     136
+    AB     104
+    QC      45
+    MB      36
+    SK      32
+    NS      30
+    NB      21
+    PE       8
+    NL       8

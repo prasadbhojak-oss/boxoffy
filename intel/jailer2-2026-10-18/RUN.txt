@@ -1,0 +1,251 @@
+Jailer 2  (jailer2)   fandango 247862   cineplex n/a
+dates ['2026-10-16', '2026-10-17', '2026-10-18']   401 postcodes   10 workers   pace 0.12s
+  session warm-up HTTP 200; cookies ['akamai_location', 'userCountry', 'akamai_set_zip', 'userlocation', 'akamai_generated_location']
+RUN 2026-10-03T22:38:53.893463 film=jailer2 date=2026-10-16 workers=10 pace=0.12 SEATS
+
+### Jailer 2 · 2026-10-16 -> intel\jailer2-2026-10-16
+  86 sites, 219 showtimes
+Seat maps...
+  219 showtimes, 219 unique seat maps, 219 to read
+  10 workers, starting pace 0.12s -> about 0 min if nothing throttles
+  219/219 · 0.4 min · 8.3 req/s · ~0 min left · pace 0.11s · 1 failed · 0 throttled
+  WARNING 1 seat maps failed. Those rows are BLANK, not zero. Re-run with --resume to retry only those.
+Cineplex (Canada)...
+  Canada skipped: no cineplex filmId for this listing.
+  0 Canadian showtimes
+
+=== Jailer 2 · 2026-10-16 · PRESALE ===
+  sites                       86
+  showtimes                  219
+  seat maps read             218   99.5% of showtimes
+  seats on sale           22,174
+  TICKETS SOLD               527   2.4% of those seats
+  sold-out shows               0
+  Presale: nothing has played, no seat map withdrawn, so this is a
+  cumulative total rather than a floor.
+
+  no earlier read with seat data on disk, so no velocity yet.
+  This read is the baseline. Run again in a few hours.
+
+  BY FORMAT
+    Standard                 83 sites    211 sh    21,270 seats      501 sold   2.4%
+    Premium Format            2 sites      7 sh       904 seats       26 sold   2.9%
+
+  BY CHAIN
+    Cinemark                 68 sites    182 sh    18,398 seats      483 sold   2.6%
+    Independent               3 sites     11 sh     1,387 seats       28 sold   2.0%
+    AMC                       9 sites     10 sh       973 seats       13 sold   1.3%
+    Regal                     3 sites      9 sh     1,017 seats        3 sold   0.3%
+    Marcus                    2 sites      6 sh       399 seats        0 sold   0.0%
+
+  BY METRO
+    SF Bay                    6 sites     23 sh     2,547 seats      126 sold   4.9%
+    DFW                      17 sites     49 sh     4,149 seats      124 sold   3.0%
+    Austin                    5 sites     17 sh     1,536 seats      102 sold   6.6%
+    Seattle                   3 sites      8 sh     1,955 seats       61 sold   3.1%
+    Baltimore/DC              4 sites      8 sh     1,360 seats       35 sold   2.6%
+    Portland/OR               3 sites      6 sh       374 seats       17 sold   4.5%
+    Florida                   4 sites     10 sh       669 seats       15 sold   2.2%
+    N Carolina                3 sites      6 sh       457 seats        9 sold   2.0%
+    LA                        2 sites      2 sh       108 seats        8 sold   7.4%
+    Houston                   5 sites     15 sh     1,101 seats        8 sold   0.7%
+    Arizona                   1 sites      3 sh       342 seats        8 sold   2.3%
+    Chicago                   4 sites     12 sh     1,782 seats        4 sold   0.2%
+    Hartford/CT               2 sites      4 sh       415 seats        3 sold   0.7%
+    Colorado                  2 sites      3 sh       225 seats        3 sold   1.3%
+    Detroit                   3 sites      6 sh       696 seats        2 sold   0.3%
+
+  BY TIME OF DAY (local, per-hour density so wide buckets do not lie)
+    6-12                 31 sh (     5/hr)     3,313 seats       26 sold   0.8%
+    12-4pm               52 sh (    13/hr)     5,428 seats        9 sold   0.2%
+    4-7pm                54 sh (    18/hr)     5,347 seats      314 sold   5.9%
+    7-9pm                27 sh (    14/hr)     2,986 seats       85 sold   2.8%
+    9pm+                 54 sh (    18/hr)     5,100 seats       93 sold   1.8%
+    after midnight        0 sh (     0/hr)         0 seats        0 sold   0.0%
+
+  === DOLLARS ON WHAT WE MEASURED ===
+  ATP assumed: Standard $16.50, 3D $18.00, Premium Format $21.00   (ASSUMPTION - override with --atp-* flags)
+  observed presale gross  $8,812
+
+  === WHAT THIS IMPLIES FOR THE OPENING ===
+  We have NO measured presale-to-final ratio for a Marvel title.
+  The $43.21 factor we calibrated on Drishyam was a same-day
+  walk-up factor and does not transfer. So this is a sensitivity
+  table, not a forecast. Pick a row only if you can defend it.
+    presale is       implied 3-day gross
+      10% of final                88,529
+      15% of final                59,019
+      20% of final                44,265
+      25% of final                35,412
+      30% of final                29,510
+  Publish the measured presale number. Do not publish a row of
+  this table as our estimate until we have calibrated the ratio.
+
+  === CANADA ===
+  no Canadian rows in this read.
+Written to intel\jailer2-2026-10-16
+RUN 2026-10-03T22:48:19.202075 film=jailer2 date=2026-10-17 workers=10 pace=0.12 SEATS
+
+### Jailer 2 · 2026-10-17 -> intel\jailer2-2026-10-17
+  84 sites, 227 showtimes
+Seat maps...
+  227 showtimes, 227 unique seat maps, 227 to read
+  10 workers, starting pace 0.12s -> about 0 min if nothing throttles
+  227/227 · 0.5 min · 8.4 req/s · ~0 min left · pace 0.11s · 1 failed · 0 throttled
+  WARNING 1 seat maps failed. Those rows are BLANK, not zero. Re-run with --resume to retry only those.
+Cineplex (Canada)...
+  Canada skipped: no cineplex filmId for this listing.
+  0 Canadian showtimes
+
+=== Jailer 2 · 2026-10-17 · PRESALE ===
+  sites                       84
+  showtimes                  227
+  seat maps read             226   99.6% of showtimes
+  seats on sale           21,038
+  TICKETS SOLD               327   1.6% of those seats
+  sold-out shows               0
+  Presale: nothing has played, no seat map withdrawn, so this is a
+  cumulative total rather than a floor.
+
+  no earlier read with seat data on disk, so no velocity yet.
+  This read is the baseline. Run again in a few hours.
+
+  BY FORMAT
+    Standard                 82 sites    222 sh    20,614 seats      312 sold   1.5%
+    Premium Format            1 sites      4 sh       424 seats       15 sold   3.5%
+
+  BY CHAIN
+    Cinemark                 67 sites    193 sh    17,744 seats      308 sold   1.7%
+    Independent               2 sites      8 sh       907 seats       15 sold   1.7%
+    Regal                     3 sites      9 sh     1,017 seats        2 sold   0.2%
+    AMC                       9 sites     10 sh       971 seats        2 sold   0.2%
+    Marcus                    2 sites      6 sh       399 seats        0 sold   0.0%
+
+  BY METRO
+    SF Bay                    6 sites     24 sh     2,560 seats      102 sold   4.0%
+    DFW                      17 sites     49 sh     3,977 seats       87 sold   2.2%
+    Austin                    5 sites     20 sh     1,736 seats       27 sold   1.6%
+    Arizona                   1 sites      3 sh       342 seats       16 sold   4.7%
+    LA                        2 sites      2 sh       108 seats       15 sold  13.9%
+    Houston                   5 sites     18 sh     1,344 seats       15 sold   1.1%
+    Idaho/WY                  1 sites      4 sh       292 seats       12 sold   4.1%
+    Seattle                   2 sites      5 sh       324 seats       11 sold   3.4%
+    Baltimore/DC              4 sites     10 sh     1,628 seats        9 sold   0.6%
+    San Antonio               1 sites      4 sh       260 seats        6 sold   2.3%
+    Hartford/CT               2 sites      4 sh       415 seats        5 sold   1.2%
+    Florida                   4 sites     12 sh       832 seats        5 sold   0.6%
+    Utah                      1 sites      3 sh       189 seats        5 sold   2.6%
+    Sacramento                1 sites      3 sh       687 seats        4 sold   0.6%
+    Boston                    1 sites      2 sh       172 seats        2 sold   1.2%
+
+  BY TIME OF DAY (local, per-hour density so wide buckets do not lie)
+    6-12                 38 sh (     6/hr)     3,684 seats       17 sold   0.5%
+    12-4pm               53 sh (    13/hr)     5,077 seats       88 sold   1.7%
+    4-7pm                71 sh (    24/hr)     6,222 seats      163 sold   2.6%
+    7-9pm                15 sh (     8/hr)     1,401 seats       10 sold   0.7%
+    9pm+                 49 sh (    16/hr)     4,654 seats       49 sold   1.1%
+    after midnight        0 sh (     0/hr)         0 seats        0 sold   0.0%
+
+  === DOLLARS ON WHAT WE MEASURED ===
+  ATP assumed: Standard $16.50, 3D $18.00, Premium Format $21.00   (ASSUMPTION - override with --atp-* flags)
+  observed presale gross  $5,463
+
+  === WHAT THIS IMPLIES FOR THE OPENING ===
+  We have NO measured presale-to-final ratio for a Marvel title.
+  The $43.21 factor we calibrated on Drishyam was a same-day
+  walk-up factor and does not transfer. So this is a sensitivity
+  table, not a forecast. Pick a row only if you can defend it.
+    presale is       implied 3-day gross
+      10% of final                54,872
+      15% of final                36,581
+      20% of final                27,436
+      25% of final                21,949
+      30% of final                18,291
+  Publish the measured presale number. Do not publish a row of
+  this table as our estimate until we have calibrated the ratio.
+
+  === CANADA ===
+  no Canadian rows in this read.
+Written to intel\jailer2-2026-10-17
+RUN 2026-10-03T22:54:01.858588 film=jailer2 date=2026-10-18 workers=10 pace=0.12 SEATS
+
+### Jailer 2 · 2026-10-18 -> intel\jailer2-2026-10-18
+  82 sites, 222 showtimes
+Seat maps...
+  222 showtimes, 222 unique seat maps, 222 to read
+  10 workers, starting pace 0.12s -> about 0 min if nothing throttles
+  222/222 · 0.4 min · 8.4 req/s · ~0 min left · pace 0.11s · 1 failed · 0 throttled
+  WARNING 1 seat maps failed. Those rows are BLANK, not zero. Re-run with --resume to retry only those.
+Cineplex (Canada)...
+  Canada skipped: no cineplex filmId for this listing.
+  0 Canadian showtimes
+
+=== Jailer 2 · 2026-10-18 · PRESALE ===
+  sites                       82
+  showtimes                  222
+  seat maps read             221   99.5% of showtimes
+  seats on sale           20,557
+  TICKETS SOLD               115   0.6% of those seats
+  sold-out shows               0
+  Presale: nothing has played, no seat map withdrawn, so this is a
+  cumulative total rather than a floor.
+
+  no earlier read with seat data on disk, so no velocity yet.
+  This read is the baseline. Run again in a few hours.
+
+  BY FORMAT
+    Standard                 80 sites    217 sh    20,133 seats      115 sold   0.6%
+    Premium Format            1 sites      4 sh       424 seats        0 sold   0.0%
+
+  BY CHAIN
+    Cinemark                 65 sites    188 sh    17,306 seats      114 sold   0.7%
+    Independent               2 sites      8 sh       911 seats        1 sold   0.1%
+    Regal                     3 sites      9 sh     1,017 seats        0 sold   0.0%
+    AMC                       9 sites     10 sh       924 seats        0 sold   0.0%
+    Marcus                    2 sites      6 sh       399 seats        0 sold   0.0%
+
+  BY METRO
+    DFW                      17 sites     50 sh     4,107 seats       44 sold   1.1%
+    SF Bay                    6 sites     24 sh     2,748 seats       31 sold   1.1%
+    Baltimore/DC              4 sites     10 sh     1,628 seats       10 sold   0.6%
+    Seattle                   2 sites      5 sh       324 seats        8 sold   2.5%
+    Colorado                  2 sites      3 sh       225 seats        6 sold   2.7%
+    Houston                   5 sites     18 sh     1,343 seats        5 sold   0.4%
+    Austin                    5 sites     20 sh     1,516 seats        3 sold   0.2%
+    LA                        2 sites      2 sh       108 seats        2 sold   1.9%
+    Boston                    1 sites      2 sh       172 seats        2 sold   1.2%
+    Dakotas/MT                1 sites      1 sh       103 seats        2 sold   1.9%
+    Detroit                   2 sites      5 sh       551 seats        1 sold   0.2%
+    Nevada                    1 sites      4 sh       284 seats        1 sold   0.4%
+    Sacramento                1 sites      3 sh       687 seats        0 sold   0.0%
+    San Diego                 1 sites      3 sh       372 seats        0 sold   0.0%
+    San Antonio               1 sites      3 sh       195 seats        0 sold   0.0%
+
+  BY TIME OF DAY (local, per-hour density so wide buckets do not lie)
+    6-12                 40 sh (     7/hr)     3,892 seats        7 sold   0.2%
+    12-4pm               51 sh (    13/hr)     4,890 seats       46 sold   0.9%
+    4-7pm                70 sh (    23/hr)     6,096 seats       53 sold   0.9%
+    7-9pm                12 sh (     6/hr)     1,161 seats        2 sold   0.2%
+    9pm+                 48 sh (    16/hr)     4,518 seats        7 sold   0.2%
+    after midnight        0 sh (     0/hr)         0 seats        0 sold   0.0%
+
+  === DOLLARS ON WHAT WE MEASURED ===
+  ATP assumed: Standard $16.50, 3D $18.00, Premium Format $21.00   (ASSUMPTION - override with --atp-* flags)
+  observed presale gross  $1,898
+
+  === WHAT THIS IMPLIES FOR THE OPENING ===
+  We have NO measured presale-to-final ratio for a Marvel title.
+  The $43.21 factor we calibrated on Drishyam was a same-day
+  walk-up factor and does not transfer. So this is a sensitivity
+  table, not a forecast. Pick a row only if you can defend it.
+    presale is       implied 3-day gross
+      10% of final                19,061
+      15% of final                12,707
+      20% of final                 9,530
+      25% of final                 7,624
+      30% of final                 6,354
+  Publish the measured presale number. Do not publish a row of
+  this table as our estimate until we have calibrated the ratio.
+
+  === CANADA ===
+  no Canadian rows in this read.

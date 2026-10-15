@@ -1,0 +1,120 @@
+Dune: Part Three  (dune3)   fandango 244800   cineplex 37998
+dates ['2026-12-18']   401 postcodes   10 workers   pace 0.12s
+  session warm-up HTTP 200; cookies ['akamai_location', 'userCountry', 'akamai_set_zip', 'userlocation', 'akamai_generated_location']
+RUN 2026-10-03T22:13:45.818554 film=dune3 date=2026-12-18 workers=10 pace=0.12 SEATS
+
+### Dune: Part Three · 2026-12-18 -> intel\dune3-2026-12-18
+  859 sites, 3,734 showtimes
+Seat maps...
+  3,734 showtimes, 3,734 unique seat maps, 3,734 to read
+  10 workers, starting pace 0.12s -> about 7 min if nothing throttles
+  250/3,734 · 0.8 min · 5.2 req/s · ~11 min left · pace 0.11s · 2 failed · 0 throttled
+  500/3,734 · 1.6 min · 5.3 req/s · ~10 min left · pace 0.10s · 7 failed · 0 throttled
+  750/3,734 · 2.3 min · 5.3 req/s · ~9 min left · pace 0.09s · 9 failed · 0 throttled
+  1,000/3,734 · 3.1 min · 5.4 req/s · ~8 min left · pace 0.08s · 13 failed · 0 throttled
+  1,250/3,734 · 3.8 min · 5.5 req/s · ~7 min left · pace 0.08s · 20 failed · 0 throttled
+  1,500/3,734 · 4.6 min · 5.5 req/s · ~7 min left · pace 0.08s · 24 failed · 0 throttled
+  1,750/3,734 · 5.3 min · 5.5 req/s · ~6 min left · pace 0.08s · 24 failed · 0 throttled
+  2,000/3,734 · 6.0 min · 5.6 req/s · ~5 min left · pace 0.08s · 42 failed · 0 throttled
+  2,250/3,734 · 6.7 min · 5.6 req/s · ~4 min left · pace 0.08s · 51 failed · 0 throttled
+  2,500/3,734 · 7.5 min · 5.6 req/s · ~4 min left · pace 0.08s · 51 failed · 0 throttled
+  2,750/3,734 · 8.3 min · 5.5 req/s · ~3 min left · pace 0.08s · 54 failed · 0 throttled
+  3,000/3,734 · 9.2 min · 5.4 req/s · ~2 min left · pace 0.08s · 68 failed · 0 throttled
+  3,250/3,734 · 9.9 min · 5.5 req/s · ~1 min left · pace 0.08s · 70 failed · 0 throttled
+  3,500/3,734 · 10.9 min · 5.4 req/s · ~1 min left · pace 0.08s · 74 failed · 0 throttled
+  3,734/3,734 · 11.7 min · 5.3 req/s · ~0 min left · pace 0.08s · 81 failed · 0 throttled
+  WARNING 81 seat maps failed. Those rows are BLANK, not zero. Re-run with --resume to retry only those.
+Cineplex (Canada)...
+  238 Canadian showtimes
+
+=== Dune: Part Three · 2026-12-18 · PRESALE ===
+  sites                      859
+  showtimes                3,734
+  seat maps read           3,651   97.8% of showtimes
+  seats on sale          812,494
+  TICKETS SOLD           127,659   15.7% of those seats
+  sold-out shows              22
+  Presale: nothing has played, no seat map withdrawn, so this is a
+  cumulative total rather than a floor.
+
+  no earlier read with seat data on disk, so no velocity yet.
+  This read is the baseline. Run again in a few hours.
+
+  BY FORMAT
+    Premium Format          824 sites  3,480 sh   781,596 seats  126,744 sold  16.2%
+    Standard                 39 sites    169 sh    30,610 seats      913 sold   3.0%
+    3D                        1 sites      2 sh       288 seats        2 sold   0.7%
+
+  BY CHAIN
+    AMC                     233 sites  1,228 sh   326,229 seats   56,663 sold  17.4%
+    Independent             206 sites    829 sh   175,667 seats   25,339 sold  14.4%
+    Regal                   162 sites    519 sh   131,907 seats   20,731 sold  15.7%
+    Cinemark                123 sites    557 sh    81,282 seats   14,353 sold  17.7%
+    Harkins                  18 sites    135 sh    30,552 seats    3,448 sold  11.3%
+    Alamo                    22 sites     59 sh    11,616 seats    2,538 sold  21.8%
+    Marcus                   34 sites    149 sh    25,692 seats    1,331 sold   5.2%
+    Emagine                  19 sites     59 sh    10,595 seats    1,215 sold  11.5%
+    LOOK                      7 sites     28 sh     4,684 seats      922 sold  19.7%
+    MJR                       7 sites     18 sh     3,314 seats      510 sold  15.4%
+    B&B                      16 sites     65 sh     9,191 seats      438 sold   4.8%
+    Showcase                  1 sites      5 sh     1,765 seats      171 sold   9.7%
+
+  BY METRO
+    LA                       79 sites    399 sh    88,828 seats   19,574 sold  22.0%
+    NY/NJ                    61 sites    262 sh    61,449 seats   17,090 sold  27.8%
+    Florida                  56 sites    213 sh    51,620 seats    7,991 sold  15.5%
+    SF Bay                   35 sites    179 sh    37,581 seats    6,687 sold  17.8%
+    DFW                      36 sites    166 sh    34,011 seats    6,157 sold  18.1%
+    Baltimore/DC             32 sites    165 sh    35,357 seats    5,076 sold  14.4%
+    Chicago                  33 sites    147 sh    29,380 seats    4,127 sold  14.0%
+    Arizona                  23 sites    139 sh    32,207 seats    3,949 sold  12.3%
+    Houston                  24 sites    118 sh    27,200 seats    3,905 sold  14.4%
+    Colorado                 24 sites    105 sh    23,320 seats    3,879 sold  16.6%
+    Georgia                  27 sites     98 sh    22,456 seats    3,639 sold  16.2%
+    Boston                   15 sites     57 sh    13,877 seats    3,581 sold  25.8%
+    Utah                     15 sites     57 sh    15,945 seats    3,021 sold  18.9%
+    N Carolina               21 sites     66 sh    14,347 seats    2,776 sold  19.3%
+    Ohio                     24 sites     96 sh    21,837 seats    2,647 sold  12.1%
+
+  BY TIME OF DAY (local, per-hour density so wide buckets do not lie)
+    6-12                827 sh (   138/hr)   185,797 seats   19,452 sold  10.5%
+    12-4pm              996 sh (   249/hr)   217,203 seats   28,086 sold  12.9%
+    4-7pm               476 sh (   159/hr)   108,472 seats   26,396 sold  24.3%
+    7-9pm               408 sh (   204/hr)    86,449 seats   25,975 sold  30.0%
+    9pm+                815 sh (   272/hr)   180,733 seats   24,215 sold  13.4%
+    after midnight      129 sh (    22/hr)    33,840 seats    3,535 sold  10.4%
+
+  === DOLLARS ON WHAT WE MEASURED ===
+  ATP assumed: Standard $12.50, 3D $15.50, Premium Format $18.50   (ASSUMPTION - override with --atp-* flags)
+  observed presale gross  $2,356,208
+  seat coverage is 97.8%, so scaled to all showtimes
+  that is about $2,409,772 - an ESTIMATE, label it as one.
+
+  === WHAT THIS IMPLIES FOR THE OPENING ===
+  We have NO measured presale-to-final ratio for a Marvel title.
+  The $43.21 factor we calibrated on Drishyam was a same-day
+  walk-up factor and does not transfer. So this is a sensitivity
+  table, not a forecast. Pick a row only if you can defend it.
+    presale is       implied 3-day gross
+      10% of final            24,097,723
+      15% of final            16,065,149
+      20% of final            12,048,862
+      25% of final             9,639,089
+      30% of final             8,032,574
+  Publish the measured presale number. Do not publish a row of
+  this table as our estimate until we have calibrated the ratio.
+
+  === CANADA ===
+  sites 49   showtimes 238   seats available 63,212
+  Cineplex gives availability but not capacity, so occupancy
+  is not computable. The DROP between two reads is the ticket
+  number - this read is the baseline for it.
+    ON     108
+    BC      36
+    AB      32
+    QC      26
+    MB      12
+    SK      12
+    NB       4
+    NS       4
+    NL       4

@@ -1,0 +1,145 @@
+
+######################################################################
+#  BOXOFFY  -  RAMAYANA NORTH AMERICA SWEEP v2
+#  2026-10-11 09:32   14 zips   5 dates
+#
+#  v1 swept Fandango and called it North America's presale.
+#  It was Fandango's presale, which for this title is near
+#  nothing. The chains have the film; the aggregators do not.
+#  This run reports three surfaces SEPARATELY and never sums
+#  the Hindi and English cuts.
+######################################################################
+
+======================================================================
+  1 of 3   FANDANGO
+======================================================================
+
+  --- Ramayana (Hindi 3h15m)  (fid 245446) ---
+      2026-11-04: 28 showtimes, 11 sites running
+      2026-11-05: 16 showtimes, 11 sites running
+      2026-11-06: 18 showtimes, 13 sites running
+      2026-11-07: 18 showtimes, 13 sites running
+      2026-11-08: 20 showtimes, 13 sites running
+
+======================================================================
+  2 of 3   CINEPLEX CANADA
+======================================================================
+
+  --- Cineplex Canada  (filmId 62087) ---
+      theatre list: 152 locations (published total 152)
+      2026-11-04: 0 showtimes
+      2026-11-05: 0 showtimes
+      2026-11-06: 0 showtimes
+      2026-11-07: 0 showtimes
+      2026-11-08: 0 showtimes
+
+======================================================================
+  3 of 3   CHAIN SITES
+======================================================================
+
+  --- CHAIN SITES  (this is where the tickets are) ---
+      AMC is robots-disallowed. NOT fetched. Open by hand:
+        https://www.amctheatres.com/movies/ramayana-84991
+      200  Hollywood Blvd (Woodridge IL)                   listed (HI), 22 time strings
+      200  Hollywood Blvd coming-soon                      listed (HI), 0 time strings
+      200  Emagine movies index                            listed (EN), 0 time strings
+      200  Emagine Ramayana (Hindi)                        listed (EN), 0 time strings
+      200  Emagine Rise of a Legend (English)              listed (EN), 0 time strings
+      403  Regal home                                    
+      403  Regal Ramayana                                
+      403  Regal Ramayana RoaL                           
+      403  Regal international films                     
+      403  Regal Metropolitan (Austin)                   
+      403  Regal New Roc (New Rochelle)                  
+      403  Regal White Oak (Silver Spring)               
+      403  Regal Edwards Fairfield                       
+      500  Galaxy RoaL (GigHarbor slug)                  
+      200  Galaxy Grandscape (The Colony TX)             
+      404  Galaxy Grandscape showtimes                   
+      403  SMG now showing                               
+      403  SMG North Point (Alpharetta GA)               
+      403  SMG Pearland (TX)                             
+      200  Marcus coming soon                            
+      200  Harkins coming soon                             listed (HI), 0 time strings
+      200  MJR                                           
+      200  Showcase                                      
+      403  Cinepolis USA                                 
+      200  Alamo Drafthouse                              
+      200  iPic                                          
+      200  Look Cinemas                                  
+      200  B&B Theatres                                  
+      200  Cinemark Ramayana (Hindi)                       listed (HI), 0 time strings
+      200  Atom Tickets                                    listed (HI), 0 time strings
+      403  IMAX                                          
+      200  Sony official site                              listed (EN), 0 time strings
+      200  Cinema United release calendar                
+
+      raw HTML saved for 17 pages -> intel\ramayana-v2-20261011-0932\raw
+      SEND ME THAT raw FOLDER. Regal and Galaxy block my
+      datacentre IP; whatever your home connection received
+      is what I can build a real parser from.
+
+======================================================================
+  SUMMARY  -  three surfaces, never summed
+======================================================================
+    surface                  sites   showtimes
+    Fandango (US)               13         100
+    Cineplex (Canada)            0           0
+    Chain sites                  9           0
+
+    FANDANGO BY FORMAT
+      Standard                    73
+      3D                          22
+      Premium Format               5
+    FANDANGO BY CHAIN
+      Regal                      5 sites     43 shows
+      SMG                        5 sites     35 shows
+      Hollywood Blvd             1 sites     12 shows
+      Galaxy                     1 sites      9 shows
+      Marcus                     1 sites      1 shows
+    FANDANGO BY DATE
+      2026-11-04      28
+      2026-11-05      16
+      2026-11-06      18
+      2026-11-07      18
+      2026-11-08      20
+
+    CHAIN SITES LISTING THE FILM
+      Hollywood Blvd (Woodridge IL)             HINDI       - shows
+      Hollywood Blvd coming-soon                HINDI       - shows
+      Emagine movies index                      BOTH        - shows
+      Emagine Ramayana (Hindi)                  BOTH        - shows
+      Emagine Rise of a Legend (English)        BOTH        - shows
+      Harkins coming soon                       HINDI       - shows
+      Cinemark Ramayana (Hindi)                 HINDI       - shows
+      Atom Tickets                              HINDI       - shows
+      Sony official site                        BOTH        - shows
+
+    CHAIN PAGES THAT DID NOT RETURN 200
+      403  Regal home
+      403  Regal Ramayana
+      403  Regal Ramayana RoaL
+      403  Regal international films
+      403  Regal Metropolitan (Austin)
+      403  Regal New Roc (New Rochelle)
+      403  Regal White Oak (Silver Spring)
+      403  Regal Edwards Fairfield
+      500  Galaxy RoaL (GigHarbor slug)
+      404  Galaxy Grandscape showtimes
+      403  SMG now showing
+      403  SMG North Point (Alpharetta GA)
+      403  SMG Pearland (TX)
+      403  Cinepolis USA
+      403  IMAX
+      403/429 = bot wall. Recorded, not worked around.
+      500 = their server. 404 = wrong URL, send me the right one.
+
+======================================================================
+  WHAT TO PASTE BACK
+    1. This SUMMARY block.
+    2. The CHAIN SITES LISTING THE FILM block.
+    3. Zip up intel\...\raw\ and send it. That folder is
+       the point of the run - it is how Regal gets cracked.
+======================================================================
+
+  csv: intel\ramayana-v2-20261011-0932

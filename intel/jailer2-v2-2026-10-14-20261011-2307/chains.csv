@@ -1,0 +1,9 @@
+chain,url,http,listed
+Cinemark Jailer 2,https://www.cinemark.com/movies/jailer-2,404,False
+Cinemark Jailer 2 Tamil,https://www.cinemark.com/movies/jailer-2-tamil-with-english-subtitles,200,True
+Regal Jailer 2,https://www.regmovies.com/movies/jailer-2,403,False
+Marcus coming soon,https://www.marcustheatres.com/movies/coming-soon,200,False
+Harkins coming soon,https://www.harkins.com/movies/coming-soon,200,False
+Atom Tickets search,https://www.atomtickets.com/search?q=jailer,200,True
+Emagine movies,https://www.emagine-entertainment.com/movies/,200,True
+Galaxy Theatres,https://www.galaxytheatres.com/,200,False

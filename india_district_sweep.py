@@ -51,7 +51,8 @@ _args = [a for a in sys.argv[1:] if a]
 DATE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 LIST_ONLY = bool(_args) and _args[0].lower() == "list"
 _dates = [a for a in _args if DATE_RE.match(a)]
-_films = [a for a in _args if not DATE_RE.match(a) and a.lower() != "list"]
+_films = [a for a in _args if not DATE_RE.match(a)
+          and a.lower() != "list" and not a.startswith("-")]   # flags are not film names
 FILM       = (_films[0].lower() if _films else "drishyam")
 DATE_LABEL = _dates[0] if _dates else "2026-10-02"
 if not LIST_ONLY and FILM not in FILMS:
@@ -60,6 +61,8 @@ if not LIST_ONLY and FILM not in FILMS:
     sys.exit(1)
 MOVIE_SLUG, MOVIE_ID = FILMS.get(FILM, ("", ""))
 OUT   = os.path.join("intel", f"{FILM}-{DATE_LABEL}")
+RESUME = "--resume" in sys.argv
+RUN_UTC = datetime.datetime.utcnow()   # every minsToShow is measured from here
 PAUSE = 0.8
 
 CITIES = [
@@ -166,6 +169,8 @@ def sessions_from(data):
                         "audi": s.get("audi") or "",
                         "format": s.get("scrnFmt") or "",
                         "showTime": s.get("showTime") or "",
+                        "minsToShow": mins_to_show(s.get("showTime") or ""),
+                        "started": "Y" if mins_to_show(s.get("showTime") or "") < 0 else "N",
                         "seatStatus": s.get("seatStatus") or "",
                         "seatsTotal": tot,
                         "seatsAvail": av,
@@ -176,6 +181,22 @@ def sessions_from(data):
                                      f"{c.get('id')}-{s.get('sid')}-{s.get('showTime')}",
                     })
     return out
+
+
+def mins_to_show(ts):
+    """showTime is UTC. Minutes from the moment this run started to the show.
+    Negative means the show has already begun, so its seat count is effectively
+    final and it should never be averaged in with shows still on sale."""
+    # District sends minute precision and no seconds: "2026-10-02T03:45"
+    t = None
+    for fmt in ("%Y-%m-%dT%H:%M:%S", "%Y-%m-%dT%H:%M", "%Y-%m-%d %H:%M:%S", "%Y-%m-%d %H:%M"):
+        try:
+            t = datetime.datetime.strptime(ts[:len("2026-10-02T03:45:00")].rstrip("Z"), fmt); break
+        except (ValueError, TypeError):
+            continue
+    if t is None:
+        return 99999
+    return int((t - RUN_UTC).total_seconds() // 60)
 
 
 def catalogue():
@@ -195,9 +216,26 @@ def catalogue():
         print(f'    "{key}": ("{slug}", "{mid}"),')
 
 
+def archive_previous():
+    """Never clobber an earlier read of the same film and date."""
+    if not os.path.isdir(OUT) or not os.listdir(OUT):
+        return
+    stamp = datetime.datetime.fromtimestamp(
+        max(os.path.getmtime(os.path.join(OUT, f)) for f in os.listdir(OUT))
+    ).strftime("%H%M")
+    dest = f"{OUT}-prev-{stamp}"
+    n = 1
+    while os.path.exists(dest):
+        n += 1; dest = f"{OUT}-prev-{stamp}-{n}"
+    os.rename(OUT, dest)
+    print(f"  previous read preserved as {dest}", flush=True)
+
+
 def main():
     if LIST_ONLY:
         catalogue(); return
+    if not RESUME:
+        archive_previous()
     os.makedirs(OUT, exist_ok=True)
     log(f"RUN {datetime.datetime.now().isoformat()}   {FILM} / {MOVIE_SLUG} {MOVIE_ID}   show date {DATE_LABEL}")
     log("District, server rendered, one request per city.\n")
@@ -233,7 +271,8 @@ def main():
         time.sleep(PAUSE)
 
     cols = ["city", "state", "chain", "cinema", "cinemaId", "pincode", "audi",
-            "format", "showTime", "seatStatus", "seatsTotal", "seatsAvail",
+            "format", "showTime", "minsToShow", "started", "seatStatus",
+            "seatsTotal", "seatsAvail",
             "sold", "grossRs", "classes", "sessionId"]
     with open(os.path.join(OUT, "district_shows.csv"), "w", newline="",
               encoding="utf-8") as f:
@@ -271,15 +310,33 @@ def main():
     group("city", "CITY", 20)
     group("state", "STATE", 15)
 
-    log("\n=== BY TIME OF DAY ===")
-    blocks = [("before noon", 0, 12), ("12-4pm", 12, 16), ("4-7pm", 16, 19),
-              ("7-9pm", 19, 21), ("9pm+", 21, 24)]
-    for lab, a, b in blocks:
-        g = [r for r in rows if r["showTime"][11:13].isdigit()
-             and a <= int(r["showTime"][11:13]) < b]
+    log("\n=== PLAYED vs STILL SELLING ===")
+    done = [r for r in rows if r.get("started") == "Y"]
+    live = [r for r in rows if r.get("started") != "Y"]
+    for lab, g in (("already started", done), ("still on sale", live)):
         t = sum(r["seatsTotal"] for r in g); s = sum(r["sold"] for r in g)
-        log(f"  {lab:<12}{len(g):>6} shows {t:>9,} seats {s:>8,} sold "
+        log(f"  {lab:<18}{len(g):>6} shows {t:>9,} seats {s:>8,} sold "
             f"{(s/t*100 if t else 0):>5.1f}%")
+    if done:
+        log("  Occupancy on shows that have already begun is final for those shows.")
+        log("  It is the closest thing to a real opening-day occupancy read.")
+
+    def ist_h(r):
+        try:
+            hh = int(r["showTime"][11:13]); mm = int(r["showTime"][14:16])
+        except (ValueError, IndexError):
+            return None
+        return ((hh * 60 + mm) + 330) // 60 % 24
+
+    log("\n=== BY TIME OF DAY (IST) ===")
+    blocks = [("before 10am", 0, 10), ("10am-1pm", 10, 13), ("1-4pm", 13, 16),
+              ("4-7pm", 16, 19), ("7-10pm", 19, 22), ("10pm+", 22, 24)]
+    for lab, a, b in blocks:
+        g = [r for r in rows if ist_h(r) is not None and a <= ist_h(r) < b]
+        t = sum(r["seatsTotal"] for r in g); s = sum(r["sold"] for r in g)
+        nd = sum(1 for r in g if r.get("started") == "Y")
+        log(f"  {lab:<12}{len(g):>6} shows {t:>9,} seats {s:>8,} sold "
+            f"{(s/t*100 if t else 0):>5.1f}%   {nd} already begun")
 
     log("\n=== SEAT STATUS AS DISTRICT LABELS IT ===")
     for k, v in collections.Counter(r["seatStatus"] for r in rows).most_common():

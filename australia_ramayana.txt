@@ -1,0 +1,261 @@
+========================================================================
+  BOXOFFY - RAMAYANA, AUSTRALIA AND NEW ZEALAND
+  2026-10-09T23:23:01
+  AU/NZ release 2026-11-05  (T-27 days)
+  target: ramayana / rise of a legend
+  control: drishyam - should be playing NOW
+  9 homepages to warm, 38 endpoints to try
+========================================================================
+
+--- warming sessions so CDN cookies are set ---
+  200  https://www.hoyts.com.au
+  200  https://www.eventcinemas.com.au
+  403  https://villagecinemas.com.au   <-- bot wall at the front door
+  200  https://www.readingcinemas.com.au
+  200  https://www.palacecinemas.com.au
+  200  https://www.dendy.com.au
+  200  https://www.eventcinemas.co.nz
+  200  https://www.readingcinemas.co.nz
+  200  https://www.flicks.com.au
+  cookies collected: 3
+
+--- endpoints ---
+
+### HOYTS ramayana page
+    https://www.hoyts.com.au/movies/ramayana-hindi-eng-sub
+    HTTP 200  text/html  109,207 bytes  json=False
+    RAMAYANA=True   control(drishyam)=True
+    html: data-ids=[]  next/nuxt_payload=False
+    >>> RAMAYANA CONTEXT: ...<!DOCTYPE html> <html class="is-hero-active" lang="en"> <head>     <meta charset="utf-8">     <meta name="viewport" content="width=device-width, initial-scale=1.0">     <title>Ramayana: Rise Of A Legend (Hindi, Eng Sub) | HOYTS Cinemas</title>     <meta name="description" content="In an age of gods and kings, the fate of worlds hangs in the balance. Rama, a prince bound by duty, sacrifice, and righteousness, must confront Ravana, an immortal ruler.">     <meta property="og:title" content="Ra...
+    >>> booking-ish words near this page: 4
+
+### HOYTS movies site
+    https://www.hoyts.com.au/movies
+    HTTP 200  text/html  211,228 bytes  json=False
+    RAMAYANA=False   control(drishyam)=True
+    html: data-ids=[]  next/nuxt_payload=False
+
+### HOYTS comingsoon
+    https://www.hoyts.com.au/movies/coming-soon
+    HTTP 200  text/html  608,324 bytes  json=False
+    RAMAYANA=True   control(drishyam)=False
+    html: data-ids=[]  next/nuxt_payload=False
+    >>> RAMAYANA CONTEXT: ...v>                                 </li>                                 <li class="movies-list__item">                                     <div class="movies-list__wrapper">                                         <a class="movies-list__poster" href="/movies/ramayana-hindi-eng-sub">                                             <img class="movies-list__image" src="https://imgix.hoyts.com.au:443/mx/posters/au/ramayana-rise-of-a-legend-31a03918.jpg?fit=crop&amp;auto=compress%2cformat&amp;w=156&amp;h=231" placement="poster-large" alt="" srcset="https://imgix.hoyts.com.au:443/mx...
+    >>> booking-ish words near this page: 13
+
+### HOYTS api films
+    https://www.hoyts.com.au/api/films
+    HTTP 404 Not Found
+
+### HOYTS api v1 films
+    https://www.hoyts.com.au/api/v1/films
+    HTTP 404 Not Found
+
+### HOYTS api movies
+    https://www.hoyts.com.au/api/movies
+    HTTP 404 Not Found
+
+### HOYTS sessions
+    https://www.hoyts.com.au/api/sessions?date=2026-11-05
+    HTTP 404 Not Found
+
+### HOYTS graphql probe
+    https://www.hoyts.com.au/graphql
+    HTTP 404 Not Found
+
+### HOYTS sitemap
+    https://www.hoyts.com.au/sitemap.xml
+    HTTP 200  application/xml  421,931 bytes  json=False
+    RAMAYANA=True   control(drishyam)=True
+    html: data-ids=[]  next/nuxt_payload=False
+    >>> RAMAYANA CONTEXT: ...ts.com.au/movies/rajkumar-bengali-eng-sub</loc>     <lastmod>2024-04-17</lastmod>   </url>   <url>     <loc>https://www.hoyts.com.au/movies/rakasa-telugu-eng-sub</loc>     <lastmod>2026-04-01</lastmod>   </url>   <url>     <loc>https://www.hoyts.com.au/movies/ramayana-hindi-eng-sub</loc>     <lastmod>2026-10-08</lastmod>   </url>   <url>     <loc>https://www.hoyts.com.au/movies/ramayana-kannada-eng-sub</loc>     <lastmod>2026-10-08</lastmod>   </url>   <url>     <loc>https://www.hoyts.com.au/movies/ramayana-malayalam-eng-sub</loc>     <lastmod>2026-10-08</lastmod>   </url> ...
+    >>> booking-ish words near this page: 6
+
+### Event movies
+    https://www.eventcinemas.com.au/Movies
+    HTTP 200  text/html  229,298 bytes  json=False
+    RAMAYANA=False   control(drishyam)=False
+    html: data-ids=['${Id}']  next/nuxt_payload=False
+
+### Event nowshowing
+    https://www.eventcinemas.com.au/Movies/NowShowing
+    HTTP 200  text/html  229,298 bytes  json=False
+    RAMAYANA=False   control(drishyam)=False
+    html: data-ids=['${Id}']  next/nuxt_payload=False
+
+### Event comingsoon
+    https://www.eventcinemas.com.au/Movies/ComingSoon
+    HTTP 200  text/html  228,794 bytes  json=False
+    RAMAYANA=False   control(drishyam)=False
+    html: data-ids=['${Id}']  next/nuxt_payload=False
+
+### Event api movies
+    https://www.eventcinemas.com.au/api/movies
+    HTTP 404 Not Found
+
+### Event GetSessions
+    https://www.eventcinemas.com.au/Session/GetSessions?date=2026-11-05
+    HTTP 404 Not Found
+
+### Event QuickBook
+    https://www.eventcinemas.com.au/QuickBook/Movies
+    HTTP 404 Not Found
+
+### Event peach api
+    https://peach.eventcinemas.com.au/api/movies
+    FAILED URLError: <urlopen error [Errno 11001] getaddrinfo failed>
+
+### Event search ramayana
+    https://www.eventcinemas.com.au/Search?q=ramayana
+    HTTP 200  text/html  223,746 bytes  json=False
+    RAMAYANA=False   control(drishyam)=False
+    html: data-ids=['${Id}']  next/nuxt_payload=False
+
+### Event Bollywood hub
+    https://www.eventcinemas.com.au/EventsFestivals/Bollywood
+    HTTP 200  text/html  394,003 bytes  json=False
+    RAMAYANA=False   control(drishyam)=True
+    html: data-ids=['${$data.Id}', '${SessionId}', '${session.Id}', '${Seats.SessionId}', '${Id}']  next/nuxt_payload=False
+
+### Village movies
+    https://villagecinemas.com.au/movies
+    HTTP 403 Forbidden   <-- bot wall
+
+### Village api movies
+    https://villagecinemas.com.au/api/movies
+    HTTP 403 Forbidden   <-- bot wall
+
+### Village sessions
+    https://villagecinemas.com.au/api/sessions?date=2026-11-05
+    HTTP 403 Forbidden   <-- bot wall
+
+### Reading AU movies
+    https://www.readingcinemas.com.au/movies
+    HTTP 200  text/html  2,988 bytes  json=False
+    RAMAYANA=False   control(drishyam)=False
+    html: data-ids=[]  next/nuxt_payload=False
+
+### Reading AU api
+    https://www.readingcinemas.com.au/api/movies
+    HTTP 200  text/html  2,988 bytes  json=False
+    RAMAYANA=False   control(drishyam)=False
+    html: data-ids=[]  next/nuxt_payload=False
+
+### Reading AU comingsoon
+    https://www.readingcinemas.com.au/coming-soon
+    HTTP 200  text/html  2,988 bytes  json=False
+    RAMAYANA=False   control(drishyam)=False
+    html: data-ids=[]  next/nuxt_payload=False
+
+### Palace movies
+    https://www.palacecinemas.com.au/movies/
+    HTTP 200  text/html  453,632 bytes  json=False
+    RAMAYANA=False   control(drishyam)=False
+    html: data-ids=[]  next/nuxt_payload=True
+
+### Dendy movies
+    https://www.dendy.com.au/movies
+    HTTP 200  text/html  10,778 bytes  json=False
+    RAMAYANA=False   control(drishyam)=False
+    html: data-ids=[]  next/nuxt_payload=False
+
+### Wallis SA
+    https://www.wallis.com.au/movies
+    HTTP 200  text/html  344,403 bytes  json=False
+    RAMAYANA=False   control(drishyam)=False
+    html: data-ids=[]  next/nuxt_payload=False
+
+### Grand Cinemas WA
+    https://www.grandcinemas.com.au/movies
+    HTTP 200  text/html  183,403 bytes  json=False
+    RAMAYANA=False   control(drishyam)=True
+    html: data-ids=[]  next/nuxt_payload=False
+
+### Limelight Ipswich
+    https://www.limelightcinemas.com.au/ipswich/movies
+    HTTP 200  text/html  1,033,269 bytes  json=False
+    RAMAYANA=False   control(drishyam)=False
+    html: data-ids=[]  next/nuxt_payload=False
+
+### Event NZ movies
+    https://www.eventcinemas.co.nz/Movies
+    HTTP 200  text/html  164,947 bytes  json=False
+    RAMAYANA=False   control(drishyam)=False
+    html: data-ids=['${Id}']  next/nuxt_payload=False
+
+### Event NZ comingsoon
+    https://www.eventcinemas.co.nz/Movies/ComingSoon
+    HTTP 200  text/html  164,945 bytes  json=False
+    RAMAYANA=False   control(drishyam)=False
+    html: data-ids=['${Id}']  next/nuxt_payload=False
+
+### Event NZ Bollywood
+    https://www.eventcinemas.co.nz/EventsFestivals/Bollywood
+    HTTP 200  text/html  236,754 bytes  json=False
+    RAMAYANA=False   control(drishyam)=True
+    html: data-ids=['${$data.Id}', '${SessionId}', '${session.Id}', '${Seats.SessionId}', '${Id}']  next/nuxt_payload=False
+
+### Reading NZ movies
+    https://www.readingcinemas.co.nz/movies
+    HTTP 200  text/html  2,988 bytes  json=False
+    RAMAYANA=False   control(drishyam)=False
+    html: data-ids=[]  next/nuxt_payload=False
+
+### Hoyts NZ
+    https://www.hoyts.co.nz/movies
+    HTTP 200  text/html  164,462 bytes  json=False
+    RAMAYANA=False   control(drishyam)=True
+    html: data-ids=[]  next/nuxt_payload=False
+
+### Flicks AU ramayana
+    https://www.flicks.com.au/movie/ramayana/
+    HTTP 200  text/html  138,521 bytes  json=False
+    RAMAYANA=True   control(drishyam)=False
+    html: data-ids=[]  next/nuxt_payload=False
+    >>> RAMAYANA CONTEXT: ...f="/app-icons/apple-touch-icon-180x180.png" rel="apple-touch-icon" sizes="180x180"><link href="/app-icons/icon-hires.png" rel="icon" sizes="192x192"><link href="/app-icons/icon-normal.png" rel="icon" sizes="128x128"><link href="https://www.flicks.com.au/movie/ramayana/" rel="canonical"><title>Ramayana | Movie session times & tickets in Australian cinemas | Flicks</title><meta name="description" property="description" content="Find where to watch Ramayana in Australian cinemas + release dates, reviews and trailers. This ancient epic follows a young prince and princess whose ...
+    >>> booking-ish words near this page: 13
+
+### Flicks NZ ramayana
+    https://www.flicks.co.nz/movie/ramayana/
+    HTTP 200  text/html  112,691 bytes  json=False
+    RAMAYANA=True   control(drishyam)=False
+    html: data-ids=[]  next/nuxt_payload=False
+    >>> RAMAYANA CONTEXT: ...ef="/app-icons/apple-touch-icon-180x180.png" rel="apple-touch-icon" sizes="180x180"><link href="/app-icons/icon-hires.png" rel="icon" sizes="192x192"><link href="/app-icons/icon-normal.png" rel="icon" sizes="128x128"><link href="https://www.flicks.co.nz/movie/ramayana/" rel="canonical"><title>Ramayana | Movie session times & tickets in New Zealand cinemas | Flicks</title><meta name="description" property="description" content="Find where to watch Ramayana in New Zealand cinemas + release dates, reviews and trailers. This ancient epic follows a young prince and princess whos...
+    >>> booking-ish words near this page: 13
+
+### Flicks AU comingsoon
+    https://www.flicks.com.au/coming-soon/
+    HTTP 200  text/html  60,543 bytes  json=False
+    RAMAYANA=False   control(drishyam)=False
+    html: data-ids=[]  next/nuxt_payload=False
+
+### AU Classification Board
+    https://www.classification.gov.au/titles/ramayana
+    FAILED TimeoutError: The read operation timed out
+
+========================================================================
+  SUMMARY
+    responded 200        25
+    returned json        0
+    mentioned RAMAYANA   5
+    mentioned control    7
+    failed               13  (blocked 3)
+    elapsed              79s
+
+  WHERE RAMAYANA APPEARED
+    + HOYTS ramayana page
+    + HOYTS comingsoon
+    + HOYTS sitemap
+    + Flicks AU ramayana
+    + Flicks NZ ramayana
+
+  MACHINE-READABLE SURFACES (json) - what I can build a parser on
+    none. Every chain served HTML only. That means a real AU
+    sweeper has to parse markup per chain, which is slower to
+    build and more fragile. Worth knowing before we commit.
+
+  READ THE CLASSIFICATION LINE ABOVE
+    If it still shows only a 34-minute record, tickets will not be
+    on sale anywhere and every zero in this run is expected.
+    A feature-length record is the green light to re-run.
+========================================================================

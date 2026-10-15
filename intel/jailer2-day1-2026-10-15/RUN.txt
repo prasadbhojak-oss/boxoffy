@@ -1,0 +1,138 @@
+Jailer 2 · DAY ONE · show date 2026-10-15
+District gives tickets. BMS gives footprint. Neither is the market.
+GET only; nothing booked, held or posted.
+--loop 45: a pass every 45 min. Ctrl-C to stop; the
+ledger is saved after every pass, so stopping loses nothing.
+
+### PASS 17:17 · Jailer 2 · 2026-10-15  [full scale]
+  District starting: python.exe -u jailer2_district_sweep.py 2026-10-15
+  (its own progress follows, prefixed Dist| - if this stops
+   moving for more than a couple of minutes, THEN it is stuck)
+  District exited 1. Last lines:
+      !   File "C:\Python314\Lib\encodings\cp1252.py", line 19, in encode
+      !     return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+      !            ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      ! UnicodeEncodeError: 'charmap' codec can't encode characters in position 2-3: character maps to <undefined>
+  District done in 6.6 min, exit 1
+  BookMyShow starting: python.exe -u jailer2_bms_sweep.py 20261015
+  (its own progress follows, prefixed Book| - if this stops
+   moving for more than a couple of minutes, THEN it is stuck)
+  BookMyShow done in 11.6 min, exit 0
+  ledger 0 -> 14,210 shows (+5,429 District, +8,781 BMS, 0 sold figures raised)
+
+============================================================
+  JAILER 2 · DAY ONE · 2026-10-15
+============================================================
+  TICKETS SOLD               6,92,834
+  SHOWS SOLD OUT                1,302
+  SHOWS                         8,781
+============================================================
+
+  passes merged 1: 17:17
+  ⚠️ ONE PASS ONLY. On release day that is a snapshot, not a day.
+  Shows that have already played are not in the feeds, so this
+  ticket total is missing every show that finished before the
+  sweep. Run again through the day - the ledger accumulates.
+
+  --- TICKETS: DISTRICT ONLY, AND WHY ---
+  shows with seat data            5,429
+  seats on sale               15,42,221
+  tickets sold                 6,92,834
+  occupancy                       44.9%
+  gross observed         Rs       16.68 Cr
+  average ticket         Rs         241
+  BookMyShow contributes ZERO tickets here, by design. It publishes
+  four fullness words and no seat counts, so it cannot be converted
+  into seats or rupees without inventing a capacity.
+
+  --- SOLD OUT: TWO DEFINITIONS, BOTH REPORTED ---
+  District, every seat gone               506   of 5,429 shows
+  BMS, every priced class gone            796   of 8,781 shows
+  BMS, at least one class gone          2,645   of 8,781 shows
+  The third line is the loosest and the biggest. A 40-seat recliner
+  class going on a 900-seat screen trips it. The child script's own
+  report uses that definition, so its sold-out figure runs high -
+  quote the 'every priced class gone' line instead, and say which
+  definition you used.
+  Here the loose count is 3.3x the strict one.
+  That gap is big enough to change a headline. Be careful.
+
+  --- SHOWS: DO NOT ADD THESE TOGETHER ---
+  District shows        5,429   venues    671
+  BMS shows             8,781   venues     88
+  These overlap heavily on multiplexes and the two use different
+  venue id systems, so there is no safe way to union them here.
+  Published figure: 8,781 shows, as a FLOOR, being the larger
+  of the two. The GAP between them is the real finding for a Tamil
+  release - BMS reaches the single screens District never lists.
+  BMS is 1.62x District's show count on the same date.
+
+  === BY LANGUAGE · District, with seats ===
+                          ven   shows        sold    occ  s/out
+    Tamil                 485   4,425    6,53,875  50.3%    502
+    Hindi                 251   1,004      38,959  16.1%      4
+
+  === BY STATE · District, with seats ===
+                          ven   shows        sold    occ  s/out
+    tamil-nadu            180   1,741    3,83,760  65.7%    454
+    karnataka              58     858      73,324  39.4%      8
+    kerala                 49     632      66,514  45.8%     19
+    telangana              67     571      66,430  33.5%      8
+    andhra-pradesh         56     354      45,443  36.3%      1
+    uttar-pradesh          56     225      12,845  22.9%      0
+    maharashtra            38     220      11,214  18.7%      5
+    puducherry              3      28       9,223  86.7%      7
+    gujarat                71     387       7,198   9.7%      0
+    rajasthan              14      67       6,011  21.2%      0
+
+  === BY CHAIN · District, with seats ===
+                          ven   shows        sold    occ  s/out
+    PVR                    88   1,721    2,17,879  58.2%    377
+    TicketNew              77     401      73,662  47.3%     16
+    Cinepolis              21     395      29,078  36.7%      2
+    Justickets             36     181      27,319  40.2%      0
+    AGS Cinemas             5      86      26,180  91.3%      8
+    Magic Frame Theatr      8      65      14,028  59.4%      6
+    Mythri Theatres         8      40      12,278  40.4%      5
+    Devi                    2      19      11,308  88.2%      6
+    Suresh Production       8      68      10,786  40.2%      1
+    miraj                   9     125      10,428  31.8%      0
+
+  === BY LANGUAGE · BMS, footprint only ===
+                          ven   shows  sold out
+    Tamil (original, a      1   5,841       777
+    Hindi                   1   1,568         4
+    Telugu                  1   1,372        15
+
+  === BY STATE · BMS, footprint only ===
+                          ven   shows  sold out
+    Tamil Nadu              1   2,146       684
+    Kerala                  1   1,923        72
+    Karnataka               1   1,298        11
+    Telangana               1   1,089        17
+    Gujarat                 1     569         0
+    Maharashtra             1     488         7
+    Andhra Pradesh          1     477         0
+    Delhi                   1     224         0
+    Uttar Pradesh           1     142         0
+    Madhya Pradesh          1      98         0
+
+  === BY TIME OF DAY (IST) · District ===
+    before 7am     239 shows       58,613 seats       32,678 sold  55.8%     17 s/out
+    7-10am         710 shows     1,87,416 seats     1,06,655 sold  56.9%    145 s/out
+    10am-1pm      1015 shows     2,93,252 seats     1,18,465 sold  40.4%     66 s/out
+    1-4pm          890 shows     2,67,720 seats       83,214 sold  31.1%     19 s/out
+    4-7pm          853 shows     2,47,429 seats     1,00,572 sold  40.6%     50 s/out
+    7-10pm         919 shows     2,58,018 seats     1,34,151 sold  52.0%    111 s/out
+    10pm+          803 shows     2,29,773 seats     1,17,099 sold  51.0%     98 s/out
+    The before-7am block is the Tamil opening-day signature, and it
+    is the one most likely to be missing from a late pass - those
+    shows finish first and leave the feed first.
+
+  WHAT THIS IS AND IS NOT
+    It is a measured floor for District's footprint plus BMS's.
+    It is NOT the India day-one number. Counter sales at the cinema,
+    chain apps and every platform neither source lists are outside
+    it entirely, and on a Tamil release that is a large share.
+    Publish it as 'tickets sold across District and BookMyShow',
+    never as 'Jailer 2 day one'.

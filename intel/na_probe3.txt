@@ -1,0 +1,427 @@
+NA GAP PROBE ROUND 2   2026-10-02T16:44:35.946252
+Round 1: 34/78 responded, 0 JSON, 0 seat fields.
+Round 2 asks whether that was the sites or my endpoint guesses.
+
+========================================================================
+A - SHOWTIMES.COM: is there a national theatre-list route?
+    If yes, we get a true national footprint for free, which tells us
+    whether our 382 Fandango theatres is the whole market or a slice.
+========================================================================
+
+### showtimes.com film page
+    https://www.showtimes.com/movies/drishyam-the-conclusion-200472/
+    HTTP 200  text/html  41,123B  json=False  film=True  SEATS=False
+    theatre links on page: 0  e.g. []
+    self-advertised routes: ['https://www.showtimes.com/movies/drishyam-the-conclusion-200472/movie-times/', 'https://www.showtimes.com/movies/drishyam-the-conclusion-200472/videos/', 'https://www.showtimes.com/movies/drishyam-the-conclusion-200472/cast/', 'https://www.showtimes.com/movies/drishyam-the-conclusion-200472/', 'https://www.showtimes.com/26924457/showtimes/ros_leaderboard_atf', 'https://www.showtimes.com/26924457/showtimes/ros_rec_atf', 'https://www.showtimes.com/26924457/showtimes/ros_rec_btf1', 'https://www.showtimes.com/26924457/showtimes/ros_rec_btf2']
+
+### showtimes.com ?zip Dallas 75024
+    https://www.showtimes.com/movies/drishyam-the-conclusion-200472/?zip=75024
+    HTTP 200  text/html  41,133B  json=False  film=True  SEATS=False
+    distinct theatre slugs: 0
+
+### showtimes.com showtimes Dallas 75024
+    https://www.showtimes.com/showtimes/75024/
+    HTTP 404
+
+### showtimes.com theaters Dallas 75024
+    https://www.showtimes.com/movie-theaters/75024/
+    HTTP 404
+
+### showtimes.com ?zip Edison NJ 08817
+    https://www.showtimes.com/movies/drishyam-the-conclusion-200472/?zip=08817
+    HTTP 200  text/html  41,133B  json=False  film=True  SEATS=False
+    distinct theatre slugs: 0
+
+### showtimes.com showtimes Edison NJ 08817
+    https://www.showtimes.com/showtimes/08817/
+    HTTP 404
+
+### showtimes.com theaters Edison NJ 08817
+    https://www.showtimes.com/movie-theaters/08817/
+    HTTP 404
+
+### showtimes.com ?zip Chicago 60089
+    https://www.showtimes.com/movies/drishyam-the-conclusion-200472/?zip=60089
+    HTTP 200  text/html  41,133B  json=False  film=True  SEATS=False
+    distinct theatre slugs: 0
+
+### showtimes.com showtimes Chicago 60089
+    https://www.showtimes.com/showtimes/60089/
+    HTTP 404
+
+### showtimes.com theaters Chicago 60089
+    https://www.showtimes.com/movie-theaters/60089/
+    HTTP 404
+
+========================================================================
+B - FOLLOW EACH SITE'S OWN ROUTES, one level deep
+    Round 1 guessed /api/movies and got 404 nineteen times. This reads
+    the paths out of the markup instead.
+========================================================================
+
+--- Harkins ---
+    homepage 200, 29,736B
+    NEXT buildId mI3Tw2f2hCL3jxCM73N4i
+
+### Harkins _next/data index
+    https://www.harkins.com/_next/data/mI3Tw2f2hCL3jxCM73N4i/index.json
+    HTTP 404
+
+### Harkins _next/data movies
+    https://www.harkins.com/_next/data/mI3Tw2f2hCL3jxCM73N4i/movies.json
+    HTTP 404
+
+### Harkins _next/data showtimes
+    https://www.harkins.com/_next/data/mI3Tw2f2hCL3jxCM73N4i/showtimes.json
+    HTTP 404
+    film not linked from homepage (may still be booked - listing pages often load by script)
+
+### Harkins self-route
+    https://www.harkins.com/events-and-series/event-detail/on-screen-captioned-films
+    HTTP 200  text/html  145,050B  json=False  film=False  SEATS=False
+
+### Harkins self-route
+    https://www.harkins.com/movies/coming-soon
+    HTTP 200  text/html  629,964B  json=False  film=True  SEATS=False
+
+### Harkins self-route
+    https://www.harkins.com/events-and-series/summer-movie-fun
+    HTTP 200  text/html  203,962B  json=False  film=False  SEATS=False
+
+### Harkins self-route
+    https://www.harkins.com/movies/verity
+    HTTP 200  text/html  348,930B  json=False  film=False  SEATS=True
+    >> SEAT FIELD: ...mos":0,"tnc":0,"sessionId":"560443","attributes":["AD","ADAAccess","ALD","CC","DigitalSnd","LoungerSea","StadSeatng","DigitalPrj","2D"],"eventId":"","soldOut":false,"businessDate":"2026-10-02T00:00:00","playThroughId":null,"genres":["Thriller"],"format":"Digital","mpaaRating":"R","ticketingUrl":"https://harkins.com/ticketing/theatre/10/movie/HO00015652/se...
+
+### Harkins self-route
+    https://www.harkins.com/movies/digger
+    HTTP 200  text/html  234,338B  json=False  film=False  SEATS=True
+    >> SEAT FIELD: ...onId":"559149","attributes":["CINÉXL","AD","ADAAccess","ALD","Atmos","CC","DigitalSnd","LoungerSea","StadSeatng","DigitalPrj","CineXL"],"eventId":"","soldOut":false,"businessDate":"2026-10-02T00:00:00","playThroughId":null,"genres":["Comedy","Disaster"],"format":"CINÉXL","mpaaRating":"R","ticketingUrl":"https://harkins.com/ticketing/theatre/10/movie/HO000...
+
+--- B&B Theatres ---
+    homepage 200, 294,720B
+    film not linked from homepage (may still be booked - listing pages often load by script)
+
+### B&B Theatres self-route
+    https://www.bbtheatres.com/showtimes/1000015739-verity/
+    HTTP 200  text/html  170,970B  json=False  film=False  SEATS=False
+
+### B&B Theatres self-route
+    https://www.bbtheatres.com/showtimes/327174-digger/
+    HTTP 200  text/html  170,958B  json=False  film=False  SEATS=False
+
+### B&B Theatres self-route
+    https://www.bbtheatres.com/showtimes/1000036867-avengers-endgame-encore/
+    HTTP 200  text/html  171,112B  json=False  film=False  SEATS=False
+
+### B&B Theatres self-route
+    https://www.bbtheatres.com/showtimes/1000000085-heart-of-the-beast/
+    HTTP 200  text/html  171,066B  json=False  film=False  SEATS=False
+
+### B&B Theatres self-route
+    https://www.bbtheatres.com/showtimes/296642-forgotten-island/
+    HTTP 200  text/html  171,038B  json=False  film=False  SEATS=False
+
+--- Premiere Cin ---
+    homepage 200, 181,660B
+    film not linked from homepage (may still be booked - listing pages often load by script)
+
+### Premiere Cin self-route
+    https://www.pccmovies.com/movie-theater/bessemer
+    HTTP 200  text/html  332,500B  json=False  film=False  SEATS=False
+
+### Premiere Cin self-route
+    https://www.pccmovies.com/movie-theater/birmingham
+    HTTP 200  text/html  338,370B  json=False  film=False  SEATS=False
+
+### Premiere Cin self-route
+    https://www.pccmovies.com/movie-theater/gadsden
+    HTTP 200  text/html  389,441B  json=False  film=False  SEATS=False
+
+### Premiere Cin self-route
+    https://www.pccmovies.com/movie-theater/pellcity
+    HTTP 200  text/html  225,345B  json=False  film=False  SEATS=False
+
+### Premiere Cin self-route
+    https://www.pccmovies.com/movie-theater/spanishfort
+    HTTP 200  text/html  324,387B  json=False  film=False  SEATS=False
+
+--- CMX ---
+    homepage 200, 162,321B
+    film not linked from homepage (may still be booked - listing pages often load by script)
+
+### CMX self-route
+    https://www.cmxcinemas.com/movie/21050
+    HTTP 200  text/html  281,243B  json=False  film=False  SEATS=False
+
+### CMX self-route
+    https://www.cmxcinemas.com/movie/21025
+    HTTP 200  text/html  264,044B  json=False  film=False  SEATS=False
+
+### CMX self-route
+    https://www.cmxcinemas.com/movie/21038
+    HTTP 200  text/html  259,930B  json=False  film=False  SEATS=False
+
+### CMX self-route
+    https://www.cmxcinemas.com/movie/21045
+    HTTP 200  text/html  258,645B  json=False  film=False  SEATS=False
+
+### CMX self-route
+    https://cmxcinemas.com/movie/21035
+    HTTP 404
+
+--- NCG ---
+    homepage 200, 199,967B
+    film not linked from homepage (may still be booked - listing pages often load by script)
+
+### NCG self-route
+    https://www.ncgmovies.com/movie-theater/citruspark
+    HTTP 200  text/html  289,861B  json=False  film=False  SEATS=False
+
+### NCG self-route
+    https://www.ncgmovies.com/movie-theater/palmbay
+    HTTP 200  text/html  285,579B  json=False  film=False  SEATS=False
+
+### NCG self-route
+    https://www.ncgmovies.com/movie-theater/acworth
+    HTTP 200  text/html  312,479B  json=False  film=False  SEATS=False
+
+### NCG self-route
+    https://www.ncgmovies.com/movie-theater/brookhaven
+    HTTP 200  text/html  275,003B  json=False  film=False  SEATS=False
+
+### NCG self-route
+    https://www.ncgmovies.com/movie-theater/marietta
+    HTTP 200  text/html  286,026B  json=False  film=False  SEATS=False
+
+--- GQT ---
+    homepage 200, 166,132B
+    film not linked from homepage (may still be booked - listing pages often load by script)
+
+### GQT self-route
+    https://www.gqtmovies.com/movie/26571
+    HTTP 200  text/html  248,643B  json=False  film=False  SEATS=False
+
+### GQT self-route
+    https://www.gqtmovies.com/movie/27158
+    HTTP 200  text/html  232,846B  json=False  film=False  SEATS=False
+
+### GQT self-route
+    https://www.gqtmovies.com/movie/26330
+    HTTP 200  text/html  221,019B  json=False  film=False  SEATS=False
+
+### GQT self-route
+    https://www.gqtmovies.com/gqt-capital-8/
+    HTTP 200  text/html  121,553B  json=False  film=False  SEATS=False
+
+### GQT self-route
+    https://www.gqtmovies.com/gqt-pittsburgh-mills-cinemas/
+    HTTP 200  text/html  115,409B  json=False  film=False  SEATS=False
+
+--- Flix Brewhouse ---
+    homepage 200, 174,950B
+    film not linked from homepage (may still be booked - listing pages often load by script)
+
+### Flix Brewhouse self-route
+    https://www.flixbrewhouse.com/showtimes/
+    HTTP 200  text/html  183,638B  json=False  film=False  SEATS=False
+
+--- Regency ---
+    homepage 200, 165,343B
+    film not linked from homepage (may still be booked - listing pages often load by script)
+
+--- Emagine ---
+    homepage 200, 202,726B
+    film not linked from homepage (may still be booked - listing pages often load by script)
+
+### Emagine self-route
+    https://www.emagine-entertainment.com/movies/verity/
+    HTTP 200  text/html  168,243B  json=False  film=True  SEATS=False
+
+### Emagine self-route
+    https://www.emagine-entertainment.com/movies/digger/
+    HTTP 200  text/html  166,876B  json=False  film=True  SEATS=False
+
+### Emagine self-route
+    https://www.emagine-entertainment.com/movies/you-can-see-everything/
+    HTTP 200  text/html  168,180B  json=False  film=True  SEATS=False
+
+### Emagine self-route
+    https://www.emagine-entertainment.com/movies/forgotten-island/
+    HTTP 200  text/html  169,303B  json=False  film=True  SEATS=False
+
+### Emagine self-route
+    https://www.emagine-entertainment.com/movies/avengers-doomsday/
+    HTTP 200  text/html  169,219B  json=False  film=True  SEATS=False
+
+--- FunAsia DFW ---
+    homepage 200, 75,999B
+    film not linked from homepage (may still be booked - listing pages often load by script)
+
+--- Imagine CA ---
+    homepage 200, 118,103B
+    film not linked from homepage (may still be booked - listing pages often load by script)
+
+### Imagine CA self-route
+    https://imaginecinemas.com/cinema/alliston/
+    HTTP 200  text/html  116,368B  json=False  film=False  SEATS=False
+
+### Imagine CA self-route
+    https://imaginecinemas.com/cinema/carlton/
+    HTTP 200  text/html  128,531B  json=False  film=False  SEATS=False
+
+### Imagine CA self-route
+    https://imaginecinemas.com/cinema/elgin-mills/
+    HTTP 200  text/html  147,411B  json=False  film=False  SEATS=False
+
+### Imagine CA self-route
+    https://imaginecinemas.com/cinema/keswick/
+    HTTP 200  text/html  109,775B  json=False  film=False  SEATS=False
+
+### Imagine CA self-route
+    https://imaginecinemas.com/cinema/lakeshore/
+    HTTP 200  text/html  151,604B  json=False  film=False  SEATS=False
+
+--- Cinestarz CA ---
+    homepage 200, 36,018B
+    film not linked from homepage (may still be booked - listing pages often load by script)
+
+### Cinestarz CA self-route
+    https://www.cinestarz.ca/movie-theater/burlington
+    HTTP 200  text/html  109,965B  json=False  film=False  SEATS=False
+
+### Cinestarz CA self-route
+    https://www.cinestarz.ca/movie-theater/cotedesneiges
+    HTTP 200  text/html  159,290B  json=False  film=False  SEATS=False
+
+### Cinestarz CA self-route
+    https://www.cinestarz.ca/movie-theater/deluxecavendish
+    HTTP 200  text/html  225,212B  json=False  film=False  SEATS=False
+
+### Cinestarz CA self-route
+    https://www.cinestarz.ca/movie-theater/deluxesources
+    HTTP 200  text/html  156,433B  json=False  film=False  SEATS=False
+
+### Cinestarz CA self-route
+    https://www.cinestarz.ca/movie-theater/deluxewoodbine
+    HTTP 200  text/html  155,596B  json=False  film=False  SEATS=False
+
+--- Atom Tickets ---
+    homepage 200, 389,584B
+
+### Atom Tickets FILM PAGE
+    https://www.atomtickets.com/movies/drishyam-the-conclusion/408574
+    HTTP 200  text/html  256,509B  json=False  film=True  SEATS=False
+    routes on film page: ['https://www.atomtickets.com/movies/drishyam-the-conclusion/408574', 'https://www.atomtickets.com/theaters/cinemark-north-mckinney-and-xd/49183', 'https://www.atomtickets.com/theaters/cinemark-allen-16-and-xd/10039', 'https://www.atomtickets.com/theaters/cinemark-legacy-and-xd/6199', 'https://www.atomtickets.com/theaters/cut-by-cinemark-dine-in-theatre-kitchen-bar/48839', 'https://www.atomtickets.com/theaters/cinemark-frisco-square-and-xd/26349']
+
+### Atom Tickets self-route
+    https://www.atomtickets.com/movies/verity/380866
+    HTTP 200  text/html  620,303B  json=False  film=False  SEATS=False
+
+### Atom Tickets self-route
+    https://www.atomtickets.com/movies/digger/373163
+    HTTP 200  text/html  526,907B  json=False  film=False  SEATS=False
+
+### Atom Tickets self-route
+    https://www.atomtickets.com/movies/forgotten-island/390767
+    HTTP 200  text/html  456,764B  json=False  film=False  SEATS=False
+
+### Atom Tickets self-route
+    https://www.atomtickets.com/movies/heart-of-the-beast/358931
+    HTTP 200  text/html  457,039B  json=False  film=False  SEATS=False
+
+### Atom Tickets self-route
+    https://www.atomtickets.com/movies/primetime/378430
+    HTTP 200  text/html  441,086B  json=False  film=False  SEATS=False
+
+========================================================================
+C - RETRY THE DEAD HOSTNAMES (DNS failure = my domain was wrong)
+========================================================================
+
+### Phoenix Big Cinemas alt
+    https://www.phoenixtheatres.com
+    HTTP 200  text/html  165,520B  json=False  film=False  SEATS=False
+
+### Bow Tie alt
+    https://bowtiecinemas.com
+    HTTP 0  URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unabl
+
+### Bow Tie alt
+    https://www.bowtiecinema.com
+    HTTP 0  URLError: <urlopen error [Errno 11001] getaddrinfo failed>
+
+### MovieMax desi alt
+    https://www.moviemax.com
+    HTTP 0  URLError: <urlopen error [Errno 11001] getaddrinfo failed>
+
+### MovieMax desi alt
+    https://moviemaxcinema.com
+    HTTP 0  URLError: <urlopen error [Errno 11001] getaddrinfo failed>
+
+### Golden GTA alt
+    https://goldencinemas.com
+    HTTP 0  URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of 
+
+### Golden GTA alt
+    https://www.woodsidecinemas.ca
+    HTTP 0  URLError: <urlopen error [Errno 11001] getaddrinfo failed>
+
+========================================================================
+D - 403s AND EDGE STUBS, retried with a full Chrome header set
+    A 403 means the site is alive and refusing us, which is a different
+    problem from a site that has no data. Marcus and Megaplex served a
+    212-byte stub to every path, which is the same refusal wearing a
+    200. If headers do not fix these, no amount of parser will.
+========================================================================
+
+### Malco browser-headers
+    https://www.malco.com
+    HTTP 403
+
+### Studio Movie Grill browser-headers
+    https://www.studiomoviegrill.com
+    HTTP 403
+
+### Santikos browser-headers
+    https://www.santikos.com
+    HTTP 403
+
+### Silverspot browser-headers
+    https://silverspot.net
+    HTTP 403
+
+### Landmark CA browser-headers
+    https://www.landmarkcinemas.com
+    HTTP 200  text/html  75,513B  json=False  film=False  SEATS=True
+    >> SEAT FIELD: ...-exp=" {{#Experience}}{{Id}} {{/Experience}}">{{{pStartTime}}}</span> 							    {{/SessionExpired}} 							    {{^SessionExpired}} 								    {{#SoldOut}} 									    <span class="session soldOut tix" title="{{StartTime}}" data-film-exp=" {{#Experience}}{{Id}} {{/Experience}}">{{{pStartTime}}}</span> 								    {{/SoldOut}} 								    {{^SoldOu...
+    >> HEADERS FIXED IT. 75,513B of real page.
+    routes: ['https://www.landmarkcinemas.com/experiences/luxe-cinema/', 'https://www.landmarkcinemas.com/experiences/sensory-friendly-films/', 'https://www.landmarkcinemas.com/movie-trailers/heart-of-the-beast-official-trailer/', 'https://www.landmarkcinemas.com/movie-trailers/primetime-official-trailer-2/', 'https://www.landmarkcinemas.com/movie-trailers/digger-official-final-trailer/', 'https://www.landmarkcinemas.com/movie-trailers/wildwood-final-trailer/']
+
+### Marcus browser-headers
+    https://www.marcustheatres.com
+    HTTP 200  text/html  28,846B  json=False  film=False  SEATS=False
+    >> HEADERS FIXED IT. 28,846B of real page.
+    routes: []
+
+### Megaplex browser-headers
+    https://www.megaplextheatres.com
+    HTTP 200  text/html  62,295B  json=False  film=False  SEATS=False
+    >> HEADERS FIXED IT. 62,295B of real page.
+    routes: []
+
+========================================================================
+SUMMARY
+========================================================================
+
+  SEATS  (3)
+    Harkins self-route                 https://www.harkins.com/movies/verity
+    Harkins self-route                 https://www.harkins.com/movies/digger
+    Landmark CA browser-headers        https://www.landmarkcinemas.com
+
+  UNBLOCKED  (3)
+    Landmark CA                        https://www.landmarkcinemas.com
+    Marcus                             https://www.marcustheatres.com
+    Megaplex                           https://www.megaplextheatres.com
+
+  A seat field exists outside Fandango. That is the one result
+  that would justify building a second money sweeper.

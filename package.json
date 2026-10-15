@@ -1,11 +1,12 @@
 {
   "name": "boxoffy",
   "version": "1.0.0",
-  "description": "Boxoffy — India Box Office Intelligence",
+  "description": "Boxoffy \u2014 India Box Office Intelligence",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "chmod +x ./node_modules/.bin/vite 2>/dev/null; vite build",
+    "prebuild": "node prebuild.cjs",
+    "build": "vite build",
     "preview": "vite preview"
   },
   "dependencies": {

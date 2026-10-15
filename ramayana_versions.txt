@@ -1,0 +1,34 @@
+
+######################################################################
+#  BOXOFFY  -  RAMAYANA, THE TWO NORTH AMERICAN CUTS
+#  2026-10-10 01:58
+#
+#  Hindi   'Ramayana'                   3h 15m  songs + interval
+#  English 'Ramayana: Rise of a Legend' 2h 45m  neither
+#
+#  We have been sweeping one id. If the English cut has its own,
+#  every number we have published is the Hindi cut alone.
+######################################################################
+======================================================================
+  1 of 2   RESOLVE - which Fandango ids exist for Ramayana
+======================================================================
+
+  12 candidate id(s) from search:
+
+    UNKNOWN       245446  runtime ?   Ramayana (2026) Movie Tickets & Showtimes Near You  <- the id we have been sweeping
+    UNKNOWN       226349  runtime ?   Sampurn Ramayana Tickets & Showtimes
+    UNKNOWN       232150  runtime ?   Intinti Ramayanam (2022) Tickets & Showtimes
+    UNKNOWN       196703  runtime ?   Mana Oori Ramayanam Tickets & Showtimes
+    UNKNOWN       245150  129 min     Digger (2026) Movie Tickets & Showtimes Near You
+    UNKNOWN       246464  93 min      Other Mommy (2026) Tickets & Showtimes
+    UNKNOWN       245965  109 min     Primetime (2026) Tickets & Showtimes
+    UNKNOWN       246370  109 min     Forgotten Island (2026) Tickets & Showtimes
+    UNKNOWN       240033  114 min     Verity (2026) Movie Tickets & Showtimes Near You
+    UNKNOWN       246224  101 min     Heart of the Beast (2026) Showtimes
+    UNKNOWN       246392  112 min     The Social Reckoning (2026) Showtimes
+    UNKNOWN       245893  runtime ?   Resident Evil (2026) Tickets & Showtimes
+
+  Neither cut classified. Runtimes may not be on the page yet.
+  Nothing below is reliable; re-run closer to release.
+
+  csv: intel\ramayana-versions-20261010-0158

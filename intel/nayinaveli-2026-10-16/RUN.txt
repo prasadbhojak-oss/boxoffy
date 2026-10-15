@@ -1,0 +1,187 @@
+RUN 2026-10-14T18:10:20.299303
+Nayi Naveli   (nayinaveli)   IST show date 2026-10-16
+District, server rendered, one request per city PER LANGUAGE.
+Times are converted UTC -> IST and filtered on the IST date.
+GET only. Nothing booked, nothing held, nothing posted.
+
+NOTE: Hindi. Yami Gautam, dir Balaji Mohan, Aanand L. Rai / Colour Yellow + Amazon MGM, distributed by PVR Inox Pictures. Title is spelt Nayyi Navelli on its own Wikipedia page and Nayi Naveli in the trade, so the match pattern accepts both. Being a PVR Inox release, expect a multiplex footprint - the opposite shape to Jailer 2's Hindi track.
+
+session warm-up: HTTP 200, cookies=['AKA_A2', 'ak_bmsc']
+
+[1] resolving every District id for this film
+  nayyi-navelli                                 MV219759  UNLABELLED
+
+  1 track(s): UNLABELLED
+  133 cities x 1 tracks = 133 requests, about 3 minutes.
+
+[2] UNLABELLED  (nayyi-navelli)
+    chennai                 11 cin   17 sh   3,263 seats    546 sold  16.7%   0 s/out
+    coimbatore               2 cin    3 sh     525 seats      6 sold   1.1%   0 s/out
+    madurai                  1 cin    1 sh     178 seats     29 sold  16.3%   0 s/out
+    vellore                  1 cin    1 sh     176 seats     51 sold  29.0%   0 s/out
+    bengaluru               35 cin  112 sh  15,957 seats    640 sold   4.0%   0 s/out
+    mysuru                   3 cin    7 sh   1,412 seats      0 sold   0.0%   0 s/out
+    hyderabad                6 cin   18 sh   3,428 seats    164 sold   4.8%   0 s/out
+    vijayawada               1 cin    2 sh     266 seats     20 sold   7.5%   0 s/out
+    mumbai                  45 cin  322 sh  68,376 seats  1,334 sold   2.0%   0 s/out
+    new-delhi               50 cin  375 sh  73,936 seats  2,012 sold   2.7%   0 s/out
+    pune                    15 cin  139 sh  31,164 seats    304 sold   1.0%   0 s/out
+    kolkata                 20 cin   60 sh  13,356 seats    227 sold   1.7%   0 s/out
+    ahmedabad               24 cin  150 sh  26,876 seats    487 sold   1.8%   0 s/out
+    jaipur                   8 cin   61 sh  14,180 seats    363 sold   2.6%   0 s/out
+    lucknow                 10 cin  107 sh  22,382 seats    375 sold   1.7%   0 s/out
+    chandigarh              11 cin   74 sh  17,181 seats    327 sold   1.9%   0 s/out
+    indore                   5 cin   64 sh  13,416 seats    597 sold   4.4%   0 s/out
+    bhopal                   4 cin   29 sh   8,164 seats  1,513 sold  18.5%   0 s/out
+    nagpur                   3 cin   17 sh   4,764 seats     50 sold   1.0%   0 s/out
+    surat                   11 cin   67 sh  15,763 seats    656 sold   4.2%   0 s/out
+    kochi                    3 cin    5 sh     487 seats     12 sold   2.5%   0 s/out
+    thiruvananthapuram       2 cin    3 sh     292 seats     52 sold  17.8%   0 s/out
+    thrissur                 1 cin    2 sh     222 seats      0 sold   0.0%   0 s/out
+    noida                    8 cin   61 sh  13,520 seats    245 sold   1.8%   0 s/out
+    gurgaon                 18 cin  128 sh  24,161 seats    223 sold   0.9%   0 s/out
+    patna                    4 cin   25 sh   5,554 seats    129 sold   2.3%   0 s/out
+    ranchi                   2 cin   13 sh   3,509 seats    127 sold   3.6%   0 s/out
+    bhubaneswar              6 cin   29 sh   7,719 seats     96 sold   1.2%   0 s/out
+    guwahati                 7 cin   29 sh   6,113 seats    157 sold   2.6%   0 s/out
+    kanpur                   3 cin   16 sh   4,563 seats     30 sold   0.7%   0 s/out
+    ludhiana                 4 cin   32 sh   8,356 seats     61 sold   0.7%   0 s/out
+    dehradun                 4 cin   30 sh   5,587 seats     21 sold   0.4%   0 s/out
+    raipur                   6 cin   44 sh   9,490 seats     88 sold   0.9%   0 s/out
+    cuddalore                1 cin    1 sh     183 seats      9 sold   4.9%   0 s/out
+    kalaburagi               1 cin    3 sh     557 seats      0 sold   0.0%   0 s/out
+    kannur                   1 cin    1 sh     112 seats      5 sold   4.5%   0 s/out
+    nellore                  1 cin    2 sh     263 seats      0 sold   0.0%   0 s/out
+    gorakhpur                3 cin   21 sh   4,291 seats     40 sold   0.9%   0 s/out
+    bareilly                 3 cin   16 sh   3,623 seats      6 sold   0.2%   0 s/out
+    moradabad                2 cin   12 sh   2,370 seats     61 sold   2.6%   0 s/out
+    jalandhar                4 cin   25 sh   5,665 seats     54 sold   1.0%   0 s/out
+    panipat                  2 cin   10 sh   1,866 seats     60 sold   3.2%   0 s/out
+    jammu                    1 cin    5 sh   1,530 seats  1,245 sold  81.4%   0 s/out
+    ajmer                    2 cin   11 sh   2,596 seats      0 sold   0.0%   0 s/out
+    kota                     2 cin   14 sh   3,941 seats      0 sold   0.0%   0 s/out
+    jabalpur                 2 cin   13 sh   2,249 seats     38 sold   1.7%   0 s/out
+    ujjain                   1 cin    6 sh   1,615 seats    146 sold   9.0%   0 s/out
+    gwalior                  4 cin   28 sh   6,702 seats  1,214 sold  18.1%   0 s/out
+    jodhpur                  4 cin   16 sh   4,429 seats    749 sold  16.9%   0 s/out
+    udaipur                  3 cin   23 sh   4,734 seats      6 sold   0.1%   0 s/out
+    kolhapur                 2 cin   12 sh   3,332 seats      4 sold   0.1%   0 s/out
+    nashik                   2 cin   13 sh   3,299 seats      0 sold   0.0%   0 s/out
+    aurangabad               2 cin   14 sh   3,809 seats     43 sold   1.1%   0 s/out
+    amravati                 1 cin    7 sh   1,750 seats      2 sold   0.1%   0 s/out
+    jalgaon                  1 cin    6 sh   2,025 seats      0 sold   0.0%   0 s/out
+    vadodara                13 cin   64 sh  13,646 seats    132 sold   1.0%   0 s/out
+    rajkot                   3 cin   17 sh   3,212 seats     35 sold   1.1%   0 s/out
+    bhavnagar                1 cin    5 sh   1,125 seats      0 sold   0.0%   0 s/out
+    goa                      5 cin   25 sh   5,854 seats      4 sold   0.1%   0 s/out
+    muzaffarpur              3 cin   18 sh   3,435 seats     94 sold   2.7%   0 s/out
+    gaya                     1 cin    4 sh   1,020 seats    852 sold  83.5%   0 s/out
+    dhanbad                  3 cin   18 sh   4,508 seats     13 sold   0.3%   0 s/out
+    durgapur                 2 cin    4 sh     788 seats     48 sold   6.1%   0 s/out
+    siliguri                 3 cin   13 sh   3,619 seats     26 sold   0.7%   0 s/out
+    jamshedpur               2 cin   15 sh   3,352 seats      9 sold   0.3%   0 s/out
+    agra                     3 cin   13 sh   3,058 seats      6 sold   0.2%   0 s/out
+    meerut                   3 cin    9 sh   2,700 seats      8 sold   0.3%   0 s/out
+    amritsar                 3 cin   23 sh   4,894 seats     60 sold   1.2%   0 s/out
+
+  0 session(s) fell on another IST date and were excluded.
+  The OLD script filtered on the raw UTC string instead, which threw
+  away every show before 05:30 IST. That is the FDFS block.
+
+=== LANGUAGE RELABELLING (slug carried no language word) ===
+  nayyi-navelli|MV219759                      -> Hindi
+      91% of seats in Hindi states; next best Kannada 3%
+  Inferred from where the shows ARE. A single-language Hindi film
+  should come back Hindi with a large margin; if it does not,
+  something is wrong with the id resolution, not the inference.
+
+====================================================================
+  NAYI NAVELI  ·  2026-10-16 IST  ·  District only
+====================================================================
+  cinemas                  424
+  shows                  2,530
+  shows SOLD OUT             0   0.0% of shows
+  seats on sale        536,488
+  seats sold            15,911
+  occupancy               3.0%
+  advance gross   Rs      0.40 Cr
+  average ticket  Rs       251
+
+=== BY LANGUAGE ===
+  Hindi                      424 cin   15,911 sold   3.0%  Rs   0.40 Cr     0 s/out
+
+=== BY STATE ===
+  madhya-pradesh              16 cin    3,508 sold  10.9%  Rs   0.05 Cr     0 s/out
+  maharashtra                 71 cin    1,737 sold   1.5%  Rs   0.06 Cr     0 s/out
+  delhi                       35 cin    1,619 sold   3.0%  Rs   0.07 Cr     0 s/out
+  gujarat                     52 cin    1,310 sold   2.2%  Rs   0.03 Cr     0 s/out
+  jammu-and-kashmir            1 cin    1,245 sold  81.4%  Rs   0.03 Cr     0 s/out
+  rajasthan                   19 cin    1,118 sold   3.7%  Rs   0.02 Cr     0 s/out
+  uttar-pradesh               44 cin    1,100 sold   1.6%  Rs   0.03 Cr     0 s/out
+  bihar                        8 cin    1,075 sold  10.7%  Rs   0.03 Cr     0 s/out
+  karnataka                   39 cin      640 sold   3.6%  Rs   0.02 Cr     0 s/out
+  tamil-nadu                  15 cin      632 sold  15.3%  Rs   0.01 Cr     0 s/out
+  haryana                     26 cin      433 sold   1.2%  Rs   0.01 Cr     0 s/out
+  west-bengal                 24 cin      275 sold   1.6%  Rs   0.01 Cr     0 s/out
+
+=== BY CHAIN ===
+  PVR                        256 cin    4,485 sold   1.3%  Rs   0.16 Cr     0 s/out
+  Cinepolis                   69 cin    3,152 sold   3.4%  Rs   0.09 Cr     0 s/out
+  Bharat Cineplex              1 cin    1,420 sold  63.2%  Rs   0.02 Cr     0 s/out
+  Apsara Multiplex             1 cin    1,245 sold  81.4%  Rs   0.03 Cr     0 s/out
+  Delite Theatre               1 cin    1,160 sold  67.1%  Rs   0.01 Cr     0 s/out
+  Rajhans Cinemas             12 cin    1,141 sold   6.5%  Rs   0.02 Cr     0 s/out
+  APR Cinema                   1 cin      852 sold  83.5%  Rs   0.02 Cr     0 s/out
+  Justickets                   3 cin      744 sold  20.9%  Rs   0.01 Cr     0 s/out
+  miraj                       12 cin      697 sold   3.8%  Rs   0.01 Cr     0 s/out
+  Movietime                    3 cin      235 sold   8.9%  Rs   0.01 Cr     0 s/out
+  Suresh Production            1 cin      222 sold  21.0%  Rs   0.00 Cr     0 s/out
+  NY                          11 cin      127 sold   1.4%  Rs   0.00 Cr     0 s/out
+  SVF Cinemas                  5 cin      104 sold   5.9%  Rs   0.00 Cr     0 s/out
+  City Gold                    5 cin      104 sold   2.7%  Rs   0.00 Cr     0 s/out
+  Bansal Movieplex             3 cin      101 sold   6.4%  Rs   0.00 Cr     0 s/out
+  SUV Entertainment            1 cin       56 sold   4.9%  Rs   0.00 Cr     0 s/out
+  Galleria                     1 cin       40 sold   7.8%  Rs   0.00 Cr     0 s/out
+  MovieMax                    16 cin       11 sold   0.0%  Rs   0.00 Cr     0 s/out
+  New Fangled Miniplex         3 cin        8 sold   0.8%  Rs   0.00 Cr     0 s/out
+  Cinemarc                     2 cin        4 sold   0.4%  Rs   0.00 Cr     0 s/out
+
+=== BY CITY ===
+  New Delhi                   35 cin    1,619 sold   3.0%  Rs   0.07 Cr     0 s/out
+  Bhopal                       4 cin    1,513 sold  18.5%  Rs   0.02 Cr     0 s/out
+  Jammu                        1 cin    1,245 sold  81.4%  Rs   0.03 Cr     0 s/out
+  Gwalior                      4 cin    1,214 sold  18.1%  Rs   0.01 Cr     0 s/out
+  Mumbai                      33 cin    1,020 sold   2.1%  Rs   0.04 Cr     0 s/out
+  Gaya                         1 cin      852 sold  83.5%  Rs   0.02 Cr     0 s/out
+  Jodhpur                      4 cin      749 sold  16.9%  Rs   0.01 Cr     0 s/out
+  Bengaluru                   35 cin      640 sold   4.0%  Rs   0.02 Cr     0 s/out
+  Indore                       5 cin      597 sold   4.4%  Rs   0.01 Cr     0 s/out
+  Chennai                     11 cin      546 sold  16.7%  Rs   0.01 Cr     0 s/out
+  Surat                       10 cin      523 sold   3.7%  Rs   0.01 Cr     0 s/out
+  Ahmedabad                   24 cin      487 sold   1.8%  Rs   0.01 Cr     0 s/out
+  Lucknow                     10 cin      375 sold   1.7%  Rs   0.01 Cr     0 s/out
+  Jaipur                       8 cin      363 sold   2.6%  Rs   0.01 Cr     0 s/out
+  Greater Noida                4 cin      305 sold   5.3%  Rs   0.01 Cr     0 s/out
+
+=== BY FORMAT ===
+  2D                         424 cin   15,911 sold   3.0%  Rs   0.40 Cr     0 s/out
+
+=== BY TIME OF DAY (IST, converted from UTC) ===
+  7-10am         268 sh    53,278 seats    1,326 sold   2.5%     0 s/out
+  10am-1pm       445 sh    95,976 seats    3,140 sold   3.3%     0 s/out
+  1-4pm          447 sh    95,825 seats    2,840 sold   3.0%     0 s/out
+  4-7pm          445 sh    96,892 seats    3,165 sold   3.3%     0 s/out
+  7-10pm         481 sh   101,108 seats    3,514 sold   3.5%     0 s/out
+  10pm+          444 sh    93,409 seats    1,926 sold   2.1%     0 s/out
+  This table is now trustworthy. Previously the early rows were
+  missing entirely because of the date-filter bug above.
+
+=== PLAYED vs STILL SELLING ===
+  already started        0 sh         0 seats        0 sold   0.0%
+  still on sale       2530 sh   536,488 seats   15,911 sold   3.0%
+
+  WHAT THIS IS NOT
+  District is a subset of the market - on Jailer 2 it carried about
+  36% of the tickets Sacnilk reported. Use it for occupancy, the
+  chain question and real ticket prices. Do not publish its total as
+  the film's advance.

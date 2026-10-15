@@ -1,0 +1,134 @@
+{
+  "film": "Drishyam: The Conclusion",
+  "dates": [
+    "2026-10-09",
+    "2026-10-10"
+  ],
+  "cpx_fid": "62159",
+  "cpx_name": "Drishyam - The Conclusion (Hindi w/e.s.t.)",
+  "cpx_theatres": 152,
+  "cpx_catalogue": 636,
+  "cpx_shows": 220,
+  "landmark_json": [],
+  "landmark_listed": null,
+  "cc_markets": [
+    {
+      "market": "Toronto",
+      "shows": 0,
+      "week": "2",
+      "lang": "Hindi"
+    },
+    {
+      "market": "Brampton",
+      "shows": 0,
+      "week": "2",
+      "lang": "Hindi"
+    },
+    {
+      "market": "Mississauga",
+      "shows": 0,
+      "week": "2",
+      "lang": "Hindi"
+    },
+    {
+      "market": "Scarborough",
+      "shows": 0,
+      "week": "2",
+      "lang": "Hindi"
+    },
+    {
+      "market": "Surrey",
+      "shows": 0,
+      "week": "2",
+      "lang": "Hindi"
+    },
+    {
+      "market": "Vancouver",
+      "shows": 0,
+      "week": "2",
+      "lang": "Hindi"
+    },
+    {
+      "market": "Calgary",
+      "shows": 0,
+      "week": "2",
+      "lang": "Hindi"
+    },
+    {
+      "market": "Edmonton",
+      "shows": 0,
+      "week": "2",
+      "lang": "Hindi"
+    },
+    {
+      "market": "Winnipeg",
+      "shows": 0,
+      "week": "",
+      "lang": "Hindi"
+    },
+    {
+      "market": "Ottawa",
+      "shows": 0,
+      "week": "2",
+      "lang": "Hindi"
+    },
+    {
+      "market": "Montreal",
+      "shows": 0,
+      "week": "2",
+      "lang": "Hindi"
+    }
+  ],
+  "indies": [
+    {
+      "venue": "Albion Cinemas (Etobicoke)",
+      "status": "LISTED",
+      "http": 200,
+      "times": [],
+      "lang": "Hindi"
+    },
+    {
+      "venue": "Woodside Cinemas (Agincourt)",
+      "status": "not listed",
+      "http": 200,
+      "times": [],
+      "lang": ""
+    },
+    {
+      "venue": "York Cinemas (Richmond Hill)",
+      "status": "LISTED",
+      "http": 200,
+      "times": [],
+      "lang": "Hindi"
+    },
+    {
+      "venue": "Central Parkway (Mississauga)",
+      "status": "LISTED",
+      "http": 200,
+      "times": [],
+      "lang": "Hindi"
+    },
+    {
+      "venue": "Cineplex Strawberry Hill (Surrey)",
+      "status": "LISTED",
+      "http": 200,
+      "times": [],
+      "lang": "Hindi"
+    },
+    {
+      "venue": "SilverCity Brampton",
+      "status": "not listed",
+      "http": 200,
+      "times": [],
+      "lang": ""
+    }
+  ],
+  "cinestarz": [],
+  "imagine": [],
+  "tribute": {
+    "listed": false,
+    "date": "",
+    "url": "",
+    "shows": 0
+  }
+}

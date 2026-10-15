@@ -1,0 +1,870 @@
+date,theatreId,theatre,chain,metro,format,time,isSoldOut,seatsTotal,seatsAvail,hash
+2026-10-14,aagbk,Apple Cinemas Van Ness,Independent,SF Bay,Standard,4:30p,False,268,0,v2-fa6aac20b54ef7b173d1af1db41dc65dbc90b6dd2fab9fa93cbe8f732cb64cdc
+2026-10-14,aagbk,Apple Cinemas Van Ness,Independent,SF Bay,Standard,8:30p,False,268,0,v2-7afceeeefe15b497cadfe1b3701e7d630c55cfe7642ca98879c30c6aa2556376
+2026-10-14,aafcc,Regal Jack London,Regal,SF Bay,Standard,7:30p,False,196,0,v2-fd0eca6e4099f37f3dad2423493bff75664f1f9e603d70e2ffcd0133a412c8fb
+2026-10-14,aavac,Cinemark Century at Hayward,Cinemark,SF Bay,Standard,8:00p,False,103,0,v2-c8189da9d70476cab32794b24fdfd96815e73c42d1bae7b5bf479267b6a64064
+2026-10-14,aaubf,Cinemark Century Redwood Downtown 20 and XD,Cinemark,SF Bay,Standard,8:10p,False,44,0,v2-113e717820d9f9dffdd882b4100ede9a9b80b1d05c947100bf8f410954fdf413
+2026-10-14,aanay,Cinemark Century Union Landing 25 and XD,Cinemark,SF Bay,Premium Format,4:30p,False,188,0,v2-4f5eafdaee72ca0b7d933f7bae93a8df44055073bb6506d3ee4d5a2187810b8c
+2026-10-14,aanay,Cinemark Century Union Landing 25 and XD,Cinemark,SF Bay,Premium Format,8:35p,False,188,0,v2-2c9165d13b15120c9518a4114e7a6864d79c4b89180febd1699d97b6f8c93cd0
+2026-10-14,aanay,Cinemark Century Union Landing 25 and XD,Cinemark,SF Bay,Standard,5:00p,False,257,0,v2-918f035b6af9e125f24ee2c8303fc4f3c6f03e1f09156bdf3a311c5a4df3f318
+2026-10-14,aanay,Cinemark Century Union Landing 25 and XD,Cinemark,SF Bay,Standard,6:35p,False,227,0,v2-4642916128202bbcf6a7e2ff4b03412a7f113b467e88d6ded826e85182c03cdb
+2026-10-14,aanay,Cinemark Century Union Landing 25 and XD,Cinemark,SF Bay,Standard,9:05p,False,257,0,v2-25cd123590d7895446b91073bcbc3418ba26c66d5e50910baeef61c454d6e487
+2026-10-14,aanay,Cinemark Century Union Landing 25 and XD,Cinemark,SF Bay,Standard,5:30p,False,214,0,v2-9c444f0fd8e767bf53eb81b801ef56b122db0849c7a8323d3ba67c167535ac81
+2026-10-14,aanay,Cinemark Century Union Landing 25 and XD,Cinemark,SF Bay,Standard,9:35p,False,214,0,v2-107ae351959e4df0249f23bbd58f6a6c4a616a592a1064eeb1b711a874221873
+2026-10-14,aaxsl,Ciné Lounge Fremont 7,Independent,SF Bay,Premium Format,5:15p,True,,,v2-8746c27bf5dac1dc6cb0589116e72aef07655e5ebdc747299ea8945d8d9f593b
+2026-10-14,aaxsl,Ciné Lounge Fremont 7,Independent,SF Bay,Premium Format,5:25p,True,,,v2-4647b5b4c505f33c0e2e3357746d9508c2406c3d045f7e73242d5612f42583a3
+2026-10-14,aaxsl,Ciné Lounge Fremont 7,Independent,SF Bay,Premium Format,5:45p,True,,,v2-63a2a86808a4454c756d3086db35895a7185154aeeb83e8b5f70039a3ceeaee6
+2026-10-14,aaxsl,Ciné Lounge Fremont 7,Independent,SF Bay,Premium Format,9:15p,False,107,0,v2-0e1506895fe9c45e1ddae486990ba51f9253f57554b81539c2fd00941b8e63cd
+2026-10-14,aaxsl,Ciné Lounge Fremont 7,Independent,SF Bay,Premium Format,9:25p,False,80,0,v2-e43250f63a5e51a314ff578b7ff5855d8381d908b0206056f08f274731df0e67
+2026-10-14,aaxsl,Ciné Lounge Fremont 7,Independent,SF Bay,Premium Format,10:00p,False,86,0,v2-24ae316faf5c09b03051b982b2be5e98bb4ac7cd3eab4b56918ea23c5c218515
+2026-10-14,aaxsl,Ciné Lounge Fremont 7,Independent,SF Bay,Standard,4:00p,False,52,0,v2-25225333800321b767c94b4d8aef8d8c54c0130196288a8f48ab0f71ff29d61b
+2026-10-14,aaxsl,Ciné Lounge Fremont 7,Independent,SF Bay,Standard,5:30p,True,,,v2-e9665cc2e48d0f5698aa18aa358b993a5615231d195c1cbdd48442d8c3895553
+2026-10-14,aaxsl,Ciné Lounge Fremont 7,Independent,SF Bay,Standard,5:35p,True,,,v2-7960a2a137b406adde39bbd95b377d38c2f52aa67a604f94757e7940df401a38
+2026-10-14,aaxsl,Ciné Lounge Fremont 7,Independent,SF Bay,Standard,5:40p,True,,,v2-7cea0c03c40e910ed557cb99d625fc23421278f876040bab6a2d9a8cfc8d05d5
+2026-10-14,aaxsl,Ciné Lounge Fremont 7,Independent,SF Bay,Standard,7:45p,False,52,0,v2-6cf51d783cb9bf74f334852f655ae61d4cdd912bba000d3649db7f2da34c9de2
+2026-10-14,aaxsl,Ciné Lounge Fremont 7,Independent,SF Bay,Standard,10:35p,False,53,0,v2-0ad72a66f402ac72e46daa6c7b053536d3bc0ac0765c0800b4b27b36895e4269
+2026-10-14,aaxsl,Ciné Lounge Fremont 7,Independent,SF Bay,Standard,9:50p,False,50,0,v2-cce5f4cb49046d892d7d4ff8fd4005075360c9b3a0da2168e128a5920cb6797e
+2026-10-14,aaopk,"Regal Hacienda Crossings ScreenX, IMAX & RPX",Regal,SF Bay,Premium Format,5:30p,False,291,0,v2-a8ab1fe21a410b593d5dab290801796095346d9c8aa305bff7389c4fdd7d4204
+2026-10-14,aaopk,"Regal Hacienda Crossings ScreenX, IMAX & RPX",Regal,SF Bay,Premium Format,9:45p,False,291,0,v2-516fce379c1694fa593b99eaf3947444c6004b02def06c11ae17792c38cf9ac8
+2026-10-14,aaopk,"Regal Hacienda Crossings ScreenX, IMAX & RPX",Regal,SF Bay,Standard,4:30p,False,181,0,v2-6cd479c4968ed52eaf46b22aefd37abd7cba930e68c78b128af778688c99d30f
+2026-10-14,aaopk,"Regal Hacienda Crossings ScreenX, IMAX & RPX",Regal,SF Bay,Standard,8:45p,False,181,0,v2-3a128de5adc93a13da750c1245cb68c6c2672656db39e5786aba56d0e842b816
+2026-10-14,aawqb,Cinemark Century at Pacific Commons and XD,Cinemark,SF Bay,Premium Format,4:30p,False,215,0,v2-888a096f9dd66519f89c4515584d818a088a723b2bdaf47701d6208499aa189f
+2026-10-14,aawqb,Cinemark Century at Pacific Commons and XD,Cinemark,SF Bay,Premium Format,8:30p,False,215,0,v2-ac185a775785671867ca138e421f618eae6ef34deee23a2773a8613d17e2b1dd
+2026-10-14,aawqb,Cinemark Century at Pacific Commons and XD,Cinemark,SF Bay,Standard,5:20p,False,44,0,v2-d9a70ba542a6affa668db3b290b8b4099bcc5c987ba10ab01bbf5642efe9058d
+2026-10-14,aawqb,Cinemark Century at Pacific Commons and XD,Cinemark,SF Bay,Standard,5:25p,False,115,0,v2-5b28447b62e2ac5a7b2e2e62223bd77a1d6343bc726bda7d0a3bd54eade86f4f
+2026-10-14,aawqb,Cinemark Century at Pacific Commons and XD,Cinemark,SF Bay,Standard,8:55p,False,51,0,v2-fec28a8c4cc22610719007452f92592620a151766197adbed8b594a1fda2995a
+2026-10-14,aawqb,Cinemark Century at Pacific Commons and XD,Cinemark,SF Bay,Standard,9:25p,False,115,0,v2-e2e2d1bff302751b5793a2befea46b233fd27c9f08c939abf74c2c43ea2af71c
+2026-10-14,aawqb,Cinemark Century at Pacific Commons and XD,Cinemark,SF Bay,Standard,9:45p,False,69,0,v2-7bcead04a4507f3423980dd5b675883e94ed52019145df906f613174ad63bff4
+2026-10-14,aawqb,Cinemark Century at Pacific Commons and XD,Cinemark,SF Bay,Standard,10:00p,False,51,0,v2-095ae8bd07a3d3183995bc27dcc040524925addb7ac28fb134f4a7d3b2ea4280
+2026-10-14,aadyn,AMC Mercado 20,AMC,SF Bay,Standard,10:00p,False,112,0,v2-8c818a943f3a1151f9860bc48553425cfd089499595769118fde0407dea8f854
+2026-10-14,aapcg,Cinemark Century Great Mall 20 XD and ScreenX,Cinemark,SF Bay,Premium Format,4:30p,False,180,0,v2-3cc965979ae5fb98386eea11dd76974a747b25a3a3c9195320bdb918ceafa20b
+2026-10-14,aapcg,Cinemark Century Great Mall 20 XD and ScreenX,Cinemark,SF Bay,Premium Format,6:30p,False,181,0,v2-76ba6022385b8cee61d90a755ce3ff2a1273af7a04c9da8a3d609fe9e89ca256
+2026-10-14,aapcg,Cinemark Century Great Mall 20 XD and ScreenX,Cinemark,SF Bay,Premium Format,8:30p,False,180,0,v2-4ba8b1997b730b9cd6e179e3393fe4baeeb497f71e781855a6b11b7d70318a9f
+2026-10-14,aapcg,Cinemark Century Great Mall 20 XD and ScreenX,Cinemark,SF Bay,Premium Format,4:30p,False,181,0,v2-87f8053888887b35f58522fc0307ddbd715d9c7380b7dfdf84355f764b9dc506
+2026-10-14,aapcg,Cinemark Century Great Mall 20 XD and ScreenX,Cinemark,SF Bay,Premium Format,6:30p,False,181,0,v2-5f69bde59577480390472ebdbf490b4084485da21382b77833df05abd6187413
+2026-10-14,aapcg,Cinemark Century Great Mall 20 XD and ScreenX,Cinemark,SF Bay,Premium Format,8:30p,False,181,0,v2-9fd50ee54a61a9384f27577c30d727cc34c3de7bad5d5d7e56e3d2c39dc10fe3
+2026-10-14,aapcg,Cinemark Century Great Mall 20 XD and ScreenX,Cinemark,SF Bay,Standard,4:30p,False,62,0,v2-b24fb1c374cade7a4ae6d55d76000a79c2009f2143f54f4f57ac36b70a9a6746
+2026-10-14,aapcg,Cinemark Century Great Mall 20 XD and ScreenX,Cinemark,SF Bay,Standard,4:30p,False,121,0,v2-aa037ea53c44f3a7410475d8fe5f60ec06d08df8cb269479a2a32161184276da
+2026-10-14,aapcg,Cinemark Century Great Mall 20 XD and ScreenX,Cinemark,SF Bay,Standard,5:30p,False,112,0,v2-d991eeb86bcd3191f20fcce04d92bba2cdc37493beb6e7dd68505ddf5e94000e
+2026-10-14,aapcg,Cinemark Century Great Mall 20 XD and ScreenX,Cinemark,SF Bay,Standard,5:45p,False,45,0,v2-b541b1347b0b1f5bc6b767a9b25fb652f3ae6275fa9876a20b20a11632913229
+2026-10-14,aapcg,Cinemark Century Great Mall 20 XD and ScreenX,Cinemark,SF Bay,Standard,5:55p,False,45,0,v2-bc53d5f7c5b3e35f54a024b17dcae0e7fedc6ab8a321cc8f1110651cfd6627a0
+2026-10-14,aapcg,Cinemark Century Great Mall 20 XD and ScreenX,Cinemark,SF Bay,Standard,7:30p,False,45,0,v2-ffe04f080f50488f1e18777a5b26a8d303e44ab319712db70d3dbc56ea54232e
+2026-10-14,aapcg,Cinemark Century Great Mall 20 XD and ScreenX,Cinemark,SF Bay,Standard,8:35p,False,62,0,v2-33e155aee355855e09cc17db0d13f2c70cb5fb87c4da71b1c9a0789604fef573
+2026-10-14,aapcg,Cinemark Century Great Mall 20 XD and ScreenX,Cinemark,SF Bay,Standard,9:00p,False,45,0,v2-a465b9567935a39b0f2afb032515a4b5ba7b83f5ab18a0de761f5c934aadd5e2
+2026-10-14,aapcg,Cinemark Century Great Mall 20 XD and ScreenX,Cinemark,SF Bay,Standard,9:20p,False,62,0,v2-088f6a1934fe26f78a6b1e4f2b190458e12e0f3a991a729f9d4f18652a564139
+2026-10-14,aapcg,Cinemark Century Great Mall 20 XD and ScreenX,Cinemark,SF Bay,Standard,9:30p,False,112,0,v2-ddedf11d243d3071409248ebbd08f1fee0c28eedd8f6eafbf7b3757f8ce269c2
+2026-10-14,aapcg,Cinemark Century Great Mall 20 XD and ScreenX,Cinemark,SF Bay,Standard,9:35p,False,45,0,v2-5240a89c6947aa6355949d49a6bdc166a6feedfbfef8fa80c9a6b2b98dae6f52
+2026-10-14,aandk,Regal Edwards Fairfield & IMAX,Regal,SF Bay,Standard,7:30p,False,169,0,v2-f7737da303851aaaf9b5cdb5f1834c9b585201123bbc0bf3f80fae606c63c75a
+2026-10-14,aarbx,Cinemark Century Oakridge 20 XD and ScreenX,Cinemark,San Jose,Premium Format,4:30p,False,173,0,v2-6841d31d73078cefa3a5d3bbc3029173ab086d33c05995b199b4297527764923
+2026-10-14,aarbx,Cinemark Century Oakridge 20 XD and ScreenX,Cinemark,San Jose,Premium Format,8:20p,False,173,0,v2-8de138e7826006031d82d054ebacc2c92650d9896e3783a757caf97c63b07bce
+2026-10-14,aarbx,Cinemark Century Oakridge 20 XD and ScreenX,Cinemark,San Jose,Premium Format,4:30p,False,173,0,v2-ef154f307de4f151a4bda1cacae42200cf4193f7d89e7811011d973db0f2dc76
+2026-10-14,aarbx,Cinemark Century Oakridge 20 XD and ScreenX,Cinemark,San Jose,Premium Format,8:20p,False,173,0,v2-64705567f9d19160527f89d03205a598ea5073066c19a34bbf5efddd85c71968
+2026-10-14,aahcv,Cinemark Tracy 14,Cinemark,San Jose,Premium Format,4:30p,True,,,v2-c43762d8dd444d3cde7a0a89a6858eb7384fafdcbe6800191f7caa8ad4dfd333
+2026-10-14,aahcv,Cinemark Tracy 14,Cinemark,San Jose,Premium Format,5:30p,False,100,0,v2-de897848d02caa19ef755fc610f46da6852f2059b56bf20b90c04f55e19e122b
+2026-10-14,aahcv,Cinemark Tracy 14,Cinemark,San Jose,Premium Format,8:35p,False,59,0,v2-8f18215931fd5a055485ca241d37dbe13f2115ef660c4a7a3c58009ad2cb7e25
+2026-10-14,aahcv,Cinemark Tracy 14,Cinemark,San Jose,Standard,4:30p,False,50,0,v2-6710d1b2b0261081bbe6d42c7420b1e843c9057c10085fd30af410c0a62455be
+2026-10-14,aahcv,Cinemark Tracy 14,Cinemark,San Jose,Standard,8:35p,False,50,0,v2-9b6b13eac3a01b669060a08b844714c87735c1d20f0e6f87feba712dbba596d7
+2026-10-14,aahcv,Cinemark Tracy 14,Cinemark,San Jose,Standard,8:45p,False,68,0,v2-e9106b5eae9fe2a5dd20aab3fb51aed9ecfbab657336f5c5e854fbbf41e74f52
+2026-10-14,aahcv,Cinemark Tracy 14,Cinemark,San Jose,Standard,4:30p,False,59,0,v2-37eed188b4994a6d188c6ecebd955b0a15df223ec3764294fc57d0f9f20fbcc5
+2026-10-14,aahcv,Cinemark Tracy 14,Cinemark,San Jose,Standard,5:30p,False,100,0,v2-265744364224009a6749735dd4926ee99b2d60f5e47fb9c9aadd898bee66f524
+2026-10-14,aahcv,Cinemark Tracy 14,Cinemark,San Jose,Standard,8:35p,False,59,0,v2-c94a2f76593853ec026039b62148a6fd81f8ff4771b8072cac9ab645b635f115
+2026-10-14,aacbt,Cinemark Dallas XD and IMAX,Cinemark,DFW,Premium Format,6:30p,False,277,0,v2-d14aba81aee57e1e00650ee216516007a5ed85169be1d1660064e309a2146081
+2026-10-14,aacbt,Cinemark Dallas XD and IMAX,Cinemark,DFW,Premium Format,6:45p,False,299,0,v2-3cc197ae0fb59f6d2707cfce93277d6d79ff24810742bb23c80b92cb66909a25
+2026-10-14,aacbt,Cinemark Dallas XD and IMAX,Cinemark,DFW,Premium Format,10:30p,False,277,0,v2-c7b6ac5c3cc21203e9c23dc67a47cb719686f9b72ec506f827513b6ab78489b1
+2026-10-14,aacbt,Cinemark Dallas XD and IMAX,Cinemark,DFW,Premium Format,10:50p,False,299,0,v2-e5b07ed682ae0d172e979893ac73456f885a95f3bb483ffde7f68032b1559f84
+2026-10-14,aacbt,Cinemark Dallas XD and IMAX,Cinemark,DFW,Premium Format,6:30p,False,277,0,v2-ba31f6a66482ef703a662133e375205ee7ab6d0dab411a50b8bcd6ad8a1930c9
+2026-10-14,aacbt,Cinemark Dallas XD and IMAX,Cinemark,DFW,Premium Format,6:45p,False,299,0,v2-431e4e00bd078c865feeb4d4abd21f5d8717b55d06f2ceb2b47aa2444040c4f5
+2026-10-14,aacbt,Cinemark Dallas XD and IMAX,Cinemark,DFW,Premium Format,10:30p,False,277,0,v2-e783bf664957fd8dc5bd3e4fde9a00c6484fa059380cb16f3df2c36b30b3a978
+2026-10-14,aacbt,Cinemark Dallas XD and IMAX,Cinemark,DFW,Premium Format,10:50p,False,299,0,v2-b829f25e24c6ba3f5d33082b35786d46286d7a8efa671175a744ce673ba83b01
+2026-10-14,aacbt,Cinemark Dallas XD and IMAX,Cinemark,DFW,Premium Format,9:00p,False,128,0,v2-59f336ee956ba844a5c3166eb2228b4b1606359d989b3cad99f1fdf6a495077d
+2026-10-14,aacbt,Cinemark Dallas XD and IMAX,Cinemark,DFW,Standard,6:40p,False,83,0,v2-f4f1e964caecccaa5e7ed5ab776f3686cc581fccd23f5eb4b6ef3ddb1adc2a0e
+2026-10-14,aacbt,Cinemark Dallas XD and IMAX,Cinemark,DFW,Standard,6:50p,False,71,0,v2-0a061a37e05f4d8082161c7e8c62862a5e3139c64b9c864a99af28a335e79ea0
+2026-10-14,aacbt,Cinemark Dallas XD and IMAX,Cinemark,DFW,Standard,6:55p,False,49,0,v2-5251469ed53eb8f6643bf990269974c970d46133b3efd88ed8657ee3a3d63771
+2026-10-14,aacbt,Cinemark Dallas XD and IMAX,Cinemark,DFW,Standard,7:05p,False,72,0,v2-5048d68fa73fbede9fd3a945f15b02e2c0f247b4648df0ad2e00eaaa9c6adaeb
+2026-10-14,aacbt,Cinemark Dallas XD and IMAX,Cinemark,DFW,Standard,11:00p,False,71,0,v2-c873ad0bc1438a4422daebb46198ddf44ec9460cc95c7b2265bd0873d083db79
+2026-10-14,aacbt,Cinemark Dallas XD and IMAX,Cinemark,DFW,Standard,7:00p,False,65,0,v2-4a14f14e83388e6ed96840cf8a4a4c5a8a0927fa4ef0ed488f16a244f5066b02
+2026-10-14,aacbt,Cinemark Dallas XD and IMAX,Cinemark,DFW,Standard,9:00p,False,128,0,v2-a1d82e80609f54fc617f4671f990834f3076b4cc0d3302069fc2ce3b808fd1f5
+2026-10-14,aafle,AMC Mesquite 30,AMC,DFW,Standard,6:30p,False,49,0,v2-9d2ed5dfc8efb2e1345cb7c7b67363dbd1f38a3a169b68b592026c974c86be53
+2026-10-14,aacrp,AMC Irving Mall 14,AMC,DFW,Standard,6:30p,False,70,0,v2-f3a5eb2e26ff12f2723e2901400d2d515b536325d2d3c9c63708a54762553e25
+2026-10-14,aacrp,AMC Irving Mall 14,AMC,DFW,Standard,9:00p,False,111,0,v2-7189da222d11d1124c3beef93c1522fa3c67b62e90b6090a466882389291acd6
+2026-10-14,aacbv,Cinemark Grand Prairie,Cinemark,DFW,Standard,8:00p,False,88,0,v2-f9a51e9b576470c2a4a35491d340c77700343aff5a2755c36b25337071544d8e
+2026-10-14,aatvs,AMC Firewheel 18,AMC,DFW,Standard,9:45p,False,120,0,v2-2800b6779c2255adc43b754d3c79e4946a3b8c1d7a1e1196a6304cc50ac44ade
+2026-10-14,aacbz,Cinemark Central Plano,Cinemark,DFW,Standard,6:30p,False,75,0,v2-a636efb361486907f27658cf5067d40321631370d64aa654c3860d15a7a8fdd1
+2026-10-14,aacbz,Cinemark Central Plano,Cinemark,DFW,Standard,6:30p,False,48,0,v2-e453aeb6a8892350485076d7ff063e1189f4b1b8f7b4c77450802fe54d4dfc78
+2026-10-14,aacbz,Cinemark Central Plano,Cinemark,DFW,Standard,7:30p,False,75,0,v2-fadb0f83fd4638727e570b3effe31144807b85549664f71aef92a1520fdb81af
+2026-10-14,aaego,AMC Grapevine Mills 24,AMC,DFW,Standard,7:30p,False,50,0,v2-76183be5a3b4f2be9a93ea6078e54b691d15a5e9ac2b6a03bb0c3ee4a5aed54c
+2026-10-14,aaego,AMC Grapevine Mills 24,AMC,DFW,Standard,6:30p,False,55,0,v2-190e6b60638dd7356c48a22908e6fb48b27871aa3d3de404495a2b05c891b08e
+2026-10-14,aaudu,Cinemark Lewisville and XD,Cinemark,DFW,Premium Format,7:00p,False,208,0,v2-6bb58e4f80ac0143fa94544ae2515e08adff8d1b7a8bfbf35b3826791af8b5c2
+2026-10-14,aaudu,Cinemark Lewisville and XD,Cinemark,DFW,Standard,6:35p,False,79,0,v2-22e8d4f73d2c7a6a6d9a4efb5dcaf1d64fe4f7e9d8749228a86bc34be7ae9401
+2026-10-14,aaudu,Cinemark Lewisville and XD,Cinemark,DFW,Standard,10:35p,False,79,0,v2-46398e3f818971cb3bba0f4ddaad38578ae89e76ac99d05341ea9a8213d1f168
+2026-10-14,aaudu,Cinemark Lewisville and XD,Cinemark,DFW,Standard,7:20p,False,111,0,v2-8646d3e8987f206321e44bb91365675bbfa5de455fd2372cb9b4b9f7d233d3c9
+2026-10-14,aacut,Cinemark West Plano and XD,Cinemark,DFW,Premium Format,6:30p,True,303,0,v2-1bc9735c63c93a8995ee5b54d2d105df85cc3cb036e1db12e1d1b5d9b3da7a66
+2026-10-14,aacut,Cinemark West Plano and XD,Cinemark,DFW,Premium Format,6:30p,True,,,v2-bd127eabebfa7ba801d890055aebb091c88821c1b54754818568538ab751e9a6
+2026-10-14,aacut,Cinemark West Plano and XD,Cinemark,DFW,Premium Format,10:35p,False,303,0,v2-afa67354903ef0a31d16ee9aa5903e25c3205bc6cd6ecbf9ecc2eec56cd340c6
+2026-10-14,aacut,Cinemark West Plano and XD,Cinemark,DFW,Premium Format,10:35p,False,303,0,v2-23c67f75b56378d71a4c67dbe03a3d493dd3a1475b914f942353f07b5900d38f
+2026-10-14,aacut,Cinemark West Plano and XD,Cinemark,DFW,Premium Format,10:50p,False,180,0,v2-3a4f36be78b4d4ad3988b9007b0411c77e00186cdee2ecb5097c9bae4759ccf4
+2026-10-14,aacut,Cinemark West Plano and XD,Cinemark,DFW,Standard,6:30p,True,,,v2-075c7d96009a69b2fe8568056583d12ca79e934cb76fd168ffb9f3b7ec04437f
+2026-10-14,aacut,Cinemark West Plano and XD,Cinemark,DFW,Standard,6:40p,False,114,0,v2-1759eb8b07eb14a00c16390e12342d48ecd346ba26f278b78bc06d0a7d34e931
+2026-10-14,aacut,Cinemark West Plano and XD,Cinemark,DFW,Standard,9:00p,False,148,0,v2-d0cb3411190ab1b855c26642df126de282a75d3d6db2d751e1a0f8306ecdaf03
+2026-10-14,aacut,Cinemark West Plano and XD,Cinemark,DFW,Standard,9:45p,False,114,0,v2-31dd0e0517dd219da976e680589575964a1f03ce3e292bbb77f41f56247cf7cc
+2026-10-14,aacut,Cinemark West Plano and XD,Cinemark,DFW,Standard,10:50p,False,180,0,v2-b792b1b01633825589e400d6fba0f2576b0aa746b7880abdd4829c18fd1473f3
+2026-10-14,aacut,Cinemark West Plano and XD,Cinemark,DFW,Standard,8:00p,False,73,0,v2-f6fd49968d0c489fb811972459c0858016c42d303c5f115632eb542a2f8369df
+2026-10-14,aacut,Cinemark West Plano and XD,Cinemark,DFW,Standard,8:55p,False,74,0,v2-0f360f18ba8872ec86901898ccca95e070f660cde36c72092b7b43d71f8d19c1
+2026-10-14,aacut,Cinemark West Plano and XD,Cinemark,DFW,Standard,9:25p,False,89,0,v2-d09c499b2a9b3a9a07967707856ae055b4ff53b25a26d30670384e4ea6b4bdbe
+2026-10-14,aacbr,Cinemark Tinseltown Grapevine and XD,Cinemark,DFW,Premium Format,6:30p,False,290,0,v2-0c2ee591e5df0fcaf02252d03181ea136aa0ea012c8a54752e4f592d07a57478
+2026-10-14,aacbr,Cinemark Tinseltown Grapevine and XD,Cinemark,DFW,Premium Format,10:30p,False,290,0,v2-bae5dda57cee0581328e6454f21ea6e2f16e59bd8320a84f83a1696e13d7ab92
+2026-10-14,aacbr,Cinemark Tinseltown Grapevine and XD,Cinemark,DFW,Premium Format,6:30p,False,290,0,v2-2858f484a975bb37ed18c268c340a64d87b1f5658037ed307b81f3f5d1f5c144
+2026-10-14,aacbr,Cinemark Tinseltown Grapevine and XD,Cinemark,DFW,Premium Format,10:30p,False,290,0,v2-58d1299641cd0f7987e4a0a4f66834b059f312656dabc5fa09ee37121b96dfc8
+2026-10-14,aacbr,Cinemark Tinseltown Grapevine and XD,Cinemark,DFW,Premium Format,6:30p,False,116,0,v2-60ad4d68b8d5cec524f5db73c06c5ca2793b1469814a2ba2d66c007ae95b3fee
+2026-10-14,aacbr,Cinemark Tinseltown Grapevine and XD,Cinemark,DFW,Premium Format,10:30p,False,116,0,v2-9de678778e40516a5155e3d3aa9f12947de84a6bf85d05d7b6d917b01786fea3
+2026-10-14,aacbr,Cinemark Tinseltown Grapevine and XD,Cinemark,DFW,Standard,6:30p,False,121,0,v2-e8f5dd5199233e554831c2ba05b77f5586e39ffb5b06699260c26110bd1ff832
+2026-10-14,aacbr,Cinemark Tinseltown Grapevine and XD,Cinemark,DFW,Standard,8:15p,False,62,0,v2-25fc1a33f41cb9660e3d29b30f9eb473b5f45721ec19d7ab921c8e796ae557ee
+2026-10-14,aacbr,Cinemark Tinseltown Grapevine and XD,Cinemark,DFW,Standard,10:30p,False,121,0,v2-fbd16a24101ce5a78aa8ec003e9a32c8c2905157d56b924587ec6285cefb2853
+2026-10-14,aacbr,Cinemark Tinseltown Grapevine and XD,Cinemark,DFW,Standard,6:30p,False,116,0,v2-bed84fec53be31191c49f5f04be52c8f4769263b645d1b9c222c8c5b6a18f188
+2026-10-14,aacbr,Cinemark Tinseltown Grapevine and XD,Cinemark,DFW,Standard,8:15p,False,70,0,v2-7fb135c1ceac5185817a7abce00f1dfb21dd5676a974456f26bad76451a0962b
+2026-10-14,aacbr,Cinemark Tinseltown Grapevine and XD,Cinemark,DFW,Standard,10:30p,False,116,0,v2-0fbacb3e347e919c09e7a5f1c73a0e034f7a9bb3a74fab3aadc9ae847c3c0c7d
+2026-10-14,aayyj,Galaxy Grandscape,Galaxy,DFW,Premium Format,6:30p,False,276,0,v2-7a0b466eb5cd7e3a5c919cf7cd138c01482fa6f74a1ee3e7888745c14ca0770b
+2026-10-14,aayyj,Galaxy Grandscape,Galaxy,DFW,Premium Format,10:20p,False,276,0,v2-6258897bbe100320131ce0e404410ca142878ede31ee94793fb37368b238b8ae
+2026-10-14,aayyj,Galaxy Grandscape,Galaxy,DFW,Premium Format,8:00p,False,270,0,v2-b3f34fbf4db9bf223c1be1d5bc87c0c95e1f2c4b741537eee98a370a89e0cb50
+2026-10-14,aayyj,Galaxy Grandscape,Galaxy,DFW,Standard,7:00p,False,149,0,v2-fe8b288c0271d57a865255fc418616e215a0b7cc9d06671b310176087c02b3da
+2026-10-14,aayyj,Galaxy Grandscape,Galaxy,DFW,Standard,9:30p,False,161,0,v2-a71b14e144f0dc5837c6a18aa539f4fa69362655f317b58e7469aa864dccce96
+2026-10-14,aanhh,Cinemark Legacy and XD,Cinemark,DFW,Premium Format,6:30p,True,,,v2-4c86b85d40eaf56c94e06d3e60cc0c2835e91967fa786e7c1a58781f4e302528
+2026-10-14,aanhh,Cinemark Legacy and XD,Cinemark,DFW,Premium Format,10:30p,False,234,0,v2-851bee2cdff17f234883e4231f59134126f6cdc7eef67a13258ae83faba87093
+2026-10-14,aanhh,Cinemark Legacy and XD,Cinemark,DFW,Premium Format,6:30p,False,234,0,v2-5845bc1322ba6ea5c139b6b237f3c457a9e1a0beca1c6e305ed15a5135129139
+2026-10-14,aanhh,Cinemark Legacy and XD,Cinemark,DFW,Premium Format,10:30p,False,234,0,v2-45742575c7a68fcf6d6803cd9dec200d278e80fdf0e5d3475668e2c3ee87ca0b
+2026-10-14,aanhh,Cinemark Legacy and XD,Cinemark,DFW,Premium Format,7:00p,False,120,0,v2-546000370448cd185bd690a945f4c13b3e0cb9342315730eb70b4ce01ba5b270
+2026-10-14,aanhh,Cinemark Legacy and XD,Cinemark,DFW,Standard,6:30p,False,103,0,v2-51f07898e40d070896e6d74f761a1b697bb6867c37de990db7ea495dbb68091c
+2026-10-14,aanhh,Cinemark Legacy and XD,Cinemark,DFW,Standard,6:45p,False,68,0,v2-bc8f7ea798e7f89f804dfe022ea10d2dbdbb3c30631fd8d4afa4b93905298a63
+2026-10-14,aanhh,Cinemark Legacy and XD,Cinemark,DFW,Standard,7:50p,False,53,0,v2-5a6a8c6a45e98117565de56ab4a6b9e05d1dd775420aa6d6e43308c4f1db3196
+2026-10-14,aanhh,Cinemark Legacy and XD,Cinemark,DFW,Standard,8:40p,False,63,0,v2-cbf2aff1a8cdb46095d2a1e0ae6ed5d066e185501bb7a235856efe6553f8c3d6
+2026-10-14,aanhh,Cinemark Legacy and XD,Cinemark,DFW,Standard,9:00p,False,53,0,v2-05c3cb6120b402b94e3686cef5004c9bdb9518ff73b24c9fb1fcb20524b55294
+2026-10-14,aanhh,Cinemark Legacy and XD,Cinemark,DFW,Standard,9:30p,False,97,0,v2-ad632b366202c2b503ea5e106180bd08e2f13be6c834b789d4ceb7f3efa8802d
+2026-10-14,aanhh,Cinemark Legacy and XD,Cinemark,DFW,Standard,10:20p,False,103,0,v2-f76c899f22b2a60e1d4b3fa68ab5e32ae9cbfa41dab32eb526bbfb10f21aed4a
+2026-10-14,aanhh,Cinemark Legacy and XD,Cinemark,DFW,Standard,7:00p,False,120,0,v2-2f5f9c2f71362a41e176a87ce6f1817c9e7ccbdfee3dee05440f73e8d5c3f7af
+2026-10-14,aanhh,Cinemark Legacy and XD,Cinemark,DFW,Standard,7:05p,False,102,0,v2-5a5a0f36e3dbbea9a811eecc216f81f838242594a5297a07f18ff3aef6eb9e41
+2026-10-14,aanhh,Cinemark Legacy and XD,Cinemark,DFW,Standard,7:25p,False,79,0,v2-d28d70946b4c5923ab8b1a56019f5b63f9808520001b61b65118b5d78d28a13f
+2026-10-14,aanhh,Cinemark Legacy and XD,Cinemark,DFW,Standard,9:45p,False,68,0,v2-abadde71d71090eb04ba315f118f71cc17de63e9d379d0e16c8c3dd9c7c44405
+2026-10-14,aaqpe,AMC The Parks At Arlington 18,AMC,DFW,Standard,6:30p,False,82,0,v2-54ff280d46368faea777a4dabc1b885a4e2db58706c417f7dc2d16359286aabf
+2026-10-14,aatta,Cinemark Rockwall 14 and XD,Cinemark,DFW,Standard,8:00p,False,43,0,v2-45e3f12fd4b26185503b395d9912fe8f6061f0f0d127b3ff69b39a3ddb9f3af4
+2026-10-14,aaoxj,AMC Stonebriar 24,AMC,DFW,Standard,6:30p,False,52,0,v2-288f5af173f6862c1102a46eeff55d74b8f4c65f9b3b19485343f9b11c71b7dc
+2026-10-14,aaoxj,AMC Stonebriar 24,AMC,DFW,Standard,7:30p,False,52,0,v2-38838c4d1cf9b59d43e162d7e82719f0a0d47ad0e8a3910095ced1cf1fb0e9ab
+2026-10-14,aaoxj,AMC Stonebriar 24,AMC,DFW,Standard,8:25p,False,180,0,v2-d9778a7922aee74e8d643181f0951fa348160f04b9077cffca2d78ef6d2ac5d5
+2026-10-14,aaoxj,AMC Stonebriar 24,AMC,DFW,Standard,10:00p,False,127,0,v2-c4d05294d170e61f5146319f6626b2366393f01af9cc87c3f4aea1113ea5c540
+2026-10-14,aaoxj,AMC Stonebriar 24,AMC,DFW,Standard,7:00p,False,87,0,v2-54bd9892dce1f96a2773c50ea504fe2d73b0a29d2c39a66818fc62688bcdf035
+2026-10-14,aaoxj,AMC Stonebriar 24,AMC,DFW,Standard,10:30p,False,126,0,v2-967779f3b5aa2c280cdfde39359cadeef2671af596c5021eb89c6863592df250
+2026-10-14,aatcg,Cinemark North East Mall 18 and XD,Cinemark,DFW,Premium Format,6:30p,False,211,0,v2-98b58c3f3264132c1777e54ab35aac2a4c52126452193e3c57ade733e726fa90
+2026-10-14,aatcg,Cinemark North East Mall 18 and XD,Cinemark,DFW,Premium Format,10:30p,False,211,0,v2-bd0b1653a13e7e1470cb4cc737501de490c6b140e1e05d7be428eb33468a1de8
+2026-10-14,aatcg,Cinemark North East Mall 18 and XD,Cinemark,DFW,Premium Format,6:30p,False,211,0,v2-a3b84cdd35abc4576bc3973c9f9e3fae0d31454c9510003597fb342e4cf8b717
+2026-10-14,aatcg,Cinemark North East Mall 18 and XD,Cinemark,DFW,Premium Format,10:30p,False,211,0,v2-f9693d68330b075d2c772e34b7574e847bcef04264b7fd7574b82f04d5666ff7
+2026-10-14,aatcg,Cinemark North East Mall 18 and XD,Cinemark,DFW,Premium Format,7:30p,False,205,0,v2-f03972fbae7d0820e9dd9b3218ab5dafd9d5c0243c6ca129d43e015720d4338e
+2026-10-14,aatcg,Cinemark North East Mall 18 and XD,Cinemark,DFW,Standard,7:10p,False,78,0,v2-7693cff04bb2166002a820d55335c2cf511f186c60ac83aceb4cddc7b7eeb72b
+2026-10-14,aatcg,Cinemark North East Mall 18 and XD,Cinemark,DFW,Standard,7:30p,False,205,0,v2-716ab9655eb1995e4b3833e711fb46a966dda12b98a204b6d1c4803d0303682d
+2026-10-14,aawfx,Cinemark Frisco Square and XD,Cinemark,DFW,Premium Format,6:30p,True,,,v2-86279d66478727e9d189fc555e9e2d8f497f46948278dde42cbf387b1f94ac18
+2026-10-14,aawfx,Cinemark Frisco Square and XD,Cinemark,DFW,Premium Format,10:30p,False,147,0,v2-7a78d1a8cd61b37d1431efe16aa42beb4af19584e7d5b373091b9a47e43454c1
+2026-10-14,aawfx,Cinemark Frisco Square and XD,Cinemark,DFW,Premium Format,6:30p,False,147,0,v2-d639c4e262fd68aef587624793fda89c3dbc61aa362a0d988181ef93fb82869b
+2026-10-14,aawfx,Cinemark Frisco Square and XD,Cinemark,DFW,Premium Format,10:30p,False,147,0,v2-2e011fc37b46f8052d1fcf7bcc3c013c618afbe6cfe416e7d15d0c969cbc9763
+2026-10-14,aawfx,Cinemark Frisco Square and XD,Cinemark,DFW,Premium Format,6:30p,True,,,v2-195e665c297a06143b9359aa8d8df2a68287f3dec0eb68170671bf22fbd90d7f
+2026-10-14,aawfx,Cinemark Frisco Square and XD,Cinemark,DFW,Premium Format,10:30p,False,106,0,v2-29dd7da817ca0b56247ce4559951b29ebf2f59a6f1f0dbcd40a9ec8acf398864
+2026-10-14,aawfx,Cinemark Frisco Square and XD,Cinemark,DFW,Standard,6:30p,False,63,0,v2-9f20f8337370f0c34a01e7c4a0b3ae3a944846ca5cbce799a494b88fd16ed76d
+2026-10-14,aawfx,Cinemark Frisco Square and XD,Cinemark,DFW,Standard,6:55p,False,43,0,v2-17412df3d1a2c4485f8c408c0b43a9e1b5e52348391c7be66dc793feb184811c
+2026-10-14,aawfx,Cinemark Frisco Square and XD,Cinemark,DFW,Standard,7:00p,False,43,0,v2-3fea83881edab0b970599d7161bfc7d95a4db5b3cf6f124a84e0aca709b056e3
+2026-10-14,aawfx,Cinemark Frisco Square and XD,Cinemark,DFW,Standard,10:30p,False,63,0,v2-071493a085d6ecff65d73bc1b4d2ecb7f8f63dec288da6526453491f96d1366d
+2026-10-14,aawfx,Cinemark Frisco Square and XD,Cinemark,DFW,Standard,6:30p,False,106,0,v2-67f7cf55503ac9753aed6fec549c3d49d49bd4b4c2e7ca143da26a9475327d8d
+2026-10-14,aawfx,Cinemark Frisco Square and XD,Cinemark,DFW,Standard,6:40p,False,43,0,v2-9b32fae389a1cc98a060d212df0a79206b716f9e52d0cfa8ecfb4290635af2fd
+2026-10-14,aawfx,Cinemark Frisco Square and XD,Cinemark,DFW,Standard,10:30p,False,106,0,v2-52e5f1026fd9112597373ec5227b1c509cc1aea902c08038cb6379b4731473aa
+2026-10-14,aatzm,Cinemark Allen 16 and XD,Cinemark,DFW,Premium Format,6:30p,False,123,0,v2-9553fec044d8997d9b8647eee744f05ea53b08c8fccd9f1c7a8326359aa4a9d5
+2026-10-14,aatzm,Cinemark Allen 16 and XD,Cinemark,DFW,Premium Format,10:30p,False,123,0,v2-b0fdc7219e2d7d0ce4411319cea7cb2f3fe7642671fccc0563f5a704f0818d2a
+2026-10-14,aatzm,Cinemark Allen 16 and XD,Cinemark,DFW,Standard,6:30p,False,75,0,v2-8342f08dd9d63c48d7a88d28e402b297a7d4190c380b7c0af2d555af27a1df79
+2026-10-14,aatzm,Cinemark Allen 16 and XD,Cinemark,DFW,Standard,7:15p,False,80,0,v2-8c4ed88c36a6815f2666141b85ff3134b92ac50f8b7eaf81a6335f5e3194e200
+2026-10-14,aatzm,Cinemark Allen 16 and XD,Cinemark,DFW,Standard,10:30p,False,75,0,v2-a6ae6c326d3123c1735da82203d5d1edb6cea46c9df0a649d3424623e55ba051
+2026-10-14,aatzm,Cinemark Allen 16 and XD,Cinemark,DFW,Standard,6:35p,False,75,0,v2-88a4c6ccd02b2f39bcc42543e4018fe985de3b133788193640f3f9568e3c1cae
+2026-10-14,aatzm,Cinemark Allen 16 and XD,Cinemark,DFW,Standard,8:45p,False,75,0,v2-213c479c3bc52f05316711d2f633f63923b27a76d65f7794dbb5ceb3a278fe32
+2026-10-14,aatzm,Cinemark Allen 16 and XD,Cinemark,DFW,Standard,9:45p,False,75,0,v2-35375619ca14f791d9551d6bf0212cdd49444cee813a74fc93cdaa5d9ab3ae62
+2026-10-14,aaxpt,Cinemark Roanoke and XD,Cinemark,DFW,Premium Format,6:30p,False,170,0,v2-11c337fdd061af96dd5e25842cc9c25ae233ab465adfe17757bff413c574ea34
+2026-10-14,aaxpt,Cinemark Roanoke and XD,Cinemark,DFW,Premium Format,10:30p,False,170,0,v2-17f792cc4d1969e1f1603c0c738afb713b877c2247977b8c285b494a78ea0524
+2026-10-14,aaxpt,Cinemark Roanoke and XD,Cinemark,DFW,Premium Format,6:30p,False,162,0,v2-82c9bba2c11f434975b6f095f06e1b3200cbe19a11176be20ba8e044e18a307e
+2026-10-14,aaxpt,Cinemark Roanoke and XD,Cinemark,DFW,Premium Format,10:30p,False,162,0,v2-25910b9435e6fc1463781dd0ad0fdfdd85a8f464babcab6d25120aa775e03576
+2026-10-14,aaxpt,Cinemark Roanoke and XD,Cinemark,DFW,Premium Format,7:45p,False,,,v2-a97a203001aeb42876eb03446a169599e8ec2b31034d851a9019b8b60e1eacc5
+2026-10-14,aaxpt,Cinemark Roanoke and XD,Cinemark,DFW,Standard,7:15p,False,86,0,v2-e3035637b000810c9b0767f212c2dd5fadce3f32184d7c05a9ac4992c36fa1ed
+2026-10-14,aaxpt,Cinemark Roanoke and XD,Cinemark,DFW,Standard,7:45p,False,103,0,v2-39a5749389a0153e1a6961d84854a467a8d8600a22efbf52a364888882973a5f
+2026-10-14,aayob,"CUT! by Cinemark Frisco - Dine-in Theatre, Kitchen",Cinemark,DFW,Premium Format,6:30p,True,,,v2-59a45aae4ff0b80c75927aaf0e87987cc7c4113cbee034bfe612592d5bad1ae9
+2026-10-14,aayob,"CUT! by Cinemark Frisco - Dine-in Theatre, Kitchen",Cinemark,DFW,Premium Format,10:30p,False,141,0,v2-a479410994d7b2cded6d533bb934047edfc93b42f006c73eec36b0ef40d4da41
+2026-10-14,aayob,"CUT! by Cinemark Frisco - Dine-in Theatre, Kitchen",Cinemark,DFW,Premium Format,6:30p,False,141,0,v2-86ef6f71cdbebdc7cbb4750065cc3ae06e880c6b3aa4ee16a4383dbaf29a1c1e
+2026-10-14,aayob,"CUT! by Cinemark Frisco - Dine-in Theatre, Kitchen",Cinemark,DFW,Premium Format,10:30p,False,141,0,v2-64fe518efb8aa26f86fce7c7c03be4a285dd1face6e1b31072f09005dd6f0827
+2026-10-14,aayob,"CUT! by Cinemark Frisco - Dine-in Theatre, Kitchen",Cinemark,DFW,Premium Format,6:45p,False,105,0,v2-e8f2d5e70ba8c8657db47612dd790ace2b9a339bfccb6aa19aa19ef69a703375
+2026-10-14,aayob,"CUT! by Cinemark Frisco - Dine-in Theatre, Kitchen",Cinemark,DFW,Premium Format,9:45p,False,105,0,v2-d7171275e792dd4d5fa8cb44b8cd7d181232310784923b6b47cf4635e238b3ab
+2026-10-14,aayob,"CUT! by Cinemark Frisco - Dine-in Theatre, Kitchen",Cinemark,DFW,Standard,6:45p,False,105,0,v2-27f5995108ceb1657963b6e82fdb4146eae4e130fc264e81a14e6a55c22dd643
+2026-10-14,aayob,"CUT! by Cinemark Frisco - Dine-in Theatre, Kitchen",Cinemark,DFW,Standard,7:45p,False,60,0,v2-297727d9c786ec638a1405cbd486dbbec867126bbe73f2185b380b2cf479027b
+2026-10-14,aayob,"CUT! by Cinemark Frisco - Dine-in Theatre, Kitchen",Cinemark,DFW,Standard,8:45p,False,85,0,v2-a8d3aad3af867636c339dbce47447a89e5493c3e3b705e337d62027e34c2316f
+2026-10-14,aayob,"CUT! by Cinemark Frisco - Dine-in Theatre, Kitchen",Cinemark,DFW,Standard,9:45p,False,105,0,v2-553e5cca625c82995c44dd2a797428c22716f9a6748e650236c82f02d08ba860
+2026-10-14,aayob,"CUT! by Cinemark Frisco - Dine-in Theatre, Kitchen",Cinemark,DFW,Standard,10:10p,False,85,0,v2-0d2fcf5d300f9ce6e7693076af57c2687a782688db289b03c2e6c6ef97eed513
+2026-10-14,aawqh,Cinemark Alliance Town Center and XD,Cinemark,DFW,Standard,8:00p,False,43,0,v2-cbd5a14fe84c8633a7e4fea01d57f83a77a17b2c8ff7857f736dd9a321cbe8d2
+2026-10-14,aawqh,Cinemark Alliance Town Center and XD,Cinemark,DFW,Standard,9:25p,False,81,0,v2-db8f3232755ba0c30dc873c56f65fe7e7ab8fd85ac2dbef9ef7506b9b95dacd6
+2026-10-14,aayoy,Cinemark North McKinney and XD,Cinemark,DFW,Premium Format,6:30p,False,170,0,v2-2979f53397fbb9c2353649abc907ca1f68dbe727309593f2b4dc891799af4a65
+2026-10-14,aayoy,Cinemark North McKinney and XD,Cinemark,DFW,Premium Format,10:30p,False,170,0,v2-beef7ad488f96a0391e6f71cd61e5a256c3aeff4fd69544261dce0298d1e7b4b
+2026-10-14,aayoy,Cinemark North McKinney and XD,Cinemark,DFW,Premium Format,6:30p,False,170,0,v2-936bde868660a57c99c1ec6eb46c97f194191c6685290989dc61381e13a1f079
+2026-10-14,aayoy,Cinemark North McKinney and XD,Cinemark,DFW,Premium Format,10:30p,False,170,0,v2-219718a4050b25a16b21f03b9a40e4056a07c2fee87cdba6764e5c91bb9d24e4
+2026-10-14,aayoy,Cinemark North McKinney and XD,Cinemark,DFW,Premium Format,6:40p,False,136,0,v2-cf492c35bb55ee453d97b47b3e2e6fb7d203b62022357157f4702339c3992b02
+2026-10-14,aayoy,Cinemark North McKinney and XD,Cinemark,DFW,Premium Format,10:40p,False,136,0,v2-65975c45fd6013fb51412004357d064ffa298349efca38e0b95c07c8a77ec1c1
+2026-10-14,aayoy,Cinemark North McKinney and XD,Cinemark,DFW,Standard,6:30p,False,110,0,v2-10921597fbe982c68520dae437a43310ae6d2d6522166a94df77350741f249f1
+2026-10-14,aayoy,Cinemark North McKinney and XD,Cinemark,DFW,Standard,9:50p,False,110,0,v2-81594ec52aa58b66493dad1d17a2a6b69368b68288db01893468b5d69e30f157
+2026-10-14,aayoy,Cinemark North McKinney and XD,Cinemark,DFW,Standard,10:10p,False,110,0,v2-c270e7016854438ea109b2bd798b284cd6455a7c6525d95b7b740f5346cea9eb
+2026-10-14,aayoy,Cinemark North McKinney and XD,Cinemark,DFW,Standard,10:20p,False,110,0,v2-8b9339454f4bee07d28c8bfa3cb884251642814e2a3069363982951400fbd1a6
+2026-10-14,aayoy,Cinemark North McKinney and XD,Cinemark,DFW,Standard,6:40p,False,136,0,v2-d1112cd78fdaf22a769f2a7b6fc206e7b596fd88b35cac84084f2db52cd0497f
+2026-10-14,aayoy,Cinemark North McKinney and XD,Cinemark,DFW,Standard,10:05p,False,110,0,v2-2c061fa9c080546a2b1e2a94d491319487f421f901a8e3a93e2a46aa3ab0903e
+2026-10-14,aayoy,Cinemark North McKinney and XD,Cinemark,DFW,Standard,10:40p,False,136,0,v2-9107d9b41b09c3ca4c4e6dc564839c70388832ae4ff7a4c00bafb0bbec4a6a7b
+2026-10-14,aatfb,Cinemark Denton 14,Cinemark,DFW,Premium Format,6:30p,False,111,0,v2-90b9423804d98311f21bfe839adf4688139627a18781a1073c73f29fe8b29fcd
+2026-10-14,aatfb,Cinemark Denton 14,Cinemark,DFW,Standard,6:30p,False,111,0,v2-b2ade0ae8de5124a88b63071e0a061d578fb29b81723f68198f05f05d6f28394
+2026-10-14,aatfb,Cinemark Denton 14,Cinemark,DFW,Standard,8:25p,False,46,0,v2-8ddcec1b65678d241aca196fb3072ba8ce9b2bc54bf9fcd7d6f8eb5bd0a3c6b7
+2026-10-14,aatfb,Cinemark Denton 14,Cinemark,DFW,Standard,6:35p,False,46,0,v2-5c92abf1a6888080aac03c3e09a65c858719564026e6c3c936c4ecc8d91babaa
+2026-10-14,aatfb,Cinemark Denton 14,Cinemark,DFW,Standard,7:30p,False,111,0,v2-07b5976309d826a7c36da7e3b6e343722f91b56267c56bada1dba7d0d82fea91
+2026-10-14,aatfb,Cinemark Denton 14,Cinemark,DFW,Standard,8:35p,False,46,0,v2-bf318a0f3f96c86205bfce1a546de90c02565c312df97f46f0538356bd3e9f82
+2026-10-14,aalhe,Regal Metropolitan,Regal,Austin,Standard,6:30p,False,95,0,v2-63676426da7cfa4b5523f27bcb1f6dcc046d043a6fd466e4df57a9504e2b66a1
+2026-10-14,aauiy,Cinemark Southpark Meadows,Cinemark,Austin,Premium Format,6:30p,False,113,0,v2-19855bb653d93b207e52659090d06e6dac4b18ef816e9c8fd115322c6c956980
+2026-10-14,aauiy,Cinemark Southpark Meadows,Cinemark,Austin,Standard,6:30p,False,113,0,v2-28baf2e806e362c3799e06017cde3d555022e414d603043c76c34de02c29e0d8
+2026-10-14,aaebg,Regal Gateway 4DX & IMAX,Regal,Austin,Standard,7:30p,False,94,0,v2-845d356dd667f35e62cb3ca29d6331b0bab7c6625635caa7579c16f19bebab6f
+2026-10-14,aaebg,Regal Gateway 4DX & IMAX,Regal,Austin,Standard,8:00p,False,123,0,v2-400875ee1ea31638ac981988fd25d885a22e0a17a23304a5afd0acb31cad2d61
+2026-10-14,aaysf,AMC DINE-IN Tech Ridge 10,AMC,Austin,Standard,8:50p,False,138,0,v2-52eceedbb2639ff0b604e2f02dc6cafa4ea6f96aaaeac18f7f0d434fe478554c
+2026-10-14,aaunj,Cinemark Hill Country Galleria,Cinemark,Austin,Standard,6:30p,False,125,0,v2-e7e4daae8280903cef3536b4c24a6c31a14edd83d3c1443f2d355f718f427bc8
+2026-10-14,aaunj,Cinemark Hill Country Galleria,Cinemark,Austin,Standard,6:50p,False,98,0,v2-f1356569e1673d33183a3d59e6d9fc7a8a620dc95653e82d9f7e9c7ba67da92c
+2026-10-14,aaeqk,Cinemark Pflugerville 20 and XD,Cinemark,Austin,Premium Format,6:30p,False,205,0,v2-995f48dedabf436ec537702f0496fe8541afb8f58cc48fbbbe97c34878677f74
+2026-10-14,aaeqk,Cinemark Pflugerville 20 and XD,Cinemark,Austin,Premium Format,10:30p,False,205,0,v2-8c9611fb17c56fc92c53a96f2ab567c01e00bc395d67a937cfe6082ae98fe5d1
+2026-10-14,aaeqk,Cinemark Pflugerville 20 and XD,Cinemark,Austin,Premium Format,6:50p,False,128,0,v2-dc734c3b20a9e8d85a61c1a5e068598f7196f573343250e64d17007079103b39
+2026-10-14,aaeqk,Cinemark Pflugerville 20 and XD,Cinemark,Austin,Premium Format,7:05p,False,127,0,v2-dd74aed3945c510c23b1d372d0549127bd68e4fa7b834dd17a8ae68c9fe73422
+2026-10-14,aaeqk,Cinemark Pflugerville 20 and XD,Cinemark,Austin,Premium Format,11:00p,False,127,0,v2-89256a6b3b29137952f79d51fa4da5adc17e627d866ee152169750f9ed54c87e
+2026-10-14,aaeqk,Cinemark Pflugerville 20 and XD,Cinemark,Austin,Standard,6:25p,False,56,0,v2-c72bee78bfc24952efdfe710032d20335a3f07860e751304ee0120e1b0f9125b
+2026-10-14,aaeqk,Cinemark Pflugerville 20 and XD,Cinemark,Austin,Standard,6:50p,False,134,0,v2-5f99633acbe339fd7e936fb1e45a90e67d4150426a85c3ab38b58f2298f11959
+2026-10-14,aaeqk,Cinemark Pflugerville 20 and XD,Cinemark,Austin,Standard,8:40p,False,45,0,v2-f81de072433a6061f33955339b12d9d185fafbb758d48f5efc1814a9098d3327
+2026-10-14,aaeqk,Cinemark Pflugerville 20 and XD,Cinemark,Austin,Standard,9:05p,False,89,0,v2-d903d9275b68c0aa547697f1a9579865d47131e9facd24238581f223c5ee1009
+2026-10-14,aaeqk,Cinemark Pflugerville 20 and XD,Cinemark,Austin,Standard,9:50p,False,96,0,v2-8a96763c1651d88d420dd501ed605cad4da8a2540ed024708d1c8222efbfd203
+2026-10-14,aaeqk,Cinemark Pflugerville 20 and XD,Cinemark,Austin,Standard,10:10p,False,71,0,v2-aa9566bb6b33ac18f3ca721a280d18e428123be8abb613897421baad804118ea
+2026-10-14,aaeqk,Cinemark Pflugerville 20 and XD,Cinemark,Austin,Standard,10:15p,False,56,0,v2-a504ae90456481586d4a76cdeb1afea7777270e04270b1e1662fb696bbee7884
+2026-10-14,aaeqk,Cinemark Pflugerville 20 and XD,Cinemark,Austin,Standard,10:40p,False,134,0,v2-a896573312a5c66b9d9e4561369a68f583eccf47537a21106815b31a437d406f
+2026-10-14,aaeqk,Cinemark Pflugerville 20 and XD,Cinemark,Austin,Standard,10:50p,False,56,0,v2-e5e6449fc6ebafde8f0ac901258342a9cb7a2fe6540114ae558769270b06bce3
+2026-10-14,aaeqk,Cinemark Pflugerville 20 and XD,Cinemark,Austin,Standard,6:50p,False,128,0,v2-6253d111c2fc90df381a45e519ef6885f79067aff66b34ba683dc5a5c3f05122
+2026-10-14,aaeqk,Cinemark Pflugerville 20 and XD,Cinemark,Austin,Standard,7:05p,False,127,0,v2-eafe49fe81d8ec37c2938f6c96b383a03e1798ea5f196e32f0b91dc778ee9952
+2026-10-14,aaeqk,Cinemark Pflugerville 20 and XD,Cinemark,Austin,Standard,7:40p,False,56,0,v2-8e243a1dd72fd2dcb13bcae539e2cdde29801957bc7da86926741c8c7ddb6da0
+2026-10-14,aaeqk,Cinemark Pflugerville 20 and XD,Cinemark,Austin,Standard,10:05p,False,134,0,v2-a97380e969fb1cffa9d331b8ef13a896a9f36bcda865abecadc372534e6a23a3
+2026-10-14,aaeqk,Cinemark Pflugerville 20 and XD,Cinemark,Austin,Standard,11:00p,False,127,0,v2-f8567c5b7bedbb5549326e46fb12f64543740b3c6f23cb0d32bbd8e81e09e16e
+2026-10-14,aaodh,Regal Times Square,Regal,NY/NJ,Standard,8:30p,False,83,0,v2-2481b10c0f6446ac74e02b6abcf5d45b7dc06e1cc602c05ce8993d7471df974b
+2026-10-14,aaodh,Regal Times Square,Regal,NY/NJ,Standard,9:30p,False,79,0,v2-8e5254a7bd0d91e947a17a4997c078c931546e909023f9c31956cd4a55e59c88
+2026-10-14,aaore,AMC Empire 25,AMC,NY/NJ,Standard,11:00p,False,41,0,v2-a400b94bd97c1750ca80bc25b3ad7af19bb0bafc5e4d37b2e4084de5861aa4e4
+2026-10-14,aancl,AMC Kips Bay 15,AMC,NY/NJ,Standard,7:40p,False,45,0,v2-970e7b8b8e26e01cba752ab5c2b60dc66cc2f193de733cce25ed7c6e7f53c9f4
+2026-10-14,aancl,AMC Kips Bay 15,AMC,NY/NJ,Standard,9:50p,False,41,0,v2-a6fb50c2df25ee68f385bab89f7c9b92ef0f8b0eb4c469f71e6f53cbccd8d162
+2026-10-14,aajnk,Regal Union Square ScreenX & 4DX,Regal,NY/NJ,Standard,7:30p,False,148,0,v2-e78f3a9d9ece91eab579529b84d67bed5a1d447b57f31780ebe53ff74479e11a
+2026-10-14,aapos,Regal Battery Park,Regal,NY/NJ,Standard,7:30p,False,78,0,v2-cc47c112348e69b79301a57303d86a4cf294ce367ac535f59d8c35a1ec5e65ca
+2026-10-14,aapot,Regal UA Kaufman Astoria,Regal,NY/NJ,Standard,7:30p,False,116,0,v2-1479d825d0799b6bdb3bb86245ea5728a36101b463747fd263d6a30e0ec13501
+2026-10-14,aapot,Regal UA Kaufman Astoria,Regal,NY/NJ,Standard,9:00p,False,78,0,v2-02d1e51a9fcbe50cae689f69a8b23f6b6854de00d00043d9681cf289345a24a5
+2026-10-14,aavpq,Regal Secaucus ShowPlace 14,Regal,NY/NJ,Standard,7:45p,False,129,0,v2-39cce18262014afa4e13dd1c9ff94fc139a2b163adf3456465aa7936d8a90294
+2026-10-14,aavpq,Regal Secaucus ShowPlace 14,Regal,NY/NJ,Standard,8:15p,False,129,0,v2-8daed479426748a3ead484d8fce73e31c8e8907209048c5744de256d30dfdf95
+2026-10-14,aabjw,Regal UA Midway,Regal,NY/NJ,Standard,7:30p,False,79,0,v2-6bb1082ccad2dfb1367a0b724d50a0acc30cb9dea7f9fd1cbe659c9dda09040b
+2026-10-14,aapyt,AMC Jersey Gardens 20,AMC,NY/NJ,Standard,9:45p,False,288,0,v2-d5a775b9525838519e00ce8b4409bf3116b0aba7ef4e2a0431ffda7a2e33f4f9
+2026-10-14,aaemi,Regal Hadley,Regal,Edison NJ,Standard,7:30p,False,141,0,v2-32b0a795096ff695ae13c2bb31fab3c8d5bd9e62bed35ca4b0dad87a7a461346
+2026-10-14,aaemi,Regal Hadley,Regal,Edison NJ,Standard,7:45p,False,121,0,v2-20d643497771200b7044c51bab670c97179c8fbef7d22815a2960f73bcca4166
+2026-10-14,aaemi,Regal Hadley,Regal,Edison NJ,Standard,8:00p,False,125,0,v2-cc6919fa4bf5ad3b1fb3c1a54df521073d0b8fa6f2be85e3ca427fd379f4b1a6
+2026-10-14,aaemi,Regal Hadley,Regal,Edison NJ,Standard,8:20p,False,139,0,v2-4943f054796e02601e7d34410355ccd4e77c465ef1f717315094d50236494625
+2026-10-14,aaypg,Cinemark Watchung and XD,Cinemark,Edison NJ,Premium Format,7:30p,False,193,0,v2-82deed6b1b6ca1f142e262e1eb5349d4d5007960f6c8b83b1b2456450677ed6b
+2026-10-14,aaypg,Cinemark Watchung and XD,Cinemark,Edison NJ,Standard,7:30p,False,85,0,v2-d526c0bc8d39c2ea91085315bd76b535c1390e985586c1b9257d5e56e376f575
+2026-10-14,aaypg,Cinemark Watchung and XD,Cinemark,Edison NJ,Standard,7:30p,False,79,0,v2-3d182881fcabd7796a728f8a0f2fa03068ca2f020f1d239017e578756c636c21
+2026-10-14,aacph,AMC New Brunswick 18,AMC,Edison NJ,Standard,7:40p,False,303,0,v2-1c8069a313a7ba03838e63775eaba2b33786fa462f01d9475a8f72f3174fa270
+2026-10-14,aacph,AMC New Brunswick 18,AMC,Edison NJ,Standard,8:40p,False,301,0,v2-cb1eadd112623c5f6d04c8e81d51c452b8b7813515e39eed6f4e8031886a84f7
+2026-10-14,aamac,Regal Commerce Center,Regal,Edison NJ,Premium Format,7:30p,False,210,0,v2-2c68c50bfe863605a02044f4940af8f5d1ba926e8d3df1bba98609d3331a4e59
+2026-10-14,aamac,Regal Commerce Center,Regal,Edison NJ,Standard,7:50p,False,130,0,v2-88368bb7a265419285dc3c3703907e38cb4ad75aaa1f2dd6fc5464bac575981d
+2026-10-14,aamac,Regal Commerce Center,Regal,Edison NJ,Standard,8:10p,False,210,0,v2-866ec16ffe351f9c84b1e0e584a3a1d4dff533e899be41b03c9a501c8ca53c28
+2026-10-14,aamac,Regal Commerce Center,Regal,Edison NJ,Standard,8:30p,False,130,0,v2-cd76fdf7710ad0b90dcfc99c59e37d91d033058a2406a8a4ba936cc07f62867c
+2026-10-14,aamac,Regal Commerce Center,Regal,Edison NJ,Standard,8:50p,False,129,0,v2-6eaa7cbb745dc3f26ebb37437112242120531bcf623f4b68f71e6256b9c46053
+2026-10-14,aamac,Regal Commerce Center,Regal,Edison NJ,Standard,9:20p,False,129,0,v2-5da212c4766238d159211360e09db7adaa79fb5259a5f55b8277cf0c749ebf7e
+2026-10-14,aamac,Regal Commerce Center,Regal,Edison NJ,Standard,9:40p,False,129,0,v2-ddc8f2b0219eb50a44fdf8be82c447231ff73e0f0fb6562855b4b8ee03611f8a
+2026-10-14,aaqow,AMC River East 21,AMC,Chicago,Standard,6:30p,False,101,0,v2-2cd0b02326964a868e40bc801ba1ed76ea1d7945da93769e3f4eefa915ca44e5
+2026-10-14,aaqow,AMC River East 21,AMC,Chicago,Standard,9:40p,False,124,0,v2-bc6000f1cf07b6d0e6cfe48eff170766802d9d80912988ed570f52616524680d
+2026-10-14,aamia,Cinemark Melrose Park,Cinemark,Chicago,Standard,8:00p,False,82,0,v2-c48b2bf2970246faa785e33dcedc62ebcf8f9e97c47a1cbb0350e6d9d94f5d83
+2026-10-14,aaxgv,Ciné Lounge at Niles,Independent,Chicago,Premium Format,6:00p,False,160,0,v2-d0f01528d2be8e5ccbc07af18bcbb66d743991dcca657cc06ddd0564e577cf4a
+2026-10-14,aaxgv,Ciné Lounge at Niles,Independent,Chicago,Premium Format,9:40p,False,160,0,v2-adfef341a325d5e866be4aef080474403d1ae556c505049f43b4c7948d5c457a
+2026-10-14,aaxgv,Ciné Lounge at Niles,Independent,Chicago,Standard,6:05p,False,112,0,v2-a1bcb4ba68f85ace51dc3f701cba15383acaa3c54a571261e1a1e0b12c6c577c
+2026-10-14,aaxgv,Ciné Lounge at Niles,Independent,Chicago,Standard,7:00p,False,94,0,v2-d163037d3e49fd99343899888fba2d57372f43eea42a660805c0fc6739823047
+2026-10-14,aaxgv,Ciné Lounge at Niles,Independent,Chicago,Standard,8:15p,False,153,0,v2-2c5c8db413b73e38c3382a716b9c7fc7de6636f9fe6b91d5a307d03583d7f612
+2026-10-14,aaxgv,Ciné Lounge at Niles,Independent,Chicago,Standard,10:35p,False,94,0,v2-b75c0ea20ba59c5bd4a3a335b7438c3f1d7b881be139f8771566a05309226759
+2026-10-14,aaxgv,Ciné Lounge at Niles,Independent,Chicago,Standard,9:45p,False,112,0,v2-264d95d313485faaa536d0e86a4efe4af80d1b05fe5ef4b57250e76cba5b7b59
+2026-10-14,aafez,Marcus Addison Cinema,Marcus,Chicago,Standard,6:30p,False,53,0,v2-8fd2d61891b1b2a2fe5c1f3fc5db66dfd0e04757aabe4baf2113ae42805e51eb
+2026-10-14,aafez,Marcus Addison Cinema,Marcus,Chicago,Standard,7:30p,False,53,0,v2-d6a21cc5b5a7154c7fa1992714fa673dadf54c7ac34dde3702a8e1616c9adcc2
+2026-10-14,aaogc,AMC Loews Streets Of Woodfield 20,AMC,Chicago,Standard,6:30p,False,66,0,v2-b1f767153497ba778190e1df3694b82a007118348280d95d415ea36a86386752
+2026-10-14,aaogc,AMC Loews Streets Of Woodfield 20,AMC,Chicago,Standard,9:00p,False,86,0,v2-d762f1fd71c771d7ad1bab3ffdb7b3fd7c98ac870a26d7be6be64f77c52980ee
+2026-10-14,aaoon,Cinemark Seven Bridges and IMAX,Cinemark,Chicago,Standard,6:30p,False,171,0,v2-98bdb15a8596521392e0a92d6dc8b0114f5d657ff1c13b2756603a224dc406a8
+2026-10-14,aaoon,Cinemark Seven Bridges and IMAX,Cinemark,Chicago,Standard,9:00p,False,174,0,v2-acca28af7474b2b4235d180176746d41f87482fbaad2342bbe5c73e62360ca44
+2026-10-14,aaoon,Cinemark Seven Bridges and IMAX,Cinemark,Chicago,Standard,6:30p,False,172,0,v2-71d5afb154a4fe5dd0efd93dffb269de73eb50562873675fa089e17134f770ee
+2026-10-14,aaoon,Cinemark Seven Bridges and IMAX,Cinemark,Chicago,Standard,6:45p,False,117,0,v2-e7f9fe16f39feea03f6cb0d9b4caa15738623141774c9d98f1e5fe37dddfb5d4
+2026-10-14,aaoon,Cinemark Seven Bridges and IMAX,Cinemark,Chicago,Standard,7:30p,False,158,0,v2-6b4e338a029dd44f525083218ca22caea81ee5233a3d0e10cb062ce9a5f924f4
+2026-10-14,aaoon,Cinemark Seven Bridges and IMAX,Cinemark,Chicago,Standard,9:25p,False,152,0,v2-2f3cb1234f5c1dfdb47b5462eba95c4a413f83edd73d8f4444a0107d8163144d
+2026-10-14,aahvc,Regal Bolingbrook,Regal,Chicago,Standard,7:30p,False,131,0,v2-0fc6449448b7b4366f9ba2d5bca88ee8f20ef7bc8bc84507afda247e0be4846f
+2026-10-14,aahvc,Regal Bolingbrook,Regal,Chicago,Standard,8:00p,False,102,0,v2-0b2e6fedcc546516d83b9bf2b4cca7f254a898401084e2512d73aa8bcb54903d
+2026-10-14,aacyl,Phoenix Theatres Cantera Warrenville 17 + PTX,Independent,Chicago,Premium Format,6:05p,False,260,0,v2-b8840047de3f552e3d6a4d8c9fa4b153544ac6d42821cc9984877e67e946b003
+2026-10-14,aacyl,Phoenix Theatres Cantera Warrenville 17 + PTX,Independent,Chicago,Premium Format,9:30p,False,260,0,v2-6e28487e8f101950dffb9b05cd06603da8d05ce6bc5d6dce37d8dff9efaadbfd
+2026-10-14,aacyl,Phoenix Theatres Cantera Warrenville 17 + PTX,Independent,Chicago,Standard,7:30p,False,181,0,v2-2cbc7f690a4369be97eb7efa3e43179d983f1f36f32188fe1b54e5f4d6a49a28
+2026-10-14,aacyl,Phoenix Theatres Cantera Warrenville 17 + PTX,Independent,Chicago,Standard,8:00p,False,179,0,v2-6eb3f0fe208f4c8b4386345479801c5ae67d9693d1d4183f16d9928da1c283ba
+2026-10-14,aarmr,Cinemark Century Deer Park 16,Cinemark,Chicago,Standard,6:30p,False,105,0,v2-a8a7dd3cce1cd78379706af0dbbc603fca88e9bd53e94b9698983cc7961f112f
+2026-10-14,aarmr,Cinemark Century Deer Park 16,Cinemark,Chicago,Standard,6:30p,False,127,0,v2-3396b50f1ac456e3b62243cbd14dd6727a1503af5b320002f28e15461bc8e604
+2026-10-14,aadqg,AMC South Barrington 24,AMC,Chicago,Standard,8:00p,False,53,0,v2-b01d453bb3526f09017ec62946904f8618e7a04478ac71ca7965a7fd5af096b3
+2026-10-14,aatwv,AMC Naperville 16,AMC,Chicago,Standard,8:30p,False,189,0,v2-83e12ef7df74b90e7d8ea5cf87a966e4fd895c9f42dfbf33a5a1294732300943
+2026-10-14,aaite,Cinemark Tinseltown USA Aurora,Cinemark,Chicago,Standard,6:30p,False,136,0,v2-2688f7ef527b4d6e2af362d7f6371306902da5f03a0eefaf8c73a57d96a0ae56
+2026-10-14,aaite,Cinemark Tinseltown USA Aurora,Cinemark,Chicago,Standard,7:05p,False,104,0,v2-2ac8cb2489c40975ae2d54cd4f102d78500051b6b3cfd14e6d61dd8f1c8b6581
+2026-10-14,aaffg,Marcus Gurnee Mills Cinema,Marcus,Chicago,Standard,6:30p,False,49,0,v2-a6364c3a34abe8bf49e52e2c75a45f2a90df8b4104b786e0841fb7d8155de1e4
+2026-10-14,aaffg,Marcus Gurnee Mills Cinema,Marcus,Chicago,Standard,6:50p,False,42,0,v2-cbceab8f76dfcb7bd1e52d8cff43eeced9ded622ece1d6a3650a0231cf346a9a
+2026-10-14,aakhi,Regal Crystal Lake Showplace,Regal,Chicago,Standard,7:30p,False,44,0,v2-800826c486d0688f5ebe35f3413663d27b1c58df92e50714ecb98b107f46cb6f
+2026-10-14,aaiqh,Cinemark Tinseltown USA Kenosha,Cinemark,Chicago,Standard,8:00p,False,61,0,v2-dbf90ce859f6d5b9b812a9456762cfc4462fdd5156e1d0895b96c7ef20f970a6
+2026-10-14,aabfy,Regal Meridian,Regal,Seattle,Standard,6:55p,False,81,0,v2-85c5f0ba676c432559f58e6d7e9094e68b087ce9c2eefde64436b34e2c76e569
+2026-10-14,aabfy,Regal Meridian,Regal,Seattle,Standard,8:35p,False,74,0,v2-732de295a935667862e138986fb94d0900fb65a3338b114943dcd04ff6bf04d2
+2026-10-14,aatvl,Cinemark Lincoln Square,Cinemark,Seattle,Standard,4:25p,False,121,0,v2-48801e61d404456c020aea97a4f4a92cf2d03d8926712a44e47593a2be807e09
+2026-10-14,aatvl,Cinemark Lincoln Square,Cinemark,Seattle,Standard,4:30p,False,367,0,v2-fa7ad41ddfe6094e7d73225412eaf868f40eb84e95537c9fb7584a88fd32c861
+2026-10-14,aatvl,Cinemark Lincoln Square,Cinemark,Seattle,Standard,5:30p,False,128,0,v2-ffcb3ea340e36f855586a2db3a8f133f234878c34844b57cc4e78085db423d94
+2026-10-14,aatvl,Cinemark Lincoln Square,Cinemark,Seattle,Standard,6:30p,False,444,0,v2-7a8ff7ecd623215a9b1e53404edd28647e6867162a6ad85e87151ac24bf8bf88
+2026-10-14,aatvl,Cinemark Lincoln Square,Cinemark,Seattle,Standard,7:30p,False,121,0,v2-32f700da2ee0261eb9c63ec624817e846368e5f7f98c5d091e19a8a92c194330
+2026-10-14,aatvl,Cinemark Lincoln Square,Cinemark,Seattle,Standard,8:30p,False,121,0,v2-67f4c974c2a722b1dcff8735c165ecdbbe08be36777fe29f4b495d5f359af979
+2026-10-14,aatvl,Cinemark Lincoln Square,Cinemark,Seattle,Standard,8:35p,False,367,0,v2-1882aecf274737bee89177cdd9e12cc585c893a6576287cec61e74786e00afcf
+2026-10-14,aatvl,Cinemark Lincoln Square,Cinemark,Seattle,Standard,8:50p,False,162,0,v2-c8da6309743403ff652ddfe9d0256314123f14aca03158a95d34f34afdd130fb
+2026-10-14,aatvl,Cinemark Lincoln Square,Cinemark,Seattle,Standard,9:10p,False,368,0,v2-df2e625deb2505d5085bb4ca7c5bbd96f544f8502cdcc32f6122c44545b4bf07
+2026-10-14,aatvl,Cinemark Lincoln Square,Cinemark,Seattle,Standard,10:10p,False,191,0,v2-d838a4b44565f2b635903a5d2ebdbbbb40d4235908dbb7223a74257a2314c873
+2026-10-14,aatvl,Cinemark Lincoln Square,Cinemark,Seattle,Standard,10:35p,False,444,0,v2-60db9009b238eb953bc1b701cde871e4037e19077b3136fb30e225b88af72afb
+2026-10-14,aatvl,Cinemark Lincoln Square,Cinemark,Seattle,Standard,5:05p,False,141,0,v2-827ec936ceef75b97dbbc4ff7266868dde9b2595335caf00212ffcb793a31454
+2026-10-14,aatvl,Cinemark Lincoln Square,Cinemark,Seattle,Standard,7:30p,False,191,0,v2-9f81b7e67d3a955a7d4c5057b8c5680e4098a8d5646d4f38ab5bfe5b0ca22519
+2026-10-14,aatvl,Cinemark Lincoln Square,Cinemark,Seattle,Standard,9:10p,False,141,0,v2-35e1fd423534a6529f13698192b6c939d44124c7b021a9894bd5fc1364ff6b66
+2026-10-14,aatvl,Cinemark Lincoln Square,Cinemark,Seattle,Standard,9:55p,False,368,0,v2-40b29f3af5621c3e947bddb78c10b4a5953e5cf2418f2f4d05a5af48618dfeca
+2026-10-14,aaatx,Regal Crossroads - Bellevue,Regal,Seattle,Standard,7:30p,False,209,0,v2-7e1bb3bfe6e3973d2322d68c334aa1b06f0a4d38c175012d93e7cc5dc7cd4a7f
+2026-10-14,aauyz,Regal The Landing,Regal,Seattle,Standard,7:30p,False,134,0,v2-7021aeb7760a5ff82cd9b6f9b69c4a37858f20a2a2abdb8e4c2d7c4c3ae88c51
+2026-10-14,aayus,Cinemark Totem Lake Kirkland and XD,Cinemark,Seattle,Premium Format,4:30p,True,,,v2-e403b3a6926578bff1746264f8ec3fa216bd7f94c8cddc95f29464ec056ae565
+2026-10-14,aayus,Cinemark Totem Lake Kirkland and XD,Cinemark,Seattle,Premium Format,8:30p,False,170,0,v2-de00ecc5201ab8e7e859fd1be18173fe5604defb1ab62a766c83c755102941bb
+2026-10-14,aayus,Cinemark Totem Lake Kirkland and XD,Cinemark,Seattle,Premium Format,4:30p,False,172,0,v2-ab2ed3febc4430708db3be0bf7be170a8cabb2312c6c7f23cda8427fd5a172b0
+2026-10-14,aayus,Cinemark Totem Lake Kirkland and XD,Cinemark,Seattle,Premium Format,8:30p,False,172,0,v2-3ceb5259ddf5769d13a78bb47acae9d441fe00f3fc4c9c0e03f903f45360476c
+2026-10-14,aayus,Cinemark Totem Lake Kirkland and XD,Cinemark,Seattle,Standard,5:30p,False,98,0,v2-9bdfc97eb1a9080a9103c1e26a3e3e2703626359b81af51ccd8470cf7968e4b1
+2026-10-14,aayus,Cinemark Totem Lake Kirkland and XD,Cinemark,Seattle,Standard,9:30p,False,98,0,v2-286ae84d56a20e4029a340aa91534899eb0283daf50db44a9db5e32346c72331
+2026-10-14,aabsr,Regal Bella Bottega,Regal,Seattle,Standard,7:30p,False,283,0,v2-02f3e48ed2d0b12949d6439b0b95308704b4e8c9e28b37fc2d65537e5a6f1c59
+2026-10-14,aabsr,Regal Bella Bottega,Regal,Seattle,Standard,8:00p,False,283,0,v2-e9f52a48ecb3a8e9d02cdc5847a113269638e3fbfaa98b4b1729323a19a9944d
+2026-10-14,aafwi,AMC Loews Woodinville 12,AMC,Seattle,Standard,4:30p,False,122,0,v2-3a2022ef90d3e8cb71e55f56e788b1c7066189a3b6d7886bd129867536e07cb7
+2026-10-14,aafwi,AMC Loews Woodinville 12,AMC,Seattle,Standard,8:40p,False,122,0,v2-d671769e610e101a2f94ed3ac86d702b27ddee3b7eeb059ea6f48e10d9823ddf
+2026-10-14,aawyy,Regal Issaquah Highlands,Regal,Bellevue WA,Premium Format,7:30p,False,341,0,v2-fcd3f2efeae35c2b82bb9df11d884175c39dc45ebdec4ce200c7b5b42f643bb1
+2026-10-14,aawyy,Regal Issaquah Highlands,Regal,Bellevue WA,Standard,8:00p,False,132,0,v2-7b3078b746ffbe0cba2db9da6e0744be75f919a23646e0a0ff9337698869e0b3
+2026-10-14,aatft,AMC Loews Alderwood Mall 16,AMC,Bellevue WA,Standard,4:30p,False,124,0,v2-33f9a6fecb32103a6a80b450bd29c05a6207a9f7e2572bdf8778101ad0f8770b
+2026-10-14,aatft,AMC Loews Alderwood Mall 16,AMC,Bellevue WA,Standard,9:30p,False,224,0,v2-c38eba4a456eb26b591dccb85150ba5182e2192a4f8827c44c0725f7dda8a741
+2026-10-14,aaonh,Regal Crossroads - Cary,Regal,Raleigh/Cary,Standard,7:30p,False,90,0,v2-2c602940f37ff14c7b68cb691d51ed4cea1b50d88e910b426134af7ecf153457
+2026-10-14,aaonh,Regal Crossroads - Cary,Regal,Raleigh/Cary,Standard,8:20p,False,73,0,v2-71d745d1b17842163c8701fc6f455f53b3f9ed2b3dd70ab69006cd917bd384b2
+2026-10-14,aaonh,Regal Crossroads - Cary,Regal,Raleigh/Cary,Standard,8:00p,False,90,0,v2-421203a4120d1dfd8c160698289ba8553f682937b8bad9651988d79eb9c49dc0
+2026-10-14,aaguq,AMC Park Place 16,AMC,Raleigh/Cary,Standard,7:45p,False,48,0,v2-ad81a4b3e9b2ad1fb258f0395943c8a186cf712050968e96d972823ac6af2411
+2026-10-14,aavbo,Cinemark Bistro Raleigh,Cinemark,Raleigh/Cary,Standard,7:30p,False,88,0,v2-a96cd222fb0d672965377d5fe2ef8b5911e0df0ae2dd8bc0adcbb68bb4c58365
+2026-10-14,aavbo,Cinemark Bistro Raleigh,Cinemark,Raleigh/Cary,Standard,8:35p,False,58,0,v2-7deaac000d552d55cd703ea75989506807c4a24d3abaa3db27ab1ff8030c3b21
+2026-10-14,aavbo,Cinemark Bistro Raleigh,Cinemark,Raleigh/Cary,Standard,7:45p,False,52,0,v2-14cbb01fc77393722744f7c89ca05cb3a60f73c6b999de0f700e9adabbd81eaf
+2026-10-14,aavbo,Cinemark Bistro Raleigh,Cinemark,Raleigh/Cary,Standard,9:10p,False,66,0,v2-72920bf779ff6f33ef283c7f61c208fe7e8995863c57959c5f58088121e4910b
+2026-10-14,aaxmx,Hooky Entertainment Cary,Independent,Raleigh/Cary,Standard,7:45p,False,58,0,v2-b4b1413eb88f37c123a96702e582fa90f4edb8a1330643c35cc902ea9be075bf
+2026-10-14,aaxmx,Hooky Entertainment Cary,Independent,Raleigh/Cary,Standard,8:00p,False,115,0,v2-45e6a401c9468b34257c9eeffdb4f1e479c2af20e7400f396041c9503d993905
+2026-10-14,aaxmx,Hooky Entertainment Cary,Independent,Raleigh/Cary,Standard,8:15p,False,67,0,v2-35f11bcac2ae5e96ce331bd3945bcd37a7b5d2a77568915d674df97221efee35
+2026-10-14,aaxmx,Hooky Entertainment Cary,Independent,Raleigh/Cary,Standard,8:45p,False,53,0,v2-b8da8e1d90adaec405bdd8c2be49e2c6708ca337bdd3ddd9fee5c36ec968b834
+2026-10-14,aaxmx,Hooky Entertainment Cary,Independent,Raleigh/Cary,Standard,9:20p,False,69,0,v2-29bc54f1dde5f04ec84ff8d1c13996cef251a37dd10abcb188c72538fc91e62a
+2026-10-14,aaxmx,Hooky Entertainment Cary,Independent,Raleigh/Cary,Standard,8:30p,False,112,0,v2-ce829d02c5554894222c88b37ba5f1571b3d11f67ed0628181043d3eae173900
+2026-10-14,aatcu,Regal North Hills,Regal,Raleigh/Cary,Standard,7:30p,False,84,0,v2-69c8d7e0106ee31b4ce2f4c4e2b673abb15afc426cc38cd826a31282ae408e84
+2026-10-14,aatcu,Regal North Hills,Regal,Raleigh/Cary,Standard,8:00p,False,43,0,v2-e7179793ac6c54d2fbb8fc12d495d46dd188c1fea6cda075649aede2904bee10
+2026-10-14,aaubr,Regal White Oak,Regal,Raleigh/Cary,Standard,7:30p,False,103,0,v2-e04e0b988fd96a3b3b16eecc852d9b036f94e68436a083d4c6c756d76008c744
+2026-10-14,aaubr,Regal White Oak,Regal,Raleigh/Cary,Standard,8:00p,False,103,0,v2-feefd509bc6228b070aa9cada1552765a5539105dba85787e9204d1994a3d297
+2026-10-14,aaqwe,Regal Brier Creek,Regal,Raleigh/Cary,Standard,7:30p,False,50,0,v2-4f50316506214311df03d101956020ea372c364c7b8d04825dd4da2409486fbd
+2026-10-14,aaqwe,Regal Brier Creek,Regal,Raleigh/Cary,Standard,8:00p,False,50,0,v2-6c2cf306e52fd221066edac1fa8a5250b5110d3379bfe4398a1aac9473e35b8f
+2026-10-14,aafuv,Cinemark Buckland Hills 18 XD and IMAX,Cinemark,Hartford CT,Premium Format,7:30p,False,241,0,v2-e94c0608edecc6de2f0954062ec0f4b0d860bd325148ac7560b693fd33972d5c
+2026-10-14,aafuv,Cinemark Buckland Hills 18 XD and IMAX,Cinemark,Hartford CT,Premium Format,8:00p,False,140,0,v2-3a8a35de56047fae658241c76b90b1b0c5c0477a8a6b27d57875db873e5a2b07
+2026-10-14,aafuv,Cinemark Buckland Hills 18 XD and IMAX,Cinemark,Hartford CT,Standard,7:35p,False,105,0,v2-56f6cecc49130b1322d4db1103205b5a54041c81e655a3de383008281f093444
+2026-10-14,aafuv,Cinemark Buckland Hills 18 XD and IMAX,Cinemark,Hartford CT,Standard,8:00p,False,140,0,v2-6260001bd046ba82717151a669e195ed82b16b1130163aaa2d1d63d6c7098a69
+2026-10-14,aafuv,Cinemark Buckland Hills 18 XD and IMAX,Cinemark,Hartford CT,Standard,9:25p,False,105,0,v2-7211ee2c96a3e0af7eb60f4bca08713d5d68274a802a1c1474776ed10a0084b2
+2026-10-14,aaokb,Apple Cinemas Simsbury,Independent,Hartford CT,Premium Format,7:30p,False,156,0,v2-70617844fbf03db038e0c3d27dcd27331c90d16ddf8192456a55d0fdd7a075b2
+2026-10-14,aagdz,Apple Cinemas Brass Mill,Independent,Hartford CT,Premium Format,7:30p,False,162,0,v2-b9200af0d25658e6b52f2a1806eb83fb73f308531d1f138977251c54c48bd244
+2026-10-14,aackt,Cinemark West Springfield 15,Cinemark,Hartford CT,Standard,7:30p,False,103,0,v2-56f915a4ec57b5ae863ef1f0167efdf48ca9f3044d7a8a59fd77d2b624c2ed9e
+2026-10-14,aatxh,Cinemark Connecticut Post 14 and IMAX,Cinemark,Hartford CT,Standard,7:30p,False,100,0,v2-575673e61d1bb0f36afb489ac50c9f596bc8ce4a578ca9c82ce20a8cdc7dad32
+2026-10-14,aatxh,Cinemark Connecticut Post 14 and IMAX,Cinemark,Hartford CT,Standard,7:40p,False,70,0,v2-6d25498ae00791f351b8292c7a9169e79e5da0957f679096a274fa02f077c454
+2026-10-14,aatxh,Cinemark Connecticut Post 14 and IMAX,Cinemark,Hartford CT,Standard,8:00p,False,71,0,v2-e2528f6adcafe333185fa0cc657cf88ad2f7b612786648fd441aa11f8e8efb72
+2026-10-14,aapcq,Cinemark At Hampshire Mall and XD,Cinemark,Hartford CT,Standard,8:00p,False,163,0,v2-5ef6c70c94b4be50fc8206da1a3b7dae74aa5a61b7289defbf351132074dc2dd
+2026-10-14,aanzg,Regal Edwards Greenway Grand Palace ScreenX & RPX,Regal,Houston,Premium Format,9:00p,False,160,0,v2-2dcde60af7758f4b3c101bafadfe6c2290d4083b329af26f5398aa136c596f55
+2026-10-14,aanzg,Regal Edwards Greenway Grand Palace ScreenX & RPX,Regal,Houston,Standard,7:30p,False,98,0,v2-c27b43a2fb3695e7d9a5615773be9fd71aa55aa2f953513fac339537bb0293a4
+2026-10-14,aanzg,Regal Edwards Greenway Grand Palace ScreenX & RPX,Regal,Houston,Standard,8:00p,False,98,0,v2-2757fcca985a9c2f53bc4601d95b0d4b169b02d3b30ca4779bf7e15d9750029a
+2026-10-14,aacmr,Cinemark Tinseltown Houston 290 and XD,Cinemark,Houston,Premium Format,6:30p,False,235,0,v2-f136d9459b22b00f4705f9a62e8a2f65b24ea996dab9ee05842edbc9b30af2e3
+2026-10-14,aacmr,Cinemark Tinseltown Houston 290 and XD,Cinemark,Houston,Premium Format,10:30p,False,235,0,v2-71f68f1f67149df9030196061a8c47b4211ee72da770c5e170a65a222a42aed4
+2026-10-14,aacmr,Cinemark Tinseltown Houston 290 and XD,Cinemark,Houston,Premium Format,6:30p,False,235,0,v2-85c0d05f460cf1c621c8e9fd067671854dd7442be055f54db8224e1eac478d11
+2026-10-14,aacmr,Cinemark Tinseltown Houston 290 and XD,Cinemark,Houston,Premium Format,10:30p,False,235,0,v2-9a5f2813914130234adad0b041045c091beca8ddd71502be15d8df3cafc9f50e
+2026-10-14,aacmr,Cinemark Tinseltown Houston 290 and XD,Cinemark,Houston,Standard,7:00p,False,99,0,v2-6f4e01d5bbb4aa3672bebc3fcba45b715679f8b5267684ce895d0969c710fb5e
+2026-10-14,aauis,Cinemark Memorial City,Cinemark,Houston,Premium Format,6:30p,False,123,0,v2-cece2aa5c1b5a5f33a39fe9fa929fe25c0fe8bb560ab094cce6e81d721e43834
+2026-10-14,aauis,Cinemark Memorial City,Cinemark,Houston,Standard,6:30p,False,123,0,v2-b7dce9fb36893b6e4b28d1ebf48047c687e260d0edad7228e1fb42a1973aa3a4
+2026-10-14,aaepa,AMC Gulf Pointe 30,AMC,Houston,Standard,6:40p,False,96,0,v2-a1c49ff990b51ae121ee16cfed3cbf4131c77db4f38e303a639d50bac65c4591
+2026-10-14,aacxa,AMC Loews Fountains 18,AMC,Houston,Standard,6:30p,False,99,0,v2-610e0c8977d15ead35e08218325e3d0067154258dd86d4fd863ac09b3190235b
+2026-10-14,aacxa,AMC Loews Fountains 18,AMC,Houston,Standard,8:30p,False,65,0,v2-dcbf8bd8bea282daf50a097e68e998e5f53984f2d199492b82c661ca37eded9e
+2026-10-14,aacxa,AMC Loews Fountains 18,AMC,Houston,Standard,8:00p,False,103,0,v2-40b846554433ce66c81121ab6cb356dedaa85dc3a838ccac72e70dac7ea9bf5c
+2026-10-14,aaodo,AMC Willowbrook 24,AMC,Houston,Standard,8:30p,False,44,0,v2-40ed71f31802a1171a7dc15a215035b7f838052dc2baa74a49ea89254af9580b
+2026-10-14,aayxm,Cinemark Missouri City and XD,Cinemark,Houston,Premium Format,6:30p,False,190,0,v2-fafe013406b13c62fde897314c9b4a852684a02fbcf162711fd40d088a9dde0f
+2026-10-14,aayxm,Cinemark Missouri City and XD,Cinemark,Houston,Premium Format,10:30p,False,190,0,v2-d6ca1a85f487cc7b4023633e101a4e5253fe4d7cd70ab06e8a60a2f718719b2a
+2026-10-14,aayxm,Cinemark Missouri City and XD,Cinemark,Houston,Premium Format,6:30p,False,190,0,v2-b34b49944016f47e93dd752e00fc1282a2b474e51663063c81b81cd021892165
+2026-10-14,aayxm,Cinemark Missouri City and XD,Cinemark,Houston,Premium Format,10:30p,False,190,0,v2-0c36d1a81b6aca99d917b53ee78e618f8a984433189d42ce23ac157dc34ca6cb
+2026-10-14,aayxm,Cinemark Missouri City and XD,Cinemark,Houston,Standard,7:00p,False,115,0,v2-393f88c9b4dda164965776e6d9d93becbc820694d6bcb1a8ac3aaadbdde2fdc4
+2026-10-14,aaepb,AMC First Colony 24,AMC,Houston,Standard,6:30p,False,50,0,v2-bcfe382fe34189985c63148540b57b738952a0bd5218202eaaea9686c02cff0d
+2026-10-14,aaoyr,Cinemark NASA and XD,Cinemark,Houston,Premium Format,6:30p,False,199,0,v2-88b84123784a4544613dcf8e06e196f661fd13c12d3d899d70164cd766795463
+2026-10-14,aaoyr,Cinemark NASA and XD,Cinemark,Houston,Premium Format,10:30p,False,199,0,v2-417c9ea6843e779a55441542bd70ed94797757e0f48606a82a82045ec4d77df1
+2026-10-14,aaoyr,Cinemark NASA and XD,Cinemark,Houston,Premium Format,6:30p,False,199,0,v2-93edde47d5d10a0acf93f73a83d5b9f2520673b4723a54b27d10b9aa8cdaed4a
+2026-10-14,aaoyr,Cinemark NASA and XD,Cinemark,Houston,Premium Format,10:30p,False,199,0,v2-2e71a10282cf9200c5a0b01f829d0510104c43099746f87516f05a692ed3cac9
+2026-10-14,aamzu,Cinemark Katy and XD,Cinemark,Houston,Premium Format,6:30p,False,172,0,v2-d5e467a23909c36706eeefd96420c958c5ed5dced9c5bfe03d5f06df579466c4
+2026-10-14,aamzu,Cinemark Katy and XD,Cinemark,Houston,Premium Format,10:30p,False,172,0,v2-d287b154bc2acdcdef4314155a6b861d0cd1df4b4976089b91712e1175b48c49
+2026-10-14,aamzu,Cinemark Katy and XD,Cinemark,Houston,Premium Format,6:30p,False,172,0,v2-edc1da325e033474db6e0a08d838793deb39bea8a0b92d4acb1d5eddbd05195d
+2026-10-14,aamzu,Cinemark Katy and XD,Cinemark,Houston,Premium Format,10:30p,False,172,0,v2-1a7b8981c233db041e13e9539b9c846c3275141698599a75c3cdb01ac788d729
+2026-10-14,aamzu,Cinemark Katy and XD,Cinemark,Houston,Premium Format,6:45p,False,91,0,v2-dbd8d82069434ca8134d2885bec1b834da614f5d3b0359c09da76bcd9acf277e
+2026-10-14,aamzu,Cinemark Katy and XD,Cinemark,Houston,Premium Format,10:45p,False,91,0,v2-ae3ee56593af32b3cd66cad7f7cc6ec00cf28bca64ce9893b6fb4f2ddb8fb986
+2026-10-14,aamzu,Cinemark Katy and XD,Cinemark,Houston,Standard,6:35p,False,73,0,v2-ae6ed4964ff9f243d6561cc766ef0cef70f701ca3d57fb746e2c9f8074b41ae0
+2026-10-14,aamzu,Cinemark Katy and XD,Cinemark,Houston,Standard,10:35p,False,73,0,v2-6aa558aaba72309990033e3fee69883224298f7358096b4683f4149fc1e4f8ee
+2026-10-14,aamzu,Cinemark Katy and XD,Cinemark,Houston,Standard,6:45p,False,91,0,v2-6265a1b7cdb1a3e281970c63d3b54f0643f64e9177fdc0b08627752277f37e21
+2026-10-14,aamzu,Cinemark Katy and XD,Cinemark,Houston,Standard,8:00p,False,76,0,v2-9c0556d9ba737407d3f98b5f344a88a8092c5a33327fc259945e646ee9a5d191
+2026-10-14,aamzu,Cinemark Katy and XD,Cinemark,Houston,Standard,8:45p,False,60,0,v2-742c3a626bae43d7dac0c1ef68bfc6e392bccaea813db81d586c0f0099e5fef2
+2026-10-14,aamzu,Cinemark Katy and XD,Cinemark,Houston,Standard,10:45p,False,91,0,v2-32455c8f494d7439cb332d7bb071a0cd3fc5b5e4f9bf7d8367e982545eb0bd4f
+2026-10-14,aayuh,"Regal Benders Landing 4DX, ScreenX, RPX & VIP",Regal,Houston,Standard,7:30p,False,168,0,v2-41fde36cf593818651ab1d9c603c651fab18da90069f205e1e711518124b8929
+2026-10-14,aayuh,"Regal Benders Landing 4DX, ScreenX, RPX & VIP",Regal,Houston,Standard,8:00p,False,157,0,v2-431ae3ad4378d1168ec19ca54ece4a1587033a054ba94ee79903bc92e1a60c07
+2026-10-14,aanrv,AMC Katy Mills 20,AMC,Houston,Standard,6:30p,False,52,0,v2-a6381cf9fa64de00e873e4ebdb35e2a8d2664626917faa595867ceb0fb191ec7
+2026-10-14,aanrv,AMC Katy Mills 20,AMC,Houston,Standard,8:15p,False,58,0,v2-5c461e202c6ea211a219421a3832dac1dbd8b808827b6a4dbe9c2f9897a4e7fa
+2026-10-14,aacct,Cinemark The Woodlands and XD,Cinemark,Houston,Premium Format,6:30p,False,276,0,v2-970a7c14b8a89303d3fbd2896e6320cc58dd7108f64898e8ef1321b1bf81b924
+2026-10-14,aacct,Cinemark The Woodlands and XD,Cinemark,Houston,Premium Format,10:05p,False,274,0,v2-4be39dd73d36df85c006168c189eeabb3f159912556a48ac27b9d674456c2e0a
+2026-10-14,aatsj,Regal Atlantic Station,Regal,Atlanta,Premium Format,7:30p,False,310,0,v2-3828ebe6c4d8cafa268d1f9334c24cd633db45f2a5dc7b23f891adf1e67baaf5
+2026-10-14,aatsj,Regal Atlantic Station,Regal,Atlanta,Standard,8:00p,False,114,0,v2-7894f0a894d9dbcdf2abfa5884a2c90f43fad0ea19c65c4de77570ee97c8cf6e
+2026-10-14,aatsj,Regal Atlantic Station,Regal,Atlanta,Standard,9:25p,False,132,0,v2-a2fad9a50acb7fe4c221487c87495fb5ae5b0059623674b9a2361a51d7c20729
+2026-10-14,aaktp,AMC Parkway Pointe 15,AMC,Atlanta,Standard,7:30p,False,117,0,v2-c9b64f58bdae81e3058f6324ff444a9a5563d10b3fec8d4fac0b6534275ab532
+2026-10-14,aadit,Regal Perimeter Pointe,Regal,Atlanta,Standard,7:30p,False,260,0,v2-4fd354934571293a1d443577e3e146faa60288c0a4bc99cf7adb6a40fd6d09ee
+2026-10-14,aadit,Regal Perimeter Pointe,Regal,Atlanta,Standard,7:45p,False,272,0,v2-b85d7af7be0b867a2764c92299e691dcf0e84df75a9b2c3c81bd0c1f7a3b2992
+2026-10-14,aadit,Regal Perimeter Pointe,Regal,Atlanta,Standard,8:00p,False,152,0,v2-94598e77c65ed37463e1dbe2a66d0a8308201ba91e9c2608ec6bd84a9bd396ba
+2026-10-14,aaegn,AMC Southlake 24,AMC,Atlanta,Standard,7:30p,False,56,0,v2-09ac359f9a41203d0a7a60bdfb5193edc4ad071162504659d3126386cc8a1135
+2026-10-14,aaegn,AMC Southlake 24,AMC,Atlanta,Standard,8:30p,False,39,0,v2-0e9e04d0e612509e53bcdc1c5a726785c142e6fb9c68e70e82d711456d52cee1
+2026-10-14,aaegn,AMC Southlake 24,AMC,Atlanta,Standard,9:00p,False,39,0,v2-30fd6fc170cd6425bd10addcf92d9142ad21f7de33bc40474f2538d8406a5643
+2026-10-14,aaegn,AMC Southlake 24,AMC,Atlanta,Standard,9:30p,False,72,0,v2-af15d6d5a8db553639cb018244269f7a3708d9e79ca7b72f237f438fe624afea
+2026-10-14,aaxbw,AMC North Point Mall 12,AMC,Atlanta,Standard,7:30p,False,83,0,v2-6910b60abe74647b8172febb65ae04e049a60379b67a8cdc0a2b61a89fe5f59b
+2026-10-14,aamem,Regal Medlock Crossing,Regal,Atlanta,Premium Format,7:30p,False,186,0,v2-187865cb70d7e879ccaa16f1bf3e82d892bc3bd3d9280a88c442ee0622c24da5
+2026-10-14,aamem,Regal Medlock Crossing,Regal,Atlanta,Premium Format,11:30p,False,186,0,v2-6e4b8f36dbd60c93a1458fbd91867d87321791eecada537667e17c61043025ab
+2026-10-14,aamem,Regal Medlock Crossing,Regal,Atlanta,Standard,7:45p,False,97,0,v2-e9290f11e1fb10681788cb2b1f54898cce63b589a1c7591ec4340afe6928649a
+2026-10-14,aamem,Regal Medlock Crossing,Regal,Atlanta,Standard,8:15p,False,90,0,v2-d9f3236c4d8cab41f7cee220af1bf606ea4c4d8630767adeaefc86ad8f3d38b4
+2026-10-14,aamem,Regal Medlock Crossing,Regal,Atlanta,Standard,8:30p,False,186,0,v2-493a66ceda79c09867f636c62708915e4ea6e31d55ac4da35c1f594a5fc73fe9
+2026-10-14,aamem,Regal Medlock Crossing,Regal,Atlanta,Standard,8:00p,False,100,0,v2-58c4a2e3ccfeb5744af8cc14c57b309e0bcd750f09adbcf330b2062e6727982d
+2026-10-14,aamem,Regal Medlock Crossing,Regal,Atlanta,Standard,9:00p,False,83,0,v2-74b4f2914e888011c258e3165234b155bf70e4614945778a2f17f629e15b6d8d
+2026-10-14,aamem,Regal Medlock Crossing,Regal,Atlanta,Standard,9:30p,False,100,0,v2-e044241110434917eca465938b563496909b8b9403a78096318b6c6631d00563
+2026-10-14,aamem,Regal Medlock Crossing,Regal,Atlanta,Standard,10:00p,False,93,0,v2-dc0c4d3c41bdf904b39690b40302c8ba9587746f78d21ed4d50bb6d5d7dda90a
+2026-10-14,aamem,Regal Medlock Crossing,Regal,Atlanta,Standard,10:30p,False,97,0,v2-145341b8a56bbe8671fae8c49fee78e134d20cfb7d0a9ff5fff8d0d4f47ee444
+2026-10-14,aamem,Regal Medlock Crossing,Regal,Atlanta,Standard,11:00p,False,50,0,v2-ea5900420d4efac492df48a65e4c5f99577f553fcc765d4c956e9a99369f0e4b
+2026-10-14,aaxfo,Movie Tavern Roswell,Independent,Atlanta,Standard,8:15p,False,89,0,v2-d3c21154a542f1dd06496edc39f732b1a9a873e0dae7a6d7082e3de7e7ed2196
+2026-10-14,aaxfo,Movie Tavern Roswell,Independent,Atlanta,Standard,8:45p,False,89,0,v2-f1f8923f5ccd6e9f6e73bbb257cb19d0cc9cbd1e6ec87f5ef68159b558d3c239
+2026-10-14,aanqu,Regal Arbor Place,Regal,Atlanta,Standard,7:30p,False,170,0,v2-6ab48b3d3fa60ce6f25aa35e591367f99cb12656db9b3397e098777bacc0d906
+2026-10-14,aaxie,Regal Avalon,Regal,Atlanta,Premium Format,7:30p,False,213,0,v2-c2f83a405f1a99326b990d9795a4a96909fab9e4f733d58e2f166975fb0a747d
+2026-10-14,aaxie,Regal Avalon,Regal,Atlanta,Standard,8:00p,False,112,0,v2-be60f3e20c675802a5f77f64b1458d29b73bf73b48270ad55b20e80b378c4bd3
+2026-10-14,aaxie,Regal Avalon,Regal,Atlanta,Standard,8:30p,False,202,0,v2-8c1c0bf8b5438c20bb41fc553fe815739ffee531e01446fca47fa7c2eb99e974
+2026-10-14,aaevw,Regal Cherokee,Regal,Atlanta,Standard,7:30p,False,94,0,v2-019266582f1beb7a75daf93df6aa03757b313a53a54383d36cc79c1d1a79af32
+2026-10-14,aaevw,Regal Cherokee,Regal,Atlanta,Standard,8:00p,False,123,0,v2-15d9b841f4154fbe5c4765686df6ad84e20d2b1f00b6e34b675cbb044b15aebd
+2026-10-14,aauuq,AMC Avenue Forsyth 12,AMC,Atlanta,Standard,7:30p,False,220,0,v2-a503679d9965c33a87feed4364d7a54a674dd606738777e6788809ac052af933
+2026-10-14,aankx,Regal Mall of Georgia,Regal,Atlanta,Standard,7:30p,False,251,0,v2-d3b9e0b88cdf62c4d69d35eb7d65090f3d32187cd7a1037370f24535565a28fb
+2026-10-14,aankx,Regal Mall of Georgia,Regal,Atlanta,Standard,8:30p,False,406,0,v2-fdff2986c785b6ad48d995348ef0de452c5a94006bde3c2eda093c75a4054bb5
+2026-10-14,aankx,Regal Mall of Georgia,Regal,Atlanta,Standard,11:30p,False,251,0,v2-a9c0e0cc484458f9385ddd9147a72df2e7ff73d6e126294936598e896385d84b
+2026-10-14,aankx,Regal Mall of Georgia,Regal,Atlanta,Standard,8:00p,False,473,0,v2-d47304378d6315b730187e8e2dafbe9abb7a7e0ce130134748543956f064c135
+2026-10-14,aankx,Regal Mall of Georgia,Regal,Atlanta,Standard,11:25p,False,210,0,v2-92963e20a8a500ab11ef3fc113ba376d8d34ced62eb719e51a6f9eb8e98b2def
+2026-10-14,aahmg,Regal Hollywood - Gainesville,Regal,Atlanta,Standard,7:30p,False,131,0,v2-c754b4a63cb67f908a1b08e42ef442bb420e620feda029ad8a03659346fa96f7
+2026-10-14,aaron,Regal Majestic & IMAX,Regal,DC/MD/VA,Standard,7:30p,False,63,0,v2-a2e32b5263d1dfae80ecaf4880b4e7a84731e0ce99da509c7acb8e4eba315916
+2026-10-14,aaron,Regal Majestic & IMAX,Regal,DC/MD/VA,Standard,8:00p,False,95,0,v2-3e0d4892b009dc71583e46e9950b67fe8b4ede361f55c84087e799b57530af06
+2026-10-14,aatuq,Regal Kingstowne ScreenX & RPX,Regal,DC/MD/VA,Premium Format,7:30p,False,157,0,v2-55a09d7578db88740788f664d6f6bb83796713e4e32c5358f1ae3e052b2e75be
+2026-10-14,aatuq,Regal Kingstowne ScreenX & RPX,Regal,DC/MD/VA,Standard,8:00p,False,144,0,v2-1d609740ceea92b351b439db7baf128869e39d092e172556b3179ae7376cf68d
+2026-10-14,aaixz,Regal Rockville Center,Regal,DC/MD/VA,Standard,7:30p,False,84,0,v2-f38f89636100b34604bf336ad13051d8970bf0f4d91932ad6ac5355852971853
+2026-10-14,aaixz,Regal Rockville Center,Regal,DC/MD/VA,Standard,8:00p,False,92,0,v2-c6a988be2e117687e9ce2199e53af55ba1a647320a47cbfcbb30617bc5d4b1ee
+2026-10-14,aaxib,Regal Laurel Towne Centre,Regal,DC/MD/VA,Standard,6:40p,False,67,0,v2-f362235d1d523de07db3cd69e5dc85c4a70e3960b2db36fd4c188a2fa5973eaf
+2026-10-14,aarcj,Cinemark Fairfax Corner and XD,Cinemark,DC/MD/VA,Premium Format,7:30p,False,209,0,v2-ee8cd76875fb1655217361f010c28feb49e2b58e87ee6a0fdf6e4ae0eb51cfaf
+2026-10-14,aarcj,Cinemark Fairfax Corner and XD,Cinemark,DC/MD/VA,Premium Format,8:00p,False,211,0,v2-592d35b35a820984293dbdb527e3d23c4553f508534363398df981ea8867a51c
+2026-10-14,aarcj,Cinemark Fairfax Corner and XD,Cinemark,DC/MD/VA,Premium Format,7:30p,True,,,v2-bd43851d0e6e0ab89e7d2a1d4437a6d1e24aa4a5ba0bc60f3cea5d6287f1cf0c
+2026-10-14,aarcj,Cinemark Fairfax Corner and XD,Cinemark,DC/MD/VA,Premium Format,8:00p,False,211,0,v2-1963c9bcd08191d27cf66d08d702c39665397dc7e89d5d2e0c83266cf6b50c33
+2026-10-14,aarcj,Cinemark Fairfax Corner and XD,Cinemark,DC/MD/VA,Standard,7:30p,False,73,0,v2-1cab5d6dc1212d19a9e2ee013fa6786865541108f234179257ec87cc2572431c
+2026-10-14,aarcj,Cinemark Fairfax Corner and XD,Cinemark,DC/MD/VA,Standard,7:30p,False,81,0,v2-43bba7f71ea9f6c54d4ebf7189ccfd166c22cc612fe5524134970403bbe9c109
+2026-10-14,aarcj,Cinemark Fairfax Corner and XD,Cinemark,DC/MD/VA,Standard,7:45p,False,84,0,v2-2f92a99f5ef4d6446d1d31bae30f51831534b94e6d9f742c00473d030e27ce43
+2026-10-14,aarcj,Cinemark Fairfax Corner and XD,Cinemark,DC/MD/VA,Standard,8:50p,False,82,0,v2-88fa6d5b3fe3129585959431b46bd86cb5a8e827af9ca19c1a64b1353a232b76
+2026-10-14,aarcj,Cinemark Fairfax Corner and XD,Cinemark,DC/MD/VA,Standard,9:15p,False,102,0,v2-4e05680dda7e8f3cf7eaa555fb808cd07b956a32ab5ad244b7b32df2b1d2a518
+2026-10-14,aarcj,Cinemark Fairfax Corner and XD,Cinemark,DC/MD/VA,Standard,7:45p,False,84,0,v2-6186bd88690306efef1eef9e99bcd4d474199089d44253574bc6cf824dd71729
+2026-10-14,aadya,Regal Fairfax Towne Center,Regal,DC/MD/VA,Standard,7:30p,False,133,0,v2-f3efe27e22c4b45e99116eece605936f18b2e2a5fc5e6a2db446de576a7b244f
+2026-10-14,aadya,Regal Fairfax Towne Center,Regal,DC/MD/VA,Standard,8:00p,False,131,0,v2-749a54877216c384da91b529b90bfd7f0a7fd015c09166c700b3a3c210b21eb3
+2026-10-14,aapdl,Cinemark Egyptian 24 and XD,Cinemark,DC/MD/VA,Premium Format,7:30p,False,170,0,v2-8370e4902002e8094a6ed08c299878e1cd63985cbf8eb02f10481c49d1b0594c
+2026-10-14,aapdl,Cinemark Egyptian 24 and XD,Cinemark,DC/MD/VA,Premium Format,7:30p,False,170,0,v2-236f9e29b93393125eb41b5e5bf70366915a9f311d61ab905f456cb97003960b
+2026-10-14,aapdl,Cinemark Egyptian 24 and XD,Cinemark,DC/MD/VA,Premium Format,7:30p,False,132,0,v2-ca72ed3ddbfccc9b658ebf7fe104842255664746bd704441348c7bf2bef99868
+2026-10-14,aapdl,Cinemark Egyptian 24 and XD,Cinemark,DC/MD/VA,Standard,7:30p,False,103,0,v2-ff70d92ff509cf9569ae13bc7781025e8c1a11d5f11621c20d7839e676e06d20
+2026-10-14,aapdl,Cinemark Egyptian 24 and XD,Cinemark,DC/MD/VA,Standard,8:30p,False,54,0,v2-630b44af6bcbee8eadf9597bbf44bff6ca083cc8d558ccced80fa5ee6442fe59
+2026-10-14,aapdl,Cinemark Egyptian 24 and XD,Cinemark,DC/MD/VA,Standard,7:30p,False,132,0,v2-265dcbf870507ba64f201d64249464687eeed24f8b5bfb1790c79936bfeb0aa6
+2026-10-14,aapdl,Cinemark Egyptian 24 and XD,Cinemark,DC/MD/VA,Standard,7:30p,False,65,0,v2-8e5804b2b4dae6328bc8dd14913181fec455a6c6905c9c97549e1457e777bb84
+2026-10-14,aacko,Cinemark Centreville,Cinemark,DC/MD/VA,Standard,7:30p,False,78,0,v2-1b6f80e86874d586ea3d81b48f54340c98cd5769a6cf7642917b3b10c9a7a496
+2026-10-14,aacko,Cinemark Centreville,Cinemark,DC/MD/VA,Standard,9:25p,False,78,0,v2-fee19da013f760eaa37237e621638b45a1dd21ee723aedb44e8d103d61bdfb48
+2026-10-14,aacko,Cinemark Centreville,Cinemark,DC/MD/VA,Standard,7:30p,False,78,0,v2-38a1d131376c438b964db0fd36caa723cee886668e8dacd83009b96fff997787
+2026-10-14,aauns,Regal Fox 4DX & IMAX,Regal,DC/MD/VA,Standard,7:45p,False,86,0,v2-28122c0a9016a304fe031c71370bb7999d80c699c92bc58eef43842892835967
+2026-10-14,aauns,Regal Fox 4DX & IMAX,Regal,DC/MD/VA,Standard,8:15p,False,49,0,v2-8942304f5fb4ca6fa2ad6425a3b82a90cbf6edc5d9cbe8dee4cb8b44522612e8
+2026-10-14,aauns,Regal Fox 4DX & IMAX,Regal,DC/MD/VA,Standard,9:15p,False,49,0,v2-49edd0349ce405556f6a69b3e78f6d9273c8705cf8cc55bed6a68fff055d2656
+2026-10-14,aauns,Regal Fox 4DX & IMAX,Regal,DC/MD/VA,Standard,9:45p,False,60,0,v2-6054545d6ac4407895ad1dab22f30db60078caae9bd8d545fd422b803bf90bac
+2026-10-14,aauns,Regal Fox 4DX & IMAX,Regal,DC/MD/VA,Standard,9:55p,False,60,0,v2-d25b129da0adc3df7ad0936e4d4f1885781a97204a3e86d0017ceeb011cbdd15
+2026-10-14,aauns,Regal Fox 4DX & IMAX,Regal,DC/MD/VA,Standard,7:30p,False,299,0,v2-739c06dda79802980e9092a474930c012aa0aeb7bce1b6ca5803c7cd30d2ed98
+2026-10-14,aauns,Regal Fox 4DX & IMAX,Regal,DC/MD/VA,Standard,8:00p,False,222,0,v2-7e8d3d3d5f708584557b9b39f608c259050a51c6ef02397d31878d263817ea7e
+2026-10-14,aauns,Regal Fox 4DX & IMAX,Regal,DC/MD/VA,Standard,9:00p,False,234,0,v2-3a745f17cf1e8738af2fd11d7e07f6bdb51a9dc8cffb38b84b986e3a6f12b0bc
+2026-10-14,aauns,Regal Fox 4DX & IMAX,Regal,DC/MD/VA,Standard,8:00p,False,103,0,v2-e0a0968417c7232cde42daf59395772142516d9a580364c56f7be0842615f735
+2026-10-14,aaqpt,Regal Westview & IMAX,Regal,DC/MD/VA,Standard,6:50p,False,135,0,v2-1d3456e7687a7e3e1f58514c572fd59ff344034c7f09c961861cc2dc0e9e3504
+2026-10-14,aaxgt,Cinemark Towson and XD,Cinemark,DC/MD/VA,Premium Format,7:30p,False,111,0,v2-29e2659f3f9f938b0a1fbcb6bff2765dd4aa0bb508111462f1b1602292538292
+2026-10-14,aaxgt,Cinemark Towson and XD,Cinemark,DC/MD/VA,Premium Format,7:30p,False,111,0,v2-e139b5b8d1af26fc3c53c91716395e20ee559215c14b8a066b5b1e233b32a898
+2026-10-14,aaxgt,Cinemark Towson and XD,Cinemark,DC/MD/VA,Premium Format,7:30p,False,35,0,v2-9c45e35da5fdea113d6b41631b4c213cf3e1b89046e96de23bc85094b375c273
+2026-10-14,aaxgt,Cinemark Towson and XD,Cinemark,DC/MD/VA,Standard,8:00p,False,65,0,v2-ed32f427a7889b81a5728f1ba1c0cdc671eb6401ccd11d74fcba578a78148bf9
+2026-10-14,aapnv,AMC Boston Common 19,AMC,Boston,Standard,8:00p,False,205,0,v2-602302dcb626eb3873f4e10b9e7ea401acb070b5864f5b4152e998d0658fd09a
+2026-10-14,aapnv,AMC Boston Common 19,AMC,Boston,Standard,9:45p,False,190,0,v2-a8caff54dd53681a8726b2c4d10552bcec8dad603dc3d40af3645655938c7034
+2026-10-14,aapnv,AMC Boston Common 19,AMC,Boston,Standard,9:30p,False,208,0,v2-577874ff237c9a0e6d300e6b0769a9cb89211dbda84b7ab1a8379fbb56ce1b58
+2026-10-14,aabbi,Apple Cinemas Cambridge,Independent,Boston,Standard,7:30p,False,110,0,v2-b5d438cb87334f324c59a21feaa5e9099b226690870581406b419f9be9f26287
+2026-10-14,aabbi,Apple Cinemas Cambridge,Independent,Boston,Standard,9:15p,False,134,0,v2-36e0e0de0ecde0051ada4eca4453b3042eba47f87b9cdec639bfb2ffa4d5c459
+2026-10-14,aabbk,AMC Loews Liberty Tree Mall 20,AMC,Boston,Standard,7:30p,False,50,0,v2-23c78450438fb091b38c9d4aa609f2e0151a25e1ad0d73dcc54beb54c61b8664
+2026-10-14,aaezs,Regal Bellingham,Regal,Boston,Premium Format,7:30p,False,315,0,v2-dbb02f30fdf5692985b6b1795780e434424d64bd7e3c77d6af10f25ebeb8bf6c
+2026-10-14,aaezs,Regal Bellingham,Regal,Boston,Standard,8:00p,False,203,0,v2-ee98649b0f8d173e05e8323b20955d8857b5dec8815bf9a2aa56041af5b73617
+2026-10-14,aaezs,Regal Bellingham,Regal,Boston,Standard,8:30p,False,99,0,v2-2ddb0f5993f78bbcd3d440ddb58155206756e9d1db45a19b1703d859298643fb
+2026-10-14,aaoze,AMC Methuen 20,AMC,Boston,Standard,7:30p,False,89,0,v2-9fe3a4c67ccc318e7f0ef3dc8337dc7c6fbe5d78808b449ed551cf1b7a4821e1
+2026-10-14,aaoze,AMC Methuen 20,AMC,Boston,Standard,8:45p,False,134,0,v2-990ba910e6657426bf9bfe16d22f749f373bdee01c9c250c096db3626d3c1761
+2026-10-14,aadxg,Regal Solomon Pond,Regal,Boston,Standard,7:30p,False,381,0,v2-e4f3066a8c15cf0e9ef3cb42ae2daa88cfe6730b1f351d47a5a5bcf322c4c0ea
+2026-10-14,aadxg,Regal Solomon Pond,Regal,Boston,Standard,8:00p,False,293,0,v2-11e3edcd727c7fb2c2a48f26ab1f672407449db4160f32276ff80be45339f1ef
+2026-10-14,aaysp,Cinemark Rockingham Park and XD,Cinemark,Boston,Premium Format,7:40p,False,192,0,v2-38ede148f499cda3279f031d5cadd663f4d7bb1682599542105ee82c96b93aec
+2026-10-14,aaysp,Cinemark Rockingham Park and XD,Cinemark,Boston,Premium Format,7:40p,False,192,0,v2-7cb214a35264db7da922a9ae47b4610deca868f1bab44e29ef619e867803fb9e
+2026-10-14,aaysp,Cinemark Rockingham Park and XD,Cinemark,Boston,Standard,8:00p,False,63,0,v2-cb3764c88716a9f575829f215e31909ddb6218167ef2219b3840e95b40cdc261
+2026-10-14,aaysp,Cinemark Rockingham Park and XD,Cinemark,Boston,Standard,9:00p,False,109,0,v2-925a7f530d7892881495ba318b6a631f3030533f08843ec0b695363aa6ea3911
+2026-10-14,aanzk,Apple Cinemas Providence Place IMAX,Independent,Boston,Standard,7:30p,False,351,0,v2-35416b342f89b4d2509d496ca56d2598fc7921cb287f41c709ca5fd72ca4809e
+2026-10-14,aatgl,Apple Cinemas Merrimack,Independent,Boston,Premium Format,7:30p,False,113,0,v2-80d90f01e50642e31e74030d6491dec66e561e85e5c688bad2ae0557d5800f34
+2026-10-14,aapmq,Apple Cinemas Warwick,Independent,Boston,Premium Format,7:30p,False,210,0,v2-4ea8bc1cb9f43e06127046c12e47b11f809d81635195a0eaf764e70a2d7fa2af
+2026-10-14,aauoc,Apple Cinemas Hooksett IMAX,Independent,Nashua NH,Premium Format,7:30p,False,138,0,v2-77705caf4efd6495dafafa2465e90b915cff94c2486ffdba67c525b641c74773
+2026-10-14,aafxo,Regal Fox Run & RPX,Regal,Nashua NH,Standard,7:30p,False,49,0,v2-e2fdc0bf5f7eb3102deadd9b97c451630e32348edf26e6dfdf35ede168425e29
+2026-10-14,aaktm,AMC Cherry Hill 24,AMC,Philadelphia,Standard,7:45p,False,113,0,v2-af2f6482a601fbad62209fab5d5329e5dde9c4ef55785bcd320e4cbd7382456f
+2026-10-14,aadko,Cinemark Somerdale 16 and XD,Cinemark,Philadelphia,Standard,7:30p,False,71,0,v2-ed7d5d37f2f05f31fd1f0b2d774b2962c73144ce62a199bbfc83e3f2b2b0833c
+2026-10-14,aadko,Cinemark Somerdale 16 and XD,Cinemark,Philadelphia,Standard,7:30p,False,47,0,v2-dba48f87bf9c27fcbdfd1fc3b0833f9587072c7fc24e9e804d8c435890d831c5
+2026-10-14,aaxbz,Regal Moorestown Mall,Regal,Philadelphia,Premium Format,7:30p,False,180,0,v2-62b851af765786b915d9e4cc77fbcf636a17118eb9f31c279659c03aa469e3a5
+2026-10-14,aaxbz,Regal Moorestown Mall,Regal,Philadelphia,Standard,8:30p,False,135,0,v2-9d470088efd22b67e217243788ec3c3867a1b1ec3894603cbeaf9afc0d81d119
+2026-10-14,aaoqp,Regal UA King Of Prussia,Regal,Philadelphia,Standard,7:30p,False,468,0,v2-30d4b58cb0f9610d010f54c902a81e9b90d3beb18c059cfbc7bd181f24fe20a3
+2026-10-14,aaoqp,Regal UA King Of Prussia,Regal,Philadelphia,Standard,8:10p,False,494,0,v2-6b6f1133c6b88bbbefdf9d346f283cab41e0c405a2515cd0b39f07fa6ddd3b03
+2026-10-14,aaoqp,Regal UA King Of Prussia,Regal,Philadelphia,Standard,8:00p,False,205,0,v2-c5a6a248074a9b73a40b9671eb1a4b1f7319d7ab82bf91adb3dc5901cf7456e0
+2026-10-14,aaivo,AMC Neshaminy 24,AMC,Philadelphia,Standard,7:45p,False,78,0,v2-cd5995734accc574832489cfac9623b9ed7ed1692f2502373812461507480bfc
+2026-10-14,aanja,Regal Warrington Crossing,Regal,Philadelphia,Premium Format,7:30p,False,354,0,v2-b0403acfd8ad9f464350c5b20b8ffa8ea808b5134c86d74861cfdc395ef14906
+2026-10-14,aanja,Regal Warrington Crossing,Regal,Philadelphia,Standard,8:00p,False,142,0,v2-b3e4d6a174dac093a20606ea058342099528d8a402f7e91b7dfd5553151ba4cc
+2026-10-14,aanja,Regal Warrington Crossing,Regal,Philadelphia,Standard,8:30p,False,102,0,v2-ca417d122fda4b9bf2eae62f58dd8859c1b0d529b41b1655ff5b476d715f8be2
+2026-10-14,aadhv,Regal Burlington,Regal,Philadelphia,Standard,7:30p,False,221,0,v2-c77a984000ebdc0d686fb26f945e0b3518f352c85d447225e1c66964d6bbbc5b
+2026-10-14,aadhv,Regal Burlington,Regal,Philadelphia,Standard,8:00p,False,188,0,v2-3f6478ca9363aacea6dc39e4d1c3ca6ac7dfaee8179d385173d61a611a6b2295
+2026-10-14,aadri,Regal Brandywine Town Center,Regal,Philadelphia,Standard,7:30p,False,63,0,v2-ae192f790ec102447545f76d0b838c140d6bf77b7a29d188da8ee85e30e5a3b0
+2026-10-14,aadri,Regal Brandywine Town Center,Regal,Philadelphia,Standard,8:00p,False,52,0,v2-b951aceafbd7d85cec6f22c77705f094070142205d8e6531487c4883c8ba0608
+2026-10-14,aamgg,Regal Downingtown,Regal,Philadelphia,Standard,7:30p,False,141,0,v2-2da55c684a5a667542588a7a8186047080d76c7bc59e10a18a594edf550ab1ec
+2026-10-14,aamgg,Regal Downingtown,Regal,Philadelphia,Standard,8:15p,False,96,0,v2-80084cf98b75a8c76aeb817aed011b6ded6e67ae79747d63df8eeb1e4622fd6d
+2026-10-14,aamgg,Regal Downingtown,Regal,Philadelphia,Standard,8:30p,False,141,0,v2-c6ee8d31f1da5bd656070a5a6ca96d9a171837ad9e3fd122fe4f3a2c8bb2ad7e
+2026-10-14,aamgg,Regal Downingtown,Regal,Philadelphia,Standard,8:00p,False,178,0,v2-e4c8cd640d889f3adf4d70097702de325eec887804113cbb4b79c30ccdb2d06e
+2026-10-14,aaxqi,Regal Independence Plaza,Regal,Philadelphia,Premium Format,7:30p,False,130,0,v2-cf82a877f861d504c58dddb220e6993f3a9182c360ff30a1db7094e9ccc58842
+2026-10-14,aaxqi,Regal Independence Plaza,Regal,Philadelphia,Standard,8:00p,False,109,0,v2-4471bcf9cfef31cac8325e68f83242396c8222690ded50119901b6e3fef516fe
+2026-10-14,aaxqi,Regal Independence Plaza,Regal,Philadelphia,Standard,8:30p,False,127,0,v2-0b2db8d523d2bc067ec3fb39f570c61ac75d9473cec450b379dfa41c6ab2bbf1
+2026-10-14,aaxjl,Cinemark Christiana and XD,Cinemark,Philadelphia,Premium Format,7:30p,False,130,0,v2-69741dd3e8072d5fdd9eb5cd4455146e80045d0b65c90b0a5dc90c538cbbec50
+2026-10-14,aaxjl,Cinemark Christiana and XD,Cinemark,Philadelphia,Premium Format,7:30p,False,130,0,v2-8d0f0c2f79b487cb9cc31f3a22fc26aebb8a529159a471453467abd4ca7a8975
+2026-10-14,aaxjl,Cinemark Christiana and XD,Cinemark,Philadelphia,Premium Format,8:00p,False,111,0,v2-d4a8ded29304acc5849fee741f06d53aadb633e6101b12f2d7e183dc0423550c
+2026-10-14,aaxjl,Cinemark Christiana and XD,Cinemark,Philadelphia,Standard,7:30p,False,44,0,v2-277eec5a6eb79d779cac466a11a07802232aca464322956c834e55b753b41f80
+2026-10-14,aaxjl,Cinemark Christiana and XD,Cinemark,Philadelphia,Standard,7:30p,False,44,0,v2-ebcfea408dca8c0c459b0a4d5f005c840851a6ba25bafa7f5694e62551fdd21a
+2026-10-14,aaxjl,Cinemark Christiana and XD,Cinemark,Philadelphia,Standard,8:00p,False,111,0,v2-53e8e246a6e53508c6786278c789970652e120b5c42d9e5b817cfd61d0bce91f
+2026-10-14,aaxjl,Cinemark Christiana and XD,Cinemark,Philadelphia,Standard,8:50p,False,66,0,v2-91a499767509efc157827d508c08c98595f82f490c8cc63746d7ead94e0ef1c2
+2026-10-14,aaehm,Regal Peoples Plaza,Regal,Philadelphia,Standard,7:30p,False,156,0,v2-5e2c595d57fe82dd44b8a2efcf959e48e5880ab51ef384cc355433c3d009624f
+2026-10-14,aaehm,Regal Peoples Plaza,Regal,Philadelphia,Standard,8:00p,False,100,0,v2-641abb6ad84c3b8f7168777e7bfaed5bec780570459d5e5400da33590bf268c1
+2026-10-14,aaqad,Regal Hamilton Commons,Regal,Philadelphia,Standard,7:40p,False,278,0,v2-5f705543ee17f63e37d1cd0a4b9898efb39ce9295413dcd11adb67accf50e91d
+2026-10-14,aaylg,Movie Tavern Trexlertown,Independent,Philadelphia,Standard,6:30p,False,49,0,v2-0732e737fce604fce76702308211936c01df819a774a9cb680d651d2282920e8
+2026-10-14,aaylg,Movie Tavern Trexlertown,Independent,Philadelphia,Standard,8:45p,False,55,0,v2-5e984624900af4d136438606483a20c2fdeb12497248dc9c28a4c61136219cbd
+2026-10-14,aaxvg,Cinemark Southland Mall and XD,Cinemark,Detroit,Standard,6:00p,False,58,0,v2-bfcff554f7744805021d811b721f71432ab69b48cb09542566c276cd4baad38f
+2026-10-14,aaxhp,MJR Troy Cinema,MJR,Detroit,Standard,7:30p,False,109,0,v2-b94208d3d0326b8fd2b33b1e194f88ebce9e4241d85854ec7a8a9ed6d21a501f
+2026-10-14,aaxhp,MJR Troy Cinema,MJR,Detroit,Standard,8:00p,False,266,0,v2-20e8403552490b1a4457a1dd2481403d2ca4cd869a02066639c39bcdaae58ab1
+2026-10-14,aaxhp,MJR Troy Cinema,MJR,Detroit,Standard,9:45p,False,109,0,v2-d8c26cd5e8aff302d54a44d6632c11c1eed40e1385ddec2fc8044c216c1a8c41
+2026-10-14,aawni,MJR Westland Cinema,MJR,Detroit,Standard,7:30p,False,151,0,v2-3bb67705a770fe0c0b7bf02b78bb56b2b86c50441fdff81e0afda5f63b2fe824
+2026-10-14,aawni,MJR Westland Cinema,MJR,Detroit,Standard,8:00p,False,149,0,v2-78d8565ec0141ee0a8155a056389c61721e7282b6c01819fbaceb193bd5d2a26
+2026-10-14,aawni,MJR Westland Cinema,MJR,Detroit,Standard,10:00p,False,78,0,v2-a57de68c8ef3a8afcd3b6e3b58865346364650f0acce1c9ef6bb0ac11527a883
+2026-10-14,aatyi,Emagine Canton,Emagine,Detroit,Standard,8:15p,False,137,0,v2-222e3c474ca79109b54acc27c5b29e4ad37de67eaa4fb46ece38e565d8b0ea95
+2026-10-14,aaqpa,Emagine Novi,Emagine,Detroit,Standard,8:00p,False,130,0,v2-054cf73dee5b7d4c1fb6f0bc779d1d64696ee481f24d177d62c42c805d13f7f5
+2026-10-14,aaqpa,Emagine Novi,Emagine,Detroit,Standard,8:30p,False,207,0,v2-019261eb1d5e9359bdeb440eb5c92a0b504625998089ccda374ac60abe77755c
+2026-10-14,aacuh,Ann Arbor 20 + IMAX,Independent,Detroit,Premium Format,7:30p,False,131,0,v2-24895c5dba8ff1c5be0dc93268cf004f034f956e200e4d2fd7fea9d02cab6618
+2026-10-14,aacuh,Ann Arbor 20 + IMAX,Independent,Detroit,Standard,7:30p,False,131,0,v2-123f45117fbb3a0501a55e209a129059041a0eba8b9c903d24b5db8bbf3a8080
+2026-10-14,aacuh,Ann Arbor 20 + IMAX,Independent,Detroit,Standard,7:40p,False,62,0,v2-ad0709aa1fc6f5cdf72432a1200d5e909cbf82a673c8a40297081fcabe50decf
+2026-10-14,aacuh,Ann Arbor 20 + IMAX,Independent,Detroit,Standard,8:45p,False,144,0,v2-ddfdfb06f92599fee13fb309dbef0628b0f01b1be44e3a60751991bbe8411558
+2026-10-14,aacuh,Ann Arbor 20 + IMAX,Independent,Detroit,Standard,7:45p,False,131,0,v2-289d0554947fe93573c9248b01cc86c40f474bdc3daae46154b6e326f25ccf7b
+2026-10-14,aacuh,Ann Arbor 20 + IMAX,Independent,Detroit,Standard,9:15p,False,122,0,v2-e9b19fb82ca6996f13a145bc91f9cd5c5a1f75ea98c33cae70241d54493ed5fc
+2026-10-14,aacuj,Cinemark Flint West 14,Cinemark,Troy MI,Standard,8:00p,False,152,0,v2-9dfbe2574f32e82b3917f26765360af0d9b447fa7ac85fa8d81b1b2ffe52a1f4
+2026-10-14,aaglu,Cinemark Stoneridge Plaza Movies 16,Cinemark,Columbus,Standard,8:00p,False,109,0,v2-d288b1ab9c7a4f89ee57314bf9c92f2b38999129b8fb9250972c17930f00baf5
+2026-10-14,aaizu,Marcus Crosswoods Cinema,Marcus,Columbus,Standard,6:00p,False,128,0,v2-77b027c0cdc3e5d9403b1c1a92a39b2562a3519edd4a612d357ae1b67d31f721
+2026-10-14,aaizu,Marcus Crosswoods Cinema,Marcus,Columbus,Standard,6:30p,False,130,0,v2-43275e9094b711750d88a85d1b73ce62d50077f815cff4ab7c200e158e1c7205
+2026-10-14,aabyg,AMC Dublin Village 18,AMC,Columbus,Standard,7:30p,False,137,0,v2-1860af6654ac64690d166e8618c4dcea78df3367b017ed1e9c4f9ebedb859a80
+2026-10-14,aabyg,AMC Dublin Village 18,AMC,Columbus,Standard,8:00p,False,137,0,v2-c4dcd69eff1ff568aa0aae0449cf4e79acd9414727011d1cf81de7d5bd590174
+2026-10-14,aatvf,Cinemark Polaris 18 and XD,Cinemark,Columbus,Premium Format,7:30p,False,238,0,v2-748d1d28d9e067906841dbcc09a1b15069b68babd0c7f9f9b3f3cd94449b7c32
+2026-10-14,aatvf,Cinemark Polaris 18 and XD,Cinemark,Columbus,Standard,7:30p,False,125,0,v2-82ba06fb053d31c35da2092eca11123e1244bbb54f30d79b384b4e65936c83d0
+2026-10-14,aatvf,Cinemark Polaris 18 and XD,Cinemark,Columbus,Standard,7:45p,False,49,0,v2-c38b1f36d452f8f2d3d34a9b2d707f2fa7ab8eb8cf2066b84adb171db3d74172
+2026-10-14,aatvf,Cinemark Polaris 18 and XD,Cinemark,Columbus,Standard,8:50p,False,125,0,v2-1568a420640ae222f7110c27f4316dbab0fe70e2973f80e6f7675a4b0b0a7df1
+2026-10-14,aatvf,Cinemark Polaris 18 and XD,Cinemark,Columbus,Standard,8:00p,False,50,0,v2-628dc27c08f10bf60bb0101c31aced429ca47d0c3e640a7cc98e472faf4fea18
+2026-10-14,aaimj,Cinemark Greenwood Corner,Cinemark,Indianapolis,Standard,7:30p,False,88,0,v2-8b233d0f4d561cf106c635318875747ff570bcecf331d9709aa76df8ba4c8d86
+2026-10-14,aaimj,Cinemark Greenwood Corner,Cinemark,Indianapolis,Standard,8:00p,False,62,0,v2-dae8ef495a02c177d62c8e65c9e7135e8b4f784a7532d4993f98af288eeadd65
+2026-10-14,aaejm,Regal Shiloh Crossing,Regal,Indianapolis,Standard,7:30p,False,78,0,v2-510a1eb14b68040ed30f311b57a0121879e863d5afcd71a2770300ea5e854459
+2026-10-14,aaejm,Regal Shiloh Crossing,Regal,Indianapolis,Standard,8:00p,False,112,0,v2-486ccf82e62b8024d638ba8de35c22e294aae07dd888c28ef430eaf33cd17448
+2026-10-14,aacta,Regal Greenwood & RPX,Regal,Indianapolis,Premium Format,7:30p,False,142,0,v2-70e1292e7b52015092620a2d37a786e75542f4837a3bc03b8e2c43b827d37e5e
+2026-10-14,aacta,Regal Greenwood & RPX,Regal,Indianapolis,Standard,8:00p,False,105,0,v2-7ad3915bd875b187a5f768d913a39722b3b7c45f417a5fd76dc532c8a62f5e8d
+2026-10-14,aausc,AMC Castleton Square 14,AMC,Indianapolis,Standard,7:30p,False,78,0,v2-7fbcd732ce80322d73466e3b92b5e3619f1a371ce071aa334b71fc6ea1b035a6
+2026-10-14,aacvp,Regal UA Galaxy - Indianapolis,Regal,Indianapolis,Standard,7:30p,False,154,0,v2-2bd77102d359cc1977805f87d4b66709bb5f512e65e1bb119d9424e2f5c9b7aa
+2026-10-14,aacvp,Regal UA Galaxy - Indianapolis,Regal,Indianapolis,Standard,7:45p,False,158,0,v2-032f9f55d0703bbd6ac7e796087798469b38cffdedb25352e28ea0763520a539
+2026-10-14,aacvp,Regal UA Galaxy - Indianapolis,Regal,Indianapolis,Standard,8:00p,False,100,0,v2-4b68ed27e1b7f6779600d30b66ed92a04330baf375de2bee4b1d304e8e721372
+2026-10-14,aavnh,Marcus West End Cinema,Marcus,Minnesota,Standard,6:45p,False,116,0,v2-c4c6d7c9306f1b237037cf1d61451554f3517acbefbd2174a6635beb2c9f91a6
+2026-10-14,aaqcx,AMC Southdale 16,AMC,Minnesota,Standard,6:30p,False,84,0,v2-ab5c25e026a87f0843bf79871c28433ceb69c3f2d53a529a1e0dc838fc11b001
+2026-10-14,aaivb,AMC Coon Rapids 16,AMC,Minnesota,Standard,8:10p,False,61,0,v2-93f07d7d829ecc2d7857ecb277cffebe97fcbfae5424340dbc1b87637614d18e
+2026-10-14,aaqiu,AMC Eden Prairie Mall 18,AMC,Minnesota,Standard,9:00p,False,91,0,v2-dc3fed24a028a3aa4ebefd78a91f661cc72d7d035d377a01dfd2a93e32f1e477
+2026-10-14,aaqiu,AMC Eden Prairie Mall 18,AMC,Minnesota,Standard,9:30p,False,96,0,v2-55dfe307261dcd0776e074af6368c5ed0aa5c6d2958f4648f4e8bd5c88c957e8
+2026-10-14,aaivd,AMC Inver Grove 16,AMC,Minnesota,Standard,7:45p,False,85,0,v2-9c934c63406daa70f745ac222ca3a9ce830313516f579b785c58323bace77a77
+2026-10-14,aagqt,Marcus Ronnie's Cinema + IMAX  ,Marcus,St Louis,Standard,6:20p,False,70,0,v2-5e1440af2c2d0d3d103b030493b225b29452897318ed65ed8d59b7f2cabda2fd
+2026-10-14,aagqt,Marcus Ronnie's Cinema + IMAX  ,Marcus,St Louis,Standard,7:45p,False,65,0,v2-57ff3a977681331878918c350582ce7584c0b3fb522e2406c2b81dc2715ad341
+2026-10-14,aagso,Marcus St. Charles Cinema,Marcus,St Louis,Standard,6:30p,False,103,0,v2-71542eceb83a72869b4ae6b7fac0b8876ee99598864bd9213beeb3f726d5f639
+2026-10-14,aagso,Marcus St. Charles Cinema,Marcus,St Louis,Standard,7:00p,False,85,0,v2-c5922966447ff375558afdb46f7c964d32ada0e3334639683adea9151f5f2ace
+2026-10-14,aagso,Marcus St. Charles Cinema,Marcus,St Louis,Standard,7:30p,False,103,0,v2-2106e4b7e5f2505a47b31ac31c7a9a97b83efcc2640bb1526d483abcade2045f
+2026-10-14,aagso,Marcus St. Charles Cinema,Marcus,St Louis,Standard,8:00p,False,84,0,v2-8f193a8a995ca96ce7165ea77ff5467566b9c76d340a30a53cd2e5c07bb66418
+2026-10-14,aathv,Marcus Chesterfield Cinema,Marcus,St Louis,Standard,6:30p,False,84,0,v2-4cb52386f4ed952044d7c814fa1cafafef273b9ee0695d0219f2437b3c89ed42
+2026-10-14,aathv,Marcus Chesterfield Cinema,Marcus,St Louis,Standard,6:45p,False,78,0,v2-fb5911e15b6fd0ff13c539c897bc9a74c5ee5e3498251faceff581ab562ba763
+2026-10-14,aathv,Marcus Chesterfield Cinema,Marcus,St Louis,Standard,7:15p,False,61,0,v2-0fec876ea2009d1eea90196aad10abcc17d1af748eaeaea5d61dd5b08a0fdd0a
+2026-10-14,aaojf,Marcus Mid Rivers Cinema,Marcus,St Louis,Standard,6:30p,False,84,0,v2-8653c06b2e0b92be5fa9ecb9aa3b36177aae3c8c248d787f2bbfc0dc98713882
+2026-10-14,aaojf,Marcus Mid Rivers Cinema,Marcus,St Louis,Standard,6:45p,False,54,0,v2-e6725d78b1f9d31ec378759907421cc8369d721fe3e336b06d9ad965274ceae2
+2026-10-14,aalav,Cinemark Merriam and XD,Cinemark,Kansas City,Premium Format,6:30p,False,252,0,v2-80d5e51a22fff0a2382967df051bf79f3f3d6bf36147b5740ca3997c3b9bc963
+2026-10-14,aalav,Cinemark Merriam and XD,Cinemark,Kansas City,Premium Format,10:30p,False,252,0,v2-94e4ffb88f01b05514d285d534d69d8187e76ff4c1e8d54a2c5575ff586b910d
+2026-10-14,aalav,Cinemark Merriam and XD,Cinemark,Kansas City,Premium Format,6:30p,False,252,0,v2-cbcce6b36a5ce0517b5f4239e3cccb3fb023c3ea937f13ab81974aeaffb494e8
+2026-10-14,aalav,Cinemark Merriam and XD,Cinemark,Kansas City,Premium Format,10:30p,False,252,0,v2-dea0923a3a58c521c03ef793902b8d29611ebd54033354a4b9d74e37b7026825
+2026-10-14,aalav,Cinemark Merriam and XD,Cinemark,Kansas City,Standard,7:30p,False,64,0,v2-3d5163115d536b88abd2bf9efc0b6332710282ea03d30f7d9321679af0b95b45
+2026-10-14,aalav,Cinemark Merriam and XD,Cinemark,Kansas City,Standard,9:30p,False,76,0,v2-32994d480e5e46093c2be1cd3b354bf3a00b50a170ae0688a5cc590f44ff02ed
+2026-10-14,aalav,Cinemark Merriam and XD,Cinemark,Kansas City,Standard,8:30p,False,104,0,v2-1741bc25b12694cf14d35407e2765630da4bad2df353f3c0ef2d3bf6efc0b23e
+2026-10-14,aaecp,AMC Barrywoods 24,AMC,Kansas City,Standard,8:45p,False,98,0,v2-69e101cecb866edfebfc497939797f093ff6752b17b283423d255e137158453d
+2026-10-14,aaecp,AMC Barrywoods 24,AMC,Kansas City,Standard,9:30p,False,144,0,v2-d2f15d122c4f9ad858d228c38ac7d914b2441c855f74eca93c3ce06e86227f59
+2026-10-14,aaeco,AMC Town Center 20,AMC,Kansas City,Standard,6:30p,False,43,0,v2-b57a7dd72c72fa1d3284a65bc41c7d08c0577a4501c9de0ee3cbce229e686ecf
+2026-10-14,aaeco,AMC Town Center 20,AMC,Kansas City,Standard,9:00p,False,43,0,v2-b9aa0930776a6eecc523f08aa2c21ce8f8de22c70055230000752a1bd3cc70f1
+2026-10-14,aaxgg,AMC Prairiefire 17,AMC,Kansas City,Standard,6:30p,False,56,0,v2-d22f7577a8a9779eec7f0ef815f52fb2bbc5c0256596c2668d6cd552a2fde31b
+2026-10-14,aaxgg,AMC Prairiefire 17,AMC,Kansas City,Standard,9:30p,False,56,0,v2-35d371a7c7c1d5eaffe873cf4547559c320f6690cf88459f1cd60a191c0a8d90
+2026-10-14,aaecq,AMC Studio 28,AMC,Kansas City,Standard,6:30p,False,32,0,v2-930a275e37d58ffc17f9527b20fbf0a70cf25a0b5387a3e03ed8e8695527d460
+2026-10-14,aajjg,Regal UA Denver Pavilions ,Regal,Denver,Standard,7:30p,False,46,0,v2-9e90a8abec5f73310c995072edd1ba35c5ed964bf304b47184d5bd4ade9f0664
+2026-10-14,aavkz,Regal River Point,Regal,Denver,Standard,7:30p,False,162,0,v2-3eba4a2af9f9b2c4020e35b8e3106f01a3eeb5e9d0cb74366c78466bcb70df2d
+2026-10-14,aaqqk,Regal UA Colorado Mills,Regal,Denver,Standard,8:00p,False,100,0,v2-23fe450dcc6abbbb74f10cbd7fe81528577589993cf7bfd2e349f99bfb10cc50
+2026-10-14,aajni,Cinemark Century Aurora and XD,Cinemark,Denver,Premium Format,5:30p,False,162,0,v2-5727985cfa2e8eef81b5713ce50ed1dd34fa9571a4bf7c14db03dd07c50a8d5a
+2026-10-14,aajni,Cinemark Century Aurora and XD,Cinemark,Denver,Premium Format,9:35p,False,162,0,v2-3fba96cfdc855a8c1be731195a92a25ee24f5862bdd5426d80f7fb17ab891c02
+2026-10-14,aajni,Cinemark Century Aurora and XD,Cinemark,Denver,Standard,5:35p,False,76,0,v2-5a09ad47fa0b58ca428b226ff4671b3dc1b003142b86c23eca57891e5433dc26
+2026-10-14,aajni,Cinemark Century Aurora and XD,Cinemark,Denver,Standard,9:40p,False,76,0,v2-6d382ecb45de54171733965f337e738d7d1acbb232ffca7fb7d239769a5ea4da
+2026-10-14,aajni,Cinemark Century Aurora and XD,Cinemark,Denver,Standard,5:40p,False,76,0,v2-8c912777e1b4077a0d0c605dc08354a1071de312b8484b0dcc535338994b16f4
+2026-10-14,aajni,Cinemark Century Aurora and XD,Cinemark,Denver,Standard,9:45p,False,76,0,v2-d2e4e0fe5cfd72a078ed5d4b6c44716953e8a2712c99e18e593c49d3e544e584
+2026-10-14,aaecn,AMC Westminster Promenade 24,AMC,Denver,Standard,5:30p,False,53,0,v2-4ec35485cbc50bc23b049d203698b2e0ea573392ae97bafa67d9d257229f0f0f
+2026-10-14,aaecn,AMC Westminster Promenade 24,AMC,Denver,Standard,7:00p,False,42,0,v2-681e30c099973fb12edcbf2e443ce98284d375d0c255c60772e942d047f0b462
+2026-10-14,aaecn,AMC Westminster Promenade 24,AMC,Denver,Standard,8:15p,False,100,0,v2-0118ee4b7937dbf340cf82b80b483c16e3f3166c90e0c842f6ae3a19baf59691
+2026-10-14,aavry,Regal SouthGlenn,Regal,Denver,Standard,6:30p,False,32,0,v2-5884772ddf9e49dbf83124846c8c7961c847ffa274122f8973200faa575b6afc
+2026-10-14,aatzn,Cinemark Mesa 16,Cinemark,Phoenix,Standard,4:30p,False,74,0,v2-4760e0ea2710aca1f74a09517c34daea991ef2e63e74b5414f5b136ebb8ba94c
+2026-10-14,aatzn,Cinemark Mesa 16,Cinemark,Phoenix,Standard,6:15p,False,71,0,v2-0ca89c77a9e43111c9767056ded412ca4d3b7adb4b1890fca5d53164334d2055
+2026-10-14,aatzn,Cinemark Mesa 16,Cinemark,Phoenix,Standard,8:35p,False,74,0,v2-1b5efdb83e231e91d62f3ce6bf3fb355371d04c7b0fcfa2b58e8a75600ea5626
+2026-10-14,aatzn,Cinemark Mesa 16,Cinemark,Phoenix,Standard,8:55p,False,123,0,v2-13e0ac72b5133cf02503ae1e976cd251ecce687d92d6cfae37218063a0e2f8ce
+2026-10-14,aatzn,Cinemark Mesa 16,Cinemark,Phoenix,Standard,4:35p,False,55,0,v2-f5a5e78250861af07bacf8d3f0667b188a9aaa9b58db246aa1a75f41debeafc6
+2026-10-14,aatzn,Cinemark Mesa 16,Cinemark,Phoenix,Standard,8:40p,False,55,0,v2-98d1fdf40f7ec8f63a97246bef8d515f88ec29293a8b2d9473a5d90bf01ef5f1
+2026-10-14,aappp,Regal Gilbert,Regal,Phoenix,Standard,4:30p,False,72,0,v2-d39e1c7b0f24c842a9d82908e826eaa14c16c6594e7ca9d3d71934ae0c0b1824
+2026-10-14,aapby,Cinemark Century Sam's Town 18,Cinemark,Las Vegas,Standard,8:00p,False,129,0,v2-c1b96268206168f941fbe7739ea1d49d714fabb90ecd21a4386eb90e71cf91ee
+2026-10-14,aadzy,Cinemark Century Orleans 18 and XD,Cinemark,Las Vegas,Standard,4:30p,False,71,0,v2-2f57338dad8ae1958bb12e5b02c665cc738e94bd2a474a6ab629967167142034
+2026-10-14,aadzy,Cinemark Century Orleans 18 and XD,Cinemark,Las Vegas,Standard,8:45p,False,71,0,v2-5f5d6d1a0abb2b63780b5494e2d9bb5bf70ee8ac893223db47d1a49aeb9ee013
+2026-10-14,aatth,Cinemark Century South Point 16 and XD,Cinemark,Las Vegas,Premium Format,4:30p,False,228,0,v2-9353ff316a7e0d4fe9fdc3597e517d8cf8704e7d5e4a399b6da7307eaf840e58
+2026-10-14,aatth,Cinemark Century South Point 16 and XD,Cinemark,Las Vegas,Premium Format,8:30p,False,228,0,v2-93e28ad8fbdeebef42eba2ecb57110a83e2be9bfca4f1b519814d28b848af101
+2026-10-14,aafxq,AMC Fashion Valley 18,AMC,San Diego,Standard,4:30p,False,76,0,v2-5e18d677ed6a9222a5763ca715896f277b024cb925e822caec9068c6be91a215
+2026-10-14,aabnh,AMC Mission Valley 20,AMC,San Diego,Standard,4:30p,False,126,0,v2-c7cdbd295093638bff58f7b1505e104974f74834f60567b42d025fdcd39a0888
+2026-10-14,aabnh,AMC Mission Valley 20,AMC,San Diego,Standard,8:30p,False,126,0,v2-493ac1ccc892458d0c8eed20e8f2c375af7ae4709416cc2b87db0f1a359625cb
+2026-10-14,aajal,Regal Rancho Del Rey,Regal,San Diego,Standard,7:35p,False,127,0,v2-d6e5bcfb9efa62e4bb1fed543cc8a714378f041fe7824300d1637991f4335e53
+2026-10-14,aajnl,Regal Parkway Plaza,Regal,San Diego,Standard,7:30p,False,124,0,v2-a82c5372f066d43935b8283da5431f1335f700c796822f7512f207be9f07ec61
+2026-10-14,aajnl,Regal Parkway Plaza,Regal,San Diego,Standard,8:00p,False,112,0,v2-911f8cc1ef6307927dd93f830bd19af19fbca16edd882b8105a09e573047fea5
+2026-10-14,aaove,Regal Edwards Mira Mesa ,Regal,San Diego,Premium Format,7:30p,False,153,0,v2-5a34f2d30d15ae119ab15840917d5961ade610cfa5d67783ac5aa4b776bab6cc
+2026-10-14,aaove,Regal Edwards Mira Mesa ,Regal,San Diego,Standard,8:00p,False,212,0,v2-68e6ab41d58fe9eefbbd843f190767472175d90ec05fa0da427edb4ddca9927e
+2026-10-14,aaove,Regal Edwards Mira Mesa ,Regal,San Diego,Standard,8:30p,False,212,0,v2-d87f5732d7bb53d7275cc9c026a7255d75ba254b9efdb4da81f8d2dd00447d3e
+2026-10-14,aaove,Regal Edwards Mira Mesa ,Regal,San Diego,Standard,9:00p,False,142,0,v2-e55f30bbc7dbf7c403679fd38856a77e2f9bfb6bfd121e6d4b97be8beda63ab0
+2026-10-14,aaove,Regal Edwards Mira Mesa ,Regal,San Diego,Standard,8:15p,False,148,0,v2-7453acfb6fc2f6f8b676c88ae4eccfb837620fe527feb5629160c7838e58b45e
+2026-10-14,aabtb,Regal Irvine Spectrum,Regal,Irvine CA,Premium Format,7:30p,False,523,0,v2-9107303f037c46627047b7bebde8ab43d2df4ae2c61a76ed1511f21647a3b696
+2026-10-14,aabtb,Regal Irvine Spectrum,Regal,Irvine CA,Premium Format,11:00p,False,523,0,v2-6966c6d9d7bcf2b5fc2ddf9fab4b59d553fa7c5e63484bc0d15ed695e0b5e503
+2026-10-14,aabtb,Regal Irvine Spectrum,Regal,Irvine CA,Standard,8:30p,False,533,0,v2-c50f0e629f6678a2edab896efbad1353143a1971951429a418fb1dd4ea109847
+2026-10-14,aaegj,Cinemark Century Orange and XD,Cinemark,Irvine CA,Premium Format,4:30p,False,203,0,v2-b9d4e9e0af2cb4cb6b15fe859ddfaa1ea4af078582bf0d6f0f9ffdf4282c2a4b
+2026-10-14,aaegj,Cinemark Century Orange and XD,Cinemark,Irvine CA,Premium Format,8:20p,False,203,0,v2-990e7d940b268780212add4a7de73c2291bf66dd8bf879654c45b5a745b87dbc
+2026-10-14,aaegj,Cinemark Century Orange and XD,Cinemark,Irvine CA,Premium Format,4:30p,True,,,v2-3b39dea595fa5a6a9d8a716fba4c1411be8c088cdd3532e41eeb1649326670a7
+2026-10-14,aaegj,Cinemark Century Orange and XD,Cinemark,Irvine CA,Premium Format,8:20p,True,203,0,v2-5a0791ce2ff6840a6fcbdd0361f855058e850960d3d91dc149ba8e1bfed9fc4a
+2026-10-14,aaegj,Cinemark Century Orange and XD,Cinemark,Irvine CA,Standard,5:15p,False,64,0,v2-d1e08a4462f6430202c3a5a1043f61c82b01406a3735400122aeb88b892831b9
+2026-10-14,aaegj,Cinemark Century Orange and XD,Cinemark,Irvine CA,Standard,6:20p,False,48,0,v2-79b055533725b372e2ba4f8fc0cdaee62cb6ec308168a2d32ed71e841b4501da
+2026-10-14,aaegj,Cinemark Century Orange and XD,Cinemark,Irvine CA,Standard,8:55p,False,83,0,v2-c74968d3b2293b4aa7c895597be023922f60847e82f4e4b3ddaf296882ad314c
+2026-10-14,aaegj,Cinemark Century Orange and XD,Cinemark,Irvine CA,Standard,9:05p,False,64,0,v2-0537f5fa036e0a95ed33de057efdde0ea0939b5900a3bbf2f853a2d592c0782b
+2026-10-14,aaegj,Cinemark Century Orange and XD,Cinemark,Irvine CA,Standard,6:00p,False,64,0,v2-4dab8eb10737790c070a1d7e8aedd80fd5f45cb0618ad4aede7d12ef16dd7d09
+2026-10-14,aaegj,Cinemark Century Orange and XD,Cinemark,Irvine CA,Standard,9:50p,False,64,0,v2-8650d6d0fcff1cbb93d4ae226dd1dca4b10e446938b3c68a03b1dd60a7529222
+2026-10-14,aatbd,Regal Edwards Corona Crossings,Regal,Irvine CA,Standard,7:30p,False,131,0,v2-78eebe5f73511bce4ca6c6b3047f93541ac4b319436aff8d7d861202e26a30e7
+2026-10-14,aatbd,Regal Edwards Corona Crossings,Regal,Irvine CA,Standard,7:45p,False,156,0,v2-b56268c300587d4709b2266f4fd810161c190042da3f47484810dc079418af53
+2026-10-14,aattf,Cinemark Century Huntington Beach and XD,Cinemark,Irvine CA,Standard,8:00p,False,50,0,v2-87cb9e81942bfad0be2b2f21d0d541a8104c5558ff475afbe9ecc46b9e05cf60
+2026-10-14,aaaox,AMC Fullerton 20,AMC,Irvine CA,Standard,4:30p,False,72,0,v2-1708ec7bf319ac179965a0b01920767cb4b66f9d84590bd8f80f81d8fbb77ae8
+2026-10-14,aauqt,Regal Edwards Eastvale Gateway,Regal,Irvine CA,Standard,7:30p,False,94,0,v2-19c3b59d1c88b45ee85dd847345ad07591bfb6f9425f4f18b073dfeb4239cab6
+2026-10-14,aamzh,Regal Edwards Long Beach,Regal,Irvine CA,Standard,7:30p,False,69,0,v2-e9bdba94dd4aa14a0d4b01c80aea746b2b30b2efdb1099cad5d1b07a487e3341
+2026-10-14,aamzh,Regal Edwards Long Beach,Regal,Irvine CA,Standard,8:00p,False,69,0,v2-a44d067f9222393a49b84ef96fb4740f372a9fa20c2de2c58193124e497b5b80
+2026-10-14,aatbe,Regal Riverside Plaza,Regal,Irvine CA,Standard,8:00p,False,64,0,v2-0238fbdd8b898681f309f44b94ad59b6bbb9affe95400d6d02925ad27ef6b7bd
+2026-10-14,aardy,Cinemark At The Pike Outlets and XD,Cinemark,Irvine CA,Standard,8:00p,False,96,0,v2-6a8f2ae88425df2ce3f1eaddcdd1b7a13c5a5fd23be284e0fad7cb382233b32e
+2026-10-14,aacgs,AMC Ontario Mills 30,AMC,Irvine CA,Standard,4:30p,False,42,0,v2-4b142ca1005296f9d2c694ecb66fd8d37027d30f29e911778dd0ae1c5df6aeec
+2026-10-14,aacgs,AMC Ontario Mills 30,AMC,Irvine CA,Standard,8:45p,False,42,0,v2-960b7e6aeacd7704a0e4ccea3d8e42dc0676ddab54a834711acb12ff8ce43606
+2026-10-14,aaedm,Regal Edwards Ontario Palace,Regal,Irvine CA,Premium Format,6:30p,False,744,0,v2-aa50494fb7d6cb1eb715660f1ce409827e5f756b50a5949568ad3021b9901f1d
+2026-10-14,aaedm,Regal Edwards Ontario Palace,Regal,Irvine CA,Standard,4:30p,False,122,0,v2-6453f10ce9ff3206b64f10213256c973f2acab693ac2ee25303cc48c0f6670ff
+2026-10-14,aaedm,Regal Edwards Ontario Palace,Regal,Irvine CA,Standard,5:30p,False,133,0,v2-09b0e52ea7b01c4782ee422f69236729960cf78107610ec5d557c7ec01dc8ffc
+2026-10-14,aanqt,Regal Oceanside,Regal,Irvine CA,Standard,7:30p,False,160,0,v2-a8c839ebf5637a65f51a909c3f281735a3b8d97380a0046405500f1cf53f5973
+2026-10-14,aawju,Cinemark Baldwin Hills Crenshaw and XD,Cinemark,Irvine CA,Standard,4:30p,False,85,0,v2-100ff7f4cd31ca65cb93fb534d984aaf416ea11ee1c74933f2ebdfb442e2dd2f
+2026-10-14,aaijt,Regal Edwards San Marcos,Regal,Irvine CA,Standard,7:30p,False,182,0,v2-637c841ba2fc6b7857466f89a8a6146190709a059f0bcc9feeb95e4a102967bf
+2026-10-14,aaijt,Regal Edwards San Marcos,Regal,Irvine CA,Standard,8:00p,False,158,0,v2-6e1a6e51d18b6e0fdd4f3fa73d856e7c370189ab1bae1c107e2f7fde64dee63f
+2026-10-14,aauri,Regal Sherman Oaks Galleria,Regal,LA,Premium Format,6:30p,False,224,0,v2-fc62962c547d8373998cc047f11df1d18289020359232fb53b538290a7568dae
+2026-10-14,aauri,Regal Sherman Oaks Galleria,Regal,LA,Premium Format,9:50p,False,224,0,v2-10152fac40111967879e54df759ce79052e122badbacabe6321f9983990243ac
+2026-10-14,aauri,Regal Sherman Oaks Galleria,Regal,LA,Standard,7:30p,False,121,0,v2-f4c632e1cb4ec410c22200ba49e149a5b97cfa4d03c50bb4ab0f9cf3f9b549c9
+2026-10-14,aajmp,AMC Northridge 10,AMC,LA,Standard,8:15p,False,153,0,v2-24bfb1c52a2fb66356a5075963e6411e5027f376f45f6eda4091312e997c824b
+2026-10-14,aanra,Regal Simi Valley Civic Center,Regal,LA,Standard,6:00p,False,83,0,v2-b92e14298869ff14787179ab699098623c4517754cfb5ee56dcaaf7e52778898
+2026-10-14,aanra,Regal Simi Valley Civic Center,Regal,LA,Standard,6:30p,False,91,0,v2-e690086932b31b7db6b301b0751bf36d76d859bb129fc610f91f358cbac7f759
+2026-10-14,aanky,"Regal Natomas Marketplace ScreenX, 4DX & RPX",Regal,Sacramento,Standard,7:30p,False,165,0,v2-2c590a401051b062203259f31f33dc84097f60e3f5f2603daef56f86a9fdf619
+2026-10-14,aanky,"Regal Natomas Marketplace ScreenX, 4DX & RPX",Regal,Sacramento,Standard,8:00p,False,169,0,v2-f1da33a0ef741ac39f0962697f6c909909288a1e8a0f12d4f0c22489a1088866
+2026-10-14,aayii,Regal Delta Shores & IMAX,Regal,Sacramento,Standard,7:30p,False,115,0,v2-f4f75b7cdee54283cbd198dcc506d8401160aab812abf00bde72054a1e3a7978
+2026-10-14,aacfa,Cinemark Century Laguna 16 and XD,Cinemark,Sacramento,Standard,8:00p,False,68,0,v2-0a771895c58df43b1e67b6190164c42f2337a53c38048bab291920d65dbf2210
+2026-10-14,aacfc,Cinemark Century Folsom 14,Cinemark,Sacramento,Standard,4:30p,False,112,0,v2-9f6244757a6956c01ad49cdd32773adb967134a2d79d2a48774bd14adcd37e75
+2026-10-14,aacfc,Cinemark Century Folsom 14,Cinemark,Sacramento,Standard,5:30p,False,120,0,v2-432ccfc32797a4ed173d45560fbf9015100c7fb6be023d88e362138b672cf199
+2026-10-14,aaywe,Cinemark Roseville Galleria Mall and XD,Cinemark,Sacramento,Premium Format,4:30p,False,226,0,v2-432bc5b357d54cbeb3426819d74dea624a16f2d5ddfaf076aa39b8aa5d0b6bd4
+2026-10-14,aaywe,Cinemark Roseville Galleria Mall and XD,Cinemark,Sacramento,Premium Format,8:30p,False,226,0,v2-c14c7e90c8dd181adab6667304252648f9f621c3ba59fb76a132f2f7d50a76b4
+2026-10-14,aaywe,Cinemark Roseville Galleria Mall and XD,Cinemark,Sacramento,Premium Format,4:30p,False,226,0,v2-79afa6348b7e10c967a7efc5cf1b276fa4ac9a0c84a78757531bfbac609368d5
+2026-10-14,aaywe,Cinemark Roseville Galleria Mall and XD,Cinemark,Sacramento,Premium Format,8:30p,False,226,0,v2-72ac4d879778d69d7737512515f5bd8631581195846274a5828e3fb2c4da2311
+2026-10-14,aaywe,Cinemark Roseville Galleria Mall and XD,Cinemark,Sacramento,Standard,5:00p,False,84,0,v2-638effed5e6b7d32bedb3f89cf49ae5b128ad0d79e69e14fee4ad161f3e6e96e
+2026-10-14,aaywe,Cinemark Roseville Galleria Mall and XD,Cinemark,Sacramento,Standard,6:30p,False,102,0,v2-628be04a9cd955134b817b81c61d6d1d6b0a7f806ff4cd21d843dbf677a2737f
+2026-10-14,aaywe,Cinemark Roseville Galleria Mall and XD,Cinemark,Sacramento,Standard,9:00p,False,84,0,v2-6b4fcb7637b95abff9389ef441e62916d156efd762bbdb4aa7da6e0afdf70362
+2026-10-14,aatje,Regal El Dorado Hills & IMAX,Regal,Sacramento,Premium Format,10:00p,False,150,0,v2-ad01bbc62c286ac2c99ee506833bd5737f44edafcfd8283505aca59013b6dcdd
+2026-10-14,aatje,Regal El Dorado Hills & IMAX,Regal,Sacramento,Standard,7:30p,False,88,0,v2-5a7022a53f264f9e08741c50a215a4e8e480b8bae9e9140fa96c0b35282cea80
+2026-10-14,aaqli,Regal Auburn - California,Regal,Sacramento,Standard,7:00p,False,248,0,v2-67fcaf9e52d28378bb8e705ffdd664b845695b816fbd0c54b46affaf39e80982
+2026-10-14,aarfb,Regal Stockton City Center & IMAX,Regal,Sacramento,Standard,7:30p,False,70,0,v2-c13589fd72ea4c733ba08beacb113cab762db2850cbf4750d9a7ea633bae00ea
+2026-10-14,aafyg,"Regal Edwards Fresno ScreenX, 4DX & IMAX",Regal,Fresno,Standard,7:30p,False,103,0,v2-a7e57f9ebf96f9cf1a5d3c8179107f21f032e0b6b1381f659379196d5bdb683f
+2026-10-14,aaovy,Regal Manchester - Fresno,Regal,Fresno,Standard,7:30p,False,75,0,v2-16b9219c1d68403333f48d7b386404d5a15a7f82d448e8e8d70469546aeaf3e4
+2026-10-14,aaovy,Regal Manchester - Fresno,Regal,Fresno,Standard,8:00p,False,75,0,v2-1a939f3148fe7802d34b90fece5f791906401d060dadbf869a29f09122bf38aa
+2026-10-14,aaxpf,Galaxy Fresno,Galaxy,Fresno,Standard,7:00p,False,187,0,v2-842a15f25796884d23ef23310de106b9e137b32be5c42048eda84f1aec25c615
+2026-10-14,aalun,Regal Visalia,Regal,Fresno,Standard,7:30p,False,158,0,v2-01f4e5589b9adb5b457abe95935c23b93f9352292df77ae0acb9b84efcfc68e1
+2026-10-14,aapkt,Regal Hollywood Merced,Regal,Fresno,Standard,7:30p,False,108,0,v2-07648127677d1850028c2082562f77851f8f07070d7151202c55da842bcee1b6
+2026-10-14,aajmz,Cinemark Century Eastport Plaza 16,Cinemark,Portland,Standard,8:00p,False,38,0,v2-3502028967d53ec594d1d605bec57ad1ed794b998c290d1125601a25f334310b
+2026-10-14,aatbx,Cinemark Cedar Hills 16,Cinemark,Portland,Premium Format,4:30p,False,91,0,v2-6e7bac0ae447e6ac762b8ef0085ca93d025a1d585e9ddc635a47835c6b51e88f
+2026-10-14,aatbx,Cinemark Cedar Hills 16,Cinemark,Portland,Premium Format,4:55p,False,126,0,v2-fde4b1b4645b2dd9541ef53942571d054ae0b42d14241b08f690b5ff14b0cb3c
+2026-10-14,aatbx,Cinemark Cedar Hills 16,Cinemark,Portland,Standard,4:30p,False,51,0,v2-4f0ff44a04ca79ba7ddd07d5be74f48b6327ea0a69922d82494d18a4c20c6b1c
+2026-10-14,aatbx,Cinemark Cedar Hills 16,Cinemark,Portland,Standard,4:30p,False,91,0,v2-48a995b8497fc67a2d71c3a2a3253f193bc2979c4f13b07e0b56eb00a1702b26
+2026-10-14,aatbx,Cinemark Cedar Hills 16,Cinemark,Portland,Standard,4:45p,False,51,0,v2-6d55c15f46403b00fe2cb6cd7c8be5b316e1bf583c55c4091b6b3c9b3ed8b110
+2026-10-14,aatbx,Cinemark Cedar Hills 16,Cinemark,Portland,Standard,4:55p,False,126,0,v2-b47b66bf1b41d240586314ce40fbf168759107371fba89817569c724b302ca1a
+2026-10-14,aaunh,Cinemark Clackamas Town Center and XD,Cinemark,Portland,Standard,8:00p,False,108,0,v2-9d7152add2956cfa6fd5c52cb2a6cbe09fb9c41be439bdaa4f1fe1efd0be8ecd
+2026-10-14,aatjc,Regal Bridgeport Village ScreenX & IMAX,Regal,Portland,Standard,7:30p,False,158,0,v2-0fe631f353fb9ab3abd9ee37461a09fb88c0271a7412127339f1433a59fb75c3
+2026-10-14,aawru,AMC Vancouver Mall 23,AMC,Portland,Standard,4:30p,False,97,0,v2-f3a131a42fa8c10a0df798ebad44b460382457f0e71015a4b4dfbb4c13594ce4
+2026-10-14,aawru,AMC Vancouver Mall 23,AMC,Portland,Standard,4:30p,False,110,0,v2-3b433379439918a272542c063d111b1852bd9ed67cbee7482a87977df605dd69
+2026-10-14,aaesc,Regal Movies On TV,Regal,Portland,Standard,7:30p,False,177,0,v2-a9abfb052d715f2f3e1e936ed1cf24a3bac372b2bb042c7810b2aee2b215ac35
+2026-10-14,aaesc,Regal Movies On TV,Regal,Portland,Standard,8:00p,False,177,0,v2-86985ca04993d0ec2c429d840a3c01ea30f18b4d795057d6b58a2c0ac9f7e7f2
+2026-10-14,aaoej,Cinemark Jordan Landing 24 and XD,Cinemark,Salt Lake,Premium Format,5:30p,False,231,0,v2-79192345622e5158d27abbde51cf5debf3109e2361f92ff9a37fd9428c330044
+2026-10-14,aaoej,Cinemark Jordan Landing 24 and XD,Cinemark,Salt Lake,Premium Format,9:30p,False,231,0,v2-9f175bff9774cd7787627d5cbe60cc4b405c3aa9018a485db00d1152d2c86800
+2026-10-14,aaoej,Cinemark Jordan Landing 24 and XD,Cinemark,Salt Lake,Premium Format,5:30p,False,231,0,v2-04dafee1536946605c6228f33b9ce778c57a4fac3bf615815397c57e7145008a
+2026-10-14,aaoej,Cinemark Jordan Landing 24 and XD,Cinemark,Salt Lake,Premium Format,9:30p,False,231,0,v2-db4a17cec651fc7233842cea4d62c2385f4fea4704471b22c291f893b505cd7c
+2026-10-14,aaoej,Cinemark Jordan Landing 24 and XD,Cinemark,Salt Lake,Standard,6:00p,False,63,0,v2-01b7e185e65c31fb36c99f0f1ba8152ce0a06606f1d57c1519408254b6ebb99b
+2026-10-14,aaoej,Cinemark Jordan Landing 24 and XD,Cinemark,Salt Lake,Standard,8:50p,False,79,0,v2-e06df875ad785dcb6f5252b51a586468a66f1dce40cc7d4becfc237a2cf2aedd
+2026-10-14,aaxoy,AMC West Jordan 12,AMC,Salt Lake,Standard,5:30p,False,52,0,v2-ca6df875b0210553bf67b02e1761c21978ffbf4005ea06f629452fa0e428f7e6
+2026-10-14,aaxoy,AMC West Jordan 12,AMC,Salt Lake,Standard,8:40p,False,78,0,v2-8d870d1bf6d35dbe17fa5b144048cd3800a944158072e2121ac5382777df70d0
+2026-10-14,aawiu,Cinemark Draper and XD,Cinemark,Salt Lake,Standard,8:00p,False,114,0,v2-29e89b77e38d19a66ad9bc48ee2a014d1e56330d52a97453f13d6491ed8b0287
+2026-10-14,aavbq,Cinemark Bistro Charlotte,Cinemark,Charlotte,Standard,7:30p,False,84,0,v2-84e32b72699dd94102af42bc636fabd71ff1d2e9a590e9e51dd360cbd865fb78
+2026-10-14,aavbq,Cinemark Bistro Charlotte,Cinemark,Charlotte,Standard,7:30p,False,85,0,v2-a5eabc50b6364d22f457a7e767468c725c55cf3b6ad3b95cd6231063477bba02
+2026-10-14,aacca,AMC Carolina Pavilion 22,AMC,Charlotte,Standard,7:30p,False,50,0,v2-832ce3504ba1ccf4a2efd9c73b8e4a0842b3ad89c23a8065043de6d3d519c9e0
+2026-10-14,aafzk,Regal Starlight - Charlotte,Regal,Charlotte,Standard,7:30p,False,,,v2-40638366e50d797dd628f34d8ab5e9eb11497746c3cc59f006cfafcc59ff70a5
+2026-10-14,aafzk,Regal Starlight - Charlotte,Regal,Charlotte,Standard,7:30p,False,,,v2-d068a7ab8dbd5a20e75c9d8b27ecbfd862b155e8fc3a9af829b0b380e2b2a77f
+2026-10-14,aafzk,Regal Starlight - Charlotte,Regal,Charlotte,Standard,7:30p,False,83,0,v2-955554ee691f296385cb2e0daedfcffc2cf0ea40b4ebbf10e8d6181af550559d
+2026-10-14,aafzk,Regal Starlight - Charlotte,Regal,Charlotte,Standard,7:30p,False,,,v2-9647769909b2ad1bf3f91a6f36b3a5c3295e45a26911ba96c7c8df7f6ce0ba82
+2026-10-14,aafzk,Regal Starlight - Charlotte,Regal,Charlotte,Standard,7:30p,False,,,v2-9b069ebcad441227d8fc2471e5381c4c568d0282407e8933e9bddbc5b037f0fa
+2026-10-14,aafzk,Regal Starlight - Charlotte,Regal,Charlotte,Standard,8:00p,False,54,0,v2-cc6fb00f7304b6929187f86bdb35e3a71629e0d7a565b829d5f03d9dbd5ca137
+2026-10-14,aaixy,Regal Stonecrest at Piper Glen,Regal,Charlotte,Premium Format,7:30p,False,175,0,v2-c9a63d6a04d810dd17f5a3314f9d3e1342232c79c38615e3629de10d6c2b8d34
+2026-10-14,aaixy,Regal Stonecrest at Piper Glen,Regal,Charlotte,Standard,8:00p,False,80,0,v2-27d045aafa6aed8406e5971618dad7ce0433960d9c84fa9ddbe6d8da0a5c5a2d
+2026-10-14,aaixy,Regal Stonecrest at Piper Glen,Regal,Charlotte,Standard,8:30p,False,95,0,v2-c1a67421c825e79757c30365bf5f0275862751f8853d3730a1356e7e5b036dbc
+2026-10-14,aanqm,AMC Concord Mills 24,AMC,Charlotte,Standard,7:30p,False,135,0,v2-9e94bf7d9557b7e0f7a78c78336f5e9b01e2dc55a55c352de8b691e3c4add155
+2026-10-14,aanqm,AMC Concord Mills 24,AMC,Charlotte,Standard,8:00p,False,93,0,v2-c177067e4173fd4528511a461af3892ab46923294baa0a459900b556bd0e7884
+2026-10-14,aanqm,AMC Concord Mills 24,AMC,Charlotte,Standard,8:30p,False,93,0,v2-f4c13114b53672155778b84dbe553a9e0f59b3b4abcc85abc7ef688e24f4a60e
+2026-10-14,aanqm,AMC Concord Mills 24,AMC,Charlotte,Standard,9:15p,False,137,0,v2-89f00c696f2495678bae2f54c5d8deef5baaed525ef03b6bb551f1b87620464c
+2026-10-14,aanqm,AMC Concord Mills 24,AMC,Charlotte,Standard,10:35p,False,139,0,v2-9bedb5def8ed1324657cc494edddddc73b98b2c515c09ef60d636d2171ab99aa
+2026-10-14,aanqm,AMC Concord Mills 24,AMC,Charlotte,Standard,8:15p,False,51,0,v2-b9a466507bd5ab7685a870ff3d6b5afcc66fb7104c10fcb13739c59cfc6262da
+2026-10-14,aanqm,AMC Concord Mills 24,AMC,Charlotte,Standard,9:45p,False,63,0,v2-5e8f0cc69c63c13fd7bd75c199291c5487f06288feba90add78596fe276ffd3b
+2026-10-14,aanqm,AMC Concord Mills 24,AMC,Charlotte,Standard,10:30p,False,93,0,v2-1e352e76e4bcd90a391088d20ef37aa4f15082dd5e37594b7aba26c173a3a0f1
+2026-10-14,aanzd,Regal Winter Park Village,Regal,Orlando,Standard,7:30p,False,92,0,v2-4523278cc3e1a88c370062c4d2c9f7375fde5ab7620c74ac0d1cec97a3cd5796
+2026-10-14,aaojk,Cinemark Orlando and XD,Cinemark,Orlando,Premium Format,7:30p,False,198,0,v2-018ff07465757479b47ce5c0adce4a26e2c0af1eb09b5bcfcdcc453c6831da1e
+2026-10-14,aaojk,Cinemark Orlando and XD,Cinemark,Orlando,Standard,7:30p,False,77,0,v2-e5e801d806c9e6b336fcc0e2369d4c5af9df3298dfe7a4b90e04e9353d1777b5
+2026-10-14,aaojk,Cinemark Orlando and XD,Cinemark,Orlando,Standard,8:45p,False,116,0,v2-45fab43888d4873a573558729596e05c9256fc216108657cd86574b731629361
+2026-10-14,aaojk,Cinemark Orlando and XD,Cinemark,Orlando,Standard,7:35p,False,78,0,v2-789ce52486ea7440ed4159cd83c86a1c3ae454a4972804ce745dea7632231f0d
+2026-10-14,aaujq,Regal Pointe Orlando ,Regal,Orlando,Standard,7:30p,False,49,0,v2-35d1dcd9ee8c20b580295e5280441ec3d4eb73714ae834aea9fa9b419bf61bb8
+2026-10-14,aaope,Regal Waterford Lakes,Regal,Orlando,Standard,7:35p,False,196,0,v2-1d25fb95591298bcc0bf4a9001851e3ede9435daa85ac7472cab40c8229ded17
+2026-10-14,aafqv,Regal Oviedo Mall,Regal,Orlando,Standard,7:30p,False,67,0,v2-37b03de4cebabe129591f799786b679eac385b9f61951374b0c2c411fbb6100e
+2026-10-14,aafqv,Regal Oviedo Mall,Regal,Orlando,Standard,8:00p,False,67,0,v2-ac8c8d3ee910715d8fbf2b99b9d22ddeaaa3e34f48bc413ad6b641956b6cc948
+2026-10-14,aanjo,AMC Veterans 24,AMC,Tampa,Standard,7:45p,False,76,0,v2-69fbd443e1b5ee01788c57fbc9675be5d1082c33a9b92c71d1092c2914599fed
+2026-10-14,aanjo,AMC Veterans 24,AMC,Tampa,Standard,8:00p,False,113,0,v2-48e5a977ec2cf86710f501dfb6c2fafb0d7bfe32e96f90f4d7fa54c8953afb91
+2026-10-14,aanjo,AMC Veterans 24,AMC,Tampa,Standard,8:30p,False,49,0,v2-50ea21cc974ebfae99bc4570a2e493e9bdc38821f5f797169c91a77920bfeeaf
+2026-10-14,aanjo,AMC Veterans 24,AMC,Tampa,Standard,9:15p,False,52,0,v2-2c16e7ab7425c9fb4fe186bd7991db7db6df668bd7075252c43c75e501aa1388
+2026-10-14,aanjo,AMC Veterans 24,AMC,Tampa,Standard,9:30p,False,41,0,v2-ce1bab201ca25795c03333b272cf7de018a09f7e5e80f54f9c1a09053ba0ceb4
+2026-10-14,aanjo,AMC Veterans 24,AMC,Tampa,Standard,9:35p,False,41,0,v2-9001ed21ab3eda6b81276d70c73ef4fc2f2ab7539f0afeacc35bd3dbf63b4290
+2026-10-14,aadax,AMC The Regency 20,AMC,Tampa,Standard,7:30p,False,110,0,v2-6d04d44fe38ac561ca0084a93b43aae3cabcafc6172196772aa24321e3585f40
+2026-10-14,aaodq,AMC Highwoods 20,AMC,Tampa,Standard,7:30p,False,,,v2-ca87d9dc12998265d128824c52d3f6ee533f0c9eda5522d42cd1731cefa4c7e1
+2026-10-14,aaodq,AMC Highwoods 20,AMC,Tampa,Standard,9:00p,False,,,v2-81872d7bc8b62b5d98727c44d2cb3b3a8b904b69a184664070dd63f377e03724
+2026-10-14,aapio,Regal Park Place,Regal,Tampa,Standard,8:00p,False,104,0,v2-92d9f007f1d5e03d167521edc3ec2645d993248153ccf32a30197433965c73a7
+2026-10-14,aakub,AMC Sunset Place 24,AMC,Miami,Standard,7:30p,False,95,0,v2-35998f72d4e43ed1115c4ad6dbea22b206060f85c44bb5a6f95db70dedf84439
+2026-10-14,aakub,AMC Sunset Place 24,AMC,Miami,Standard,9:40p,False,160,0,v2-9f01fcef0d075f4b35cb9d65c6bd09bbd8a336cdf06ae4cf6920389d24ceb3a4
+2026-10-14,aairq,AMC Aventura 24,AMC,Miami,Standard,7:30p,False,143,0,v2-054c0e02aca60baa9a5885edf8d21fcac71b7acc87da673e59017c386b6dc5ac
+2026-10-14,aaekb,Regal Sawgrass,Regal,Miami,Standard,7:30p,False,70,0,v2-8dccd9be00c9f979efc8078164621e6b292a7a61ee0ce7fa55c2a741a857fc9b
+2026-10-14,aaouv,Cinemark Bistro Boca Raton and XD,Cinemark,Miami,Premium Format,7:30p,False,148,0,v2-735edc06da02c1758719d428a26d9f5302d0837d8536ad5ae8fbf4896aea042b
+2026-10-14,aamgt,AMC Regency 24,AMC,Jacksonville,Standard,7:30p,False,37,0,v2-086ee9bc8fe9ecd0eb236cf425a2b86724ecf321e28826208839c773c6b90acd
+2026-10-14,aaili,Cinemark Tinseltown Jacksonville and XD,Cinemark,Jacksonville,Premium Format,7:30p,False,30,0,v2-7bf540c6522474a0b839ec8212dfe9c2d2964d7f4c925ffb20b60a354f0633d2
+2026-10-14,aaili,Cinemark Tinseltown Jacksonville and XD,Cinemark,Jacksonville,Premium Format,7:30p,False,169,0,v2-3c5676cadd8142dc7fbf7b449781dbb63611152772f511227a2c67204f52413a
+2026-10-14,aaili,Cinemark Tinseltown Jacksonville and XD,Cinemark,Jacksonville,Standard,7:45p,False,86,0,v2-f8fa2c644b92bf27a4c66e5d9ab05eadf1ab5c410cc42467e6a5cc4cc162c0f2
+2026-10-14,aaili,Cinemark Tinseltown Jacksonville and XD,Cinemark,Jacksonville,Standard,9:10p,False,88,0,v2-a0670788eede33a776926d35cf65e927d46c9685b46aee7be12a82fc92d4b378
+2026-10-14,aaili,Cinemark Tinseltown Jacksonville and XD,Cinemark,Jacksonville,Standard,9:00p,False,127,0,v2-706f80225a665da92c22a0e8059b0a8196979c58bd17299722db94501b94554a
+2026-10-14,aavpp,Cinemark Robinson Township and XD,Cinemark,Pittsburgh,Premium Format,7:30p,False,114,0,v2-35ed4f1e5534820a08c27d40f8441e028a8e764cf13db32dd6324d60e2e32bad
+2026-10-14,aavpp,Cinemark Robinson Township and XD,Cinemark,Pittsburgh,Premium Format,7:30p,False,114,0,v2-59dc801b32595ef9c48c3b6bdd54db7088f0fe769078f7039a303d9c270756b2
+2026-10-14,aavpp,Cinemark Robinson Township and XD,Cinemark,Pittsburgh,Premium Format,9:00p,False,,,v2-d6199b61e11af3f87867461178e668d56f82b7b9e2c20f60488c5360e967ee1b
+2026-10-14,aavpp,Cinemark Robinson Township and XD,Cinemark,Pittsburgh,Standard,8:35p,False,59,0,v2-a35da0833e28c6e4ce79e2e34033eb74abf462d485ca16b9ba632fd91ad8bbf2
+2026-10-14,aavpp,Cinemark Robinson Township and XD,Cinemark,Pittsburgh,Standard,8:50p,False,59,0,v2-fca9234a056468f26d4b9895ecadb590de2fc09b001c925e67d0f7d77e09181c
+2026-10-14,aavpp,Cinemark Robinson Township and XD,Cinemark,Pittsburgh,Standard,9:00p,False,100,0,v2-e7f4fe928485aed73c903e2922ad3567e97f6abc238d7bf8a6d33ae8a3d2efec
+2026-10-14,aavpp,Cinemark Robinson Township and XD,Cinemark,Pittsburgh,Standard,9:30p,False,58,0,v2-06da1c90d40b310fbaf0d4ec2a2c43dbdb477908a358d1d9804b35639a56496a
+2026-10-14,aaxiw,Cinemark North Hills and XD,Cinemark,Pittsburgh,Premium Format,8:00p,False,140,0,v2-b09c52569b71690f0a07b6b66585cb7cda850e71ac823416efa5ef1984cb2e0d
+2026-10-14,aaxiw,Cinemark North Hills and XD,Cinemark,Pittsburgh,Standard,7:30p,False,39,0,v2-0e692c4f5a3b75f6fffae3fe1eb2abba401a4cbcc18f676bddf0a17da9fe0cc1
+2026-10-14,aaxiw,Cinemark North Hills and XD,Cinemark,Pittsburgh,Standard,8:00p,False,140,0,v2-a867401e2c60e27749eb222c057dfdc5292246857b4448f8dd0bec2d32eda2c7
+2026-10-14,aaxiw,Cinemark North Hills and XD,Cinemark,Pittsburgh,Standard,8:10p,False,39,0,v2-ce58f9c8be3994533585912ebbda75204ecc4527843cb1db539cffa30dd627d3
+2026-10-14,aaxbv,Cinemark Monroeville Mall and XD,Cinemark,Pittsburgh,Standard,7:30p,False,142,0,v2-e8fce9d027403712ae9242c07a4f2f655d7fee8f57e7de7f9325b7a2a204658c
+2026-10-14,aaxbv,Cinemark Monroeville Mall and XD,Cinemark,Pittsburgh,Standard,7:30p,False,142,0,v2-4710c06114074cfb0bbcdc6f36618d4315d3142b98a649aa1eb06d3fa6192be0
+2026-10-14,aanhi,Cinemark Valley View and XD,Cinemark,Cleveland,Premium Format,7:30p,False,252,0,v2-ad5f7d0d22ae596478b5effba94806f556d053e4fe5afc3573631fd811af94a6
+2026-10-14,aanhi,Cinemark Valley View and XD,Cinemark,Cleveland,Standard,7:55p,False,92,0,v2-a77167d2a34f24db141f331eede730385cc08409642198798226ae66a8427752
+2026-10-14,aanhi,Cinemark Valley View and XD,Cinemark,Cleveland,Standard,8:00p,False,79,0,v2-a4d8896abd615f4a2e66fda0796fa9348fcf749e1f74374457050a7836c17f85
+2026-10-14,aanhi,Cinemark Valley View and XD,Cinemark,Cleveland,Standard,8:20p,False,111,0,v2-944a6355339b323863dd05ab56faf147bfa5db9c5880c525b3e73d665f7ed5ea
+2026-10-14,aauiu,Cinemark Strongsville at Southpark Mall,Cinemark,Cleveland,Standard,7:30p,False,62,0,v2-21ecf44d4a5da4c402078bec2823f69f5aedaba411787691d8ec5037708cf570
+2026-10-14,aancu,AMC Mayfair Mall 18,AMC,Milwaukee,Standard,8:10p,False,202,0,v2-3ab4d17e0f1a71bb247fadad69167179e097ed32b030a0de7cee9da44458b6cd
+2026-10-14,aauml,Marcus Majestic Cinema of Brookfield,Marcus,Milwaukee,Standard,6:30p,False,44,0,v2-ccba22b9b0ea4026e84c494ef0bcb4cfa3fafe4464bd6e7173d937f491d5c1f8
+2026-10-14,aaqwh,AMC Council Bluffs 17,AMC,Omaha,Standard,7:30p,False,124,0,v2-cdddefab7619f68466da4aa44073b884241dbdd137f88ac9a7200dcd3f205547
+2026-10-14,aaqwh,AMC Council Bluffs 17,AMC,Omaha,Standard,8:45p,False,124,0,v2-39e110fe27755032623306d7c92615e4ff7da92de04cda0294bea157b8f69574
+2026-10-14,aaigv,Marcus Majestic Cinema of Omaha,Marcus,Omaha,Standard,6:30p,False,60,0,v2-144eb2231e7f2d350287a982e7b6e61ca968ba88deb10aaada89af03ddd527d2
+2026-10-14,aaigv,Marcus Majestic Cinema of Omaha,Marcus,Omaha,Standard,7:00p,False,44,0,v2-23e63d32d91020c513cdfd29deaf8de44fcb8e1e9018323b5371cd4934bcf62f
+2026-10-14,aarow,Marcus Village Pointe Cinema,Marcus,Omaha,Standard,6:30p,False,90,0,v2-8640196f279c9ee949d3da87ff5f6e03a44312d17408f78848d481ef4125d0bd
+2026-10-14,aarow,Marcus Village Pointe Cinema,Marcus,Omaha,Standard,6:30p,False,91,0,v2-ba3a0381b424839b0edf5e7193bfbd79b382fe0d23219e38aac659483ec75ed4
+2026-10-14,aaitg,Cinemark Tinseltown Oklahoma City and XD,Cinemark,Oklahoma,Premium Format,6:30p,False,264,0,v2-412f0d44add92bc39398ab71696d464dbe384debb9479b2bde3e1b1119359e9e
+2026-10-14,aaitg,Cinemark Tinseltown Oklahoma City and XD,Cinemark,Oklahoma,Premium Format,10:30p,False,264,0,v2-8117291e776b6903331e9665d7f97ee04ec451bf0cfc413e1132b8e0db5926cd
+2026-10-14,aaitg,Cinemark Tinseltown Oklahoma City and XD,Cinemark,Oklahoma,Premium Format,6:30p,False,264,0,v2-814151aecdd96766faffcabf5f8d0526a87b1d936ea1351cd9d55798b097bd98
+2026-10-14,aaitg,Cinemark Tinseltown Oklahoma City and XD,Cinemark,Oklahoma,Premium Format,10:30p,False,264,0,v2-24ac7ae15cab9cec3d71a5de81a634a77fdc1d57a9bf052d3a8969322f81c532
+2026-10-14,aaitg,Cinemark Tinseltown Oklahoma City and XD,Cinemark,Oklahoma,Standard,6:30p,False,105,0,v2-49b5f09b90de3f1d8d24a6dccbe13b7b86b8bbc627f849d69f1741fb535c0cf4
+2026-10-14,aaitg,Cinemark Tinseltown Oklahoma City and XD,Cinemark,Oklahoma,Standard,10:35p,False,105,0,v2-67f796e0300b7b4d1571b1f408bdcd0ba7bbf639728536d75ef6a4e2c9983df2
+2026-10-14,aaitg,Cinemark Tinseltown Oklahoma City and XD,Cinemark,Oklahoma,Standard,6:30p,False,64,0,v2-503120c053e5e95fce81a2be7997674cb4556df3d82a557d0b7435f95b8e1220
+2026-10-14,aaitg,Cinemark Tinseltown Oklahoma City and XD,Cinemark,Oklahoma,Standard,10:30p,False,64,0,v2-17b5c82de4f485a2e96fcc859168365c9fe54b88915db050a202e1df80fcd92d
+2026-10-14,aaktw,AMC Quail Springs Mall 24,AMC,Oklahoma,Standard,8:00p,False,160,0,v2-e982e6d8359f382f53907d6f2078543944a36848db160dcadbc2a208f0125ea1
+2026-10-14,aaktw,AMC Quail Springs Mall 24,AMC,Oklahoma,Standard,8:45p,False,183,0,v2-65dcb6327b08b6ec97d77ee3b66814f504aa46041eceb7ef28f87ab134e3a144
+2026-10-14,aaqip,AMC Elmwood Palace 20,AMC,New Orleans,Standard,7:25p,False,186,0,v2-a6dce59c71dfd8c7edb1ce5c50abcb6b8502ca371061e174be63106c73eb1aaf
+2026-10-14,aaxdq,Regal Grand Esplanade,Regal,New Orleans,Standard,7:30p,False,72,0,v2-ca21b779612065b9c4e02d27d089675ec42d469533ccf5bf87fa847af8c5dfff
+2026-10-14,aaxba,AMC Stonybrook 20,AMC,Louisville,Standard,7:30p,False,119,0,v2-83bf5b85ec9d68cbe82ef7a311e9a6549703571aa510ad302649f63c37bdf8e6
+2026-10-14,aaiqi,Cinemark Tinseltown Louisville and XD,Cinemark,Louisville,Standard,7:30p,False,61,0,v2-39dc222fc51654958eca8509c91114b35e6cb67e495202dd1c294d584045c483
+2026-10-14,aaiqi,Cinemark Tinseltown Louisville and XD,Cinemark,Louisville,Standard,7:35p,False,58,0,v2-64c951b6ce84b73d7f663dc333b295c6c737a07fd4a9ab01a3978982d3dda25a
+2026-10-14,aaiqi,Cinemark Tinseltown Louisville and XD,Cinemark,Louisville,Standard,7:50p,False,62,0,v2-cf59baa6a379c3bdebe013f25755ed000fd59c7f769c1ddb541909d86c75a3cd
+2026-10-14,aaiqi,Cinemark Tinseltown Louisville and XD,Cinemark,Louisville,Standard,8:00p,False,115,0,v2-fe4c77b23cbba5ae5575f35885ae4915d83a2827d046a885a3787455be604f3c
+2026-10-14,aaiqi,Cinemark Tinseltown Louisville and XD,Cinemark,Louisville,Standard,8:40p,False,59,0,v2-516adb7ffc4d8a5babb1e81c82b645ade4f130be8b4f5e280c58747f484fa982
+2026-10-14,aaepq,Regal Virginia Center,Regal,Richmond VA,Standard,7:35p,False,126,0,v2-98adcf6fa533f88597d621e43a49972fe6ad5c8bd85ddb9e57de85695e993281
+2026-10-14,aaepq,Regal Virginia Center,Regal,Richmond VA,Standard,8:00p,False,126,0,v2-6affc97aca7a0b9f5e51d01ccaf62281ef5d2c7aacb3d49a13173828c10d9459
+2026-10-14,aaphs,Regal Short Pump,Regal,Richmond VA,Standard,7:50p,False,205,0,v2-2cd6d1103de6252e1a1415381c51b7ae5b799bcabf30c4aabc1e9b922f80d9b6
+2026-10-14,aaphs,Regal Short Pump,Regal,Richmond VA,Standard,8:20p,False,107,0,v2-7458ed9bafe34fbd8e271fc90864d33501ae5d30d99fcda31f1c65f724e778b9
+2026-10-14,aaowm,Regal Commonwealth & IMAX,Regal,Richmond VA,Standard,7:30p,False,184,0,v2-415e51164aa97d0db90ad2efe75c116515f627ba220fd1ca13936fbbd1e8fdcf
+2026-10-14,aaowm,Regal Commonwealth & IMAX,Regal,Richmond VA,Standard,8:00p,False,150,0,v2-4adb177e876ce70aa7aed0c2d29875439b9dd7fe5d608adf2ca191b69503486b
+2026-10-14,aaeth,Regal Elmwood Center,Regal,Buffalo,Standard,7:35p,False,187,0,v2-c5045875b7e58438e4c394ef341f6a0beeade5b1c73841d00afc74a690a4f73a
+2026-10-14,aaeth,Regal Elmwood Center,Regal,Buffalo,Standard,8:15p,False,108,0,v2-76f99db7f35cba1f54a7f8e84c0aa958c11ec3a14979c965d3c0ad0da39c75ed
+2026-10-14,aauvb,Regal Walden Galleria 4DX & RPX,Regal,Buffalo,Standard,7:30p,False,81,0,v2-6f1878b0bc141ae90fe4909eb753e10e243280189191ba33078de6aa12051e4e
+2026-10-14,aaetg,Regal Transit Center & IMAX,Regal,Buffalo,Standard,7:30p,False,257,0,v2-da6d87dbf2264ee628be8a507ea05ad65a6162355bceba9113bf1d89cc750d5d
+2026-10-14,aaggs,Regal Crossgates,Regal,Albany NY,Standard,7:30p,False,439,0,v2-f5c1bc124a1b36744b9e905701b18d653c48cdbb37600eb684d60a696c39e069
+2026-10-14,aaggs,Regal Crossgates,Regal,Albany NY,Standard,8:00p,False,458,0,v2-02a04c195c2496a0f4fcdf005bfa6c3880371dc9b32f8877ac747c773ee20338
+2026-10-14,aanlc,"Regal New Roc 4DX, IMAX & RPX",Regal,Queens NY,Premium Format,7:30p,False,172,0,v2-c2519eff0333af045974ed47b8ce303de9fa7aa92f503edc96efa6fd792a094a
+2026-10-14,aaodg,Regal Westbury IMAX & RPX,Regal,Queens NY,Premium Format,7:30p,False,222,0,v2-6d8dd2bf0628caa13b6de4569d5d8ad49dd5e02c10f646b5641308f9d947456a
+2026-10-14,aaodg,Regal Westbury IMAX & RPX,Regal,Queens NY,Standard,8:35p,False,148,0,v2-672f1e28f8b58437d57af017c634cbcec87b74bf5964e08bdd027f8297aa956e
+2026-10-14,aahqz,Bellmore Playhouse,Independent,Long Island,Standard,8:00p,False,,,v2-632fbf14db9235dbe875ef33700e75a372151edbae03a3c6acc9c52931e2f4dd
+2026-10-14,aagvl,Regal UA Farmingdale & IMAX,Regal,Long Island,Standard,7:30p,False,80,0,v2-d883d1be127e2e3cccb34406fd92377532f437523f9bd46ba147de212e56cca4
+2026-10-14,aarck,Apple Cinemas White Plains,Independent,Long Island,Premium Format,7:30p,False,182,0,v2-98a362a0b8e6c0b24e09f34f7ae13c773f0eb329799d14138f7091aeb6e9fdc7
+2026-10-14,aalat,AMC Loews Stony Brook 17,AMC,Long Island,Standard,8:00p,False,42,0,v2-be690c1731d0f2ab87695a6278a0ab587cc4af5209d782f1d89cd6a07af4ab20
+2026-10-14,aaxbf,Regal Nanuet & RPX,Regal,Stamford CT,Standard,7:30p,False,140,0,v2-d4741371c510d6ca926bd2765b930899f8c46eae36f495d45bcee44cc0bdcbcf
+2026-10-14,aayrx,Cinemark Willowbrook Mall and XD,Cinemark,Stamford CT,Premium Format,7:30p,False,191,0,v2-7c9ca0109f8db414136e6a5bf501dad1e1237ff4da0a1bb235e0e4da2cd96919
+2026-10-14,aayrx,Cinemark Willowbrook Mall and XD,Cinemark,Stamford CT,Premium Format,7:30p,False,191,0,v2-e5ff3f0baa5ac5a51b53799882f38285e7251a6c4e0aa31c15897fc9b0c98c3b
+2026-10-14,aayrx,Cinemark Willowbrook Mall and XD,Cinemark,Stamford CT,Premium Format,7:40p,False,100,0,v2-778e76713f1a786ccedc9423154d9a9e9aaee484ac85d1e64cc2506039a53ee7
+2026-10-14,aayrx,Cinemark Willowbrook Mall and XD,Cinemark,Stamford CT,Standard,7:35p,False,46,0,v2-060cb4761ba05346db117e3e059c66eb4c951e9818be90a14b3a83c63010e6b8
+2026-10-14,aayrx,Cinemark Willowbrook Mall and XD,Cinemark,Stamford CT,Standard,7:40p,False,100,0,v2-7bbaf54125493b91258811f9d8e5a5103cc012720132028b28767f764ae490bb
+2026-10-14,aayrx,Cinemark Willowbrook Mall and XD,Cinemark,Stamford CT,Standard,9:00p,False,61,0,v2-5d9ecdcc667fa31121247e1c227409862381c4c52d209e58ed7f6a76d075971d
+2026-10-14,aangb,Cinemark Century El Con 20 and XD,Cinemark,Tucson,Standard,4:30p,False,97,0,v2-c7a420d62f963693f4176a1761f0b69977b54cdc28fbebf080a4f4f7a3b28162
+2026-10-14,aangb,Cinemark Century El Con 20 and XD,Cinemark,Tucson,Standard,8:35p,False,97,0,v2-afbb1c17d535e2058712d49d8db3f29c61eabb9451f4e5e5adc2dcdb67587221
+2026-10-14,aacwa,Cinemark Century Rio Plex 24 and XD,Cinemark,Albuquerque,Standard,5:30p,False,58,0,v2-1d23c36f891f5505aaa7e03f9d2feeaea09ccb26432c5ff7db74ccad696e4776
+2026-10-14,aacwa,Cinemark Century Rio Plex 24 and XD,Cinemark,Albuquerque,Standard,9:35p,False,58,0,v2-f4a605bbf595614d73de6285f6468a6ed5b81679998970e04148c753a96ce06e
+2026-10-14,aacmq,Regal UA Cottonwood,Regal,Albuquerque,Standard,7:30p,False,50,0,v2-14e7207d1f7d708e814b448191261128f4f430a6c6ad893d105247792bdd0148

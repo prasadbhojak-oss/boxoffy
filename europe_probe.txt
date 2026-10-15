@@ -1,0 +1,359 @@
+======================================================================
+  BOXOFFY - EUROPE PROBE
+  2026-10-09T22:35:22
+  probe film: drishyam   probe date: 2026-10-10
+  23 homepages to warm, 69 endpoints to try
+======================================================================
+
+--- warming sessions so the CDN cookies are set ---
+  200  https://www.cineworld.co.uk
+  403  https://www.myvue.com   <-- bot wall at the front door
+  403  https://www.odeon.co.uk   <-- bot wall at the front door
+  200  https://www.showcasecinemas.co.uk
+  200  https://www.picturehouses.com
+  200  https://www.omniplex.ie
+  200  https://www.cinestar.de
+  403  https://www.uci-kinowelt.de   <-- bot wall at the front door
+  200  https://www.cinemaxx.de
+  200  https://www.kinopolis.de
+  403  https://www.cineplex.de   <-- bot wall at the front door
+  403  https://www.pathe.nl   <-- bot wall at the front door
+  403  https://kinepolis.nl   <-- bot wall at the front door
+  403  https://kinepolis.be   <-- bot wall at the front door
+  200  https://www.cinemacity.pl
+  403  https://www.cinesa.es   <-- bot wall at the front door
+  403  https://www.ucicinemas.it   <-- bot wall at the front door
+  403  https://www.pathe.fr   <-- bot wall at the front door
+  200  https://www.ugc.fr
+  403  https://www.finnkino.fi   <-- bot wall at the front door
+  403  https://www.filmstaden.se   <-- bot wall at the front door
+  200  https://www.cineplexx.at
+  200  https://www.nos.pt
+  cookies collected: 31
+
+--- endpoints ---
+
+### UK Cineworld site
+    https://www.cineworld.co.uk/films
+    HTTP 200  text/html  190,028 bytes  json=False  mentions_drishyam=False
+    html: data-ids=[]  next/nuxt_payload=False
+
+### UK Cineworld films api
+    https://www.cineworld.co.uk/uk/data-api-service/v1/quickbook/10108/films/until/2026-11-30?attr=&lang=en_GB
+    HTTP 404 Not Found
+
+### UK Cineworld cinemas api
+    https://www.cineworld.co.uk/uk/data-api-service/v1/quickbook/10108/cinemas/with-event/until/2026-11-30?attr=&lang=en_GB
+    HTTP 404 Not Found
+
+### UK Cineworld showtimes
+    https://www.cineworld.co.uk/uk/data-api-service/v1/quickbook/10108/film-events/in-group/10108?lang=en_GB&dt=2026-10-10
+    HTTP 404 Not Found
+
+### UK Cineworld search
+    https://www.cineworld.co.uk/search?q=drishyam
+    HTTP 404 Not Found
+
+### UK Vue films
+    https://www.myvue.com/film
+    HTTP 403 Forbidden   <-- bot wall, needs the homepage-cookie trick or is a no
+
+### UK Vue api films
+    https://www.myvue.com/data/films/
+    HTTP 403 Forbidden   <-- bot wall, needs the homepage-cookie trick or is a no
+
+### UK Vue api filmswithshowings
+    https://www.myvue.com/data/filmswithshowings/10002
+    HTTP 403 Forbidden   <-- bot wall, needs the homepage-cookie trick or is a no
+
+### UK Vue api cinemas
+    https://www.myvue.com/data/cinemas/
+    HTTP 403 Forbidden   <-- bot wall, needs the homepage-cookie trick or is a no
+
+### UK Odeon films
+    https://www.odeon.co.uk/films/
+    HTTP 403 Forbidden   <-- bot wall, needs the homepage-cookie trick or is a no
+
+### UK Odeon api films
+    https://www.odeon.co.uk/api/gateway/graphql
+    HTTP 403 Forbidden   <-- bot wall, needs the homepage-cookie trick or is a no
+
+### UK Odeon ocapi films
+    https://vwc.odeon.co.uk/WSVistaWebClient/ocapi/v1/browsing/master-data/films
+    HTTP 403 Forbidden   <-- bot wall, needs the homepage-cookie trick or is a no
+
+### UK Odeon ocapi showtimes
+    https://vwc.odeon.co.uk/WSVistaWebClient/ocapi/v1/browsing/master-data/showtimes/by-business-date/2026-10-10
+    HTTP 403 Forbidden   <-- bot wall, needs the homepage-cookie trick or is a no
+
+### UK Odeon sitemap films
+    https://www.odeon.co.uk/sitemap-films.xml
+    HTTP 403 Forbidden   <-- bot wall, needs the homepage-cookie trick or is a no
+
+### UK Showcase films
+    https://www.showcasecinemas.co.uk/movies
+    HTTP 200  text/html  117,340 bytes  json=False  mentions_drishyam=False
+    html: data-ids=[]  next/nuxt_payload=False
+
+### UK Showcase api
+    https://www.showcasecinemas.co.uk/api/movies
+    HTTP 404 Not Found
+
+### UK Picturehouse films
+    https://www.picturehouses.com/movies
+    HTTP 200  text/html  2,680 bytes  json=False  mentions_drishyam=False
+    html: data-ids=[]  next/nuxt_payload=False
+
+### UK Picturehouse api
+    https://www.picturehouses.com/api/get-movies
+    HTTP 200  text/html  2,680 bytes  json=False  mentions_drishyam=False
+    html: data-ids=[]  next/nuxt_payload=False
+
+### UK Everyman films
+    https://www.everymancinema.com/whats-on
+    HTTP 404 Not Found
+
+### UK Curzon films
+    https://www.curzon.com/films/
+    HTTP 403 Forbidden   <-- bot wall, needs the homepage-cookie trick or is a no
+
+### IE Omniplex films
+    https://www.omniplex.ie/whatson
+    HTTP 200  text/html  104,506 bytes  json=False  mentions_drishyam=False
+    html: data-ids=[]  next/nuxt_payload=False
+
+### IE Omniplex api
+    https://www.omniplex.ie/api/movies
+    HTTP 200  text/html  51,674 bytes  json=False  mentions_drishyam=False
+    html: data-ids=[]  next/nuxt_payload=False
+
+### IE Odeon films
+    https://www.odeoncinemas.ie/films/
+    HTTP 403 Forbidden   <-- bot wall, needs the homepage-cookie trick or is a no
+
+### DE CineStar site
+    https://www.cinestar.de/filme
+    HTTP 404 Not Found
+
+### DE CineStar api movies
+    https://www.cinestar.de/api/v1/de/movie
+    HTTP 404 Not Found
+
+### DE CineStar api program
+    https://www.cinestar.de/api/v1/de/show?date=2026-10-10
+    HTTP 404 Not Found
+
+### DE UCI site
+    https://www.uci-kinowelt.de/filme
+    HTTP 403 Forbidden   <-- bot wall, needs the homepage-cookie trick or is a no
+
+### DE UCI api
+    https://www.uci-kinowelt.de/api/films
+    HTTP 403 Forbidden   <-- bot wall, needs the homepage-cookie trick or is a no
+
+### DE UCI ocapi films
+    https://vwc.uci-kinowelt.de/WSVistaWebClient/ocapi/v1/browsing/master-data/films
+    FAILED URLError: <urlopen error [Errno 11001] getaddrinfo failed>
+
+### DE Cinemaxx site
+    https://www.cinemaxx.de/filme
+    HTTP 404 Not Found
+
+### DE Cinemaxx api
+    https://www.cinemaxx.de/api/v1/movies
+    HTTP 404 Not Found
+
+### DE Kinopolis site
+    https://www.kinopolis.de/filme
+    HTTP 404 Not Found
+
+### DE Kinopolis api
+    https://www.kinopolis.de/api/movies
+    HTTP 404 Not Found
+
+### DE Cineplex.de site
+    https://www.cineplex.de/filme/
+    HTTP 403 Forbidden   <-- bot wall, needs the homepage-cookie trick or is a no
+
+### DE Cineplex.de api
+    https://www.cineplex.de/api/movies
+    HTTP 403 Forbidden   <-- bot wall, needs the homepage-cookie trick or is a no
+
+### DE kino.de search
+    https://www.kino.de/suche/?q=drishyam
+    HTTP 200  text/html  494,131 bytes  json=False  mentions_drishyam=False
+    html: data-ids=[]  next/nuxt_payload=False
+    film slugs seen: ['avengers-4-endgame-2019', 'bibi-blocksberg-2-2026', 'das-gewisse-etwas-at--01k3rhpq8vqx6n299n8g6kvs7x', 'emil-und-die-detektive-2', 'heart-of-the-beast--01kjaehkbr040tp9br58x4tddy', 'resident-evil-2026', 'spider-man-4-2026', 'steckerlfischfiasko-2026', 'the-odyssey-2026', 'vaterland--01kshe7qj1kd0kv4mz5gdvfydq']
+
+### DE filmstarts search
+    https://www.filmstarts.de/suche/?q=drishyam
+    HTTP 410 Gone
+
+### NL Pathe site
+    https://www.pathe.nl/films
+    HTTP 403 Forbidden   <-- bot wall, needs the homepage-cookie trick or is a no
+
+### NL Pathe api shows
+    https://www.pathe.nl/api/shows?date=2026-10-10
+    HTTP 200  application/json  329,440 bytes  json=True  mentions_drishyam=True
+    TOP-LEVEL KEYS: ['shows', 'labels', 'contentratings']
+      shows[0] keys: ['slug', 'title', 'releaseAt', 'posterPath', 'backgroundPath', 'label', 'contentRating', 'cinechecks', 'isMovie', 'isNew', 'isEventSpecial', 'isComingSoon', 'homeOrder', 'genericOrder', 'hubbleCasting', 'type', 'upcomingOrder', 'mostAwaitedOrder', 'duration', 'genres']
+    {"shows":[{"slug":"verity-50915","title":"Verity","releaseAt":{"NL_NL":"2026-10-01"},"posterPath":{"lg":"https:\/\/media.pathe.nl\/movie\/alex\/HO00003207\/poster\/lg\/3\/movie&uuid=69158583-9A44-40DB-9A9A-31CE68F887B2","md":"https:\/\/media.pathe.nl\/movie\/alex\/HO00003207\/poster\/md\/3\/movie&uuid=69158583-9A44-40DB-9A9A-31CE68F887B2"},"backgroundPath":{"lg":"https:\/\/media.pathe.nl\/movie\/mx\/50915\/lg\/112\/media","md":"https:\/\/media.pathe.nl\/movie\/mx\/50915\/md\/112\/media","sm":"https:\/\/media.pathe.nl\/movie\/mx\/50915\/sm\/112\/media"},"label":null,"contentRating":{"ref":"-12ans","description":"-12 jaar","extendedDescription":"Jonger dan 12 jaar? Dan alleen toegang onder begeleiding van een volwassene."},"cinechecks":[{"ref":"vio","description":"Geweld"},{"ref":"angoisse","description":"Angst"},{"ref":"sexe","description":"Seks"},{"ref":"language","description":"Grof taa
+
+### NL Pathe api movies
+    https://www.pathe.nl/api/movies
+    HTTP 404 Not Found
+
+### NL Kinepolis site
+    https://kinepolis.nl/films
+    HTTP 404 Not Found
+
+### NL Kinepolis api
+    https://kinepolis.nl/api/films
+    HTTP 401 Unauthorized
+
+### BE Kinepolis site
+    https://kinepolis.be/nl/films
+    HTTP 200  text/html  38,604 bytes  json=False  mentions_drishyam=False
+    html: data-ids=[]  next/nuxt_payload=False
+
+### NL Vue site
+    https://www.vuecinemas.nl/films
+    HTTP 404 Not Found
+
+### PL Cinema City site
+    https://www.cinema-city.pl/kina
+    HTTP 404 Not Found
+
+### PL Cinema City api films
+    https://www.cinema-city.pl/pl/data-api-service/v1/quickbook/10103/films/until/2026-11-30?attr=&lang=pl_PL
+    HTTP 200  application/json  31,697 bytes  json=True  mentions_drishyam=False
+    TOP-LEVEL KEYS: ['body']
+    {"body":{"films":[{"id":"8447o2r","name":"100 dni: Misja Zeus","length":112,"posterLink":"https://www.cinema-city.pl/xmedia-cw/repo/feats/posters/8447O2R.jpg","videoLink":"https://www.youtube.com/watch?v=bzqFkUHw0IU","link":"https://www.cinema-city.pl/filmy/100-dni-misja-zeus/8447o2r","weight":0,"releaseYear":"2026","releaseDate":"2026-09-11T00:00:00","attributeIds":["action","comedy","na","vip"]},{"id":"8190s3r","name":"500 mil","length":102,"posterLink":"https://www.cinema-city.pl/xmedia-cw/repo/feats/posters/8190S3R.jpg","videoLink":"https://www.youtube.com/watch?v=JQMLALxUHsA","link":"https://www.cinema-city.pl/filmy/500-mil/8190s3r","weight":0,"releaseYear":"2025","releaseDate":"2026-09-04T00:00:00","attributeIds":["drama","first-subbed-lang-pl","na","original-lang-en","subbed","vip"]},{"id":"8190s3r1","name":"500 mil (lektor)","length":102,"posterLink":"https://www.cinema-city.pl/x
+
+### PL Multikino site
+    https://multikino.pl/filmy
+    HTTP 403 Forbidden   <-- bot wall, needs the homepage-cookie trick or is a no
+
+### ES Cinesa site
+    https://www.cinesa.es/peliculas/
+    HTTP 403 Forbidden   <-- bot wall, needs the homepage-cookie trick or is a no
+
+### ES Cinesa ocapi films
+    https://vwc.cinesa.es/WSVistaWebClient/ocapi/v1/browsing/master-data/films
+    HTTP 403 Forbidden   <-- bot wall, needs the homepage-cookie trick or is a no
+
+### ES Yelmo site
+    https://www.yelmocines.es/cartelera
+    HTTP 200  text/html  166,403 bytes  json=False  mentions_drishyam=False
+    html: data-ids=[]  next/nuxt_payload=False
+    film slugs seen: ['posters']
+
+### IT UCI site
+    https://www.ucicinemas.it/film/
+    HTTP 403 Forbidden   <-- bot wall, needs the homepage-cookie trick or is a no
+
+### IT UCI api
+    https://www.ucicinemas.it/rest/v3/movies/
+    HTTP 404 Not Found
+
+### IT The Space site
+    https://www.thespacecinema.it/film
+    HTTP 403 Forbidden   <-- bot wall, needs the homepage-cookie trick or is a no
+
+### FR Pathe site
+    https://www.pathe.fr/films
+    HTTP 200  text/html  1,803,583 bytes  json=False  mentions_drishyam=False
+    html: data-ids=[]  next/nuxt_payload=False
+    film slugs seen: ['alex', 'digger-51293', 'heart-of-the-beast-52822', 'la-maison-de-nos-reves-51866', 'verity-50815']
+
+### FR Pathe api
+    https://www.pathe.fr/api/films
+    HTTP 404 Not Found
+
+### FR UGC site
+    https://www.ugc.fr/films.html
+    HTTP 200  text/html  57,101 bytes  json=False  mentions_drishyam=False
+    html: data-ids=[]  next/nuxt_payload=False
+
+### FR Allocine search
+    https://www.allocine.fr/rechercher/?q=drishyam
+    HTTP 200  text/html  258,693 bytes  json=False  mentions_drishyam=True
+    html: data-ids=[]  next/nuxt_payload=False
+    CONTEXT: ...TF-8" />     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">     <meta name="robots" content="noindex, nofollow" />         <title>Recherche drishyam sur AlloCiné</title>     <meta name="keywords" content="" />     <meta name="Googlebot" content="noarchive" />     <meta name="distribution" content="global" />     <meta name="author" content="AlloCine" />     <meta name="country" content="France" />...
+
+### FI Finnkino site
+    https://www.finnkino.fi/movies
+    HTTP 403 Forbidden   <-- bot wall, needs the homepage-cookie trick or is a no
+
+### FI Finnkino xml events
+    https://www.finnkino.fi/xml/Events/
+    HTTP 403 Forbidden   <-- bot wall, needs the homepage-cookie trick or is a no
+
+### FI Finnkino xml schedule
+    https://www.finnkino.fi/xml/Schedule/?dt=10/10/2026
+    HTTP 403 Forbidden   <-- bot wall, needs the homepage-cookie trick or is a no
+
+### SE Filmstaden site
+    https://www.filmstaden.se/filmer/
+    HTTP 403 Forbidden   <-- bot wall, needs the homepage-cookie trick or is a no
+
+### SE Filmstaden api
+    https://www.filmstaden.se/api/v2/movie
+    HTTP 403 Forbidden   <-- bot wall, needs the homepage-cookie trick or is a no
+
+### NO Nordisk Film Kino
+    https://www.nfkino.no/filmer
+    HTTP 200  text/html  9,397 bytes  json=False  mentions_drishyam=False
+    html: data-ids=[]  next/nuxt_payload=False
+
+### DK Nordisk Film Bio
+    https://www.nfbio.dk/film
+    HTTP 404 Not Found
+
+### CH Pathe site
+    https://www.pathe.ch/fr/films
+    HTTP 403 Forbidden   <-- bot wall, needs the homepage-cookie trick or is a no
+
+### AT Cineplexx site
+    https://www.cineplexx.at/filme/
+    HTTP 200  text/html  5,584 bytes  json=False  mentions_drishyam=False
+    html: data-ids=[]  next/nuxt_payload=False
+
+### AT Cineplexx api
+    https://www.cineplexx.at/api/movies
+    HTTP 200  text/html  5,584 bytes  json=False  mentions_drishyam=False
+    html: data-ids=[]  next/nuxt_payload=False
+
+### PT NOS site
+    https://nos.pt/cinemas/filmes
+    HTTP 404 Not Found
+
+### PT NOS api
+    https://nos.pt/cinemas/api/movies
+    HTTP 404 Not Found
+
+======================================================================
+  SUMMARY
+    responded 200      17
+    returned json      2
+    mentioned drishyam 2
+    failed             52
+    of which blocked   28  (403/429 - bot wall)
+    elapsed            94s
+
+  WHAT HAPPENS NEXT
+    Send me europe_probe.txt. The ones that matter are any endpoint
+    that returned JSON, and any that mentioned the film - those are
+    the chains I can build a real parser against. Chains that only
+    served HTML behind a bot wall may need a different approach or
+    may simply not be worth the effort.
+
+    My expectation, to be tested: Cineworld's data-api-service is the
+    best bet, because that same API shape covers the whole Cinema City
+    group - UK, Poland, Czechia, Hungary, Romania, Israel, Bulgaria.
+    One parser, seven countries. Odeon's Vista ocapi endpoints are the
+    second bet, and Finnkino publishes open XML, which would make
+    Finland trivially easy and is a good sanity check that the
+    pipeline works end to end.
+======================================================================

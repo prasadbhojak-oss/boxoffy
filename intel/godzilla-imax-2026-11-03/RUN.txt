@@ -1,0 +1,88 @@
+Godzilla Minus Zero - Godzilla Day IMAX Early Access  (godzilla-imax)   fandango 247879   cineplex n/a
+dates ['2026-11-03']   401 postcodes   10 workers   pace 0.12s
+  session warm-up HTTP 200; cookies ['akamai_location', 'userCountry', 'akamai_set_zip', 'userlocation', 'akamai_generated_location']
+RUN 2026-10-04T09:57:10.080438 film=godzilla-imax date=2026-11-03 workers=10 pace=0.12 SEATS
+
+### Godzilla Minus Zero - Godzilla Day IMAX Early Access · 2026-11-03 -> intel\godzilla-imax-2026-11-03
+  190 sites, 192 showtimes
+Seat maps...
+  192 showtimes, 192 unique seat maps, 192 to read
+  10 workers, starting pace 0.12s -> about 0 min if nothing throttles
+  192/192 · 0.4 min · 7.5 req/s · ~0 min left · pace 0.12s · 170 failed · 0 throttled
+  WARNING 170 seat maps failed. Those rows are BLANK, not zero. Re-run with --resume to retry only those.
+Cineplex (Canada)...
+  Canada skipped: no cineplex filmId for this listing.
+  0 Canadian showtimes
+
+=== Godzilla Minus Zero - Godzilla Day IMAX Early Access · 2026-11-03 · PRESALE ===
+  sites                      190
+  showtimes                  192
+  seat maps read              22   11.5% of showtimes
+  seats on sale            5,778
+  TICKETS SOLD               206   3.6% of those seats
+  sold-out shows               0
+  Presale: nothing has played, no seat map withdrawn, so this is a
+  cumulative total rather than a floor.
+
+  no earlier read with seat data on disk, so no velocity yet.
+  This read is the baseline. Run again in a few hours.
+
+  BY FORMAT
+    Premium Format           22 sites     22 sh     5,778 seats      206 sold   3.6%
+
+  BY CHAIN
+    Independent               6 sites      6 sh     1,816 seats      134 sold   7.4%
+    Cinemark                  6 sites      6 sh     1,599 seats       50 sold   3.1%
+    Regal                     5 sites      5 sh     1,041 seats        8 sold   0.8%
+    MJR                       2 sites      2 sh       459 seats        8 sold   1.7%
+    Harkins                   1 sites      1 sh       373 seats        6 sold   1.6%
+    Emagine                   1 sites      1 sh       266 seats        0 sold   0.0%
+    Marcus                    1 sites      1 sh       224 seats        0 sold   0.0%
+
+  BY METRO
+    Philadelphia              1 sites      1 sh       570 seats      133 sold  23.3%
+    LA                        1 sites      1 sh       380 seats       38 sold  10.0%
+    Oklahoma                  1 sites      1 sh       229 seats       11 sold   4.8%
+    Detroit                   2 sites      2 sh       459 seats        8 sold   1.7%
+    Tennessee                 1 sites      1 sh       345 seats        8 sold   2.3%
+    Arizona                   1 sites      1 sh       373 seats        6 sold   1.6%
+    Ohio                      3 sites      3 sh       772 seats        1 sold   0.1%
+    Indiana                   1 sites      1 sh       292 seats        1 sold   0.3%
+    SF Bay                    1 sites      1 sh       264 seats        0 sold   0.0%
+    Fresno/Cent CA            1 sites      1 sh       129 seats        0 sold   0.0%
+    Houston                   1 sites      1 sh       178 seats        0 sold   0.0%
+    Austin                    1 sites      1 sh       125 seats        0 sold   0.0%
+    Upstate NY                1 sites      1 sh       218 seats        0 sold   0.0%
+    Georgia                   1 sites      1 sh       126 seats        0 sold   0.0%
+    Minnesota                 1 sites      1 sh       266 seats        0 sold   0.0%
+
+  BY TIME OF DAY (local, per-hour density so wide buckets do not lie)
+    6-12                  0 sh (     0/hr)         0 seats        0 sold   0.0%
+    12-4pm                0 sh (     0/hr)         0 seats        0 sold   0.0%
+    4-7pm                 0 sh (     0/hr)         0 seats        0 sold   0.0%
+    7-9pm                22 sh (    11/hr)     5,778 seats      206 sold   3.6%
+    9pm+                  0 sh (     0/hr)         0 seats        0 sold   0.0%
+    after midnight        0 sh (     0/hr)         0 seats        0 sold   0.0%
+
+  === DOLLARS ON WHAT WE MEASURED ===
+  ATP assumed: Standard $20.00, 3D $22.00, Premium Format $26.00, IMAX $26.00   (ASSUMPTION - override with --atp-* flags)
+  observed presale gross  $5,356
+  seat coverage is 11.5%, so scaled to all showtimes
+  that is about $46,743 - an ESTIMATE, label it as one.
+
+  === WHAT THIS IMPLIES FOR THE OPENING ===
+  We have NO measured presale-to-final ratio for a Marvel title.
+  The $43.21 factor we calibrated on Drishyam was a same-day
+  walk-up factor and does not transfer. So this is a sensitivity
+  table, not a forecast. Pick a row only if you can defend it.
+    presale is       implied 3-day gross
+      10% of final               467,433
+      15% of final               311,622
+      20% of final               233,716
+      25% of final               186,973
+      30% of final               155,811
+  Publish the measured presale number. Do not publish a row of
+  this table as our estimate until we have calibrated the ratio.
+
+  === CANADA ===
+  no Canadian rows in this read.

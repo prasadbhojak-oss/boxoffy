@@ -1,12 +1,57 @@
 [
   {
+    "headline": "Weekend Preview · October 16–18: Jailer 2 Opens On A ₹41.48 Crore Advance, Five New Films Land In 48 Hours, And Drishyam Finally Gets Tested",
+    "dek": "Jailer 2 closed its day-one advance at ₹41.48 crore gross on 19.6 lakh tickets across 17,615 shows — the biggest Tamil pre-sale of the year — and passed ₹60 crore worldwide. We call ₹60 crore India net on opening day, band ₹54–67, and ₹188 crore across the extended Thursday-to-Sunday weekend; ₹200 crore needs day one at ₹64 crore. Then five new films land in 48 hours. Ranabaali's ₹86 lakh advance is 87% block seats — ₹11 lakh of genuine public pre-sale — while Nayi Naveli and Prahaar have not sold out a single show between 4,420 of them. Drishyam: The Conclusion gives up screens to all five and finally gets tested. Plus the Jailer 2 heat map state by state, our ₹260.30 crore national weekend chart, Hanuman Ansh's bands closing to within ₹6 crore of Drishyam's, Ramayana's US pre-sales opening onto an empty board with four different release dates listed, and the streaming, music and American charts.",
+    "url": "/boxoffice-weekend-preview-october-16-18-2026.html",
+    "tag": "WEEKEND PREVIEW",
+    "date": "2026-10-15",
+    "readTime": "23 min read",
+    "featured": true
+  },
+  {
+    "headline": "Jailer 2 Advance Booking: The India Map, Zone By Zone",
+    "dek": "Two days before release, Jailer 2 has sold 4,16,162 seats and banked ₹8.98 crore in District advance. Tamil Nadu is 58.6% sold and Chennai 84.9%, with 335 of the country's 347 sold-out shows sitting in one state — while every state outside the south is under 16%. The full heat map, zone by zone and city by city, plus the Hindi version that has sold 3,800 seats nationally and does not have a single PVR, INOX or Cinepolis show anywhere in India.",
+    "url": "/jailer-2-advance-booking-india-map.html",
+    "tag": "EDITORIAL",
+    "date": "2026-10-13",
+    "readTime": "9 min read",
+    "featured": false
+  },
+  {
+    "headline": "Weekend Recap · October 9–11: Drishyam Needs One More Weekend For 400, And The Industry Is Adding People Again",
+    "dek": "Drishyam: The Conclusion took ₹63.50 crore in its second weekend, a fall of 64%, and sits at ₹315.25 crore. Four hundred is still live — but only on a third weekend near ₹35 crore, in the week Jailer 2 opens, and we are cutting our own range to ₹375–395 as a result. Plus the ₹300 crore club in full, Hanuman Ansh on day 67 with no streaming deal at all and its producer denying the ₹100 crore figure on the record, Premada Oorali turning ₹9 lakh into ₹53 crore on 60 screens, the cross-platform streaming and music charts, and an India that has passed the whole of last January–September with a month to spare — this time by selling more tickets, not dearer ones.",
+    "url": "/boxoffice-weekend-recap-october-9-11-2026.html",
+    "tag": "WEEKEND RECAP",
+    "date": "2026-10-11",
+    "readTime": "12 min read",
+    "featured": false
+  },
+  {
+    "headline": "India Ran Hollywood's Streaming Experiment And Got The Opposite Answer",
+    "dek": "An American newsletter argues the box office is dead and that streaming engagement should set a film's price. We fact-check it — the margin model credits the theatrical studio with ticket sales alone, Netflix's \"free\" marketing was $3.3 billion, and nine of its ten streaming hits are catalogue films. Then we run the same question on India and get the reverse: FICCI-EY reports digital rights values down 8 percent in a record theatrical year, because buyers now price on how the film did in cinemas. With Premalu pulled before its own remake, Tumbbad selling tickets twice, and the two numbers India does not have.",
+    "url": "/india-ott-vs-box-office.html",
+    "tag": "ANALYSIS",
+    "date": "2026-10-12",
+    "readTime": "11 min read",
+    "featured": false
+  },
+  {
+    "headline": "Weekend Recap · October 2–4: We Called ₹61 Crore, It Did ₹62 — Every Call Graded",
+    "dek": "Drishyam: The Conclusion opened to ₹62.00 crore against our pre-release call of ₹61 crore, then ₹53.50 crore on Saturday — a drop of only 13.7% off a Gandhi Jayanti Friday. We grade all six numbers we published, including the three that missed, and explain why our Thursday model beat our Friday revision. Plus the 2026 opening-weekend boards for India and North America on a strict Friday-to-Sunday rule, the Netflix and Prime top tens, Ramayana's hype index recalibrated against three trailers, and a first-weekend review.",
+    "url": "/boxoffice-weekend-recap-october-2-4-2026.html",
+    "tag": "WEEKEND RECAP",
+    "date": "2026-10-04",
+    "readTime": "11 min read",
+    "featured": false
+  },
+  {
     "headline": "Weekend Report · October 2–4: Drishyam Is Staring At An Earth-Shattering Opening Weekend",
     "dek": "We read the live seat map of every Drishyam show in fifty Indian cities and counted 6,36,693 seats sold, ₹26.97 crore banked, before the first show. National chains 4,21,153 with nine hours to go. We call ₹61 crore on day one and raise our lifetime from ₹275 crore to ₹580 crore. Plus Gujarat cold on more shows than Maharashtra, 390 American theatres and not one IMAX, Hanuman Ansh at 157 times its budget, and India's three-month TV ratings blackout.",
     "url": "/boxoffice-weekend-october-2-4-2026.html",
     "tag": "WEEKEND PREVIEW",
     "date": "2026-10-02",
     "readTime": "13 min read",
-    "featured": true
+    "featured": false
   },
   {
     "headline": "Weekend Recap · September 25–27: The Paradise Wins India, Hanuman Ansh Clears ₹305 Cr",
@@ -42,7 +87,7 @@
     "tag": "WEEKEND RECAP",
     "date": "2026-09-06",
     "readTime": "13 min read",
-    "featured": true
+    "featured": false
   },
   {
     "headline": "Weekend Preview · Aug 28–30: Toxic Opens Wednesday — ₹86 Cr Day 1, ₹128 Cr Worldwide",
@@ -60,7 +105,7 @@
     "tag": "DEEP DIVE",
     "date": "2026-08-21",
     "readTime": "25 min read",
-    "featured": true
+    "featured": false
   },
   {
     "headline": "India OTT Charts (August 2026): Welcome to the Jungle Lands, and Cricket Outdraws Everything Scripted Six to One",
@@ -105,7 +150,7 @@
     "tag": "REVIEW",
     "date": "2026-08-01",
     "readTime": "5 min read",
-    "featured": true
+    "featured": false
   },
   {
     "headline": "Weekend Preview: Spider-Man Owns Aug 1–3, Chasing Endgame's India Records",
@@ -470,7 +515,7 @@
   {
     "headline": "Ramayana: Part One — The Most Ambitious Indian Film Ever Made. What Will It Take?",
     "dek": "₹835 Cr budget. DNEG VFX. Hans Zimmer + AR Rahman. Ranbir Kapoor as Ram. LA test screening 'roaring response'. Boxoffy's full preview — cast, scale, and box office outlook.",
-    "url": "ramayana-part-one-box-office.html",
+    "url": "/ramayana-part-one-box-office.html",
     "tag": "PREVIEW",
     "date": "2026-03-30",
     "readTime": "8 min",
@@ -479,7 +524,7 @@
   {
     "headline": "Driver or Multiplier? The Top 20 Bollywood Songs vs Box Office — Ranked",
     "dek": "Do hit Bollywood songs drive box office — or does the film make the song? Boxoffy ranks the 20 biggest Indian film songs of 2021–2026 and maps each against box office reality.",
-    "url": "bollywood-music-box-office.html",
+    "url": "/bollywood-music-box-office.html",
     "tag": "ANALYSIS",
     "date": "2026-03-29",
     "readTime": "12 min",
@@ -497,7 +542,7 @@
   {
     "headline": "Dhurandhar vs Dhurandhar: The Revenge — The Full Comparison",
     "dek": "India nett, global, week-by-week, ROI — the complete side-by-side of India's biggest franchise.",
-    "url": "dhurandhar-2-vs-pushpa-2-box-office.html",
+    "url": "/dhurandhar-2-vs-pushpa-2-box-office.html",
     "tag": "COMPARISON",
     "date": "2026-03-25",
     "readTime": "7 min",
@@ -506,7 +551,7 @@
   {
     "headline": "Why Indian Cinema Will Never Have a Number 2",
     "dek": "The dinner table decision, the comparison trap, and the ego economy that keeps Bollywood a winner-take-all market. A structural autopsy.",
-    "url": "why-indian-cinema-never-has-a-number-2.html",
+    "url": "/why-indian-cinema-never-has-a-number-2.html",
     "tag": "DEEP DIVE",
     "date": "2026-03-22",
     "readTime": "9 min",
@@ -515,7 +560,7 @@
   {
     "headline": "₹623.97 Cr in 7 Days. ₹1,006 Cr Worldwide. 31 Records. Dhurandhar 2 Is Historic.",
     "dek": "D5 Monday ₹60 Cr — the highest first weekday in Bollywood history. D6 Tuesday ₹56.55 Cr. Week 1 targeting ₹625+ Cr nett. $81M 5-day global per Deadline.",
-    "url": "dhurandhar2-advance-article.html",
+    "url": "/dhurandhar2-advance-article.html",
     "tag": "VERDICT",
     "date": "2026-03-20",
     "readTime": "4 min",
@@ -524,7 +569,7 @@
   {
     "headline": "Dhurandhar 2 in North America — $14M 5-Day Record. All-Time Bollywood NA Opening.",
     "dek": "$14M 5-day at 987 sites. Surpasses Pathaan ($9.5M), Jawan, and KGF Chapter 2. Box Office Guru: \"an incredible opening for a four-hour movie playing to 3% of the population.\"",
-    "url": "dhurandhar2-us-boxoffice.html",
+    "url": "/dhurandhar2-us-boxoffice.html",
     "tag": "US BOX OFFICE",
     "date": "2026-03-20",
     "readTime": "3 min",
@@ -533,7 +578,7 @@
   {
     "headline": "Dhurandhar vs Dhurandhar: The Revenge — D1 Head to Head",
     "dek": "Opening day numbers, screen counts, ATP, advance booking — the complete D1 comparison between India's biggest franchise films.",
-    "url": "dhurandhar-box-office-d1-vs-d2.html",
+    "url": "/dhurandhar-box-office-d1-vs-d2.html",
     "tag": "COMPARISON",
     "date": "2026-03-19",
     "readTime": "5 min",
@@ -542,7 +587,7 @@
   {
     "headline": "The ₹100 Crore Day 1 Club — Every Indian Film That Made It, and Why No Hindi Film Has",
     "dek": "Pushpa 2 ₹144 Cr. RRR, Baahubali 2, KGF2 — all ₹100–110 Cr. Four films. All South Indian. Zero Bollywood. Dhurandhar 2 attempts it. Footfall math + ATP breakdown.",
-    "url": "100-crore-day-one-club-box-office.html",
+    "url": "/100-crore-day-one-club-box-office.html",
     "tag": "DATA ANALYSIS",
     "date": "2026-03-15",
     "readTime": "6 min",
@@ -551,7 +596,7 @@
   {
     "headline": "Dhurandhar 2 Is Not Just Bigger. It Is Priced Bigger.",
     "dek": "From ₹307 to ₹414 ATP — a 34.9% jump in pricing power. What equal footfalls would mean for the gross. The ATP math, seat mix logic, and why runtime changes everything.",
-    "url": "dhurandhar-comparison.html",
+    "url": "/dhurandhar-comparison.html",
     "tag": "PRICING ANALYSIS",
     "date": "2026-03-13",
     "readTime": "5 min",
@@ -560,7 +605,7 @@
   {
     "headline": "Bollywood Box Office Explained — How Producers, Distributors & Exhibitors Share Your Ticket Money",
     "dek": "Who keeps your ₹300 PVR ticket? The complete guide to how Indian cinema's money chain works — from the producer's budget to PVR vs Raj Mandir revenue splits.",
-    "url": "india-boxoffice-how-it-works.html",
+    "url": "/india-boxoffice-how-it-works.html",
     "tag": "DEEP DIVE",
     "date": "2026-03-10",
     "readTime": "15 min",
@@ -569,7 +614,7 @@
   {
     "headline": "Dhurandhar 2 The Revenge Pre-Release Analysis — Ladies and Gentlemen, You Are STILL Not Ready",
     "dek": "₹80–100 Cr Day 1. 5 languages. The biggest commercial bet Indian cinema has made since Pushpa 2. Boxoffy's full pre-release breakdown.",
-    "url": "dhurandhar2-editorial.html",
+    "url": "/dhurandhar2-editorial.html",
     "tag": "ANALYSIS",
     "date": "2026-03-08",
     "readTime": "6 min",
@@ -578,10 +623,10 @@
   {
     "headline": "Hanuman Ansh: A Film Blessed by Bajrangbali",
     "dek": "A devotional drama nobody backed is still climbing in week six. Plus Mirzapur's OTT-to-theatrical gamble, the India and US weekend Top 10s, and Drishyam: The Conclusion's record trailer.",
-    "url": "weekend-insight-september-11-13-2026.html",
+    "url": "/weekend-insight-september-11-13-2026.html",
     "tag": "WEEKEND RECAP",
     "date": "2026-09-12",
     "readTime": "13 min",
-    "featured": true
+    "featured": false
   }
 ]

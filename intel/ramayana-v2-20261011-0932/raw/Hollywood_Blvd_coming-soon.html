@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script data-test-id="js-enabled-script">
+    function ios() {
+      let userAgent = window.navigator.userAgent.toLowerCase()
+      let safari = /safari/.test(userAgent)
+      let ios = /iphone|ipod|ipad/.test(userAgent) || (/macintosh/.test(userAgent) && window.navigator.maxTouchPoints > 0)
+
+      return ios && !safari
+    }
+
+    const loadingMessage = [
+      'Popping the popcorn',
+      'Starting the projectors',
+      'Contacting Hollywood',
+      'Negotiating Distribution Deals',
+      'Splicing the Film',
+      'Sweeping the Auditorium'
+    ]
+    function showDelayLoadMessage(attempt = 1) {
+      const loadDelayMessageElement = document.getElementById('indy-load-delay-message')
+
+      if (!loadDelayMessageElement) return
+
+      if (attempt === 1) {
+        loadDelayMessageElement.style.display = "block"
+      } else {
+        loadDelayMessageElement.children[0].textContent = loadingMessage[(attempt - 2) % loadingMessage.length]
+      }
+
+      setTimeout(() => {
+        showDelayLoadMessage(attempt + 1)
+      }, 5000)
+    }
+    setTimeout(() => {
+      showDelayLoadMessage()
+    }, 7500)
+  </script>
+  <script data-test-id="splash-image-script">
+    const splashImageEl = document.getElementById('splash-image')
+    const qAppEl = document.getElementById('q-app-splash-screen')
+
+    if (splashImageEl && qAppEl && localStorage.splashImageUrl && localStorage.splashBackgroundColor) {
+      splashImageEl.src = localStorage.splashImageUrl
+
+      splashImageEl.onload = function () {
+        if (splashImageEl.naturalWidth > 0 && splashImageEl.naturalHeight > 0) {
+          rendered()
+          return
+        }
+        const interval = setInterval(() => {
+          if (splashImageEl.naturalWidth > 0 && splashImageEl.naturalHeight > 0) {
+            clearInterval(interval);
+            rendered();
+          }
+        }, 5);
+      }
+      function rendered() {
+        qAppEl.style.backgroundColor = localStorage.splashBackgroundColor
+      }
+    }
+  </script>
+  <script type="application/ld+json" data-test-id="schema-org-data">
+    {"@context":"https://schema.org","@type":"MovieTheater","name":"Reel Hospitality LLC | Hollywood Blvd. Cinema","brand":"Reel Hospitality LLC","description":"Hollywood Blvd Cinema in Woodridge, IL offers new movies, dining and cocktails, special events, classic films, private theater rentals and unforgettable movie experiences.","address":{"@type":"PostalAddress","streetAddress":"1001 W 75TH ST. ","addressLocality":"WOODRIDGE","postalCode":"60517","addressRegion":"IL","addressCountry":"US"},"telephone":"630 427 1880","email":"info@hblvd.com","geo":{"@type":"GeoCoordinates","latitude":41.7504578,"longitude":-88.0151427},"screenCount":14,"url":"https://hollywoodblvdcinema.com/"}
+  </script>
+  <title>Coming Soon</title>
+  <link rel="canonical" href="https://hollywoodblvdcinema.com/coming-soon/">
+  <meta charset=utf-8>
+  <meta name="description" content="See what’s coming soon to Hollywood Blvd Cinema in Woodridge, IL. Explore upcoming movies, new releases, special screenings and events, and plan your next movie night.">
+  <meta property="og:description" content="See what’s coming soon to Hollywood Blvd Cinema in Woodridge, IL. Explore upcoming movies, new releases, special screenings and events, and plan your next movie night.">
+  <meta name="twitter:description" content="See what’s coming soon to Hollywood Blvd Cinema in Woodridge, IL. Explore upcoming movies, new releases, special screenings and events, and plan your next movie night.">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="msapplication-tap-highlight" content="no">
+  <meta name="viewport"
+    content="user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1,width=device-width,viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="description" content="See what’s coming soon to Hollywood Blvd Cinema in Woodridge, IL. Explore upcoming movies, new releases, special screenings and events, and plan your next movie night."><meta name="twitter:title" content="Coming Soon"><meta name="twitter:site" content="@"><meta name="twitter:url" content="https://hollywoodblvdcinema.com/coming-soon"><meta name="twitter:card" content="summary"><meta name="twitter:description" content="See what’s coming soon to Hollywood Blvd Cinema in Woodridge, IL. Explore upcoming movies, new releases, special screenings and events, and plan your next movie night."><meta property="og:title" content="Coming Soon"><meta property="og:site_name" content="Hollywood Blvd. Cinema"><meta property="og:type" content="website"><meta property="og:url" content="https://hollywoodblvdcinema.com/coming-soon"><meta property="og:description" content="See what’s coming soon to Hollywood Blvd Cinema in Woodridge, IL. Explore upcoming movies, new releases, special screenings and events, and plan your next movie night.">
+  <link rel=icon type=image/png sizes=128x128
+    href="https://indy-systems.imgix.net/zxas6hw77rg2foxmiyi78rgs7tdb?fm=png&w=128&h=128&fit=fill&fill=solid&auto=format">
+  <link rel=icon type=image/png sizes=96x96
+    href="https://indy-systems.imgix.net/zxas6hw77rg2foxmiyi78rgs7tdb?fm=png&w=96&h=96&fit=fill&fill=solid&auto=format">
+  <link rel=icon type=image/png sizes=32x32
+    href="https://indy-systems.imgix.net/zxas6hw77rg2foxmiyi78rgs7tdb?fm=png&w=32&h=32&fit=fill&fill=solid&auto=format">
+  <link rel=icon type=image/png sizes=16x16
+    href="https://indy-systems.imgix.net/zxas6hw77rg2foxmiyi78rgs7tdb?fm=png&w=16&h=16&fit=fill&fill=solid&auto=format">
+  <link href="/fontawesome/css/fontawesome.min.css" rel="stylesheet">
+  <link href="/fontawesome/css/light.min.css" rel="stylesheet">
+  <link href="/fontawesome/css/solid.min.css" rel="stylesheet">
+  <link href="/fontawesome/css/brands.min.css" rel="stylesheet">
+  <link rel=icon type=image/ico href="https://indy-systems.imgix.net/0v05zavvqfcq1pcza1itf5b29t3p?fm=png&w=32&h=32&fit=fill&fill=solid&auto=format">
+  <link rel="shortcut icon" href="https://indy-systems.imgix.net/zxas6hw77rg2foxmiyi78rgs7tdb?fm=png&w=128&h=128&fit=fill&fill=solid&auto=format">
+  <link rel=apple-touch-icon
+    href="https://indy-systems.imgix.net/7i0uym92rubgjctw3ecykvxvzr5b?fm=png&w=128&h=128&fit=fill&fill=solid&pad=9&fill-color=f4cb18&bg=f4cb18&auto=format">
+  <link rel=apple-touch-startup-image
+    media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2)"
+    href="https://indy-systems.imgix.net/0mu11z9synrg0rftf4pwpdqob3ke?fm=png&w=828&h=1792&fit=fillmax&fill=solid&pad=60&fill-color=ffffff&bg=ffffff&auto=format">
+  <link rel=apple-touch-startup-image
+    media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3)"
+    href="https://indy-systems.imgix.net/0mu11z9synrg0rftf4pwpdqob3ke?fm=png&w=1125&h=2436&fit=fillmax&fill=solid&pad=60&fill-color=ffffff&bg=ffffff&auto=format">
+  <link rel=apple-touch-startup-image
+    media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3)"
+    href="https://indy-systems.imgix.net/0mu11z9synrg0rftf4pwpdqob3ke?fm=png&w=1242&h=2688&fit=fillmax&fill=solid&pad=60&fill-color=ffffff&bg=ffffff&auto=format">
+  <link rel=apple-touch-startup-image
+    media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)"
+    href="https://indy-systems.imgix.net/0mu11z9synrg0rftf4pwpdqob3ke?fm=png&w=750&h=1334&fit=fillmax&fill=solid&pad=60&fill-color=f4cb18&bg=f4cb18&auto=format">
+  <link rel=apple-touch-startup-image
+    media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3)"
+    href="https://indy-systems.imgix.net/0mu11z9synrg0rftf4pwpdqob3ke?fm=png&w=1242&h=2208&fit=fillmax&fill=solid&pad=60&fill-color=f4cb18&bg=f4cb18&auto=format">
+  <link rel=apple-touch-startup-image
+    media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)"
+    href="https://indy-systems.imgix.net/0mu11z9synrg0rftf4pwpdqob3ke?fm=png&w=640&h=1136&fit=fillmax&fill=solid&pad=60&fill-color=f4cb18&bg=f4cb18&auto=format">
+  <link rel=apple-touch-startup-image
+    media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2)"
+    href="https://indy-systems.imgix.net/0mu11z9synrg0rftf4pwpdqob3ke?fm=png&w=1536&h=2048&fit=fillmax&fill=solid&pad=60&fill-color=f4cb18&bg=f4cb18&auto=format">
+  <link rel=apple-touch-startup-image
+    media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2)"
+    href="https://indy-systems.imgix.net/0mu11z9synrg0rftf4pwpdqob3ke?fm=png&w=1668&h=2224&fit=fillmax&fill=solid&pad=60&fill-color=f4cb18&bg=f4cb18&auto=format">
+  <link rel=apple-touch-startup-image
+    media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2)"
+    href="https://indy-systems.imgix.net/0mu11z9synrg0rftf4pwpdqob3ke?fm=png&w=1668&h=2388&fit=fillmax&fill=solid&pad=60&fill-color=f4cb18&bg=f4cb18&auto=format">
+  <link rel=apple-touch-startup-image
+    media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2)"
+    href="https://indy-systems.imgix.net/0mu11z9synrg0rftf4pwpdqob3ke?fm=png&w=2048&h=2732&fit=fillmax&fill=solid&pad=60&fill-color=f4cb18&bg=f4cb18&auto=format">
+  <link rel=stylesheet href=https://use.typekit.net/hwu0dkh.css>
+  <style>
+    @font-face {
+      font-family: "bebas-neue";
+      src: url("/fonts/BebasNeue-Regular.ttf") format("opentype");
+      font-display: auto;
+      font-style: normal;
+      font-weight: 400;
+      letter-spacing: 0.05em;
+    }
+
+    body {
+      font-family: brandon-grotesque, sans-serif;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    .text-h1,
+    .text-h2,
+    .text-h3,
+    .text-h4,
+    .text-h5,
+    .text-h6 {
+      font-family: bebas-neue, sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      letter-spacing: 0.05em;
+    }
+
+    .q-header .menu .q-btn {
+      font-family: bebas-neue, sans-serif;
+      font-size: calc(1em + 0.5vmin);
+      font-style: normal;
+      font-weight: 400;
+      letter-spacing: 0.05em;
+    }
+  </style>
+  <link href=/css/ rel=stylesheet>
+  <link href=/css/app.d313a078.css rel=stylesheet>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1WTBGMSGJ3"></script>
+<script>
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
+ gtag('config', 'G-1WTBGMSGJ3');
+</script>
+
+<script>
+function updatePageClasses() {
+ if (!document.body) return;
+
+ const slug = window.location.pathname
+ .split('/')
+ .filter(Boolean)
+ .pop();
+
+ const accountPages = [
+ 'account',
+ 'my-membership',
+ 'account-information',
+ 'orders',
+ 'update-payment-method',
+ 'my-movies',
+ 'marketing-preferences',
+ 'manage-friends'
+ ];
+
+ if (accountPages.includes(slug)) {
+ document.body.classList.add('account-page');
+ } else {
+ document.body.classList.remove('account-page');
+ }
+
+ if (window.location.pathname.startsWith('/checkout/')) {
+ document.body.classList.add('checkout-page');
+ } else {
+ document.body.classList.remove('checkout-page');
+ }
+}
+
+window.addEventListener('load', function () {
+ updatePageClasses();
+
+ let currentPath = window.location.pathname;
+
+ setInterval(function () {
+ if (window.location.pathname !== currentPath) {
+ currentPath = window.location.pathname;
+ updatePageClasses();
+ }
+ }, 250);
+});
+</script>
+
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '36988883154035963');
+fbq('track', 'PageView');
+</script>
+
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=36988883154035963&ev=PageView&noscript=1"
+/></noscript> 
+</head>
+
+<body style="background-color: #000000;">
+  
+  <div id="q-app">
+    <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; overflow: hidden; z-index: -1000;">
+      <h1>Coming Soon</h1><h2>Coming Soon</h2><p>Coming Soon
+<a href="https://hollywoodblvdcinema.com/movie/how-to-rob-a-bank">how to rob a bank</a> - <a href="https://hollywoodblvdcinema.com/movie/graham-crackers-comics">Graham Crackers Comics</a> - <a href="https://hollywoodblvdcinema.com/movie/horror-house-event">Horror House Event</a> - <a href="https://hollywoodblvdcinema.com/movie/spirited-away">Spirited Away</a> - <a href="https://hollywoodblvdcinema.com/movie/a-beautiful-mind">A Beautiful Mind</a> - <a href="https://hollywoodblvdcinema.com/movie/the-maltese-falcon">The Maltese Falcon</a> - <a href="https://hollywoodblvdcinema.com/movie/its-a-wonderful-life">its a wonderful life</a> - <a href="https://hollywoodblvdcinema.com/movie/brad-test-movie">brad test movie</a> - <a href="https://hollywoodblvdcinema.com/movie/avengers-doomsday">Avengers: Doomsday</a> - <a href="https://hollywoodblvdcinema.com/movie/movie-trivia-halloween-movies">Movie Trivia (Halloween Movies)</a> - <a href="https://hollywoodblvdcinema.com/movie/movie-trivia-thanksgiving-movies">Movie Trivia (Thanksgiving Movies)</a> - <a href="https://hollywoodblvdcinema.com/movie/movie-trivia-christmas-movies">Movie Trivia (Christmas Movies)</a> - <a href="https://hollywoodblvdcinema.com/movie/movie-trivia-star-trek">Movie Trivia (Star Trek)</a> - <a href="https://hollywoodblvdcinema.com/movie/movie-trivia-brat-pack">Movie Trivia (Brat Pack)</a> - <a href="https://hollywoodblvdcinema.com/movie/movie-trivia-disney-movies">Movie Trivia (Disney Movies)</a> - <a href="https://hollywoodblvdcinema.com/movie/movie-trivia-sci-fi-movies">Movie Trivia (Sci-Fi Movies)</a> - <a href="https://hollywoodblvdcinema.com/movie/movie-trivia-ghostbusters">Movie Trivia (Ghostbusters)</a> - <a href="https://hollywoodblvdcinema.com/movie/movie-trivia-christopher-nolan-movies">Movie Trivia (Christopher Nolan Movies)</a> - <a href="https://hollywoodblvdcinema.com/movie/hershey">Hershey</a> - <a href="https://hollywoodblvdcinema.com/movie/girl-scout-days">Girl Scout Days</a> - <a href="https://hollywoodblvdcinema.com/movie/love-actually">Love Actually</a> - <a href="https://hollywoodblvdcinema.com/movie/how-the-grinch-stole-christmas">How The Grinch Stole Christmas</a> - <a href="https://hollywoodblvdcinema.com/movie/elf">Elf</a> - <a href="https://hollywoodblvdcinema.com/movie/a-christmas-story">A Christmas Story</a> - <a href="https://hollywoodblvdcinema.com/movie/krampus">Krampus</a> - <a href="https://hollywoodblvdcinema.com/movie/national-lampoons-christmas-vacation">National Lampoons Christmas Vacation</a> - <a href="https://hollywoodblvdcinema.com/movie/white-christmas">White Christmas</a> - <a href="https://hollywoodblvdcinema.com/movie/step-brothers">Step Brothers</a> - <a href="https://hollywoodblvdcinema.com/movie/1071215">Thanksgiving</a> - <a href="https://hollywoodblvdcinema.com/movie/4488">Friday the 13th</a> - <a href="https://hollywoodblvdcinema.com/movie/half-baked">Half Baked</a> - <a href="https://hollywoodblvdcinema.com/movie/the-wizard-of-oz">The Wizard of Oz</a> - <a href="https://hollywoodblvdcinema.com/movie/boo-at-the-blvd">BOO AT THE BLVD</a> - <a href="https://hollywoodblvdcinema.com/movie/dracula-spanish-dracula">Dracula &amp; Spanish Dracula</a> - <a href="https://hollywoodblvdcinema.com/movie/bar-league-jeopardy">Bar League Jeopardy!</a> - <a href="https://hollywoodblvdcinema.com/movie/the-wolf-man-frankenstein-meets-the-wolf-man">The Wolf Man &amp; Frankenstein Meets The Wolf Man</a> - <a href="https://hollywoodblvdcinema.com/movie/the-creature-from-the-black-lagoon">The Creature from the Black Lagoon</a> - <a href="https://hollywoodblvdcinema.com/movie/spanish-drcula">Spanish Drácula</a> - <a href="https://hollywoodblvdcinema.com/movie/boozy-at-the-blvd">Boozy At The BLVD</a> - <a href="https://hollywoodblvdcinema.com/movie/serial-mom-2">Serial Mom</a> - <a href="https://hollywoodblvdcinema.com/movie/the-thing-2">The Thing</a> - <a href="https://hollywoodblvdcinema.com/movie/they-live-2">They Live</a> - <a href="https://hollywoodblvdcinema.com/movie/videodrome-2">Videodrome</a> - <a href="https://hollywoodblvdcinema.com/movie/candyman-2">candyman</a> - <a href="https://hollywoodblvdcinema.com/movie/shaun-of-the-dead-2">Shaun Of The Dead</a> - <a href="https://hollywoodblvdcinema.com/movie/army-of-darkness-2">Army Of Darkness</a> - <a href="https://hollywoodblvdcinema.com/movie/the-frightners">The Frightners</a> - <a href="https://hollywoodblvdcinema.com/movie/christine-2">Christine</a> - <a href="https://hollywoodblvdcinema.com/movie/halloween-2">Halloween</a> - <a href="https://hollywoodblvdcinema.com/movie/casper">Casper</a> - <a href="https://hollywoodblvdcinema.com/movie/drummer-boy">Drummer Boy</a> - <a href="https://hollywoodblvdcinema.com/movie/jimmy">Jimmy</a> - <a href="https://hollywoodblvdcinema.com/movie/1366">Rocky 50</a> - <a href="https://hollywoodblvdcinema.com/movie/you-can-see-everything">You Can See Everything</a> - <a href="https://hollywoodblvdcinema.com/movie/street-fighter">Street Fighter</a> - <a href="https://hollywoodblvdcinema.com/movie/1503762">Sense and Sensibility</a> - <a href="https://hollywoodblvdcinema.com/movie/back-to-the-future">Back to the Future</a> - <a href="https://hollywoodblvdcinema.com/movie/rpw-darkness-falls">RPW Darkness Falls</a> - <a href="https://hollywoodblvdcinema.com/movie/your-motheryour-motheryour-mother">Your Mother,Your Mother,Your Mother</a> - <a href="https://hollywoodblvdcinema.com/movie/la-bola-negra">La Bola Negra</a> - <a href="https://hollywoodblvdcinema.com/movie/the-devils">The Devils</a> - <a href="https://hollywoodblvdcinema.com/movie/crawlers">Crawlers</a> - <a href="https://hollywoodblvdcinema.com/movie/wildwood">Wildwood</a> - <a href="https://hollywoodblvdcinema.com/movie/christmas-at-the-kringles">Christmas At The Kringles</a> - <a href="https://hollywoodblvdcinema.com/movie/1286656">I Played Rocky</a> - <a href="https://hollywoodblvdcinema.com/movie/ozzy-black-sabbath-back-to-the-beginning">OZZY &amp; BLACK SABBATH: BACK TO THE BEGINNING</a> - <a href="https://hollywoodblvdcinema.com/movie/the-hunger-games-sunrise-on-the-reaping">THE HUNGER GAMES: SUNRISE ON THE REAPING</a> - <a href="https://hollywoodblvdcinema.com/movie/4232">Scream</a> - <a href="https://hollywoodblvdcinema.com/movie/clayface">Clayface</a> - <a href="https://hollywoodblvdcinema.com/movie/1503762-sense-and-sensibility">SENSE AND SENSIBILITY: EARLY ACCESS MOVIE PARTY</a> - <a href="https://hollywoodblvdcinema.com/movie/whalefall">Whalefall</a> - <a href="https://hollywoodblvdcinema.com/movie/jeffrey-dollmer">Jeffrey Dollmer</a> - <a href="https://hollywoodblvdcinema.com/movie/amfm">AM/FM</a> - <a href="https://hollywoodblvdcinema.com/movie/popeye-the-slayer-man">Popeye the Slayer Man</a> - <a href="https://hollywoodblvdcinema.com/movie/bad-ass-bear">Bad Ass Bear</a> - <a href="https://hollywoodblvdcinema.com/movie/killer-sofa">Killer Sofa</a> - <a href="https://hollywoodblvdcinema.com/movie/idea-media-literacy-spotlight-community">IDEA | Media Literacy Spotlight Community</a> - <a href="https://hollywoodblvdcinema.com/movie/cryptids-anonymous">Cryptids Anonymous</a> - <a href="https://hollywoodblvdcinema.com/movie/godzilla-minus-zero">Godzilla Minus Zero</a> - <a href="https://hollywoodblvdcinema.com/movie/ramayana">Ramayana</a> - <a href="https://hollywoodblvdcinema.com/movie/klara-and-the-sun">Klara and the Sun</a> - <a href="https://hollywoodblvdcinema.com/movie/ali-g-who-iz-i">Ali G: Who Iz I?</a> - <a href="https://hollywoodblvdcinema.com/movie/ebenezer">Ebenezer</a></p>
+    </div>
+    <div
+      id="q-app-splash-screen"
+      class="q-app-splash-screen"
+      style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-color: #ffffff;">
+      <div style="height: 100%; width: 100%;">
+        <div style="text-align: center;">
+          <div
+            style="width: 90%; max-width: 600px; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+            <img alt="Welcome Page"
+              src="https://indy-systems.imgix.net/0mu11z9synrg0rftf4pwpdqob3ke?w=1200&auto=format"
+              style="width: 100%" id="splash-image">
+          </div>
+        </div>
+        <div id="indy-load-delay-message"
+          style="position: absolute; bottom: 30px; left: 0; right: 0; text-align: center; display: none;">
+          <span
+            style="padding: 10px 20px; background-color: #00000066; color: white; font-size: large; font-weight: bold; border-radius: 10px;">
+            Loading...
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src=/js/vendor.18b1b163.js></script>
+  <script src=/js/app.affeaac6.js></script>
+</body>
+</html>

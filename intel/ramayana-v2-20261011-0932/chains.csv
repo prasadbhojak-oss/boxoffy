@@ -1,0 +1,34 @@
+chain,url,http,hindi,english,showtimes,times,dates,buyish,notifyish
+Hollywood Blvd (Woodridge IL),https://hollywoodblvdcinema.com/movie/ramayana,200,True,False,0,22,2026-11-05,0,0
+Hollywood Blvd coming-soon,https://hollywoodblvdcinema.com/coming-soon/,200,True,False,0,0,,0,4
+Emagine movies index,https://www.emagine-entertainment.com/movies/,200,True,True,0,0,,193,1
+Emagine Ramayana (Hindi),https://www.emagine-entertainment.com/movies/ramayana/,200,True,True,0,0,2026-11-05,3,0
+Emagine Rise of a Legend (English),https://www.emagine-entertainment.com/movies/ramayana-rise-of-a-legend/,200,True,True,0,0,2026-11-05,3,0
+Regal home,https://www.regmovies.com/,403,False,False,0,0,,0,0
+Regal Ramayana,https://www.regmovies.com/movies/ramayana,403,False,False,0,0,,0,0
+Regal Ramayana RoaL,https://www.regmovies.com/movies/ramayana-rise-of-a-legend,403,False,False,0,0,,0,0
+Regal international films,https://www.regmovies.com/international-films,403,False,False,0,0,,0,0
+Regal Metropolitan (Austin),https://www.regmovies.com/theatres/regal-metropolitan/0950,403,False,False,0,0,,0,0
+Regal New Roc (New Rochelle),https://www.regmovies.com/theatres/regal-new-roc-4dx-imax-rpx/0618,403,False,False,0,0,,0,0
+Regal White Oak (Silver Spring),https://www.regmovies.com/theatres/regal-white-oak/1557,403,False,False,0,0,,0,0
+Regal Edwards Fairfield,https://www.regmovies.com/theatres/regal-edwards-fairfield-imax/0565,403,False,False,0,0,,0,0
+Galaxy RoaL (GigHarbor slug),https://www.galaxytheatres.com/movie/GigHarbor/RAMAYANA-RISE-OF-A-LEGEND,500,False,False,0,0,,0,0
+Galaxy Grandscape (The Colony TX),https://www.galaxytheatres.com/movie-theater/grandscape,200,False,False,0,71,,19,1
+Galaxy Grandscape showtimes,https://www.galaxytheatres.com/movie-theater/Grandscape/showtimes,404,False,False,0,0,,0,0
+SMG now showing,https://www.studiomoviegrill.com/movie/now-showing,403,False,False,0,0,,0,0
+SMG North Point (Alpharetta GA),https://www.studiomoviegrill.com/locations/georgia/north-point,403,False,False,0,0,,0,0
+SMG Pearland (TX),https://www.studiomoviegrill.com/locations/texas/pearland,403,False,False,0,0,,0,0
+Marcus coming soon,https://www.marcustheatres.com/movies/coming-soon,200,False,False,0,0,,0,0
+Harkins coming soon,https://www.harkins.com/movies/coming-soon,200,True,False,0,0,,0,0
+MJR,https://www.mjrtheatres.com/,200,False,False,0,0,,3,0
+Showcase,https://www.showcasecinemas.com/,200,False,False,0,0,,5,1
+Cinepolis USA,https://www.cinepolisusa.com/,403,False,False,0,0,,0,0
+Alamo Drafthouse,https://drafthouse.com/show/ramayana,200,False,False,0,0,,0,0
+iPic,https://www.ipic.com/,200,False,False,0,0,,9,0
+Look Cinemas,https://www.lookcinemas.com/,200,False,False,0,0,,0,0
+B&B Theatres,https://www.bbtheatres.com/,200,False,False,0,0,,7,0
+Cinemark Ramayana (Hindi),https://www.cinemark.com/movies/ramayana-hindi-with-english-subtitles,200,True,False,0,0,,6,3
+Atom Tickets,https://www.atomtickets.com/movies/ramayana/395593,200,True,False,0,0,,12,5
+IMAX,https://www.imax.com/movie/ramayana,403,False,False,0,0,,0,0
+Sony official site,https://ramayanariseofalegend.com/,200,True,True,0,0,2026-11-05,0,0
+Cinema United release calendar,https://cinemaunited.org/release-calendar/,200,False,False,0,0,,0,0

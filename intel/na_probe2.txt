@@ -1,0 +1,378 @@
+NA GAP PROBE  2026-10-02T16:39:19.856759   target date 2026-10-03
+Covered today by na_sweep.py: Fandango (US) + Cineplex (CA), 389 theatres.
+This probe asks what is OUTSIDE that, and whether it publishes seats.
+Seat fields watched: seatsAvailable / seatsRemaining / availableSeats /
+RemainingSeats / seatsLeft / percentSold.
+
+=== ALREADY COVERED BY FANDANGO  (intel\na-2026-10-02, 382 theatres) ===
+    Any site below is already in our numbers. The second sweeper must
+    skip it or we count the same ticket twice.
+    Marcus                    13 of ~80   sites  -> ~67 possibly missing
+    Harkins                    6 of ~35   sites  -> ~29 possibly missing
+    Emagine                    2 of ~25   sites  -> ~23 possibly missing
+    Phoenix Big Cinemas        1 of ~12   sites  -> ~11 possibly missing
+
+    NOTE: a low count can mean two different things and they matter
+    very differently. Either the chain only booked that many sites for
+    this film (fine, nothing missing), or our zip seeds never reached
+    its home markets (a real hole). I will separate the two from the
+    probe output, not guess here.
+
+33 targets, 78 requests, about 3 minutes.
+
+
+### [US] Harkins - home
+    https://www.harkins.com/
+    HTTP 200  text/html  29,736B  json=False  film=False  SEATS=False  platform=NEXTJS
+    NEXT buildId: mI3Tw2f2hCL3jxCM73N4i
+
+### [US] Harkins - api movies
+    https://www.harkins.com/api/movies
+    HTTP 404
+
+### [US] Harkins - showtimes
+    https://www.harkins.com/showtimes?date=2026-10-03
+    HTTP 404
+
+### [US] Harkins - vista cinemas
+    https://www.harkins.com/WSVistaWebClient/RESTData.svc/cinemas
+    HTTP 404
+
+### [US] Harkins - vista ocapi
+    https://www.harkins.com/WSVistaWebClient/ocapi/v1/browsing/master-data/showtimes
+    HTTP 404
+
+### [US] Marcus - home
+    https://www.marcustheatres.com/
+    HTTP 200  text/html  28,845B  json=False  film=False  SEATS=False  platform=-
+    api urls: ['https://apps.rokt-api.com']
+
+### [US] Marcus - api movies
+    https://www.marcustheatres.com/api/movies
+    HTTP 200  text/html  212B  json=False  film=False  SEATS=False  platform=-
+
+### [US] Marcus - movies page
+    https://www.marcustheatres.com/movies
+    HTTP 200  text/html  212B  json=False  film=False  SEATS=False  platform=-
+
+### [US] Marcus - vista cinemas
+    https://www.marcustheatres.com/WSVistaWebClient/RESTData.svc/cinemas
+    HTTP 200  text/html  212B  json=False  film=False  SEATS=False  platform=-
+
+### [US] Marcus - vista ocapi
+    https://www.marcustheatres.com/WSVistaWebClient/ocapi/v1/browsing/master-data/showtimes
+    HTTP 200  text/html  212B  json=False  film=False  SEATS=False  platform=-
+
+### [US] B&B Theatres - home
+    https://www.bbtheatres.com/
+    HTTP 200  text/html  294,720B  json=False  film=False  SEATS=False  platform=-
+
+### [US] B&B Theatres - api
+    https://www.bbtheatres.com/api/movies
+    HTTP 404
+
+### [US] B&B Theatres - showtimes
+    https://www.bbtheatres.com/showtimes
+    HTTP 200  text/html  201,269B  json=False  film=False  SEATS=False  platform=-
+
+### [US] B&B Theatres - vista cinemas
+    https://www.bbtheatres.com/WSVistaWebClient/RESTData.svc/cinemas
+    HTTP 404
+
+### [US] B&B Theatres - vista ocapi
+    https://www.bbtheatres.com/WSVistaWebClient/ocapi/v1/browsing/master-data/showtimes
+    HTTP 404
+
+### [US] Malco - home
+    https://www.malco.com/
+    HTTP 403
+
+### [US] Malco - api films
+    https://www.malco.com/api/films
+    HTTP 403
+
+### [US] Malco - showtimes
+    https://www.malco.com/showtimes
+    HTTP 403
+
+### [US] Malco - vista cinemas
+    https://www.malco.com/WSVistaWebClient/RESTData.svc/cinemas
+    HTTP 403
+
+### [US] Malco - vista ocapi
+    https://www.malco.com/WSVistaWebClient/ocapi/v1/browsing/master-data/showtimes
+    HTTP 403
+
+### [US] Studio Movie Grill - home
+    https://www.studiomoviegrill.com/
+    HTTP 403
+
+### [US] Studio Movie Grill - api
+    https://www.studiomoviegrill.com/api/movies
+    HTTP 403
+
+### [US] Studio Movie Grill - showtimes
+    https://www.studiomoviegrill.com/showtimes
+    HTTP 403
+
+### [US] Premiere Cinemas - home
+    https://www.pccmovies.com/
+    HTTP 200  text/html  181,660B  json=False  film=False  SEATS=False  platform=-
+
+### [US] Premiere Cinemas - showtimes
+    https://www.pccmovies.com/showtimes
+    HTTP 404
+
+### [US] CMX Cinemas - home
+    https://cmxcinemas.com/
+    HTTP 200  text/html  162,321B  json=False  film=False  SEATS=False  platform=-
+
+### [US] CMX Cinemas - api
+    https://cmxcinemas.com/api/movies
+    HTTP 404
+
+### [US] CMX Cinemas - vista cinemas
+    https://cmxcinemas.com/WSVistaWebClient/RESTData.svc/cinemas
+    HTTP 404
+
+### [US] CMX Cinemas - vista ocapi
+    https://cmxcinemas.com/WSVistaWebClient/ocapi/v1/browsing/master-data/showtimes
+    HTTP 404
+
+### [US] Santikos - home
+    https://www.santikos.com/
+    HTTP 403
+
+### [US] Santikos - api
+    https://www.santikos.com/api/movies
+    HTTP 403
+
+### [US] Look Dine-In - home
+    https://www.lookcinemas.com/
+    HTTP 200  text/html  10,523B  json=False  film=False  SEATS=False  platform=-
+
+### [US] Look Dine-In - api
+    https://www.lookcinemas.com/api/movies
+    HTTP 200  text/html  10,523B  json=False  film=False  SEATS=False  platform=-
+
+### [US] Megaplex - home
+    https://www.megaplextheatres.com/
+    HTTP 200  text/html  62,294B  json=False  film=False  SEATS=False  platform=-
+    api urls: ['https://apiv2.megaplex.com']
+
+### [US] Megaplex - api
+    https://www.megaplextheatres.com/api/movies
+    HTTP 200  text/html  212B  json=False  film=False  SEATS=False  platform=-
+
+### [US] Megaplex - vista cinemas
+    https://www.megaplextheatres.com/WSVistaWebClient/RESTData.svc/cinemas
+    HTTP 200  text/html  212B  json=False  film=False  SEATS=False  platform=-
+
+### [US] Megaplex - vista ocapi
+    https://www.megaplextheatres.com/WSVistaWebClient/ocapi/v1/browsing/master-data/showtimes
+    HTTP 200  text/html  212B  json=False  film=False  SEATS=False  platform=-
+
+### [US] NCG Cinema - home
+    https://www.ncgmovies.com/
+    HTTP 200  text/html  199,967B  json=False  film=False  SEATS=False  platform=-
+
+### [US] NCG Cinema - api
+    https://www.ncgmovies.com/api/movies
+    HTTP 404
+
+### [US] GQT Movies - home
+    https://www.gqtmovies.com/
+    HTTP 200  text/html  166,132B  json=False  film=False  SEATS=False  platform=-
+
+### [US] Alamo Drafthouse - home
+    https://drafthouse.com/
+    HTTP 200  text/html  4,496B  json=False  film=False  SEATS=False  platform=-
+
+### [US] Alamo Drafthouse - api v2
+    https://drafthouse.com/s/mother/v2/schedule/market/dallas
+    HTTP 404
+
+### [US] Alamo Drafthouse - graphql
+    https://drafthouse.com/graphql
+    HTTP 200  text/html  4,496B  json=False  film=False  SEATS=False  platform=-
+
+### [US] Flix Brewhouse - home
+    https://www.flixbrewhouse.com/
+    HTTP 200  text/html  174,950B  json=False  film=False  SEATS=False  platform=-
+
+### [US] Silverspot - home
+    https://silverspot.net/
+    HTTP 403
+
+### [US] Maya Cinemas - home
+    https://www.mayacinemas.com/
+    HTTP 200  text/html  8,818B  json=False  film=False  SEATS=False  platform=-
+
+### [US] Regency - home
+    https://www.regencymovies.com/
+    HTTP 200  text/html  165,343B  json=False  film=False  SEATS=False  platform=-
+
+### [US] Bow Tie - home
+    https://www.bowtiecinemas.com/
+    URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1081)>
+
+### [US] Emagine - home
+    https://www.emagine-entertainment.com/
+    HTTP 200  text/html  202,726B  json=False  film=False  SEATS=False  platform=SHOPIFY/WP
+    api urls: ['https://api.w.org/']
+
+### [US] Emagine - api
+    https://www.emagine-entertainment.com/api/movies
+    HTTP 404
+
+### [US] Emagine - vista cinemas
+    https://www.emagine-entertainment.com/WSVistaWebClient/RESTData.svc/cinemas
+    HTTP 404
+
+### [US] Emagine - vista ocapi
+    https://www.emagine-entertainment.com/WSVistaWebClient/ocapi/v1/browsing/master-data/showtimes
+    HTTP 404
+
+### [US] Phoenix Big Cinemas - home
+    https://phoenixbigcinemas.com/
+    URLError: <urlopen error [Errno 11001] getaddrinfo failed>
+
+### [US] Phoenix Big Cinemas - api
+    https://phoenixbigcinemas.com/api/movies
+    URLError: <urlopen error [Errno 11001] getaddrinfo failed>
+
+### [US] Phoenix Big Cinemas - showtimes
+    https://phoenixbigcinemas.com/showtimes
+    URLError: <urlopen error [Errno 11001] getaddrinfo failed>
+
+### [US] FunAsia (DFW) - home
+    https://www.funasia.net/
+    HTTP 200  text/html  75,999B  json=False  film=False  SEATS=False  platform=-
+
+### [US] FunAsia (DFW) - movies
+    https://www.funasia.net/movies
+    HTTP 404
+
+### [US] FunAsia (DFW) - tickets
+    https://www.funasia.net/tickets
+    HTTP 404
+
+### [US] MovieMax / desi - home
+    https://www.moviemaxcinemas.com/
+    URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1081)>
+
+### [US] Cinemark-free indie: Cine Lounge - home
+    https://www.cineloungecinemas.com/
+    HTTP 200  text/html  8,224B  json=False  film=False  SEATS=False  platform=-
+
+### [CA] Landmark Cinemas - home
+    https://www.landmarkcinemas.com/
+    HTTP 403
+
+### [CA] Landmark Cinemas - api movies
+    https://www.landmarkcinemas.com/api/movies
+    HTTP 403
+
+### [CA] Landmark Cinemas - showtimes
+    https://www.landmarkcinemas.com/showtimes/2026-10-03
+    HTTP 403
+
+### [CA] Landmark Cinemas - vista cinemas
+    https://www.landmarkcinemas.com/WSVistaWebClient/RESTData.svc/cinemas
+    HTTP 403
+
+### [CA] Landmark Cinemas - vista ocapi
+    https://www.landmarkcinemas.com/WSVistaWebClient/ocapi/v1/browsing/master-data/showtimes
+    HTTP 403
+
+### [CA] Imagine Cinemas - home
+    https://imaginecinemas.com/
+    HTTP 200  text/html  118,103B  json=False  film=False  SEATS=False  platform=SHOPIFY/WP
+    api urls: ['https://api.w.org/']
+
+### [CA] Imagine Cinemas - api
+    https://imaginecinemas.com/api/movies
+    HTTP 404
+
+### [CA] Cinestarz - home
+    https://www.cinestarz.ca/
+    HTTP 200  text/html  36,018B  json=False  film=False  SEATS=False  platform=-
+
+### [CA] Golden/Woodside GTA - home
+    https://www.goldencinemas.ca/
+    URLError: <urlopen error [Errno 11001] getaddrinfo failed>
+
+### [CA] Rainbow Cinemas - home
+    https://www.rainbowcinemas.ca/
+    HTTP 200  text/html  7,948B  json=False  film=False  SEATS=False  platform=-
+
+### [CA] Magic Lantern - home
+    https://www.magiclantern.ca/
+    HTTP 200  text/html  114B  json=False  film=False  SEATS=False  platform=-
+
+### [US] Atom Tickets - home
+    https://www.atomtickets.com/
+    HTTP 200  text/html  390,938B  json=False  film=True  SEATS=False  platform=-
+    api urls: ['https://images.atomtickets.com/image/upload/website/share-site.png', 'https://www.atomtickets.com/', 'https://apps.rokt-api.com/js/v2/', 'https://www.atomtickets.com', 'http://www.atomtickets.com/assets/images/svg/atom-logo.svg', 'https://atom-tickets-res.cloudinary.com/image/upload/c_lfill']
+    film slug: ['/movies/drishyam-the-conclusion/408574', 'Drishyam']
+
+### [US] Atom Tickets - search api
+    https://www.atomtickets.com/api/gateway/movies/search?query=drishyam
+    HTTP 404
+
+### [US] Atom Tickets - movies
+    https://www.atomtickets.com/movies
+    HTTP 404
+
+### [US] MovieTickets.com - home
+    https://www.movietickets.com/
+    HTTP 200  text/html  260,944B  json=False  film=False  SEATS=False  platform=-
+    api urls: ['https://www.fandangomovietickets.com/diggergwp/', 'https://www.fandangomovietickets.com/veritygwp/', 'https://www.fandangomovietickets.com/HeartoftheBeastBOGO', 'https://www.fandangomovietickets.com/QueenIMAXOffer', 'https://tickets.fandango.com/MobileExpress/CheckBalance', 'https://tickets.fandango.com/returns']
+
+### [US] MovieTickets.com - api
+    https://www.movietickets.com/api/movies
+    HTTP 200  text/html  260,944B  json=False  film=False  SEATS=False  platform=-
+    api urls: ['https://www.fandangomovietickets.com/diggergwp/', 'https://www.fandangomovietickets.com/veritygwp/', 'https://www.fandangomovietickets.com/HeartoftheBeastBOGO', 'https://www.fandangomovietickets.com/QueenIMAXOffer', 'https://tickets.fandango.com/MobileExpress/CheckBalance', 'https://tickets.fandango.com/returns']
+
+### [US] Showtimes.com - home
+    https://www.showtimes.com/
+    HTTP 200  text/html  107,442B  json=False  film=True  SEATS=False  platform=-
+    film slug: ['/movies/drishyam-the-conclusion-200472/', 'Drishyam', 'com/poster/160x236/drishyam-the-conclusion-292989', '/movies/drishyam-the-conclusion-200472/user-reviews/']
+
+### [US] Veezi platform - sessions probe
+    https://ticketing.useast.veezi.com/sessions/
+    HTTP 404
+
+========================================================================
+SUMMARY - what is worth building
+========================================================================
+  requests 200           : 34 of 78
+  returned JSON          : 0
+  mention the film       : 2
+  EXPOSE SEAT COUNTS     : 0   <- the only line that matters
+
+  NO seat fields on any homepage response. That is NOT the final
+  answer - most chains only expose seats on the seat-map call, two
+  clicks past a showtime id. It means the probe has to go one level
+  deeper on whichever hosts returned JSON, which is what I use the
+  'api urls' and 'platform' lines below to target.
+
+  PLATFORMS - one parser each, not one per chain:
+    SHOPIFY/WP    2 chains: Emagine, Imagine Cinemas
+    NEXTJS        1 chains: Harkins
+
+  Whichever platform covers the most sites is the first thing I
+  write. That is the difference between one week of parsers and one
+  afternoon.
+
+  no usable response at all: Bow Tie, Golden/Woodside GTA, Landmark Cinemas, Malco, MovieMax / desi, Phoenix Big Cinemas, Santikos, Silverspot, Studio Movie Grill, Veezi platform
+  Some of these are Cloudflare, not absence. I will tell them apart.
+
+========================================================================
+WHAT I NEED FROM THIS FILE
+  1. every SEATS=True line - that chain is worth a parser
+  2. every platform= hit - tells me how many chains one parser buys
+  3. every 'api urls' line on an HTML page - the real endpoint behind it
+  4. every film=True - confirms the film is actually booked there, so I
+     am not building a reader for a chain that never played it
+========================================================================

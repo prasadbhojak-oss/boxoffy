@@ -1,0 +1,116 @@
+theatreId,theatre,city,province,time,format,seatsAvail
+7257,Cineplex Odeon Devonshire Mall Cinemas,Windsor,ON,2026-10-02T18:00:00,,38
+7257,Cineplex Odeon Devonshire Mall Cinemas,Windsor,ON,2026-10-02T21:20:00,,33
+7422,SilverCity London Cinemas,London,ON,2026-10-02T18:30:00,,16
+7422,SilverCity London Cinemas,London,ON,2026-10-02T21:30:00,,27
+7422,SilverCity London Cinemas,London,ON,2026-10-02T21:45:00,,23
+7430,SilverCity Thunder Bay Cinemas,Thunder Bay,ON,2026-10-02T18:20:00,,169
+7430,SilverCity Thunder Bay Cinemas,Thunder Bay,ON,2026-10-02T21:45:00,,158
+7291,Galaxy Cinemas Brantford,Brantford,ON,2026-10-02T21:10:00,,37
+7268,Galaxy Cinemas Waterloo,Waterloo,ON,2026-10-02T18:10:00,,3
+7268,Galaxy Cinemas Waterloo,Waterloo,ON,2026-10-02T21:30:00,,5
+7269,Cineplex Cinemas Cambridge,Cambridge,ON,2026-10-02T18:20:00,,10
+7269,Cineplex Cinemas Cambridge,Cambridge,ON,2026-10-02T21:45:00,,9
+7272,Galaxy Cinemas Guelph,Guelph,ON,2026-10-02T18:40:00,,77
+7272,Galaxy Cinemas Guelph,Guelph,ON,2026-10-02T21:15:00,,78
+7272,Galaxy Cinemas Guelph,Guelph,ON,2026-10-02T21:30:00,,59
+7272,Galaxy Cinemas Guelph,Guelph,ON,2026-10-02T21:55:00,,86
+7290,Cineplex Cinemas Hamilton Mountain,Hamilton,ON,2026-10-02T19:45:00,,36
+7413,SilverCity Burlington Cinemas,Burlington,ON,2026-10-02T18:40:00,,47
+7413,SilverCity Burlington Cinemas,Burlington,ON,2026-10-02T21:20:00,,68
+2112,Cinema City Northgate,Winnipeg,MB,2026-10-02T18:20:00,,171
+2112,Cinema City Northgate,Winnipeg,MB,2026-10-02T20:30:00,,99
+2112,Cinema City Northgate,Winnipeg,MB,2026-10-02T21:40:00,,228
+7123,Cineplex Cinemas Winston Churchill & VIP,Oakville,ON,2026-10-02T21:05:00,,19
+7420,Cineplex Cinemas Mississauga Square One,Mississauga,ON,2026-10-02T18:10:00,,50
+7420,Cineplex Cinemas Mississauga Square One,Mississauga,ON,2026-10-02T21:30:00,,38
+7122,Cineplex Cinemas Courtney Park,Mississauga,ON,2026-10-02T17:30:00,,63
+7122,Cineplex Cinemas Courtney Park,Mississauga,ON,2026-10-02T18:35:00,,68
+7122,Cineplex Cinemas Courtney Park,Mississauga,ON,2026-10-02T21:10:00,,60
+7122,Cineplex Cinemas Courtney Park,Mississauga,ON,2026-10-02T22:00:00,,74
+7411,SilverCity Brampton Cinemas,Brampton,ON,2026-10-02T18:15:00,,90
+7411,SilverCity Brampton Cinemas,Brampton,ON,2026-10-02T20:40:00,,18
+7411,SilverCity Brampton Cinemas,Brampton,ON,2026-10-02T21:35:00,,69
+7256,Cineplex Odeon Niagara Square Cinemas,Niagara Falls,ON,2026-10-02T18:10:00,,246
+7256,Cineplex Odeon Niagara Square Cinemas,Niagara Falls,ON,2026-10-02T21:30:00,,227
+7408,Cineplex Cinemas Vaughan,Vaughan,ON,2026-10-02T18:25:00,,91
+7408,Cineplex Cinemas Vaughan,Vaughan,ON,2026-10-02T21:45:00,,70
+7130,Cineplex Cinemas Yonge-Dundas and VIP,Toronto,ON,2026-10-02T18:00:00,,30
+7130,Cineplex Cinemas Yonge-Dundas and VIP,Toronto,ON,2026-10-02T18:50:00,,67
+7130,Cineplex Cinemas Yonge-Dundas and VIP,Toronto,ON,2026-10-02T21:30:00,,36
+7130,Cineplex Cinemas Yonge-Dundas and VIP,Toronto,ON,2026-10-02T22:15:00,,56
+7253,Cineplex Odeon Eglinton Town Centre Cinemas,Toronto,ON,2026-10-02T22:00:00,,93
+7253,Cineplex Odeon Eglinton Town Centre Cinemas,Toronto,ON,2026-10-02T18:00:00,,38
+7253,Cineplex Odeon Eglinton Town Centre Cinemas,Toronto,ON,2026-10-02T21:30:00,,41
+7253,Cineplex Odeon Eglinton Town Centre Cinemas,Toronto,ON,2026-10-02T22:00:00,,93
+7253,Cineplex Odeon Eglinton Town Centre Cinemas,Toronto,ON,2026-10-02T22:15:00,,79
+7404,Cineplex Cinemas Scarborough,Toronto,ON,2026-10-02T18:10:00,,188
+7404,Cineplex Cinemas Scarborough,Toronto,ON,2026-10-02T21:45:00,,183
+7404,Cineplex Cinemas Scarborough,Toronto,ON,2026-10-02T22:15:00,,184
+7240,Cineplex Odeon Morningside Cinemas,Toronto,ON,2026-10-02T18:00:00,,91
+7240,Cineplex Odeon Morningside Cinemas,Toronto,ON,2026-10-02T21:20:00,,71
+7249,Galaxy Cinemas Barrie,Barrie,ON,2026-10-02T17:30:00,,58
+7249,Galaxy Cinemas Barrie,Barrie,ON,2026-10-02T21:00:00,,57
+7248,Cineplex Odeon Ajax Cinemas,Ajax,ON,2026-10-02T20:30:00,,23
+7248,Cineplex Odeon Ajax Cinemas,Ajax,ON,2026-10-02T21:20:00,,77
+7429,SilverCity Sudbury Cinemas,Sudbury,ON,2026-10-02T18:40:00,,144
+7429,SilverCity Sudbury Cinemas,Sudbury,ON,2026-10-02T21:50:00,,113
+4114,Cineplex Cinemas Normanview,Regina,SK,2026-10-02T18:25:00,,192
+4114,Cineplex Cinemas Normanview,Regina,SK,2026-10-02T21:45:00,,181
+7259,Cineplex Odeon Gardiners Road Cinemas,Kingston,ON,2026-10-02T18:45:00,,33
+7259,Cineplex Odeon Gardiners Road Cinemas,Kingston,ON,2026-10-02T21:00:00,,30
+3140,Galaxy Cinemas Medicine Hat,Medicine Hat,AB,2026-10-02T18:45:00,,122
+3140,Galaxy Cinemas Medicine Hat,Medicine Hat,AB,2026-10-02T21:55:00,,91
+7247,Cineplex Odeon South Keys Cinemas,Ottawa,ON,2026-10-02T18:00:00,,77
+7247,Cineplex Odeon South Keys Cinemas,Ottawa,ON,2026-10-02T21:20:00,,64
+4403,Scotiabank Theatre Saskatoon and VIP,Saskatoon,SK,2026-10-02T18:45:00,,150
+4403,Scotiabank Theatre Saskatoon and VIP,Saskatoon,SK,2026-10-02T20:00:00,,113
+4403,Scotiabank Theatre Saskatoon and VIP,Saskatoon,SK,2026-10-02T22:15:00,,160
+3101,Galaxy Cinemas Lethbridge,Lethbridge,AB,2026-10-02T19:50:00,,119
+3101,Galaxy Cinemas Lethbridge,Lethbridge,AB,2026-10-02T21:40:00,,157
+9109,Cinéma Cineplex Forum et VIP,Montréal,QC,2026-10-02T18:40:00,,45
+9109,Cinéma Cineplex Forum et VIP,Montréal,QC,2026-10-02T22:00:00,,64
+3401,Scotiabank Theatre Chinook,Calgary,AB,2026-10-02T18:40:00,,69
+3401,Scotiabank Theatre Chinook,Calgary,AB,2026-10-02T22:00:00,,79
+3142,Cineplex Odeon Sunridge Spectrum Cinemas,Calgary,AB,2026-10-02T18:20:00,,39
+3142,Cineplex Odeon Sunridge Spectrum Cinemas,Calgary,AB,2026-10-02T21:55:00,,28
+3142,Cineplex Odeon Sunridge Spectrum Cinemas,Calgary,AB,2026-10-02T18:45:00,,13
+3142,Cineplex Odeon Sunridge Spectrum Cinemas,Calgary,AB,2026-10-02T21:45:00,,9
+3132,Galaxy Cinemas Red Deer,Red Deer,AB,2026-10-02T16:10:00,,144
+3132,Galaxy Cinemas Red Deer,Red Deer,AB,2026-10-02T19:40:00,,143
+3144,Cineplex Odeon South Edmonton Cinemas,Edmonton,AB,2026-10-02T15:50:00,,13
+3144,Cineplex Odeon South Edmonton Cinemas,Edmonton,AB,2026-10-02T18:45:00,,3
+3144,Cineplex Odeon South Edmonton Cinemas,Edmonton,AB,2026-10-02T19:05:00,,4
+3144,Cineplex Odeon South Edmonton Cinemas,Edmonton,AB,2026-10-02T22:00:00,,10
+3144,Cineplex Odeon South Edmonton Cinemas,Edmonton,AB,2026-10-02T22:10:00,,6
+3144,Cineplex Odeon South Edmonton Cinemas,Edmonton,AB,2026-10-02T22:20:00,,9
+3151,Cineplex Cinemas Manning Town Centre,Edmonton,AB,2026-10-02T16:30:00,,180
+3151,Cineplex Cinemas Manning Town Centre,Edmonton,AB,2026-10-02T20:45:00,,77
+1407,SilverCity Mission Cinemas,Mission,BC,2026-10-02T15:45:00,,153
+1407,SilverCity Mission Cinemas,Mission,BC,2026-10-02T18:05:00,,316
+1407,SilverCity Mission Cinemas,Mission,BC,2026-10-02T21:25:00,,321
+1405,Cineplex Cinemas Langley,Langley,BC,2026-10-02T14:35:00,,329
+1405,Cineplex Cinemas Langley,Langley,BC,2026-10-02T18:10:00,,197
+1405,Cineplex Cinemas Langley,Langley,BC,2026-10-02T21:35:00,,218
+1142,Cineplex Odeon Meadowtown Cinemas,Pitt Meadows,BC,2026-10-02T15:30:00,,190
+1142,Cineplex Odeon Meadowtown Cinemas,Pitt Meadows,BC,2026-10-02T18:40:00,,152
+1142,Cineplex Odeon Meadowtown Cinemas,Pitt Meadows,BC,2026-10-02T21:50:00,,173
+1129,Cineplex Odeon Victoria Cinemas,Victoria,BC,2026-10-02T18:00:00,,44
+1129,Cineplex Odeon Victoria Cinemas,Victoria,BC,2026-10-02T21:00:00,,39
+1136,Cineplex Cinemas Strawberry Hill,Surrey,BC,2026-10-02T16:25:00,,80
+1136,Cineplex Cinemas Strawberry Hill,Surrey,BC,2026-10-02T19:50:00,,35
+1412,Cineplex Cinemas Coquitlam and VIP,Coquitlam,BC,2026-10-02T15:50:00,,156
+1412,Cineplex Cinemas Coquitlam and VIP,Coquitlam,BC,2026-10-02T19:30:00,,73
+1409,SilverCity Riverport Cinemas,Richmond,BC,2026-10-02T14:45:00,,154
+1409,SilverCity Riverport Cinemas,Richmond,BC,2026-10-02T18:15:00,,91
+1409,SilverCity Riverport Cinemas,Richmond,BC,2026-10-02T21:45:00,,89
+6107,Cineplex Cinemas Saint John,Saint John,NB,2026-10-02T18:55:00,,70
+6107,Cineplex Cinemas Saint John,Saint John,NB,2026-10-02T22:15:00,,89
+3141,Cineplex Odeon Grande Prairie Cinemas,Grande Prairie,AB,2026-10-02T16:30:00,,149
+3141,Cineplex Odeon Grande Prairie Cinemas,Grande Prairie,AB,2026-10-02T20:00:00,,118
+6109,Cineplex Cinemas Trinity Drive,Moncton,NB,2026-10-02T18:45:00,,44
+5130,Scotiabank Theatre Halifax,Halifax,NS,2026-10-02T19:10:00,,30
+5130,Scotiabank Theatre Halifax,Halifax,NS,2026-10-02T21:30:00,,69
+5130,Scotiabank Theatre Halifax,Halifax,NS,2026-10-02T22:25:00,,45
+5103,Cineplex Cinemas Sydney,Sydney,NS,2026-10-02T19:55:00,,113
+8126,Scotiabank Theatre St. John's,St. John's,NL,2026-10-02T21:55:00,,64

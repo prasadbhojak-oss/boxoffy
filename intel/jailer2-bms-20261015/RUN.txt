@@ -1,0 +1,312 @@
+RUN 2026-10-14T17:24:37.916898
+Jailer 2   BookMyShow   show date 15-10-2026  (20261015)
+GET only. Nothing booked, nothing held, nothing posted.
+FOOTPRINT AND FULLNESS LABELS ONLY. No seats, no gross. See the
+header of this file for why, and jailer2_district_sweep.py for seats.
+
+[0] warm-up
+    HTTP 200   cookies now: ['__cf_bm', '_cfuvid', 'bmsId', 'rgn']
+
+[1] discovering every Jailer 2 event code, one per language
+    chennai        HTTP 200   2 Jailer 2 link(s)
+    hyderabad      HTTP 200   4 Jailer 2 link(s)
+    bengaluru      HTTP 200   4 Jailer 2 link(s)
+    kochi          HTTP 200   2 Jailer 2 link(s)
+    mumbai         HTTP 200   4 Jailer 2 link(s)
+    ET00429213   rajini-the-jailer-2-hindiHindi
+    ET00518674   jailer-2                Tamil (original, assumed)
+    ET00518675   jailer-2-telugu         Telugu
+
+    3 code(s) x 95 regions = 285 requests, about 13 minutes.
+
+[2] Hindi   ET00429213
+    Bengaluru                1 ven     8 shows      2 with a sold-out class
+    Hubballi                 1 ven     3 shows      0 with a sold-out class
+    Belagavi                 1 ven     9 shows      0 with a sold-out class
+    Hyderabad                1 ven    13 shows      1 with a sold-out class
+    Mumbai                   1 ven   150 shows      3 with a sold-out class
+    Delhi-NCR                1 ven   161 shows      0 with a sold-out class
+    Pune                     1 ven   122 shows     13 with a sold-out class
+    Kolkata                  1 ven    50 shows      3 with a sold-out class
+    Ahmedabad                1 ven   253 shows      5 with a sold-out class
+    Surat                    1 ven   166 shows      1 with a sold-out class
+    Vadodara                 1 ven    52 shows      0 with a sold-out class
+    Rajkot                   1 ven    26 shows      0 with a sold-out class
+    Jaipur                   1 ven    47 shows      0 with a sold-out class
+    Lucknow                  1 ven    30 shows      5 with a sold-out class
+    Chandigarh               1 ven     8 shows      0 with a sold-out class
+    Indore                   1 ven    66 shows      4 with a sold-out class
+    Bhopal                   1 ven    30 shows      0 with a sold-out class
+    Nagpur                   1 ven    50 shows      0 with a sold-out class
+    Nashik                   1 ven    20 shows      0 with a sold-out class
+    Patna                    1 ven    60 shows      0 with a sold-out class
+    Ranchi                   1 ven    17 shows      2 with a sold-out class
+    Bhubaneswar              1 ven    15 shows      0 with a sold-out class
+    Guwahati                 1 ven    19 shows      0 with a sold-out class
+    Kanpur                   1 ven    30 shows      2 with a sold-out class
+    Varanasi                 1 ven    15 shows      1 with a sold-out class
+    Ludhiana                 1 ven    14 shows      0 with a sold-out class
+    Amritsar                 1 ven     5 shows      4 with a sold-out class
+    Dehradun                 1 ven    12 shows      2 with a sold-out class
+    Raipur                   1 ven    11 shows      1 with a sold-out class
+    Goa                      1 ven    29 shows      0 with a sold-out class
+    Agra                     1 ven    35 shows      0 with a sold-out class
+    Meerut                   1 ven    12 shows      0 with a sold-out class
+    Prayagraj                1 ven     9 shows      1 with a sold-out class
+    Jamshedpur               1 ven     8 shows      1 with a sold-out class
+    Siliguri                 1 ven     5 shows      0 with a sold-out class
+    Jammu                    1 ven     9 shows      0 with a sold-out class
+
+[2] Tamil (original, assumed)   ET00518674
+    Chennai                  1 ven  1006 shows    758 with a sold-out class
+    Coimbatore               1 ven   315 shows    256 with a sold-out class
+    Madurai                  1 ven   204 shows    104 with a sold-out class
+    Tiruchirappalli          1 ven     4 shows      0 with a sold-out class
+    Salem                    1 ven    57 shows     26 with a sold-out class
+    Erode                    1 ven    61 shows     30 with a sold-out class
+    Tirunelveli              1 ven    22 shows     21 with a sold-out class
+    Vellore                  1 ven    45 shows     35 with a sold-out class
+    Thanjavur                1 ven    44 shows     15 with a sold-out class
+    Tiruppur                 1 ven   119 shows     62 with a sold-out class
+    Dindigul                 1 ven    34 shows     17 with a sold-out class
+    Karur                    1 ven     9 shows      0 with a sold-out class
+    Namakkal                 1 ven     4 shows      0 with a sold-out class
+    Nagercoil                1 ven     5 shows      0 with a sold-out class
+    Cuddalore                1 ven    23 shows     13 with a sold-out class
+    Kanchipuram              1 ven    63 shows     34 with a sold-out class
+    Villupuram               1 ven    19 shows     14 with a sold-out class
+    Krishnagiri              1 ven     4 shows      0 with a sold-out class
+    Pudukkottai              1 ven     5 shows      0 with a sold-out class
+    Virudhunagar             1 ven     8 shows      1 with a sold-out class
+    Theni                    1 ven    43 shows      2 with a sold-out class
+    Sivakasi                 1 ven     4 shows      1 with a sold-out class
+    Rajapalayam              1 ven    18 shows      1 with a sold-out class
+    Ramanathapuram           1 ven    24 shows      2 with a sold-out class
+    Ariyalur                 1 ven     5 shows      5 with a sold-out class
+    Perambalur               1 ven    10 shows      5 with a sold-out class
+    Bengaluru                1 ven  1012 shows    176 with a sold-out class
+    Mysuru                   1 ven    85 shows     15 with a sold-out class
+    Hubballi                 1 ven    22 shows      0 with a sold-out class
+    Belagavi                 1 ven     6 shows      0 with a sold-out class
+    Tumakuru                 1 ven     8 shows      4 with a sold-out class
+    Bellary                  1 ven     2 shows      0 with a sold-out class
+    Kalaburagi               1 ven     8 shows      0 with a sold-out class
+    Davanagere               1 ven     7 shows      1 with a sold-out class
+    Shivamogga               1 ven    14 shows      8 with a sold-out class
+    Udupi                    1 ven    35 shows      0 with a sold-out class
+    Hyderabad                1 ven   247 shows     70 with a sold-out class
+    Visakhapatnam            1 ven     5 shows      3 with a sold-out class
+    Vijayawada               1 ven     8 shows      0 with a sold-out class
+    Guntur                   1 ven     3 shows      0 with a sold-out class
+    Warangal                 1 ven     7 shows      0 with a sold-out class
+    Tirupati                 1 ven    11 shows      0 with a sold-out class
+    Nellore                  1 ven     4 shows      0 with a sold-out class
+    Rajahmundry              1 ven     2 shows      1 with a sold-out class
+    Kakinada                 1 ven     2 shows      0 with a sold-out class
+    Kochi                    1 ven   461 shows    188 with a sold-out class
+    Thiruvananthapuram       1 ven   487 shows    124 with a sold-out class
+    Kozhikode                1 ven   168 shows     19 with a sold-out class
+    Thrissur                 1 ven   273 shows     59 with a sold-out class
+    Kollam                   1 ven   165 shows     50 with a sold-out class
+    Kottayam                 1 ven    58 shows     15 with a sold-out class
+    Alappuzha                1 ven   101 shows     33 with a sold-out class
+    Kannur                   1 ven    26 shows      1 with a sold-out class
+    Palakkad                 1 ven   200 shows     47 with a sold-out class
+    Mumbai                   1 ven   100 shows     21 with a sold-out class
+    Delhi-NCR                1 ven    59 shows      0 with a sold-out class
+    Pune                     1 ven    36 shows      5 with a sold-out class
+    Kolkata                  1 ven     2 shows      0 with a sold-out class
+    Ahmedabad                1 ven    27 shows      4 with a sold-out class
+    Surat                    1 ven     7 shows      1 with a sold-out class
+    Vadodara                 1 ven    31 shows      0 with a sold-out class
+    Rajkot                   1 ven     1 shows      1 with a sold-out class
+    Lucknow                  1 ven     4 shows      0 with a sold-out class
+    Nagpur                   1 ven     4 shows      0 with a sold-out class
+    Nashik                   1 ven     6 shows      0 with a sold-out class
+    Patna                    1 ven     1 shows      1 with a sold-out class
+    Ranchi                   1 ven     1 shows      1 with a sold-out class
+    Kanpur                   1 ven     3 shows      1 with a sold-out class
+    Dehradun                 1 ven     1 shows      0 with a sold-out class
+    Raipur                   1 ven     1 shows      1 with a sold-out class
+    Goa                      1 ven     6 shows      2 with a sold-out class
+    Agra                     1 ven     1 shows      0 with a sold-out class
+    Jamshedpur               1 ven     1 shows      1 with a sold-out class
+    Jammu                    1 ven     1 shows      1 with a sold-out class
+
+[2] Telugu   ET00518675
+    Bengaluru                1 ven    50 shows      9 with a sold-out class
+    Mysuru                   1 ven     3 shows      0 with a sold-out class
+    Hubballi                 1 ven    12 shows      0 with a sold-out class
+    Tumakuru                 1 ven     4 shows      1 with a sold-out class
+    Bellary                  1 ven     8 shows      1 with a sold-out class
+    Kalaburagi               1 ven    11 shows      0 with a sold-out class
+    Hyderabad                1 ven   746 shows    269 with a sold-out class
+    Visakhapatnam            1 ven   144 shows     18 with a sold-out class
+    Vijayawada               1 ven   134 shows     27 with a sold-out class
+    Guntur                   1 ven    25 shows      1 with a sold-out class
+    Warangal                 1 ven    42 shows      0 with a sold-out class
+    Tirupati                 1 ven    34 shows      1 with a sold-out class
+    Nellore                  1 ven    20 shows      0 with a sold-out class
+    Rajahmundry              1 ven    53 shows     14 with a sold-out class
+    Kakinada                 1 ven    32 shows      0 with a sold-out class
+    Karimnagar               1 ven    15 shows      1 with a sold-out class
+    Nizamabad                1 ven    23 shows      0 with a sold-out class
+    Delhi-NCR                1 ven     4 shows      0 with a sold-out class
+    Pune                     1 ven     1 shows      1 with a sold-out class
+    Ahmedabad                1 ven     3 shows      0 with a sold-out class
+    Vadodara                 1 ven     2 shows      0 with a sold-out class
+    Rajkot                   1 ven     1 shows      0 with a sold-out class
+    Indore                   1 ven     2 shows      0 with a sold-out class
+    Bhubaneswar              1 ven     1 shows      0 with a sold-out class
+    Kanpur                   1 ven     1 shows      0 with a sold-out class
+    Varanasi                 1 ven     1 shows      0 with a sold-out class
+    Dehradun                 1 ven     2 shows      1 with a sold-out class
+    Raipur                   1 ven     1 shows      0 with a sold-out class
+    Prayagraj                1 ven     1 shows      0 with a sold-out class
+
+======================================================================
+  JAILER 2 - BOOKMYSHOW - 15-10-2026 - ALL LANGUAGES
+======================================================================
+  shows                 8,820
+  venues                   88
+  cities with shows        88
+  states                   21
+  seat classes read    22,423
+
+  THERE IS NO SEAT COUNT AND NO GROSS IN THIS REPORT. BookMyShow
+  does not publish either outside the booking funnel. Everything
+  below is footprint and fullness labels.
+
+=== IS THE SHOW-TO-SEAT-CLASS PAIRING TRUSTWORTHY? ===
+  Seat-class objects are not nested inside their show in BMS's
+  payload, so each class is attributed to the most recent show in
+  document order. That is a HEURISTIC. Here is how it did:
+        79 shows carry 0 seat class(es)
+      1358 shows carry 1 seat class(es)
+      3639 shows carry 2 seat class(es)
+      1976 shows carry 3 seat class(es)
+      1189 shows carry 4 seat class(es)
+       381 shows carry 5 seat class(es)
+       191 shows carry 6 seat class(es)
+         7 shows carry 7 seat class(es)
+         0 seat classes could not be attached to any show
+  Looks sane. Prices and labels below can be used, with the
+  caveat that they are an attribution, not a field BMS nests.
+
+=== BY LANGUAGE ===
+                              ven   shows  sold out  +almost
+  Tamil (original, assumed     74   5,875     2,256    3,175
+  Hindi                        36   1,569        51       72
+  Telugu                       29   1,376       344      497
+
+=== BY STATE ===
+                              ven   shows  sold out  +almost
+  Tamil Nadu                   26   2,155     1,402    1,664
+  Kerala                        9   1,939       536      890
+  Karnataka                    10   1,307       217      475
+  Telangana                     4   1,093       341      465
+  Gujarat                       4     569        12       22
+  Maharashtra                   4     489        43       67
+  Andhra Pradesh                7     477        65      114
+  Delhi                         1     224         0        5
+  Uttar Pradesh                 6     142        10       13
+  Madhya Pradesh                2      98         4        5
+  Bihar                         1      61         1        1
+  West Bengal                   2      57         3        5
+  Rajasthan                     1      47         0        0
+  Goa                           1      35         2        2
+
+=== BY CITY ===
+                              ven   shows  sold out  +almost
+  Bengaluru                     1   1,070       187      420
+  Hyderabad                     1   1,006       340      456
+  Chennai                       1   1,006       758      878
+  Thiruvananthapuram            1     487       124      211
+  Kochi                         1     461       188      287
+  Coimbatore                    1     315       256      285
+  Ahmedabad                     1     283         9       14
+  Thrissur                      1     273        59      103
+  Mumbai                        1     250        24       37
+  Delhi-NCR                     1     224         0        5
+  Madurai                       1     204       104      121
+  Palakkad                      1     200        47       76
+  Surat                         1     173         2        5
+  Kozhikode                     1     168        19       57
+  Kollam                        1     165        50       72
+  Pune                          1     159        19       29
+  Visakhapatnam                 1     149        21       38
+  Vijayawada                    1     142        27       50
+
+=== BY CHAIN ===
+                              ven   shows  sold out  +almost
+  Independent / single scr     88   8,820     2,651    3,744
+
+=== FULLNESS LABELS (BMS's own four values) ===
+  SOLD OUT           4,077   18.2% of seat classes
+  ALMOST FULL        2,288   10.2% of seat classes
+  FILLING FAST       2,958   13.2% of seat classes
+  AVAILABLE         13,100   58.4% of seat classes
+
+=== availStatus, BMS's OWN SHOW-LEVEL CODE ===
+  availStatus 0              880 shows   10.0%
+  availStatus 1            1,137 shows   12.9%
+  availStatus 2            1,652 shows   18.7%
+  availStatus 3            5,151 shows   58.4%
+  We have NOT established what 0/1/2/3 mean. Chennai on 13 Oct read
+  0:358  1:184  2:118  3:100 across 760 shows, and 358 sold-out shows
+  in one city would have exceeded the national housefull count being
+  reported that day - so 0 is almost certainly NOT 'sold out'.
+  The mapping is printed because it is BMS's own field, not because we
+  know how to read it. Use the word labels above, not these integers,
+  and do not publish a figure derived from them.
+
+=== TICKET PRICES (real, from the page, in rupees) ===
+  classes priced     22,423
+  min / median / max   Rs 0 / 200 / 4,120
+  Tamil Nadu median    Rs 184   (5,099 classes)
+  rest of India median Rs 252   (17,324 classes)
+  That gap is the TN price cap, and it is the reason a gross
+  estimate built on a Hindi film's ticket price reads high here.
+
+=== BY TIME OF DAY (IST, from BMS's own showTime) ===
+  4am-7am             512 shows     208 sold out   40.6%     170.7/hr
+  7am-10am          1,117 shows     462 sold out   41.4%     372.3/hr
+  10am-1pm          1,535 shows     375 sold out   24.4%     511.7/hr
+  1pm-4pm           1,349 shows     214 sold out   15.9%     449.7/hr
+  4pm-7pm           1,428 shows     338 sold out   23.7%     476.0/hr
+  7pm-10pm          1,542 shows     567 sold out   36.8%     514.0/hr
+  10pm-midnight     1,337 shows     487 sold out   36.4%     668.5/hr
+  The 4am-7am block is the Tamil opening-day signature. A thick
+  early band selling out is the strongest single sign the fan
+  turnout is real - and it is exactly the band District under-lists,
+  because those shows are single screens that do not sell there.
+
+======================================================================
+  HOW TO USE THIS, AND HOW NOT TO
+======================================================================
+  USE IT FOR: screen count, show count, city and state spread, the
+  format mix, real ticket prices, and the share of shows already
+  carrying a sold-out seat class. These are measurements.
+
+  DO NOT turn any of it into seats or rupees. There is no capacity
+  figure on the page, so 'sold out' tells you a class is gone, not
+  how many seats it held. A 40-seat recliner class and a 900-seat
+  single screen both read SOLD OUT.
+
+  THE ONE COMPARISON WORTH PUBLISHING: set this show count against
+  District's. District is the seat and gross source; BMS reaches the
+  single screens District does not list. The gap between the two is
+  itself the finding for a Tamil release, and it is the honest way to
+  say that a District-only number under-reads Tamil Nadu.
+
+  146 region/language pair(s) returned no shows:
+      Hindi: 59 city(ies) - Chennai, Coimbatore, Madurai, Tiruchirappalli, Salem, Erode, Tirunelveli, Vellore...
+      Tamil (original, assumed): 21 city(ies) - Hosur, Tiruvannamalai, Pollachi, Kurnool, Anantapur, Karimnagar, Nizamabad, Khammam...
+      Telugu: 66 city(ies) - Chennai, Coimbatore, Madurai, Tiruchirappalli, Salem, Erode, Tirunelveli, Vellore...
+  Not listed is NOT zero demand. Say 'not listed' when writing.
+
+  GRADE THIS LATER
+    1. BMS show count vs District's, same date - how big is the gap
+    2. whether the sold-out share at T-2 predicted the actual day one
+    3. whether the show-to-seat-class pairing held (diagnostic above)
+    4. what availStatus 0/1/2/3 actually mean, once settled

@@ -1,0 +1,78 @@
+Ramayana  (ramayana)   fandango 245446   cineplex n/a
+dates ['2026-11-06']   401 postcodes   10 workers   pace 0.12s
+  session warm-up HTTP 200; cookies ['akamai_location', 'userCountry', 'akamai_set_zip', 'userlocation', 'akamai_generated_location']
+RUN 2026-10-09T16:32:29.371007 film=ramayana date=2026-11-06 workers=10 pace=0.12 SEATS
+
+### Ramayana · 2026-11-06 -> intel\ramayana-2026-11-06
+  12 sites, 24 showtimes
+Seat maps...
+  24 showtimes, 24 unique seat maps, 24 to read
+  10 workers, starting pace 0.12s -> about 0 min if nothing throttles
+  24/24 · 0.1 min · 4.9 req/s · ~0 min left · pace 0.12s · 2 failed · 0 throttled
+  WARNING 2 seat maps failed. Those rows are BLANK, not zero. Re-run with --resume to retry only those.
+Cineplex (Canada)...
+  Canada skipped: no cineplex filmId for this listing.
+  0 Canadian showtimes
+
+=== Ramayana · 2026-11-06 · PRESALE ===
+  sites                       12
+  showtimes                   24
+  seat maps read              22   91.7% of showtimes
+  seats on sale            2,237
+  TICKETS SOLD                88   3.9% of those seats
+  sold-out shows               0
+  Presale: nothing has played, no seat map withdrawn, so this is a
+  cumulative total rather than a floor.
+
+  no earlier read with seat data on disk, so no velocity yet.
+  This read is the baseline. Run again in a few hours.
+
+  BY FORMAT
+    Standard                 10 sites     18 sh     1,789 seats       88 sold   4.9%
+    3D                        3 sites      4 sh       448 seats        0 sold   0.0%
+
+  BY CHAIN
+    Independent               1 sites      4 sh       400 seats       88 sold  22.0%
+    SMG                       6 sites      9 sh       703 seats        0 sold   0.0%
+    Regal                     3 sites      9 sh     1,134 seats        0 sold   0.0%
+
+  BY METRO
+    Chicago                   1 sites      4 sh       400 seats       88 sold  22.0%
+    DFW                       2 sites      2 sh       147 seats        0 sold   0.0%
+    Houston                   1 sites      2 sh       144 seats        0 sold   0.0%
+    NY/NJ                     1 sites      3 sh       438 seats        0 sold   0.0%
+    N Carolina                1 sites      3 sh       486 seats        0 sold   0.0%
+    Georgia                   1 sites      2 sh       158 seats        0 sold   0.0%
+    Florida                   2 sites      3 sh       254 seats        0 sold   0.0%
+    Missouri/KS               1 sites      3 sh       210 seats        0 sold   0.0%
+
+  BY TIME OF DAY (local, per-hour density so wide buckets do not lie)
+    6-12                  0 sh (     0/hr)         0 seats        0 sold   0.0%
+    12-4pm                8 sh (     2/hr)       813 seats       44 sold   5.4%
+    4-7pm                 3 sh (     1/hr)       378 seats        0 sold   0.0%
+    7-9pm                 8 sh (     4/hr)       714 seats       22 sold   3.1%
+    9pm+                  3 sh (     1/hr)       332 seats       22 sold   6.6%
+    after midnight        0 sh (     0/hr)         0 seats        0 sold   0.0%
+
+  === DOLLARS ON WHAT WE MEASURED ===
+  ATP assumed: Standard $17.00, 3D $20.00, Premium Format $24.00, IMAX $26.00   (ASSUMPTION - override with --atp-* flags)
+  observed presale gross  $1,496
+  seat coverage is 91.7%, so scaled to all showtimes
+  that is about $1,632 - an ESTIMATE, label it as one.
+
+  === WHAT THIS IMPLIES FOR THE OPENING ===
+  We have NO measured presale-to-final ratio for a Marvel title.
+  The $43.21 factor we calibrated on Drishyam was a same-day
+  walk-up factor and does not transfer. So this is a sensitivity
+  table, not a forecast. Pick a row only if you can defend it.
+    presale is       implied 3-day gross
+      10% of final                16,320
+      15% of final                10,880
+      20% of final                 8,160
+      25% of final                 6,528
+      30% of final                 5,440
+  Publish the measured presale number. Do not publish a row of
+  this table as our estimate until we have calibrated the ratio.
+
+  === CANADA ===
+  no Canadian rows in this read.

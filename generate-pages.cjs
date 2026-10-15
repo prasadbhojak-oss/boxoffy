@@ -54,6 +54,10 @@ const HAND_CRAFTED = new Set([
   'india-boxoffice-how-it-works.html',
   'ott-releases.html',
   'ramayana-part-one-box-office.html',
+  // Drishyam: The Conclusion opened 2 Oct 2026 with no settled figure, so the
+  // generator's `total <= 0 || verdict === 'Upcoming'` guard skips it and the slug
+  // served a stale stub on the biggest search day of the year. Hand-built page.
+  'drishyam-3-box-office.html',
 ]);
 
 // ── Helpers ──────────────────────────────────────────────────────────────────

@@ -61,7 +61,7 @@ function rowToFilm(row) {
   const parseBool = v => v === true || v === 1 || (typeof v === "string" && v.trim().toLowerCase() === "true");
   const parseNullInt = v => (v !== "" && v != null) ? parseInt(v) : null;
   const parseNullFloat = v => (v !== "" && v != null) ? parseFloat(v) : null;
-  return {
+  const film = {
     title:row.title||"", language:row.language||"Hindi", director:row.director||"",
     releaseDate:row.releaseDate||"", totalCollection:row.totalCollection||"—",
     totalNum:parseFloat(row.totalNum)||0, indiaNet:row.indiaNet||"—",
@@ -75,6 +75,11 @@ function rowToFilm(row) {
     wwGross:row.wwGross||null,
     lastWeekCollection:parseNullFloat(row.lastWeekCollection),
     lastWeekRange:row.lastWeekRange||null,
+    /* The range of THIS week's figure. The sheet only ever carried lastWeekRange,
+       which is why the chart header had a hardcoded date sitting next to a live
+       week number. Add a weekRange column to the Films tab and the header reads
+       it; until then it falls back to lastWeekRange. */
+    weekRange:row.weekRange||null,
     lastWeekRank:parseNullInt(row.lastWeekRank),
     showInMainChart:parseBool(row.showInMainChart),
     bogRank:parseNullInt(row.bogRank),
@@ -91,7 +96,9 @@ function rowToFilm(row) {
     studio:row.studio||null,
     betaModel:parseBool(row.betaModel),
     wkTrend:row.wkTrend||null,
-    screenCount:row.screenCount ? parseInt(row.screenCount) : null,
+    /* The sheet's header is `screencount`, lower-case c. Reading only row.screenCount
+       meant this field was always null no matter what the sheet said. Accept both. */
+    screenCount:(row.screenCount || row.screencount) ? parseInt(row.screenCount || row.screencount) : null,
     occupancy:row.occupancy||null,
     openingPrediction: row.op_low ? {
       low:parseFloat(row.op_low), mid:parseFloat(row.op_mid),
@@ -99,6 +106,35 @@ function rowToFilm(row) {
       basis:row.op_basis||"Boxoffy AI Calc", note:row.op_note||"",
     } : undefined,
   };
+
+  /* _present records which sheet CELLS were actually filled in, so the overlay merge
+     can patch only those fields. Without it every blank cell was coerced to 0 / "" /
+     null / false above and then stamped straight over a good bundled value - a film
+     with an empty weeklyCollection cell would overwrite a real figure with 0, and an
+     empty showInMainChart cell would read as false. Absent must mean "leave alone",
+     not "set to zero". Non-enumerable so it never reaches rendered output or JSON. */
+  const present = new Set(
+    Object.keys(row).filter(k => String(row[k] ?? "").trim() !== "")
+  );
+  if (row.screencount && String(row.screencount).trim() !== "") present.add("screenCount");
+  if (row.op_low && String(row.op_low).trim() !== "") present.add("openingPrediction");
+  Object.defineProperty(film, "_present", { value: present, enumerable: false });
+  return film;
+}
+
+/* Titles are the join key between this sheet and the bundled films.json, and the two
+   stores have drifted apart - the sheet says "Drishyam3 M" where the JSON says
+   "Drishyam 3 (Malayalam)". Every mismatch used to render the film twice: once from the
+   bundle, once again as a "brand-new" sheet film. normTitle collapses case, punctuation
+   and spacing; TITLE_ALIASES handles the cases normalisation cannot reach. Prefer fixing
+   the sheet title to match the JSON over adding an alias here. */
+const TITLE_ALIASES = {
+  "drishyam3m": "drishyam3malayalam",        // sheet "Drishyam3 M"
+  "leecroninsmummy": "leecroninsthemummy",   // sheet "Lee Cronin's Mummy"
+};
+function normTitle(t) {
+  const n = String(t || "").toLowerCase().replace(/[^a-z0-9]+/g, "");
+  return TITLE_ALIASES[n] || n;
 }
 
 // ── Main loader — fetches all tabs in parallel ──
@@ -184,22 +220,47 @@ async function loadFromSheets() {
 // For each film in Sheet, find matching film in bundled by title and override live fields.
 function mergeSheetsIntoData(bundledData, rawFilms) {
   if (!rawFilms?.length) return bundledData;
+
+  /* Rows the agent is forbidden to delete but that must never render. */
+  const isJunkRow = f => !f.title || /DUPLICATE ROW/i.test(f.title);
+
+  const sheetFilms = rawFilms.filter(f => !isJunkRow(f));
+
   const overrides = {};
-  rawFilms.forEach(f => { if (f.title) overrides[f.title.toLowerCase()] = f; });
+  sheetFilms.forEach(f => { overrides[normTitle(f.title)] = f; });
+
+  /* Patch only the fields whose sheet cell was actually filled in. A blank cell means
+     "no BCM figure for this yet", which must leave the bundled value standing rather
+     than zero it out. _present is built in rowToFilm; if it is missing for any reason
+     we fall back to the old whole-object spread. */
+  /* title is deliberately never patched onto a matched film. The bundled JSON holds the
+     canonical display title; the sheet may carry a shorthand that only resolves through
+     TITLE_ALIASES, and letting it win would put "Drishyam3 M" on the chart. */
+  const applyOverride = (base, ov) => {
+    if (!ov._present) { const { title, ...rest } = ov; return { ...base, ...rest }; }
+    const patch = {};
+    Object.keys(ov).forEach(k => {
+      if (k !== "title" && ov._present.has(k)) patch[k] = ov[k];
+    });
+    return { ...base, ...patch };
+  };
 
   const merged = {};
+  const matched = new Set();
   Object.entries(bundledData).forEach(([year, films]) => {
     merged[year] = films.map(f => {
-      const ov = overrides[f.title?.toLowerCase()];
-      return ov ? { ...f, ...ov } : f;
+      const key = normTitle(f.title);
+      const ov = overrides[key];
+      if (!ov) return f;
+      matched.add(key);
+      return applyOverride(f, ov);
     });
   });
 
-  // Add Sheet-only films not yet in bundled JSON (brand-new releases)
-  const bundledTitles = new Set(
-    Object.values(bundledData).flat().map(f => f.title?.toLowerCase())
-  );
-  const newFilms = rawFilms.filter(f => f.title && !bundledTitles.has(f.title.toLowerCase()));
+  /* Add Sheet-only films not yet in bundled JSON (brand-new releases). Keyed on the
+     same normalised title used above, so a punctuation or shorthand difference no
+     longer makes a film appear twice. */
+  const newFilms = sheetFilms.filter(f => !matched.has(normTitle(f.title)));
   if (newFilms.length) {
     const yr = String(new Date().getFullYear());
     if (!merged[yr]) merged[yr] = [];
@@ -2420,7 +2481,11 @@ function NationalTop10Row({ movie, rank }) {
   const tmdbPoster = useTMDBPoster(movie.posterUrl ? null : movie.title, movie.releaseDate ? movie.releaseDate.slice(0,4) : null);
   const posterSrc = movie.posterUrl || tmdbPoster;
 
-  const chgPct = movie.lastWeekCollection > 0
+  /* Both sides are required. Guarding only on last week meant a film whose
+     weeklyCollection had not been filed yet - the sheet carries a literal "0" -
+     published a -100% week on the live chart, which is a claim we cannot
+     support. With this guard the cell shows a dash until a real figure exists. */
+  const chgPct = (movie.weeklyCollection > 0 && movie.lastWeekCollection > 0)
     ? Math.round(((movie.weeklyCollection - movie.lastWeekCollection) / movie.lastWeekCollection) * 100)
     : null;
 
@@ -4282,17 +4347,22 @@ function UpcomingCalendarGrid({ movies }) {
    Poster tiles: prefer useTMDBPosterById for any title that collides with
    another film. "Drishyam" collides with the Malayalam Drishyam 3, so it is
    pinned to id 1269325 (Drishyam: The Conclusion, Hindi) rather than searched.
+   Currently pinned: 1234139 Jailer 2, 1389379 Ranabaali, 1654581 Nayyi Navelli,
+   1081010 Prahaar. All four verified against the TMDB movie endpoint, not just a
+   search hit. Ranabaali, Navelli and Prahaar were read off TMDB on 15 Oct 2026;
+   their poster paths are aIzU9bVUvqphq8rPnvAS5N1Zd5o, aZEKuzGt7ObqoKjTM4kcMd0klYy
+   and g2bZzjWzdPZ5GXrN8dQ8sixant3 if the id lookup ever needs checking.
    ─────────────────────────────────────────────────────────────────────────── */
-function WeekendPreviewHero() {
+function WeekendLeadHero() {
   // If a search-by-title poster ever mismatches, pin it with useTMDBPosterById(<tmdbId>, "w185").
-  const pDrishyam = useTMDBPosterById(1269325, "w185");
-  const pVvaan    = useTMDBPosterById(1384514, "w185");
-  const pHanuman  = useTMDBPosterById(1709391, "w185");
-  const pParadise = useTMDBPoster("The Paradise", "2026");
-  const tiles = [ { src:pDrishyam, ab:"D3" }, { src:pVvaan, ab:"TV" }, { src:pHanuman, ab:"HA" }, { src:pParadise, ab:"TP" } ];
+  const pJailer2   = useTMDBPosterById(1234139, "w185");
+  const pRanabaali = useTMDBPosterById(1389379, "w185");
+  const pNaveli    = useTMDBPosterById(1654581, "w185");
+  const pPrahaar   = useTMDBPosterById(1081010, "w185");
+  const tiles = [ { src:pJailer2, ab:"J2" }, { src:pRanabaali, ab:"RB" }, { src:pNaveli, ab:"NN" }, { src:pPrahaar, ab:"PR" } ];
   const [hover, setHover] = React.useState(false);
   return (
-    <a href="/boxoffice-weekend-october-2-4-2026.html" style={{ textDecoration:"none", display:"block" }}>
+    <a href="/boxoffice-weekend-preview-october-16-18-2026.html" style={{ textDecoration:"none", display:"block" }}>
       <div
         onMouseEnter={() => setHover(true)}
         onMouseLeave={() => setHover(false)}
@@ -4313,14 +4383,14 @@ function WeekendPreviewHero() {
           ))}
         </div>
         <div style={{ flex:1, minWidth:0, display:"flex", flexDirection:"column", justifyContent:"center" }}>
-          <span style={{ alignSelf:"flex-start", background:"#C8201A", color:"#FFFFFF", fontFamily:"'Barlow Condensed', sans-serif", fontWeight:900, fontSize:9, letterSpacing:"0.12em", padding:"2px 7px", borderRadius:2, marginBottom:7 }}>WEEK 40 · WEEKEND REPORT</span>
+          <span style={{ alignSelf:"flex-start", background:"#C8201A", color:"#FFFFFF", fontFamily:"'Barlow Condensed', sans-serif", fontWeight:900, fontSize:9, letterSpacing:"0.12em", padding:"2px 7px", borderRadius:2, marginBottom:7 }}>WEEK 42 · WEEKEND PREVIEW</span>
           <div style={{ fontFamily:"'Barlow Condensed', sans-serif", fontWeight:900, fontSize:"clamp(15px, 1.7vw, 17px)", color:"#FFFFFF", lineHeight:1.15, letterSpacing:"-0.01em" }}>
-            DRISHYAM IS STARING AT AN EARTH-SHATTERING OPENING WEEKEND.
+            JAILER 2 OPENS ON A ₹41.48 CRORE ADVANCE.
           </div>
           <div style={{ fontFamily:"'DM Sans', sans-serif", fontSize:10.5, color:"#9CA3AF", marginTop:5, lineHeight:1.4 }}>
-            We counted 6,36,693 seats sold before the first show — 4,21,153 of them in the national chains, ₹26.97 Cr banked. We call ₹61 Cr on day one, ₹185 Cr across three days, and raise our lifetime to ₹580 Cr.
+            19.6 lakh tickets, 17,615 shows, ₹60 Cr+ worldwide — the biggest Tamil pre-sale of the year. We call ₹60 Cr India net on day one and ₹188 Cr Thursday to Sunday. Then five new films land in 48 hours, Ranabaali's advance turns out to be 87% block seats, and Drishyam finally gets tested.
           </div>
-          <span style={{ fontFamily:"'Barlow Condensed', sans-serif", fontWeight:700, fontSize:11, color:"#E5C882", letterSpacing:"0.06em", marginTop:8 }}>READ THE REPORT →</span>
+          <span style={{ fontFamily:"'Barlow Condensed', sans-serif", fontWeight:700, fontSize:11, color:"#E5C882", letterSpacing:"0.06em", marginTop:8 }}>READ THE PREVIEW →</span>
         </div>
       </div>
     </a>
@@ -4353,7 +4423,7 @@ function HeaderSnapshotCards({ activeSection }) {
   const isMobile = useIsMobile();
   return (
     <div style={{ display:"flex", flexDirection:"column", gap:0, flexShrink:0, maxWidth: isMobile ? "100%" : 380 }}>
-      <WeekendPreviewHero />
+      <WeekendLeadHero />
 
       {/* ── PINNED: Industry Report ─────────────────────────────── */}
       <a href="/india-cinema-state-2026.html" style={{ textDecoration:"none", display:"block" }}>
@@ -4441,7 +4511,14 @@ function BoxOfficeSection({ onNavigate, forceAllTime, onClearForceAllTime }) {
         if (b.status === "Upcoming" && a.status !== "Upcoming") return -1;
         if (a.status === "OTT" && b.status !== "OTT") return 1;
         if (b.status === "OTT" && a.status !== "OTT") return -1;
-        return b.weeklyCollection - a.weeklyCollection;
+        /* Without a tiebreak, ten films all carrying weeklyCollection 0 leave
+           Array.sort stable, so the chart ranks by sheet row order while still
+           painting gold, silver and bronze on the top three. That is how
+           Drishyam came 9th behind Vvan. Fall through to cumulative nett, then
+           title, so the order is always defensible. */
+        return (b.weeklyCollection - a.weeklyCollection)
+            || ((b.totalNum || 0) - (a.totalNum || 0))
+            || String(a.title || "").localeCompare(String(b.title || ""));
       })
     : [];
 
@@ -4634,7 +4711,14 @@ function BoxOfficeSection({ onNavigate, forceAllTime, onClearForceAllTime }) {
           <div style={{ padding:"4px 8px 2px", background:"#FEF2F2", borderBottom:`1px solid ${T.border}`, display:"flex", alignItems:"center", gap:8 }}>
             <span style={{ width:7, height:7, borderRadius:"50%", background:T.accent, display:"inline-block", animation:"boPulse 1.8s ease-in-out infinite" }} />
             <span style={{ fontFamily:"'DM Sans',sans-serif", fontSize:10, fontWeight:700, color:T.accent, letterSpacing:"0.08em", textTransform:"uppercase" }}>
-              INDIA NATIONAL TOP 10 · WEEK {BO_WEEK.num} · JUN 5–7 · BCM v2.1 · 12-SOURCE WEIGHTED · <span style={{ color:"#D97706" }}>~ = BCM ESTIMATE</span>
+              {/* "JUN 5-7" was a string literal next to a live {BO_WEEK.num}, so the
+                  chart read "WEEK 41 - JUN 5-7" in October. BO_WEEK is also the ISO
+                  week of TODAY (41) while a Fri-Thu box-office week of Oct 2-8 is
+                  week 40 - they can never agree, so neither belongs in the label.
+                  Read the range from the data and say so plainly when none is set. */}
+              INDIA NATIONAL TOP 10 · {weeklyChartMovies.find(m => m.status === "Running" && m.showInMainChart && m.weekRange)?.weekRange
+                || weeklyChartMovies.find(m => m.status === "Running" && m.showInMainChart && m.lastWeekRange)?.lastWeekRange
+                || "WEEK NOT SET"} · BCM v2.1 · 12-SOURCE WEIGHTED · <span style={{ color:"#D97706" }}>~ = BCM ESTIMATE</span>
             </span>
           </div>
 

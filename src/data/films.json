@@ -18961,7 +18961,7 @@
     {
       "title": "Drishyam 3 (Malayalam)",
       "language": "Malayalam",
-      "director": "Drishyam Films",
+      "director": "Jeethu Joseph",
       "releaseDate": "May 21, 2026",
       "eventTier": "tentpole",
       "totalCollection": "₹110 Cr",
@@ -18976,32 +18976,15 @@
       "weekNum": 0,
       "daysInRelease": 0,
       "lastWeekRank": null,
-      "weeklyNote": "Mohanlal · Dir. Jeethu Joseph · Malayalam · postponed, now May 21 2026 confirmed (Pinkvilla) — coincides with Mohanlal 66th birthday.",
-      "xChatter": [
-        {
-          "handle": "@taran_adarsh",
-          "name": "Taran Adarsh",
-          "role": "Film Critic & Trade",
-          "color": "#DC2626",
-          "post": "Drishyam 3 — Ajay Devgn is back as Vijay Salgaonkar. Gandhi Jayanti 2026. The franchise has never disappointed.",
-          "date": "2025"
-        },
-        {
-          "handle": "@rohitjswl01",
-          "name": "Rohit Jaiswal",
-          "role": "Trade Analyst",
-          "color": "#1D4ED8",
-          "post": "Drishyam franchise = guaranteed ₹200 Cr+ India. Part 3 with the goodwill of Parts 1 & 2? Could be their biggest yet.",
-          "date": "2025"
-        }
-      ],
+      "weeklyNote": "Mohanlal · Dir. Jeethu Joseph · Malayalam · released 21 May 2026.",
+      "xChatter": null,
       "cast": [
-        "Ajay Devgn · Tabu · Akshaye Khanna · Shriya Saran"
+        "Mohanlal"
       ],
-      "note": "Oct 2, 2026",
+      "note": null,
       "pageUrl": "drishyam-3-malayalam-box-office.html",
-      "posterUrl": "https://image.tmdb.org/t/p/w185/456FlpiU1iOBnaOxSd783QhZKWw.jpg",
-      "studio": "Ajay Devgn Ffilms",
+      "posterUrl": null,
+      "studio": "Aashirvad Cinemas",
       "betaModel": false,
       "wwGross": "₹239.83 Cr WW"
     },
@@ -19010,26 +18993,32 @@
       "language": "Hindi",
       "director": "Abhishek Pathak",
       "releaseDate": "Oct 2, 2026",
-      "eventTier": null,
+      "eventTier": "tentpole",
       "totalCollection": null,
       "totalNum": null,
       "indiaNet": "—",
       "overseas": null,
       "weeksInTop10": null,
-      "status": "Upcoming",
+      "status": "Running",
       "budget": null,
-      "verdict": "Upcoming",
+      "verdict": "Tracking",
       "weeklyCollection": null,
       "weekNum": null,
       "daysInRelease": null,
       "lastWeekRank": null,
-      "weeklyNote": null,
+      "weeklyNote": "Opened 2 Oct 2026. Figures pending; advance counted pre-release.",
       "xChatter": null,
-      "cast": "Ajay Devgn, Tabu, Akshaye Khanna, Shriya Saran, Jaideep Ahlawat",
+      "cast": [
+        "Ajay Devgn",
+        "Tabu",
+        "Akshaye Khanna",
+        "Shriya Saran",
+        "Jaideep Ahlawat"
+      ],
       "note": null,
       "pageUrl": "drishyam-3-box-office.html",
       "posterUrl": null,
-      "studio": null,
+      "studio": "Ajay Devgn Ffilms",
       "betaModel": null,
       "wwGross": null
     },

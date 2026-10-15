@@ -1,0 +1,70 @@
+{
+  "film": "Ramayana: Rise of a Legend",
+  "dates": [
+    "2026-11-04",
+    "2026-11-05",
+    "2026-11-06",
+    "2026-11-07",
+    "2026-11-08"
+  ],
+  "cpx_fid": "62087",
+  "cpx_name": "Ramayana",
+  "cpx_theatres": 152,
+  "cpx_catalogue": 636,
+  "cpx_shows": 0,
+  "landmark_json": [],
+  "landmark_listed": null,
+  "cc_markets": [],
+  "indies": [
+    {
+      "venue": "Albion Cinemas (Etobicoke)",
+      "status": "not listed",
+      "http": 200,
+      "times": [],
+      "lang": ""
+    },
+    {
+      "venue": "Woodside Cinemas (Agincourt)",
+      "status": "not listed",
+      "http": 200,
+      "times": [],
+      "lang": ""
+    },
+    {
+      "venue": "York Cinemas (Richmond Hill)",
+      "status": "not listed",
+      "http": 200,
+      "times": [],
+      "lang": ""
+    },
+    {
+      "venue": "Central Parkway (Mississauga)",
+      "status": "not listed",
+      "http": 200,
+      "times": [],
+      "lang": ""
+    },
+    {
+      "venue": "Cineplex Strawberry Hill (Surrey)",
+      "status": "not listed",
+      "http": 200,
+      "times": [],
+      "lang": ""
+    },
+    {
+      "venue": "SilverCity Brampton",
+      "status": "not listed",
+      "http": 200,
+      "times": [],
+      "lang": ""
+    }
+  ],
+  "cinestarz": [],
+  "imagine": [],
+  "tribute": {
+    "listed": false,
+    "date": "",
+    "url": "",
+    "shows": 0
+  }
+}

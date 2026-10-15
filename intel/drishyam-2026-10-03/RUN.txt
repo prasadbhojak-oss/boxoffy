@@ -1,0 +1,278 @@
+RUN 2026-10-02T12:33:21.280494   drishyam / drishyam-the-conclusion MV207254   show date 2026-10-03
+District, server rendered, one request per city.
+
+session warm-up: HTTP 200, cookies=['AKA_A2', 'ak_bmsc']
+
+  mumbai                  50 cinemas   675 new shows  159,967 seats  66,386 sold  41.5%  (page had 675)
+  new-delhi               50 cinemas   594 new shows  133,600 seats  43,754 sold  32.8%  (page had 594)
+  bengaluru               40 cinemas   300 new shows   66,895 seats  39,641 sold  59.3%  (page had 300)
+  hyderabad               41 cinemas   271 new shows   80,578 seats  17,323 sold  21.5%  (page had 271)
+  chennai                 20 cinemas    61 new shows   13,362 seats   8,416 sold  63.0%  (page had 61)
+  kolkata                 28 cinemas   304 new shows   74,204 seats  14,314 sold  19.3%  (page had 304)
+  pune                    20 cinemas   422 new shows   93,495 seats  41,529 sold  44.4%  (page had 422)
+  ahmedabad               38 cinemas   574 new shows   99,204 seats  15,396 sold  15.5%  (page had 574)
+  jaipur                  21 cinemas   231 new shows   65,584 seats  12,976 sold  19.8%  (page had 231)
+  lucknow                 15 cinemas   251 new shows   57,378 seats  10,570 sold  18.4%  (page had 251)
+  chandigarh              13 cinemas   183 new shows   39,012 seats   8,571 sold  22.0%  (page had 183)
+  indore                  21 cinemas   270 new shows   56,993 seats   9,885 sold  17.3%  (page had 270)
+  bhopal                   9 cinemas    97 new shows   19,517 seats   4,313 sold  22.1%  (page had 97)
+  nagpur                   5 cinemas    62 new shows   16,007 seats   3,991 sold  24.9%  (page had 62)
+  surat                   34 cinemas   510 new shows  111,144 seats  13,046 sold  11.7%  (page had 510)
+  vadodara                24 cinemas   354 new shows   76,702 seats   9,445 sold  12.3%  (page had 354)
+  rajkot                   9 cinemas    98 new shows   22,949 seats   4,048 sold  17.6%  (page had 98)
+  kanpur                  12 cinemas   100 new shows   27,542 seats   6,728 sold  24.4%  (page had 100)
+  patna                    8 cinemas    56 new shows   12,669 seats   2,934 sold  23.2%  (page had 56)
+  ranchi                   3 cinemas    31 new shows    7,374 seats   1,576 sold  21.4%  (page had 31)
+  bhubaneswar              7 cinemas    75 new shows   14,833 seats   3,248 sold  21.9%  (page had 75)
+  guwahati                10 cinemas    74 new shows   16,000 seats   2,588 sold  16.2%  (page had 74)
+  kochi                    7 cinemas    22 new shows    3,353 seats     534 sold  15.9%  (page had 22)
+  coimbatore               4 cinemas     9 new shows    1,924 seats     451 sold  23.4%  (page had 9)
+  visakhapatnam          HTTP 404
+  vijayawada               8 cinemas    34 new shows    8,564 seats     306 sold   3.6%  (page had 34)
+  ludhiana                 7 cinemas   100 new shows   23,804 seats   2,420 sold  10.2%  (page had 100)
+  amritsar                 5 cinemas    76 new shows   16,096 seats   1,026 sold   6.4%  (page had 76)
+  dehradun                 6 cinemas    69 new shows   14,260 seats   2,919 sold  20.5%  (page had 69)
+  varanasi                 2 cinemas    19 new shows    6,482 seats   1,088 sold  16.8%  (page had 19)
+  agra                    11 cinemas    99 new shows   29,891 seats   6,668 sold  22.3%  (page had 99)
+  meerut                   8 cinemas    65 new shows   17,549 seats   7,014 sold  40.0%  (page had 65)
+  nashik                   2 cinemas    31 new shows    7,926 seats   3,802 sold  48.0%  (page had 31)
+  aurangabad               2 cinemas    30 new shows    8,073 seats   2,625 sold  32.5%  (page had 30)
+  raipur                   8 cinemas   109 new shows   24,498 seats   9,879 sold  40.3%  (page had 109)
+  gwalior                  6 cinemas    64 new shows   14,086 seats   2,761 sold  19.6%  (page had 64)
+  jodhpur                  5 cinemas    56 new shows   15,430 seats   4,546 sold  29.5%  (page had 56)
+  udaipur                  3 cinemas    45 new shows    9,834 seats   1,429 sold  14.5%  (page had 45)
+  mysuru                   4 cinemas    21 new shows    4,076 seats     336 sold   8.2%  (page had 21)
+  mangaluru              HTTP 404
+  thiruvananthapuram       2 cinemas     9 new shows    1,697 seats     323 sold  19.0%  (page had 9)
+  madurai                  1 cinemas     2 new shows      356 seats     153 sold  43.0%  (page had 2)
+  noida                   29 cinemas   470 new shows   94,012 seats  25,972 sold  27.6%  (page had 714)
+  gurgaon                 37 cinemas   532 new shows  100,805 seats  25,097 sold  24.9%  (page had 682)
+  ghaziabad                3 cinemas    37 new shows    8,401 seats   4,465 sold  53.1%  (page had 690)
+  faridabad                9 cinemas   123 new shows   27,073 seats  10,210 sold  37.7%  (page had 697)
+  thane                   15 cinemas   239 new shows   60,935 seats  17,536 sold  28.8%  (page had 766)
+  navi-mumbai              3 cinemas    58 new shows   11,927 seats   6,482 sold  54.3%  (page had 713)
+  jamshedpur               2 cinemas    25 new shows    5,359 seats   1,261 sold  23.5%  (page had 25)
+  siliguri                 3 cinemas    35 new shows    9,698 seats   1,246 sold  12.8%  (page had 35)
+
+=== ALL INDIA, District only ===
+  cinemas               670
+  shows               7,972
+  seats on sale   1,791,118
+  seats sold        481,227
+  occupancy           26.9%
+  advance gross  Rs   21.09 Cr
+  average ticket Rs     438
+
+=== BY CHAIN ===
+  PVR                        273 cin  250,957 sold  33.0%  Rs  12.73 Cr
+  Cinepolis                   75 cin   62,668 sold  28.8%  Rs   3.08 Cr
+  miraj                       46 cin   19,398 sold  17.1%  Rs   0.74 Cr
+  MovieMax                    19 cin   18,768 sold  25.4%  Rs   0.77 Cr
+  Rajhans Cinemas             17 cin   13,735 sold  20.2%  Rs   0.51 Cr
+  Movietime                   18 cin    9,344 sold  25.8%  Rs   0.29 Cr
+  Justickets                  10 cin    8,155 sold  30.1%  Rs   0.11 Cr
+  Wave                         8 cin    7,330 sold  23.3%  Rs   0.27 Cr
+  NY                          10 cin    5,426 sold  19.8%  Rs   0.31 Cr
+  TicketNew                    4 cin    5,343 sold  82.8%  Rs   0.07 Cr
+  Galaxie Multiplex            1 cin    4,698 sold  94.9%  Rs   0.13 Cr
+  MSX Cinemas                  1 cin    4,296 sold  79.5%  Rs   0.10 Cr
+  Maxus                        4 cin    3,929 sold  20.0%  Rs   0.18 Cr
+  SUV Entertainment            1 cin    3,148 sold  55.0%  Rs   0.12 Cr
+  Movie Magic                  1 cin    3,128 sold  89.4%  Rs   0.06 Cr
+  Colors Cinema                1 cin    2,921 sold  85.9%  Rs   0.09 Cr
+  Rapid Cinema                 1 cin    2,687 sold  92.8%  Rs   0.07 Cr
+  Krishna Cinema               1 cin    2,616 sold  88.3%  Rs   0.03 Cr
+  Rajmandir                    1 cin    2,433 sold  56.5%  Rs   0.08 Cr
+  City Pride Multiplex         1 cin    2,343 sold  57.8%  Rs   0.09 Cr
+  Mangal Multiplex             1 cin    1,937 sold  54.7%  Rs   0.05 Cr
+  Fundore Cinemas              1 cin    1,887 sold  92.3%  Rs   0.05 Cr
+  Chitra Cinema                1 cin    1,820 sold  91.5%  Rs   0.01 Cr
+  US Cinemas                   2 cin    1,733 sold  30.3%  Rs   0.06 Cr
+  Suresh Production            2 cin    1,616 sold  45.7%  Rs   0.04 Cr
+  Mukta A2                     1 cin    1,616 sold  43.3%  Rs   0.06 Cr
+  Gold                         7 cin    1,609 sold  13.3%  Rs   0.05 Cr
+  Meher Cinema                 1 cin    1,469 sold  50.3%  Rs   0.02 Cr
+  Bharat Cineplex              1 cin    1,428 sold  63.5%  Rs   0.02 Cr
+  Paras Cinema                 1 cin    1,384 sold  73.8%  Rs   0.02 Cr
+  Rajhans Multiplex            2 cin    1,375 sold  12.6%  Rs   0.04 Cr
+  SVF Cinemas                  5 cin    1,240 sold  15.3%  Rs   0.04 Cr
+  CosmoPlex                    1 cin    1,197 sold  36.4%  Rs   0.05 Cr
+  Delite Theatre               1 cin    1,160 sold  67.1%  Rs   0.01 Cr
+  Bansal Movieplex             3 cin    1,094 sold  11.6%  Rs   0.03 Cr
+  IP Cinemas                   2 cin    1,088 sold  16.8%  Rs   0.05 Cr
+  Sapna Palace Cinema          1 cin    1,035 sold  93.7%  Rs   0.01 Cr
+  Goldwings Cinemas            1 cin    1,024 sold  21.0%  Rs   0.04 Cr
+  Sanjay Talkies               1 cin    1,024 sold  22.1%  Rs   0.01 Cr
+  Valentine Multiplex          1 cin    1,016 sold  26.7%  Rs   0.03 Cr
+  Krishna Talkies              1 cin      828 sold  77.3%  Rs   0.01 Cr
+  Gold Cinema                  2 cin      786 sold  23.8%  Rs   0.03 Cr
+  Ayou Cinemas                 1 cin      772 sold  80.8%  Rs   0.02 Cr
+  Rakesh Cinema                2 cin      756 sold   8.8%  Rs   0.02 Cr
+  M2K                          1 cin      737 sold  23.0%  Rs   0.03 Cr
+  Panna Cinema                 1 cin      722 sold  75.2%  Rs   0.01 Cr
+  Kailash Cineplex             1 cin      571 sold  41.4%  Rs   0.01 Cr
+  Cinemera                     1 cin      492 sold  13.0%  Rs   0.01 Cr
+  Fun Cinemas                  1 cin      492 sold  14.4%  Rs   0.01 Cr
+  Silvercity Multiplex         1 cin      489 sold  21.3%  Rs   0.01 Cr
+  Cinemarc                     3 cin      488 sold   4.9%  Rs   0.01 Cr
+   Silvercity                  1 cin      482 sold  10.3%  Rs   0.01 Cr
+  Apple Cinema                 2 cin      477 sold  12.6%  Rs   0.01 Cr
+  Cineport Cinemas             1 cin      467 sold  13.6%  Rs   0.02 Cr
+  Mukta A2 Cinemas             2 cin      445 sold  12.9%  Rs   0.02 Cr
+  Wave Cinema                  1 cin      432 sold  18.5%  Rs   0.02 Cr
+  First Cinema                 1 cin      426 sold  17.8%  Rs   0.01 Cr
+  AGS Cinemas                  2 cin      424 sold  44.0%  Rs   0.01 Cr
+  Mythri Theatres              1 cin      418 sold  27.5%  Rs   0.00 Cr
+  Mangoplus Cinema             1 cin      415 sold  14.3%  Rs   0.02 Cr
+  Shyam Talkies                1 cin      400 sold  71.4%  Rs   0.01 Cr
+  Rave Moti Cinema             1 cin      386 sold   9.7%  Rs   0.02 Cr
+  DDX Multiplex                2 cin      380 sold  17.7%  Rs   0.01 Cr
+  Cinestar Multiplex           1 cin      361 sold  14.5%  Rs   0.01 Cr
+  Cine Wheels                  1 cin      360 sold  21.7%  Rs   0.02 Cr
+  Silvercity                   1 cin      326 sold  11.8%  Rs   0.01 Cr
+  Sarv                         1 cin      315 sold   5.1%  Rs   0.01 Cr
+  Loop Cineplex                1 cin      309 sold   8.2%  Rs   0.01 Cr
+  Roongta Cinemas              3 cin      308 sold   7.1%  Rs   0.01 Cr
+  US Cinema                    1 cin      297 sold   7.4%  Rs   0.01 Cr
+  Kohinoor                     1 cin      292 sold  11.2%  Rs   0.01 Cr
+  Gold Cinema: Dadar           1 cin      267 sold  20.0%  Rs   0.01 Cr
+  Novelty MGS Cinema           1 cin      259 sold  10.2%  Rs   0.01 Cr
+  Rathindra Multiplex          1 cin      252 sold  23.0%  Rs   0.01 Cr
+  DD Cinema                    2 cin      241 sold   6.2%  Rs   0.01 Cr
+  Novelty Aliganj              1 cin      235 sold   7.6%  Rs   0.01 Cr
+  Wide Angle Multiplex         1 cin      234 sold  26.0%  Rs   0.01 Cr
+  Infinity 7 Seas              1 cin      220 sold   4.8%  Rs   0.01 Cr
+  Sanelite Cinema              4 cin      218 sold   1.9%  Rs   0.01 Cr
+  Fun Square                   1 cin      218 sold  29.2%  Rs   0.00 Cr
+  Odeon Cinemas                1 cin      195 sold   8.1%  Rs   0.01 Cr
+  New Fangled Miniplex         3 cin      165 sold   9.6%  Rs   0.01 Cr
+  Cine Square                  1 cin      164 sold  15.2%  Rs   0.00 Cr
+  Galleria                     1 cin      161 sold  15.8%  Rs   0.00 Cr
+  City Gold                    5 cin      156 sold   1.4%  Rs   0.01 Cr
+  Cineworld Multiplex          1 cin      155 sold   3.0%  Rs   0.01 Cr
+  Pristine Cinemas             1 cin      144 sold   9.1%  Rs   0.00 Cr
+  MVR Cinemas                  1 cin      134 sold  60.6%  Rs   0.00 Cr
+  SVC Sangeetha                1 cin      131 sold   4.3%  Rs   0.00 Cr
+  Movie Angle Multiplex        1 cin      125 sold  20.2%  Rs   0.00 Cr
+  Nasrani Cinema               1 cin      121 sold   4.1%  Rs   0.01 Cr
+  CityPlus                     1 cin      117 sold  13.7%  Rs   0.00 Cr
+  Carnival                     1 cin      115 sold   8.0%  Rs   0.00 Cr
+  Drama Factory                1 cin      109 sold   3.0%  Rs   0.01 Cr
+  Navrang Theater              1 cin       90 sold   8.5%  Rs   0.00 Cr
+  Cosmoplex multiplex          1 cin       86 sold  18.1%  Rs   0.00 Cr
+  Rajhans Multiplex            1 cin       84 sold   1.5%  Rs   0.00 Cr
+  Devi                         1 cin       76 sold   2.7%  Rs   0.00 Cr
+  Sapna Sangeeta               1 cin       71 sold   1.9%  Rs   0.00 Cr
+  Chhotu Maharaj               3 cin       63 sold   4.5%  Rs   0.00 Cr
+  Galaxy Cinema                1 cin       59 sold   1.6%  Rs   0.00 Cr
+  Skylit Cinema                1 cin       59 sold   1.9%  Rs   0.00 Cr
+  Nirmal Palace                1 cin       51 sold   2.3%  Rs   0.00 Cr
+  Qla Multiplex                1 cin       49 sold   2.3%  Rs   0.00 Cr
+  MH Cinema                    1 cin       44 sold   2.6%  Rs   0.00 Cr
+  Abhinav and Sanghvi          1 cin       42 sold   2.5%  Rs   0.00 Cr
+  Kalyan Cinemas               1 cin       39 sold   1.4%  Rs   0.00 Cr
+  Arnothaya Cinemax            1 cin       39 sold   8.3%  Rs   0.00 Cr
+  funstar cinemas              1 cin       37 sold   1.7%  Rs   0.00 Cr
+  Ohm Omjee Cinema             1 cin       37 sold   1.4%  Rs   0.00 Cr
+  Magic Frame Theatre          1 cin       31 sold   9.7%  Rs   0.00 Cr
+  Nirmal DD Plex               1 cin       30 sold   2.1%  Rs   0.00 Cr
+  Asian Mukta A2               1 cin       29 sold   4.2%  Rs   0.00 Cr
+  Bharath INC	                 1 cin       23 sold   1.4%  Rs   0.00 Cr
+  Nexus Cinema                 1 cin       20 sold   1.5%  Rs   0.00 Cr
+  Cine Verse Vesu              3 cin       18 sold   0.2%  Rs   0.00 Cr
+  Mythri Cinemas Phoenix M     1 cin       17 sold   9.7%  Rs   0.00 Cr
+  Deep Multiplex               1 cin       16 sold   0.3%  Rs   0.00 Cr
+  Anuradha Cineplex            1 cin       16 sold   1.9%  Rs   0.00 Cr
+  Rupam Multiplex              1 cin       12 sold   1.3%  Rs   0.00 Cr
+  Maurice Multilplex           1 cin       11 sold   0.9%  Rs   0.00 Cr
+  Gajanan Multiplex            1 cin        9 sold   2.4%  Rs   0.00 Cr
+  Fusion Cinemas               1 cin        4 sold   0.6%  Rs   0.00 Cr
+  Gunjan Cinema                1 cin        1 sold   0.3%  Rs   0.00 Cr
+  Apsara                       1 cin        0 sold   0.0%  Rs   0.00 Cr
+  Gagan Theatre                1 cin        0 sold   0.0%  Rs   0.00 Cr
+  UK Cineplex                  1 cin        0 sold   0.0%  Rs   0.00 Cr
+  Vilux Talkies                1 cin        0 sold   0.0%  Rs   0.00 Cr
+  Revolution Video             2 cin        0 sold   0.0%  Rs   0.00 Cr
+  Aastha Cinema                1 cin        0 sold   0.0%  Rs   0.00 Cr
+  Manmandir Minplex            1 cin        0 sold   0.0%  Rs   0.00 Cr
+  Kastur Deluxe Theatre        1 cin        0 sold   0.0%  Rs   0.00 Cr
+  Fortune                      1 cin        0 sold   0.0%  Rs   0.00 Cr
+  British Park Cineplex        1 cin        0 sold   0.0%  Rs   0.00 Cr
+  Buty Cineplex                1 cin        0 sold   0.0%  Rs   0.00 Cr
+  Kamal                        1 cin        0 sold   0.0%  Rs   0.00 Cr
+  Coconut Cinema               1 cin        0 sold   0.0%  Rs   0.00 Cr
+  Angel Cinema                 1 cin        0 sold   0.0%  Rs   0.00 Cr
+  Cine Plus Film City          1 cin        0 sold   0.0%  Rs   0.00 Cr
+  Friday Cinema                1 cin        0 sold   0.0%  Rs   0.00 Cr
+  Bajrang Cinema               1 cin        0 sold   0.0%  Rs   0.00 Cr
+  Rajhans                      1 cin        0 sold   0.0%  Rs   0.00 Cr
+  Diya                         1 cin        0 sold   0.0%  Rs   0.00 Cr
+  Rajshree                     1 cin        0 sold   0.0%  Rs   0.00 Cr
+  Jugul Palace Cinema          1 cin        0 sold   0.0%  Rs   0.00 Cr
+  Navin Talkies                1 cin        0 sold   0.0%  Rs   0.00 Cr
+  Ganesh Talkies               1 cin        0 sold   0.0%  Rs   0.00 Cr
+  Nova Cinemaz                 1 cin        0 sold   0.0%  Rs   0.00 Cr
+  Orient Cinema                1 cin        0 sold   0.0%  Rs   0.00 Cr
+  Rajeev Cinema                1 cin        0 sold   0.0%  Rs   0.00 Cr
+  Satyam Talkies               1 cin        0 sold   0.0%  Rs   0.00 Cr
+  Vibhor Chitralok             1 cin        0 sold   0.0%  Rs   0.00 Cr
+  AKR Cinema                   1 cin        0 sold   0.0%  Rs   0.00 Cr
+  Grand Cinemaz                1 cin        0 sold   0.0%  Rs   0.00 Cr
+  PM Cinemas                   1 cin        0 sold   0.0%  Rs   0.00 Cr
+  Nazrana Cinema               1 cin        0 sold   0.0%  Rs   0.00 Cr
+
+=== BY CITY ===
+  Mumbai                      50 cin   67,181 sold  39.9%  Rs   3.29 Cr
+  Pune                        20 cin   41,529 sold  44.4%  Rs   1.91 Cr
+  Bengaluru                   40 cin   39,641 sold  59.3%  Rs   2.11 Cr
+  New Delhi                   43 cin   38,967 sold  33.9%  Rs   2.52 Cr
+  Ghaziabad                   23 cin   19,997 sold  28.3%  Rs   0.64 Cr
+  Gurgaon                     32 cin   17,518 sold  21.3%  Rs   1.01 Cr
+  Hyderabad                   41 cin   17,323 sold  21.5%  Rs   0.41 Cr
+  Noida                       12 cin   16,526 sold  36.9%  Rs   0.80 Cr
+  Ahmedabad                   35 cin   14,381 sold  15.3%  Rs   0.67 Cr
+  Kolkata                     22 cin   13,507 sold  20.8%  Rs   0.62 Cr
+  Jaipur                      21 cin   12,976 sold  19.8%  Rs   0.49 Cr
+  Surat                       30 cin   11,887 sold  12.0%  Rs   0.43 Cr
+  Thane                        9 cin   10,884 sold  34.7%  Rs   0.61 Cr
+  Lucknow                     15 cin   10,570 sold  18.4%  Rs   0.36 Cr
+  Greater Noida                7 cin   10,078 sold  43.0%  Rs   0.40 Cr
+  Indore                      19 cin    9,071 sold  16.7%  Rs   0.34 Cr
+  Navi Mumbai                  5 cin    8,424 sold  53.6%  Rs   0.45 Cr
+  Chennai                     20 cin    8,416 sold  63.0%  Rs   0.16 Cr
+  Raipur                       7 cin    8,299 sold  38.7%  Rs   0.31 Cr
+  Meerut                       5 cin    6,875 sold  54.7%  Rs   0.18 Cr
+
+=== BY STATE ===
+  maharashtra                 97 cin  142,351 sold  39.7%  Rs   6.92 Cr
+  uttar-pradesh               90 cin   78,669 sold  28.3%  Rs   2.71 Cr
+  gujarat                    105 cin   41,935 sold  13.5%  Rs   1.55 Cr
+  karnataka                   44 cin   39,977 sold  56.3%  Rs   2.12 Cr
+  delhi                       43 cin   38,967 sold  33.9%  Rs   2.52 Cr
+  haryana                     45 cin   24,627 sold  21.5%  Rs   1.27 Cr
+  rajasthan                   29 cin   18,951 sold  20.9%  Rs   0.68 Cr
+  telangana                   41 cin   17,323 sold  21.5%  Rs   0.41 Cr
+  madhya-pradesh              36 cin   16,959 sold  18.7%  Rs   0.57 Cr
+  west-bengal                 28 cin   15,254 sold  18.9%  Rs   0.68 Cr
+  chhattisgarh                 8 cin    9,879 sold  40.3%  Rs   0.36 Cr
+  tamil-nadu                  25 cin    9,020 sold  57.7%  Rs   0.17 Cr
+  punjab                      17 cin    7,904 sold  14.2%  Rs   0.33 Cr
+  chandigarh                   5 cin    3,405 sold  19.4%  Rs   0.13 Cr
+  odisha                       7 cin    3,248 sold  21.9%  Rs   0.15 Cr
+
+=== PLAYED vs STILL SELLING ===
+  already started        0 shows         0 seats        0 sold   0.0%
+  still on sale       7972 shows 1,791,118 seats  481,227 sold  26.9%
+
+=== BY TIME OF DAY (IST) ===
+  before 10am    758 shows   164,877 seats   31,333 sold  19.0%   0 already begun
+  10am-1pm      1436 shows   330,105 seats   78,171 sold  23.7%   0 already begun
+  1-4pm         1422 shows   322,199 seats   87,600 sold  27.2%   0 already begun
+  4-7pm         1476 shows   337,938 seats  100,650 sold  29.8%   0 already begun
+  7-10pm        1522 shows   343,371 seats  116,607 sold  34.0%   0 already begun
+  10pm+         1358 shows   292,628 seats   66,866 sold  22.9%   0 already begun
+
+=== SEAT STATUS AS DISTRICT LABELS IT ===
+  Available           6609
+  Filling Fast        1214
+  Almost Full          149

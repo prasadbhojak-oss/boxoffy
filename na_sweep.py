@@ -13,16 +13,36 @@ One script, replacing drishyam_na_sweep.py + topup.py + analyse.py.
   * Prints the full roll-up itself - totals, chains, formats, metros,
     states, daypart, Canada - diffed against NA Update 3.
 
-    python na_sweep.py                 opening day, 2 Oct
-    python na_sweep.py 2026-10-03      Saturday
+    python na_sweep.py                      opening day, 2 Oct
+    python na_sweep.py 2026-10-03           Saturday
+    python na_sweep.py --workers 8          faster seat pass (default 5)
+    python na_sweep.py --no-seats           footprint only, ~6 min
+    python na_sweep.py --resume             reuse seat maps from a run that died
 
-Writes into ./intel/na-<date>/ . Stdlib only. Python 3.8+. 12-18 minutes.
+Writes into ./intel/na-<date>/ . Stdlib only. Python 3.8+.
+Seat maps now read in parallel behind one shared rate limiter, so a full
+nationwide pass is ~6-9 minutes instead of the two hours the serial version
+took when Akamai started throttling it.
 """
 
-import json, os, csv, sys, re, time, gzip, io, datetime, collections
+import json, os, csv, sys, re, time, gzip, io, datetime, collections, threading
 import urllib.request, urllib.error, http.cookiejar
+from concurrent.futures import ThreadPoolExecutor
 
-DATE = sys.argv[1] if len(sys.argv) > 1 else "2026-10-02"
+_args   = sys.argv[1:]
+def _flag(name, cast=None, default=None):
+    """--name value  /  --name"""
+    if name not in _args: return default
+    i = _args.index(name)
+    if cast is None: return True
+    try: return cast(_args[i + 1])
+    except (IndexError, ValueError): return default
+
+NO_SEATS = "--no-seats" in _args
+RESUME   = "--resume" in _args
+WORKERS  = max(1, min(12, _flag("--workers", int, 5)))
+_dates   = [a for a in _args if re.match(r"^\d{4}-\d{2}-\d{2}$", a)]
+DATE     = _dates[0] if _dates else "2026-10-02"
 FID  = "247556"
 CPX_FILM = "62159"
 CPX_KEY  = "477f072109904a55927ba2c3bf9f77e3"
@@ -30,11 +50,26 @@ OUT   = os.path.join("intel", f"na-{DATE}")
 PAUSE = 0.40
 TIMEOUT = 12          # fail fast; a stalled socket used to look like a hang
 
-# NA Update 3, published 1 Oct - what we grade movement against
-U3 = {"theatres": 350, "shows": 813, "seats": 77075, "sold": 8954, "occ": 11.6,
-      "chain_sites": 306, "chain_seats": 69452, "chain_sold": 8130,
-      "amc": 137, "cinemark": 96, "regal": 73,
-      "ca_theatres": 48, "ca_shows": 132}
+# NA Update 8, read 2 Oct 16:23 ET - what we grade movement against.
+# Earlier: U3 350 th / 8,954 / 11.6%.  U4 390 / 10,547 / 12.2%.
+#          U5 389 / 14,504 / 16.3%.   U7 389 / 88,333 seats / 18,516 / 21.0%.
+#
+# Watch the seats line, not just the sold line. U7 saw 88,333 seats and U8 only
+# 69,033, because Fandango withdraws a show's seat map the moment it starts. So
+# "sold" falls as the day goes on even while the film keeps selling, and NO
+# single late read can give a day total. Run na_rollup.py for that: it unions
+# every read of the day and keeps each show's peak observed sold.
+U3 = {"theatres": 382, "shows": 964, "seats": 69033, "sold": 23180, "occ": 33.6,
+      "chain_sites": 333, "chain_seats": 62012, "chain_sold": 21008,
+      "amc": 145, "cinemark": 113, "regal": 75,
+      "ca_theatres": 48, "ca_shows": 115}
+BASE = "U8"
+BASE_DATE = "2026-10-02"      # the day U8 was read
+
+# Comparing a Saturday read against a Friday baseline is apples to oranges:
+# a fresh day starts with almost nothing sold, so every delta below reads as a
+# collapse. Say so loudly rather than let the minus signs be believed.
+CROSS_DAY = DATE != BASE_DATE
 
 UA = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
       "(KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36")
@@ -233,25 +268,75 @@ def sweep_fandango():
     return theatres, shows
 
 
+_gate = threading.Lock()
+_next = [0.0]
+
+def throttled_get(url, hdrs):
+    """One shared rate limit across every worker, so N threads do not mean
+    N times the request rate at Akamai. Spacing stays PAUSE overall."""
+    with _gate:
+        wait = _next[0] - time.time()
+        if wait > 0: time.sleep(wait)
+        _next[0] = max(time.time(), _next[0]) + PAUSE
+    return get(url, hdrs)
+
+
+CKPT = "_seatcache.json"
+
+def _load_ckpt():
+    p = os.path.join(OUT, CKPT)
+    if RESUME and os.path.exists(p):
+        try:
+            d = json.load(open(p, encoding="utf-8"))
+            print(f"  resuming: {len(d)} seat maps already read", flush=True)
+            return {k: tuple(v) for k, v in d.items()}
+        except Exception as ex:
+            print(f"  checkpoint unreadable ({ex}); starting fresh", flush=True)
+    return {}
+
+
 def seat_maps(shows):
-    cache, done, t0 = {}, 0, time.time()
     uniq = [s for s in shows if s["hash"]]
-    print(f"  {len(uniq)} showtimes, {len(set(s['hash'] for s in uniq))} unique seat maps "
-          f"to read (~{len(set(s['hash'] for s in uniq))*0.45/60:.0f} min)", flush=True)
+    hashes = list(dict.fromkeys(s["hash"] for s in uniq))
+    cache = _load_ckpt()
+    todo = [h for h in hashes if h not in cache]
+    t0 = time.time()
+    print(f"  {len(uniq)} showtimes, {len(hashes)} unique seat maps "
+          f"({len(todo)} to read) · {WORKERS} workers "
+          f"· ~{len(todo)*PAUSE/WORKERS/60 + len(todo)*0.5/WORKERS/60:.0f} min", flush=True)
+
+    lock, done, fails = threading.Lock(), [0], [0]
+
+    def one(h):
+        st, js = throttled_get(f"https://www.fandango.com/napi/seatMap/{h}", API_HDR)
+        v = ((js or {}).get("totalSeatCount", ""),
+             (js or {}).get("totalAvailableSeatCount", "")) if st == 200 else ("", "")
+        with lock:
+            if st == 200: cache[h] = v          # failures stay OUT of the cache,
+            else: fails[0] += 1                 # so --resume retries just them
+            done[0] += 1
+            n = done[0]
+            if n % 50 == 0 or n == len(todo):
+                el = time.time() - t0
+                eta = el / n * (len(todo) - n)
+                print(f"  {n}/{len(todo)} seat maps · {el/60:.1f} min elapsed · "
+                      f"~{eta/60:.1f} min left · {fails[0]} failed", flush=True)
+            if n % 100 == 0:
+                try: json.dump(cache, open(os.path.join(OUT, CKPT), "w"))
+                except Exception: pass
+
+    if todo:
+        with ThreadPoolExecutor(max_workers=WORKERS) as ex:
+            list(ex.map(one, todo))
+
+    try: json.dump(cache, open(os.path.join(OUT, CKPT), "w"))
+    except Exception: pass
+    if fails[0]:
+        log(f"seat maps: {fails[0]} of {len(todo)} failed and are blank in the CSV")
+        print(f"  WARNING {fails[0]} seat maps failed - those rows have no seat counts. "
+              f"Re-run with --resume to retry only those.", flush=True)
     for s in uniq:
-        h = s["hash"]
-        if h not in cache:
-            st, js = get(f"https://www.fandango.com/napi/seatMap/{h}", API_HDR)
-            cache[h] = ((js or {}).get("totalSeatCount", ""),
-                        (js or {}).get("totalAvailableSeatCount", "")) if st == 200 else ("", "")
-            time.sleep(PAUSE)
-        s["seatsTotal"], s["seatsAvail"] = cache[h]
-        done += 1
-        if done % 25 == 0:
-            el = time.time() - t0
-            eta = el / done * (len(uniq) - done)
-            print(f"  {done}/{len(uniq)} seat maps · {el/60:.1f} min elapsed · "
-                  f"~{eta/60:.1f} min left", flush=True)
+        s["seatsTotal"], s["seatsAvail"] = cache.get(s["hash"], ("", ""))
     return shows
 
 
@@ -314,12 +399,18 @@ def report(theatres, shows, ca):
     sold = tot - av
     def line(*a): log(*a); print(*a, flush=True)
     line("\n=== US TOTALS ===")
-    line(f"  theatres        {len(theatres):>8,}   (U3 {U3['theatres']}, {len(theatres)/U3['theatres']-1:+.0%})")
-    line(f"  showtimes       {len(shows):>8,}   (U3 {U3['shows']}, {len(shows)/U3['shows']-1:+.0%})")
+    if CROSS_DAY:
+        line(f"  !! reading {DATE} against a {BASE_DATE} baseline ({BASE}).")
+        line(f"  !! Every delta below is CROSS-DAY. A fresh day opens nearly")
+        line(f"  !! unsold, so the minus signs are the calendar, not the film.")
+        line(f"  !! Use the theatre and showtime counts (footprint, comparable)")
+        line(f"  !! and ignore the sold and occupancy deltas.")
+    line(f"  theatres        {len(theatres):>8,}   ({BASE} {U3['theatres']}, {len(theatres)/U3['theatres']-1:+.0%})")
+    line(f"  showtimes       {len(shows):>8,}   ({BASE} {U3['shows']}, {len(shows)/U3['shows']-1:+.0%})")
     if tot:
-        line(f"  seats on sale   {tot:>8,}   (U3 {U3['seats']:,}, {tot/U3['seats']-1:+.0%})")
-        line(f"  seats sold      {sold:>8,}   (U3 {U3['sold']:,}, {sold/U3['sold']-1:+.0%})")
-        line(f"  occupancy       {sold/tot*100:>7.1f}%   (U3 {U3['occ']}%)")
+        line(f"  seats on sale   {tot:>8,}   ({BASE} {U3['seats']:,}, {tot/U3['seats']-1:+.0%})")
+        line(f"  seats sold      {sold:>8,}   ({BASE} {U3['sold']:,}, {sold/U3['sold']-1:+.0%})")
+        line(f"  occupancy       {sold/tot*100:>7.1f}%   ({BASE} {U3['occ']}%)")
     line(f"  sold-out shows  {sum(1 for s in shows if str(s.get('isSoldOut','')).lower()=='true'):>8,}")
 
     def group(field, title, limit=None, base=None):
@@ -344,13 +435,13 @@ def report(theatres, shows, ca):
     ns = nat[2] - nat[3]
     line(f"\n  NATIONAL CHAINS  {len(nat[0])} sites, {nat[1]:,} shows, {nat[2]:,} seats, "
          f"{ns:,} sold, {(ns/nat[2]*100 if nat[2] else 0):.1f}%")
-    line(f"  U3 national chains {U3['chain_sites']} sites, {U3['chain_seats']:,} seats, "
-         f"{U3['chain_sold']:,} sold, 11.7%")
+    line(f"  {BASE} national chains {U3['chain_sites']} sites, {U3['chain_seats']:,} seats, "
+         f"{U3['chain_sold']:,} sold, 21.1%")
 
     group("format", "FORMAT")
     prem = sum(1 for s in shows if (s.get("format") or "").lower() not in ("standard", ""))
     line(f"  -> non-Standard showtimes: {prem} of {len(shows)} "
-         f"({(prem/len(shows)*100 if shows else 0):.1f}%)   (U3 1.1%)")
+         f"({(prem/len(shows)*100 if shows else 0):.1f}%)   ({BASE} 1.0%)")
     group("metro", "METRO", 20)
 
     line("\n=== BY TIME OF DAY (local) ===")
@@ -365,8 +456,8 @@ def report(theatres, shows, ca):
              f"{(sd/t*100 if t else 0):>6.1f}%")
 
     line("\n=== CANADA ===")
-    line(f"  theatres {len({r['theatreId'] for r in ca})} (U3 {U3['ca_theatres']})   "
-         f"showtimes {len(ca)} (U3 {U3['ca_shows']})")
+    line(f"  theatres {len({r['theatreId'] for r in ca})} ({BASE} {U3['ca_theatres']})   "
+         f"showtimes {len(ca)} ({BASE} {U3['ca_shows']})")
     for k, v in collections.Counter(r["province"] for r in ca).most_common():
         line(f"    {k or '?':<4}{v:>5}")
 
@@ -388,18 +479,28 @@ def archive_previous():
 
 
 def main():
-    archive_previous()
+    if not RESUME:
+        archive_previous()
     os.makedirs(OUT, exist_ok=True)
     npc = sum(len(v) for v in ZIPS.values())
-    log(f"RUN {datetime.datetime.now().isoformat()}  date={DATE}  {npc} postcodes")
+    log(f"RUN {datetime.datetime.now().isoformat()}  date={DATE}  {npc} postcodes  "
+        f"workers={WORKERS}{'  NO-SEATS' if NO_SEATS else ''}{'  RESUMED' if RESUME else ''}")
     print(f"Warming Fandango session...", flush=True)
     if not warm_session():
         print("  WARNING: film page did not return 200; API calls may 403", flush=True)
     print(f"Fandango sweep over {npc} postcodes, {len(ZIPS)} markets...", flush=True)
+    print("  NOTE if US showtimes have already begun, Fandango drops those sessions,", flush=True)
+    print("  so theatre and show counts read LOW and seats sold is a floor.", flush=True)
     theatres, shows = sweep_fandango()
     print(f"  {len(theatres)} theatres, {len(shows)} unique showtimes", flush=True)
-    print("Seat maps...", flush=True)
-    shows = seat_maps(shows)
+    # footprint lands on disk before the slow part, so a stall still leaves a usable read
+    json.dump({"theatres": list(theatres.values()), "shows": shows},
+              open(os.path.join(OUT, "_footprint.json"), "w"), indent=1)
+    if NO_SEATS:
+        print("Seat maps skipped (--no-seats).", flush=True)
+    else:
+        print("Seat maps...", flush=True)
+        shows = seat_maps(shows)
     print("Cineplex (Canada)...", flush=True)
     ca = sweep_cineplex()
     print(f"  {len(ca)} Canadian showtimes", flush=True)

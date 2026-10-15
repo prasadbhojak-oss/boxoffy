@@ -1,0 +1,28 @@
+RESOLVING FILM IDS
+  Nothing here is written to the config for you - copy what looks
+  right into FILMS at the top of this file, then re-run.
+
+  session warm-up https://www.fandango.com/ -> HTTP 200; cookies ['akamai_generated_location']
+  doomsday  (Avengers: Doomsday)
+   fandango:
+     nothing found. Open the film page in a browser and read
+     the 6-digit number out of the URL by hand.
+   cineplex:
+    /films?language=en -> HTTP 404
+    /movies?language=en -> HTTP 200
+    /films/nowplaying?language=en -> HTTP 404
+    /films/comingsoon?language=en -> HTTP 404
+     34362   Avengers: Doomsday
+     61978   Avengers Endgame: Encore
+     34363   Avengers: Secret Wars
+
+  dune3  (Dune Part Three)
+   fandango:
+     nothing found. Open the film page in a browser and read
+     the 6-digit number out of the URL by hand.
+   cineplex:
+    /films?language=en -> HTTP 404
+    /movies?language=en -> HTTP 200
+    /films/nowplaying?language=en -> HTTP 404
+    /films/comingsoon?language=en -> HTTP 404
+     37998   Dune: Part 3
