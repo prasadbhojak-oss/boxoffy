@@ -4419,6 +4419,93 @@ function SocialLinks({ size }) {
   );
 }
 
+/* ── RAMAYANA LIVE TRACKER STRIP ────────────────────────────────────────────
+   Sits between the masthead and the weekend coverage cards on the Box Office
+   home view. Figures are from the 16 Oct 13:18 CT seat scan (Update 4) and are
+   hand-set: this strip does not fetch, so it cannot slow the homepage down or
+   put load on anything. Update the five numbers when a new scan publishes.
+
+   The tracker is served from public/ramayana.html via the /ramayana rewrite in
+   vercel.json. Use the www host: the apex 301s to www, so the apex would cost
+   every visitor a redirect. */
+const RAMAYANA_TRACKER = {
+  url: "https://www.boxoffy.com/ramayana",
+  tickets: "13,992",
+  rate: "2.58%",
+  shows: "3,806",
+  tminus: "T-20",
+  scan: "16 Oct · 1:18pm CT",
+};
+
+function RamayanaTrackerStrip() {
+  const R = RAMAYANA_TRACKER;
+  const figs = [
+    { n: R.tickets, l: "Tickets" },
+    { n: R.rate,    l: "Seats gone" },
+    { n: R.shows,   l: "Shows read" },
+    { n: R.tminus,  l: "To 5 Nov" },
+  ];
+  return (
+    <div style={{ maxWidth:1160, margin:"14px auto 0", padding:"0 16px" }}>
+      <a href={R.url} target="_blank" rel="noopener noreferrer"
+         style={{ textDecoration:"none", color:"inherit", display:"block" }}>
+        <div style={{
+          display:"flex", alignItems:"center", gap:18, flexWrap:"wrap",
+          background:T.surface, border:`1px solid ${T.border}`,
+          borderLeft:`4px solid ${T.accent}`, borderRadius:10, padding:"14px 18px",
+        }}>
+          <div style={{ flex:"1 1 300px", minWidth:240 }}>
+            <div style={{
+              fontFamily:"'Barlow Condensed', sans-serif", fontWeight:700, fontSize:12.5,
+              letterSpacing:"0.14em", textTransform:"uppercase", color:T.accent,
+              display:"flex", alignItems:"center", gap:7,
+            }}>
+              <span style={{ width:7, height:7, borderRadius:"50%", background:"#15803D",
+                             display:"inline-block" }} />
+              Live presale tracker · North America
+            </div>
+            <div style={{
+              fontFamily:"'Barlow Condensed', sans-serif", fontWeight:800, fontSize:30,
+              lineHeight:1.05, letterSpacing:"-0.015em", margin:"3px 0 8px", color:T.text,
+            }}>Ramayana</div>
+            <div style={{ display:"flex", gap:22, flexWrap:"wrap" }}>
+              {figs.map(f => (
+                <div key={f.l}>
+                  <div style={{ fontFamily:"'IBM Plex Mono', monospace", fontWeight:600,
+                                fontSize:19, lineHeight:1.1, color:T.text }}>{f.n}</div>
+                  <div style={{ fontFamily:"'DM Sans', sans-serif", fontSize:10.5,
+                                color:T.textMuted, letterSpacing:"0.05em",
+                                textTransform:"uppercase", marginTop:1 }}>{f.l}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div style={{ flex:"1 1 240px", minWidth:220 }}>
+            <div style={{ fontFamily:"'DM Sans', sans-serif", fontSize:12, color:T.textMid,
+                          lineHeight:1.5, borderLeft:`2px solid ${T.border}`, paddingLeft:10 }}>
+              <b style={{ color:T.text }}>The IMAX squeeze.</b> 150 IMAX screens on
+              4 Nov, then 31. Only 26 cinemas keep the hall all three nights.
+            </div>
+          </div>
+
+          <div style={{ flex:"0 0 auto" }}>
+            <span style={{
+              display:"inline-block", background:T.accent, color:"#fff",
+              fontFamily:"'DM Sans', sans-serif", fontWeight:700, fontSize:14,
+              padding:"11px 20px", borderRadius:999, whiteSpace:"nowrap",
+            }}>Open the live map →</span>
+            <div style={{ fontFamily:"'IBM Plex Mono', monospace", fontSize:10.5,
+                          color:T.textMuted, textAlign:"center", marginTop:7 }}>
+              68 markets · scan {R.scan}
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+  );
+}
+
 function HeaderSnapshotCards({ activeSection }) {
   const isMobile = useIsMobile();
   return (
@@ -6942,6 +7029,9 @@ export default function App() {
 
 
       </div>
+
+      {/* Ramayana live tracker — between the masthead and the weekend cards */}
+      {activeSection === "Box Office" && <RamayanaTrackerStrip />}
 
 
       {/* Content */}
