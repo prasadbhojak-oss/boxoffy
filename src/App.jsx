@@ -4430,11 +4430,12 @@ function SocialLinks({ size }) {
    every visitor a redirect. */
 const RAMAYANA_TRACKER = {
   url: "https://www.boxoffy.com/ramayana",
-  tickets: "15,070",
-  rate: "2.72%",
-  shows: "3,898",
+  tickets: "16,006",
+  rate: "2.88%",
+  shows: "3,912",
+  value: "$317,778",
   tminus: "T-19",
-  scan: "16 Oct · 6:54pm CT",
+  scan: "16 Oct · 10:55pm CT",
 };
 
 function RamayanaTrackerStrip() {
@@ -4443,6 +4444,7 @@ function RamayanaTrackerStrip() {
     { n: R.tickets, l: "Tickets" },
     { n: R.rate,    l: "Seats gone" },
     { n: R.shows,   l: "Shows read" },
+    { n: R.value,   l: "Ticket value" },
     { n: R.tminus,  l: "To 5 Nov" },
   ];
   return (
