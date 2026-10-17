@@ -245,6 +245,8 @@
     </div>
   </div>
 
+  <div id="nahead"></div>
+  <p class="cap" id="ustiles" style="margin:0 0 7px"></p>
   <div class="tiles" id="tiles"></div>
   <p class="note" id="natotal" style="margin:-6px 0 18px"></p>
 
@@ -519,26 +521,57 @@ function tiles(){
   $('#tiles').innerHTML=t.map(([k,v,s])=>
     `<div class="tile"><div class="k">${esc(k)}</div><div class="v">${esc(v)}</div><div class="s">${esc(s)}</div></div>`).join('');
 
-  /* The North America line only makes sense unfiltered: Canada is a single
-     footprint figure and cannot be sliced by date, language or format. */
-  const na=$('#natotal');
-  if(activeDim()){ na.textContent=''; }
+  /* THE HEADLINE IS NORTH AMERICA, 4-8 NOVEMBER - the whole presale.
+     The tiles above are the United States on 4-6 Nov, because that is the
+     slice the map and every filter are built from. That distinction used to
+     live in a footnote, which buried the only number most readers want. The
+     big figure leads; the basis is stated on the same line, not below it.
+     Both are hidden while a filter is active: a North America total cannot
+     be sliced by date, language or format. */
+  const head=$('#nahead'), uscap=$('#ustiles'), na=$('#natotal');
+  if(activeDim()){ head.innerHTML=''; uscap.textContent=''; na.textContent=''; }
   else{
-    /* unfiltered branch, so `sold` is the full US total for 4-6 Nov */
     const usSold=sold, usUsd=Math.round(usSold*atp);
     const naTix=usSold+US_EXTRA.tickets+CA.tickets;
     const naUsd=usUsd+US_EXTRA.usd+CA.usd;
+    head.innerHTML=
+      `<div style="background:var(--card);border:1px solid var(--line);`+
+      `border-left:4px solid var(--accent);border-radius:var(--r);`+
+      `padding:15px 17px;margin-bottom:12px">`+
+        `<div style="font-family:var(--disp);font-weight:700;font-size:12px;`+
+        `letter-spacing:.14em;text-transform:uppercase;color:var(--accent)">`+
+        `North America · 4–8 November · the full opening run</div>`+
+        `<div style="display:flex;gap:30px;flex-wrap:wrap;margin-top:7px">`+
+          `<div><div style="font-family:var(--mono);font-weight:600;`+
+          `font-size:34px;letter-spacing:-.02em;line-height:1.05">`+
+          `${fmt(naTix)}</div>`+
+          `<div style="font-family:var(--disp);font-weight:700;font-size:11.5px;`+
+          `letter-spacing:.1em;text-transform:uppercase;color:var(--muted)">`+
+          `tickets sold</div></div>`+
+          `<div><div style="font-family:var(--mono);font-weight:600;`+
+          `font-size:34px;letter-spacing:-.02em;line-height:1.05">`+
+          `$${fmt(Math.round(naUsd/1000))}K</div>`+
+          `<div style="font-family:var(--disp);font-weight:700;font-size:11.5px;`+
+          `letter-spacing:.1em;text-transform:uppercase;color:var(--muted)">`+
+          `ticket value · prices assumed</div></div>`+
+        `</div>`+
+        `<div style="font-family:var(--mono);font-size:11.5px;color:var(--muted);`+
+        `margin-top:9px;line-height:1.5">`+
+        `United States ${fmt(usSold+US_EXTRA.tickets)} · `+
+        `Canada ${fmt(CA.tickets)}. `+
+        `Landmark Cinemas is not counted, so this can only go up.</div>`+
+      `</div>`;
+    uscap.textContent="United States, 4–6 November — the counted detail behind "+
+                      "the map below";
     na.innerHTML=
-      `<b>The figures above are the United States on 4–6 November</b>, counted `+
-      `seat by seat. Two more dates are already on sale and were counted for `+
-      `the first time on 17 Oct: <b>${fmt(US_EXTRA.tickets)} further tickets `+
-      `on ${US_EXTRA.dates}</b> — inventory we had never counted, not overnight `+
-      `growth. Canada adds <b>${fmt(CA.tickets)} tickets</b> across `+
-      `${CA.cinemas} Cineplex cinemas, ${CA.rate}% of its seats, counted from `+
-      `published availability and a floor rather than an estimate. `+
-      `<b>North America: ${fmt(naTix)} tickets, about `+
-      `$${fmt(Math.round(naUsd/1000))}K.</b> Landmark Cinemas is still not in `+
-      `that figure, so it can only go up — see Method.`;
+      `The tiles above are the <b>United States, 4–6 November</b>, which is what `+
+      `the map and every filter are built from. The other `+
+      `<b>${fmt(US_EXTRA.tickets)} US tickets</b> in the headline are `+
+      `${US_EXTRA.dates}, on sale all along and counted for the first time on `+
+      `17 Oct — inventory we had never counted, not overnight growth. Canada's `+
+      `<b>${fmt(CA.tickets)}</b> comes from ${CA.cinemas} Cineplex cinemas at `+
+      `${CA.rate}% of its seats, counted from published availability and a `+
+      `floor rather than an estimate — see Method.`;
   }
 }
 
