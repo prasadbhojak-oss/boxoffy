@@ -246,6 +246,7 @@
   </div>
 
   <div class="tiles" id="tiles"></div>
+  <p class="note" id="natotal" style="margin:-6px 0 18px"></p>
 
   <div class="card" id="trajcard" style="margin-bottom:18px">
     <div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap">
@@ -343,7 +344,12 @@
         no honest ticket number. Our 16 October read found Ramayana on
         <b>300 Cineplex showtimes</b> across the full 152-location national list,
         in Hindi, English-dubbed and IMAX 3D — about 136% of the footprint
-        Drishyam: The Conclusion opened on. Screens, not tickets.</p>
+        Drishyam: The Conclusion opened on, which opened on 74–78 screens.
+        The Canadian dollar figure above is those 300 showtimes multiplied by
+        the 3.6 tickets per show and US$12.24 a ticket our 15 October read
+        implied. That is an <b>estimate built on an estimate</b> and is the one
+        number on this page not derived from a seat map. The US figures are not
+        affected by it.</p>
     </div>
     <button class="btn ghost" id="tabletoggle">Show full table</button>
   </div>
@@ -434,17 +440,71 @@ const BINS=[[0,'var(--zero)','none yet'],[1,'var(--h1)','under 1%'],[2,'var(--h2
             [4,'var(--h3)','2–4%'],[8,'var(--h4)','4–8%'],[1e9,'var(--h5)','8%+']];
 const colour = r => BINS.find(b=>r<b[0]||b[0]===1e9)[1];
 
+/* MONEY. Fandango publishes no ticket price, so every dollar figure here is
+   OUR assumption applied to a MEASURED ticket count - the tickets are counted
+   seat by seat, the price is not. Same per-format prices the posts use. The
+   blend is recomputed from the current format mix rather than hardcoded, so
+   filtering to IMAX uses the IMAX price, not the average.
+   (ATP_WK further down is a different thing: the assumed price of an opening
+   weekend ticket, used only by the trajectory.) */
+const ATP_FMT={IMAX:24, PLF:22, XD:19, '3D':18, Standard:15};
+function blendedATP(){
+  let n=0,v=0;
+  for(const m of DATA.metros) for(const [k,o] of Object.entries(m.byFmt||{})){
+    const p=ATP_FMT[k]; if(!p) continue;
+    n+=o.sold; v+=o.sold*p;
+  }
+  return n ? v/n : 19;
+}
+function atpNow(){
+  const a=activeDim();
+  return (a && a.key==='fmt' && ATP_FMT[a.val]) ? ATP_FMT[a.val] : blendedATP();
+}
+
+/* CANADA IS MODELLED, AND SEPARATELY SO.
+   Canadian listings publish seats still free but never the seats in the room,
+   so there is no denominator and no measured ticket count - unlike every US
+   figure on this page. What we DO measure in Canada is the footprint: our
+   16 Oct read found 300 Cineplex showtimes nationally.
+   The two rates below come from the 15 Oct Cineplex read, which carried 199
+   showtimes and an estimated 714 tickets at C$17 (US$12.24). Applying those
+   same rates to today's showtime count is the whole model. It is one layer
+   weaker than the US number and is always shown apart from it, never folded
+   into a single headline. */
+const CA = {showtimes:300, perShow:714/199, usdPerTicket:8739/714};
+function canada(){
+  const t = Math.round(CA.showtimes * CA.perShow);
+  return {tickets:t, value:Math.round(t * CA.usdPerTicket)};
+}
+
 function tiles(){
   const rows=view();
   const sold=rows.reduce((a,r)=>a+r.sold,0), seats=rows.reduce((a,r)=>a+r.seats,0),
         shows=rows.reduce((a,r)=>a+r.shows,0);
   const ven=DATA.metros.reduce((a,m)=>a+m.nVenues,0);
   const zero=rows.filter(r=>r.sold===0).length;
-  const t=[['Tickets',fmt(sold),'sold so far'],['Seats',fmt(seats),'on sale'],
+  const atp=atpNow();
+  const t=[['Tickets',fmt(sold),'sold so far'],
+           ['Value','$'+fmt(Math.round(sold*atp)),'at $'+atp.toFixed(2)+' assumed'],
+           ['Seats',fmt(seats),'on sale'],
            ['How full',pc1(pct(sold,seats)),'of all seats'],['Shows',fmt(shows),''],
            ['Cinemas',fmt(ven),''],['Markets',fmt(rows.length),zero?zero+' with none sold':'']];
   $('#tiles').innerHTML=t.map(([k,v,s])=>
     `<div class="tile"><div class="k">${esc(k)}</div><div class="v">${esc(v)}</div><div class="s">${esc(s)}</div></div>`).join('');
+
+  /* The North America line only makes sense unfiltered: Canada is a single
+     footprint figure and cannot be sliced by date, language or format. */
+  const na=$('#natotal');
+  if(activeDim()){ na.textContent=''; }
+  else{
+    const c=canada(), us=Math.round(sold*atp);
+    na.innerHTML=
+      `<b>United States $${fmt(us)}</b> measured · `+
+      `Canada $${fmt(c.value)} <b>modelled</b> (${fmt(c.tickets)} tickets on `+
+      `${fmt(CA.showtimes)} Cineplex showtimes) · `+
+      `<b>North America $${fmt(us+c.value)}</b> — the Canadian half is an `+
+      `estimate, not a seat count. See Method.`;
+  }
 }
 
 function filters(){
@@ -770,8 +830,10 @@ function stamp(){
   $('#byline').textContent=`Boxoffy seat scan · ${when} Central · `+
     `${fmt(DATA.total.shows)} showtimes read · ${DATA.basis}`;
   $('#foot').innerHTML=`Boxoffy · seat-level scan of North American cinema listings. `+
-    `Tickets are measured, not modelled. Ticket prices are not published by the source, so any `+
-    `dollar figure elsewhere in our coverage is an assumption.<br>Scan ${when} Central · `+
+    `Tickets are measured seat by seat. The VALUE tile is not: the source publishes no `+
+    `ticket price, so it is our per-format assumption (IMAX $24, PLF $22, XD $19, 3D $18, `+
+    `standard $15) applied to a counted ticket, blended here at $${atpNow().toFixed(2)}.`+
+    `<br>Scan ${when} Central · `+
     `${fmt(cinemas)} cinemas · ${fmt(DATA.total.shows)} showtimes · basis: ${DATA.basis}`;
 }
 /* render() now owns filters(), extras() and shareLabels(), so paint() only adds
@@ -997,7 +1059,8 @@ async function drawShot(){
   const rows=view();
   const sold=rows.reduce((a,r)=>a+r.sold,0), seats=rows.reduce((a,r)=>a+r.seats,0),
         shows=rows.reduce((a,r)=>a+r.shows,0);
-  const stats=[[fmt(sold),'TICKETS'],[pc1(pct(sold,seats)),'OF SEATS'],
+  const stats=[[fmt(sold),'TICKETS'],['$'+fmt(Math.round(sold*atpNow())),'VALUE'],
+               [pc1(pct(sold,seats)),'OF SEATS'],
                [fmt(shows),'SHOWS'],[String(rows.length),'MARKETS']];
   stats.forEach((s,i)=>{
     const x=44+i*150;
@@ -1029,7 +1092,7 @@ async function drawShot(){
   c.fillStyle=SNAP.muted; c.font='400 12px '+mono;
   const when=new Date(DATA.scan).toLocaleString('en-US',
     {month:'short',day:'numeric',hour:'numeric',minute:'2-digit',timeZone:'America/Chicago'});
-  c.fillText('Seat-level scan · '+when+' Central · tickets measured, not modelled',44,H-26);
+  c.fillText('Seat-level scan · '+when+' Central · tickets counted, ticket price assumed',44,H-26);
   c.textAlign='right'; c.fillStyle=SNAP.ink; c.font='700 13px '+body;
   c.fillText('boxoffy.com',W-44,H-26); c.textAlign='left';
 }
