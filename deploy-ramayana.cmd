@@ -28,19 +28,22 @@ set DL=%USERPROFILE%\Downloads
 set FAIL=0
 
 echo.
-echo === 1. copying from %DL%
+echo === 1. copying from %DL%  (only files NEWER than the ones in public\)
+REM xcopy /D, not copy /Y. Once these files live in the repo they get edited
+REM there - the IMAX card, the Method text, a rebake after a sweep. A blind
+REM copy from Downloads would silently throw all of that away and ship an
+REM older page. /D copies only when the Downloads copy is genuinely newer.
 for %%f in (ramayana.html ramayana-map.json ramayana-og.png) do (
   if exist "%DL%\%%f" (
-    copy /Y "%DL%\%%f" "public\%%f" >nul
+    xcopy /D /Y /Q "%DL%\%%f" "public\" >nul
     if errorlevel 1 (
       echo     FAILED to copy %%f
       set FAIL=1
     ) else (
-      echo     ok  public\%%f
+      echo     ok  public\%%f  ^(copied, or already newer in public^)
     )
   ) else (
-    echo     MISSING in Downloads: %%f
-    set FAIL=1
+    echo     not in Downloads: %%f  - using the copy already in public\
   )
 )
 if "%FAIL%"=="1" (
@@ -83,20 +86,39 @@ if /i "%~1"=="push" (
   git add public\ramayana.html public\ramayana-map.json public\ramayana-og.png vercel.json src\App.jsx deploy-ramayana.cmd
   git commit -m "Ramayana live tracker: page, data, social card, /ramayana route"
   if errorlevel 1 echo     nothing to commit, continuing
-  git push
+
+  REM This repo's local branch is "main" but it tracks "master" on origin, so
+  REM a bare `git push` refuses - git will not guess across a name mismatch.
+  REM Read the configured upstream and push explicitly to it, rather than
+  REM hardcoding master, so a later rename still works.
+  set UPS=
+  for /f "tokens=*" %%b in ('git rev-parse --abbrev-ref --symbolic-full-name "@{u}" 2^>nul') do set UPS=%%b
+  if not defined UPS (
+    echo     no upstream set - pushing to origin under the same branch name
+    git push -u origin HEAD
+  ) else (
+    for /f "tokens=1,* delims=/" %%a in ("!UPS!") do (
+      set REMOTE=%%a
+      set RBRANCH=%%b
+    )
+    echo     upstream !UPS!  --^> git push !REMOTE! HEAD:!RBRANCH!
+    git push !REMOTE! HEAD:!RBRANCH!
+  )
   if errorlevel 1 (
     echo     PUSH FAILED - deploy did not happen.
+    echo     The commit is safe locally, nothing was lost.
     exit /b 1
   )
   echo.
-  echo   Pushed. Vercel builds from main; watch the deployment, then check:
+  echo   Pushed. Vercel builds from origin/master; watch the deployment, then check:
 ) else (
   echo === 5. not pushing ^(run "deploy-ramayana.cmd push" to ship^)
   echo.
   echo   Local build is good. To ship:
   echo       git add public\ramayana.html public\ramayana-map.json public\ramayana-og.png vercel.json src\App.jsx
   echo       git commit -m "Ramayana live tracker"
-  echo       git push
+  echo       git push origin HEAD:master
+  echo   ^(local branch is "main" but origin's is "master", so a bare push refuses^)
   echo.
   echo   After it deploys, check:
 )
@@ -111,6 +133,6 @@ echo.
 echo   LATER: publishing a new scan is just the JSON - no copy step, because
 echo   mapstore.py already writes straight to public\ramayana-map.json.
 echo       map-cycle.cmd ALL
-echo       git add public\ramayana-map.json ^&^& git commit -m "scan" ^&^& git push
+echo       git add public\ramayana-map.json ^&^& git commit -m "scan" ^&^& git push origin HEAD:master
 echo   Open tabs repaint within two minutes; the page itself is not rebuilt.
 exit /b 0
