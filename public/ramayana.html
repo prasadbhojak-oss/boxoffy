@@ -150,7 +150,9 @@
   .lead .ch{font-family:var(--mono);font-size:10.5px;color:var(--muted);display:block}
   .lead b{font-family:var(--mono);font-weight:600;font-size:12.5px}
   .lead .pc{font-family:var(--mono);font-size:11.5px;color:var(--muted)}
-  .trow{display:grid;grid-template-columns:minmax(150px,1.3fr) 62px 1fr 92px 74px;
+  .trow .tg span{display:block;font-family:var(--mono);font-size:10px;font-weight:400;
+    color:var(--muted);letter-spacing:.02em}
+  .trow{display:grid;grid-template-columns:minmax(150px,1.3fr) 86px 1fr 92px 74px;
     gap:11px;align-items:center;padding:7px 0;border-bottom:1px solid var(--line);font-size:13px}
   .trow:last-of-type{border-bottom:0}
   .trow .tf{font-weight:500}
@@ -252,13 +254,14 @@
 
   <div class="card" id="trajcard" style="margin-bottom:18px">
     <div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap">
-      <div><h2>Opening weekend trajectory</h2>
+      <div><h2>Opening run trajectory</h2>
         <p class="cap" id="trajcap"></p></div>
       <div style="text-align:right">
         <div class="lgt">Current trajectory</div>
         <div style="font-family:var(--mono);font-weight:600;font-size:23px" id="trajband"></div>
         <div class="lgt" id="trajbasis" style="margin-top:2px;letter-spacing:.04em"></div></div>
     </div>
+    <div id="openspan"></div>
     <div id="ladder"></div>
     <p class="note" id="trajnote"></p>
   </div>
@@ -297,6 +300,8 @@
       shown because too many of its seat maps failed to read.
     </p>
   </div>
+
+  <div class="card" id="intlcard" style="margin-bottom:18px"></div>
 
   <div class="filters" id="filters"></div>
 
@@ -359,6 +364,24 @@
         Canadian figure can only move up. An earlier modelled Canadian dollar
         figure was <b>withdrawn</b> before this: its showtime count was inflated
         27% by duplicate listings of the same session.</p>
+      <p style="font-size:13px;color:var(--body-ink);margin:0">
+        <b>Australia is counted two different ways, and one of them is a hand
+        count.</b> Event Cinemas publishes seats still free, so the Canadian
+        method transfers: <b>666 tickets</b> over all 448 shows at 37 cinemas,
+        <b>0.61%</b> of 109,327 seats. The floor is firmer than Canada's — in 77
+        of 86 rooms the two highest availabilities are within 2 seats, so an
+        empty session sets the denominator. HOYTS cannot be scanned at all: its
+        feed carries no seat field and its seat maps sit behind a path its own
+        robots.txt disallows. Its <b>286 tickets</b> were read by hand off the
+        public seat page on 17 Oct — 13 sessions at 4 cinemas, each matching a
+        row of our own showtime scan — which leaves <b>424 HOYTS shows
+        uncounted</b>. So <b>952</b> is a floor, and a soft one. We hold a
+        chain-wide HOYTS model but do not publish it: at ±45% it would be the
+        least reliable figure on this page. Australia is also the only market
+        here whose <b>prices are observed rather than assumed</b> — IMAX A$45,
+        ScreenX A$36.50, Xtremescreen A$27 — applied per format and cut 13% for
+        concession fares. Event's prices were not observed and carry the HOYTS
+        equivalents.</p>
     </div>
     <button class="btn ghost" id="tabletoggle">Show full table</button>
   </div>
@@ -504,7 +527,70 @@ const CA = {showtimes:219, cinemas:25, auditoriums:28, dates:5,
    tickets that were always there. US_EXTRA holds them so the page can show
    the true presale total without rewriting the series it has to stay
    comparable to. From the next clean break the map moves to 4-8 as well. */
-const US_EXTRA = {tickets:7212, usd:128886, dates:"7-8 Nov"};
+const US_EXTRA = {tickets:7212, usd:128886, dates:"7-8 Nov",
+                  byDate:{"2026-11-07":4430, "2026-11-08":2782}};
+
+/* AUSTRALIA IS TWO CHAINS AND ONLY ONE OF THEM CAN BE SCANNED.
+   Event Cinemas publishes the seats still free, so the same capacity recovery
+   that unlocked Canada works there: across one room's own sessions, the
+   largest availability we ever see is a floor on that room's size. That is
+   666 tickets, and the floor is firmer here than in Canada - in 77 of 86
+   rooms the two highest availabilities sit within 2 seats of each other, so
+   a genuinely empty session sets the denominator rather than a depleted one.
+   The room key is (cinema, screen, screen type), not screen name: Parramatta
+   calls both a 418-seat V-Max and a 104-seat 4DX "1", and keying on the name
+   alone fabricated 4,874 tickets in the first run of this scan.
+
+   HOYTS has no seat field in its feed at all, and its seat maps sit behind
+   /orders/*, which HOYTS' own robots.txt disallows. So HOYTS cannot be
+   scanned, today or later - that is a standing limit, not a backlog. The 286
+   here were read by hand off the public seat-selection page on 17 Oct: 13
+   sessions at 4 cinemas, every one of which joins exactly onto a row of our
+   own showtime scan. 13 of HOYTS' 437 sessions.
+
+   WHY THERE IS NO AUSTRALIAN TOTAL HERE. A chain-wide HOYTS estimate is
+   possible and we have built one, but it carries a +-45% band and would be
+   the softest number on this page by a wide margin. 952 is what is counted.
+   The true figure is higher, and we are not going to dress a model as a count.
+
+   PRICES ARE OBSERVED, NOT ASSUMED - the only place on this page where that
+   is true. IMAX A$45.00, ScreenX A$36.50, Xtremescreen A$27.00, read off
+   HOYTS' own ticket page. Each ticket is priced at the format it actually
+   sold in, then the total is cut 13% for child, concession and rewards
+   fares - a small cut because 91% of these sales are for shows at 5pm or
+   later, where there is little discounting. Event's own prices were not
+   observed; its formats carry the HOYTS equivalents, which is the one
+   assumption inside the dollar figure. */
+const AU = {
+  tickets:952, aud:29882, usd:20756, atpAud:31.39, fx:0.6946,
+  ev:{tickets:666, shows:448, counted:448, cinemas:37, seats:109327, rate:0.61},
+  hy:{tickets:286, shows:437, counted:13, cinemas:47, cinemasRead:4},
+  premiumPct:96, premiumStd:40, eveningPct:91,
+  top:{cinema:"HOYTS Blacktown, Sydney", when:"Thu 5 Nov, 6:40p",
+       room:"Xtremescreen + D-BOX", sold:109, next:80, nextAt:"IMAX Sydney"},
+  price:[["IMAX","A$45.00"],["ScreenX","A$36.50"],["Xtremescreen","A$27.00"]]
+};
+
+/* THIS PAGE IS ABOUT TO HAVE FIVE MARKETS, NOT TWO.
+   Australia landed first. Middle East, Europe and South-East Asia follow. A
+   card per market would push the map three screens down and make the reader
+   scroll through territory they did not ask about, so the markets share one
+   block and sit side by side behind chips - the same control the filters
+   already use. North America is NOT in here: it is 96% of the data and the
+   reason anyone opens this page, so it keeps the headline and the map.
+
+   MARKETS WE HAVE NOT COUNTED ARE SHOWN, NOT HIDDEN. A chip that opens onto
+   "not probed yet" is information - it says the gap is known and deliberate.
+   A page that silently omits a market is telling the reader it has the world
+   covered, which is the one thing this page must never imply. */
+const INTL = {
+  open:'au',
+  order:['au','me','eu','sea'],
+  au :{tab:'Australia',   body:auBody},
+  me :{tab:'Middle East', body:meBody},
+  eu :{tab:'Europe',      body:euBody},
+  sea:{tab:'SE Asia',     body:seaBody}
+};
 
 function tiles(){
   const rows=view();
@@ -720,19 +806,136 @@ function extras(){
 const PREM_DATE='2026-11-04', ATP_WK=20, T16='2026-10-20',
       ON_SALE='2026-10-15T09:18:00-05:00';
 const SHARE=35000/(9.3e6/ATP_WK);
+
+/* EVERY ROW BELOW IS A VERIFIED FIGURE WITH ITS OWN SPAN NAMED, AND THE SPANS
+   DO NOT MATCH EACH OTHER. That is deliberate and it is the honest way to show
+   this. A film that opened on a Friday has a 3-day opening run; one that opened
+   Wednesday has a 5-day one. Stretching them all onto a common basis would mean
+   inventing days that were never reported, so instead each row carries its span
+   and the reader can judge the comparison themselves.
+
+   `ow` is that film's FULL OPENING RUN in North America - every day from its
+   first public showing through the first Sunday. For a Friday opener that is
+   the 3-day weekend; for Pathaan it is five days. Sourced from Box Office Mojo
+   and The Numbers, cross-checked against Deadline and Variety where they
+   reported the same span.
+
+   TWO PROVENANCES, AND THE ROWS SAY WHICH IS WHICH.
+   Six rows are third-party: Box Office Mojo and The Numbers, cross-checked
+   against Deadline and Variety where they reported the same span. The seventh,
+   Dhurandhar 2, is Boxoffy's own reporting - our Apr 2 North America piece,
+   which carries Venky Box Office, Deadline, Comscore, Variety, Sacnilk and
+   Pinkvilla as its sources. It belongs here: it is the all-time Indian opening
+   in this market and leaving it out would misrepresent the ceiling. But a
+   reader deserves to know which figures we took from an outside scoreboard and
+   which are ours, so the row says so.
+
+   THE $14.0M IS RIGHT. THE $23M+ IN OUR OWN HEADLINE IS NOT - IT IS A CUME.
+   Our Apr 2 North America piece calls $23M+ the "5-Day Extended Opening", and
+   elsewhere on the same page calls the same $23M+ a "total through W2". Both
+   cannot be true, and the page settles it against itself: it reports a running
+   7-day North America total of ~$16.5M, with $1.05M on the Monday and
+   $1.4-1.5M on the Tuesday. Take those two days off $16.5M and the five-day
+   opening is about $14.0M - which is exactly the figure the old ladder row
+   carried, and exactly the 52,688 premiere tickets it asked for.
+
+   Outside reporting agrees with the cume reading and not the opening one:
+   TheWrap had $22.7M at 10 days on 29 Mar, Sacnilk $25M+ as of 3 Apr. A film
+   at $22.7M on day 10 did not open to $23M on day 5.
+
+   This is the same mistake the Pushpa 2 anchor carries three comments below -
+   a multi-week cume sitting in a column headed "opening". It is worth knowing
+   that this error is common enough to have caught us twice.
+
+   SO: ow is $14.0M, the five-day Wed-Sun opening. The $10.0M Friday-to-Sunday
+   weekend is quoted in the row's note for contrast, because it is the figure
+   Deadline, Comscore and Variety confirmed directly.
+
+   THE RRR CAVEAT, stated in its own row: its $9.5M is a Friday-to-Sunday
+   estimate that was never finalised, and the Thursday it also played is not
+   published anywhere we can read, so its true opening run is HIGHER than the
+   figure shown and we cannot say by how much.
+
+   KALKI IS THE CLOSEST STRUCTURAL MATCH to Ramayana: Wednesday previews, a
+   Thursday opening, then the weekend - exactly the shape of 4-8 Nov. */
 const MARKS=[
-  {f:'Jawan',           y:2023, ow:6.0e6, note:'Hindi, 2023'},
-  {f:'Animal',          y:2023, ow:6.5e6, note:'Hindi, 700 cinemas'},
-  {f:'Pathaan',         y:2023, ow:6.9e6, note:'Hindi, 2023'},
-  {f:'Pushpa 2',        y:2024, ow:9.3e6, note:'the anchor · 35,000 at T-16'},
-  {f:'Dhurandhar',      y:2026, ow:10.0e6,note:'3 days · 987 cinemas'},
-  {f:'Baahubali 2',     y:2017, ow:10.4e6,note:'Indian record, 3 days'},
-  {f:'Dhurandhar 4-day',y:2026, ow:14.0e6,note:'counting previews'},
+  {f:'Animal',        y:2023, ow:6524534,  span:'3-day',
+   note:'Fri–Sun · opened Friday, so this is its whole run'},
+  {f:'Jawan',         y:2023, ow:7496346,  span:'4-day',
+   note:'Thu–Sun · opened Thursday'},
+  {f:'Pushpa 2',      y:2024, ow:9300000,  span:'4-day',
+   note:'Thu–Sun, incl. Wed premieres · THE ANCHOR'},
+  {f:'Pathaan',       y:2023, ow:9490351,  span:'5-day',
+   note:'Wed–Sun · opened Wednesday'},
+  {f:'RRR',           y:2022, ow:9500000,  span:'3-day',
+   note:'Fri–Sun estimate · its Thursday is unpublished, so this is low'},
+  {f:'Baahubali 2',   y:2017, ow:10430497, span:'3-day',
+   note:'Fri–Sun · opened Friday, so this is its whole run'},
+  {f:'Kalki 2898 AD', y:2024, ow:10832531, span:'5-day',
+   note:'Wed–Sun, incl. Wed previews · same shape as Ramayana'},
+  {f:'Dhurandhar 2',  y:2026, ow:14000000, span:'5-day',
+   note:'Wed–Sun, incl. premiere night · Boxoffy reporting · Fri–Sun alone was $10.0M'},
 ];
 function premiereTickets(){
   return DATA.metros.reduce((a,m)=>a+((m.byDate&&m.byDate[PREM_DATE]||{sold:0}).sold),0);
 }
+function usOn(d){
+  if(US_EXTRA.byDate && US_EXTRA.byDate[d]!=null) return US_EXTRA.byDate[d];
+  return DATA.metros.reduce((a,m)=>a+((m.byDate&&m.byDate[d]||{sold:0}).sold),0);
+}
+
+/* THE SHAPE OF THE OPENING, which is not the same thing as the weekend.
+   Ramayana opens Thursday 5 November in North America with Wednesday previews,
+   so the opening run has three distinct parts and they are nothing alike:
+
+       Wed 4 Nov   previews      - one night, and it is IMAX night
+       Thu 5 Nov   opening day
+       Fri-Sun 6-8 the weekend   - the 3-day figure the industry reports
+
+   The presale total on this page is all five days, 4-8 Nov, and that is the
+   right basis for a presale: every one of those dates has been on sale the
+   whole time. The PROJECTION below is a different animal - it is a Friday to
+   Sunday gross, because the anchor it is built on is a Friday to Sunday gross.
+   Adding the midweek into it would compare a 5-day number against 3-day
+   benchmarks and quietly inflate every rung of the ladder. So the span is
+   shown here, the projection stays 3-day, and the two are never summed. */
+function openSpan(){
+  const el=$('#openspan'); if(!el) return;
+  const prev=usOn('2026-11-04'), day1=usOn('2026-11-05');
+  const wk=usOn('2026-11-06')+usOn('2026-11-07')+usOn('2026-11-08');
+  const all=prev+day1+wk; if(!all) return;
+  const seg=(lbl,sub,n,dim)=>
+    `<div style="flex:${Math.max(n,1)} 1 0;min-width:96px">`+
+      `<div style="height:8px;border-radius:4px;background:var(--ink);`+
+      `opacity:${dim};margin-bottom:6px"></div>`+
+      `<div style="font-family:var(--mono);font-weight:600;font-size:15px">${fmt(n)}</div>`+
+      `<div style="font-family:var(--disp);font-weight:700;font-size:11px;`+
+      `letter-spacing:.09em;text-transform:uppercase;color:var(--muted)">${esc(lbl)}</div>`+
+      `<div style="font-family:var(--mono);font-size:10.5px;color:var(--muted)">${esc(sub)}</div>`+
+    `</div>`;
+  el.innerHTML=
+    `<p class="cap" style="margin:14px 0 9px">The opening run, United States · `+
+    `${fmt(all)} tickets over five days</p>`+
+    `<div style="display:flex;gap:10px;align-items:flex-end">`+
+      seg('Previews','Wed 4 Nov',prev,1)+
+      seg('Opening day','Thu 5 Nov',day1,.55)+
+      seg('The weekend','Fri–Sun 6–8 Nov',wk,.32)+
+    `</div>`+
+    `<p class="note">`+
+      `Premiere night alone is <b>${Math.round(100*prev/all)}%</b> of the whole `+
+      `five-day presale, and previews plus opening day together `+
+      `(<b>${fmt(prev+day1)}</b>) outsell the entire Friday-to-Sunday weekend `+
+      `(<b>${fmt(wk)}</b>). That is the IMAX night doing it — Ramayana holds 151 `+
+      `IMAX screens on 4 Nov and 32 the next day. `+
+      `<b>The projection below is for all five days together</b> — previews, `+
+      `opening day and the weekend. Every benchmark in the ladder is that film's `+
+      `own full opening run, each labelled with the span it actually covers, `+
+      `because a Friday opener only ever had three days and we will not invent `+
+      `the other two to make the table tidy.`+
+    `</p>`;
+}
 function trajectory(){
+  openSpan();
   const now=premiereTickets();
   const scan=new Date(DATA.scan), t16=new Date(T16+'T12:00:00-05:00');
   const days=Math.max(0,Math.round((t16-scan)/864e5));
@@ -744,12 +947,12 @@ function trajectory(){
   const cleared=rows.filter(r=>now>=r.need);
   const next=rows.find(r=>now<r.need);
   $('#ladder').innerHTML=
-    `<div class="trow head"><span>Benchmark</span><span style="text-align:right">Weekend</span>
+    `<div class="trow head"><span>Benchmark</span><span style="text-align:right">Opening run</span>
       <span>Progress</span><span style="text-align:right">Needed by 20 Oct</span>
       <span style="text-align:right">Per day</span></div>`+
     rows.map(r=>`<div class="trow">
       <span class="tf">${r.f}<span>${r.note}</span></span>
-      <span class="tg" style="text-align:right">$${(r.ow/1e6).toFixed(1)}M</span>
+      <span class="tg" style="text-align:right">$${(r.ow/1e6).toFixed(2)}M<span>${esc(r.span)}</span></span>
       <span class="tb"><i style="width:${r.prog.toFixed(1)}%"></i></span>
       <span class="tn">${fmt(Math.round(r.need))}</span>
       <span class="tp">${r.perDay===null?'—':'+'+fmt(Math.round(r.perDay))}</span></div>`).join('');
@@ -769,21 +972,36 @@ function trajectory(){
   const projPrem = days > 0 ? now + perDay * days : now;   /* past the checkpoint: no carry */
   const weekendGross = (projPrem / SHARE) * ATP_WK;
   $('#trajband').textContent = '$' + (weekendGross/1e6).toFixed(1) + 'M';
-  $('#trajbasis').textContent = 'opening weekend at ' + fmt(Math.round(perDay)) + '/day';
+  $('#trajbasis').textContent = '5-day opening run at ' + fmt(Math.round(perDay)) + '/day';
   $('#trajnote').textContent=
-    `The figure above projects opening weekend: ${fmt(now)} premiere tickets so far, `+
+    `The figure above projects the full five-day opening run, 4–8 Nov: ${fmt(now)} premiere tickets so far, `+
     `running at ${fmt(Math.round(perDay))} a day since sales opened, carried the `+
     `${days} remaining day${days===1?'':'s'} to the 20 October checkpoint and converted `+
     `at the Pushpa 2 ratio. Read it as the optimistic end — presales sell fastest in `+
     `their first days, so holding the opening pace all the way to the checkpoint `+
     `flatters it. `+
-    `Benchmarks are North America opening weekends. The conversion comes from one film — `+
-    `Pushpa 2 published 35,000 premiere presale tickets 16 days out and opened to $9.3M, so `+
-    `each premiere ticket at that point carried about 13 weekend tickets. Applied to Ramayana's `+
+    `Every benchmark is a North America opening run, each labelled with the span it actually `+
+    `covers — Animal and Baahubali 2 opened on a Friday and had three days, Jawan opened `+
+    `Thursday and had four, Pathaan and Kalki opened Wednesday and had five. Those spans are `+
+    `not interchangeable and the table does not pretend they are. Six of the seven come from `+
+    `Box Office Mojo and The Numbers; Dhurandhar 2 is Boxoffy's own North America reporting, `+
+    `sourced to Venky Box Office, Deadline, Comscore, Variety and Sacnilk, and its row says so `+
+    `rather than passing it off as an outside scoreboard figure. The conversion comes from one `+
+    `film: Pushpa 2 published 35,000 premiere presale tickets 16 days out and took $9.3M from `+
+    `Thursday to Sunday including its Wednesday premieres, so each premiere ticket at that point `+
+    `carried about 13 opening-run tickets. Applied to Ramayana's `+
     `${fmt(now)} premiere tickets, ${next?`the next mark is ${next.f} at $${(next.ow/1e6).toFixed(1)}M, `+
     `needing ${fmt(Math.round(next.need-now))} more by 20 October`:'every mark is cleared'}. `+
-    `This is a rule of thumb from a single anchor, not a model. Cinema count is the bigger swing: `+
-    `Ramayana is on ${fmt(DATA.metros.reduce((a,m)=>a+m.nVenues,0))} today against Dhurandhar's 987 at opening.`;
+    `This is a rule of thumb from a single anchor, not a model. One thing about that anchor is `+
+    `worth saying plainly, because almost everyone gets it wrong: $9.3M is widely quoted as `+
+    `Pushpa 2's "opening weekend", including by outlets that should know better, but it is not `+
+    `a weekend at all — it is a Thursday-to-Sunday cume that folds in the Wednesday premieres. `+
+    `Pushpa 2's actual Friday-to-Sunday weekend was $4.8M. The confusion comes from Box Office `+
+    `Mojo filing the four-day figure in a column headed "Opening". We use the $9.3M on purpose, `+
+    `because the full opening run is what Ramayana is being measured on here and the two have `+
+    `the same shape. The 35,000 premiere figure is Boxoffy's own count from that release rather `+
+    `than a published number. Cinema count is the bigger swing: Ramayana is on `+
+    `${fmt(DATA.metros.reduce((a,m)=>a+m.nVenues,0))} cinemas today.`;
 }
 
 function tip(e,html){
@@ -906,7 +1124,170 @@ function stamp(){
 }
 /* render() now owns filters(), extras() and shareLabels(), so paint() only adds
    the things that change with the DATA rather than with the view. */
-function paint(){ stamp(); trajectory(); render(); }
+/* AUSTRALIA'S PANEL. Returns markup; intl() decides when to show it. Built
+   from AU, never from DATA - every tile, filter and bubble on this page is a
+   United States row and nothing Australian can be sliced by them. */
+function auBody(){
+  const cov=(a,b)=>b?Math.round(1000*a/b)/10:0;
+  const bar=(lbl,w,right,dim)=>
+    `<div style="display:grid;grid-template-columns:62px 1fr auto;gap:11px;align-items:center">`+
+      `<span style="font-family:var(--mono);font-size:11.5px;color:var(--muted)">${esc(lbl)}</span>`+
+      `<span style="display:block;height:10px;border-radius:5px;background:var(--line)">`+
+        `<span style="display:block;height:10px;border-radius:5px;width:${Math.max(w,1.2)}%;`+
+        `background:var(--ink)${dim?';opacity:.32':''}"></span></span>`+
+      `<span style="font-family:var(--mono);font-size:12.5px;font-weight:600;`+
+      `white-space:nowrap">${esc(right)}</span>`+
+    `</div>`;
+  /* The '' + is load-bearing: a bare `return` with the expression on the next
+     line gets a semicolon inserted after it and this function returns
+     undefined, silently emptying the panel. Keep something on this line. */
+  return ''+
+    `<div style="font-family:var(--disp);font-weight:700;font-size:12px;`+
+    `letter-spacing:.14em;text-transform:uppercase;color:var(--accent)">`+
+    `Australia · 5–8 November · partly counted</div>`+
+    `<div style="display:flex;gap:30px;flex-wrap:wrap;margin-top:7px">`+
+      `<div><div style="font-family:var(--mono);font-weight:600;font-size:34px;`+
+      `letter-spacing:-.02em;line-height:1.05">${fmt(AU.tickets)}</div>`+
+      `<div style="font-family:var(--disp);font-weight:700;font-size:11.5px;`+
+      `letter-spacing:.1em;text-transform:uppercase;color:var(--muted)">`+
+      `tickets counted</div></div>`+
+      `<div><div style="font-family:var(--mono);font-weight:600;font-size:34px;`+
+      `letter-spacing:-.02em;line-height:1.05">A$${fmt(Math.round(AU.aud/1000))}K</div>`+
+      `<div style="font-family:var(--disp);font-weight:700;font-size:11.5px;`+
+      `letter-spacing:.1em;text-transform:uppercase;color:var(--muted)">`+
+      `≈ US$${fmt(Math.round(AU.usd/1000))}K · prices observed</div></div>`+
+    `</div>`+
+    `<div style="font-family:var(--mono);font-size:11.5px;color:var(--muted);`+
+    `margin-top:9px;line-height:1.5">`+
+    `Event ${fmt(AU.ev.tickets)} · HOYTS ${fmt(AU.hy.tickets)}. `+
+    `${fmt(AU.hy.shows-AU.hy.counted)} HOYTS shows are not counted, so this `+
+    `is a floor and the real number is higher.</div>`+
+
+    `<p class="cap" style="margin:15px 0 0">How much of each chain we have `+
+    `actually read</p>`+
+    `<div style="display:grid;gap:9px;margin:11px 0 6px">`+
+      bar('Event',cov(AU.ev.counted,AU.ev.shows),
+          `${fmt(AU.ev.counted)} of ${fmt(AU.ev.shows)} shows · ${fmt(AU.ev.tickets)} tickets`,false)+
+      bar('HOYTS',cov(AU.hy.counted,AU.hy.shows),
+          `${AU.hy.counted} of ${fmt(AU.hy.shows)} shows · ${fmt(AU.hy.tickets)} tickets`,true)+
+    `</div>`+
+    `<p class="note">`+
+      `Event is scanned end to end: all ${fmt(AU.ev.shows)} shows across `+
+      `${AU.ev.cinemas} cinemas, ${fmt(AU.ev.seats)} seats, `+
+      `<b>${AU.ev.rate}%</b> sold. HOYTS cannot be scanned — its feed carries no `+
+      `seat count and its seat maps sit behind a path its own robots.txt `+
+      `disallows — so those ${AU.hy.counted} shows at ${AU.hy.cinemasRead} `+
+      `cinemas were read by hand, and they are the biggest reason the `+
+      `Australian figure here is low.`+
+    `</p>`+
+
+    `<p class="cap" style="margin:15px 0 0">What a ticket costs — read off `+
+    `HOYTS, not assumed</p>`+
+    `<div style="display:flex;gap:9px;flex-wrap:wrap;margin:10px 0 0">`+
+      AU.price.map(([k,v])=>
+        `<span style="font-family:var(--mono);font-size:12px;border:1px solid `+
+        `var(--line);border-radius:var(--r-sm);padding:5px 9px">`+
+        `${esc(k)} <b>${esc(v)}</b></span>`).join('')+
+    `</div>`+
+    `<p class="note">`+
+      `<b>${AU.premiumPct}% of every ticket sold in Australia is on a premium `+
+      `screen.</b> Standard screens have sold ${AU.premiumStd} tickets in `+
+      `total, out of ${fmt(AU.tickets)}. That is what makes the money here: at `+
+      `a realised <b>A$${AU.atpAud.toFixed(2)}</b> a ticket, roughly `+
+      `US$${(AU.atpAud*AU.fx).toFixed(0)}, Australia is paying more per head `+
+      `than the United States is. ${AU.eveningPct}% of sales are for shows at `+
+      `5pm or later.`+
+    `</p>`+
+    `<p class="note">`+
+      `<b>Biggest single show anywhere in Australia:</b> ${esc(AU.top.cinema)}, `+
+      `${esc(AU.top.when)}, ${esc(AU.top.room)} — <b>${AU.top.sold}</b> tickets `+
+      `in one room. Next best is ${esc(AU.top.nextAt)} at ${AU.top.next}. `+
+      `Hindi is carrying the release on its own: 665 of Event's 666 are Hindi, `+
+      `and Telugu and Tamil have sold nothing at all across 50 shows. `+
+      `Australia opens Thu 5 Nov with no preview night, unlike North America.`+
+    `</p>`;
+}
+
+/* A MARKET WE HAVE NOT COUNTED STILL GETS A HONEST PANEL. kicker is the state
+   in four words, lead says what we did and did not do, rows are chain-by-chain
+   answers where we have them. No figure appears anywhere in here, because a
+   market with no seat read has no figure - not even a small one. */
+function pendingPanel(kicker,lead,rows,note){
+  return `<div style="font-family:var(--disp);font-weight:700;font-size:12px;`+
+    `letter-spacing:.14em;text-transform:uppercase;color:var(--muted)">`+
+    `${esc(kicker)}</div>`+
+    `<p class="note" style="margin-top:8px">${lead}</p>`+
+    (rows.length
+      ? `<div style="display:grid;gap:7px;margin:13px 0 0">`+rows.map(([a,b])=>
+          `<div style="display:grid;grid-template-columns:132px 1fr;gap:11px;`+
+          `align-items:baseline">`+
+          `<span style="font-family:var(--mono);font-size:12px">${esc(a)}</span>`+
+          `<span style="font-family:var(--mono);font-size:11.5px;`+
+          `color:var(--muted)">${esc(b)}</span></div>`).join('')+`</div>`
+      : '')+
+    (note?`<p class="note">${note}</p>`:'');
+}
+
+function meBody(){
+  return pendingPanel('Middle East · not probed yet',
+    `Nothing here has been looked at. No chain, no showtime count, no seat `+
+    `read — so there is no Middle East figure on this page and will not be one `+
+    `until a scan has actually run. It is listed because leaving a market off `+
+    `entirely would suggest the page has the world covered, and it does not.`,
+    [], `Next after Australia.`);
+}
+
+function euBody(){
+  return pendingPanel('Europe · probed, and mostly shut',
+    `Europe has been probed and most of it is closed to us. This is the answer, `+
+    `not a backlog: a 403 or a bot challenge retires a host permanently and is `+
+    `recorded as a refusal we respect, never something to route around. The `+
+    `three German chains that do answer publish showtimes but no seat counts, `+
+    `so there is still no denominator and therefore no ticket number.`,
+    [['Vue · UK','HTTP 403 — retired'],
+     ['Cineworld · UK','bot challenge — retired'],
+     ['Odeon · UK','its own robots.txt disallows the listings'],
+     ['Cineplex · DE','HTTP 403 — retired'],
+     ['Kinopolis · DE','answers — no seat counts published'],
+     ['CinemaxX · DE','answers — no seat counts published'],
+     ['CineStar · DE','answers — no seat counts published']],
+    `All three UK majors are closed, so the UK cannot be counted at all. An `+
+    `earlier German run looked closed too and was wrong — the block was on our `+
+    `side, not theirs — so German results are only recorded when the run itself `+
+    `reports as conclusive.`);
+}
+
+function seaBody(){
+  return pendingPanel('South-East Asia · not probed yet',
+    `Not looked at. Same rule as the Middle East: no scan has run, so there is `+
+    `no figure and no footprint to report. Listed so the gap is visible rather `+
+    `than implied.`,
+    [], `Last of the four, after Europe has a denominator.`);
+}
+
+/* OUTSIDE NORTH AMERICA. One block, chips, markets side by side. Painted from
+   paint() rather than render(): none of this moves when a filter is pressed. */
+function intl(){
+  const el=$('#intlcard'); if(!el||typeof INTL==='undefined') return;
+  const m=INTL[INTL.open]||INTL[INTL.order[0]];
+  el.innerHTML=
+    `<div style="display:flex;justify-content:space-between;align-items:center;`+
+    `gap:12px;flex-wrap:wrap;margin:0 0 14px">`+
+      `<div><h2 style="margin:0">Outside North America</h2>`+
+      `<p class="cap" style="margin:2px 0 0">Counted separately, and each one `+
+      `differently</p></div>`+
+      `<div class="grp">`+INTL.order.map(k=>
+        `<button type="button" data-intl="${esc(k)}" `+
+        `aria-pressed="${INTL.open===k}">${esc(INTL[k].tab)}</button>`).join('')+
+      `</div>`+
+    `</div>`+
+    (typeof m.body==='function' ? m.body() : '');
+  el.querySelectorAll('[data-intl]').forEach(b=>{
+    b.onclick=()=>{ INTL.open=b.dataset.intl; intl(); };
+  });
+}
+
+function paint(){ stamp(); trajectory(); render(); intl(); }
 
 /* ---- data refresh -------------------------------------------------------
    The page reads a static JSON our own scheduled job publishes. Nothing here

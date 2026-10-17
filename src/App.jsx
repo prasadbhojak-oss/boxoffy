@@ -4430,11 +4430,17 @@ function SocialLinks({ size }) {
    every visitor a redirect. */
 const RAMAYANA_TRACKER = {
   url: "https://www.boxoffy.com/ramayana",
-  tickets: "16,609",
-  rate: "2.99%",
-  shows: "3,915",
-  value: "$330,675",
-  tminus: "T-18",
+  // BASIS: North America, 4-8 Nov - the same headline the tracker page leads
+  // with, so the strip and the page can never disagree. tickets and value are
+  // US + Canada over all five dates (16,609 + 7,212 US on 7-8 Nov + 1,179 CA;
+  // $330,675 + $128,886 + $15,280). rate and shows are the UNITED STATES over
+  // 4-8 Nov, because Canada is counted from published availability and has no
+  // comparable seat denominator - the hook line says so.
+  tickets: "25,000",
+  rate: "2.70%",
+  shows: "6,507",
+  value: "$474,841",
+  tminus: "T-19",
   scan: "17 Oct · 7:34am CT",
 };
 
@@ -4487,8 +4493,9 @@ function RamayanaTrackerStrip() {
             <div style={{ fontFamily:"'DM Sans', sans-serif", fontSize:12, color:T.textMid,
                           lineHeight:1.5, borderLeft:`2px solid ${T.border}`, paddingLeft:10 }}>
               <b style={{ color:T.text }}>25,000 tickets across North America.</b>{" "}
-              The figures here are 4&ndash;6 Nov; the full 4&ndash;8 Nov opening run
-              adds 7,212 more. IMAX alone is 37% of every ticket sold.
+              The full 4&ndash;8 Nov opening run, US and Canada. IMAX alone is 37%
+              of every ticket sold. Australia is on the page now too &mdash; 952
+              counted, and that one is a floor.
             </div>
           </div>
 
