@@ -4430,12 +4430,12 @@ function SocialLinks({ size }) {
    every visitor a redirect. */
 const RAMAYANA_TRACKER = {
   url: "https://www.boxoffy.com/ramayana",
-  tickets: "16,006",
-  rate: "2.88%",
-  shows: "3,912",
-  value: "$317,778",
-  tminus: "T-19",
-  scan: "16 Oct · 10:55pm CT",
+  tickets: "16,609",
+  rate: "2.99%",
+  shows: "3,915",
+  value: "$330,675",
+  tminus: "T-18",
+  scan: "17 Oct · 7:34am CT",
 };
 
 function RamayanaTrackerStrip() {
@@ -4486,8 +4486,9 @@ function RamayanaTrackerStrip() {
           <div style={{ flex:"1 1 240px", minWidth:220 }}>
             <div style={{ fontFamily:"'DM Sans', sans-serif", fontSize:12, color:T.textMid,
                           lineHeight:1.5, borderLeft:`2px solid ${T.border}`, paddingLeft:10 }}>
-              <b style={{ color:T.text }}>The IMAX squeeze.</b> 151 IMAX screens on
-              4 Nov, then 32. Only 26 cinemas keep the hall all three nights.
+              <b style={{ color:T.text }}>25,000 tickets across North America.</b>{" "}
+              The figures here are 4&ndash;6 Nov; the full 4&ndash;8 Nov opening run
+              adds 7,212 more. IMAX alone is 37% of every ticket sold.
             </div>
           </div>
 
