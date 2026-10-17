@@ -4432,16 +4432,16 @@ const RAMAYANA_TRACKER = {
   url: "https://www.boxoffy.com/ramayana",
   // BASIS: North America, 4-8 Nov - the same headline the tracker page leads
   // with, so the strip and the page can never disagree. tickets and value are
-  // US + Canada over all five dates (16,609 + 7,212 US on 7-8 Nov + 1,179 CA;
-  // $330,675 + $128,886 + $15,280). rate and shows are the UNITED STATES over
+  // US + Canada over all five dates (18,009 + 7,994 US on 7-8 Nov + 1,461 CA;
+  // $358,535 + $143,816 + $18,935). rate and shows are the UNITED STATES over
   // 4-8 Nov, because Canada is counted from published availability and has no
   // comparable seat denominator - the hook line says so.
-  tickets: "25,000",
-  rate: "2.70%",
-  shows: "6,507",
-  value: "$474,841",
+  tickets: "27,464",
+  rate: "2.93%",
+  shows: "6,569",
+  value: "$521,286",
   tminus: "T-19",
-  scan: "17 Oct · 7:34am CT",
+  scan: "17 Oct · 5:49pm CT",
 };
 
 function RamayanaTrackerStrip() {
