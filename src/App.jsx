@@ -4440,7 +4440,7 @@ const RAMAYANA_TRACKER = {
   rate: "2.93%",
   shows: "6,569",
   value: "$521,286",
-  tminus: "T-19",
+  tminus: "T-18",
   scan: "17 Oct · 5:49pm CT",
 };
 

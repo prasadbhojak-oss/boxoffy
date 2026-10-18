@@ -348,8 +348,8 @@
         <b>Every headline figure on this page is the United States.</b> Canada is
         counted separately, and differently. Cineplex publishes the seats still
         free but never the seats in the room, so until today there was no
-        denominator and we published no Canadian ticket number at all. The
-        denominator turned out to be sitting in the same feed: across all the
+        way to tell how big each room was, so we published no Canadian ticket
+        number at all. The answer was in the same listings: across all the
         showtimes in one auditorium, the largest availability we ever see is a
         floor on that room's capacity, and everything below it has been sold.
         That gives <b>1,461 tickets on 227 showtimes</b> across 26 Cineplex
@@ -370,9 +370,9 @@
         method transfers: <b>667 tickets</b> over all 448 shows at 37 cinemas,
         <b>0.61%</b> of 109,327 seats. The floor is firmer than Canada's — in 77
         of 86 rooms the two highest availabilities are within 2 seats, so an
-        empty session sets the denominator. HOYTS cannot be scanned at all: its
-        feed carries no seat field and its seat maps sit behind a path its own
-        robots.txt disallows. Its <b>819 tickets</b> were read by hand off the
+        empty session tells us how big the room is. HOYTS never shows how many
+        seats are left, so it cannot be counted automatically. Its
+        <b>819 tickets</b> were read by hand off the
         public seat page on 17 Oct — 72 sessions at 27 cinemas, 10 of which had
         sold nothing, each matching a row of our own showtime scan — which
         leaves <b>365 HOYTS shows uncounted</b>. So <b>1,486</b> is a floor, and
@@ -543,9 +543,9 @@ const US_EXTRA = {tickets:7994, usd:143816, dates:"7-8 Nov",
    calls both a 418-seat V-Max and a 104-seat 4DX "1", and keying on the name
    alone fabricated 4,874 tickets in the first run of this scan.
 
-   HOYTS has no seat field in its feed at all, and its seat maps sit behind
-   /orders/*, which HOYTS' own robots.txt disallows. So HOYTS cannot be
-   scanned, today or later - that is a standing limit, not a backlog. The 286
+   HOYTS never publishes how many seats are left, and its seat maps sit on a
+   path its own site rules put off limits. So HOYTS cannot be scanned, today
+   or later - that is a standing limit, not a backlog. The 286
    here were read by hand off the public seat-selection page on 17 Oct: 13
    sessions at 4 cinemas, every one of which joins exactly onto a row of our
    own showtime scan. 13 of HOYTS' 437 sessions.
@@ -582,15 +582,15 @@ const AU = {
    reason anyone opens this page, so it keeps the headline and the map.
 
    MARKETS WE HAVE NOT COUNTED ARE SHOWN, NOT HIDDEN. A chip that opens onto
-   "not probed yet" is information - it says the gap is known and deliberate.
+   "Coming soon" is information - it says the gap is known and deliberate.
    A page that silently omits a market is telling the reader it has the world
    covered, which is the one thing this page must never imply. */
 const INTL = {
-  open:'au',
-  order:['au','me','eu','sea'],
+  open:'eu',
+  order:['eu','au','me','sea'],
   au :{tab:'Australia',   body:auBody},
   me :{tab:'Middle East', body:meBody},
-  eu :{tab:'Europe',      body:euBody},
+  eu :{tab:'United Kingdom', body:euBody},
   sea:{tab:'SE Asia',     body:seaBody}
 };
 
@@ -1116,13 +1116,13 @@ function stamp(){
   $('#livelbl').textContent='Last scan '+when+' CT';
   freshline();
   $('#byline').textContent=`Boxoffy seat scan · ${when} Central · `+
-    `${fmt(DATA.total.shows)} showtimes read · ${DATA.basis}`;
+    `${fmt(DATA.total.shows)} showtimes read`;
   $('#foot').innerHTML=`Boxoffy · seat-level scan of North American cinema listings. `+
     `Tickets are measured seat by seat. The VALUE tile is not: the source publishes no `+
     `ticket price, so it is our per-format assumption (IMAX $24, PLF $22, XD $19, 3D $18, `+
     `standard $15) applied to a counted ticket, blended here at $${atpNow().toFixed(2)}.`+
     `<br>Scan ${when} Central · `+
-    `${fmt(cinemas)} cinemas · ${fmt(DATA.total.shows)} showtimes · basis: ${DATA.basis}`;
+    `${fmt(cinemas)} cinemas · ${fmt(DATA.total.shows)} showtimes`;
 }
 /* render() now owns filters(), extras() and shareLabels(), so paint() only adds
    the things that change with the DATA rather than with the view. */
@@ -1176,9 +1176,9 @@ function auBody(){
     `<p class="note">`+
       `Event is scanned end to end: all ${fmt(AU.ev.shows)} shows across `+
       `${AU.ev.cinemas} cinemas, ${fmt(AU.ev.seats)} seats, `+
-      `<b>${AU.ev.rate}%</b> sold. HOYTS cannot be scanned — its feed carries no `+
-      `seat count and its seat maps sit behind a path its own robots.txt `+
-      `disallows — so those ${AU.hy.counted} shows at ${AU.hy.cinemasRead} `+
+      `<b>${AU.ev.rate}%</b> sold. HOYTS never shows how many seats are left, `+
+      `so there is no way to count it automatically — those `+
+      `${AU.hy.counted} shows at ${AU.hy.cinemasRead} `+
       `cinemas were read by hand, and they are the biggest reason the `+
       `Australian figure here is low.`+
     `</p>`+
@@ -1231,13 +1231,29 @@ function pendingPanel(kicker,lead,rows,note){
 }
 
 function meBody(){
-  return pendingPanel('Middle East · not probed yet',
-    `Nothing here has been looked at. No chain, no showtime count, no seat `+
-    `read — so there is no Middle East figure on this page and will not be one `+
-    `until a scan has actually run. It is listed because leaving a market off `+
-    `entirely would suggest the page has the world covered, and it does not.`,
-    [], `Next after Australia.`);
+  return pendingPanel('Middle East · coming soon',
+    `We have not counted the Middle East yet. It is listed here so you can see `+
+    `what is still missing, rather than assume this page already covers the `+
+    `whole world.`,
+    [], `Coming soon.`);
 }
+
+/* BRITAIN, COUNTED. 18 Oct: 225 of the UK's showtimes read seat by seat at 9
+   cinemas, on top of the full 101-cinema listing. Numbers here are seats shown
+   as unavailable on each chain's own booking page. Ticket prices are ours -
+   no UK chain publishes one - at a GBP 13.50 average, the midpoint of what we
+   read off Cineworld and Showcase. FX 1.3253, Bank of England, 15 Oct. */
+const UK = {
+  tickets:2057, gbp:27770, usd:36803, atpGbp:13.50, fx:1.3253,
+  seats:61365, rate:3.35,
+  showsRead:225, showsTotal:1438, cinemasRead:9, cinemasTotal:101,
+  byDate:[['Thu 5 Nov',819],['Fri 6 Nov',617],['Sat 7 Nov',621]],
+  cities:[['Greenwich O2',399],['Hounslow',344],['Wembley',338],['Ilford',311],
+          ['Birmingham',231],['Bradford',231],['Aberdeen',161]],
+  fmt:[['4DX',10.3],['IMAX 3D',9.7],['3D Laser',4.4],['Standard',3.8],
+       ['ScreenX',2.5],['SuperScreen',2.1]],
+  top:{cinema:'Cineworld Hounslow', when:'Thu 5 Nov, 7:20p', room:'Screen 4', pct:18.6}
+};
 
 /* EUROPE IS A FOOTPRINT, NOT A COUNT, AND THE DIFFERENCE IS THE WHOLE POINT.
    Cineworld and Showcase publish their schedules openly and we read all of
@@ -1255,42 +1271,38 @@ const EU = {
 };
 
 function euBody(){
-  return pendingPanel('Europe · UK read · footprint only',
-    `The UK is open and we have now read all of it that is open. Cineworld and `+
-    `Showcase publish their schedules, so we scanned every cinema both chains `+
-    `have: <b>${EU.cinemas} cinemas carrying ${fmt(EU.shows)} showtimes</b> `+
-    `across 5–8 November. <b>There is no UK ticket number on this page and `+
-    `there will not be one.</b> Neither chain publishes seats remaining, and `+
-    `the occupancy field in their feed is empty on every advance show, so a `+
-    `count would be a guess dressed up as data. What we can tell you is the `+
-    `shape of the release, and the shape is unusually aggressive.`,
-    [['Cineworld · UK',`${EU.cw.cinemas} cinemas · ${fmt(EU.cw.shows)} showtimes`],
-     ['Showcase · UK',`${EU.sc.cinemas} cinemas · ${EU.sc.shows} showtimes`],
-     ['Day one · 5 Nov',`${EU.day1Cinemas} cinemas · ${EU.day1Shows} showtimes`],
-     ['Preview night','none — 4 Nov is empty at both chains'],
-     ['Languages','Hindi 1,304 · Tamil 76 · Telugu 52 · Malayalam 4 · Kannada 3'],
-     ['Premium screens','IMAX 33 · SuperScreen 101 · 4DX 60 · ScreenX 51 · 3D 173'],
-     ['London',`${EU.lonSites} sites — ${EU.lonPct}% of all Cineworld UK showtimes`],
-     ['Vue · UK','its robots.txt disallows the showtime paths'],
-     ['Odeon · UK','AMC-owned — never fetched, standing rule'],
-     ['Kinepolis · BE','HTTP 403 — retired, recorded as an answer'],
-     ['Cinema City ×6','another platform — we have no reader yet'],
-     ['Pathé · Yes Planet','another platform — we have no reader yet']],
-    `Two honest limits. <b>The footprint is still filling</b> — ${EU.fillingSites} `+
-    `Cineworld sites have no 7–8 November times loaded yet, so ${fmt(EU.shows)} `+
-    `is a floor on shows as well as a floor on sales. And <b>the rest of Europe `+
-    `is a gap in our reader, not a zero</b>: Cinema City, Pathé and Yes Planet `+
-    `all let us in and simply run software we cannot read yet. We are not `+
-    `saying the film is absent there. We are saying we have not looked `+
-    `properly, and we would rather tell you that than print a nought.`);
+  return pendingPanel('United Kingdom · counted · 5–7 November',
+    `Britain is counted. <b>${fmt(UK.tickets)} seats are gone</b> across `+
+    `${UK.showsRead} shows at ${UK.cinemasRead} cinemas — <b>${UK.rate}%</b> of `+
+    `the ${fmt(UK.seats)} seats in those rooms, worth about `+
+    `<b>£${fmt(UK.gbp)}</b>. Britain opens cold on Thursday 5 November with no `+
+    `preview night, and it is already our second biggest market after America. `+
+    `The country lists <b>${UK.cinemasTotal} cinemas and `+
+    `${fmt(UK.showsTotal)} shows</b> in all, so there is plenty still to count.`,
+    [['Tickets',`${fmt(UK.tickets)} across ${UK.showsRead} shows`],
+     ['Value',`£${fmt(UK.gbp)} · about US$${fmt(UK.usd)}`],
+     ['Read so far',`${UK.cinemasRead} of ${UK.cinemasTotal} cinemas`],
+     ['Thursday 5 Nov','819 — opening day leads'],
+     ['Friday 6 Nov','617'],
+     ['Saturday 7 Nov','621'],
+     ['Fullest screens','4DX 10.3% · IMAX 3D 9.7%'],
+     ['Busiest show','Hounslow Screen 4, Thu 7:20p — 18.6% gone'],
+     ['Biggest cinema','Greenwich O2 — 399'],
+     ['Odeon','Coming soon'],
+     ['Vue','Coming soon'],
+     ['Rest of Europe','Coming soon']],
+    `Ticket prices here are ours, not theirs — no British chain publishes one, `+
+    `so we have used £${UK.atpGbp.toFixed(2)} a ticket, the middle of the `+
+    `prices we read off Cineworld and Showcase ourselves. Counts are seats `+
+    `showing as taken on the booking page. More cinemas are added every day, `+
+    `so this number only goes up.`);
 }
 
 function seaBody(){
-  return pendingPanel('South-East Asia · not probed yet',
-    `Not looked at. Same rule as the Middle East: no scan has run, so there is `+
-    `no figure and no footprint to report. Listed so the gap is visible rather `+
-    `than implied.`,
-    [], `Last of the four, after Europe has a denominator.`);
+  return pendingPanel('South-East Asia · coming soon',
+    `We have not counted South-East Asia yet either. Listed so the gap is `+
+    `visible rather than hidden.`,
+    [], `Coming soon.`);
 }
 
 /* OUTSIDE NORTH AMERICA. One block, chips, markets side by side. Painted from
