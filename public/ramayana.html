@@ -3,6 +3,19 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<!-- ANALYTICS. Identical consent gate to every article page on the site: GA
+     only loads if the visitor already accepted cookies somewhere on
+     boxoffy.com, which is same-origin so the choice carries over. Until 18 Oct
+     this page had NO analytics at all - the busiest page on the site was
+     invisible in GA, so nothing it earned could be measured. -->
+<script>
+(function(){var c=null;try{c=localStorage.getItem("boxoffy_cookie_consent");}catch(e){}
+if(c==="accepted"){var s=document.createElement("script");s.async=true;
+s.src="https://www.googletagmanager.com/gtag/js?id=G-K6C9EVRFH4";
+document.head.appendChild(s);window.dataLayer=window.dataLayer||[];
+window.gtag=function(){window.dataLayer.push(arguments);};
+gtag("js",new Date());gtag("config","G-K6C9EVRFH4",{anonymize_ip:true});}})();
+</script>
 <title>Ramayana Presales — live worldwide seat-level tracker | Boxoffy</title>
 <!-- SOCIAL METADATA CARRIES NO FIGURES, DELIBERATELY. These tags are cached
      by X, Slack, WhatsApp and Google for days after a link is shared, so a
@@ -12,6 +25,13 @@
      had ever been posted. Describe what the page IS, never what it says. -->
 <meta name="description" content="Ramayana presales counted seat by seat across America, the UK and Australia - every cinema, every showtime, every seat map read. Live map and market-by-market totals.">
 <link rel="canonical" href="https://www.boxoffy.com/ramayana">
+<meta name="author" content="Boxoffy">
+<meta name="keywords" content="Ramayana presales, Ramayana advance booking, Ramayana box office, Ramayana USA presales, Ramayana UK advance booking, Ramayana Australia booking, Ramayana tickets sold, Ramayana IMAX, Ramayana Rise of a Legend, Ramayana opening weekend, Ranbir Kapoor Ramayana, Ramayana overseas box office">
+<meta name="news_keywords" content="Ramayana presales, Ramayana advance booking, Ramayana box office">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="en_IN">
+<meta property="og:locale:alternate" content="en_GB">
+<meta name="theme-color" content="#E8261A">
 <meta name="robots" content="index,follow,max-image-preview:large">
 
 <!-- Open Graph / Twitter. Without these the page's Link and X buttons share a
@@ -33,6 +53,123 @@
 <meta name="twitter:title" content="Ramayana Presales Worldwide — live seat-level tracker | Boxoffy">
 <meta name="twitter:description" content="Ramayana presales counted seat by seat across America, the UK and Australia - every cinema, every showtime, every seat map read. Live map and market-by-market totals.">
 <meta name="twitter:image" content="https://www.boxoffy.com/ramayana-og.png">
+<!-- ═══ STRUCTURED DATA ═══════════════════════════════════════════════════
+     Until 18 Oct this page carried NONE, while every article on the site
+     carried four blocks. Google, Bing and the AI crawlers all read this to
+     decide what the page IS; without it a live tracker looks like an untitled
+     app shell, because most of the visible numbers are painted by JavaScript
+     after the crawl.
+
+     Dataset is the right primary type - it is what Google Dataset Search and
+     the LLM crawlers understand a counted, repeatedly-measured table to be.
+     FAQPage answers MUST match the visible FAQ further down the page word for
+     word; if you edit one, edit both, or the markup is a mismatch and gets
+     ignored. NO LIVE FIGURES IN HERE, for the same reason the social tags
+     carry none: structured data is cached and a number written here is wrong
+     within the hour and cannot be corrected on an old crawl. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://www.boxoffy.com/#org",
+      "name": "Boxoffy",
+      "url": "https://www.boxoffy.com/",
+      "description": "Box office and streaming intelligence for Indian and Hollywood cinema.",
+      "sameAs": ["https://x.com/BoxoffyMI"]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.boxoffy.com/#site",
+      "url": "https://www.boxoffy.com/",
+      "name": "Boxoffy",
+      "publisher": {"@id": "https://www.boxoffy.com/#org"}
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://www.boxoffy.com/ramayana#page",
+      "url": "https://www.boxoffy.com/ramayana",
+      "name": "Ramayana Presales Worldwide - live seat-level tracker",
+      "isPartOf": {"@id": "https://www.boxoffy.com/#site"},
+      "primaryImageOfPage": {"@type": "ImageObject", "url": "https://www.boxoffy.com/ramayana-og.png"},
+      "description": "Ramayana presales counted seat by seat across America, the UK and Australia. Every cinema, every showtime, every seat map read.",
+      "inLanguage": "en",
+      "about": {"@id": "https://www.boxoffy.com/ramayana#film"},
+      "mainEntity": {"@id": "https://www.boxoffy.com/ramayana#data"}
+    },
+    {
+      "@type": "Movie",
+      "@id": "https://www.boxoffy.com/ramayana#film",
+      "name": "Ramayana: Rise of a Legend",
+      "url": "https://www.boxoffy.com/ramayana-part-one-box-office.html",
+      "image": "https://www.boxoffy.com/images/ramayana-poster.jpg",
+      "inLanguage": ["hi", "te", "ta", "kn", "ml", "en"]
+    },
+    {
+      "@type": "Dataset",
+      "@id": "https://www.boxoffy.com/ramayana#data",
+      "name": "Ramayana presale seat counts by market, cinema and showtime",
+      "description": "A seat-level count of advance bookings for Ramayana: Rise of a Legend. For every showtime on sale, the total seats in the room and the seats still free are read directly from the cinema booking page; the difference is tickets gone. Covers the United States, Canada, the United Kingdom and Australia, broken down by market, cinema, date, screen format and language. Rescanned several times a day. Ticket counts are measured; ticket prices are the publisher's own assumption and are stated on the page.",
+      "url": "https://www.boxoffy.com/ramayana",
+      "creator": {"@id": "https://www.boxoffy.com/#org"},
+      "publisher": {"@id": "https://www.boxoffy.com/#org"},
+      "isAccessibleForFree": true,
+      "temporalCoverage": "2026-11-04/2026-11-11",
+      "spatialCoverage": [
+        {"@type": "Country", "name": "United States"},
+        {"@type": "Country", "name": "Canada"},
+        {"@type": "Country", "name": "United Kingdom"},
+        {"@type": "Country", "name": "Australia"}
+      ],
+      "measurementTechnique": "Direct read of published cinema seat maps, one showtime at a time",
+      "variableMeasured": [
+        {"@type": "PropertyValue", "name": "Tickets sold", "description": "Seats no longer available for sale on a showtime, counted from the seat map"},
+        {"@type": "PropertyValue", "name": "Seats on sale", "description": "Total seats in the room for that showtime"},
+        {"@type": "PropertyValue", "name": "Occupancy", "description": "Tickets sold as a share of seats on sale"},
+        {"@type": "PropertyValue", "name": "Showtimes on sale", "description": "Count of showtimes open for booking"},
+        {"@type": "PropertyValue", "name": "Cinemas on sale", "description": "Count of cinemas with at least one showtime on sale"}
+      ],
+      "distribution": [{
+        "@type": "DataDownload",
+        "encodingFormat": "application/json",
+        "contentUrl": "https://www.boxoffy.com/ramayana-map.json"
+      }]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.boxoffy.com/ramayana#crumbs",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Boxoffy", "item": "https://www.boxoffy.com/"},
+        {"@type": "ListItem", "position": 2, "name": "Ramayana: Rise of a Legend", "item": "https://www.boxoffy.com/ramayana-part-one-box-office.html"},
+        {"@type": "ListItem", "position": 3, "name": "Presale tracker", "item": "https://www.boxoffy.com/ramayana"}
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.boxoffy.com/ramayana#faq",
+      "mainEntity": [
+        {"@type": "Question", "name": "How many Ramayana tickets have been sold so far?",
+         "acceptedAnswer": {"@type": "Answer", "text": "The counter at the top of this page is the live figure. It is not an estimate. Every showtime on sale is opened and its seat map read, seat by seat, so the ticket number is counted rather than modelled. It is rescanned several times a day and the page shows the time of the last scan."}},
+        {"@type": "Question", "name": "When does Ramayana: Rise of a Legend release?",
+         "acceptedAnswer": {"@type": "Answer", "text": "Opening day is 5 November 2026 in North America, the United Kingdom and Australia. America also has preview shows the night before, on 4 November. Britain and Australia open cold, with no previews at all."}},
+        {"@type": "Question", "name": "How does Boxoffy count presales?",
+         "acceptedAnswer": {"@type": "Answer", "text": "One seat map at a time. For every showtime we read the total seats in the room and the seats still free, and the difference is what has gone. Duplicate listings of the same room at the same time are merged so a premium block is not counted twice. The ticket count is measured. Only the ticket price is assumed."}},
+        {"@type": "Question", "name": "Are the dollar figures real box office collections?",
+         "acceptedAnswer": {"@type": "Answer", "text": "No. No cinema chain publishes what it charged. The money figures are our own ticket price applied to a counted ticket, and we print the price we used. Treat the ticket count as the hard number and the money as an indication."}},
+        {"@type": "Question", "name": "Why does the UK figure say seats off sale instead of tickets sold?",
+         "acceptedAnswer": {"@type": "Answer", "text": "Because the chain does not say which is which. A seat the booking page will not sell you may be a seat somebody bought, or a seat the cinema is holding back for wheelchair users, companions or late sales. Most of the UK figure never changes across a room's whole run, which is the signature of a block rather than a sale, so we publish a midpoint and show the raw number beside it."}},
+        {"@type": "Question", "name": "Which countries are counted?",
+         "acceptedAnswer": {"@type": "Answer", "text": "The United States, Canada, the United Kingdom and Australia are counted seat by seat. Germany is visible as a footprint, 287 showtimes at 99 cinemas, but its ticketing systems do not allow a count, so no German ticket number is published. India is not presale-tracked on this page."}},
+        {"@type": "Question", "name": "Is Ramayana sold out anywhere?",
+         "acceptedAnswer": {"@type": "Answer", "text": "Sold-out shows are flagged on the page as they happen. Premiere night in America and the biggest HOYTS rooms in Sydney have been the fullest so far. Most showtimes anywhere in the world have sold nothing at all yet, which is normal this far from release."}},
+        {"@type": "Question", "name": "How often does this page update?",
+         "acceptedAnswer": {"@type": "Answer", "text": "The page re-reads our published scan file every two minutes while it is open, and the scan itself runs several times a day. The Check for update button re-reads that same file; it does not make the data newer."}}
+      ]
+    }
+  ]
+}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -88,6 +225,70 @@
   .byline{font-family:var(--mono);font-size:12px;color:var(--muted);letter-spacing:.02em;
     margin:0 0 20px}
   .rule{height:var(--rule);background:var(--accent);width:60px;margin:0 0 20px;border-radius:2px}
+  /* ── NAV, FAQ, READ-NEXT, FOLLOW ────────────────────────────────────────
+     Added 18 Oct. Before this the page was a dead end: the only links on it
+     were three Google Fonts URLs and its own canonical. A visitor who landed
+     from search had nowhere to go, and a crawler had no reason to walk from
+     here into the rest of the site. */
+  /* ── BANNER POSTER ──────────────────────────────────────────────
+     The column is `auto`, not a fixed width, on purpose: if the poster file
+     is missing the <img> onerror hides the whole figure, the column collapses
+     to zero, and the headline sits where it always did. No gap, no broken
+     image icon, no layout to fix. The poster is served from our own origin
+     (fetch_poster.py puts it there) so there is no third-party request on
+     page load and no layout shift - width and height are declared. */
+  .hero{display:grid;grid-template-columns:auto 1fr;gap:20px;align-items:start}
+  .posterwrap{width:134px;margin:0;flex:0 0 auto}
+  .poster{display:block;border-radius:var(--r);overflow:hidden;
+    border:1px solid var(--line);background:var(--card);text-decoration:none;
+    box-shadow:0 2px 16px rgba(0,0,0,.12)}
+  .poster:hover{border-color:var(--accent)}
+  .poster img{display:block;width:100%;height:auto;aspect-ratio:2/3;object-fit:cover}
+  .pcred{font-family:var(--mono);font-size:10px;letter-spacing:.04em;
+    text-transform:uppercase;color:var(--muted);margin:6px 0 0;text-align:center}
+  .herotext{min-width:0}
+  @media (max-width:620px){
+    .hero{gap:14px}
+    .posterwrap{width:88px}
+  }
+  .sitenav{display:flex;gap:4px;flex-wrap:wrap;margin:0 0 18px;
+    padding:0 0 14px;border-bottom:1px solid var(--line)}
+  .sitenav a{font-family:var(--mono);font-size:11.5px;letter-spacing:.04em;
+    text-transform:uppercase;color:var(--muted);text-decoration:none;
+    padding:5px 9px;border:1px solid var(--line);border-radius:var(--r-sm);
+    background:var(--card);white-space:nowrap}
+  .sitenav a:hover{color:var(--accent);border-color:var(--accent)}
+  .sitenav a[aria-current="page"]{color:var(--accent);border-color:var(--accent);
+    font-weight:600}
+  .crumb{font-family:var(--mono);font-size:11.5px;color:var(--muted);margin:0 0 6px}
+  .crumb a{color:var(--muted);text-decoration:none}
+  .crumb a:hover{color:var(--accent);text-decoration:underline}
+  .prose{font-size:14.5px;color:var(--body-ink);max-width:68ch}
+  .prose p{margin:0 0 11px}
+  .prose h3{font-family:var(--disp);font-weight:700;font-size:20px;
+    letter-spacing:-.01em;margin:20px 0 7px;color:var(--ink)}
+  .faq details{border-top:1px solid var(--line);padding:12px 0}
+  .faq details:first-of-type{border-top:0}
+  .faq summary{font-weight:600;font-size:15px;cursor:pointer;color:var(--ink);
+    list-style:none;display:flex;justify-content:space-between;gap:12px;
+    align-items:flex-start}
+  .faq summary::-webkit-details-marker{display:none}
+  .faq summary::after{content:"+";font-family:var(--mono);color:var(--accent);
+    font-weight:600;flex:0 0 auto}
+  .faq details[open] summary::after{content:"\2212"}
+  .faq details p{font-size:14px;color:var(--body-ink);margin:9px 0 0;max-width:68ch}
+  .next{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:10px}
+  .next a{display:block;text-decoration:none;border:1px solid var(--line);
+    border-radius:var(--r-sm);padding:12px 13px;background:var(--paper)}
+  .next a:hover{border-color:var(--accent)}
+  .next b{display:block;font-size:14.5px;color:var(--ink);margin:0 0 3px;line-height:1.3}
+  .next span{display:block;font-size:12.5px;color:var(--muted);line-height:1.45}
+  .follow{display:flex;gap:9px;flex-wrap:wrap;align-items:center;margin:12px 0 0}
+  .follow a{font-family:var(--mono);font-size:12.5px;letter-spacing:.03em;
+    text-decoration:none;padding:9px 15px;border-radius:var(--r-sm);
+    background:var(--ink);color:var(--paper);font-weight:600}
+  .follow a.alt{background:transparent;color:var(--ink);border:1px solid var(--line)}
+  .follow a:hover{opacity:.88}
   h2{font-family:var(--disp);font-weight:800;font-size:26px;line-height:1.1;
     letter-spacing:-.01em;margin:0 0 3px}
   .cap{font-family:var(--mono);font-size:11.5px;color:var(--muted);letter-spacing:.03em;
@@ -235,10 +436,35 @@
 
 <div class="wrap">
   <div class="topbar">
-    <a class="logo" href="#">BOX<b>OFFY</b></a>
+    <a class="logo" href="/">BOX<b>OFFY</b></a>
     <div class="live"><span class="dot"></span><span id="livelbl"></span></div>
   </div>
 
+  <nav class="sitenav" aria-label="Boxoffy sections">
+    <a href="/">Home</a>
+    <a href="/ramayana" aria-current="page">Ramayana tracker</a>
+    <a href="/ramayana-part-one-box-office.html">Ramayana preview</a>
+    <a href="/india-box-office-2026.html">India 2026</a>
+    <a href="/india-all-time-box-office.html">All-time India</a>
+    <a href="/upcoming-releases.html">Upcoming</a>
+    <a href="/hype-index.html">Hype Index</a>
+    <a href="/ott.html">OTT</a>
+    <a href="/india-boxoffice-how-it-works.html">How we count</a>
+  </nav>
+
+  <p class="crumb"><a href="/">Boxoffy</a> › <a href="/ramayana-part-one-box-office.html">Ramayana: Rise of a Legend</a> › Presale tracker</p>
+  <div class="hero">
+    <figure class="posterwrap">
+      <a class="poster" href="/ramayana-part-one-box-office.html"
+         aria-label="Ramayana: Rise of a Legend — full box office preview">
+        <img src="/images/ramayana-poster.jpg" width="500" height="750"
+             alt="Ramayana: Rise of a Legend poster"
+             fetchpriority="high" decoding="async"
+             onerror="this.closest('.posterwrap').style.display='none'">
+      </a>
+      <figcaption class="pcred">Poster: TMDB</figcaption>
+    </figure>
+    <div class="herotext">
   <p class="kicker">Worldwide · Presale tracker</p>
   <h1>Ramayana Presales</h1>
   <!-- PREVIEW NIGHT IS ITS OWN NUMBER, AND IT IS NOT WORLDWIDE.
@@ -254,6 +480,8 @@
      room is. Pick a country to open it.</p>
   <p class="byline" id="byline"></p>
   <div class="rule"></div>
+    </div>
+  </div>
 
   <div class="freshbar">
     <div class="fresh" id="fresh"></div>
@@ -371,8 +599,8 @@
         number at all. The answer was in the same listings: across all the
         showtimes in one auditorium, the largest availability we ever see is a
         floor on that room's capacity, and everything below it has been sold.
-        That gives <b>1,461 tickets on 227 showtimes</b> across 26 Cineplex
-        cinemas and 29 auditoriums, <b>2.20%</b> of the 66,511 seats on sale.
+        That gives <b>1,473 tickets on 227 showtimes</b> across 26 Cineplex
+        cinemas and 48 auditoriums, <b>2.22%</b> of the 66,270 seats on sale.
         It is a floor rather than an estimate: the only tickets it misses are
         those sold in each room's emptiest show, and with the thinnest date at
         0.44% that is roughly one seat per room. Brampton, Oakville, Surrey,
@@ -388,20 +616,20 @@
         Both chains are read end to end, and HOYTS is the only market here
         measured against a real published seat plan rather than a recovered
         floor. Event Cinemas publishes seats still free, so the Canadian method
-        transfers: <b>754 tickets</b> over all 452 shows at 38 cinemas,
-        <b>0.68%</b> of 110,683 seats. That floor is firmer than Canada's — in 77
+        transfers: <b>840 tickets</b> over all 452 shows at 38 cinemas,
+        <b>0.76%</b> of 110,615 seats. That floor is firmer than Canada's — in 77
         of 86 rooms the two highest availabilities are within 2 seats, so an
         empty session tells us how big the room is. HOYTS is read a better way.
         Its booking system publishes the whole seat plan per session, and it
         marks sold seats separately from seats the cinema is holding back, so we
-        count only the sold ones: <b>2,746 tickets</b> across all 437 shows at
-        47 cinemas, <b>3.79%</b> of 72,468 seats, with 2,623 held seats left
-        out. Australia totals <b>3,500</b>.
+        count only the sold ones: <b>3,060 tickets</b> across all 437 shows at
+        47 cinemas, <b>4.24%</b> of 72,167 seats, with 2,594 held seats left
+        out. Australia totals <b>3,900</b>.
         <b>This replaces an earlier figure of 1,486, and the correction is
         ours.</b> Until 18 Oct we believed HOYTS could not be counted and
         published a hand-read sample of 13 shows at 4 of its 47 cinemas,
         extended by a model with a ±45% band. The model said 819. The count says
-        2,746. The error was not a small one and it was in our method, not in
+        3,060. The error was not a small one and it was in our method, not in
         the market. Prices here are part observed, part assumed: IMAX A$45,
         ScreenX A$36.50 and Xtremescreen A$27 were read off HOYTS' own ticket
         page and cover 82% of Australian tickets; the remaining formats, and all
@@ -413,6 +641,176 @@
   <div class="card hide" id="tablecard" style="margin-top:16px">
     <h2>All markets</h2><p class="cap">Sortable table view</p>
     <div style="max-height:440px;overflow:auto"><table id="table"></table></div>
+  </div>
+
+  <!-- ═══ STATIC CONTENT BLOCKS ═════════════════════════════════════════
+       Everything above this line is painted by JavaScript from DATA, which
+       means a crawler that does not run JS sees an empty shell. Google runs
+       JS; Bing is inconsistent about it and most AI crawlers do not run it at
+       all. So the explanation of what this page is, and the answers people
+       actually search for, are written in the HTML as plain text.
+
+       RULE FOR THIS SECTION: NO LIVE FIGURES. Not one. Everything here must
+       still be true next week without anybody editing it, because nobody will
+       remember to. The live numbers live in the tiles; this is the part that
+       explains them. The only figure below is Germany's footprint, which is a
+       count of listings rather than sales and does not move. -->
+  <div class="card" style="margin-top:16px">
+    <h2>What this page is</h2>
+    <p class="cap">And what the numbers do and do not mean</p>
+    <div class="prose">
+      <p>This is a live count of advance bookings for <b>Ramayana: Rise of a
+         Legend</b>, taken straight off the cinemas' own booking pages. It is
+         not a prediction and it is not a trade estimate. For every single
+         showtime that is on sale, we open the seat map, count the seats in the
+         room and count the seats still free. The difference is what has
+         gone. Then we do it again a few hours later.</p>
+      <p>That is the whole method, and it is the reason the number can be
+         trusted: nobody is guessing. Where we cannot count something, we say
+         so on the page instead of filling the gap with a model — and when a
+         model of ours has turned out wrong, we have said that too, in the
+         Method panel above, with the old figure left visible.</p>
+      <h3>The one thing that is assumed</h3>
+      <p>Ticket prices. No cinema chain anywhere publishes what it actually
+         charged for a seat, so every money figure on this page is our own
+         price applied to a counted ticket. We print the prices we used. If you
+         only trust one column, trust the ticket count.</p>
+      <h3>Why each country reads differently</h3>
+      <p>Because the chains publish different things. HOYTS in Australia shows
+         the full seat plan and marks which seats are sold and which the cinema
+         is holding back, so a sold seat there really is a sale. Cineplex in
+         Canada and Event in Australia publish only the seats still free, so we
+         recover the room size from the busiest and emptiest shows and the
+         result is a floor — it can only move up. Cineworld in the UK will not
+         say whether a seat off sale was bought or blocked, so the UK figure is
+         labelled seats off sale, not tickets sold.</p>
+      <p>Mixing those into one worldwide occupancy percentage would be
+         meaningless, so we do not publish one. Tickets add up across markets.
+         Percentages do not.</p>
+      <h3>Where the film is on sale</h3>
+      <p>The United States, Canada, the United Kingdom and Australia are
+         counted seat by seat. Germany is on sale and visible as a footprint —
+         287 showtimes at 99 cinemas — but its ticketing systems do not allow a
+         count, so no German ticket figure is published here. India is covered
+         separately in our <a href="/ramayana-part-one-box-office.html">Ramayana
+         box office preview</a>.</p>
+    </div>
+  </div>
+
+  <div class="card faq" id="faq" style="margin-top:16px">
+    <h2>Common questions</h2>
+    <p class="cap">Answered plainly</p>
+    <!-- THESE ANSWERS ARE MIRRORED WORD FOR WORD IN THE FAQPage JSON-LD IN
+         THE HEAD. Google requires the markup to match what a visitor can
+         actually read. Edit one, edit the other, or the markup is ignored. -->
+    <details open>
+      <summary>How many Ramayana tickets have been sold so far?</summary>
+      <p>The counter at the top of this page is the live figure. It is not an
+         estimate. Every showtime on sale is opened and its seat map read, seat
+         by seat, so the ticket number is counted rather than modelled. It is
+         rescanned several times a day and the page shows the time of the last
+         scan.</p>
+    </details>
+    <details>
+      <summary>When does Ramayana: Rise of a Legend release?</summary>
+      <p>Opening day is 5 November 2026 in North America, the United Kingdom
+         and Australia. America also has preview shows the night before, on
+         4 November. Britain and Australia open cold, with no previews at
+         all.</p>
+    </details>
+    <details>
+      <summary>How does Boxoffy count presales?</summary>
+      <p>One seat map at a time. For every showtime we read the total seats in
+         the room and the seats still free, and the difference is what has
+         gone. Duplicate listings of the same room at the same time are merged
+         so a premium block is not counted twice. The ticket count is measured.
+         Only the ticket price is assumed.</p>
+    </details>
+    <details>
+      <summary>Are the dollar figures real box office collections?</summary>
+      <p>No. No cinema chain publishes what it charged. The money figures are
+         our own ticket price applied to a counted ticket, and we print the
+         price we used. Treat the ticket count as the hard number and the money
+         as an indication.</p>
+    </details>
+    <details>
+      <summary>Why does the UK figure say seats off sale instead of tickets sold?</summary>
+      <p>Because the chain does not say which is which. A seat the booking page
+         will not sell you may be a seat somebody bought, or a seat the cinema
+         is holding back for wheelchair users, companions or late sales. Most of
+         the UK figure never changes across a room's whole run, which is the
+         signature of a block rather than a sale, so we publish a midpoint and
+         show the raw number beside it.</p>
+    </details>
+    <details>
+      <summary>Which countries are counted?</summary>
+      <p>The United States, Canada, the United Kingdom and Australia are
+         counted seat by seat. Germany is visible as a footprint, 287 showtimes
+         at 99 cinemas, but its ticketing systems do not allow a count, so no
+         German ticket number is published. India is not presale-tracked on this
+         page.</p>
+    </details>
+    <details>
+      <summary>Is Ramayana sold out anywhere?</summary>
+      <p>Sold-out shows are flagged on the page as they happen. Premiere night
+         in America and the biggest HOYTS rooms in Sydney have been the fullest
+         so far. Most showtimes anywhere in the world have sold nothing at all
+         yet, which is normal this far from release.</p>
+    </details>
+    <details>
+      <summary>How often does this page update?</summary>
+      <p>The page re-reads our published scan file every two minutes while it is
+         open, and the scan itself runs several times a day. The Check for
+         update button re-reads that same file; it does not make the data
+         newer.</p>
+    </details>
+  </div>
+
+  <div class="card" style="margin-top:16px">
+    <h2>Read next</h2>
+    <p class="cap">More on Ramayana and the 2026 box office</p>
+    <div class="next">
+      <a href="/ramayana-part-one-box-office.html">
+        <b>Ramayana box office preview</b>
+        <span>The full film: cast, budget, release plan and what the opening
+              could look like.</span></a>
+      <a href="/ramayana-rama-first-look-review.html">
+        <b>Rama first look, reviewed</b>
+        <span>What the first look actually told us, and what it did not.</span></a>
+      <a href="/ramayana-opening-weekend-part-2.html">
+        <b>Opening weekend, part two</b>
+        <span>How the first weekend is likely to break across markets.</span></a>
+      <a href="/india-box-office-2026.html">
+        <b>India box office 2026</b>
+        <span>Every release this year, ranked, with verified collections.</span></a>
+      <a href="/upcoming-releases.html">
+        <b>Upcoming releases</b>
+        <span>What is coming next, and when it lands.</span></a>
+      <a href="/hype-index.html">
+        <b>The Hype Index</b>
+        <span>Which films are actually building an audience before release.</span></a>
+      <a href="/india-all-time-box-office.html">
+        <b>All-time India box office</b>
+        <span>The highest grossing Indian films ever, properly sourced.</span></a>
+      <a href="/india-boxoffice-how-it-works.html">
+        <b>How box office reporting works</b>
+        <span>Why the numbers you see elsewhere disagree with each other.</span></a>
+    </div>
+  </div>
+
+  <div class="card" style="margin-top:16px">
+    <h2>Follow the count</h2>
+    <p class="cap">Every update is posted as it happens</p>
+    <div class="prose">
+      <p>This page is rescanned several times a day, and each time the figures
+         move enough to matter we post the breakdown — market by market, day by
+         day, with the method stated. If you want the updates rather than
+         having to check back, follow along on X.</p>
+    </div>
+    <div class="follow">
+      <a href="https://x.com/BoxoffyMI" target="_blank" rel="noopener">Follow @BoxoffyMI on X</a>
+      <a class="alt" href="/">Browse Boxoffy</a>
+    </div>
   </div>
 
   <footer id="foot"></footer>
