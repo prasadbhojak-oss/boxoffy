@@ -35,9 +35,10 @@ Need $page 'function euBody'     'United Kingdom panel'
 Need $page 'function auBody'     'Australia panel'
 Need $page 'function pendingPanel' 'not-yet-counted panel'
 Need $page 'function openSpan'   'opening-run split'
-Need $page 'tickets:3466'        'UK full run 3,466 tickets'
-Need $page 'tickets:1486'        'Australia 1,486 tickets'
-Need $page 'tickets:1461'        'Canada 1,461 tickets'
+Need $page 'tickets:5678'        'UK midpoint 5,678 tickets'
+Need $page 'rawTickets:11838'    'UK raw 11,838 published beside it'
+Need $page 'tickets:3900'        'Australia 3,900 tickets'
+Need $page 'tickets:1473'        'Canada 1,473 tickets'
 Need $page 'tickets:7994'        'US 7-8 Nov 7,994 tickets'
 Need $page 'Kalki 2898 AD'       'verified ladder'
 Need $page 'Dhurandhar 2'        'Dhurandhar 2 on the ladder'
@@ -62,8 +63,8 @@ Need $page "sea:{name:'SE Asia'"     'SE Asia tile in the map row'
 
 Write-Host ''
 Write-Host '=== 3. the homepage strip agrees with the page'
-Need $app '27,464'     'NA 4-8 total on the strip'
-Need $app '$521,286'   'NA value on the strip'
+Need $app '29,036'     'NA 4-8 total on the strip'
+Need $app '$554,424'   'NA value on the strip'
 Need $app 'T-18'       'countdown'
 
 Write-Host ''
@@ -82,9 +83,13 @@ Absent $page 'AMC-owned'           'no chain-ownership asides'
 Absent $page 'not probed yet'      'uncounted markets say Coming soon'
 # Stale UK figures from the part-run.
 Absent $page 'tickets:2057' 'no part-run UK figure left behind'
+Absent $page 'tickets:3466' 'no first-report UK figure left behind'
 Absent $page 'tickets:7212' 'no stale US 7-8 Nov figure'
 Absent $page 'tickets:1179' 'no stale Canada figure'
+Absent $page 'tickets:1461' 'no stale Canada figure (18 Oct)'
 Absent $page 'tickets:952'  'no stale Australia figure'
+Absent $page 'tickets:1486' 'no modelled Australia figure left behind'
+Absent $page 'tickets:3500' 'no pre-refresh Australia figure'
 # The old chip card duplicated the UK numbers under the map row, so clicking
 # United States still left "Outside North America" showing Britain. One
 # control now: the map row. The card and its paint() call are gone.
@@ -113,12 +118,27 @@ else {
   $seg = $t.Substring($i, 120)
   if ($seg -match '"sold":(\d+)') {
     $us = [int]$Matches[1]
-    $na = $us + 7994 + 1461
-    if ($na -eq 27464) { Write-Host "    ok    baked map $us + 7,994 + 1,461 = $na, matches the strip" }
-    else {
-      Write-Host "    FAIL  baked map $us gives $na, but the strip says 27,464"
-      Write-Host '          run: python rebake_page.py'
+    # Read US_EXTRA and Canada OUT OF THE PAGE rather than hardcoding them.
+    # Hardcoding is why this check failed on 18 Oct for three markets that had
+    # moved correctly - the guard went stale, not the data. Same for the strip
+    # figure, which is now parsed from App.jsx.
+    $ex = 0; $ca = 0; $strip = 0
+    if ($t -match 'const US_EXTRA = \{tickets:(\d+)')   { $ex = [int]$Matches[1] }
+    if ($t -match 'const CA = \{[^}]*?tickets:(\d+)')   { $ca = [int]$Matches[1] }
+    $a = [IO.File]::ReadAllText((Resolve-Path $app))
+    if ($a -match 'tickets:\s*"([\d,]+)"')              { $strip = [int](($Matches[1]) -replace ',','') }
+    if ($ex -eq 0 -or $ca -eq 0 -or $strip -eq 0) {
+      Write-Host "    FAIL  could not parse US_EXTRA ($ex), CA ($ca) or the strip ($strip)"
       $fail = 1
+    } else {
+      $na = $us + $ex + $ca
+      if ($na -eq $strip) {
+        Write-Host "    ok    baked map $us + $ex + $ca = $na, matches the strip"
+      } else {
+        Write-Host "    FAIL  baked map $us gives $na, but the strip says $strip"
+        Write-Host '          run: python rebake_page.py, then fix src\App.jsx'
+        $fail = 1
+      }
     }
   } else { Write-Host '    FAIL  cannot read the baked map total'; $fail = 1 }
 }
