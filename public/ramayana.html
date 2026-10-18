@@ -160,7 +160,7 @@ gtag("js",new Date());gtag("config","G-K6C9EVRFH4",{anonymize_ip:true});}})();
         {"@type": "Question", "name": "Why does the UK figure say seats off sale instead of tickets sold?",
          "acceptedAnswer": {"@type": "Answer", "text": "Because the chain does not say which is which. A seat the booking page will not sell you may be a seat somebody bought, or a seat the cinema is holding back for wheelchair users, companions or late sales. Most of the UK figure never changes across a room's whole run, which is the signature of a block rather than a sale, so we publish a midpoint and show the raw number beside it."}},
         {"@type": "Question", "name": "Which countries are counted?",
-         "acceptedAnswer": {"@type": "Answer", "text": "The United States, Canada, the United Kingdom and Australia are counted seat by seat. Germany is visible as a footprint, 287 showtimes at 99 cinemas, but its ticketing systems do not allow a count, so no German ticket number is published. India is not presale-tracked on this page."}},
+         "acceptedAnswer": {"@type": "Answer", "text": "The United States, Canada, the United Kingdom, Australia and Germany are counted seat by seat. Germany is the newest and the only one where the cinemas publish their own ticket prices. India is not presale-tracked on this page."}},
         {"@type": "Question", "name": "Is Ramayana sold out anywhere?",
          "acceptedAnswer": {"@type": "Answer", "text": "Sold-out shows are flagged on the page as they happen. Premiere night in America and the biggest HOYTS rooms in Sydney have been the fullest so far. Most showtimes anywhere in the world have sold nothing at all yet, which is normal this far from release."}},
         {"@type": "Question", "name": "How often does this page update?",
@@ -688,12 +688,15 @@ gtag("js",new Date());gtag("config","G-K6C9EVRFH4",{anonymize_ip:true});}})();
          meaningless, so we do not publish one. Tickets add up across markets.
          Percentages do not.</p>
       <h3>Where the film is on sale</h3>
-      <p>The United States, Canada, the United Kingdom and Australia are
-         counted seat by seat. Germany is on sale and visible as a footprint —
-         287 showtimes at 99 cinemas — but its ticketing systems do not allow a
-         count, so no German ticket figure is published here. India is covered
-         separately in our <a href="/ramayana-part-one-box-office.html">Ramayana
-         box office preview</a>.</p>
+      <p>The United States, Canada, the United Kingdom, Australia and Germany
+         are counted seat by seat. Germany is the one market where the ticket
+         price is the cinema's own rather than our assumption — German cinemas
+         print it on the booking page. India is covered separately in our
+         <a href="/ramayana-part-one-box-office.html">Ramayana box office
+         preview</a>.</p>
+      <p>Germany also has something no other market here does: a dubbed version
+         competing with the original. The subtitled original is taking about
+         five tickets for every one the German dub sells, seat for seat.</p>
     </div>
   </div>
 
@@ -744,11 +747,10 @@ gtag("js",new Date());gtag("config","G-K6C9EVRFH4",{anonymize_ip:true});}})();
     </details>
     <details>
       <summary>Which countries are counted?</summary>
-      <p>The United States, Canada, the United Kingdom and Australia are
-         counted seat by seat. Germany is visible as a footprint, 287 showtimes
-         at 99 cinemas, but its ticketing systems do not allow a count, so no
-         German ticket number is published. India is not presale-tracked on this
-         page.</p>
+      <p>The United States, Canada, the United Kingdom, Australia and Germany
+         are counted seat by seat. Germany is the newest and the only one where
+         the cinemas publish their own ticket prices. India is not
+         presale-tracked on this page.</p>
     </details>
     <details>
       <summary>Is Ramayana sold out anywhere?</summary>
@@ -947,6 +949,37 @@ function atpNow(){
    fabricated 4,874 tickets. 3 of 48 rooms appear in a single session, so
    their capacity equals their availability and they read zero - Canada is
    still a floor. */
+/* GERMANY, COUNTED 18 OCT. Hand-read seat maps, 253 of the 283 showtimes we
+   are allowed to open, at 95 cinemas. 12 could not be opened.
+
+   TWO DENOMINATORS, AND THEY ARE NOT INTERCHANGEABLE:
+     shows/cinemas   253 / 95   what was actually READ - the basis for 1,177
+     footShows/..    287 / 99   what is ON SALE - the footprint, UCI included
+   1,177 is not "out of 287". Anything that divides by the wrong one is wrong.
+
+   THE EURO FIGURE IS PART THEIRS. German cinemas print prices and no other
+   market on this tracker does - EUR 13.99 to EUR 22.50, observed average
+   18.92. That average is real for the 51% of tickets that carried a price
+   and is APPLIED to the other 49%, so the total is part observed, part
+   assumed. Say so wherever it appears.
+
+   5-8 Nov only, matching every other market. Germany is also on sale 9-11
+   Nov - 13 more tickets - deliberately excluded so the basis lines up. */
+const DE = {
+  tickets:1177, eur:22272, usd:25027, atpEur:18.92, fx:1.1237,
+  seats:62436, rate:1.89, held:482,
+  shows:253, cinemas:95, showsScan:283, footShows:287, footCinemas:99,
+  cities:63, priced:51, zeroShows:109, outBasis:13, soldOut:0,
+  byDate:[['Thu 5 Nov',665,110,29952,2.22],['Fri 6 Nov',33,32,6392,0.52],
+          ['Sat 7 Nov',173,36,8067,2.14],['Sun 8 Nov',306,75,18025,1.70]],
+  /* The version split is the German story. OmU/OV is the original with
+     subtitles; 3D and Standard here are the German dub. */
+  orig:741, origSeats:17618, origRate:4.21,
+  dub:436,  dubSeats:44818,  dubRate:0.97,
+  top:{cinema:'CinemaxX München', when:'Thu 5 Nov, 7:00p',
+       sold:70, of:121, pct:57.9}
+};
+
 const CA = {showtimes:227, cinemas:26, auditoriums:48, dates:5,
             tickets:1473, seats:66270, rate:2.22, usd:19090, atpCad:18,
             singleSessionRooms:3};
@@ -1055,8 +1088,9 @@ const AU = {
    covered, which is the one thing this page must never imply. */
 const INTL = {
   open:'eu',
-  order:['eu','au','me','sea'],
+  order:['eu','au','de','me','sea'],
   au :{tab:'Australia',   body:auBody},
+  de :{tab:'Germany',     body:deBody},
   me :{tab:'Middle East', body:meBody},
   eu :{tab:'United Kingdom', body:euBody},
   sea:{tab:'SE Asia',     body:seaBody}
@@ -1092,6 +1126,43 @@ const MKT={
       {n:'Luton',x:73.1,y:107.6,t:319},
       {n:'Newcastle',x:62.7,y:60.8,t:315},
       {n:'Bradford',x:61.5,y:78.6,t:308}]},
+  /* GERMANY IS A FOOTPRINT, NOT A COUNT, AND THE MAP MUST SAY SO.
+     Every other map on this page sizes its circles by TICKETS SOLD. Germany
+     has no ticket number and may not get one: tickets.cineplex.de answered
+     403 to our scanner and CinemaxX answered 401, and we do not turn either
+     into a 200 by dressing a script up as a browser. What we do have is
+     Sony's own distributor listing - every showtime, every cinema, with
+     coordinates - so the circles here are SHOWTIMES ON SALE.
+
+     COUNTED 18 OCT. The footprint stayed a footprint for about six hours.
+     The seat maps were read by hand instead of by script - 253 of the 283
+     showtimes we are allowed to open, at 95 cinemas - so `foot` is now off
+     and these circles are TICKETS, filled red like every other counted
+     market. The footprint figures stay in footShows/footCinemas because
+     they are still the honest answer to "how big is Germany", and they are
+     a wider net than the count: 287 shows at 99 cinemas including UCI.
+
+     Two denominators, and the page shows both on purpose:
+       1,177 tickets over 253 READ shows   - the count
+       287 shows at 99 cinemas             - the footprint
+     Never mix them. 1,177 is not "out of 287".
+
+     Geometry: Natural Earth 1:50m, equirectangular about 51.2N, 5.75E,
+     k=17.1, cos(lat0) applied to longitude so the country is not stretched.
+     The 75 city positions are projected with that SAME transform from the
+     lat/lon in the sweep, so pins and coastline cannot drift apart.
+
+     287 showtimes at 99 cinemas - the WHOLE published footprint, UCI's four
+     included. UCI is one of the chains we never fetch (the scanners carry
+     the standing list); this is Sony's own listing of what is on sale
+     rather than a read of UCI's own servers, and leaving
+     those shows out would understate a figure that is explicitly about reach
+     rather than sales. 287/99 is also what the FAQ, the worklist and every
+     post say, so the page agrees with itself. */
+  de :{name:'Germany', sub:'95 cinemas read', vb:'0 0 100 140',
+    shows:253, cinemas:95, footShows:287, footCinemas:99,
+    d:"M40.4,130.4 L38.6,129.1 L36.8,127.9 L33.5,128.2 L32.6,127.1 L30.7,126.3 L29.6,126.3 L28.4,127.6 L30.0,128.1 L29.0,129.2 L27.6,129.0 L26.2,129.0 L25.1,129.5 L23.3,129.7 L20.9,129.6 L19.5,129.0 L19.1,127.9 L19.2,126.1 L19.8,123.9 L19.9,122.2 L20.0,119.6 L21.0,117.5 L21.6,115.2 L21.9,112.9 L22.4,111.4 L23.3,110.3 L25.4,107.3 L25.5,105.6 L24.1,105.0 L22.0,104.4 L20.0,104.1 L18.2,102.6 L16.8,103.0 L15.5,103.2 L14.1,103.0 L13.4,102.1 L12.2,101.6 L11.0,102.5 L9.2,100.2 L8.4,98.4 L7.6,97.6 L6.4,97.4 L6.7,94.9 L7.5,93.5 L8.0,92.3 L6.1,90.8 L4.9,89.5 L4.2,88.5 L3.8,86.4 L4.6,84.1 L6.6,82.6 L6.4,81.2 L5.8,79.8 L4.6,79.1 L5.2,77.9 L3.9,76.4 L2.8,75.6 L3.2,72.6 L2.2,71.4 L1.2,70.4 L2.2,70.0 L4.1,68.5 L3.5,67.1 L4.4,64.9 L4.8,63.3 L4.2,61.6 L3.6,60.1 L2.1,57.9 L2.8,56.7 L3.9,56.1 L5.9,56.4 L7.2,56.3 L10.6,55.4 L11.2,54.4 L10.3,53.3 L11.2,52.0 L13.2,50.3 L13.7,48.2 L13.4,46.7 L11.6,46.3 L10.2,45.3 L10.4,44.1 L13.6,43.0 L13.9,41.1 L14.6,38.7 L15.3,37.3 L15.4,33.6 L15.5,31.9 L14.0,30.3 L14.2,28.6 L14.6,27.3 L15.6,25.6 L20.1,24.8 L24.2,25.0 L25.9,27.5 L25.3,28.8 L26.7,29.2 L27.1,28.0 L27.3,26.8 L28.9,27.3 L29.4,30.0 L29.9,27.3 L29.5,25.3 L29.8,23.4 L30.8,21.8 L33.7,22.5 L37.0,22.1 L38.3,22.9 L41.1,26.5 L43.2,27.3 L41.6,26.5 L38.2,22.1 L37.2,21.5 L35.6,21.4 L34.0,20.2 L33.8,15.2 L32.5,14.3 L31.0,14.6 L31.1,12.9 L33.0,12.3 L34.3,11.7 L34.4,10.4 L33.5,9.5 L32.6,7.8 L31.4,6.1 L31.3,4.2 L33.3,4.2 L36.8,5.2 L38.5,5.9 L40.2,5.3 L41.4,5.0 L42.6,5.6 L44.4,6.3 L45.8,8.1 L45.8,9.7 L44.9,10.9 L47.1,11.3 L47.8,12.7 L49.4,12.2 L53.4,14.2 L55.8,13.2 L56.9,14.9 L56.3,16.6 L54.2,18.4 L54.7,19.5 L57.4,19.5 L60.5,20.6 L63.8,17.7 L68.2,16.8 L68.8,15.8 L70.1,14.8 L71.0,13.7 L73.1,11.7 L75.3,12.1 L76.6,12.4 L78.0,12.6 L79.3,14.8 L82.5,17.2 L85.5,17.0 L86.5,19.3 L87.0,22.2 L87.9,23.1 L91.1,24.3 L91.4,26.1 L91.6,27.3 L92.9,31.9 L92.8,33.1 L92.4,35.0 L91.5,36.3 L90.5,37.1 L89.8,38.9 L91.1,40.5 L93.9,42.8 L95.0,44.8 L94.5,46.5 L94.3,47.7 L95.0,49.1 L95.9,50.3 L95.9,52.0 L96.2,53.3 L95.8,54.6 L94.8,56.7 L95.7,59.0 L96.3,60.2 L96.0,61.7 L98.1,63.1 L98.6,64.5 L99.3,66.6 L98.7,69.3 L98.2,70.8 L97.1,73.1 L96.1,74.1 L95.0,73.4 L94.4,71.8 L92.3,70.5 L91.1,70.9 L92.4,72.4 L90.5,73.3 L89.4,74.0 L87.3,75.0 L85.2,75.8 L83.6,76.0 L82.8,77.5 L81.3,77.6 L80.2,78.2 L79.6,79.4 L77.9,79.7 L77.3,81.0 L75.2,80.7 L73.8,81.3 L71.8,82.1 L70.8,83.4 L70.3,84.5 L68.8,83.1 L68.3,84.4 L68.9,85.5 L69.9,87.3 L71.1,88.1 L72.5,89.9 L72.0,91.0 L71.1,92.5 L71.9,93.5 L72.9,95.3 L73.7,97.3 L75.0,98.9 L76.8,99.5 L77.9,100.7 L79.2,102.4 L80.1,103.2 L81.3,104.1 L82.0,105.6 L83.6,105.9 L85.0,107.3 L85.9,108.3 L86.3,109.5 L86.2,111.6 L85.5,113.0 L82.9,112.3 L82.1,115.5 L81.1,116.6 L80.0,117.1 L78.5,117.6 L76.6,118.8 L75.7,119.5 L75.1,121.0 L76.1,122.5 L77.2,124.1 L77.2,125.5 L76.7,126.6 L78.0,127.4 L78.2,129.5 L78.0,130.7 L76.4,130.7 L75.3,129.7 L75.2,128.4 L73.3,128.2 L72.1,128.5 L70.9,127.6 L69.2,127.1 L69.1,128.3 L63.9,129.4 L62.4,130.0 L61.3,130.7 L60.3,131.5 L58.5,132.3 L56.7,132.6 L55.1,131.3 L53.5,130.4 L50.7,130.1 L49.8,132.2 L48.9,134.0 L47.5,134.6 L47.7,133.1 L46.6,132.9 L46.2,131.7 L45.2,130.7 L43.8,129.9 L42.5,129.9 L40.7,130.2Z M85.3,13.1 L85.6,14.3 L84.1,13.9 L82.8,13.9 L82.1,15.4 L79.7,14.1 L79.4,12.9 L79.6,11.0 L80.2,9.7 L81.3,7.7 L82.5,8.5 L84.5,9.8 L84.1,11.3 L85.3,13.1Z M90.7,20.5 L90.7,21.9 L88.9,22.0 L87.6,21.7 L87.6,19.7 L86.5,18.6 L86.5,17.5 L88.8,19.1 L90.7,20.5Z",
+    pins:[{n:"München",x:62.3,y:119.9,t:302,c:3},{n:"Frankfurt · Main-Taunus",x:29.7,y:86.0,t:122,c:1},{n:"Hamburg",x:45.5,y:27.4,t:100,c:2},{n:"Neckarsulm",x:37.2,y:102.2,t:83,c:1},{n:"Mannheim",x:29.1,y:96.8,t:52,c:1},{n:"Berlin",x:81.5,y:45.0,t:51,c:8},{n:"Bonn",x:14.9,y:76.1,t:39,c:2},{n:"Neu-Ulm",x:45.6,y:115.7,t:28,c:1},{n:"Dresden",x:85.6,y:70.2,t:27,c:2},{n:"Offenbach",x:32.2,y:86.3,t:21,c:1},{n:"Dortmund",x:18.3,y:62.1,t:20,c:1},{n:"Leipzig",x:70.4,y:65.4,t:20,c:2},{n:"Hannover",x:42.8,y:47.4,t:19,c:1},{n:"Augsburg",x:55.1,y:116.0,t:18,c:2},{n:"Bremen",x:32.6,y:35.1,t:18,c:3},{n:"Nürnberg",x:57.1,y:97.4,t:18,c:2},{n:"Düsseldorf",x:11.0,y:67.1,t:15,c:2},{n:"Magdeburg",x:62.9,y:51.3,t:15,c:2},{n:"Erlangen",x:56.3,y:95.0,t:13,c:1},{n:"Paderborn",x:32.1,y:58.7,t:13,c:1},{n:"Karlsruhe",x:28.3,y:105.0,t:12,c:2},{n:"Freiburg im Breisgau",x:22.4,y:122.3,t:11,c:1},{n:"Ingolstadt",x:60.4,y:109.0,t:9,c:1},{n:"Aalen",x:46.6,y:107.8,t:8,c:1},{n:"Oberhausen",x:12.1,y:62.5,t:8,c:1},{n:"Siegen",x:24.3,y:73.1,t:8,c:1},{n:"Würzburg",x:44.7,y:91.4,t:8,c:1},{n:"Lünen",x:19.0,y:60.4,t:7,c:1},{n:"Saarbrücken",x:13.2,y:101.1,t:7,c:1},{n:"Aschaffenburg",x:36.4,y:88.4,t:6,c:1},{n:"Dettelbach",x:46.3,y:91.9,t:6,c:1},{n:"Freiberg",x:81.1,y:72.5,t:6,c:1},{n:"Sindelfingen",x:34.8,y:110.2,t:6,c:1},{n:"Aachen",x:3.6,y:74.9,t:4,c:1},{n:"Fulda",x:42.1,y:78.7,t:4,c:1},{n:"Kornwestheim",x:36.8,y:107.5,t:4,c:1},{n:"Landshut",x:68.6,y:113.0,t:4,c:1},{n:"Mainz",x:27.1,y:88.2,t:4,c:1},{n:"Marburg",x:32.4,y:74.2,t:4,c:1},{n:"Penzing",x:55.4,y:121.1,t:4,c:1},{n:"Wiesbaden",x:26.6,y:86.7,t:4,c:1},{n:"Wuppertal",x:15.1,y:66.6,t:4,c:1},{n:"Alsdorf",x:4.4,y:73.1,t:3,c:1},{n:"Essen",x:13.4,y:63.1,t:3,c:1},{n:"Halle (Saale)",x:66.1,y:62.8,t:3,c:1},{n:"Leverkusen",x:13.3,y:70.4,t:3,c:1},{n:"Münster",x:20.2,y:54.7,t:3,c:1},{n:"Neustadt",x:25.2,y:99.4,t:3,c:1},{n:"Pforzheim",x:31.6,y:107.0,t:3,c:2},{n:"Regensburg",x:68.1,y:105.0,t:3,c:1},{n:"Chemnitz",x:76.8,y:73.8,t:2,c:1},{n:"Darmstadt",x:31.1,y:90.3,t:2,c:1},{n:"Erfurt",x:56.6,y:71.4,t:2,c:1},{n:"Fürth",x:56.2,y:97.1,t:2,c:1},{n:"Gelsenkirchen",x:14.2,y:61.5,t:2,c:1},{n:"Jena",x:62.5,y:72.2,t:2,c:1},{n:"Koblenz",x:19.4,y:81.5,t:2,c:1},{n:"Nidda",x:34.9,y:80.9,t:2,c:1},{n:"Bielefeld",x:29.8,y:53.4,t:1,c:1},{n:"Bruchsal",x:30.4,y:103.0,t:1,c:1},{n:"Memmingen",x:47.2,y:122.3,t:1,c:1},{n:"Osnabrück",x:24.7,y:49.2,t:1,c:1},{n:"Villingen-Schwenningen",x:29.9,y:121.2,t:1,c:1}]},
   me :{name:'Middle East', sub:'not counted yet', soon:true},
   sea:{name:'SE Asia', sub:'not counted yet', soon:true},
   aus:{name:'Australia', sub:'both chains counted', vb:'0 0 160 140',
@@ -1118,6 +1189,7 @@ function mktShapes(){
   MKT.usa.usd=Math.round(DATA.total.sold*atpNow())+US_EXTRA.usd;
   MKT.uk.tix=UK.tickets;  MKT.uk.usd=UK.usd;
   MKT.aus.tix=AU.tickets; MKT.aus.usd=AU.usd;
+  MKT.de.tix=DE.tickets;  MKT.de.usd=DE.usd;
 }
 
 /* One SVG, any market. size 's' scales the stroke and the biggest bubble so a
@@ -1128,10 +1200,19 @@ function mktSvg(k,s){
   const R=v=> v<=0 ? w*.004 : w*.004 + w*.055*Math.sqrt(v/max);
   const land=`<path d="${m.d}" fill="var(--line)" stroke="var(--muted)" `+
              `stroke-width="${(w/900).toFixed(2)}" opacity=".55"/>`;
+  /* A FOOTPRINT MARKET IS DRAWN AS A RING, NEVER A DISC. Filled red means
+     counted tickets everywhere else on this page; gold outlines mean we can
+     see the shows but have not counted a seat. Same geometry, deliberately
+     different ink, so the two can never be confused at a glance. */
+  const ft=!!m.foot, col=ft?'var(--gold)':'var(--accent)';
+  const unit=ft?'showtimes':'tickets';
   const bub=pins.slice().sort((a,b)=>b.t-a.t).map(p=>
-    `<circle cx="${p.x}" cy="${p.y}" r="${R(p.t).toFixed(1)}" fill="var(--accent)" `+
-    `fill-opacity="${p.t?.62:0}" stroke="var(--accent)" stroke-width="${(w/1400).toFixed(2)}">`+
-    `<title>${esc(p.n)}: ${fmt(p.t)} tickets</title></circle>`).join('');
+    `<circle cx="${p.x}" cy="${p.y}" r="${R(p.t).toFixed(1)}" fill="${ft?'none':col}" `+
+    `fill-opacity="${ft?0:(p.t?.62:0)}" stroke="${col}" `+
+    `stroke-opacity="${ft?.85:1}" `+
+    `stroke-width="${(w*(ft?1/520:1/1400)).toFixed(2)}">`+
+    `<title>${esc(p.n)}: ${fmt(p.t)} ${unit}`+
+    `${ft&&p.c?' at '+p.c+' cinema'+(p.c>1?'s':''):''}</title></circle>`).join('');
   return `<svg viewBox="${m.vb}" style="width:100%;height:${s}px;display:block;`+
          `overflow:visible" role="img" aria-label="${esc(m.name)} bookings">`+
          land+bub+`</svg>`;
@@ -1145,7 +1226,7 @@ function worldMaps(){
     `<p class="cap" style="margin:0 0 13px">Pick a country to open it. Circle `+
     `size is tickets sold.</p>`+
     `<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(172px,1fr));gap:13px">`+
-    ['usa','uk','aus','me','sea'].map(k=>{
+    ['usa','uk','aus','de','me','sea'].map(k=>{
       const m=MKT[k], on=MSEL===k;
       return `<button type="button" data-mkt="${k}" aria-pressed="${on}" `+
         `style="text-align:left;cursor:pointer;background:var(--card);padding:11px 12px;`+
@@ -1155,10 +1236,13 @@ function worldMaps(){
         `<div style="font-family:var(--disp);font-weight:700;font-size:11.5px;`+
         `letter-spacing:.1em;text-transform:uppercase;color:${on?'var(--accent)':'var(--muted)'}">`+
         `${esc(m.name)}</div>`+
-        `<div style="font-family:var(--mono);font-weight:600;font-size:23px;line-height:1.15">`+
-        `${m.soon?'—':fmt(m.tix)}</div>`+
+        `<div style="font-family:var(--mono);font-weight:600;font-size:23px;`+
+        `line-height:1.15;${m.foot?'color:var(--gold)':''}">`+
+        `${m.soon?'—':fmt(m.foot?m.shows:m.tix)}</div>`+
         `<div style="font-family:var(--mono);font-size:10.5px;color:var(--muted);`+
-        `margin-bottom:6px">${m.soon?'coming soon':'tickets · '+esc(m.sub)}</div>`+
+        `margin-bottom:6px">${m.soon?'coming soon'
+          : m.foot ? 'showtimes · no tickets counted'
+          : 'tickets · '+esc(m.sub)}</div>`+
         (m.soon?`<div style="height:118px"></div>`:mktSvg(k,118))+`</button>`;
     }).join('')+`</div>`;
   el.querySelectorAll('[data-mkt]').forEach(b=>
@@ -1180,20 +1264,31 @@ function mktFrame(){
   /* The written panel is the one that was already here and already checked -
      reuse it rather than keep a second copy of the same numbers in sync. */
   const body = MSEL==='uk' ? euBody() : MSEL==='aus' ? auBody()
+             : MSEL==='de' ? deBody()
              : MSEL==='me' ? meBody() : seaBody();
   if(m.soon){ fr.innerHTML=body; return; }
-  const list=m.pins.slice().sort((a,b)=>b.t-a.t).map(p=>
+  /* Germany has 75 cities on the map and a 75-row list would bury the panel
+     beside it, so the list is capped and the remainder is counted in the
+     note. Every city stays ON the map - that spread IS the finding. */
+  const CAP=16, all=m.pins.slice().sort((a,b)=>b.t-a.t), shown=all.slice(0,CAP);
+  const list=shown.map(p=>
     `<div style="display:grid;grid-template-columns:1fr auto;gap:11px;`+
     `align-items:baseline;border-bottom:1px solid var(--line);padding:4px 0">`+
     `<span style="font-family:var(--mono);font-size:12.5px">${esc(p.n)}</span>`+
     `<span style="font-family:var(--mono);font-size:12.5px;font-weight:600">`+
-    `${fmt(p.t)}</span></div>`).join('');
+    `${fmt(p.t)}${m.foot&&p.c?`<span style="color:var(--muted);font-weight:400">`+
+    ` · ${p.c}</span>`:''}</span></div>`).join('');
   fr.innerHTML=
     `<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:24px">`+
       `<div>`+mktSvg(MSEL,330)+
         `<div style="margin-top:13px">${list}</div>`+
-        `<p class="note" style="margin-top:9px">${m.pins.length} `+
-        `${MSEL==='uk'?'cinemas':'cities'} · hover a circle for its name.</p>`+
+        `<p class="note" style="margin-top:9px">`+
+        (m.foot
+          ? `${fmt(all.length)} cities on the map, top ${shown.length} listed · `+
+            `the figure is SHOWTIMES, then cinemas · no German ticket has `+
+            `been counted`
+          : `${m.pins.length} ${MSEL==='uk'?'cinemas':'cities'} · hover a `+
+            `circle for its name.`)+`</p>`+
       `</div>`+
       `<div>${body}</div>`+
     `</div>`;
@@ -1231,21 +1326,29 @@ function tiles(){
        - Middle East, SE Asia, Europe outside Britain. It is deliberately a
        zero with a label, never a blank: a reader who sees no row assumes we
        looked and found nothing. */
-    const WT={tix:naTix+UK.tickets+AU.tickets, usd:naUsd+UK.usd+AU.usd,
+    const WT={tix:naTix+UK.tickets+AU.tickets+DE.tickets,
+              usd:naUsd+UK.usd+AU.usd+DE.usd,
               rows:[['North America',naTix,naUsd],['United Kingdom',UK.tickets,UK.usd],
-                    ['Australia',AU.tickets,AU.usd],['Rest of world',0,0]]};
+                    ['Australia',AU.tickets,AU.usd],
+                    /* Germany went from footprint to counted on 18 Oct and
+                       now adds to the total like any other read market.
+                       The 4th field stays in the shape for whatever is
+                       seen-but-not-counted next. */
+                    ['Germany',DE.tickets,DE.usd],
+                    ['Rest of world',0,0]]};
     const split=w=>
       `<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(132px,1fr));`+
       `gap:1px;background:var(--line);border:1px solid var(--line);border-radius:8px;`+
       `overflow:hidden;margin-top:13px">`+
-      w.rows.map(([n,t,u])=>
+      w.rows.map(([n,t,u,sub])=>
         `<div style="background:var(--card);padding:9px 11px">`+
           `<div style="font-family:var(--disp);font-weight:700;font-size:10.5px;`+
           `letter-spacing:.1em;text-transform:uppercase;color:var(--muted)">${esc(n)}</div>`+
           `<div style="font-family:var(--mono);font-weight:600;font-size:19px;`+
           `line-height:1.2;margin-top:2px">${t?fmt(t):'—'}</div>`+
           `<div style="font-family:var(--mono);font-size:11px;color:var(--muted)">`+
-          `${t?'$'+fmt(Math.round(u/1000))+'K · '+Math.round(100*t/w.tix)+'%':'Coming soon'}</div>`+
+          `${t?'$'+fmt(Math.round(u/1000))+'K · '+Math.round(100*t/w.tix)+'%'
+            :esc(sub||'Coming soon')}</div>`+
         `</div>`).join('')+`</div>`;
     head.innerHTML=
       `<div style="background:var(--card);border:1px solid var(--line);`+
@@ -1874,6 +1977,54 @@ function pendingPanel(kicker,lead,rows,note){
           `color:var(--muted)">${esc(b)}</span></div>`).join('')+`</div>`
       : '')+
     (note?`<p class="note">${note}</p>`:'');
+}
+
+/* GERMANY, COUNTED. Written 18 Oct, hours after the footprint panel it
+   replaces. The version split is the lead because it is the finding - no
+   other market on this page has a dub competing with the original, and the
+   dub is losing five to one per seat. */
+function deBody(){
+  return `<div style="font-family:var(--disp);font-weight:700;font-size:12px;`+
+    `letter-spacing:.14em;text-transform:uppercase;color:var(--accent)">`+
+    `Germany · first report</div>`+
+    `<p class="note" style="margin-top:8px">`+
+    `<b>${fmt(DE.tickets)} tickets</b> · <b>€${fmt(DE.eur)}</b> `+
+    `(~$${fmt(DE.usd)}) · <b>${DE.rate}%</b> of ${fmt(DE.seats)} seats, `+
+    `across ${DE.shows} showtimes at ${DE.cinemas} cinemas in ${DE.cities} `+
+    `towns and cities. Every seat map opened by hand.</p>`+
+    `<p class="note"><b>The German dub is being ignored.</b> Sony dubbed `+
+    `Ramayana into German, and almost nobody is buying that ticket. The `+
+    `subtitled original takes <b>${fmt(DE.orig)}</b> of the `+
+    `${fmt(DE.tickets)} — 63% of every German sale — off 28% of the seats. `+
+    `It sells at ${DE.origRate}%. The dub sells at ${DE.dubRate}%. That is `+
+    `five to one per seat, and it is the clearest signal on this page that `+
+    `Germany is buying this film as an Indian film.</p>`+
+    `<div style="display:grid;gap:7px;margin:13px 0 0">`+
+    [['München','302 tickets off 7 shows — carrying the market almost alone'],
+     ['Berlin','8 cinemas, 38 shows, 51 tickets. The emptiest big city'],
+     ['Frankfurt','122 at Main-Taunus on 4 shows'],
+     ['Fullest room',DE.top.cinema+', '+DE.top.when+' — '+DE.top.sold+' of '+
+                     DE.top.of+' seats, '+DE.top.pct+'%']]
+      .map(([a,b])=>
+      `<div style="display:grid;grid-template-columns:104px 1fr;gap:11px;`+
+      `align-items:baseline">`+
+      `<span style="font-family:var(--mono);font-size:12px">${esc(a)}</span>`+
+      `<span style="font-family:var(--mono);font-size:11.5px;`+
+      `color:var(--muted)">${esc(b)}</span></div>`).join('')+`</div>`+
+    `<p class="note"><b>The prices here are theirs, not ours.</b> German `+
+    `cinemas print a ticket price and no other market on this page does — `+
+    `€13.99 to €22.50, averaging €${DE.atpEur}. That average is real for the `+
+    `${DE.priced}% of tickets that carried a price and is applied to the `+
+    `rest, so the euro figure is part observed, part assumed.</p>`+
+    `<p class="note">${DE.shows} of the ${DE.showsScan} showtimes we open `+
+    `were read; ${DE.showsScan-DE.shows} would not load. The footprint is `+
+    `wider than the count — <b>${DE.footShows} shows at ${DE.footCinemas} `+
+    `cinemas</b> are on sale, four of them at a chain we do not read. `+
+    `${fmt(DE.held)} seats the cinemas hold `+
+    `back are flagged and left out. Not one sold-out show; ${DE.zeroShows} `+
+    `of ${DE.shows} have sold nothing. 9–11 Nov is on sale too and is not in `+
+    `these numbers — ${DE.outBasis} more tickets — so the basis matches every `+
+    `other market here.</p>`;
 }
 
 function meBody(){
