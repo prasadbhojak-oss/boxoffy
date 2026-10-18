@@ -593,24 +593,29 @@ gtag("js",new Date());gtag("config","G-K6C9EVRFH4",{anonymize_ip:true});}})();
         the largest seat map, so premium sub-allocations are not double counted.</p>
       <p style="font-size:13px;color:var(--body-ink);margin:0">
         <b>Every headline figure on this page is the United States.</b> Canada is
-        counted separately, and differently. Cineplex publishes the seats still
-        free but never the seats in the room, so until today there was no
-        way to tell how big each room was, so we published no Canadian ticket
-        number at all. The answer was in the same listings: across all the
-        showtimes in one auditorium, the largest availability we ever see is a
-        floor on that room's capacity, and everything below it has been sold.
-        That gives <b>1,473 tickets on 227 showtimes</b> across 26 Cineplex
-        cinemas and 48 auditoriums, <b>2.22%</b> of the 66,270 seats on sale.
-        It is a floor rather than an estimate: the only tickets it misses are
-        those sold in each room's emptiest show, and with the thinnest date at
-        0.44% that is roughly one seat per room. Brampton, Oakville, Surrey,
-        Mississauga and Vaughan carry 71% of it; Surrey sells at 8.7%, faster
-        than any US market, while Calgary holds the most screens in the country
-        and sells at 2.1%. Landmark Cinemas also lists Ramayana in five versions
-        including IMAX and ScreenX, and none of it is counted here, so the
-        Canadian figure can only move up. An earlier modelled Canadian dollar
-        figure was <b>withdrawn</b> before this: its showtime count was inflated
-        27% by duplicate listings of the same session.</p>
+        counted separately, and until today it was the one market here we could
+        not count properly. Cineplex publishes how many seats are free but never
+        how big the room is, so we worked the room size out backwards — the
+        largest availability a room ever shows is a floor on its capacity — and
+        published a deliberate minimum.
+        Now all <b>227 seat maps have been read one by one</b>, and Canada is a
+        count: <b>1,899 tickets</b> across 26 cinemas and 29 auditoriums,
+        <b>2.84%</b> of 66,751 seats.
+        <b>The floor said 1,714, so it was 11% low</b> — which is what a floor
+        is supposed to be. The figure we had been publishing was 1,473, and it
+        reproduced from no scan we hold; it is withdrawn.
+        Because Cineplex's own feed reports the free seats, every row had
+        something to check against: <b>165 of 227 agreed to the exact seat</b>
+        and 191 within two, and the rest lean the one way you would expect from
+        reading the maps later in the day than the feed was sampled.
+        Ontario is 62% of the country, and inside it the suburbs are the
+        market — Oakville, Brampton, Mississauga and Vaughan total 1,105
+        against Toronto's 38. UltraAVX alone carries 88% of every Canadian
+        ticket, and every showtime in the country is Hindi. Cineplex does not
+        mark which seats are held back, so a few house seats may sit inside
+        this figure. Landmark Cinemas also lists Ramayana in five versions
+        including IMAX and ScreenX, and none of it is counted here, so Canada
+        can still only move up.</p>
       <p style="font-size:13px;color:var(--body-ink);margin:0">
         <b>Australia is now the most completely counted market on this page.</b>
         Both chains are read end to end, and HOYTS is the only market here
@@ -980,9 +985,38 @@ const DE = {
        sold:70, of:121, pct:57.9}
 };
 
-const CA = {showtimes:227, cinemas:26, auditoriums:48, dates:5,
-            tickets:1473, seats:66270, rate:2.22, usd:19090, atpCad:18,
-            singleSessionRooms:3};
+/* CANADA, COUNTED 18 OCT. Was a recovered floor until today; now every one
+   of the 227 seat maps has been read by hand.
+
+   THE FLOOR WAS NOT WRONG, IT WAS LOW ON PURPOSE - and by 11%. Capacity used
+   to be recovered as the largest availability a room ever showed, which
+   necessarily misses whatever that emptiest show had itself sold. Floor said
+   1,714 on this morning's scan. The count says 1,899.
+
+   AND THE FIGURE WE HAD PUBLISHED WAS 1,473, which reproduced from NO scan
+   on disk - every real run gave 28 or 29 auditoriums, never the 48 that
+   constant claimed. It is retired here. If a Canadian number ever again
+   fails to reproduce from a file in intel\, that is the bug, not the data.
+
+   VALIDATED AGAINST CINEPLEX ITSELF. Every row carried the seatsAvail the
+   chain's own feed reported, so capacity-minus-sold had something to be
+   checked against: 165 of 227 matched to the seat, 191 within two. The
+   stragglers all lean one way - the hand read found MORE sold than an 08:30
+   snapshot implied, which is what reading later in the day looks like.
+
+   STILL NOT PERFECT, AND THE GAPS ARE NAMED: Cineplex does not flag held
+   seats, so a few house seats may sit inside `tickets`; and Landmark is not
+   in here at all. Canada can still only move up. */
+const CA = {showtimes:227, cinemas:26, auditoriums:29, dates:5,
+            tickets:1899, seats:66751, rate:2.84, usd:24611, atpCad:18,
+            floorWas:1714, publishedWas:1473, exactMatch:165, within2:191,
+            byDate:[['Wed 4 Nov',282,6337,4.45],['Thu 5 Nov',280,14547,1.92],
+                    ['Fri 6 Nov',574,14955,3.84],['Sat 7 Nov',642,15837,4.05],
+                    ['Sun 8 Nov',121,15075,0.80]],
+            prov:[['Ontario',1177,5.33],['Alberta',322,2.14],['BC',300,2.48],
+                  ['Manitoba',36,0.88],['Quebec',31,0.53],['Nova Scotia',25,1.09],
+                  ['Saskatchewan',7,0.24],['Newfoundland',1,0.04]],
+            avx:1676, zeroShows:96, soldOut:0};
 
 /* THE DATES ON THIS PAGE vs THE DATES IN THE HEADLINE.
    Everything baked into DATA above is 4-6 Nov, because that is the basis the

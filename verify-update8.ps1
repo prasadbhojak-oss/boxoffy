@@ -38,7 +38,17 @@ Need $page 'function openSpan'   'opening-run split'
 Need $page 'tickets:5678'        'UK midpoint 5,678 tickets'
 Need $page 'rawTickets:11838'    'UK raw 11,838 published beside it'
 Need $page 'tickets:3900'        'Australia 3,900 tickets'
-Need $page 'tickets:1473'        'Canada 1,473 tickets'
+Need $page 'tickets:1177'        'Germany 1,177 tickets'
+Need $page 'function deBody'     'Germany panel'
+Need $page "de :{name:'Germany'" 'Germany tile in the map row'
+# Germany was a FOOTPRINT for six hours on 18 Oct - showtimes drawn as hollow
+# rings, explicitly not tickets. mktSvg/worldMaps still CARRY that mode for
+# the next market we can see but not count, so the strings stay in the file;
+# what must not come back is a market switched into it while it has real
+# tickets. foot:true is the switch, so that is what is checked.
+Absent $page 'foot:true'            'no market drawn as a footprint'
+Absent $page 'on sale, not counted' 'no footprint-era Germany kicker'
+Need $page 'tickets:1899'        'Canada 1,899 tickets (counted, not a floor)'
 Need $page 'tickets:8869'        'US 7-8 Nov 8,869 tickets'
 Need $page 'Kalki 2898 AD'       'verified ladder'
 Need $page 'Dhurandhar 2'        'Dhurandhar 2 on the ladder'
@@ -63,8 +73,8 @@ Need $page "sea:{name:'SE Asia'"     'SE Asia tile in the map row'
 
 Write-Host ''
 Write-Host '=== 3. the homepage strip agrees with the page'
-Need $app '29,911'     'NA 4-8 total on the strip'
-Need $app '$570,166'   'NA value on the strip'
+Need $app '30,337'     'NA 4-8 total on the strip'
+Need $app '$575,687'   'NA value on the strip'
 Need $app 'T-18'       'countdown'
 
 Write-Host ''
@@ -88,6 +98,14 @@ Absent $page 'tickets:7212' 'no stale US 7-8 Nov figure'
 Absent $page 'tickets:7994' 'no pre-refresh US 7-8 Nov figure'
 Absent $page 'tickets:1179' 'no stale Canada figure'
 Absent $page 'tickets:1461' 'no stale Canada figure (18 Oct)'
+# 1,473 was published for a day and reproduced from NO scan in intel\ - every
+# real run of canada_tickets.py gave 28 or 29 auditoriums, never the 48 that
+# constant claimed. 1,714 was the recovered FLOOR on the same data, correct as
+# a minimum but not a count. Both are retired; neither comes back.
+Absent $page 'tickets:1473' 'no unreproducible Canada figure'
+Absent $page 'tickets:1714' 'no Canada floor published as a count'
+Absent $app  '29,911'       'no pre-Canada NA total on the strip'
+Absent $app  '$570,166'     'no pre-Canada NA value on the strip'
 Absent $page 'tickets:952'  'no stale Australia figure'
 Absent $page 'tickets:1486' 'no modelled Australia figure left behind'
 Absent $page 'tickets:3500' 'no pre-refresh Australia figure'
