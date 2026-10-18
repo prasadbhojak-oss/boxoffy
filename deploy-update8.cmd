@@ -116,16 +116,23 @@ if errorlevel 1 (
 echo.
 echo   Pushed. Vercel builds from origin. Once it is live, check:
 echo       https://www.boxoffy.com/ramayana
-echo     - the headline reads 32,416 tickets and $615K
+echo     - the worldwide headline reads 39,489 tickets and $738K
+echo     - the four-way split reads NA 29,911 / UK 5,678 / AUS 3,900
+echo     - the preview-night line under the title reads 10,989
 echo     - the country row opens on United States
 echo     - clicking United Kingdom hides the US filters and opens the UK frame
+echo     - Australia's map pins read Sydney 1,521, not 782
 echo     - Middle East and SE Asia say "Coming soon", nothing technical
-echo     - the byline has no dedupe basis string after the timestamp
-echo     - the homepage strip reads 27,464 and T-18
+echo     - the homepage strip reads 29,911 and T-18
+echo.
+echo   THESE FIGURES GO STALE. They are the 18 Oct 08:11 sweep. If you are
+echo   reading them after a later sweep they are wrong - check the page
+echo   against intel\page-refresh.txt, not against this text.
 echo.
 echo   THEN regenerate the social card: open the live page, Share image,
-echo   Download PNG, overwrite public\ramayana-og.png and redeploy. It still
-echo   says 13,992 until you do.
+echo   LINK CARD, Download PNG. It saves itself as ramayana-og.png - drop it
+echo   in public\ and push again. The card and its og: tags carry NO figures
+echo   on purpose, so this is a one-time job, not a per-sweep one.
 echo.
 exit /b 0
 
