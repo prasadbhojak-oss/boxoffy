@@ -1,0 +1,124 @@
+# Boxoffy - Update 8 pre-flight checks.
+#
+# This used to live in deploy-update8.cmd as a pile of `call :need` + findstr.
+# cmd.exe re-reads a batch file by byte offset, and mixing a CALLed label with
+# `exit /b` inside a parenthesised block made it lose its place and replay whole
+# sections. It also mangles arguments containing escaped quotes, so markers like
+# id="worldmaps" silently never ran. PowerShell does plain literal matching with
+# none of that, so the checks live here and the .cmd just calls this.
+#
+# Every marker is LITERAL - no regex - so ${DATA.basis} and id="x" are safe.
+
+$ErrorActionPreference = 'Stop'
+$fail = 0
+
+function Need($file, $marker, $label) {
+  if (-not (Test-Path $file)) { Write-Host "    FAIL  $file is missing"; $script:fail = 1; return }
+  $t = [IO.File]::ReadAllText((Resolve-Path $file))
+  if ($t.Contains($marker)) { Write-Host "    ok    $label" }
+  else { Write-Host "    FAIL  $label - '$marker' not in $file"; $script:fail = 1 }
+}
+function Absent($file, $marker, $label) {
+  if (-not (Test-Path $file)) { Write-Host "    ok    $label (no $file)"; return }
+  $t = [IO.File]::ReadAllText((Resolve-Path $file))
+  if ($t.Contains($marker)) { Write-Host "    FAIL  $label - found '$marker' in $file"; $script:fail = 1 }
+  else { Write-Host "    ok    $label" }
+}
+
+$page = 'public\ramayana.html'
+$app  = 'src\App.jsx'
+
+Write-Host ''
+Write-Host '=== 1. the edits are actually in the files'
+Need $page 'id="intlcard"'       'international block container'
+Need $page 'const INTL'          'market registry'
+Need $page 'const UK = {'        'United Kingdom data'
+Need $page 'function euBody'     'United Kingdom panel'
+Need $page 'function auBody'     'Australia panel'
+Need $page 'function pendingPanel' 'not-yet-counted panel'
+Need $page 'function openSpan'   'opening-run split'
+Need $page 'tickets:3466'        'UK full run 3,466 tickets'
+Need $page 'tickets:1486'        'Australia 1,486 tickets'
+Need $page 'tickets:1461'        'Canada 1,461 tickets'
+Need $page 'tickets:7994'        'US 7-8 Nov 7,994 tickets'
+Need $page 'Kalki 2898 AD'       'verified ladder'
+Need $page 'Dhurandhar 2'        'Dhurandhar 2 on the ladder'
+Need $page 'ow:14000000'         'Dhurandhar 2 at its five-day opening'
+Need $page '5-day opening run at' 'rebased trajectory'
+Need $page 'Coming soon'         'plain wording for uncounted markets'
+
+Write-Host ''
+Write-Host '=== 2. the worldwide rename and the three-country maps'
+Need $page '<h1>Ramayana Presales' 'page renamed'
+Need $page 'Rest of world'       'worldwide ticket split'
+Need $page 'const MKT='          'three-country map registry'
+Need $page 'function worldMaps'  'country map thumbnails'
+Need $page 'function mktFrame'   'expanding country frame'
+Need $page 'id="worldmaps"'      'map row container'
+Need $page 'id="mktframe"'       'expanded frame container'
+Need $page 'id="napanels"'       'US panels are toggleable'
+Need $page 'worldMaps(); intl();' 'maps painted on load'
+Need $page 'M35.9,5.8'           'United Kingdom outline'
+
+Write-Host ''
+Write-Host '=== 3. the homepage strip agrees with the page'
+Need $app '27,464'     'NA 4-8 total on the strip'
+Need $app '$521,286'   'NA value on the strip'
+Need $app 'T-18'       'countdown'
+
+Write-Host ''
+Write-Host '=== 4. what must NOT be there'
+# Two wrong Dhurandhar figures. ow:23000000 is the two-week cume our own
+# article elsewhere calls a "total through W2"; ow:10000000 is the Fri-Sun
+# weekend, real but not an opening run.
+Absent $page 'ow:23000000' 'no two-week cume in the opening-run column'
+Absent $page 'ow:10000000' 'no 3-day figure in the opening-run column'
+# The plain-English pass must not regress. All of these were printed on the
+# page where readers could see them.
+Absent $page '${DATA.basis}'       'no dedupe basis string shown to readers'
+Absent $page 'robots.txt disallows' 'no robots talk in reader copy'
+Absent $page 'HTTP 403'            'no status codes in reader copy'
+Absent $page 'AMC-owned'           'no chain-ownership asides'
+Absent $page 'not probed yet'      'uncounted markets say Coming soon'
+# Stale UK figures from the part-run.
+Absent $page 'tickets:2057' 'no part-run UK figure left behind'
+Absent $page 'tickets:7212' 'no stale US 7-8 Nov figure'
+Absent $page 'tickets:1179' 'no stale Canada figure'
+Absent $page 'tickets:952'  'no stale Australia figure'
+# Token leak.
+Absent 'public\sitemap.xml' 'collage-week35-preview-LOCAL-ONLY' 'no LOCAL-ONLY file in the sitemap'
+if (Test-Path 'public\collage-week35-preview-LOCAL-ONLY.html') {
+  Write-Host '    FAIL  public\collage-week35-preview-LOCAL-ONLY.html exists - move it to local-only\'
+  $fail = 1
+} else { Write-Host '    ok    no LOCAL-ONLY file in public\' }
+
+Write-Host ''
+Write-Host '=== 5. the page sanity checks'
+Need $page 'og:image' 'social tags present'
+Need $page 'www.boxoffy.com/ramayana' 'canonical on www'
+
+# The page headline is DATA.total.sold + US_EXTRA + CA. If the baked map is
+# stale the page quietly understates, so check the sum rather than trusting it.
+Write-Host ''
+Write-Host '=== 6. the headline adds up'
+$t = [IO.File]::ReadAllText((Resolve-Path $page))
+$i = $t.IndexOf('"total":{"seats"')
+if ($i -lt 0) { Write-Host '    FAIL  cannot find the baked map total'; $fail = 1 }
+else {
+  $seg = $t.Substring($i, 120)
+  if ($seg -match '"sold":(\d+)') {
+    $us = [int]$Matches[1]
+    $na = $us + 7994 + 1461
+    if ($na -eq 27464) { Write-Host "    ok    baked map $us + 7,994 + 1,461 = $na, matches the strip" }
+    else {
+      Write-Host "    FAIL  baked map $us gives $na, but the strip says 27,464"
+      Write-Host '          run: python rebake_page.py'
+      $fail = 1
+    }
+  } else { Write-Host '    FAIL  cannot read the baked map total'; $fail = 1 }
+}
+
+Write-Host ''
+if ($fail -eq 1) { Write-Host '  One or more checks failed. NOT building.'; exit 1 }
+Write-Host '  All checks passed.'
+exit 0

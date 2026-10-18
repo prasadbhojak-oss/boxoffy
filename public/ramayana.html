@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>Ramayana presales in North America — live seat-level tracker | Boxoffy</title>
+<title>Ramayana Presales — live worldwide seat-level tracker | Boxoffy</title>
 <meta name="description" content="Ramayana North America presales, counted seat by seat: 13,992 tickets across 502 cinemas, 2.58% of all seats gone. Live map, every market, every cinema.">
 <link rel="canonical" href="https://www.boxoffy.com/ramayana">
 <meta name="robots" content="index,follow,max-image-preview:large">
@@ -231,10 +231,11 @@
     <div class="live"><span class="dot"></span><span id="livelbl"></span></div>
   </div>
 
-  <p class="kicker">North America · Presale tracker</p>
-  <h1>Where America is booking Ramayana</h1>
-  <p class="dek">Every cinema, every showtime, counted seat by seat. Circle size is
-     tickets sold. Colour is how full the room is.</p>
+  <p class="kicker">Worldwide · Presale tracker</p>
+  <h1>Ramayana Presales</h1>
+  <p class="dek">Every cinema, every showtime, counted seat by seat across America,
+     Britain and Australia. Circle size is tickets sold. Colour is how full the
+     room is. Pick a country to open it.</p>
   <p class="byline" id="byline"></p>
   <div class="rule"></div>
 
@@ -301,11 +302,14 @@
     </p>
   </div>
 
+  <div class="card" id="worldmaps" style="margin-bottom:18px"></div>
+  <div class="card" id="mktframe" style="margin-bottom:18px;display:none"></div>
+
   <div class="card" id="intlcard" style="margin-bottom:18px"></div>
 
   <div class="filters" id="filters"></div>
 
-  <div class="panels">
+  <div class="panels" id="napanels">
     <div class="card">
       <h2 id="maptitle">The map</h2>
       <p class="cap" id="mapcap"></p>
@@ -594,6 +598,125 @@ const INTL = {
   sea:{tab:'SE Asia',     body:seaBody}
 };
 
+/* THREE COUNTRIES, THREE MAPS, ONE OPEN AT A TIME.
+   The row of thumbnails is the index; clicking one opens that country full
+   width underneath. America keeps the real metro map and the filters, so
+   choosing America just shows the panels that were always there. Britain and
+   Australia get their own frame: their data is a list of cinemas, not a
+   filterable scan, and sharing the North American panel would leave every
+   filter on it pointing at nothing.
+
+   Alaska and Hawaii sit INSIDE the United States block, not beside it. They
+   are US markets; breaking them out made the page look like four countries. */
+const MKT={
+  usa:{name:'United States', sub:'incl. Alaska & Hawaii', tix:0, usd:0, vb:'0 0 960 600'},
+  uk :{name:'United Kingdom', sub:'14 cinemas read', vb:'0 0 100 140',
+    d:"M35.9,5.8 L47.2,5.8 L50.7,5.0 L51.5,11.8 L49.8,16.4 L42.8,16.4 L41.1,20.9 L48.0,19.4 L53.3,19.4 L61.1,22.4 L58.5,28.5 L55.9,34.5 L52.4,38.3 L54.1,43.6 L49.8,44.4 L58.5,48.2 L61.1,51.2 L62.8,60.3 L65.4,64.8 L71.5,67.9 L75.9,73.9 L74.1,80.0 L78.0,83.0 L79.8,91.4 L84.5,91.1 L91.5,94.4 L91.9,98.2 L88.0,106.5 L85.4,110.3 L84.5,114.8 L88.9,115.2 L88.5,119.4 L84.5,123.2 L76.7,124.7 L67.2,124.2 L60.2,125.2 L50.7,125.5 L46.3,127.0 L40.2,130.8 L32.4,134.8 L27.2,135.0 L33.3,128.5 L37.6,122.4 L40.2,117.9 L50.7,117.6 L55.0,113.3 L50.7,111.8 L42.0,111.8 L35.9,110.6 L30.7,110.0 L32.4,105.8 L38.5,101.2 L41.1,92.1 L37.6,86.1 L43.7,86.1 L49.8,84.5 L50.7,80.0 L49.8,73.9 L45.4,67.9 L46.3,61.8 L38.5,63.6 L34.1,65.9 L34.1,60.3 L35.0,54.2 L33.3,49.7 L35.0,45.2 L29.8,54.2 L28.1,45.2 L28.9,39.1 L25.4,33.0 L27.2,25.5 L26.3,20.9 L29.8,16.4 L33.3,10.3Z M28.9,67.9 L27.2,63.3 L22.8,57.3 L15.9,57.3 L13.3,60.3 L8.1,64.8 L11.5,70.9 L17.6,73.9 L22.8,73.9 L28.1,70.9Z",
+    pins:[{n:'Greenwich O2',x:76.7,y:113.3,t:399},{n:'Solihull',x:61.3,y:99.5,t:394},
+      {n:'Showcase Reading',x:68.3,y:114.1,t:383},{n:'Hounslow',x:73.6,y:113.8,t:344},
+      {n:'Wembley',x:74.3,y:112.4,t:338},{n:'Ilford',x:77.3,y:112.4,t:311},
+      {n:'Newcastle',x:62.7,y:60.8,t:244},{n:'Luton',x:73.1,y:107.6,t:243},
+      {n:'Birmingham',x:60.1,y:98.5,t:231},{n:'Bradford',x:61.5,y:78.6,t:231},
+      {n:'Aberdeen',x:58.6,y:27.9,t:161},{n:'Wood Green',x:75.8,y:111.8,t:104},
+      {n:'Showcase Leicester',x:66.9,y:96.2,t:53},{n:'Hull',x:73.9,y:79.4,t:30}]},
+  aus:{name:'Australia', sub:'two chains', vb:'0 0 160 140',
+    d:"M7.5,46.6 L10.8,45.8 L14,42.6 L21.9,40.1 L35.5,36.9 L39.8,30.8 L49.9,16.2 L60.6,19.4 L67.8,7.6 L76.8,6 L87.5,6.8 L92.9,22.3 L106.6,28.3 L109.1,8 L116.2,16.2 L124.5,26.3 L137.8,42.6 L150.3,60.9 L152.5,73.5 L148.5,87.3 L143.9,95 L139.6,109.6 L128.8,114.9 L119.8,113.3 L107.3,113.3 L100.1,101.9 L94.7,99.5 L89.3,97.4 L82.2,89.3 L71.4,85.2 L57,87.3 L46.3,91.3 L31.9,95.4 L23,99.9 L14,96.6 L16.5,86.9 L12.5,74.3 L8.6,62.9Z M120.2,122.6 L133.5,123 L133.5,132 L123.4,134 L120.2,125.9Z",
+    pins:[{n:'Sydney',x:143.9,y:94.9,t:782},{n:'Melbourne',x:121.5,y:110.9,t:247},
+      {n:'Perth',x:17.1,y:87.1,t:174},{n:'Canberra',x:136.4,y:100.6,t:97},
+      {n:'Adelaide',x:98.7,y:99.2,t:80},{n:'Brisbane',x:150.4,y:68.9,t:62},
+      {n:'Gold Coast',x:151.9,y:71,t:35}]}
+};
+let MSEL='usa';
+
+function mktShapes(){
+  MKT.usa.d = GEO.states.map(s=>s.d).join(' ');
+  MKT.usa.pins = DATA.metros.filter(m=>m.x!=null)
+    .map(m=>({n:m.metro, x:m.x, y:m.y, t:m.tot.sold}));
+  /* Always the WHOLE United States, never the filtered view. A reader who
+     picks "IMAX" is narrowing the American panel below, not shrinking the
+     country - the thumbnail must keep saying what the country has sold. */
+  MKT.usa.tix=DATA.total.sold+US_EXTRA.tickets;
+  MKT.usa.usd=Math.round(DATA.total.sold*atpNow())+US_EXTRA.usd;
+  MKT.uk.tix=UK.tickets;  MKT.uk.usd=UK.usd;
+  MKT.aus.tix=AU.tickets; MKT.aus.usd=AU.usd;
+}
+
+/* One SVG, any market. size 's' scales the stroke and the biggest bubble so a
+   thumbnail and the full-width version are the same drawing, not two. */
+function mktSvg(k,s){
+  const m=MKT[k], pins=m.pins||[], max=Math.max(1,...pins.map(p=>p.t));
+  const w=parseFloat(m.vb.split(' ')[2]);
+  const R=v=> v<=0 ? w*.004 : w*.004 + w*.055*Math.sqrt(v/max);
+  const land=`<path d="${m.d}" fill="var(--line)" stroke="var(--muted)" `+
+             `stroke-width="${(w/900).toFixed(2)}" opacity=".55"/>`;
+  const bub=pins.slice().sort((a,b)=>b.t-a.t).map(p=>
+    `<circle cx="${p.x}" cy="${p.y}" r="${R(p.t).toFixed(1)}" fill="var(--accent)" `+
+    `fill-opacity="${p.t?.62:0}" stroke="var(--accent)" stroke-width="${(w/1400).toFixed(2)}">`+
+    `<title>${esc(p.n)}: ${fmt(p.t)} tickets</title></circle>`).join('');
+  return `<svg viewBox="${m.vb}" style="width:100%;height:${s}px;display:block;`+
+         `overflow:visible" role="img" aria-label="${esc(m.name)} bookings">`+
+         land+bub+`</svg>`;
+}
+
+function worldMaps(){
+  const el=$('#worldmaps'); if(!el) return;
+  mktShapes();
+  el.innerHTML=
+    `<h2 style="margin:0 0 3px">Where the world is booking</h2>`+
+    `<p class="cap" style="margin:0 0 13px">Pick a country to open it. Circle `+
+    `size is tickets sold.</p>`+
+    `<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:13px">`+
+    ['usa','uk','aus'].map(k=>{
+      const m=MKT[k], on=MSEL===k;
+      return `<button type="button" data-mkt="${k}" aria-pressed="${on}" `+
+        `style="text-align:left;cursor:pointer;background:var(--card);padding:11px 12px;`+
+        `border:1px solid ${on?'var(--accent)':'var(--line)'};border-radius:var(--r);`+
+        `box-shadow:${on?'inset 0 0 0 1px var(--accent)':'none'}">`+
+        `<div style="font-family:var(--disp);font-weight:700;font-size:11.5px;`+
+        `letter-spacing:.1em;text-transform:uppercase;color:${on?'var(--accent)':'var(--muted)'}">`+
+        `${esc(m.name)}</div>`+
+        `<div style="font-family:var(--mono);font-weight:600;font-size:23px;line-height:1.15">`+
+        `${fmt(m.tix)}</div>`+
+        `<div style="font-family:var(--mono);font-size:10.5px;color:var(--muted);`+
+        `margin-bottom:6px">tickets · ${esc(m.sub)}</div>`+
+        mktSvg(k,118)+`</button>`;
+    }).join('')+`</div>`;
+  el.querySelectorAll('[data-mkt]').forEach(b=>
+    b.addEventListener('click',()=>{ MSEL=b.dataset.mkt; worldMaps(); }));
+  mktFrame();
+}
+
+/* The expanded frame. America hands back to the panels that already exist;
+   anything else draws its own map and its own list. */
+function mktFrame(){
+  const fr=$('#mktframe'), na=$('#napanels'), fl=$('#filters');
+  if(!fr) return;
+  const usa = MSEL==='usa';
+  if(na) na.style.display = usa ? '' : 'none';
+  if(fl) fl.style.display = usa ? '' : 'none';
+  if(usa){ fr.style.display='none'; fr.innerHTML=''; return; }
+  const m=MKT[MSEL], tot=m.pins.reduce((a,p)=>a+p.t,0);
+  fr.style.display='';
+  fr.innerHTML=
+    `<h2 style="margin:0 0 3px">${esc(m.name)}</h2>`+
+    `<p class="cap" style="margin:0 0 13px">${fmt(m.tix)} tickets · `+
+    `about $${fmt(Math.round(m.usd/1000))}K. Hover a circle for its name.</p>`+
+    `<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px">`+
+      `<div>`+mktSvg(MSEL,360)+`</div>`+
+      `<div><div style="display:grid;gap:6px">`+
+      m.pins.slice().sort((a,b)=>b.t-a.t).map(p=>
+        `<div style="display:grid;grid-template-columns:1fr auto;gap:11px;`+
+        `align-items:baseline;border-bottom:1px solid var(--line);padding-bottom:5px">`+
+        `<span style="font-family:var(--mono);font-size:12.5px">${esc(p.n)}</span>`+
+        `<span style="font-family:var(--mono);font-size:12.5px;font-weight:600">`+
+        `${fmt(p.t)}</span></div>`).join('')+
+      `</div><p class="note" style="margin-top:11px">`+
+      `${fmt(tot)} tickets across ${m.pins.length} `+
+      `${MSEL==='uk'?'cinemas':'cities'}. Ticket prices are ours, not the `+
+      `chains' — none of them publish one.</p></div>`+
+    `</div>`;
+}
+
 function tiles(){
   const rows=view();
   const sold=rows.reduce((a,r)=>a+r.sold,0), seats=rows.reduce((a,r)=>a+r.seats,0),
@@ -622,27 +745,48 @@ function tiles(){
     const usSold=sold, usUsd=Math.round(usSold*atp);
     const naTix=usSold+US_EXTRA.tickets+CA.tickets;
     const naUsd=usUsd+US_EXTRA.usd+CA.usd;
+    /* The worldwide roll-up. ROW is every market we list but have not counted
+       - Middle East, SE Asia, Europe outside Britain. It is deliberately a
+       zero with a label, never a blank: a reader who sees no row assumes we
+       looked and found nothing. */
+    const WT={tix:naTix+UK.tickets+AU.tickets, usd:naUsd+UK.usd+AU.usd,
+              rows:[['North America',naTix,naUsd],['United Kingdom',UK.tickets,UK.usd],
+                    ['Australia',AU.tickets,AU.usd],['Rest of world',0,0]]};
+    const split=w=>
+      `<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(132px,1fr));`+
+      `gap:1px;background:var(--line);border:1px solid var(--line);border-radius:8px;`+
+      `overflow:hidden;margin-top:13px">`+
+      w.rows.map(([n,t,u])=>
+        `<div style="background:var(--card);padding:9px 11px">`+
+          `<div style="font-family:var(--disp);font-weight:700;font-size:10.5px;`+
+          `letter-spacing:.1em;text-transform:uppercase;color:var(--muted)">${esc(n)}</div>`+
+          `<div style="font-family:var(--mono);font-weight:600;font-size:19px;`+
+          `line-height:1.2;margin-top:2px">${t?fmt(t):'—'}</div>`+
+          `<div style="font-family:var(--mono);font-size:11px;color:var(--muted)">`+
+          `${t?'$'+fmt(Math.round(u/1000))+'K · '+Math.round(100*t/w.tix)+'%':'Coming soon'}</div>`+
+        `</div>`).join('')+`</div>`;
     head.innerHTML=
       `<div style="background:var(--card);border:1px solid var(--line);`+
       `border-left:4px solid var(--accent);border-radius:var(--r);`+
       `padding:15px 17px;margin-bottom:12px">`+
         `<div style="font-family:var(--disp);font-weight:700;font-size:12px;`+
         `letter-spacing:.14em;text-transform:uppercase;color:var(--accent)">`+
-        `North America · 4–8 November · the full opening run</div>`+
+        `Worldwide · 4–8 November · the full opening run</div>`+
         `<div style="display:flex;gap:30px;flex-wrap:wrap;margin-top:7px">`+
           `<div><div style="font-family:var(--mono);font-weight:600;`+
           `font-size:34px;letter-spacing:-.02em;line-height:1.05">`+
-          `${fmt(naTix)}</div>`+
+          `${fmt(WT.tix)}</div>`+
           `<div style="font-family:var(--disp);font-weight:700;font-size:11.5px;`+
           `letter-spacing:.1em;text-transform:uppercase;color:var(--muted)">`+
           `tickets sold</div></div>`+
           `<div><div style="font-family:var(--mono);font-weight:600;`+
           `font-size:34px;letter-spacing:-.02em;line-height:1.05">`+
-          `$${fmt(Math.round(naUsd/1000))}K</div>`+
+          `$${fmt(Math.round(WT.usd/1000))}K</div>`+
           `<div style="font-family:var(--disp);font-weight:700;font-size:11.5px;`+
           `letter-spacing:.1em;text-transform:uppercase;color:var(--muted)">`+
           `ticket value · prices assumed</div></div>`+
         `</div>`+
+        split(WT)+
         `<div style="font-family:var(--mono);font-size:11.5px;color:var(--muted);`+
         `margin-top:9px;line-height:1.5">`+
         `United States ${fmt(usSold+US_EXTRA.tickets)} · `+
@@ -1244,15 +1388,15 @@ function meBody(){
    no UK chain publishes one - at a GBP 13.50 average, the midpoint of what we
    read off Cineworld and Showcase. FX 1.3253, Bank of England, 15 Oct. */
 const UK = {
-  tickets:2057, gbp:27770, usd:36803, atpGbp:13.50, fx:1.3253,
-  seats:61365, rate:3.35,
-  showsRead:225, showsTotal:1438, cinemasRead:9, cinemasTotal:101,
-  byDate:[['Thu 5 Nov',819],['Fri 6 Nov',617],['Sat 7 Nov',621]],
-  cities:[['Greenwich O2',399],['Hounslow',344],['Wembley',338],['Ilford',311],
-          ['Birmingham',231],['Bradford',231],['Aberdeen',161]],
-  fmt:[['4DX',10.3],['IMAX 3D',9.7],['3D Laser',4.4],['Standard',3.8],
-       ['ScreenX',2.5],['SuperScreen',2.1]],
-  top:{cinema:'Cineworld Hounslow', when:'Thu 5 Nov, 7:20p', room:'Screen 4', pct:18.6}
+  tickets:3466, gbp:46791, usd:62012, atpGbp:13.50, fx:1.3253,
+  seats:93267, rate:3.72,
+  showsRead:357, showsTotal:1438, cinemasRead:14, cinemasTotal:101,
+  byDate:[['Thu 5 Nov',1288],['Fri 6 Nov',1119],['Sat 7 Nov',1059]],
+  cities:[['Greenwich O2',399],['Solihull',394],['Showcase Reading',383],
+          ['Hounslow',344],['Wembley',338],['Ilford',311],['Newcastle',244]],
+  fmt:[['4DX',10.3],['IMAX 3D',9.7],['Laser PLF',4.5],['Standard',4.3],
+       ['3D',3.4]],
+  top:{cinema:'Showcase Reading', when:'Fri 6 Nov, 8:20p', room:'Screen 7', pct:34}
 };
 
 /* EUROPE IS A FOOTPRINT, NOT A COUNT, AND THE DIFFERENCE IS THE WHOLE POINT.
@@ -1282,11 +1426,11 @@ function euBody(){
     [['Tickets',`${fmt(UK.tickets)} across ${UK.showsRead} shows`],
      ['Value',`£${fmt(UK.gbp)} · about US$${fmt(UK.usd)}`],
      ['Read so far',`${UK.cinemasRead} of ${UK.cinemasTotal} cinemas`],
-     ['Thursday 5 Nov','819 — opening day leads'],
-     ['Friday 6 Nov','617'],
-     ['Saturday 7 Nov','621'],
+     ['Thursday 5 Nov','1,288 — opening day leads'],
+     ['Friday 6 Nov','1,119'],
+     ['Saturday 7 Nov','1,059'],
      ['Fullest screens','4DX 10.3% · IMAX 3D 9.7%'],
-     ['Busiest show','Hounslow Screen 4, Thu 7:20p — 18.6% gone'],
+     ['Busiest show','Showcase Reading, Fri 8:20p — 34% gone'],
      ['Biggest cinema','Greenwich O2 — 399'],
      ['Odeon','Coming soon'],
      ['Vue','Coming soon'],
@@ -1327,7 +1471,7 @@ function intl(){
   });
 }
 
-function paint(){ stamp(); trajectory(); render(); intl(); }
+function paint(){ stamp(); trajectory(); render(); worldMaps(); intl(); }
 
 /* ---- data refresh -------------------------------------------------------
    The page reads a static JSON our own scheduled job publishes. Nothing here
