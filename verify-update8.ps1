@@ -39,7 +39,7 @@ Need $page 'tickets:5678'        'UK midpoint 5,678 tickets'
 Need $page 'rawTickets:11838'    'UK raw 11,838 published beside it'
 Need $page 'tickets:3900'        'Australia 3,900 tickets'
 Need $page 'tickets:1473'        'Canada 1,473 tickets'
-Need $page 'tickets:7994'        'US 7-8 Nov 7,994 tickets'
+Need $page 'tickets:8869'        'US 7-8 Nov 8,869 tickets'
 Need $page 'Kalki 2898 AD'       'verified ladder'
 Need $page 'Dhurandhar 2'        'Dhurandhar 2 on the ladder'
 Need $page 'ow:14000000'         'Dhurandhar 2 at its five-day opening'
@@ -63,8 +63,8 @@ Need $page "sea:{name:'SE Asia'"     'SE Asia tile in the map row'
 
 Write-Host ''
 Write-Host '=== 3. the homepage strip agrees with the page'
-Need $app '29,036'     'NA 4-8 total on the strip'
-Need $app '$554,424'   'NA value on the strip'
+Need $app '29,911'     'NA 4-8 total on the strip'
+Need $app '$570,166'   'NA value on the strip'
 Need $app 'T-18'       'countdown'
 
 Write-Host ''
@@ -85,6 +85,7 @@ Absent $page 'not probed yet'      'uncounted markets say Coming soon'
 Absent $page 'tickets:2057' 'no part-run UK figure left behind'
 Absent $page 'tickets:3466' 'no first-report UK figure left behind'
 Absent $page 'tickets:7212' 'no stale US 7-8 Nov figure'
+Absent $page 'tickets:7994' 'no pre-refresh US 7-8 Nov figure'
 Absent $page 'tickets:1179' 'no stale Canada figure'
 Absent $page 'tickets:1461' 'no stale Canada figure (18 Oct)'
 Absent $page 'tickets:952'  'no stale Australia figure'
@@ -124,6 +125,14 @@ else {
     # figure, which is now parsed from App.jsx.
     $ex = 0; $ca = 0; $strip = 0
     if ($t -match 'const US_EXTRA = \{tickets:(\d+)')   { $ex = [int]$Matches[1] }
+    # 7-8 Nov day figures must agree with the US_EXTRA total they sit inside.
+    if ($t -match '"2026-11-07":(\d+), "2026-11-08":(\d+)') {
+      $d7 = [int]$Matches[1]; $d8 = [int]$Matches[2]
+      if ($d7 + $d8 -ne $ex) {
+        Write-Host "    FAIL  US_EXTRA says $ex but its days are $d7 + $d8 = $($d7+$d8)"
+        $fail = 1
+      }
+    }
     if ($t -match 'const CA = \{[^}]*?tickets:(\d+)')   { $ca = [int]$Matches[1] }
     $a = [IO.File]::ReadAllText((Resolve-Path $app))
     if ($a -match 'tickets:\s*"([\d,]+)"')              { $strip = [int](($Matches[1]) -replace ',','') }

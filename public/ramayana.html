@@ -4,7 +4,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Ramayana Presales — live worldwide seat-level tracker | Boxoffy</title>
-<meta name="description" content="Ramayana North America presales, counted seat by seat: 13,992 tickets across 502 cinemas, 2.58% of all seats gone. Live map, every market, every cinema.">
+<!-- SOCIAL METADATA CARRIES NO FIGURES, DELIBERATELY. These tags are cached
+     by X, Slack, WhatsApp and Google for days after a link is shared, so a
+     number written here is wrong on every old share and cannot be corrected.
+     Until 18 Oct this said "13,992 tickets across 502 cinemas, 2.58%" and
+     "North America" - two days and two continents stale on every link that
+     had ever been posted. Describe what the page IS, never what it says. -->
+<meta name="description" content="Ramayana presales counted seat by seat across America, the UK and Australia - every cinema, every showtime, every seat map read. Live map and market-by-market totals.">
 <link rel="canonical" href="https://www.boxoffy.com/ramayana">
 <meta name="robots" content="index,follow,max-image-preview:large">
 
@@ -13,17 +19,19 @@
      301s the apex to www, so the apex would cost a redirect on every scrape. -->
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Boxoffy">
-<meta property="og:title" content="Ramayana presales in North America — live seat-level tracker | Boxoffy">
-<meta property="og:description" content="Ramayana North America presales, counted seat by seat: 13,992 tickets across 502 cinemas, 2.58% of all seats gone. Live map, every market, every cinema.">
+<meta property="og:title" content="Ramayana Presales Worldwide — live seat-level tracker | Boxoffy">
+<meta property="og:description" content="Ramayana presales counted seat by seat across America, the UK and Australia - every cinema, every showtime, every seat map read. Live map and market-by-market totals.">
 <meta property="og:url" content="https://www.boxoffy.com/ramayana">
 <meta property="og:image" content="https://www.boxoffy.com/ramayana-og.png">
+<!-- 1200x630 is the 1.91:1 ratio X renders link previews at. The old card was
+     1200x675, which is why the Boxoffy wordmark came out squashed. -->
 <meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="675">
-<meta property="og:image:alt" content="Map of Ramayana presale bookings across North America">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Boxoffy Ramayana presale tracker - maps of the United States, the United Kingdom and Australia">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@BoxoffyMI">
-<meta name="twitter:title" content="Ramayana presales in North America — live seat-level tracker | Boxoffy">
-<meta name="twitter:description" content="Ramayana North America presales, counted seat by seat: 13,992 tickets across 502 cinemas, 2.58% of all seats gone. Live map, every market, every cinema.">
+<meta name="twitter:title" content="Ramayana Presales Worldwide — live seat-level tracker | Boxoffy">
+<meta name="twitter:description" content="Ramayana presales counted seat by seat across America, the UK and Australia - every cinema, every showtime, every seat map read. Live map and market-by-market totals.">
 <meta name="twitter:image" content="https://www.boxoffy.com/ramayana-og.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -415,6 +423,8 @@
   <div class="shotbox">
     <canvas id="shotcv" width="1200" height="675"></canvas>
     <div class="shotrow">
+      <button class="btn ghost" id="shotbrand" type="button" style="margin-top:0"
+              title="The dateless card for link previews - save as ramayana-og.png">Link card</button>
       <button class="btn" id="shotdl" type="button" style="margin-top:0">Download PNG</button>
       <button class="btn ghost" id="shotcopy" type="button" style="margin-top:0">Copy image</button>
       <button class="btn ghost" id="shotx" type="button" style="margin-top:0">Post on X</button>
@@ -550,8 +560,17 @@ const CA = {showtimes:227, cinemas:26, auditoriums:48, dates:5,
    tickets that were always there. US_EXTRA holds them so the page can show
    the true presale total without rewriting the series it has to stay
    comparable to. From the next clean break the map moves to 4-8 as well. */
-const US_EXTRA = {tickets:7994, usd:143816, dates:"7-8 Nov",
-                  byDate:{"2026-11-07":5000, "2026-11-08":2994}};
+/* 18 Oct 08:11 re-read. 7 Nov 5,000 -> 5,657 and 8 Nov 2,994 -> 3,212.
+   Still hardcoded by decision - the baked map stays 4-6 Nov so the published
+   series keeps its basis - but hardcoded is not the same as stale, and these
+   had drifted 875 tickets behind the scan.
+   usd is scaled on the SAME per-format price basis as before rather than
+   recomputed, because the 7-8 Nov format mix is not in the baked map.
+   NOT COUNTED AS A SELLOUT: 5 shows at AMC South Barrington 24 on 8 Nov carry
+   an isSoldOut flag with no capacity, no sold count and no availability - a
+   listing state or a failed read, not a full room. 0 real sellouts. */
+const US_EXTRA = {tickets:8869, usd:159558, dates:"7-8 Nov",
+                  byDate:{"2026-11-07":5657, "2026-11-08":3212}};
 
 /* AUSTRALIA IS TWO CHAINS AND ONLY ONE OF THEM CAN BE SCANNED.
    Event Cinemas publishes the seats still free, so the same capacity recovery
@@ -1823,6 +1842,103 @@ function milestone(usd){
   return m>=1e6 ? '$'+(m/1e6).toFixed(2).replace(/\.?0+$/,'')+'M'
                 : '$'+Math.round(m/1000)+'K';
 }
+/* ---- THE BRANDED LINK CARD (public/ramayana-og.png) ----------------------
+   The card X shows when someone pastes the link. It is a STATIC PNG, so any
+   number drawn on it is wrong the moment the next scan lands - the one up
+   there until 18 Oct still said 13,992 tickets and "Where America is booking",
+   two days and two continents out of date, on every link anyone had shared.
+
+   So this card carries NO figures. Brand, title, and the three countries we
+   actually count. It never goes stale, which means it never has to be
+   regenerated to stay true. If you want a milestone on it, set BRAND_MILESTONE
+   - a crossed threshold only ever moves up, so it ages gracefully in a way a
+   live count cannot. Empty by default.
+
+   SIZE: 1200x630. The old card was 1200x675, and X renders link previews at
+   1.91:1 - which is what was squashing the wordmark. */
+const BRAND_MILESTONE = '';          /* e.g. '$700K CROSSED' */
+
+function brandSvg(k,w,h){
+  const m=MKT[k]; if(!m||!m.d) return null;
+  const vb=(m.vb||'0 0 100 100').split(' ').map(Number);
+  const pins=(m.pins||[]).filter(p=>p.t>0);
+  const max=Math.max(1,...pins.map(p=>p.t));
+  const unit=Math.min(vb[2],vb[3]);
+  const R=v=>unit/46*(0.55+1.5*Math.sqrt(v/max));
+  const land=`<path d="${m.d}" fill="${SNAP.land}" stroke="${SNAP.landline}" stroke-width="${(unit/180).toFixed(2)}"/>`;
+  const bub=pins.slice().sort((a,b)=>b.t-a.t).map(p=>
+    `<circle cx="${p.x}" cy="${p.y}" r="${R(p.t).toFixed(2)}" fill="${SNAP.accent}" `+
+    `fill-opacity=".8" stroke="#ffffff" stroke-width="${(unit/300).toFixed(2)}"/>`).join('');
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="${Math.round(w)}" `+
+         `height="${Math.round(h)}" viewBox="${m.vb}">`+
+         `<rect width="${vb[2]}" height="${vb[3]}" fill="${SNAP.paper}"/>${land}${bub}</svg>`;
+}
+
+async function drawBrandCard(){
+  const cv=$('#shotcv'), W=1200, H=630, S=2;
+  cv.width=W*S; cv.height=H*S; cv.style.aspectRatio=W+'/'+H;
+  const c=cv.getContext('2d'); c.setTransform(S,0,0,S,0,0);
+  const disp="'Barlow Condensed',Impact,sans-serif",
+        body="'DM Sans',system-ui,sans-serif",
+        mono="'IBM Plex Mono',monospace";
+
+  c.fillStyle=SNAP.paper; c.fillRect(0,0,W,H);
+  c.fillStyle=SNAP.accent; c.fillRect(0,0,W,8);
+
+  /* Wordmark drawn as text at its natural width - never scaled into a box,
+     which is what stretched it before. */
+  c.textBaseline='alphabetic'; c.textAlign='left';
+  c.fillStyle=SNAP.ink; c.font='800 36px '+disp;
+  c.fillText('BOX',52,78); const bw=c.measureText('BOX').width;
+  c.fillStyle=SNAP.accent; c.fillText('OFFY',52+bw,78);
+
+  c.fillStyle=SNAP.muted; c.font='500 13px '+mono; c.textAlign='right';
+  c.fillText('LIVE SEAT-LEVEL TRACKER',W-52,78); c.textAlign='left';
+
+  c.fillStyle=SNAP.ink; c.font='800 80px '+disp;
+  c.fillText('Ramayana Presales',52,166);
+  const tw=c.measureText('Ramayana Presales').width;
+
+  if(BRAND_MILESTONE){
+    c.font='700 16px '+mono; const mw=c.measureText(BRAND_MILESTONE).width;
+    c.fillStyle=SNAP.accent; c.beginPath();
+    (c.roundRect?c.roundRect(52+tw+20,134,mw+28,34,17):c.rect(52+tw+20,134,mw+28,34));
+    c.fill();
+    c.fillStyle='#fff'; c.fillText(BRAND_MILESTONE,52+tw+34,156);
+  }
+
+  c.fillStyle=SNAP.mid; c.font='400 21px '+body;
+  c.fillText('Worldwide · every cinema, every showtime, counted seat by seat',52,202);
+
+  /* Three countries, each at its OWN aspect ratio. The US map is 1.6:1 and
+     the UK is 0.71:1 - forcing both into the same box is what makes a map
+     look wrong, so the height is fixed and the width follows. */
+  mktShapes();
+  const SLOT_H=268, GAP=52, keys=['usa','uk','aus'];
+  const names={usa:'UNITED STATES', uk:'UNITED KINGDOM', aus:'AUSTRALIA'};
+  const dims=keys.map(k=>{
+    const vb=MKT[k].vb.split(' ').map(Number);
+    return {k, w:SLOT_H*(vb[2]/vb[3]), h:SLOT_H};
+  });
+  const total=dims.reduce((a,d)=>a+d.w,0)+GAP*(dims.length-1);
+  let x=(W-total)/2; const y=238;
+  for(const d of dims){
+    let img=null;
+    try{ img=await loadSvg(brandSvg(d.k,d.w*2,d.h*2)); }catch(e){}
+    if(img) c.drawImage(img,x,y,d.w,d.h);
+    c.fillStyle=SNAP.muted; c.font='600 12.5px '+mono;
+    c.fillText(names[d.k],x,y+d.h+28);
+    x+=d.w+GAP;
+  }
+
+  c.fillStyle=SNAP.line; c.fillRect(52,H-58,W-104,1);
+  c.fillStyle=SNAP.ink; c.font='700 18px '+body;
+  c.fillText('boxoffy.com/ramayana',52,H-26);
+  c.textAlign='right'; c.fillStyle=SNAP.muted; c.font='400 13px '+mono;
+  c.fillText('Tickets counted seat by seat, not modelled',W-52,H-26);
+  c.textAlign='left';
+}
+
 function wwTotals(){
   const usSold=DATA.total.sold;
   const tix=usSold+US_EXTRA.tickets+CA.tickets+UK.tickets+AU.tickets;
@@ -1973,12 +2089,24 @@ async function drawShot(){
   c.textAlign='right'; c.fillStyle=SNAP.ink; c.font='700 13px '+body;
   c.fillText('boxoffy.com',W-44,H-26); c.textAlign='left';
 }
+/* 'live' is the data card for a post; 'brand' is the dateless card that lives
+   at public/ramayana-og.png and shows on every shared link. */
+let SHOTMODE='live';
 async function openShot(){
   $('#shotmsg').textContent='';
   $('#shot').hidden=false;
-  try{ await drawShot(); }
+  try{ await (SHOTMODE==='brand' ? drawBrandCard() : drawShot()); }
   catch(e){ $('#shotmsg').textContent='Could not draw the image here.'; }
 }
+$('#shotbrand').onclick=async function(){
+  SHOTMODE = SHOTMODE==='brand' ? 'live' : 'brand';
+  this.textContent = SHOTMODE==='brand' ? 'Live card' : 'Link card';
+  $('#shotmsg').textContent = SHOTMODE==='brand'
+    ? 'Dateless card for link previews. Download and save it as public/ramayana-og.png.'
+    : '';
+  try{ await (SHOTMODE==='brand' ? drawBrandCard() : drawShot()); }
+  catch(e){ $('#shotmsg').textContent='Could not draw the image here.'; }
+};
 $('#shotclose').onclick=()=>{ $('#shot').hidden=true; };
 $('#shot').addEventListener('click',e=>{ if(e.target.id==='shot') $('#shot').hidden=true; });
 document.addEventListener('keydown',e=>{ if(e.key==='Escape') $('#shot').hidden=true; });
@@ -1987,7 +2115,7 @@ document.addEventListener('keydown',e=>{ if(e.key==='Escape') $('#shot').hidden=
    the viewer first. Everywhere else - a local file, or boxoffy.com - that
    capability is absent and the anchor is the right path. Try the capability,
    fall back to the anchor. */
-const snapName = () =>
+const snapName = () => SHOTMODE==='brand' ? 'ramayana-og.png' :
   'ramayana-presales-'+(activeDim()?activeDim().val:'all').replace(/\W+/g,'-')+'.png';
 $('#shotdl').onclick=async function(){
   const msg=$('#shotmsg'); msg.textContent='';

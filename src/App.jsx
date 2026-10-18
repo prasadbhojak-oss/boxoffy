@@ -4432,8 +4432,8 @@ const RAMAYANA_TRACKER = {
   url: "https://www.boxoffy.com/ramayana",
   // BASIS: North America, 4-8 Nov - the same headline the tracker page leads
   // with, so the strip and the page can never disagree. tickets and value are
-  // US + Canada over all five dates (19,569 + 7,994 US on 7-8 Nov + 1,473 CA;
-  // $391,518 + $143,816 + $19,090).
+  // US + Canada over all five dates (19,569 + 8,869 US on 7-8 Nov + 1,473 CA;
+  // $391,518 + $159,558 + $19,090).
   //
   // rate is the UNITED STATES over 4-6 NOV ONLY - 19,569 of 560,686 seats.
   // Not a 4-8 figure and not a North American one: Canada's capacity is
@@ -4442,10 +4442,10 @@ const RAMAYANA_TRACKER = {
   // one block is ugly, but inventing a denominator to tidy it up is how the
   // "136% of Drishyam" claim happened. shows is US 4-8 Nov: 3,957 on 4-6
   // from this scan plus the 2,657 on 7-8 that came with US_EXTRA.
-  tickets: "29,036",
+  tickets: "29,911",
   rate: "3.49%",
   shows: "6,614",
-  value: "$554,424",
+  value: "$570,166",
   tminus: "T-18",
   scan: "18 Oct · 8:11am CT",
 };
