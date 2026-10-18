@@ -30,8 +30,6 @@ $app  = 'src\App.jsx'
 
 Write-Host ''
 Write-Host '=== 1. the edits are actually in the files'
-Need $page 'id="intlcard"'       'international block container'
-Need $page 'const INTL'          'market registry'
 Need $page 'const UK = {'        'United Kingdom data'
 Need $page 'function euBody'     'United Kingdom panel'
 Need $page 'function auBody'     'Australia panel'
@@ -57,8 +55,10 @@ Need $page 'function mktFrame'   'expanding country frame'
 Need $page 'id="worldmaps"'      'map row container'
 Need $page 'id="mktframe"'       'expanded frame container'
 Need $page 'id="napanels"'       'US panels are toggleable'
-Need $page 'worldMaps(); intl();' 'maps painted on load'
+Need $page 'worldMaps(); }'      'maps painted on load'
 Need $page 'M35.9,5.8'           'United Kingdom outline'
+Need $page "me :{name:'Middle East'" 'Middle East tile in the map row'
+Need $page "sea:{name:'SE Asia'"     'SE Asia tile in the map row'
 
 Write-Host ''
 Write-Host '=== 3. the homepage strip agrees with the page'
@@ -85,6 +85,11 @@ Absent $page 'tickets:2057' 'no part-run UK figure left behind'
 Absent $page 'tickets:7212' 'no stale US 7-8 Nov figure'
 Absent $page 'tickets:1179' 'no stale Canada figure'
 Absent $page 'tickets:952'  'no stale Australia figure'
+# The old chip card duplicated the UK numbers under the map row, so clicking
+# United States still left "Outside North America" showing Britain. One
+# control now: the map row. The card and its paint() call are gone.
+Absent $page 'id="intlcard"'  'no duplicate Outside North America card'
+Absent $page 'worldMaps(); intl();' 'the duplicate card is not painted'
 # Token leak.
 Absent 'public\sitemap.xml' 'collage-week35-preview-LOCAL-ONLY' 'no LOCAL-ONLY file in the sitemap'
 if (Test-Path 'public\collage-week35-preview-LOCAL-ONLY.html') {
