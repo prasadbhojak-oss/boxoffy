@@ -4344,6 +4344,18 @@ function UpcomingCalendarGrid({ movies }) {
    The promo card at the head of the right-hand column. Points at whichever
    weekend piece is current — swap the href, the WEEK pill, the headline, the
    dek and the four poster tiles together, or it goes stale as a unit.
+
+   19 OCT: swapped from the 16-18 Oct PREVIEW to the 16-18 Oct RECAP. The four
+   tiles are unchanged on purpose - Jailer 2, Ranabaali, Navelli and Prahaar
+   are the same four films the recap is about - so only the href, pill,
+   headline, dek and call to action moved.
+
+   The headline grades our own call, which is the point of it. The preview said
+   "Rs 60 Cr India net on day one" and Sacnilk settled day one at Rs 59.70 Cr,
+   inside half a percent. But the preview ALSO called Rs 188 Cr Thursday to
+   Sunday against an actual Rs 199.90 Cr, so that leg was 6% low. The dek says
+   "day-one call" for that reason and must not be widened to imply both legs
+   landed. When a future call misses, grade it here in the same tone.
    Poster tiles: prefer useTMDBPosterById for any title that collides with
    another film. "Drishyam" collides with the Malayalam Drishyam 3, so it is
    pinned to id 1269325 (Drishyam: The Conclusion, Hindi) rather than searched.
@@ -4362,7 +4374,7 @@ function WeekendLeadHero() {
   const tiles = [ { src:pJailer2, ab:"J2" }, { src:pRanabaali, ab:"RB" }, { src:pNaveli, ab:"NN" }, { src:pPrahaar, ab:"PR" } ];
   const [hover, setHover] = React.useState(false);
   return (
-    <a href="/boxoffice-weekend-preview-october-16-18-2026.html" style={{ textDecoration:"none", display:"block" }}>
+    <a href="/boxoffice-weekend-recap-october-16-18-2026.html" style={{ textDecoration:"none", display:"block" }}>
       <div
         onMouseEnter={() => setHover(true)}
         onMouseLeave={() => setHover(false)}
@@ -4383,14 +4395,14 @@ function WeekendLeadHero() {
           ))}
         </div>
         <div style={{ flex:1, minWidth:0, display:"flex", flexDirection:"column", justifyContent:"center" }}>
-          <span style={{ alignSelf:"flex-start", background:"#C8201A", color:"#FFFFFF", fontFamily:"'Barlow Condensed', sans-serif", fontWeight:900, fontSize:9, letterSpacing:"0.12em", padding:"2px 7px", borderRadius:2, marginBottom:7 }}>WEEK 42 · WEEKEND PREVIEW</span>
+          <span style={{ alignSelf:"flex-start", background:"#C8201A", color:"#FFFFFF", fontFamily:"'Barlow Condensed', sans-serif", fontWeight:900, fontSize:9, letterSpacing:"0.12em", padding:"2px 7px", borderRadius:2, marginBottom:7 }}>WEEK 42 · WEEKEND RECAP</span>
           <div style={{ fontFamily:"'Barlow Condensed', sans-serif", fontWeight:900, fontSize:"clamp(15px, 1.7vw, 17px)", color:"#FFFFFF", lineHeight:1.15, letterSpacing:"-0.01em" }}>
-            JAILER 2 OPENS ON A ₹41.48 CRORE ADVANCE.
+            WE CALLED ₹60 CRORE. JAILER 2 DID ₹59.70.
           </div>
           <div style={{ fontFamily:"'DM Sans', sans-serif", fontSize:10.5, color:"#9CA3AF", marginTop:5, lineHeight:1.4 }}>
-            19.6 lakh tickets, 17,615 shows, ₹60 Cr+ worldwide — the biggest Tamil pre-sale of the year. We call ₹60 Cr India net on day one and ₹188 Cr Thursday to Sunday. Then five new films land in 48 hours, Ranabaali's advance turns out to be 87% block seats, and Drishyam finally gets tested.
+            Our day-one call landed inside half a percent. The bigger story is where the money came from: ₹190 Cr of a ₹424 Cr opening is overseas — 44.8% — and Hindi gave Jailer 2 just 8.3% of its Indian net. Plus the India top 10 with two Bengali films in it, Ramayana past 42,000 presale tickets with China still undated, and Spirit moving to Diwali 2027.
           </div>
-          <span style={{ fontFamily:"'Barlow Condensed', sans-serif", fontWeight:700, fontSize:11, color:"#E5C882", letterSpacing:"0.06em", marginTop:8 }}>READ THE PREVIEW →</span>
+          <span style={{ fontFamily:"'Barlow Condensed', sans-serif", fontWeight:700, fontSize:11, color:"#E5C882", letterSpacing:"0.06em", marginTop:8 }}>READ THE RECAP →</span>
         </div>
       </div>
     </a>
