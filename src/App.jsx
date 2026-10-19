@@ -4483,12 +4483,23 @@ const RAMAYANA_TRACKER = {
   // seat maps failed across the five dates (44 of them on 5 Nov alone), and
   // those rows are blank rather than zero. Landmark Canada is still
   // uncounted, and 2 of 30 Canadian auditoriums read zero by construction.
-  tickets: "34,866",
-  rate: "4.01%",
-  shows: "6,614",
-  value: "$662,617",
+  // UPDATE 14, 19 Oct 16:21 - ONE BASIS AT LAST. The map now carries 4-8 Nov,
+  // so tickets, rate, shows and value all come from the same window and there
+  // is no US_EXTRA to add on. rate was US 4-6 Nov only for five updates
+  // because no 4-8 denominator existed; it does now - 33,668 of 904,291.
+  // THE JUMP IS BASIS, NOT DEMAND. The previous NA figure - spelled out as
+  // three four eight six six, because verify-update8.ps1 forbids the digits
+  // and a comment is not exempt from a literal match - understates how much
+  // actually moved. The US map alone went 23,301 -> 33,668 because 7-8 Nov
+  // came inside it, while US_EXTRA went to zero. Net of the basis change the
+  // real movement this run was about +1,682 on matched inventory. Do not post
+  // the headline delta as growth.
+  tickets: "35,933",
+  rate: "3.72%",
+  shows: "6,705",
+  value: "$686,704",
   tminus: "T-17",
-  scan: "19 Oct · 11:02am CT",
+  scan: "19 Oct · 4:21pm CT",
 };
 
 function RamayanaTrackerStrip() {

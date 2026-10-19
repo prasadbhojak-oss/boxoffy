@@ -85,24 +85,45 @@ Absent $page 'on sale, not counted' 'no footprint-era Germany kicker'
 # count covered. A floor that rises 203 while its own inventory shrinks is
 # sales, not an artefact, so 1,899 is provably low and is checked as absent
 # below with the rest of the retired Canadian figures.
-Need $page 'tickets:2172'        'Canada 2,172 (recovered floor, labelled as a floor)'
-Need $page 'tickets:10282'       'US 7-8 Nov 10,282 tickets'
+Need $page 'tickets:2265'        'Canada 2,265 (recovered floor, labelled as a floor)'
+# UPDATE 14: US_EXTRA IS ZERO AND THAT IS THE POINT. 7-8 Nov are measured
+# inside the baked map now, so a non-zero US_EXTRA would DOUBLE-COUNT them.
+# The retired figure is kept as wasTickets so the record survives, and
+# byDate must be empty - usOn(d) prefers US_EXTRA.byDate[d] when the key is
+# there, so a stale "2026-11-07":0 would print zero over a map holding
+# thousands. That is the failure this pair of guards exists to catch.
+Need   $page 'const US_EXTRA = {tickets:0, usd:0' 'US_EXTRA retired to zero'
+Need   $page 'byDate:{},'                         'US_EXTRA byDate is empty, not zeroed'
+Need   $page 'wasTickets:10282'                   'the retired 7-8 Nov figure kept as the record'
 Need $page 'handCount:1899'      'the retired hand count kept as the record'
-Need $page 'tickets:4598'        'Australia 4,598 (both chains, Chadstone carried)'
+Need $page 'tickets:4658'        'Australia 4,658 (Chadstone read by hand, carry retired)'
 Need $page 'tickets:1230'        'Germany 1,230 after the 19 Oct delta'
 Need $page 'notYetOnSale:4'      'the 10 Nov rows are not-yet-bookable, not gone'
 Need $page 'priced:49'           'priced coverage fell to 49% - no price was invented'
-Need $page 'carried:496'         'the 29 HTTP-500 sessions are carried, not dropped'
-Need $page "['VIC',1213]"        'Victoria leads only because Chadstone is back in'
+# The carry is RETIRED, not deleted: wasCarried keeps the 496 as the record,
+# and carried:0 / carriedShows:1 is the one Sunnybank row still unread. The
+# 18 Oct guard asked for carried:496 to stop anyone dropping those sessions;
+# the sessions have now been read, so asking for it would pin a stale figure.
+Need   $page 'wasCarried:496'    'the retired carry kept as the record'
+Need   $page 'chadstoneRead:556' 'Chadstone measured by hand, 556'
+Need   $page 'carriedShows:1'    'only the Sunnybank row is still carried'
+# The denominator did NOT move. Chadstone's Xtremescreen reads 174 seat
+# buttons where our reader counted 182, with unavailable still at 4 - a
+# counting-method difference, not eight seats leaving the room. Cutting
+# hy.seats to 70,475 would have printed 5.22% off a measurement artefact.
+Need   $page 'seats:70603'       'HOYTS denominator unchanged - 174/182 is method, not capacity'
+Absent $page 'rate:5.22'         'no rate manufactured from the 8-seat gap'
+Need $page "['VIC',1273]"        'Victoria leads on a measured Chadstone, not a carried one'
 # ASCII only in these two. The page writes '153 screens · 9.81%' with a middot,
 # but Windows PowerShell 5.1 reads a .ps1 saved as UTF-8 without a BOM as ANSI,
 # which mangles the middot and fails the guard for a reason that has nothing to
 # do with the page. Matching the rate and the screen count separately is just
 # as tight and cannot break that way.
-Need $page '10.04%'         'IMAX 4 Nov rate'
-Need $page '152 screens'    'IMAX 4 Nov - 152 screens, one fewer than update 11'
+Need $page '10.48%'         'IMAX 4 Nov rate'
+Need $page '153 screens'    'IMAX 4 Nov - 153 screens'
 Need $page '33 screens'     'IMAX 6 Nov - 33 screens, not 32'
-Need $page '7.26%'          'IMAX 6 Nov rate'
+Need $page '7.39%'          'IMAX 6 Nov rate'
+Need $page '6.78%'          'IMAX 5 Nov rate'
 Need $page '+DE.tickets'         'Germany is in the worldwide roll-up'
 Need $page "['Germany',DE.tickets,DE.usd]" 'Germany has a worldwide row'
 Need $page 'Kalki 2898 AD'       'verified ladder'
@@ -128,9 +149,12 @@ Need $page "sea:{name:'SE Asia'"     'SE Asia tile in the map row'
 
 Write-Host ''
 Write-Host '=== 3. the homepage strip agrees with the page'
-Need $app '34,866'     'NA 4-8 total on the strip'
-Need $app '$662,617'   'NA value on the strip'
-Need $app '4.01%'      'US 4-6 Nov sell-through on the strip'
+Need $app '35,933'     'NA 4-8 total on the strip'
+Need $app '$686,704'   'NA value on the strip'
+# rate is a 4-8 figure for the first time. For five updates it was US 4-6
+# only, because the baked map stopped at 6 Nov and there was no 4-8
+# denominator to divide by. There is one now: 33,668 of 904,291.
+Need $app '3.72%'      'US 4-8 Nov sell-through on the strip'
 Need $app 'T-17'       'countdown'
 
 Write-Host ''
@@ -199,6 +223,9 @@ Absent $page 'tickets:4102' 'no Chadstone-less Australia total'
 Absent $page 'tickets:3119' 'no Chadstone-less HOYTS figure'
 Absent $page 'tickets:3120' 'no Chadstone-less HOYTS figure'
 Absent $page 'tickets:3900' 'no pre-19-Oct Australia figure'
+Absent $page 'tickets:4598' 'no pre-Chadstone-read Australia total'
+Absent $page "['VIC',1213]"  'no carried-Chadstone Victoria figure'
+Absent $page 'tickets:3616' 'no pre-Chadstone-read HOYTS figure'
 Absent $page 'tickets:1192' 'no pre-delta Germany total'
 Absent $page 'tickets:1177' 'no pre-basis-change Germany total'
 # EUR MOVES WITH THE DELTA NOW, AND THAT IS NOT A CHANGE OF POLICY.
@@ -224,6 +251,17 @@ Absent $page 'atpEur:18.92' 'no pre-delta German ATP'
 # is the point: an unnamed gap is how CineStar Emden hid for five scans.
 Need   $page 'outSeats:130' 'the seat-side gap is named, not silent'
 Absent $page 'tickets:3060' 'no pre-19-Oct HOYTS figure'
+# UPDATE 14 RETIREMENTS. The 4-6 Nov basis and everything derived from it.
+Absent $page 'tickets:10282' 'no live US_EXTRA - 7-8 Nov is in the map now'
+Absent $page 'tickets:2172'  'no pre-19-Oct-16:21 Canada figure'
+Absent $page '10.04%'        'no pre-update-14 IMAX 4 Nov rate'
+Absent $page '152 screens'   'no pre-update-14 IMAX 4 Nov screen count'
+Absent $page '7.26%'         'no pre-update-14 IMAX 6 Nov rate'
+Absent $page '6.55%'         'no pre-update-14 IMAX 5 Nov rate'
+Absent $page '4-6 November'  'no reader copy still splitting the US at 6 Nov'
+Absent $app  '34,866'        'no pre-update-14 NA total on the strip'
+Absent $app  '$662,617'      'no pre-update-14 NA value on the strip'
+Absent $app  '4.01%'         'no 4-6 Nov sell-through on the strip'
 # UK was a MODELLED midpoint of 2,103-9,253 until 19 Oct, when every
 # Cineworld seat map was opened by hand. The midpoint was roughly double the
 # block-corrected count. Neither it nor its raw partner comes back.
@@ -281,8 +319,12 @@ else {
     if ($t -match 'const CA = \{[^}]*?tickets:(\d+)')   { $ca = [int]$Matches[1] }
     $a = [IO.File]::ReadAllText((Resolve-Path $app))
     if ($a -match 'tickets:\s*"([\d,]+)"')              { $strip = [int](($Matches[1]) -replace ',','') }
-    if ($ex -eq 0 -or $ca -eq 0 -or $strip -eq 0) {
-      Write-Host "    FAIL  could not parse US_EXTRA ($ex), CA ($ca) or the strip ($strip)"
+    # US_EXTRA is ZERO from Update 14 on and that is correct, so zero is no
+    # longer evidence of a failed parse here. CA and the strip must still be
+    # non-zero - if either reads 0 the regex missed and the sum below is
+    # meaningless rather than wrong.
+    if ($ca -eq 0 -or $strip -eq 0) {
+      Write-Host "    FAIL  could not parse CA ($ca) or the strip ($strip)"
       $fail = 1
     } else {
       $na = $us + $ex + $ca
