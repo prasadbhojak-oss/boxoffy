@@ -58,8 +58,14 @@ Need $page 'blockSeats:2366'     'UK house-seat exposure disclosed'
 Need $page "['Leicester Square',472]" 'UK city list on the corrected basis'
 Absent $page "['Solihull',462]"       'no block-inflated Solihull in the city list'
 Absent $page "['Feltham',281]"        'no block-inflated Feltham in the city list'
-Need $page 'tickets:3964'        'Australia 3,964 tickets (both chains, gate passed)'
-Need $page 'tickets:1192'        'Germany 1,192 tickets (all-presale basis)'
+# 3,964 and 1,192 USED TO BE Need LINES HERE. They were the live Australian
+# and German totals on 18 Oct, and when update 12 replaced them with 4,598
+# and 1,230 the new Need lines went in but these two were never taken out.
+# Section 4 then correctly added them as Absent. The file has been asking for
+# a string and forbidding the same string ever since, which means this
+# pre-flight could not pass at all - every run failed on two guards that were
+# only ever each other. Retired figures live in section 4 as Absent; the live
+# figure is the only thing section 1 Needs. One number, one guard, one place.
 Need $page 'booked:2619'         'UK organic booked figure published'
 Need $page 'blockedAll:8498'     'UK blocked seats published'
 Need $page 'INCLUDES BLOCKED SEATS' 'UK footer discloses blocks in the headline'
@@ -82,6 +88,12 @@ Absent $page 'on sale, not counted' 'no footprint-era Germany kicker'
 Need $page 'tickets:2172'        'Canada 2,172 (recovered floor, labelled as a floor)'
 Need $page 'tickets:10282'       'US 7-8 Nov 10,282 tickets'
 Need $page 'handCount:1899'      'the retired hand count kept as the record'
+Need $page 'tickets:4598'        'Australia 4,598 (both chains, Chadstone carried)'
+Need $page 'tickets:1230'        'Germany 1,230 after the 19 Oct delta'
+Need $page 'notYetOnSale:4'      'the 10 Nov rows are not-yet-bookable, not gone'
+Need $page 'priced:49'           'priced coverage fell to 49% - no price was invented'
+Need $page 'carried:496'         'the 29 HTTP-500 sessions are carried, not dropped'
+Need $page "['VIC',1213]"        'Victoria leads only because Chadstone is back in'
 # ASCII only in these two. The page writes '153 screens · 9.81%' with a middot,
 # but Windows PowerShell 5.1 reads a .ps1 saved as UTF-8 without a BOM as ANSI,
 # which mangles the middot and fails the guard for a reason that has nothing to
@@ -178,7 +190,39 @@ Absent $page '7.45%'        'no pre-update-10 IMAX 4 Nov rate'
 Absent $page 'tickets:952'  'no stale Australia figure'
 Absent $page 'tickets:1486' 'no modelled Australia figure left behind'
 Absent $page 'tickets:3500' 'no pre-refresh Australia figure'
+# 3,964 was correct on 18 Oct. 4,101 and 4,102 are the two reads that DROPPED
+# Chadstone's 28 HTTP-500 sessions - both are about 500 light and both make
+# HOYTS look like it fell when it rose 357 like-for-like. Neither goes out.
+Absent $page 'tickets:3964' 'no pre-update-12 Australia total'
+Absent $page 'tickets:4101' 'no Chadstone-less Australia total'
+Absent $page 'tickets:4102' 'no Chadstone-less Australia total'
+Absent $page 'tickets:3119' 'no Chadstone-less HOYTS figure'
+Absent $page 'tickets:3120' 'no Chadstone-less HOYTS figure'
 Absent $page 'tickets:3900' 'no pre-19-Oct Australia figure'
+Absent $page 'tickets:1192' 'no pre-delta Germany total'
+Absent $page 'tickets:1177' 'no pre-basis-change Germany total'
+# EUR MOVES WITH THE DELTA NOW, AND THAT IS NOT A CHANGE OF POLICY.
+# The 18 Oct guard said EUR must not move because none of the 22 new rows
+# carried an adult price. That reasoning was wrong about our own figure. The
+# published euro total, 22,553 over 1,192 tickets, is EXACTLY 18.92 - the
+# stated atpEur - and that can only be true if the observed average was
+# already being extended to every unpriced row. So the delta's 38 tickets at
+# PB's EUR 18 median RESTORE consistency; leaving them at zero was the
+# departure. 49% of German tickets carry a price the cinema printed, 51%
+# carry ours, and the page says so in all three places a reader can see it.
+# What this guard still protects: it must be 18, the median PB set, and it
+# must be visible in the euro total. A silent 0 or a silent 18.92 both fail.
+Need   $page 'eur:23237'    'German euros carry the 38 new tickets at EUR 18'
+Need   $page 'usd:26111'    'German dollars moved with the euros, at 1.1237'
+Need   $page 'atpEur:18.89' 'German ATP eased as the cheaper delta came in'
+Absent $page 'eur:22553'    'no pre-delta German euro total'
+Absent $page 'usd:25343'    'no pre-delta German dollar total'
+Absent $page 'atpEur:18.92' 'no pre-delta German ATP'
+# outSeats is the 130 seats that are in the German denominator but in no
+# byDate row - the 9-11 Nov rows, which carry outBasis's 13 tickets. It was
+# an unexplained gap between seats and the byDate sum until 19 Oct. Naming it
+# is the point: an unnamed gap is how CineStar Emden hid for five scans.
+Need   $page 'outSeats:130' 'the seat-side gap is named, not silent'
 Absent $page 'tickets:3060' 'no pre-19-Oct HOYTS figure'
 # UK was a MODELLED midpoint of 2,103-9,253 until 19 Oct, when every
 # Cineworld seat map was opened by hand. The midpoint was roughly double the

@@ -160,7 +160,7 @@ gtag("js",new Date());gtag("config","G-K6C9EVRFH4",{anonymize_ip:true});}})();
         {"@type": "Question", "name": "Why does the UK figure say seats off sale instead of tickets sold?",
          "acceptedAnswer": {"@type": "Answer", "text": "Because the chain does not say which is which. A seat the booking page will not sell you may be a seat somebody bought, or a seat the cinema is holding back for wheelchair users, companions or late sales. Most of the UK figure never changes across a room's whole run, which is the signature of a block rather than a sale, so we publish a midpoint and show the raw number beside it."}},
         {"@type": "Question", "name": "Which countries are counted?",
-         "acceptedAnswer": {"@type": "Answer", "text": "The United States, Canada, the United Kingdom, Australia and Germany are counted seat by seat. Germany is the newest and the only one where the cinemas publish their own ticket prices. India is not presale-tracked on this page."}},
+         "acceptedAnswer": {"@type": "Answer", "text": "The United States, Canada, the United Kingdom, Australia and Germany are counted seat by seat. Germany is the only market where any cinema publishes its own ticket price, and about half its tickets carry one; the rest use our figure, as every other market does. India is not presale-tracked on this page."}},
         {"@type": "Question", "name": "Is Ramayana sold out anywhere?",
          "acceptedAnswer": {"@type": "Answer", "text": "Sold-out shows are flagged on the page as they happen. Premiere night in America and the biggest HOYTS rooms in Sydney have been the fullest so far. Most showtimes anywhere in the world have sold nothing at all yet, which is normal this far from release."}},
         {"@type": "Question", "name": "How often does this page update?",
@@ -759,8 +759,10 @@ gtag("js",new Date());gtag("config","G-K6C9EVRFH4",{anonymize_ip:true});}})();
       <h3>Where the film is on sale</h3>
       <p>The United States, Canada, the United Kingdom, Australia and Germany
          are counted seat by seat. Germany is the one market where the ticket
-         price is the cinema's own rather than our assumption — German cinemas
-         print it on the booking page. India is covered separately in our
+         price is sometimes the cinema's own rather than our assumption —
+         German cinemas print it on the booking page, and about half our
+         German tickets carry a price read off one. The other half use our
+         own figure, the same way every other market does. India is covered separately in our
          <a href="/ramayana-part-one-box-office.html">Ramayana box office
          preview</a>.</p>
       <p>Germany also has something no other market here does: a dubbed version
@@ -817,8 +819,9 @@ gtag("js",new Date());gtag("config","G-K6C9EVRFH4",{anonymize_ip:true});}})();
     <details>
       <summary>Which countries are counted?</summary>
       <p>The United States, Canada, the United Kingdom, Australia and Germany
-         are counted seat by seat. Germany is the newest and the only one where
-         the cinemas publish their own ticket prices. India is not
+         are counted seat by seat. Germany is the only market where any cinema
+         publishes its own ticket price, and about half its tickets carry one;
+         the rest use our figure, the same as every other market. India is not
          presale-tracked on this page.</p>
     </details>
     <details>
@@ -1058,17 +1061,95 @@ const DE = {
      online for them at all. Cineplex Admiral errored twice. So Sony's
      listing OVERSTATES late-week inventory, and a footprint showtime is not
      proof a show is bookable. Do not treat footShows as countable rows. */
-  tickets:1192, eur:22553, usd:25343, atpEur:18.92, fx:1.1237,
-  inBasis:1179, outBasis2:13, deltaRead:1, deltaScannable:10, showsGone:5,
-  seats:62436, rate:1.89, held:482,
-  shows:253, cinemas:95, showsScan:283, footShows:287, footCinemas:99,
-  cities:63, priced:51, zeroShows:109, outBasis:13, soldOut:0,
-  byDate:[['Thu 5 Nov',665,110,29952,2.22],['Fri 6 Nov',33,32,6392,0.52],
-          ['Sat 7 Nov',173,36,8067,2.14],['Sun 8 Nov',306,75,18025,1.70]],
+  /* 19 OCT 13:35 DELTA, read by hand off the booking pages. +38 tickets.
+
+     The footprint grew to 298 showtimes at 103 cinemas, 11 of them new,
+     and NOTHING was withdrawn. 22 rows went out to be opened: 11 new and
+     11 retests. 13 came back with a figure, 12 of them unique - Filmhaus
+     and Filmhaus-Huber share one booking URL for the same physical show,
+     so that row is counted once and its 130 seats are not double-counted.
+
+     THE 10 NOVEMBER QUESTION IS ANSWERED, AND IT IS NOT "GONE".
+     Six of the eight 10 Nov rows do not open. Four of them - Cineworld
+     Lünen, Das Lumen Düren, Hall of Fame Kamp-Lintfort and Hall of Fame
+     Osnabrück - redirect to the chain's own programme page, where Ramayana
+     is listed as "Zum Vorverkauf ab 05.11/06.11": PRESALE OPENS LATER.
+     The inventory exists and is simply not bookable yet. That is a better
+     and more useful statement than "show gone", which is what the 18 Oct
+     pass concluded, and it means German second-week sales have not started
+     rather than been withdrawn.
+
+     THE 38 NEW TICKETS ARE PRICED AT EUR 18, AND HERE IS WHY THAT IS NOT
+     A CHANGE OF POLICY.
+     Not one of the 22 rows carried an adult price - several showed a
+     generic "ab 15,49" or a 16,99-22,99 range by seat category, and none
+     of those is an adult price, so priceEur stayed blank on all of them.
+     germany_total.py's own rule says a blank row contributes no revenue.
+     But the PUBLISHED figure never worked that way: 22,553 / 1,192 is
+     exactly 18.92, the stated atpEur, which means the observed average was
+     already being applied to every unpriced ticket. Leaving these 38 at
+     zero would have made them the only tickets in the market with no money
+     attached. So they carry EUR 18, PB's median, and the blended ATP moves
+     18.92 -> 18.89.
+     What this does NOT license is calling the result published pricing.
+     49% of tickets carry a price a German cinema actually printed. The
+     other 51% carry our figure. The panel copy already says so and reads
+     DE.priced to do it, so that split updates itself.
+
+     TWO ROWS NEED A CAVEAT IF THEY ARE EVER QUOTED ALONE.
+     ASTOR Braunschweig contributes 30 of the 38, and its seat map has no
+     separate block flag - sold there is "seats rendered unavailable",
+     which is the British problem, not the Compeso one. Cinetech Ahaus
+     shows 4 identical disabled seats on every showing of Saal Cine 06;
+     those are recorded as held, not sold, which is the same house-seat
+     test we apply everywhere.
+
+     CineStar Emden still has no figure: Sony lists it at 19:00 and the
+     cinema's own page says 12:00. A footprint time is not a showtime. */
+  tickets:1230, eur:23237, usd:26111, atpEur:18.89, fx:1.1237,
+  inBasis:1217, outBasis2:13, deltaRead:12, deltaScannable:18, showsGone:0,
+  notYetOnSale:4, sharedUrlDupes:1,
+  /* CINESTAR EMDEN WAS MISSING FROM byDate, seats AND shows, AND HAD BEEN
+     SINCE 18 OCT. Its 2 tickets were added to the headline when the
+     footprint gained that showtime, but never into the per-date rows, so
+     byDate summed to 1,177 against an inBasis of 1,179 and `seats` was 189
+     short. That is why the old 1.89% was computed on a denominator smaller
+     than the one the rows describe.
+     Caught by reconciling byDate + outBasis against tickets, which is worth
+     doing on every market every time: it is a two-ticket error and it still
+     took five scans to surface. Emden is a 5 Nov show, so it goes there. */
+  /* THE SAME RECONCILIATION FINDS A SECOND GAP, ON THE SEAT SIDE, AND IT IS
+     NAMED RATHER THAN LEFT SILENT.
+     The four byDate rows sum to 64,957 seats. `seats` is 65,087. The 130 in
+     between is outSeats below, and it is there for a structural reason: the
+     byDate rows cover 5-8 Nov, while `tickets` and `seats` are the
+     all-presale basis PB set on 19 Oct, so the 9-11 Nov rows - outBasis's 13
+     tickets - contribute seats to the denominator and appear in no date row.
+     That is also why `rate` must be read as 1,230/65,087 = 1.89% and never
+     as inBasis over the byDate sum, which is 1,217/64,957 = 1.87%. Both are
+     true statements about different windows; only the first matches the
+     headline ticket count beside it.
+     WHAT IS NOT YET PROVEN is that all 130 belong to those three dates. It
+     is arithmetic on our own published fields, not a figure read off a seat
+     map, and 13 tickets in 130 seats would be 10% - high for a second-week
+     show. The next German scan must attribute outSeats row by row. If it
+     comes back smaller, `seats` is too big and the 1.89% is flattered; the
+     ticket count is unaffected either way. */
+  seats:65087, rate:1.89, held:491, outSeats:130,
+  shows:266, cinemas:98, showsScan:298, footShows:298, footCinemas:103,
+  cities:63, priced:49, zeroShows:118, outBasis:13, soldOut:0,
+  byDate:[['Thu 5 Nov',702,115,31284,2.24],['Fri 6 Nov',33,34,6675,0.49],
+          ['Sat 7 Nov',173,37,8187,2.11],['Sun 8 Nov',309,79,18811,1.64]],
   /* The version split is the German story. OmU/OV is the original with
      subtitles; 3D and Standard here are the German dub. */
-  orig:741, origSeats:17618, origRate:4.21,
-  dub:436,  dubSeats:44818,  dubRate:0.97,
+  /* +27 original / +11 dub from the 19 Oct delta. The dub seat count adds
+     766, not 896: Filmhaus and Filmhaus-Huber share one 130-seat show and
+     it is counted once. orig+dub is 1,215 against tickets of 1,230 - the
+     same 15-ticket gap as before, which is rows whose format the footprint
+     never recorded. It is not a new discrepancy and it is not a rounding
+     error; those 15 are real tickets with an unknown version. */
+  orig:768, origSeats:19314, origRate:3.98,
+  dub:447,  dubSeats:45584,  dubRate:0.98,
   top:{cinema:'CinemaxX München', when:'Thu 5 Nov, 7:00p',
        sold:70, of:121, pct:57.9}
 };
@@ -1239,12 +1320,37 @@ const AU = {
      page measured against a real published seat plan; everything else is a
      recovered floor. `held` is seats the cinema has blocked - counted as
      capacity, never as a sale. */
-  tickets:3964, aud:102265, usd:67495, atpAud:25.80, fx:0.66,
-  ev:{tickets:831, shows:452, counted:452, cinemas:38, seats:110571, rate:0.75},
-  hy:{tickets:3133, shows:437, counted:437, cinemas:47, cinemasRead:47,
-      seats:70487, rate:4.44, held:2509},
-  byDate:[['Thu 5 Nov',1553],['Fri 6 Nov',1247],['Sat 7 Nov',965],['Sun 8 Nov',199]],
-  langs:[['Hindi',3801],['Telugu',111],['Tamil',30],['Kannada',21],['Malayalam',1]],
+  /* 19 Oct 11:15. 4,598 tickets, and 496 of that is CARRIED, not read today.
+
+     CHADSTONE IS ANSWERING HTTP 500. All 28 of its sessions failed at 11:15
+     and 25 of 28 failed at 08:56; every one read cleanly at 22:01 last night.
+     A 500 is HOYTS' own server erroring - not a 403, not a rate limit - so
+     the host is NOT retired and there is nothing here to work around. It is
+     a fault that will clear by itself. One Sunnybank session failed too.
+
+     Those 29 sessions are CARRIED at last night's count, 496 tickets across
+     6,194 seats, instead of being dropped. Dropping them is what produced
+     the 3,119 that looked like a fall. On the 391 sessions readable in BOTH
+     reads, HOYTS went 2,763 -> 3,120, up 357. The market did not fall; one
+     cinema stopped answering.
+
+     So 496 of the 4,598 is thirteen hours old and therefore LOW - Chadstone
+     has sold more since. hy.counted is what was actually read today; the gap
+     to hy.shows is the carried 29.
+
+     VICTORIA IS NOW THE TOP STATE, 1,213 against New South Wales' 1,086, and
+     that is only Chadstone coming back into the total. On the two reads that
+     lost it, NSW led. Do NOT write a Victoria-overtakes-NSW story off a run
+     where Victoria's biggest site was missing.
+
+     The 13-session hand-count validation passed again: all equal or higher
+     than PB's 17 Oct reads. */
+  tickets:4598, aud:118215, usd:78022, atpAud:25.71, fx:0.66,
+  ev:{tickets:982, shows:443, counted:443, cinemas:38, seats:107510, rate:0.91},
+  hy:{tickets:3616, shows:437, counted:408, cinemas:47, cinemasRead:47,
+      seats:70603, rate:5.12, held:2386, carried:496, carriedShows:29},
+  byDate:[['Thu 5 Nov',1768],['Fri 6 Nov',1434],['Sat 7 Nov',1145],['Sun 8 Nov',251]],
+  langs:[['Hindi',4379],['Telugu',156],['Tamil',38],['Kannada',24],['Malayalam',1]],
   /* 18 Oct 18:38 re-read, and the validation gate PASSED: all 13 sessions PB
      hand-read on 17 Oct came back equal or higher, so the ticketing API is
      reporting what the seat map shows. Like-for-like in one day those 13 went
@@ -1260,16 +1366,19 @@ const AU = {
      emptiest date its own denominator drops and computed `sold` falls with it.
      4 Event rooms appear in a single session and read 0 by construction. Floor
      noise, in the direction a floor is meant to be wrong. */
-  states:[['NSW',1548],['VIC',1027],['WA',579],['SA',309],['QLD',258],
-          ['ACT',243]],
-  cities:[['Western Sydney',814],['Melbourne Chadstone',462],['Perth Carousel',361],
-          ['Sydney Darling Harbour',187],['Canberra Belconnen',159],
-          ['Sydney Castle Hill',153],['Melbourne Docklands',146],
-          ['Melbourne CBD',135],['Melbourne Highpoint',131],
-          ['Adelaide Tea Tree Plaza',124]],
+  /* HOYTS ONLY - the chain publishes a state field and Event does not, so
+     these sum to hy.tickets (3,616), never to tickets (4,598). */
+  states:[['VIC',1213],['NSW',1086],['WA',566],['SA',342],['ACT',282],
+          ['QLD',127]],
+  /* Both chains, 19 Oct 11:15. Chadstone's 496 is the carried figure. */
+  cities:[['Western Sydney',935],['Melbourne Chadstone',496],['Perth Carousel',396],
+          ['Sydney Darling Harbour',224],['Canberra Belconnen',189],
+          ['Melbourne Docklands',181],['Sydney Castle Hill',181],
+          ['Melbourne Highpoint',174],['Melbourne CBD',150],
+          ['Sydney Parramatta',148]],
   premiumPct:94, premiumStd:166, eveningPct:91,
   top:{cinema:"HOYTS Blacktown, Sydney", when:"Fri 6 Nov, 8:45p",
-       room:"Xtremescreen", sold:156, pct:63.9, next:133,
+       room:"Xtremescreen", sold:162, pct:66.4, next:144,
        nextAt:"Blacktown, Thu 6:40p"},
   price:[["IMAX","A$45.00"],["ScreenX","A$36.50"],["Xtremescreen","A$27.00"]]
 };
