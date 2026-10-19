@@ -185,8 +185,62 @@ gtag("js",new Date());gtag("config","G-K6C9EVRFH4",{anonymize_ip:true});}})();
     --rule:4px; --r:10px; --r-sm:8px; --r-xs:3px; --gap:18px;
     --land:#EFEBE4; --landline:#FBFAF8; --grid:#EFECE6;
     --h1:#E79A92; --h2:#DD6F63; --h3:#E8261A; --h4:#AE1A12; --h5:#73110B;
+    /* 19 OCT: the article components, so the tracker stops reading as an
+       internal dashboard. These tokens were ALREADY identical to the
+       weekend-recap articles - what was missing was the components built on
+       top of them, so .sharebar, .sh, .pull, .box and .tag below are copied
+       verbatim from boxoffice-weekend-recap-october-16-18-2026.html rather
+       than re-derived. Consistency ACROSS pages beats consistency within
+       one: if those pill radii ever change there, change them here too. */
     --zero:#C9C4BA;
   }
+
+  /* ── share bar and accent blocks, from the articles ── */
+  .sharebar{display:flex;align-items:center;flex-wrap:wrap;gap:8px;margin:24px 0}
+  /* TWO DELIBERATE DEPARTURES FROM THE ARTICLE, BOTH BECAUSE THIS PAGE HAS A
+     DARK MODE AND THE ARTICLES DO NOT.
+     1. inline background is var(--card), not the article's hardcoded #F8F6F2,
+        which would stay a pale strip on a dark page.
+     2. the end bar is a FIXED #111827, not var(--ink). In dark mode --ink
+        becomes #F5F1EC, so var(--ink) would paint a light bar and the white
+        pills on it would vanish. Do not "tidy" either back to a token. */
+  .sharebar.inline{margin:14px 0 4px;padding:11px 14px;background:var(--card);
+                   border:1px solid var(--line);border-radius:4px;gap:7px}
+  .sharebar.end{padding:20px;background:#111827;border-radius:4px;
+                justify-content:center;text-align:center;margin:18px 0 0}
+  .sh-label{font-family:var(--mono);font-size:11px;font-weight:600;
+            letter-spacing:.1em;text-transform:uppercase;color:var(--muted);
+            margin-right:2px}
+  .sharebar.end .sh-label{color:#9CA3AF;display:block;width:100%;margin:0 0 10px}
+  .sh{display:inline-flex;align-items:center;gap:6px;font-size:13px;
+      font-weight:500;color:var(--ink);background:var(--card);
+      border:1px solid var(--line);border-radius:999px;padding:7px 13px;
+      cursor:pointer;text-decoration:none;line-height:1;
+      font-family:var(--body);
+      transition:transform .15s,background .15s,color .15s}
+  .sh svg{width:15px;height:15px;flex:0 0 auto}
+  .sh:hover{transform:translateY(-1px);text-decoration:none;color:#fff}
+  .sh.wa:hover{background:#25D366;border-color:#25D366}
+  .sh.x:hover{background:#111827;border-color:#111827}
+  .sh.fb:hover{background:#1877F2;border-color:#1877F2}
+  .sh.tg:hover{background:#229ED9;border-color:#229ED9}
+  .sh.cp:hover{background:var(--accent);border-color:var(--accent)}
+  .sharebar.end .sh{background:transparent;color:#fff;border-color:#374151}
+  .sh.copied{background:var(--green)!important;border-color:var(--green)!important;
+             color:#fff!important}
+  @media(max-width:640px){.sh-label{width:100%;margin-bottom:2px}}
+
+  .pull{background:var(--card);border:1px solid var(--line);border-radius:var(--r);
+        border-left:var(--rule) solid var(--accent);padding:14px 18px;
+        font-size:18px;line-height:1.5;margin:var(--gap) 0}
+  .pull b{font-family:var(--disp);font-size:21px}
+  .tag{display:inline-block;padding:2px 7px;border-radius:var(--r-xs);
+       border:1px solid var(--line);color:var(--muted);background:var(--card);
+       vertical-align:middle;font-family:var(--mono);font-size:11px;
+       letter-spacing:.04em}
+  .tag.v{border-color:#9ec8a8;color:#246b36}
+  .tag.r{border-color:#d9bd84;color:#8a6414}
+  .tag.i{border-color:#b9bdc6;color:#4b5563}
   @media (prefers-color-scheme:dark){ :root:where(:not([data-theme="light"])){
     color-scheme:dark;
     --ink:#F5F1EC; --paper:#17120F; --card:#201A16; --line:#332A24;
@@ -476,9 +530,19 @@ gtag("js",new Date());gtag("config","G-K6C9EVRFH4",{anonymize_ip:true});}})();
   <p id="prevlbl" style="font-family:var(--mono);font-size:12.5px;
      color:var(--body-ink);margin:2px 0 10px;line-height:1.5"></p>
   <p class="dek">Every cinema, every showtime, counted seat by seat across America,
-     the UK and Australia. Circle size is tickets sold. Colour is how full the
-     room is. Pick a country to open it.</p>
+     Canada, Britain, Australia and Germany. Circle size is tickets sold. Colour
+     is how full the room is. Pick a country to open it.</p>
   <p class="byline" id="byline"></p>
+
+  <div class="sharebar inline">
+    <span class="sh-label">Share the count</span>
+    <a class="sh wa" href="https://wa.me/?text=Ramayana%20presales%2C%20counted%20seat%20by%20seat%20across%20America%2C%20Britain%2C%20Australia%20and%20Germany%20%E2%80%94%20every%20cinema%2C%20every%20showtime%20https%3A%2F%2Fwww.boxoffy.com%2Framayana" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.1s-.8 1-1 1.2c-.2.2-.4.2-.7.1a7.2 7.2 0 0 1-3.6-3.2c-.2-.3 0-.5.1-.7l.6-.8c.1-.2.1-.4 0-.6l-.9-2.1c-.2-.5-.4-.5-.6-.5h-.6c-.2 0-.6.1-.9.4-.3.4-1.1 1.1-1.1 2.6s1.1 3 1.3 3.2a11 11 0 0 0 4.4 3.8c2.6 1 3.1.8 3.7.8.5 0 1.7-.6 2-1.3.2-.6.2-1.2.1-1.3zM12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.4A10 10 0 1 0 12 2z"/></svg>WhatsApp</a>
+    <a class="sh x" href="https://x.com/intent/post?text=Ramayana%20presales%2C%20counted%20seat%20by%20seat%20%E2%80%94%20every%20cinema%2C%20every%20showtime%2C%20across%20four%20countries.&amp;url=https%3A%2F%2Fwww.boxoffy.com%2Framayana" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.9 2H22l-6.8 7.8L22.8 22h-6.5l-5-6.6L5.4 22H2.3l7.2-8.2L1.6 2h6.6l4.7 6.2L18.9 2zm-1.1 18h1.8L6.3 3.8H4.4L17.8 20z"/></svg>X</a>
+    <a class="sh tg" href="https://t.me/share/url?url=https%3A%2F%2Fwww.boxoffy.com%2Framayana&amp;text=Ramayana%20presales%2C%20counted%20seat%20by%20seat" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.6 6.8-1.6 7.6c-.1.5-.5.7-.9.4l-2.5-1.9-1.2 1.2c-.1.1-.3.2-.5.2l.2-2.5 4.6-4.2c.2-.2-.1-.3-.3-.1l-5.7 3.6-2.4-.8c-.5-.2-.5-.5.1-.8l9.4-3.6c.4-.2.8.1.8.6z"/></svg>Telegram</a>
+    <button class="sh cp" type="button" onclick="navigator.clipboard.writeText(location.href);this.classList.add('copied');this.lastChild.textContent=' Copied'"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7 0l2-2a5 5 0 0 0-7-7l-1 1"/><path d="M14 11a5 5 0 0 0-7 0l-2 2a5 5 0 0 0 7 7l1-1"/></svg><span> Copy link</span></button>
+    <button class="sh cp" type="button" id="sharecard"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 15l5-4 4 3 3-2 6 4"/></svg><span> Make an image</span></button>
+  </div>
+
   <div class="rule"></div>
     </div>
   </div>
@@ -817,6 +881,14 @@ gtag("js",new Date());gtag("config","G-K6C9EVRFH4",{anonymize_ip:true});}})();
     <div class="follow">
       <a href="https://x.com/BoxoffyMI" target="_blank" rel="noopener">Follow @BoxoffyMI on X</a>
       <a class="alt" href="/">Browse Boxoffy</a>
+    </div>
+
+    <div class="sharebar end">
+      <span class="sh-label">Share this tracker</span>
+      <a class="sh wa" href="https://wa.me/?text=Ramayana%20presales%2C%20counted%20seat%20by%20seat%20https%3A%2F%2Fwww.boxoffy.com%2Framayana" target="_blank" rel="noopener">WhatsApp</a>
+      <a class="sh x" href="https://x.com/intent/post?url=https%3A%2F%2Fwww.boxoffy.com%2Framayana" target="_blank" rel="noopener">X</a>
+      <a class="sh fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.boxoffy.com%2Framayana" target="_blank" rel="noopener">Facebook</a>
+      <a class="sh tg" href="https://t.me/share/url?url=https%3A%2F%2Fwww.boxoffy.com%2Framayana" target="_blank" rel="noopener">Telegram</a>
     </div>
   </div>
 
@@ -2462,7 +2534,11 @@ function shareUrl(){
 function shareText(section){
   const rows=view();
   const sold=rows.reduce((a,r)=>a+r.sold,0), seats=rows.reduce((a,r)=>a+r.seats,0);
-  return `Ramayana · North America presales — ${filterLabel()}\n`+
+  /* 19 OCT: said "North America presales" long after this page became four
+     markets. The map and the filters are still North America, which is what
+     filterLabel() describes, so the line now names the map rather than
+     claiming the whole tracker. */
+  return `Ramayana · presales, North America map — ${filterLabel()}\n`+
          `${fmt(sold)} tickets · ${pc1(pct(sold,seats))} of seats gone`+
          (section?`\n(${section})`:'')+`\n\nCounted seat by seat by Boxoffy.`;
 }
@@ -2823,6 +2899,10 @@ $('#shotbrand').onclick=async function(){
   try{ await (SHOTMODE==='brand' ? drawBrandCard() : drawShot()); }
   catch(e){ $('#shotmsg').textContent='Could not draw the image here.'; }
 };
+/* The "Make an image" pill in the header share bar opens the same dialog the
+   in-card share control does. One entry point, two triggers - if openShot()
+   ever changes signature, both move together. */
+if($('#sharecard')) $('#sharecard').onclick=()=>openShot();
 $('#shotclose').onclick=()=>{ $('#shot').hidden=true; };
 $('#shot').addEventListener('click',e=>{ if(e.target.id==='shot') $('#shot').hidden=true; });
 document.addEventListener('keydown',e=>{ if(e.key==='Escape') $('#shot').hidden=true; });

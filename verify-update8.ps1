@@ -31,6 +31,15 @@ $app  = 'src\App.jsx'
 Write-Host ''
 Write-Host '=== 1. the edits are actually in the files'
 Need $page 'const UK = {'        'United Kingdom data'
+# The tracker looked like an internal dashboard until 19 Oct because it shared
+# the articles' design TOKENS but none of their components. These are the share
+# bar and accent blocks. If they go missing the page silently reverts to having
+# no way for a reader to pass it on.
+Need $page 'class="sharebar inline"' 'tracker has the header share bar'
+Need $page 'class="sharebar end"'    'tracker has the closing share bar'
+Need $page 'id="sharecard"'          'Make an image pill wired to the share dialog'
+Need $page 'background:#111827'      'end share bar is fixed dark, not var(--ink)'
+Absent $page 'North America presales — '  'share text does not call four markets North America'
 Need $page 'function euBody'     'United Kingdom panel'
 Need $page 'function auBody'     'Australia panel'
 Need $page 'function pendingPanel' 'not-yet-counted panel'
