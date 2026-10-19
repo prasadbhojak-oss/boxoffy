@@ -35,10 +35,25 @@ Need $page 'function euBody'     'United Kingdom panel'
 Need $page 'function auBody'     'Australia panel'
 Need $page 'function pendingPanel' 'not-yet-counted panel'
 Need $page 'function openSpan'   'opening-run split'
-Need $page 'tickets:5678'        'UK midpoint 5,678 tickets'
-Need $page 'rawTickets:11838'    'UK raw 11,838 published beside it'
+Need $page 'tickets:5472'        'UK 5,472 seats gone, both chains'
+Need $page 'cwGone:4985'         'Cineworld 4,985 measured by hand'
+Need $page 'scGone:487'          'Showcase 487 modelled on the measured share'
+Need $page 'soldShare:44.84'     'the share is measured now, not assumed'
+Need $page 'offSale:11117'       'UK 11,117 off sale published beside it'
+Need $page 'realLo:2619'         'UK real-bookings band published, not a point'
+Need $page 'blockSeats:2366'     'UK house-seat exposure disclosed'
+# The city list MUST stay block-corrected. On the seats-gone basis Solihull
+# reads 462 and Feltham 281, and both are almost entirely one room's block -
+# Solihull corrected is 6. A national total can carry blocks with a note; a
+# named cinema cannot, because a reader can open the seat map and disprove it.
+Need $page "['Leicester Square',472]" 'UK city list on the corrected basis'
+Absent $page "['Solihull',462]"       'no block-inflated Solihull in the city list'
+Absent $page "['Feltham',281]"        'no block-inflated Feltham in the city list'
 Need $page 'tickets:3964'        'Australia 3,964 tickets (both chains, gate passed)'
-Need $page 'tickets:1177'        'Germany 1,177 tickets'
+Need $page 'tickets:1192'        'Germany 1,192 tickets (all-presale basis)'
+Need $page 'booked:2619'         'UK organic booked figure published'
+Need $page 'blockedAll:8498'     'UK blocked seats published'
+Need $page 'INCLUDES BLOCKED SEATS' 'UK footer discloses blocks in the headline'
 Need $page 'function deBody'     'Germany panel'
 Need $page "de :{name:'Germany'" 'Germany tile in the map row'
 # Germany was a FOOTPRINT for six hours on 18 Oct - showtimes drawn as hollow
@@ -116,6 +131,18 @@ Absent $page 'tickets:1486' 'no modelled Australia figure left behind'
 Absent $page 'tickets:3500' 'no pre-refresh Australia figure'
 Absent $page 'tickets:3900' 'no pre-19-Oct Australia figure'
 Absent $page 'tickets:3060' 'no pre-19-Oct HOYTS figure'
+# UK was a MODELLED midpoint of 2,103-9,253 until 19 Oct, when every
+# Cineworld seat map was opened by hand. The midpoint was roughly double the
+# block-corrected count. Neither it nor its raw partner comes back.
+Absent $page 'tickets:5678'     'no UK modelled midpoint'
+Absent $page 'rawTickets:11838' 'no UK pre-scan off-sale figure'
+Absent $page 'loTickets:2103'   'no UK modelled low end'
+Absent $page 'hiTickets:9253'   'no UK modelled high end'
+Absent $page 'tickets:1177'     'no pre-all-presale Germany figure'
+# Blocked revenue is NOTIONAL - nobody paid it. It is reported per market and
+# never summed into a worldwide dollar total. If the UK blocked USD ever shows
+# up inside a worldwide figure, that figure is wrong by $152,042.
+Absent $page 'wwUsd:946' 'no worldwide total inflated by notional block revenue'
 # The old chip card duplicated the UK numbers under the map row, so clicking
 # United States still left "Outside North America" showing Britain. One
 # control now: the map row. The card and its paint() call are gone.

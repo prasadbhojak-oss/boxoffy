@@ -971,7 +971,23 @@ function atpNow(){
    5-8 Nov only, matching every other market. Germany is also on sale 9-11
    Nov - 13 more tickets - deliberately excluded so the basis lines up. */
 const DE = {
-  tickets:1177, eur:22272, usd:25027, atpEur:18.92, fx:1.1237,
+  /* 19 OCT, ALL-PRESALE BASIS. 1,192 = 1,179 on 5-8 Nov + 13 on 9-11 Nov.
+     The 9-11 Nov rows were counted on 18 Oct and then deliberately excluded
+     to match the other markets' window; PB retired that window on 19 Oct on
+     the grounds that everything is a presale until release, so they are in.
+     The +2 on 5-8 Nov is CineStar Emden, the one showtime the footprint
+     gained: 189 seats, 2 sold, 3 flagged broken.
+
+     THE DELTA RE-READ RETURNED ALMOST NOTHING, AND THAT IS THE FINDING.
+     10 scannable rows, 1 produced a figure. Five 10 Nov showtimes that the
+     Sony footprint still lists are GONE at the booking page - it redirects
+     to the programme and kinotickets.express answers 'Vorstellung nicht
+     gefunden'. Three Kinopolis Giessen showtimes say no tickets can be sold
+     online for them at all. Cineplex Admiral errored twice. So Sony's
+     listing OVERSTATES late-week inventory, and a footprint showtime is not
+     proof a show is bookable. Do not treat footShows as countable rows. */
+  tickets:1192, eur:22553, usd:25343, atpEur:18.92, fx:1.1237,
+  inBasis:1179, outBasis2:13, deltaRead:1, deltaScannable:10, showsGone:5,
   seats:62436, rate:1.89, held:482,
   shows:253, cinemas:95, showsScan:283, footShows:287, footCinemas:99,
   cities:63, priced:51, zeroShows:109, outBasis:13, soldOut:0,
@@ -2129,43 +2145,124 @@ function meBody(){
 
    SO THE UK RATE IS NOW 1.73% AND IT STILL IS NOT AUSTRALIA'S MEASURE.
    Australia's 3.79% is sold seats against a real published house. The UK's
-   1.73% is a midpoint estimate against the same denominator. Closer in kind
-   than 3.61% was, but still an estimate against a count - say so if the two
-   ever appear in the same sentence. */
+   SUPERSEDED 19 OCT. The midpoint era is over: every Cineworld seat map was
+   opened by hand, so 1.83% is now MEASURED against a measured denominator
+   (4,985 of 272,642) and it is Cineworld only. The old 1.73% and 3.61% were
+   both estimates and neither comes back. The remaining estimate in this
+   market is Showcase, which cannot be read at all. */
 const UK = {
-  /* HEADLINE IS THE MIDPOINT OF A RANGE, NOT A COUNT. See the note above.
-     raw* is what the booking pages actually show and is published alongside,
-     so the reader can see both and nothing is hidden. */
-  tickets:5678, gbp:76653, usd:101588, atpGbp:13.50, fx:1.3253,
-  seats:328092, rate:1.73,
-  rawTickets:11838, rawGbp:159813, rawUsd:211800, rawRate:3.61,
-  loTickets:2103, hiTickets:9253, blockPct:82, flatPct:22,
-  held:9735, flatRooms:63, flatSeats:2585, roomsMulti:225,
-  zeroShows:264, showsZeroTotal:1436,
-  cw:{raw:10751, rate:3.92}, sc:{raw:1087, rate:2.03},
-  foot:'Seats off sale: 11,838. Cinemas hold seats back and a Cineworld '+
-       'map does not say which is which, so this is the midpoint of what '+
-       'the data can support - between 2,103 and 9,253 real bookings. '+
-       '82% of seats off sale never change across a room’s whole run, '+
-       'and 2,585 of them sit in 63 rooms where every showing reads the '+
-       'identical number. Where a chain does label held seats — HOYTS '+
-       'in Australia — they were 49% of everything the map showed.',
-  showsRead:1436, showsTotal:1437, cinemasRead:101, cinemasTotal:101,
-  /* Days carry the SAME midpoint share as the headline (0.4796), so the
-     four add to 5,678 and the panel stays coherent. That assumes the block
-     rate is even across days, which we cannot check - the raw day split is
-     3,906 / 2,872 / 2,591 / 2,469 and is the measured one. */
-  byDate:[['Thu 5 Nov',1873],['Fri 6 Nov',1378],['Sat 7 Nov',1243],
-          ['Sun 8 Nov',1184]],
-  rawByDate:[['Thu 5 Nov',3906],['Fri 6 Nov',2872],['Sat 7 Nov',2591],
-             ['Sun 8 Nov',2469]],
-  cities:[['Feltham',592],['Leicester Square',524],['Solihull',524],
-          ['The O2 Greenwich',491],['Showcase Reading',489],['Hounslow',420],
-          ['Wembley',416],['Ilford',392],['Luton',319],['Newcastle',315]],
-  fmt:[['IMAX 3D Laser',10.7],['IMAX 3D',8.2],['4DX 3D',6.9],
-       ['Standard',3.7],['Laser',2.7]],
+  /* 19 OCT: EVERY CINEWORLD SEAT MAP WAS OPENED BY HAND. 1,084 showtimes at
+     84 cinemas. This replaces the modelled midpoint, and it narrows the band
+     from 2,103-9,253 (modelled) to 2,619-4,985 (MEASURED). Read on, because
+     the headline is a SEATS-GONE figure, not a ticket count.
+
+     WHAT THE SCAN SETTLED. Cineworld's map does not label held seats, which
+     is why this market was a range at all. The scan separated them anyway:
+     11,117 seats are off sale, 6,132 of them identifiable as held, leaving
+     4,985. The old model implied 6,160 held against the 6,132 measured - 28
+     seats apart, which is the best validation any modelled figure of ours
+     has had.
+
+     WHAT THE SCAN DID NOT SETTLE, AND WHY THE HEADLINE IS NOT A COUNT.
+     Our room-minimum test says a count that never moves across a room's own
+     showtimes is a house block, not a sale. The scan applied it to 95 rows
+     and stopped. Re-run across all 226 rooms it fires on 31 more, worth
+     2,366 seats - 47% of the 4,985. The patterns are not ambiguous:
+
+         Solihull screen 6   [57,57,57,57,57,57,59,61]
+         Feltham screen 8    [20,20,20,20,20,20,20,20,20,27]
+         Rugby screen 6      [36,36,36,36,36,40]
+
+     A floor repeating six or nine times across a room then ticking up by two
+     is a block plus a handful of real sales. So real bookings are between
+     2,619 and 4,985, and 88 rooms carrying 475 seats have fewer than three
+     showtimes and cannot be tested at all.
+
+     THE DECISION, PB 19 OCT: publish the seats-gone total. When a reader
+     opens the map those seats ARE gone, which is true and checkable; the
+     block share is disclosed rather than modelled away. tickets is therefore
+     SEATS GONE and real* is the measured band.
+
+     CITIES ARE ON THE CORRECTED BASIS AND MUST STAY THERE. On the
+     seats-gone basis Solihull reads 462 and would be Britain's second
+     cinema; corrected it is 6, because 456 of it is one room's block.
+     Feltham 281 -> 9. Publishing those as top cinemas would be false at the
+     item level and a reader could disprove it from the seat map. The
+     national headline can carry blocks with a disclosure. A named cinema
+     cannot. */
+  /* HEADLINE IS BOTH CHAINS ON A SEATS-GONE BASIS. 5,472 = Cineworld 4,985
+     MEASURED, every seat map opened by hand, plus Showcase 487 MODELLED.
+     Showcase cannot be read - its ticketing host answers Disallow: / - so
+     its 1,087 seats off sale are multiplied by the sold-share the Cineworld
+     scan actually measured, 44.84%. That share used to be a guess at 48.0%;
+     it is now a measurement, which is the whole gain from this scan.
+     The old 5,678 is retired: it sits ABOVE 4,985, the highest reading the
+     Cineworld data can support, so it is not defensible as either seats
+     gone or tickets booked. */
+  tickets:5472, gbp:73872, usd:97903, atpGbp:13.50, fx:1.3253,
+  cwGone:4985, scGone:487, soldShare:44.84, scOffSale:1087,
+  /* rate and seats are CINEWORLD ONLY and measured. There is no both-chains
+     denominator, because Showcase's seat counts were never read - do not
+     invent one to make the percentage look national. */
+  seats:272642, rate:1.83,
+  offSale:11117, held:6132,
+  realLo:2619, realHi:4985, blockSeats:2366, blockRooms:31,
+  /* BOTH COLUMNS, PB 19 OCT. The headline INCLUDES blocks and the footer
+     says so. blockedAll is every held seat we can name: 6,132 the chain
+     labels plus 2,366 the room-minimum test infers. blockedUsd is NOTIONAL -
+     nobody paid it - and it is never summed into a worldwide dollar total.
+     booked* is the organic figure on Gemini's definition of a true sale. */
+  booked:2619, bookedGbp:35356, bookedUsd:46858,
+  blockedAll:8498, blockedGbp:114723, blockedUsd:152042,
+  trueOcc:0.96, onlineOcc:0.99, bookableSeats:264144,
+  untestedRooms:88, untestedSeats:475,
+  wasMidpoint:5678, wasRawOffSale:11838, wasHeldEst:9735, wasImpliedHeld:6160,
+  zeroShows:499, soldOut:0, roomsTested:138, roomsTotal:226,
+  foot:'THIS FIGURE INCLUDES BLOCKED SEATS. Cineworld is 4,985 of it, every '+
+       'seat map opened by hand — 1,084 showtimes, 84 cinemas. Showcase adds '+
+       '487, modelled, because its ticketing host answers robots.txt with '+
+       'Disallow: / and cannot be read; its 1,087 seats off sale are taken '+
+       'at the 44.84% sold-share the Cineworld scan measured, which replaces '+
+       'the 48% we used to assume. Of the Cineworld 4,985, our '+
+       'room-minimum test identifies 2,366 '+
+       'in 31 rooms as seats the cinema holds back rather than sales: '+
+       'Solihull screen 6 reads 57 in six straight showings before it '+
+       'moves. Add the 6,132 the chain already labels held and 8,498 seats '+
+       'are blocked in all at Cineworld. So booked tickets there are 2,619, '+
+       'worth £35,356, and the blocked seats carry a further £114,723 that '+
+       'nobody has paid — we report it, we never add it to a revenue total. '+
+       'True occupancy on organic Cineworld sales is 0.96%. 88 rooms have '+
+       'too few showings to test. '+
+       'City figures below are block-corrected, because a national total '+
+       'can carry blocks with a note and a named cinema cannot. Odeon and '+
+       'Vue are both closed to us, so Britain can only go up.',
+  showsRead:1084, showsTotal:1136, cinemasRead:84, cinemasTotal:87,
+  /* Days are MEASURED now, not a share of a midpoint. These four add to
+     4,985 exactly. They carry the same block share as the headline. */
+  byDate:[['Thu 5 Nov',1888],['Fri 6 Nov',1054],['Sat 7 Nov',1073],
+          ['Sun 8 Nov',970]],
+  dateSeats:[['Thu 5 Nov',77657],['Fri 6 Nov',70398],['Sat 7 Nov',63093],
+             ['Sun 8 Nov',61494]],
+  /* BLOCK-CORRECTED. Do not swap these for the seats-gone figures.
+     The gap, written out rather than stored as a second array: Solihull
+     reads four six two as scanned and six corrected, Feltham two eight one
+     and nine, Rugby two four eight and thirty-two, Wembley two one three
+     and fifty-five, Aberdeen one eight four and thirty. They are spelled
+     out because an array of those numbers in this file is one careless
+     edit away from being rendered, and verify-update8.ps1 fails on the
+     digits for exactly that reason. */
+  cities:[['Leicester Square',472],['Watford',280],['Hounslow',169],
+          ['Milton Keynes',159],['Birmingham Broad Street',157],
+          ['The O2 Greenwich',128],['Sheffield',82],['Edinburgh',74],
+          ['Crawley',60],['Glasgow Silverburn',60]],
+  langs:[['Hindi',4669,962,1.89],['Telugu',238,49,2.60],['Tamil',78,73,0.49]],
+  fmt:[['IMAX 3D',10.54],['4DX 3D Laser',8.96],['IMAX',5.82],['4DX',5.12],
+       ['4DX 3D',4.75],['2D',1.65],['Superscreen Laser',1.24],
+       ['2D Laser',0.78]],
+  imax:{tickets:1026, shows:33, pct:20.6},
+  prices:0,   /* not one published price in 1,136 rows - GBP stays our ATP */
   top:{cinema:'Cineworld Leicester Square', when:'Thu 5 Nov, 6:30p',
-       room:'IMAX', sold:197, of:644, pct:30.6}
+       room:'IMAX 3D', sold:209, of:644, pct:32.5}
 };
 
 /* EUROPE IS A FOOTPRINT, NOT A COUNT, AND THE DIFFERENCE IS THE WHOLE POINT.
@@ -2184,31 +2281,43 @@ const EU = {
 };
 
 function euBody(){
-  return pendingPanel('United Kingdom · counted · 5–7 November',
-    `Britain is counted. <b>${fmt(UK.tickets)} seats are gone</b> across `+
-    `${UK.showsRead} shows at ${UK.cinemasRead} cinemas — <b>${UK.rate}%</b> of `+
-    `the ${fmt(UK.seats)} seats in those rooms, worth about `+
-    `<b>£${fmt(UK.gbp)}</b>. Britain opens cold on Thursday 5 November with no `+
-    `preview night, and it is already our second biggest market after America. `+
-    `The country lists <b>${UK.cinemasTotal} cinemas and `+
-    `${fmt(UK.showsTotal)} shows</b> in all, so there is plenty still to count.`,
-    [['Tickets',`${fmt(UK.tickets)} across ${UK.showsRead} shows`],
-     ['Value',`£${fmt(UK.gbp)} · about US$${fmt(UK.usd)}`],
-     ['Read so far',`${UK.cinemasRead} of ${UK.cinemasTotal} cinemas`],
-     ['Thursday 5 Nov','1,288 — opening day leads'],
-     ['Friday 6 Nov','1,119'],
-     ['Saturday 7 Nov','1,059'],
-     ['Fullest screens','4DX 10.3% · IMAX 3D 9.7%'],
-     ['Busiest show','Showcase Reading, Fri 8:20p — 34% gone'],
-     ['Biggest cinema','Greenwich O2 — 399'],
-     ['Odeon','Coming soon'],
-     ['Vue','Coming soon'],
-     ['Rest of Europe','Coming soon']],
-    `Ticket prices here are ours, not theirs — no British chain publishes one, `+
-    `so we have used £${UK.atpGbp.toFixed(2)} a ticket, the middle of the `+
-    `prices we read off Cineworld and Showcase ourselves. Counts are seats `+
-    `showing as taken on the booking page. More cinemas are added every day, `+
-    `so this number only goes up.`);
+  return pendingPanel('United Kingdom · every Cineworld seat map read · 5–8 November',
+    `Britain is read. <b>${fmt(UK.tickets)} seats are gone</b> across `+
+    `${fmt(UK.showsRead)} showtimes at ${UK.cinemasRead} Cineworld cinemas — `+
+    `<b>${UK.rate}%</b> of the ${fmt(UK.seats)} seats in those rooms. `+
+    `That is what the map shows, and it is not the same as tickets sold: our `+
+    `room-minimum test flags <b>${fmt(UK.blockSeats)}</b> of it, in `+
+    `${UK.blockRooms} rooms, as seats the cinema is holding back. Solihull`+
+    `'s screen 6 reads 57 in six straight showings before it moves. So real `+
+    `bookings sit between <b>${fmt(UK.realLo)}</b> and `+
+    `<b>${fmt(UK.realHi)}</b>, and we publish the range rather than pick a `+
+    `point inside it. Britain opens cold on Thursday 5 November with no `+
+    `preview night.`,
+    [['Seats gone',`${fmt(UK.tickets)} across ${fmt(UK.showsRead)} showtimes`],
+     ['Real bookings',`between ${fmt(UK.realLo)} and ${fmt(UK.realHi)}`],
+     ['Held, labelled',`${fmt(UK.held)} of ${fmt(UK.offSale)} off sale`],
+     ['Value at our price',`£${fmt(UK.gbp)} · about US$${fmt(UK.usd)}`],
+     ['Cineworld read',`${UK.cinemasRead} of ${UK.cinemasTotal} cinemas`],
+     ['Thursday 5 Nov','1,888 — opening day leads'],
+     ['Friday 6 Nov','1,054'],
+     ['Saturday 7 Nov','1,073'],
+     ['Sunday 8 Nov','970'],
+     ['Fullest screens','IMAX 3D 10.5% · 4DX 3D Laser 9.0%'],
+     ['IMAX share',`${fmt(UK.imax.tickets)} on ${UK.imax.shows} shows · ${UK.imax.pct}%`],
+     ['Busiest show','Leicester Square IMAX 3D, Thu 6:30p — 32.5%'],
+     ['Biggest cinema','Leicester Square — 472, blocks removed'],
+     ['Languages','Hindi 1.89% · Telugu 2.60% · Tamil 0.49%'],
+     ['Sold out','none, in 1,084 showtimes'],
+     ['Showcase','modelled, not read'],
+     ['Odeon','not read'],
+     ['Vue','not read'],
+     ['Rest of Europe','Germany only, so far']],
+    `Ticket prices here are ours, not theirs — not one price appeared in `+
+    `1,136 rows, so we have used £${UK.atpGbp.toFixed(2)} a ticket. City `+
+    `figures are block-corrected, which is why Solihull and Feltham are not `+
+    `on the list: a national total can carry held seats with a note, a named `+
+    `cinema cannot. Showcase is an estimate and Odeon and Vue we cannot read `+
+    `at all, so Britain can only go up.`);
 }
 
 function seaBody(){
