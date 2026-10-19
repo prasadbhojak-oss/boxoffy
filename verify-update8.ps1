@@ -72,8 +72,26 @@ Need $page "de :{name:'Germany'" 'Germany tile in the map row'
 # tickets. foot:true is the switch, so that is what is checked.
 Absent $page 'foot:true'            'no market drawn as a footprint'
 Absent $page 'on sale, not counted' 'no footprint-era Germany kicker'
-Need $page 'tickets:1899'        'Canada 1,899 tickets (counted, not a floor)'
-Need $page 'tickets:9362'        'US 7-8 Nov 9,362 tickets'
+# 19 Oct: Canada's published figure is now the recovered FLOOR, 2,102, and the
+# 1,899 hand count is retired. The 18 Oct rule was "a floor 13 above the count
+# is a warning light, keep the human-verified number". On the Update 11 scan
+# the floor is 2,102 over 223 showtimes - FOUR FEWER than the 227 the hand
+# count covered. A floor that rises 203 while its own inventory shrinks is
+# sales, not an artefact, so 1,899 is provably low and is checked as absent
+# below with the rest of the retired Canadian figures.
+Need $page 'tickets:2102'        'Canada 2,102 (recovered floor, labelled as a floor)'
+Need $page 'tickets:9960'        'US 7-8 Nov 9,960 tickets'
+Need $page 'handCount:1899'      'the retired hand count kept as the record'
+# ASCII only in these two. The page writes '153 screens · 9.81%' with a middot,
+# but Windows PowerShell 5.1 reads a .ps1 saved as UTF-8 without a BOM as ANSI,
+# which mangles the middot and fails the guard for a reason that has nothing to
+# do with the page. Matching the rate and the screen count separately is just
+# as tight and cannot break that way.
+Need $page '9.81%'          'IMAX 4 Nov rate'
+Need $page '33 screens'     'IMAX 6 Nov - 33 screens, not 32'
+Need $page '7.09%'          'IMAX 6 Nov rate'
+Need $page '+DE.tickets'         'Germany is in the worldwide roll-up'
+Need $page "['Germany',DE.tickets,DE.usd]" 'Germany has a worldwide row'
 Need $page 'Kalki 2898 AD'       'verified ladder'
 Need $page 'Dhurandhar 2'        'Dhurandhar 2 on the ladder'
 Need $page 'ow:14000000'         'Dhurandhar 2 at its five-day opening'
@@ -97,8 +115,9 @@ Need $page "sea:{name:'SE Asia'"     'SE Asia tile in the map row'
 
 Write-Host ''
 Write-Host '=== 3. the homepage strip agrees with the page'
-Need $app '32,245'     'NA 4-8 total on the strip'
-Need $app '$612,551'   'NA value on the strip'
+Need $app '34,213'     'NA 4-8 total on the strip'
+Need $app '$650,348'   'NA value on the strip'
+Need $app '3.93%'      'US 4-6 Nov sell-through on the strip'
 Need $app 'T-17'       'countdown'
 
 Write-Host ''
@@ -129,6 +148,17 @@ Absent $page 'tickets:1461' 'no stale Canada figure (18 Oct)'
 Absent $page 'tickets:1473' 'no unreproducible Canada figure'
 Absent $page 'tickets:1714' 'no Canada floor published as a count'
 Absent $page 'tickets:1912' 'no 18 Oct Canada floor published as a count'
+# 1,899 was a real hand count of all 227 maps and was the right figure to
+# publish on 18 Oct. It is retired because it is STALE, not because it was
+# wrong - a different reason from the three above, and the comment matters so
+# nobody "restores" it later thinking the floor was the suspect number.
+Absent $page 'tickets:1899' 'no stale Canada hand count as the live figure'
+Absent $page 'tickets:9362' 'no pre-update-11 US_EXTRA on the page'
+Absent $page '9.31%'        'no pre-update-11 IMAX 4 Nov rate'
+Absent $page '6.07%'        'no pre-update-11 IMAX 6 Nov rate'
+Absent $page '6.27%'        'no pre-update-11 IMAX 5 Nov rate'
+Absent $app  '32,245'       'no pre-update-11 NA total on the strip'
+Absent $app  '$612,551'     'no pre-update-11 NA value on the strip'
 Absent $app  '29,911'       'no pre-Canada NA total on the strip'
 Absent $app  '$570,166'     'no pre-Canada NA value on the strip'
 Absent $app  '30,337'       'no pre-update-10 NA total on the strip'
