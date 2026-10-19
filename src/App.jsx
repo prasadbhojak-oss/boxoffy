@@ -4444,8 +4444,8 @@ const RAMAYANA_TRACKER = {
   url: "https://www.boxoffy.com/ramayana",
   // BASIS: North America, 4-8 Nov - the same headline the tracker page leads
   // with, so the strip and the page can never disagree. tickets and value are
-  // US + Canada over all five dates (22,151 + 9,960 US on 7-8 Nov + 2,102 CA;
-  // $443,926 + $179,180 + $27,242).  19 Oct 00:06 scan, Update 11.
+  // US + Canada over all five dates (22,412 + 10,282 US on 7-8 Nov + 2,172 CA;
+  // $449,495 + $184,973 + $28,149).  19 Oct 11:02 scan, Update 12.
   //
   // Canada moved 1,473 -> 1,899 on 18 Oct when all 227 of its seat maps were
   // read by hand instead of inferred from published availability. The old
@@ -4453,15 +4453,18 @@ const RAMAYANA_TRACKER = {
   // floor on the same data was 1,714, so the count is 11% above the floor,
   // which is the direction a floor is meant to be wrong in.
   //
-  // rate is the UNITED STATES over 4-6 NOV ONLY - 22,151 of 564,098 seats.
+  // rate is the UNITED STATES over 4-6 NOV ONLY - 22,412 of 559,084 seats.
   // Not a 4-8 figure and not a North American one: 7-8 Nov seats are not in
   // the baked map, so there is no 4-8 denominator to divide by. (Canada does
   // have a seat count - 65,254 offered on the 19 Oct floor basis, against
   // 66,751 on the retired 18 Oct hand read - but folding either one in would
   // mix a 4-8 numerator with a 4-6 one.) Three spans in
   // one block is ugly, but inventing a denominator to tidy it up is how the
-  // "136% of Drishyam" claim happened. shows is US 4-8 Nov: 3,987 on 4-6
-  // from this scan plus the 2,645 on 7-8 that came with US_EXTRA.
+  // "136% of Drishyam" claim happened. shows is US 4-8 Nov: 3,953 on 4-6
+  // from this scan plus the 2,661 on 7-8 that came with US_EXTRA. That is 18
+  // FEWER than Update 11 read, because 115 seat maps failed this run and a
+  // failed map is a blank row. Shows read is a coverage figure and it is
+  // allowed to fall; tickets is not, and did not.
   //
   // CANADA IS NOW THE FLOOR, 2,102, AND THE 1,899 HAND COUNT IS RETIRED.
   // On the 18 Oct 18:17 scan the recovered floor (1,912) sat 13 tickets above
@@ -4474,12 +4477,18 @@ const RAMAYANA_TRACKER = {
   // showtime has sold, 2 of 30 auditoriums read zero by construction, and
   // Landmark is uncounted. So tickets and value here remain a FLOOR for
   // North America, not a ceiling.
-  tickets: "34,213",
-  rate: "3.93%",
-  shows: "6,632",
-  value: "$650,348",
+  // UPDATE 12 PASSED ALL THREE GATES: US 4-6 Nov 22,151 -> 22,412, the
+  // Canada floor 2,102 -> 2,172, and 7-8 Nov 9,960 -> 10,282. Nothing fell.
+  // Everything here remains a FLOOR, and by more than usual this time: 115
+  // seat maps failed across the five dates (44 of them on 5 Nov alone), and
+  // those rows are blank rather than zero. Landmark Canada is still
+  // uncounted, and 2 of 30 Canadian auditoriums read zero by construction.
+  tickets: "34,866",
+  rate: "4.01%",
+  shows: "6,614",
+  value: "$662,617",
   tminus: "T-17",
-  scan: "19 Oct · 12:06am CT",
+  scan: "19 Oct · 11:02am CT",
 };
 
 function RamayanaTrackerStrip() {

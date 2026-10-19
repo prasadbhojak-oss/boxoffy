@@ -79,17 +79,18 @@ Absent $page 'on sale, not counted' 'no footprint-era Germany kicker'
 # count covered. A floor that rises 203 while its own inventory shrinks is
 # sales, not an artefact, so 1,899 is provably low and is checked as absent
 # below with the rest of the retired Canadian figures.
-Need $page 'tickets:2102'        'Canada 2,102 (recovered floor, labelled as a floor)'
-Need $page 'tickets:9960'        'US 7-8 Nov 9,960 tickets'
+Need $page 'tickets:2172'        'Canada 2,172 (recovered floor, labelled as a floor)'
+Need $page 'tickets:10282'       'US 7-8 Nov 10,282 tickets'
 Need $page 'handCount:1899'      'the retired hand count kept as the record'
 # ASCII only in these two. The page writes '153 screens · 9.81%' with a middot,
 # but Windows PowerShell 5.1 reads a .ps1 saved as UTF-8 without a BOM as ANSI,
 # which mangles the middot and fails the guard for a reason that has nothing to
 # do with the page. Matching the rate and the screen count separately is just
 # as tight and cannot break that way.
-Need $page '9.81%'          'IMAX 4 Nov rate'
+Need $page '10.04%'         'IMAX 4 Nov rate'
+Need $page '152 screens'    'IMAX 4 Nov - 152 screens, one fewer than update 11'
 Need $page '33 screens'     'IMAX 6 Nov - 33 screens, not 32'
-Need $page '7.09%'          'IMAX 6 Nov rate'
+Need $page '7.26%'          'IMAX 6 Nov rate'
 Need $page '+DE.tickets'         'Germany is in the worldwide roll-up'
 Need $page "['Germany',DE.tickets,DE.usd]" 'Germany has a worldwide row'
 Need $page 'Kalki 2898 AD'       'verified ladder'
@@ -115,9 +116,9 @@ Need $page "sea:{name:'SE Asia'"     'SE Asia tile in the map row'
 
 Write-Host ''
 Write-Host '=== 3. the homepage strip agrees with the page'
-Need $app '34,213'     'NA 4-8 total on the strip'
-Need $app '$650,348'   'NA value on the strip'
-Need $app '3.93%'      'US 4-6 Nov sell-through on the strip'
+Need $app '34,866'     'NA 4-8 total on the strip'
+Need $app '$662,617'   'NA value on the strip'
+Need $app '4.01%'      'US 4-6 Nov sell-through on the strip'
 Need $app 'T-17'       'countdown'
 
 Write-Host ''
@@ -159,6 +160,15 @@ Absent $page '6.07%'        'no pre-update-11 IMAX 6 Nov rate'
 Absent $page '6.27%'        'no pre-update-11 IMAX 5 Nov rate'
 Absent $app  '32,245'       'no pre-update-11 NA total on the strip'
 Absent $app  '$612,551'     'no pre-update-11 NA value on the strip'
+# Update 11's own figures, now superseded by update 12.
+Absent $page 'tickets:2102' 'no pre-update-12 Canada floor'
+Absent $page 'tickets:9960' 'no pre-update-12 US_EXTRA'
+Absent $page '9.81%'        'no pre-update-12 IMAX 4 Nov rate'
+Absent $page '7.09%'        'no pre-update-12 IMAX 6 Nov rate'
+Absent $page '6.47%'        'no pre-update-12 IMAX 5 Nov rate'
+Absent $app  '34,213'       'no pre-update-12 NA total on the strip'
+Absent $app  '$650,348'     'no pre-update-12 NA value on the strip'
+Absent $app  '3.93%'        'no pre-update-12 sell-through on the strip'
 Absent $app  '29,911'       'no pre-Canada NA total on the strip'
 Absent $app  '$570,166'     'no pre-Canada NA value on the strip'
 Absent $app  '30,337'       'no pre-update-10 NA total on the strip'
