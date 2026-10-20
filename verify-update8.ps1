@@ -114,7 +114,8 @@ Absent $page 'on sale, not counted' 'no footprint-era Germany kicker'
 # the same showtimes, because a room's capacity floor is its own best
 # availability reading and that drops as it sells. The floor therefore
 # understates by MORE than last time, not less. Both are guarded below.
-Need $page 'tickets:2449'        'Cineplex 2,449 (recovered floor, labelled as a floor)'
+Need $page 'tickets:3040'        'Cineplex 3,040 on its own all-presale dates'
+Absent $page 'tickets:2449,'     'no five-date Cineplex figure'
 # LANDMARK, FIRST READ. Opened by hand - robots.txt answers 403 and no
 # scanner of ours fetches that chain. Seats gone off a one-state map, not a
 # counted sale, and 295 of the 650 are identical on both nights.
@@ -137,9 +138,12 @@ Absent $page 'none of it is counted here'          'Method must not say Landmark
 Need   $page '590 of the 650 is held inventory'    'the block is in the footnote, as agreed'
 Need $page 'canTix'              'the Canadian roll-up uses both chains'
 Absent $page 'const naTix=usSold+xTix()+CA.tickets;' 'no Cineplex-only North America'
-Need $page 'seats:66384'         'the offered-seat floor this scan actually read'
-Need $page 'soloRooms:2,'        'both unrecoverable rooms disclosed'
-Need $page 'wasTickets:2265'     'the retired Canadian figure kept as the record'
+Need $page 'seats:95681'         'the offered-seat floor this scan actually read'
+# Back to one unrecoverable room on the widened dates - the extra sittings
+# gave the second room something to recover its capacity from.
+Need $page 'soloRooms:1,'        'the unrecoverable room is disclosed'
+Absent $page 'soloRooms:2,'      'no five-date solo-room count'
+Need $page 'wasTickets:2449'     'the retired Canadian figure kept as the record'
 # UPDATE 14: US_EXTRA IS ZERO AND THAT IS THE POINT. 7-8 Nov are measured
 # inside the baked map now, so a non-zero US_EXTRA would DOUBLE-COUNT them.
 # The retired figure is kept as wasTickets so the record survives, and
@@ -172,7 +176,8 @@ Need $page 'handCount:1899'      'the retired hand count kept as the record'
 # 19 Oct 22:26/22:40 re-read: 4,836 -> 4,922 on IDENTICAL inventory in both
 # chains - HOYTS 419 sessions none new none gone none failed, Event 443 and
 # the same 107,490 seats. All 86 is buying.
-Need $page 'tickets:4922'        'Australia 4,922 after the 22:26 re-read'
+Need $page 'tickets:5006'        'Australia 5,006 after the Event re-read'
+Absent $page 'tickets:4922,'     'no pre-Event-re-read Australian total'
 # NEW ZEALAND FOLDED IN 20 OCT. The tile and every roll-up read
 # "Australia & NZ" and use anzTix/anzUsd; AU.tickets stays Australia alone so
 # the Australian panel keeps being about Australia. Only the four Australian
@@ -187,9 +192,20 @@ Need $page 'secondWeek:59'       'the second-week NZ tickets named, not hidden'
 Absent $page 'nz:{tickets:200'   'no four-date-only New Zealand'
 Need $page 'anzTix'              'the roll-up uses the combined getter'
 Need $page "'Australia & NZ'"    'the market is labelled for what is in it'
+# INDIA WENT LIVE 20 OCT on District's own seat data. One platform, one
+# date, and 45% of it is a standing block - Gwalior reads 141 sold on eight
+# of nine showtimes. The band is published the way the UK's is.
+Need $page 'const IN = {'        'India is a counted market'
+Need $page 'tickets:13702'       'the District figure'
+Need $page 'clean:7496'          'the block-corrected floor'
+Need $page 'block:6206'          'the block is named, not absorbed'
+Need $page 'atpInr:432'          'the Indian price is theirs, read not assumed'
+Need $page "['India',IN.tickets,IN.usd]" 'India is in the worldwide roll-up'
+Absent $page "sub:'presales opened 20 Oct', soon:true" 'India is no longer coming soon'
 Absent $page "['Australia',AU.tickets,AU.usd]" 'no roll-up row on Australia alone'
 Need $page 'tickets:3864'        'HOYTS 3,864'
-Need $page 'tickets:1058'        'Event 1,058'
+Need $page 'tickets:1142'        'Event 1,142 - same 443 sessions, all buying'
+Absent $page 'tickets:1058,'     'no pre-re-read Event figure'
 Absent $page 'tickets:4836,'     'no pre-re-read Australian total'
 # 20 OCT SECOND FULL GERMAN READ: 277 of 298 showtimes, 98 cinemas, 72 towns.
 # 976 of the 1,706 are published SOLD (Compeso); 730 are one-state seats gone.
@@ -254,8 +270,10 @@ Need $page "sea:{name:'SE Asia'"     'SE Asia tile in the map row'
 Write-Host ''
 Write-Host '=== 3. the homepage strip agrees with the page'
 # 20 OCT: ALL-PRESALE BASIS, 4-12 NOV. The jump is inventory, not demand.
-Need $app '46,807'     'NA all-presale total on the strip'
-Need $app '$868,008'   'NA value on the strip'
+Need $app '47,398'     'NA all-presale total on the strip'
+Need $app '$875,667'   'NA value on the strip'
+Absent $app '46,807'   'no pre-Canada-widening NA total'
+Absent $app '$868,008' 'no pre-Canada-widening NA value'
 Absent $app '46,157'   'no pre-Landmark NA total on the strip'
 Absent $app '$859,584' 'no pre-Landmark NA value on the strip'
 Need $app '10,539'     'US 4-12 Nov showtimes on the strip'
@@ -418,7 +436,6 @@ Absent $app  '$726,991'      'no pre-update-16 NA value on the strip'
 Absent $app  '3.88%'         'no 4-8 Nov sell-through on the strip'
 Absent $page '4–8 November'  'no 4-8 Nov basis line left on the page'
 Absent $page 'tickets:2265,' 'no pre-reread Canada ticket count'
-Absent $page 'soloRooms:1,'  'solo-room count must be the 2 this scan read'
 Absent $page 'seats:66642'   'no pre-reread Canadian seat floor'
 Absent $app  '4.01%'         'no 4-6 Nov sell-through on the strip'
 # UK was a MODELLED midpoint of 2,103-9,253 until 19 Oct, when every

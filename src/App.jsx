@@ -4546,10 +4546,18 @@ const RAMAYANA_TRACKER = {
   // The US half is untouched. Retired pair, spelled out because
   // verify-update8.ps1 now forbids the digits: four six one five seven, and
   // eight five nine five eight four.
-  tickets: "46,807",
+  // UPDATE 18, 20 Oct 06:27 - CANADA WIDENED. Cineplex 2,449 -> 3,040 on
+  // its own all-presale dates; it has 9 and 10 Nov on sale and nothing on
+  // the 11th or 12th. Only about half the 4-8 Nov move is buying - adding
+  // near-empty second-week sittings raises each room's recovered capacity,
+  // which raises the computed sold everywhere. NA = 43,708 + 3,040 + 650.
+  // The US half is untouched. Retired pair, spelled out because
+  // verify-update8.ps1 forbids the digits: four six eight zero seven, and
+  // eight six eight zero zero eight.
+  tickets: "47,398",
   rate: "3.19%",
   shows: "10,539",
-  value: "$868,008",
+  value: "$875,667",
   tminus: "T-16",
   scan: "19 Oct · 10:00pm CT",
 };
