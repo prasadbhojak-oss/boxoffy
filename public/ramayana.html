@@ -2124,7 +2124,12 @@ function mktSvg(k,s,act){
     `${ft&&p.c?' at '+p.c+' cinema'+(p.c>1?'s':''):''}</title></circle>`;
   }).join('');
   const bub=ink+hit;
-  return `<svg viewBox="${m.vb}" style="width:100%;height:${s}px;display:block;`+
+  const vb=m.vb.split(' ').map(Number);
+  /* act === the big detail map. s is a HEIGHT CAP there, not a height. */
+  const box = act
+    ? `width:100%;height:auto;aspect-ratio:${vb[2]}/${vb[3]};max-height:${s}px`
+    : `width:100%;height:${s}px`;
+  return `<svg viewBox="${m.vb}" style="${box};display:block;`+
          `overflow:visible" role="img" aria-label="${esc(m.name)} bookings">`+
          land+bub+`</svg>`;
 }
@@ -2184,9 +2189,9 @@ function worldMaps(){
         /* A market with no figures still has a shape, and showing it is
            the difference between "we are watching this" and a grey box.
            India went in the day its booking opened with nothing counted. */
-        (m.soon ? (m.d?`<div style="opacity:.45">${mktSvg(k,118)}</div>`
-                      :`<div style="height:118px"></div>`)
-                : mktSvg(k,118))+`</button>`;
+        (m.soon ? (m.d?`<div style="opacity:.45">${mktSvg(k,146)}</div>`
+                      :`<div style="height:146px"></div>`)
+                : mktSvg(k,146))+`</button>`;
     }).join('')+`</div>`;
   el.querySelectorAll('[data-mkt]').forEach(b=>
     b.addEventListener('click',()=>{
@@ -2251,8 +2256,8 @@ function mktFrame(){
       `Clear</button></div>`
     : '';
   fr.innerHTML=
-    `<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:24px">`+
-      `<div>`+mktSvg(MSEL,330,true)+selline+
+    `<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:26px">`+
+      `<div>`+mktSvg(MSEL,620,true)+selline+
         `<div style="margin-top:13px">${list}</div>`+
         `<p class="note" style="margin-top:9px">`+
         (m.foot
