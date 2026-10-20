@@ -3432,10 +3432,27 @@ async function drawShot(){
   const stats=[[fmt(sold),'TICKETS'],['$'+fmt(Math.round(sold*atpNow())),'VALUE'],
                [pc1(pct(sold,seats)),'OF SEATS'],
                [fmt(shows),'SHOWS'],[String(rows.length),'MARKETS']];
-  stats.forEach((s,i)=>{
-    const x=44+i*150;
-    c.fillStyle=SNAP.ink; c.font='600 34px '+mono; c.fillText(s[0],x,200);
-    c.fillStyle=SNAP.muted; c.font='600 11px '+body; c.fillText(s[1],x,218);
+  /* COLUMNS ARE MEASURED, NEVER ASSUMED. These sat on a fixed 150px pitch,
+     which worked until the US value passed six figures: '$695,252' at 34px
+     mono is about 163px wide and ran straight through the column beside it,
+     so the card printed "$695,2523.88%" as one unreadable number. Each
+     column is now as wide as the widest thing in it, and the whole row is
+     scaled down together if it would ever run off the card. */
+  c.font='600 34px '+mono;
+  const vw=stats.map(s=>c.measureText(s[0]).width);
+  c.font='600 11px '+body;
+  const lw3=stats.map(s=>c.measureText(s[1]).width);
+  const colw=vw.map((w,i)=>Math.max(w,lw3[i]));
+  const GAP=28, AVAIL=W-88;
+  let need=colw.reduce((a,b)=>a+b,0)+GAP*(colw.length-1);
+  const k=need>AVAIL ? AVAIL/need : 1;
+  let sx=44;
+  stats.forEach((st,i)=>{
+    c.fillStyle=SNAP.ink; c.font='600 '+(34*k).toFixed(1)+'px '+mono;
+    c.fillText(st[0],sx,200);
+    c.fillStyle=SNAP.muted; c.font='600 '+(11*k).toFixed(1)+'px '+body;
+    c.fillText(st[1],sx,218);
+    sx+=colw[i]*k+GAP*k;
   });
 
   /* map */
@@ -3469,10 +3486,20 @@ async function drawShot(){
      rather than "not counted yet". */
   const mx=760, bw2=330;
   const mrows=WW.rows, mmax=Math.max(1,...mrows.map(r=>r[1]));
+  /* THE ROW PITCH IS DERIVED FROM HOW MANY MARKETS THERE ARE. It was a fixed
+     62px against a PREVIEW NIGHT block pinned at y=508, and the fourth market
+     - Germany, added 18 Oct - put its bar underneath that heading. A fifth,
+     when India lands, would have buried two. The preview block keeps its
+     place, which is set by the footer below it; the markets get the room
+     above it and divide it between however many of them there are, always
+     leaving CLEAR between the last bar and the heading. */
+  const MTOP=300, PY=508, CLEAR=46;
+  const mstep=Math.min(62,
+    Math.floor((PY-CLEAR-19-MTOP)/Math.max(1,mrows.length-1)));
   c.fillStyle=SNAP.ink; c.font='800 21px '+disp;
   c.fillText('MARKET BY MARKET',mx,262);
   mrows.forEach((r,i)=>{
-    const y=300+i*62;
+    const y=MTOP+i*mstep;
     c.fillStyle=SNAP.mid; c.font='600 15px '+body;
     c.fillText(r[0],mx,y);
     c.fillStyle=SNAP.line; c.fillRect(mx,y+9,bw2,10);
@@ -3488,13 +3515,13 @@ async function drawShot(){
      page: there is no worldwide preview night. */
   const prem=premiereTickets();
   c.fillStyle=SNAP.ink; c.font='800 21px '+disp;
-  c.fillText('PREVIEW NIGHT',mx,508);
+  c.fillText('PREVIEW NIGHT',mx,PY);
   c.fillStyle=SNAP.accent; c.font='800 46px '+disp;
-  c.fillText(fmt(prem),mx,556);
+  c.fillText(fmt(prem),mx,PY+48);
   c.fillStyle=SNAP.muted; c.font='500 12.5px '+mono;
-  c.fillText('WED 4 NOV · NORTH AMERICA ONLY',mx,578);
+  c.fillText('WED 4 NOV · NORTH AMERICA ONLY',mx,PY+70);
   c.fillStyle=SNAP.mid; c.font='400 13px '+body;
-  c.fillText('The UK and Australia open cold on Thu 5 Nov',mx,600);
+  c.fillText('The UK and Australia open cold on Thu 5 Nov',mx,PY+92);
 
   c.fillStyle=SNAP.line; c.fillRect(44,H-46,W-88,1);
   c.fillStyle=SNAP.muted; c.font='400 12px '+mono;
