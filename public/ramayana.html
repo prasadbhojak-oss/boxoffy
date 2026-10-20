@@ -2543,10 +2543,10 @@ const UK = {
      The old 5,678 is retired: it sits ABOVE 4,985, the highest reading the
      Cineworld data can support, so it is not defensible as either seats
      gone or tickets booked. */
-  /* 20 OCT PARTIAL RE-READ, BATCH 2. 12 of 84 cinemas, 202 of 1,084
+  /* 20 OCT PARTIAL RE-READ, BATCH 3. 13 of 84 cinemas, 267 of 1,084
      showtimes, taken highest-selling first.
-     +235 TICKETS, AND ANOTHER 147 ARE NOT SALES.
-     The raw delta is +382. A hundred and forty-seven of that is London
+     +294 TICKETS, AND ANOTHER 147 ARE NOT SALES.
+     The raw delta is +441. A hundred and forty-seven of that is London
      Feltham rows where sold rises by what held falls - 0->15 against
      23->8, 0->17 against 25->8, over and over. Rows do not mirror to the
      seat by chance. Those are the same seats being RELABELLED from held
@@ -2561,35 +2561,42 @@ const UK = {
      waved all nineteen through. The rule now is per row: whatever held
      gave up is a relabel, the remainder is a sale.
 
-     Because we exclude them, our 5,220 sits 147 BELOW Cineworld's own
-     seats-gone basis. That is the conservative direction and it is the
+     THREE O2 GREENWICH ROWS WENT DOWN, AND THEY ARE LEFT IN. Two 4DX
+     sessions on 5 Nov read -1 and -2. A presale does not usually fall, so
+     these are refunds or a re-read difference, and they are small. They
+     stay in the clean figure because excluding only the falls while
+     keeping every rise is how a number drifts upward one batch at a time.
+     Take the measurement in both directions or do not take it.
+
+     Because we exclude the relabels, our 5,279 sits 147 BELOW Cineworld's
+     own seats-gone basis. That is the conservative direction and it is the
      one to be wrong in.
      GROK'S COLUMN HEADERS ARE OFF BY A DAY. Its "sold_18oct" is our
      19 Oct hand scan - Leicester Square's 18:30 IMAX reads 209 there and
      209 is what this page published. Taking the headers literally would
      have added a delta that is already inside the 4,985.
-     THE BASIS IS MIXED AND THE POST MUST SAY SO: 12 cinemas are 20 Oct,
-     the other 72 are still 19 Oct. Grok is working highest-selling first,
+     THE BASIS IS MIXED AND THE POST MUST SAY SO: 13 cinemas are 20 Oct,
+     the other 71 are still 19 Oct. Grok is working highest-selling first,
      so the re-read cinemas are the ones most likely to have moved and the
      remaining 72 will add less per cinema than these did. This is a
      FLOOR. */
-  tickets:5707, gbp:77044, usd:102106, atpGbp:13.50, fx:1.3253,
-  cwGone:5220, scGone:487, soldShare:44.84, scOffSale:1087,
-  reRead:12, reReadShows:202, reReadDelta:235, relabelled:147,
+  tickets:5766, gbp:77841, usd:103163, atpGbp:13.50, fx:1.3253,
+  cwGone:5279, scGone:487, soldShare:44.84, scOffSale:1087,
+  reRead:13, reReadShows:267, reReadDelta:294, relabelled:147,
   /* rate and seats are CINEWORLD ONLY and measured. There is no both-chains
      denominator, because Showcase's seat counts were never read - do not
      invent one to make the percentage look national. */
-  seats:272642, rate:1.91,
-  offSale:11352, held:5985,
-  realLo:2854, realHi:5220, blockSeats:2366, blockRooms:31,
+  seats:272642, rate:1.94,
+  offSale:11411, held:5985,
+  realLo:2913, realHi:5279, blockSeats:2366, blockRooms:31,
   /* BOTH COLUMNS, PB 19 OCT. The headline INCLUDES blocks and the footer
      says so. blockedAll is every held seat we can name: 6,132 the chain
      labels plus 2,366 the room-minimum test infers. blockedUsd is NOTIONAL -
      nobody paid it - and it is never summed into a worldwide dollar total.
      booked* is the organic figure on Gemini's definition of a true sale. */
-  booked:2854, bookedGbp:38529, bookedUsd:51062,
+  booked:2913, bookedGbp:39326, bookedUsd:52119,
   blockedAll:8351, blockedGbp:112738, blockedUsd:149412,
-  trueOcc:1.05, onlineOcc:0.99, bookableSeats:264144,
+  trueOcc:1.07, onlineOcc:0.99, bookableSeats:264144,
   untestedRooms:88, untestedSeats:475,
   wasMidpoint:5678, wasRawOffSale:11838, wasHeldEst:9735, wasImpliedHeld:6160,
   zeroShows:499, soldOut:0, roomsTested:138, roomsTotal:226,
@@ -2614,8 +2621,8 @@ const UK = {
   showsRead:1084, showsTotal:1136, cinemasRead:84, cinemasTotal:87,
   /* Days are MEASURED now, not a share of a midpoint. These four add to
      4,985 exactly. They carry the same block share as the headline. */
-  byDate:[['Thu 5 Nov',2002],['Fri 6 Nov',1119],['Sat 7 Nov',1093],
-          ['Sun 8 Nov',1006]],
+  byDate:[['Thu 5 Nov',2043],['Fri 6 Nov',1124],['Sat 7 Nov',1104],
+          ['Sun 8 Nov',1008]],
   dateSeats:[['Thu 5 Nov',77657],['Fri 6 Nov',70398],['Sat 7 Nov',63093],
              ['Sun 8 Nov',61494]],
   /* BLOCK-CORRECTED. Do not swap these for the seats-gone figures.
@@ -2628,7 +2635,7 @@ const UK = {
      digits for exactly that reason. */
   cities:[['Leicester Square',520],['Watford',322],
           ['Birmingham Broad Street',200],['Hounslow',169],
-          ['Milton Keynes',159],['The O2 Greenwich',128],
+          ['The O2 Greenwich',187],['Milton Keynes',159],
           ['Edinburgh',94],['Wembley',90],['Sheffield',82],
           ['Crawley',70]],
   langs:[['Hindi',4669,962,1.89],['Telugu',238,49,2.60],['Tamil',78,73,0.49]],

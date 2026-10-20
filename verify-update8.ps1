@@ -45,12 +45,12 @@ Need $page 'function euBody'     'United Kingdom panel'
 Need $page 'function auBody'     'Australia panel'
 Need $page 'function pendingPanel' 'not-yet-counted panel'
 Need $page 'function openSpan'   'opening-run split'
-Need $page 'tickets:5707'        'UK 5,707 after the 20 Oct batch-2 re-read'
-Need $page 'cwGone:5220'         'Cineworld 5,220 after the 20 Oct batch-2 re-read'
+Need $page 'tickets:5766'        'UK 5,766 after the 20 Oct batch-3 re-read'
+Need $page 'cwGone:5279'         'Cineworld 5,279 after the 20 Oct batch-3 re-read'
 Need $page 'scGone:487'          'Showcase 487 modelled on the measured share'
 Need $page 'soldShare:44.84'     'the share is measured now, not assumed'
-Need $page 'offSale:11352'       'UK off sale published beside it'
-Need $page 'realLo:2854'         'UK real-bookings band published, not a point'
+Need $page 'offSale:11411'       'UK off sale published beside it'
+Need $page 'realLo:2913'         'UK real-bookings band published, not a point'
 Need $page 'blockSeats:2366'     'UK house-seat exposure disclosed'
 # The city list MUST stay block-corrected. On the seats-gone basis Solihull
 # reads 462 and Feltham 281, and both are almost entirely one room's block -
@@ -67,7 +67,7 @@ Absent $page "['Feltham',281]"        'no block-inflated Feltham in the city lis
 # pre-flight could not pass at all - every run failed on two guards that were
 # only ever each other. Retired figures live in section 4 as Absent; the live
 # figure is the only thing section 1 Needs. One number, one guard, one place.
-Need $page 'booked:2854'         'UK organic booked figure published'
+Need $page 'booked:2913'         'UK organic booked figure published'
 Need $page 'blockedAll:8351'     'UK blocked seats published'
 Need $page 'INCLUDES BLOCKED SEATS' 'UK footer discloses blocks in the headline'
 Need $page 'function deBody'     'Germany panel'
@@ -260,6 +260,8 @@ Need   $page 'relabelled:147' 'the held-to-sold relabel is named, not absorbed'
 Absent $page 'cwGone:5367'  'no relabelled seats counted as sales'
 Absent $page 'tickets:5621' 'no batch-1 UK total'
 Absent $page 'cwGone:5134'  'no batch-1 Cineworld figure'
+Absent $page 'tickets:5707' 'no batch-2 UK total'
+Absent $page 'cwGone:5220'  'no batch-2 Cineworld figure'
 Absent $page 'tickets:1192' 'no pre-delta Germany total'
 Absent $page 'tickets:1177' 'no pre-basis-change Germany total'
 # EUR MOVES WITH THE DELTA NOW, AND THAT IS NOT A CHANGE OF POLICY.
