@@ -27,6 +27,7 @@ function Absent($file, $marker, $label) {
 
 $page = 'public\ramayana.html'
 $app  = 'src\App.jsx'
+$vercel = 'vercel.json'
 
 Write-Host ''
 Write-Host '=== 1. the edits are actually in the files'
@@ -44,18 +45,18 @@ Need $page 'function euBody'     'United Kingdom panel'
 Need $page 'function auBody'     'Australia panel'
 Need $page 'function pendingPanel' 'not-yet-counted panel'
 Need $page 'function openSpan'   'opening-run split'
-Need $page 'tickets:5472'        'UK 5,472 seats gone, both chains'
-Need $page 'cwGone:4985'         'Cineworld 4,985 measured by hand'
+Need $page 'tickets:5621'        'UK 5,621 after the 20 Oct partial re-read'
+Need $page 'cwGone:5134'         'Cineworld 5,134 after the 20 Oct partial re-read'
 Need $page 'scGone:487'          'Showcase 487 modelled on the measured share'
 Need $page 'soldShare:44.84'     'the share is measured now, not assumed'
-Need $page 'offSale:11117'       'UK 11,117 off sale published beside it'
-Need $page 'realLo:2619'         'UK real-bookings band published, not a point'
+Need $page 'offSale:11266'       'UK off sale published beside it'
+Need $page 'realLo:2768'         'UK real-bookings band published, not a point'
 Need $page 'blockSeats:2366'     'UK house-seat exposure disclosed'
 # The city list MUST stay block-corrected. On the seats-gone basis Solihull
 # reads 462 and Feltham 281, and both are almost entirely one room's block -
 # Solihull corrected is 6. A national total can carry blocks with a note; a
 # named cinema cannot, because a reader can open the seat map and disprove it.
-Need $page "['Leicester Square',472]" 'UK city list on the corrected basis'
+Need $page "['Leicester Square',520]" 'UK city list on the corrected basis'
 Absent $page "['Solihull',462]"       'no block-inflated Solihull in the city list'
 Absent $page "['Feltham',281]"        'no block-inflated Feltham in the city list'
 # 3,964 and 1,192 USED TO BE Need LINES HERE. They were the live Australian
@@ -66,8 +67,8 @@ Absent $page "['Feltham',281]"        'no block-inflated Feltham in the city lis
 # pre-flight could not pass at all - every run failed on two guards that were
 # only ever each other. Retired figures live in section 4 as Absent; the live
 # figure is the only thing section 1 Needs. One number, one guard, one place.
-Need $page 'booked:2619'         'UK organic booked figure published'
-Need $page 'blockedAll:8498'     'UK blocked seats published'
+Need $page 'booked:2768'         'UK organic booked figure published'
+Need $page 'blockedAll:8400'     'UK blocked seats published'
 Need $page 'INCLUDES BLOCKED SEATS' 'UK footer discloses blocks in the headline'
 Need $page 'function deBody'     'Germany panel'
 Need $page "de :{name:'Germany'" 'Germany tile in the map row'
@@ -95,8 +96,27 @@ Need $page 'tickets:2265'        'Canada 2,265 (recovered floor, labelled as a f
 Need   $page 'const US_EXTRA = {tickets:0, usd:0' 'US_EXTRA retired to zero'
 Need   $page 'byDate:{},'                         'US_EXTRA byDate is empty, not zeroed'
 Need   $page 'wasTickets:10282'                   'the retired 7-8 Nov figure kept as the record'
+# THE $1.07M BUG, 19 OCT. The page was briefly serving a worldwide total of
+# about $1,072,508 against a true $889,758, because ramayana.html was cached
+# for 300s while ramayana-map.json was cached for 60s. For four minutes a
+# returning visitor held OLD constants and fetched the NEW map, so 7-8 Nov -
+# already inside the map - were added a second time from the stale US_EXTRA.
+# Two guards, because the fix has two halves and either alone still breaks:
+#   xTix/xUsd   the page asks the MAP what dates it covers and zeroes the
+#               supplement itself, instead of trusting a constant about data
+#   cache       ramayana.html must never outlive ramayana-map.json
+Need   $page 'const MAP_HAS_78' 'the page derives its own basis from DATA.dates'
+Need   $page 'function xTix()'  'the 7-8 Nov supplement goes through the guard'
+Need   $page 'function xUsd()'  'the dollar supplement goes through the guard'
+Need   $vercel 'max-age=0, must-revalidate' 'the page revalidates - never cached longer than its data'
+# The unguarded shapes. If any of these come back, something reads US_EXTRA
+# directly again and the double-count returns on the next basis change.
+Absent $page 'US_EXTRA.tickets+CA.tickets' 'no unguarded US_EXTRA in the NA sum'
+Absent $page '+US_EXTRA.usd+'              'no unguarded US_EXTRA in a dollar sum'
+Absent $page 'DATA.total.sold+US_EXTRA.tickets' 'no unguarded US_EXTRA in the US tile'
+Absent $vercel 'max-age=300'               'no 5-minute cache on a live tracker page'
 Need $page 'handCount:1899'      'the retired hand count kept as the record'
-Need $page 'tickets:4658'        'Australia 4,658 (Chadstone read by hand, carry retired)'
+Need $page 'tickets:4836'        'Australia 4,836 (Chadstone answering, full clean read)'
 Need $page 'tickets:1230'        'Germany 1,230 after the 19 Oct delta'
 Need $page 'notYetOnSale:4'      'the 10 Nov rows are not-yet-bookable, not gone'
 Need $page 'priced:49'           'priced coverage fell to 49% - no price was invented'
@@ -105,15 +125,16 @@ Need $page 'priced:49'           'priced coverage fell to 49% - no price was inv
 # 18 Oct guard asked for carried:496 to stop anyone dropping those sessions;
 # the sessions have now been read, so asking for it would pin a stale figure.
 Need   $page 'wasCarried:496'    'the retired carry kept as the record'
-Need   $page 'chadstoneRead:556' 'Chadstone measured by hand, 556'
+Need   $page 'chadstoneRead:564' 'Chadstone scanned by our own reader, 564'
+Need   $page 'chadstoneHand:556'  'the hand count kept as the record it validated'
 Need   $page 'carriedShows:1'    'only the Sunnybank row is still carried'
 # The denominator did NOT move. Chadstone's Xtremescreen reads 174 seat
 # buttons where our reader counted 182, with unavailable still at 4 - a
 # counting-method difference, not eight seats leaving the room. Cutting
 # hy.seats to 70,475 would have printed 5.22% off a measurement artefact.
-Need   $page 'seats:70603'       'HOYTS denominator unchanged - 174/182 is method, not capacity'
-Absent $page 'rate:5.22'         'no rate manufactured from the 8-seat gap'
-Need $page "['VIC',1273]"        'Victoria leads on a measured Chadstone, not a carried one'
+Need   $page 'seats:70335'       'HOYTS denominator from the full clean read'
+Need   $page 'rate:5.42'         'HOYTS rate on its own real house count'
+Need $page "['VIC',1298]"        'Victoria leads on a fully scanned Chadstone'
 # ASCII only in these two. The page writes '153 screens · 9.81%' with a middot,
 # but Windows PowerShell 5.1 reads a .ps1 saved as UTF-8 without a BOM as ANSI,
 # which mangles the middot and fails the guard for a reason that has nothing to
@@ -226,6 +247,17 @@ Absent $page 'tickets:3900' 'no pre-19-Oct Australia figure'
 Absent $page 'tickets:4598' 'no pre-Chadstone-read Australia total'
 Absent $page "['VIC',1213]"  'no carried-Chadstone Victoria figure'
 Absent $page 'tickets:3616' 'no pre-Chadstone-read HOYTS figure'
+# 20 OCT RETIREMENTS.
+Absent $page 'tickets:4658' 'no pre-full-read Australia total'
+Absent $page 'tickets:3676' 'no carried-era HOYTS figure'
+Absent $page "['VIC',1273]" 'no carried-era Victoria figure'
+Absent $page 'tickets:5472' 'no pre-re-read UK total'
+Absent $page 'cwGone:4985'  'no pre-re-read Cineworld figure'
+# The 98 Feltham seats that moved from held to sold are NOT counted. If
+# cwGone ever reads 5,232 it means someone added them, and 98 tickets
+# nobody bought are in the UK total.
+Need   $page 'relabelled:98' 'the held-to-sold relabel is named, not absorbed'
+Absent $page 'cwGone:5232'  'no relabelled seats counted as sales'
 Absent $page 'tickets:1192' 'no pre-delta Germany total'
 Absent $page 'tickets:1177' 'no pre-basis-change Germany total'
 # EUR MOVES WITH THE DELTA NOW, AND THAT IS NOT A CHANGE OF POLICY.

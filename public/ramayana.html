@@ -1311,6 +1311,30 @@ const US_EXTRA = {tickets:0, usd:0, dates:"folded into the map 19 Oct",
                   byDate:{},
                   wasTickets:10282, wasUsd:184973, wasAtp:17.99};
 
+/* xTix / xUsd EXIST BECAUSE THE PAGE SHOWED $1.07M FOR FOUR MINUTES.
+   19 Oct, right after Update 14 deployed. The page baked-paints from the
+   constants in this file and then repaints from /ramayana-map.json. Those two
+   are cached on DIFFERENT clocks, so for a few minutes a returning visitor
+   holds OLD constants and fetches the NEW map. Normally that only makes
+   figures lag. On a BASIS change it double-counts: the new map already
+   contained 7-8 Nov while the cached HTML still had US_EXTRA at 10,282, so
+   those dates were added twice and the worldwide total read about $1,072,508
+   against a true $889,758.
+
+   So US_EXTRA is no longer trusted on its own. The map states its own date
+   window, and that is the authority: if 7 Nov is in DATA.dates, 7-8 Nov are
+   already counted and the supplement MUST be zero whatever this file says.
+   A constant describing data is always a guess about data; the data knows.
+
+   THIS BLOCK WAS LOST ONCE ALREADY. It was written on 19 Oct and was gone
+   from the file by 20 Oct - the page had been rolled back to its pre-fix
+   state while keeping Update 14's constants. Cause unknown. If it disappears
+   again, check whether anything in the deploy path rewrites this file.
+   verify-update8.ps1 now guards for it, so a deploy without it fails. */
+const MAP_HAS_78 = Array.isArray(DATA.dates) && DATA.dates.includes('2026-11-07');
+function xTix(){ return MAP_HAS_78 ? 0 : (US_EXTRA.tickets || 0); }
+function xUsd(){ return MAP_HAS_78 ? 0 : (US_EXTRA.usd     || 0); }
+
 /* AUSTRALIA IS TWO CHAINS AND ONLY ONE OF THEM CAN BE SCANNED.
    Event Cinemas publishes the seats still free, so the same capacity recovery
    that unlocked Canada works there: across one room's own sessions, the
@@ -1410,14 +1434,27 @@ const AU = {
 
      ONE CARRIED SESSION REMAINS: the Sunnybank row, still unread. Its last
      count was 0, so it costs the headline nothing and sits only in seats. */
-  tickets:4658, aud:119757, usd:79040, atpAud:25.71, fx:0.66,
-  ev:{tickets:982, shows:443, counted:443, cinemas:38, seats:107510, rate:0.91},
-  hy:{tickets:3676, shows:437, counted:436, cinemas:47, cinemasRead:47,
-      seats:70603, rate:5.21, held:2386, carried:0, carriedShows:1,
-      wasCarried:496, chadstoneRead:556, chadstoneSeats:5956,
-      chadstonePct:9.3, capacityWas:182, capacityNow:174},
-  byDate:[['Thu 5 Nov',1778],['Fri 6 Nov',1460],['Sat 7 Nov',1169],['Sun 8 Nov',251]],
-  langs:[['Hindi',4439],['Telugu',156],['Tamil',38],['Kannada',24],['Malayalam',1]],
+  /* 19 OCT 20:39/20:54. CHADSTONE ANSWERED. FULL CLEAN READ AT LAST.
+     All 28 Chadstone sessions came back through our own reader - no 500s,
+     nothing carried, nothing hand-read. They read 564 against the 556 a
+     human counted six hours earlier, so the hand count was right and the
+     market kept moving. Exactly one HOYTS row is blank now (Belconnen),
+     and its last count was 0.
+     The 13-session hand-count gate passed again and by a wide margin:
+     those shows went 286 -> 463 in a day, +62%. Event went 666 -> 1,022
+     nationally, +53%.
+     SAY WHICH KIND OF GROWTH THIS IS. The old 952 -> 3,900 leap was
+     COVERAGE - 4 HOYTS cinemas becoming 47. That is finished; the
+     footprint is fully read. Movement from 3,964 onward is BUYING, and
+     this +178 is the first increase that is entirely demand. */
+  tickets:4836, aud:124706, usd:82306, atpAud:25.79, fx:0.66,
+  ev:{tickets:1022, shows:443, counted:443, cinemas:38, seats:107490, rate:0.95},
+  hy:{tickets:3814, shows:419, counted:418, cinemas:47, cinemasRead:47,
+      seats:70335, rate:5.42, held:2479, carried:0, carriedShows:1,
+      wasCarried:496, chadstoneRead:564, chadstoneHand:556,
+      capacityWas:182, capacityNow:174},
+  byDate:[['Thu 5 Nov',1836],['Fri 6 Nov',1513],['Sat 7 Nov',1215],['Sun 8 Nov',272]],
+  langs:[['Hindi',4605],['Telugu',168],['Tamil',38],['Kannada',24],['Malayalam',1]],
   /* 18 Oct 18:38 re-read, and the validation gate PASSED: all 13 sessions PB
      hand-read on 17 Oct came back equal or higher, so the ticketing API is
      reporting what the seat map shows. Like-for-like in one day those 13 went
@@ -1434,17 +1471,17 @@ const AU = {
      4 Event rooms appear in a single session and read 0 by construction. Floor
      noise, in the direction a floor is meant to be wrong. */
   /* HOYTS ONLY - the chain publishes a state field and Event does not, so
-     these sum to hy.tickets (3,676), never to tickets (4,658). */
-  states:[['VIC',1273],['NSW',1086],['WA',566],['SA',342],['ACT',282],
-          ['QLD',127]],
+     these sum to hy.tickets (3,814), never to tickets (4,836). */
+  states:[['VIC',1298],['NSW',1134],['WA',598],['SA',352],['ACT',298],
+          ['QLD',134]],
   /* Both chains, 19 Oct 14:40. Chadstone's 556 is now READ, not carried, so
      Victoria's lead over New South Wales is measured rather than restored -
      1,273 to 1,086. The warning above still stands for the two reads that
      LOST Chadstone; it no longer applies to this one. */
-  cities:[['Western Sydney',935],['Melbourne Chadstone',556],['Perth Carousel',396],
-          ['Sydney Darling Harbour',224],['Canberra Belconnen',189],
-          ['Melbourne Docklands',181],['Sydney Castle Hill',181],
-          ['Melbourne Highpoint',174],['Melbourne CBD',150],
+  cities:[['Western Sydney',974],['Melbourne Chadstone',564],['Perth Carousel',426],
+          ['Sydney Darling Harbour',217],['Canberra Belconnen',202],
+          ['Sydney Castle Hill',191],['Melbourne Docklands',184],
+          ['Melbourne Highpoint',179],['Melbourne CBD',151],
           ['Sydney Parramatta',148]],
   premiumPct:94, premiumStd:166, eveningPct:91,
   top:{cinema:"HOYTS Blacktown, Sydney", when:"Fri 6 Nov, 8:45p",
@@ -1564,8 +1601,8 @@ function mktShapes(){
   /* Always the WHOLE United States, never the filtered view. A reader who
      picks "IMAX" is narrowing the American panel below, not shrinking the
      country - the thumbnail must keep saying what the country has sold. */
-  MKT.usa.tix=DATA.total.sold+US_EXTRA.tickets;
-  MKT.usa.usd=Math.round(DATA.total.sold*atpNow())+US_EXTRA.usd;
+  MKT.usa.tix=DATA.total.sold+xTix();
+  MKT.usa.usd=Math.round(DATA.total.sold*atpNow())+xUsd();
   MKT.uk.tix=UK.tickets;  MKT.uk.usd=UK.usd;
   MKT.aus.tix=AU.tickets; MKT.aus.usd=AU.usd;
   MKT.de.tix=DE.tickets;  MKT.de.usd=DE.usd;
@@ -1700,8 +1737,8 @@ function tiles(){
   if(activeDim()){ head.innerHTML=''; uscap.textContent=''; na.textContent=''; }
   else{
     const usSold=sold, usUsd=Math.round(usSold*atp);
-    const naTix=usSold+US_EXTRA.tickets+CA.tickets;
-    const naUsd=usUsd+US_EXTRA.usd+CA.usd;
+    const naTix=usSold+xTix()+CA.tickets;
+    const naUsd=usUsd+xUsd()+CA.usd;
     /* The worldwide roll-up. ROW is every market we list but have not counted
        - Middle East, SE Asia, Europe outside Britain. It is deliberately a
        zero with a label, never a blank: a reader who sees no row assumes we
@@ -1754,7 +1791,7 @@ function tiles(){
         split(WT)+
         `<div style="font-family:var(--mono);font-size:11.5px;color:var(--muted);`+
         `margin-top:9px;line-height:1.5">`+
-        `United States ${fmt(usSold+US_EXTRA.tickets)} · `+
+        `United States ${fmt(usSold+xTix())} · `+
         `Canada ${fmt(CA.tickets)}. `+
         `Landmark Cinemas is not counted, so this can only go up.</div>`+
       `</div>`;
@@ -1991,7 +2028,8 @@ function premiereTickets(){
   return DATA.metros.reduce((a,m)=>a+((m.byDate&&m.byDate[PREM_DATE]||{sold:0}).sold),0);
 }
 function usOn(d){
-  if(US_EXTRA.byDate && US_EXTRA.byDate[d]!=null) return US_EXTRA.byDate[d];
+  /* Same guard as xTix: once the map carries a date, the map is the source. */
+  if(!MAP_HAS_78 && US_EXTRA.byDate && US_EXTRA.byDate[d]!=null) return US_EXTRA.byDate[d];
   return DATA.metros.reduce((a,m)=>a+((m.byDate&&m.byDate[d]||{sold:0}).sold),0);
 }
 
@@ -2505,22 +2543,42 @@ const UK = {
      The old 5,678 is retired: it sits ABOVE 4,985, the highest reading the
      Cineworld data can support, so it is not defensible as either seats
      gone or tickets booked. */
-  tickets:5472, gbp:73872, usd:97903, atpGbp:13.50, fx:1.3253,
-  cwGone:4985, scGone:487, soldShare:44.84, scOffSale:1087,
+  /* 20 OCT PARTIAL RE-READ. 8 of 84 cinemas, 118 of 1,084 showtimes.
+     +149 TICKETS, AND THE OTHER 98 ARE NOT SALES.
+     Grok re-opened eight cinemas. The raw delta is +247. Ninety-eight of
+     that is six London Feltham rows where sold rises by EXACTLY what held
+     falls - 0->15 against 23->8, 0->17 against 25->8, three times over.
+     Six rows cannot mirror to the seat by chance. Those are the same
+     seats being RELABELLED from held to sold by the chain, not bought by
+     anyone, and they are excluded. This is the British problem happening
+     in front of us: we cannot tell a held seat from a sold one, and here
+     the label moved on its own.
+     Because we exclude them, our 5,134 now sits 98 BELOW Cineworld's own
+     seats-gone basis. That is the conservative direction and it is the
+     one to be wrong in.
+     GROK'S COLUMN HEADERS ARE OFF BY A DAY. Its "sold_18oct" is our
+     19 Oct hand scan - Leicester Square's 18:30 IMAX reads 209 there and
+     209 is what this page published. Taking the headers literally would
+     have added a delta that is already inside the 4,985.
+     THE BASIS IS MIXED AND THE POST MUST SAY SO: 8 cinemas are 20 Oct,
+     the other 76 are still 19 Oct. This is a FLOOR. */
+  tickets:5621, gbp:75884, usd:100568, atpGbp:13.50, fx:1.3253,
+  cwGone:5134, scGone:487, soldShare:44.84, scOffSale:1087,
+  reRead:8, reReadShows:118, reReadDelta:149, relabelled:98,
   /* rate and seats are CINEWORLD ONLY and measured. There is no both-chains
      denominator, because Showcase's seat counts were never read - do not
      invent one to make the percentage look national. */
-  seats:272642, rate:1.83,
-  offSale:11117, held:6132,
-  realLo:2619, realHi:4985, blockSeats:2366, blockRooms:31,
+  seats:272642, rate:1.88,
+  offSale:11266, held:6034,
+  realLo:2768, realHi:5134, blockSeats:2366, blockRooms:31,
   /* BOTH COLUMNS, PB 19 OCT. The headline INCLUDES blocks and the footer
      says so. blockedAll is every held seat we can name: 6,132 the chain
      labels plus 2,366 the room-minimum test infers. blockedUsd is NOTIONAL -
      nobody paid it - and it is never summed into a worldwide dollar total.
      booked* is the organic figure on Gemini's definition of a true sale. */
-  booked:2619, bookedGbp:35356, bookedUsd:46858,
-  blockedAll:8498, blockedGbp:114723, blockedUsd:152042,
-  trueOcc:0.96, onlineOcc:0.99, bookableSeats:264144,
+  booked:2768, bookedGbp:37368, bookedUsd:49524,
+  blockedAll:8400, blockedGbp:113400, blockedUsd:150289,
+  trueOcc:1.02, onlineOcc:0.99, bookableSeats:264144,
   untestedRooms:88, untestedSeats:475,
   wasMidpoint:5678, wasRawOffSale:11838, wasHeldEst:9735, wasImpliedHeld:6160,
   zeroShows:499, soldOut:0, roomsTested:138, roomsTotal:226,
@@ -2545,8 +2603,8 @@ const UK = {
   showsRead:1084, showsTotal:1136, cinemasRead:84, cinemasTotal:87,
   /* Days are MEASURED now, not a share of a midpoint. These four add to
      4,985 exactly. They carry the same block share as the headline. */
-  byDate:[['Thu 5 Nov',1888],['Fri 6 Nov',1054],['Sat 7 Nov',1073],
-          ['Sun 8 Nov',970]],
+  byDate:[['Thu 5 Nov',1975],['Fri 6 Nov',1076],['Sat 7 Nov',1077],
+          ['Sun 8 Nov',1006]],
   dateSeats:[['Thu 5 Nov',77657],['Fri 6 Nov',70398],['Sat 7 Nov',63093],
              ['Sun 8 Nov',61494]],
   /* BLOCK-CORRECTED. Do not swap these for the seats-gone figures.
@@ -2557,10 +2615,10 @@ const UK = {
      out because an array of those numbers in this file is one careless
      edit away from being rendered, and verify-update8.ps1 fails on the
      digits for exactly that reason. */
-  cities:[['Leicester Square',472],['Watford',280],['Hounslow',169],
+  cities:[['Leicester Square',520],['Watford',322],['Hounslow',169],
           ['Milton Keynes',159],['Birmingham Broad Street',157],
-          ['The O2 Greenwich',128],['Sheffield',82],['Edinburgh',74],
-          ['Crawley',60],['Glasgow Silverburn',60]],
+          ['The O2 Greenwich',128],['Edinburgh',94],['Sheffield',82],
+          ['Crawley',70],['Glasgow Silverburn',60]],
   langs:[['Hindi',4669,962,1.89],['Telugu',238,49,2.60],['Tamil',78,73,0.49]],
   fmt:[['IMAX 3D',10.54],['4DX 3D Laser',8.96],['IMAX',5.82],['4DX',5.12],
        ['4DX 3D',4.75],['2D',1.65],['Superscreen Laser',1.24],
@@ -2568,7 +2626,7 @@ const UK = {
   imax:{tickets:1026, shows:33, pct:20.6},
   prices:0,   /* not one published price in 1,136 rows - GBP stays our ATP */
   top:{cinema:'Cineworld Leicester Square', when:'Thu 5 Nov, 6:30p',
-       room:'IMAX 3D', sold:209, of:644, pct:32.5}
+       room:'IMAX 3D', sold:215, of:644, pct:33.4}
 };
 
 /* EUROPE IS A FOOTPRINT, NOT A COUNT, AND THE DIFFERENCE IS THE WHOLE POINT.
@@ -2975,10 +3033,10 @@ async function drawBrandCard(){
    order a reader sees. Markets are listed largest first. */
 function wwTotals(){
   const usSold=DATA.total.sold;
-  const tix=usSold+US_EXTRA.tickets+CA.tickets+UK.tickets+AU.tickets+DE.tickets;
-  const usd=Math.round(usSold*atpNow())+US_EXTRA.usd+CA.usd+UK.usd+AU.usd+DE.usd;
-  const naTix=usSold+US_EXTRA.tickets+CA.tickets;
-  const naUsd=Math.round(usSold*atpNow())+US_EXTRA.usd+CA.usd;
+  const tix=usSold+xTix()+CA.tickets+UK.tickets+AU.tickets+DE.tickets;
+  const usd=Math.round(usSold*atpNow())+xUsd()+CA.usd+UK.usd+AU.usd+DE.usd;
+  const naTix=usSold+xTix()+CA.tickets;
+  const naUsd=Math.round(usSold*atpNow())+xUsd()+CA.usd;
   const cin=DATA.metros.reduce((a,m)=>a+m.nVenues,0)+CA.cinemas+
             UK.cinemasRead+AU.ev.cinemas+AU.hy.cinemas+DE.cinemas;
   return {tix,usd,cin,rows:[
