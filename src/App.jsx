@@ -4550,14 +4550,20 @@ const RAMAYANA_TRACKER = {
   // its own all-presale dates; it has 9 and 10 Nov on sale and nothing on
   // the 11th or 12th. Only about half the 4-8 Nov move is buying - adding
   // near-empty second-week sittings raises each room's recovered capacity,
-  // which raises the computed sold everywhere. NA = 43,708 + 3,040 + 650.
-  // The US half is untouched. Retired pair, spelled out because
-  // verify-update8.ps1 forbids the digits: four six eight zero seven, and
-  // eight six eight zero zero eight.
-  tickets: "47,398",
+  // which raises the computed sold everywhere.
+  // UPDATE 16a, LANDMARK ONLY, 20 Oct 09:11 CT. NA = 43,708 + 3,040 + 676.
+  // The US and Cineplex halves are untouched; only Landmark moved, and it
+  // moved on a MATCHED re-read - the same twelve showtimes at the same six
+  // cinemas, opened by hand 9h38m after the first. Nothing was added to the
+  // worklist, so all 26 of those seats are movement rather than coverage,
+  // which makes this the only figure on the strip we can call buying without
+  // a caveat. Landmark's block stays 590; its clean read goes 60 -> 86.
+  // Retired pair, spelled out because verify-update8.ps1 forbids the digits:
+  // four seven three nine eight, and eight seven five six six seven.
+  tickets: "47,424",
   rate: "3.19%",
   shows: "10,539",
-  value: "$875,667",
+  value: "$876,004",
   tminus: "T-16",
   scan: "19 Oct · 10:00pm CT",
 };

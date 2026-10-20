@@ -116,17 +116,24 @@ Absent $page 'on sale, not counted' 'no footprint-era Germany kicker'
 # understates by MORE than last time, not less. Both are guarded below.
 Need $page 'tickets:3040'        'Cineplex 3,040 on its own all-presale dates'
 Absent $page 'tickets:2449,'     'no five-date Cineplex figure'
-# LANDMARK, FIRST READ. Opened by hand - robots.txt answers 403 and no
-# scanner of ours fetches that chain. Seats gone off a one-state map, not a
-# counted sale, and 295 of the 650 are identical on both nights.
-Need $page 'lm:{tickets:650'     'Landmark in, as its own figure'
+# LANDMARK, SECOND READ 20 OCT 09:11 CT. Opened by hand - robots.txt answers
+# 403 and no scanner of ours fetches that chain. Seats gone off a one-state
+# map, not a counted sale, and 295 of the 676 are identical on both nights.
+# THIS IS THE ONLY MATCHED PAIR ON THE PAGE: same twelve showtimes, same six
+# cinemas, 9h38m apart, nothing added to the worklist. So the +26 is movement
+# and belongs to the clean read, which is why lo goes 60 -> 86 while
+# blockFloor stays at 590. A block is a count that does not move.
+Need $page 'lm:{tickets:676'     'Landmark on the matched re-read'
+Absent $page 'lm:{tickets:650'   'no first-read Landmark figure'
+Need $page 'was:650, added:26'   'the re-read delta is published, not absorbed'
 # THE FLOOR IS CARRIED BY EACH SHOWTIME, NOT ONCE PER ROOM. Solihull proves
 # the rule on this same page: screen 6 reads 57 across eight showings and its
 # block is published as 456, which is 57 x 8. Landmark's six rooms repeat a
 # combined floor of 295 on both of their nights, so the block is 590 and the
 # clean read is 60 - not the 355 a once-per-room subtraction gives.
 Need $page 'blockFloor:590'      'the Landmark block on the per-showtime rule'
-Need $page 'lo:60,'              'the Landmark clean read is published'
+Need $page 'lo:86,'              'the Landmark clean read is published'
+Absent $page 'lo:60,'            'no pre-re-read Landmark clean figure'
 Absent $page 'blockFloor:295'    'no once-per-room block arithmetic'
 Absent $page 'between 355 and 650' 'no band from the wrong rule'
 # The Method panel carried 18 Oct Canadian and Australian figures for two
@@ -135,7 +142,8 @@ Absent $page 'between 355 and 650' 'no band from the wrong rule'
 Absent $page '1,899 tickets</b> across 26 cinemas' 'no 18 Oct Canada in Method'
 Absent $page '<b>840 tickets</b>'                  'no 18 Oct Event in Method'
 Absent $page 'none of it is counted here'          'Method must not say Landmark is uncounted'
-Need   $page '590 of the 650 is held inventory'    'the block is in the footnote, as agreed'
+Need   $page '590 of the 676 is held inventory'    'the block is in the footnote, as agreed'
+Absent $page '590 of the 650 is held inventory'    'no first-read Landmark block line'
 Need $page 'canTix'              'the Canadian roll-up uses both chains'
 Absent $page 'const naTix=usSold+xTix()+CA.tickets;' 'no Cineplex-only North America'
 Need $page 'seats:95681'         'the offered-seat floor this scan actually read'
@@ -193,15 +201,37 @@ Absent $page 'nz:{tickets:200'   'no four-date-only New Zealand'
 Need $page 'anzTix'              'the roll-up uses the combined getter'
 Need $page "'Australia & NZ'"    'the market is labelled for what is in it'
 # INDIA WENT LIVE 20 OCT on District's own seat data. One platform, one
-# date, and 45% of it is a standing block - Gwalior reads 141 sold on eight
-# of nine showtimes. The band is published the way the UK's is.
+# INDIA, SECOND READ 20 OCT 09:02. 2,731 showtimes at 284 cinemas in 69
+# cities - the footprint MORE THAN DOUBLED since 06:32, so 13,702 -> 24,588
+# is mostly coverage and the panel says so. 49% is a standing block.
+# The band is published the way the UK's is.
 Need $page 'const IN = {'        'India is a counted market'
-Need $page 'tickets:13702'       'the District figure'
-Need $page 'clean:7496'          'the block-corrected floor'
-Need $page 'block:6206'          'the block is named, not absorbed'
-Need $page 'atpInr:432'          'the Indian price is theirs, read not assumed'
+Need $page 'tickets:24588'       'the second-read India figure'
+Need $page 'clean:12617'         'the block-corrected floor'
+Need $page 'block:11971'         'the block is named, not absorbed'
+Need $page 'atpInr:578'          'the Indian price is theirs, read not assumed'
+Need $page 'wasTickets:13702'    'the first read is kept so the jump can be described'
+Absent $page 'tickets:13702,'    'no first-read India total'
+Absent $page 'atpInr:432'        'no first-read Indian price'
 Need $page "['India',IN.tickets,IN.usd]" 'India is in the worldwide roll-up'
 Absent $page "sub:'presales opened 20 Oct', soon:true" 'India is no longer coming soon'
+# PB, 20 OCT: THE PLATFORM IS NAMED IN THE FOOTER AND NOWHERE ELSE.
+# The rendered labels say "one ticketing platform". These guards are literal
+# string matches against the file, so they check the SOURCE of the rendered
+# strings, not comments - the comment blocks still name it on purpose.
+Absent $page "sub:'District only" 'the tile label must not name the platform'
+Absent $page 'India - first count - District' 'the panel kicker must not name it'
+Need $page 'India is District'   'the footer names the platform, once'
+# THE NETHERLANDS AND SWEDEN, FIRST COUNT 20 OCT, read by hand like Germany.
+# NL is the cleanest foreign read we have: the block test fires on 5 rooms
+# for 36 seats, about 2%. Sweden is a MEASURED ZERO and is published as one.
+Need $page 'const NL = {'        'the Netherlands is a counted market'
+Need $page 'tickets:1546'        'the Netherlands seats-gone figure'
+Need $page 'atpIsOurs:true'      'the Dutch price is ours, and flagged as ours'
+Need $page "['Netherlands',NL.tickets,NL.usd]" 'the Netherlands is in the roll-up'
+Need $page 'const SE = {'        'Sweden is on the page as a measured zero'
+Need $page "['Sweden',SE.tickets,0]" 'Sweden is in the roll-up at zero, with a label'
+Need $page 'Filmstaden'          'the unreadable Swedish chain is disclosed'
 Absent $page "['Australia',AU.tickets,AU.usd]" 'no roll-up row on Australia alone'
 Need $page 'tickets:3864'        'HOYTS 3,864'
 Need $page 'tickets:1142'        'Event 1,142 - same 443 sessions, all buying'
@@ -270,8 +300,10 @@ Need $page "sea:{name:'SE Asia'"     'SE Asia tile in the map row'
 Write-Host ''
 Write-Host '=== 3. the homepage strip agrees with the page'
 # 20 OCT: ALL-PRESALE BASIS, 4-12 NOV. The jump is inventory, not demand.
-Need $app '47,398'     'NA all-presale total on the strip'
-Need $app '$875,667'   'NA value on the strip'
+Need $app '47,424'     'NA all-presale total on the strip'
+Need $app '$876,004'   'NA value on the strip'
+Absent $app '47,398'   'no pre-Landmark-re-read NA total'
+Absent $app '$875,667' 'no pre-Landmark-re-read NA value'
 Absent $app '46,807'   'no pre-Canada-widening NA total'
 Absent $app '$868,008' 'no pre-Canada-widening NA value'
 Absent $app '46,157'   'no pre-Landmark NA total on the strip'
