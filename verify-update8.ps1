@@ -140,6 +140,21 @@ Need $page 'handCount:1899'      'the retired hand count kept as the record'
 # chains - HOYTS 419 sessions none new none gone none failed, Event 443 and
 # the same 107,490 seats. All 86 is buying.
 Need $page 'tickets:4922'        'Australia 4,922 after the 22:26 re-read'
+# NEW ZEALAND FOLDED IN 20 OCT. The tile and every roll-up read
+# "Australia & NZ" and use anzTix/anzUsd; AU.tickets stays Australia alone so
+# the Australian panel keeps being about Australia. Only the four Australian
+# dates roll up - Event NZ lists 5-11 Nov and sold 259 over the lot, 200 of
+# them on 5-8 Nov. The other 59 are recorded, never added.
+# 20 OCT, PB: ALL-PRESALE BASIS. Every date a market has on sale counts,
+# because the whole run is presale. New Zealand is 5-11 Nov and all 259 are
+# in. inBasis keeps the 5-8 Nov subset so the earlier figure stays checkable.
+Need $page 'nz:{tickets:259'     'New Zealand on its full all-presale basis'
+Need $page 'inBasis:200'         'the 5-8 Nov subset kept checkable'
+Need $page 'secondWeek:59'       'the second-week NZ tickets named, not hidden'
+Absent $page 'nz:{tickets:200'   'no four-date-only New Zealand'
+Need $page 'anzTix'              'the roll-up uses the combined getter'
+Need $page "'Australia & NZ'"    'the market is labelled for what is in it'
+Absent $page "['Australia',AU.tickets,AU.usd]" 'no roll-up row on Australia alone'
 Need $page 'tickets:3864'        'HOYTS 3,864'
 Need $page 'tickets:1058'        'Event 1,058'
 Absent $page 'tickets:4836,'     'no pre-re-read Australian total'
@@ -200,14 +215,15 @@ Need $page "sea:{name:'SE Asia'"     'SE Asia tile in the map row'
 
 Write-Host ''
 Write-Host '=== 3. the homepage strip agrees with the page'
-Need $app '37,989'     'NA 4-8 total on the strip'
-Need $app '$726,991'   'NA value on the strip'
-Need $app '6,814'      'US 4-8 Nov showtimes on the strip'
-Need $app '9:32pm'     'the strip carries the re-sweep scan time, not the old one'
+# 20 OCT: ALL-PRESALE BASIS, 4-12 NOV. The jump is inventory, not demand.
+Need $app '46,157'     'NA all-presale total on the strip'
+Need $app '$859,584'   'NA value on the strip'
+Need $app '10,539'     'US 4-12 Nov showtimes on the strip'
+Need $app '10:00pm'    'the strip carries the rebuild scan time'
 # rate is a 4-8 figure for the first time. For five updates it was US 4-6
 # only, because the baked map stopped at 6 Nov and there was no 4-8
 # denominator to divide by. There is one now: 33,668 of 904,291.
-Need $app '3.88%'      'US 4-8 Nov sell-through on the strip'
+Need $app '3.19%'      'US 4-12 Nov sell-through on the strip'
 Need $app 'T-16'       'countdown'
 
 Write-Host ''
@@ -347,9 +363,14 @@ Absent $app  '$686,704'      'no pre-Canada-reread NA value on the strip'
 Absent $app  '36,117'        'no pre-update-15 NA total on the strip'
 Absent $app  '$689,089'      'no pre-update-15 NA value on the strip'
 Absent $app  '3.72%'         'no pre-update-15 sell-through on the strip'
-Need   $page '"sold":35540'  'the baked map is the 21:32 re-sweep'
+Need   $page '"sold":43708'  'the baked map is the all-presale rebuild'
+Need   $page '"2026-11-12"'  'the baked map carries the second week'
+Absent $page '"sold":35540'  'no 4-8 Nov baked map'
 Absent $page '"sold":33668'  'no pre-re-sweep baked map'
-Absent $page '"2026-11-09"'  'the baked map stays 4-8 Nov, not the 9-12 sweep'
+Absent $app  '37,989'        'no pre-update-16 NA total on the strip'
+Absent $app  '$726,991'      'no pre-update-16 NA value on the strip'
+Absent $app  '3.88%'         'no 4-8 Nov sell-through on the strip'
+Absent $page '4–8 November'  'no 4-8 Nov basis line left on the page'
 Absent $page 'tickets:2265,' 'no pre-reread Canada ticket count'
 Absent $page 'soloRooms:1,'  'solo-room count must be the 2 this scan read'
 Absent $page 'seats:66642'   'no pre-reread Canadian seat floor'

@@ -4507,7 +4507,7 @@ const RAMAYANA_TRACKER = {
   // UPDATE 15, 19 Oct 21:32 - THE FULL NORTH AMERICAN RE-SWEEP LANDED.
   // All five dates re-read end to end, the map rebaked, and every figure
   // here moves together off it: US 33,668 -> 35,540 over 6,814 showtimes at
-  // 539 cinemas, 3.88% of 915,420 seats, at a blended $19.56. Canada is the
+  // 539 cinemas, 3.9 per cent of 915,420 seats, blended $19.56. Canada is the
   // 2,449 floor from the 21:56 read, which the 22:00 run inside this sweep
   // reproduced to the ticket. NA = 35,540 + 2,449.
   // THE SWEEP ALSO READ 9-12 NOV, AND NONE OF IT IS IN HERE. build_map bakes
@@ -4521,12 +4521,28 @@ const RAMAYANA_TRACKER = {
   // The retired pair, spelled out because verify-update8.ps1 now forbids the
   // digits and a comment is not exempt from a literal match: three six one
   // one seven, and six eight nine zero eight nine.
-  tickets: "37,989",
-  rate: "3.88%",
-  shows: "6,814",
-  value: "$726,991",
+  // UPDATE 16, 19 Oct 22:00 - THE BASIS IS NOW EVERY DATE ON SALE, 4-12 NOV.
+  // PB's call: the whole run is presale, so a 4-8 window was a choice of ours
+  // and never a property of the film. No new scanning - the 19 Oct sweep had
+  // already read 9-12 Nov into their own folders and build_map was re-run
+  // over them. US 35,540 -> 43,708 across 10,539 showtimes at 541 cinemas,
+  // 3.19% of 1,370,937 seats, blended $18.94.
+  // THE JUMP IS INVENTORY, NOT DEMAND, AND IT IS THE SECOND RESTATEMENT IN
+  // TWO DAYS. 4-6 became 4-8 on 19 Oct; 4-8 becomes 4-12 now. The US second
+  // week is 8,168 tickets, about 19% of the American total, and every one is
+  // a day that existed yesterday and was not being counted. Do not post the
+  // delta as growth.
+  // Canada is still 4-8 Nov - its chain was never asked for the later dates -
+  // so NA = 43,708 + 2,449 and the two halves are on different windows until
+  // canada_cineplex.py runs again. Said here because it will be asked.
+  // Retired pair spelled out, since verify-update8.ps1 forbids the digits:
+  // three seven nine eight nine, and seven two six nine nine one.
+  tickets: "46,157",
+  rate: "3.19%",
+  shows: "10,539",
+  value: "$859,584",
   tminus: "T-16",
-  scan: "19 Oct · 9:32pm CT",
+  scan: "19 Oct · 10:00pm CT",
 };
 
 function RamayanaTrackerStrip() {
