@@ -912,6 +912,8 @@ gtag("js",new Date());gtag("config","G-K6C9EVRFH4",{anonymize_ip:true});}})();
   <div class="shotbox">
     <canvas id="shotcv" width="1200" height="675"></canvas>
     <div class="shotrow">
+      <button class="btn ghost" id="shotindia" type="button" style="margin-top:0"
+              title="The India card - rupees first, District basis stated">India card</button>
       <button class="btn ghost" id="shotbrand" type="button" style="margin-top:0"
               title="The dateless card for link previews - save as ramayana-og.png">Link card</button>
       <button class="btn" id="shotdl" type="button" style="margin-top:0">Download PNG</button>
@@ -3855,22 +3857,126 @@ async function drawShot(){
   c.textAlign='right'; c.fillStyle=SNAP.ink; c.font='700 13px '+body;
   c.fillText('boxoffy.com',W-44,H-26); c.textAlign='left';
 }
+/* INDIAN DIGIT GROUPING. 59,21,785 and not 5,921,785 - lakhs and crores are
+   how the number is read by the audience it is for, and a rupee figure in
+   thousands separators looks like a foreigner wrote it. */
+function inr(n){
+  const x=String(Math.round(n));
+  if(x.length<=3) return x;
+  return x.slice(0,-3).replace(/\B(?=(\d{2})+(?!\d))/g,',')+','+x.slice(-3);
+}
+
+/* THE INDIA CARD. India is the volume market and the US card cannot carry
+   it: the money is in rupees, the basis is one platform and one date, and
+   nearly half the figure is a block that has to travel with the number
+   wherever it goes. So it gets its own card rather than a line on someone
+   else's. */
+async function drawIndiaCard(){
+  const cv=$('#shotcv'), W=1200, H=675, S=2;
+  cv.width=W*S; cv.height=H*S; cv.style.aspectRatio=W+'/'+H;
+  const c=cv.getContext('2d'); c.setTransform(S,0,0,S,0,0);
+  const disp="'Barlow Condensed',Impact,sans-serif",
+        body="'DM Sans',system-ui,sans-serif",
+        mono="'IBM Plex Mono',monospace";
+  c.fillStyle=SNAP.paper; c.fillRect(0,0,W,H);
+  c.fillStyle=SNAP.accent; c.fillRect(0,0,W,7);
+
+  c.fillStyle=SNAP.ink; c.font='800 30px '+disp;
+  c.fillText('BOX',44,58); const bw=c.measureText('BOX').width;
+  c.fillStyle=SNAP.accent; c.fillText('OFFY',44+bw,58);
+  const relD=new Date('2026-11-05T00:00:00-06:00');
+  const tmin=Math.max(0,Math.round((relD-new Date(DATA.scan))/864e5));
+  c.fillStyle=SNAP.muted; c.font='500 13px '+mono; c.textAlign='right';
+  c.fillText('RAMAYANA · INDIA PRESALES · T-'+tmin,W-44,58);
+  c.textAlign='left';
+
+  /* RUPEES LEAD. The dollar is in brackets underneath, not beside it. */
+  c.fillStyle=SNAP.ink; c.font='800 92px '+disp;
+  const head='₹'+inr(IN.inr); c.fillText(head,44,140);
+  const hw=c.measureText(head).width;
+  c.fillStyle=SNAP.muted; c.font='500 26px '+body;
+  c.fillText('(about $'+fmt(IN.usd)+')',44+hw+20,140);
+  c.fillStyle=SNAP.mid; c.font='600 23px '+body;
+  c.fillText(inr(IN.tickets)+' tickets · '+IN.cinemas+' cinemas · '+
+             IN.cities+' cities',44,176);
+
+  const img=await loadSvg(brandSvg('ind',420,468)).catch(()=>null);
+  if(img) c.drawImage(img,44,206,378,420);
+
+  const mx=470, bw2=330;
+  c.fillStyle=SNAP.ink; c.font='800 21px '+disp;
+  c.fillText('WHERE INDIA IS BOOKING',mx,236);
+  const top=IN.top.slice(0,8), mmax=Math.max(1,...top.map(r=>r[1]));
+  top.forEach((r,i)=>{
+    const y=274+i*44;
+    c.fillStyle=SNAP.mid; c.font='600 15px '+body; c.fillText(r[0],mx,y);
+    c.fillStyle=SNAP.line; c.fillRect(mx,y+9,bw2,9);
+    c.fillStyle=SNAP.accent; c.fillRect(mx,y+9,Math.max(4,bw2*r[1]/mmax),9);
+    c.fillStyle=SNAP.muted; c.font='500 12.5px '+mono; c.textAlign='right';
+    c.fillText(inr(r[1])+'  ·  '+Number(r[2]).toFixed(1)+'%',mx+bw2,y);
+    c.textAlign='left';
+  });
+
+  /* THE CAVEAT IS ON THE CARD, NOT IN THE CAPTION. A card travels without
+     its tweet, and this number cannot. */
+  const cx=mx+bw2+34;
+  c.fillStyle=SNAP.ink; c.font='800 21px '+disp;
+  c.fillText('READ IT PROPERLY',cx,236);
+  const lines=[
+    ['₹'+IN.atpInr+' a ticket','their printed price, not our guess'],
+    [inr(IN.clean)+'–'+inr(IN.tickets),'real bookings. '+inr(IN.block)+' is a block'],
+    [IN.platform+' only','BookMyShow is not counted yet'],
+    ['5 Nov only','not the whole presale'],
+  ];
+  lines.forEach((l,i)=>{
+    const y=278+i*62;
+    c.fillStyle=SNAP.accent; c.font='700 19px '+mono; c.fillText(l[0],cx,y);
+    c.fillStyle=SNAP.muted; c.font='400 13px '+body;
+    c.fillText(l[1],cx,y+20);
+  });
+
+  c.fillStyle=SNAP.line; c.fillRect(44,H-46,W-88,1);
+  c.fillStyle=SNAP.muted; c.font='400 12px '+mono;
+  c.fillText('Counted off District seat maps, 5 Nov · price is District\u2019s own, '+
+             'not an assumption · one platform, so India can only go up',44,H-26);
+  c.textAlign='right'; c.fillStyle=SNAP.ink; c.font='700 13px '+body;
+  c.fillText('boxoffy.com',W-44,H-26); c.textAlign='left';
+}
+
 /* 'live' is the data card for a post; 'brand' is the dateless card that lives
-   at public/ramayana-og.png and shows on every shared link. */
+   at public/ramayana-og.png and shows on every shared link; 'india' is the
+   rupee card. */
 let SHOTMODE='live';
 async function openShot(){
   $('#shotmsg').textContent='';
   $('#shot').hidden=false;
-  try{ await (SHOTMODE==='brand' ? drawBrandCard() : drawShot()); }
+  try{ await drawByMode(); }
   catch(e){ $('#shotmsg').textContent='Could not draw the image here.'; }
 }
+async function drawByMode(){
+  if(SHOTMODE==='brand') return drawBrandCard();
+  if(SHOTMODE==='india') return drawIndiaCard();
+  return drawShot();
+}
+function shotLabels(){
+  $('#shotbrand').textContent = SHOTMODE==='brand' ? 'Live card' : 'Link card';
+  $('#shotindia').textContent = SHOTMODE==='india' ? 'Live card' : 'India card';
+}
+$('#shotindia').onclick=async function(){
+  SHOTMODE = SHOTMODE==='india' ? 'live' : 'india';
+  shotLabels();
+  $('#shotmsg').textContent = SHOTMODE==='india'
+    ? 'India, rupees first. The block and the District basis are on the card.' : '';
+  try{ await drawByMode(); }
+  catch(e){ $('#shotmsg').textContent='Could not draw the image here.'; }
+};
 $('#shotbrand').onclick=async function(){
   SHOTMODE = SHOTMODE==='brand' ? 'live' : 'brand';
-  this.textContent = SHOTMODE==='brand' ? 'Live card' : 'Link card';
+  shotLabels();
   $('#shotmsg').textContent = SHOTMODE==='brand'
     ? 'Dateless card for link previews. Download and save it as public/ramayana-og.png.'
     : '';
-  try{ await (SHOTMODE==='brand' ? drawBrandCard() : drawShot()); }
+  try{ await drawByMode(); }
   catch(e){ $('#shotmsg').textContent='Could not draw the image here.'; }
 };
 /* The "Make an image" pill in the header share bar opens the same dialog the
@@ -3885,7 +3991,8 @@ document.addEventListener('keydown',e=>{ if(e.key==='Escape') $('#shot').hidden=
    the viewer first. Everywhere else - a local file, or boxoffy.com - that
    capability is absent and the anchor is the right path. Try the capability,
    fall back to the anchor. */
-const snapName = () => SHOTMODE==='brand' ? 'ramayana-og.png' :
+const snapName = () => SHOTMODE==='brand' ? 'ramayana-og.png'
+  : SHOTMODE==='india' ? 'ramayana-india-presales.png' :
   'ramayana-presales-'+(activeDim()?activeDim().val:'all').replace(/\W+/g,'-')+'.png';
 $('#shotdl').onclick=async function(){
   const msg=$('#shotmsg'); msg.textContent='';
