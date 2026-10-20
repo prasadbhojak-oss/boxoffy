@@ -2861,22 +2861,42 @@ const UK = {
      approximating one is exactly what the rule below forbids), the
      per-date split, and the Showcase model, whose 44.84% sold-share came
      off an off-sale total this file does not restate. */
-  tickets:5940, gbp:80190, usd:106276, atpGbp:13.50, fx:1.3253,
-  cwGone:5453, scGone:487, soldShare:44.84, scOffSale:1087,
-  reRead:26, reReadShows:599, reReadDelta:468, relabelled:167,
+  /* 20 OCT, BATCH 5 - 47 CINEMAS, 830 SHOWTIMES, AND THE FIRST ROW-LEVEL
+     FILE WE HAVE HAD. Grok sent the per-showtime deltas this time, not just
+     cinema totals, so the relabel test ran per row the way it is supposed
+     to rather than per cinema. Both answers agreed: 214 seats across 51
+     showtimes moved from held to sold with nobody buying them, and the
+     row file names every one of them - Feltham nine times, Leeds White Rose
+     fifteen, Glasgow Silverburn six. Raw movement 746, relabel 214,
+     CLEAN 532.
+
+     ONE CINEMA WAS RE-BASELINED AND IT MATTERS. Ilford was in batch 4 at
+     27 showtimes, 37 -> 62. This file reads it at 56 showtimes starting
+     from 62, so its earlier +25 is folded into this file's baseline rather
+     than into its delta. Every other cinema in the file still starts from
+     the 19 Oct scan. The gain over 19 October is therefore 532 + 25 = 557,
+     and the published Cineworld figure is 4,985 + 557. Checking only the
+     file's own total would have lost those 25.
+
+     FOUR SHOWTIMES WENT BACKWARDS and are left in: Hounslow 5 Nov 20:20
+     is -3, Greenwich -1 and -2, Enfield -1. Seats came back on sale. A
+     basis that only ever rises is not a measurement. */
+  tickets:6029, gbp:81392, usd:107869, atpGbp:13.50, fx:1.3253,
+  cwGone:5542, scGone:487, soldShare:44.84, scOffSale:1087,
+  reRead:47, reReadShows:830, reReadDelta:557, relabelled:214,
   /* rate and seats are CINEWORLD ONLY and measured. There is no both-chains
      denominator, because Showcase's seat counts were never read - do not
      invent one to make the percentage look national. */
-  seats:272642, rate:2.00,
-  offSale:11411, held:5965,
-  realLo:3087, realHi:5453, blockSeats:2366, blockRooms:31,
+  seats:272642, rate:2.03,
+  offSale:11411, held:5918,
+  realLo:3176, realHi:5542, blockSeats:2366, blockRooms:31,
   /* BOTH COLUMNS, PB 19 OCT. The headline INCLUDES blocks and the footer
      says so. blockedAll is every held seat we can name: 6,132 the chain
      labels plus 2,366 the room-minimum test infers. blockedUsd is NOTIONAL -
      nobody paid it - and it is never summed into a worldwide dollar total.
      booked* is the organic figure on Gemini's definition of a true sale. */
-  booked:3087, bookedGbp:41675, bookedUsd:55232,
-  blockedAll:8331, blockedGbp:112469, blockedUsd:149055,
+  booked:3176, bookedGbp:42876, bookedUsd:56824,
+  blockedAll:8284, blockedGbp:111834, blockedUsd:148214,
   /* trueOcc, onlineOcc and bookableSeats are NOT rendered anywhere and are
      left at their 19 Oct values on purpose. Two of the three no longer
      reconcile to the fields above them and I could not pin which definition
@@ -2890,8 +2910,11 @@ const UK = {
   showsRead:1084, showsTotal:1136, cinemasRead:84, cinemasTotal:87,
   /* Days are MEASURED now, not a share of a midpoint. These four add to
      4,985 exactly. They carry the same block share as the headline. */
-  byDate:[['Thu 5 Nov',2043],['Fri 6 Nov',1124],['Sat 7 Nov',1104],
-          ['Sun 8 Nov',1008]],
+  byDate:[['Thu 5 Nov',2181],['Fri 6 Nov',1167],['Sat 7 Nov',1146],
+          ['Sun 8 Nov',1023]],
+  byDateNote:'19 Oct full scan plus the 20 Oct clean per-date delta. '+
+    '25 tickets from an earlier Ilford re-read came with no date attached '+
+    'and are in the national figure but not in this column.',
   dateSeats:[['Thu 5 Nov',77657],['Fri 6 Nov',70398],['Sat 7 Nov',63093],
              ['Sun 8 Nov',61494]],
   /* BLOCK-CORRECTED. Do not swap these for the seats-gone figures.
@@ -2913,9 +2936,14 @@ const UK = {
        ['2D Laser',0.78]],
   imax:{tickets:1026, shows:33, pct:20.6},
   prices:0,   /* not one published price in 1,136 rows - GBP stays our ATP */
-  /* THE PER-DATE SPLIT IS THE 19 OCT FULL SCAN AND SUMS TO 5,279, NOT TO
-     THE HEADLINE. The 20 Oct re-reads come as cinema totals with no dates
-     in them. Stated on the panel rather than scaled. */
+  /* THE PER-DATE SPLIT IS CURRENT AGAIN, AND IT IS REBUILT, NOT SCALED.
+     Batch 5 came with dates on every row, so the 19 Oct full-scan split -
+     1,888 / 1,054 / 1,073 / 970, which is Cineworld's 4,985 - takes this
+     batch's CLEAN per-date delta straight on top: +293 Thu, +113 Fri,
+     +73 Sat, +53 Sun. It sums to 5,517 against a Cineworld total of 5,542.
+     The 25 missing are Ilford's batch-4 gain, which arrived as a cinema
+     total with no dates on it and is not being spread across days to make
+     the column add up. The panel says so. */
   top:{cinema:'Cineworld Leicester Square', when:'Thu 5 Nov, 6:30p',
        room:'IMAX 3D', sold:215, of:644, pct:33.4}
 };
@@ -2940,7 +2968,8 @@ UK.foot = 'THIS FIGURE INCLUDES BLOCKED SEATS. Cineworld is '+fmt(UK.cwGone)+
   ', and the blocked seats carry a further \u00a3'+fmt(UK.blockedGbp)+
   ' that nobody has paid \u2014 we report it, we never add it to a revenue '+
   'total. 88 rooms have too few showings to test. '+
-  'A further 167 seats moved from held to sold on the 20 October re-read '+
+  'A further '+fmt(UK.relabelled)+' seats moved from held to sold on the '+
+  '20 October re-reads '+
   'with nobody buying them; those are excluded from every figure here.';
 
 /* EUROPE IS A FOOTPRINT, NOT A COUNT, AND THE DIFFERENCE IS THE WHOLE POINT.
@@ -2979,13 +3008,16 @@ function euBody(){
      ['Cineworld read',`${UK.cinemasRead} of ${UK.cinemasTotal} cinemas`],
      ['Re-read 20 Oct',`${UK.reRead} cinemas · ${fmt(UK.reReadShows)} `+
        `showtimes · +${UK.reReadDelta} clean, after excluding `+
-       `${UK.relabelled} the chain relabelled held to sold`],
-     ['Thursday 5 Nov','1,888 — opening day leads'],
-     ['Friday 6 Nov','1,054'],
-     ['Saturday 7 Nov','1,073'],
-     ['Sunday 8 Nov','970'],
-     ['Per-date basis','the 19 Oct full scan · the 20 Oct re-reads come as '+
-       'cinema totals and are not split by date'],
+       `${UK.relabelled} seats the chain relabelled held to sold in `+
+       `51 showtimes`],
+     /* DERIVED FROM UK.byDate. These were four hand-typed strings carrying
+        the 19 Oct numbers while the headline above them moved three times.
+        The first row carries the label, the rest are bare. */
+     ...UK.byDate.map(([d,v],i)=>
+       [d.replace('Thu','Thursday').replace('Fri','Friday')
+          .replace('Sat','Saturday').replace('Sun','Sunday'),
+        fmt(v)+(i===0?' — opening day leads':'')]),
+     ['Per-date basis',UK.byDateNote],
      ['Fullest screens','IMAX 3D 10.5% · 4DX 3D Laser 9.0%'],
      ['IMAX share',`${fmt(UK.imax.tickets)} on ${UK.imax.shows} shows · ${UK.imax.pct}%`],
      ['Busiest show','Leicester Square IMAX 3D, Thu 6:30p — 32.5%'],

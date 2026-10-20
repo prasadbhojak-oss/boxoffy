@@ -48,15 +48,20 @@ Need $page 'function openSpan'   'opening-run split'
 # BATCH 4 REPLACES BATCH 3, it does not stack on it: Grok's file is
 # cumulative from the same 19 Oct baseline, so the published figure is
 # 4,985 + 468 clean, never 5,279 + 468.
-Need $page 'tickets:5940'        'UK 5,940 after the 20 Oct batch-4 re-read'
-Need $page 'cwGone:5453'         'Cineworld 5,453 after the 20 Oct batch-4 re-read'
-Need $page 'reReadDelta:468'     'the clean delta, not the raw 635'
-Absent $page 'cwGone:5747'       'batch 4 must not be stacked on batch 3'
-Absent $page 'reReadDelta:635'   'the raw delta must never be published as clean'
+Need $page 'tickets:6029'        'UK 6,029 after the 20 Oct batch-5 re-read'
+Need $page 'cwGone:5542'         'Cineworld 5,542 after the 20 Oct batch-5 re-read'
+# 557 = the file's own 532 clean PLUS Ilford's 25 from batch 4, which this
+# file folded into its baseline when it re-read that cinema from 62 instead
+# of 37. Publishing the file's 532 would silently drop them.
+Need $page 'reReadDelta:557'     'the clean delta including the re-baselined cinema'
+Need $page 'relabelled:214'      'every relabelled seat named, not absorbed'
+Absent $page 'reReadDelta:532'   'the file total alone loses the re-baselined 25'
+Absent $page 'reReadDelta:746'   'the raw delta must never be published as clean'
+Absent $page 'cwGone:5985'       'batch 5 must not be stacked on batch 4'
 Need $page 'scGone:487'          'Showcase 487 modelled on the measured share'
 Need $page 'soldShare:44.84'     'the share is measured now, not assumed'
 Need $page 'offSale:11411'       'UK off sale published beside it'
-Need $page 'realLo:3087'         'UK real-bookings band published, not a point'
+Need $page 'realLo:3176'         'UK real-bookings band published, not a point'
 Need $page 'blockSeats:2366'     'UK house-seat exposure disclosed'
 # The city list MUST stay block-corrected. On the seats-gone basis Solihull
 # reads 462 and Feltham 281, and both are almost entirely one room's block -
@@ -73,8 +78,8 @@ Absent $page "['Feltham',281]"        'no block-inflated Feltham in the city lis
 # pre-flight could not pass at all - every run failed on two guards that were
 # only ever each other. Retired figures live in section 4 as Absent; the live
 # figure is the only thing section 1 Needs. One number, one guard, one place.
-Need $page 'booked:3087'         'UK organic booked figure published'
-Need $page 'blockedAll:8331'     'UK blocked seats published'
+Need $page 'booked:3176'         'UK organic booked figure published'
+Need $page 'blockedAll:8284'     'UK blocked seats published'
 Need $page 'INCLUDES BLOCKED SEATS' 'UK footer discloses blocks in the headline'
 Need $page 'function deBody'     'Germany panel'
 Need $page "de :{name:'Germany'" 'Germany tile in the map row'
@@ -272,6 +277,9 @@ Absent $page 'tickets:3676' 'no carried-era HOYTS figure'
 Absent $page "['VIC',1273]" 'no carried-era Victoria figure'
 Absent $page 'tickets:5472,' 'no pre-re-read UK total'
 Absent $page 'tickets:5766,' 'no batch-3 UK total'
+Absent $page 'tickets:5940,' 'no batch-4 UK total'
+Absent $page 'cwGone:5453,'  'no batch-4 Cineworld figure'
+Absent $page "['Thu 5 Nov',2043]" 'no stale UK date split'
 Absent $page 'cwGone:4985,'  'no pre-re-read Cineworld figure'
 Absent $page 'cwGone:5279,'  'no batch-3 Cineworld figure'
 # foot is BUILT from the constants now. It carried 4,985 and 2,619 as typed
@@ -280,7 +288,7 @@ Absent $page 'Cineworld is 4,985 of it' 'the footnote must be built, not typed'
 # The 98 Feltham seats that moved from held to sold are NOT counted. If
 # cwGone ever reads 5,232 it means someone added them, and 98 tickets
 # nobody bought are in the UK total.
-Need   $page 'relabelled:167' 'the held-to-sold relabel is named, not absorbed'
+Need   $page 'byDateNote'     'the UK date column says what it does not cover'
 Absent $page 'cwGone:5367'  'no relabelled seats counted as sales'
 Absent $page 'tickets:5621' 'no batch-1 UK total'
 Absent $page 'cwGone:5134'  'no batch-1 Cineworld figure'
