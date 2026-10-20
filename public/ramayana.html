@@ -1477,14 +1477,23 @@ const AU = {
      COVERAGE - 4 HOYTS cinemas becoming 47. That is finished; the
      footprint is fully read. Movement from 3,964 onward is BUYING, and
      this +178 is the first increase that is entirely demand. */
-  tickets:4836, aud:124706, usd:82306, atpAud:25.79, fx:0.66,
-  ev:{tickets:1022, shows:443, counted:443, cinemas:38, seats:107490, rate:0.95},
-  hy:{tickets:3814, shows:419, counted:418, cinemas:47, cinemasRead:47,
-      seats:70335, rate:5.42, held:2479, carried:0, carriedShows:1,
+  /* 19 OCT 22:26 / 22:40 RE-READ. 4,836 -> 4,922, AND ALL 86 OF IT IS
+     BUYING. Both chains came back on exactly the inventory they were read
+     on before: HOYTS 419 sessions, none new, none gone, none failed, +50
+     spread over eleven named sittings - Salisbury +15, Chadstone +8,
+     Sunnybank +5 and +4, Carousel +4, Blacktown +4. Event 443 sessions and
+     the same 107,490 seats, +36. There is no coverage in this move at all,
+     which is the second market tonight where that can be said and the
+     reason both are worth posting.
+     australia_total.py validated with 0 failures and 0 missing. */
+  tickets:4922, aud:126955, usd:83790, atpAud:25.79, fx:0.66,
+  ev:{tickets:1058, shows:443, counted:443, cinemas:38, seats:107490, rate:0.98},
+  hy:{tickets:3864, shows:419, counted:419, cinemas:47, cinemasRead:47,
+      seats:70459, rate:5.48, held:2492, carried:0, carriedShows:0,
       wasCarried:496, chadstoneRead:564, chadstoneHand:556,
       capacityWas:182, capacityNow:174},
-  byDate:[['Thu 5 Nov',1836],['Fri 6 Nov',1513],['Sat 7 Nov',1215],['Sun 8 Nov',272]],
-  langs:[['Hindi',4605],['Telugu',168],['Tamil',38],['Kannada',24],['Malayalam',1]],
+  byDate:[['Thu 5 Nov',1856],['Fri 6 Nov',1558],['Sat 7 Nov',1234],['Sun 8 Nov',274]],
+  langs:[['Hindi',4689],['Telugu',170],['Tamil',38],['Kannada',24],['Malayalam',1]],
   /* 18 Oct 18:38 re-read, and the validation gate PASSED: all 13 sessions PB
      hand-read on 17 Oct came back equal or higher, so the ticketing API is
      reporting what the seat map shows. Like-for-like in one day those 13 went
@@ -1501,18 +1510,18 @@ const AU = {
      4 Event rooms appear in a single session and read 0 by construction. Floor
      noise, in the direction a floor is meant to be wrong. */
   /* HOYTS ONLY - the chain publishes a state field and Event does not, so
-     these sum to hy.tickets (3,814), never to tickets (4,836). */
-  states:[['VIC',1298],['NSW',1134],['WA',598],['SA',352],['ACT',298],
-          ['QLD',134]],
+     these sum to hy.tickets (3,864), never to tickets (4,922). */
+  states:[['VIC',1311],['NSW',1138],['WA',602],['SA',369],['ACT',301],
+          ['QLD',143]],
   /* Both chains, 19 Oct 14:40. Chadstone's 556 is now READ, not carried, so
      Victoria's lead over New South Wales is measured rather than restored -
      1,273 to 1,086. The warning above still stands for the two reads that
      LOST Chadstone; it no longer applies to this one. */
-  cities:[['Western Sydney',974],['Melbourne Chadstone',564],['Perth Carousel',426],
-          ['Sydney Darling Harbour',217],['Canberra Belconnen',202],
-          ['Sydney Castle Hill',191],['Melbourne Docklands',184],
-          ['Melbourne Highpoint',179],['Melbourne CBD',151],
-          ['Sydney Parramatta',148]],
+  cities:[['Western Sydney',978],['Melbourne Chadstone',574],['Perth Carousel',430],
+          ['Sydney Darling Harbour',232],['Canberra Belconnen',205],
+          ['Sydney Castle Hill',192],['Melbourne Docklands',184],
+          ['Melbourne Highpoint',179],['Sydney Parramatta',152],
+          ['Melbourne CBD',151]],
   premiumPct:94, premiumStd:166, eveningPct:91,
   top:{cinema:"HOYTS Blacktown, Sydney", when:"Fri 6 Nov, 8:45p",
        room:"Xtremescreen", sold:162, pct:66.4, next:144,

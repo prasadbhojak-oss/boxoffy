@@ -136,7 +136,13 @@ Absent $page '+US_EXTRA.usd+'              'no unguarded US_EXTRA in a dollar su
 Absent $page 'DATA.total.sold+US_EXTRA.tickets' 'no unguarded US_EXTRA in the US tile'
 Absent $vercel 'max-age=300'               'no 5-minute cache on a live tracker page'
 Need $page 'handCount:1899'      'the retired hand count kept as the record'
-Need $page 'tickets:4836'        'Australia 4,836 (Chadstone answering, full clean read)'
+# 19 Oct 22:26/22:40 re-read: 4,836 -> 4,922 on IDENTICAL inventory in both
+# chains - HOYTS 419 sessions none new none gone none failed, Event 443 and
+# the same 107,490 seats. All 86 is buying.
+Need $page 'tickets:4922'        'Australia 4,922 after the 22:26 re-read'
+Need $page 'tickets:3864'        'HOYTS 3,864'
+Need $page 'tickets:1058'        'Event 1,058'
+Absent $page 'tickets:4836,'     'no pre-re-read Australian total'
 Need $page 'tickets:1230'        'Germany 1,230 after the 19 Oct delta'
 Need $page 'notYetOnSale:4'      'the 10 Nov rows are not-yet-bookable, not gone'
 Need $page 'priced:49'           'priced coverage fell to 49% - no price was invented'
@@ -147,14 +153,16 @@ Need $page 'priced:49'           'priced coverage fell to 49% - no price was inv
 Need   $page 'wasCarried:496'    'the retired carry kept as the record'
 Need   $page 'chadstoneRead:564' 'Chadstone scanned by our own reader, 564'
 Need   $page 'chadstoneHand:556'  'the hand count kept as the record it validated'
-Need   $page 'carriedShows:1'    'only the Sunnybank row is still carried'
+# 22:26 read every one of HOYTS' 419 sessions, so nothing is carried now.
+Need   $page 'carriedShows:0'    'only the Sunnybank row is still carried'
 # The denominator did NOT move. Chadstone's Xtremescreen reads 174 seat
 # buttons where our reader counted 182, with unavailable still at 4 - a
 # counting-method difference, not eight seats leaving the room. Cutting
 # hy.seats to 70,475 would have printed 5.22% off a measurement artefact.
-Need   $page 'seats:70335'       'HOYTS denominator from the full clean read'
-Need   $page 'rate:5.42'         'HOYTS rate on its own real house count'
-Need $page "['VIC',1298]"        'Victoria leads on a fully scanned Chadstone'
+Need   $page 'seats:70459'       'HOYTS denominator from the full clean read'
+Need   $page 'rate:5.48'         'HOYTS rate on its own real house count'
+Need $page "['VIC',1311]"        'Victoria leads on a fully scanned Chadstone'
+Absent $page "['VIC',1298]"      'no pre-re-read state split'
 # ASCII only in these two. The page writes '153 screens · 9.81%' with a middot,
 # but Windows PowerShell 5.1 reads a .ps1 saved as UTF-8 without a BOM as ANSI,
 # which mangles the middot and fails the guard for a reason that has nothing to
