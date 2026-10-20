@@ -4537,10 +4537,19 @@ const RAMAYANA_TRACKER = {
   // canada_cineplex.py runs again. Said here because it will be asked.
   // Retired pair spelled out, since verify-update8.ps1 forbids the digits:
   // three seven nine eight nine, and seven two six nine nine one.
-  tickets: "46,157",
+  // UPDATE 17, 20 Oct - LANDMARK CANADA IS IN. Canada 2,449 -> 3,099: 650
+  // seats gone across 12 IMAX 3D showtimes at 6 cinemas, opened by hand
+  // because Landmark's robots.txt answers 403 and no scanner of ours may
+  // fetch it. It is seats gone off a one-state map, not a counted sale, and
+  // 295 of the 650 are identical on both nights, so real bookings there are
+  // 355-650. Six cinemas and two nights is a fraction of that chain.
+  // The US half is untouched. Retired pair, spelled out because
+  // verify-update8.ps1 now forbids the digits: four six one five seven, and
+  // eight five nine five eight four.
+  tickets: "46,807",
   rate: "3.19%",
   shows: "10,539",
-  value: "$859,584",
+  value: "$868,008",
   tminus: "T-16",
   scan: "19 Oct · 10:00pm CT",
 };
