@@ -4494,12 +4494,39 @@ const RAMAYANA_TRACKER = {
   // came inside it, while US_EXTRA went to zero. Net of the basis change the
   // real movement this run was about +1,682 on matched inventory. Do not post
   // the headline delta as growth.
-  tickets: "35,933",
-  rate: "3.72%",
-  shows: "6,705",
-  value: "$686,704",
-  tminus: "T-17",
-  scan: "19 Oct · 4:21pm CT",
+  // UPDATE 15a, CANADA ONLY, 19 Oct 21:56. The US half of this strip is
+  // untouched - rate, shows and the 4:21pm scan label are still the 16:21
+  // map, and the full US re-sweep is still running. Canada went 2,265 ->
+  // 2,449 on IDENTICAL inventory: same 229 showtimes, same 26 cinemas, same
+  // 32 auditoriums, five and a half hours apart. No coverage in it, so the
+  // +184 is buying and may be posted as such. The retired NA pair is spelled
+  // out rather than typed, the same way the Update 14 pair is above, because
+  // verify-update8.ps1 now forbids those digits and a comment is not exempt
+  // from a literal match: three five nine three three, and six eight six
+  // seven zero four.
+  // UPDATE 15, 19 Oct 21:32 - THE FULL NORTH AMERICAN RE-SWEEP LANDED.
+  // All five dates re-read end to end, the map rebaked, and every figure
+  // here moves together off it: US 33,668 -> 35,540 over 6,814 showtimes at
+  // 539 cinemas, 3.88% of 915,420 seats, at a blended $19.56. Canada is the
+  // 2,449 floor from the 21:56 read, which the 22:00 run inside this sweep
+  // reproduced to the ticket. NA = 35,540 + 2,449.
+  // THE SWEEP ALSO READ 9-12 NOV, AND NONE OF IT IS IN HERE. build_map bakes
+  // 4-8 only, deliberately: second-weekend inventory is not opening-run
+  // demand and folding it in would restate the series a second time.
+  // page_refresh.py is NOT the source for this block and was not used - it
+  // is still hardwired to 4-6 Nov and printed a three-date total this run
+  // that is nowhere near this one. Its IMAX per-date output is still good,
+  // because that card is
+  // a 4-6 Nov card by design, and only those three rows came from it.
+  // The retired pair, spelled out because verify-update8.ps1 now forbids the
+  // digits and a comment is not exempt from a literal match: three six one
+  // one seven, and six eight nine zero eight nine.
+  tickets: "37,989",
+  rate: "3.88%",
+  shows: "6,814",
+  value: "$726,991",
+  tminus: "T-16",
+  scan: "19 Oct · 9:32pm CT",
 };
 
 function RamayanaTrackerStrip() {

@@ -45,12 +45,18 @@ Need $page 'function euBody'     'United Kingdom panel'
 Need $page 'function auBody'     'Australia panel'
 Need $page 'function pendingPanel' 'not-yet-counted panel'
 Need $page 'function openSpan'   'opening-run split'
-Need $page 'tickets:5766'        'UK 5,766 after the 20 Oct batch-3 re-read'
-Need $page 'cwGone:5279'         'Cineworld 5,279 after the 20 Oct batch-3 re-read'
+# BATCH 4 REPLACES BATCH 3, it does not stack on it: Grok's file is
+# cumulative from the same 19 Oct baseline, so the published figure is
+# 4,985 + 468 clean, never 5,279 + 468.
+Need $page 'tickets:5940'        'UK 5,940 after the 20 Oct batch-4 re-read'
+Need $page 'cwGone:5453'         'Cineworld 5,453 after the 20 Oct batch-4 re-read'
+Need $page 'reReadDelta:468'     'the clean delta, not the raw 635'
+Absent $page 'cwGone:5747'       'batch 4 must not be stacked on batch 3'
+Absent $page 'reReadDelta:635'   'the raw delta must never be published as clean'
 Need $page 'scGone:487'          'Showcase 487 modelled on the measured share'
 Need $page 'soldShare:44.84'     'the share is measured now, not assumed'
 Need $page 'offSale:11411'       'UK off sale published beside it'
-Need $page 'realLo:2913'         'UK real-bookings band published, not a point'
+Need $page 'realLo:3087'         'UK real-bookings band published, not a point'
 Need $page 'blockSeats:2366'     'UK house-seat exposure disclosed'
 # The city list MUST stay block-corrected. On the seats-gone basis Solihull
 # reads 462 and Feltham 281, and both are almost entirely one room's block -
@@ -67,8 +73,8 @@ Absent $page "['Feltham',281]"        'no block-inflated Feltham in the city lis
 # pre-flight could not pass at all - every run failed on two guards that were
 # only ever each other. Retired figures live in section 4 as Absent; the live
 # figure is the only thing section 1 Needs. One number, one guard, one place.
-Need $page 'booked:2913'         'UK organic booked figure published'
-Need $page 'blockedAll:8351'     'UK blocked seats published'
+Need $page 'booked:3087'         'UK organic booked figure published'
+Need $page 'blockedAll:8331'     'UK blocked seats published'
 Need $page 'INCLUDES BLOCKED SEATS' 'UK footer discloses blocks in the headline'
 Need $page 'function deBody'     'Germany panel'
 Need $page "de :{name:'Germany'" 'Germany tile in the map row'
@@ -86,7 +92,16 @@ Absent $page 'on sale, not counted' 'no footprint-era Germany kicker'
 # count covered. A floor that rises 203 while its own inventory shrinks is
 # sales, not an artefact, so 1,899 is provably low and is checked as absent
 # below with the rest of the retired Canadian figures.
-Need $page 'tickets:2265'        'Canada 2,265 (recovered floor, labelled as a floor)'
+# 19 OCT 21:56: 2,265 -> 2,449 on IDENTICAL inventory - same 229 showtimes,
+# same 26 cinemas, same 32 auditoriums. No coverage in the move, so the +184
+# is buying. soloRooms went 1 -> 2 and offered seats FELL 66,642 -> 66,384 on
+# the same showtimes, because a room's capacity floor is its own best
+# availability reading and that drops as it sells. The floor therefore
+# understates by MORE than last time, not less. Both are guarded below.
+Need $page 'tickets:2449'        'Canada 2,449 (recovered floor, labelled as a floor)'
+Need $page 'seats:66384'         'the offered-seat floor this scan actually read'
+Need $page 'soloRooms:2,'        'both unrecoverable rooms disclosed'
+Need $page 'wasTickets:2265'     'the retired Canadian figure kept as the record'
 # UPDATE 14: US_EXTRA IS ZERO AND THAT IS THE POINT. 7-8 Nov are measured
 # inside the baked map now, so a non-zero US_EXTRA would DOUBLE-COUNT them.
 # The retired figure is kept as wasTickets so the record survives, and
@@ -140,11 +155,13 @@ Need $page "['VIC',1298]"        'Victoria leads on a fully scanned Chadstone'
 # which mangles the middot and fails the guard for a reason that has nothing to
 # do with the page. Matching the rate and the screen count separately is just
 # as tight and cannot break that way.
-Need $page '10.48%'         'IMAX 4 Nov rate'
-Need $page '153 screens'    'IMAX 4 Nov - 153 screens'
+Need $page '11.17%'         'IMAX 4 Nov rate'
+Need $page '154 screens'    'IMAX 4 Nov - 154 screens'
 Need $page '33 screens'     'IMAX 6 Nov - 33 screens, not 32'
-Need $page '7.39%'          'IMAX 6 Nov rate'
-Need $page '6.78%'          'IMAX 5 Nov rate'
+Need $page '8.18%'          'IMAX 6 Nov rate'
+Need $page '7.29%'          'IMAX 5 Nov rate'
+Absent $page '153 screens'  'no pre-re-sweep IMAX screen count'
+Absent $page '10.48%'       'no pre-re-sweep IMAX 4 Nov rate'
 Need $page '+DE.tickets'         'Germany is in the worldwide roll-up'
 Need $page "['Germany',DE.tickets,DE.usd]" 'Germany has a worldwide row'
 Need $page 'Kalki 2898 AD'       'verified ladder'
@@ -170,13 +187,15 @@ Need $page "sea:{name:'SE Asia'"     'SE Asia tile in the map row'
 
 Write-Host ''
 Write-Host '=== 3. the homepage strip agrees with the page'
-Need $app '35,933'     'NA 4-8 total on the strip'
-Need $app '$686,704'   'NA value on the strip'
+Need $app '37,989'     'NA 4-8 total on the strip'
+Need $app '$726,991'   'NA value on the strip'
+Need $app '6,814'      'US 4-8 Nov showtimes on the strip'
+Need $app '9:32pm'     'the strip carries the re-sweep scan time, not the old one'
 # rate is a 4-8 figure for the first time. For five updates it was US 4-6
 # only, because the baked map stopped at 6 Nov and there was no 4-8
 # denominator to divide by. There is one now: 33,668 of 904,291.
-Need $app '3.72%'      'US 4-8 Nov sell-through on the strip'
-Need $app 'T-17'       'countdown'
+Need $app '3.88%'      'US 4-8 Nov sell-through on the strip'
+Need $app 'T-16'       'countdown'
 
 Write-Host ''
 Write-Host '=== 4. what must NOT be there'
@@ -251,12 +270,17 @@ Absent $page 'tickets:3616' 'no pre-Chadstone-read HOYTS figure'
 Absent $page 'tickets:4658' 'no pre-full-read Australia total'
 Absent $page 'tickets:3676' 'no carried-era HOYTS figure'
 Absent $page "['VIC',1273]" 'no carried-era Victoria figure'
-Absent $page 'tickets:5472' 'no pre-re-read UK total'
-Absent $page 'cwGone:4985'  'no pre-re-read Cineworld figure'
+Absent $page 'tickets:5472,' 'no pre-re-read UK total'
+Absent $page 'tickets:5766,' 'no batch-3 UK total'
+Absent $page 'cwGone:4985,'  'no pre-re-read Cineworld figure'
+Absent $page 'cwGone:5279,'  'no batch-3 Cineworld figure'
+# foot is BUILT from the constants now. It carried 4,985 and 2,619 as typed
+# text through two re-reads while the headline above it moved twice.
+Absent $page 'Cineworld is 4,985 of it' 'the footnote must be built, not typed'
 # The 98 Feltham seats that moved from held to sold are NOT counted. If
 # cwGone ever reads 5,232 it means someone added them, and 98 tickets
 # nobody bought are in the UK total.
-Need   $page 'relabelled:147' 'the held-to-sold relabel is named, not absorbed'
+Need   $page 'relabelled:167' 'the held-to-sold relabel is named, not absorbed'
 Absent $page 'cwGone:5367'  'no relabelled seats counted as sales'
 Absent $page 'tickets:5621' 'no batch-1 UK total'
 Absent $page 'cwGone:5134'  'no batch-1 Cineworld figure'
@@ -297,6 +321,22 @@ Absent $page '6.55%'         'no pre-update-14 IMAX 5 Nov rate'
 Absent $page '4-6 November'  'no reader copy still splitting the US at 6 Nov'
 Absent $app  '34,866'        'no pre-update-14 NA total on the strip'
 Absent $app  '$662,617'      'no pre-update-14 NA value on the strip'
+# Canada-only re-read, 19 Oct 21:56: 2,265 -> 2,449 on identical inventory.
+Absent $app  '35,933'        'no pre-Canada-reread NA total on the strip'
+Absent $app  '$686,704'      'no pre-Canada-reread NA value on the strip'
+# UPDATE 15, the full North American re-sweep, 19 Oct 21:32. The map is
+# rebaked, so the strip and the page must both come off that build and never
+# off page_refresh.py, which is still hardwired to 4-6 Nov and printed a
+# three-date total this run that is nowhere near the 4-8 figure.
+Absent $app  '36,117'        'no pre-update-15 NA total on the strip'
+Absent $app  '$689,089'      'no pre-update-15 NA value on the strip'
+Absent $app  '3.72%'         'no pre-update-15 sell-through on the strip'
+Need   $page '"sold":35540'  'the baked map is the 21:32 re-sweep'
+Absent $page '"sold":33668'  'no pre-re-sweep baked map'
+Absent $page '"2026-11-09"'  'the baked map stays 4-8 Nov, not the 9-12 sweep'
+Absent $page 'tickets:2265,' 'no pre-reread Canada ticket count'
+Absent $page 'soloRooms:1,'  'solo-room count must be the 2 this scan read'
+Absent $page 'seats:66642'   'no pre-reread Canadian seat floor'
 Absent $app  '4.01%'         'no 4-6 Nov sell-through on the strip'
 # UK was a MODELLED midpoint of 2,103-9,253 until 19 Oct, when every
 # Cineworld seat map was opened by hand. The midpoint was roughly double the
