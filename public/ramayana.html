@@ -1800,24 +1800,28 @@ const INTL = {
    cover all of them. FX 0.0105, valutafx, 19 Oct - Rs 94.97 to the dollar -
    pinned like every other rate here. */
 const IN = {
-  tickets:24588, clean:12617, block:11971, blockRooms:192,
-  inr:14230286, cleanInr:7302079, usd:149418, cleanUsd:76672,
-  atpInr:578, fx:0.0105, fxDate:'19 Oct', fxSrc:'valutafx',
-  seats:570489, rate:4.31, shows:2731, cinemas:284, cities:69, states:20,
-  platform:'District', pvrShare:74, dateRead:'5 November only',
+  tickets:46539, clean:34333, block:12206, blockRooms:167,
+  inr:29574423, cleanInr:22457205, usd:310531, cleanUsd:235801,
+  atpInr:635, fx:0.0105, fxDate:'19 Oct', fxSrc:'valutafx',
+  seats:664246, rate:7.01, shows:3129, cinemas:321, cities:71, states:20,
+  platform:'District', pvrShare:71, dateRead:'5 November only',
   benchmark:36,
-  /* the 06:32 read, kept so the jump can be described honestly */
-  wasTickets:13702, wasShows:1160, wasCinemas:118, wasCities:48,
-  /* BookMyShow, swept 06:32. Footprint only - it publishes no capacity. */
-  bmsSwept:true, bmsShows:65, bmsVenues:9, bmsKannadaShows:45,
-  bmsPriceLo:200, bmsPriceMid:400, bmsPriceHi:1000,
-  /* the matched four showtimes that prove the block test */
-  tnWas:1682, tnNow:1684,
-  top:[['Delhi NCR',3045,4.8],['Mumbai',2117,5.3],['Jaipur',901,5.9],
-       ['Kolkata',800,3.4],['Ahmedabad',727,7.4],['Pune',617,3.4],
-       ['Lucknow',523,3.5],['Raipur',303,4.9],['Bhubaneswar',279,4.5],
-       ['Nashik',257,13.4]],
-  silent:['Chennai','Hyderabad','Kochi','Coimbatore','Visakhapatnam','Varanasi']
+  /* the 09:02 read, kept so the move can be described honestly */
+  wasTickets:24588, wasShows:2731, wasCinemas:284, wasInr:14230286,
+  /* THE MATCHED COMPARISON. 2,680 showtimes appear in BOTH reads. This
+     is the first clean velocity number India has given us. */
+  matchedShows:2680, matchedWas:22730, matchedNow:38769, buying:16039,
+  gapHours:12.8, perHour:1249, newShows:449, newInvTickets:7770,
+  /* BookMyShow, re-swept 21:33. Footprint only - no capacity anywhere. */
+  bmsSwept:true, bmsShows:2751, bmsVenues:37, bmsCodes:4,
+  bmsSoldOutClasses:86, bmsClassesPriced:10184,
+  bmsPriceLo:200, bmsPriceMid:440, bmsPriceHi:2920,
+  bmsWasShows:65, bmsWasVenues:9,
+  top:[['Delhi NCR',9286,8.4],['Mumbai',5733,7.4],['Kolkata',2082,5.8],
+       ['Jaipur',1792,10.6],['Pune',1773,5.3],['Lucknow',1136,6.1],
+       ['Bhubaneswar',880,9.5],['Nagpur',726,16.2],['Raipur',671,8.5],
+       ['Patna',664,10.2]],
+  silent:['Chennai','Hyderabad','Coimbatore','Visakhapatnam','Varanasi']
 };
 
 /* ---------------------------------------------------------------------
@@ -1980,24 +1984,24 @@ const MKT={
        which reproduces Delhi and Kolkata to within a tenth of a unit).
        Navi Mumbai (170) and Thane (153) are deliberately NOT pinned: at
        this scale they land on top of Mumbai and would read as one blob. */
-    pins:[{n:'Mumbai',x:20.5,y:83.1,t:2117},{n:'Delhi NCR',x:39.0,y:39.1,t:3045},
-      {n:'Bengaluru',x:40.7,y:111.3,t:8},
+    pins:[{n:'Mumbai',x:20.5,y:83.1,t:5733},{n:'Delhi NCR',x:39.0,y:39.1,t:9286},
+      {n:'Bengaluru',x:40.7,y:111.3,t:18},
       {n:'Hyderabad',x:44.5,y:91.0,t:0},
-      {n:'Chennai',x:52.1,y:110.8,t:0},{n:'Kolkata',x:86.8,y:67.0,t:800},
-      {n:'Pune',x:24.7,y:85.7,t:617},{n:'Ahmedabad',x:19.2,y:64.9,t:727},
-      {n:'Jaipur',x:32.9,y:46.9,t:901},{n:'Lucknow',x:55.0,y:47.3,t:523},
-      {n:'Kochi',x:35.0,y:125.4,t:0},{n:'Indore',x:33.2,y:66.3,t:156},
-      {n:'Chandigarh',x:37.2,y:29.3,t:105},{n:'Surat',x:20.3,y:73.5,t:70},
-      {n:'Nagpur',x:47.1,y:73.6,t:193},{n:'Patna',x:73.0,y:53.0,t:190},
-      {n:'Bhopal',x:39.9,y:63.8,t:118},{n:'Vadodara',x:21.8,y:68.2,t:83},
-      {n:'Raipur',x:58.0,y:73.1,t:303},{n:'Nashik',x:24.4,y:78.9,t:257},
-      {n:'Ranchi',x:73.7,y:63.4,t:186},{n:'Gwalior',x:43.2,y:50.1,t:144},
+      {n:'Chennai',x:52.1,y:110.8,t:0},{n:'Kolkata',x:86.8,y:67.0,t:2082},
+      {n:'Pune',x:24.7,y:85.7,t:1773},{n:'Ahmedabad',x:19.2,y:64.9,t:493},
+      {n:'Jaipur',x:32.9,y:46.9,t:1792},{n:'Lucknow',x:55.0,y:47.3,t:1136},
+      {n:'Kochi',x:35.0,y:125.4,t:274},{n:'Indore',x:33.2,y:66.3,t:615},
+      {n:'Chandigarh',x:37.2,y:29.3,t:394},{n:'Surat',x:20.3,y:73.5,t:153},
+      {n:'Nagpur',x:47.1,y:73.6,t:726},{n:'Patna',x:73.0,y:53.0,t:664},
+      {n:'Bhopal',x:39.9,y:63.8,t:324},{n:'Vadodara',x:21.8,y:68.2,t:212},
+      {n:'Raipur',x:58.0,y:73.1,t:671},{n:'Nashik',x:24.4,y:78.9,t:531},
+      {n:'Ranchi',x:73.7,y:63.4,t:485},{n:'Gwalior',x:43.2,y:50.1,t:223},
       {n:'Coimbatore',x:37.9,y:120.4,t:0},
       {n:'Thiruvananthapuram',x:37.9,y:131.9,t:0},
       {n:'Visakhapatnam',x:64.8,y:89.6,t:0},
       {n:'Vijayawada',x:53.8,y:95.0,t:0},
       {n:'Bhubaneswar',x:75.9,y:77.5,t:279},
-      {n:'Guwahati',x:101.3,y:50.5,t:143},{n:'Kanpur',x:52.4,y:49.1,t:4},
+      {n:'Guwahati',x:101.3,y:50.5,t:143},{n:'Kanpur',x:52.4,y:49.1,t:239},
       {n:'Varanasi',x:63.7,y:54.3,t:0}],
     pinNote:'One ticketing platform, 5 November only, and BLOCK-CORRECTED '+
       '— the 192 rooms carrying a standing block are not allowed to inflate '+
@@ -3106,7 +3110,7 @@ function inBody(){
   const f=n=>fmt(n);
   return `<div style="font-family:var(--disp);font-weight:700;font-size:12px;`+
     `letter-spacing:.14em;text-transform:uppercase;color:var(--accent)">`+
-    `India · second read · 5 November</div>`+
+    `India · 5 November · measured against this morning</div>`+
     `<p class="note" style="margin-top:8px">`+
     `<b>${f(IN.tickets)} tickets</b> · <b>₹${f(IN.inr)}</b> `+
     `($${f(IN.usd)}) · <b>${IN.rate}%</b> of ${f(IN.seats)} seats, across `+
@@ -3115,28 +3119,26 @@ function inBody(){
     `gross on every showtime, so ₹${IN.atpInr} a ticket is read, not `+
     `assumed, and it covers every ticket here. Germany's own prices cover `+
     `42% of its tickets; India's cover all of them.</p>`+
-    `<p class="note"><b>Most of the jump since this morning is coverage, `+
-    `not buying.</b> The 06:32 read carried ${f(IN.wasShows)} showtimes at `+
-    `${IN.wasCinemas} cinemas for ${f(IN.wasTickets)} tickets. The `+
-    `footprint has since <b>more than doubled</b> — cinemas kept loading, `+
-    `and that is where the extra tickets came from. We cannot say how much `+
-    `of it is real buying, because our own sweep overwrites its file and `+
-    `keeps no earlier copy, so there is nothing to compare against. One `+
-    `matched piece survives: four showtimes present in both reads went `+
-    `${f(IN.tnWas)} → ${f(IN.tnNow)} in two and a half hours. A room `+
-    `reading 80% full that gains two seats is not selling.</p>`+
-    `<p class="note"><b>Half of it is a standing block.</b> Our `+
-    `room-minimum test fires on ${IN.blockRooms} rooms for `+
-    `<b>${f(IN.block)} seats</b> — a higher share than this morning, `+
-    `because the cinemas that loaded since are block-heavy. The clearest `+
-    `cases: KRG Soundarya Mahal in Bengaluru reads 422, 419, 422, 419; PVR `+
-    `Palladium in Ahmedabad reads <b>230 on three of its five showtimes</b>; `+
-    `and two rooms at PVR ECX in Chanakyapuri repeat 132 and 93. A fan club `+
-    `buying out a show produces one full show — not the identical 230 at `+
-    `three different times of day. So real bookings sit between `+
-    `<b>${f(IN.clean)}</b> and <b>${f(IN.tickets)}</b>, worth `+
-    `₹${f(IN.cleanInr)} ($${f(IN.cleanUsd)}) at the low end, and we publish `+
-    `the range the same way we publish the UK's.</p>`+
+    `<p class="note"><b>This time we can tell buying from coverage, and `+
+    `most of it is buying.</b> We kept a copy of the previous read before `+
+    `overwriting it, so <b>${f(IN.matchedShows)} showtimes appear in both</b>. `+
+    `Those went <b>${f(IN.matchedWas)} → ${f(IN.matchedNow)}</b> in `+
+    `${IN.gapHours} hours — <b>${f(IN.buying)} tickets of real buying</b>, `+
+    `about ${f(IN.perHour)} an hour. A further ${f(IN.newShows)} showtimes `+
+    `are new and carry ${f(IN.newInvTickets)}; that part is inventory, not `+
+    `demand, and it is separated here rather than folded in. India went `+
+    `${f(IN.wasTickets)} → ${f(IN.tickets)} and roughly three-quarters of `+
+    `the move is people buying tickets.</p>`+
+    `<p class="note"><b>The block barely moved, and that is the proof it `+
+    `is a block.</b> Our room-minimum test fires on ${IN.blockRooms} rooms `+
+    `for <b>${f(IN.block)} seats</b>. This morning it was 11,971. So while `+
+    `the rest of India added more than twenty thousand tickets, the held `+
+    `inventory sat still — which is exactly what held inventory does, and `+
+    `why the block share has fallen from 49% to ${Math.round(100*IN.block/IN.tickets)}%. `+
+    `Real bookings now sit between <b>${f(IN.clean)}</b> and `+
+    `<b>${f(IN.tickets)}</b>, worth ₹${f(IN.cleanInr)} ($${f(IN.cleanUsd)}) `+
+    `at the low end, and we publish the range the same way we publish the `+
+    `UK's.</p>`+
     `<div style="display:grid;gap:7px;margin:13px 0 0">`+
     IN.top.slice(0,8).map(([c,t,r])=>
       `<div style="display:grid;grid-template-columns:120px 1fr;gap:11px;`+
@@ -3152,19 +3154,23 @@ function inBody(){
     `<p class="note"><b>What this is not.</b> This is one ticketing `+
     `platform and a subset of the market — on Jailer 2 it carried about `+
     `${IN.benchmark}% of what Sacnilk reported — and ${IN.pvrShare}% of `+
-    `these showtimes are PVR. <b>The other big platform has now been read `+
-    `and it cannot add a ticket:</b> ${IN.bmsShows} shows at `+
-    `${IN.bmsVenues} independents, and it publishes fullness labels with no `+
-    `capacity anywhere outside the booking funnel. What it did find is a `+
-    `Kannada version that this platform does not list at all — `+
-    `${IN.bmsKannadaShows} of those shows — and printed prices of `+
-    `₹${IN.bmsPriceLo}, ₹${IN.bmsPriceMid} and ₹${IN.bmsPriceHi}, which `+
-    `sit right on top of our ₹${IN.atpInr}. This also reads `+
+    `these showtimes are PVR. <b>The other big platform cannot add a `+
+    `ticket, but it has just told us something bigger:</b> it has gone `+
+    `from ${IN.bmsWasShows} shows at ${IN.bmsWasVenues} venues to `+
+    `<b>${f(IN.bmsShows)} shows at ${IN.bmsVenues}</b>, and it now lists `+
+    `<b>${IN.bmsCodes} separate versions</b> where this morning it listed `+
+    `two — including an IMAX 3D Hindi track. ${IN.bmsSoldOutClasses} seat `+
+    `classes there are already sold out, against three this morning. It `+
+    `publishes no capacity, so none of that becomes a seat or a rupee `+
+    `here; it is the clearest early demand signal India has given us. `+
+    `Its ${f(IN.bmsClassesPriced)} priced classes run ₹${IN.bmsPriceLo} to `+
+    `₹${f(IN.bmsPriceHi)}, median ₹${IN.bmsPriceMid}. This also reads `+
     `<b>${esc(IN.dateRead)}</b>, while every other market here carries its `+
-    `whole presale. ${esc(IN.silent.slice(0,3).join(', '))} read zero on `+
-    `<i>both</i> platforms — a zero of listings, not of demand, and the `+
-    `reason to call this a Hindi read rather than an Indian one. India is `+
-    `a floor and a narrow one.</p>`;
+    `whole presale. ${esc(IN.silent.slice(0,2).join(' and '))} still read `+
+    `zero on <i>both</i> platforms — a zero of listings, not of demand, `+
+    `and the reason to call this a Hindi read rather than an Indian one. `+
+    `Kerala opened since this morning: Kochi has gone from nothing to 274. `+
+    `India is a floor and a narrow one.</p>`;
 }
 
 function meBody(){

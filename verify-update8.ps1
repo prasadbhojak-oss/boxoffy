@@ -206,13 +206,27 @@ Need $page "'Australia & NZ'"    'the market is labelled for what is in it'
 # is mostly coverage and the panel says so. 49% is a standing block.
 # The band is published the way the UK's is.
 Need $page 'const IN = {'        'India is a counted market'
-Need $page 'tickets:24588'       'the second-read India figure'
-Need $page 'clean:12617'         'the block-corrected floor'
-Need $page 'block:11971'         'the block is named, not absorbed'
-Need $page 'atpInr:578'          'the Indian price is theirs, read not assumed'
-Need $page 'wasTickets:13702'    'the first read is kept so the jump can be described'
+# THIRD INDIA READ, 20 Oct 21:5x - AND THE FIRST ONE WE CAN GRADE.
+# district_shows.csv was snapshotted before the sweep overwrote it, so
+# 2,680 showtimes appear in BOTH reads: 22,730 -> 38,769 over 12.8h.
+# That +16,039 is BUYING. A further 449 showtimes are new and carry
+# 7,770 - inventory, separated out rather than folded in.
+# THE BLOCK BARELY MOVED: 11,971 -> 12,206 while everything else added
+# twenty thousand. That is the strongest confirmation of the test we have.
+Need $page 'tickets:46539'       'the third-read India figure'
+Need $page 'clean:34333'         'the block-corrected floor'
+Need $page 'block:12206'         'the block is named, not absorbed'
+Need $page 'atpInr:635'          'the Indian price is theirs, read not assumed'
+Need $page 'wasTickets:24588'    'the previous read is kept so the move can be described'
+Need $page 'matchedShows:2680'   'the matched set is published, not just the total'
+Need $page 'buying:16039'        'buying is separated from new inventory'
+Need $page 'newInvTickets:7770'  'and the inventory half is named'
+Absent $page 'tickets:24588,'    'no second-read India total'
 Absent $page 'tickets:13702,'    'no first-read India total'
+Absent $page 'atpInr:578'        'no second-read Indian price'
 Absent $page 'atpInr:432'        'no first-read Indian price'
+Need $page 'bmsShows:2751'       'BookMyShow footprint after its own jump'
+Need $page 'bmsCodes:4'          'four language tracks now listed, not two'
 Need $page "['India',IN.tickets,IN.usd]" 'India is in the worldwide roll-up'
 Absent $page "sub:'presales opened 20 Oct', soon:true" 'India is no longer coming soon'
 # PB, 20 OCT: THE PLATFORM IS NAMED IN THE FOOTER AND NOWHERE ELSE.

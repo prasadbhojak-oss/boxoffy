@@ -8,9 +8,22 @@
   -->
 
   <url>
+    <loc>https://www.boxoffy.com/ramayana</loc>
+    <lastmod>2026-10-18</lastmod>
+    <changefreq>hourly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
     <loc>https://www.boxoffy.com/ramayana-opening-weekend-part-2.html</loc>
     <lastmod>2026-10-14</lastmod>
     <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.boxoffy.com/why-ramayana-matters-dharma-and-indias-soft-power.html</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
@@ -6962,12 +6975,6 @@
   </url>
   <url>
     <loc>https://www.boxoffy.com/chandni-box-office.html</loc>
-    <lastmod>2026-10-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://www.boxoffy.com/collage-week35-preview-LOCAL-ONLY.html</loc>
     <lastmod>2026-10-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
