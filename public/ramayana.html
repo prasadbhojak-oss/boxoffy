@@ -1157,9 +1157,16 @@ const DE = {
 
      CineStar Emden still has no figure: Sony lists it at 19:00 and the
      cinema's own page says 12:00. A footprint time is not a showtime. */
-  tickets:1706, eur:29187, usd:32796, atpEur:17.11, fx:1.1237,
-  inBasis:1682, outBasis2:24, deltaRead:12, deltaScannable:18, showsGone:0,
+  tickets:2023, eur:34818, usd:39125, atpEur:17.21, fx:1.1237,
+  inBasis:1993, outBasis2:30, deltaRead:12, deltaScannable:18, showsGone:0,
   notYetOnSale:4, sharedUrlDupes:1,
+  /* 21 OCT. THE TOTAL IS NOW TWO READS AND THE PAGE SAYS WHICH IS WHICH.
+     191 showtimes were opened on 21 Oct. 90 more were read on 20 Oct and
+     could not be opened again - Cineplex began answering 403 and took 78
+     of them with it, and 12 showtimes are no longer listed at all. Those
+     90 keep their 20 Oct figure, 226 tickets, because a presale does not
+     run backwards; a stale read is a floor, not a guess. */
+  read21:191, carried:90, carriedTickets:226, cineplexGone:78, delisted:12,
   /* 20 OCT, SECOND FULL GERMAN READ. 277 of 298 showtimes opened by hand at
      98 cinemas in 72 towns. 1,230 -> 1,706. The four UCI rows were left
      untouched and marked "UCI - policy", which is what the brief asked for.
@@ -1184,24 +1191,56 @@ const DE = {
      only 12 seats that never move across 20 testable rooms, so the 730 is
      close to clean - but 62 of those rooms have fewer than three showings
      and cannot be tested at all. Publish the total, say the split. */
-  seats:67201, rate:2.54, held:616, outSeats:3662,
-  shows:277, cinemas:98, showsScan:298, footShows:298, footCinemas:103,
-  cities:72, priced:42, zeroShows:103, outBasis:24, soldOut:0,
-  compeso:976, compesoShows:117, compesoRate:3.02,
-  oneState:730, oneStateShows:160, oneStateRate:2.09,
+  /* 21 OCT - GERMANY'S FIRST CLEAN VELOCITY READING, AND THE REASON THE
+     SAME 298 ROWS WENT OUT TWICE INSTEAD OF A WIDER NET.
+     187 showtimes were read on BOTH days. The footprint behind them did
+     not move: same cinemas, same sittings, same booking links. So the
+     whole of the change on those rows is buying, not coverage.
+         187 matched showtimes   1,480  ->  1,789   =  +309
+     Four showtimes were opened for the first time and carried 8 more.
+     +309 of the +317 is people buying tickets. Nothing else in this
+     market has ever been measurable that cleanly. */
+  matchedShows:187, matchedWas:1480, matchedNow:1789, buying:309,
+  newShows:4, newTickets:8,
+  seats:67786, rate:2.98, held:670, outSeats:3756,
+  shows:281, cinemas:99, showsScan:298, footShows:298, footCinemas:103,
+  cities:73, priced:49, zeroShows:96, outBasis:30, soldOut:0,
+  compeso:1173, compesoShows:120, compesoRate:3.52,
+  oneState:850, oneStateShows:161, oneStateRate:2.47,
   blockFloor:12, testedRooms:20, untestedRooms:62,
-  byDate:[['Thu 5 Nov',914,112,30618,2.99],['Fri 6 Nov',102,33,6575,1.55],
-          ['Sat 7 Nov',245,36,8030,3.05],['Sun 8 Nov',421,77,18316,2.30]],
-  /* The version split is the German story. OmU/OV is the original with
-     subtitles; 3D and Standard here are the German dub. */
-  /* +27 original / +11 dub from the 19 Oct delta. The dub seat count adds
-     766, not 896: Filmhaus and Filmhaus-Huber share one 130-seat show and
-     it is counted once. orig+dub is 1,215 against tickets of 1,230 - the
-     same 15-ticket gap as before, which is rows whose format the footprint
-     never recorded. It is not a new discrepancy and it is not a rounding
-     error; those 15 are real tickets with an unknown version. */
-  orig:1073, origSeats:20352, origRate:5.27,
-  dub:633,   dubSeats:46849,  dubRate:1.35,
+  byDate:[['Thu 5 Nov',1078,113,30699,3.51],['Fri 6 Nov',114,34,6699,1.70],
+          ['Sat 7 Nov',310,37,8212,3.77],['Sun 8 Nov',491,78,18420,2.67],
+          ['Mon 9 Nov',12,9,2112,0.57],['Tue 10 Nov',18,9,1536,1.17],
+          ['Wed 11 Nov',0,1,108,0.00]],
+  /* THE VERSION SPLIT IS CORRECTED, NOT UPDATED, AND IT WAS WRONG BY A
+     LOT. The old 1,073 original / 633 dubbed came off OUR isOV flag in
+     the worklist. On 21 Oct the booking pages themselves were read and
+     63 of 191 rows had that flag wrong - rows carrying 578 tickets, and
+     nearly every one was a row we had marked dubbed that the page states
+     as the original with subtitles.
+     Germany is not a half-dubbed market. It is an original-language
+     market with a dub attached: 1,749 of 1,797 on the 21 Oct rows.
+     These figures are the 21 Oct rows ONLY. They are the only rows where
+     the version came off the page instead of off our own flag, and
+     mixing them with the carried rows would put the bad flag back in. */
+  verBasis:'the 191 showtimes opened on 21 October',
+  verShowsRead:191, verTickets:1797, flagsCorrected:63, flagTickets:578,
+  orig:1749, origSeats:40103, origRate:4.36, origShows:166,
+  dub:36,    dubSeats:2521,   dubRate:1.43, dubShows:9,
+  verUnstated:12, verUnstatedSeats:2036, verUnstatedShows:16,
+  origShare:97, origSeatShare:90,
+  /* AND A LANGUAGE WE DID NOT KNOW WAS THERE. The worklist has no
+     language column at all - only a yes/no original flag - so nobody had
+     ever asked which original. The pages name it: Tamil is playing in
+     Germany, at 17 cinemas in 16 towns, on 32 of the 191 showtimes read.
+     119 tickets so far against Hindi's 1,194, and 43 showtimes carrying
+     484 tickets where the page prints the version but not the language.
+     Every German figure we have published until now has been reported as
+     if this were a Hindi-and-dub market. It is three tracks. */
+  hindi:1194, hindiShows:116, hindiSeats:30457,
+  tamil:119,  tamilShows:32,  tamilSeats:5242,
+  tamilCinemas:17, tamilCities:16,
+  langUnnamed:484, langUnnamedShows:43,
   top:{cinema:'CinemaxX München', when:'Thu 5 Nov, 7:00p',
        sold:81, of:121, pct:66.9}
 };
@@ -3058,18 +3097,35 @@ function deBody(){
     `(~$${fmt(DE.usd)}) · <b>${DE.rate}%</b> of ${fmt(DE.seats)} seats, `+
     `across ${DE.shows} showtimes at ${DE.cinemas} cinemas in ${DE.cities} `+
     `towns and cities. Every seat map opened by hand.</p>`+
-    `<p class="note"><b>The German dub is being ignored.</b> Sony dubbed `+
-    `Ramayana into German, and almost nobody is buying that ticket. The `+
-    `subtitled original takes <b>${fmt(DE.orig)}</b> of the `+
-    `${fmt(DE.tickets)} — 63% of every German sale — off 30% of the seats. `+
-    `It sells at ${DE.origRate}%. The dub sells at ${DE.dubRate}%. That is `+
-    `nearly four to one per seat, and it is the clearest signal on this page `+
-    `that `+
-    `Germany is buying this film as an Indian film.</p>`+
+    `<p class="note"><b>The German dub is being ignored, and by more than `+
+    `we thought.</b> Sony dubbed Ramayana into German and almost nobody is `+
+    `buying that ticket. On the ${DE.verShowsRead} showtimes we opened on `+
+    `21 October the subtitled original takes <b>${fmt(DE.orig)}</b> of `+
+    `${fmt(DE.verTickets)} tickets — ${DE.origShare}% of every German sale `+
+    `— off ${DE.origSeatShare}% of the seats. It sells at ${DE.origRate}%. `+
+    `The dub sells at ${DE.dubRate}%. <b>That split is a correction.</b> We `+
+    `had been reading the version off our own listing flag, and when the `+
+    `booking pages were read instead, ${DE.flagsCorrected} of `+
+    `${DE.verShowsRead} rows came back marked wrong — nearly all of them `+
+    `rows we had called dubbed that the cinema calls the original. Germany `+
+    `is not a half-dubbed market. It is an original-language market with a `+
+    `dub attached.</p>`+
+    `<p class="note"><b>And it is not one original — it is two.</b> Reading `+
+    `the pages turned up a language nobody here had asked about, because our `+
+    `worklist only ever recorded original-or-dubbed and never which `+
+    `original. <b>Ramayana is playing in Tamil in Germany</b>, at `+
+    `${DE.tamilCinemas} cinemas in ${DE.tamilCities} towns, on `+
+    `${DE.tamilShows} of those ${DE.verShowsRead} showtimes. Tamil has `+
+    `${DE.tamil} tickets to Hindi's ${fmt(DE.hindi)} so far, and a further `+
+    `${DE.langUnnamed} sit on ${DE.langUnnamedShows} showtimes where the `+
+    `page prints the version but not the language. Every German figure we `+
+    `published before today was reported as if this were a Hindi-and-dub `+
+    `market. It is three tracks.</p>`+
     `<div style="display:grid;gap:7px;margin:13px 0 0">`+
-    [['München','384 tickets — still carrying the market almost alone'],
-     ['Berlin','93 across seven cinemas. Still the emptiest big city'],
-     ['Main-Taunus','181 at one multiplex outside Frankfurt'],
+    [['München','445 tickets off three cinemas — still carrying the market'],
+     ['Berlin','103 across seven cinemas. Still the emptiest big city'],
+     ['Main-Taunus','201 at one multiplex outside Frankfurt'],
+     ['Hamburg','187 across two cinemas, 8.4% of their seats'],
      ['Fullest room',DE.top.cinema+', '+DE.top.when+' — '+DE.top.sold+' of '+
                      DE.top.of+' seats, '+DE.top.pct+'%']]
       .map(([a,b])=>
@@ -3082,11 +3138,22 @@ function deBody(){
     `cinemas print a ticket price and no other market on this page does — `+
     `averaging €${DE.atpEur}. That average is real for the ${DE.priced}% of `+
     `tickets that carried a price and is applied to the rest, so the euro `+
-    `figure is part observed, part assumed. It fell from €18.89 on the `+
-    `18 October read: the showtimes added since are cheaper screens, not a `+
+    `figure is part observed, part assumed. It has been steady across three `+
+    `reads — €18.89 on 18 October, €17.11 on 20 October, €${DE.atpEur} now — `+
+    `and the fall between the first two was cheaper screens joining, not a `+
     `price cut.</p>`+
-    `<p class="note">${DE.shows} of the ${DE.showsScan} showtimes we open `+
-    `were read; ${DE.showsScan-DE.shows} would not load. The footprint is `+
+    `<p class="note"><b>This total is two reads, not one.</b> `+
+    `${DE.read21} of the ${DE.showsScan} showtimes were opened on `+
+    `21 October. Another ${DE.carried} could not be opened again and keep `+
+    `their 20 October figure, <b>${DE.carriedTickets} tickets</b> — `+
+    `${DE.cineplexGone} of them because one chain's booking site stopped `+
+    `answering us, and ${DE.delisted} because the showtime is no longer `+
+    `listed. A presale does not run backwards, so a figure we measured and `+
+    `cannot refresh is a floor, not a guess — but it is a floor, and it is `+
+    `named here rather than blended in. The ${DE.matchedShows} showtimes `+
+    `read on <b>both</b> days are the clean reading: `+
+    `${fmt(DE.matchedWas)} to ${fmt(DE.matchedNow)}, <b>+${DE.buying} `+
+    `bought</b> with the footprint behind them unchanged. The footprint is `+
     `wider than the count — <b>${DE.footShows} shows at ${DE.footCinemas} `+
     `cinemas</b> are on sale, four of them at a chain we do not read. `+
     `${fmt(DE.held)} seats the cinemas hold `+
