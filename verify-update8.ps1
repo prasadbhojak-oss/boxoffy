@@ -52,8 +52,42 @@ Need $page 'function openSpan'   'opening-run split'
 # chain shows 6,098; we publish 5,551. Bradford (held 308->128, sold 0->180)
 # and Whiteley (held 192->48, sold 0->144) are 324 of the 547 difference and
 # neither has one seat fewer off sale than it had on 19 October.
-Need $page 'tickets:6038'        'UK 6,038 after the final re-read'
-Need $page 'cwGone:5551'         'Cineworld 5,551, relabelling excluded'
+# 21 OCT SECOND RE-READ: the same 1,083 showtimes twice in 8h29m. The chain's
+# own column moved 536; only 427 seats actually left the inventory. 5,551 +
+# 427 = 5,978 Cineworld, + 487 Showcase = 6,465.
+#
+# BRADFORD RELABELLED AGAIN, ON TWO CONSECUTIVE READS. Screen 8 moved held
+# 10->4 and sold 0->6 on all twelve of its showtimes: raw +73, clean +1. The
+# 20 Oct guard below exists because Bradford and Whiteley did this once. It
+# has now happened twice, to the same cinema, and these guards are the only
+# thing standing between that and a published +73.
+Need $page 'tickets:6465'        'UK 6,465 after the 21 Oct re-read'
+Need $page 'cwGone:5978'         'Cineworld 5,978, relabelling excluded'
+Need $page 'gbp:87278'           'UK pounds at the pinned 13.50 ATP'
+Need $page 'usd:115669'          'UK dollars moved with the pounds, at 1.3253'
+Need $page 'realHi:5978'         'the top of the UK range is cwGone by definition'
+Need $page 'reRead2Delta:427'    'the 21 Oct clean delta'
+Need $page 'reRead2Relabelled:109' 'and the seats excluded to get it'
+Need $page 'bradfordClean:1'     'Bradford: one seat, not seventy-three'
+Absent $page 'tickets:6038,'     'no pre-21-Oct UK total'
+Absent $page 'cwGone:5551,'      'no pre-21-Oct Cineworld figure'
+Absent $page 'gbp:81513'         'no pre-21-Oct UK pounds'
+Absent $page 'usd:108029'        'no pre-21-Oct UK dollars'
+Absent $page 'realHi:5551'       'no pre-21-Oct top of range'
+Absent $page 'reRead2Delta:536'  'the raw movement must never be published as clean'
+Absent $page 'bradfordClean:73'  'Bradford raw is never the clean figure'
+# THE UK CARRIES THREE LANGUAGE TRACKS. The 21 Oct file is the first UK file
+# with a language on every row. Telugu sells at 4.45% against Hindi's 2.16%,
+# off 49 showtimes at 17 cinemas. Tamil is third at 0.76%. Germany turned up
+# a Tamil track the same day; two markets in one day is not a coincidence,
+# and no India figure we hold can resolve a language at all.
+Need $page "langs:[['Hindi'"   'the UK language split is on the page'
+Need $page "['Telugu',49,17"   'and Telugu is named with its own footprint'
+# Leicester Square went unread this round - 9 showtimes, all IMAX or
+# Superscreen. Its figure is carried, so it must be named as carried.
+Need $page 'lsUnread:9'          'the unread West End rooms are named'
+# The 20 Oct round is KEPT, not overwritten. Two clean deltas on two dates
+# is the series; collapsing them into one would lose it.
 Need $page 'chainShows:6098'     'what the chain shows is published beside what we count'
 Need $page 'relabelled:552'      'every relabelled seat named'
 Absent $page 'cwGone:6098'       'the chain figure is never the published one'
@@ -114,26 +148,72 @@ Absent $page 'on sale, not counted' 'no footprint-era Germany kicker'
 # the same showtimes, because a room's capacity floor is its own best
 # availability reading and that drops as it sells. The floor therefore
 # understates by MORE than last time, not less. Both are guarded below.
-Need $page 'tickets:3040'        'Cineplex 3,040 on its own all-presale dates'
+# 21 OCT 04:33Z: 3,040 -> 3,719, AND THE DENOMINATOR DID NOT MOVE.
+# Every previous Canadian delta came with the recovered-capacity warning -
+# the floor is max(seatsAvail) over a room's own showtimes, so adding
+# near-empty sittings inflates computed sold everywhere. Offered seats went
+# 95,681 -> 95,658, twenty-three DOWN across the same seven dates, so the
+# +679 is buying rather than arithmetic. seats and tickets must move together
+# or the mechanic is back: that is what these two guards are for.
+Need $page 'tickets:3719'        'Cineplex 3,719 on its own all-presale dates'
+Need $page 'buying:679'          'and the buying figure on a flat denominator'
+Need $page 'usd:48198'           'Canadian dollars at the flat C$18 assumption'
+# WHY THE MARKER IS THE PAIR AND NOT 'tickets:3040,'. The retired figures
+# are kept on the page as wasTickets and wasSeats. Contains() is case
+# SENSITIVE, so 'tickets:3040,' does not match 'wasTickets:3040,' - the
+# capital T saves it, and the same camelCase accident is what lets
+# Absent 'soloRooms:2,' coexist with wasSoloRooms:2 further down.
+# That is luck, not design, and one renamed field would turn every one of
+# these guards into a false failure on our own record. The adjacent pair
+# only ever existed in the live field, so it cannot collide at all.
+Absent $page 'tickets:3040, seats:95681' 'no pre-21-Oct Cineplex figure'
 Absent $page 'tickets:2449,'     'no five-date Cineplex figure'
+Absent $page 'usd:39398'         'no pre-21-Oct Canadian dollar figure'
+Absent $page 'rate:3.18,'        'no pre-21-Oct Canadian rate'
+Absent $page "['Tue 10 Nov',383" 'no pre-21-Oct Canadian second-week row'
 # LANDMARK, SECOND READ 20 OCT 09:11 CT. Opened by hand - robots.txt answers
 # 403 and no scanner of ours fetches that chain. Seats gone off a one-state
 # map, not a counted sale, and 295 of the 676 are identical on both nights.
-# THIS IS THE ONLY MATCHED PAIR ON THE PAGE: same twelve showtimes, same six
+# THIS WAS THE FIRST MATCHED PAIR ON THE PAGE, and it is no longer the only
+# one - the method it proved is now running in Germany, the UK, India and the
+# United States. Same twelve showtimes, same six
 # cinemas, 9h38m apart, nothing added to the worklist. So the +26 is movement
 # and belongs to the clean read, which is why lo goes 60 -> 86 while
 # blockFloor stays at 590. A block is a count that does not move.
-Need $page 'lm:{tickets:676'     'Landmark on the matched re-read'
+# 20 OCT 23:36 CT, THIRD READ, AND IT IS TWO THINGS IN ONE FILE.
+#   IMAX     same 12 showtimes, 676 -> 769 in 14h25m. All six cinemas moved.
+#            +93 is BUYING. The series is 650 -> 676 -> 769, +119 clean.
+#   ScreenX  36 showtimes at 3 cinemas, 554 seats gone, NEVER READ BEFORE.
+#            Zero of it buying. It is footprint we had not opened.
+# 676 -> 1,323 is +93 bought and +554 coverage. 86% of the jump is coverage,
+# and these guards exist so nobody quotes the 647 as a move.
+Need $page 'lm:{tickets:1323'    'Landmark on the third read, both formats'
+Need $page 'imax:{tickets:769'   'the matched IMAX set on its own'
+Need $page 'sx:{tickets:554'     'and ScreenX on its own, never pooled'
+Need $page 'buying:93,'          'the part of the move that is buying'
+Need $page 'newInventory:554'    'and the part that is coverage'
 Absent $page 'lm:{tickets:650'   'no first-read Landmark figure'
-Need $page 'was:650, added:26'   'the re-read delta is published, not absorbed'
+Absent $page 'lm:{tickets:676'   'no second-read Landmark figure'
+Need $page 'was2:650, added2:26' 'the 650 -> 676 delta stays on the record'
+Need $page 'was:676, added:93'   'and the 676 -> 769 delta beside it'
+Need $page 'addedAll:119'        'the whole clean series, 650 -> 769'
+# SCREENX IS THE THIRD SITTING WE HAVE BEEN ASKING FOR, AND WE HAVE NOT USED
+# IT YET. Two of its rooms run 14 showtimes each against IMAX's two, which is
+# finally enough to run the room-minimum test at this chain. The file gives
+# per-cinema totals only, so the test has not been run: blockTested must stay
+# false and the chain's clean floor must stay 179 rather than quietly rising
+# with ScreenX's 554. Delete that flag and the 554 becomes an unlabelled
+# guess, which is the one thing this page does not publish.
+Need $page 'blockTested:false'   'ScreenX is marked untested for blocks'
 # THE FLOOR IS CARRIED BY EACH SHOWTIME, NOT ONCE PER ROOM. Solihull proves
 # the rule on this same page: screen 6 reads 57 across eight showings and its
 # block is published as 456, which is 57 x 8. Landmark's six rooms repeat a
 # combined floor of 295 on both of their nights, so the block is 590 and the
 # clean read is 60 - not the 355 a once-per-room subtraction gives.
 Need $page 'blockFloor:590'      'the Landmark block on the per-showtime rule'
-Need $page 'lo:86,'              'the Landmark clean read is published'
+Need $page 'lo:179,'             'the Landmark clean read is published'
 Absent $page 'lo:60,'            'no pre-re-read Landmark clean figure'
+Absent $page 'lo:86,'            'no second-read Landmark clean figure'
 Absent $page 'blockFloor:295'    'no once-per-room block arithmetic'
 Absent $page 'between 355 and 650' 'no band from the wrong rule'
 # The Method panel carried 18 Oct Canadian and Australian figures for two
@@ -142,16 +222,21 @@ Absent $page 'between 355 and 650' 'no band from the wrong rule'
 Absent $page '1,899 tickets</b> across 26 cinemas' 'no 18 Oct Canada in Method'
 Absent $page '<b>840 tickets</b>'                  'no 18 Oct Event in Method'
 Absent $page 'none of it is counted here'          'Method must not say Landmark is uncounted'
-Need   $page '590 of the 676 is held inventory'    'the block is in the footnote, as agreed'
+Need   $page '590 of the 769 is held inventory'    'the block is in the footnote, as agreed'
 Absent $page '590 of the 650 is held inventory'    'no first-read Landmark block line'
+Absent $page '590 of the 676 is held inventory'    'no second-read Landmark block line'
+Absent $page 'Landmark Cinemas is not counted'     'the roll-up must not say Landmark is uncounted'
+Absent $page 'Landmark is in for the first time'   'no first-read framing on the third read'
 Need $page 'canTix'              'the Canadian roll-up uses both chains'
 Absent $page 'const naTix=usSold+xTix()+CA.tickets;' 'no Cineplex-only North America'
-Need $page 'seats:95681'         'the offered-seat floor this scan actually read'
+Need $page 'seats:95658'         'the offered-seat floor this scan actually read'
+Need $page 'wasSeats:95681'      'the retired floor stays on the record'
 # Back to one unrecoverable room on the widened dates - the extra sittings
 # gave the second room something to recover its capacity from.
 Need $page 'soloRooms:1,'        'the unrecoverable room is disclosed'
 Absent $page 'soloRooms:2,'      'no five-date solo-room count'
-Need $page 'wasTickets:2449'     'the retired Canadian figure kept as the record'
+Need $page 'wasTickets2:2449'    'the 2,449 stays on the record behind the 3,040'
+Need $page 'wasTickets:3040'     'and the 3,040 the 3,719 replaced'
 # UPDATE 14: US_EXTRA IS ZERO AND THAT IS THE POINT. 7-8 Nov are measured
 # inside the baked map now, so a non-zero US_EXTRA would DOUBLE-COUNT them.
 # The retired figure is kept as wasTickets so the record survives, and
@@ -257,14 +342,53 @@ Need $page 'tickets:3864'        'HOYTS 3,864'
 Need $page 'tickets:1142'        'Event 1,142 - same 443 sessions, all buying'
 Absent $page 'tickets:1058,'     'no pre-re-read Event figure'
 Absent $page 'tickets:4836,'     'no pre-re-read Australian total'
-# 20 OCT SECOND FULL GERMAN READ: 277 of 298 showtimes, 98 cinemas, 72 towns.
-# 976 of the 1,706 are published SOLD (Compeso); 730 are one-state seats gone.
-Need $page 'tickets:1706'        'Germany 1,706 after the second full read'
-Need $page 'compeso:976'         'the half of Germany that is a true sold count'
-Need $page 'oneState:730'        'the half that is only seats gone'
+# 21 OCT THIRD GERMAN READ: 281 of 294 scannable showtimes carry a figure,
+# 99 cinemas, 73 towns. 1,173 of the 2,023 are published SOLD (Compeso);
+# 850 are one-state seats gone.
+#
+# THE TOTAL IS TWO READS AND THESE GUARDS EXIST TO KEEP IT HONEST. 191 rows
+# were opened on 21 Oct. 90 more were read on 20 Oct and could not be opened
+# again - one chain's booking site began refusing us and took 78 of them, and
+# 12 showtimes are no longer listed. Those 90 keep their 20 Oct figure.
+# carriedTickets must stay on the page: a blended total that hides which
+# rows are stale is the thing we are guarding against.
+Need $page 'tickets:2023'        'Germany 2,023 after the 21 Oct read'
+Need $page 'compeso:1173'        'the half of Germany that is a true sold count'
+Need $page 'oneState:850'        'the half that is only seats gone'
+Need $page 'seats:67786'         'the German denominator moved with the rows'
+Need $page 'carried:90,'         'the carried-forward rows are counted'
+Need $page 'carriedTickets:226'  'and their tickets are named, not blended'
 Absent $page 'tickets:1230,'     'no pre-re-read German total'
+Absent $page 'tickets:1706,'     'no pre-21-Oct German total'
+Absent $page 'compeso:976,'      'no pre-21-Oct Compeso figure'
+Absent $page 'oneState:730,'     'no pre-21-Oct one-state figure'
+Absent $page 'seats:67201,'      'no pre-21-Oct German denominator'
+Absent $page 'priced:42,'        'no pre-21-Oct price coverage'
+# GERMANY'S FIRST MEASURED VELOCITY. 187 showtimes read on both days against
+# an unchanged footprint: 1,480 -> 1,789. That +309 is buying, and it is the
+# only German number that is not part coverage. If it ever disappears from
+# the page, the re-read was wasted.
+Need $page 'matchedShows:187'    'the matched-read set is on the page'
+Need $page 'buying:309'          'and the buying figure it produced'
+# THE VERSION SPLIT IS A CORRECTION. 63 of 191 rows had our own isOV flag
+# wrong, carrying 578 tickets, nearly all of them rows we called dubbed that
+# the cinema calls the original. 1,073/633 was wrong and must never come back.
+Need $page 'orig:1749'           'the corrected original-version figure'
+Need $page 'flagsCorrected:63'   'and the count of rows our flag got wrong'
+Absent $page 'orig:1073,'        'no pre-correction original figure'
+Absent $page 'dub:633,'          'no pre-correction dub figure'
+Absent $page '63% of every German sale' 'no pre-correction version share in copy'
+Absent $page 'off 30% of the seats'     'no pre-correction seat share in copy'
+# A THIRD LANGUAGE TRACK NOBODY HAD ASKED ABOUT. The worklist only ever
+# recorded original-or-dubbed. The booking pages name Tamil: 32 of the 191
+# showtimes, 17 cinemas, 16 towns. Every German figure before 21 Oct was
+# reported as if this were a Hindi-and-dub market.
+Need $page 'tamil:119'           'the Tamil track is on the page'
+Need $page 'hindi:1194'          'and Hindi is stated beside it, not assumed'
+Absent $page '384 tickets'       'no pre-21-Oct Munich figure in copy'
+Absent $page '181 at one multiplex' 'no pre-21-Oct Main-Taunus figure in copy'
 Need $page 'notYetOnSale:4'      'the 10 Nov rows are not-yet-bookable, not gone'
-Need $page 'priced:42'           'priced coverage fell to 49% - no price was invented'
+Need $page 'priced:49'           'priced coverage is 49% - no price was invented'
 # The carry is RETIRED, not deleted: wasCarried keeps the 496 as the record,
 # and carried:0 / carriedShows:1 is the one Sunnybank row still unread. The
 # 18 Oct guard asked for carried:496 to stop anyone dropping those sessions;
@@ -415,7 +539,12 @@ Absent $page 'tickets:5940,' 'no batch-4 UK total'
 Absent $page 'cwGone:5453,'  'no batch-4 Cineworld figure'
 Absent $page "['Thu 5 Nov',2043]" 'no stale UK date split'
 Absent $page "['Thu 5 Nov',2181]" 'no partial UK date split'
-Need   $page "['Thu 5 Nov',2205]" 'the complete measured UK date split'
+Absent $page "['Thu 5 Nov',2205]" 'no pre-21-Oct UK date split'
+# The four dates must still sum to cwGone with nothing unallocated:
+#   2,445 + 1,251 + 1,210 + 1,072 = 5,978
+Need   $page "['Thu 5 Nov',2445]" 'the complete measured UK date split'
+Need   $page "['Sun 8 Nov',1072]" 'and the last day of it, so the sum is checkable'
+Need   $page 'byDateAdded'        'each day carries its own clean delta'
 Absent $page 'cwGone:4985,'  'no pre-re-read Cineworld figure'
 Absent $page 'cwGone:5279,'  'no batch-3 Cineworld figure'
 # foot is BUILT from the constants now. It carried 4,985 and 2,619 as typed
@@ -443,21 +572,31 @@ Absent $page 'tickets:1177' 'no pre-basis-change Germany total'
 # carry ours, and the page says so in all three places a reader can see it.
 # What this guard still protects: it must be 18, the median PB set, and it
 # must be visible in the euro total. A silent 0 or a silent 18.92 both fail.
-Need   $page 'eur:29187'    'German euros at their own observed EUR 17.11'
+Need   $page 'eur:34818'    'German euros at their own observed EUR 17.21'
 Absent $page 'eur:23237'    'no pre-re-read German euros'
-Need   $page 'usd:32796'    'German dollars moved with the euros, at 1.1237'
-Need   $page 'atpEur:17.11' 'German ATP eased as the cheaper delta came in'
+Absent $page 'eur:29187'    'no pre-21-Oct German euro total'
+Need   $page 'usd:39125'    'German dollars moved with the euros, at 1.1237'
+Absent $page 'usd:32796'    'no pre-21-Oct German dollar total'
+Need   $page 'atpEur:17.21' 'German ATP held steady across the third read'
+Absent $page 'atpEur:17.11' 'no pre-21-Oct German ATP'
 Absent $page 'eur:22553'    'no pre-delta German euro total'
 Absent $page 'usd:25343'    'no pre-delta German dollar total'
 Absent $page 'atpEur:18.92' 'no pre-delta German ATP'
-# outSeats is the 130 seats that are in the German denominator but in no
-# byDate row - the 9-11 Nov rows, which carry outBasis's 13 tickets. It was
-# an unexplained gap between seats and the byDate sum until 19 Oct. Naming it
-# is the point: an unnamed gap is how CineStar Emden hid for five scans.
-# The 18 Oct note asked the next scan to attribute outSeats row by row. It
-# did: the second week is 3,662 seats carrying 24 tickets. The old 130 was
-# never measured.
-Need   $page 'outSeats:3662' 'the seat-side gap is named, not silent'
+# outSeats started life as 130 unexplained seats sitting between the German
+# denominator and the byDate sum. An unnamed gap is how CineStar Emden hid
+# for five scans, so naming it was the point. The 20 Oct read attributed it
+# row by row - 3,662 seats of second week - and on 21 Oct the 9-11 Nov rows
+# finally opened and got byDate rows of their own.
+#
+# SO outSeats IS NO LONGER A GAP. It is now the second-week subset of a
+# denominator that reconciles exactly:
+#     byDate seats 30,699 + 6,699 + 8,212 + 18,420 + 2,112 + 1,536 + 108
+#                = 67,786 = seats, nothing left over
+#     outSeats     2,112 + 1,536 + 108 = 3,756, carrying outBasis's 30
+# The guard stays because the reconciliation is the thing worth protecting,
+# not the gap it used to describe.
+Need   $page 'outSeats:3756' 'the second-week seats are named and reconcile'
+Absent $page 'outSeats:3662' 'no pre-21-Oct second-week seat count'
 Absent $page 'tickets:3060' 'no pre-19-Oct HOYTS figure'
 # UPDATE 14 RETIREMENTS. The 4-6 Nov basis and everything derived from it.
 Absent $page 'tickets:10282' 'no live US_EXTRA - 7-8 Nov is in the map now'
@@ -479,10 +618,31 @@ Absent $app  '$686,704'      'no pre-Canada-reread NA value on the strip'
 Absent $app  '36,117'        'no pre-update-15 NA total on the strip'
 Absent $app  '$689,089'      'no pre-update-15 NA value on the strip'
 Absent $app  '3.72%'         'no pre-update-15 sell-through on the strip'
-Need   $page '"sold":43708'  'the baked map is the all-presale rebuild'
+# UPDATE 17, 21 OCT 04:33Z. The map is rebuilt across all nine dates:
+# 49,434 tickets, 1,383,690 seats, 10,661 showtimes, 549 venues, 69 metros,
+# every one of them with an x/y so rebake_page.py did not refuse.
+Need   $page '"sold":49434'  'the baked map is the 21 Oct all-presale rebuild'
+Absent $page '"sold":43708'  'no pre-21-Oct baked map'
 Need   $page '"2026-11-12"'  'the baked map carries the second week'
 Absent $page '"sold":35540'  'no 4-8 Nov baked map'
 Absent $page '"sold":33668'  'no pre-re-sweep baked map'
+# UPDATE 17 STRIP. 49,434 + 0 + 3,719 + 1,323 = 54,476, and $1,003,831 is
+# the map at the format-blended $18.98 plus Canada's two chains at flat C$18.
+# The live pair is NOT Need-guarded here on purpose - section 6 recomputes it
+# from the page and App.jsx, so a hardcoded Need would only ever go stale.
+# These are the retirements, and App.jsx spells their digits out in words so
+# these four guards cannot trip on its own record of them.
+Absent $app  '47,424'        'no pre-update-17 NA total on the strip'
+Absent $app  '$876,004'      'no pre-update-17 NA value on the strip'
+# These two name the FIELD, not the bare number, and that is deliberate.
+# 3.19% and 10,539 also appear in the update-16 comment block directly above
+# the strip in App.jsx, where they are the record of what that build read.
+# A bare Absent would fail on that record rather than on a mistake, and the
+# fix would be to obfuscate our own history to satisfy a guard - which is
+# backwards. Matching 'rate: "..."' and 'shows: "..."' catches a stale live
+# value and cannot touch prose.
+Absent $app  'rate: "3.19%"'   'no pre-update-17 sell-through on the strip'
+Absent $app  'shows: "10,539"' 'no pre-update-17 showtime count on the strip'
 Absent $app  '37,989'        'no pre-update-16 NA total on the strip'
 Absent $app  '$726,991'      'no pre-update-16 NA value on the strip'
 Absent $app  '3.88%'         'no 4-8 Nov sell-through on the strip'
