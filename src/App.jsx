@@ -4557,15 +4557,34 @@ const RAMAYANA_TRACKER = {
   // cinemas, opened by hand 9h38m after the first. Nothing was added to the
   // worklist, so all 26 of those seats are movement rather than coverage,
   // which makes this the only figure on the strip we can call buying without
-  // a caveat. Landmark's block stays 590; its clean read goes 60 -> 86.
-  // Retired pair, spelled out because verify-update8.ps1 forbids the digits:
-  // four seven three nine eight, and eight seven five six six seven.
-  tickets: "47,424",
-  rate: "3.19%",
-  shows: "10,539",
-  value: "$876,004",
-  tminus: "T-16",
-  scan: "19 Oct · 10:00pm CT",
+  // a caveat. Landmark's block stays 590; its clean read goes 60 -> 86 -> 179.
+  //
+  // 21 OCT, AND NORTH AMERICA IS PAST A MILLION DOLLARS. The strip is the
+  // sum of four things and section 6 of verify-update8.ps1 recomputes it from
+  // the page rather than trusting this block:
+  //    49,434  baked map, nine dates, after python rebake_page.py
+  //         0  US_EXTRA, retired - 7-8 Nov live inside the map now
+  //     3,719  Cineplex, recovered floor, on a denominator that did not move
+  //     1,323  Landmark, by hand: 769 IMAX + 554 ScreenX
+  //  = 54,476
+  // Value is the map at the format-blended ATP, $18.98 across all 49,434
+  // (IMAX 24 / PLF 22 / XD 19 / 3D 18 / Standard 15), plus Canada's two
+  // chains at the flat C$18: 938,487 + 65,344 = 1,003,831.
+  //
+  // CAUTION ON THE LANDMARK LINE. Its 1,323 is 676 -> 1,323 on the face of
+  // it, but only 93 of that is buying; 554 is ScreenX inventory nobody had
+  // ever opened. Never quote the 647.
+  //
+  // Retired figures, spelled out because verify-update8.ps1 forbids the
+  // digits: four seven three nine eight, and eight seven five six six seven;
+  // then four seven four two four, eight seven six zero zero four,
+  // three point one nine per cent, and ten five three nine showtimes.
+  tickets: "54,476",
+  rate: "3.57%",
+  shows: "10,661",
+  value: "$1,003,831",
+  tminus: "T-15",
+  scan: "20 Oct · 11:33pm CT",
 };
 
 function RamayanaTrackerStrip() {
