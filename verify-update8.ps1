@@ -226,6 +226,12 @@ Absent $page 'tickets:13702,'    'no first-read India total'
 Absent $page 'atpInr:578'        'no second-read Indian price'
 Absent $page 'atpInr:432'        'no first-read Indian price'
 Need $page 'bmsShows:2751'       'BookMyShow footprint after its own jump'
+# THE BMS VENUE COUNT IS AN ARTIFACT. venueName and venueCode are EMPTY on
+# every row of bms_shows.csv, so bms_sweep.py's "venues" figure is just its
+# city count (37/37 here, 9/9 on the earlier read) and its chain column is a
+# default string. Published as cities until the parser is fixed.
+Absent $page 'bmsVenues'         'no BMS venue count - the parser does not read one'
+Need $page 'bmsCities:37'        'BMS reported as cities, which is what it actually counts'
 Need $page 'bmsCodes:4'          'four language tracks now listed, not two'
 Need $page "['India',IN.tickets,IN.usd]" 'India is in the worldwide roll-up'
 Absent $page "sub:'presales opened 20 Oct', soon:true" 'India is no longer coming soon'

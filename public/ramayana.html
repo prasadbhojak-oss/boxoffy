@@ -1813,10 +1813,14 @@ const IN = {
   matchedShows:2680, matchedWas:22730, matchedNow:38769, buying:16039,
   gapHours:12.8, perHour:1249, newShows:449, newInvTickets:7770,
   /* BookMyShow, re-swept 21:33. Footprint only - no capacity anywhere. */
-  bmsSwept:true, bmsShows:2751, bmsVenues:37, bmsCodes:4,
-  bmsSoldOutClasses:86, bmsClassesPriced:10184,
+  bmsSwept:true, bmsShows:2751, bmsCities:37, bmsStates:18, bmsCodes:4,
+  bmsSoldOutShows:70, bmsSoldOutClasses:86, bmsClassesPriced:10184,
   bmsPriceLo:200, bmsPriceMid:440, bmsPriceHi:2920,
-  bmsWasShows:65, bmsWasVenues:9,
+  bmsWasShows:65, bmsWasCities:9,
+  /* NO VENUE COUNT ON PURPOSE. bms_sweep.py reports one, but venueName and
+     venueCode come back empty on every row, so its figure is really the
+     city count and its chain column is a default string. Not published
+     until the parser is fixed. */
   top:[['Delhi NCR',9286,8.4],['Mumbai',5733,7.4],['Kolkata',2082,5.8],
        ['Jaipur',1792,10.6],['Pune',1773,5.3],['Lucknow',1136,6.1],
        ['Bhubaneswar',880,9.5],['Nagpur',726,16.2],['Raipur',671,8.5],
@@ -3156,8 +3160,9 @@ function inBody(){
     `${IN.benchmark}% of what Sacnilk reported — and ${IN.pvrShare}% of `+
     `these showtimes are PVR. <b>The other big platform cannot add a `+
     `ticket, but it has just told us something bigger:</b> it has gone `+
-    `from ${IN.bmsWasShows} shows at ${IN.bmsWasVenues} venues to `+
-    `<b>${f(IN.bmsShows)} shows at ${IN.bmsVenues}</b>, and it now lists `+
+    `from ${IN.bmsWasShows} shows in ${IN.bmsWasCities} cities to `+
+    `<b>${f(IN.bmsShows)} shows in ${IN.bmsCities} cities across `+
+    `${IN.bmsStates} states</b>, and it now lists `+
     `<b>${IN.bmsCodes} separate versions</b> where this morning it listed `+
     `two — including an IMAX 3D Hindi track. ${IN.bmsSoldOutClasses} seat `+
     `classes there are already sold out, against three this morning. It `+
