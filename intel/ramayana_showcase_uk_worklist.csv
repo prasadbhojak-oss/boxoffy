@@ -1,0 +1,2 @@
+cinema,brand,city,date,time,screen,format,language,capacity,sold,held,soldOutFlag,priceGbp,bookUrl,notes
+EXAMPLE - delete this row,Showcase Cinema de Lux,Leicester,2026-11-05,19:30,Screen 4,2D,Hindi with subtitles,168,24,6,N,12.99,https://...,"read OK. 24 occupied, 6 greyed out on every sitting of this screen - looks like a block"

@@ -298,18 +298,36 @@ Need $page 'const IN = {'        'India is a counted market'
 # 7,770 - inventory, separated out rather than folded in.
 # THE BLOCK BARELY MOVED: 11,971 -> 12,206 while everything else added
 # twenty thousand. That is the strongest confirmation of the test we have.
-Need $page 'tickets:46539'       'the third-read India figure'
-Need $page 'clean:34333'         'the block-corrected floor'
-Need $page 'block:12206'         'the block is named, not absorbed'
-Need $page 'atpInr:635'          'the Indian price is theirs, read not assumed'
-Need $page 'wasTickets:24588'    'the previous read is kept so the move can be described'
-Need $page 'matchedShows:2680'   'the matched set is published, not just the total'
-Need $page 'buying:16039'        'buying is separated from new inventory'
-Need $page 'newInvTickets:7770'  'and the inventory half is named'
+# 21 OCT, TWO READS IN ONE NIGHT: 46,539 -> 50,758 (00:45) -> 64,696 (07:35).
+# 3,054 showtimes appear in BOTH of last night's passes: 50,621 -> 60,162,
+# so +9,541 is BUYING over 6h50m - about 1,397 an hour against 1,249 on the
+# 20 Oct matched read. 128 new showtimes carried 4,534 and 34 dropped out
+# holding 137, so the +13,938 headline is 68% buying.
+#
+# THE FIRST SOLD-OUT SHOWTIME IN INDIA. Every read before today returned
+# zero across three thousand showtimes. soldOutShows must stay on the page:
+# the day it goes back to a bare 0 we want to see it change, not discover it
+# was quietly dropped.
+Need $page 'tickets:64696'       'the 07:35 India figure'
+Need $page 'clean:49868'         'the block-corrected floor'
+Need $page 'block:14828'         'the block is named, not absorbed'
+Need $page 'atpInr:651'          'the Indian price is theirs, read not assumed'
+Need $page 'soldOutShows:1'      'the first sold-out Indian showtime'
+Need $page 'wasTickets:50758'    'the 00:45 read is kept so the move can be described'
+Need $page 'wasTickets2:46539'   'and the read the NA sweep destroyed'
+Need $page 'matchedShows:3054'   'the matched set is published, not just the total'
+Need $page 'buying:9541'         'buying is separated from new inventory'
+Need $page 'newInvTickets:4534'  'and the inventory half is named'
+Need $page 'perHour:1397'        'the rate, so the acceleration is checkable'
+Need $page 'wasPerHour:1249'     'against the rate it replaced'
+Absent $page 'tickets:46539,'    'no pre-21-Oct India total'
+Absent $page 'tickets:50758,'    'no 00:45 India total as the live figure'
 Absent $page 'tickets:24588,'    'no second-read India total'
 Absent $page 'tickets:13702,'    'no first-read India total'
+Absent $page 'atpInr:635'        'no third-read Indian price'
 Absent $page 'atpInr:578'        'no second-read Indian price'
 Absent $page 'atpInr:432'        'no first-read Indian price'
+Absent $page 'buying:16039'      'no stale Indian buying figure as the live one'
 Need $page 'bmsShows:2751'       'BookMyShow footprint after its own jump'
 # THE BMS VENUE COUNT IS AN ARTIFACT. venueName and venueCode are EMPTY on
 # every row of bms_shows.csv, so bms_sweep.py's "venues" figure is just its
@@ -444,21 +462,35 @@ Need $page "sea:{name:'SE Asia'"     'SE Asia tile in the map row'
 Write-Host ''
 Write-Host '=== 3. the homepage strip agrees with the page'
 # 20 OCT: ALL-PRESALE BASIS, 4-12 NOV. The jump is inventory, not demand.
-Need $app '47,424'     'NA all-presale total on the strip'
-Need $app '$876,004'   'NA value on the strip'
+# UPDATE 17 STRIP. 49,434 + 0 + 3,719 + 1,323 = 54,476, valued at the
+# format-blended $18.98 plus Canada's two chains: $1,003,831.
+#
+# THIS BLOCK IS WHY THE 21 OCT DEPLOY ABORTED, AND THE LESSON IS THE ONE
+# ALREADY WRITTEN FURTHER UP THIS FILE. The retirements went in at the
+# bottom of section 4 while these Need lines were left pointing at the old
+# figures, so the file spent one run asking for '47,424' and forbidding it
+# forty lines later. That is exactly what happened with 3,964 and 1,192 on
+# 18 October. ONE NUMBER, ONE GUARD, ONE PLACE: when the strip moves, the
+# Need lines here and the Absent lines in section 4 change together or not
+# at all.
+Need $app '54,476'     'NA all-presale total on the strip'
+Need $app '$1,003,831' 'NA value on the strip'
 Absent $app '47,398'   'no pre-Landmark-re-read NA total'
 Absent $app '$875,667' 'no pre-Landmark-re-read NA value'
 Absent $app '46,807'   'no pre-Canada-widening NA total'
 Absent $app '$868,008' 'no pre-Canada-widening NA value'
 Absent $app '46,157'   'no pre-Landmark NA total on the strip'
 Absent $app '$859,584' 'no pre-Landmark NA value on the strip'
-Need $app '10,539'     'US 4-12 Nov showtimes on the strip'
-Need $app '10:00pm'    'the strip carries the rebuild scan time'
+# Anchored to the FIELD, not the bare number: 10,539 and 3.19% also appear
+# in the update-16 comment above the strip, so a bare marker would pass off
+# the comment while the live value said anything at all.
+Need $app 'shows: "10,661"'  'US 4-12 Nov showtimes on the strip'
+Need $app '11:33pm'    'the strip carries the rebuild scan time'
 # rate is a 4-8 figure for the first time. For five updates it was US 4-6
 # only, because the baked map stopped at 6 Nov and there was no 4-8
 # denominator to divide by. There is one now: 33,668 of 904,291.
-Need $app '3.19%'      'US 4-12 Nov sell-through on the strip'
-Need $app 'T-16'       'countdown'
+Need $app 'rate: "3.57%"'    'US 4-12 Nov sell-through on the strip'
+Need $app 'T-15'       'countdown'
 
 Write-Host ''
 Write-Host '=== 4. what must NOT be there'

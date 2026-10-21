@@ -1,0 +1,182 @@
+RAMAYANA - SHOWCASE CINEMAS UK - BRIEF FOR GROK
+Release 5 Nov 2026.  Basis: 5, 6, 7 and 8 November.
+Worklist to fill: ramayana_showcase_uk_worklist.csv
+Part 2 at the bottom: 3 rows, Landmark Canada ScreenX. Do Part 1 first.
+
+WHY THIS ONE MATTERS MORE THAN THE SIZE OF IT SUGGESTS
+
+Every market on boxoffy.com/ramayana is now a measured number except one.
+Showcase Cinemas UK is the last MODELLED figure on the page: 487 tickets,
+carried with a 📐 on it, worked out by taking the seats the chain shows as
+off sale and applying the 44.84% sold-share that the Cineworld hand-scan
+measured. It is the only figure in the whole tracker that nobody has read.
+
+If you fill this file, the United Kingdom becomes fully measured and the
+last modelled number comes off the page. That is the job.
+
+WHAT WE ALREADY HOLD, SO YOU KNOW WHAT YOU ARE CHECKING
+  Published Showcase figure   487 tickets  (MODELLED, to be replaced)
+  Seats we believe off sale   1,087
+  Sold-share applied          44.84%, measured at Cineworld, not here
+  Cineworld, for scale        5,978 seats gone over 1,083 showtimes
+                              at 85 cinemas - all hand-read
+  The UK total today          6,465 = 5,978 Cineworld + 487 Showcase
+
+If your read comes back far from 487, that is a FINDING and not a mistake.
+The 487 is an inference and the whole point of opening these pages is to
+find out whether the inference holds. Do not steer toward it.
+
+WHY A PERSON HAS TO DO THIS
+Showcase's booking host answers robots.txt with Disallow: /, so no scanner
+of ours has ever fetched it and none ever will. A person opening public
+pages in a browser is the sanctioned way to read it, exactly as with
+Landmark Canada and the whole of Germany. You are not working around
+anything - you are doing the part a scanner is not allowed to do.
+
+STEP 1 - FIND THE FOOTPRINT
+Start at www.showcasecinemas.co.uk and find every UK cinema showing
+Ramayana on 5, 6, 7 or 8 November. Showcase UK runs under two brands,
+"Showcase" and "Showcase Cinema de Lux" - BOTH COUNT, and please record
+which one each site is, because de Lux rooms are recliner houses with much
+smaller capacities and that changes what a seat count means.
+
+One row per SHOWTIME, not per cinema. If a cinema has four sittings on
+6 November, that is four rows.
+
+STEP 2 - OPEN EACH SEAT MAP AND FILL THE ROW
+  cinema        as the site writes it
+  brand         Showcase  or  Showcase Cinema de Lux
+  city          town or city
+  date          2026-11-05 .. 2026-11-08
+  time          24h, as the page prints it
+  screen        screen or room name/number if shown
+  format        2D / 3D / IMAX / XPlus / 4DX etc, as printed
+  language      THE LANGUAGE THE PAGE NAMES - see below, this matters
+  capacity      every seat drawn in the room: sold + free + held
+  sold          seats shown as taken
+  held          seats greyed out / blocked / not for sale, IF the map marks
+                them as a separate state from sold. If it does not, leave
+                blank and write "no block flag" in notes.
+  soldOutFlag   Y only if the page itself says sold out
+  priceGbp      the adult ticket price the page prints, if it prints one
+  bookUrl       the page you read
+  notes         anything that went wrong, in plain words
+
+*** LANGUAGE IS NOT A SIDE COLUMN ON THIS JOB ***
+Write the language the page NAMES, in its own words: Hindi, Tamil, Telugu,
+English, "Hindi with subtitles", or whatever is printed. If the page shows
+no language at all, write exactly "not stated".
+
+Here is why. In the last two days a language we were not tracking turned up
+in three separate markets. Germany is playing Tamil at 17 cinemas. The UK's
+Cineworld file showed 49 Telugu showtimes selling at 4.45% against Hindi's
+2.16% - more than double, off a far smaller footprint. The United States
+has 226 Telugu showtimes. We had been reporting all three markets as if
+they were Hindi-only. Showcase is the one UK chain we have never had a
+language column for, and its sites sit in exactly the towns where that
+would show up.
+
+Do not infer the language from the format badge, from 3D, or from the other
+showtimes at that cinema. Only what is printed.
+
+THE HOUSE-BLOCK RULE
+If the same count appears on every showtime in the same screen and never
+moves, that is seats the cinema is holding back, not sales. Put it in held,
+not sold. A room reading 4 on all four of its sittings has sold nothing.
+Our own test needs THREE or more sittings in a room before it can tell a
+block from a coincidence, so where a screen has four or more showtimes on
+the same date you are giving us something genuinely useful - say so in
+notes if you spot a repeated figure.
+
+SIX ROWS NEED A SECOND READ
+Our totalling script refuses to call a market validated until six showtimes
+have been read TWICE, independently. That guard exists because an Australian
+figure was once wrong by 3.4x and thirteen hand reads were the only thing
+that caught it.
+
+So: when you have finished, pick the six busiest rooms you read, spread
+across different cinemas, and open them again FRESH without looking at your
+first figure. Send both readings.
+
+  *** IF THE TWO DISAGREE, SAY SO AND SEND BOTH. A disagreement is the
+      finding. Reconciling it quietly is the one outcome that makes the
+      second read pointless. ***
+
+Germany's last delivery promised six second reads and sent none, and the
+German figure is still stamped UNVALIDATED because of it. Please do not
+leave this one in the same state.
+
+RULES - THESE MATTER MORE THAN SPEED
+- Read only. Never place an order, never go past seat selection, never
+  enter any personal or payment detail, never sign in, never create an
+  account.
+- Never estimate. If a seat map will not open, write "map would not open"
+  in notes and leave the counts blank. A blank row is fine. A guessed row
+  is not, because later we cannot tell it apart from a real one.
+- If a showtime is listed but not bookable, write "not bookable yet" -
+  that is a real finding, not a failure. Germany taught us that a listed
+  showtime is not proof a show is on sale.
+- If the film is not listed at a cinema at all, do not create a row for it.
+  Send a short list of Showcase sites you checked that had NOTHING, so we
+  can publish a denominator rather than a guess.
+- Partial is fine. Work busiest-first, send what you have, keep going.
+
+ONE CHAIN IS OFF LIMITS AND STAYS OFF
+Do not open Odeon, UCI, Cinesa or any other AMC-owned site, anywhere, for
+any reason. We never fetch an AMC host. Vue is also closed: it showed a bot
+challenge and a bot challenge retires a host permanently - it is never
+solved, worked around or retried. Neither belongs in this file.
+
+HOW TO SEND IT BACK
+The filled CSV, same columns, same order. If you can also send a
+one-line-per-cinema summary with showtimes read, capacity, sold and held,
+that lets us reconcile your file against its own totals before anything is
+published.
+
+AND ONE THING NOT TO SEND
+Please do not re-send a file we already have in a new shape. We have had
+three deliveries that turned out to be the same read re-cut, and each one
+costs an hour proving it is not new. If part of a job is already done, just
+say so.
+
+══════════════════════════════════════════════════════════════════════
+PART 2 - LANDMARK CANADA, SCREENX. THREE ROWS, AND THEY SETTLE AN
+          ARGUMENT THE PAGE HAS BEEN CARRYING FOR THREE READS.
+══════════════════════════════════════════════════════════════════════
+Worklist: ramayana_landmark_screenx_worklist.csv
+
+Your 20 October Landmark file gave us ScreenX for the first time: 36
+showtimes at 3 cinemas, 5,332 seats, 554 seats gone. Thank you - that was
+new footprint we had never opened.
+
+It arrived as PER-CINEMA TOTALS, and that is the one shape we cannot use
+for the question it would answer.
+
+Here is the problem. Landmark's six IMAX rooms have only TWO sittings each.
+With two sittings, a figure that repeats could be a house block or could be
+a coincidence, and our test cannot tell. The page has said so in print for
+three reads: "a third sitting per room is what would settle it."
+
+Your ScreenX rows have FOURTEEN sittings in two of the three rooms. That is
+far more than enough. For the first time at this chain we could actually
+run the test - and we cannot, because we only have the cinema totals.
+
+So: the same 36 showtimes, but ONE ROW EACH, with
+  cinema, date, time, screen, capacity, unavailable, held, priceCad, notes
+
+  Surrey Guildford        14 showtimes
+  Calgary Country Hills   14 showtimes
+  Orleans                  8 showtimes
+
+Your totals to reconcile against: 292 / 193 / 69, and 554 in all.
+If your per-showtime figures do not sum to those, send both and say so.
+
+WHAT WE WILL DO WITH IT. If a room repeats the same count across fourteen
+sittings, that is a block and it comes out of the Canadian figure. If the
+counts move across the day, it is demand and it stays in. Right now all 554
+sit on the page flagged "untested", and the chain's clean floor is held at
+179 rather than rising, because we will not quietly count what we have not
+tested.
+
+Same rules as Part 1: read only, never past seat selection, never estimate,
+a blank beats a guess.

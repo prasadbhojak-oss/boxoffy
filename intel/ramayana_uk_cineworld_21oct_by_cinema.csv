@@ -1,0 +1,86 @@
+scope,cinema,showtimes_compared,capacity,sold_before,sold_now,sold_added,sold_pct,held_before,held_now,booked_before,booked_now,booked_added,booked_pct
+Cineworld alone,Solihull,8,2400,464,464,0,0.0%,64,64,528,528,0,0.0%
+Cineworld alone,Watford,18,3112,378,408,30,7.9%,24,24,402,432,30,7.5%
+Cineworld alone,London Feltham,28,7047,339,341,2,0.6%,269,269,608,610,2,0.3%
+Cineworld alone,Birmingham Broad Street,15,4265,249,300,51,20.5%,120,120,369,420,51,13.8%
+Cineworld alone,London Hounslow,61,14328,254,294,40,15.7%,292,292,546,586,40,7.3%
+Cineworld alone,London Wembley,37,9339,258,278,20,7.8%,222,222,480,500,20,4.2%
+Cineworld alone,London The O2 Greenwich,69,22417,252,275,23,9.1%,360,360,612,635,23,3.8%
+Cineworld alone,Rugby,8,2200,248,248,0,0.0%,48,48,296,296,0,0.0%
+Cineworld alone,Milton Keynes,29,6787,161,218,57,35.4%,125,116,286,334,48,16.8%
+Cineworld alone,Newcastle Upon Tyne,29,8430,174,199,25,14.4%,182,182,356,381,25,7.0%
+Cineworld alone,Aberdeen Queens Links,8,2336,198,197,-1,-0.5%,32,32,230,229,-1,-0.4%
+Cineworld alone,London South Ruislip,34,9274,163,173,10,6.1%,170,170,333,343,10,3.0%
+Cineworld alone,Luton,36,10484,136,171,35,25.7%,208,192,344,363,19,5.5%
+Cineworld alone,Wolverhampton,26,5989,136,140,4,2.9%,152,152,288,292,4,1.4%
+Cineworld alone,London Ilford,57,15619,122,135,13,10.7%,356,356,478,491,13,2.7%
+Cineworld alone,Huntingdon,8,2272,124,124,0,0.0%,32,32,156,156,0,0.0%
+Cineworld alone,Edinburgh,21,6702,100,123,23,23.0%,156,156,256,279,23,9.0%
+Cineworld alone,Birmingham Nec,8,2192,120,120,0,0.0%,64,64,184,184,0,0.0%
+Cineworld alone,Sheffield,21,5265,99,109,10,10.1%,100,100,199,209,10,5.0%
+Cineworld alone,London Wandsworth,29,7969,92,100,8,8.7%,174,174,266,274,8,3.0%
+Cineworld alone,Basildon,8,1438,97,97,0,0.0%,28,28,125,125,0,0.0%
+Cineworld alone,Swindon Shaw Ridge,8,1656,88,96,8,9.1%,16,16,104,112,8,7.7%
+Cineworld alone,Belfast,20,5809,86,95,9,10.5%,136,136,222,231,9,4.1%
+Cineworld alone,Crawley,20,6113,76,77,1,1.3%,108,108,184,185,1,0.5%
+Cineworld alone,Cardiff,24,7419,62,74,12,19.4%,0,0,62,74,12,19.4%
+Cineworld alone,Glasgow Silverburn,13,1864,66,73,7,10.6%,64,64,130,137,7,5.4%
+Cineworld alone,Bradford,32,9352,0,73,73,,308,236,308,309,1,0.3%
+Cineworld alone,York,8,2408,57,58,1,1.8%,48,48,105,106,1,1.0%
+Cineworld alone,Stevenage,8,2076,41,52,11,26.8%,56,56,97,108,11,11.3%
+Cineworld alone,Leeds White Rose,20,5504,49,51,2,4.1%,127,127,176,178,2,1.1%
+Cineworld alone,Rushden Lakes,8,438,43,51,8,18.6%,0,0,43,51,8,18.6%
+Cineworld alone,Bolton,8,4200,46,46,0,0.0%,64,64,110,110,0,0.0%
+Cineworld alone,Hemel Hempstead,8,994,31,43,12,38.7%,28,28,59,71,12,20.3%
+Cineworld alone,Bracknell,10,1637,38,38,0,0.0%,40,40,78,78,0,0.0%
+Cineworld alone,Bury St Edmunds,2,440,34,34,0,0.0%,12,12,46,46,0,0.0%
+Cineworld alone,Gloucester Quays,8,1392,15,32,17,113.3%,32,32,47,64,17,36.2%
+Cineworld alone,Aldershot,8,976,30,31,1,3.3%,32,32,62,63,1,1.6%
+Cineworld alone,Speke,26,7122,13,28,15,115.4%,152,140,165,168,3,1.8%
+Cineworld alone,Rochester,8,2138,24,24,0,0.0%,56,56,80,80,0,0.0%
+Cineworld alone,Shrewsbury,2,452,22,22,0,0.0%,24,24,46,46,0,0.0%
+Cineworld alone,Braintree,8,1216,21,21,0,0.0%,32,32,53,53,0,0.0%
+Cineworld alone,Ipswich,8,2836,23,20,-3,-13.0%,56,56,79,76,-3,-3.8%
+Cineworld alone,Ashford,8,1814,20,20,0,0.0%,52,52,72,72,0,0.0%
+Cineworld alone,Stoke On Trent,8,922,15,20,5,33.3%,32,32,47,52,5,10.6%
+Cineworld alone,Telford,8,616,17,18,1,5.9%,0,0,17,18,1,5.9%
+Cineworld alone,Harlow Harvey Centre,8,1272,16,18,2,12.5%,36,36,52,54,2,3.8%
+Cineworld alone,Jersey,8,1808,16,16,0,0.0%,40,40,56,56,0,0.0%
+Cineworld alone,Didcot,2,356,15,15,0,0.0%,16,16,31,31,0,0.0%
+Cineworld alone,Brighton,6,1326,14,14,0,0.0%,24,24,38,38,0,0.0%
+Cineworld alone,Ely,2,266,12,12,0,0.0%,8,8,20,20,0,0.0%
+Cineworld alone,London West India Quay,8,2806,13,11,-2,-15.4%,66,66,79,77,-2,-2.5%
+Cineworld alone,High Wycombe,8,2576,11,11,0,0.0%,64,64,75,75,0,0.0%
+Cineworld alone,Cheltenham,8,1048,9,11,2,22.2%,32,32,41,43,2,4.9%
+Cineworld alone,London Enfield,8,2122,10,10,0,0.0%,54,54,64,64,0,0.0%
+Cineworld alone,Burton Upon Trent,2,582,10,10,0,0.0%,8,8,18,18,0,0.0%
+Cineworld alone,Chesterfield,8,1734,10,10,0,0.0%,32,32,42,42,0,0.0%
+Cineworld alone,Wakefield,8,1962,9,9,0,0.0%,64,64,73,73,0,0.0%
+Cineworld alone,Eastbourne At The Beacon,8,1176,7,9,2,28.6%,32,32,39,41,2,5.1%
+Cineworld alone,Ashton Under Lyne,8,1682,8,8,0,0.0%,32,32,40,40,0,0.0%
+Cineworld alone,Plymouth,8,1456,8,8,0,0.0%,32,32,40,40,0,0.0%
+Cineworld alone,London Bexleyheath,8,1952,6,6,0,0.0%,48,48,54,54,0,0.0%
+Cineworld alone,Didsbury,8,2240,4,4,0,0.0%,56,56,60,60,0,0.0%
+Cineworld alone,Dundee,2,522,4,4,0,0.0%,24,24,28,28,0,0.0%
+Cineworld alone,Broughton,8,1304,3,3,0,0.0%,32,32,35,35,0,0.0%
+Cineworld alone,Falkirk,8,1664,3,3,0,0.0%,32,32,35,35,0,0.0%
+Cineworld alone,Isle Of Wight,2,376,3,3,0,0.0%,12,12,15,15,0,0.0%
+Cineworld alone,Warrington,8,2192,3,3,0,0.0%,48,48,51,51,0,0.0%
+Cineworld alone,Llandudno,2,586,2,3,1,50.0%,16,16,18,19,1,5.6%
+Cineworld alone,London Wood Green,34,5396,2,2,0,0.0%,136,136,138,138,0,0.0%
+Cineworld alone,Barnsley,8,1274,2,2,0,0.0%,32,32,34,34,0,0.0%
+Cineworld alone,Newport Wales Spytty Park,2,630,2,2,0,0.0%,8,8,10,10,0,0.0%
+Cineworld alone,Witney,2,346,2,2,0,0.0%,8,8,10,10,0,0.0%
+Cineworld alone,Chichester Gate,6,1332,1,1,0,0.0%,36,36,37,37,0,0.0%
+Cineworld alone,Hinckley,2,276,1,1,0,0.0%,9,9,10,10,0,0.0%
+Cineworld alone,St Neots,2,281,1,1,0,0.0%,8,8,9,9,0,0.0%
+Cineworld alone,Haverhill,2,276,0,1,1,,8,8,8,9,1,12.5%
+Cineworld alone,Boldon Tyne And Wear,2,558,0,0,0,,8,8,8,8,0,0.0%
+Cineworld alone,Dalton Park,2,362,0,0,0,,16,16,16,16,0,0.0%
+Cineworld alone,Dover,2,294,0,0,0,,8,8,8,8,0,0.0%
+Cineworld alone,Hull,8,1144,0,0,0,,40,40,40,40,0,0.0%
+Cineworld alone,St Helens,2,542,0,0,0,,24,24,24,24,0,0.0%
+Cineworld alone,Weston Super Mare,8,1458,0,0,0,,32,32,32,32,0,0.0%
+Cineworld alone,Whiteley,8,2024,0,0,0,,192,192,192,192,0,0.0%
+Cineworld alone,Yeovil,8,2224,0,0,0,,112,112,112,112,0,0.0%
+Cineworld alone,TOTAL,1083,270684,5288,5824,536,10.1%,6138,6029,11426,11853,427,3.7%

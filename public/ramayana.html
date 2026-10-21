@@ -1926,18 +1926,42 @@ const INTL = {
    cover all of them. FX 0.0105, valutafx, 19 Oct - Rs 94.97 to the dollar -
    pinned like every other rate here. */
 const IN = {
-  tickets:46539, clean:34333, block:12206, blockRooms:167,
-  inr:29574423, cleanInr:22457205, usd:310531, cleanUsd:235801,
-  atpInr:635, fx:0.0105, fxDate:'19 Oct', fxSrc:'valutafx',
-  seats:664246, rate:7.01, shows:3129, cinemas:321, cities:71, states:20,
+  /* 21 OCT 07:35 IST-equivalent. 46,539 -> 50,758 -> 64,696, and the
+     second leg is the cleanest number India has produced.
+
+     3,054 showtimes were read on BOTH the 00:45 and 07:35 passes:
+         50,621 -> 60,162  =  +9,541 BOUGHT in 6h50m, about 1,397/hour.
+     128 new showtimes carried 4,534 more, and 34 showtimes dropped out
+     holding 137. So +13,938 in all, and 68% of it is buying.
+
+     IT IS ALSO ACCELERATING. The 20 October matched read ran at 1,249
+     tickets an hour. This one runs at 1,397 - on a footprint that has
+     barely grown. India is not filling up because more cinemas keep
+     loading shows; it is filling up because people keep buying.
+
+     AND THE FIRST SOLD-OUT SHOW. Every India read until now returned
+     zero sold-out showtimes across three thousand of them. There is one
+     today. One is not a trend, and it is recorded rather than
+     celebrated - but it is the first. */
+  tickets:64696, clean:49868, block:14828, blockRooms:171,
+  inr:42142906, cleanInr:35277134, usd:442501, cleanUsd:370410,
+  atpInr:651, fx:0.0105, fxDate:'19 Oct', fxSrc:'valutafx',
+  seats:680034, rate:9.51, shows:3182, cinemas:332, cities:72, states:20,
+  soldOutShows:1,
   platform:'District', pvrShare:71, dateRead:'5 November only',
   benchmark:36,
-  /* the 09:02 read, kept so the move can be described honestly */
-  wasTickets:24588, wasShows:2731, wasCinemas:284, wasInr:14230286,
-  /* THE MATCHED COMPARISON. 2,680 showtimes appear in BOTH reads. This
-     is the first clean velocity number India has given us. */
-  matchedShows:2680, matchedWas:22730, matchedNow:38769, buying:16039,
-  gapHours:12.8, perHour:1249, newShows:449, newInvTickets:7770,
+  /* the series, because each one was the published figure once. The 20
+     Oct 21:52 read (46,539) was DESTROYED by the North American sweep,
+     which owns the same output folder - it is reconstructed here from
+     what we published, not from a file we still hold. */
+  wasTickets:50758, wasTickets2:46539, wasTickets3:24588,
+  wasShows:3088, wasCinemas:323, wasInr:32535132,
+  /* THE MATCHED COMPARISON, 00:45 -> 07:35. 3,054 showtimes in both. */
+  matchedShows:3054, matchedWas:50621, matchedNow:60162, buying:9541,
+  gapHours:6.83, perHour:1397, newShows:128, newInvTickets:4534,
+  droppedShows:34, droppedTickets:137,
+  /* the previous matched read, so the acceleration is checkable */
+  wasMatchedShows:2680, wasBuying:16039, wasPerHour:1249,
   /* BookMyShow, re-swept 21:33. Footprint only - no capacity anywhere. */
   bmsSwept:true, bmsShows:2751, bmsCities:37, bmsStates:18, bmsCodes:4,
   bmsSoldOutShows:70, bmsSoldOutClasses:86, bmsClassesPriced:10184,
@@ -1947,10 +1971,10 @@ const IN = {
      venueCode come back empty on every row, so its figure is really the
      city count and its chain column is a default string. Not published
      until the parser is fixed. */
-  top:[['Delhi NCR',9286,8.4],['Mumbai',5733,7.4],['Kolkata',2082,5.8],
-       ['Jaipur',1792,10.6],['Pune',1773,5.3],['Lucknow',1136,6.1],
-       ['Bhubaneswar',880,9.5],['Nagpur',726,16.2],['Raipur',671,8.5],
-       ['Patna',664,10.2]],
+  top:[['Delhi NCR',15803,11.0],['Mumbai',9285,9.2],['Bengaluru',4070,80.0],
+       ['Kolkata',3201,7.7],['Pune',3044,6.6],['Ahmedabad',2810,10.8],
+       ['Jaipur',2723,12.2],['Lucknow',1576,7.9],
+       ['Bhubaneswar',1250,12.7],['Patna',1025,15.1]],
   silent:['Chennai','Hyderabad','Coimbatore','Visakhapatnam','Varanasi']
 };
 

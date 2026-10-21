@@ -1,0 +1,6 @@
+scope,date,showtimes_compared,capacity,sold_before,sold_now,sold_added,sold_pct,held_before,held_now,booked_before,booked_now,booked_added,booked_pct
+Cineworld alone,2026-11-05,305,76925,2085,2360,275,13.2%,1864,1829,3949,4189,240,6.1%
+Cineworld alone,2026-11-06,276,70204,1184,1283,99,8.4%,1544,1522,2728,2805,77,2.8%
+Cineworld alone,2026-11-07,258,62524,1144,1231,87,7.6%,1383,1357,2527,2588,61,2.4%
+Cineworld alone,2026-11-08,244,61031,875,950,75,8.6%,1347,1321,2222,2271,49,2.2%
+Cineworld alone,TOTAL,1083,270684,5288,5824,536,10.1%,6138,6029,11426,11853,427,3.7%

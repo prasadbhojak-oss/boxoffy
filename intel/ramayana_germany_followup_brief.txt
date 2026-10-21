@@ -1,0 +1,100 @@
+RAMAYANA GERMANY - SHORT FOLLOW-UP - BRIEF FOR GROK
+Worklist: intel\ramayana_germany_followup_20261021.csv   19 rows
+
+FIRST, THE GOOD PART. The 21 October file was the best German delivery we
+have had. 191 showtimes, every one with a note saying what the page actually
+said, format and version corrections written down instead of silently
+applied, and a cinema summary that reconciles against its own rows. Three
+things in it changed what we publish:
+
+  1. The 7-hour clock. You spotted that the CineStar pages run seven hours
+     behind Berlin and matched every row to the right sitting. That one is
+     easy to get wrong and nobody had caught it before.
+  2. The version flags. 63 of 191 rows had OUR original-or-dubbed flag wrong,
+     nearly all of them rows we had called dubbed that the cinema calls the
+     original. Our published split said 1,073 original against 633 dubbed.
+     It is 1,749 against 36. We had been wrong about the shape of the market
+     and your notes are the only reason we know.
+  3. TAMIL. Our worklist has no language column at all - only a yes/no
+     original flag - so nobody here had ever asked WHICH original. Your
+     notes name Tamil at 17 cinemas in 16 towns. Every German figure we had
+     published was written as if this were a Hindi-and-dub market.
+
+This is a 19-row job, not a sweep. Two parts.
+
+PART 1 - THE SIX SECOND READS (rows 1-6). DO THESE.
+These six were asked for in the 20 October brief and did not come back. Two
+of the notes you sent say "see second read" - Mathäser 5 Nov 19:00 and
+Kinopolis Hafencity 5 Nov 20:00 - so they were started.
+
+Our totalling script refuses to call a German figure validated until six
+showtimes have been read twice, independently. It is stamping the current
+number UNVALIDATED, and that guard exists because an Australian figure was
+once wrong by 3.4x and thirteen hand reads were the only thing that found it.
+
+So: open each of these six again, fresh, without looking at the first
+figure. The first read is in the file as firstRead_capacity / firstRead_sold
+/ firstRead_held so we can compare - do not copy it forward, and do not
+reconcile the two yourself.
+
+  *** IF YOUR SECOND READING DISAGREES WITH THE FIRST, SAY SO AND LEAVE
+      BOTH. A disagreement is the finding. Tidying it away is the one
+      outcome that makes the whole exercise pointless. ***
+
+PART 2 - THE THIRTEEN THAT HAVE NEVER PRODUCED A FIGURE (rows 7-19).
+These have never been read, on any date, by anyone. The notes column carries
+what went wrong last time. Most will fail again and that is fine - a row
+that reliably refuses to open is a finding we can publish around. What we
+need is to know which.
+
+ONE NEW COLUMN, AND IT IS THE MOST USEFUL THING IN THIS FILE
+  languageOnPage   the language the page NAMES, in its own words: Hindi,
+                   Tamil, Telugu, German, "Hollywoodfassung", "deutsche
+                   Synchronfassung", or whatever it prints.
+
+Write what is printed. Do not infer it from OmU, do not infer it from 3D,
+and do not infer it from the other showtimes at that cinema. If the page
+says only "o.P." or shows no language badge at all, write exactly
+"not stated" - that is a real answer and we have 43 showtimes in that state
+already. A guessed language would be worse than a blank one, because we
+would have no way to tell it apart from a read one later.
+
+If you have the Tamil and Hindi labels still to hand from the 21 October
+pass for rows you already read, send those as a separate two-column list
+(bookUrl, languageOnPage). We will not re-ask you to open them.
+
+WHAT TO FILL ON EVERY ROW
+  capacity     every seat drawn in the room: sold + free + held
+  sold         seats shown as taken
+  held         seats greyed out / blocked / not for sale, IF the map marks
+               them as a separate state. If it does not, leave blank and
+               write "no block flag" in notes.
+  soldOutFlag  Y only if the page itself says sold out
+  priceEur     the adult ticket price the page prints
+  languageOnPage  as above
+  notes        anything that went wrong, in plain words
+
+ONE CHAIN IS OFF THE LIST AND STAYS OFF
+No UCI row is in this file. UCI is AMC-owned and we do not fetch an AMC host
+anywhere in the world. That has not changed and will not change.
+
+AND ONE THAT HAS JUST TAKEN ITSELF OFF
+Cineplex - tickets.cineplex.de - began refusing us between the two reads and
+took 78 showtimes with it. Do not work around that. A refusal is an answer:
+we keep the 20 October figure for those rows, mark them as a 20 October
+figure on the page, and leave the host alone. If any Cineplex row in this
+file opens normally for you, say so - that tells us the refusal was
+temporary, which is worth knowing.
+
+RULES - THESE MATTER MORE THAN SPEED
+- Read only. Never place an order, never go past seat selection, never enter
+  any personal or payment detail, never sign in.
+- Never estimate. If a seat map will not open, write "map would not open" in
+  notes and leave the counts blank. A blank row is fine. A guessed row is
+  not, because we cannot tell it apart from a real one later.
+- If the film is no longer listed for that showtime, write "no longer
+  listed" - do not delete the row.
+- Partial is fine. Work top down, send what you have.
+
+HOW TO SEND IT BACK
+The filled CSV, same columns, same order, firstRead_ columns untouched.
