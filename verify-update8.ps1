@@ -318,22 +318,24 @@ Need $page 'const IN = {'        'India is a counted market'
 # in both: 64,689 -> 74,559, +9,870 over 13.4h (India's night, so 737/hr is
 # not a slowdown). 1,867 of it is one Amritsar cinema going full on all
 # eight showtimes. Block re-run with the rebuilt room_block on both reads.
-# 21 OCT 23:47 CT: 76,227 -> 76,297. 3,245 showtimes in both: net +68, but
-# that is +1,473 bought on 313 showtimes against 1,337 released on the two
-# rooms the block check had flagged (Amritsar -1,011, Kurnool -326). Block
-# delta from the same rebuild on both files applied: 17,923 -> 15,488.
-Need $page 'tickets:76297'       'the 21 Oct 23:47 CT India figure'
-Need $page 'clean:60809'         'the block-corrected floor'
-Need $page 'block:15488'         'the block is named, not absorbed'
-Need $page 'atpInr:646'          'the Indian price is theirs, read not assumed'
+# 22 OCT 06:22 CT: 76,297 -> 82,298. 3,229 showtimes in both: +5,615
+# bought on 884 showtimes over 6.6h of India daytime (853/hr), 419 given
+# back on 63. 26 new showtimes carry 1,235 - 1,178 is Rajmandir Jaipur,
+# first listed: coverage. Block same-rebuild delta: 15,488 -> 15,327.
+Need $page 'tickets:82298'       'the 22 Oct 06:22 CT India figure'
+Need $page 'clean:66971'         'the block-corrected floor'
+Need $page 'block:15327'         'the block is named, not absorbed'
+Need $page 'atpInr:644'          'the Indian price is theirs, read not assumed'
 Need $page 'soldOutShows:1'      'sold-out showtimes: the Amritsar ones released'
-Need $page 'released:1337'       'the release is named, not hidden in a net figure'
-Need $page 'wasTickets:76227'    'the 20:59 read is kept so the move can be described'
-Need $page 'wasTickets4:46539'   'and the read the NA sweep destroyed'
-Need $page 'matchedShows:3245'   'the matched set is published, not just the total'
-Need $page 'buying:1473'         'buying is separated from release'
-Need $page 'perHour:526'         'the morning rate, so it is checkable'
-Need $page 'wasPerHour:737'      'against the overnight rate it replaced'
+Need $page 'amritsarNow:622'     'the Amritsar release is tracked, not hidden'
+Need $page 'rajmandir:1178'      'new coverage is named, not counted as buying'
+Need $page 'wasTickets:76297'    'the 23:47 read is kept so the move can be described'
+Need $page 'wasTickets5:46539'   'and the read the NA sweep destroyed'
+Need $page 'matchedShows:3229'   'the matched set is published, not just the total'
+Need $page 'buying:5615'         'buying is separated from coverage'
+Need $page 'perHour:853'         'the daytime rate, so it is checkable'
+Need $page 'wasPerHour:526'      'against the rate it replaced'
+Absent $page 'tickets:76297,'    'no 23:47 India total as the live figure'
 Absent $page 'tickets:76227,'    'no 20:59 India total as the live figure'
 Absent $page 'tickets:46539,'    'no pre-21-Oct India total'
 Absent $page 'tickets:50758,'    'no 00:45 India total as the live figure'

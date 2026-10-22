@@ -1945,34 +1945,28 @@ const INTL = {
    cover all of them. FX 0.0105, valutafx, 19 Oct - Rs 94.97 to the dollar -
    pinned like every other rate here. */
 const IN = {
-  /* 21 OCT 23:47 CT (10:17 IST, 22 Oct). 64,696 -> 76,227 -> 76,297.
+  /* 22 OCT 06:22 CT (16:52 IST). 76,227 -> 76,297 -> 82,298.
 
-     3,245 showtimes were read on BOTH the 20:59 and 23:47 passes, 2.8 hours
-     apart, Indian morning: 76,227 -> 76,295, net +68. That flat line is two
-     things cancelling, and the page says so:
-       BUYING   313 showtimes gained 1,473 - about 526 an hour.
-       RELEASE  1,337 seats came back on the two rooms the block check had
-                already flagged: Movietime Novelty Mall, Amritsar 1,842 -> 831
-                (-1,011) and SVC City Square, Kurnool 722 -> 396 (-326).
-                Every other fall together is 68 seats on 22 showtimes.
-     10 new showtimes (two Movietime cinemas in Noida and Gurugram) carry 2.
-     A 23:14 read sits between these two; it is not published on its own.
+     3,229 showtimes were read on BOTH the 23:47 and 06:22 passes, 6.6
+     hours apart in India's daytime: 75,867 -> 81,063.
+       BUYING   884 showtimes gained 5,615 - about 853 an hour, up from
+                526 in India's night (1,397 on the 20-21 Oct daytime read).
+       FALLS    63 showtimes gave back 419. 209 of it is one more Amritsar
+                Movietime showtime emptied (that cinema: 1,842 at its peak,
+                831 last read, 622 now). Kurnool, also flagged, 396 -> 440.
+     COVERAGE, NOT BUYING: 26 showtimes are new and carry 1,235 - 1,178 of
+     it Rajmandir, Jaipur, a 4,310-seat single screen listed for the first
+     time. 26 dropped out holding 430 (INOX Malad 233, the rest small).
+     The headline is everything read: 82,298 on 3,255 showtimes.
 
-     THE HOLDS LETTING GO IS THE BLOCK CHECK WORKING. Amritsar's eight
-     overnight full houses were named a bulk booking last read, not
-     celebrated; it has handed back more than half. Under the seat-map rule
-     both directions count, so the headline takes the fall.
-
-     BLOCK, LIKE FOR LIKE. The rebuilt room_block run on BOTH files moves
-     by -2,435 (the Amritsar clusters no longer form). That delta is applied
-     to the published 17,923 rather than switching to a fresh absolute
-     figure from slightly different code: 17,923 -> 15,488 on 145 rooms.
-     Gross is the platform's own, per showtime: Rs 49,314,169.
-     ONE sold-out showtime left: the 32-seat Gold room in Noida. */
-  tickets:76297, clean:60809, block:15488, blockRooms:145,
-  inr:49314169, cleanInr:41918229, usd:517799, cleanUsd:440141,
-  atpInr:646, fx:0.0105, fxDate:'19 Oct', fxSrc:'valutafx',
-  seats:701617, rate:10.9, shows:3255, cinemas:342, cities:74, states:21,
+     BLOCK, LIKE FOR LIKE. Same rebuilt room_block on both files moves
+     -161 seats and -21 rooms; applied to the published figure:
+     15,488 -> 15,327 on 124 rooms. Gross is the platform's own,
+     Rs 53,034,760, so Rs 644 a ticket. */
+  tickets:82298, clean:66971, block:15327, blockRooms:124,
+  inr:53034760, cleanInr:45715702, usd:556865, cleanUsd:480015,
+  atpInr:644, fx:0.0105, fxDate:'19 Oct', fxSrc:'valutafx',
+  seats:705569, rate:11.7, shows:3255, cinemas:344, cities:74, states:21,
   soldOutShows:1, soldOutOneCinema:0,
   platform:'District', pvrShare:71, dateRead:'5 November only',
   benchmark:36,
@@ -1980,17 +1974,19 @@ const IN = {
      Oct 21:52 read (46,539) was DESTROYED by the North American sweep,
      which owns the same output folder - it is reconstructed here from
      what we published, not from a file we still hold. */
-  wasTickets:76227, wasTickets2:64696, wasTickets3:50758, wasTickets4:46539,
-  wasTickets5:24588,
-  wasShows:3245, wasCinemas:340, wasInr:48671442,
-  /* THE MATCHED COMPARISON, 20:59 -> 23:47 CT. 3,245 showtimes in both. */
-  matchedShows:3245, matchedWas:76227, matchedNow:76295, netMove:68,
-  buying:1473, buyingShows:313, gapHours:2.8, perHour:526,
-  released:1337, amritsarWas:1842, amritsarNow:831,
-  kurnoolWas:722, kurnoolNow:396, otherFalls:68, otherFallShows:22,
-  newShows:10, newInvTickets:2, droppedShows:0, droppedTickets:0,
+  wasTickets:76297, wasTickets2:76227, wasTickets3:64696, wasTickets4:50758,
+  wasTickets5:46539, wasTickets6:24588,
+  wasShows:3255, wasCinemas:342, wasInr:49314169,
+  /* THE MATCHED COMPARISON, 23:47 -> 06:22 CT. 3,229 showtimes in both. */
+  matchedShows:3229, matchedWas:75867, matchedNow:81063, netMove:5196,
+  buying:5615, buyingShows:884, gapHours:6.6, perHour:853,
+  falls:419, fallShows:63, amritsarFall:209,
+  amritsarPeak:1842, amritsarWas:831, amritsarNow:622,
+  kurnoolWas:396, kurnoolNow:440,
+  newShows:26, newInvTickets:1235, rajmandir:1178,
+  droppedShows:26, droppedTickets:430,
   /* the previous matched reads, so the rate is checkable */
-  wasMatchedShows:3171, wasBuying:9870, wasPerHour:737, wasPerHour2:1397,
+  wasPerHour:526, wasPerHour2:737, wasPerHour3:1397,
   /* BookMyShow, re-swept 21:33. Footprint only - no capacity anywhere. */
   bmsSwept:true, bmsShows:2751, bmsCities:37, bmsStates:18, bmsCodes:4,
   bmsSoldOutShows:70, bmsSoldOutClasses:86, bmsClassesPriced:10184,
@@ -2000,10 +1996,10 @@ const IN = {
      venueCode come back empty on every row, so its figure is really the
      city count and its chain column is a default string. Not published
      until the parser is fixed. */
-  top:[['Delhi NCR',17928,12.2],['Mumbai',11128,10.7],['Bengaluru',4097,80.5],
-       ['Kolkata',4012,9.6],['Pune',3631,7.9],['Ahmedabad',3107,11.9],
-       ['Jaipur',2986,13.3],['Lucknow',1733,8.6],
-       ['Bhubaneswar',1472,15.0],['Patna',1178,17.3]],
+  top:[['Delhi NCR',19106,13.0],['Mumbai',11445,11.1],['Kolkata',4487,10.7],
+       ['Jaipur',4281,16.7],['Bengaluru',4102,80.6],['Pune',4001,8.7],
+       ['Ahmedabad',3143,12.9],['Lucknow',1818,9.0],
+       ['Bhubaneswar',1592,16.2],['Patna',1338,19.6]],
   silent:['Chennai','Hyderabad','Coimbatore','Visakhapatnam','Varanasi']
 };
 
@@ -3340,7 +3336,7 @@ function inBody(){
   const f=n=>fmt(n);
   return `<div style="font-family:var(--disp);font-weight:700;font-size:12px;`+
     `letter-spacing:.14em;text-transform:uppercase;color:var(--accent)">`+
-    `India · 5 November · two reads, three hours apart</div>`+
+    `India · 5 November · two reads, six hours apart</div>`+
     `<p class="note" style="margin-top:8px">`+
     `<b>${f(IN.tickets)} tickets</b> · <b>₹${f(IN.inr)}</b> `+
     `($${f(IN.usd)}) · <b>${IN.rate}%</b> of ${f(IN.seats)} seats, across `+
@@ -3349,28 +3345,27 @@ function inBody(){
     `gross on every showtime, so ₹${IN.atpInr} a ticket is read, not `+
     `assumed, and it covers every ticket here. Germany's own prices cover `+
     `42% of its tickets; India's cover all of them.</p>`+
-    `<p class="note"><b>The latest read looks flat, and it is not.</b> `+
+    `<p class="note"><b>Buying picked up again in India's afternoon.</b> `+
     `${f(IN.matchedShows)} showtimes appear in both of the last two reads, `+
-    `${IN.gapHours} hours apart in India's morning. Together they went `+
-    `<b>${f(IN.matchedWas)} → ${f(IN.matchedNow)}</b>, but that is two `+
-    `things cancelling. ${f(IN.buyingShows)} showtimes gained `+
-    `<b>${f(IN.buying)} tickets</b> — people buying, about `+
-    `${f(IN.perHour)} an hour. Against that, <b>${f(IN.released)} seats `+
-    `came back</b>, and every one of them is in a room our block check had `+
-    `already flagged. Every other fall in the country together is `+
-    `${f(IN.otherFalls)} seats. ${f(IN.newShows)} new showtimes carry `+
-    `${f(IN.newInvTickets)}. India went ${f(IN.wasTickets2)} → `+
+    `${IN.gapHours} hours apart in India's daytime. They went `+
+    `<b>${f(IN.matchedWas)} → ${f(IN.matchedNow)}</b>: `+
+    `${f(IN.buyingShows)} showtimes gained <b>${f(IN.buying)} tickets</b>, `+
+    `about <b>${f(IN.perHour)} an hour</b> — up from ${f(IN.wasPerHour)} `+
+    `an hour in the window before. ${f(IN.fallShows)} showtimes gave back `+
+    `${f(IN.falls)}. Separately, ${f(IN.newShows)} showtimes are new and `+
+    `carry ${f(IN.newInvTickets)} — ${f(IN.rajmandir)} of that is one big `+
+    `single-screen in Jaipur listed for the first time, so it is new `+
+    `coverage, not new buying — and ${f(IN.droppedShows)} dropped out `+
+    `holding ${f(IN.droppedTickets)}. India went ${f(IN.wasTickets2)} → `+
     `${f(IN.wasTickets)} → <b>${f(IN.tickets)}</b>.</p>`+
-    `<p class="note"><b>The holds are letting go.</b> Last read, one `+
-    `cinema in Amritsar went full on eight showtimes overnight and we `+
-    `called it a bulk booking, not eight crowds. It has since handed back `+
-    `more than half: <b>${f(IN.amritsarWas)} → ${f(IN.amritsarNow)}</b>. `+
-    `A cinema in Kurnool that the check had also flagged went `+
-    `${f(IN.kurnoolWas)} → ${f(IN.kurnoolNow)}. Every seat shown as taken `+
-    `counts, so a seat handed back comes off — both directions or neither. `+
-    `India now has ${IN.soldOutShows} sold-out showtime, a 32-seat room in `+
-    `Noida. Our block check finds held seats in ${IN.blockRooms} rooms, `+
-    `<b>${f(IN.block)} seats</b> in all, `+
+    `<p class="note"><b>The Amritsar hold keeps letting go.</b> The cinema `+
+    `that went full on eight showtimes overnight — we called it a bulk `+
+    `booking, not eight crowds — was ${f(IN.amritsarPeak)} at its peak, `+
+    `${f(IN.amritsarWas)} last read and <b>${f(IN.amritsarNow)}</b> now. `+
+    `Every seat shown as taken counts, so a seat handed back comes off — `+
+    `both directions or neither. India has ${IN.soldOutShows} sold-out `+
+    `showtime, a 32-seat room in Noida. Our block check finds held seats `+
+    `in ${IN.blockRooms} rooms, <b>${f(IN.block)} seats</b> in all, `+
     `${Math.round(100*IN.block/IN.tickets)}% of the total. Real bookings `+
     `sit between <b>${f(IN.clean)}</b> and <b>${f(IN.tickets)}</b>, worth `+
     `₹${f(IN.cleanInr)} ($${f(IN.cleanUsd)}) at the low end, and we publish `+
@@ -3384,10 +3379,11 @@ function inBody(){
       `color:var(--muted)">${f(t)} tickets · ${r}% full</span></div>`).join('')+
     `</div>`+
     `<p class="note" style="margin-top:11px">City figures are seats `+
-    `taken, before the block check. One of them is not what it looks `+
+    `taken, before the block check. Two of them are not what they look `+
     `like: Bengaluru's 80% is two cinemas and seven showtimes and does `+
-    `not speak for its city. Amritsar has left the top ten as the hold `+
-    `there releases.</p>`+
+    `not speak for its city, and most of Jaipur's jump is one `+
+    `single-screen listed for the first time. Amritsar has left the top `+
+    `ten as the hold there releases.</p>`+
     `<p class="note"><b>What this is not.</b> This is one ticketing `+
     `platform and a subset of the market — on Jailer 2 it carried about `+
     `${IN.benchmark}% of what Sacnilk reported — and ${IN.pvrShare}% of `+
