@@ -1,10 +1,9 @@
-Ramayana tracker: India map shows every city District lists
+Ramayana tracker: US/Canada 22 Oct 08:22 CT sweep
 
-74 cities pinned from the 22 Oct 06:22 read (was 26 hand-placed pins
-from 20 Oct), plus the 5 not-yet-listed cities in grey. State chips
-filter the map and list (Rajasthan -> Jaipur, Jodhpur, Kota, Udaipur,
-Ajmer). Tooltip adds state, cinemas, showtimes, fill and share of
-state. India map drawn full width; "Show all" on the city list.
+US map 57,053 -> 58,019 (+966), 4 Nov previews 19,229 -> 19,639. Every
+date also gained seats, so part of the move is new showtimes (coverage).
+Cineplex 4,344 -> 4,447 on unchanged seats (+103 buying).
+North America 63,789 / $1,187,432. Worldwide 164,216 / $2,060,408.
 
 Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
 Claude-Session: https://claude.ai/code/session_01C4QoUcxfFQuVHBLGsUts4A
