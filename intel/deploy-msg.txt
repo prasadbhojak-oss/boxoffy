@@ -1,15 +1,10 @@
-Ramayana tracker: India 23:47 CT District read + Germany interim re-read
+Ramayana tracker: India map shows every city District lists
 
-India 76,227 -> 76,297. 3,245 showtimes read on both passes (2.8h, Indian
-morning): +1,473 bought on 313 showtimes, 1,337 released on the two rooms
-the block check had flagged (Amritsar 1,842 -> 831, Kurnool 722 -> 396).
-Block 17,923 -> 15,488 on 145 rooms (same-rebuild delta). Rs 49,314,169.
-
-Germany 2,023 -> 2,360 (Grok interim, 23:30 CT). 195 showtimes read on
-both nights: 1,886 -> 2,208, +322. 86 rows carry their earlier figure
-(74 not reached yet). Still unvalidated. EUR 40,427.
-
-Worldwide 157,146 tickets / $2,000,282.
+74 cities pinned from the 22 Oct 06:22 read (was 26 hand-placed pins
+from 20 Oct), plus the 5 not-yet-listed cities in grey. State chips
+filter the map and list (Rajasthan -> Jaipur, Jodhpur, Kota, Udaipur,
+Ajmer). Tooltip adds state, cinemas, showtimes, fill and share of
+state. India map drawn full width; "Show all" on the city list.
 
 Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
 Claude-Session: https://claude.ai/code/session_01C4QoUcxfFQuVHBLGsUts4A
