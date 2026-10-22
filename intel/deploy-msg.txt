@@ -1,45 +1,25 @@
-Update 17: five markets re-read, India accelerating, NA past $1m
+Ramayana tracker: India overnight read, 64,696 -> 76,227
 
-INDIA 46,539 -> 64,696 overnight, and it is the cleanest reading this
-market has given us. 3,054 showtimes were read on BOTH of last night's
-passes: 50,621 -> 60,162, so +9,541 is BUYING over 6h50m - about 1,397
-an hour against 1,249 on the 20 Oct matched read. It is accelerating on
-a footprint that barely grew. 128 new showtimes carried 4,534 and 34
-dropped out holding 137, so the +13,938 is 68% buying.
-Rs 4,21,42,906 (~$442,501), 9.51% of 680,034 seats, ATP Rs 651.
-Block 14,828 across 171 rooms, clean 49,868 - share steady at 23%.
-AND THE FIRST SOLD-OUT SHOWTIME IN INDIA. Every read before today
-returned zero across three thousand showtimes. There is one now.
-Still Hindi only: no Tamil or Telugu track on District, while Germany,
-the UK and the US all now show one.
+INDIA, District, 21 Oct 20:59 CT (07:29 IST 22 Oct). 5 November only,
+one Hindi track. Rs 4,86,71,442 (~$511,050), 10.9% of 699,228 seats,
+ATP Rs 639. 3,245 showtimes, 340 cinemas, 74 cities, 21 states.
 
-NORTH AMERICA map rebuilt across nine dates: 49,434 tickets, 3.57%,
-10,661 showtimes, 549 venues. Strip 54,476 / $1,003,831.
-Cineplex 3,040 -> 3,719 on a denominator that FELL 95,681 -> 95,658,
-so the +679 is buying and not the recovered-capacity mechanic.
+Matched read 07:35 -> 20:59 CT: 3,171 showtimes in both, 64,689 ->
+74,559 = +9,870 over 13.4h, 737/hr. Mostly India's night, so half the
+daytime 1,397/hr is not a slowdown. 74 new showtimes carry 1,668.
 
-LANDMARK is two things in one read. IMAX 676 -> 769 on the same twelve
-showtimes, all six cinemas moving: +93 buying, clean read 86 -> 179.
-ScreenX is 36 showtimes at 3 cinemas never opened before: 554 seats
-gone, none of it buying. The 647 is never quoted. ScreenX stays
-blockTested:false until per-showtime figures arrive.
+One Amritsar cinema (Movietime Novelty Mall) went full on all eight
+showtimes - 1,867 of the +9,870, read as a bulk booking. It is 8 of the
+9 sold-out showtimes; the ninth is a 32-seat Gold room in Noida.
 
-UK 6,038 -> 6,465. The chain's column moved 536; only 427 seats left
-the inventory. Bradford screen 8 relabelled held 10->4 and sold 0->6 on
-all twelve showtimes: raw +73, clean +1, the same trick as 20 Oct.
-First UK file with a language per row: Telugu 4.45% against Hindi 2.16%.
+Block re-run with room_block rebuilt from its definition (blk.py is not
+in the repo): 17,923 on 154 rooms, clean 58,304. Same code gives 15,409
+on the 07:35 file vs the 14,828 published then.
 
-GERMANY 1,706 -> 2,023, +309 of it measured on 187 matched showtimes.
-The version split was WRONG - 1,073/633 came off our own isOV flag and
-the booking pages disagree on 63 of 191 rows. It is 1,749 to 36. Tamil
-is playing at 17 cinemas in 16 towns.
+New: Kurnool (AP) and Kalyan. Kochi 337 -> 407. Chennai, Hyderabad,
+Coimbatore, Visakhapatnam, Varanasi still not listed.
 
-GUARD WORK. The 21 Oct deploy aborted because the update-17 retirements
-went into section 4 while the Need lines in section 3 still pointed at
-the old strip - the file asked for '47,424' and forbade it forty lines
-later, which is the 3,964/1,192 bug of 18 October repeating. Both ends
-now move together, and the two App.jsx guards that could match prose in
-a comment are anchored to their field instead.
+US/Canada map not rebaked in this commit - run-update18 still sweeping.
 
-Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>
-Claude-Session: https://claude.ai/code/session_01E5wpYPbiP2DsFoXy9WDNEa
+Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01C4QoUcxfFQuVHBLGsUts4A

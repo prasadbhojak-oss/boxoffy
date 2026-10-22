@@ -1,4 +1,4 @@
-# Boxoffy - Update 8 pre-flight checks.
+﻿# Boxoffy - Update 8 pre-flight checks.
 #
 # This used to live in deploy-update8.cmd as a pile of `call :need` + findstr.
 # cmd.exe re-reads a batch file by byte offset, and mixing a CALLed label with
@@ -308,18 +308,23 @@ Need $page 'const IN = {'        'India is a counted market'
 # zero across three thousand showtimes. soldOutShows must stay on the page:
 # the day it goes back to a bare 0 we want to see it change, not discover it
 # was quietly dropped.
-Need $page 'tickets:64696'       'the 07:35 India figure'
-Need $page 'clean:49868'         'the block-corrected floor'
-Need $page 'block:14828'         'the block is named, not absorbed'
-Need $page 'atpInr:651'          'the Indian price is theirs, read not assumed'
-Need $page 'soldOutShows:1'      'the first sold-out Indian showtime'
-Need $page 'wasTickets:50758'    'the 00:45 read is kept so the move can be described'
-Need $page 'wasTickets2:46539'   'and the read the NA sweep destroyed'
-Need $page 'matchedShows:3054'   'the matched set is published, not just the total'
-Need $page 'buying:9541'         'buying is separated from new inventory'
-Need $page 'newInvTickets:4534'  'and the inventory half is named'
-Need $page 'perHour:1397'        'the rate, so the acceleration is checkable'
-Need $page 'wasPerHour:1249'     'against the rate it replaced'
+# 21 OCT 20:59 CT, THE OVERNIGHT INDIA READ: 64,696 -> 76,227. 3,171 showtimes
+# in both: 64,689 -> 74,559, +9,870 over 13.4h (India's night, so 737/hr is
+# not a slowdown). 1,867 of it is one Amritsar cinema going full on all
+# eight showtimes. Block re-run with the rebuilt room_block on both reads.
+Need $page 'tickets:76227'       'the 21 Oct 20:59 CT India figure'
+Need $page 'clean:58304'         'the block-corrected floor'
+Need $page 'block:17923'         'the block is named, not absorbed'
+Need $page 'atpInr:639'          'the Indian price is theirs, read not assumed'
+Need $page 'soldOutShows:9'      'sold-out showtimes, 8 of them one Amritsar cinema'
+Need $page 'soldOutOneCinema:8'  'the Amritsar cinema is named, not celebrated'
+Need $page 'wasTickets:64696'    'the 07:35 read is kept so the move can be described'
+Need $page 'wasTickets3:46539'   'and the read the NA sweep destroyed'
+Need $page 'matchedShows:3171'   'the matched set is published, not just the total'
+Need $page 'buying:9870'         'buying is separated from new inventory'
+Need $page 'newInvTickets:1668'  'and the inventory half is named'
+Need $page 'perHour:737'         'the overnight rate, so it is checkable'
+Need $page 'wasPerHour:1397'     'against the daytime rate it replaced'
 Absent $page 'tickets:46539,'    'no pre-21-Oct India total'
 Absent $page 'tickets:50758,'    'no 00:45 India total as the live figure'
 Absent $page 'tickets:24588,'    'no second-read India total'
@@ -327,6 +332,11 @@ Absent $page 'tickets:13702,'    'no first-read India total'
 Absent $page 'atpInr:635'        'no third-read Indian price'
 Absent $page 'atpInr:578'        'no second-read Indian price'
 Absent $page 'atpInr:432'        'no first-read Indian price'
+Absent $page 'tickets:64696,'    'no 07:35 India total as the live figure'
+Absent $page 'atpInr:651'        'no 07:35 Indian price'
+Absent $page 'clean:49868'       'no 07:35 India floor'
+Absent $page 'block:14828'       'no 07:35 India block'
+Absent $page ' buying:9541,'     'no 07:35 buying figure as the live one'
 Absent $page 'buying:16039'      'no stale Indian buying figure as the live one'
 Need $page 'bmsShows:2751'       'BookMyShow footprint after its own jump'
 # THE BMS VENUE COUNT IS AN ARTIFACT. venueName and venueCode are EMPTY on
