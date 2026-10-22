@@ -723,9 +723,9 @@ gtag("js",new Date());gtag("config","G-K6C9EVRFH4",{anonymize_ip:true});}})();
         cinemas, <b>1.06%</b> of 107,474 seats. HOYTS is read a better way —
         its booking system publishes the whole seat plan per session and marks
         sold seats separately from seats the cinema is holding back, so we
-        count only the sold ones: <b>3,864 tickets</b> across all 419 shows at
-        47 cinemas, <b>5.48%</b> of 70,459 seats, with 2,492 held seats left
-        out. Australia totals <b>5,006</b>. New Zealand adds <b>259</b> across
+        count only the sold ones: <b>5,496 tickets</b> across all 419 shows at
+        47 cinemas, <b>7.80%</b> of 70,459 seats, with 2,478 held seats left
+        out. Australia totals <b>7,031</b>. New Zealand adds <b>314</b> across
         14 Event cinemas, and that one is Event only — HOYTS New Zealand and
         the independents are not counted.
         <b>An earlier Australian figure of 1,486 was wrong and the correction
@@ -740,19 +740,21 @@ gtag("js",new Date());gtag("config","G-K6C9EVRFH4",{anonymize_ip:true});}})();
         — Event NZ prints one on every session.</p>
       <p style="font-size:13px;color:var(--body-ink);margin:0">
         <b>The Netherlands is the cleanest foreign read on this page.</b>
-        106 showtimes at 19 cinemas in 11 cities, read by hand in a browser
+        104 showtimes at 19 cinemas in 11 cities, read by hand in a browser
         because neither Pathé nor Vue can be fetched by a scanner of ours:
-        <b>1,546 seats gone</b>, <b>5.61%</b> of 27,536. The room-minimum
-        test fires on five rooms for 36 seats — about 2%, against 49% in
-        India and 29% in the United States — and the per-date shape decays
-        properly (426, 444, 342, 188, 50, 62, 34), which is what buying
-        looks like and what a block never does. Neither chain marks held
+        <b>1,959 seats gone</b>, <b>7.22%</b> of 27,124. These are the same
+        showtimes we read on 20 October, so the rise from 1,546 is
+        <b>413 tickets of real buying in one day</b>, not new shows. The
+        room-minimum test fires on three rooms for 51 seats — under 3%,
+        against 24% in India and 29% in the United States — and the
+        per-date shape decays properly (527, 570, 463, 218, 60, 75, 46),
+        which is what buying looks like and what a block never does. Neither chain marks held
         seats separately, so this is seats gone rather than confirmed
         sales, the same basis the UK headline uses. The price here is
         <b>ours</b>, unlike Germany's and India's: Vue prints €15.00 at
         Hilversum and €13.00 at Eindhoven and LAB-1 prints €14.00, but
-        Pathé — 1,475 of the 1,546 — shows nothing before seat selection,
-        so €14.00 is an assumption applied to a counted ticket. Eleven
+        Pathé — 1,870 of the 1,959 — shows nothing before seat selection,
+        so €14.00 is an assumption applied to a counted ticket. Nine
         Pathé cinemas returned no showtimes, but their date strip only
         offered 10 November onward, so that is a gap in our reach and not
         a confirmed zero. Kinepolis lists the film for 11 November with
@@ -2030,21 +2032,29 @@ const IN = {
    nothing on sale. LAB-1 has one show whose map only appears after adding
    tickets, which would hold seats, so it was correctly left unopened. */
 const NL = {
-  tickets:1546, clean:1510, block:36, blockRooms:5,
-  eur:21644, usd:24321, atpEur:14.00, fx:1.1237, atpIsOurs:true,
-  shows:106, cinemas:19, cities:11, seats:27536, rate:5.61,
-  pathe:1475, patheShows:89, patheCinemas:15,
-  vue:71, vueShows:17, vueCinemas:4,
-  blankRows:14, patheNoShows:11, vueFailed:3,
-  byDate:[['Thu 5 Nov',426,21],['Fri 6 Nov',444,19],['Sat 7 Nov',342,18],
-          ['Sun 8 Nov',188,23],['Mon 9 Nov',50,7],['Tue 10 Nov',62,13],
-          ['Wed 11 Nov',34,5]],
-  cities_:[['Den Haag · Ypenburg',311,21.4],['Amsterdam · Arena',310,8.6],
-           ['Rotterdam · de Kuip',245,21.8],['Den Haag · Spuimarkt',138,3.9],
-           ['Eindhoven · Pathe',121,5.2],['Utrecht Leidsche Rijn',104,5.6],
-           ['Arnhem',56,4.5],['Amsterdam-Noord',48,9.2]],
+  /* 21 OCT MATCHED RE-READ, by hand in a browser (Grok). The SAME showtimes
+     as 20 Oct: 1,546 -> 1,959, +413 in a day, and all of it buying - no new
+     showtimes were added. Two Vue Amsterdam showtimes are no longer listed
+     (both held 0), so 104 read against 106. Two Schiedam rows fell by 1 and
+     are left in: take the measurement both ways or not at all. Block test
+     re-run with the rebuilt room_block (the same code used for India
+     tonight): 51 seats on 3 rooms, Arnhem Zaal 1 the largest at 33. */
+  tickets:1959, clean:1908, block:51, blockRooms:3,
+  eur:27426, usd:30819, atpEur:14.00, fx:1.1237, atpIsOurs:true,
+  shows:104, cinemas:19, cities:11, seats:27124, rate:7.22,
+  pathe:1870, patheShows:89, patheCinemas:15,
+  vue:89, vueShows:15, vueCinemas:4,
+  blankRows:14, patheNoShows:9, vueFailed:3, vueDelisted:2,
+  wasTickets:1546, matchedAdded:413,
+  byDate:[['Thu 5 Nov',527,20],['Fri 6 Nov',570,19],['Sat 7 Nov',463,18],
+          ['Sun 8 Nov',218,22],['Mon 9 Nov',60,7],['Tue 10 Nov',75,13],
+          ['Wed 11 Nov',46,5]],
+  cities_:[['Den Haag · Ypenburg',403,27.7],['Amsterdam · Arena',364,10.1],
+           ['Rotterdam · de Kuip',286,25.4],['Den Haag · Spuimarkt',192,5.5],
+           ['Eindhoven · Pathe',171,7.3],['Utrecht Leidsche Rijn',132,7.1],
+           ['Arnhem',66,5.4],['Amsterdam-Noord',57,11.0]],
   top:{cinema:'Pathe Ypenburg, Den Haag', when:'Thu 5 Nov, 7:00p',
-       sold:131, of:213, pct:61.5}
+       sold:155, of:213, pct:72.8}
 };
 
 /* SWEDEN IS A ZERO WITH A LABEL, AND THE LABEL IS THE POINT.

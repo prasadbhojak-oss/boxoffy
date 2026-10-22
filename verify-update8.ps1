@@ -363,7 +363,10 @@ Need $page 'India is District'   'the footer names the platform, once'
 # NL is the cleanest foreign read we have: the block test fires on 5 rooms
 # for 36 seats, about 2%. Sweden is a MEASURED ZERO and is published as one.
 Need $page 'const NL = {'        'the Netherlands is a counted market'
-Need $page 'tickets:1546'        'the Netherlands seats-gone figure'
+Need $page 'tickets:1959'        'the Netherlands seats-gone figure, 21 Oct matched re-read'
+Absent $page 'tickets:1546,'     'no 20 Oct Netherlands total'
+Absent $page '1,546 seats gone' 'no 20 Oct Netherlands copy'
+Absent $page 'Australia totals <b>5,006</b>' 'no 20 Oct Australia copy'
 Need $page 'atpIsOurs:true'      'the Dutch price is ours, and flagged as ours'
 Need $page "['Netherlands',NL.tickets,NL.usd]" 'the Netherlands is in the roll-up'
 Need $page 'const SE = {'        'Sweden is on the page as a measured zero'

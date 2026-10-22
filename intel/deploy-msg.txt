@@ -1,21 +1,23 @@
-Ramayana tracker: Australia 5,006 -> 7,031, New Zealand 259 -> 314
+Ramayana tracker: Australia 7,031, NZ 314, Netherlands 1,546 -> 1,959
 
-AUSTRALIA, 21 Oct 21:39-21:53 CT, 5-8 Nov (nothing on sale after 8 Nov).
-HOYTS 3,864 -> 5,496 on the same 419 sessions, 0 failed, 7.80% of
-70,459 seats. Event 1,142 -> 1,535 on 424 sessions (recovered floor).
-Australia 7,031 - A$181,055 (~US$119,496), ATP A$25.75.
-By date Thu 2,516 - Fri 2,131 - Sat 1,844 - Sun 540; byDate now sums
-to tickets, so the 84-short defect is fixed.
+NETHERLANDS, 21 Oct matched re-read by hand (Grok), the SAME showtimes
+as 20 Oct: 1,546 -> 1,959 seats gone, +413 in one day, all buying - no
+new showtimes. 104 showtimes (2 Vue Amsterdam delisted, both held 0),
+19 cinemas, 7.22% of 27,124 seats. Pathe 1,870, Vue 89. EUR 27,426
+(~$30,819) at our EUR 14.00. Block 51 on 3 rooms (rebuilt room_block),
+clean 1,908. Sweden re-read: still a measured zero.
 
-CHADSTONE VALIDATED. PB's hand read of all 28 sessions (21:50 CT)
-matches the scanner seat for seat: 797. Capacity 174 vs 182 is the
-known counting-method difference, not seats leaving the room.
+AUSTRALIA, 21 Oct 21:39-21:53 CT, 5-8 Nov. HOYTS 3,864 -> 5,496 on the
+same 419 sessions, 0 failed. Event 1,142 -> 1,535. Australia 7,031 -
+A$181,055 (~US$119,496). byDate now sums to tickets. Chadstone: PB's
+hand read of all 28 sessions matches the scanner seat for seat, 797.
+NEW ZEALAND, Event only: 259 -> 314, NZ$8,378.
 
-NEW ZEALAND, Event only, 5-11 Nov: 314 tickets, NZ$8,378. 245 on
-5-8 Nov, 69 on 10 Nov (38 of them one Queen Street IMAX sitting).
+Method copy: the Australia paragraph (still 5,006 / 259) and the
+Netherlands paragraph brought up to date.
 
-Showcase UK swap (model 487 -> block-tested 491) NOT in this commit.
-US/Canada map not rebaked - run-update18 still sweeping.
+Not in this commit: Showcase UK swap, US/Canada map rebake (sweep
+still running).
 
 Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
 Claude-Session: https://claude.ai/code/session_01C4QoUcxfFQuVHBLGsUts4A
