@@ -1,23 +1,22 @@
-Ramayana tracker: Australia 7,031, NZ 314, Netherlands 1,546 -> 1,959
+Ramayana tracker: US 49,434 -> 57,053, sold-out shows counted, Canada 4,344
 
-NETHERLANDS, 21 Oct matched re-read by hand (Grok), the SAME showtimes
-as 20 Oct: 1,546 -> 1,959 seats gone, +413 in one day, all buying - no
-new showtimes. 104 showtimes (2 Vue Amsterdam delisted, both held 0),
-19 cinemas, 7.22% of 27,124 seats. Pathe 1,870, Vue 89. EUR 27,426
-(~$30,819) at our EUR 14.00. Block 51 on 3 rooms (rebuilt room_block),
-clean 1,908. Sweden re-read: still a measured zero.
+US, 21 Oct 23:29 CT rebuild, 4-12 Nov, 551 cinemas, 10,793 shows.
+57,053 tickets, 4.06% of 1,403,650 seats, $1,092,928 at the format-blended
+$19.16. Preview night 4 Nov 19,229.
 
-AUSTRALIA, 21 Oct 21:39-21:53 CT, 5-8 Nov. HOYTS 3,864 -> 5,496 on the
-same 419 sessions, 0 failed. Event 1,142 -> 1,535. Australia 7,031 -
-A$181,055 (~US$119,496). byDate now sums to tickets. Chadstone: PB's
-hand read of all 28 sessions matches the scanner seat for seat, 797.
-NEW ZEALAND, Event only: 259 -> 314, NZ$8,378.
+SOLD-OUT SHOWTIMES ARE NOW COUNTED. A sold-out show has no seat map, so the
+sweep left it blank and build_map dropped it - the busiest rooms were the
+ones missing. Now counted full at the same-format room size from the
+cinema's other showtimes: 7 shows, 1,679 seats (Plainville, Lynnhaven,
+Atlantic Station, Hoffman Center, Totem Lake on 4 Nov; South Barrington x2
+on 8 Nov). MovieMintBO's table proves it exactly: Plainville 392 = our 17 +
+a full 375 room. Two AMC Thoroughbred sold-out shows stay out - no
+same-format room there to size them.
 
-Method copy: the Australia paragraph (still 5,006 / 259) and the
-Netherlands paragraph brought up to date.
+CANADA Cineplex 3,719 -> 4,344 on the same 328 showtimes, seats flat
+(95,658 -> 95,602), so +625 is buying. Landmark unchanged at 1,323.
 
-Not in this commit: Showcase UK swap, US/Canada map rebake (sweep
-still running).
+STRIP 62,720 / $1,166,372 = 57,053 + 4,344 + 1,323.
 
 Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
 Claude-Session: https://claude.ai/code/session_01C4QoUcxfFQuVHBLGsUts4A

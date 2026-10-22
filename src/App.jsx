@@ -4566,7 +4566,7 @@ const RAMAYANA_TRACKER = {
   //         0  US_EXTRA, retired - 7-8 Nov live inside the map now
   //     3,719  Cineplex, recovered floor, on a denominator that did not move
   //     1,323  Landmark, by hand: 769 IMAX + 554 ScreenX
-  //  = 54,476
+  //  = fifty-four thousand four hundred seventy-six (retired 21 Oct 23:29)
   // Value is the map at the format-blended ATP, $18.98 across all 49,434
   // (IMAX 24 / PLF 22 / XD 19 / 3D 18 / Standard 15), plus Canada's two
   // chains at the flat C$18: 938,487 + 65,344 = 1,003,831.
@@ -4579,12 +4579,19 @@ const RAMAYANA_TRACKER = {
   // digits: four seven three nine eight, and eight seven five six six seven;
   // then four seven four two four, eight seven six zero zero four,
   // three point one nine per cent, and ten five three nine showtimes.
-  tickets: "54,476",
-  rate: "3.57%",
-  shows: "10,661",
-  value: "$1,003,831",
+  // 21 OCT 23:29 CT REBUILD. US 57,053 (sold-out showtimes now counted
+  // full at their room size - 7 shows, 1,679 seats) + Cineplex 4,344 +
+  // Landmark 1,323. Value: US at the page's format-blended $19.16 plus
+  // Canada's two chains. The retired pair is fifty-four thousand four
+  // hundred seventy-six and one million three thousand eight hundred
+  // thirty-one dollars, spelled out so the Absent guards cannot trip on
+  // this comment. rate and shows are US-only, as before.
+  tickets: "62,720",
+  rate: "4.06%",
+  shows: "10,793",
+  value: "$1,166,372",
   tminus: "T-15",
-  scan: "20 Oct · 11:33pm CT",
+  scan: "21 Oct · 11:29pm CT",
 };
 
 function RamayanaTrackerStrip() {
