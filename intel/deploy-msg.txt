@@ -1,9 +1,10 @@
-Ramayana tracker: US/Canada 22 Oct 08:22 CT sweep
+Ramayana tracker: India 22 Oct 18:18 CT District read
 
-US map 57,053 -> 58,019 (+966), 4 Nov previews 19,229 -> 19,639. Every
-date also gained seats, so part of the move is new showtimes (coverage).
-Cineplex 4,344 -> 4,447 on unchanged seats (+103 buying).
-North America 63,789 / $1,187,432. Worldwide 164,216 / $2,060,408.
+India 82,298 -> 90,828 (Rs 5.84 Cr). 3,253 showtimes read on both passes:
++7,053 bought on 1,047 showtimes over 11.9h, 141 given back. 149 new
+showtimes carry 1,660 (77 in Bengaluru, now 22 cinemas) - coverage.
+Block 15,327 -> 17,345 on 130 rooms. India map refreshed, Mysuru added.
+Worldwide 172,746 / $2,117,024.
 
 Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
 Claude-Session: https://claude.ai/code/session_01C4QoUcxfFQuVHBLGsUts4A
