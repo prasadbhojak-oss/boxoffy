@@ -1668,6 +1668,13 @@ function xUsd(){ return MAP_HAS_78 ? 0 : (US_EXTRA.usd     || 0); }
    included, it is A$25.86. The earlier figure was not wrong, it was premium-
    only, and this is the honest one. */
 const AU = {
+  /* 21 OCT 21:39-21:54 CT RE-READ. HOYTS 3,864 -> 5,496 on the same 419
+     sessions (0 failed - Chadstone read cleanly, 797, and PB's hand read of
+     all 28 Chadstone sessions matched it seat for seat). Event 1,142 ->
+     1,535 on 424 sessions; part of any Event rise is the recovered floor.
+     Australia still only sells 5-8 Nov. byDate now sums to tickets (the
+     84-short defect is gone). NZ Event 259 -> 314, NZ$8,378. eveningPct
+     is NOT recomputed here and is not rendered. */
   /* 18 Oct: both chains counted end to end. HOYTS is the only figure on this
      page measured against a real published seat plan; everything else is a
      recovered floor. `held` is seats the cinema has blocked - counted as
@@ -1752,13 +1759,13 @@ const AU = {
      HOYTS is still the 22:26 read: its re-run is the 30-minute job and has
      not happened yet, so this total is a 06:27 Event read beside a 22:26
      HOYTS one. Both are current for their own chain. */
-  tickets:5006, aud:129175, usd:85256, atpAud:25.80, fx:0.66,
-  ev:{tickets:1142, shows:443, counted:443, cinemas:38, seats:107474, rate:1.06},
-  hy:{tickets:3864, shows:419, counted:419, cinemas:47, cinemasRead:47,
-      seats:70459, rate:5.48, held:2492, carried:0, carriedShows:0,
-      wasCarried:496, chadstoneRead:564, chadstoneHand:556,
+  tickets:7031, aud:181055, usd:119496, atpAud:25.75, fx:0.66,
+  ev:{tickets:1535, shows:424, counted:424, cinemas:38, seats:101354, rate:1.51},
+  hy:{tickets:5496, shows:419, counted:419, cinemas:47, cinemasRead:47,
+      seats:70459, rate:7.80, held:2478, carried:0, carriedShows:0,
+      wasCarried:496, chadstoneRead:797, chadstoneHand:797,
       capacityWas:182, capacityNow:174},
-  byDate:[['Thu 5 Nov',1856],['Fri 6 Nov',1558],['Sat 7 Nov',1234],['Sun 8 Nov',274]],
+  byDate:[['Thu 5 Nov',2516],['Fri 6 Nov',2131],['Sat 7 Nov',1844],['Sun 8 Nov',540]],
   /* NEW ZEALAND, FOLDED INTO THIS MARKET 20 OCT. PB's call: one line, not
      two, so the tile and the worldwide roll-up read "Australia & NZ".
      AU.tickets, AU.aud and everything in auBody above stay AUSTRALIA ALONE -
@@ -1783,17 +1790,17 @@ const AU = {
      so NZ$5,378 over 200 tickets is an observed ATP of NZ$26.89, not an
      assumption. FX 0.5609, OFX, 18 Oct - pinned like every other rate here
      and not to be refreshed quietly mid-week. */
-  nz:{tickets:259, nzd:6943, usd:3894, atpNzd:26.81, fx:0.5609,
-      cinemas:14, shows:111, seats:23783, rate:1.09,
-      inBasis:200, inBasisNzd:5378, secondWeek:59, secondWeekNote:'10 Nov',
+  nz:{tickets:314, nzd:8378, usd:4699, atpNzd:26.68, fx:0.5609,
+      cinemas:14, shows:111, seats:23743, rate:1.32,
+      inBasis:245, inBasisNzd:6533, secondWeek:69, secondWeekNote:'10 Nov',
       cinemasAll:14, showsAll:111, hoytsCinemas:7, hoytsShows:98,
-      byDate:[['Thu 5 Nov',101],['Fri 6 Nov',69],['Sat 7 Nov',28],
-              ['Sun 8 Nov',2],['Tue 10 Nov',59]],
-      cities:[['Auckland Queen Street',151],['Wellington Queensgate',45],
-              ['Auckland Manukau',36],['Auckland St Lukes',8],
-              ['Auckland Westgate',11],['Hamilton Chartwell',4],
-              ['Auckland Westcity',3],['Palmerston North',1]]},
-  langs:[['Hindi',4689],['Telugu',170],['Tamil',38],['Kannada',24],['Malayalam',1]],
+      byDate:[['Thu 5 Nov',137],['Fri 6 Nov',77],['Sat 7 Nov',29],
+              ['Sun 8 Nov',2],['Tue 10 Nov',69]],
+      cities:[['Auckland Queen Street',158],['Wellington Queensgate',75],
+              ['Auckland Manukau',38],['Auckland Westgate',17],
+              ['Auckland St Lukes',13],['Auckland Westcity',5],
+              ['Hamilton Chartwell',4],['Palmerston North',4]]},
+  langs:[['Hindi',6642],['Telugu',265],['Tamil',78],['Kannada',43],['Malayalam',3]],
   /* The two figures every roll-up on this page uses. Australia alone stays
      available as AU.tickets / AU.usd for the panel that is about Australia. */
   get anzTix(){ return this.tickets + this.nz.tickets; },
@@ -1815,20 +1822,20 @@ const AU = {
      noise, in the direction a floor is meant to be wrong. */
   /* HOYTS ONLY - the chain publishes a state field and Event does not, so
      these sum to hy.tickets (3,864), never to tickets (4,922). */
-  states:[['VIC',1311],['NSW',1138],['WA',602],['SA',369],['ACT',301],
-          ['QLD',143]],
+  states:[['VIC',1873],['NSW',1537],['WA',796],['SA',552],['ACT',438],
+          ['QLD',300]],
   /* Both chains, 19 Oct 14:40. Chadstone's 556 is now READ, not carried, so
      Victoria's lead over New South Wales is measured rather than restored -
      1,273 to 1,086. The warning above still stands for the two reads that
      LOST Chadstone; it no longer applies to this one. */
-  cities:[['Western Sydney',978],['Melbourne Chadstone',574],['Perth Carousel',430],
-          ['Sydney Darling Harbour',232],['Canberra Belconnen',205],
-          ['Sydney Castle Hill',192],['Melbourne Docklands',184],
-          ['Melbourne Highpoint',179],['Sydney Parramatta',152],
-          ['Melbourne CBD',151]],
-  premiumPct:94, premiumStd:166, eveningPct:91,
+  cities:[['Western Sydney',1232],['Melbourne Chadstone',797],['Perth Carousel',590],
+          ['Sydney Darling Harbour',291],['Sydney Castle Hill',283],
+          ['Melbourne Docklands',263],['Canberra Belconnen',253],
+          ['Melbourne Highpoint',251],['Sydney Parramatta',239],
+          ['Brisbane Sunnybank',236]],
+  premiumPct:93, premiumStd:485, eveningPct:91,
   top:{cinema:"HOYTS Blacktown, Sydney", when:"Fri 6 Nov, 8:45p",
-       room:"Xtremescreen", sold:162, pct:66.4, next:144,
+       room:"Xtremescreen", sold:176, pct:72.1, next:167,
        nextAt:"Blacktown, Thu 6:40p"},
   price:[["IMAX","A$45.00"],["ScreenX","A$36.50"],["Xtremescreen","A$27.00"]]
 };
@@ -3188,7 +3195,7 @@ function auBody(){
     `<p class="note">`+
       `<b>Biggest single show anywhere in Australia:</b> ${esc(AU.top.cinema)}, `+
       `${esc(AU.top.when)}, ${esc(AU.top.room)} — <b>${AU.top.sold}</b> tickets `+
-      `in one room, 52% of the house. Next best is ${esc(AU.top.nextAt)} at `+
+      `in one room, ${Math.round(AU.top.pct)}% of the house. Next best is ${esc(AU.top.nextAt)} at `+
       `${AU.top.next}. Hindi is carrying the release almost alone: `+
       `${fmt(AU.langs[0][1])} of ${fmt(AU.tickets)} tickets, `+
       `${Math.round(100*AU.langs[0][1]/AU.tickets)}%. Telugu ${AU.langs[1][1]}, `+

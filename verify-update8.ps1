@@ -269,7 +269,10 @@ Need $page 'handCount:1899'      'the retired hand count kept as the record'
 # 19 Oct 22:26/22:40 re-read: 4,836 -> 4,922 on IDENTICAL inventory in both
 # chains - HOYTS 419 sessions none new none gone none failed, Event 443 and
 # the same 107,490 seats. All 86 is buying.
-Need $page 'tickets:5006'        'Australia 5,006 after the Event re-read'
+# 21 OCT 21:39-21:54 CT AU/NZ RE-READ: HOYTS 5,496 on the same 419 sessions,
+# Event 1,535, Australia 7,031; NZ Event 314. Chadstone 797 = PB's hand read.
+Need $page 'tickets:7031'        'Australia 7,031 after the 21 Oct re-read'
+Absent $page 'tickets:5006,'     'no 20 Oct Australia total'
 Absent $page 'tickets:4922,'     'no pre-Event-re-read Australian total'
 # NEW ZEALAND FOLDED IN 20 OCT. The tile and every roll-up read
 # "Australia & NZ" and use anzTix/anzUsd; AU.tickets stays Australia alone so
@@ -279,9 +282,10 @@ Absent $page 'tickets:4922,'     'no pre-Event-re-read Australian total'
 # 20 OCT, PB: ALL-PRESALE BASIS. Every date a market has on sale counts,
 # because the whole run is presale. New Zealand is 5-11 Nov and all 259 are
 # in. inBasis keeps the 5-8 Nov subset so the earlier figure stays checkable.
-Need $page 'nz:{tickets:259'     'New Zealand on its full all-presale basis'
-Need $page 'inBasis:200'         'the 5-8 Nov subset kept checkable'
-Need $page 'secondWeek:59'       'the second-week NZ tickets named, not hidden'
+Need $page 'nz:{tickets:314'     'New Zealand on its full all-presale basis'
+Absent $page 'nz:{tickets:259'   'no 20 Oct New Zealand'
+Need $page 'inBasis:245'         'the 5-8 Nov subset kept checkable'
+Need $page 'secondWeek:69'       'the second-week NZ tickets named, not hidden'
 Absent $page 'nz:{tickets:200'   'no four-date-only New Zealand'
 Need $page 'anzTix'              'the roll-up uses the combined getter'
 Need $page "'Australia & NZ'"    'the market is labelled for what is in it'
@@ -366,8 +370,10 @@ Need $page 'const SE = {'        'Sweden is on the page as a measured zero'
 Need $page "['Sweden',SE.tickets,0]" 'Sweden is in the roll-up at zero, with a label'
 Need $page 'Filmstaden'          'the unreadable Swedish chain is disclosed'
 Absent $page "['Australia',AU.tickets,AU.usd]" 'no roll-up row on Australia alone'
-Need $page 'tickets:3864'        'HOYTS 3,864'
-Need $page 'tickets:1142'        'Event 1,142 - same 443 sessions, all buying'
+Need $page 'tickets:5496'        'HOYTS 5,496'
+Absent $page 'tickets:3864'      'no 20 Oct HOYTS'
+Need $page 'tickets:1535'        'Event 1,535 on 424 sessions'
+Absent $page 'tickets:1142'      'no 20 Oct Event'
 Absent $page 'tickets:1058,'     'no pre-re-read Event figure'
 Absent $page 'tickets:4836,'     'no pre-re-read Australian total'
 # 21 OCT THIRD GERMAN READ: 281 of 294 scannable showtimes carry a figure,
@@ -422,8 +428,8 @@ Need $page 'priced:49'           'priced coverage is 49% - no price was invented
 # 18 Oct guard asked for carried:496 to stop anyone dropping those sessions;
 # the sessions have now been read, so asking for it would pin a stale figure.
 Need   $page 'wasCarried:496'    'the retired carry kept as the record'
-Need   $page 'chadstoneRead:564' 'Chadstone scanned by our own reader, 564'
-Need   $page 'chadstoneHand:556'  'the hand count kept as the record it validated'
+Need   $page 'chadstoneRead:797' 'Chadstone scanned by our own reader, 797'
+Need   $page 'chadstoneHand:797'  'PB 21 Oct hand read, matched seat for seat'
 # 22:26 read every one of HOYTS' 419 sessions, so nothing is carried now.
 Need   $page 'carriedShows:0'    'only the Sunnybank row is still carried'
 # The denominator did NOT move. Chadstone's Xtremescreen reads 174 seat
@@ -431,8 +437,8 @@ Need   $page 'carriedShows:0'    'only the Sunnybank row is still carried'
 # counting-method difference, not eight seats leaving the room. Cutting
 # hy.seats to 70,475 would have printed 5.22% off a measurement artefact.
 Need   $page 'seats:70459'       'HOYTS denominator from the full clean read'
-Need   $page 'rate:5.48'         'HOYTS rate on its own real house count'
-Need $page "['VIC',1311]"        'Victoria leads on a fully scanned Chadstone'
+Need   $page 'rate:7.80'         'HOYTS rate on its own real house count'
+Need $page "['VIC',1873]"        'Victoria leads on a fully scanned Chadstone'
 Absent $page "['VIC',1298]"      'no pre-re-read state split'
 # ASCII only in these two. The page writes '153 screens · 9.81%' with a middot,
 # but Windows PowerShell 5.1 reads a .ps1 saved as UTF-8 without a BOM as ANSI,

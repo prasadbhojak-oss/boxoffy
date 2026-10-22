@@ -1,25 +1,21 @@
-Ramayana tracker: India overnight read, 64,696 -> 76,227
+Ramayana tracker: Australia 5,006 -> 7,031, New Zealand 259 -> 314
 
-INDIA, District, 21 Oct 20:59 CT (07:29 IST 22 Oct). 5 November only,
-one Hindi track. Rs 4,86,71,442 (~$511,050), 10.9% of 699,228 seats,
-ATP Rs 639. 3,245 showtimes, 340 cinemas, 74 cities, 21 states.
+AUSTRALIA, 21 Oct 21:39-21:53 CT, 5-8 Nov (nothing on sale after 8 Nov).
+HOYTS 3,864 -> 5,496 on the same 419 sessions, 0 failed, 7.80% of
+70,459 seats. Event 1,142 -> 1,535 on 424 sessions (recovered floor).
+Australia 7,031 - A$181,055 (~US$119,496), ATP A$25.75.
+By date Thu 2,516 - Fri 2,131 - Sat 1,844 - Sun 540; byDate now sums
+to tickets, so the 84-short defect is fixed.
 
-Matched read 07:35 -> 20:59 CT: 3,171 showtimes in both, 64,689 ->
-74,559 = +9,870 over 13.4h, 737/hr. Mostly India's night, so half the
-daytime 1,397/hr is not a slowdown. 74 new showtimes carry 1,668.
+CHADSTONE VALIDATED. PB's hand read of all 28 sessions (21:50 CT)
+matches the scanner seat for seat: 797. Capacity 174 vs 182 is the
+known counting-method difference, not seats leaving the room.
 
-One Amritsar cinema (Movietime Novelty Mall) went full on all eight
-showtimes - 1,867 of the +9,870, read as a bulk booking. It is 8 of the
-9 sold-out showtimes; the ninth is a 32-seat Gold room in Noida.
+NEW ZEALAND, Event only, 5-11 Nov: 314 tickets, NZ$8,378. 245 on
+5-8 Nov, 69 on 10 Nov (38 of them one Queen Street IMAX sitting).
 
-Block re-run with room_block rebuilt from its definition (blk.py is not
-in the repo): 17,923 on 154 rooms, clean 58,304. Same code gives 15,409
-on the 07:35 file vs the 14,828 published then.
-
-New: Kurnool (AP) and Kalyan. Kochi 337 -> 407. Chennai, Hyderabad,
-Coimbatore, Visakhapatnam, Varanasi still not listed.
-
-US/Canada map not rebaked in this commit - run-update18 still sweeping.
+Showcase UK swap (model 487 -> block-tested 491) NOT in this commit.
+US/Canada map not rebaked - run-update18 still sweeping.
 
 Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
 Claude-Session: https://claude.ai/code/session_01C4QoUcxfFQuVHBLGsUts4A
