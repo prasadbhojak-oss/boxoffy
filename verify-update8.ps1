@@ -318,19 +318,23 @@ Need $page 'const IN = {'        'India is a counted market'
 # in both: 64,689 -> 74,559, +9,870 over 13.4h (India's night, so 737/hr is
 # not a slowdown). 1,867 of it is one Amritsar cinema going full on all
 # eight showtimes. Block re-run with the rebuilt room_block on both reads.
-Need $page 'tickets:76227'       'the 21 Oct 20:59 CT India figure'
-Need $page 'clean:58304'         'the block-corrected floor'
-Need $page 'block:17923'         'the block is named, not absorbed'
-Need $page 'atpInr:639'          'the Indian price is theirs, read not assumed'
-Need $page 'soldOutShows:9'      'sold-out showtimes, 8 of them one Amritsar cinema'
-Need $page 'soldOutOneCinema:8'  'the Amritsar cinema is named, not celebrated'
-Need $page 'wasTickets:64696'    'the 07:35 read is kept so the move can be described'
-Need $page 'wasTickets3:46539'   'and the read the NA sweep destroyed'
-Need $page 'matchedShows:3171'   'the matched set is published, not just the total'
-Need $page 'buying:9870'         'buying is separated from new inventory'
-Need $page 'newInvTickets:1668'  'and the inventory half is named'
-Need $page 'perHour:737'         'the overnight rate, so it is checkable'
-Need $page 'wasPerHour:1397'     'against the daytime rate it replaced'
+# 21 OCT 23:47 CT: 76,227 -> 76,297. 3,245 showtimes in both: net +68, but
+# that is +1,473 bought on 313 showtimes against 1,337 released on the two
+# rooms the block check had flagged (Amritsar -1,011, Kurnool -326). Block
+# delta from the same rebuild on both files applied: 17,923 -> 15,488.
+Need $page 'tickets:76297'       'the 21 Oct 23:47 CT India figure'
+Need $page 'clean:60809'         'the block-corrected floor'
+Need $page 'block:15488'         'the block is named, not absorbed'
+Need $page 'atpInr:646'          'the Indian price is theirs, read not assumed'
+Need $page 'soldOutShows:1'      'sold-out showtimes: the Amritsar ones released'
+Need $page 'released:1337'       'the release is named, not hidden in a net figure'
+Need $page 'wasTickets:76227'    'the 20:59 read is kept so the move can be described'
+Need $page 'wasTickets4:46539'   'and the read the NA sweep destroyed'
+Need $page 'matchedShows:3245'   'the matched set is published, not just the total'
+Need $page 'buying:1473'         'buying is separated from release'
+Need $page 'perHour:526'         'the morning rate, so it is checkable'
+Need $page 'wasPerHour:737'      'against the overnight rate it replaced'
+Absent $page 'tickets:76227,'    'no 20:59 India total as the live figure'
 Absent $page 'tickets:46539,'    'no pre-21-Oct India total'
 Absent $page 'tickets:50758,'    'no 00:45 India total as the live figure'
 Absent $page 'tickets:24588,'    'no second-read India total'
@@ -391,12 +395,13 @@ Absent $page 'tickets:4836,'     'no pre-re-read Australian total'
 # 12 showtimes are no longer listed. Those 90 keep their 20 Oct figure.
 # carriedTickets must stay on the page: a blended total that hides which
 # rows are stale is the thing we are guarding against.
-Need $page 'tickets:2023'        'Germany 2,023 after the 21 Oct read'
-Need $page 'compeso:1173'        'the half of Germany that is a true sold count'
-Need $page 'oneState:850'        'the half that is only seats gone'
-Need $page 'seats:67786'         'the German denominator moved with the rows'
-Need $page 'carried:90,'         'the carried-forward rows are counted'
-Need $page 'carriedTickets:226'  'and their tickets are named, not blended'
+Need $page 'tickets:2360'        'Germany 2,360, 21-22 Oct night interim re-read'
+Absent $page 'tickets:2023,'     'no 21 Oct German total'
+Need $page 'compeso:1278'        'the half of Germany that is a true sold count'
+Need $page 'oneState:1082'        'the half that is only seats gone'
+Need $page 'seats:67905'         'the German denominator moved with the rows'
+Need $page 'carried:86,'         'the carried-forward rows are counted'
+Need $page 'carriedTickets:137'  'and their tickets are named, not blended'
 Absent $page 'tickets:1230,'     'no pre-re-read German total'
 Absent $page 'tickets:1706,'     'no pre-21-Oct German total'
 Absent $page 'compeso:976,'      'no pre-21-Oct Compeso figure'
@@ -407,8 +412,8 @@ Absent $page 'priced:42,'        'no pre-21-Oct price coverage'
 # an unchanged footprint: 1,480 -> 1,789. That +309 is buying, and it is the
 # only German number that is not part coverage. If it ever disappears from
 # the page, the re-read was wasted.
-Need $page 'matchedShows:187'    'the matched-read set is on the page'
-Need $page 'buying:309'          'and the buying figure it produced'
+Need $page 'matchedShows:195'    'the matched-read set is on the page'
+Need $page 'buying:322'          'and the buying figure it produced'
 # THE VERSION SPLIT IS A CORRECTION. 63 of 191 rows had our own isOV flag
 # wrong, carrying 578 tickets, nearly all of them rows we called dubbed that
 # the cinema calls the original. 1,073/633 was wrong and must never come back.
@@ -427,7 +432,7 @@ Need $page 'hindi:1194'          'and Hindi is stated beside it, not assumed'
 Absent $page '384 tickets'       'no pre-21-Oct Munich figure in copy'
 Absent $page '181 at one multiplex' 'no pre-21-Oct Main-Taunus figure in copy'
 Need $page 'notYetOnSale:4'      'the 10 Nov rows are not-yet-bookable, not gone'
-Need $page 'priced:49'           'priced coverage is 49% - no price was invented'
+Need $page 'priced:51'           'priced coverage is 49% - no price was invented'
 # The carry is RETIRED, not deleted: wasCarried keeps the 496 as the record,
 # and carried:0 / carriedShows:1 is the one Sunnybank row still unread. The
 # 18 Oct guard asked for carried:496 to stop anyone dropping those sessions;
@@ -629,12 +634,12 @@ Absent $page 'tickets:1177' 'no pre-basis-change Germany total'
 # carry ours, and the page says so in all three places a reader can see it.
 # What this guard still protects: it must be 18, the median PB set, and it
 # must be visible in the euro total. A silent 0 or a silent 18.92 both fail.
-Need   $page 'eur:34818'    'German euros at their own observed EUR 17.21'
+Need   $page 'eur:40427'    'German euros at their own observed EUR 17.21'
 Absent $page 'eur:23237'    'no pre-re-read German euros'
 Absent $page 'eur:29187'    'no pre-21-Oct German euro total'
-Need   $page 'usd:39125'    'German dollars moved with the euros, at 1.1237'
+Need   $page 'usd:45428'    'German dollars moved with the euros, at 1.1237'
 Absent $page 'usd:32796'    'no pre-21-Oct German dollar total'
-Need   $page 'atpEur:17.21' 'German ATP held steady across the third read'
+Need   $page 'atpEur:17.13' 'German ATP held steady across the third read'
 Absent $page 'atpEur:17.11' 'no pre-21-Oct German ATP'
 Absent $page 'eur:22553'    'no pre-delta German euro total'
 Absent $page 'usd:25343'    'no pre-delta German dollar total'

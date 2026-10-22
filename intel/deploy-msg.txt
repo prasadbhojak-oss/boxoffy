@@ -1,22 +1,15 @@
-Ramayana tracker: US 49,434 -> 57,053, sold-out shows counted, Canada 4,344
+Ramayana tracker: India 23:47 CT District read + Germany interim re-read
 
-US, 21 Oct 23:29 CT rebuild, 4-12 Nov, 551 cinemas, 10,793 shows.
-57,053 tickets, 4.06% of 1,403,650 seats, $1,092,928 at the format-blended
-$19.16. Preview night 4 Nov 19,229.
+India 76,227 -> 76,297. 3,245 showtimes read on both passes (2.8h, Indian
+morning): +1,473 bought on 313 showtimes, 1,337 released on the two rooms
+the block check had flagged (Amritsar 1,842 -> 831, Kurnool 722 -> 396).
+Block 17,923 -> 15,488 on 145 rooms (same-rebuild delta). Rs 49,314,169.
 
-SOLD-OUT SHOWTIMES ARE NOW COUNTED. A sold-out show has no seat map, so the
-sweep left it blank and build_map dropped it - the busiest rooms were the
-ones missing. Now counted full at the same-format room size from the
-cinema's other showtimes: 7 shows, 1,679 seats (Plainville, Lynnhaven,
-Atlantic Station, Hoffman Center, Totem Lake on 4 Nov; South Barrington x2
-on 8 Nov). MovieMintBO's table proves it exactly: Plainville 392 = our 17 +
-a full 375 room. Two AMC Thoroughbred sold-out shows stay out - no
-same-format room there to size them.
+Germany 2,023 -> 2,360 (Grok interim, 23:30 CT). 195 showtimes read on
+both nights: 1,886 -> 2,208, +322. 86 rows carry their earlier figure
+(74 not reached yet). Still unvalidated. EUR 40,427.
 
-CANADA Cineplex 3,719 -> 4,344 on the same 328 showtimes, seats flat
-(95,658 -> 95,602), so +625 is buying. Landmark unchanged at 1,323.
-
-STRIP 62,720 / $1,166,372 = 57,053 + 4,344 + 1,323.
+Worldwide 157,146 tickets / $2,000,282.
 
 Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
 Claude-Session: https://claude.ai/code/session_01C4QoUcxfFQuVHBLGsUts4A
