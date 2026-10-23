@@ -1,10 +1,4 @@
-Ramayana tracker: India map carries the BookMyShow side city by city
-
-Each circle = District tickets + that city's BookMyShow slice from the
-all-India call (Sacnilk 06:47 IST). Hyderabad, Shivamogga, Tumakuru added
-as BookMyShow-only cities. Circles hold 124,876 of 132,245; the 7,369 in
-~100 cities Sacnilk does not name are stated in the map note. Tooltip shows
-the District / BookMyShow split.
+Ramayana tracker: AU 8,000 / NZ 369 / Cineplex 4,851 (22 Oct 21:51-22:11 CT re-reads, all buying)
 
 Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
 Claude-Session: https://claude.ai/code/session_01C4QoUcxfFQuVHBLGsUts4A
