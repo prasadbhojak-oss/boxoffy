@@ -1,9 +1,10 @@
-Ramayana tracker: US/Canada 22 Oct 20:18 CT sweep + India all-India call
+Ramayana tracker: US/Canada 20:18 sweep, India all-India call, NL 22 Oct
 
-US map 58,019 -> 61,537 (+3,518; every date also gained seats, so part is
-new showtimes). 4 Nov previews 19,639 -> 20,694. Cineplex 4,447 -> 4,711.
-North America 67,571 / $1,259,652. India all-India call Rs 8.17 Cr
-(District + BMS via Sacnilk). Germany 2,436. Worldwide 217,992 / $2,435,271.
+US map 61,537; Cineplex 4,711; North America 67,571 / $1,259,652.
+India all-India call Rs 8.17 Cr (District + BMS via Sacnilk).
+Netherlands 1,959 -> 2,175: 97 matched showtimes +216, none fell; 7 Pathe
+Dolby showtimes now "volgeboekt" with no map carry 253 as a floor.
+Germany 2,436. Worldwide 218,208 / $2,438,669.
 
 Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
 Claude-Session: https://claude.ai/code/session_01C4QoUcxfFQuVHBLGsUts4A

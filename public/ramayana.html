@@ -740,20 +740,23 @@ gtag("js",new Date());gtag("config","G-K6C9EVRFH4",{anonymize_ip:true});}})();
         — Event NZ prints one on every session.</p>
       <p style="font-size:13px;color:var(--body-ink);margin:0">
         <b>The Netherlands is the cleanest foreign read on this page.</b>
-        104 showtimes at 19 cinemas in 11 cities, read by hand in a browser
+        106 showtimes at 19 cinemas in 11 cities, read by hand in a browser
         because neither Pathé nor Vue can be fetched by a scanner of ours:
-        <b>1,959 seats gone</b>, <b>7.22%</b> of 27,124. These are the same
-        showtimes we read on 20 October, so the rise from 1,546 is
-        <b>413 tickets of real buying in one day</b>, not new shows. The
-        room-minimum test fires on three rooms for 51 seats — under 3%,
-        against 24% in India and 29% in the United States — and the
-        per-date shape decays properly (527, 570, 463, 218, 60, 75, 46),
-        which is what buying looks like and what a block never does. Neither chain marks held
+        <b>2,175 seats gone</b>, <b>7.90%</b> of 27,536. 97 showtimes were
+        read on both 21 and 22 October and went 1,706 → 1,922 —
+        <b>216 tickets of real buying, and not one showtime fell</b>. Seven
+        Pathé Dolby showtimes now say "volgeboekt" (fully booked) with no
+        seat map, some of them a day after selling a single seat — that is
+        a room taken off sale, not a room filled, so they keep last
+        night's 253 as a floor rather than being counted full. The
+        room-minimum test fires on three rooms for 51 seats — under 3% —
+        and the per-date shape decays properly (583, 675, 491, 229, 64,
+        79, 54), which is what buying looks like and what a block never does. Neither chain marks held
         seats separately, so this is seats gone rather than confirmed
         sales, the same basis the UK headline uses. The price here is
         <b>ours</b>, unlike Germany's and India's: Vue prints €15.00 at
         Hilversum and €13.00 at Eindhoven and LAB-1 prints €14.00, but
-        Pathé — 1,870 of the 1,959 — shows nothing before seat selection,
+        Pathé — 2,080 of the 2,175 — shows nothing before seat selection,
         so €14.00 is an assumption applied to a counted ticket. Nine
         Pathé cinemas returned no showtimes, but their date strip only
         offered 10 November onward, so that is a gap in our reach and not
@@ -2160,22 +2163,32 @@ const NL = {
      are left in: take the measurement both ways or not at all. Block test
      re-run with the rebuilt room_block (the same code used for India
      tonight): 51 seats on 3 rooms, Arnhem Zaal 1 the largest at 33. */
-  tickets:1959, clean:1908, block:51, blockRooms:3,
-  eur:27426, usd:30819, atpEur:14.00, fx:1.1237, atpIsOurs:true,
-  shows:104, cinemas:19, cities:11, seats:27124, rate:7.22,
-  pathe:1870, patheShows:89, patheCinemas:15,
-  vue:89, vueShows:15, vueCinemas:4,
-  blankRows:14, patheNoShows:9, vueFailed:3, vueDelisted:2,
-  wasTickets:1546, matchedAdded:413,
-  byDate:[['Thu 5 Nov',527,20],['Fri 6 Nov',570,19],['Sat 7 Nov',463,18],
-          ['Sun 8 Nov',218,22],['Mon 9 Nov',60,7],['Tue 10 Nov',75,13],
-          ['Wed 11 Nov',46,5]],
+  /* 22 OCT, GROK RE-READ. 1,959 -> 2,175. 97 showtimes read on both
+     nights: 1,706 -> 1,922, +216, and not one fell - all buying, no new
+     Pathe showtimes. SEVEN PATHE DOLBY SHOWTIMES (Scheveningen Zaal 4 x4,
+     de Kuip Zaal 9 x3) now answer "volgeboekt" with no seat map. Some had
+     sold 1 seat the night before, so this is not demand filling the room -
+     most likely the Dolby rooms were taken off sale or booked out whole.
+     They are NOT counted full; they carry last night's figure, 253, as a
+     floor. Two Vue Amsterdam rows are listed again (0 each); Vue Enschede
+     still will not open. Block test not re-run: 51 on 3 rooms carried. */
+  tickets:2175, clean:2124, block:51, blockRooms:3,
+  eur:30450, usd:34217, atpEur:14.00, fx:1.1237, atpIsOurs:true,
+  shows:106, cinemas:19, cities:11, seats:27536, rate:7.90,
+  pathe:2080, patheShows:89, patheCinemas:15,
+  vue:95, vueShows:20, vueCinemas:5,
+  blankRows:3, patheNoShows:9, vueFailed:3, vueDelisted:0,
+  soldOutCarried:7, soldOutCarriedTickets:253,
+  wasTickets:1959, wasTickets2:1546, matchedAdded:216,
+  byDate:[['Thu 5 Nov',583,23],['Fri 6 Nov',675,19],['Sat 7 Nov',491,19],
+          ['Sun 8 Nov',229,24],['Mon 9 Nov',64,7],['Tue 10 Nov',79,13],
+          ['Wed 11 Nov',54,5]],
   cities_:[['Den Haag · Ypenburg',403,27.7],['Amsterdam · Arena',364,10.1],
            ['Rotterdam · de Kuip',286,25.4],['Den Haag · Spuimarkt',192,5.5],
            ['Eindhoven · Pathe',171,7.3],['Utrecht Leidsche Rijn',132,7.1],
            ['Arnhem',66,5.4],['Amsterdam-Noord',57,11.0]],
   top:{cinema:'Pathe Ypenburg, Den Haag', when:'Thu 5 Nov, 7:00p',
-       sold:155, of:213, pct:72.8}
+       sold:186, of:213, pct:87.3}
 };
 
 /* SWEDEN IS A ZERO WITH A LABEL, AND THE LABEL IS THE POINT.
