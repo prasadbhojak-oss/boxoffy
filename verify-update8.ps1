@@ -324,6 +324,11 @@ Need $page 'const IN = {'        'India is a counted market'
 # showtimes carry 1,660 - 77 are Bengaluru: coverage. Block same-rebuild
 # delta: 15,327 -> 17,345.
 Need $page 'tickets:90828'       'the 22 Oct 18:18 CT India figure'
+# 23 OCT ALL-INDIA CALL: District 18:18 CT + BMS side from Sacnilk (as of
+# 01:50 IST), city-by-city higher of the two. The worldwide total uses it.
+Need $page 'allTix:132216'      'the all-India call is on the page'
+Need $page 'allInr:81718220'   'and its rupees'
+Need $page 'IN.allTix+NL.tickets' 'the worldwide total uses the all-India call'
 Need $page 'clean:73483'         'the block-corrected floor'
 Need $page 'block:17345'         'the block is named, not absorbed'
 Need $page 'atpInr:643'          'the Indian price is theirs, read not assumed'
@@ -360,7 +365,7 @@ Need $page 'bmsShows:2751'       'BookMyShow footprint after its own jump'
 Absent $page 'bmsVenues'         'no BMS venue count - the parser does not read one'
 Need $page 'bmsCities:37'        'BMS reported as cities, which is what it actually counts'
 Need $page 'bmsCodes:4'          'four language tracks now listed, not two'
-Need $page "['India',IN.tickets,IN.usd]" 'India is in the worldwide roll-up'
+Need $page "['India',IN.allTix,IN.allUsd]" 'India row in the worldwide table is the all-India call'
 Absent $page "sub:'presales opened 20 Oct', soon:true" 'India is no longer coming soon'
 # PB, 20 OCT: THE PLATFORM IS NAMED IN THE FOOTER AND NOWHERE ELSE.
 # The rendered labels say "one ticketing platform". These guards are literal

@@ -1,11 +1,10 @@
-Ramayana tracker: India 18:18 CT read + Germany 22 Oct re-read
+Ramayana tracker: India all-India call (District + BMS via Sacnilk)
 
-India 82,298 -> 90,828 (Rs 5.84 Cr): +7,053 bought on 1,047 showtimes
-over 11.9h; 149 new showtimes (77 Bengaluru) are coverage.
-Germany 2,360 -> 2,436 (EUR 41,733), reconciled row by row on our own
-basis; Grok's +1,039 change column was against a different baseline and
-is not used. 261 matched rows 2,269 -> 2,345. Still unvalidated.
-Worldwide 172,822 / $2,118,491.
+India all-India call Rs 8.17 Cr ($858,041), 132,216 tickets: our District
+18:18 CT read (Rs 5.84 Cr, 90,828) plus the BookMyShow side from Sacnilk
+(Rs 8.16 Cr as of 23 Oct 01:50 IST), reconciled city by city (higher of
+the two). Worldwide now uses it: 214,210 tickets / $2,363,051.
+Also in this deploy: India 18:18 District read, Germany 2,436.
 
 Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
 Claude-Session: https://claude.ai/code/session_01C4QoUcxfFQuVHBLGsUts4A
