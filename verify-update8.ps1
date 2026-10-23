@@ -564,6 +564,12 @@ Absent $app 'shows: "10,841"' 'no 22 Oct 08:22 showtime count'
 Absent $app 'shows: "10,793"' 'no 21 Oct showtime count'
 Absent $app 'shows: "10,661"' 'no 20 Oct showtime count'
 Need $app '9:49am'     'the strip carries the scan time'
+# 23 OCT US CITY LAYER: every Fandango cinema placed in its own city (USV,
+# from us_theatre_geo.py), Alaska and Hawaii drawn as insets, and Honolulu
+# moved into the Hawaii inset.
+Need $page 'const USV = {"'          'the US city layer carries cinema positions'
+Need $page '"insets":[{"name":"Alaska"' 'Alaska and Hawaii insets are drawn'
+Need $page "XY_FIX = {'Honolulu'"        'Honolulu sits in the Hawaii inset'
 # rate is a 4-8 figure for the first time. For five updates it was US 4-6
 # only, because the baked map stopped at 6 Nov and there was no 4-8
 # denominator to divide by. There is one now: 33,668 of 904,291.

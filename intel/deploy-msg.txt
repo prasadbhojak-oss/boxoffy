@@ -1,4 +1,4 @@
-Ramayana tracker: US/Canada 23 Oct 09:49 CT sweep - US 63,828, Cineplex 5,075, NA 70,679
+Ramayana tracker: US map shows every city (458) incl. listed-but-unsold, Alaska and Hawaii insets
 
 Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
 Claude-Session: https://claude.ai/code/session_01C4QoUcxfFQuVHBLGsUts4A
