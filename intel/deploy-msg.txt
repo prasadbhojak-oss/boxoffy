@@ -1,10 +1,11 @@
-Ramayana tracker: India 22 Oct 18:18 CT District read
+Ramayana tracker: India 18:18 CT read + Germany 22 Oct re-read
 
-India 82,298 -> 90,828 (Rs 5.84 Cr). 3,253 showtimes read on both passes:
-+7,053 bought on 1,047 showtimes over 11.9h, 141 given back. 149 new
-showtimes carry 1,660 (77 in Bengaluru, now 22 cinemas) - coverage.
-Block 15,327 -> 17,345 on 130 rooms. India map refreshed, Mysuru added.
-Worldwide 172,746 / $2,117,024.
+India 82,298 -> 90,828 (Rs 5.84 Cr): +7,053 bought on 1,047 showtimes
+over 11.9h; 149 new showtimes (77 Bengaluru) are coverage.
+Germany 2,360 -> 2,436 (EUR 41,733), reconciled row by row on our own
+basis; Grok's +1,039 change column was against a different baseline and
+is not used. 261 matched rows 2,269 -> 2,345. Still unvalidated.
+Worldwide 172,822 / $2,118,491.
 
 Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
 Claude-Session: https://claude.ai/code/session_01C4QoUcxfFQuVHBLGsUts4A

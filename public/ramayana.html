@@ -1184,8 +1184,23 @@ const DE = {
      reading (137 tickets), 74 of them only because Grok has not reached
      them yet. STILL UNVALIDATED: no second reads in this file. Version and
      language splits below stay on their 21 Oct 191-showtime basis. */
-  tickets:2360, eur:40427, usd:45428, atpEur:17.13, fx:1.1237,
-  inBasis:1993, outBasis2:30, deltaRead:12, deltaScannable:18, showsGone:0,
+  /* 22 OCT, GROK FULL RE-READ (file ramayana_germany_update_22oct.csv),
+     RECONCILED ON OUR BASIS. 2,360 -> 2,436.
+     GROK'S OWN "+1,039" IS NOT USED. Its sold_prev_21oct column sums 1,190
+     on the rows where our 21 Oct master has 1,944 - it is not our previous
+     read, so its change column is not a change. Every row was joined to our
+     own last figure by bookUrl instead.
+     261 showtimes have a figure on both our last read and this one:
+     2,269 -> 2,345. 61 rose by 135, 33 fell by 59 (kept - both directions
+     or neither). 4 Cineplex rows had seats in state 8 that Grok left out
+     this time and counted as sold last time (Neckarsulm 72, Mannheim 21+18,
+     +2) - 113 seats, put back so the basis does not change between reads.
+     16 rows carry their last figure, 91 tickets: 9 not reached or not
+     loading, 7 no longer listed. 4 UCI rows untouched by policy.
+     eur moves by each row's change at its own printed price, else EUR 17.13.
+     seats and held stay on the 21-22 Oct basis. Still UNVALIDATED. */
+  tickets:2436, eur:41733, usd:46895, atpEur:17.13, fx:1.1237,
+  inBasis:2393, outBasis2:43, deltaRead:12, deltaScannable:18, showsGone:0,
   notYetOnSale:4, sharedUrlDupes:1,
   /* 21 OCT. THE TOTAL IS NOW TWO READS AND THE PAGE SAYS WHICH IS WHICH.
      191 showtimes were opened on 21 Oct. 90 more were read on 20 Oct and
@@ -1193,7 +1208,7 @@ const DE = {
      of them with it, and 12 showtimes are no longer listed at all. Those
      90 keep their 20 Oct figure, 226 tickets, because a presale does not
      run backwards; a stale read is a floor, not a guess. */
-  read21:196, carried:86, carriedTickets:137, cineplexGone:74, delisted:20,
+  read21:261, carried:16, carriedTickets:91, cineplexGone:9, delisted:7,
   /* 20 OCT, SECOND FULL GERMAN READ. 277 of 298 showtimes opened by hand at
      98 cinemas in 72 towns. 1,230 -> 1,706. The four UCI rows were left
      untouched and marked "UCI - policy", which is what the brief asked for.
@@ -1227,17 +1242,17 @@ const DE = {
      Four showtimes were opened for the first time and carried 8 more.
      +309 of the +317 is people buying tickets. Nothing else in this
      market has ever been measurable that cleanly. */
-  matchedShows:195, matchedWas:1886, matchedNow:2208, buying:322,
-  newShows:1, newTickets:15,
-  seats:67905, rate:3.48, held:682, outSeats:3756,
+  matchedShows:261, matchedWas:2269, matchedNow:2345, buying:76,
+  newShows:0, newTickets:0,
+  seats:67905, rate:3.59, held:682, outSeats:3756,
   shows:282, cinemas:100, showsScan:298, footShows:298, footCinemas:103,
-  cities:74, priced:51, zeroShows:102, outBasis:30, soldOut:0,
-  compeso:1278, compesoShows:117, compesoRate:3.94,
-  oneState:1082, oneStateShows:165, oneStateRate:3.05,
+  cities:74, priced:51, zeroShows:100, outBasis:30, soldOut:0,
+  compeso:1280, compesoShows:117, compesoRate:3.95,
+  oneState:1156, oneStateShows:165, oneStateRate:3.26,
   blockFloor:12, testedRooms:20, untestedRooms:62,
-  byDate:[['Thu 5 Nov',1236,114,30881,4.00],['Fri 6 Nov',151,34,6684,2.26],
-          ['Sat 7 Nov',345,37,8187,4.21],['Sun 8 Nov',592,78,18405,3.22],
-          ['Mon 9 Nov',18,9,2102,0.86],['Tue 10 Nov',18,9,1538,1.17],
+  byDate:[['Thu 5 Nov',1295,114,30881,4.19],['Fri 6 Nov',160,34,6684,2.39],
+          ['Sat 7 Nov',346,37,8187,4.23],['Sun 8 Nov',592,78,18405,3.22],
+          ['Mon 9 Nov',23,9,2102,1.09],['Tue 10 Nov',20,9,1538,1.30],
           ['Wed 11 Nov',0,1,108,0.00]],
   /* THE VERSION SPLIT IS CORRECTED, NOT UPDATED, AND IT WAS WRONG BY A
      LOT. The old 1,073 original / 633 dubbed came off OUR isOV flag in
@@ -3408,18 +3423,18 @@ function deBody(){
     `October, €${DE.atpEur} now — `+
     `and the fall between the first two was cheaper screens joining, not a `+
     `price cut.</p>`+
-    `<p class="note"><b>This total is two reads, not one, and the newer `+
-    `one is still in progress.</b> ${DE.read21} of the ${DE.showsScan} `+
-    `showtimes were opened again on the night of 21 October. Another `+
+    `<p class="note"><b>This total is two reads, not one.</b> `+
+    `${DE.read21} of the ${DE.showsScan} `+
+    `showtimes were opened again on 22 October. Another `+
     `${DE.carried} keep their earlier figure for now, `+
     `<b>${DE.carriedTickets} tickets</b> — ${DE.cineplexGone} of them `+
-    `simply not reached yet, the rest no longer listed or not loading. A `+
+    `not reached or not loading, the rest no longer listed. A `+
     `presale does not run backwards, so a figure we measured and have not `+
     `yet refreshed is a floor, not a guess — but it is a floor, and it is `+
     `named here rather than blended in. The ${DE.matchedShows} showtimes `+
     `read on <b>both</b> nights are the clean reading: `+
     `${fmt(DE.matchedWas)} to ${fmt(DE.matchedNow)}, <b>+${DE.buying} `+
-    `bought</b> with the footprint behind them unchanged. The footprint is `+
+    `net</b>, with some rooms rising and some handing seats back. The footprint is `+
     `wider than the count — <b>${DE.footShows} shows at ${DE.footCinemas} `+
     `cinemas</b> are on sale, four of them at a chain we do not read. `+
     `${fmt(DE.held)} seats the cinemas hold `+
