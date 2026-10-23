@@ -4606,12 +4606,16 @@ const RAMAYANA_TRACKER = {
   // buying, +142 new showtimes). Retired: sixty-nine thousand five hundred
   // fifty-two, one million two hundred ninety-five thousand eight hundred
   // twenty-two dollars.
-  tickets: "70,005",
-  rate: "4.38%",
-  shows: "11,203",
-  value: "$1,301,693",
+  // 23 OCT 09:49 CT SWEEP. US 63,828 + Cineplex 5,075 + Landmark 1,776.
+  // Retired: seventy thousand five, one million three hundred one thousand
+  // six hundred ninety-three dollars, four point three eight per cent,
+  // eleven thousand two hundred three shows.
+  tickets: "70,679",
+  rate: "4.39%",
+  shows: "11,235",
+  value: "$1,314,851",
   tminus: "T-14",
-  scan: "23 Oct · 7:57am CT",
+  scan: "23 Oct · 9:49am CT",
 };
 
 function RamayanaTrackerStrip() {
