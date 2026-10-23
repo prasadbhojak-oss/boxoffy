@@ -155,13 +155,14 @@ Absent $page 'on sale, not counted' 'no footprint-era Germany kicker'
 # 95,681 -> 95,658, twenty-three DOWN across the same seven dates, so the
 # +679 is buying rather than arithmetic. seats and tickets must move together
 # or the mechanic is back: that is what these two guards are for.
-Need $page 'tickets:4851'        'Cineplex 4,851 on its own all-presale dates, 22 Oct 21:51'
+Need $page 'tickets:4986'        'Cineplex 4,986 on its own all-presale dates, 23 Oct 01:03'
+Absent $page 'tickets:4851,'     'no 22 Oct 21:51 Cineplex total'
 Absent $page 'tickets:4711,'     'no 22 Oct 20:18 Cineplex total'
 Absent $page 'tickets:4447,'     'no 22 Oct 08:22 Cineplex total'
 Absent $page 'tickets:4344,'     'no 21 Oct 23:29 Cineplex total'
 Absent $page 'tickets:3719,'     'no 21 Oct 04:33Z Cineplex total'
-Need $page 'buying:140'          'and the buying figure'
-Need $page 'usd:62869'           'Canadian dollars at the flat C$18 assumption'
+Need $page 'buying:135'          'and the buying figure'
+Need $page 'usd:64619'           'Canadian dollars at the flat C$18 assumption'
 # WHY THE MARKER IS THE PAIR AND NOT 'tickets:3040,'. The retired figures
 # are kept on the page as wasTickets and wasSeats. Contains() is case
 # SENSITIVE, so 'tickets:3040,' does not match 'wasTickets:3040,' - the
@@ -239,9 +240,9 @@ Need $page 'wasSeats2:95602,'      'the retired floor stays on the record'
 # gave the second room something to recover its capacity from.
 Need $page 'soloRooms:1,'        'the unrecoverable room is disclosed'
 Absent $page 'soloRooms:2,'      'no five-date solo-room count'
-Need $page 'wasTickets6:2449'    'the 2,449 stays on the record behind the 3,040'
-Need $page 'wasTickets4:3719'     'and the 3,719 the 4,344 replaced'
-Need $page 'wasTickets5:3040'    'and the 3,040 before it'
+Need $page 'wasTickets7:2449'    'the 2,449 stays on the record behind the 3,040'
+Need $page 'wasTickets5:3719'     'and the 3,719 the 4,344 replaced'
+Need $page 'wasTickets6:3040'    'and the 3,040 before it'
 # UPDATE 14: US_EXTRA IS ZERO AND THAT IS THE POINT. 7-8 Nov are measured
 # inside the baked map now, so a non-zero US_EXTRA would DOUBLE-COUNT them.
 # The retired figure is kept as wasTickets so the record survives, and
@@ -515,11 +516,13 @@ Write-Host '=== 3. the homepage strip agrees with the page'
 # 18 October. ONE NUMBER, ONE GUARD, ONE PLACE: when the strip moves, the
 # Need lines here and the Absent lines in section 4 change together or not
 # at all.
-Need $app '67,711'     'NA all-presale total on the strip, 22 Oct 21:51 Cineplex'
+Need $app '69,552'     'NA all-presale total on the strip, 23 Oct 01:03 sweep'
+Absent $app '67,711'   'no 22 Oct 21:51 NA total'
 Absent $app '67,571'   'no 22 Oct 20:18 NA total'
 Absent $app '63,789'   'no 22 Oct 08:22 NA total'
 Absent $app '62,720'   'no 21 Oct 23:29 NA total'
-Need $app '$1,261,466' 'NA value on the strip'
+Need $app '$1,295,822' 'NA value on the strip'
+Absent $app '$1,261,466' 'no 22 Oct 21:51 NA value'
 Absent $app '$1,259,652' 'no 22 Oct 20:18 NA value'
 Absent $app '$1,187,432' 'no 22 Oct 08:22 NA value'
 Absent $app '$1,166,372' 'no 21 Oct 23:29 NA value'
@@ -534,15 +537,17 @@ Absent $app '$859,584' 'no pre-Landmark NA value on the strip'
 # Anchored to the FIELD, not the bare number: 10,539 and 3.19% also appear
 # in the update-16 comment above the strip, so a bare marker would pass off
 # the comment while the live value said anything at all.
-Need $app 'shows: "11,176"'  'US 4-12 Nov showtimes on the strip'
+Need $app 'shows: "11,203"'  'US 4-12 Nov showtimes on the strip'
+Absent $app 'shows: "11,176"' 'no 22 Oct 20:18 showtime count'
 Absent $app 'shows: "10,841"' 'no 22 Oct 08:22 showtime count'
 Absent $app 'shows: "10,793"' 'no 21 Oct showtime count'
 Absent $app 'shows: "10,661"' 'no 20 Oct showtime count'
-Need $app '9:51pm'     'the strip carries the scan time'
+Need $app '1:03am'     'the strip carries the scan time'
 # rate is a 4-8 figure for the first time. For five updates it was US 4-6
 # only, because the baked map stopped at 6 Nov and there was no 4-8
 # denominator to divide by. There is one now: 33,668 of 904,291.
-Need $app 'rate: "4.27%"'    'US 4-12 Nov sell-through on the strip'
+Need $app 'rate: "4.38%"'    'US 4-12 Nov sell-through on the strip'
+Absent $app 'rate: "4.27%"' 'no 22 Oct 20:18 sell-through'
 Absent $app 'rate: "4.11%"'  'no 22 Oct 08:22 sell-through'
 Absent $app 'rate: "4.06%"'  'no 21 Oct sell-through'
 Absent $app 'rate: "3.57%"'  'no 20 Oct sell-through'
@@ -709,7 +714,8 @@ Absent $app  '3.72%'         'no pre-update-15 sell-through on the strip'
 # UPDATE 17, 21 OCT 04:33Z. The map is rebuilt across all nine dates:
 # 49,434 tickets, 1,383,690 seats, 10,661 showtimes, 549 venues, 69 metros,
 # every one of them with an x/y so rebake_page.py did not refuse.
-Need   $page '"sold":61537'  'the baked map is the 22 Oct 20:18 CT sweep, sold-out shows counted'
+Need   $page '"sold":63243'  'the baked map is the 23 Oct 01:03 CT sweep, sold-out shows counted'
+Absent $page '"sold":61537'  'no 22 Oct 20:18 baked map'
 Absent $page '"sold":58019'  'no 22 Oct 08:22 baked map'
 Absent $page '"sold":57053'  'no 21 Oct 23:29 baked map'
 Absent $page '"sold":49434'  'no 21 Oct 04:33Z baked map'

@@ -1,4 +1,4 @@
-Ramayana tracker: AU 8,000 / NZ 369 / Cineplex 4,851 (22 Oct 21:51-22:11 CT re-reads, all buying)
+Ramayana tracker: US/Canada 23 Oct 01:03 CT sweep - US 63,243, Cineplex 4,986, NA 69,552
 
 Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
 Claude-Session: https://claude.ai/code/session_01C4QoUcxfFQuVHBLGsUts4A
