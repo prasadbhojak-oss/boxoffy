@@ -1,4 +1,4 @@
-Ramayana tracker: US map shows every city (458) incl. listed-but-unsold, Alaska and Hawaii insets
+Ramayana tracker: India 23 Oct 15:26 CT District 106,675 + Sacnilk 9 PM IST call 153,709 / Rs 9.44 Cr; India map shows District vs BookMyShow per city
 
 Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
 Claude-Session: https://claude.ai/code/session_01C4QoUcxfFQuVHBLGsUts4A
