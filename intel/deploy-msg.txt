@@ -1,10 +1,10 @@
-Ramayana tracker: India 21:32 CT District read + reconciled all-India call
+Ramayana tracker: India map carries the BookMyShow side city by city
 
-District 90,828 -> 91,171 on the same 3,402 showtimes (+362 / -19).
-All-India call (District + BMS via Sacnilk 06:47 IST, city-by-city higher
-of the two): Rs 8.17 Cr ($858,202), 132,245 tickets. Also carries the US/
-Canada 20:18 sweep, Netherlands 2,175 and Germany 2,436.
-Worldwide 218,237 / $2,438,830.
+Each circle = District tickets + that city's BookMyShow slice from the
+all-India call (Sacnilk 06:47 IST). Hyderabad, Shivamogga, Tumakuru added
+as BookMyShow-only cities. Circles hold 124,876 of 132,245; the 7,369 in
+~100 cities Sacnilk does not name are stated in the map note. Tooltip shows
+the District / BookMyShow split.
 
 Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
 Claude-Session: https://claude.ai/code/session_01C4QoUcxfFQuVHBLGsUts4A

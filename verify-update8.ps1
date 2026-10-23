@@ -324,6 +324,13 @@ Need $page 'const IN = {'        'India is a counted market'
 # Block same-rebuild delta 17,345 -> 16,758. All-India call re-run against
 # Sacnilk 06:47 IST: Rs 8.17 Cr, 132,245 tickets.
 Need $page 'tickets:91171'       'the 22 Oct 21:32 CT India figure'
+# ALL-INDIA CALL: District + BMS side from Sacnilk, city-by-city higher of
+# the two. The worldwide total and the India map both use it.
+Need $page 'allTix:132245'      'the all-India call is on the page'
+Need $page 'allInr:81733570'   'and its rupees'
+Need $page 'IN.allTix+NL.tickets' 'the worldwide total uses the all-India call'
+Need $page 'bmsCity:{'  'the India map carries the BookMyShow side city by city'
+Need $page 'bmsOthers:[7369,4146769]' 'the unnamed-cities remainder is stated, not hidden'
 Need $page 'clean:74413'         'the block-corrected floor'
 Need $page 'block:16758'         'the block is named, not absorbed'
 Need $page 'soldOutShows:1'      'one sold-out showtime, the Noida Gold room'

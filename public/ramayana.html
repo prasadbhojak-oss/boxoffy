@@ -2115,7 +2115,23 @@ const IN = {
     ['Anand','Gujarat',15,2073,2,9],
     ['Panchkula','Haryana',6,988,1,4],
     ['Sanand','Gujarat',4,500,1,4]],
-  silent:['Chennai','Hyderabad','Coimbatore','Visakhapatnam','Varanasi']
+  /* THE BOOKMYSHOW SIDE ON THE MAP, 23 OCT. The all-India call adds Rs 2.31 Cr
+     on top of District, city by city (higher-of-two against Sacnilk 06:47
+     IST). Each named city's addition is a slice of its circle; tickets at
+     Sacnilk's Rs 563. Hyderabad, Shivamogga and Tumakuru are BookMyShow-only.
+     Mysuru/Shivamogga/Tumakuru are Sacnilk's Kannada cities (District lists
+     Hindi only), so they come out of Sacnilk's "others" bucket. What is left,
+     bmsOthers, sits in ~100 smaller cities Sacnilk does not name: no circle.
+     [tickets, rupees, state]; key = the District city name the circle uses
+     (NCR on New Delhi, the Chandigarh tri-city on Chandigarh). */
+  bmsCity:{'New Delhi':[4527,2547459,'Delhi'],'Mumbai':[9224,5190760,'Maharashtra'],
+    'Hyderabad':[8295,4668000,'Telangana'],'Bengaluru':[5552,3124660,'Karnataka'],
+    'Pune':[1131,636730,'Maharashtra'],'Kolkata':[1059,595980,'West Bengal'],
+    'Ahmedabad':[254,142691,'Gujarat'],'Lucknow':[922,518970,'Uttar Pradesh'],
+    'Chandigarh':[891,501460,'Chandigarh'],'Mysuru':[880,495000,'Karnataka'],
+    'Shivamogga':[739,416000,'Karnataka'],'Tumakuru':[231,130000,'Karnataka']},
+  bmsOthers:[7369,4146769],
+  silent:['Chennai','Coimbatore','Visakhapatnam','Varanasi']
 };
 
 /* ---------------------------------------------------------------------
@@ -2323,7 +2339,7 @@ let MSEL='usa';
    x = 20.5 + (lon - 72.88) * 4.283,  y = 83.1 - (lat - 19.08) * 4.617.
    A city District adds that is missing here is NAMED in the map note,
    never silently dropped. */
-const IN_LL={'Mysuru':[12.296,76.639],'Mumbai':[19.076,72.878],'New Delhi':[28.614,77.209],'Kolkata':[22.573,88.364],'Jaipur':[26.912,75.787],'Bengaluru':[12.972,77.595],'Pune':[18.52,73.857],'Noida':[28.535,77.391],'Ahmedabad':[23.023,72.571],'Gurgaon':[28.459,77.027],'Lucknow':[26.847,80.947],'Bhubaneswar':[20.296,85.825],'Patna':[25.594,85.138],'Indore':[22.72,75.858],'Nagpur':[21.146,79.088],'Navi Mumbai':[19.033,73.03],'Raipur':[21.251,81.63],'Surat':[21.17,72.831],'Guwahati':[26.144,91.736],'Ranchi':[23.344,85.31],'Mohali':[30.704,76.718],'Chandigarh':[30.733,76.779],'Amritsar':[31.634,74.872],'Ghaziabad':[28.669,77.454],'Nashik':[19.998,73.79],'Thane':[19.218,72.978],'Kanpur':[26.449,80.332],'Trivandrum':[8.524,76.937],'Bhopal':[23.26,77.413],'Faridabad':[28.408,77.318],'Jodhpur':[26.238,73.024],'Siliguri':[26.727,88.396],'Dehradun':[30.317,78.032],'Ulhasnagar':[19.218,73.163],'Greater Noida':[28.474,77.504],'Aurangabad':[19.877,75.343],'Kota':[25.213,75.865],'Muzaffarpur':[26.12,85.391],'Gorakhpur':[26.76,83.373],'Vadodara':[22.307,73.181],'Jamshedpur':[22.805,86.203],'Kochi':[9.931,76.267],'Gwalior':[26.218,78.182],'Kurnool':[15.828,78.037],'Goa':[15.49,73.828],'Ambernath':[19.186,73.192],'Bhilai':[21.209,81.428],'Dhanbad':[23.796,86.43],'Ujjain':[23.179,75.785],'Ludhiana':[30.901,75.857],'Bareilly':[28.367,79.43],'Kolhapur':[16.705,74.243],'Jabalpur':[23.181,79.986],'Cuttack':[20.462,85.883],'Agra':[27.177,78.008],'Udaipur':[24.585,73.712],'Jammu':[32.727,74.857],'Howrah':[22.596,88.264],'Bokaro':[23.669,86.151],'Ajmer':[26.45,74.64],'Jalandhar':[31.326,75.576],'Jalgaon':[21.004,75.563],'Zirakpur':[30.643,76.817],'Panipat':[29.391,76.968],'Rajkot':[22.303,70.802],'Amravati':[20.937,77.779],'Moradabad':[28.839,78.773],'Patiala':[30.34,76.386],'Kalyan':[19.243,73.135],'Gandhinagar':[23.216,72.637],'Vasai':[19.391,72.84],'Karnal':[29.686,76.99],'Anand':[22.556,72.951],'Panchkula':[30.695,76.861],'Sanand':[22.992,72.381],'Chennai':[13.083,80.27],'Hyderabad':[17.385,78.487],'Coimbatore':[11.017,76.956],'Visakhapatnam':[17.687,83.218],'Varanasi':[25.318,82.974]};
+const IN_LL={'Shivamogga':[13.929,75.568],'Tumakuru':[13.340,77.101],'Mysuru':[12.296,76.639],'Mumbai':[19.076,72.878],'New Delhi':[28.614,77.209],'Kolkata':[22.573,88.364],'Jaipur':[26.912,75.787],'Bengaluru':[12.972,77.595],'Pune':[18.52,73.857],'Noida':[28.535,77.391],'Ahmedabad':[23.023,72.571],'Gurgaon':[28.459,77.027],'Lucknow':[26.847,80.947],'Bhubaneswar':[20.296,85.825],'Patna':[25.594,85.138],'Indore':[22.72,75.858],'Nagpur':[21.146,79.088],'Navi Mumbai':[19.033,73.03],'Raipur':[21.251,81.63],'Surat':[21.17,72.831],'Guwahati':[26.144,91.736],'Ranchi':[23.344,85.31],'Mohali':[30.704,76.718],'Chandigarh':[30.733,76.779],'Amritsar':[31.634,74.872],'Ghaziabad':[28.669,77.454],'Nashik':[19.998,73.79],'Thane':[19.218,72.978],'Kanpur':[26.449,80.332],'Trivandrum':[8.524,76.937],'Bhopal':[23.26,77.413],'Faridabad':[28.408,77.318],'Jodhpur':[26.238,73.024],'Siliguri':[26.727,88.396],'Dehradun':[30.317,78.032],'Ulhasnagar':[19.218,73.163],'Greater Noida':[28.474,77.504],'Aurangabad':[19.877,75.343],'Kota':[25.213,75.865],'Muzaffarpur':[26.12,85.391],'Gorakhpur':[26.76,83.373],'Vadodara':[22.307,73.181],'Jamshedpur':[22.805,86.203],'Kochi':[9.931,76.267],'Gwalior':[26.218,78.182],'Kurnool':[15.828,78.037],'Goa':[15.49,73.828],'Ambernath':[19.186,73.192],'Bhilai':[21.209,81.428],'Dhanbad':[23.796,86.43],'Ujjain':[23.179,75.785],'Ludhiana':[30.901,75.857],'Bareilly':[28.367,79.43],'Kolhapur':[16.705,74.243],'Jabalpur':[23.181,79.986],'Cuttack':[20.462,85.883],'Agra':[27.177,78.008],'Udaipur':[24.585,73.712],'Jammu':[32.727,74.857],'Howrah':[22.596,88.264],'Bokaro':[23.669,86.151],'Ajmer':[26.45,74.64],'Jalandhar':[31.326,75.576],'Jalgaon':[21.004,75.563],'Zirakpur':[30.643,76.817],'Panipat':[29.391,76.968],'Rajkot':[22.303,70.802],'Amravati':[20.937,77.779],'Moradabad':[28.839,78.773],'Patiala':[30.34,76.386],'Kalyan':[19.243,73.135],'Gandhinagar':[23.216,72.637],'Vasai':[19.391,72.84],'Karnal':[29.686,76.99],'Anand':[22.556,72.951],'Panchkula':[30.695,76.861],'Sanand':[22.992,72.381],'Chennai':[13.083,80.27],'Hyderabad':[17.385,78.487],'Coimbatore':[11.017,76.956],'Visakhapatnam':[17.687,83.218],'Varanasi':[25.318,82.974]};
 let PSEL=null, ISTATE=null, PALL=false;
 
 function mktShapes(){
@@ -2358,16 +2374,28 @@ function mktShapes(){
   MKT.ind.tix=IN.allTix; MKT.ind.usd=IN.allUsd;
   const ioff=[], ip=x=>{ const q=IN_LL[x]; if(!q){ ioff.push(x); return null; }
     return [+(20.5+(q[1]-72.88)*4.283).toFixed(1), +(83.1-(q[0]-19.08)*4.617).toFixed(1)]; };
+  /* Circle = District tickets + that city's BookMyShow slice, so the circles
+     add up to the all-India call less the unnamed-cities remainder. */
+  const bc=IN.bmsCity||{}, seen={};
   MKT.ind.pins=IN.cityRows.map(c=>{ const xy=ip(c[0]); if(!xy) return null;
-    return {n:c[0], st:c[1], x:xy[0], y:xy[1], t:c[2], s:c[3], c:c[4], sh:c[5]};
-  }).filter(Boolean).concat(IN.silent.map(n=>{ const xy=ip(n); return xy &&
-    {n, st:'', x:xy[0], y:xy[1], t:0, s:0, c:0, sh:0, nl:true}; }).filter(Boolean));
-  MKT.ind.pinNote='Every city the platform lists, '+IN.cityRows.length+' of them, '+
-    'on the 5 November read. Circles are seats taken BEFORE the block check, '+
-    'so they add to the District figure, not to the block-corrected floor and not to the all-India call. Pick a '+
-    'state to see only its cities. '+IN.silent.join(', ')+' are grey because '+
-    'the platform does not list the film there yet - a zero of listings, not '+
-    'of demand.'+(ioff.length?' No map position yet: '+ioff.join(', ')+'.':'');
+    const b=bc[c[0]]?bc[c[0]][0]:0; seen[c[0]]=1;
+    return {n:c[0], st:c[1], x:xy[0], y:xy[1], t:c[2]+b, d:c[2], b, s:c[3], c:c[4], sh:c[5]};
+  }).filter(Boolean)
+  .concat(Object.keys(bc).filter(n=>!seen[n]).map(n=>{ const xy=ip(n); return xy &&
+    {n, st:bc[n][2], x:xy[0], y:xy[1], t:bc[n][0], d:0, b:bc[n][0], s:0, c:0, sh:0, bmsOnly:true}; }).filter(Boolean))
+  .concat(IN.silent.map(n=>{ const xy=ip(n); return xy &&
+    {n, st:'', x:xy[0], y:xy[1], t:0, d:0, b:0, s:0, c:0, sh:0, nl:true}; }).filter(Boolean));
+  const named=MKT.ind.pins.reduce((a,p)=>a+p.t,0);
+  MKT.ind.pinNote='Every city on the all-India call: the '+IN.cityRows.length+' cities '+
+    'District lists, counted seat by seat, plus the BookMyShow side from '+
+    'Sacnilk ('+IN.sacAsOf+') added city by city - Hyderabad, Shivamogga and '+
+    'Tumakuru are BookMyShow-only. Circles hold '+fmt(named)+' of the '+
+    fmt(IN.allTix)+' tickets; the other '+fmt(IN.bmsOthers[1]>0?IN.bmsOthers[0]:0)+
+    ' (Rs '+(IN.bmsOthers[1]/1e5).toFixed(1)+' lakh) are in about 100 smaller cities '+
+    'Sacnilk does not name, so they have no circle. Hover a city for the '+
+    'District / BookMyShow split. Pick a state to see only its cities. '+
+    IN.silent.join(', ')+' are grey: neither platform lists the film there yet.'+
+    (ioff.length?' No map position yet: '+ioff.join(', ')+'.':'');
 }
 
 /* One SVG, any market. size 's' scales the stroke and the biggest bubble so a
@@ -2457,9 +2485,12 @@ function pinTip(k,name){
     if(p.nl) return `<b>${esc(name)}</b><div class="r"><span>Status</span>`+
       `<span>not listed on the platform yet</span></div>`;
     r=`<div class="r"><span>State</span><span>${esc(p.st)}</span></div>`+r+
-      `<div class="r"><span>Cinemas</span><span>${fmt(p.c)}</span></div>`+
-      `<div class="r"><span>Showtimes</span><span>${fmt(p.sh)}</span></div>`+
-      `<div class="r"><span>Full</span><span>${pc1(pct(p.t,p.s))}</span></div>`;
+      (p.bmsOnly ? `<div class="r"><span>Source</span><span>BookMyShow via Sacnilk</span></div>`
+        : `<div class="r"><span>District</span><span>${fmt(p.d)}</span></div>`+
+          (p.b?`<div class="r"><span>+ BookMyShow</span><span>${fmt(p.b)}</span></div>`:'')+
+          `<div class="r"><span>Cinemas</span><span>${fmt(p.c)}</span></div>`+
+          `<div class="r"><span>Showtimes</span><span>${fmt(p.sh)}</span></div>`+
+          `<div class="r"><span>District seats full</span><span>${pc1(pct(p.d,p.s))}</span></div>`);
     const sp=m.pins.filter(x=>x.st===p.st), stt=sp.reduce((a,x)=>a+x.t,0);
     if(sp.length>1) r+=`<div class="r"><span>Share of ${esc(p.st)}</span>`+
       `<span>${pc1(pct(p.t,stt))}</span></div>`;
@@ -3565,8 +3596,8 @@ function inBody(){
     `whole presale. ${esc(IN.silent.slice(0,2).join(' and '))} still read `+
     `zero on <i>both</i> platforms — a zero of listings, not of demand, `+
     `and the reason to call this a Hindi read rather than an Indian one. `+
-    `New tonight: Kurnool in Andhra Pradesh (one cinema, Hindi shows) and `+
-    `Kalyan. Kochi is up to 407. `+
+    `Hyderabad, Kannada Bengaluru and Telugu shows are no longer zeros: `+
+    `they come in through the BookMyShow side of the all-India call above. `+
     `India is a floor and a narrow one.</p>`;
 }
 
