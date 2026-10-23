@@ -192,16 +192,19 @@ Absent $page "['Tue 10 Nov',383" 'no pre-21-Oct Canadian second-week row'
 #            Zero of it buying. It is footprint we had not opened.
 # 676 -> 1,323 is +93 bought and +554 coverage. 86% of the jump is coverage,
 # and these guards exist so nobody quotes the 647 as a move.
-Need $page 'lm:{tickets:1323'    'Landmark on the third read, both formats'
-Need $page 'imax:{tickets:769'   'the matched IMAX set on its own'
-Need $page 'sx:{tickets:554'     'and ScreenX on its own, never pooled'
-Need $page 'buying:93,'          'the part of the move that is buying'
-Need $page 'newInventory:554'    'and the part that is coverage'
+Need $page 'lm:{tickets:1776'    'Landmark on the fourth read, both formats'
+Absent $page 'lm:{tickets:1323'  'no 20 Oct Landmark'
+Need $page 'imax:{tickets:963'   'the matched IMAX set on its own'
+Absent $page 'imax:{tickets:769' 'no 20 Oct IMAX'
+Need $page 'sx:{tickets:813'     'and ScreenX on its own, never pooled'
+Absent $page 'sx:{tickets:554'   'no 20 Oct ScreenX'
+Need $page 'buying:311,'         'the part of the move that is buying'
+Need $page 'newInventory:142'    'and the part that is coverage'
 Absent $page 'lm:{tickets:650'   'no first-read Landmark figure'
 Absent $page 'lm:{tickets:676'   'no second-read Landmark figure'
-Need $page 'was2:650, added2:26' 'the 650 -> 676 delta stays on the record'
-Need $page 'was:676, added:93'   'and the 676 -> 769 delta beside it'
-Need $page 'addedAll:119'        'the whole clean series, 650 -> 769'
+Need $page 'was2:676, was3:650' 'the earlier IMAX reads stay on the record'
+Need $page 'was:769, added:194'  'and the 769 -> 963 delta beside it'
+Need $page 'addedAll:313'        'the whole IMAX series, 650 -> 963'
 # SCREENX IS THE THIRD SITTING WE HAVE BEEN ASKING FOR, AND WE HAVE NOT USED
 # IT YET. Two of its rooms run 14 showtimes each against IMAX's two, which is
 # finally enough to run the room-minimum test at this chain. The file gives
@@ -209,14 +212,14 @@ Need $page 'addedAll:119'        'the whole clean series, 650 -> 769'
 # false and the chain's clean floor must stay 179 rather than quietly rising
 # with ScreenX's 554. Delete that flag and the 554 becomes an unlabelled
 # guess, which is the one thing this page does not publish.
-Need $page 'blockTested:false'   'ScreenX is marked untested for blocks'
+Need $page 'blockTested:true'    'ScreenX room-minimum block test run 23 Oct'
 # THE FLOOR IS CARRIED BY EACH SHOWTIME, NOT ONCE PER ROOM. Solihull proves
 # the rule on this same page: screen 6 reads 57 across eight showings and its
 # block is published as 456, which is 57 x 8. Landmark's six rooms repeat a
 # combined floor of 295 on both of their nights, so the block is 590 and the
 # clean read is 60 - not the 355 a once-per-room subtraction gives.
 Need $page 'blockFloor:590'      'the Landmark block on the per-showtime rule'
-Need $page 'lo:179,'             'the Landmark clean read is published'
+Need $page 'lo:1064,'            'the Landmark clean read is published'
 Absent $page 'lo:60,'            'no pre-re-read Landmark clean figure'
 Absent $page 'lo:86,'            'no second-read Landmark clean figure'
 Absent $page 'blockFloor:295'    'no once-per-room block arithmetic'
@@ -516,12 +519,14 @@ Write-Host '=== 3. the homepage strip agrees with the page'
 # 18 October. ONE NUMBER, ONE GUARD, ONE PLACE: when the strip moves, the
 # Need lines here and the Absent lines in section 4 change together or not
 # at all.
-Need $app '69,552'     'NA all-presale total on the strip, 23 Oct 01:03 sweep'
+Need $app '70,005'     'NA all-presale total on the strip, 23 Oct 07:57 Landmark'
+Absent $app '69,552'   'no 23 Oct 01:03 NA total'
 Absent $app '67,711'   'no 22 Oct 21:51 NA total'
 Absent $app '67,571'   'no 22 Oct 20:18 NA total'
 Absent $app '63,789'   'no 22 Oct 08:22 NA total'
 Absent $app '62,720'   'no 21 Oct 23:29 NA total'
-Need $app '$1,295,822' 'NA value on the strip'
+Need $app '$1,301,693' 'NA value on the strip'
+Absent $app '$1,295,822' 'no 23 Oct 01:03 NA value'
 Absent $app '$1,261,466' 'no 22 Oct 21:51 NA value'
 Absent $app '$1,259,652' 'no 22 Oct 20:18 NA value'
 Absent $app '$1,187,432' 'no 22 Oct 08:22 NA value'
@@ -542,7 +547,7 @@ Absent $app 'shows: "11,176"' 'no 22 Oct 20:18 showtime count'
 Absent $app 'shows: "10,841"' 'no 22 Oct 08:22 showtime count'
 Absent $app 'shows: "10,793"' 'no 21 Oct showtime count'
 Absent $app 'shows: "10,661"' 'no 20 Oct showtime count'
-Need $app '1:03am'     'the strip carries the scan time'
+Need $app '7:57am'     'the strip carries the scan time'
 # rate is a 4-8 figure for the first time. For five updates it was US 4-6
 # only, because the baked map stopped at 6 Nov and there was no 4-8
 # denominator to divide by. There is one now: 33,668 of 904,291.

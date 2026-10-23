@@ -1,4 +1,4 @@
-Ramayana tracker: US/Canada 23 Oct 01:03 CT sweep - US 63,243, Cineplex 4,986, NA 69,552
+Ramayana tracker: Landmark Canada 23 Oct hand read 1,776 (+311 buying, +142 new showtimes); NA 70,005
 
 Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
 Claude-Session: https://claude.ai/code/session_01C4QoUcxfFQuVHBLGsUts4A

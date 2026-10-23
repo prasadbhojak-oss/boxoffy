@@ -1497,36 +1497,45 @@ const CA = {showtimes:330, cinemas:27, auditoriums:33, dates:5,
      showtime. The figures are asked for in the follow-up brief. Until they
      arrive ScreenX's 554 is completely untested for blocks, which is why
      the band below starts at 179 and not at 179 plus some share of it. */
-  lm:{tickets:1323, cinemas:8, shows:48, seats:8624, rate:15.34,
-      cad:23814, usd:17146, atpCad:18, format:'IMAX 3D and ScreenX',
-      buying:93, newInventory:554, was:676, gapHours:14.4,
-      /* IMAX: the matched pair, read three times now. 650 -> 676 -> 769.
-         blockFloor stays 590 because nothing in this file re-tests it, so
-         the clean read moves 86 -> 179: a block does not move, and these
-         93 moved. */
-      imax:{tickets:769, cinemas:6, shows:12, seats:3292, rate:23.36,
-            was:676, added:93, matched:true, dates:2,
-            /* The whole series, because each one was published once:
-               650 -> 676 (+26, 9h38m) -> 769 (+93, 14h25m). All 119 of it
-               is clean, because a block does not move. */
-            was2:650, added2:26, addedAll:119,
-            blockFloor:590, lo:179, hi:769, wheelchair:72, blockRooms:6,
-            cities:[['Waterloo',238],['Whitby',222],['Kanata',133],
-                    ['Calgary Country Hills',120],['Kingston',38],
+  /* 23 OCT 07:57 CT, FOURTH LANDMARK READ (Grok, by hand, every seat map
+     counted twice and identical). 1,323 -> 1,776, and again it is two
+     things in one file:
+       MATCHED  the same 12 IMAX + 36 ScreenX showtimes as 20 Oct.
+                IMAX 769 -> 963 (+194), ScreenX 554 -> 671 (+117).
+                +311 is BUYING.
+       NEW      25 showtimes never opened before: St. Catharines Pen Centre
+                (a new cinema, 14 ScreenX showtimes) and 11 extra Surrey
+                Guildford sittings, incl. 11-12 Nov. +142 is COVERAGE.
+     THE SCREENX BLOCK TEST HAS NOW BEEN RUN. With 8-25 sittings per room,
+     the room minimum is a real test: Calgary 4 x 14, Surrey 2 x 25,
+     Orleans 2 x 8, St. Catharines 0 x 14 = 122 seats that never move -
+     about the wheelchair/companion seats each room holds. IMAX still has
+     two sittings per room, so its 590 floor stands untested. Block total
+     590 + 122 = 712; clean floor 1,776 - 712 = 1,064. */
+  lm:{tickets:1776, cinemas:9, shows:73, seats:11719, rate:15.15,
+      cad:31968, usd:23017, atpCad:18, format:'IMAX 3D and ScreenX',
+      buying:311, newInventory:142, newShows:25, matchedShows:48,
+      was:1323, gapHours:56.4, was2:676,
+      imax:{tickets:963, cinemas:6, shows:12, seats:3292, rate:29.25,
+            was:769, added:194, matched:true, dates:2,
+            was2:676, was3:650, addedAll:313,
+            blockFloor:590, lo:373, hi:963, wheelchair:72, blockRooms:6,
+            cities:[['Whitby',277],['Waterloo',275],['Kanata',190],
+                    ['Calgary Country Hills',160],['Kingston',43],
                     ['Nanaimo',18]]},
-      /* ScreenX: new. Two of the three cinemas are new to the page too -
-         Calgary Country Hills already had an IMAX row, so cinemas goes 6 to
-         8, not 6 to 9. Columns are tickets, showtimes, seats. */
-      sx:{tickets:554, cinemas:3, newCinemas:2, shows:36, seats:5332,
-          rate:10.39, blockTested:false,
-          cities:[['Surrey Guildford',292,14,1890],
-                  ['Calgary Country Hills',193,14,2394],
-                  ['Orleans',69,8,1048]]},
-      blockFloor:590, lo:179, hi:1323, wheelchair:72, dates:2, blockRooms:6,
-      /* IMAX only, and from the 09:11 read - this file reports per cinema
-         over two sittings, so the 769 cannot be split by date. Kept because
-         it is still the only date shape we have, labelled because it is
-         no longer the current total. */
+      /* ScreenX. Columns are tickets, showtimes, seats. */
+      sx:{tickets:813, cinemas:4, newCinemas:1, shows:61, seats:8427,
+          rate:9.65, blockTested:true, blockFloor:122,
+          matchedWas:554, matchedNow:671, added:117, newShows:25, newTickets:142,
+          cities:[['Surrey Guildford',397,25,3375],
+                  ['Calgary Country Hills',247,14,2394],
+                  ['St. Catharines Pen Centre',92,14,1610],
+                  ['Orleans',77,8,1048]]},
+      blockFloor:712, lo:1064, hi:1776, wheelchair:72, blockRooms:10,
+      /* Both formats, all 73 showtimes, seats gone by show date. */
+      byDate:[['Wed 4 Nov',690],['Thu 5 Nov',501],['Fri 6 Nov',173],
+              ['Sat 7 Nov',225],['Sun 8 Nov',44],['Mon 9 Nov',34],
+              ['Tue 10 Nov',93],['Wed 11 Nov',10],['Thu 12 Nov',6]],
       byDateWas:[['Wed 4 Nov',364],['Thu 5 Nov',312]]},
   /* Canada's two chains, for every roll-up on the page. CA.tickets stays
      Cineplex alone so the Cineplex paragraph keeps being about Cineplex. */
@@ -2781,19 +2790,19 @@ function tiles(){
       `${fmt(CA.lm.tickets)}</b> — seats gone across ${CA.lm.shows} `+
       `showtimes at ${CA.lm.cinemas} cinemas, every one opened by hand `+
       `because no scanner of ours may fetch that chain. <b>Read the split `+
-      `before quoting the move.</b> Its ${CA.lm.imax.shows} IMAX showtimes `+
-      `are a matched set, read three times, and went `+
-      `${fmt(CA.lm.imax.was)} to <b>${fmt(CA.lm.imax.tickets)}</b> with all `+
-      `six cinemas moving — so that <b>+${CA.lm.imax.added} is buying</b>. `+
-      `The other ${CA.lm.sx.tickets} is ${CA.lm.sx.shows} ScreenX showtimes `+
-      `we had never opened: new inventory, not a sale we can date. So `+
-      `${fmt(CA.lm.was)} to ${fmt(CA.lm.tickets)} is <b>+${CA.lm.buying} `+
-      `bought and +${CA.lm.newInventory} coverage</b>, and reporting it as `+
-      `one number would be reporting coverage as demand. All of it is seats `+
-      `gone rather than counted sales, and much of it is house block: the `+
-      `IMAX rooms repeat a floor worth <b>${fmt(CA.lm.blockFloor)}</b> and `+
-      `ScreenX has not been tested at all. The clean floor for the chain is `+
-      `${CA.lm.lo} — see Method.`;
+      `before quoting the move.</b> The same ${CA.lm.matchedShows} `+
+      `showtimes read last time moved on their own: IMAX `+
+      `${fmt(CA.lm.imax.was)} to <b>${fmt(CA.lm.imax.tickets)}</b> and `+
+      `ScreenX ${fmt(CA.lm.sx.matchedWas)} to ${fmt(CA.lm.sx.matchedNow)}, `+
+      `so <b>+${CA.lm.buying} is buying</b>. The other `+
+      `+${CA.lm.newInventory} is ${CA.lm.newShows} showtimes we had never `+
+      `opened, including a new cinema in St. Catharines — coverage, not `+
+      `demand. So ${fmt(CA.lm.was)} to ${fmt(CA.lm.tickets)} is `+
+      `<b>+${CA.lm.buying} bought and +${CA.lm.newInventory} coverage</b>. `+
+      `All of it is seats gone rather than counted sales, and some is house `+
+      `block: seats that never move across a room's sittings add up to `+
+      `<b>${fmt(CA.lm.blockFloor)}</b>. The clean floor for the chain is `+
+      `${fmt(CA.lm.lo)} — see Method.`;
   }
 }
 
