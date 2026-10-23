@@ -330,23 +330,31 @@ Need $page 'const IN = {'        'India is a counted market'
 # 22 OCT 21:32 CT: 90,828 -> 91,171 on the same 3,402 showtimes (+362 / -19).
 # Block same-rebuild delta 17,345 -> 16,758. All-India call re-run against
 # Sacnilk 06:47 IST: Rs 8.17 Cr, 132,245 tickets.
-Need $page 'tickets:91171'       'the 22 Oct 21:32 CT India figure'
+# 23 OCT 08:48 CT: 91,171 -> 99,408. Matched 3,364 showtimes 90,057 -> 96,870
+# (+7,862 on 962 / -1,049 on 60, 620 of it the Amritsar hold released);
+# 170 new showtimes +2,538 coverage, 38 dropped -1,114. Block same-rebuild
+# delta 16,758 -> 15,848. All-India call vs Sacnilk 4:50 PM IST: Rs 8.85 Cr,
+# 142,810 tickets.
+Need $page 'tickets:99408'       'the 23 Oct 08:48 CT India figure'
+Absent $page 'tickets:91171,'    'no 22 Oct 21:32 India total as the live figure'
 # ALL-INDIA CALL: District + BMS side from Sacnilk, city-by-city higher of
 # the two. The worldwide total and the India map both use it.
-Need $page 'allTix:132245'      'the all-India call is on the page'
-Need $page 'allInr:81733570'   'and its rupees'
+Need $page 'allTix:142810'      'the all-India call is on the page'
+Need $page 'allInr:88451710'   'and its rupees'
+Absent $page 'allTix:132245'    'no 22 Oct all-India call'
 Need $page 'IN.allTix+NL.tickets' 'the worldwide total uses the all-India call'
 Need $page 'bmsCity:{'  'the India map carries the BookMyShow side city by city'
-Need $page 'bmsOthers:[7369,4146769]' 'the unnamed-cities remainder is stated, not hidden'
-Need $page 'clean:74413'         'the block-corrected floor'
-Need $page 'block:16758'         'the block is named, not absorbed'
-Need $page 'soldOutShows:1'      'one sold-out showtime, the Noida Gold room'
-Need $page 'amritsarNow:622'     'the Amritsar release is tracked, not hidden'
-Need $page 'wasTickets:90828'    'the 18:18 read is kept so the move can be described'
-Need $page 'wasTickets7:46539'   'and the read the NA sweep destroyed'
-Need $page 'matchedShows:3402'   'the matched set is published, not just the total'
-Need $page 'buying:362'          'buying is separated from coverage'
-Need $page 'wasPerHour:591'      'against the rate it replaced'
+Need $page 'bmsOthers:[10068,5705192]' 'the unnamed-cities remainder is stated, not hidden'
+Need $page 'clean:83560'         'the block-corrected floor'
+Need $page 'block:15848'         'the block is named, not absorbed'
+Need $page 'soldOutShows:2'      'two sold-out showtimes, Noida Gold and Nehru Place Insignia'
+Need $page 'amritsarNow:2'       'the Amritsar release is tracked, not hidden'
+Need $page 'wasTickets:91171'    'the 21:32 read is kept so the move can be described'
+Need $page 'wasTickets8:46539'   'and the read the NA sweep destroyed'
+Need $page 'matchedShows:3364'   'the matched set is published, not just the total'
+Need $page 'buying:7862'         'buying is separated from coverage'
+Need $page 'newShows:170'        'and the coverage is named'
+Need $page 'wasPerHour:113'      'against the rate it replaced'
 Absent $page 'tickets:90828,'    'no 18:18 India total as the live figure'
 Absent $page 'tickets:82298,'    'no 06:22 India total as the live figure'
 Absent $page 'tickets:76297,'    'no 23:47 India total as the live figure'
