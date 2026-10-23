@@ -1969,29 +1969,19 @@ const INTL = {
    cover all of them. FX 0.0105, valutafx, 19 Oct - Rs 94.97 to the dollar -
    pinned like every other rate here. */
 const IN = {
-  /* 22 OCT 18:18 CT (04:48 IST, 23 Oct). 76,297 -> 82,298 -> 90,828.
+  /* 22 OCT 21:32 CT (08:02 IST, 23 Oct). 82,298 -> 90,828 -> 91,171.
 
-     3,253 showtimes were read on BOTH the 06:22 and 18:18 passes, 11.9
-     hours apart across India's evening and night: 82,256 -> 89,168.
-       BUYING   1,047 showtimes gained 7,053 - about 591 an hour.
-       FALLS    48 showtimes gave back 141. Amritsar Movietime did not
-                move (622); Kurnool 440 -> 451.
-     COVERAGE, NOT BUYING: 149 showtimes are new and carry 1,660. 77 of them
-     are Bengaluru (617 tickets) - the city went from 2 cinemas and 7
-     showtimes to 22 cinemas and 84. Mysuru is listed for the first time.
-     2 showtimes dropped out holding 42.
+     All 3,402 showtimes were read on both the 18:18 and 21:32 passes (3.2
+     hours, India's early morning): 90,828 -> 91,171. 96 showtimes gained
+     362, 9 gave back 19. No showtime added or dropped.
 
-     BLOCK, LIKE FOR LIKE. Same rebuilt room_block on both files moves
-     +2,018 seats and +6 rooms; applied to the published figure:
-     15,327 -> 17,345 on 130 rooms. Most of the rise is two IMAX rooms
-     (INOX South City Kolkata, PVR Select City Walk Saket) now filling
-     evenly across their sittings, which the test reads as held; Noida's
-     Logix IMAX left the flagged set. Gross is the platform's own,
-     Rs 58,426,773, so Rs 643 a ticket. */
-  tickets:90828, clean:73483, block:17345, blockRooms:130,
-  inr:58426773, cleanInr:50144066, usd:613481, cleanUsd:526513,
+     BLOCK, LIKE FOR LIKE. Same rebuilt room_block on both files: -587 seats,
+     -7 rooms; applied to the published figure: 17,345 -> 16,758 on 123 rooms.
+     Gross is the platform's own, Rs 58,619,091, so Rs 643 a ticket. */
+  tickets:91171, clean:74413, block:16758, blockRooms:123,
+  inr:58619091, cleanInr:50616692, usd:615500, cleanUsd:531475,
   atpInr:643, fx:0.0105, fxDate:'19 Oct', fxSrc:'valutafx',
-  seats:741521, rate:12.2, shows:3402, cinemas:373, cities:75, states:21,
+  seats:741529, rate:12.3, shows:3402, cinemas:373, cities:75, states:21,
   soldOutShows:1, soldOutOneCinema:0,
   platform:'District', pvrShare:71, dateRead:'5 November only',
   benchmark:36,
@@ -1999,9 +1989,9 @@ const IN = {
      Oct 21:52 read (46,539) was DESTROYED by the North American sweep,
      which owns the same output folder - it is reconstructed here from
      what we published, not from a file we still hold. */
-  wasTickets:82298, wasTickets2:76297, wasTickets3:76227, wasTickets4:64696,
-  wasTickets5:50758, wasTickets6:46539, wasTickets7:24588,
-  wasShows:3255, wasCinemas:344, wasInr:53034760,
+  wasTickets:90828, wasTickets2:82298, wasTickets3:76297, wasTickets4:76227,
+  wasTickets5:64696, wasTickets6:50758, wasTickets7:46539, wasTickets8:24588,
+  wasShows:3402, wasCinemas:373, wasInr:58426773,
   /* THE ALL-INDIA CALL, 23 OCT. PB's rule: our District count PLUS the
      BookMyShow side from Sacnilk, reconciled and time-stamped.
      Sacnilk's Day 1 page (data as of 23 Oct 01:50 IST): Rs 8.16 Cr incl.
@@ -2019,20 +2009,24 @@ const IN = {
      Sacnilk's own blended Rs 563 a ticket: +41,388. District read is 23 Oct
      04:48 IST, Sacnilk's 01:50 IST - three hours of Indian night apart.
      The District figure above stays the MEASURED number; this is the call. */
-  allTix:132216, allInr:81718220, allUsd:858041, bmsTix:41388, bmsInr:23291447,
+  allTix:132245, allInr:81733570, allUsd:858202, bmsTix:41074, bmsInr:23114479,
   sacInr:81600000, sacInrEx:61500000, sacTix:145000, sacTixEx:107000,
-  sacShows:3935, sacCinemas:466, sacCities:120, sacAsOf:'23 Oct, 1:50 am IST',
-  coverInr:71,
-  /* THE MATCHED COMPARISON, 06:22 -> 18:18 CT. 3,253 showtimes in both. */
-  matchedShows:3253, matchedWas:82256, matchedNow:89168, netMove:6912,
-  buying:7053, buyingShows:1047, gapHours:11.9, perHour:591,
-  falls:141, fallShows:48,
+  sacShows:3944, sacCinemas:466, sacCities:120, sacAsOf:'23 Oct, 6:47 am IST',
+  coverInr:72,
+  /* 21:32 CT RE-RUN of the call. Sacnilk data as of 06:47 IST, District read
+     08:02 IST - 75 minutes apart, the closest pair yet. Same city-by-city
+     higher-of-two rule; additions Rs 2,31,14,479 -> +41,074 tickets at
+     Sacnilk's Rs 563. */
+  /* THE MATCHED COMPARISON, 18:18 -> 21:32 CT. All 3,402 showtimes. */
+  matchedShows:3402, matchedWas:90828, matchedNow:91171, netMove:343,
+  buying:362, buyingShows:96, gapHours:3.2, perHour:113,
+  falls:19, fallShows:9,
   amritsarPeak:1842, amritsarWas:831, amritsarNow:622,
   kurnoolWas:440, kurnoolNow:451,
-  newShows:149, newInvTickets:1660, bengaluruNew:77, bengaluruNewTickets:617,
-  droppedShows:2, droppedTickets:42,
+  newShows:0, newInvTickets:0, bengaluruNew:77, bengaluruNewTickets:617,
+  droppedShows:0, droppedTickets:0,
   /* the previous matched reads, so the rate is checkable */
-  wasPerHour:853, wasPerHour2:526, wasPerHour3:737, wasPerHour4:1397,
+  wasPerHour:591, wasPerHour2:853, wasPerHour3:526, wasPerHour4:737,
   /* BookMyShow, re-swept 21:33. Footprint only - no capacity anywhere. */
   bmsSwept:true, bmsShows:2751, bmsCities:37, bmsStates:18, bmsCodes:4,
   bmsSoldOutShows:70, bmsSoldOutClasses:86, bmsClassesPriced:10184,
@@ -2042,40 +2036,37 @@ const IN = {
      venueCode come back empty on every row, so its figure is really the
      city count and its chain column is a default string. Not published
      until the parser is fixed. */
-  top:[['Delhi NCR',20871,14.0],['Mumbai',12510,11.6],['Kolkata',5133,12.2],
-       ['Bengaluru',4732,19.4],['Jaipur',4630,18.0],['Pune',4337,9.4],
-       ['Ahmedabad',3396,13.2],['Lucknow',1960,9.7],
-       ['Bhubaneswar',1761,17.9],['Patna',1429,21.0]],
-  /* EVERY CITY, 22 OCT 18:18 read: [city, state, tickets (seats taken,
+  top:[['Delhi NCR',20907,14.0],['Mumbai',12531,11.7],['Kolkata',5132,12.2],['Bengaluru',4821,19.8],['Jaipur',4665,18.1],['Pune',4349,9.4],['Ahmedabad',3396,13.2],['Lucknow',1965,9.7],['Bhubaneswar',1762,17.9],['Patna',1431,21.0]],
+  /* EVERY CITY, 22 OCT 21:32 read: [city, state, tickets (seats taken,
      before the block check), seats, cinemas, showtimes]. The India map is
      drawn from this list and nothing else. */
-  cityRows:[['Mumbai','Maharashtra',12510,107382,40,482],
-    ['New Delhi','Delhi',12060,76676,41,378],
-    ['Kolkata','West Bengal',5133,42085,17,156],
-    ['Bengaluru','Karnataka',4732,24399,22,84],
-    ['Jaipur','Rajasthan',4630,25705,11,97],
-    ['Pune','Maharashtra',4337,46218,14,217],
-    ['Noida','Uttar Pradesh',3816,13811,6,69],
+  cityRows:[['Mumbai','Maharashtra',12531,107382,40,482],
+    ['New Delhi','Delhi',12067,76676,41,378],
+    ['Kolkata','West Bengal',5132,42085,17,156],
+    ['Bengaluru','Karnataka',4821,24407,22,84],
+    ['Jaipur','Rajasthan',4665,25705,11,97],
+    ['Pune','Maharashtra',4349,46218,14,217],
+    ['Noida','Uttar Pradesh',3824,13811,6,69],
     ['Ahmedabad','Gujarat',3396,25730,12,128],
-    ['Gurgaon','Haryana',2616,31723,21,186],
-    ['Lucknow','Uttar Pradesh',1960,20155,9,96],
-    ['Bhubaneswar','Odisha',1761,9851,5,42],
-    ['Patna','Bihar',1429,6815,4,32],
-    ['Indore','Madhya Pradesh',1358,13316,5,74],
-    ['Raipur','Chhattisgarh',1301,9031,5,41],
+    ['Gurgaon','Haryana',2620,31723,21,186],
+    ['Lucknow','Uttar Pradesh',1965,20155,9,96],
+    ['Bhubaneswar','Odisha',1762,9851,5,42],
+    ['Patna','Bihar',1431,6815,4,32],
+    ['Indore','Madhya Pradesh',1359,13316,5,74],
+    ['Raipur','Chhattisgarh',1307,9031,5,41],
     ['Nagpur','Maharashtra',1275,5101,2,23],
-    ['Navi Mumbai','Maharashtra',1236,9910,4,44],
+    ['Navi Mumbai','Maharashtra',1253,9910,4,44],
     ['Guwahati','Assam',1195,8645,5,46],
     ['Surat','Gujarat',1180,15053,6,74],
-    ['Mohali','Punjab',1054,5416,3,34],
-    ['Ranchi','Jharkhand',1001,5388,3,22],
-    ['Ghaziabad','Uttar Pradesh',966,10436,7,44],
-    ['Nashik','Maharashtra',872,2739,1,14],
+    ['Mohali','Punjab',1059,5416,3,34],
+    ['Ranchi','Jharkhand',1006,5388,3,22],
+    ['Ghaziabad','Uttar Pradesh',979,10436,7,44],
+    ['Nashik','Maharashtra',877,2739,1,14],
     ['Chandigarh','Chandigarh',856,10583,5,45],
     ['Thane','Maharashtra',839,11273,5,53],
     ['Amritsar','Punjab',826,7017,4,34],
-    ['Faridabad','Haryana',774,11244,7,54],
-    ['Kanpur','Uttar Pradesh',753,7641,6,32],
+    ['Faridabad','Haryana',778,11244,7,54],
+    ['Kanpur','Uttar Pradesh',756,7641,6,32],
     ['Bhopal','Madhya Pradesh',749,8210,5,38],
     ['Siliguri','West Bengal',739,6168,3,23],
     ['Dehradun','Uttarakhand',731,4294,3,28],
@@ -2083,40 +2074,40 @@ const IN = {
     ['Jodhpur','Rajasthan',707,9385,4,43],
     ['Greater Noida','Uttar Pradesh',639,4939,4,41],
     ['Ulhasnagar','Maharashtra',626,3788,1,9],
-    ['Kota','Rajasthan',577,6306,3,22],
-    ['Vadodara','Gujarat',567,14093,6,67],
-    ['Muzaffarpur','Bihar',552,6054,4,32],
-    ['Gwalior','Madhya Pradesh',544,5183,3,25],
+    ['Kota','Rajasthan',583,6306,3,22],
+    ['Vadodara','Gujarat',566,14093,6,67],
+    ['Muzaffarpur','Bihar',559,6054,4,32],
+    ['Gwalior','Madhya Pradesh',558,5183,3,25],
+    ['Jamshedpur','Jharkhand',541,3486,2,16],
     ['Aurangabad','Maharashtra',541,5459,2,21],
-    ['Jamshedpur','Jharkhand',535,3486,2,16],
     ['Gorakhpur','Uttar Pradesh',512,3040,3,16],
     ['Kochi','Kerala',507,1145,1,5],
-    ['Goa','Goa',462,9120,4,37],
-    ['Kurnool','Andhra Pradesh',451,2050,1,5],
+    ['Goa','Goa',469,9120,4,37],
+    ['Kurnool','Andhra Pradesh',453,2050,1,5],
     ['Ambernath','Maharashtra',435,2457,1,9],
     ['Bhilai','Chhattisgarh',430,1965,1,9],
     ['Dhanbad','Jharkhand',391,4096,2,18],
-    ['Ujjain','Madhya Pradesh',383,1482,1,5],
-    ['Ludhiana','Punjab',377,7072,3,28],
+    ['Ujjain','Madhya Pradesh',388,1482,1,5],
+    ['Ludhiana','Punjab',381,7072,3,28],
     ['Bareilly','Uttar Pradesh',376,888,1,4],
     ['Kolhapur','Maharashtra',364,4965,2,20],
     ['Vasai','Maharashtra',342,2250,1,9],
     ['Jabalpur','Madhya Pradesh',340,2476,2,14],
     ['Cuttack','Odisha',325,2015,1,10],
-    ['Bokaro','Jharkhand',314,1629,1,5],
-    ['Rajkot','Gujarat',306,4210,4,20],
-    ['Agra','Uttar Pradesh',303,1002,1,8],
+    ['Bokaro','Jharkhand',313,1629,1,5],
+    ['Rajkot','Gujarat',308,4210,4,20],
+    ['Agra','Uttar Pradesh',307,1002,1,8],
     ['Howrah','West Bengal',255,4175,2,15],
-    ['Udaipur','Rajasthan',253,6544,3,31],
-    ['Jammu','Jammu & Kashmir',233,2369,3,14],
+    ['Udaipur','Rajasthan',255,6544,3,31],
+    ['Jammu','Jammu & Kashmir',235,2369,3,14],
     ['Ajmer','Rajasthan',217,2254,2,13],
     ['Jalandhar','Punjab',195,5080,3,24],
     ['Jalgaon','Maharashtra',157,1096,1,5],
     ['Zirakpur','Punjab',134,2772,2,12],
     ['Panipat','Haryana',132,3167,2,13],
-    ['Moradabad','Uttar Pradesh',101,2004,2,8],
-    ['Amravati','Maharashtra',97,3151,1,13],
-    ['Mysuru','Karnataka',93,1803,2,8],
+    ['Mysuru','Karnataka',129,1803,2,8],
+    ['Moradabad','Uttar Pradesh',105,2004,2,8],
+    ['Amravati','Maharashtra',99,3151,1,13],
     ['Kalyan','Maharashtra',85,2489,1,9],
     ['Patiala','Punjab',52,3906,2,17],
     ['Gandhinagar','Gujarat',50,1980,1,5],
@@ -3500,7 +3491,7 @@ function inBody(){
   const f=n=>fmt(n);
   return `<div style="font-family:var(--disp);font-weight:700;font-size:12px;`+
     `letter-spacing:.14em;text-transform:uppercase;color:var(--accent)">`+
-    `India · 5 November · two reads, twelve hours apart</div>`+
+    `India · 5 November · two reads, three hours apart</div>`+
     `<p class="note" style="margin-top:8px"><b>All-India call: `+
     `₹${(IN.allInr/1e7).toFixed(2)} Cr ($${f(IN.allUsd)}), ${f(IN.allTix)} tickets.</b> `+
     `That is our own District count plus the BookMyShow side, which we `+
@@ -3520,16 +3511,14 @@ function inBody(){
     `gross on every showtime, so ₹${IN.atpInr} a ticket is read, not `+
     `assumed, and it covers every ticket here. Germany's own prices cover `+
     `42% of its tickets; India's cover all of them.</p>`+
-    `<p class="note"><b>India kept buying through the night.</b> `+
+    `<p class="note"><b>India's early morning was quiet, as it should be.</b> `+
     `${f(IN.matchedShows)} showtimes appear in both of the last two reads, `+
-    `${IN.gapHours} hours apart across India's evening and night. They went `+
+    `${IN.gapHours} hours apart before India woke up. They went `+
     `<b>${f(IN.matchedWas)} → ${f(IN.matchedNow)}</b>: `+
     `${f(IN.buyingShows)} showtimes gained <b>${f(IN.buying)} tickets</b>, `+
     `about <b>${f(IN.perHour)} an hour</b>, and only ${f(IN.fallShows)} `+
-    `gave any back (${f(IN.falls)} seats). Separately, ${f(IN.newShows)} `+
-    `showtimes are new and carry ${f(IN.newInvTickets)} — ${f(IN.bengaluruNew)} `+
-    `of them in Bengaluru, which the platform has finally opened up properly. `+
-    `That is new coverage, not new buying. India went ${f(IN.wasTickets2)} → `+
+    `gave any back (${f(IN.falls)} seats). No showtime was added or `+
+    `dropped, so all of it is buying. India went ${f(IN.wasTickets2)} → `+
     `${f(IN.wasTickets)} → <b>${f(IN.tickets)}</b>.</p>`+
     `<p class="note"><b>The Amritsar hold has stopped moving.</b> The cinema `+
     `that went full on eight showtimes overnight — we called it a bulk `+

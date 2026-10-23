@@ -320,31 +320,22 @@ Need $page 'const IN = {'        'India is a counted market'
 # in both: 64,689 -> 74,559, +9,870 over 13.4h (India's night, so 737/hr is
 # not a slowdown). 1,867 of it is one Amritsar cinema going full on all
 # eight showtimes. Block re-run with the rebuilt room_block on both reads.
-# 22 OCT 18:18 CT: 82,298 -> 90,828. 3,253 showtimes in both: +7,053
-# bought on 1,047 showtimes over 11.9h (591/hr), 141 given back. 149 new
-# showtimes carry 1,660 - 77 are Bengaluru: coverage. Block same-rebuild
-# delta: 15,327 -> 17,345.
-Need $page 'tickets:90828'       'the 22 Oct 18:18 CT India figure'
-# 23 OCT ALL-INDIA CALL: District 18:18 CT + BMS side from Sacnilk (as of
-# 01:50 IST), city-by-city higher of the two. The worldwide total uses it.
-Need $page 'allTix:132216'      'the all-India call is on the page'
-Need $page 'allInr:81718220'   'and its rupees'
-Need $page 'IN.allTix+NL.tickets' 'the worldwide total uses the all-India call'
-Need $page 'clean:73483'         'the block-corrected floor'
-Need $page 'block:17345'         'the block is named, not absorbed'
-Need $page 'atpInr:643'          'the Indian price is theirs, read not assumed'
+# 22 OCT 21:32 CT: 90,828 -> 91,171 on the same 3,402 showtimes (+362 / -19).
+# Block same-rebuild delta 17,345 -> 16,758. All-India call re-run against
+# Sacnilk 06:47 IST: Rs 8.17 Cr, 132,245 tickets.
+Need $page 'tickets:91171'       'the 22 Oct 21:32 CT India figure'
+Need $page 'clean:74413'         'the block-corrected floor'
+Need $page 'block:16758'         'the block is named, not absorbed'
 Need $page 'soldOutShows:1'      'one sold-out showtime, the Noida Gold room'
 Need $page 'amritsarNow:622'     'the Amritsar release is tracked, not hidden'
-Need $page 'bengaluruNew:77'     'new coverage is named, not counted as buying'
-Need $page 'wasTickets:82298'    'the 06:22 read is kept so the move can be described'
-Need $page 'wasTickets6:46539'   'and the read the NA sweep destroyed'
-Need $page 'matchedShows:3253'   'the matched set is published, not just the total'
-Need $page 'buying:7053'         'buying is separated from coverage'
-Need $page 'perHour:591'         'the overnight rate, so it is checkable'
-Need $page 'wasPerHour:853'      'against the rate it replaced'
+Need $page 'wasTickets:90828'    'the 18:18 read is kept so the move can be described'
+Need $page 'wasTickets7:46539'   'and the read the NA sweep destroyed'
+Need $page 'matchedShows:3402'   'the matched set is published, not just the total'
+Need $page 'buying:362'          'buying is separated from coverage'
+Need $page 'wasPerHour:591'      'against the rate it replaced'
+Absent $page 'tickets:90828,'    'no 18:18 India total as the live figure'
 Absent $page 'tickets:82298,'    'no 06:22 India total as the live figure'
 Absent $page 'tickets:76297,'    'no 23:47 India total as the live figure'
-Absent $page 'tickets:76227,'    'no 20:59 India total as the live figure'
 Absent $page 'tickets:46539,'    'no pre-21-Oct India total'
 Absent $page 'tickets:50758,'    'no 00:45 India total as the live figure'
 Absent $page 'tickets:24588,'    'no second-read India total'

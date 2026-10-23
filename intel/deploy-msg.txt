@@ -1,10 +1,10 @@
-Ramayana tracker: US/Canada 20:18 sweep, India all-India call, NL 22 Oct
+Ramayana tracker: India 21:32 CT District read + reconciled all-India call
 
-US map 61,537; Cineplex 4,711; North America 67,571 / $1,259,652.
-India all-India call Rs 8.17 Cr (District + BMS via Sacnilk).
-Netherlands 1,959 -> 2,175: 97 matched showtimes +216, none fell; 7 Pathe
-Dolby showtimes now "volgeboekt" with no map carry 253 as a floor.
-Germany 2,436. Worldwide 218,208 / $2,438,669.
+District 90,828 -> 91,171 on the same 3,402 showtimes (+362 / -19).
+All-India call (District + BMS via Sacnilk 06:47 IST, city-by-city higher
+of the two): Rs 8.17 Cr ($858,202), 132,245 tickets. Also carries the US/
+Canada 20:18 sweep, Netherlands 2,175 and Germany 2,436.
+Worldwide 218,237 / $2,438,830.
 
 Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
 Claude-Session: https://claude.ai/code/session_01C4QoUcxfFQuVHBLGsUts4A
