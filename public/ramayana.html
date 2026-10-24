@@ -750,35 +750,42 @@ gtag("js",new Date());gtag("config","G-K6C9EVRFH4",{anonymize_ip:true});}})();
         — Event NZ prints one on every session.</p>
       <p style="font-size:13px;color:var(--body-ink);margin:0">
         <b>The Netherlands is the cleanest foreign read on this page.</b>
-        106 showtimes at 19 cinemas in 11 cities, read by hand in a browser
+        124 showtimes at 31 cinemas, 100 of them read by hand in a browser
         because neither Pathé nor Vue can be fetched by a scanner of ours:
-        <b>2,175 seats gone</b>, <b>7.90%</b> of 27,536. 97 showtimes were
-        read on both 21 and 22 October and went 1,706 → 1,922 —
-        <b>216 tickets of real buying, and not one showtime fell</b>. Seven
+        <b>2,639 seats gone</b>, <b>9.9%</b> of the 24,114 seats read. 88
+        showtimes were read on both 22 and 24 October and went 1,869 →
+        2,113 — <b>244 tickets of real buying, and for the second read
+        running not one showtime fell</b>. Vue Kerkrade, Enschede and
+        others were read for the first time (+273); eleven showtimes were
+        pulled (−53). Pathé Ypenburg in Den Haag is 195 of 213 seats gone
+        for Thursday 7pm. Seven
         Pathé Dolby showtimes now say "volgeboekt" (fully booked) with no
         seat map, some of them a day after selling a single seat — that is
         a room taken off sale, not a room filled, so they keep last
-        night's 253 as a floor rather than being counted full. The
-        room-minimum test fires on three rooms for 51 seats — under 3% —
-        and the per-date shape decays properly (583, 675, 491, 229, 64,
-        79, 54), which is what buying looks like and what a block never does. Neither chain marks held
+        night's 253 as a floor rather than being counted full. Our block
+        test flags 282 seats in four rooms — mostly Vue Kerkrade, which reads
+        77 to 85 on every showing, the flat shape of a held block — so real
+        bookings are 2,357 to 2,639. Every Pathé room decays properly
+        (682, 780, 618, 328, 78, 94, 59 by date), which is what buying looks
+        like and what a block never does. Neither chain marks held
         seats separately, so this is seats gone rather than confirmed
         sales, the same basis the UK headline uses. The price here is
         <b>ours</b>, unlike Germany's and India's: Vue prints €15.00 at
         Hilversum and €13.00 at Eindhoven and LAB-1 prints €14.00, but
-        Pathé — 2,080 of the 2,175 — shows nothing before seat selection,
+        Pathé — 2,317 of the 2,639 — shows nothing before seat selection,
         so €14.00 is an assumption applied to a counted ticket. Nine
         Pathé cinemas returned no showtimes, but their date strip only
         offered 10 November onward, so that is a gap in our reach and not
         a confirmed zero. Kinepolis lists the film for 11 November with
         nothing yet on sale.
-        <b>Sweden is a measured zero.</b> Two independents, four showtimes,
-        624 seats, and every seat map reads completely empty — 230 free of
-        230, 82 free of 82. It is published as a zero rather than left off
-        the page, because a reader who sees no row assumes we did not look.
-        It is also not Sweden: Filmstaden, far and away the country's
-        biggest chain, is one we are not able to read, so what is on this
-        page is two independent cinemas rather than a country.</p>
+        <b>Sweden is still a measured zero.</b> It is now listed at 25
+        cinemas, 31 showtimes. Seven seat maps at five independents were
+        read and every one says all seats free — 230 of 230, 82 of 82. It
+        is published as a zero rather than left off the page, because a
+        reader who sees no row assumes we did not look. It is also not
+        Sweden: Filmstaden, 17 of those cinemas and the country's biggest
+        chain, blocked every read, so what is on this page is five
+        independents rather than a country.</p>
     </div>
     <button class="btn ghost" id="tabletoggle">Show full table</button>
   </div>
@@ -2324,23 +2331,40 @@ const NL = {
      They are NOT counted full; they carry last night's figure, 253, as a
      floor. Two Vue Amsterdam rows are listed again (0 each); Vue Enschede
      still will not open. Block test not re-run: 51 on 3 rooms carried. */
-  tickets:2175, clean:2124, block:51, blockRooms:3,
-  eur:30450, usd:34217, atpEur:14.00, fx:1.1237, atpIsOurs:true,
-  shows:106, cinemas:19, cities:11, seats:27536, rate:7.90,
-  pathe:2080, patheShows:89, patheCinemas:15,
-  vue:95, vueShows:20, vueCinemas:5,
-  blankRows:3, patheNoShows:9, vueFailed:3, vueDelisted:0,
+  /* 24 OCT, GROK RE-READ. 2,175 -> 2,639. The list is wider now (124
+     showtimes at 31 cinemas, every chain allowed); 100 seat maps read.
+     MATCHED  88 showtimes read on 22 and 24 Oct: 1,869 -> 2,113, +244, and
+              again NOT ONE FELL - all buying.
+     NEW      Vue Kerkrade, Enschede, Hoogezand, Vlaardingen and more read
+              for the first time: +273.
+     PULLED   11 showtimes with a 22 Oct figure are gone - Vue Hilversum and
+              Eindhoven now 404, Tilburg "niet meer beschikbaar": -53.
+     CARRIED  the same seven Dolby rooms still say "volgeboekt" with no
+              map; they keep 253 as a floor, as before.
+     2,175 + 244 + 273 - 53 = 2,639 = 2,386 read + 253 carried.
+     BLOCK. Vue Kerkrade Zaal 2 reads 78, 85, 77 on its three showings in a
+     271-seat room, all new today - the flat shape of a held block, not of
+     buying. Its 231-seat floor is added to the 51 carried: 282 on 4 rooms.
+     Every Pathe room decays properly and is left alone.
+     Kinepolis, Euroscoop, Cinemec and three independents list it but ask
+     for a ticket quantity first or show nothing yet: not counted. */
+  tickets:2639, clean:2357, block:282, blockRooms:4,
+  eur:36946, usd:41516, atpEur:14.00, fx:1.1237, atpIsOurs:true,
+  shows:124, showsRead:100, cinemas:31, cinemasRead:21, cities:14, seats:24114, rate:9.89,
+  pathe:2317, patheShows:88, patheCinemas:15,
+  vue:322, vueShows:19, vueCinemas:6,
+  pulledShows:11, pulledTickets:53, newRead:273,
   soldOutCarried:7, soldOutCarriedTickets:253,
-  wasTickets:1959, wasTickets2:1546, matchedAdded:216,
-  byDate:[['Thu 5 Nov',583,23],['Fri 6 Nov',675,19],['Sat 7 Nov',491,19],
-          ['Sun 8 Nov',229,24],['Mon 9 Nov',64,7],['Tue 10 Nov',79,13],
-          ['Wed 11 Nov',54,5]],
-  cities_:[['Den Haag · Ypenburg',403,27.7],['Amsterdam · Arena',364,10.1],
-           ['Rotterdam · de Kuip',286,25.4],['Den Haag · Spuimarkt',192,5.5],
-           ['Eindhoven · Pathe',171,7.3],['Utrecht Leidsche Rijn',132,7.1],
-           ['Arnhem',66,5.4],['Amsterdam-Noord',57,11.0]],
+  wasTickets:2175, wasTickets2:1959, wasTickets3:1546, matchedAdded:244,
+  byDate:[['Thu 5 Nov',682,21],['Fri 6 Nov',780,17],['Sat 7 Nov',618,20],
+          ['Sun 8 Nov',328,25],['Mon 9 Nov',78,6],['Tue 10 Nov',94,13],
+          ['Wed 11 Nov',59,5]],
+  cities_:[['Den Haag · Ypenburg',504,34.7],['Amsterdam · Arena',461,12.8],
+           ['Rotterdam · de Kuip',300,23.4],['Den Haag · Spuimarkt',283,8.0],
+           ['Eindhoven · Pathe',212,9.1],['Utrecht Leidsche Rijn',157,8.4],
+           ['Amsterdam-Noord',76,14.6],['Arnhem',72,5.8]],
   top:{cinema:'Pathe Ypenburg, Den Haag', when:'Thu 5 Nov, 7:00p',
-       sold:186, of:213, pct:87.3}
+       sold:195, of:213, pct:91.5}
 };
 
 /* SWEDEN IS A ZERO WITH A LABEL, AND THE LABEL IS THE POINT.
@@ -2362,8 +2386,15 @@ const NL = {
    show as taken, so Saint-Julien's 2 could be Grok's - France is 5 to 7. */
 const FR = { tickets:7, eur:124, usd:139, shows:12, showsRead:9, cinemas:12,
              seats:1805, opens:'Fri 6 Nov', premiere:'Le Grand Rex, 4 Nov', low:5 };
-const SE = { tickets:0, shows:4, cinemas:2, cities:2, seats:624,
-             chainBlocked:'Filmstaden' };
+/* 24 OCT: SWEDEN IS STILL A ZERO, NOW ACROSS A WIDER LIST. 31 showtimes at
+   25 cinemas, 17 of them Filmstaden - and filmstaden.se answered a hard 403
+   "you have been blocked" on all 21 of its showtimes, so it is NOT read.
+   Seven bio.se showtimes at five independents were read: every header says
+   all seats free ("230 lediga platser av 230", "82 av 82"). Grok wrote 18
+   'sold' by taking capacity minus free, but those seats are drawn as not
+   bookable (seatEjBokning), not taken. The header is the measurement: 0. */
+const SE = { tickets:0, shows:31, showsRead:7, cinemas:25, cities:24, seats:1043,
+             chainBlocked:'Filmstaden', blockedShows:21, blockedCinemas:17 };
 
 
 const MKT={
@@ -2982,7 +3013,33 @@ function tiles(){
         `Canada ${fmt(CA.canTix)} — Cineplex ${fmt(CA.tickets)} plus `+
         `Landmark ${fmt(CA.lm.tickets)}. `+
         `Landmark is nine rooms at eight cinemas of a far larger chain, all `+
-        `read by hand, so this can only go up.</div>`+
+        `read by hand, so this can only go up.<br>`+
+        /* 24 OCT, PB: COUNT THE BLOCKS AND PRICE THEM. Built from the same
+           constants each market panel uses, never typed. These are the seats
+           our own tests flag as held back rather than bought that are STILL
+           INSIDE the headline (each market publishes its range on that
+           basis). Seats already kept out of the headline - Cineworld's own
+           'held' label, HOYTS held, the Showcase/Vue room minimums - are
+           named after it but not added. Values are notional: nobody paid. */
+        (()=>{
+          const B=[['India (District)',IN.block,IN.usd-IN.cleanUsd],
+                   ['UK (Cineworld)',UK.blockSeats,UK.blockSeats*UK.atpGbp*UK.fx],
+                   ['Canada (Landmark)',CA.lm.blockFloor,CA.lm.blockFloor*CA.lm.usd/CA.lm.tickets],
+                   ['Netherlands',NL.block,NL.block*NL.atpEur*NL.fx],
+                   ['Germany',DE.blockFloor,DE.blockFloor*DE.usd/DE.tickets]];
+          const bs=B.reduce((s,r)=>s+r[1],0), bu=Math.round(B.reduce((s,r)=>s+r[2],0));
+          return `<b>Blocks inside this total: ${fmt(bs)} seats, about $${fmt(bu)}</b> `+
+            `(${(100*bs/WT.tix).toFixed(1)}% of tickets, ${(100*bu/WT.usd).toFixed(1)}% of value) — `+
+            B.map((r,i)=>`${r[0]} ${fmt(r[1])} (${i===0?'₹'+((IN.inr-IN.cleanInr)/1e5).toFixed(1)+' lakh, ':''}$${fmt(Math.round(r[2]))})`).join(' · ')+
+            `. These are seats our room tests flag as held back rather than bought; `+
+            `every market shows its range with them in and out, and their value is `+
+            `notional because nobody has paid it. Kept out of the total altogether: `+
+            `${fmt(UK.held)} seats Cineworld labels held, ${fmt(AU.hy.held)} HOYTS `+
+            `holds, and ${fmt((UK.scRaw-UK.scGone)+(UK.vueRaw-UK.vueGone)+(UK.othRaw-UK.othGone))} `+
+            `room-minimum seats at Showcase, Vue and the smaller UK chains. India's `+
+            `BookMyShow side is Sacnilk's figure including its blocks; we cannot `+
+            `separate those city by city.`;
+        })()+`</div>`+
       `</div>`;
     uscap.textContent="United States, 4–12 November — the counted detail "+
                       "behind the map below";
@@ -3633,7 +3690,7 @@ function stamp(){
     `standard $15) applied to a counted ticket, blended here at $${atpNow().toFixed(2)}.`+
     `<br>Sources outside North America: the UK is Cineworld, Showcase, Vue and six smaller chains, read by hand; Australia is HOYTS and `+
     `Event; New Zealand is Event; Germany is thirteen chain systems read by hand; `+
-    `the Netherlands is Pathé and Vue, read by hand; Sweden is two independents on `+
+    `the Netherlands is Pathé and Vue, read by hand; Sweden is five independents on `+
     `bio.se; <b>India is District</b>, with BookMyShow read for footprint only. `+
     `Some large chains we cannot read at all — Odeon in the UK, UCI in `+
     `Germany, Filmstaden in Sweden — so every one of those markets can only `+

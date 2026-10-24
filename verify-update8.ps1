@@ -411,7 +411,11 @@ Need $page 'India is District'   'the footer names the platform, once'
 # NL is the cleanest foreign read we have: the block test fires on 5 rooms
 # for 36 seats, about 2%. Sweden is a MEASURED ZERO and is published as one.
 Need $page 'const NL = {'        'the Netherlands is a counted market'
-Need $page 'tickets:2175'        'the Netherlands seats-gone figure, 22 Oct matched re-read'
+Need $page 'tickets:2639'        'the Netherlands seats-gone figure, 24 Oct re-read'
+Absent $page 'tickets:2175,'     'no 22 Oct Netherlands total'
+Absent $page '<b>2,175 seats gone</b>' 'no 22 Oct Netherlands copy'
+Need $page 'Blocks inside this total' 'the worldwide footnote counts and prices the blocks'
+Need $page 'blockedShows:21'     'Filmstaden named as blocked, Sweden not called empty'
 Absent $page 'tickets:1959,'     'no 21 Oct Netherlands total'
 Absent $page '<b>1,959 seats gone</b>' 'no 21 Oct Netherlands copy'
 Absent $page 'tickets:1546,'     'no 20 Oct Netherlands total'
