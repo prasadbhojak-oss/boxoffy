@@ -729,13 +729,13 @@ gtag("js",new Date());gtag("config","G-K6C9EVRFH4",{anonymize_ip:true});}})();
         <b>Australia is the most completely counted market on this page</b>,
         and New Zealand now sits beside it. Both Australian chains are read end
         to end. Event Cinemas publishes seats still free, so the Canadian
-        method transfers: <b>1,978 tickets</b> over all 425 shows at 38
-        cinemas, <b>1.98%</b> of 99,660 seats. HOYTS is read a better way —
+        method transfers: <b>2,061 tickets</b> over all 425 shows at 38
+        cinemas, <b>2.07%</b> of 99,604 seats. HOYTS is read a better way —
         its booking system publishes the whole seat plan per session and marks
         sold seats separately from seats the cinema is holding back, so we
-        count only the sold ones: <b>6,653 tickets</b> across all 434 shows at
-        47 cinemas, <b>9.24%</b> of 72,027 seats, with 2,510 held seats left
-        out. Australia totals <b>8,631</b>. New Zealand adds <b>390</b> across
+        count only the sold ones: <b>6,911 tickets</b> across all 434 shows at
+        47 cinemas, <b>9.63%</b> of 71,775 seats, with 2,501 held seats left
+        out. Australia totals <b>8,972</b>. New Zealand adds <b>429</b> across
         14 Event cinemas, and that one is Event only — HOYTS New Zealand and
         the independents are not counted.
         <b>An earlier Australian figure of 1,486 was wrong and the correction
@@ -1851,13 +1851,18 @@ const AU = {
      ticket. Event: the same 421 sessions 1,781 -> 1,978 (+197); 4 new
      sessions, 0 sold. Validation gate passed again (0 failures, 0 missing).
      NZ Event: same 110 sessions, 369 -> 390 (+21), NZ$10,289 printed. */
-  tickets:8631, aud:221948, usd:146486, atpAud:25.72, fx:0.66,
-  ev:{tickets:1978, shows:425, counted:425, cinemas:38, seats:99660, rate:1.98},
-  hy:{tickets:6653, shows:434, counted:434, cinemas:47, cinemasRead:47,
-      seats:72027, rate:9.24, held:2510, carried:0, carriedShows:0,
+  /* 24 OCT 00:28-00:47 CT RE-READ. 8,631 -> 8,972, ALL BUYING: every
+     session matched on both reads, none added or dropped. HOYTS 6,653 ->
+     6,911 (+258) on the same 434; Event 1,978 -> 2,061 (+83) on the same
+     425. HOYTS' seat plan reads 71,775 (was 72,027) - one session missing
+     from the validation, not a sale. NZ Event 390 -> 429 (+39), same 110. */
+  tickets:8972, aud:230552, usd:152164, atpAud:25.70, fx:0.66,
+  ev:{tickets:2061, shows:425, counted:425, cinemas:38, seats:99604, rate:2.07},
+  hy:{tickets:6911, shows:434, counted:434, cinemas:47, cinemasRead:47,
+      seats:71775, rate:9.63, held:2501, carried:0, carriedShows:0,
       wasCarried:496, chadstoneRead:797, chadstoneHand:797,
       capacityWas:182, capacityNow:174},
-  byDate:[['Thu 5 Nov',3125],['Fri 6 Nov',2600],['Sat 7 Nov',2244],['Sun 8 Nov',662]],
+  byDate:[['Thu 5 Nov',3172],['Fri 6 Nov',2710],['Sat 7 Nov',2389],['Sun 8 Nov',701]],
   /* NEW ZEALAND, FOLDED INTO THIS MARKET 20 OCT. PB's call: one line, not
      two, so the tile and the worldwide roll-up read "Australia & NZ".
      AU.tickets, AU.aud and everything in auBody above stay AUSTRALIA ALONE -
@@ -1882,18 +1887,18 @@ const AU = {
      so NZ$5,378 over 200 tickets is an observed ATP of NZ$26.89, not an
      assumption. FX 0.5609, OFX, 18 Oct - pinned like every other rate here
      and not to be refreshed quietly mid-week. */
-  nz:{tickets:390, nzd:10289, usd:5771, atpNzd:26.38, fx:0.5609,
-      cinemas:14, shows:110, seats:23413, rate:1.67,
-      inBasis:308, inBasisNzd:8088, secondWeek:82, secondWeekNote:'10 Nov',
+  nz:{tickets:429, nzd:11340, usd:6361, atpNzd:26.43, fx:0.5609,
+      cinemas:14, shows:110, seats:23413, rate:1.83,
+      inBasis:337, inBasisNzd:8879, secondWeek:92, secondWeekNote:'10 Nov',
       cinemasAll:14, showsAll:110, hoytsCinemas:7, hoytsShows:98,
-      byDate:[['Thu 5 Nov',168],['Fri 6 Nov',105],['Sat 7 Nov',29],
-              ['Sun 8 Nov',6],['Tue 10 Nov',82]],
-      cities:[['Auckland Queen Street',162],['Wellington Queensgate',110],
-              ['Auckland Manukau',43],['Auckland St Lukes',22],
-              ['Auckland Westgate',21],['Hamilton Chartwell',17],
-              ['Palmerston North',6],['Auckland Westcity',5],
+      byDate:[['Thu 5 Nov',169],['Fri 6 Nov',114],['Sat 7 Nov',44],
+              ['Sun 8 Nov',10],['Tue 10 Nov',92]],
+      cities:[['Auckland Queen Street',174],['Wellington Queensgate',129],
+              ['Auckland Manukau',48],['Auckland St Lukes',22],
+              ['Auckland Westgate',21],['Hamilton Chartwell',18],
+              ['Auckland Westcity',7],['Palmerston North',6],
               ['Kapiti Coastlands',2],['New Plymouth',2]]},
-  langs:[['Hindi',8140],['Telugu',331],['Tamil',103],['Kannada',53],['Malayalam',4]],
+  langs:[['Hindi',8466],['Telugu',343],['Tamil',106],['Kannada',53],['Malayalam',4]],
   /* The two figures every roll-up on this page uses. Australia alone stays
      available as AU.tickets / AU.usd for the panel that is about Australia. */
   get anzTix(){ return this.tickets + this.nz.tickets; },
