@@ -1231,7 +1231,29 @@ const DE = {
      loading, 7 no longer listed. 4 UCI rows untouched by policy.
      eur moves by each row's change at its own printed price, else EUR 17.13.
      seats and held stay on the 21-22 Oct basis. Still UNVALIDATED. */
-  tickets:2436, eur:41733, usd:46895, atpEur:17.13, fx:1.1237,
+  /* 24 OCT, GROK FULL RE-READ PLUS NEW SHOWTIMES. 2,436 -> 3,954, rebuilt
+     from this read rather than stacked on the old one (the 22 Oct total
+     carried 113 Cineplex 'state 8' seats we had put back by hand; this read
+     counts them itself, so stacking would double them).
+     LISTED 323 showtimes at 113 cinemas (was 298 at 103); 313 maps read,
+     72,429 seats. 10 maps would not open and carry their 22 Oct figure (18
+     tickets); 8 are no longer listed (1 ticket, dropped).
+     MATCHED  257 showtimes read on 22 and 24 Oct: 2,213 -> 3,124. 138 rose
+              by 935, 21 fell by 24 - kept. Part of the rise is Cineplex
+              Neckarsulm and Mannheim counting held-then-sold seats again
+              (+171 between them); the rest is buying.
+     NEW      53 showtimes at 22 cinemas, 51 read: +812. Traumpalast
+              Leonberg, Schwaebisch Gmuend and Esslingen, CinemaxX Stuttgart
+              SI, Cinedom Koeln, Gloria Stuttgart and more. COVERAGE.
+     FLAG     Traumpalast Leonberg IMAX, Sat 7 Nov 11:00am: 418 of 582 seats
+              gone, on a cinema we had never read. A Saturday-morning IMAX
+              that full that early is a group booking - Amritsar again. It is
+              counted, because every seat shown as taken counts, and the
+              range below takes it out: Germany is 3,536 to 3,954.
+     UCI: no Ramayana showtimes found on the four rows; not counted.
+     euro at the pinned EUR 17.13 (no price column this read). */
+  tickets:3954, eur:67732, usd:76111, atpEur:17.13, fx:1.1237, lowNoGroup:3536,
+  leonberg:{sold:418, of:582, when:'Sat 7 Nov, 11:00am'},
   inBasis:2393, outBasis2:43, deltaRead:12, deltaScannable:18, showsGone:0,
   notYetOnSale:4, sharedUrlDupes:1,
   /* 21 OCT. THE TOTAL IS NOW TWO READS AND THE PAGE SAYS WHICH IS WHICH.
@@ -1274,18 +1296,18 @@ const DE = {
      Four showtimes were opened for the first time and carried 8 more.
      +309 of the +317 is people buying tickets. Nothing else in this
      market has ever been measurable that cleanly. */
-  matchedShows:261, matchedWas:2269, matchedNow:2345, buying:76,
-  newShows:0, newTickets:0,
-  seats:67905, rate:3.59, held:682, outSeats:3756,
-  shows:282, cinemas:100, showsScan:298, footShows:298, footCinemas:103,
-  cities:74, priced:51, zeroShows:100, outBasis:30, soldOut:0,
-  compeso:1280, compesoShows:117, compesoRate:3.95,
-  oneState:1156, oneStateShows:165, oneStateRate:3.26,
+  matchedShows:257, matchedWas:2213, matchedNow:3124, buying:911,
+  newShows:53, newTickets:812,
+  seats:72429, rate:5.46, held:335, outSeats:3756,
+  shows:313, cinemas:112, showsScan:323, footShows:323, footCinemas:113,
+  cities:90, priced:51, zeroShows:100, outBasis:30, soldOut:0,
+  compeso:1835, compesoShows:117, compesoRate:3.95,
+  oneState:2119, oneStateShows:196, oneStateRate:3.26,
   blockFloor:12, testedRooms:20, untestedRooms:62,
-  byDate:[['Thu 5 Nov',1295,114,30881,4.19],['Fri 6 Nov',160,34,6684,2.39],
-          ['Sat 7 Nov',346,37,8187,4.23],['Sun 8 Nov',592,78,18405,3.22],
-          ['Mon 9 Nov',23,9,2102,1.09],['Tue 10 Nov',20,9,1538,1.30],
-          ['Wed 11 Nov',0,1,108,0.00]],
+  byDate:[['Thu 5 Nov',1835,121,32326,5.68],['Fri 6 Nov',286,37,7168,3.99],
+          ['Sat 7 Nov',948,42,9291,10.20],['Sun 8 Nov',808,83,18563,4.35],
+          ['Mon 9 Nov',33,13,2631,1.25],['Tue 10 Nov',26,16,2370,1.10],
+          ['Wed 11 Nov',0,1,80,0.00]],
   /* THE VERSION SPLIT IS CORRECTED, NOT UPDATED, AND IT WAS WRONG BY A
      LOT. The old 1,073 original / 633 dubbed came off OUR isOV flag in
      the worklist. On 21 Oct the booking pages themselves were read and
@@ -1316,7 +1338,7 @@ const DE = {
   tamilCinemas:17, tamilCities:16,
   langUnnamed:484, langUnnamedShows:43,
   top:{cinema:'CinemaxX München', when:'Thu 5 Nov, 7:00p',
-       sold:87, of:121, pct:71.9}
+       sold:91, of:121, pct:75.2}
 };
 
 /* CANADA, COUNTED 18 OCT. Was a recovered floor until today; now every one
@@ -3911,12 +3933,21 @@ function pendingPanel(kicker,lead,rows,note){
 function deBody(){
   return `<div style="font-family:var(--disp);font-weight:700;font-size:12px;`+
     `letter-spacing:.14em;text-transform:uppercase;color:var(--accent)">`+
-    `Germany · first report</div>`+
+    `Germany · full re-read, 24 October</div>`+
     `<p class="note" style="margin-top:8px">`+
     `<b>${fmt(DE.tickets)} tickets</b> · <b>€${fmt(DE.eur)}</b> `+
     `(~$${fmt(DE.usd)}) · <b>${DE.rate}%</b> of ${fmt(DE.seats)} seats, `+
     `across ${DE.shows} showtimes at ${DE.cinemas} cinemas in ${DE.cities} `+
-    `towns and cities. Every seat map opened by hand.</p>`+
+    `towns and cities. Every seat map opened by hand. <b>Up from `+
+    `2,436 two days ago.</b> The ${DE.matchedShows} showtimes read on both `+
+    `22 and 24 October went ${fmt(DE.matchedWas)} → ${fmt(DE.matchedNow)}, `+
+    `and ${DE.newShows} showtimes listed since add ${fmt(DE.newTickets)}. `+
+    `One of them needs saying out loud: <b>Traumpalast Leonberg's IMAX, `+
+    `${DE.leonberg.when}, is ${DE.leonberg.sold} of ${DE.leonberg.of} seats `+
+    `gone</b> — a Saturday-morning room that full this early is almost `+
+    `certainly a group booking. It is counted, because every seat shown as `+
+    `taken counts, and the range without it is ${fmt(DE.lowNoGroup)} to `+
+    `${fmt(DE.tickets)}.</p>`+
     `<p class="note"><b>The German dub is being ignored, and by more than `+
     `we thought.</b> Sony dubbed Ramayana into German and almost nobody is `+
     `buying that ticket. On the ${DE.verShowsRead} showtimes we opened on `+
@@ -3942,10 +3973,11 @@ function deBody(){
     `published before today was reported as if this were a Hindi-and-dub `+
     `market. It is three tracks.</p>`+
     `<div style="display:grid;gap:7px;margin:13px 0 0">`+
-    [['München','445 tickets off three cinemas — still carrying the market'],
-     ['Berlin','103 across seven cinemas. Still the emptiest big city'],
-     ['Main-Taunus','201 at one multiplex outside Frankfurt'],
-     ['Hamburg','187 across two cinemas, 8.4% of their seats'],
+    [['München','611 tickets off three cinemas — still the biggest city'],
+     ['Leonberg','456 at one cinema near Stuttgart, 418 of them one IMAX show'],
+     ['Main-Taunus','319 at one multiplex outside Frankfurt'],
+     ['Hamburg','270 across two cinemas'],
+     ['Berlin','226 across nine cinemas — still small for the capital'],
      ['Fullest room',DE.top.cinema+', '+DE.top.when+' — '+DE.top.sold+' of '+
                      DE.top.of+' seats, '+DE.top.pct+'%']]
       .map(([a,b])=>
@@ -3963,20 +3995,15 @@ function deBody(){
     `October, €${DE.atpEur} now — `+
     `and the fall between the first two was cheaper screens joining, not a `+
     `price cut.</p>`+
-    `<p class="note"><b>This total is two reads, not one.</b> `+
-    `${DE.read21} of the ${DE.showsScan} `+
-    `showtimes were opened again on 22 October. Another `+
-    `${DE.carried} keep their earlier figure for now, `+
-    `<b>${DE.carriedTickets} tickets</b> — ${DE.cineplexGone} of them `+
-    `not reached or not loading, the rest no longer listed. A `+
-    `presale does not run backwards, so a figure we measured and have not `+
-    `yet refreshed is a floor, not a guess — but it is a floor, and it is `+
-    `named here rather than blended in. The ${DE.matchedShows} showtimes `+
-    `read on <b>both</b> nights are the clean reading: `+
+    `<p class="note"><b>This total is one fresh read.</b> `+
+    `${DE.shows} of the ${DE.showsScan} listed showtimes were opened on `+
+    `24 October; ten maps would not open and keep their last figure (18 `+
+    `tickets), eight showtimes are no longer listed. The ${DE.matchedShows} `+
+    `showtimes read on <b>both</b> 22 and 24 October are the clean reading: `+
     `${fmt(DE.matchedWas)} to ${fmt(DE.matchedNow)}, <b>+${DE.buying} `+
     `net</b>, with some rooms rising and some handing seats back. The footprint is `+
     `wider than the count — <b>${DE.footShows} shows at ${DE.footCinemas} `+
-    `cinemas</b> are on sale, four of them at a chain we do not read. `+
+    `cinemas</b> are on sale; UCI, now allowed, lists none. `+
     `${fmt(DE.held)} seats the cinemas hold `+
     `back are flagged and left out. <b>Two kinds of number sit inside the `+
     `${fmt(DE.tickets)}</b>: ${fmt(DE.compeso)} are SOLD, published as sold `+
