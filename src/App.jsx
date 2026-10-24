@@ -4614,12 +4614,12 @@ const RAMAYANA_TRACKER = {
   // Retired: seventy thousand six hundred seventy-nine, one million three
   // hundred fourteen thousand eight hundred fifty-one dollars, four point
   // three nine per cent, eleven thousand two hundred thirty-five shows.
-  tickets: "75,940",
-  rate: "4.63%",
-  shows: "11,438",
-  value: "$1,410,177",
+  tickets: "76,901",
+  rate: "4.68%",
+  shows: "11,448",
+  value: "$1,428,154",
   tminus: "T-14",
-  scan: "24 Oct · 1:43am CT",
+  scan: "24 Oct · 10:06am CT",
 };
 
 function RamayanaTrackerStrip() {
