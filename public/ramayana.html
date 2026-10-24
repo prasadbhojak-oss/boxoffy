@@ -681,17 +681,17 @@ gtag("js",new Date());gtag("config","G-K6C9EVRFH4",{anonymize_ip:true});}})();
         Cineplex publishes how many seats are free but never how big the room
         is, so the room size is worked out backwards — the largest availability
         a room ever shows is a floor on its capacity — and what we publish is a
-        deliberate minimum: <b>3,040 tickets</b> across 26 cinemas and 32
-        auditoriums, <b>3.18%</b> of 95,681 seats, over the seven dates
+        deliberate minimum: <b>5,555 tickets</b> across 27 cinemas and 33
+        auditoriums, <b>5.61%</b> of 99,051 seats, over the seven dates
         Cineplex has on sale. One of those auditoriums
         appears in a single showtime and reads zero by construction. Cineplex
         does not mark seats the cinema holds back, so a few house seats sit
         inside that figure.
-        <b>Landmark is counted, and most of what we can see there is a
-        block.</b> Landmark's robots.txt answers 403, so no scanner of ours has
+        <b>Landmark is counted, and about a third of it may be held
+        seats.</b> Landmark's robots.txt answers 403, so no scanner of ours has
         ever fetched it; every Landmark showtime is opened by hand in a browser
         instead. Its map draws every seat but has one off-state, so
-        <b>1,323 seats gone</b> is what we can say, not 1,323 sales. It is two
+        <b>1,952 seats gone</b> is what we can say, not 1,952 sales. It is two
         kinds of room now and they are not equally well understood.
         <b>Six IMAX rooms, twelve showtimes</b>, read three times over — the
         same twelve each time: 650, then 676, then <b>769</b>. All six cinemas
@@ -1551,31 +1551,42 @@ const CA = {showtimes:337, cinemas:27, auditoriums:33, dates:5,
      about the wheelchair/companion seats each room holds. IMAX still has
      two sittings per room, so its 590 floor stands untested. Block total
      590 + 122 = 712; clean floor 1,776 - 712 = 1,064. */
-  lm:{tickets:1776, cinemas:9, shows:73, seats:11719, rate:15.15,
-      cad:31968, usd:23017, atpCad:18, format:'IMAX 3D and ScreenX',
-      buying:311, newInventory:142, newShows:25, matchedShows:48,
-      was:1323, gapHours:56.4, was2:676,
-      imax:{tickets:963, cinemas:6, shows:12, seats:3292, rate:29.25,
-            was:769, added:194, matched:true, dates:2,
-            was2:676, was3:650, addedAll:313,
-            blockFloor:590, lo:373, hi:963, wheelchair:72, blockRooms:6,
-            cities:[['Whitby',277],['Waterloo',275],['Kanata',190],
-                    ['Calgary Country Hills',160],['Kingston',43],
+  /* 24 OCT 12:52Z, GROK RE-READ. 1,776 -> 1,952.
+     MATCHED  all 73 showtimes of 23 Oct, 24 hours apart: 1,776 -> 1,911.
+              24 rose by 138, one fell by 3 (Calgary ScreenX Fri, kept) -
+              +135 buying. Every map counted twice and matched.
+     NEW      three 4:40pm IMAX sittings on 4 Nov at Kanata, Waterloo and
+              Whitby, listed since yesterday: 41 seats gone. COVERAGE.
+     BLOCK    unchanged at 712. Those three rooms now have three sittings,
+              but the third is one day old, so its low count says nothing
+              about a hold - the 590 IMAX floor stays untested and carried.
+              ScreenX's room test still gives 122. Clean floor 1,952 - 712
+              = 1,240. */
+  lm:{tickets:1952, cinemas:9, shows:76, seats:12644, rate:15.44,
+      cad:35136, usd:25298, atpCad:18, format:'IMAX 3D and ScreenX',
+      buying:135, newInventory:41, newShows:3, matchedShows:73,
+      was:1776, gapHours:24.0, was2:1323, was3:676,
+      imax:{tickets:1057, cinemas:6, shows:15, seats:4217, rate:25.07,
+            was:963, added:94, matched:true, dates:2,
+            was2:769, was3:676, was4:650, addedAll:407,
+            blockFloor:590, lo:467, hi:1057, wheelchair:72, blockRooms:6,
+            cities:[['Waterloo',307],['Whitby',297],['Kanata',215],
+                    ['Calgary Country Hills',170],['Kingston',50],
                     ['Nanaimo',18]]},
       /* ScreenX. Columns are tickets, showtimes, seats. */
-      sx:{tickets:813, cinemas:4, newCinemas:1, shows:61, seats:8427,
+      sx:{tickets:895, was:813, cinemas:4, newCinemas:1, shows:61, seats:8427,
           rate:9.65, blockTested:true, blockFloor:122,
-          matchedWas:554, matchedNow:671, added:117, newShows:25, newTickets:142,
-          cities:[['Surrey Guildford',397,25,3375],
-                  ['Calgary Country Hills',247,14,2394],
-                  ['St. Catharines Pen Centre',92,14,1610],
-                  ['Orleans',77,8,1048]]},
-      blockFloor:712, lo:1064, hi:1776, wheelchair:72, blockRooms:10,
+          matchedWas:813, matchedNow:895, added:82, newShows:0, newTickets:0,
+          cities:[['Surrey Guildford',463,25,3375],
+                  ['Calgary Country Hills',255,14,2394],
+                  ['St. Catharines Pen Centre',94,14,1610],
+                  ['Orleans',83,8,1048]]},
+      blockFloor:712, lo:1240, hi:1952, wheelchair:72, blockRooms:10,
       /* Both formats, all 73 showtimes, seats gone by show date. */
-      byDate:[['Wed 4 Nov',690],['Thu 5 Nov',501],['Fri 6 Nov',173],
-              ['Sat 7 Nov',225],['Sun 8 Nov',44],['Mon 9 Nov',34],
-              ['Tue 10 Nov',93],['Wed 11 Nov',10],['Thu 12 Nov',6]],
-      byDateWas:[['Wed 4 Nov',364],['Thu 5 Nov',312]]},
+      byDate:[['Wed 4 Nov',772],['Thu 5 Nov',533],['Fri 6 Nov',179],
+              ['Sat 7 Nov',245],['Sun 8 Nov',62],['Mon 9 Nov',46],
+              ['Tue 10 Nov',96],['Wed 11 Nov',13],['Thu 12 Nov',6]],
+      byDateWas:[['Wed 4 Nov',690],['Thu 5 Nov',501]]},
   /* Canada's two chains, for every roll-up on the page. CA.tickets stays
      Cineplex alone so the Cineplex paragraph keeps being about Cineplex. */
   get canTix(){ return this.tickets + this.lm.tickets; },
