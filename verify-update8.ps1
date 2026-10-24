@@ -155,15 +155,16 @@ Absent $page 'on sale, not counted' 'no footprint-era Germany kicker'
 # 95,681 -> 95,658, twenty-three DOWN across the same seven dates, so the
 # +679 is buying rather than arithmetic. seats and tickets must move together
 # or the mechanic is back: that is what these two guards are for.
-Need $page 'tickets:5075'        'Cineplex 5,075 on its own all-presale dates, 23 Oct 09:49'
+Need $page 'tickets:5412'        'Cineplex 5,412 on its own all-presale dates, 23 Oct 19:53'
+Absent $page 'tickets:5075,'     'no 23 Oct 09:49 Cineplex total'
 Absent $page 'tickets:4986,'     'no 23 Oct 01:03 Cineplex total'
 Absent $page 'tickets:4851,'     'no 22 Oct 21:51 Cineplex total'
 Absent $page 'tickets:4711,'     'no 22 Oct 20:18 Cineplex total'
 Absent $page 'tickets:4447,'     'no 22 Oct 08:22 Cineplex total'
 Absent $page 'tickets:4344,'     'no 21 Oct 23:29 Cineplex total'
 Absent $page 'tickets:3719,'     'no 21 Oct 04:33Z Cineplex total'
-Need $page 'buying:89'          'and the buying figure'
-Need $page 'usd:65772'           'Canadian dollars at the flat C$18 assumption'
+Need $page 'buying:335'          'and the buying figure'
+Need $page 'usd:70140'           'Canadian dollars at the flat C$18 assumption'
 # WHY THE MARKER IS THE PAIR AND NOT 'tickets:3040,'. The retired figures
 # are kept on the page as wasTickets and wasSeats. Contains() is case
 # SENSITIVE, so 'tickets:3040,' does not match 'wasTickets:3040,' - the
@@ -238,15 +239,15 @@ Absent $page 'Landmark Cinemas is not counted'     'the roll-up must not say Lan
 Absent $page 'Landmark is in for the first time'   'no first-read framing on the third read'
 Need $page 'canTix'              'the Canadian roll-up uses both chains'
 Absent $page 'const naTix=usSold+xTix()+CA.tickets;' 'no Cineplex-only North America'
-Need $page 'seats:96156'         'the offered-seat floor this scan actually read'
+Need $page 'seats:99387'         'the offered-seat floor this scan actually read'
 Need $page 'wasSeats2:95602,'      'the retired floor stays on the record'
 # Back to one unrecoverable room on the widened dates - the extra sittings
 # gave the second room something to recover its capacity from.
 Need $page 'soloRooms:1,'        'the unrecoverable room is disclosed'
 Absent $page 'soloRooms:2,'      'no five-date solo-room count'
-Need $page 'wasTickets8:2449'    'the 2,449 stays on the record behind the 3,040'
-Need $page 'wasTickets6:3719'     'and the 3,719 the 4,344 replaced'
-Need $page 'wasTickets7:3040'    'and the 3,040 before it'
+Need $page 'wasTickets9:2449'    'the 2,449 stays on the record behind the 3,040'
+Need $page 'wasTickets7:3719'     'and the 3,719 the 4,344 replaced'
+Need $page 'wasTickets8:3040'    'and the 3,040 before it'
 # UPDATE 14: US_EXTRA IS ZERO AND THAT IS THE POINT. 7-8 Nov are measured
 # inside the baked map now, so a non-zero US_EXTRA would DOUBLE-COUNT them.
 # The retired figure is kept as wasTickets so the record survives, and
@@ -536,14 +537,16 @@ Write-Host '=== 3. the homepage strip agrees with the page'
 # 18 October. ONE NUMBER, ONE GUARD, ONE PLACE: when the strip moves, the
 # Need lines here and the Absent lines in section 4 change together or not
 # at all.
-Need $app '70,679'     'NA all-presale total on the strip, 23 Oct 09:49 sweep'
+Need $app '73,226'     'NA all-presale total on the strip, 23 Oct 19:53 sweep'
+Absent $app '70,679'   'no 23 Oct 09:49 NA total'
 Absent $app '70,005'   'no 23 Oct 07:57 NA total'
 Absent $app '69,552'   'no 23 Oct 01:03 NA total'
 Absent $app '67,711'   'no 22 Oct 21:51 NA total'
 Absent $app '67,571'   'no 22 Oct 20:18 NA total'
 Absent $app '63,789'   'no 22 Oct 08:22 NA total'
 Absent $app '62,720'   'no 21 Oct 23:29 NA total'
-Need $app '$1,314,851' 'NA value on the strip'
+Need $app '$1,360,020' 'NA value on the strip'
+Absent $app '$1,314,851' 'no 23 Oct 09:49 NA value'
 Absent $app '$1,301,693' 'no 23 Oct 07:57 NA value'
 Absent $app '$1,295,822' 'no 23 Oct 01:03 NA value'
 Absent $app '$1,261,466' 'no 22 Oct 21:51 NA value'
@@ -561,13 +564,14 @@ Absent $app '$859,584' 'no pre-Landmark NA value on the strip'
 # Anchored to the FIELD, not the bare number: 10,539 and 3.19% also appear
 # in the update-16 comment above the strip, so a bare marker would pass off
 # the comment while the live value said anything at all.
-Need $app 'shows: "11,235"'  'US 4-12 Nov showtimes on the strip'
+Need $app 'shows: "11,308"'  'US 4-12 Nov showtimes on the strip'
+Absent $app 'shows: "11,235"' 'no 23 Oct 09:49 showtime count'
 Absent $app 'shows: "11,203"' 'no 23 Oct 01:03 showtime count'
 Absent $app 'shows: "11,176"' 'no 22 Oct 20:18 showtime count'
 Absent $app 'shows: "10,841"' 'no 22 Oct 08:22 showtime count'
 Absent $app 'shows: "10,793"' 'no 21 Oct showtime count'
 Absent $app 'shows: "10,661"' 'no 20 Oct showtime count'
-Need $app '9:49am'     'the strip carries the scan time'
+Need $app '7:53pm'     'the strip carries the scan time'
 # 23 OCT US CITY LAYER: every Fandango cinema placed in its own city (USV,
 # from us_theatre_geo.py), Alaska and Hawaii drawn as insets, and Honolulu
 # moved into the Hawaii inset.
@@ -583,7 +587,8 @@ Need $page "XY_FIX = {'Honolulu'"        'Honolulu sits in the Hawaii inset'
 # rate is a 4-8 figure for the first time. For five updates it was US 4-6
 # only, because the baked map stopped at 6 Nov and there was no 4-8
 # denominator to divide by. There is one now: 33,668 of 904,291.
-Need $app 'rate: "4.39%"'    'US 4-12 Nov sell-through on the strip'
+Need $app 'rate: "4.51%"'    'US 4-12 Nov sell-through on the strip'
+Absent $app 'rate: "4.39%"' 'no 23 Oct 09:49 sell-through'
 Absent $app 'rate: "4.38%"' 'no 23 Oct 01:03 sell-through'
 Absent $app 'rate: "4.27%"' 'no 22 Oct 20:18 sell-through'
 Absent $app 'rate: "4.11%"'  'no 22 Oct 08:22 sell-through'
@@ -752,7 +757,8 @@ Absent $app  '3.72%'         'no pre-update-15 sell-through on the strip'
 # UPDATE 17, 21 OCT 04:33Z. The map is rebuilt across all nine dates:
 # 49,434 tickets, 1,383,690 seats, 10,661 showtimes, 549 venues, 69 metros,
 # every one of them with an x/y so rebake_page.py did not refuse.
-Need   $page '"sold":63828'  'the baked map is the 23 Oct 09:49 CT sweep, sold-out shows counted'
+Need   $page '"sold":66038'  'the baked map is the 23 Oct 19:53 CT sweep, sold-out shows counted'
+Absent $page '"sold":63828'  'no 23 Oct 09:49 baked map'
 Absent $page '"sold":63243'  'no 23 Oct 01:03 baked map'
 Absent $page '"sold":61537'  'no 22 Oct 20:18 baked map'
 Absent $page '"sold":58019'  'no 22 Oct 08:22 baked map'
