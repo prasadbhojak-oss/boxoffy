@@ -61,14 +61,15 @@ Need $page 'function openSpan'   'opening-run split'
 # 20 Oct guard below exists because Bradford and Whiteley did this once. It
 # has now happened twice, to the same cinema, and these guards are the only
 # thing standing between that and a published +73.
-Need $page 'tickets:6465'        'UK 6,465 after the 21 Oct re-read'
-Need $page 'cwGone:5978'         'Cineworld 5,978, relabelling excluded'
-Need $page 'gbp:87278'           'UK pounds at the pinned 13.50 ATP'
-Need $page 'usd:115669'          'UK dollars moved with the pounds, at 1.3253'
-Need $page 'realHi:5978'         'the top of the UK range is cwGone by definition'
+Need $page 'tickets:10621'       'UK 10,621 after the 24 Oct all-chain read'
+Need $page 'cwGone:7481'         'Cineworld 7,481, relabelling excluded'
+Need $page 'gbp:143384'           'UK pounds at the pinned 13.50 ATP'
+Need $page 'usd:190027'          'UK dollars moved with the pounds, at 1.3253'
+Need $page 'realHi:10621'        'the top of the UK range is the headline'
 Need $page 'reRead2Delta:427'    'the 21 Oct clean delta'
 Need $page 'reRead2Relabelled:109' 'and the seats excluded to get it'
 Need $page 'bradfordClean:1'     'Bradford: one seat, not seventy-three'
+Absent $page 'tickets:6465,'     'no pre-24-Oct UK total'
 Absent $page 'tickets:6038,'     'no pre-21-Oct UK total'
 Absent $page 'cwGone:5551,'      'no pre-21-Oct Cineworld figure'
 Absent $page 'gbp:81513'         'no pre-21-Oct UK pounds'
@@ -85,7 +86,7 @@ Need $page "langs:[['Hindi'"   'the UK language split is on the page'
 Need $page "['Telugu',49,17"   'and Telugu is named with its own footprint'
 # Leicester Square went unread this round - 9 showtimes, all IMAX or
 # Superscreen. Its figure is carried, so it must be named as carried.
-Need $page 'lsUnread:9'          'the unread West End rooms are named'
+Need $page 'odeonShows:453'      'the unread Odeon showtimes are named'
 # The 20 Oct round is KEPT, not overwritten. Two clean deltas on two dates
 # is the series; collapsing them into one would lose it.
 Need $page 'chainShows:6098'     'what the chain shows is published beside what we count'
@@ -102,17 +103,20 @@ Absent $page 'reReadDelta:1118'  'the raw delta must never be published as clean
 Absent $page 'reReadDelta:532'   'the file total alone loses the re-baselined 25'
 Absent $page 'reReadDelta:746'   'the raw delta must never be published as clean'
 Absent $page 'cwGone:5985'       'batch 5 must not be stacked on batch 4'
-Need $page 'scGone:487'          'Showcase 487 modelled on the measured share'
+Need $page 'scGone:1087'         'Showcase 1,087 read, room blocks removed'
+Need $page 'vueGone:1687'        'Vue counted for the first time'
+Need $page 'reRead3Delta:1503'   'the clean Cineworld delta, 24 Oct'
+Absent $page 'cwGone:8211'       'the chain column is never the published Cineworld figure'
 Need $page 'soldShare:44.84'     'the share is measured now, not assumed'
 # offSale is a direct read now: 6,098 shown sold plus 5,576 labelled held.
-Need $page 'offSale:11674'       'UK off sale published beside it'
-Need $page 'realLo:3185'         'UK real-bookings band published, not a point'
-Need $page 'blockSeats:2366'     'UK house-seat exposure disclosed'
+Need $page 'offSale:14119'       'UK off sale published beside it'
+Need $page 'realLo:7224'         'UK real-bookings band published, not a point'
+Need $page 'blockSeats:3397'     'UK house-seat exposure disclosed'
 # The city list MUST stay block-corrected. On the seats-gone basis Solihull
 # reads 462 and Feltham 281, and both are almost entirely one room's block -
 # Solihull corrected is 6. A national total can carry blocks with a note; a
 # named cinema cannot, because a reader can open the seat map and disprove it.
-Need $page "['Leicester Square',520]" 'UK city list on the corrected basis'
+Need $page "['Leicester Square',211]" 'UK city list on the corrected basis'
 Absent $page "['Solihull',462]"       'no block-inflated Solihull in the city list'
 Absent $page "['Feltham',281]"        'no block-inflated Feltham in the city list'
 # 3,964 and 1,192 USED TO BE Need LINES HERE. They were the live Australian
@@ -123,8 +127,8 @@ Absent $page "['Feltham',281]"        'no block-inflated Feltham in the city lis
 # pre-flight could not pass at all - every run failed on two guards that were
 # only ever each other. Retired figures live in section 4 as Absent; the live
 # figure is the only thing section 1 Needs. One number, one guard, one place.
-Need $page 'booked:3185'         'UK organic booked figure published'
-Need $page 'blockedAll:7942'     'UK blocked seats published'
+Need $page 'booked:7224'         'UK organic booked figure published'
+Need $page 'blockedAll:11287'     'UK blocked seats published'
 Need $page 'INCLUDES BLOCKED SEATS' 'UK footer discloses blocks in the headline'
 Need $page 'function deBody'     'Germany panel'
 Need $page "de :{name:'Germany'" 'Germany tile in the map row'
@@ -155,7 +159,8 @@ Absent $page 'on sale, not counted' 'no footprint-era Germany kicker'
 # 95,681 -> 95,658, twenty-three DOWN across the same seven dates, so the
 # +679 is buying rather than arithmetic. seats and tickets must move together
 # or the mechanic is back: that is what these two guards are for.
-Need $page 'tickets:5412'        'Cineplex 5,412 on its own all-presale dates, 23 Oct 19:53'
+Need $page 'tickets:5555'        'Cineplex 5,555 on its own all-presale dates, 24 Oct 01:43'
+Absent $page 'tickets:5412,'     'no 23 Oct 19:53 Cineplex total'
 Absent $page 'tickets:5075,'     'no 23 Oct 09:49 Cineplex total'
 Absent $page 'tickets:4986,'     'no 23 Oct 01:03 Cineplex total'
 Absent $page 'tickets:4851,'     'no 22 Oct 21:51 Cineplex total'
@@ -163,8 +168,8 @@ Absent $page 'tickets:4711,'     'no 22 Oct 20:18 Cineplex total'
 Absent $page 'tickets:4447,'     'no 22 Oct 08:22 Cineplex total'
 Absent $page 'tickets:4344,'     'no 21 Oct 23:29 Cineplex total'
 Absent $page 'tickets:3719,'     'no 21 Oct 04:33Z Cineplex total'
-Need $page 'buying:335'          'and the buying figure'
-Need $page 'usd:70140'           'Canadian dollars at the flat C$18 assumption'
+Need $page 'buying:143'          'and the buying figure'
+Need $page 'usd:71993'           'Canadian dollars at the flat C$18 assumption'
 # WHY THE MARKER IS THE PAIR AND NOT 'tickets:3040,'. The retired figures
 # are kept on the page as wasTickets and wasSeats. Contains() is case
 # SENSITIVE, so 'tickets:3040,' does not match 'wasTickets:3040,' - the
@@ -239,15 +244,15 @@ Absent $page 'Landmark Cinemas is not counted'     'the roll-up must not say Lan
 Absent $page 'Landmark is in for the first time'   'no first-read framing on the third read'
 Need $page 'canTix'              'the Canadian roll-up uses both chains'
 Absent $page 'const naTix=usSold+xTix()+CA.tickets;' 'no Cineplex-only North America'
-Need $page 'seats:99387'         'the offered-seat floor this scan actually read'
-Need $page 'wasSeats2:95602,'      'the retired floor stays on the record'
+Need $page 'seats:99051'         'the offered-seat floor this scan actually read'
+Need $page 'wasSeats3:95602,'      'the retired floor stays on the record'
 # Back to one unrecoverable room on the widened dates - the extra sittings
 # gave the second room something to recover its capacity from.
 Need $page 'soloRooms:1,'        'the unrecoverable room is disclosed'
 Absent $page 'soloRooms:2,'      'no five-date solo-room count'
-Need $page 'wasTickets9:2449'    'the 2,449 stays on the record behind the 3,040'
-Need $page 'wasTickets7:3719'     'and the 3,719 the 4,344 replaced'
-Need $page 'wasTickets8:3040'    'and the 3,040 before it'
+Need $page 'wasTickets10:2449'    'the 2,449 stays on the record behind the 3,040'
+Need $page 'wasTickets8:3719'     'and the 3,719 the 4,344 replaced'
+Need $page 'wasTickets9:3040'    'and the 3,040 before it'
 # UPDATE 14: US_EXTRA IS ZERO AND THAT IS THE POINT. 7-8 Nov are measured
 # inside the baked map now, so a non-zero US_EXTRA would DOUBLE-COUNT them.
 # The retired figure is kept as wasTickets so the record survives, and
@@ -545,7 +550,8 @@ Write-Host '=== 3. the homepage strip agrees with the page'
 # 18 October. ONE NUMBER, ONE GUARD, ONE PLACE: when the strip moves, the
 # Need lines here and the Absent lines in section 4 change together or not
 # at all.
-Need $app '73,226'     'NA all-presale total on the strip, 23 Oct 19:53 sweep'
+Need $app '75,764'     'NA all-presale total on the strip, 24 Oct 01:43 sweep'
+Absent $app '73,226'   'no 23 Oct 19:53 strip total'
 Absent $app '70,679'   'no 23 Oct 09:49 NA total'
 Absent $app '70,005'   'no 23 Oct 07:57 NA total'
 Absent $app '69,552'   'no 23 Oct 01:03 NA total'
@@ -553,7 +559,7 @@ Absent $app '67,711'   'no 22 Oct 21:51 NA total'
 Absent $app '67,571'   'no 22 Oct 20:18 NA total'
 Absent $app '63,789'   'no 22 Oct 08:22 NA total'
 Absent $app '62,720'   'no 21 Oct 23:29 NA total'
-Need $app '$1,360,020' 'NA value on the strip'
+Need $app '$1,407,896' 'NA value on the strip'
 Absent $app '$1,314,851' 'no 23 Oct 09:49 NA value'
 Absent $app '$1,301,693' 'no 23 Oct 07:57 NA value'
 Absent $app '$1,295,822' 'no 23 Oct 01:03 NA value'
@@ -572,14 +578,14 @@ Absent $app '$859,584' 'no pre-Landmark NA value on the strip'
 # Anchored to the FIELD, not the bare number: 10,539 and 3.19% also appear
 # in the update-16 comment above the strip, so a bare marker would pass off
 # the comment while the live value said anything at all.
-Need $app 'shows: "11,308"'  'US 4-12 Nov showtimes on the strip'
+Need $app 'shows: "11,438"'  'US 4-12 Nov showtimes on the strip'
 Absent $app 'shows: "11,235"' 'no 23 Oct 09:49 showtime count'
 Absent $app 'shows: "11,203"' 'no 23 Oct 01:03 showtime count'
 Absent $app 'shows: "11,176"' 'no 22 Oct 20:18 showtime count'
 Absent $app 'shows: "10,841"' 'no 22 Oct 08:22 showtime count'
 Absent $app 'shows: "10,793"' 'no 21 Oct showtime count'
 Absent $app 'shows: "10,661"' 'no 20 Oct showtime count'
-Need $app '7:53pm'     'the strip carries the scan time'
+Need $app '1:43am'     'the strip carries the scan time'
 # 23 OCT US CITY LAYER: every Fandango cinema placed in its own city (USV,
 # from us_theatre_geo.py), Alaska and Hawaii drawn as insets, and Honolulu
 # moved into the Hawaii inset.
@@ -595,7 +601,7 @@ Need $page "XY_FIX = {'Honolulu'"        'Honolulu sits in the Hawaii inset'
 # rate is a 4-8 figure for the first time. For five updates it was US 4-6
 # only, because the baked map stopped at 6 Nov and there was no 4-8
 # denominator to divide by. There is one now: 33,668 of 904,291.
-Need $app 'rate: "4.51%"'    'US 4-12 Nov sell-through on the strip'
+Need $app 'rate: "4.63%"'    'US 4-12 Nov sell-through on the strip'
 Absent $app 'rate: "4.39%"' 'no 23 Oct 09:49 sell-through'
 Absent $app 'rate: "4.38%"' 'no 23 Oct 01:03 sell-through'
 Absent $app 'rate: "4.27%"' 'no 22 Oct 20:18 sell-through'
@@ -686,8 +692,8 @@ Absent $page "['Thu 5 Nov',2181]" 'no partial UK date split'
 Absent $page "['Thu 5 Nov',2205]" 'no pre-21-Oct UK date split'
 # The four dates must still sum to cwGone with nothing unallocated:
 #   2,445 + 1,251 + 1,210 + 1,072 = 5,978
-Need   $page "['Thu 5 Nov',2445]" 'the complete measured UK date split'
-Need   $page "['Sun 8 Nov',1072]" 'and the last day of it, so the sum is checkable'
+Need   $page "['Thu 5 Nov',3376]" 'the complete measured UK date split'
+Need   $page "['Sun 8 Nov',1103]" 'and the last day of it, so the sum is checkable'
 Need   $page 'byDateAdded'        'each day carries its own clean delta'
 Absent $page 'cwGone:4985,'  'no pre-re-read Cineworld figure'
 Absent $page 'cwGone:5279,'  'no batch-3 Cineworld figure'
@@ -765,7 +771,7 @@ Absent $app  '3.72%'         'no pre-update-15 sell-through on the strip'
 # UPDATE 17, 21 OCT 04:33Z. The map is rebuilt across all nine dates:
 # 49,434 tickets, 1,383,690 seats, 10,661 showtimes, 549 venues, 69 metros,
 # every one of them with an x/y so rebake_page.py did not refuse.
-Need   $page '"sold":66038'  'the baked map is the 23 Oct 19:53 CT sweep, sold-out shows counted'
+Need   $page '"sold":68433'  'the baked map is the 24 Oct 01:43 CT sweep, sold-out shows counted'
 Absent $page '"sold":63828'  'no 23 Oct 09:49 baked map'
 Absent $page '"sold":63243'  'no 23 Oct 01:03 baked map'
 Absent $page '"sold":61537'  'no 22 Oct 20:18 baked map'
