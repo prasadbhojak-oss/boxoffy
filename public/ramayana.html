@@ -1878,13 +1878,19 @@ const AU = {
      6,911 (+258) on the same 434; Event 1,978 -> 2,061 (+83) on the same
      425. HOYTS' seat plan reads 71,775 (was 72,027) - one session missing
      from the validation, not a sale. NZ Event 390 -> 429 (+39), same 110. */
-  tickets:8972, aud:230552, usd:152164, atpAud:25.70, fx:0.66,
-  ev:{tickets:2061, shows:425, counted:425, cinemas:38, seats:99604, rate:2.07},
-  hy:{tickets:6911, shows:434, counted:434, cinemas:47, cinemasRead:47,
-      seats:71775, rate:9.63, held:2501, carried:0, carriedShows:0,
+  /* 24 OCT 07:57-08:15 CT RE-READ. 8,972 -> 9,561. HOYTS 6,911 -> 7,366
+     (+455) on 437 sessions (434 before; the three new ones are in the plan,
+     71,775 -> 71,892 seats); Event 2,061 -> 2,195 (+134) on the same 425,
+     floor 99,604 -> 99,600. The 13-session hand-count gate passed again (0
+     failures, 0 missing). Held seats 2,501 -> 2,518, never counted as sales.
+     NZ Event 429 -> 434 (+5) on the same 110 sessions, NZ$11,480 printed. */
+  tickets:9561, aud:245585, usd:162086, atpAud:25.69, fx:0.66,
+  ev:{tickets:2195, shows:425, counted:425, cinemas:38, seats:99600, rate:2.20},
+  hy:{tickets:7366, shows:437, counted:437, cinemas:47, cinemasRead:47,
+      seats:71892, rate:10.25, held:2518, carried:0, carriedShows:0,
       wasCarried:496, chadstoneRead:797, chadstoneHand:797,
       capacityWas:182, capacityNow:174},
-  byDate:[['Thu 5 Nov',3172],['Fri 6 Nov',2710],['Sat 7 Nov',2389],['Sun 8 Nov',701]],
+  byDate:[['Thu 5 Nov',3361],['Fri 6 Nov',2872],['Sat 7 Nov',2549],['Sun 8 Nov',779]],
   /* NEW ZEALAND, FOLDED INTO THIS MARKET 20 OCT. PB's call: one line, not
      two, so the tile and the worldwide roll-up read "Australia & NZ".
      AU.tickets, AU.aud and everything in auBody above stay AUSTRALIA ALONE -
@@ -1909,12 +1915,12 @@ const AU = {
      so NZ$5,378 over 200 tickets is an observed ATP of NZ$26.89, not an
      assumption. FX 0.5609, OFX, 18 Oct - pinned like every other rate here
      and not to be refreshed quietly mid-week. */
-  nz:{tickets:429, nzd:11340, usd:6361, atpNzd:26.43, fx:0.5609,
+  nz:{tickets:434, nzd:11480, usd:6439, atpNzd:26.45, fx:0.5609,
       cinemas:14, shows:110, seats:23413, rate:1.83,
-      inBasis:337, inBasisNzd:8879, secondWeek:92, secondWeekNote:'10 Nov',
+      inBasis:339, inBasisNzd:8967, secondWeek:95, secondWeekNote:'10 Nov',
       cinemasAll:14, showsAll:110, hoytsCinemas:7, hoytsShows:98,
-      byDate:[['Thu 5 Nov',169],['Fri 6 Nov',114],['Sat 7 Nov',44],
-              ['Sun 8 Nov',10],['Tue 10 Nov',92]],
+      byDate:[['Thu 5 Nov',169],['Fri 6 Nov',114],['Sat 7 Nov',46],
+              ['Sun 8 Nov',10],['Tue 10 Nov',95]],
       cities:[['Auckland Queen Street',174],['Wellington Queensgate',129],
               ['Auckland Manukau',48],['Auckland St Lukes',22],
               ['Auckland Westgate',21],['Hamilton Chartwell',18],
@@ -1942,20 +1948,21 @@ const AU = {
      noise, in the direction a floor is meant to be wrong. */
   /* HOYTS ONLY - the chain publishes a state field and Event does not, so
      these sum to hy.tickets (3,864), never to tickets (4,922). */
-  states:[['VIC',1873],['NSW',1537],['WA',796],['SA',552],['ACT',438],
-          ['QLD',300]],
+  states:[['VIC',2570],['NSW',2010],['WA',1026],['SA',758],['ACT',586],
+          ['QLD',416]],
   /* Both chains, 19 Oct 14:40. Chadstone's 556 is now READ, not carried, so
      Victoria's lead over New South Wales is measured rather than restored -
      1,273 to 1,086. The warning above still stands for the two reads that
      LOST Chadstone; it no longer applies to this one. */
-  cities:[['Western Sydney',1232],['Melbourne Chadstone',797],['Perth Carousel',590],
-          ['Sydney Darling Harbour',291],['Sydney Castle Hill',283],
-          ['Melbourne Docklands',263],['Canberra Belconnen',253],
-          ['Melbourne Highpoint',251],['Sydney Parramatta',239],
-          ['Brisbane Sunnybank',236]],
+  /* 24 Oct 08:15, both chains. */
+  cities:[['Western Sydney',1500],['Melbourne Chadstone',1016],['Perth Carousel',744],
+          ['Sydney Parramatta',459],['Sydney Castle Hill',429],
+          ['Melbourne Docklands',367],['Brisbane Sunnybank',331],
+          ['Melbourne Highpoint',320],['Canberra Belconnen',319],
+          ['Melbourne Central',293]],
   premiumPct:93, premiumStd:485, eveningPct:91,
   top:{cinema:"HOYTS Blacktown, Sydney", when:"Fri 6 Nov, 8:45p",
-       room:"Xtremescreen", sold:176, pct:72.1, next:167,
+       room:"Xtremescreen", sold:185, pct:75.8, next:179,
        nextAt:"Blacktown, Thu 6:40p"},
   price:[["IMAX","A$45.00"],["ScreenX","A$36.50"],["Xtremescreen","A$27.00"]]
 };
@@ -2424,8 +2431,21 @@ const NL = {
    prices printed (EUR 14.70-22.00), USD at 1.1237.
    CAVEAT: Grok chose a ticket quantity (2) to open each map. Its own hold may
    show as taken, so Saint-Julien's 2 could be Grok's - France is 5 to 7. */
-const FR = { tickets:7, eur:124, usd:139, shows:12, showsRead:9, cinemas:12,
-             seats:1805, opens:'Fri 6 Nov', premiere:'Le Grand Rex, 4 Nov', low:5 };
+/* 24 OCT, GROK FULL FRANCE READ. 40 showtimes at 20 cinemas (Kinepolis 10,
+   Megarama 7, Cineplanet Antibes, Majestic Dole, Le Grand Rex); 29 seat maps
+   read at 14 of them, 6,115 seats: 14 taken - Cineplanet Antibes Dolby 10,
+   Megarama Les Ulis IMAX 3, Megarama Bordeaux IMAX 1. EUR 228 at the prices
+   printed. Kinepolis reads 0 everywhere, so the Saint-Julien 2 of 23 Oct
+   was very likely Grok's own hold, as we flagged. Antibes' 10 are recliners
+   the map marks "not available for sale", its only off-state, so they may
+   be held rather than sold: France is 4 to 14.
+   Pathe blocked (403); UGC, CGR, MK2, UCI and Cineville list no showtimes.
+   CAVEAT: Grok again chose a ticket quantity to open Kinepolis, Majestic and
+   Megarama maps (notes say "user OK"). A chosen quantity does not take a
+   seat on these maps - Kinepolis read 0 - but it is outside our rule. */
+const FR = { tickets:14, eur:228, usd:257, shows:40, showsRead:29, cinemas:20,
+             cinemasRead:14, seats:6115, opens:'Fri 6 Nov', premiere:'Le Grand Rex, 4 Nov', low:4,
+             wasTickets:7 };
 /* 24 OCT: SWEDEN IS STILL A ZERO, NOW ACROSS A WIDER LIST. 31 showtimes at
    25 cinemas, 17 of them Filmstaden - and filmstaden.se answered a hard 403
    "you have been blocked" on all 21 of its showtimes, so it is NOT read.
