@@ -160,7 +160,7 @@ Absent $page 'on sale, not counted' 'no footprint-era Germany kicker'
 # 95,681 -> 95,658, twenty-three DOWN across the same seven dates, so the
 # +679 is buying rather than arithmetic. seats and tickets must move together
 # or the mechanic is back: that is what these two guards are for.
-Need $page 'tickets:5811'        'Cineplex 5,811 on its own all-presale dates, 24 Oct 14:00'
+Need $page 'tickets:6252'        'Cineplex 6,252 on its own all-presale dates, 24 Oct 21:39'
 Absent $page 'tickets:5555,'     'no 24 Oct 01:43 Cineplex total'
 Absent $page 'tickets:5412,'     'no 23 Oct 19:53 Cineplex total'
 Absent $page 'tickets:5075,'     'no 23 Oct 09:49 Cineplex total'
@@ -170,8 +170,8 @@ Absent $page 'tickets:4711,'     'no 22 Oct 20:18 Cineplex total'
 Absent $page 'tickets:4447,'     'no 22 Oct 08:22 Cineplex total'
 Absent $page 'tickets:4344,'     'no 21 Oct 23:29 Cineplex total'
 Absent $page 'tickets:3719,'     'no 21 Oct 04:33Z Cineplex total'
-Need $page 'buying:178'          'and the buying figure'
-Need $page 'usd:75311'           'Canadian dollars at the flat C$18 assumption'
+Need $page 'buying:458'          'and the buying figure'
+Need $page 'usd:81026'           'Canadian dollars at the flat C$18 assumption'
 # WHY THE MARKER IS THE PAIR AND NOT 'tickets:3040,'. The retired figures
 # are kept on the page as wasTickets and wasSeats. Contains() is case
 # SENSITIVE, so 'tickets:3040,' does not match 'wasTickets:3040,' - the
@@ -247,15 +247,15 @@ Absent $page 'Landmark Cinemas is not counted'     'the roll-up must not say Lan
 Absent $page 'Landmark is in for the first time'   'no first-read framing on the third read'
 Need $page 'canTix'              'the Canadian roll-up uses both chains'
 Absent $page 'const naTix=usSold+xTix()+CA.tickets;' 'no Cineplex-only North America'
-Need $page 'seats:99051'         'the offered-seat floor this scan actually read'
-Need $page 'wasSeats3:95602,'      'the retired floor stays on the record'
+Need $page 'seats:99034'         'the offered-seat floor this scan actually read'
+Need $page 'wasSeats4:95602,'      'the retired floor stays on the record'
 # Back to one unrecoverable room on the widened dates - the extra sittings
 # gave the second room something to recover its capacity from.
 Need $page 'soloRooms:1,'        'the unrecoverable room is disclosed'
 Absent $page 'soloRooms:2,'      'no five-date solo-room count'
-Need $page 'wasTickets12:2449'    'the 2,449 stays on the record behind the 3,040'
-Need $page 'wasTickets10:3719'     'and the 3,719 the 4,344 replaced'
-Need $page 'wasTickets11:3040'    'and the 3,040 before it'
+Need $page 'wasTickets13:2449'    'the 2,449 stays on the record behind the 3,040'
+Need $page 'wasTickets11:3719'     'and the 3,719 the 4,344 replaced'
+Need $page 'wasTickets12:3040'    'and the 3,040 before it'
 # UPDATE 14: US_EXTRA IS ZERO AND THAT IS THE POINT. 7-8 Nov are measured
 # inside the baked map now, so a non-zero US_EXTRA would DOUBLE-COUNT them.
 # The retired figure is kept as wasTickets so the record survives, and
@@ -290,7 +290,7 @@ Need $page 'handCount:1899'      'the retired hand count kept as the record'
 # the same 107,490 seats. All 86 is buying.
 # 21 OCT 21:39-21:54 CT AU/NZ RE-READ: HOYTS 5,496 on the same 419 sessions,
 # Event 1,535, Australia 7,031; NZ Event 314. Chadstone 797 = PB's hand read.
-Need $page 'tickets:9561'        'Australia 9,561 after the 24 Oct 08:15 re-read'
+Need $page 'tickets:9653'        'Australia 9,653 after the 24 Oct 18:57 re-read'
 Absent $page 'tickets:8972,'     'no 24 Oct 00:47 Australia total'
 Absent $page 'tickets:8631,'     'no 23 Oct Australia total'
 Absent $page 'tickets:8000,'     'no 22 Oct Australia total'
@@ -305,12 +305,13 @@ Absent $page 'tickets:4922,'     'no pre-Event-re-read Australian total'
 # 20 OCT, PB: ALL-PRESALE BASIS. Every date a market has on sale counts,
 # because the whole run is presale. New Zealand is 5-11 Nov and all 259 are
 # in. inBasis keeps the 5-8 Nov subset so the earlier figure stays checkable.
-Need $page 'nz:{tickets:434'     'New Zealand on its full all-presale basis'
+Need $page 'nz:{tickets:451'     'New Zealand on its full all-presale basis'
+Absent $page 'nz:{tickets:434'   'no 24 Oct morning New Zealand'
 Absent $page 'nz:{tickets:390'   'no 23 Oct New Zealand'
 Absent $page 'nz:{tickets:369'   'no 22 Oct New Zealand'
 Absent $page 'nz:{tickets:314'   'no 21 Oct New Zealand'
 Absent $page 'nz:{tickets:259'   'no 20 Oct New Zealand'
-Need $page 'inBasis:339'         'the 5-8 Nov subset kept checkable'
+Need $page 'inBasis:356'         'the 5-8 Nov subset kept checkable'
 Need $page 'secondWeek:95'       'the second-week NZ tickets named, not hidden'
 Absent $page 'nz:{tickets:200'   'no four-date-only New Zealand'
 Need $page 'anzTix'              'the roll-up uses the combined getter'
@@ -352,30 +353,31 @@ Need $page 'const IN = {'        'India is a counted market'
 # 142,810 tickets.
 Need $page "'Premiere mark'" 'past the 20 Oct checkpoint the ladder reports, it does not count down'
 Need $page 'no mark passed yet' 'the ladder says plainly when no film has been passed'
-Need $page 'tickets:120373'      'the 24 Oct 14:58 CT India figure'
+Need $page 'tickets:121279'      'the 24 Oct 18:45 CT India figure'
+Absent $page 'tickets:120373,'   'no 24 Oct 14:58 India total as the live figure'
 Absent $page 'tickets:119879,'   'no 24 Oct 13:00 India total as the live figure'
 Absent $page 'tickets:118309,'   'no 24 Oct 10:32 India total as the live figure'
 Absent $page 'tickets:99408,'    'no 23 Oct 08:48 India total as the live figure'
 Absent $page 'tickets:91171,'    'no 22 Oct 21:32 India total as the live figure'
 # ALL-INDIA CALL: District + BMS side from Sacnilk, city-by-city higher of
 # the two. The worldwide total and the India map both use it.
-Need $page 'allTix:177713'      'the all-India call is on the page'
+Need $page 'allTix:177727'      'the all-India call is on the page'
 Absent $page 'allTix:142810'    'no 23 Oct 08:48 all-India call'
-Need $page 'allInr:106765710'   'and its rupees'
+Need $page 'allInr:106764220'   'and its rupees'
 Absent $page 'allTix:132245'    'no 22 Oct all-India call'
 Need $page 'IN.allTix+NL.tickets' 'the worldwide total uses the all-India call'
 Need $page 'bmsCity:{'  'the India map carries the BookMyShow side city by city'
-Need $page 'bmsOthers:[14290,7941519]' 'the unnamed-cities remainder is stated, not hidden'
-Need $page 'clean:99829'         'the block-corrected floor'
-Need $page 'block:20544'         'the block is named, not absorbed'
+Need $page 'bmsOthers:[13724,7626588]' 'the unnamed-cities remainder is stated, not hidden'
+Need $page 'clean:100570'         'the block-corrected floor'
+Need $page 'block:20709'         'the block is named, not absorbed'
 Need $page 'soldOutShows:5'      'five sold-out showtimes: Noida Gold, Nehru Place Insignia, PVR Lakeshore and Irrum Manzil Hyderabad, PVR Palladium Ahmedabad'
 Need $page 'amritsarNow:2'       'the Amritsar release is tracked, not hidden'
-Need $page 'wasTickets:119879'   'the 13:00 read is kept so the move can be described'
-Need $page 'wasTickets14:46539'   'and the read the NA sweep destroyed'
-Need $page 'matchedShows:3639'   'the matched set is published, not just the total'
-Need $page 'buying:699'         'buying is separated from coverage'
-Need $page 'newShows:12'        'and the coverage is named'
-Need $page 'wasPerHour:724'      'against the rate it replaced'
+Need $page 'wasTickets:120373'   'the 14:58 read is kept so the move can be described'
+Need $page 'wasTickets15:46539'   'and the read the NA sweep destroyed'
+Need $page 'matchedShows:3651'   'the matched set is published, not just the total'
+Need $page 'buying:937'         'buying is separated from coverage'
+Need $page 'newShows:2'        'and the coverage is named'
+Need $page 'wasPerHour:350'      'against the rate it replaced'
 Absent $page 'tickets:90828,'    'no 18:18 India total as the live figure'
 Absent $page 'tickets:82298,'    'no 06:22 India total as the live figure'
 Absent $page 'tickets:76297,'    'no 23:47 India total as the live figure'
@@ -385,9 +387,9 @@ Absent $page 'tickets:24588,'    'no second-read India total'
 Absent $page 'tickets:13702,'    'no first-read India total'
 # atpInr:635 was the third read's price and is, by coincidence, the 23 Oct
 # 15:26 read's price too (Rs 67,693,337 / 106,675), so it is a Need now.
-Need $page "distAsOf:'25 Oct, 1:28 am IST'" 'the District read is time-stamped on the page'
+Need $page "distAsOf:'25 Oct, 5:15 am IST'" 'the District read is time-stamped on the page'
 Need $page "sacAsOf:'24 Oct, 10:00 pm IST'" 'and so is the Sacnilk BookMyShow side'
-Need $page 'atpInr:622'          'the 24 Oct 14:58 Indian price'
+Need $page 'atpInr:622'          'the 24 Oct 18:45 Indian price'
 Absent $page 'atpInr:578'        'no second-read Indian price'
 Absent $page 'atpInr:432'        'no first-read Indian price'
 Absent $page 'tickets:64696,'    'no 07:35 India total as the live figure'
@@ -438,12 +440,12 @@ Need $page 'const SE = {'        'Sweden is on the page as a measured zero'
 Need $page "['Sweden',SE.tickets,0]" 'Sweden is in the roll-up at zero, with a label'
 Need $page 'Filmstaden'          'the unreadable Swedish chain is disclosed'
 Absent $page "['Australia',AU.tickets,AU.usd]" 'no roll-up row on Australia alone'
-Need $page 'tickets:7366'        'HOYTS 7,366'
+Need $page 'tickets:7437'        'HOYTS 7,437'
 Absent $page 'tickets:6653'      'no 23 Oct HOYTS'
 Absent $page 'tickets:6219'      'no 22 Oct HOYTS'
 Absent $page 'tickets:5496'      'no 21 Oct HOYTS'
 Absent $page 'tickets:3864'      'no 20 Oct HOYTS'
-Need $page 'tickets:2195'        'Event 2,195 on 425 sessions'
+Need $page 'tickets:2216'        'Event 2,216 on 425 sessions'
 Absent $page 'tickets:1978'      'no 23 Oct Event'
 Absent $page 'tickets:1781'      'no 22 Oct Event'
 Absent $page 'tickets:1535'      'no 21 Oct Event'
@@ -515,7 +517,7 @@ Need   $page 'carriedShows:0'    'only the Sunnybank row is still carried'
 # counting-method difference, not eight seats leaving the room. Cutting
 # hy.seats to 70,475 would have printed 5.22% off a measurement artefact.
 Need   $page 'seats:71892'       'HOYTS denominator from the full clean read'
-Need   $page 'rate:10.25'         'HOYTS rate on its own real house count'
+Need   $page 'rate:10.34'         'HOYTS rate on its own real house count'
 Need $page "['VIC',2570]"        'Victoria leads on a fully scanned Chadstone'
 Absent $page "['VIC',1298]"      'no pre-re-read state split'
 # ASCII only in these two. The page writes '153 screens · 9.81%' with a middot,
@@ -567,7 +569,8 @@ Write-Host '=== 3. the homepage strip agrees with the page'
 # 18 October. ONE NUMBER, ONE GUARD, ONE PLACE: when the strip moves, the
 # Need lines here and the Absent lines in section 4 change together or not
 # at all.
-Need $app '78,379'     'NA all-presale total on the strip, 24 Oct 14:00 sweep'
+Need $app '81,594'     'NA all-presale total on the strip, 24 Oct 21:39 sweep'
+Absent $app '78,379'   'no 14:00 strip total'
 Absent $app '76,901'   'no 10:06 strip total'
 Absent $app '75,940'   'no 01:43 strip total'
 Absent $app '75,764'   'no pre-Landmark-24-Oct strip total'
@@ -579,7 +582,8 @@ Absent $app '67,711'   'no 22 Oct 21:51 NA total'
 Absent $app '67,571'   'no 22 Oct 20:18 NA total'
 Absent $app '63,789'   'no 22 Oct 08:22 NA total'
 Absent $app '62,720'   'no 21 Oct 23:29 NA total'
-Need $app '$1,456,118' 'NA value on the strip'
+Need $app '$1,514,924' 'NA value on the strip'
+Absent $app '$1,456,118' 'no 14:00 NA value'
 Absent $app '$1,428,154' 'no 10:06 NA value'
 Absent $app '$1,314,851' 'no 23 Oct 09:49 NA value'
 Absent $app '$1,301,693' 'no 23 Oct 07:57 NA value'
@@ -599,7 +603,8 @@ Absent $app '$859,584' 'no pre-Landmark NA value on the strip'
 # Anchored to the FIELD, not the bare number: 10,539 and 3.19% also appear
 # in the update-16 comment above the strip, so a bare marker would pass off
 # the comment while the live value said anything at all.
-Need $app 'shows: "11,434"'  'US 4-12 Nov showtimes on the strip'
+Need $app 'shows: "11,478"'  'US 4-12 Nov showtimes on the strip'
+Absent $app 'shows: "11,434"' 'no 14:00 showtime count'
 Absent $app 'shows: "11,448"' 'no 10:06 showtime count'
 Absent $app 'shows: "11,235"' 'no 23 Oct 09:49 showtime count'
 Absent $app 'shows: "11,203"' 'no 23 Oct 01:03 showtime count'
@@ -607,7 +612,7 @@ Absent $app 'shows: "11,176"' 'no 22 Oct 20:18 showtime count'
 Absent $app 'shows: "10,841"' 'no 22 Oct 08:22 showtime count'
 Absent $app 'shows: "10,793"' 'no 21 Oct showtime count'
 Absent $app 'shows: "10,661"' 'no 20 Oct showtime count'
-Need $app '2:00pm'    'the strip carries the scan time'
+Need $app '9:39pm'    'the strip carries the scan time'
 # 23 OCT US CITY LAYER: every Fandango cinema placed in its own city (USV,
 # from us_theatre_geo.py), Alaska and Hawaii drawn as insets, and Honolulu
 # moved into the Hawaii inset.
@@ -623,7 +628,8 @@ Need $page "XY_FIX = {'Honolulu'"        'Honolulu sits in the Hawaii inset'
 # rate is a 4-8 figure for the first time. For five updates it was US 4-6
 # only, because the baked map stopped at 6 Nov and there was no 4-8
 # denominator to divide by. There is one now: 33,668 of 904,291.
-Need $app 'rate: "4.78%"'    'US 4-12 Nov sell-through on the strip'
+Need $app 'rate: "4.95%"'    'US 4-12 Nov sell-through on the strip'
+Absent $app 'rate: "4.78%"' 'no 14:00 sell-through'
 Absent $app 'rate: "4.68%"' 'no 10:06 sell-through'
 Absent $app 'rate: "4.39%"' 'no 23 Oct 09:49 sell-through'
 Absent $app 'rate: "4.38%"' 'no 23 Oct 01:03 sell-through'
@@ -794,7 +800,7 @@ Absent $app  '3.72%'         'no pre-update-15 sell-through on the strip'
 # UPDATE 17, 21 OCT 04:33Z. The map is rebuilt across all nine dates:
 # 49,434 tickets, 1,383,690 seats, 10,661 showtimes, 549 venues, 69 metros,
 # every one of them with an x/y so rebake_page.py did not refuse.
-Need   $page '"sold":70616'  'the baked map is the 24 Oct 14:00 CT sweep, sold-out shows counted'
+Need   $page '"sold":73390'  'the baked map is the 24 Oct 21:39 CT sweep, sold-out shows counted'
 Absent $page '"sold":63828'  'no 23 Oct 09:49 baked map'
 Absent $page '"sold":63243'  'no 23 Oct 01:03 baked map'
 Absent $page '"sold":61537'  'no 22 Oct 20:18 baked map'
