@@ -1964,13 +1964,21 @@ const AU = {
      failures, 0 missing). Held 2,530. NZ Event 451 -> 462 (+11), NZ$12,158.
      About 60 an hour across Australia on a Sunday afternoon and evening -
      faster than the quiet Sunday midday read before it. */
-  tickets:9991, aud:256513, usd:169299, atpAud:25.67, fx:0.66,
-  ev:{tickets:2285, shows:425, counted:425, cinemas:38, seats:99560, rate:2.30},
-  hy:{tickets:7706, shows:437, counted:437, cinemas:47, cinemasRead:47,
-      seats:72180, rate:10.68, held:2530, carried:0, carriedShows:0,
+  /* 25 OCT 09:15-09:33 CT RE-READ (Monday 1-2am in Sydney). 9,991 ->
+     10,629. HOYTS read 431 of 438 sessions; 7 answered HTTP 503 (HOYTS'
+     own server - Carousel 4, Broadmeadows, Entertainment Quarter, Erina)
+     and are CARRIED at their 00:29 count, 214 tickets on 1,272 seats - a
+     floor, never dropped. On the 431 read both times: 7,492 -> 7,996,
+     +509 / -5. HOYTS 8,210 incl. carry; Event 2,285 -> 2,419 (+134) on
+     425, floor 99,466. NZ Event 462 -> 484, NZ$12,752. Australia's Sunday
+     evening buying, landing overnight. */
+  tickets:10629, aud:272374, usd:179767, atpAud:25.63, fx:0.66,
+  ev:{tickets:2419, shows:425, counted:425, cinemas:38, seats:99466, rate:2.43},
+  hy:{tickets:8210, shows:438, counted:431, cinemas:47, cinemasRead:47,
+      seats:72180, rate:11.37, held:2503, carried:214, carriedShows:7,
       wasCarried:496, chadstoneRead:797, chadstoneHand:797,
       capacityWas:182, capacityNow:174},
-  byDate:[['Thu 5 Nov',3538],['Fri 6 Nov',2964],['Sat 7 Nov',2673],['Sun 8 Nov',816]],
+  byDate:[['Thu 5 Nov',3721],['Fri 6 Nov',3130],['Sat 7 Nov',2862],['Sun 8 Nov',916]],
   /* NEW ZEALAND, FOLDED INTO THIS MARKET 20 OCT. PB's call: one line, not
      two, so the tile and the worldwide roll-up read "Australia & NZ".
      AU.tickets, AU.aud and everything in auBody above stay AUSTRALIA ALONE -
@@ -1995,12 +2003,12 @@ const AU = {
      so NZ$5,378 over 200 tickets is an observed ATP of NZ$26.89, not an
      assumption. FX 0.5609, OFX, 18 Oct - pinned like every other rate here
      and not to be refreshed quietly mid-week. */
-  nz:{tickets:462, nzd:12158, usd:6819, atpNzd:26.32, fx:0.5609,
-      cinemas:14, shows:110, seats:23413, rate:1.97,
-      inBasis:360, inBasisNzd:9474, secondWeek:95, secondWeekNote:'10 Nov',
+  nz:{tickets:484, nzd:12752, usd:7153, atpNzd:26.35, fx:0.5609,
+      cinemas:14, shows:110, seats:23413, rate:2.07,
+      inBasis:380, inBasisNzd:10012, secondWeek:95, secondWeekNote:'10 Nov',
       cinemasAll:14, showsAll:110, hoytsCinemas:7, hoytsShows:98,
-      byDate:[['Thu 5 Nov',186],['Fri 6 Nov',116],['Sat 7 Nov',46],
-              ['Sun 8 Nov',12],['Tue 10 Nov',102]],
+      byDate:[['Thu 5 Nov',188],['Fri 6 Nov',123],['Sat 7 Nov',52],
+              ['Sun 8 Nov',17],['Tue 10 Nov',104]],
       cities:[['Auckland Queen Street',174],['Wellington Queensgate',129],
               ['Auckland Manukau',48],['Auckland St Lukes',22],
               ['Auckland Westgate',21],['Hamilton Chartwell',18],
