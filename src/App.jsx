@@ -2473,8 +2473,19 @@ function BRSBadge({ brs, compact = false }) {
    ═══════════════════════════════════════════════════════════════ */
 function NationalTop10Row({ movie, rank }) {
   const isMobile = useIsMobile();
-  const isNew    = !movie.lastWeekCollection || movie.weekNum <= 1;
+  /* weekNum is the authority. Testing a blank last week first made every film
+     NEW whenever last week was left empty (25 Oct: all ten showed NEW). Last
+     week only decides when the sheet carries no week number at all. */
+  const isNew    = movie.weekNum > 0 ? movie.weekNum <= 1 : !movie.lastWeekCollection;
   const isHolly  = movie.language === "Hollywood";
+  /* A part-week ("2 of 7 days") against a full last week is not a change - it
+     would print -86% for a film that is holding. Show the days instead. */
+  const partM    = /(\d)\s*of\s*7\s*days/i.exec(movie.weeklyNote || "");
+  const partDays = partM && +partM[1] < 7 ? +partM[1] : 0;
+  const domNet   = movie.totalNum > 0 ? `₹${movie.totalNum} Cr`
+                 : (movie.indiaNet && movie.indiaNet !== "—" ? `₹${movie.indiaNet} Cr` : "—");
+  const wwNum    = parseFloat(movie.ww);
+  const wwShow   = wwNum > 0 ? `₹${wwNum} Cr` : (movie.wwGross || "—");
   const [shareOpen, setShareOpen] = React.useState(false);
 
   // Auto-fetch poster from TMDB if sheet doesn't have one
@@ -2485,7 +2496,7 @@ function NationalTop10Row({ movie, rank }) {
      weeklyCollection had not been filed yet - the sheet carries a literal "0" -
      published a -100% week on the live chart, which is a claim we cannot
      support. With this guard the cell shows a dash until a real figure exists. */
-  const chgPct = (movie.weeklyCollection > 0 && movie.lastWeekCollection > 0)
+  const chgPct = (!partDays && movie.weeklyCollection > 0 && movie.lastWeekCollection > 0)
     ? Math.round(((movie.weeklyCollection - movie.lastWeekCollection) / movie.lastWeekCollection) * 100)
     : null;
 
@@ -2594,7 +2605,7 @@ function NationalTop10Row({ movie, rank }) {
               {chgPct >= 0 ? `+${chgPct}` : chgPct}%
             </span>
           : <span style={{ fontFamily:"'DM Sans',sans-serif", fontSize:9, color:T.textMuted }}>
-              {isNew ? "W1" : "—"}
+              {partDays ? `${partDays}/7 days` : isNew ? "W1" : "—"}
             </span>
         }
       </div>
@@ -2603,7 +2614,7 @@ function NationalTop10Row({ movie, rank }) {
       {!isMobile && (
         <div style={cellBase}>
           <div style={{ fontFamily:"'Barlow Condensed',sans-serif", fontWeight:900, fontSize:15, color:T.text, lineHeight:1 }}>
-            {movie.indiaNet || (movie.totalNum > 0 ? `₹${movie.totalNum} Cr` : "—")}
+            {domNet}
           </div>
           {movie.domesticATB && atbTag(movie.domesticATB)}
           {movie.weeklyNote && (movie.weeklyNote.includes("called") || movie.weeklyNote.includes("BCM CALL")) && (
@@ -2615,11 +2626,11 @@ function NationalTop10Row({ movie, rank }) {
       {/* Global WW */}
       <div style={cellBase}>
         <div style={{ fontFamily:"'Barlow Condensed',sans-serif", fontWeight:900, fontSize:isMobile?13:15, color: isHolly ? "#1D4ED8" : T.text, lineHeight:1 }}>
-          {movie.ww || movie.wwGross || movie.totalCollection || "—"}
+          {wwShow}
         </div>
         {movie.globalATB && topTag(movie.globalATB)}
-        {isMobile && movie.indiaNet && (
-          <div style={{ fontFamily:"'DM Sans',sans-serif", fontSize:8, color:T.textMuted, marginTop:3 }}>{movie.indiaNet}</div>
+        {isMobile && domNet !== "—" && (
+          <div style={{ fontFamily:"'DM Sans',sans-serif", fontSize:8, color:T.textMuted, marginTop:3 }}>{domNet} India</div>
         )}
       </div>
     </div>
