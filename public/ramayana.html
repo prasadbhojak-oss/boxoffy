@@ -1262,8 +1262,19 @@ const DE = {
               range below takes it out: Germany is 3,536 to 3,954.
      UCI: no Ramayana showtimes found on the four rows; not counted.
      euro at the pinned EUR 17.13 (no price column this read). */
-  tickets:3954, eur:67732, usd:76111, atpEur:17.13, fx:1.1237, lowNoGroup:3536,
-  leonberg:{sold:418, of:582, when:'Sat 7 Nov, 11:00am'},
+  /* 25 OCT, GROK RE-READ (file ramayana_germany_25oct.csv). 3,954 -> 4,244.
+     331 rows, 318 maps read (73,723 seats). MATCHED 313 showtimes read on
+     24 and 25 Oct: 3,936 -> 4,216, +280 net (82 rose by 334, 23 fell by 54
+     - kept). FIRST READS 5, +28: Capitol Lichtspiele Kornwestheim's four
+     (its server answered this time) and C1 Braunschweig 8 Nov, re-listed.
+     The 18 tickets carried from 22 Oct are retired - those rows are read.
+     STILL UNREAD 6 (Cineplex Mannheim/Alsdorf, Admiral Nuernberg: Cineplex
+     API 401/400/500), none carrying a figure. NOT LISTED 7. No new
+     showtimes found. LEONBERG 418 -> 434: still counted, still ranged out.
+     Grok printed 50 prices; the total stays at the pinned EUR 17.13 so the
+     series does not jump on a method change. */
+  tickets:4244, eur:72700, usd:81693, atpEur:17.13, fx:1.1237, lowNoGroup:3810,
+  leonberg:{sold:434, of:582, when:'Sat 7 Nov, 11:00am'},
   inBasis:2393, outBasis2:43, deltaRead:12, deltaScannable:18, showsGone:0,
   notYetOnSale:4, sharedUrlDupes:1,
   /* 21 OCT. THE TOTAL IS NOW TWO READS AND THE PAGE SAYS WHICH IS WHICH.
@@ -1306,18 +1317,18 @@ const DE = {
      Four showtimes were opened for the first time and carried 8 more.
      +309 of the +317 is people buying tickets. Nothing else in this
      market has ever been measurable that cleanly. */
-  matchedShows:257, matchedWas:2213, matchedNow:3124, buying:911,
-  newShows:53, newTickets:812,
-  seats:72429, rate:5.46, held:335, outSeats:3756,
-  shows:313, cinemas:112, showsScan:323, footShows:323, footCinemas:113,
+  matchedShows:313, matchedWas:3936, matchedNow:4216, buying:280,
+  newShows:5, newTickets:28,
+  seats:73723, rate:5.76, held:335, outSeats:3756,
+  shows:318, cinemas:113, showsScan:323, footShows:323, footCinemas:113,
   cities:90, priced:51, zeroShows:100, outBasis:30, soldOut:0,
   compeso:1835, compesoShows:117, compesoRate:3.95,
   oneState:2119, oneStateShows:196, oneStateRate:3.26,
   blockFloor:12, testedRooms:20, untestedRooms:62,
-  byDate:[['Thu 5 Nov',1835,121,32326,5.68],['Fri 6 Nov',286,37,7168,3.99],
-          ['Sat 7 Nov',948,42,9291,10.20],['Sun 8 Nov',808,83,18563,4.35],
-          ['Mon 9 Nov',33,13,2631,1.25],['Tue 10 Nov',26,16,2370,1.10],
-          ['Wed 11 Nov',0,1,80,0.00]],
+  byDate:[['Thu 5 Nov',1978,122,32531,6.08],['Fri 6 Nov',311,38,7285,4.27],
+          ['Sat 7 Nov',1019,43,9519,10.70],['Sun 8 Nov',866,85,19209,4.51],
+          ['Mon 9 Nov',43,13,2669,1.61],['Tue 10 Nov',27,16,2402,1.12],
+          ['Wed 11 Nov',0,1,108,0.00]],
   /* THE VERSION SPLIT IS CORRECTED, NOT UPDATED, AND IT WAS WRONG BY A
      LOT. The old 1,073 original / 633 dubbed came off OUR isOV flag in
      the worklist. On 21 Oct the booking pages themselves were read and
@@ -4127,15 +4138,16 @@ function pendingPanel(kicker,lead,rows,note){
 function deBody(){
   return `<div style="font-family:var(--disp);font-weight:700;font-size:12px;`+
     `letter-spacing:.14em;text-transform:uppercase;color:var(--accent)">`+
-    `Germany · full re-read, 24 October</div>`+
+    `Germany · full re-read, 25 October</div>`+
     `<p class="note" style="margin-top:8px">`+
     `<b>${fmt(DE.tickets)} tickets</b> · <b>€${fmt(DE.eur)}</b> `+
     `(~$${fmt(DE.usd)}) · <b>${DE.rate}%</b> of ${fmt(DE.seats)} seats, `+
     `across ${DE.shows} showtimes at ${DE.cinemas} cinemas in ${DE.cities} `+
     `towns and cities. Every seat map opened by hand. <b>Up from `+
-    `2,436 two days ago.</b> The ${DE.matchedShows} showtimes read on both `+
-    `22 and 24 October went ${fmt(DE.matchedWas)} → ${fmt(DE.matchedNow)}, `+
-    `and ${DE.newShows} showtimes listed since add ${fmt(DE.newTickets)}. `+
+    `3,954 a day ago.</b> The ${DE.matchedShows} showtimes read on both `+
+    `24 and 25 October went ${fmt(DE.matchedWas)} → ${fmt(DE.matchedNow)}, `+
+    `and ${DE.newShows} maps that would not open last time add `+
+    `${fmt(DE.newTickets)}. `+
     `One of them needs saying out loud: <b>Traumpalast Leonberg's IMAX, `+
     `${DE.leonberg.when}, is ${DE.leonberg.sold} of ${DE.leonberg.of} seats `+
     `gone</b> — a Saturday-morning room that full this early is almost `+
@@ -4167,11 +4179,11 @@ function deBody(){
     `published before today was reported as if this were a Hindi-and-dub `+
     `market. It is three tracks.</p>`+
     `<div style="display:grid;gap:7px;margin:13px 0 0">`+
-    [['München','611 tickets off three cinemas — still the biggest city'],
-     ['Leonberg','456 at one cinema near Stuttgart, 418 of them one IMAX show'],
-     ['Main-Taunus','319 at one multiplex outside Frankfurt'],
-     ['Hamburg','270 across two cinemas'],
-     ['Berlin','226 across nine cinemas — still small for the capital'],
+    [['München','635 tickets off three cinemas — still the biggest city'],
+     ['Leonberg','472 at one cinema near Stuttgart, 434 of them one IMAX show'],
+     ['Main-Taunus','354 at one multiplex outside Frankfurt'],
+     ['Hamburg','292 across two cinemas'],
+     ['Berlin','239 across ten cinemas — still small for the capital'],
      ['Fullest room',DE.top.cinema+', '+DE.top.when+' — '+DE.top.sold+' of '+
                      DE.top.of+' seats, '+DE.top.pct+'%']]
       .map(([a,b])=>
@@ -4191,9 +4203,9 @@ function deBody(){
     `price cut.</p>`+
     `<p class="note"><b>This total is one fresh read.</b> `+
     `${DE.shows} of the ${DE.showsScan} listed showtimes were opened on `+
-    `24 October; ten maps would not open and keep their last figure (18 `+
-    `tickets), eight showtimes are no longer listed. The ${DE.matchedShows} `+
-    `showtimes read on <b>both</b> 22 and 24 October are the clean reading: `+
+    `25 October; six maps would not open (none carried a figure) and seven `+
+    `showtimes are no longer listed. The ${DE.matchedShows} `+
+    `showtimes read on <b>both</b> 24 and 25 October are the clean reading: `+
     `${fmt(DE.matchedWas)} to ${fmt(DE.matchedNow)}, <b>+${DE.buying} `+
     `net</b>, with some rooms rising and some handing seats back. The footprint is `+
     `wider than the count — <b>${DE.footShows} shows at ${DE.footCinemas} `+
