@@ -1616,31 +1616,39 @@ const CA = {showtimes:337, cinemas:27, auditoriums:33, dates:5,
               about a hold - the 590 IMAX floor stays untested and carried.
               ScreenX's room test still gives 122. Clean floor 1,952 - 712
               = 1,240. */
-  lm:{tickets:1952, cinemas:9, shows:76, seats:12644, rate:15.44,
-      cad:35136, usd:25298, atpCad:18, format:'IMAX 3D and ScreenX',
-      buying:135, newInventory:41, newShows:3, matchedShows:73,
-      was:1776, gapHours:24.0, was2:1323, was3:676,
-      imax:{tickets:1057, cinemas:6, shows:15, seats:4217, rate:25.07,
-            was:963, added:94, matched:true, dates:2,
-            was2:769, was3:676, was4:650, addedAll:407,
-            blockFloor:590, lo:467, hi:1057, wheelchair:72, blockRooms:6,
-            cities:[['Waterloo',307],['Whitby',297],['Kanata',215],
-                    ['Calgary Country Hills',170],['Kingston',50],
+  /* 25 OCT 05:36-05:42Z, GROK RE-READ. 1,952 -> 2,046.
+     MATCHED  all 76 showtimes of 24 Oct, about 17 hours apart, every
+              capacity identical: 25 rose by 105, two fell by 11 (Surrey
+              ScreenX 4 Nov -9, Kingston IMAX 4 Nov -2, kept) - +94 net.
+              IMAX 1,057 -> 1,109; ScreenX 895 -> 937.
+     NEW      none. BLOCK unchanged at 712; clean floor 2,046 - 712 = 1,334.
+     Waterloo's 4 Nov 9pm IMAX is the fullest room in Canada: 156 of 223,
+     70%. */
+  lm:{tickets:2046, cinemas:9, shows:76, seats:12644, rate:16.18,
+      cad:36828, usd:26516, atpCad:18, format:'IMAX 3D and ScreenX',
+      buying:94, newInventory:0, newShows:0, matchedShows:76,
+      was:1952, gapHours:17.0, was2:1776, was3:1323, was4:676,
+      imax:{tickets:1109, cinemas:6, shows:15, seats:4217, rate:26.30,
+            was:1057, added:52, matched:true, dates:2,
+            was2:963, was3:769, was4:676, was5:650, addedAll:459,
+            blockFloor:590, lo:519, hi:1109, wheelchair:72, blockRooms:6,
+            cities:[['Waterloo',329],['Whitby',308],['Kanata',220],
+                    ['Calgary Country Hills',186],['Kingston',48],
                     ['Nanaimo',18]]},
       /* ScreenX. Columns are tickets, showtimes, seats. */
-      sx:{tickets:895, was:813, cinemas:4, newCinemas:1, shows:61, seats:8427,
-          rate:9.65, blockTested:true, blockFloor:122,
-          matchedWas:813, matchedNow:895, added:82, newShows:0, newTickets:0,
-          cities:[['Surrey Guildford',463,25,3375],
-                  ['Calgary Country Hills',255,14,2394],
-                  ['St. Catharines Pen Centre',94,14,1610],
+      sx:{tickets:937, was:895, cinemas:4, newCinemas:0, shows:61, seats:8427,
+          rate:11.12, blockTested:true, blockFloor:122,
+          matchedWas:895, matchedNow:937, added:42, newShows:0, newTickets:0,
+          cities:[['Surrey Guildford',480,25,3375],
+                  ['Calgary Country Hills',273,14,2394],
+                  ['St. Catharines Pen Centre',101,14,1610],
                   ['Orleans',83,8,1048]]},
-      blockFloor:712, lo:1240, hi:1952, wheelchair:72, blockRooms:10,
+      blockFloor:712, lo:1334, hi:2046, wheelchair:72, blockRooms:10,
       /* Both formats, all 73 showtimes, seats gone by show date. */
-      byDate:[['Wed 4 Nov',772],['Thu 5 Nov',533],['Fri 6 Nov',179],
-              ['Sat 7 Nov',245],['Sun 8 Nov',62],['Mon 9 Nov',46],
-              ['Tue 10 Nov',96],['Wed 11 Nov',13],['Thu 12 Nov',6]],
-      byDateWas:[['Wed 4 Nov',690],['Thu 5 Nov',501]]},
+      byDate:[['Wed 4 Nov',805],['Thu 5 Nov',552],['Fri 6 Nov',199],
+              ['Sat 7 Nov',253],['Sun 8 Nov',66],['Mon 9 Nov',50],
+              ['Tue 10 Nov',102],['Wed 11 Nov',13],['Thu 12 Nov',6]],
+      byDateWas:[['Wed 4 Nov',772],['Thu 5 Nov',533]]},
   /* Canada's two chains, for every roll-up on the page. CA.tickets stays
      Cineplex alone so the Cineplex paragraph keeps being about Cineplex. */
   get canTix(){ return this.tickets + this.lm.tickets; },

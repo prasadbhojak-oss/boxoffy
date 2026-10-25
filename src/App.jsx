@@ -4623,13 +4623,16 @@ const RAMAYANA_TRACKER = {
   // eighteen dollars, four point seven eight per cent, eleven thousand four
   // hundred thirty-four shows.
   // 24 OCT 21:39 CT SWEEP. US 73,390 + Cineplex 6,252 + Landmark 1,952.
-  tickets: "81,594",
+  // 25 OCT 05:40Z: Landmark re-read 1,952 -> 2,046. Retired: eighty-one
+  // thousand five hundred ninety-four, one million five hundred sixty-two
+  // thousand two hundred eighty-four dollars.
+  tickets: "81,688",
   rate: "4.95%",
   shows: "11,478",
   // 24 OCT 22:40: priced at MEASURED per-format prices (IMAX 23.90, PLF
   // 25.04, XD 20.47, 3D 17.13, Std 16.36). Retired: one million five hundred
   // fourteen thousand nine hundred twenty-four dollars.
-  value: "$1,562,284",
+  value: "$1,563,502",
   tminus: "T-14",
   scan: "24 Oct · 9:39pm CT",
 };
