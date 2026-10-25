@@ -1088,7 +1088,17 @@ const colour = r => BINS.find(b=>r<b[0]||b[0]===1e9)[1];
    filtering to IMAX uses the IMAX price, not the average.
    (ATP_WK further down is a different thing: the assumed price of an opening
    weekend ticket, used only by the trajectory.) */
-const ATP_FMT={IMAX:24, PLF:22, XD:19, '3D':18, Standard:15};
+/* 24 OCT, PB: "stay close to the actual ticket rate". Prices are now the
+   MEASURED averages from a published premiere-night gross split by format
+   (MovieMintBO, USA premiere, 24 Oct ~09:30 CT, $489,390 on 22,009 tickets):
+   IMAX $336,064/14,061 = $23.90; XD $45,577/2,226 = $20.47; Digital 3D
+   $9,406/549 = $17.13; Standard $52,964/3,237 = $16.36; PLF = our bucket
+   (4DX, ScreenX, D-Box) $32,170/1,285 = $25.04. Was IMAX 24, PLF 22, XD 19,
+   3D 18, Standard 15. Cross-check: our own 4 Nov scan priced by its own
+   format mix gives $22.00 a ticket against their $22.24. These are evening
+   premiere prices; later days carry matinees and discount Tuesdays, so if
+   anything they run slightly high on 9-12 Nov, where volumes are small. */
+const ATP_FMT={IMAX:23.90, PLF:25.04, XD:20.47, '3D':17.13, Standard:16.36};
 function blendedATP(){
   let n=0,v=0;
   for(const m of DATA.metros) for(const [k,o] of Object.entries(m.byFmt||{})){
@@ -3940,8 +3950,8 @@ function stamp(){
      ticketing platform" and the name is stated once, here. */
   $('#foot').innerHTML=`Boxoffy · seat-level scan of North American cinema listings. `+
     `Tickets are measured seat by seat. The VALUE tile is not: the source publishes no `+
-    `ticket price, so it is our per-format assumption (IMAX $24, PLF $22, XD $19, 3D $18, `+
-    `standard $15) applied to a counted ticket, blended here at $${atpNow().toFixed(2)}.`+
+    `ticket price, so it is a per-format price measured from a published premiere-night gross (IMAX $23.90, PLF $25.04, XD $20.47, 3D $17.13, `+
+    `standard $16.36) applied to a counted ticket, blended here at $${atpNow().toFixed(2)}.`+
     `<br>Sources outside North America: the UK is Cineworld, Showcase, Vue and six smaller chains, read by hand; Australia is HOYTS and `+
     `Event; New Zealand is Event; Germany is thirteen chain systems read by hand; `+
     `the Netherlands is Pathé and Vue, read by hand; Sweden is five independents on `+

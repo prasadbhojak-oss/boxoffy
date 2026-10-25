@@ -4626,7 +4626,10 @@ const RAMAYANA_TRACKER = {
   tickets: "81,594",
   rate: "4.95%",
   shows: "11,478",
-  value: "$1,514,924",
+  // 24 OCT 22:40: priced at MEASURED per-format prices (IMAX 23.90, PLF
+  // 25.04, XD 20.47, 3D 17.13, Std 16.36). Retired: one million five hundred
+  // fourteen thousand nine hundred twenty-four dollars.
+  value: "$1,562,284",
   tminus: "T-14",
   scan: "24 Oct · 9:39pm CT",
 };
