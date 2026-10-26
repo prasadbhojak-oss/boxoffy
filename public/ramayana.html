@@ -2723,23 +2723,26 @@ const NL = {
      Every Pathe room decays properly and is left alone.
      Kinepolis, Euroscoop, Cinemec and three independents list it but ask
      for a ticket quantity first or show nothing yet: not counted. */
-  tickets:2639, clean:2357, block:282, blockRooms:4,
-  eur:36946, usd:41516, atpEur:14.00, fx:1.1237, atpIsOurs:true,
+  /* 25 OCT ~22:50 CT GROK RE-READ (ramayana_nl_se_25oct.xlsx). 2,639 ->
+     3,060. 55 showtimes re-read on s.pathe.nl and Vue: 1,753 -> 2,174,
+     +421 (Pathe +393, Vue +28). Pathe started refusing loads partway, so
+     45 showtimes keep their 24 Oct count (633) and the 7 sold-out shows
+     keep their 253. Pathe Ypenburg's Thu 7pm is 203 of 213. */
+  tickets:3060, clean:2778, block:282, blockRooms:4,
+  eur:42840, usd:48139, atpEur:14.00, fx:1.1237, atpIsOurs:true,
   shows:124, showsRead:100, cinemas:31, cinemasRead:21, cities:14, seats:24114, rate:9.89,
-  pathe:2317, patheShows:88, patheCinemas:15,
-  vue:322, vueShows:19, vueCinemas:6,
+  pathe:2710, patheShows:88, patheCinemas:15,
+  vue:350, vueShows:19, vueCinemas:6,
   pulledShows:11, pulledTickets:53, newRead:273,
   soldOutCarried:7, soldOutCarriedTickets:253,
-  wasTickets:2175, wasTickets2:1959, wasTickets3:1546, matchedAdded:244,
-  byDate:[['Thu 5 Nov',682,21],['Fri 6 Nov',780,17],['Sat 7 Nov',618,20],
-          ['Sun 8 Nov',328,25],['Mon 9 Nov',78,6],['Tue 10 Nov',94,13],
-          ['Wed 11 Nov',59,5]],
+  wasTickets:2639, wasTickets2:2175, wasTickets3:1959, wasTickets4:1546, matchedAdded:421,
+  byDate:[['Thu 5 Nov',756,21],['Fri 6 Nov',970,17],['Sat 7 Nov',768,20],['Sun 8 Nov',335,25],['Mon 9 Nov',78,6],['Tue 10 Nov',94,13],['Wed 11 Nov',59,5]],
   cities_:[['Den Haag · Ypenburg',504,34.7],['Amsterdam · Arena',461,12.8],
            ['Rotterdam · de Kuip',300,23.4],['Den Haag · Spuimarkt',283,8.0],
            ['Eindhoven · Pathe',212,9.1],['Utrecht Leidsche Rijn',157,8.4],
            ['Amsterdam-Noord',76,14.6],['Arnhem',72,5.8]],
   top:{cinema:'Pathe Ypenburg, Den Haag', when:'Thu 5 Nov, 7:00p',
-       sold:195, of:213, pct:91.5}
+       sold:203, of:213, pct:95.3}
 };
 
 /* SWEDEN IS A ZERO WITH A LABEL, AND THE LABEL IS THE POINT.
@@ -2786,7 +2789,11 @@ const FR = { tickets:14, eur:228, usd:257, shows:40, showsRead:29, cinemas:20,
    Nov 18:00, 0 of 176. The same 18 seats are drawn not bookable, not taken.
    Filmstaden no longer answers a hard 403, but its page pre-sets a ticket
    quantity before the seat map, so under our rule it stays unread. */
-const SE = { tickets:0, shows:30, showsRead:8, cinemas:25, cities:24, seats:1219,
+/* 26 OCT ~09:15 CT: Sweden 0 -> 30. Sigtuna Grona Ladan (bio.se) 30 on
+   Thu 5 Nov - the first Swedish tickets we have counted. Filmstaden is
+   still behind Cloudflare and pre-sets 2 tickets before the map, so it
+   is NOT read (BoxofficeIndia24 reports ~712 there). */
+const SE = { tickets:30, usd:446, /* SEK 150 assumed, as BoxofficeIndia24 */ shows:32, showsRead:8, cinemas:26, cities:25, seats:1219,
              chainBlocked:'Filmstaden', blockedShows:21, blockedCinemas:17 };
 
 
@@ -3424,8 +3431,8 @@ function tiles(){
        - Middle East, SE Asia, Europe outside the UK. It is deliberately a
        zero with a label, never a blank: a reader who sees no row assumes we
        looked and found nothing. */
-    const WT={tix:naTix+UK.tickets+AU.anzTix+DE.tickets+IN.allTix+NL.tickets+FR.tickets+SE.tickets,
-              usd:naUsd+UK.usd+AU.anzUsd+DE.usd+IN.allUsd+NL.usd+FR.usd,
+    const WT={tix:naTix+UK.tickets+AU.anzTix+DE.tickets+IN.allTix+NL.tickets+FR.tickets+SE.tickets+PH.tickets,
+              usd:naUsd+UK.usd+AU.anzUsd+DE.usd+IN.allUsd+NL.usd+FR.usd+(SE.usd||0)+PH.usd,
               rows:[['North America',naTix,naUsd],['United Kingdom',UK.tickets,UK.usd],
                     ['Australia & NZ',AU.anzTix,AU.anzUsd],
                     /* Germany went from footprint to counted on 18 Oct and
@@ -3445,7 +3452,8 @@ function tiles(){
                        would let a reader assume we had not looked. */
                     ['Netherlands',NL.tickets,NL.usd],
                     ['France',FR.tickets,FR.usd],
-                    ['Sweden',SE.tickets,0],
+                    ['Sweden',SE.tickets,SE.usd||0],
+                    ['Philippines',PH.tickets,PH.usd],
                     ['Rest of world',0,0]]};
     const split=w=>
       `<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(132px,1fr));`+
@@ -5424,7 +5432,7 @@ function wwTotals(){
   const tix=usSold+xTix()+CA.canTix+UK.tickets+AU.anzTix+DE.tickets+IN.allTix+
             NL.tickets+FR.tickets+SE.tickets+PH.tickets;
   const usd=Math.round(usSold*atpNow())+xUsd()+CA.canUsd+UK.usd+AU.anzUsd+DE.usd+
-            IN.allUsd+NL.usd+FR.usd+PH.usd;
+            IN.allUsd+NL.usd+FR.usd+PH.usd+(SE.usd||0);
   const naTix=usSold+xTix()+CA.canTix;
   const naUsd=Math.round(usSold*atpNow())+xUsd()+CA.canUsd;
   /* NEW ZEALAND'S 14 WERE MISSING FROM THIS SUM. NZ folded into the
