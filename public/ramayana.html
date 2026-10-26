@@ -1159,6 +1159,18 @@ function atpNow(){
    5-8 Nov only, matching every other market. Germany is also on sale 9-11
    Nov - 13 more tickets - deliberately excluded so the basis lines up. */
 const DE = {
+  /* 26 OCT EVENING (Grok, read 22:51-23:01Z). 4,546 -> 4,643.
+     MATCHED 325 showtimes read this morning and tonight: 4,545 -> 4,615,
+     +70 net (72 rose by 275, 54 fell by 205 - kept, both directions are
+     the read). The falls are mostly Cineplex weekend matinees letting go
+     of seats: Neckarsulm Sun 11:00 74 -> 0, Mannheim Sun 11:30 48 -> 26
+     and Sat 18:00 37 -> 20 - group or school reservations released, not
+     buying in reverse. Risers: Leonberg +24 (the group show 452 -> 470),
+     Kinopolis Hafencity +24, Main-Taunus +21, CinemaxX Berlin +18, UFA
+     Palast Duesseldorf +17. FIRST READS 7, +27 (Capitol Kassel 8, Alsdorf
+     7, Passau 8). UNREAD 25: UCI still Cloudflare 403 (10, not worked
+     around), 7 never loaded, 8 shows gone from sale - their last figure
+     (1 ticket) is carried. Held 890, kept out. EUR 17.13 pinned, 1.1237. */
   /* 19 OCT, ALL-PRESALE BASIS. 1,192 = 1,179 on 5-8 Nov + 13 on 9-11 Nov.
      The 9-11 Nov rows were counted on 18 Oct and then deliberately excluded
      to match the other markets' window; PB retired that window on 19 Oct on
@@ -1295,8 +1307,8 @@ const DE = {
      Rheine); 15 not readable - UCI 8 (Cloudflare 403), Cineplex Alsdorf /
      Kassel stall, Passau, Heidelberg late show. 116 cinemas, 94 towns.
      Leonberg 449 -> 452, still counted, still ranged out. EUR 17.13 pinned. */
-  tickets:4546, eur:77873, usd:87506, atpEur:17.13, fx:1.1237, lowNoGroup:4094,
-  leonberg:{sold:452, of:582, when:'Sat 7 Nov, 11:00am'},
+  tickets:4643, eur:79535, usd:89373, atpEur:17.13, fx:1.1237, lowNoGroup:4173,
+  leonberg:{sold:470, of:582, when:'Sat 7 Nov, 11:00am'},
   inBasis:2393, outBasis2:43, deltaRead:12, deltaScannable:18, showsGone:0,
   notYetOnSale:4, sharedUrlDupes:1,
   /* 21 OCT. THE TOTAL IS NOW TWO READS AND THE PAGE SAYS WHICH IS WHICH.
@@ -1339,17 +1351,17 @@ const DE = {
      Four showtimes were opened for the first time and carried 8 more.
      +309 of the +317 is people buying tickets. Nothing else in this
      market has ever been measurable that cleanly. */
-  matchedShows:313, matchedWas:3936, matchedNow:4216, buying:280,
-  newShows:5, newTickets:28,
-  seats:75829, rate:6.0, held:898, outSeats:3756,
-  shows:326, cinemas:116, showsScan:323, footShows:323, footCinemas:113,
-  cities:94, priced:51, zeroShows:100, outBasis:30, soldOut:0,
+  matchedShows:325, matchedWas:4545, matchedNow:4615, buying:70,
+  newShows:7, newTickets:27,
+  seats:76400, rate:6.1, held:890, outSeats:3756,
+  shows:333, cinemas:119, showsScan:323, footShows:323, footCinemas:113,
+  cities:96, priced:51, zeroShows:115, outBasis:30, soldOut:0,
   compeso:1835, compesoShows:117, compesoRate:3.95,
   oneState:2119, oneStateShows:196, oneStateRate:3.26,
   blockFloor:12, testedRooms:20, untestedRooms:62,
-  byDate:[['Thu 5 Nov',2123,125,33278,6.38],['Fri 6 Nov',354,39,7573,4.67],
-          ['Sat 7 Nov',1108,44,9796,11.31],['Sun 8 Nov',911,87,19714,4.62],
-          ['Mon 9 Nov',29,13,2681,1.08],['Tue 10 Nov',21,16,2402,0.87],
+  byDate:[['Thu 5 Nov',2212,128,33521,6.60],['Fri 6 Nov',370,39,7405,5.00],
+          ['Sat 7 Nov',1141,46,9799,11.64],['Sun 8 Nov',851,89,20207,4.21],
+          ['Mon 9 Nov',45,13,2681,1.68],['Tue 10 Nov',24,16,2402,1.00],
           ['Wed 11 Nov',0,2,385,0.00]],
   /* THE VERSION SPLIT IS CORRECTED, NOT UPDATED, AND IT WAS WRONG BY A
      LOT. The old 1,073 original / 633 dubbed came off OUR isOV flag in
