@@ -1273,8 +1273,16 @@ const DE = {
      showtimes found. LEONBERG 418 -> 434: still counted, still ranged out.
      Grok printed 50 prices; the total stays at the pinned EUR 17.13 so the
      series does not jump on a method change. */
-  tickets:4244, eur:72700, usd:81693, atpEur:17.13, fx:1.1237, lowNoGroup:3810,
-  leonberg:{sold:434, of:582, when:'Sat 7 Nov, 11:00am'},
+  /* 25 OCT ~19:30 CT, GROK RE-READ (ramayana_germany_25oct_pm.csv). 4,244 ->
+     4,597. 196 showtimes re-read like for like against the 01:03 read:
+     2,154 -> 2,507, +353 net (63 rose by 356, 1 fell by 3 - kept). The
+     other 122 (Cineplex and Kinopolis behind a Cloudflare bot check this
+     time, Mathaeser, Cinedom) were NOT re-read and are CARRIED at their
+     01:03 count - a presale does not run backwards, so a floor. Not
+     listed 7. Thursday 5 Nov +137, Sunday 8 Nov +142. LEONBERG 434 -> 449,
+     still counted, still ranged out. EUR at the pinned 17.13. */
+  tickets:4597, eur:78747, usd:88488, atpEur:17.13, fx:1.1237, lowNoGroup:4148,
+  leonberg:{sold:449, of:582, when:'Sat 7 Nov, 11:00am'},
   inBasis:2393, outBasis2:43, deltaRead:12, deltaScannable:18, showsGone:0,
   notYetOnSale:4, sharedUrlDupes:1,
   /* 21 OCT. THE TOTAL IS NOW TWO READS AND THE PAGE SAYS WHICH IS WHICH.
@@ -1319,15 +1327,15 @@ const DE = {
      market has ever been measurable that cleanly. */
   matchedShows:313, matchedWas:3936, matchedNow:4216, buying:280,
   newShows:5, newTickets:28,
-  seats:73723, rate:5.76, held:335, outSeats:3756,
+  seats:73723, rate:6.24, held:335, outSeats:3756,
   shows:318, cinemas:113, showsScan:323, footShows:323, footCinemas:113,
   cities:90, priced:51, zeroShows:100, outBasis:30, soldOut:0,
   compeso:1835, compesoShows:117, compesoRate:3.95,
   oneState:2119, oneStateShows:196, oneStateRate:3.26,
   blockFloor:12, testedRooms:20, untestedRooms:62,
-  byDate:[['Thu 5 Nov',1978,122,32531,6.08],['Fri 6 Nov',311,38,7285,4.27],
-          ['Sat 7 Nov',1019,43,9519,10.70],['Sun 8 Nov',866,85,19209,4.51],
-          ['Mon 9 Nov',43,13,2669,1.61],['Tue 10 Nov',27,16,2402,1.12],
+  byDate:[['Thu 5 Nov',2115,122,32531,6.50],['Fri 6 Nov',335,38,7285,4.60],
+          ['Sat 7 Nov',1063,43,9519,11.17],['Sun 8 Nov',1008,85,19209,5.25],
+          ['Mon 9 Nov',49,13,2669,1.84],['Tue 10 Nov',27,16,2402,1.12],
           ['Wed 11 Nov',0,1,108,0.00]],
   /* THE VERSION SPLIT IS CORRECTED, NOT UPDATED, AND IT WAS WRONG BY A
      LOT. The old 1,073 original / 633 dubbed came off OUR isOV flag in
@@ -1359,7 +1367,7 @@ const DE = {
   tamilCinemas:17, tamilCities:16,
   langUnnamed:484, langUnnamedShows:43,
   top:{cinema:'CinemaxX München', when:'Thu 5 Nov, 7:00p',
-       sold:91, of:121, pct:75.2}
+       sold:93, of:121, pct:76.9}
 };
 
 /* CANADA, COUNTED 18 OCT. Was a recovered floor until today; now every one
