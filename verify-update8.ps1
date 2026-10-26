@@ -61,12 +61,12 @@ Need $page 'function openSpan'   'opening-run split'
 # 20 Oct guard below exists because Bradford and Whiteley did this once. It
 # has now happened twice, to the same cinema, and these guards are the only
 # thing standing between that and a published +73.
-Need $page 'tickets:10844'       'UK 10,844 after the 24 Oct afternoon Cineworld Fri/Sat re-read'
+Need $page 'tickets:11134'       'UK 10,844 after the 24 Oct afternoon Cineworld Fri/Sat re-read'
 Absent $page 'tickets:10621,'    'no overnight 24 Oct UK total as the live figure'
-Need $page 'cwGone:7704'         'Cineworld 7,704, relabelling excluded'
-Need $page 'gbp:146394'           'UK pounds at the pinned 13.50 ATP'
-Need $page 'usd:194016'          'UK dollars moved with the pounds, at 1.3253'
-Need $page 'realHi:10844'        'the top of the UK range is the headline'
+Need $page 'cwGone:7845'         'Cineworld 7,704, relabelling excluded'
+Need $page 'gbp:150309'           'UK pounds at the pinned 13.50 ATP'
+Need $page 'usd:199205'          'UK dollars moved with the pounds, at 1.3253'
+Need $page 'realHi:11134'        'the top of the UK range is the headline'
 Need $page 'reRead2Delta:427'    'the 21 Oct clean delta'
 Need $page 'reRead2Relabelled:109' 'and the seats excluded to get it'
 Need $page 'bradfordClean:1'     'Bradford: one seat, not seventy-three'
@@ -104,14 +104,14 @@ Absent $page 'reReadDelta:1118'  'the raw delta must never be published as clean
 Absent $page 'reReadDelta:532'   'the file total alone loses the re-baselined 25'
 Absent $page 'reReadDelta:746'   'the raw delta must never be published as clean'
 Absent $page 'cwGone:5985'       'batch 5 must not be stacked on batch 4'
-Need $page 'scGone:1087'         'Showcase 1,087 read, room blocks removed'
-Need $page 'vueGone:1687'        'Vue counted for the first time'
+Need $page 'scGone:1171'         'Showcase 1,087 read, room blocks removed'
+Need $page 'vueGone:1752'        'Vue counted for the first time'
 Need $page 'reRead3Delta:1503'   'the clean Cineworld delta, 24 Oct'
 Absent $page 'cwGone:8211'       'the chain column is never the published Cineworld figure'
 Need $page 'soldShare:44.84'     'the share is measured now, not assumed'
 # offSale is a direct read now: 6,098 shown sold plus 5,576 labelled held.
 Need $page 'offSale:14119'       'UK off sale published beside it'
-Need $page 'realLo:7447'         'UK real-bookings band published, not a point'
+Need $page 'realLo:7737'         'UK real-bookings band published, not a point'
 Need $page 'blockSeats:3397'     'UK house-seat exposure disclosed'
 # The city list MUST stay block-corrected. On the seats-gone basis Solihull
 # reads 462 and Feltham 281, and both are almost entirely one room's block -
@@ -128,7 +128,7 @@ Absent $page "['Feltham',281]"        'no block-inflated Feltham in the city lis
 # pre-flight could not pass at all - every run failed on two guards that were
 # only ever each other. Retired figures live in section 4 as Absent; the live
 # figure is the only thing section 1 Needs. One number, one guard, one place.
-Need $page 'booked:7447'         'UK organic booked figure published'
+Need $page 'booked:7737'         'UK organic booked figure published'
 Need $page 'blockedAll:11287'     'UK blocked seats published'
 Need $page 'INCLUDES BLOCKED SEATS' 'UK footer discloses blocks in the headline'
 Need $page 'function deBody'     'Germany panel'
@@ -472,15 +472,15 @@ Absent $page 'tickets:4836,'     'no pre-re-read Australian total'
 # 12 showtimes are no longer listed. Those 90 keep their 20 Oct figure.
 # carriedTickets must stay on the page: a blended total that hides which
 # rows are stale is the thing we are guarding against.
-Need $page 'tickets:4597'        'Germany 4,244, 25 Oct Grok re-read'
+Need $page 'tickets:4546'        'Germany 4,244, 25 Oct Grok re-read'
 Absent $page 'tickets:3954,'     'no 24 Oct German total'
 Absent $page 'tickets:2436,'     'no 22 Oct Germany total'
-Need $page 'lowNoGroup:4148'     'the Leonberg group booking is named and ranged out'
+Need $page 'lowNoGroup:4094'     'the Leonberg group booking is named and ranged out'
 Absent $page 'tickets:2360,'     'no 21-22 Oct interim German total'
 Absent $page 'tickets:2023,'     'no 21 Oct German total'
 Need $page 'compeso:1835'        'the half of Germany that is a true sold count'
 Need $page 'oneState:2119'        'the half that is only seats gone'
-Need $page 'seats:73723'         'the German denominator moved with the rows'
+Need $page 'seats:75829'         'the German denominator moved with the rows'
 Need $page 'carried:16,'         'the carried-forward rows are counted'
 Need $page 'carriedTickets:91'  'and their tickets are named, not blended'
 Absent $page 'tickets:1230,'     'no pre-re-read German total'
@@ -770,10 +770,10 @@ Absent $page 'tickets:1177' 'no pre-basis-change Germany total'
 # carry ours, and the page says so in all three places a reader can see it.
 # What this guard still protects: it must be 18, the median PB set, and it
 # must be visible in the euro total. A silent 0 or a silent 18.92 both fail.
-Need   $page 'eur:78747'    'German euros at their own observed EUR 17.21'
+Need   $page 'eur:77873'    'German euros at their own observed EUR 17.21'
 Absent $page 'eur:23237'    'no pre-re-read German euros'
 Absent $page 'eur:29187'    'no pre-21-Oct German euro total'
-Need   $page 'usd:88488'    'German dollars moved with the euros, at 1.1237'
+Need   $page 'usd:87506'    'German dollars moved with the euros, at 1.1237'
 Absent $page 'usd:32796'    'no pre-21-Oct German dollar total'
 Need   $page 'atpEur:17.13' 'German ATP held steady across the third read'
 Absent $page 'atpEur:17.11' 'no pre-21-Oct German ATP'

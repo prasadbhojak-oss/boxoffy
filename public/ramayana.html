@@ -1281,8 +1281,22 @@ const DE = {
      01:03 count - a presale does not run backwards, so a floor. Not
      listed 7. Thursday 5 Nov +137, Sunday 8 Nov +142. LEONBERG 434 -> 449,
      still counted, still ranged out. EUR at the pinned 17.13. */
-  tickets:4597, eur:78747, usd:88488, atpEur:17.13, fx:1.1237, lowNoGroup:4148,
-  leonberg:{sold:449, of:582, when:'Sat 7 Nov, 11:00am'},
+  /* 26 OCT ~14:00Z, GROK FULL RE-READ (Ramayana_Germany_filled_2026-10-26.csv).
+     4,597 -> 4,546, and the fall is a RULE CHANGE, not refunds. Every one
+     of the 318 showtimes carried in the worklist was read this time -
+     Cineplex and Kinopolis answered, nothing is carried.
+     - 259 showtimes read on the same basis as before: 3,131 -> 3,444, +313
+       (real buying; Kinopolis Main-Taunus 213 on Thu 7:30pm, Mathaeser 198).
+     - 59 showtimes in rooms where the SAME seats show taken on every session
+       (Dietrich-Theater Neu-Ulm 25 a show, C1 Braunschweig 10, Kinopolis
+       Hafencity 6...) now count those seats as HELD, our rule everywhere
+       (IMAX Sydney, SM Manila): 1,466 -> 1,102. Held 327 -> 898.
+     23 new rows: 8 read at 0 (CineStar Wildau, Filmpalast Hofheim, Zinema
+     Rheine); 15 not readable - UCI 8 (Cloudflare 403), Cineplex Alsdorf /
+     Kassel stall, Passau, Heidelberg late show. 116 cinemas, 94 towns.
+     Leonberg 449 -> 452, still counted, still ranged out. EUR 17.13 pinned. */
+  tickets:4546, eur:77873, usd:87506, atpEur:17.13, fx:1.1237, lowNoGroup:4094,
+  leonberg:{sold:452, of:582, when:'Sat 7 Nov, 11:00am'},
   inBasis:2393, outBasis2:43, deltaRead:12, deltaScannable:18, showsGone:0,
   notYetOnSale:4, sharedUrlDupes:1,
   /* 21 OCT. THE TOTAL IS NOW TWO READS AND THE PAGE SAYS WHICH IS WHICH.
@@ -1327,16 +1341,16 @@ const DE = {
      market has ever been measurable that cleanly. */
   matchedShows:313, matchedWas:3936, matchedNow:4216, buying:280,
   newShows:5, newTickets:28,
-  seats:73723, rate:6.24, held:335, outSeats:3756,
-  shows:318, cinemas:113, showsScan:323, footShows:323, footCinemas:113,
-  cities:90, priced:51, zeroShows:100, outBasis:30, soldOut:0,
+  seats:75829, rate:6.0, held:898, outSeats:3756,
+  shows:326, cinemas:116, showsScan:323, footShows:323, footCinemas:113,
+  cities:94, priced:51, zeroShows:100, outBasis:30, soldOut:0,
   compeso:1835, compesoShows:117, compesoRate:3.95,
   oneState:2119, oneStateShows:196, oneStateRate:3.26,
   blockFloor:12, testedRooms:20, untestedRooms:62,
-  byDate:[['Thu 5 Nov',2115,122,32531,6.50],['Fri 6 Nov',335,38,7285,4.60],
-          ['Sat 7 Nov',1063,43,9519,11.17],['Sun 8 Nov',1008,85,19209,5.25],
-          ['Mon 9 Nov',49,13,2669,1.84],['Tue 10 Nov',27,16,2402,1.12],
-          ['Wed 11 Nov',0,1,108,0.00]],
+  byDate:[['Thu 5 Nov',2123,125,33278,6.38],['Fri 6 Nov',354,39,7573,4.67],
+          ['Sat 7 Nov',1108,44,9796,11.31],['Sun 8 Nov',911,87,19714,4.62],
+          ['Mon 9 Nov',29,13,2681,1.08],['Tue 10 Nov',21,16,2402,0.87],
+          ['Wed 11 Nov',0,2,385,0.00]],
   /* THE VERSION SPLIT IS CORRECTED, NOT UPDATED, AND IT WAS WRONG BY A
      LOT. The old 1,073 original / 633 dubbed came off OUR isOV flag in
      the worklist. On 21 Oct the booking pages themselves were read and
@@ -4313,16 +4327,18 @@ function pendingPanel(kicker,lead,rows,note){
 function deBody(){
   return `<div style="font-family:var(--disp);font-weight:700;font-size:12px;`+
     `letter-spacing:.14em;text-transform:uppercase;color:var(--accent)">`+
-    `Germany · full re-read, 25 October</div>`+
+    `Germany · full re-read, 26 October</div>`+
     `<p class="note" style="margin-top:8px">`+
     `<b>${fmt(DE.tickets)} tickets</b> · <b>€${fmt(DE.eur)}</b> `+
     `(~$${fmt(DE.usd)}) · <b>${DE.rate}%</b> of ${fmt(DE.seats)} seats, `+
     `across ${DE.shows} showtimes at ${DE.cinemas} cinemas in ${DE.cities} `+
-    `towns and cities. Every seat map opened by hand. <b>Up from `+
-    `3,954 a day ago.</b> The ${DE.matchedShows} showtimes read on both `+
-    `24 and 25 October went ${fmt(DE.matchedWas)} → ${fmt(DE.matchedNow)}, `+
-    `and ${DE.newShows} maps that would not open last time add `+
-    `${fmt(DE.newTickets)}. `+
+    `towns and cities. Every seat map opened by hand, Cineplex and Kinopolis `+
+    `included this time. <b>Down from 4,597, and that is a rule, not `+
+    `refunds:</b> on the 259 showtimes read the same way as before, Germany `+
+    `went 3,131 → 3,444, up 313. The other 59 sit in rooms where the same `+
+    `seats show taken on every session — house blocks — and those seats now `+
+    `count as held, not sold, as they do everywhere else on this page `+
+    `(${fmt(DE.held)} held in all). `+
     `One of them needs saying out loud: <b>Traumpalast Leonberg's IMAX, `+
     `${DE.leonberg.when}, is ${DE.leonberg.sold} of ${DE.leonberg.of} seats `+
     `gone</b> — a Saturday-morning room that full this early is almost `+
@@ -4762,13 +4778,27 @@ const UK = {
      figure before either. So cwGone 7,481 + 223 = 7,704; Fri +119, Sat +104.
      Thu 5 and Sun 8 Nov and the other chains are unchanged from overnight.
      tickets = 7,704 + 1,087 + 1,687 + 366 = 10,844. */
-  tickets:10844, gbp:146394, usd:194016, atpGbp:13.50, fx:1.3253,
-  cwGone:7704, scGone:1087, vueGone:1687, othGone:366, soldShare:44.84, scOffSale:2549,
+  /* 26 OCT GROK RE-READ, ALL CHAINS (ramayana_uk_full_26oct.csv). 2,604
+     showtimes listed at 288 cinemas, 1,379 read; 1,378 matched to the last
+     read: 11,227 -> 11,463 raw, +236 (+2.1%). Applied chain by chain to the
+     clean figures, so the relabel/room-minimum rules stand:
+       Cineworld +141 on 394 matched (7,704 -> 7,845); unread Cineworld
+         rows keep their last count
+       Showcase  +84 on 644 (1,087 -> 1,171)
+       Vue       +65 on 301 (1,687 -> 1,752)
+       others     0  (Aberystwyth -48 and The Light Wisbech -12 are seats
+                     Grok now files as HELD - already outside our clean
+                     figure, so nothing moves)
+     ODEON (453 shows), Everyman, Omniplex: not read - still NOT counted.
+     Grok's held column: 2,248 seats, never counted.
+     tickets = 7,845 + 1,171 + 1,752 + 366 = 11,134, at the pinned £13.50. */
+  tickets:11134, gbp:150309, usd:199205, atpGbp:13.50, fx:1.3253,
+  cwGone:7845, scGone:1171, vueGone:1752, othGone:366, soldShare:44.84, scOffSale:2549,
   scRaw:2549, vueRaw:1869, othRaw:547, odeonShows:453, odeonCinemas:90,
   chainShows:6098, reRead:85, reReadShows:1091, reReadDelta:566,
   relabelled:552,
   reRead3Shows:1073, reRead3Raw:1763, reRead3Delta:1503, reRead3Relabelled:260,
-  reRead4Shows:534, reRead4Raw:243, reRead4Delta:222, reRead4Relabelled:21, reRead4New:1,
+  reRead4Shows:534, reRead4Raw:243, reRead4Delta:222, reRead4Relabelled:21, reRead4New:1, reRead5Delta:141,
   whiteleyRaw:147, whiteleyClean:3, chainShows3:8211,
   /* The 21 Oct round kept as its own fields. reReadDelta/relabelled above
      are the 20 Oct record and are not overwritten - two clean deltas on two
@@ -4784,7 +4814,7 @@ const UK = {
      labels held. Our published sold is 5,551 because 547 of that 6,098 is
      relabelling, and the gap is disclosed rather than reconciled away. */
   offSale:14119, held:5908,
-  realLo:7447, realHi:10844, blockSeats:3397, blockRooms:59,
+  realLo:7737, realHi:11134, blockSeats:3397, blockRooms:59,
   /* 24 Oct: offSale/held are Cineworld's own map, 8,211 shown + 5,908 held.
      blockSeats is Cineworld's room-minimum on today's read; the other
      chains' 1,982 are already off their figures. realLo = (7,481 - 3,397)
@@ -4800,7 +4830,7 @@ const UK = {
      labels plus 2,366 the room-minimum test infers. blockedUsd is NOTIONAL -
      nobody paid it - and it is never summed into a worldwide dollar total.
      booked* is the organic figure on Gemini's definition of a true sale. */
-  booked:7447, bookedGbp:100535, bookedUsd:133239,
+  booked:7737, bookedGbp:104450, bookedUsd:138427,
   blockedAll:11287, blockedGbp:152375, blockedUsd:201943,
   /* trueOcc, onlineOcc and bookableSeats are NOT rendered anywhere and are
      left at their 19 Oct values on purpose. Two of the three no longer
@@ -4926,7 +4956,7 @@ function euBody(){
     `across ${fmt(UK.showsRead)} showtimes at ${UK.cinemasRead} cinemas — `+
     `<b>${UK.rate.toFixed(2)}%</b> of the ${fmt(UK.seats)} seats in those `+
     `rooms. Cineworld is ${fmt(UK.cwGone)} of it, up `+
-    `${fmt(UK.reRead3Delta+UK.reRead4Delta+UK.reRead4New)} since 20 October; Showcase ${fmt(UK.scGone)}, read seat by seat for the `+
+    `${fmt(UK.reRead3Delta+UK.reRead4Delta+UK.reRead4New+UK.reRead5Delta)} since 20 October; Showcase ${fmt(UK.scGone)}, read seat by seat for the `+
     `first time; Vue ${fmt(UK.vueGone)}, counted for the first time; and `+
     `six smaller chains ${fmt(UK.othGone)}. Odeon is still closed to us. `+
     `That is the headline figure, and it is not the same as tickets sold: our `+
