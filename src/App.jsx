@@ -4652,15 +4652,15 @@ const RAMAYANA_TRACKER = {
   // Retired: eighty-one thousand six hundred eighty-eight, one million five
   // hundred sixty-three thousand five hundred two dollars, four point nine
   // five per cent, eleven thousand four hundred seventy-eight shows.
-  tickets: "93,241",
-  rate: "5.62%",
-  shows: "11,542",
+  tickets: "95,047",
+  rate: "5.66%",
+  shows: "11,660",
   // 24 OCT 22:40: priced at MEASURED per-format prices (IMAX 23.90, PLF
   // 25.04, XD 20.47, 3D 17.13, Std 16.36). Retired: one million five hundred
   // fourteen thousand nine hundred twenty-four dollars.
-  value: "$1,781,938",
+  value: "$1,814,621",
   tminus: "T-14",
-  scan: "26 Oct · 8:38am CT",
+  scan: "26 Oct · 4:00pm CT",
 };
 
 function RamayanaTrackerStrip() {
