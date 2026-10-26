@@ -1997,13 +1997,20 @@ const AU = {
      Event 2,419 -> 2,458 on 428 sessions, floor 100,059. Hand-count gate
      passed (13 of 13 at or above). NZ Event 484 -> 494, NZ$13,016.
      A quiet Monday-morning read: +153 in ten hours. */
-  tickets:10782, aud:276421, usd:182438, atpAud:25.64, fx:0.66,
-  ev:{tickets:2458, shows:428, counted:428, cinemas:38, seats:100059, rate:2.46},
-  hy:{tickets:8324, shows:437, counted:437, cinemas:47, cinemasRead:47,
-      seats:72985, rate:11.41, held:2620, carried:0, carriedShows:0,
+  /* 26 OCT 07:35-07:53 CT RE-READ (Monday night in Sydney). 10,782 ->
+     11,375. HOYTS 8,324 -> 8,696 (+372) - 441 of 442 read, one failed
+     (a 0-sold Warringah Mall row), plan 72,838 seats, held 2,618. Event
+     2,458 -> 2,679 (+221) on 428, floor 100,027. Hand-count gate passed.
+     Event still lists Ramayana for 5-8 Nov only in its API; Grok saw
+     9-11 Nov sessions on the website (BCC, IMAX Sydney) - not yet
+     counted. NZ Event 494 -> 534, NZ$14,032. */
+  tickets:11375, aud:291824, usd:192604, atpAud:25.65, fx:0.66,
+  ev:{tickets:2679, shows:428, counted:428, cinemas:38, seats:100027, rate:2.68},
+  hy:{tickets:8696, shows:437, counted:437, cinemas:47, cinemasRead:47,
+      seats:72838, rate:11.94, held:2618, carried:0, carriedShows:0,
       wasCarried:496, chadstoneRead:797, chadstoneHand:797,
       capacityWas:182, capacityNow:174},
-  byDate:[['Thu 5 Nov',3767],['Fri 6 Nov',3176],['Sat 7 Nov',2909],['Sun 8 Nov',930]],
+  byDate:[['Thu 5 Nov',3949],['Fri 6 Nov',3352],['Sat 7 Nov',3091],['Sun 8 Nov',983]],
   /* NEW ZEALAND, FOLDED INTO THIS MARKET 20 OCT. PB's call: one line, not
      two, so the tile and the worldwide roll-up read "Australia & NZ".
      AU.tickets, AU.aud and everything in auBody above stay AUSTRALIA ALONE -
@@ -2028,18 +2035,18 @@ const AU = {
      so NZ$5,378 over 200 tickets is an observed ATP of NZ$26.89, not an
      assumption. FX 0.5609, OFX, 18 Oct - pinned like every other rate here
      and not to be refreshed quietly mid-week. */
-  nz:{tickets:494, nzd:13016, usd:7301, atpNzd:26.35, fx:0.5609,
+  nz:{tickets:534, nzd:14032, usd:7871, atpNzd:26.35, fx:0.5609,
       cinemas:14, shows:110, seats:23413, rate:2.07,
       inBasis:380, inBasisNzd:10012, secondWeek:95, secondWeekNote:'10 Nov',
       cinemasAll:14, showsAll:110, hoytsCinemas:7, hoytsShows:98,
-      byDate:[['Thu 5 Nov',188],['Fri 6 Nov',126],['Sat 7 Nov',52],
-              ['Sun 8 Nov',17],['Tue 10 Nov',111]],
+      byDate:[['Thu 5 Nov',203],['Fri 6 Nov',138],['Sat 7 Nov',58],
+              ['Sun 8 Nov',17],['Mon 9 Nov',3],['Tue 10 Nov',115]],
       cities:[['Auckland Queen Street',174],['Wellington Queensgate',129],
               ['Auckland Manukau',48],['Auckland St Lukes',22],
               ['Auckland Westgate',21],['Hamilton Chartwell',18],
               ['Auckland Westcity',7],['Palmerston North',6],
               ['Kapiti Coastlands',2],['New Plymouth',2]]},
-  langs:[['Hindi',10166],['Telugu',415],['Tamil',126],['Kannada',61],['Malayalam',6]],
+  langs:[['Hindi',10727],['Telugu',441],['Tamil',131],['Kannada',62],['Malayalam',6]],
   /* The two figures every roll-up on this page uses. Australia alone stays
      available as AU.tickets / AU.usd for the panel that is about Australia. */
   get anzTix(){ return this.tickets + this.nz.tickets; },
@@ -2061,21 +2068,21 @@ const AU = {
      noise, in the direction a floor is meant to be wrong. */
   /* HOYTS ONLY - the chain publishes a state field and Event does not, so
      these sum to hy.tickets (3,864), never to tickets (4,922). */
-  states:[['VIC',2981],['NSW',2150],['WA',1169],['SA',907],['ACT',647],
-          ['QLD',470]],
+  states:[['VIC',3132],['NSW',2226],['WA',1204],['SA',990],['ACT',672],
+          ['QLD',472]],
   /* Both chains, 19 Oct 14:40. Chadstone's 556 is now READ, not carried, so
      Victoria's lead over New South Wales is measured rather than restored -
      1,273 to 1,086. The warning above still stands for the two reads that
      LOST Chadstone; it no longer applies to this one. */
   /* 24 Oct 08:15, both chains. */
-  cities:[['Western Sydney',1590],['Melbourne Chadstone',1141],['Perth Carousel',829],
-          ['Sydney Parramatta',510],['Sydney Castle Hill',462],
-          ['Melbourne Docklands',442],['Brisbane Sunnybank',362],
-          ['Melbourne Highpoint',362],['Canberra Belconnen',351],
-          ['Adelaide Arndale',341]],
-  premiumPct:92, premiumStd:485, eveningPct:91,
+  cities:[['Western Sydney',1636],['Melbourne Chadstone',1204],['Perth Carousel',858],
+          ['Sydney Parramatta',572],['Sydney Castle Hill',523],
+          ['Melbourne Docklands',462],['Melbourne Highpoint',385],
+          ['Adelaide Arndale',377],['Brisbane Sunnybank',360],
+          ['Canberra Belconnen',351]],
+  premiumPct:91, premiumStd:485, eveningPct:91,
   top:{cinema:"HOYTS Blacktown, Sydney", when:"Fri 6 Nov, 8:45p",
-       room:"Xtremescreen", sold:185, pct:75.8, next:185,
+       room:"Xtremescreen", sold:195, pct:79.9, next:187,
        nextAt:"Blacktown, Thu 6:40p"},
   price:[["IMAX","A$45.00"],["ScreenX","A$36.50"],["Xtremescreen","A$27.00"]]
 };
