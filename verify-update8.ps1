@@ -201,21 +201,21 @@ Absent $page "['Tue 10 Nov',383" 'no pre-21-Oct Canadian second-week row'
 #            Zero of it buying. It is footprint we had not opened.
 # 676 -> 1,323 is +93 bought and +554 coverage. 86% of the jump is coverage,
 # and these guards exist so nobody quotes the 647 as a move.
-Need $page 'lm:{tickets:2046'    'Landmark on the 25 Oct re-read, both formats'
+Need $page 'lm:{tickets:2199'    'Landmark on the 25 Oct re-read, both formats'
 Absent $page 'lm:{tickets:1952'  'no 24 Oct Landmark'
 Absent $page 'lm:{tickets:1776'  'no 23 Oct Landmark'
 Absent $page 'lm:{tickets:1323'  'no 20 Oct Landmark'
-Need $page 'imax:{tickets:1109'   'the matched IMAX set on its own'
+Need $page 'imax:{tickets:1181'   'the matched IMAX set on its own'
 Absent $page 'imax:{tickets:769' 'no 20 Oct IMAX'
-Need $page 'sx:{tickets:937'     'and ScreenX on its own, never pooled'
+Need $page 'sx:{tickets:1018'     'and ScreenX on its own, never pooled'
 Absent $page 'sx:{tickets:554'   'no 20 Oct ScreenX'
-Need $page 'buying:94,'         'the part of the move that is buying'
+Need $page 'buying:134,'         'the part of the move that is buying'
 Need $page 'newInventory:0,'    'and the part that is coverage'
 Absent $page 'lm:{tickets:650'   'no first-read Landmark figure'
 Absent $page 'lm:{tickets:676'   'no second-read Landmark figure'
-Need $page 'was4:676, was5:650' 'the earlier IMAX reads stay on the record'
-Need $page 'was:1057, added:52'   'and the 963 -> 1,057 move beside it'
-Need $page 'addedAll:459'        'the whole IMAX series, 650 -> 1,057'
+Need $page 'was5:676, was6:650' 'the earlier IMAX reads stay on the record'
+Need $page 'was:1109, added:72'   'and the 963 -> 1,057 move beside it'
+Need $page 'addedAll:531'        'the whole IMAX series, 650 -> 1,057'
 # SCREENX IS THE THIRD SITTING WE HAVE BEEN ASKING FOR, AND WE HAVE NOT USED
 # IT YET. Two of its rooms run 14 showtimes each against IMAX's two, which is
 # finally enough to run the room-minimum test at this chain. The file gives
@@ -230,7 +230,7 @@ Need $page 'blockTested:true'    'ScreenX room-minimum block test run 23 Oct'
 # combined floor of 295 on both of their nights, so the block is 590 and the
 # clean read is 60 - not the 355 a once-per-room subtraction gives.
 Need $page 'blockFloor:590'      'the Landmark block on the per-showtime rule'
-Need $page 'lo:1334,'            'the Landmark clean read is published'
+Need $page 'lo:1487,'            'the Landmark clean read is published'
 Absent $page 'lo:60,'            'no pre-re-read Landmark clean figure'
 Absent $page 'lo:86,'            'no second-read Landmark clean figure'
 Absent $page 'blockFloor:295'    'no once-per-room block arithmetic'
@@ -578,7 +578,7 @@ Write-Host '=== 3. the homepage strip agrees with the page'
 # 18 October. ONE NUMBER, ONE GUARD, ONE PLACE: when the strip moves, the
 # Need lines here and the Absent lines in section 4 change together or not
 # at all.
-Need $app '82,528'     'NA all-presale total on the strip, 25 Oct 02:28 sweep'
+Need $app '82,681'     'NA all-presale total on the strip, 25 Oct 02:28 sweep'
 Absent $app '81,688'   'no 24 Oct 21:39 strip total'
 Absent $app '81,594'   'no pre-Landmark-25-Oct strip total'
 Absent $app '78,379'   'no 14:00 strip total'
@@ -593,7 +593,7 @@ Absent $app '67,711'   'no 22 Oct 21:51 NA total'
 Absent $app '67,571'   'no 22 Oct 20:18 NA total'
 Absent $app '63,789'   'no 22 Oct 08:22 NA total'
 Absent $app '62,720'   'no 21 Oct 23:29 NA total'
-Need $app '$1,574,894' 'NA value on the strip, measured format prices'
+Need $app '$1,576,877' 'NA value on the strip, measured format prices'
 Absent $app '$1,563,502' 'no 24 Oct 21:39 NA value'
 Absent $app '$1,562,284' 'no pre-Landmark-25-Oct NA value'
 Absent $app '$1,514,924' 'no assumed-price NA value'
