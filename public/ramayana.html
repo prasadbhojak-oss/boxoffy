@@ -1678,30 +1678,44 @@ const CA = {showtimes:337, cinemas:27, auditoriums:33, dates:5,
      ScreenX 937 -> 1,018. Waterloo's 4 Nov 9pm IMAX still the fullest room
      in Canada, 156 of 223 (70%); Whitby's preview 176 of 344. Block not
      re-tested - floor held at 712, so the clean floor is 1,487. */
-  lm:{tickets:2199, cinemas:9, shows:76, seats:12644, rate:17.39,
-      cad:39582, usd:28499, atpCad:18, format:'IMAX 3D and ScreenX',
-      buying:134, newInventory:0, newShows:0, matchedShows:76,
-      was:2046, gapHours:9.0, was2:1952, was3:1776, was4:1323, was5:676,
-      imax:{tickets:1181, cinemas:6, shows:15, seats:4217, rate:28.01,
-            was:1109, added:72, matched:true, dates:2,
+  /* 26 OCT 22:54-23:13Z LANDMARK RE-READ (PB, Grok, read-only). THE CHAIN
+     IS NOW READ WHOLE: 239 showtimes at 22 cinemas, every version - Hindi
+     2D, IMAX 3D, ScreenX, English dub. 2,199 -> 5,009.
+     MATCHED  the same 76 IMAX + ScreenX showtimes: 2,199 -> 2,299, +100
+              BUYING (IMAX 1,181 -> 1,242, ScreenX 1,018 -> 1,057).
+     NEW      163 showtimes never opened before, 2,710 tickets - the Hindi
+              2D rooms (Whitby 40, Kanata 35, London 14, Kelowna 13, Caledon
+              Bolton 11 - 49% full - Windsor 9...) at 13 more cinemas, and
+              32 English-dub sittings. COVERAGE: these were on sale all
+              along and simply not read.
+     HELD 95 seats (the same count on 3+ shows of one screen, mostly the
+     English dub) - kept out of the 5,009. Block floor still the 712 tested
+     on IMAX/ScreenX, so the clean floor is 4,297. */
+  lm:{tickets:5009, cinemas:22, shows:239, seats:33811, rate:14.81,
+      cad:90162, usd:64917, atpCad:18, format:'Hindi 2D, IMAX 3D, ScreenX and English dub',
+      buying:100, newInventory:2710, newShows:163, matchedShows:76, held:95,
+      hindi2d:2656, dub:54, newCinemas:13,
+      was:2199, gapHours:27.5, was2:2046, was3:1952, was4:1776, was5:1323, was6:676,
+      imax:{tickets:1242, cinemas:6, shows:15, seats:4217, rate:29.45,
+            was:1181, added:72, matched:true, dates:2,
             was2:1057, was3:963, was4:769, was5:676, was6:650, addedAll:531,
             blockFloor:590, lo:591, hi:1181, wheelchair:72, blockRooms:6,
             cities:[['Waterloo',341],['Whitby',337],['Kanata',232],
                     ['Calgary Country Hills',197],['Kingston',54],
                     ['Nanaimo',20]]},
       /* ScreenX. Columns are tickets, showtimes, seats. */
-      sx:{tickets:1018, was:937, cinemas:4, newCinemas:0, shows:61, seats:8427,
-          rate:12.08, blockTested:true, blockFloor:122,
-          matchedWas:937, matchedNow:1018, added:81, newShows:0, newTickets:0,
+      sx:{tickets:1057, was:1018, cinemas:4, newCinemas:0, shows:61, seats:8427,
+          rate:12.54, blockTested:true, blockFloor:122,
+          matchedWas:1018, matchedNow:1057, added:81, newShows:0, newTickets:0,
           cities:[['Surrey Guildford',522,25,3375],
                   ['Calgary Country Hills',288,14,2394],
                   ['St. Catharines Pen Centre',105,14,1610],
                   ['Orleans',103,8,1048]]},
-      blockFloor:712, lo:1487, hi:2199, wheelchair:72, blockRooms:10,
+      blockFloor:712, lo:4297, hi:5009, wheelchair:72, blockRooms:10,
       /* Both formats, all 73 showtimes, seats gone by show date. */
-      byDate:[['Wed 4 Nov',852],['Thu 5 Nov',595],['Fri 6 Nov',226],
-              ['Sat 7 Nov',272],['Sun 8 Nov',70],['Mon 9 Nov',52],
-              ['Tue 10 Nov',110],['Wed 11 Nov',13],['Thu 12 Nov',9]],
+      byDate:[['Wed 4 Nov',1800],['Thu 5 Nov',1202],['Fri 6 Nov',586],
+              ['Sat 7 Nov',741],['Sun 8 Nov',271],['Mon 9 Nov',131],
+              ['Tue 10 Nov',257],['Wed 11 Nov',16],['Thu 12 Nov',5]],
       byDateWas:[['Wed 4 Nov',805],['Thu 5 Nov',552]]},
   /* Canada's two chains, for every roll-up on the page. CA.tickets stays
      Cineplex alone so the Cineplex paragraph keeps being about Cineplex. */
@@ -3669,7 +3683,8 @@ function tiles(){
       `ScreenX ${fmt(CA.lm.sx.matchedWas)} to ${fmt(CA.lm.sx.matchedNow)}, `+
       `so <b>+${CA.lm.buying} is buying</b>. The other `+
       `+${CA.lm.newInventory} is ${CA.lm.newShows} showtimes we had never `+
-      `opened, including a new cinema in St. Catharines — coverage, not `+
+      `opened — the Hindi 2D and English-dub shows at ${CA.lm.newCinemas} `+
+      `more cinemas, now read for the first time — coverage, not `+
       `demand. So ${fmt(CA.lm.was)} to ${fmt(CA.lm.tickets)} is `+
       `<b>+${CA.lm.buying} bought and +${CA.lm.newInventory} coverage</b>. `+
       `All of it is seats gone rather than counted sales, and some is house `+
