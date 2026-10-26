@@ -291,7 +291,7 @@ Need $page 'handCount:1899'      'the retired hand count kept as the record'
 # the same 107,490 seats. All 86 is buying.
 # 21 OCT 21:39-21:54 CT AU/NZ RE-READ: HOYTS 5,496 on the same 419 sessions,
 # Event 1,535, Australia 7,031; NZ Event 314. Chadstone 797 = PB's hand read.
-Need $page 'tickets:11375'       'Australia 10,629 after the 25 Oct 09:33 re-read, 7 HOYTS sessions carried'
+Need $page 'tickets:11828'       'Australia 10,629 after the 25 Oct 09:33 re-read, 7 HOYTS sessions carried'
 Need $page 'const PH={tickets:41'  'Philippines SM Cinema, 26 Oct Grok read'
 Need $page "sub:'Philippines (SM) counted'" 'SE Asia map tile is live'
 Absent $page 'tickets:8972,'     'no 24 Oct 00:47 Australia total'
@@ -308,7 +308,7 @@ Absent $page 'tickets:4922,'     'no pre-Event-re-read Australian total'
 # 20 OCT, PB: ALL-PRESALE BASIS. Every date a market has on sale counts,
 # because the whole run is presale. New Zealand is 5-11 Nov and all 259 are
 # in. inBasis keeps the 5-8 Nov subset so the earlier figure stays checkable.
-Need $page 'nz:{tickets:534'     'New Zealand on its full all-presale basis'
+Need $page 'nz:{tickets:926'     'New Zealand on its full all-presale basis'
 Absent $page 'nz:{tickets:462'   'no 25 Oct 00:47 New Zealand'
 Absent $page 'nz:{tickets:451'   'no 24 Oct evening New Zealand'
 Absent $page 'nz:{tickets:434'   'no 24 Oct morning New Zealand'
@@ -636,7 +636,7 @@ Need $app '8:38am'    'the strip carries the scan time'
 # moved into the Hawaii inset.
 Need $page 'const USV = {"'          'the US city layer carries cinema positions'
 # 23 OCT FRANCE: Grok's first count, 7 tickets, added to the worldwide total.
-Need $page 'const FR = { tickets:14,' 'France on the page, 24 Oct full read'
+Need $page 'const FR = { tickets:16,' 'France on the page, 24 Oct full read'
 # 23 OCT INDIA MAP: District disc + BookMyShow ring, India fullness scale.
 Need $page 'function indSvg(' 'India map draws both sources'
 Need $page 'data-iview=' 'India map source switch'

@@ -2021,13 +2021,26 @@ const AU = {
      Event still lists Ramayana for 5-8 Nov only in its API; Grok saw
      9-11 Nov sessions on the website (BCC, IMAX Sydney) - not yet
      counted. NZ Event 494 -> 534, NZ$14,032. */
-  tickets:11375, aud:291824, usd:192604, atpAud:25.65, fx:0.66,
+  /* 26 OCT GROK GAPS RUN (ramayana_anz_gaps_filled_26oct.csv).
+     11,375 -> 11,828. READING CINEMAS counted for the first time: 355 on
+     122 sessions at 27 cinemas (Rouse Hill 88, Millers Junction 65), 420
+     held seats - the same seats on every session of a room - kept out.
+     EVENT'S SECOND WEEK, 9-12 Nov, which Event's own listing API does not
+     return yet: 98 on 14 sessions (IMAX Sydney 10 Nov 73 once its 189 held
+     seats come out). Priced at our ATPs (Reading at A$25.65, Event at
+     A$26.39). NOT READ: Village (8 cinemas, Cloudflare 403), Dendy, IMAX
+     Melbourne, United (login wall before the map), Limelight. NZ: HOYTS NZ
+     347 at 7 cinemas (Ormiston 173; 810 held kept out) and Reading NZ 45
+     at 7 - NZ 534 -> 926. */
+  tickets:11828, aud:303516, usd:200321, atpAud:25.66, fx:0.66,
+  rd:{tickets:355, shows:122, cinemas:27, held:420}, wk2:98,
   ev:{tickets:2679, shows:428, counted:428, cinemas:38, seats:100027, rate:2.68},
   hy:{tickets:8696, shows:437, counted:437, cinemas:47, cinemasRead:47,
       seats:72838, rate:11.94, held:2618, carried:0, carriedShows:0,
       wasCarried:496, chadstoneRead:797, chadstoneHand:797,
       capacityWas:182, capacityNow:174},
-  byDate:[['Thu 5 Nov',3949],['Fri 6 Nov',3352],['Sat 7 Nov',3091],['Sun 8 Nov',983]],
+  byDate:[['Thu 5 Nov',4101],['Fri 6 Nov',3453],['Sat 7 Nov',3159],['Sun 8 Nov',1017],
+          ['Mon 9 Nov',35],['Tue 10 Nov',13],['Wed 11 Nov',46],['Thu 12 Nov',4]],
   /* NEW ZEALAND, FOLDED INTO THIS MARKET 20 OCT. PB's call: one line, not
      two, so the tile and the worldwide roll-up read "Australia & NZ".
      AU.tickets, AU.aud and everything in auBody above stay AUSTRALIA ALONE -
@@ -2052,12 +2065,12 @@ const AU = {
      so NZ$5,378 over 200 tickets is an observed ATP of NZ$26.89, not an
      assumption. FX 0.5609, OFX, 18 Oct - pinned like every other rate here
      and not to be refreshed quietly mid-week. */
-  nz:{tickets:534, nzd:14032, usd:7871, atpNzd:26.35, fx:0.5609,
+  nz:{tickets:926, nzd:24334, usd:13649, atpNzd:26.35, fx:0.5609,
       cinemas:14, shows:110, seats:23413, rate:2.07,
       inBasis:380, inBasisNzd:10012, secondWeek:95, secondWeekNote:'10 Nov',
       cinemasAll:14, showsAll:110, hoytsCinemas:7, hoytsShows:98,
-      byDate:[['Thu 5 Nov',203],['Fri 6 Nov',138],['Sat 7 Nov',58],
-              ['Sun 8 Nov',17],['Mon 9 Nov',3],['Tue 10 Nov',115]],
+      byDate:[['Thu 5 Nov',329],['Fri 6 Nov',256],['Sat 7 Nov',187],
+              ['Sun 8 Nov',36],['Mon 9 Nov',3],['Tue 10 Nov',115]],
       cities:[['Auckland Queen Street',174],['Wellington Queensgate',129],
               ['Auckland Manukau',48],['Auckland St Lukes',22],
               ['Auckland Westgate',21],['Hamilton Chartwell',18],
@@ -2774,7 +2787,10 @@ const NL = {
    CAVEAT: Grok again chose a ticket quantity to open Kinepolis, Majestic and
    Megarama maps (notes say "user OK"). A chosen quantity does not take a
    seat on these maps - Kinepolis read 0 - but it is outside our rule. */
-const FR = { tickets:14, eur:228, usd:257, shows:40, showsRead:29, cinemas:20,
+/* 26 OCT: Kinepolis France re-read, 18 seat maps: 16 sold (Lomme 7,
+   Mulhouse 5, Belfort 2, St-Julien-les-Metz 2) at each show's own price,
+   EUR 300. Rouen and Le Grand Rex are free seating, no map. */
+const FR = { tickets:16, eur:300, usd:337, shows:40, showsRead:29, cinemas:20,
              cinemasRead:14, seats:6115, opens:'Fri 6 Nov', premiere:'Le Grand Rex, 4 Nov', low:4,
              wasTickets:7 };
 /* 24 OCT: SWEDEN IS STILL A ZERO, NOW ACROSS A WIDER LIST. 31 showtimes at
@@ -2897,7 +2913,11 @@ const MKT={
     /* pins are built in mktShapes() from IN.cityRows - every city District
        lists, not a hand-picked set. */
     pins:[], pinNote:''},
-  me :{name:'Middle East', sub:'not counted yet', soon:true},
+  /* 26 OCT 09:38 CT sweep: VOX lists NO Ramayana showtime for 4-12 Nov in
+     UAE, KSA, Qatar, Kuwait, Bahrain, Lebanon or Egypt; 16 hosts reached,
+     so this is a real "not on sale", not a blocked read. Gulf News (7 Oct)
+     has the Gulf on 5 Nov with bookings not yet open. */
+  me :{name:'Middle East', sub:'not on sale yet · VOX checked 26 Oct', soon:true},
   /* SOUTH-EAST ASIA, 26 OCT. Natural Earth 1:50m (world-atlas 2.0.2),
      equirectangular about 8.7N, 92-141.2E / 11.2S-28.6N, islands under 0.25 sq
      units dropped, points closer than 0.35 units merged. Pins projected with
@@ -4211,7 +4231,7 @@ function auBody(){
   return ''+
     `<div style="font-family:var(--disp);font-weight:700;font-size:12px;`+
     `letter-spacing:.14em;text-transform:uppercase;color:var(--accent)">`+
-    `Australia · 5–8 November · partly counted</div>`+
+    `Australia · 5–12 November · HOYTS, Event and Reading counted</div>`+
     `<div style="display:flex;gap:30px;flex-wrap:wrap;margin-top:7px">`+
       `<div><div style="font-family:var(--mono);font-weight:600;font-size:34px;`+
       `letter-spacing:-.02em;line-height:1.05">${fmt(AU.tickets)}</div>`+
@@ -4303,8 +4323,8 @@ function auBody(){
       `Malayalam ${AU.langs[4][1]} — the four other language cuts together `+
       `are ${fmt(AU.tickets-AU.langs[0][1])} tickets. `+
       `Australia opens Thu 5 Nov with no preview night, unlike North America: `+
-      `Thursday alone is ${Math.round(100*AU.byDate[0][1]/AU.tickets)}% of the `+
-      `four days.`+
+      `Thursday alone is ${Math.round(100*AU.byDate[0][1]/AU.tickets)}% of `+
+      `everything sold.`+
     `</p>`;
 }
 
