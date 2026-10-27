@@ -376,14 +376,14 @@ Absent $page 'tickets:99408,'    'no 23 Oct 08:48 India total as the live figure
 Absent $page 'tickets:91171,'    'no 22 Oct 21:32 India total as the live figure'
 # ALL-INDIA CALL: District + BMS side from Sacnilk, city-by-city higher of
 # the two. The worldwide total and the India map both use it.
-Need $page 'allTix:217000'
+Need $page 'allTix:237000'
 Need $page "tixFloor:'sacnilk'" 'all-India tickets never below Sacnilk own combined count'      'the all-India call is on the page'
 Absent $page 'allTix:142810'    'no 23 Oct 08:48 all-India call'
-Need $page 'allInr:119711180'   'and its rupees'
+Need $page 'allInr:128641180'   'and its rupees'
 Absent $page 'allTix:132245'    'no 22 Oct all-India call'
 Need $page 'IN.allTix+NL.tickets' 'the worldwide total uses the all-India call'
 Need $page 'bmsCity:{'  'the India map carries the BookMyShow side city by city'
-Need $page 'bmsOthers:[16502,6092466]' 'the unnamed-cities remainder is stated, not hidden'
+Need $page 'bmsOthers:[24658,9592466]' 'the unnamed-cities remainder is stated, not hidden'
 Need $page 'clean:128888'         'the block-corrected floor'
 Need $page 'block:29940'         'the block is named, not absorbed'
 Need $page 'soldOutShows:4'      'six sold-out showtimes: Noida Gold, Nehru Place Insignia, PVR Lakeshore, two Irrum Manzil 4DX in Hyderabad, PVR Palladium Ahmedabad'
@@ -404,7 +404,7 @@ Absent $page 'tickets:13702,'    'no first-read India total'
 # atpInr:635 was the third read's price and is, by coincidence, the 23 Oct
 # 15:26 read's price too (Rs 67,693,337 / 106,675), so it is a Need now.
 Need $page "distAsOf:'27 Oct, 9:50 am IST'" 'the District read is time-stamped on the page'
-Need $page "sacAsOf:'26 Oct, 4:49 pm IST'" 'and so is the Sacnilk BookMyShow side'
+Need $page "sacAsOf:'27 Oct, 12:42 am IST'" 'and so is the Sacnilk BookMyShow side'
 Need $page 'atpInr:618'          'the 25 Oct 10:21 Indian price'
 Absent $page 'atpInr:578'        'no second-read Indian price'
 Absent $page 'atpInr:432'        'no first-read Indian price'
@@ -478,10 +478,10 @@ Absent $page 'tickets:4836,'     'no pre-re-read Australian total'
 # 12 showtimes are no longer listed. Those 90 keep their 20 Oct figure.
 # carriedTickets must stay on the page: a blended total that hides which
 # rows are stale is the thing we are guarding against.
-Need $page 'tickets:4643'        'Germany 4,244, 25 Oct Grok re-read'
+Need $page 'tickets:4653'        'Germany 4,244, 25 Oct Grok re-read'
 Absent $page 'tickets:3954,'     'no 24 Oct German total'
 Absent $page 'tickets:2436,'     'no 22 Oct Germany total'
-Need $page 'lowNoGroup:4173'     'the Leonberg group booking is named and ranged out'
+Need $page 'lowNoGroup:4183'     'the Leonberg group booking is named and ranged out'
 Absent $page 'tickets:2360,'     'no 21-22 Oct interim German total'
 Absent $page 'tickets:2023,'     'no 21 Oct German total'
 Need $page 'compeso:1835'        'the half of Germany that is a true sold count'
@@ -499,8 +499,8 @@ Absent $page 'priced:42,'        'no pre-21-Oct price coverage'
 # an unchanged footprint: 1,480 -> 1,789. That +309 is buying, and it is the
 # only German number that is not part coverage. If it ever disappears from
 # the page, the re-read was wasted.
-Need $page 'matchedShows:325'    'the matched-read set is on the page'
-Need $page 'buying:70'          'and the buying figure it produced'
+Need $page 'matchedShows:332'    'the matched-read set is on the page'
+Need $page 'buying:10,'         'and the buying figure it produced'
 # THE VERSION SPLIT IS A CORRECTION. 63 of 191 rows had our own isOV flag
 # wrong, carrying 578 tickets, nearly all of them rows we called dubbed that
 # the cinema calls the original. 1,073/633 was wrong and must never come back.
@@ -776,10 +776,10 @@ Absent $page 'tickets:1177' 'no pre-basis-change Germany total'
 # carry ours, and the page says so in all three places a reader can see it.
 # What this guard still protects: it must be 18, the median PB set, and it
 # must be visible in the euro total. A silent 0 or a silent 18.92 both fail.
-Need   $page 'eur:79535'    'German euros at their own observed EUR 17.21'
+Need   $page 'eur:79706'    'German euros at their own observed EUR 17.21'
 Absent $page 'eur:23237'    'no pre-re-read German euros'
 Absent $page 'eur:29187'    'no pre-21-Oct German euro total'
-Need   $page 'usd:89373'    'German dollars moved with the euros, at 1.1237'
+Need   $page 'usd:89566'    'German dollars moved with the euros, at 1.1237'
 Absent $page 'usd:32796'    'no pre-21-Oct German dollar total'
 Need   $page 'atpEur:17.13' 'German ATP held steady across the third read'
 Absent $page 'atpEur:17.11' 'no pre-21-Oct German ATP'

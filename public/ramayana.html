@@ -1159,6 +1159,10 @@ function atpNow(){
    5-8 Nov only, matching every other market. Germany is also on sale 9-11
    Nov - 13 more tickets - deliberately excluded so the basis lines up. */
 const DE = {
+  /* 26 OCT NIGHT (Grok, Germany's early morning). 4,643 -> 4,653. All 332
+     readable showtimes matched: 6 rose by 15, 4 fell by 5 (+10). Mathaeser
+     +6, Hafencity +3. UCI still 403, 7 never loaded, 8 off sale (1 carried).
+     Held 883, kept out. */
   /* 26 OCT EVENING (Grok, read 22:51-23:01Z). 4,546 -> 4,643.
      MATCHED 325 showtimes read this morning and tonight: 4,545 -> 4,615,
      +70 net (72 rose by 275, 54 fell by 205 - kept, both directions are
@@ -1307,7 +1311,7 @@ const DE = {
      Rheine); 15 not readable - UCI 8 (Cloudflare 403), Cineplex Alsdorf /
      Kassel stall, Passau, Heidelberg late show. 116 cinemas, 94 towns.
      Leonberg 449 -> 452, still counted, still ranged out. EUR 17.13 pinned. */
-  tickets:4643, eur:79535, usd:89373, atpEur:17.13, fx:1.1237, lowNoGroup:4173,
+  tickets:4653, eur:79706, usd:89566, atpEur:17.13, fx:1.1237, lowNoGroup:4183,
   leonberg:{sold:470, of:582, when:'Sat 7 Nov, 11:00am'},
   inBasis:2393, outBasis2:43, deltaRead:12, deltaScannable:18, showsGone:0,
   notYetOnSale:4, sharedUrlDupes:1,
@@ -1351,17 +1355,17 @@ const DE = {
      Four showtimes were opened for the first time and carried 8 more.
      +309 of the +317 is people buying tickets. Nothing else in this
      market has ever been measurable that cleanly. */
-  matchedShows:325, matchedWas:4545, matchedNow:4615, buying:70,
-  newShows:7, newTickets:27,
-  seats:76400, rate:6.1, held:890, outSeats:3756,
+  matchedShows:332, matchedWas:4642, matchedNow:4652, buying:10,
+  newShows:0, newTickets:0,
+  seats:76400, rate:6.1, held:883, outSeats:3756,
   shows:333, cinemas:119, showsScan:323, footShows:323, footCinemas:113,
-  cities:96, priced:51, zeroShows:115, outBasis:30, soldOut:0,
+  cities:96, priced:51, zeroShows:116, outBasis:30, soldOut:0,
   compeso:1835, compesoShows:117, compesoRate:3.95,
   oneState:2119, oneStateShows:196, oneStateRate:3.26,
   blockFloor:12, testedRooms:20, untestedRooms:62,
-  byDate:[['Thu 5 Nov',2212,128,33521,6.60],['Fri 6 Nov',370,39,7405,5.00],
-          ['Sat 7 Nov',1141,46,9799,11.64],['Sun 8 Nov',851,89,20207,4.21],
-          ['Mon 9 Nov',45,13,2681,1.68],['Tue 10 Nov',24,16,2402,1.00],
+  byDate:[['Thu 5 Nov',2218,128,33521,6.62],['Fri 6 Nov',370,39,7405,5.00],
+          ['Sat 7 Nov',1141,46,9799,11.64],['Sun 8 Nov',856,89,20207,4.24],
+          ['Mon 9 Nov',45,13,2681,1.68],['Tue 10 Nov',23,16,2402,0.96],
           ['Wed 11 Nov',0,2,385,0.00]],
   /* THE VERSION SPLIT IS CORRECTED, NOT UPDATED, AND IT WAS WRONG BY A
      LOT. The old 1,073 original / 633 dubbed came off OUR isOV flag in
@@ -2260,6 +2264,14 @@ const INTL = {
    cover all of them. FX 0.0105, valutafx, 19 Oct - Rs 94.97 to the dollar -
    pinned like every other rate here. */
 const IN = {
+  /* 27 OCT 00:42 IST SACNILK REFRESH - THE CALL MOVES. First Day report
+     updated 1:20 AM IST 27 Oct, data as of 12:42 AM: Rs 12.85 Cr incl. blocks
+     [10.30 excl.], 2.37 lakh tickets [1.87], 5,498 shows, 610 cinemas, 165
+     cities; others Rs 3.68 Cr over 155. Hindi Rs 11.08 Cr, Kannada 1.35,
+     Telugu 0.42. Against our 09:50 IST District read, city by city: District
+     still wins Jaipur only. Rupees Rs 12.86 Cr. Tickets: conversion 214,913
+     < 237,000, floored at 237,000; BookMyShow rings rescaled. 2.17 -> 2.37
+     lakh, +9% in eight hours of India's night and morning. */
   /* 26 OCT 23:20 CT (09:50 IST, 27 Oct). 158,447 -> 158,828. 4,392 showtimes
      matched to 22:15, 1.1 hours apart: 108 gained 432 - about 400 an hour;
      20 gave back 69. Kolkata +61, Bengaluru +51, New Delhi +45, Raipur +38.
@@ -2625,12 +2637,12 @@ const IN = {
      cities. District read 6:21 PM IST - 91 MINUTES after Sacnilk, the
      closest pair yet. District wins Jaipur only. Additions Rs 2,94,81,630
      -> +52,760 tickets at Sacnilk's Rs 559. */
-  allTix:217000, allInr:119711180, allUsd:1256967, bmsTix:58172, bmsInr:21478994, convTix:197865, tixFloor:'sacnilk',
-  sacInr:119400000, sacInrEx:97200000, sacTix:217000, sacTixEx:174000,
-  sacShows:4746, sacCinemas:589, sacCities:157, sacOthersCities:147, sacNamed:10,
+  allTix:237000, allInr:128641180, allUsd:1350732, bmsTix:78172, bmsInr:30408994, convTix:214913, tixFloor:'sacnilk',
+  sacInr:128500000, sacInrEx:103000000, sacTix:237000, sacTixEx:187000,
+  sacShows:5498, sacCinemas:610, sacCities:165, sacOthersCities:155, sacNamed:10,
   /* Named by Sacnilk but our District read is HIGHER, so District stands
      and nothing is added: [Sacnilk gross incl. blocks]. */
-  bmsBelow:{'Jaipur':2653000},
+  bmsBelow:{'Jaipur':2865000},
   /* 24 OCT, PB: FORMAT AND CHAIN SPLITS, like the US panel. District read
      only (07:51 CT), [name, tickets, seats, showtimes, Rs per ticket from
      District's own gross]. Screen type is read off District's format field
@@ -2651,7 +2663,7 @@ const IN = {
            ['Others', 14130, 32239, 100, 233],
            ['Miraj', 9469, 90409, 385, 496],
            ['Movietime', 2922, 32680, 149, 385]],
-  sacAsOf:'26 Oct, 4:49 pm IST',
+  sacAsOf:'27 Oct, 12:42 am IST',
   coverInr:72,
   /* 21:32 CT RE-RUN of the call. Sacnilk data as of 06:47 IST, District read
      08:02 IST - 75 minutes apart, the closest pair yet. Same city-by-city
@@ -2785,16 +2797,16 @@ const IN = {
      [tickets, rupees, state]; key = the District city name the circle uses
      (NCR on New Delhi). From 24 Oct Sacnilk names Bhubaneswar, not
      Chandigarh, so the tri-city's BookMyShow side is in bmsOthers. */
-  bmsCity:{'New Delhi':[1162,429013,'Delhi'],
-    'Mumbai':[14280,5272970,'Maharashtra'],
-    'Bengaluru':[5256,1940610,'Karnataka'],
-    'Hyderabad':[16164,5968280,'Telangana'],
-    'Pune':[690,254605,'Maharashtra'],
-    'Kolkata':[782,288970,'West Bengal'],
-    'Ahmedabad':[529,195250,'Gujarat'],
-    'Lucknow':[317,117250,'Uttar Pradesh'],
-    'Bhubaneswar':[2490,919580,'Odisha']},
-  bmsOthers:[16502,6092466],
+  bmsCity:{'New Delhi':[6501,2529013,'Delhi'],
+    'Mumbai':[15612,6072970,'Maharashtra'],
+    'Bengaluru':[7817,3040610,'Karnataka'],
+    'Hyderabad':[15782,6139280,'Telangana'],
+    'Pune':[1313,510605,'Maharashtra'],
+    'Kolkata':[1522,591970,'West Bengal'],
+    'Ahmedabad':[1260,490250,'Gujarat'],
+    'Lucknow':[1075,418250,'Uttar Pradesh'],
+    'Bhubaneswar':[2632,1023580,'Odisha']},
+  bmsOthers:[24658,9592466],
   /* Chennai left this list 23 Oct: District now lists 3 IMAX showtimes there
      (0 sold), so it is a listed city, not a silent one. */
   silent:['Visakhapatnam','Varanasi']
