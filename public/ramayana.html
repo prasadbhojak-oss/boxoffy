@@ -1159,6 +1159,12 @@ function atpNow(){
    5-8 Nov only, matching every other market. Germany is also on sale 9-11
    Nov - 13 more tickets - deliberately excluded so the basis lines up. */
 const DE = {
+  /* 27 OCT THOROUGH RE-READ (Grok, Germany's Tuesday). 4,653 -> 4,824.
+     332 showtimes matched to the 26 Oct night read: 59 rose by 182, 7 fell
+     by 12 (+170). Kinopolis Main-Taunus +15, Kristallpalast Dresden +15,
+     Mathaeser +14, UFA Duesseldorf +9, Traumpalast Schwaebisch Gmuend +9.
+     10 new showtimes (+1). UCI still Cloudflare 403 (10 rows), 7 gone from
+     cineplex.de, 4 free seating, 1 carried. Held 883 -> 912, kept out. */
   /* 26 OCT NIGHT (Grok, Germany's early morning). 4,643 -> 4,653. All 332
      readable showtimes matched: 6 rose by 15, 4 fell by 5 (+10). Mathaeser
      +6, Hafencity +3. UCI still 403, 7 never loaded, 8 off sale (1 carried).
@@ -1311,7 +1317,7 @@ const DE = {
      Rheine); 15 not readable - UCI 8 (Cloudflare 403), Cineplex Alsdorf /
      Kassel stall, Passau, Heidelberg late show. 116 cinemas, 94 towns.
      Leonberg 449 -> 452, still counted, still ranged out. EUR 17.13 pinned. */
-  tickets:4653, eur:79706, usd:89566, atpEur:17.13, fx:1.1237, lowNoGroup:4183,
+  tickets:4824, eur:82635, usd:92857, atpEur:17.13, fx:1.1237, lowNoGroup:4354,
   leonberg:{sold:470, of:582, when:'Sat 7 Nov, 11:00am'},
   inBasis:2393, outBasis2:43, deltaRead:12, deltaScannable:18, showsGone:0,
   notYetOnSale:4, sharedUrlDupes:1,
@@ -1355,17 +1361,17 @@ const DE = {
      Four showtimes were opened for the first time and carried 8 more.
      +309 of the +317 is people buying tickets. Nothing else in this
      market has ever been measurable that cleanly. */
-  matchedShows:332, matchedWas:4642, matchedNow:4652, buying:10,
-  newShows:0, newTickets:0,
-  seats:76400, rate:6.1, held:883, outSeats:3756,
-  shows:333, cinemas:119, showsScan:323, footShows:323, footCinemas:113,
-  cities:96, priced:51, zeroShows:116, outBasis:30, soldOut:0,
+  matchedShows:332, matchedWas:4652, matchedNow:4822, buying:170,
+  newShows:10, newTickets:1,
+  seats:77478, rate:6.2, held:912, outSeats:3756,
+  shows:343, cinemas:119, showsScan:323, footShows:323, footCinemas:113,
+  cities:96, priced:51, zeroShows:122, outBasis:30, soldOut:0,
   compeso:1835, compesoShows:117, compesoRate:3.95,
   oneState:2119, oneStateShows:196, oneStateRate:3.26,
   blockFloor:12, testedRooms:20, untestedRooms:62,
-  byDate:[['Thu 5 Nov',2218,128,33521,6.62],['Fri 6 Nov',370,39,7405,5.00],
-          ['Sat 7 Nov',1141,46,9799,11.64],['Sun 8 Nov',856,89,20207,4.24],
-          ['Mon 9 Nov',45,13,2681,1.68],['Tue 10 Nov',23,16,2402,0.96],
+  byDate:[['Thu 5 Nov',2295,130,33739,6.80],['Fri 6 Nov',393,41,7645,5.14],
+          ['Sat 7 Nov',1170,48,9999,11.70],['Sun 8 Nov',894,90,20309,4.40],
+          ['Mon 9 Nov',49,15,2897,1.69],['Tue 10 Nov',23,17,2504,0.92],
           ['Wed 11 Nov',0,2,385,0.00]],
   /* THE VERSION SPLIT IS CORRECTED, NOT UPDATED, AND IT WAS WRONG BY A
      LOT. The old 1,073 original / 633 dubbed came off OUR isOV flag in
@@ -2990,8 +2996,12 @@ const FR = { tickets:14, eur:269, usd:302, shows:40, showsRead:29, cinemas:20,
    Thu 5 Nov - the first Swedish tickets we have counted. Filmstaden is
    still behind Cloudflare and pre-sets 2 tickets before the map, so it
    is NOT read (BoxofficeIndia24 reports ~712 there). */
-const SE = { tickets:30, usd:446, /* SEK 150 assumed, as BoxofficeIndia24 */ shows:32, showsRead:8, cinemas:26, cities:25, seats:1219,
-             chainBlocked:'Filmstaden', blockedShows:21, blockedCinemas:17 };
+/* 27 OCT SWEDEN RE-READ (ramayana_nl_se_25oct.xlsx, SE tab 27 Oct). Same
+   8 readable shows: 30 -> 32 (Kungalv Trappan 6 Nov +2; Sigtuna 30 held
+   steady). Filmstaden still needs a quantity before its map - 22 shows at
+   18 cinemas not read. Lund and Ludvika newly listed. NL unchanged. */
+const SE = { tickets:32, usd:476, /* SEK 150 assumed, as BoxofficeIndia24 */ shows:32, showsRead:8, cinemas:28, cities:27, seats:1219,
+             chainBlocked:'Filmstaden', blockedShows:22, blockedCinemas:18 };
 
 
 /* UK OUTLINE redrawn 26 Oct from Natural Earth 1:50m (world-atlas 2.0.2), Great
