@@ -5304,6 +5304,14 @@ function euBody(){
     `the map, and it is replaced the day Odeon can be read.`);
 }
 
+/* 27 OCT GROK SEA RE-READ (ramayana_sea_grok_filled_27oct.csv): no seat
+   map read anywhere. SM Cinema /tickets and /seats now redirect to sign-in
+   - a block, an answer, not worked around - so PH stays at the 26 Oct
+   read. Coming-soon listings, no showtimes: Major TH 5 Nov, XXI ID, BHD
+   Star VN 6 Nov, Shaw SG (Hindi + Tamil, 5 Nov, IMAX), GSC MY (Tamil 5
+   Nov, Hindi 8 Nov), Times + The Mall Cineplex BN. Not listed: Robinsons,
+   SF, Galaxy, GV, WE, TGV, Legend KH. Ayala + Major KH cert errors, Lotte
+   VN 403, others timed out. */
 /* PHILIPPINES, 26 OCT. Grok read of SM Cinema Metro Manila, 5-8 Nov
    (file ramayana_ph_sm_cumulative_26oct.xlsx). 145 showtimes listed at 15
    SM cinemas; 90 read, then SM's ticket API answered 403 and the remaining
@@ -5339,10 +5347,16 @@ function seaBody(){
     `<p class="note">By date: `+PH.byDate.map(r=>`${r[0]} ${fmt(r[1])}`).join(' · ')+
     `. <b>${fmt(PH.held)} more seats show as taken but are house blocks</b> — `+
     `the same seats on every show of a screen — so they are not counted.</p>`+
-    `<p class="note"><b>Listed, not yet counted:</b> Thailand (Major Cineplex), `+
-    `Indonesia (Cinema XXI), Vietnam (BHD Star). Ayala Malls Cinemas and `+
-    `Robinsons in the Philippines, and Singapore and Malaysia, are not read `+
-    `yet. Grey rings on the map are those listings — never zero demand.</p>`;
+    `<p class="note"><b>27 October re-check: nothing new to count yet.</b> `+
+    `SM Cinema now asks for a sign-in before any seat map, so its 145 `+
+    `showtimes could not be re-read; the 26 October count above stands. `+
+    `The film is listed as coming soon in Thailand (Major Cineplex, 5 Nov), `+
+    `Indonesia (Cinema XXI), Vietnam (BHD Star, 6 Nov), Singapore (Shaw, `+
+    `Hindi and Tamil, 5 Nov, also IMAX), Malaysia (GSC, Tamil 5 Nov, Hindi `+
+    `8 Nov) and Brunei (Times Cineplex, The Mall Cineplex) — none has opened `+
+    `a showtime. Robinsons does not list it; Ayala's ticket site would not `+
+    `open securely and was left alone. Grey rings on the map are those `+
+    `listings — never zero demand.</p>`;
 }
 
 /* AFRICA, 26 OCT. Grok read of every chain our 10:48 CT Africa scan found
