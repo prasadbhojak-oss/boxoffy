@@ -2916,19 +2916,28 @@ const NL = {
      +421 (Pathe +393, Vue +28). Pathe started refusing loads partway, so
      45 showtimes keep their 24 Oct count (633) and the 7 sold-out shows
      keep their 253. Pathe Ypenburg's Thu 7pm is 203 of 213. */
-  tickets:3060, clean:2778, block:282, blockRooms:4,
-  eur:42840, usd:48139, atpEur:14.00, fx:1.1237, atpIsOurs:true,
-  shows:124, showsRead:100, cinemas:31, cinemasRead:21, cities:14, seats:24114, rate:9.89,
-  pathe:2710, patheShows:88, patheCinemas:15,
-  vue:350, vueShows:19, vueCinemas:6,
-  pulledShows:11, pulledTickets:53, newRead:273,
-  soldOutCarried:7, soldOutCarriedTickets:253,
-  wasTickets:2639, wasTickets2:2175, wasTickets3:1959, wasTickets4:1546, matchedAdded:421,
-  byDate:[['Thu 5 Nov',756,21],['Fri 6 Nov',970,17],['Sat 7 Nov',768,20],['Sun 8 Nov',335,25],['Mon 9 Nov',78,6],['Tue 10 Nov',94,13],['Wed 11 Nov',59,5]],
-  cities_:[['Den Haag · Ypenburg',504,34.7],['Amsterdam · Arena',461,12.8],
-           ['Rotterdam · de Kuip',300,23.4],['Den Haag · Spuimarkt',283,8.0],
-           ['Eindhoven · Pathe',212,9.1],['Utrecht Leidsche Rijn',157,8.4],
-           ['Amsterdam-Noord',76,14.6],['Arnhem',72,5.8]],
+  /* 27 OCT 09:09-09:31 CT GROK RE-READ (ramayana_nl_se_27oct.xlsx). 3,060
+     -> 3,668. EVERY Pathe and Vue showtime read this time - 118 (88 Pathe
+     at 15 cinemas, 30 Vue at 8), nothing carried. Like for like on the 55
+     re-read shows: 2,174 -> 2,399 (+225; Pathe +199, Vue +26). The 52
+     shows carried at 886 (24 Oct counts + 7 sold-outs) now read 1,269.
+     Vue held 231 (same seats on 3+ shows of a room) kept as the block;
+     the 51 carried earlier is dropped - nothing is carried now. Pathe
+     Tilburg pulled 1 show. Kinepolis Leidschendam BLOCKED; De Vlugt, LAB-1,
+     Forum Groningen need a quantity - not counted. SE unchanged at 32. */
+  tickets:3668, clean:3437, block:231, blockRooms:4,
+  eur:51352, usd:57704, atpEur:14.00, fx:1.1237, atpIsOurs:true,
+  shows:124, showsRead:118, cinemas:31, cinemasRead:23, cities:15, seats:29730, rate:12.34,
+  pathe:3210, patheShows:88, patheCinemas:15,
+  vue:458, vueShows:30, vueCinemas:8,
+  pulledShows:1, pulledTickets:0, newRead:63,
+  soldOutCarried:0, soldOutCarriedTickets:0,
+  wasTickets:3060, wasTickets2:2639, wasTickets3:2175, wasTickets4:1959, wasTickets5:1546, matchedAdded:225,
+  byDate:[['Thu 5 Nov',863,25],['Fri 6 Nov',1108,19],['Sat 7 Nov',975,23],['Sun 8 Nov',435,27],['Mon 9 Nov',99,6],['Tue 10 Nov',118,13],['Wed 11 Nov',70,5]],
+  cities_:[['Den Haag · Ypenburg',664,45.7],['Amsterdam · Arena',644,17.8],
+           ['Rotterdam · de Kuip',388,34.5],['Den Haag · Spuimarkt',366,10.4],
+           ['Eindhoven · Pathe',332,14.2],['Kerkrade · Vue',242,29.8],
+           ['Utrecht Leidsche Rijn',241,13.0],['Amsterdam-Noord',135,26.0]],
   top:{cinema:'Pathe Ypenburg, Den Haag', when:'Thu 5 Nov, 7:00p',
        sold:203, of:213, pct:95.3}
 };
