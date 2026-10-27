@@ -2882,9 +2882,17 @@ const NL = {
 /* 26 OCT: Kinepolis France re-read, 18 seat maps: 16 sold (Lomme 7,
    Mulhouse 5, Belfort 2, St-Julien-les-Metz 2) at each show's own price,
    EUR 300. Rouen and Le Grand Rex are free seating, no map. */
-const FR = { tickets:16, eur:300, usd:337, shows:40, showsRead:29, cinemas:20,
+/* 26 OCT ~6:50pm CT: Kinepolis France re-read, same 18 seat maps: 16 ->
+   15. Lomme 6, Mulhouse 4 (3 seats K10-K12 on Fri 6 Nov drawn taken, counted),
+   Belfort 2, St-Julien 2, Nancy 1. The morning's 16 carried 4 seats that
+   were Grok's own holds (Lomme J9-J10, Mulhouse J11-J12) - they are free
+   again tonight, so the fall is a correction, not refunds. EUR 286 at each
+   show's own price. Grok again picked a quantity (2) to open the maps, PB OK;
+   its own auto-picked seats are excluded. AlloCine still lists 21 French
+   cities and Pathe still shows the film as coming soon, not bookable. */
+const FR = { tickets:15, eur:286, usd:322, shows:40, showsRead:29, cinemas:20,
              cinemasRead:14, seats:6115, opens:'Fri 6 Nov', premiere:'Le Grand Rex, 4 Nov', low:4,
-             wasTickets:7 };
+             wasTickets:16, wasTickets2:7 };
 /* 24 OCT: SWEDEN IS STILL A ZERO, NOW ACROSS A WIDER LIST. 31 showtimes at
    25 cinemas, 17 of them Filmstaden - and filmstaden.se answered a hard 403
    "you have been blocked" on all 21 of its showtimes, so it is NOT read.
@@ -3099,7 +3107,7 @@ function mktShapes(){
      country - the thumbnail must keep saying what the country has sold. */
   MKT.usa.tix=DATA.total.sold+xTix();
   MKT.usa.usd=Math.round(DATA.total.sold*atpNow())+xUsd();
-  MKT.uk.tix=UK.tickets;  MKT.uk.usd=UK.usd;
+  MKT.uk.tix=UK.tickets+EST.odeon.c;  MKT.uk.usd=UK.usd+odeonUsd();
   /* THE UK MAP IS BUILT FROM UK.cities, NEVER TYPED OUT AGAIN. It used to
      carry its own hard-coded list on the SEATS-GONE basis - Feltham 592,
      Solihull 524 - while the panel beside it said in terms that a named
@@ -3115,7 +3123,7 @@ function mktShapes(){
     'headline above. Cinemas with no chain named are Cineworld.'+(off.length?' '+off.length+' listed cinema'+
     (off.length>1?'s have':' has')+' no map position yet: '+
     off.join(', ')+'.':'');
-  MKT.aus.tix=AU.anzTix; MKT.aus.usd=AU.anzUsd;
+  MKT.aus.tix=AU.anzTix+EST.village.c; MKT.aus.usd=AU.anzUsd+villageUsd();
   MKT.de.tix=DE.tickets;  MKT.de.usd=DE.usd;
   MKT.sea.tix=PH.tickets; MKT.sea.usd=PH.usd; MKT.sea.pins[0].t=PH.tickets;
   MKT.sea.pinNote='Manila is SM Cinema only, '+PH.showsRead+' of '+PH.shows+
@@ -3564,10 +3572,10 @@ function tiles(){
        - Middle East, SE Asia, Europe outside the UK. It is deliberately a
        zero with a label, never a blank: a reader who sees no row assumes we
        looked and found nothing. */
-    const WT={tix:naTix+UK.tickets+AU.anzTix+DE.tickets+IN.allTix+NL.tickets+FR.tickets+SE.tickets+PH.tickets+AF.tickets,
-              usd:naUsd+UK.usd+AU.anzUsd+DE.usd+IN.allUsd+NL.usd+FR.usd+(SE.usd||0)+PH.usd+AF.usd,
-              rows:[['North America',naTix,naUsd],['United Kingdom',UK.tickets,UK.usd],
-                    ['Australia & NZ',AU.anzTix,AU.anzUsd],
+    const WT={tix:naTix+UK.tickets+AU.anzTix+DE.tickets+IN.allTix+NL.tickets+FR.tickets+SE.tickets+PH.tickets+AF.tickets+estTix(),
+              usd:naUsd+UK.usd+AU.anzUsd+DE.usd+IN.allUsd+NL.usd+FR.usd+(SE.usd||0)+PH.usd+AF.usd+estUsd(),
+              rows:[['North America',naTix,naUsd],['United Kingdom',UK.tickets+EST.odeon.c,UK.usd+odeonUsd()],
+                    ['Australia & NZ',AU.anzTix+EST.village.c,AU.anzUsd+villageUsd()],
                     /* Germany went from footprint to counted on 18 Oct and
                        now adds to the total like any other read market.
                        The 4th field stays in the shape for whatever is
@@ -3630,8 +3638,11 @@ function tiles(){
         `United States ${fmt(usSold+xTix())} · `+
         `Canada ${fmt(CA.canTix)} — Cineplex ${fmt(CA.tickets)} plus `+
         `Landmark ${fmt(CA.lm.tickets)}. `+
-        `Landmark is nine rooms at eight cinemas of a far larger chain, all `+
-        `read by hand, so this can only go up.<br>`+
+        `Landmark is read by hand across ${CA.lm.cinemas} cinemas.<br>`+
+        `<b>Includes estimates</b> for two chains that block our scan: ODEON `+
+        `UK about ${fmt(EST.odeon.c)} and Village Australia about `+
+        `${fmt(EST.village.c)} tickets, 5–8 Nov (about $${fmt(estUsd())}). `+
+        `Everything else is counted seat by seat.<br>`+
         /* 24 OCT, PB: COUNT THE BLOCKS AND PRICE THEM. Built from the same
            constants each market panel uses, never typed. These are the seats
            our own tests flag as held back rather than bought that are STILL
@@ -4318,9 +4329,14 @@ function stamp(){
     `Event; New Zealand is Event; Germany is thirteen chain systems read by hand; `+
     `the Netherlands is Pathé and Vue, read by hand; Sweden is five independents on `+
     `bio.se; <b>India is District</b>, with BookMyShow read for footprint only. `+
-    `Some large chains we cannot read at all — Odeon in the UK, UCI in `+
-    `Germany, Filmstaden in Sweden — so every one of those markets can only `+
-    `move up from what is printed here.`+
+    `<br>Estimates: Odeon (UK) and Village (Australia) block our scans. `+
+    `Their figures in the totals — Odeon about ${fmt(EST.odeon.c)} `+
+    `(range ${fmt(EST.odeon.lo)}–${fmt(EST.odeon.hi)}), Village about `+
+    `${fmt(EST.village.c)} (${fmt(EST.village.lo)}–${fmt(EST.village.hi)}) — `+
+    `are estimates built from BoxofficeIndia24's published chain tables `+
+    `(${EST.asOf}), checked against the chains we do count and priced at our `+
+    `own ticket prices. UCI in Germany and Filmstaden in Sweden are not read `+
+    `or estimated, so those markets can only move up from what is printed here.`+
     `<br>Scan ${when} Central · `+
     `${fmt(cinemas)} cinemas · ${fmt(DATA.total.shows)} showtimes`;
 }
@@ -4439,7 +4455,10 @@ function auBody(){
       `are ${fmt(AU.tickets-AU.langs[0][1])} tickets. `+
       `Australia opens Thu 5 Nov with no preview night, unlike North America: `+
       `Thursday alone is ${Math.round(100*AU.byDate[0][1]/AU.tickets)}% of `+
-      `everything sold.`+
+      `everything sold. <b>Village blocks our scan</b>; the Australia & NZ `+
+      `figure in the worldwide total adds an <b>estimate</b> of about `+
+      `${fmt(EST.village.c)} Village tickets across its ${EST.village.cinemas} `+
+      `Melbourne-area cinemas.`+
     `</p>`;
 }
 
@@ -5101,7 +5120,9 @@ function euBody(){
     `rooms. Cineworld is ${fmt(UK.cwGone)} of it, up `+
     `${fmt(UK.reRead3Delta+UK.reRead4Delta+UK.reRead4New+UK.reRead5Delta)} since 20 October; Showcase ${fmt(UK.scGone)}, read seat by seat for the `+
     `first time; Vue ${fmt(UK.vueGone)}, counted for the first time; and `+
-    `six smaller chains ${fmt(UK.othGone)}. Odeon is still closed to us. `+
+    `six smaller chains ${fmt(UK.othGone)}. Odeon blocks our scan; the UK `+
+    `figure in the worldwide total adds an <b>estimate</b> of about `+
+    `${fmt(EST.odeon.c)} Odeon tickets for 5–8 Nov. `+
     `That is the headline figure, and it is not the same as tickets sold: our `+
     `room-minimum test flags <b>${fmt(UK.blockSeats)}</b> Cineworld seats, `+
     `in ${UK.blockRooms} rooms, as seats the cinema is holding back. So real `+
@@ -5289,6 +5310,29 @@ function afBody(){
     `Mauritius or Botswana. Grey rings on the map are listings — never zero `+
     `demand.</p>`;
 }
+
+/* 26 OCT 7:40pm CT: ESTIMATES FOR THE TWO CHAINS WE CANNOT READ - NOT COUNTED.
+   ODEON UK blocks us; Village Australia answers Cloudflare 403. PB's file
+   (ramayana_odeon_village_estimates_26oct.xlsx) builds 5-8 Nov estimates
+   from BoxofficeIndia24's live chain tables (27 Oct 05:50 IST): ODEON 3,408
+   tickets on 5-6 Nov at 281 shows / 96 cinemas; Village 1,332 at 132
+   sessions / 8 cinemas. ODEON is scaled by BOI's capture ratio, checked
+   against chains we DO count (Vue 0.97-1.04, Showcase 1.02-1.09, Cineworld
+   0.71-0.87), and 7-8 Nov are derived from 6 Nov per show. Village is BOI's
+   own figure with a range. Priced at OUR pinned ATPs (UK GBP 13.50, AU
+   A$25.66) so they sit on the same basis as the counted markets.
+   26 OCT 7:45pm, PB: PLUG THEM IN. The two estimates now ADD to the UK and
+   Australia & NZ rows, the market tiles and the worldwide totals. On the page
+   they are called ESTIMATES wherever they appear; the source is named once,
+   in the footer. UK.tickets and AU.tickets stay the COUNTED figures, so each
+   market panel still reports only what we read. */
+const EST={odeon:{c:5069, lo:4178, hi:6930, boi:3408, boiShows:281, cinemas:96},
+  village:{c:1147, lo:878, hi:1484, boi:1332, cinemas:8},
+  asOf:'26 Oct, 7:40pm CT', src:'BoxofficeIndia24 chain tables'};
+function odeonUsd(){ return Math.round(EST.odeon.c*UK.atpGbp*UK.fx); }
+function villageUsd(){ return Math.round(EST.village.c*AU.atpAud*AU.fx); }
+function estUsd(){ return odeonUsd()+villageUsd(); }
+function estTix(){ return EST.odeon.c+EST.village.c; }
 
 /* OUTSIDE NORTH AMERICA. One block, chips, markets side by side. Painted from
    paint() rather than render(): none of this moves when a filter is pressed. */
@@ -5633,9 +5677,9 @@ async function drawBrandCard(){
 function wwTotals(){
   const usSold=DATA.total.sold;
   const tix=usSold+xTix()+CA.canTix+UK.tickets+AU.anzTix+DE.tickets+IN.allTix+
-            NL.tickets+FR.tickets+SE.tickets+PH.tickets+AF.tickets;
+            NL.tickets+FR.tickets+SE.tickets+PH.tickets+AF.tickets+estTix();
   const usd=Math.round(usSold*atpNow())+xUsd()+CA.canUsd+UK.usd+AU.anzUsd+DE.usd+
-            IN.allUsd+NL.usd+FR.usd+PH.usd+(SE.usd||0)+AF.usd;
+            IN.allUsd+NL.usd+FR.usd+PH.usd+(SE.usd||0)+AF.usd+estUsd();
   const naTix=usSold+xTix()+CA.canTix;
   const naUsd=Math.round(usSold*atpNow())+xUsd()+CA.canUsd;
   /* NEW ZEALAND'S 14 WERE MISSING FROM THIS SUM. NZ folded into the
@@ -5647,8 +5691,8 @@ function wwTotals(){
             DE.cinemas+IN.cinemas+NL.cinemas+FR.cinemas+SE.cinemas+PH.cinemasRead+AF.cinemas;
   return {tix,usd,cin,rows:[
     ['North America',naTix,naUsd],['India',IN.allTix,IN.allUsd],
-    ['United Kingdom',UK.tickets,UK.usd],
-    ['Australia & NZ',AU.anzTix,AU.anzUsd],['Germany',DE.tickets,DE.usd],
+    ['United Kingdom',UK.tickets+EST.odeon.c,UK.usd+odeonUsd()],
+    ['Australia & NZ',AU.anzTix+EST.village.c,AU.anzUsd+villageUsd()],['Germany',DE.tickets,DE.usd],
     ['Netherlands',NL.tickets,NL.usd],['France',FR.tickets,FR.usd],
     ['Philippines',PH.tickets,PH.usd],['South Africa',AF.tickets,AF.usd]]};
 }

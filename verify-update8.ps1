@@ -295,6 +295,8 @@ Need $page 'tickets:11911'       'Australia 10,629 after the 25 Oct 09:33 re-rea
 Need $page 'const PH={tickets:41'  'Philippines SM Cinema, 26 Oct Grok read'
 Need $page "sub:'Philippines (SM) counted'" 'SE Asia map tile is live'
 Need $page 'const AF={tickets:363' 'South Africa, 26 Oct Grok read'
+Need $page 'const EST={odeon:{c:5069' 'Odeon UK estimate in the totals'
+Need $page 'AF.tickets+estTix()' 'estimates added to the worldwide total'
 Need $page "sub:'South Africa counted'" 'Africa map tile is live'
 Need $page "['South Africa',AF.tickets,AF.usd]" 'South Africa in the worldwide roll-up'
 Need $page "MSEL==='afr' ? afBody()" 'Africa tile opens its panel'
@@ -640,7 +642,7 @@ Need $app '4:00pm'    'the strip carries the scan time'
 # moved into the Hawaii inset.
 Need $page 'const USV = {"'          'the US city layer carries cinema positions'
 # 23 OCT FRANCE: Grok's first count, 7 tickets, added to the worldwide total.
-Need $page 'const FR = { tickets:16,' 'France on the page, 24 Oct full read'
+Need $page 'const FR = { tickets:15,' 'France on the page, 24 Oct full read'
 # 23 OCT INDIA MAP: District disc + BookMyShow ring, India fullness scale.
 Need $page 'function indSvg(' 'India map draws both sources'
 Need $page 'data-iview=' 'India map source switch'
