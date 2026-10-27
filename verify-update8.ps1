@@ -291,7 +291,7 @@ Need $page 'handCount:1899'      'the retired hand count kept as the record'
 # the same 107,490 seats. All 86 is buying.
 # 21 OCT 21:39-21:54 CT AU/NZ RE-READ: HOYTS 5,496 on the same 419 sessions,
 # Event 1,535, Australia 7,031; NZ Event 314. Chadstone 797 = PB's hand read.
-Need $page 'tickets:11911'       'Australia 10,629 after the 25 Oct 09:33 re-read, 7 HOYTS sessions carried'
+Need $page 'tickets:12096'       'Australia 10,629 after the 25 Oct 09:33 re-read, 7 HOYTS sessions carried'
 Need $page 'const PH={tickets:41'  'Philippines SM Cinema, 26 Oct Grok read'
 Need $page "sub:'Philippines (SM) counted'" 'SE Asia map tile is live'
 Need $page 'const AF={tickets:363' 'South Africa, 26 Oct Grok read'
@@ -314,7 +314,7 @@ Absent $page 'tickets:4922,'     'no pre-Event-re-read Australian total'
 # 20 OCT, PB: ALL-PRESALE BASIS. Every date a market has on sale counts,
 # because the whole run is presale. New Zealand is 5-11 Nov and all 259 are
 # in. inBasis keeps the 5-8 Nov subset so the earlier figure stays checkable.
-Need $page 'nz:{tickets:926'     'New Zealand on its full all-presale basis'
+Need $page 'nz:{tickets:935'     'New Zealand on its full all-presale basis'
 Absent $page 'nz:{tickets:462'   'no 25 Oct 00:47 New Zealand'
 Absent $page 'nz:{tickets:451'   'no 24 Oct evening New Zealand'
 Absent $page 'nz:{tickets:434'   'no 24 Oct morning New Zealand'
@@ -456,12 +456,12 @@ Need $page 'const SE = {'        'Sweden is on the page as a measured zero'
 Need $page "['Sweden',SE.tickets,SE.usd||0]" 'Sweden is in the roll-up, counted from 26 Oct'
 Need $page 'Filmstaden'          'the unreadable Swedish chain is disclosed'
 Absent $page "['Australia',AU.tickets,AU.usd]" 'no roll-up row on Australia alone'
-Need $page 'tickets:8761'        'HOYTS 8,210 incl. 214 carried'
+Need $page 'tickets:8879'        'HOYTS 8,210 incl. 214 carried'
 Absent $page 'tickets:6653'      'no 23 Oct HOYTS'
 Absent $page 'tickets:6219'      'no 22 Oct HOYTS'
 Absent $page 'tickets:5496'      'no 21 Oct HOYTS'
 Absent $page 'tickets:3864'      'no 20 Oct HOYTS'
-Need $page 'tickets:2697'        'Event 2,419 on 425 sessions'
+Need $page 'tickets:2764'        'Event 2,419 on 425 sessions'
 Absent $page 'tickets:1978'      'no 23 Oct Event'
 Absent $page 'tickets:1781'      'no 22 Oct Event'
 Absent $page 'tickets:1535'      'no 21 Oct Event'
@@ -534,7 +534,7 @@ Need   $page 'carriedShows:0'    '7 HOYTS sessions answered 503 on 25 Oct 09:15 
 # counting-method difference, not eight seats leaving the room. Cutting
 # hy.seats to 70,475 would have printed 5.22% off a measurement artefact.
 Need   $page 'seats:72985'       'HOYTS denominator from the full clean read'
-Need   $page 'rate:12.00'         'HOYTS rate on its own real house count'
+Need   $page 'rate:12.17'         'HOYTS rate on its own real house count'
 Need $page "['VIC',3132]"        'Victoria leads on a fully scanned Chadstone'
 Absent $page "['VIC',1298]"      'no pre-re-read state split'
 # ASCII only in these two. The page writes '153 screens · 9.81%' with a middot,

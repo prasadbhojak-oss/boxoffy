@@ -2071,14 +2071,19 @@ const AU = {
      2,697 (+18: Parramatta +11). Australia's Tuesday early morning - quiet.
      Thu +37, Sat +17, Sun +31, Fri -2. Reading and 2nd week unchanged.
      NZ Event read 522 (floor) vs 534 - kept at the higher NZ 926. */
-  tickets:11911, aud:305645, usd:201726, atpAud:25.66, fx:0.66,
+  /* 26 OCT 20:52-21:07 CT RE-READ (Australia's Tuesday afternoon). Same
+     442 HOYTS and 428 Event sessions, none failed, hand-read validation
+     passed. HOYTS 8,761 -> 8,879 (+118), Event 2,697 -> 2,764 (+67): +185.
+     Thu +58, Fri +46, Sat +64, Sun +17. Parramatta +31, Woden +20, Arndale
+     +17. NZ Event floor 534 -> 543, so NZ 926 -> 935. */
+  tickets:12096, aud:310214, usd:204741, atpAud:25.66, fx:0.66,
   rd:{tickets:355, shows:122, cinemas:27, held:420}, wk2:98,
-  ev:{tickets:2697, shows:428, counted:428, cinemas:38, seats:100019, rate:2.70},
-  hy:{tickets:8761, shows:437, counted:437, cinemas:47, cinemasRead:47,
-      seats:72985, rate:12.00, held:2620, carried:0, carriedShows:0,
+  ev:{tickets:2764, shows:428, counted:428, cinemas:38, seats:100276, rate:2.76},
+  hy:{tickets:8879, shows:437, counted:437, cinemas:47, cinemasRead:47,
+      seats:72985, rate:12.17, held:2608, carried:0, carriedShows:0,
       wasCarried:496, chadstoneRead:797, chadstoneHand:797,
       capacityWas:182, capacityNow:174},
-  byDate:[['Thu 5 Nov',4138],['Fri 6 Nov',3451],['Sat 7 Nov',3176],['Sun 8 Nov',1048],
+  byDate:[['Thu 5 Nov',4196],['Fri 6 Nov',3497],['Sat 7 Nov',3240],['Sun 8 Nov',1065],
           ['Mon 9 Nov',35],['Tue 10 Nov',13],['Wed 11 Nov',46],['Thu 12 Nov',4]],
   /* NEW ZEALAND, FOLDED INTO THIS MARKET 20 OCT. PB's call: one line, not
      two, so the tile and the worldwide roll-up read "Australia & NZ".
@@ -2104,7 +2109,7 @@ const AU = {
      so NZ$5,378 over 200 tickets is an observed ATP of NZ$26.89, not an
      assumption. FX 0.5609, OFX, 18 Oct - pinned like every other rate here
      and not to be refreshed quietly mid-week. */
-  nz:{tickets:926, nzd:24334, usd:13649, atpNzd:26.35, fx:0.5609,
+  nz:{tickets:935, nzd:24571, usd:13782, atpNzd:26.35, fx:0.5609,
       cinemas:14, shows:110, seats:23413, rate:2.07,
       inBasis:380, inBasisNzd:10012, secondWeek:95, secondWeekNote:'10 Nov',
       cinemasAll:14, showsAll:110, hoytsCinemas:7, hoytsShows:98,
@@ -2115,7 +2120,7 @@ const AU = {
               ['Auckland Westgate',21],['Hamilton Chartwell',18],
               ['Auckland Westcity',7],['Palmerston North',6],
               ['Kapiti Coastlands',2],['New Plymouth',2]]},
-  langs:[['Hindi',10797],['Telugu',447],['Tamil',138],['Kannada',62],['Malayalam',6]],
+  langs:[['Hindi',10956],['Telugu',461],['Tamil',141],['Kannada',68],['Malayalam',9]],
   /* The two figures every roll-up on this page uses. Australia alone stays
      available as AU.tickets / AU.usd for the panel that is about Australia. */
   get anzTix(){ return this.tickets + this.nz.tickets; },
