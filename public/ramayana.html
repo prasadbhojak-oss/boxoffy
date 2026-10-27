@@ -2913,10 +2913,25 @@ const SE = { tickets:30, usd:446, /* SEK 150 assumed, as BoxofficeIndia24 */ sho
              chainBlocked:'Filmstaden', blockedShows:21, blockedCinemas:17 };
 
 
+/* UK OUTLINE redrawn 26 Oct from Natural Earth 1:50m (world-atlas 2.0.2), Great
+   Britain and Northern Ireland, through the same x/y fit as the pins; Shetland
+   dropped (above the frame). The old hand-traced outline put coastal pins at sea. */
+/* 26 OCT 7:50pm, PB: THE UK MAP BY CITY, WITH ODEON IN. Built from the
+   26 Oct UK file (2,604 showtimes, every chain we read) on the CORRECTED basis
+   a named place must carry: Showcase at its house-block view, every other
+   room with 3+ showings less its room minimum (1,610 seats), Cineworld's own
+   'held' already out - 8,565 seats gone. Cinemas grouped into towns and cities
+   (London is one circle, 36 cinemas), positions from GeoNames lat/lon through
+   the same linear fit as before. Each city also carries its ODEON ESTIMATE
+   (EST, per-cinema central figures, 5,069 in all) as e; d is counted, t = d+e.
+   The map draws d solid and t as a dashed gold ring. Jersey sits below the
+   frame and is pinned to its bottom edge. 164 cities. */
+const UKC=[{n:"London",x:75.4,y:112.6,t:3280,d:2161,e:1119,c:36},{n:"Leicester",x:66.9,y:95.7,t:861,d:368,e:493,c:3},{n:"Reading",x:68.2,y:113.4,t:597,d:597,e:0,c:2},{n:"Birmingham",x:60.3,y:98.1,t:520,d:370,e:150,c:5},{n:"Watford",x:73.1,y:110.4,t:457,d:457,e:0,c:1},{n:"Southampton",x:64.6,y:121.7,t:337,d:337,e:0,c:1},{n:"Coventry",x:63.6,y:99.2,t:313,d:116,e:197,c:2},{n:"Cambridge",x:77.5,y:102.3,t:290,d:290,e:0,c:1},{n:"Manchester",x:57.5,y:83.1,t:289,d:198,e:91,c:5},{n:"Edinburgh",x:49.3,y:46.2,t:285,d:221,e:64,c:6},{n:"Milton Keynes",x:70.1,y:104.7,t:269,d:165,e:104,c:2},{n:"Norwich",x:87.6,y:95.9,t:268,d:4,e:264,c:2},{n:"Glasgow",x:40.3,y:47.5,t:262,d:164,e:98,c:7},{n:"Newcastle",x:62.8,y:60.8,t:262,d:149,e:113,c:5},{n:"Leeds",x:63.3,y:78.4,t:248,d:234,e:14,c:5},{n:"Belfast",x:26.1,y:66.4,t:231,d:185,e:46,c:2},{n:"Cardiff",x:49.4,y:113.1,t:196,d:122,e:74,c:3},{n:"Dartford",x:78.4,y:113.7,t:181,d:181,e:0,c:1},{n:"West Bromwich",x:59.5,y:97.5,t:134,d:0,e:134,c:1},{n:"Peterborough",x:74.4,y:96.7,t:131,d:27,e:104,c:2},{n:"Crawley",x:74.9,y:118.5,t:126,d:126,e:0,c:1},{n:"Sheffield",x:64.0,y:84.6,t:125,d:109,e:16,c:3},{n:"Solihull",x:61.3,y:99.1,t:116,d:116,e:0,c:1},{n:"Bristol",x:54.4,y:113.4,t:107,d:57,e:50,c:4},{n:"Luton",x:73.0,y:107.1,t:101,d:101,e:0,c:1},{n:"Chatham",x:81.0,y:114.6,t:100,d:0,e:100,c:1},{n:"Swindon",x:61.3,y:111.9,t:88,d:88,e:0,c:2},{n:"Dudley",x:58.8,y:97.8,t:85,d:3,e:82,c:2},{n:"Tamworth",x:62.1,y:95.8,t:82,d:0,e:82,c:1},{n:"Stoke-on-Trent",x:57.9,y:90.3,t:82,d:37,e:45,c:3},{n:"Rugby",x:65.7,y:99.7,t:82,d:82,e:0,c:1},{n:"Northampton",x:69.0,y:101.5,t:81,d:23,e:58,c:2},{n:"Nottingham",x:66.7,y:91.0,t:74,d:74,e:0,c:2},{n:"Basildon",x:80.4,y:111.7,t:72,d:72,e:0,c:1},{n:"Mansfield",x:66.3,y:88.3,t:71,d:0,e:71,c:1},{n:"Staines",x:72.2,y:113.8,t:68,d:68,e:0,c:1},{n:"Bracknell",x:70.1,y:114.0,t:67,d:67,e:0,c:1},{n:"Telford",x:55.7,y:95.2,t:67,d:24,e:43,c:2},{n:"Portsmouth",x:67.2,y:123.2,t:66,d:31,e:35,c:2},{n:"Nuneaton",x:64.0,y:97.4,t:66,d:0,e:66,c:1},{n:"Brighton",x:75.3,y:122.8,t:63,d:24,e:39,c:2},{n:"Bradford",x:61.6,y:78.4,t:61,d:13,e:48,c:2},{n:"Liverpool",x:51.2,y:84.2,t:60,d:21,e:39,c:4},{n:"Didcot",x:66.0,y:111.1,t:58,d:58,e:0,c:1},{n:"Gloucester",x:57.4,y:107.3,t:55,d:55,e:0,c:1},{n:"Worcester",x:57.6,y:102.4,t:55,d:0,e:55,c:1},{n:"Ipswich",x:86.3,y:104.4,t:55,d:55,e:0,c:1},{n:"Epsom",x:74.2,y:115.3,t:54,d:0,e:54,c:1},{n:"Salisbury",x:61.2,y:119.2,t:51,d:0,e:51,c:1},{n:"Aylesbury",x:69.6,y:108.0,t:51,d:0,e:51,c:1},{n:"Wolverhampton",x:58.4,y:96.5,t:51,d:51,e:0,c:1},{n:"Colchester",x:84.2,y:106.9,t:49,d:8,e:41,c:2},{n:"Guildford",x:71.6,y:116.7,t:49,d:0,e:49,c:1},{n:"Derby",x:63.9,y:91.5,t:49,d:26,e:23,c:2},{n:"Hatfield",x:74.6,y:108.8,t:44,d:0,e:44,c:1},{n:"Bournemouth",x:60.5,y:124.4,t:43,d:0,e:43,c:1},{n:"Southend",x:82.6,y:112.2,t:41,d:0,e:41,c:1},{n:"Chelmsford",x:80.5,y:109.2,t:41,d:0,e:41,c:1},{n:"Exeter",x:46.5,y:124.4,t:39,d:24,e:15,c:2},{n:"Loughborough",x:66.3,y:93.8,t:39,d:0,e:39,c:1},{n:"Stafford",x:58.5,y:93.2,t:38,d:0,e:38,c:1},{n:"Bedford",x:72.5,y:103.3,t:37,d:37,e:0,c:1},{n:"Fareham",x:66.5,y:122.5,t:36,d:36,e:0,c:1},{n:"Hereford",x:53.4,y:104.4,t:36,d:0,e:36,c:1},{n:"Maidstone",x:80.9,y:116.2,t:35,d:0,e:35,c:1},{n:"Andover",x:63.9,y:117.1,t:35,d:0,e:35,c:1},{n:"Durham",x:63.1,y:63.7,t:35,d:0,e:35,c:1},{n:"Bury St Edmunds",x:82.6,y:101.5,t:34,d:34,e:0,c:1},{n:"Dundee",x:51.2,y:38.6,t:34,d:4,e:30,c:2},{n:"Lincoln",x:71.9,y:86.9,t:33,d:0,e:33,c:1},{n:"Middlesbrough",x:66.0,y:66.7,t:33,d:10,e:23,c:2},{n:"Aberdeen",x:58.6,y:28.3,t:32,d:32,e:0,c:1},{n:"Tunbridge Wells",x:78.7,y:118.2,t:32,d:0,e:32,c:1},{n:"Rushden",x:71.4,y:100.9,t:32,d:32,e:0,c:1},{n:"Preston",x:53.5,y:78.9,t:31,d:1,e:30,c:2},{n:"Bolton",x:55.8,y:81.6,t:30,d:30,e:0,c:1},{n:"Maidenhead",x:70.4,y:112.4,t:29,d:0,e:29,c:1},{n:"Swansea",x:42.9,y:110.9,t:28,d:2,e:26,c:2},{n:"Stevenage",x:74.8,y:106.7,t:28,d:28,e:0,c:1},{n:"Rochdale",x:58.2,y:81.1,t:28,d:0,e:28,c:1},{n:"Taunton",x:50.1,y:120.0,t:27,d:0,e:27,c:1},{n:"Poole",x:59.6,y:124.5,t:27,d:27,e:0,c:1},{n:"Ellesmere Port",x:51.8,y:86.1,t:27,d:27,e:0,c:1},{n:"Ashford",x:83.9,y:118.0,t:26,d:26,e:0,c:1},{n:"Basingstoke",x:67.3,y:116.3,t:25,d:25,e:0,c:1},{n:"York",x:67.3,y:76.0,t:23,d:23,e:0,c:1},{n:"Hastings",x:81.4,y:122.4,t:20,d:0,e:20,c:1},{n:"Newbury",x:65.2,y:114.2,t:19,d:19,e:0,c:1},{n:"Oxford",x:65.8,y:109.0,t:19,d:19,e:0,c:1},{n:"Jersey",x:58.5,y:138.5,t:19,d:19,e:0,c:1},{n:"Oldham",x:58.5,y:82.2,t:18,d:0,e:18,c:1},{n:"Warrington",x:54.5,y:84.4,t:17,d:1,e:16,c:2},{n:"Dunfermline",x:47.1,y:44.4,t:17,d:0,e:17,c:1},{n:"Wrexham",x:51.0,y:89.6,t:17,d:0,e:17,c:1},{n:"Bath",x:56.4,y:114.6,t:17,d:0,e:17,c:1},{n:"Trowbridge",x:57.7,y:115.4,t:16,d:0,e:16,c:1},{n:"Camberley",x:70.2,y:115.2,t:16,d:16,e:0,c:1},{n:"Ashton-under-Lyne",x:58.6,y:83.0,t:16,d:16,e:0,c:1},{n:"Boston",x:76.3,y:90.7,t:16,d:16,e:0,c:1},{n:"Yeovil",x:54.1,y:121.1,t:16,d:16,e:0,c:1},{n:"Dorchester",x:55.7,y:124.6,t:15,d:0,e:15,c:1},{n:"Farnborough",x:70.1,y:115.8,t:15,d:15,e:0,c:1},{n:"Plymouth",x:41.2,y:129.6,t:14,d:14,e:0,c:1},{n:"Burton upon Trent",x:62.5,y:93.2,t:14,d:14,e:0,c:1},{n:"Eastleigh",x:65.0,y:120.7,t:14,d:14,e:0,c:1},{n:"Swadlincote",x:63.3,y:93.8,t:13,d:0,e:13,c:1},{n:"Huntingdon",x:75.0,y:100.3,t:13,d:13,e:0,c:1},{n:"Eastbourne",x:78.9,y:123.7,t:13,d:13,e:0,c:1},{n:"Banbury",x:65.1,y:104.3,t:13,d:13,e:0,c:1},{n:"Bridgend",x:46.0,y:112.8,t:13,d:0,e:13,c:1},{n:"Blackburn",x:55.4,y:79.1,t:13,d:13,e:0,c:1},{n:"Newark",x:69.6,y:89.1,t:13,d:0,e:13,c:1},{n:"Cheltenham",x:58.8,y:106.8,t:13,d:13,e:0,c:1},{n:"Harrogate",x:63.4,y:75.5,t:12,d:0,e:12,c:1},{n:"Huddersfield",x:61.3,y:80.6,t:12,d:0,e:12,c:1},{n:"Hull",x:73.7,y:79.2,t:12,d:0,e:12,c:2},{n:"Lancaster",x:52.7,y:74.7,t:11,d:11,e:0,c:1},{n:"Shrewsbury",x:53.1,y:94.7,t:11,d:11,e:0,c:1},{n:"Walsall",x:59.6,y:96.5,t:11,d:11,e:0,c:1},{n:"Llanelli",x:41.1,y:110.1,t:11,d:0,e:11,c:1},{n:"Aldershot",x:70.0,y:116.5,t:11,d:11,e:0,c:1},{n:"High Wycombe",x:70.1,y:110.8,t:11,d:11,e:0,c:1},{n:"Braintree",x:81.2,y:107.1,t:10,d:10,e:0,c:1},{n:"Aberystwyth",x:41.8,y:99.1,t:10,d:10,e:0,c:1},{n:"Hemel Hempstead",x:72.7,y:109.0,t:10,d:10,e:0,c:1},{n:"Rochester",x:80.8,y:114.4,t:9,d:9,e:0,c:1},{n:"Doncaster",x:66.9,y:82.5,t:9,d:9,e:0,c:1},{n:"Margate",x:88.3,y:114.5,t:9,d:9,e:0,c:1},{n:"Northwich",x:55.1,y:86.4,t:9,d:0,e:9,c:1},{n:"Crewe",x:55.7,y:88.9,t:9,d:0,e:9,c:1},{n:"Ely",x:78.7,y:99.3,t:8,d:8,e:0,c:1},{n:"Darlington",x:63.3,y:67.5,t:8,d:8,e:0,c:1},{n:"Scunthorpe",x:70.9,y:81.7,t:6,d:6,e:0,c:1},{n:"Isle of Wight",x:65.5,y:124.7,t:6,d:6,e:0,c:1},{n:"Wirral",x:51.0,y:85.4,t:6,d:0,e:6,c:1},{n:"Halifax",x:60.8,y:79.6,t:5,d:5,e:0,c:1},{n:"Stirling",x:43.0,y:43.6,t:4,d:4,e:0,c:1},{n:"Redditch",x:59.9,y:100.7,t:4,d:4,e:0,c:1},{n:"Chesterfield",x:64.4,y:86.6,t:3,d:3,e:0,c:1},{n:"Chester",x:51.9,y:87.5,t:3,d:3,e:0,c:1},{n:"Hinckley",x:64.8,y:97.2,t:3,d:3,e:0,c:1},{n:"Falkirk",x:44.3,y:45.4,t:3,d:3,e:0,c:1},{n:"Wakefield",x:63.8,y:80.1,t:3,d:3,e:0,c:1},{n:"Llandudno",x:43.9,y:85.5,t:3,d:3,e:0,c:1},{n:"Wisbech",x:77.9,y:95.4,t:3,d:3,e:0,c:1},{n:"Seaham",x:65.1,y:62.8,t:2,d:2,e:0,c:1},{n:"Barnsley",x:63.9,y:82.1,t:2,d:2,e:0,c:1},{n:"Castleford",x:64.9,y:79.5,t:2,d:2,e:0,c:1},{n:"Gainsborough",x:70.0,y:84.3,t:2,d:2,e:0,c:1},{n:"Sittingbourne",x:82.7,y:115.1,t:2,d:2,e:0,c:1},{n:"Bury",x:56.9,y:81.3,t:1,d:1,e:0,c:1},{n:"Haverhill",x:80.3,y:104.1,t:1,d:1,e:0,c:1},{n:"Chichester",x:69.9,y:122.7,t:1,d:1,e:0,c:1},{n:"Inverness",x:40.6,y:23.3,t:1,d:1,e:0,c:1},{n:"Dover",x:87.7,y:118.3,t:0,d:0,e:0,c:1},{n:"Grantham",x:71.0,y:91.6,t:0,d:0,e:0,c:1},{n:"Harlow",x:77.5,y:108.6,t:0,d:0,e:0,c:1},{n:"Corby",x:70.6,y:97.9,t:0,d:0,e:0,c:1},{n:"Newport",x:51.0,y:111.6,t:0,d:0,e:0,c:1},{n:"St Helens",x:53.2,y:83.6,t:0,d:0,e:0,c:1},{n:"Stroud",x:57.6,y:109.2,t:0,d:0,e:0,c:1},{n:"Southport",x:50.9,y:80.7,t:0,d:0,e:0,c:1},{n:"Weston-super-Mare",x:51.2,y:115.1,t:0,d:0,e:0,c:1},{n:"Worksop",x:66.9,y:85.8,t:0,d:0,e:0,c:1}];
+
 const MKT={
   usa:{name:'United States', sub:'incl. Alaska & Hawaii', tix:0, usd:0, vb:'0 0 960 600'},
-  uk :{name:'United Kingdom', sub:'196 cinemas read, 5 chains+', vb:'0 0 100 140',
-    d:"M35.9,5.8 L47.2,5.8 L50.7,5.0 L51.5,11.8 L49.8,16.4 L42.8,16.4 L41.1,20.9 L48.0,19.4 L53.3,19.4 L61.1,22.4 L58.5,28.5 L55.9,34.5 L52.4,38.3 L54.1,43.6 L49.8,44.4 L58.5,48.2 L61.1,51.2 L62.8,60.3 L65.4,64.8 L71.5,67.9 L75.9,73.9 L74.1,80.0 L78.0,83.0 L79.8,91.4 L84.5,91.1 L91.5,94.4 L91.9,98.2 L88.0,106.5 L85.4,110.3 L84.5,114.8 L88.9,115.2 L88.5,119.4 L84.5,123.2 L76.7,124.7 L67.2,124.2 L60.2,125.2 L50.7,125.5 L46.3,127.0 L40.2,130.8 L32.4,134.8 L27.2,135.0 L33.3,128.5 L37.6,122.4 L40.2,117.9 L50.7,117.6 L55.0,113.3 L50.7,111.8 L42.0,111.8 L35.9,110.6 L30.7,110.0 L32.4,105.8 L38.5,101.2 L41.1,92.1 L37.6,86.1 L43.7,86.1 L49.8,84.5 L50.7,80.0 L49.8,73.9 L45.4,67.9 L46.3,61.8 L38.5,63.6 L34.1,65.9 L34.1,60.3 L35.0,54.2 L33.3,49.7 L35.0,45.2 L29.8,54.2 L28.1,45.2 L28.9,39.1 L25.4,33.0 L27.2,25.5 L26.3,20.9 L29.8,16.4 L33.3,10.3Z M28.9,67.9 L27.2,63.3 L22.8,57.3 L15.9,57.3 L13.3,60.3 L8.1,64.8 L11.5,70.9 L17.6,73.9 L22.8,73.9 L28.1,70.9Z",
+  uk :{name:'United Kingdom', sub:'196 cinemas read + Odeon estimate', vb:'0 0 100 140',
+    d:"M53.8,110.9 L53.2,111.5 L51.1,112.2 L50.3,112.8 L48.8,114.3 L48.5,114.4 L46.2,114.0 L44.5,112.2 L43.4,111.4 L42.9,111.3 L42.5,111.5 L41.5,111.8 L40.5,111.7 L41.0,110.8 L41.7,110.4 L40.1,110.0 L39.7,109.8 L39.2,109.2 L37.9,109.1 L37.4,109.2 L36.3,110.0 L34.8,110.9 L32.9,109.7 L32.5,109.2 L32.5,108.1 L32.2,107.3 L31.7,107.1 L32.4,106.0 L33.2,105.3 L35.0,104.6 L37.7,103.0 L39.2,102.3 L40.6,101.1 L41.2,100.4 L41.6,99.4 L42.0,98.2 L42.6,97.2 L42.0,96.9 L41.8,96.2 L41.9,95.4 L42.1,94.7 L41.9,93.9 L41.5,93.0 L41.5,92.3 L41.6,91.6 L40.5,91.6 L39.4,91.9 L38.4,92.4 L37.5,93.1 L36.7,93.2 L36.7,92.6 L37.0,91.9 L38.0,91.0 L39.0,90.1 L39.4,89.5 L39.7,88.7 L40.2,88.1 L41.5,87.0 L44.1,85.8 L44.5,85.7 L45.5,85.9 L46.5,85.7 L47.3,85.2 L48.2,85.1 L50.1,86.4 L49.6,84.4 L50.4,83.9 L51.7,85.8 L52.1,85.9 L53.1,85.7 L52.7,85.4 L52.3,85.3 L51.7,85.1 L51.2,84.5 L50.4,82.6 L50.5,81.6 L51.0,80.4 L51.6,79.3 L51.1,79.1 L50.7,78.7 L50.6,77.7 L50.7,76.8 L51.8,75.9 L52.1,74.7 L52.3,73.3 L52.1,72.7 L51.0,72.8 L50.5,73.1 L50.0,73.5 L49.6,73.5 L48.2,71.9 L47.5,70.8 L46.1,68.4 L45.9,66.9 L47.0,63.8 L48.7,61.8 L50.7,61.1 L50.3,61.0 L47.3,60.9 L46.3,61.2 L45.4,62.0 L44.8,62.3 L44.3,62.3 L43.8,62.8 L43.3,63.3 L42.8,63.7 L41.8,63.6 L41.3,63.7 L41.0,63.4 L40.7,62.8 L40.3,62.7 L39.9,62.9 L39.0,63.6 L38.1,64.0 L37.0,63.6 L35.5,62.7 L35.2,63.0 L34.9,63.8 L34.7,65.0 L33.7,64.0 L32.8,62.5 L32.5,61.6 L32.5,60.6 L32.9,60.2 L33.5,60.6 L34.2,58.2 L35.8,55.0 L36.3,54.1 L36.7,52.9 L36.6,52.1 L36.3,51.5 L34.9,50.0 L34.9,48.7 L35.0,47.3 L35.4,46.5 L37.5,46.4 L36.7,45.9 L35.3,44.7 L35.3,44.2 L35.6,43.1 L35.2,43.7 L34.6,45.0 L34.2,45.3 L33.2,45.6 L33.0,46.3 L32.3,46.5 L32.1,47.1 L31.8,46.5 L31.8,45.4 L32.1,44.4 L32.5,43.7 L34.0,42.0 L33.2,42.5 L31.5,44.1 L30.7,45.1 L30.5,45.5 L30.4,45.8 L30.4,46.2 L30.8,48.0 L30.6,48.9 L29.2,54.6 L28.9,55.1 L28.7,55.4 L27.7,55.4 L27.4,55.0 L27.4,54.5 L27.5,53.8 L28.1,51.1 L28.4,50.3 L28.8,49.6 L29.6,48.4 L29.0,48.5 L28.7,48.2 L28.7,44.6 L29.2,43.4 L29.4,41.7 L29.8,40.2 L30.2,39.1 L30.6,37.7 L31.1,37.1 L31.3,36.2 L31.9,35.2 L32.3,34.1 L29.1,37.0 L28.4,37.5 L27.4,37.4 L26.6,37.0 L26.0,36.4 L25.7,35.1 L24.9,35.1 L24.3,34.9 L25.1,34.0 L26.5,33.8 L27.7,32.7 L26.6,31.9 L27.7,31.1 L28.9,28.9 L29.2,27.0 L28.6,26.1 L28.3,25.5 L27.2,24.8 L27.0,24.0 L27.1,23.5 L27.5,23.0 L28.1,22.7 L29.0,22.3 L28.2,21.9 L27.9,21.5 L27.6,20.9 L27.6,20.5 L28.0,18.8 L28.3,18.2 L28.8,17.3 L31.0,17.4 L31.2,17.0 L32.6,17.3 L32.4,16.9 L30.6,14.9 L30.4,14.5 L30.9,13.4 L31.0,12.9 L30.9,12.4 L31.1,12.0 L31.7,11.8 L33.4,11.8 L33.9,11.6 L33.7,11.1 L33.2,10.4 L33.2,9.8 L33.3,9.3 L33.3,8.2 L33.4,7.8 L33.8,7.1 L34.1,6.8 L34.6,6.7 L35.6,7.0 L35.9,7.2 L36.4,7.9 L36.7,7.8 L37.9,7.1 L38.3,7.0 L38.8,7.9 L40.8,7.2 L43.6,6.9 L45.3,6.5 L47.1,6.3 L48.8,5.8 L50.5,6.0 L50.5,6.7 L50.0,7.8 L50.1,9.0 L50.0,9.4 L49.8,9.9 L49.2,10.7 L47.5,11.9 L44.4,14.7 L42.5,16.1 L42.3,16.8 L42.2,17.8 L43.2,17.9 L43.7,18.2 L43.4,18.7 L41.8,20.3 L41.3,21.9 L42.6,21.8 L43.6,21.5 L45.6,20.6 L47.5,19.9 L48.4,19.9 L50.3,20.4 L50.7,20.4 L51.4,20.2 L52.2,20.1 L57.4,20.3 L58.8,20.0 L59.8,20.4 L60.6,21.3 L61.4,23.1 L60.9,24.2 L60.0,25.2 L59.3,26.6 L59.1,27.4 L59.0,28.2 L58.7,28.9 L57.3,32.5 L55.8,34.5 L55.2,35.9 L54.4,37.0 L53.7,37.7 L52.9,38.2 L50.6,38.7 L49.9,39.1 L49.2,39.7 L48.3,40.0 L49.3,40.0 L50.2,39.6 L51.9,39.5 L53.9,40.7 L53.8,41.6 L53.0,42.4 L51.1,42.6 L49.5,44.2 L48.7,44.8 L47.9,45.0 L46.9,44.9 L45.0,44.5 L44.3,44.0 L45.0,44.8 L45.8,45.2 L50.6,46.2 L52.3,45.0 L54.4,45.0 L58.2,46.9 L59.3,48.3 L60.9,50.3 L61.8,51.1 L62.4,51.9 L62.8,52.9 L63.6,56.5 L64.4,60.0 L65.5,63.8 L66.0,64.8 L66.7,65.6 L70.1,67.3 L70.8,67.8 L72.1,69.5 L73.4,71.2 L74.5,72.5 L75.8,73.6 L75.2,74.2 L74.7,75.0 L75.1,76.2 L75.6,77.4 L76.6,79.2 L77.5,81.2 L77.2,80.9 L76.8,80.7 L76.3,80.8 L75.9,80.7 L75.0,80.1 L74.2,79.3 L72.6,79.6 L71.7,79.5 L70.9,79.5 L72.4,79.9 L74.0,80.0 L77.6,83.3 L78.8,85.3 L79.5,87.9 L79.0,89.1 L78.3,89.9 L77.6,90.7 L76.9,91.7 L78.9,93.2 L79.3,93.1 L79.8,92.9 L80.2,92.4 L80.9,91.2 L81.3,90.8 L82.5,90.7 L83.5,90.7 L84.6,91.0 L85.5,90.9 L87.3,91.4 L88.3,91.9 L90.6,94.0 L91.1,95.1 L91.4,96.6 L91.4,98.3 L91.0,99.8 L90.5,101.1 L90.3,102.8 L90.1,103.5 L89.8,104.0 L88.5,105.4 L87.7,105.9 L87.4,105.7 L87.0,105.7 L87.0,106.0 L87.3,106.7 L87.4,107.6 L86.6,108.2 L85.9,108.5 L84.6,108.1 L82.9,109.3 L84.2,109.9 L84.4,110.6 L84.1,111.7 L83.3,112.2 L82.4,112.4 L81.5,112.5 L80.8,112.7 L80.1,113.3 L81.0,113.0 L81.6,113.2 L82.0,114.2 L82.3,114.5 L84.1,114.8 L85.1,114.8 L87.2,114.6 L88.2,114.6 L88.6,114.8 L88.6,115.6 L88.4,117.5 L88.1,117.9 L85.4,119.5 L84.8,120.7 L84.7,121.3 L83.1,121.2 L82.3,121.9 L81.0,122.4 L80.0,122.9 L79.1,123.6 L78.2,123.8 L74.8,123.0 L72.7,123.1 L69.8,123.8 L69.1,123.6 L68.0,123.0 L66.9,122.6 L65.6,122.4 L64.4,121.8 L65.2,122.9 L63.6,124.0 L62.9,124.2 L62.1,124.2 L60.6,124.5 L59.2,124.3 L59.4,125.1 L59.8,125.8 L59.5,126.1 L59.2,126.2 L56.5,125.6 L56.1,125.8 L55.8,126.2 L54.8,126.0 L53.9,125.2 L52.9,124.6 L51.8,124.4 L51.0,124.5 L47.5,125.7 L46.8,127.0 L46.5,128.8 L46.0,130.4 L45.2,131.6 L44.2,131.8 L43.3,130.9 L41.6,130.0 L41.0,129.3 L40.6,129.5 L39.9,129.8 L39.2,129.8 L38.2,130.1 L36.3,130.8 L35.5,131.4 L33.9,132.8 L33.5,133.2 L32.9,134.6 L32.0,134.9 L31.2,134.0 L30.2,133.6 L29.3,134.0 L28.7,134.4 L28.4,134.0 L28.3,133.2 L29.1,132.2 L31.0,131.5 L32.7,129.6 L33.6,128.4 L33.9,127.8 L34.3,127.4 L34.8,127.2 L35.1,126.5 L37.5,123.6 L37.7,122.9 L37.8,121.7 L38.0,120.6 L39.9,119.8 L40.8,117.4 L41.1,117.2 L43.8,116.8 L45.8,116.8 L47.8,117.3 L48.8,117.3 L49.8,117.2 L50.6,116.5 L52.0,114.2 L52.7,113.1 L53.6,112.2 L54.5,111.1 L55.8,109.2 L54.9,109.8 L53.8,110.9ZM40.8,85.5 L41.1,85.8 L42.0,85.7 L41.7,86.4 L40.8,87.1 L40.1,87.7 L39.3,88.3 L38.9,87.7 L38.4,87.7 L37.8,86.4 L37.6,84.5 L38.5,84.0 L39.8,84.1 L40.8,85.5ZM49.6,3.7 L49.1,3.8 L48.6,3.8 L47.8,3.0 L47.6,2.3 L47.6,1.9 L47.9,1.8 L48.7,2.0 L49.0,2.7 L49.1,3.2 L49.6,3.5ZM51.6,4.4 L51.2,4.2 L50.7,3.2 L51.5,3.0 L51.9,3.2 L51.7,3.6 L51.6,4.4ZM20.3,36.7 L19.8,36.8 L20.6,35.5 L21.1,35.4 L20.9,36.1 L20.3,36.7ZM33.0,53.7 L32.0,53.7 L31.6,53.6 L31.1,53.2 L30.6,51.1 L30.8,50.4 L31.0,50.1 L31.2,49.8 L31.8,49.7 L32.4,50.1 L32.6,50.4 L33.0,51.8 L33.1,53.0 L33.0,53.7ZM27.3,40.3 L23.9,41.1 L22.8,41.0 L22.6,40.6 L22.9,40.4 L23.8,40.1 L24.2,38.1 L22.8,37.2 L22.8,36.5 L23.9,35.8 L24.2,35.7 L24.5,35.8 L25.2,36.3 L25.9,37.4 L26.8,37.6 L27.5,38.1 L27.3,40.3ZM24.3,46.5 L24.6,48.4 L24.9,49.6 L24.9,50.0 L24.7,50.6 L23.3,51.3 L22.8,51.3 L23.1,50.4 L22.9,49.5 L23.0,48.8 L22.6,48.8 L21.6,49.9 L21.2,50.0 L21.4,48.9 L21.5,48.3 L21.6,48.0 L21.9,47.6 L22.2,47.4 L22.8,47.6 L23.6,46.9 L24.3,46.5ZM25.7,48.2 L25.1,48.3 L24.9,48.1 L24.8,47.7 L24.8,47.0 L25.1,46.6 L26.2,45.8 L25.7,45.6 L26.0,44.8 L27.1,43.8 L27.5,43.6 L27.8,43.7 L27.1,45.4 L25.7,48.2ZM23.7,10.1 L22.6,12.7 L22.2,12.8 L21.8,13.4 L20.7,14.1 L21.7,14.1 L22.0,14.4 L22.0,14.9 L21.8,15.2 L20.5,16.4 L19.6,16.9 L18.7,18.1 L18.2,18.1 L17.7,18.9 L17.3,19.3 L16.8,19.1 L16.2,18.3 L17.3,17.5 L17.4,17.1 L18.1,16.7 L16.9,15.9 L16.4,15.5 L17.0,14.8 L16.6,14.5 L16.3,14.4 L16.1,13.5 L16.2,12.8 L16.5,12.5 L16.7,12.2 L17.3,12.3 L17.9,12.8 L18.5,12.6 L19.2,12.7 L18.7,11.3 L19.1,10.7 L20.8,9.8 L22.9,8.2 L23.4,8.0 L23.8,9.0 L23.7,10.1ZM23.0,31.0 L22.8,31.2 L22.5,31.2 L22.2,30.9 L21.8,30.2 L22.7,29.7 L23.1,30.0 L23.2,30.3 L23.2,30.7 L23.0,31.0ZM24.2,22.9 L24.2,23.6 L24.0,24.4 L24.2,25.2 L24.3,25.8 L24.6,26.0 L24.9,26.2 L26.4,26.6 L27.9,26.5 L28.2,26.7 L28.3,27.1 L28.0,27.5 L27.2,28.3 L26.2,29.5 L25.9,29.8 L25.5,29.8 L25.1,27.5 L24.1,27.8 L23.2,27.7 L22.7,27.5 L22.3,26.9 L21.7,25.6 L19.7,25.0 L19.1,24.3 L18.9,23.9 L19.4,23.1 L19.9,23.3 L20.3,23.2 L20.5,22.9 L20.2,22.2 L22.2,21.5 L22.4,20.5 L22.8,20.4 L23.3,20.7 L24.0,21.7 L24.2,22.9ZM15.2,20.3 L16.1,21.1 L15.4,22.5 L14.2,22.5 L12.5,21.5 L12.7,21.0 L12.9,20.7 L13.6,20.8 L14.2,20.6 L14.6,20.7 L15.2,20.3ZM14.8,28.8 L14.4,28.8 L14.0,28.8 L13.7,28.5 L13.4,27.6 L13.3,27.0 L13.5,26.0 L13.4,24.8 L14.4,24.7 L14.6,24.9 L14.8,28.6ZM13.4,31.0 L12.6,31.2 L12.3,30.9 L12.5,30.4 L13.1,30.2 L13.5,30.5 L13.4,31.0ZM23.6,74.0 L22.9,73.9 L22.3,74.2 L22.0,74.4 L21.7,74.4 L20.8,74.5 L19.9,74.5 L19.8,74.1 L19.9,72.9 L19.7,72.6 L18.9,72.4 L18.6,72.2 L18.1,71.3 L18.0,71.0 L18.0,70.4 L17.5,69.8 L16.9,69.3 L16.5,69.2 L15.8,70.1 L15.2,70.9 L15.4,71.2 L15.6,71.8 L15.3,72.2 L14.3,73.0 L14.2,73.4 L13.9,73.6 L13.4,73.3 L12.3,73.3 L11.8,73.2 L11.2,72.6 L9.7,72.1 L9.4,71.1 L9.1,70.9 L7.4,69.2 L7.2,68.6 L7.4,68.2 L8.0,67.7 L10.2,66.8 L10.5,66.5 L10.6,66.2 L9.9,65.8 L9.4,65.4 L9.2,65.1 L9.5,64.6 L10.1,64.6 L10.6,64.7 L11.0,64.5 L11.8,64.2 L12.2,63.9 L12.7,63.0 L13.1,62.2 L13.1,61.8 L13.5,60.3 L13.7,60.0 L15.0,59.0 L15.4,59.6 L16.1,59.7 L16.7,59.2 L17.4,57.7 L17.9,57.6 L18.4,57.7 L19.5,57.5 L21.4,56.8 L22.2,56.8 L23.4,57.1 L24.3,57.1 L25.1,58.2 L25.6,59.9 L26.5,61.7 L27.9,63.1 L27.9,64.0 L27.4,64.5 L26.4,65.1 L26.5,65.8 L27.1,65.4 L27.6,65.3 L29.0,65.4 L29.4,66.1 L29.8,67.1 L29.9,67.9 L29.8,68.8 L29.5,68.5 L29.1,67.7 L28.7,67.3 L28.2,67.1 L28.4,68.2 L28.3,69.7 L29.2,69.8 L28.8,71.3 L27.9,71.7 L26.9,71.8 L26.7,72.4 L26.5,73.0 L26.0,74.0 L25.3,74.6 L24.4,74.5 L23.6,74.0ZM67.5,124.9 L66.7,125.4 L66.5,126.0 L65.9,126.4 L65.4,126.4 L63.6,125.2 L63.2,125.2 L63.6,124.7 L64.7,124.2 L65.3,123.6 L66.8,124.2 L67.5,124.9Z",
     /* 20 OCT: THESE PINS ARE NOW THE CORRECTED BASIS, AND THAT IS A FIX, NOT
        A FALL. Until today the map carried the SEATS-GONE list - Feltham 592,
        Solihull 524 - while the panel two inches to its right said in terms
@@ -3113,16 +3128,14 @@ function mktShapes(){
      Solihull 524 - while the panel beside it said in terms that a named
      cinema may only be published with its room block removed. The two lists
      drifted because there were two lists. Now there is one. */
-  const xy=MKT.uk.pinxy, off=[];
-  MKT.uk.pins=UK.cities.map(c=>{
-    if(!xy[c[0]]){ off.push(c[0]); return null; }
-    return {n:c[0], x:xy[c[0]][0], y:xy[c[0]][1], t:c[1]};
-  }).filter(Boolean);
-  MKT.uk.pinNote='these are the CORRECTED basis, every chain, each room\'s '+
-    'own block removed, which is why they do not sum to the seats-gone '+
-    'headline above. Cinemas with no chain named are Cineworld.'+(off.length?' '+off.length+' listed cinema'+
-    (off.length>1?'s have':' has')+' no map position yet: '+
-    off.join(', ')+'.':'');
+  MKT.uk.pins=UKC.map(p=>Object.assign({},p));
+  {const sd=UKC.reduce((a,p)=>a+p.d,0), se=UKC.reduce((a,p)=>a+p.e,0);
+  MKT.uk.pinNote='Every city we read: <b>solid red</b> is seats counted seat by seat '+
+    '(house blocks removed, the basis a named place must carry), the <b>dashed gold '+
+    'ring</b> is the city total once the Odeon estimate is added. '+UKC.length+' cities, '+
+    fmt(sd)+' counted + '+fmt(se)+' Odeon estimated. The counted circles add to less '+
+    'than the seats-gone headline because the blocks are out of them. London is one '+
+    'circle for its 36 cinemas; Jersey is pinned to the bottom edge.';}
   MKT.aus.tix=AU.anzTix+EST.village.c; MKT.aus.usd=AU.anzUsd+villageUsd();
   MKT.de.tix=DE.tickets;  MKT.de.usd=DE.usd;
   MKT.sea.tix=PH.tickets; MKT.sea.usd=PH.usd; MKT.sea.pins[0].t=PH.tickets;
@@ -3208,6 +3221,15 @@ function mktSvg(k,s,act){
     if(p.nl && p.lab) return `<circle${cls} cx="${p.x}" cy="${p.y}" r="${(w*.014).toFixed(1)}" `+
       `fill="none" stroke="${on?'var(--ink)':'var(--zero)'}" stroke-width="${(h/190).toFixed(2)}">`+
       (act?'':`<title>${esc(p.n)}: ${esc(p.lab)}</title>`)+`</circle>`;
+    /* A CITY WITH AN ESTIMATE IN IT (UK Odeon) draws twice: the counted
+       part solid, the whole as a dashed gold ring, so the estimate is never
+       mistaken for a count. */
+    if(p.e>0) return (p.d>0?`<circle${cls} cx="${p.x}" cy="${p.y}" r="${R(p.d).toFixed(1)}" `+
+      `fill="${col}" fill-opacity=".62" stroke="${on?'var(--ink)':col}" stroke-width="${(w/1400).toFixed(2)}"></circle>`:'')+
+      `<circle${cls} cx="${p.x}" cy="${p.y}" r="${R(p.t).toFixed(1)}" fill="none" `+
+      `stroke="${on?'var(--ink)':'var(--gold)'}" stroke-width="${(h/170).toFixed(2)}" `+
+      `stroke-dasharray="${(h/110).toFixed(2)} ${(h/220).toFixed(2)}">`+
+      (act?'':`<title>${esc(p.n)}: ${fmt(p.t)} tickets (counted ${fmt(p.d)} + Odeon estimate ${fmt(p.e)})</title>`)+`</circle>`;
     return `<circle${cls} cx="${p.x}" cy="${p.y}" r="${R(p.t).toFixed(1)}" `+
     `fill="${ring?'none':col}" fill-opacity="${ring?0:(p.t?.62:0)}" `+
     `stroke="${on?'var(--ink)':rcol}" `+
@@ -3458,7 +3480,7 @@ function mktFrame(){
     return `<div class="row" style="break-inside:avoid" data-pin="${esc(p.n)}" data-pmkt="${esc(MSEL)}" `+
     `role="button" tabindex="0" aria-selected="${on}">`+
     `<span class="nm">${esc(p.n)}</span>`+
-    `<span class="vl">${p.nl?(p.lab||'not listed'):fmt(pv(p))}${ind&&IVIEW==='all'&&!p.nl&&!IFIL?' (District '+fmt(p.d)+(p.b?' + BMS '+fmt(p.b):'')+')':''}${m.foot&&p.c?' · '+p.c:''}${ind&&p.st&&!ISTATE?' · '+esc(p.st):''}</span>`+
+    `<span class="vl">${p.nl?(p.lab||'not listed'):fmt(pv(p))}${p.e?' · counted '+fmt(p.d)+' + Odeon est. '+fmt(p.e):''}${ind&&IVIEW==='all'&&!p.nl&&!IFIL?' (District '+fmt(p.d)+(p.b?' + BMS '+fmt(p.b):'')+')':''}${m.foot&&p.c?' · '+p.c:''}${ind&&p.st&&!ISTATE?' · '+esc(p.st):''}</span>`+
     `<span class="bar"><i style="width:${(pv(p)/mx*100).toFixed(1)}%${ind&&IVIEW==='bms'?';background:var(--bms)':''}"></i></span>`+
     `</div>`;
   }).join('');
@@ -3488,7 +3510,7 @@ function mktFrame(){
             `the figure is SHOWTIMES, then cinemas · no German ticket has `+
             `been counted`
           : (ind&&ISTATE ? `${all.length} cities in ${esc(ISTATE)}, ${fmt(all.reduce((a,p)=>a+p.t,0))} tickets`
-              : `${m.pins.length} ${MSEL==='uk'?'cinemas':'cities'}`+
+              : `${m.pins.length} cities`+
             (all.length>CAP&&!PALL?`, top ${CAP} listed`:''))+
             ` · click a circle or a row and the other one lights up`)+`</p>`+
         /* THE CIRCLES DO NOT ALWAYS SUM TO THE HEADLINE, and where they do
@@ -5120,9 +5142,10 @@ function euBody(){
     `rooms. Cineworld is ${fmt(UK.cwGone)} of it, up `+
     `${fmt(UK.reRead3Delta+UK.reRead4Delta+UK.reRead4New+UK.reRead5Delta)} since 20 October; Showcase ${fmt(UK.scGone)}, read seat by seat for the `+
     `first time; Vue ${fmt(UK.vueGone)}, counted for the first time; and `+
-    `six smaller chains ${fmt(UK.othGone)}. Odeon blocks our scan; the UK `+
-    `figure in the worldwide total adds an <b>estimate</b> of about `+
-    `${fmt(EST.odeon.c)} Odeon tickets for 5–8 Nov. `+
+    `six smaller chains ${fmt(UK.othGone)}. Odeon blocks our scan, so it is `+
+    `<b>estimated</b> at about ${fmt(EST.odeon.c)} for 5–8 Nov (method below), `+
+    `which puts <b>the UK at about ${fmt(UK.tickets+EST.odeon.c)} tickets</b>, `+
+    `~US$${fmt(UK.usd+odeonUsd())}, in the worldwide total. `+
     `That is the headline figure, and it is not the same as tickets sold: our `+
     `room-minimum test flags <b>${fmt(UK.blockSeats)}</b> Cineworld seats, `+
     `in ${UK.blockRooms} rooms, as seats the cinema is holding back. So real `+
@@ -5130,7 +5153,10 @@ function euBody(){
     `<b>${fmt(UK.realHi)}</b>, and we publish the range rather than pick a `+
     `point inside it. The UK opens cold on Thursday 5 November with no `+
     `preview night.`,
-    [['Seats gone',`${fmt(UK.tickets)} across ${fmt(UK.showsRead)} showtimes`],
+    [['UK incl. Odeon',`${fmt(UK.tickets+EST.odeon.c)} tickets · about US$${fmt(UK.usd+odeonUsd())}`],
+     ['Odeon, estimated',`about ${fmt(EST.odeon.c)} (${fmt(EST.odeon.lo)}–${fmt(EST.odeon.hi)}) at ${EST.odeon.cinemas} cinemas, 5–8 Nov`],
+     ['Seats gone',`${fmt(UK.tickets)} across ${fmt(UK.showsRead)} showtimes, counted`],
+     ['Cities',`${UKC.length} on the map · London ${fmt(UKC[0].t)} (${fmt(UKC[0].d)} counted + ${fmt(UKC[0].e)} Odeon est.) · Leicester ${fmt(UKC[1].t)} · Reading ${fmt(UKC[2].t)} · Birmingham ${fmt(UKC[3].t)}`],
      ['Real bookings',`between ${fmt(UK.realLo)} and ${fmt(UK.realHi)}`],
      ['Held, labelled',`Cineworld: ${fmt(UK.held)} of ${fmt(UK.offSale)} off sale`],
      ['Value at our price',`£${fmt(UK.gbp)} · about US$${fmt(UK.usd)}`],
@@ -5139,22 +5165,6 @@ function euBody(){
        `20 October · the chain's column moved ${fmt(UK.reRead3Raw)}, `+
        `+${fmt(UK.reRead3Delta)} clean · ${UK.reRead3Relabelled} relabelled `+
        `held to sold, ${UK.whiteleyRaw - UK.whiteleyClean} of them at Whiteley alone`],
-     ['Re-read 24 Oct, afternoon',`Cineworld's Friday 6 and Saturday 7 Nov `+
-       `showtimes again, ${fmt(UK.reRead4Shows)} matched to the overnight read · `+
-       `+${UK.reRead4Delta} clean in about half a day · ${UK.reRead4Relabelled} `+
-       `relabelled held to sold, all at Wolverhampton`],
-     ['Re-read 20 Oct',`${UK.reRead} cinemas · ${fmt(UK.reReadShows)} `+
-       `showtimes · +${UK.reReadDelta} clean, after excluding `+
-       `${UK.relabelled} seats the chain relabelled held to sold`],
-     ['Re-read 21 Oct',`${fmt(UK.reRead2Shows)} showtimes read twice in `+
-       `${UK.reRead2Hours} hours · the chain's column moved `+
-       `${UK.reRead2Raw}, but only +${UK.reRead2Delta} seats actually `+
-       `left the inventory · ${UK.reRead2Relabelled} were relabelled from `+
-       `held to sold without being bought`],
-     ['Bradford, again',`the chain's column says +${UK.bradfordRaw} across `+
-       `${UK.bradfordShows} showtimes. One seat left the inventory. Screen 8 `+
-       `moved held 10 to 4 and sold 0 to 6 on every single showing — the `+
-       `same trick it pulled on 20 October, caught by the same per-row rule`],
      ['What the chain shows',`Cineworld's own column reads ${fmt(UK.chainShows3)} on the 24 Oct read — we `+
        `publish ${fmt(UK.cwGone)}. The gap is seats moved from held to sold `+
        `without being bought, and it is not a one-off: Bradford did it on two `+
@@ -5167,10 +5177,9 @@ function euBody(){
        `${UK.langs[0][3]}%, off ${UK.langs[1][2]} showtimes, nearly all London. `+
        `Tamil has ${UK.langs[2][2]} showtimes and the weakest result at `+
        `${UK.langs[2][3]}%. Hindi is the market at ${fmt(UK.langs[0][1])} seats gone`],
-     ['Not read',`Odeon, ${UK.odeonShows} showtimes at ${UK.odeonCinemas} `+
-       `cinemas, blocked; Piccadilly Leicester and IMC, 12 showtimes, whose `+
-       `maps need a ticket quantity first; and 15 seat maps that would not `+
-       `open. None of them is in the total`],
+     ['Not read',`Odeon (estimated, see below); Piccadilly Leicester and IMC, `+
+       `12 showtimes, whose maps need a ticket quantity first; and 15 seat maps `+
+       `that would not open`],
      /* DERIVED FROM UK.byDate. These were four hand-typed strings carrying
         the 19 Oct numbers while the headline above them moved three times.
         The first row carries the label, the rest are bare. */
@@ -5193,13 +5202,26 @@ function euBody(){
      ['Sold out','none, in 2,136 showtimes'],
      ['Showcase',`${fmt(UK.scGone)} at 16 cinemas, blocks removed — Southampton leads`],
      ['Vue',`${fmt(UK.vueGone)} at 68 cinemas — Harrow and Birmingham Star City lead`],
-     ['Odeon','blocked, not counted'],
-     ['Rest of Europe','Germany only, so far']],
+     ['Odeon',`blocked to our scan · estimated at about ${fmt(EST.odeon.c)}`],
+     ['Rest of Europe','Germany, the Netherlands, France and Sweden counted']],
     `Ticket prices here are ours, not theirs — not one price appeared in `+
     `${fmt(UK.showsRead)} seat maps, so we have used £${UK.atpGbp.toFixed(2)} `+
     `a ticket. City figures are block-corrected: a national total can carry `+
-    `held seats with a note, a named cinema cannot. Odeon is not counted at `+
-    `all, so the UK can only go up.`);
+    `held seats with a note, a named cinema cannot.</p>`+
+    `<p class="note"><b>How the Odeon estimate is built.</b> Odeon blocks every `+
+    `scanner we run, so we start from BoxofficeIndia24's live chain tables: `+
+    `${fmt(EST.odeon.boi)} Odeon tickets for 5–6 November across `+
+    `${EST.odeon.boiShows} shows at ${EST.odeon.cinemas} cinemas. Before using `+
+    `their number we test it against chains we count ourselves — their figure `+
+    `for Vue lands at 0.97–1.04 of ours, Showcase 1.02–1.09, Cineworld `+
+    `0.71–0.87 — and scale Odeon by that capture ratio (0.93 central). `+
+    `BoxofficeIndia24 shows no Odeon figure for 7–8 November, so those two `+
+    `days carry Friday's per-show rate forward at the weekend ratios our own `+
+    `chains show. Each cinema gets its share by time slot, city and IMAX, `+
+    `capped below its seats. The result is about <b>${fmt(EST.odeon.c)}</b>, `+
+    `range ${fmt(EST.odeon.lo)}–${fmt(EST.odeon.hi)}, priced at our `+
+    `£${UK.atpGbp.toFixed(2)}. It is an estimate, drawn as a dashed ring on `+
+    `the map, and it is replaced the day Odeon can be read.`);
 }
 
 /* PHILIPPINES, 26 OCT. Grok read of SM Cinema Metro Manila, 5-8 Nov

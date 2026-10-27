@@ -568,7 +568,7 @@ Need $page 'id="worldmaps"'      'map row container'
 Need $page 'id="mktframe"'       'expanded frame container'
 Need $page 'id="napanels"'       'US panels are toggleable'
 Need $page 'worldMaps(); }'      'maps painted on load'
-Need $page 'M35.9,5.8'           'United Kingdom outline'
+Need $page 'const UKC=[{n:"London"' 'UK map by city with the Odeon estimate'
 Need $page "me :{name:'Middle East'" 'Middle East tile in the map row'
 Need $page "sea:{name:'SE Asia'"     'SE Asia tile in the map row'
 
