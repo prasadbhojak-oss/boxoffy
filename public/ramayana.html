@@ -1158,6 +1158,11 @@ function atpNow(){
    5-8 Nov only, matching every other market. Germany is also on sale 9-11
    Nov - 13 more tickets - deliberately excluded so the basis lines up. */
 const DE = {
+  /* 28 OCT AM RE-READ (Grok, Germany's Wednesday). 5,048 -> 5,279. 343
+     showtimes matched to last night's read: 73 rose by 255, 7 fell by 24
+     (+231). Mathaeser +30, CinemaxX Berlin/Munich/Freiburg +13 each,
+     Kinopolis Hafencity +12. 4 new showtimes (0 sold). 33 unread, their
+     last 35 tickets carried (UCI still blocked). Held 962 -> 991, kept out. */
   /* 27 OCT 21:30 CT RE-READ (Grok, Germany's early Wednesday). 5,013 ->
      5,048. 342 showtimes matched to the afternoon read: 25 rose by 57, 11
      fell by 22 (+35). Leonberg +6, Main-Taunus +6, CineStar Duesseldorf +4,
@@ -1327,7 +1332,7 @@ const DE = {
      Rheine); 15 not readable - UCI 8 (Cloudflare 403), Cineplex Alsdorf /
      Kassel stall, Passau, Heidelberg late show. 116 cinemas, 94 towns.
      Leonberg 449 -> 452, still counted, still ranged out. EUR 17.13 pinned. */
-  tickets:5048, eur:86472, usd:97168, atpEur:17.13, fx:1.1237, lowNoGroup:4578,
+  tickets:5279, eur:90429, usd:101615, atpEur:17.13, fx:1.1237, lowNoGroup:4809,
   leonberg:{sold:470, of:582, when:'Sat 7 Nov, 11:00am'},
   inBasis:2393, outBasis2:43, deltaRead:12, deltaScannable:18, showsGone:0,
   notYetOnSale:4, sharedUrlDupes:1,
@@ -1371,18 +1376,18 @@ const DE = {
      Four showtimes were opened for the first time and carried 8 more.
      +309 of the +317 is people buying tickets. Nothing else in this
      market has ever been measurable that cleanly. */
-  matchedShows:342, matchedWas:5012, matchedNow:5047, buying:35,
-  newShows:3, newTickets:0,
-  seats:77734, rate:6.5, held:962, outSeats:3756,
-  shows:346, cinemas:119, showsScan:323, footShows:323, footCinemas:113,
-  cities:96, priced:51, zeroShows:122, outBasis:30, soldOut:0,
+  matchedShows:343, matchedWas:5013, matchedNow:5244, buying:231,
+  newShows:4, newTickets:0,
+  seats:77916, rate:6.8, held:991, outSeats:3756,
+  shows:350, cinemas:119, showsScan:323, footShows:323, footCinemas:113,
+  cities:96, priced:51, zeroShows:118, outBasis:30, soldOut:0,
   compeso:1835, compesoShows:117, compesoRate:3.95,
   oneState:2119, oneStateShows:196, oneStateRate:3.26,
   blockFloor:12, testedRooms:20, untestedRooms:62,
-  byDate:[['Thu 5 Nov',2397,131,33787,7.09],['Fri 6 Nov',425,42,7693,5.52],
-          ['Sat 7 Nov',1244,48,9999,12.44],['Sun 8 Nov',905,90,20309,4.46],
-          ['Mon 9 Nov',54,15,2897,1.86],['Tue 10 Nov',23,17,2504,0.92],
-          ['Wed 11 Nov',0,3,545,0.00]],
+  byDate:[['Thu 5 Nov',2542,131,33789,7.52],['Fri 6 Nov',440,42,7693,5.72],
+          ['Sat 7 Nov',1278,48,9999,12.78],['Sun 8 Nov',944,91,20345,4.64],
+          ['Mon 9 Nov',50,16,2945,1.70],['Tue 10 Nov',25,18,2552,0.98],
+          ['Wed 11 Nov',0,4,593,0.00]],
   /* THE VERSION SPLIT IS CORRECTED, NOT UPDATED, AND IT WAS WRONG BY A
      LOT. The old 1,073 original / 633 dubbed came off OUR isOV flag in
      the worklist. On 21 Oct the booking pages themselves were read and
