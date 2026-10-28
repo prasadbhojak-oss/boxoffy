@@ -1,4 +1,4 @@
-Ramayana tracker 28 Oct: worldwide 444,560 / $4.50M. US map 98,575 + Canada 14,517 (NA 113,950), India 2.86 lakh (Sacnilk 7PM IST + District 7:53PM IST), UK 18,109, ANZ 17,178, NL 3,766, SE 34; map tiles and world circle now show North America
+Ramayana tracker: US + Canada 28 Oct 16:16 CT scan, Germany PM, Landmark PM, Philippines SM re-read (worldwide 447,869 / $4.55M)
 
 Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
 Claude-Session: https://claude.ai/code/session_01C4QoUcxfFQuVHBLGsUts4A
