@@ -1,4 +1,4 @@
-Ramayana tracker: US/Canada 23 Oct 19:53 sweep (NA 73,226) + Australia 8,972 / NZ 429 (24 Oct 00:47 re-read, all buying)
+Ramayana tracker 28 Oct: worldwide 444,560 / $4.50M. US map 98,575 + Canada 14,517 (NA 113,950), India 2.86 lakh (Sacnilk 7PM IST + District 7:53PM IST), UK 18,109, ANZ 17,178, NL 3,766, SE 34; map tiles and world circle now show North America
 
 Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
 Claude-Session: https://claude.ai/code/session_01C4QoUcxfFQuVHBLGsUts4A

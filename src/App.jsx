@@ -4356,10 +4356,10 @@ function UpcomingCalendarGrid({ movies }) {
    weekend piece is current — swap the href, the WEEK pill, the headline, the
    dek and the four poster tiles together, or it goes stale as a unit.
 
-   19 OCT: swapped from the 16-18 Oct PREVIEW to the 16-18 Oct RECAP. The four
-   tiles are unchanged on purpose - Jailer 2, Ranabaali, Navelli and Prahaar
-   are the same four films the recap is about - so only the href, pill,
-   headline, dek and call to action moved.
+   27 OCT: points at the 23-25 Oct RECAP (WEEK 43, "Udta Teer grew every day
+   of the weekend"). Tiles swapped to Udta Teer, Jailer 2, Premada Oorali and
+   Drishyam: The Conclusion, all pinned by TMDB id (see WeekendLeadHero).
+   19 OCT: swapped from the 16-18 Oct PREVIEW to the 16-18 Oct RECAP.
 
    The headline grades our own call, which is the point of it. The preview said
    "Rs 60 Cr India net on day one" and Sacnilk settled day one at Rs 59.70 Cr,
@@ -4378,14 +4378,18 @@ function UpcomingCalendarGrid({ movies }) {
    ─────────────────────────────────────────────────────────────────────────── */
 function WeekendLeadHero() {
   // If a search-by-title poster ever mismatches, pin it with useTMDBPosterById(<tmdbId>, "w185").
+  // 27 OCT: tiles follow the 23-25 Oct recap - Udta Teer, Jailer 2, Premada
+  // Oorali, Drishyam: The Conclusion. All four pinned by TMDB id, read off
+  // themoviedb.org on 27 Oct: 1375156 Udta Teer, 1234139 Jailer 2,
+  // 1735270 Premada Oorali, 1269325 Drishyam: The Conclusion.
+  const pUdta      = useTMDBPosterById(1375156, "w185");
   const pJailer2   = useTMDBPosterById(1234139, "w185");
-  const pRanabaali = useTMDBPosterById(1389379, "w185");
-  const pNaveli    = useTMDBPosterById(1654581, "w185");
-  const pPrahaar   = useTMDBPosterById(1081010, "w185");
-  const tiles = [ { src:pJailer2, ab:"J2" }, { src:pRanabaali, ab:"RB" }, { src:pNaveli, ab:"NN" }, { src:pPrahaar, ab:"PR" } ];
+  const pPremada   = useTMDBPosterById(1735270, "w185");
+  const pDrishyam  = useTMDBPosterById(1269325, "w185");
+  const tiles = [ { src:pUdta, ab:"UT" }, { src:pJailer2, ab:"J2" }, { src:pPremada, ab:"PO" }, { src:pDrishyam, ab:"D3" } ];
   const [hover, setHover] = React.useState(false);
   return (
-    <a href="/boxoffice-weekend-recap-october-16-18-2026.html" style={{ textDecoration:"none", display:"block" }}>
+    <a href="/boxoffice-weekend-recap-october-23-25-2026.html" style={{ textDecoration:"none", display:"block" }}>
       <div
         onMouseEnter={() => setHover(true)}
         onMouseLeave={() => setHover(false)}
@@ -4406,12 +4410,12 @@ function WeekendLeadHero() {
           ))}
         </div>
         <div style={{ flex:1, minWidth:0, display:"flex", flexDirection:"column", justifyContent:"center" }}>
-          <span style={{ alignSelf:"flex-start", background:"#C8201A", color:"#FFFFFF", fontFamily:"'Barlow Condensed', sans-serif", fontWeight:900, fontSize:9, letterSpacing:"0.12em", padding:"2px 7px", borderRadius:2, marginBottom:7 }}>WEEK 42 · WEEKEND RECAP</span>
+          <span style={{ alignSelf:"flex-start", background:"#C8201A", color:"#FFFFFF", fontFamily:"'Barlow Condensed', sans-serif", fontWeight:900, fontSize:9, letterSpacing:"0.12em", padding:"2px 7px", borderRadius:2, marginBottom:7 }}>WEEK 43 · WEEKEND RECAP</span>
           <div style={{ fontFamily:"'Barlow Condensed', sans-serif", fontWeight:900, fontSize:"clamp(15px, 1.7vw, 17px)", color:"#FFFFFF", lineHeight:1.15, letterSpacing:"-0.01em" }}>
-            WE CALLED ₹60 CRORE. JAILER 2 DID ₹59.70.
+            UDTA TEER GREW EVERY DAY OF THE WEEKEND.
           </div>
           <div style={{ fontFamily:"'DM Sans', sans-serif", fontSize:10.5, color:"#9CA3AF", marginTop:5, lineHeight:1.4 }}>
-            Our day-one call landed inside half a percent. The bigger story is where the money came from: ₹190 Cr of a ₹424 Cr opening is overseas — 44.8% — and Hindi gave Jailer 2 just 8.3% of its Indian net. Plus the India top 10 with two Bengali films in it, Ramayana past 42,000 presale tickets with China still undated, and Spirit moving to Diwali 2027.
+            ₹4.10 Cr Friday, ₹7.25 Cr Saturday, ₹8.20 Cr Sunday, and a strong ₹3.15 Cr Monday. Jailer 2 is at ₹408 Cr in India and ₹733 Cr worldwide in 12 days, Premada Oorali passed ₹100 Cr in week 5, and Hanuman Ansh sits at ₹342 Cr on a ₹2.95 Cr cost. Plus our charts for this Friday, OTT, music, and Ramayana at ₹13.53 Cr in advance.
           </div>
           <span style={{ fontFamily:"'Barlow Condensed', sans-serif", fontWeight:700, fontSize:11, color:"#E5C882", letterSpacing:"0.06em", marginTop:8 }}>READ THE RECAP →</span>
         </div>
@@ -4444,9 +4448,11 @@ function SocialLinks({ size }) {
 
 /* ── RAMAYANA LIVE TRACKER STRIP ────────────────────────────────────────────
    Sits between the masthead and the weekend coverage cards on the Box Office
-   home view. Figures are from the 16 Oct 13:18 CT seat scan (Update 4) and are
-   hand-set: this strip does not fetch, so it cannot slow the homepage down or
-   put load on anything. Update the five numbers when a new scan publishes.
+   home view. Figures are hand-set to match the tracker page (last set 27 Oct
+   12:55 CT: worldwide 396,397 / $4.11M, North America 103,842, India Day 1
+   2.51 lakh). This strip does not fetch, so it cannot slow the homepage down
+   or put load on anything. Update wwTickets, wwValue, tickets, value,
+   indiaDay1, indiaInr, tminus and scan together when a new scan publishes.
 
    The tracker is served from public/ramayana.html via the /ramayana rewrite in
    vercel.json. Use the www host: the apex 301s to www, so the apex would cost
@@ -4652,25 +4658,34 @@ const RAMAYANA_TRACKER = {
   // Retired: eighty-one thousand six hundred eighty-eight, one million five
   // hundred sixty-three thousand five hundred two dollars, four point nine
   // five per cent, eleven thousand four hundred seventy-eight shows.
-  tickets: "103,035",
-  rate: "5.90%",
-  shows: "11,755",
+  tickets: "113,950",
+  rate: "6.21%",
+  shows: "12,202",
   // 24 OCT 22:40: priced at MEASURED per-format prices (IMAX 23.90, PLF
   // 25.04, XD 20.47, 3D 17.13, Std 16.36). Retired: one million five hundred
   // fourteen thousand nine hundred twenty-four dollars.
-  value: "$1,953,896",
-  tminus: "T-14",
-  scan: "27 Oct · 10:50am CT",
+  value: "$2,152,089",
+  // 27 OCT 13:00 CT: the strip now leads WORLDWIDE, matching the tracker
+  // page's roll-up (US map + US independents + Canada + India Sacnilk Day 1
+  // + UK, ANZ, Germany, NL, FR, SE, PH, Africa + Odeon/Village estimates).
+  // tickets/rate/shows/value above stay as the North America figures.
+  wwTickets: "444,560",
+  wwValue: "$4.50M",
+  indiaDay1: "2.86 lakh",
+  indiaInr: "₹14.95 Cr",
+  countries: 13,
+  tminus: "T-8",
+  scan: "28 Oct · 8:24am CT",
 };
 
 function RamayanaTrackerStrip() {
   const R = RAMAYANA_TRACKER;
   const figs = [
-    { n: R.tickets, l: "Tickets" },
-    { n: R.rate,    l: "Seats gone" },
-    { n: R.shows,   l: "Shows read" },
-    { n: R.value,   l: "Ticket value" },
-    { n: R.tminus,  l: "To 5 Nov" },
+    { n: R.wwTickets, l: "Tickets worldwide" },
+    { n: R.wwValue,   l: "Value worldwide" },
+    { n: R.tickets,   l: "North America" },
+    { n: R.indiaDay1, l: "India · Day 1" },
+    { n: R.tminus,    l: "To 5 Nov" },
   ];
   return (
     <div style={{ maxWidth:1160, margin:"14px auto 0", padding:"0 16px" }}>
@@ -4689,7 +4704,7 @@ function RamayanaTrackerStrip() {
             }}>
               <span style={{ width:7, height:7, borderRadius:"50%", background:"#15803D",
                              display:"inline-block" }} />
-              Live presale tracker · North America
+              Live presale tracker · Worldwide
             </div>
             <div style={{
               fontFamily:"'Barlow Condensed', sans-serif", fontWeight:800, fontSize:30,
@@ -4711,10 +4726,10 @@ function RamayanaTrackerStrip() {
           <div style={{ flex:"1 1 240px", minWidth:220 }}>
             <div style={{ fontFamily:"'DM Sans', sans-serif", fontSize:12, color:T.textMid,
                           lineHeight:1.5, borderLeft:`2px solid ${T.border}`, paddingLeft:10 }}>
-              <b style={{ color:T.text }}>25,000 tickets across North America.</b>{" "}
-              The full 4&ndash;8 Nov opening run, US and Canada. IMAX alone is 37%
-              of every ticket sold. Australia is on the page now too &mdash; 952
-              counted, and that one is a floor.
+              <b style={{ color:T.text }}>Past 4.4 lakh tickets and $4.5 million, eight days out.</b>{" "}
+              North America {R.tickets} tickets ({R.value}) across 4&ndash;12 Nov.
+              India {R.indiaDay1} for opening day ({R.indiaInr}). The UK 18,109,
+              Australia &amp; NZ 17,178 &mdash; IMAX Melbourne alone has sold 1,295.
             </div>
           </div>
 
@@ -4726,7 +4741,7 @@ function RamayanaTrackerStrip() {
             }}>Open the live map →</span>
             <div style={{ fontFamily:"'IBM Plex Mono', monospace", fontSize:10.5,
                           color:T.textMuted, textAlign:"center", marginTop:7 }}>
-              68 markets · scan {R.scan}
+              {R.countries} countries · scan {R.scan}
             </div>
           </div>
         </div>
