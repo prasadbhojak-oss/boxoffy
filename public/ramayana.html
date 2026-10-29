@@ -1098,6 +1098,16 @@ const colour = r => BINS.find(b=>r<b[0]||b[0]===1e9)[1];
    premiere prices; later days carry matinees and discount Tuesdays, so if
    anything they run slightly high on 9-12 Nov, where volumes are small. */
 const ATP_FMT={IMAX:23.90, PLF:25.04, XD:20.47, '3D':17.13, Standard:16.36};
+/* 28 OCT, PB: PREVIEW NIGHT GETS ITS OWN PRICE. The blend above is right for
+   the presale as a whole ($19.72 on the 21:16 CT read: Standard 40,752 x
+   16.36 + IMAX 34,338 x 23.90 + 3D 16,192 x 17.13 + XD 8,863 x 20.47 + PLF
+   5,363 x 25.04 = $2,080,466 / 105,508). But 4 Nov is IMAX night and nearly
+   all full-price evening shows; priced on its own format mix it comes to
+   $22.00 (MovieMintBO's published premiere split: $22.24). So any per-day
+   dollar figure prices previews at ATP_PREV and the other days at whatever
+   keeps the US total unchanged (about $18.63). Totals do not move; only the
+   split between days does. */
+const ATP_PREV=22.00;
 function blendedATP(){
   let n=0,v=0;
   for(const m of DATA.metros) for(const [k,o] of Object.entries(m.byFmt||{})){
@@ -4437,11 +4447,14 @@ function openSpan(){
   const prev=usOn('2026-11-04'), day1=usOn('2026-11-05');
   const wk=usOn('2026-11-06')+usOn('2026-11-07')+usOn('2026-11-08');
   const all=prev+day1+wk; if(!all) return;
+  const sold=DATA.total.sold, mapUsd=sold*blendedATP();
+  const restAtp=sold>prev?(mapUsd-prev*ATP_PREV)/(sold-prev):blendedATP();
   const seg=(lbl,sub,n,dim)=>
     `<div style="flex:${Math.max(n,1)} 1 0;min-width:96px">`+
       `<div style="height:8px;border-radius:4px;background:var(--ink);`+
       `opacity:${dim};margin-bottom:6px"></div>`+
       `<div style="font-family:var(--mono);font-weight:600;font-size:15px">${fmt(n)}</div>`+
+      `<div style="font-family:var(--mono);font-size:11px;color:var(--muted)">$${fmt(Math.round(n*(lbl==='Previews'?ATP_PREV:restAtp)))}</div>`+
       `<div style="font-family:var(--disp);font-weight:700;font-size:11px;`+
       `letter-spacing:.09em;text-transform:uppercase;color:var(--muted)">${esc(lbl)}</div>`+
       `<div style="font-family:var(--mono);font-size:10.5px;color:var(--muted)">${esc(sub)}</div>`+
@@ -4465,7 +4478,14 @@ function openSpan(){
       `own full opening run, each labelled with the span it actually covers, `+
       `because a Friday opener only ever had three days and we will not invent `+
       `the other two to make the table tidy.`+
-    `</p>`;
+    `</p>`+
+    `<p class="note"><b>How the dollars are priced.</b> Tickets are counted; dollars are `+
+    `tickets times a price for each format, taken from a published US premiere gross `+
+    `split by format: IMAX $23.90, 4DX/ScreenX/D-Box $25.04, XD $20.47, 3D $17.13, `+
+    `Standard $16.36. Across all dates that blends to <b>$${blendedATP().toFixed(2)}</b>. `+
+    `Preview night is mostly IMAX and full-price evening shows, so it is priced on its own `+
+    `mix at <b>$${ATP_PREV.toFixed(2)}</b>; the other days then average `+
+    `<b>$${restAtp.toFixed(2)}</b>, so the US total does not change.</p>`;
 }
 function trajectory(){
   openSpan();
