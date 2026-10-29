@@ -1,10 +1,9 @@
-Ramayana tracker: US/Canada 29 Oct 10:00 CT, Australia/NZ 29 Oct AM
+Ramayana tracker: US/Canada 29 Oct 10:00 CT, Australia/NZ 29 Oct AM, Netherlands 29 Oct
 
-- US map 105,508 -> 110,611 sold (12,295 shows, 6.91%)
-- Canada Cineplex 9,553 -> 9,886 (139 showtimes bought, 480 seats)
-- Australia 15,381 -> 16,448 (HOYTS +804, Event +263); NZ 1,038 -> 1,142
-- North America 127,831 / $2,416,254; worldwide 484,776 / $4.96M
-- Homepage strip updated to match
+- US map 105,508 -> 110,611 sold; Canada Cineplex 9,553 -> 9,886
+- Australia 15,381 -> 16,448; NZ 1,038 -> 1,142
+- Netherlands 3,766 -> 4,377 (all 118 Pathe and Vue shows re-read, +611)
+- Worldwide 485,387 / $4.97M; homepage strip updated
 
 Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
 Claude-Session: https://claude.ai/code/session_01C4QoUcxfFQuVHBLGsUts4A
