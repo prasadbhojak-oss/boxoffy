@@ -4669,7 +4669,7 @@ const RAMAYANA_TRACKER = {
   // page's roll-up (US map + US independents + Canada + India Sacnilk Day 1
   // + UK, ANZ, Germany, NL, FR, SE, PH, Africa + Odeon/Village estimates).
   // tickets/rate/shows/value above stay as the North America figures.
-  wwTickets: "467,799",
+  wwTickets: "467,947",
   wwValue: "$4.78M",
   indiaDay1: "2.97 lakh",
   indiaInr: "₹15.57 Cr",
