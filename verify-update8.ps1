@@ -293,7 +293,7 @@ Need $page 'handCount:1899'      'the retired hand count kept as the record'
 # Event 1,535, Australia 7,031; NZ Event 314. Chadstone 797 = PB's hand read.
 Need $page 'tickets:15381'       'Australia 10,629 after the 25 Oct 09:33 re-read, 7 HOYTS sessions carried'
 Need $page 'const PH={tickets:78'  'Philippines SM Cinema, 26 Oct Grok read'
-Need $page 'const TH={tickets:130'  'Thailand Major Cineplex, 29 Oct Grok read'
+Need $page 'const TH={tickets:266'  'Thailand Major Cineplex, 29 Oct Grok read'
 Need $page 'const GR={tickets:11'  'Greece Village The Mall Athens IMAX, block-excluded'
 Need $page 'IE:{t:860,'  'Ireland, 29 Oct overnight Europe sweep'
 Need $page "eur:{name:'Rest of Europe'"  'Rest of Europe map tile'
