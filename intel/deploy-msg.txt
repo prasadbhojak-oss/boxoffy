@@ -1,4 +1,4 @@
-Ramayana tracker: India District + Sacnilk 29 Oct 09:20 IST (2.97 lakh), US + Canada 28 Oct 21:16 CT, Germany, Landmark, Australia/NZ, Philippines, US independents (worldwide 464,847 / $4.73M)
+Ramayana tracker: India District + Sacnilk 29 Oct 09:20 IST (2.97 lakh), US + Canada 28 Oct 21:16 CT, Germany, Landmark, Australia/NZ, Philippines, Thailand (new), US independents (worldwide 464,977 / $4.73M)
 
 Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
 Claude-Session: https://claude.ai/code/session_01C4QoUcxfFQuVHBLGsUts4A
