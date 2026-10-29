@@ -2013,7 +2013,15 @@ const MAP_HAS_78 = Array.isArray(DATA.dates) && DATA.dates.includes('2026-11-07'
    used. Davenport +16, Corpus Christi +11, GR North +10, Royal Pooler +9,
    Lubbock +7; Mt Pleasant -4 kept. Marcus (4 venues) and NCG Lansing
    blocked again - last counts carried. Held 1,815 -> 1,894, kept out. */
-const US_IND = {tickets:923, usd:18303, cinemas:37, shows:664, seats:62808, held:1894};
+/* 29 OCT ~8-9 AM CT US INDEPENDENTS RESCAN (ramayana_us_independents_
+   29oct_am.xlsx). 923 -> 1,009. Same 604 shows on the block-safe rule:
+   860 -> 942 (+82). Royal Pooler +23 (IMAX 4 Nov 17:00 1 -> 16), Davenport
+   +15, Celebration Crossroads +11, Amarillo +7, Lubbock +7, Corpus Christi
+   +6, GR North +5. Phoenix Savoy's Aud 12 now shows 7 taken on all 22
+   shows - a house block, held under both rules, not lost sales. NCG
+   Lansing read again: 11 (we had carried 7), +4. Marcus still blocked,
+   carried. Grok's looser headline (1,250) not used. */
+const US_IND = {tickets:1009, usd:20008, cinemas:37, shows:664, seats:62808, held:1890};
 function xTix(){ return (MAP_HAS_78 ? 0 : (US_EXTRA.tickets || 0)) + US_IND.tickets; }
 function xUsd(){ return (MAP_HAS_78 ? 0 : (US_EXTRA.usd     || 0)) + US_IND.usd; }
 
