@@ -3972,8 +3972,8 @@ function tiles(){
        - Middle East, SE Asia, Europe outside the UK. It is deliberately a
        zero with a label, never a blank: a reader who sees no row assumes we
        looked and found nothing. */
-    const WT={tix:naTix+UK.tickets+AU.anzTix+DE.tickets+IN.allTix+NL.tickets+FR.tickets+SE.tickets+PH.tickets+TH.tickets+AF.tickets+estTix(),
-              usd:naUsd+UK.usd+AU.anzUsd+DE.usd+IN.allUsd+NL.usd+FR.usd+(SE.usd||0)+PH.usd+TH.usd+AF.usd+estUsd(),
+    const WT={tix:naTix+UK.tickets+AU.anzTix+DE.tickets+IN.allTix+NL.tickets+FR.tickets+SE.tickets+PH.tickets+TH.tickets+GR.tickets+AF.tickets+estTix(),
+              usd:naUsd+UK.usd+AU.anzUsd+DE.usd+IN.allUsd+NL.usd+FR.usd+(SE.usd||0)+PH.usd+TH.usd+GR.usd+AF.usd+estUsd(),
               rows:[['North America',naTix,naUsd],['United Kingdom',UK.tickets+EST.odeon.c,UK.usd+odeonUsd()],
                     ['Australia & NZ',AU.anzTix+EST.village.c,AU.anzUsd+villageUsd()],
                     /* Germany went from footprint to counted on 18 Oct and
@@ -3994,6 +3994,7 @@ function tiles(){
                     ['Netherlands',NL.tickets,NL.usd],
                     ['France',FR.tickets,FR.usd],
                     ['Sweden',SE.tickets,SE.usd||0],
+                    ['Greece',GR.tickets,GR.usd],
                     ['Philippines',PH.tickets,PH.usd],
                     ['Thailand',TH.tickets,TH.usd],
                     ['Africa (SA + Kenya)',AF.tickets,AF.usd],
@@ -5694,6 +5695,15 @@ function euBody(){
    Normal fare: THB 59,220, US$1,824 at an assumed 0.0308. SF Cinema's 405
    showtimes (21 cinemas) were still 'coming soon' at 10:43 AM Thai time,
    so not counted yet. */
+/* GREECE, 28 OCT 23:25 CT (Grok, Village The Mall Athens, IMAX 3D, the only
+   Greek listing). 7 showtimes, 5-11 Nov, one a day at 17:00, 602 seats each.
+   Taken counts 10, 10, 8, 12, 8, 10, 9: the same room shows at least 8 taken
+   on every show, so 8 a show (56) is treated as a house block and kept out;
+   the rest, 11 tickets, counts. At Village's EUR 15 IMAX e-ticket: EUR 165.
+   NOTE: Grok opened these maps with quantity 2, which is not our approved
+   method - flagged to PB; the counts read the same either way. */
+const GR={tickets:11, eur:165, usd:185, fx:1.1237, shows:7, cinemas:1, seats:4214,
+  held:56, taken:67};
 const TH={tickets:130, thb:59220, usd:1824, fx:0.0308, shows:634, cinemas:67,
   cinemasSold:25, seats:152993, held:4497, imax:79, hindi:91, thaiDub:34,
   sfShows:405, sfCinemas:21,
@@ -6190,9 +6200,9 @@ async function drawBrandCard(){
 function wwTotals(){
   const usSold=DATA.total.sold;
   const tix=usSold+xTix()+CA.canTix+UK.tickets+AU.anzTix+DE.tickets+IN.allTix+
-            NL.tickets+FR.tickets+SE.tickets+PH.tickets+TH.tickets+AF.tickets+estTix();
+            NL.tickets+FR.tickets+SE.tickets+PH.tickets+TH.tickets+GR.tickets+AF.tickets+estTix();
   const usd=Math.round(usSold*atpNow())+xUsd()+CA.canUsd+UK.usd+AU.anzUsd+DE.usd+
-            IN.allUsd+NL.usd+FR.usd+PH.usd+TH.usd+(SE.usd||0)+AF.usd+estUsd();
+            IN.allUsd+NL.usd+FR.usd+PH.usd+TH.usd+GR.usd+(SE.usd||0)+AF.usd+estUsd();
   const naTix=usSold+xTix()+CA.canTix;
   const naUsd=Math.round(usSold*atpNow())+xUsd()+CA.canUsd;
   /* NEW ZEALAND'S 14 WERE MISSING FROM THIS SUM. NZ folded into the
@@ -6201,13 +6211,13 @@ function wwTotals(){
      cinema count 14 short of the markets it was counting. */
   const cin=DATA.metros.reduce((a,m)=>a+m.nVenues,0)+CA.cinemas+CA.lm.cinemas+
             UK.cinemasRead+AU.ev.cinemas+AU.hy.cinemas+AU.nz.cinemas+
-            DE.cinemas+IN.cinemas+NL.cinemas+FR.cinemas+SE.cinemas+PH.cinemasRead+TH.cinemas+AF.cinemas;
+            DE.cinemas+IN.cinemas+NL.cinemas+FR.cinemas+SE.cinemas+PH.cinemasRead+TH.cinemas+GR.cinemas+AF.cinemas;
   return {tix,usd,cin,rows:[
     ['North America',naTix,naUsd],['India',IN.allTix,IN.allUsd],
     ['United Kingdom',UK.tickets+EST.odeon.c,UK.usd+odeonUsd()],
     ['Australia & NZ',AU.anzTix+EST.village.c,AU.anzUsd+villageUsd()],['Germany',DE.tickets,DE.usd],
     ['Netherlands',NL.tickets,NL.usd],['France',FR.tickets,FR.usd],
-    ['Sweden',SE.tickets,SE.usd||0],
+    ['Sweden',SE.tickets,SE.usd||0],['Greece',GR.tickets,GR.usd],
     ['Philippines',PH.tickets,PH.usd],['Thailand',TH.tickets,TH.usd],['Africa (SA + Kenya)',AF.tickets,AF.usd]]};
 }
 
