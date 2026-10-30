@@ -653,6 +653,8 @@ gtag("js",new Date());gtag("config","G-K6C9EVRFH4",{anonymize_ip:true});}})();
     </div>
   </div>
 
+  <div class="card" id="h2h" style="margin-top:16px"></div>
+
   <div class="grid3">
     <div class="card"><h2>By language</h2><p class="cap">Tickets sold</p><div id="bLang"></div></div>
     <div class="card"><h2>By format</h2><p class="cap">Tickets sold</p><div id="bFmt"></div></div>
@@ -1071,6 +1073,12 @@ function atpNow(){
    5-8 Nov only, matching every other market. Germany is also on sale 9-11
    Nov - 13 more tickets - deliberately excluded so the basis lines up. */
 const DE = {
+  /* 30 OCT ~00:00 CT RE-READ (Germany's early Friday). 6,121 -> 6,131.
+     361 showtimes matched to last night's read: +15 up, -17 down. 12 of
+     the fall is CinemaxX Dammtor's Kino 6 moving 4 seats on each of 3
+     shows into a 19-seat held block - relabelled, added back. Real: +10
+     (Kinopolis Main-Taunus +6, CineStar Rostock +4; Muenchen -3, Mathaeser
+     -2 kept). 55 unread rows keep their count. Held 1,212 kept out. */
   /* 29 OCT EVENING RE-READ (Grok, ~7 PM CT). 5,701 -> 6,121. 342
      showtimes matched to this morning's read: +443 up, -48 down (mostly
      CineStar/CinemaxX seats moving between sold and held), net +395.
@@ -1268,7 +1276,7 @@ const DE = {
      Rheine); 15 not readable - UCI 8 (Cloudflare 403), Cineplex Alsdorf /
      Kassel stall, Passau, Heidelberg late show. 116 cinemas, 94 towns.
      Leonberg 449 -> 452, still counted, still ranged out. EUR 17.13 pinned. */
-  tickets:6121, eur:104853, usd:117823, atpEur:17.13, fx:1.1237, lowNoGroup:5651,
+  tickets:6131, eur:105024, usd:118015, atpEur:17.13, fx:1.1237, lowNoGroup:5661,
   leonberg:{sold:470, of:582, when:'Sat 7 Nov, 11:00am'},
   inBasis:2393, outBasis2:43, deltaRead:12, deltaScannable:18, showsGone:0,
   notYetOnSale:4, sharedUrlDupes:1,
@@ -1312,16 +1320,16 @@ const DE = {
      Four showtimes were opened for the first time and carried 8 more.
      +309 of the +317 is people buying tickets. Nothing else in this
      market has ever been measurable that cleanly. */
-  matchedShows:342, matchedWas:5613, matchedNow:6008, buying:443,
-  newShows:19, newTickets:25,
-  seats:83485, rate:7.3, held:1195, outSeats:3756,
+  matchedShows:361, matchedWas:6121, matchedNow:6131, buying:15,
+  newShows:0, newTickets:0,
+  seats:83485, rate:7.3, held:1212, outSeats:3756,
   shows:376, cinemas:120, showsScan:323, footShows:323, footCinemas:113,
   cities:96, priced:51, zeroShows:116, outBasis:30, soldOut:0,
   compeso:1835, compesoShows:117, compesoRate:3.95,
   oneState:2119, oneStateShows:196, oneStateRate:3.26,
   blockFloor:12, testedRooms:20, untestedRooms:62,
-  byDate:[['Thu 5 Nov',2955,139,35207,8.39],['Fri 6 Nov',558,48,8849,6.31],
-          ['Sat 7 Nov',1413,51,10957,12.90],['Sun 8 Nov',1080,98,21949,4.92],
+  byDate:[['Thu 5 Nov',2966,139,35207,8.39],['Fri 6 Nov',555,48,8849,6.31],
+          ['Sat 7 Nov',1415,51,10957,12.90],['Sun 8 Nov',1080,98,21949,4.92],
           ['Mon 9 Nov',84,17,3131,2.68],['Tue 10 Nov',31,19,2799,1.11],
           ['Wed 11 Nov',0,4,593,0.00]],
   /* THE VERSION SPLIT IS CORRECTED, NOT UPDATED, AND IT WAS WRONG BY A
@@ -5712,7 +5720,102 @@ function intl(){
   });
 }
 
-function paint(){ stamp(); trajectory(); render(); worldMaps(); }
+
+/* PB 30 OCT: HEAD TO HEAD. Ramayana's US premiere night set against Kalki
+   2898 AD's, theatre by theatre and state by state.
+   WHY KALKI AND NOT DHURANDHAR 2: Dhurandhar 2 released in March, before our
+   scanners existed, and nobody publishes its presales by city or theatre -
+   only national totals (Venky Box Office). Kalki is the one big Indian
+   release with a public theatre-level and state-level presale table:
+   Track BO, "Kalki 2898 AD USA Premieres Advance Sales", compiled 26 Jun
+   2024 21:34 IST (the morning of its US premiere), non-Comscore, scraped.
+   It publishes the top 25 theatres, top 10 states and top 10 chains only,
+   so those are the rows here. Kalki is its FINAL premiere presale; Ramayana
+   is its count today, days before its own premiere - the gap is how far
+   Ramayana still has to go, not a like-for-like verdict.
+   Ramayana side: the US map's own 4 Nov counts at the same theatres
+   (matched by name), states summed from single-state metros. New Jersey
+   and Virginia are left out: their cinemas sit inside the New York and
+   Washington metros, which also span other states. */
+const H2H={rival:'Kalki 2898 AD', asOf:'Track BO, 26 Jun 2024 (its US premiere morning)',
+  nat:{k:[95685,3727,904,2875407], d2:[61491,1684,678,982374]},
+  th:[['Cinemark Dallas XD and IMAX','Dallas-Fort Worth',2621],['Cinemark Pflugerville 20 and XD','Austin',2558],
+      ['Cinemark Lincoln Square','Seattle',1990],['Cinemark West Plano and XD','Dallas-Fort Worth',1966],
+      ['Cinemark Legacy and XD','Dallas-Fort Worth',1576],['Galaxy Grandscape','Dallas-Fort Worth',1364],
+      ['AMC Concord Mills 24','Charlotte',1252],['Cinemark Century Great Mall 20 XD and ScreenX','San Jose + South Bay',1208],
+      ['Cinemark Tinseltown Grapevine and XD','Dallas-Fort Worth',1177],['Regal Fox 4DX & IMAX','Washington-Baltimore',1161],
+      ['AMC Stonebriar 24','Dallas-Fort Worth',1043],['Cinemark Lewisville and XD','Dallas-Fort Worth',988],
+      ['Cinemark Connecticut Post 14 and IMAX','Connecticut',985],['Regal Hacienda Crossings ScreenX, IMAX & RPX','East Bay',959],
+      ['Cinemark Valley View and XD','Cleveland',921],['AMC Empire 25','New York metro',918],
+      ['Cinemark North McKinney and XD','Dallas-Fort Worth',883],['Regal Commerce Center','New York metro',837],
+      ['Cinemark Egyptian 24 and XD','Washington-Baltimore',825],['AMC Boston Common 19','Boston',824],
+      ['Cinemark Fairfax Corner and XD','Washington-Baltimore',819],['Regal Medlock Crossing','Atlanta',814],
+      ['Cinemark Frisco Square and XD','Dallas-Fort Worth',789],['Harkins Arizona Mills and IMAX','Phoenix',678],
+      ['Emagine Novi','Detroit',564]],
+  st:[['Texas',['Dallas-Fort Worth','Austin','Houston','San Antonio'],24160],
+      ['California',['Los Angeles','San Jose + South Bay','SF Bay','East Bay','San Francisco','San Diego','Sacramento','Fresno'],9025],
+      ['North Carolina',['Raleigh-Durham','Charlotte','N Carolina','Greensboro','Asheville'],4432],
+      ['Illinois',['Chicago'],3951],['Virginia',null,3923],['New Jersey',null,3872],['Ohio',['Ohio','Columbus','Cleveland','Cincinnati'],3827],
+      ['Washington',['Seattle'],3789],['Georgia',['Atlanta'],3751],['Michigan',['Detroit'],2677]],
+  ch:[['Cinemark',44460],['AMC',19065],['Regal',15759],['Marcus',3877],['Harkins',1903],['Emagine',1233]]};
+function h2hPrem(o){return ((o&&o.byDate&&o.byDate['2026-11-04'])||{sold:0,shows:0}).sold||0;}
+function h2h(){
+  const el=$('#h2h'); if(!el) return;
+  const PD='2026-11-04', vs={}, mts={};
+  for(const m of DATA.metros){ mts[m.metro]=m; for(const v of (m.venues||[])) vs[v.name]=v; }
+  const rP=n=>h2hPrem(vs[n]);
+  const nat=[premiereTickets(), DATA.metros.reduce((a,m)=>a+((m.byDate&&m.byDate[PD]||{}).shows||0),0),
+             DATA.metros.reduce((a,m)=>a+((m.venues||[]).filter(v=>v.byDate&&v.byDate[PD]&&v.byDate[PD].shows).length),0)];
+  const chR={}; for(const m of DATA.metros) for(const v of (m.venues||[])) chR[v.chain]=(chR[v.chain]||0)+h2hPrem(v);
+  const bar=(r,k)=>{const mx=Math.max(r,k,1);
+    return `<div style="display:grid;gap:2px;min-width:120px">`+
+      `<div style="height:7px;border-radius:3px;background:var(--accent);width:${(100*r/mx).toFixed(1)}%"></div>`+
+      `<div style="height:7px;border-radius:3px;background:#c9a227;width:${(100*k/mx).toFixed(1)}%"></div></div>`;};
+  const pct=(r,k)=>k?`<b style="color:${r>=k?'#2e7d32':'var(--ink)'}">${Math.round(100*r/k)}%</b>`:'—';
+  const tr=(a,r,k,sub)=>`<tr><td>${esc(a)}${sub?`<div style="font-size:10.5px;color:var(--muted)">${esc(sub)}</div>`:''}</td>`+
+      `<td class="n">${fmt(r)}</td><td class="n" style="color:#9a7b12">${fmt(k)}</td><td class="n">${pct(r,k)}</td><td>${bar(r,k)}</td></tr>`;
+  const thead=`<tr><th style="text-align:left"></th><th class="n">Ramayana</th><th class="n">${esc(H2H.rival)}</th><th class="n">Ramayana as % of Kalki</th><th></th></tr>`;
+  /* map: per metro, the 25 theatres summed - Kalki as a gold ring, Ramayana
+     solid red, both on one scale so the sizes compare directly. */
+  const agg={}; for(const [n,mt,k] of H2H.th){ (agg[mt]=agg[mt]||{k:0,r:0,n:0}); agg[mt].k+=k; agg[mt].r+=rP(n); agg[mt].n++; }
+  const mx=Math.max(...Object.values(agg).map(a=>Math.max(a.k,a.r)),1), R=v=>3+30*Math.sqrt(v/mx);
+  const land=GEO.states.map(s=>`<path class="land" d="${s.d}"><title>${esc(s.name)}</title></path>`).join('');
+  const dots=Object.entries(agg).sort((a,b)=>b[1].k-a[1].k).map(([mt,a])=>{const m=mts[mt]; if(!m||m.x==null) return '';
+    return `<g><title>${esc(mt)}: ${a.n} theatre${a.n>1?'s':''} · Ramayana ${fmt(a.r)} · Kalki ${fmt(a.k)}</title>`+
+      `<circle cx="${m.x}" cy="${m.y}" r="${R(a.k).toFixed(1)}" fill="none" stroke="#c9a227" stroke-width="2" stroke-dasharray="4 3"/>`+
+      `<circle cx="${m.x}" cy="${m.y}" r="${R(a.r).toFixed(1)}" fill="var(--accent)" fill-opacity=".6"/></g>`;}).join('');
+  const labs=Object.entries(agg).filter(([mt,a])=>a.k>=1500||a.r>=1000).map(([mt,a])=>{const m=mts[mt]; if(!m||m.x==null) return '';
+    const L=m.x>760, rr=R(Math.max(a.k,a.r))+3; return `<text x="${L?m.x-rr:m.x+rr}" y="${m.y+4}" text-anchor="${L?'end':'start'}" font-size="12" font-family="var(--mono)" fill="var(--ink)">${esc(mt)} ${Math.round(100*a.r/a.k)}%</text>`;}).join('');
+  const thS=H2H.th.reduce((a,x)=>a+x[2],0), thR=H2H.th.reduce((a,x)=>a+rP(x[0]),0);
+  el.innerHTML=
+    `<h2>Head to head · US premiere night</h2>`+
+    `<p class="cap">Ramayana's 4 Nov count now against ${esc(H2H.rival)}'s final premiere presales · ${esc(H2H.asOf)}</p>`+
+    `<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px;margin:8px 0 12px">`+
+      [['Ramayana · now',nat[0],nat[1],nat[2],'var(--accent)'],['Kalki 2898 AD · final',H2H.nat.k[0],H2H.nat.k[1],H2H.nat.k[2],'#9a7b12'],
+       ['Dhurandhar 2 · 5 days out',H2H.nat.d2[0],H2H.nat.d2[1],H2H.nat.d2[2],'var(--muted)']].map(([l,a,b,c,col])=>
+        `<div style="border:1px solid var(--line);border-radius:8px;padding:9px 11px"><div style="font-family:var(--disp);font-weight:700;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:${col}">${l}</div>`+
+        `<div style="font-family:var(--mono);font-weight:600;font-size:19px">${fmt(a)}</div>`+
+        `<div style="font-family:var(--mono);font-size:11px;color:var(--muted)">${fmt(b)} shows · ${fmt(c)} cinemas</div></div>`).join('')+`</div>`+
+    `<svg class="map" viewBox="0 0 960 600" role="img" aria-label="Ramayana against Kalki 2898 AD at the same cinemas">${land}${dots}${labs}</svg>`+
+    `<p class="note"><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:var(--accent);opacity:.6"></span> Ramayana now · `+
+    `<span style="display:inline-block;width:10px;height:10px;border-radius:50%;border:2px dashed #c9a227"></span> Kalki 2898 AD, final. `+
+    `Kalki's 25 busiest US theatres, summed by city, with Ramayana's premiere-night tickets at the same theatres. Labels show Ramayana as a share of Kalki.</p>`+
+    `<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:16px;margin-top:10px">`+
+      `<div><h3 style="margin:0 0 6px;font-size:14px">By state</h3><table>${thead}`+
+        H2H.st.map(([s,ms,k])=>ms?tr(s,ms.reduce((a,x)=>a+h2hPrem(mts[x]),0),k):
+          `<tr><td>${esc(s)}<div style="font-size:10.5px;color:var(--muted)">inside the New York / Washington metros - not split</div></td><td class="n">—</td><td class="n" style="color:#9a7b12">${fmt(k)}</td><td></td><td></td></tr>`).join('')+`</table></div>`+
+      `<div><h3 style="margin:0 0 6px;font-size:14px">By chain</h3><table>${thead}`+
+        H2H.ch.map(([c,k])=>tr(c,chR[c]||0,k)).join('')+`</table>`+
+        `<p class="note" style="margin-top:8px">Kalki, a Telugu film, sold most of its premiere at Cinemark in Texas. Ramayana's audience leans to AMC and the coasts.</p></div>`+
+    `</div>`+
+    `<h3 style="margin:14px 0 6px;font-size:14px">Kalki's 25 busiest theatres · ${fmt(thR)} Ramayana tickets against ${fmt(thS)} (${Math.round(100*thR/thS)}%)</h3>`+
+    `<div style="max-height:420px;overflow:auto"><table>${thead}`+
+      H2H.th.slice().sort((a,b)=>rP(b[0])/b[2]-rP(a[0])/a[2]).map(([n,mt,k])=>tr(n,rP(n),k,mt)).join('')+`</table></div>`+
+    `<p class="note">Sources: Ramayana, Boxoffy US seat-map scan (${esc(new Date(DATA.scan).toLocaleString('en-US',{month:'short',day:'numeric',hour:'numeric',minute:'2-digit',timeZone:'America/Chicago'}))} CT). `+
+    `Kalki, Track BO (non-Comscore), top 25 theatres / 10 states / 10 chains only. Dhurandhar 2, Venky Box Office via Variety India, national only - `+
+    `no city or theatre split was ever published for it.</p>`;
+}
+function paint(){ stamp(); trajectory(); render(); worldMaps(); try{h2h();}catch(e){console.error(e);} }
 
 /* ---- data refresh -------------------------------------------------------
    The page reads a static JSON our own scheduled job publishes. Nothing here
