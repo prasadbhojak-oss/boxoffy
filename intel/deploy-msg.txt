@@ -1,8 +1,1 @@
-Ramayana tracker: US head-to-head vs Kalki 2898 AD; day-on-day moves; Germany 30 Oct
-
-- New panel: US premiere night vs Kalki 2898 AD by state, chain and Kalki's top-25 theatres (Track BO data), with map
-- Every country tile shows its move vs the page a day earlier
-- Germany 6,121 -> 6,131; UK 15,424; worldwide 503,164 / $5.13M
-
-Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
-Claude-Session: https://claude.ai/code/session_01C4QoUcxfFQuVHBLGsUts4A
+Ramayana tracker 30 Oct 01:04 CT: US merged map 119,129; Cineplex 10,727; Landmark 7,462; AU 17,048 + NZ 1,235; UK 16,134; NL 4,633; TH 365; PH 107 (SM nationwide); GR 30; US indies 1,100. NA 138,418 / $2.61M; worldwide 511,390 / $5.27M. PREV_DAY rolled to 29 Oct 3:43pm.
