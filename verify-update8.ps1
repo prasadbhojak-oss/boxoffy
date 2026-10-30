@@ -290,10 +290,10 @@ Need $page 'handCount:1899'      'the retired hand count kept as the record'
 # the same 107,490 seats. All 86 is buying.
 # 21 OCT 21:39-21:54 CT AU/NZ RE-READ: HOYTS 5,496 on the same 419 sessions,
 # Event 1,535, Australia 7,031; NZ Event 314. Chadstone 797 = PB's hand read.
-Need $page 'tickets:17048'       'Australia 10,629 after the 25 Oct 09:33 re-read, 7 HOYTS sessions carried'
+Need $page 'tickets:18102'       'Australia 10,629 after the 25 Oct 09:33 re-read, 7 HOYTS sessions carried'
 Need $page 'const PH={tickets:107'  'Philippines SM Cinema, 26 Oct Grok read'
 Need $page 'const TH={tickets:365'  'Thailand Major Cineplex, 29 Oct Grok read'
-Need $page 'const GR={tickets:30'  'Greece Village The Mall Athens IMAX, block-excluded'
+Need $page 'const GR={tickets:44'  'Greece Village The Mall Athens IMAX, block-excluded'
 Need $page 'IE:{t:860,'  'Ireland, 29 Oct overnight Europe sweep'
 Need $page "eur:{name:'Rest of Europe'"  'Rest of Europe map tile'
 Need $page 'const ATP_PREV=22.00;'  'preview night priced on its own format mix'
@@ -318,7 +318,7 @@ Absent $page 'tickets:4922,'     'no pre-Event-re-read Australian total'
 # 20 OCT, PB: ALL-PRESALE BASIS. Every date a market has on sale counts,
 # because the whole run is presale. New Zealand is 5-11 Nov and all 259 are
 # in. inBasis keeps the 5-8 Nov subset so the earlier figure stays checkable.
-Need $page 'nz:{tickets:1235'     'New Zealand on its full all-presale basis'
+Need $page 'nz:{tickets:1329'     'New Zealand on its full all-presale basis'
 Absent $page 'nz:{tickets:462'   'no 25 Oct 00:47 New Zealand'
 Absent $page 'nz:{tickets:451'   'no 24 Oct evening New Zealand'
 Absent $page 'nz:{tickets:434'   'no 24 Oct morning New Zealand'
@@ -439,7 +439,7 @@ Need $page 'India is District'   'the footer names the platform, once'
 # NL is the cleanest foreign read we have: the block test fires on 5 rooms
 # for 36 seats, about 2%. Sweden is a MEASURED ZERO and is published as one.
 Need $page 'const NL = {'        'the Netherlands is a counted market'
-Need $page 'tickets:4633'        'the Netherlands seats-gone figure, 24 Oct re-read'
+Need $page 'tickets:4777'        'the Netherlands seats-gone figure, 24 Oct re-read'
 Absent $page 'tickets:2175,'     'no 22 Oct Netherlands total'
 Absent $page '<b>2,175 seats gone</b>' 'no 22 Oct Netherlands copy'
 Need $page '  byFmt:[' 'India format split on the page'
@@ -459,12 +459,12 @@ Need $page 'const SE = {'        'Sweden is on the page as a measured zero'
 Need $page "['Sweden',SE.tickets,SE.usd||0]" 'Sweden is in the roll-up, counted from 26 Oct'
 Need $page 'Filmstaden'          'the unreadable Swedish chain is disclosed'
 Absent $page "['Australia',AU.tickets,AU.usd]" 'no roll-up row on Australia alone'
-Need $page 'tickets:11344'        'HOYTS 8,210 incl. 214 carried'
+Need $page 'tickets:12101'        'HOYTS 8,210 incl. 214 carried'
 Absent $page 'tickets:6653'      'no 23 Oct HOYTS'
 Absent $page 'tickets:6219'      'no 22 Oct HOYTS'
 Absent $page 'tickets:5496'      'no 21 Oct HOYTS'
 Absent $page 'tickets:3864'      'no 20 Oct HOYTS'
-Need $page 'tickets:3842'        'Event 2,419 on 425 sessions'
+Need $page 'tickets:4139'        'Event 2,419 on 425 sessions'
 Absent $page 'tickets:1978'      'no 23 Oct Event'
 Absent $page 'tickets:1781'      'no 22 Oct Event'
 Absent $page 'tickets:1535'      'no 21 Oct Event'
@@ -537,7 +537,7 @@ Need   $page 'carriedShows:0'    '7 HOYTS sessions answered 503 on 25 Oct 09:15 
 # counting-method difference, not eight seats leaving the room. Cutting
 # hy.seats to 70,475 would have printed 5.22% off a measurement artefact.
 Need   $page 'seats:74243'       'HOYTS denominator from the full clean read'
-Need   $page 'rate:15.28'         'HOYTS rate on its own real house count'
+Need   $page 'rate:16.30'         'HOYTS rate on its own real house count'
 Need $page "['VIC',3132]"        'Victoria leads on a fully scanned Chadstone'
 Absent $page "['VIC',1298]"      'no pre-re-read state split'
 # ASCII only in these two. The page writes '153 screens · 9.81%' with a middot,

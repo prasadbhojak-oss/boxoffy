@@ -2252,15 +2252,25 @@ const AU = {
      HOYTS 11,040 -> 11,344 (+304), Event 3,705 -> 3,842 (+137): +441. Thu
      +154, Fri +108, Sat +121, Sun +58. HOYTS held 2,661 kept out. NZ Event
      751 -> 827 (+76): Wellington Queensgate +34, Queen Street +17. */
-  tickets:17048, aud:436850, usd:288321, atpAud:25.66, fx:0.66,
+  /* 30 OCT 09:41-09:58 CT RE-READ (Australia's Saturday 1-2 AM - so this
+     is Friday evening's buying). HOYTS 11,344 -> 12,101 (+757 on 452
+     matched; 3 sessions answered HTTP 500, last count carried). Event
+     3,842 -> 4,139 (+297; 6 sessions gone, their 13 carried). +1,054, the
+     biggest Australian read yet. Thu +267, Fri +347, Sat +303, Sun +137.
+     Chadstone +96, Blacktown +81, Carousel +76. HOYTS held 2,640 kept out.
+     NZ Event 1,235 -> 1,329 (+94): Wellington Queensgate +59. Queen Street
+     IMAX was redrawn 394 -> 354 seats, which made its computed sold FALL
+     142 - counted on seats-available instead (+18). All 21 Sun 8 Nov NZ
+     sessions missing from this read, carried (38). */
+  tickets:18102, aud:463896, usd:306171, atpAud:25.66, fx:0.66,
   rd:{tickets:362, shows:122, cinemas:27, held:420}, wk2:117,
   q1:{tickets:1383, imaxMel:1295, united:84, limelight:4, dendy:0, dendyUnread:23},
-  ev:{tickets:3842, shows:427, counted:427, cinemas:39, seats:98988, rate:3.88},
-  hy:{tickets:11344, shows:437, counted:437, cinemas:47, cinemasRead:47,
-      seats:74243, rate:15.28, held:2661, carried:0, carriedShows:0,
+  ev:{tickets:4139, shows:427, counted:427, cinemas:39, seats:98988, rate:4.18},
+  hy:{tickets:12101, shows:437, counted:437, cinemas:47, cinemasRead:47,
+      seats:74243, rate:16.30, held:2640, carried:0, carriedShows:0,
       wasCarried:496, chadstoneRead:797, chadstoneHand:797,
       capacityWas:182, capacityNow:174},
-  byDate:[['Thu 5 Nov',5462],['Fri 6 Nov',4737],['Sat 7 Nov',4664],['Sun 8 Nov',1745],
+  byDate:[['Thu 5 Nov',5729],['Fri 6 Nov',5084],['Sat 7 Nov',4967],['Sun 8 Nov',1882],
           ['Mon 9 Nov',51],['Tue 10 Nov',336],['Wed 11 Nov',49],['Thu 12 Nov',4]],
   /* NEW ZEALAND, FOLDED INTO THIS MARKET 20 OCT. PB's call: one line, not
      two, so the tile and the worldwide roll-up read "Australia & NZ".
@@ -2286,14 +2296,14 @@ const AU = {
      so NZ$5,378 over 200 tickets is an observed ATP of NZ$26.89, not an
      assumption. FX 0.5609, OFX, 18 Oct - pinned like every other rate here
      and not to be refreshed quietly mid-week. */
-  nz:{tickets:1235, nzd:32476, usd:18216, atpNzd:26.35, fx:0.5609,
+  nz:{tickets:1329, nzd:34953, usd:19605, atpNzd:26.35, fx:0.5609,
       cinemas:14, shows:110, seats:23413, rate:2.07,
       inBasis:396, inBasisNzd:10434, secondWeek:95, secondWeekNote:'10 Nov',
       cinemasAll:14, showsAll:110, hoytsCinemas:7, hoytsShows:98,
-      byDate:[['Thu 5 Nov',362],['Fri 6 Nov',274],['Sat 7 Nov',206],
-              ['Sun 8 Nov',40],['Mon 9 Nov',5],['Tue 10 Nov',131]],
-      cities:[['Auckland Queen Street',191],['Wellington Queensgate',163],
-              ['Auckland Manukau',53],['Auckland St Lukes',33],
+      byDate:[['Thu 5 Nov',372],['Fri 6 Nov',285],['Sat 7 Nov',237],
+              ['Sun 8 Nov',40],['Mon 9 Nov',7],['Tue 10 Nov',171]],
+      cities:[['Wellington Queensgate',222],['Auckland Queen Street',209],
+              ['Auckland Manukau',64],['Auckland St Lukes',38],
               ['Auckland Westgate',21],['Hamilton Chartwell',18],
               ['Auckland Westcity',11],['Palmerston North',6],
               ['Kapiti Coastlands',2],['New Plymouth',2]]},
@@ -3244,18 +3254,24 @@ const NL = {
      Some Pathe reads came off the header count while the box was busy.
      Kerkrade's 77-seat house block still out. 4,377 -> 4,633. Sweden
      unchanged at 34. */
-  tickets:4633, clean:4365, block:268, blockRooms:5,
-  eur:64862, usd:72886, atpEur:14.00, fx:1.1237, atpIsOurs:true,
+  /* 30 OCT ~11:00-11:40 CT BROWSER RE-READ (nl_se_gr_seats_browser.csv),
+     no quantity chosen. 116 showtimes read again: +151 (Pathe +137, Vue +14).
+     Arena +40, Eindhoven +24, Leeuwarden +14, Arnhem +11. Pathe pulled
+     Scheveningen's 8 Nov 4DX show (7 sold) - taken off. Two Vue 5 Nov
+     shows gone (0 sold). Kerkrade's 77 house block still out. 4,633 ->
+     4,777. Sweden re-read: unchanged at 34. */
+  tickets:4777, clean:4509, block:268, blockRooms:5,
+  eur:66878, usd:75151, atpEur:14.00, fx:1.1237, atpIsOurs:true,
   shows:124, showsRead:118, cinemas:31, cinemasRead:23, cities:15, seats:29681, rate:14.42,
-  pathe:4033, patheShows:88, patheCinemas:15,
-  vue:551, vueShows:30, vueCinemas:8,
+  pathe:4163, patheShows:88, patheCinemas:15,
+  vue:565, vueShows:30, vueCinemas:8,
   pulledShows:1, pulledTickets:0, newRead:0,
   soldOutCarried:0, soldOutCarriedTickets:0,
-  wasTickets:4377, wasTickets2:3766, wasTickets3:3717, wasTickets4:3060, wasTickets5:2639, wasTickets6:2175, wasTickets7:1959, wasTickets8:1546, matchedAdded:256,
-  byDate:[['Thu 5 Nov',1030,25],['Fri 6 Nov',1341,19],['Sat 7 Nov',1187,23],['Sun 8 Nov',585,27],['Mon 9 Nov',145,6],['Tue 10 Nov',215,13],['Wed 11 Nov',81,5]],
-  cities_:[['Amsterdam · Arena',807,22.3],['Den Haag · Ypenburg',754,51.9],
-           ['Rotterdam · de Kuip',482,42.9],['Den Haag · Spuimarkt',442,12.6],
-           ['Eindhoven · Pathe',406,17.4],['Utrecht Leidsche Rijn',326,17.5],
+  wasTickets:4633, wasTickets2:4377, wasTickets3:3766, wasTickets4:3717, wasTickets5:3060, wasTickets6:2639, wasTickets7:2175, wasTickets8:1959, wasTickets9:1546, matchedAdded:151,
+  byDate:[['Thu 5 Nov',1058,25],['Fri 6 Nov',1370,19],['Sat 7 Nov',1227,23],['Sun 8 Nov',615,26],['Mon 9 Nov',149,6],['Tue 10 Nov',231,13],['Wed 11 Nov',78,5]],
+  cities_:[['Amsterdam · Arena',847,23.4],['Den Haag · Ypenburg',754,51.9],
+           ['Rotterdam · de Kuip',482,42.9],['Den Haag · Spuimarkt',452,12.9],
+           ['Eindhoven · Pathe',430,18.4],['Utrecht Leidsche Rijn',326,17.5],
            ['Kerkrade · Vue',245,30.1],['Amsterdam-Noord',157,30.2]],
   top:{cinema:'Pathe Ypenburg, Den Haag', when:'Thu 5 Nov, 7:00p',
        sold:204, of:213, pct:95.8}
@@ -5635,8 +5651,12 @@ function eu2Cin(){ return Object.values(EU2).reduce((a,v)=>a+v.cin,0); }
    11 -> 30 tickets, EUR 450. Grok again put 2 IMAX e-tickets in the basket
    to reach the map - quantity 2, NOT approved; flagged to PB. Its own 2
    seats were excluded. The standard 2D page says tickets from 5 Nov. */
-const GR={tickets:30, eur:450, usd:506, fx:1.1237, shows:7, cinemas:1, seats:4200,
-  held:56, taken:86};
+/* 30 OCT ~11:00-11:40 CT RE-READ: taken 86 -> 100 (Thu 22, Fri 13, Sat 24,
+   Sun 16, Mon 8, Tue 8, Wed 9). 56 house floor still out: 30 -> 44, EUR 660.
+   Again opened with 2 IMAX e-tickets - quantity 2, NOT approved; own 2
+   seats excluded. Flagged to PB. */
+const GR={tickets:44, eur:660, usd:742, fx:1.1237, shows:7, cinemas:1, seats:4200,
+  held:56, taken:100};
 /* 29 OCT ~8 AM CT RE-READ (Grok, Major Cineplex, 694 showtimes 5-8 Nov at
    72 cinemas, seat positions listed). Held = seats taken in the same place
    on 3+ shows of a screen (5,116 incl. the group below). 130 -> 266.
