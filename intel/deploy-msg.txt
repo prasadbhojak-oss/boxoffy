@@ -1,9 +1,9 @@
-Ramayana tracker: India District 30 Oct 10:13 AM IST + 29 Oct evening fold
+Ramayana tracker: UK 29 Oct 11:30 CT re-read + map; India District 30 Oct 10:13 AM IST
 
-- District 225,349 -> 226,872 (overnight India, 360 showtimes bought 1,592)
-- India all-in unchanged at 3.19 lakh / Rs 16.43 Cr (Sacnilk not updated since 11 PM IST)
-- Earlier tonight: US 114,046, Canada 10,372, Germany 6,121, US independents 1,079, ANZ
-- Worldwide 502,864 / $5.12M
+- UK 15,134 -> 15,424 (Cineworld +194, Showcase +90); 20,493 with Odeon estimate
+- The Light Cambridge house block moved to held, not counted as lost sales
+- UK city map and top-10 cinemas rebuilt from the new file
+- Worldwide 503,154 / $5.13M
 
 Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
 Claude-Session: https://claude.ai/code/session_01C4QoUcxfFQuVHBLGsUts4A

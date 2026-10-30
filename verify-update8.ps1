@@ -61,12 +61,12 @@ Need $page 'function openSpan'   'opening-run split'
 # 20 Oct guard below exists because Bradford and Whiteley did this once. It
 # has now happened twice, to the same cinema, and these guards are the only
 # thing standing between that and a published +73.
-Need $page 'tickets:15134'       'UK 10,844 after the 24 Oct afternoon Cineworld Fri/Sat re-read'
+Need $page 'tickets:15424'       'UK 10,844 after the 24 Oct afternoon Cineworld Fri/Sat re-read'
 Absent $page 'tickets:10621,'    'no overnight 24 Oct UK total as the live figure'
-Need $page 'cwGone:10926'         'Cineworld 7,704, relabelling excluded'
-Need $page 'gbp:204309'           'UK pounds at the pinned 13.50 ATP'
-Need $page 'usd:270771'          'UK dollars moved with the pounds, at 1.3253'
-Need $page 'realHi:15134'        'the top of the UK range is the headline'
+Need $page 'cwGone:11120'         'Cineworld 7,704, relabelling excluded'
+Need $page 'gbp:208224'           'UK pounds at the pinned 13.50 ATP'
+Need $page 'usd:275959'          'UK dollars moved with the pounds, at 1.3253'
+Need $page 'realHi:15424'        'the top of the UK range is the headline'
 Need $page 'reRead2Delta:427'    'the 21 Oct clean delta'
 Need $page 'reRead2Relabelled:109' 'and the seats excluded to get it'
 Need $page 'bradfordClean:1'     'Bradford: one seat, not seventy-three'
@@ -104,20 +104,20 @@ Absent $page 'reReadDelta:1118'  'the raw delta must never be published as clean
 Absent $page 'reReadDelta:532'   'the file total alone loses the re-baselined 25'
 Absent $page 'reReadDelta:746'   'the raw delta must never be published as clean'
 Absent $page 'cwGone:5985'       'batch 5 must not be stacked on batch 4'
-Need $page 'scGone:1795'         'Showcase 1,087 read, room blocks removed'
+Need $page 'scGone:1885'         'Showcase 1,087 read, room blocks removed'
 Need $page 'vueGone:1752'        'Vue counted for the first time'
 Need $page 'reRead3Delta:1503'   'the clean Cineworld delta, 24 Oct'
 Absent $page 'cwGone:8211'       'the chain column is never the published Cineworld figure'
 Need $page 'soldShare:44.84'     'the share is measured now, not assumed'
 # offSale is a direct read now: 6,098 shown sold plus 5,576 labelled held.
 Need $page 'offSale:14119'       'UK off sale published beside it'
-Need $page 'realLo:11737'         'UK real-bookings band published, not a point'
+Need $page 'realLo:12027'         'UK real-bookings band published, not a point'
 Need $page 'blockSeats:3397'     'UK house-seat exposure disclosed'
 # The city list MUST stay block-corrected. On the seats-gone basis Solihull
 # reads 462 and Feltham 281, and both are almost entirely one room's block -
 # Solihull corrected is 6. A national total can carry blocks with a note; a
 # named cinema cannot, because a reader can open the seat map and disprove it.
-Need $page "['Showcase Reading',818]" 'UK city list on the corrected basis'
+Need $page "['Showcase Reading',836]" 'UK city list on the corrected basis'
 Absent $page "['Solihull',462]"       'no block-inflated Solihull in the city list'
 Absent $page "['Feltham',281]"        'no block-inflated Feltham in the city list'
 # 3,964 and 1,192 USED TO BE Need LINES HERE. They were the live Australian
@@ -572,6 +572,7 @@ Need $page 'id="mktframe"'       'expanded frame container'
 Need $page 'id="napanels"'       'US panels are toggleable'
 Need $page 'worldMaps(); }'      'maps painted on load'
 Need $page 'const UKC=[{n:"London"' 'UK map by city with the Odeon estimate'
+Need $page 'const PREV_DAY={asOf:' 'every country tile shows its day-on-day move'
 Need $page "me :{name:'Middle East'" 'Middle East tile in the map row'
 Need $page "sea:{name:'SE Asia'"     'SE Asia tile in the map row'
 
@@ -749,8 +750,8 @@ Absent $page "['Thu 5 Nov',2181]" 'no partial UK date split'
 Absent $page "['Thu 5 Nov',2205]" 'no pre-21-Oct UK date split'
 # The four dates must still sum to cwGone with nothing unallocated:
 #   2,445 + 1,251 + 1,210 + 1,072 = 5,978
-Need   $page "['Thu 5 Nov',4701]" 'the complete measured UK date split'
-Need   $page "['Sun 8 Nov',1555]" 'and the last day of it, so the sum is checkable'
+Need   $page "['Thu 5 Nov',4754]" 'the complete measured UK date split'
+Need   $page "['Sun 8 Nov',1591]" 'and the last day of it, so the sum is checkable'
 Need   $page 'byDateAdded'        'each day carries its own clean delta'
 Absent $page 'cwGone:4985,'  'no pre-re-read Cineworld figure'
 Absent $page 'cwGone:5279,'  'no batch-3 Cineworld figure'
