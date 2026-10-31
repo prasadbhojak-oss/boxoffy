@@ -4675,8 +4675,8 @@ const RAMAYANA_TRACKER = {
   // page's roll-up (US map + US independents + Canada + India Sacnilk Day 1
   // + UK, ANZ, Germany, NL, FR, SE, PH, Africa + Odeon/Village estimates).
   // tickets/rate/shows/value above stay as the North America figures.
-  wwTickets: "608,343",
-  wwValue: "$5.89M",
+  wwTickets: "609,541",
+  wwValue: "$5.91M",
   indiaDay1: "4.00 lakh",
   indiaInr: "₹19.59 Cr",
   countries: 24,
@@ -4735,7 +4735,7 @@ function RamayanaTrackerStrip() {
               <b style={{ color:T.text }}>Past 6 lakh tickets and $5.9 million, six days out.</b>{" "}
               North America {R.tickets} tickets ({R.value}) across 4&ndash;12 Nov.
               India {R.indiaDay1} for opening day ({R.indiaInr}). The UK 22,334,
-              Australia &amp; NZ 21,114 &mdash; IMAX Melbourne alone has sold 1,295.
+              Australia &amp; NZ 22,312 &mdash; IMAX Melbourne alone has sold 1,295.
             </div>
           </div>
 
