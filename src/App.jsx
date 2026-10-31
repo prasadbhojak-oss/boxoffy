@@ -4664,24 +4664,24 @@ const RAMAYANA_TRACKER = {
   // twenty-two, two million four hundred ninety-two thousand ninety-five
   // dollars, seven point zero eight per cent, twelve thousand three hundred
   // seventy-three shows.
-  tickets: "148,680",
-  rate: "8.05%",
-  shows: "12,214",
+  tickets: "152,274",
+  rate: "8.21%",
+  shows: "12,170",
   // 24 OCT 22:40: priced at MEASURED per-format prices (IMAX 23.90, PLF
   // 25.04, XD 20.47, 3D 17.13, Std 16.36). Retired: one million five hundred
   // fourteen thousand nine hundred twenty-four dollars.
-  value: "$2,805,398",
+  value: "$2,869,783",
   // 27 OCT 13:00 CT: the strip now leads WORLDWIDE, matching the tracker
   // page's roll-up (US map + US independents + Canada + India Sacnilk Day 1
   // + UK, ANZ, Germany, NL, FR, SE, PH, Africa + Odeon/Village estimates).
   // tickets/rate/shows/value above stay as the North America figures.
-  wwTickets: "609,541",
-  wwValue: "$5.91M",
+  wwTickets: "617,085",
+  wwValue: "$6.04M",
   indiaDay1: "4.00 lakh",
   indiaInr: "₹19.59 Cr",
   countries: 24,
-  tminus: "T-6",
-  scan: "30 Oct · 11:16pm CT",
+  tminus: "T-5",
+  scan: "31 Oct · 4:11am CT",
 };
 
 function RamayanaTrackerStrip() {
@@ -4732,10 +4732,10 @@ function RamayanaTrackerStrip() {
           <div style={{ flex:"1 1 240px", minWidth:220 }}>
             <div style={{ fontFamily:"'DM Sans', sans-serif", fontSize:12, color:T.textMid,
                           lineHeight:1.5, borderLeft:`2px solid ${T.border}`, paddingLeft:10 }}>
-              <b style={{ color:T.text }}>Past 6 lakh tickets and $5.9 million, six days out.</b>{" "}
+              <b style={{ color:T.text }}>Past 6.1 lakh tickets and $6 million, five days out.</b>{" "}
               North America {R.tickets} tickets ({R.value}) across 4&ndash;12 Nov.
-              India {R.indiaDay1} for opening day ({R.indiaInr}). The UK 22,334,
-              Australia &amp; NZ 22,312 &mdash; IMAX Melbourne alone has sold 1,295.
+              India {R.indiaDay1} for opening day ({R.indiaInr}). The UK 25,089,
+              Australia &amp; NZ 22,389 &mdash; IMAX Melbourne alone has sold 1,295.
             </div>
           </div>
 
