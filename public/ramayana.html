@@ -3294,21 +3294,28 @@ const NL = {
      Scheveningen's 8 Nov 4DX show (7 sold) - taken off. Two Vue 5 Nov
      shows gone (0 sold). Kerkrade's 77 house block still out. 4,633 ->
      4,777. Sweden re-read: unchanged at 34. */
-  tickets:4777, clean:4509, block:268, blockRooms:5,
-  eur:66878, usd:75151, atpEur:14.00, fx:1.1237, atpIsOurs:true,
+  /* 30 OCT ~8:40-9:25 PM CT BROWSER RE-READ (seats_browser.csv), no
+     quantity chosen. 116 showtimes matched: +357 (66 up by 364, 6 down by
+     7; Pathe +338, Vue +19). Arena +80, Eindhoven +52, Spuimarkt +41,
+     Ypenburg +25, Schouwburgplein +23. Tilburg 1 show pulled, two Vue
+     shows still 404 (0 sold). Kerkrade's 77 house block still out.
+     4,777 -> 5,134. Sweden: bio.se unchanged at 34, Filmstaden blocked
+     (Cloudflare) - its count carried. */
+  tickets:5134, clean:4866, block:268, blockRooms:5,
+  eur:71876, usd:80767, atpEur:14.00, fx:1.1237, atpIsOurs:true,
   shows:124, showsRead:118, cinemas:31, cinemasRead:23, cities:15, seats:29681, rate:14.42,
-  pathe:4163, patheShows:88, patheCinemas:15,
-  vue:565, vueShows:30, vueCinemas:8,
+  pathe:4501, patheShows:88, patheCinemas:15,
+  vue:584, vueShows:30, vueCinemas:8,
   pulledShows:1, pulledTickets:0, newRead:0,
   soldOutCarried:0, soldOutCarriedTickets:0,
-  wasTickets:4633, wasTickets2:4377, wasTickets3:3766, wasTickets4:3717, wasTickets5:3060, wasTickets6:2639, wasTickets7:2175, wasTickets8:1959, wasTickets9:1546, matchedAdded:151,
-  byDate:[['Thu 5 Nov',1058,25],['Fri 6 Nov',1370,19],['Sat 7 Nov',1227,23],['Sun 8 Nov',615,26],['Mon 9 Nov',149,6],['Tue 10 Nov',231,13],['Wed 11 Nov',78,5]],
-  cities_:[['Amsterdam · Arena',847,23.4],['Den Haag · Ypenburg',754,51.9],
-           ['Rotterdam · de Kuip',482,42.9],['Den Haag · Spuimarkt',452,12.9],
-           ['Eindhoven · Pathe',430,18.4],['Utrecht Leidsche Rijn',326,17.5],
+  wasTickets:4777, wasTickets2:4633, wasTickets3:4377, wasTickets4:3766, wasTickets5:3717, wasTickets6:3060, wasTickets7:2639, wasTickets8:2175, wasTickets9:1959, matchedAdded:357,
+  byDate:[['Thu 5 Nov',1120,25],['Fri 6 Nov',1465,19],['Sat 7 Nov',1321,23],['Sun 8 Nov',658,26],['Mon 9 Nov',162,6],['Tue 10 Nov',268,13],['Wed 11 Nov',91,5]],
+  cities_:[['Amsterdam · Arena',927,25.6],['Den Haag · Ypenburg',779,53.6],
+           ['Rotterdam · de Kuip',504,44.9],['Den Haag · Spuimarkt',493,14.1],
+           ['Eindhoven · Pathe',482,20.6],['Utrecht Leidsche Rijn',326,17.5],
            ['Kerkrade · Vue',245,30.1],['Amsterdam-Noord',157,30.2]],
   top:{cinema:'Pathe Ypenburg, Den Haag', when:'Thu 5 Nov, 7:00p',
-       sold:204, of:213, pct:95.8}
+       sold:207, of:213, pct:97.2}
 };
 
 /* SWEDEN IS A ZERO WITH A LABEL, AND THE LABEL IS THE POINT.
@@ -5716,8 +5723,13 @@ function eu2Cin(){ return Object.values(EU2).reduce((a,v)=>a+v.cin,0); }
    Sun 16, Mon 8, Tue 8, Wed 9). 56 house floor still out: 30 -> 44, EUR 660.
    Again opened with 2 IMAX e-tickets - quantity 2, NOT approved; own 2
    seats excluded. Flagged to PB. */
-const GR={tickets:44, eur:660, usd:742, fx:1.1237, shows:7, cinemas:1, seats:4200,
-  held:56, taken:100};
+/* 30 OCT ~9 PM CT RE-READ: taken 100 -> 113 (Thu 24, Fri 17, Sat 27, Sun
+   18, Mon 8, Tue 10, Wed 9). 56 house floor still out: 44 -> 57, EUR 855.
+   Quantity 2 AGAIN (2 IMAX e-tickets) - not approved, flagged; own 2 out.
+   France Kinepolis re-read the same night (also quantity 2): 33 on 18 maps
+   vs 36 carried; Nimes read with a broken method (0) - 36 kept. */
+const GR={tickets:57, eur:855, usd:961, fx:1.1237, shows:7, cinemas:1, seats:4200,
+  held:56, taken:113};
 /* 29 OCT ~8 AM CT RE-READ (Grok, Major Cineplex, 694 showtimes 5-8 Nov at
    72 cinemas, seat positions listed). Held = seats taken in the same place
    on 3+ shows of a screen (5,116 incl. the group below). 130 -> 266.
@@ -5743,10 +5755,19 @@ const GR={tickets:44, eur:660, usd:742, fx:1.1237, shows:7, cinemas:1, seats:420
    No price before login: MYR 20 assumed, FX 0.22 assumed. TGV listed, no
    sessions; LFS behind a login. */
 const MY={tickets:199, myr:3980, usd:876, fx:0.22, shows:773, cinemas:42, seats:101714, held:685};
-const TH={tickets:438, thb:194492, usd:5990, fx:0.0308, shows:727, cinemas:73,
-  cinemasSold:33, seats:174603, held:5240, imax:194, hindi:203, thaiDub:63, group:185,
+/* 30 OCT ~01:30-02:00 UTC 31 OCT RE-READ (Muse, Major, 637 showtimes at 88
+   branches, both the main and 'Director's Cut' entries). 608 matched to the
+   morning read on showtime_id, seats taken like for like: +132 (44 up by
+   148, 14 down by 16). Paragon IMAX +27, ICON IMAX +16, Ratchayothin IMAX
+   +11. 29 new showtimes: Ratchayothin DC Sat 2pm 40 and Samrong 6 counted;
+   44 seats sitting flat on every new show (Samui, Chalong, Khon Kaen,
+   Ladkrabang, Sriracha) read as fixed blocks, kept out. 94 earlier rows
+   not in this file keep their count. QUARTIER IMAX group (185) still out.
+   438 -> 616 at THB 444. */
+const TH={tickets:616, thb:273504, usd:8424, fx:0.0308, shows:756, cinemas:88,
+  cinemasSold:71, seats:174603, held:5384, imax:275, hindi:203, thaiDub:63, group:185,
   sfShows:405, sfCinemas:21,
-  byDate:[['Thu 5 Nov',157],['Fri 6 Nov',79],['Sat 7 Nov',101],['Sun 8 Nov',28]]};
+  byDate:[['Thu 5 Nov',208],['Fri 6 Nov',122],['Sat 7 Nov',185],['Sun 8 Nov',28]]};
 /* 30 OCT MUSE SWEEP. SM's all-sites feed shows 816 Ramayana showtimes on
    sale across 77 SM cinemas nationwide, 5-9 Nov (SM is the only chain
    showing it). 516 seat maps read; 300 returned no seat data and are not
