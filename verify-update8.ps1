@@ -481,15 +481,15 @@ Absent $page 'tickets:4836,'     'no pre-re-read Australian total'
 # 12 showtimes are no longer listed. Those 90 keep their 20 Oct figure.
 # carriedTickets must stay on the page: a blended total that hides which
 # rows are stale is the thing we are guarding against.
-Need $page 'tickets:6131'        'Germany 4,244, 25 Oct Grok re-read'
+Need $page 'tickets:6429'        'Germany 4,244, 25 Oct Grok re-read'
 Absent $page 'tickets:3954,'     'no 24 Oct German total'
 Absent $page 'tickets:2436,'     'no 22 Oct Germany total'
-Need $page 'lowNoGroup:5661'     'the Leonberg group booking is named and ranged out'
+Need $page 'lowNoGroup:5959'     'the Leonberg group booking is named and ranged out'
 Absent $page 'tickets:2360,'     'no 21-22 Oct interim German total'
 Absent $page 'tickets:2023,'     'no 21 Oct German total'
 Need $page 'compeso:1835'        'the half of Germany that is a true sold count'
 Need $page 'oneState:2119'        'the half that is only seats gone'
-Need $page 'seats:83485'         'the German denominator moved with the rows'
+Need $page 'seats:84746'         'the German denominator moved with the rows'
 Need $page 'carried:16,'         'the carried-forward rows are counted'
 Need $page 'carriedTickets:91'  'and their tickets are named, not blended'
 Absent $page 'tickets:1230,'     'no pre-re-read German total'
@@ -502,8 +502,8 @@ Absent $page 'priced:42,'        'no pre-21-Oct price coverage'
 # an unchanged footprint: 1,480 -> 1,789. That +309 is buying, and it is the
 # only German number that is not part coverage. If it ever disappears from
 # the page, the re-read was wasted.
-Need $page 'matchedShows:361'    'the matched-read set is on the page'
-Need $page 'buying:15,'         'and the buying figure it produced'
+Need $page 'matchedShows:338'    'the matched-read set is on the page'
+Need $page 'buying:298,'         'and the buying figure it produced'
 # THE VERSION SPLIT IS A CORRECTION. 63 of 191 rows had our own isOV flag
 # wrong, carrying 578 tickets, nearly all of them rows we called dubbed that
 # the cinema calls the original. 1,073/633 was wrong and must never come back.
@@ -648,7 +648,7 @@ Need $app '3:51pm'    'the strip carries the scan time'
 Need $page 'const USV = {"'          'the US city layer carries cinema positions'
 # 23 OCT FRANCE: Grok's first count, 7 tickets, added to the worldwide total.
 Need $page 'const FR = { tickets:144,' 'France on the page, 24 Oct full read'
-Need $page 'const ME={tickets:108'  'Middle East: VOX UAE first read, 30 Oct'
+Need $page 'const ME={tickets:227'  'Middle East: VOX UAE first read, 30 Oct'
 # 23 OCT INDIA MAP: District disc + BookMyShow ring, India fullness scale.
 Need $page 'function indSvg(' 'India map draws both sources'
 Need $page 'data-iview=' 'India map source switch'
@@ -782,10 +782,10 @@ Absent $page 'tickets:1177' 'no pre-basis-change Germany total'
 # carry ours, and the page says so in all three places a reader can see it.
 # What this guard still protects: it must be 18, the median PB set, and it
 # must be visible in the euro total. A silent 0 or a silent 18.92 both fail.
-Need   $page 'eur:105024'    'German euros at their own observed EUR 17.21'
+Need   $page 'eur:110129'    'German euros at their own observed EUR 17.21'
 Absent $page 'eur:23237'    'no pre-re-read German euros'
 Absent $page 'eur:29187'    'no pre-21-Oct German euro total'
-Need   $page 'usd:118015'    'German dollars moved with the euros, at 1.1237'
+Need   $page 'usd:123752'    'German dollars moved with the euros, at 1.1237'
 Absent $page 'usd:32796'    'no pre-21-Oct German dollar total'
 Need   $page 'atpEur:17.13' 'German ATP held steady across the third read'
 Absent $page 'atpEur:17.11' 'no pre-21-Oct German ATP'

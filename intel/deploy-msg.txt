@@ -1,1 +1,4 @@
-Ramayana tracker 30 Oct 8:15 PM CT: UK Grok PM read 17,265; US merged map 122,712 (15:51 CT); Cineplex 11,209; NA 142,590 / $2.69M. Worldwide 534,288 / $5.50M.
+Ramayana tracker: Germany late-AM fold (6,429), UAE re-read (227); UK files reconciled
+
+Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01C4QoUcxfFQuVHBLGsUts4A
