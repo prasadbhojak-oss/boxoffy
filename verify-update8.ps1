@@ -481,10 +481,10 @@ Absent $page 'tickets:4836,'     'no pre-re-read Australian total'
 # 12 showtimes are no longer listed. Those 90 keep their 20 Oct figure.
 # carriedTickets must stay on the page: a blended total that hides which
 # rows are stale is the thing we are guarding against.
-Need $page 'tickets:6429'        'Germany 4,244, 25 Oct Grok re-read'
+Need $page 'tickets:6985'        'Germany 4,244, 25 Oct Grok re-read'
 Absent $page 'tickets:3954,'     'no 24 Oct German total'
 Absent $page 'tickets:2436,'     'no 22 Oct Germany total'
-Need $page 'lowNoGroup:5959'     'the Leonberg group booking is named and ranged out'
+Need $page 'lowNoGroup:6515'     'the Leonberg group booking is named and ranged out'
 Absent $page 'tickets:2360,'     'no 21-22 Oct interim German total'
 Absent $page 'tickets:2023,'     'no 21 Oct German total'
 Need $page 'compeso:1835'        'the half of Germany that is a true sold count'
@@ -503,7 +503,7 @@ Absent $page 'priced:42,'        'no pre-21-Oct price coverage'
 # only German number that is not part coverage. If it ever disappears from
 # the page, the re-read was wasted.
 Need $page 'matchedShows:338'    'the matched-read set is on the page'
-Need $page 'buying:298,'         'and the buying figure it produced'
+Need $page 'buying:556,'         'and the buying figure it produced'
 # THE VERSION SPLIT IS A CORRECTION. 63 of 191 rows had our own isOV flag
 # wrong, carrying 578 tickets, nearly all of them rows we called dubbed that
 # the cinema calls the original. 1,073/633 was wrong and must never come back.
@@ -591,7 +591,7 @@ Write-Host '=== 3. the homepage strip agrees with the page'
 # 18 October. ONE NUMBER, ONE GUARD, ONE PLACE: when the strip moves, the
 # Need lines here and the Absent lines in section 4 change together or not
 # at all.
-Need $app '152,274'     'NA all-presale total on the strip, 25 Oct 02:28 sweep'
+Need $app '152,381'     'NA all-presale total on the strip, 25 Oct 02:28 sweep'
 Absent $app '81,688'   'no 24 Oct 21:39 strip total'
 Absent $app '81,594'   'no pre-Landmark-25-Oct strip total'
 Absent $app '78,379'   'no 14:00 strip total'
@@ -606,7 +606,7 @@ Absent $app '67,711'   'no 22 Oct 21:51 NA total'
 Absent $app '67,571'   'no 22 Oct 20:18 NA total'
 Absent $app '63,789'   'no 22 Oct 08:22 NA total'
 Absent $app '62,720'   'no 21 Oct 23:29 NA total'
-Need $app '$2,869,783' 'NA value on the strip, measured format prices'
+Need $app '$2,871,905' 'NA value on the strip, measured format prices'
 Absent $app '$1,563,502' 'no 24 Oct 21:39 NA value'
 Absent $app '$1,562,284' 'no pre-Landmark-25-Oct NA value'
 Absent $app '$1,514,924' 'no assumed-price NA value'
@@ -648,7 +648,7 @@ Need $app '4:11am'    'the strip carries the scan time'
 Need $page 'const USV = {"'          'the US city layer carries cinema positions'
 # 23 OCT FRANCE: Grok's first count, 7 tickets, added to the worldwide total.
 Need $page 'const FR = { tickets:144,' 'France on the page, 24 Oct full read'
-Need $page 'const ME={tickets:1144'  'Middle East: VOX UAE first read, 30 Oct'
+Need $page 'const ME={tickets:1218'  'Middle East: VOX UAE first read, 30 Oct'
 # 23 OCT INDIA MAP: District disc + BookMyShow ring, India fullness scale.
 Need $page 'function indSvg(' 'India map draws both sources'
 Need $page 'data-iview=' 'India map source switch'
@@ -782,10 +782,10 @@ Absent $page 'tickets:1177' 'no pre-basis-change Germany total'
 # carry ours, and the page says so in all three places a reader can see it.
 # What this guard still protects: it must be 18, the median PB set, and it
 # must be visible in the euro total. A silent 0 or a silent 18.92 both fail.
-Need   $page 'eur:110129'    'German euros at their own observed EUR 17.21'
+Need   $page 'eur:119653'    'German euros at their own observed EUR 17.21'
 Absent $page 'eur:23237'    'no pre-re-read German euros'
 Absent $page 'eur:29187'    'no pre-21-Oct German euro total'
-Need   $page 'usd:123752'    'German dollars moved with the euros, at 1.1237'
+Need   $page 'usd:134454'    'German dollars moved with the euros, at 1.1237'
 Absent $page 'usd:32796'    'no pre-21-Oct German dollar total'
 Need   $page 'atpEur:17.13' 'German ATP held steady across the third read'
 Absent $page 'atpEur:17.11' 'no pre-21-Oct German ATP'
