@@ -1,4 +1,4 @@
-Ramayana tracker: 08:12 cycle - India District 278,175 + Sacnilk 4.05 lakh, ANZ 23,356
+Ramayana share card: market list no longer overlaps (top markets + rest folded), US-only stats labelled, countries count, footer fits
 
 Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
 Claude-Session: https://claude.ai/code/session_01C4QoUcxfFQuVHBLGsUts4A

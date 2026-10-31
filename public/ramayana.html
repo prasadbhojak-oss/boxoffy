@@ -6587,9 +6587,15 @@ async function drawShot(){
   c.fill();
   c.fillStyle='#fff'; c.fillText(ml,44+dw+31,125);
 
-  c.fillStyle=SNAP.mid; c.font='600 23px '+body;
+  c.fillStyle=SNAP.mid; c.font='600 20px '+body;
+  /* 31 OCT, PB: the subtitle still named the first four markets. It now
+     counts the countries actually in the roll-up. */
+  const nCountries=WW.rows.filter(r=>r[1]>0).length+
+    (WW.rows.some(r=>r[0]==='North America')?1:0)+
+    (WW.rows.some(r=>r[0]==='Australia & NZ')?1:0)+
+    (WW.rows.some(r=>/SA \+ Kenya/.test(r[0]))?1:0);
   c.fillText(fmt(WW.tix)+' tickets counted · '+fmt(WW.cin)+' cinemas · '+
-             'America, the UK, Australia, Canada',44,172);
+             nCountries+' countries',44,166);
 
   /* The filter chip only appears when a filter is ON, and it says US, because
      the headline above it is worldwide and a bare "IMAX" chip under a global
@@ -6606,9 +6612,11 @@ async function drawShot(){
   const rows=view();
   const sold=rows.reduce((a,r)=>a+r.sold,0), seats=rows.reduce((a,r)=>a+r.seats,0),
         shows=rows.reduce((a,r)=>a+r.shows,0);
-  const stats=[[fmt(sold),'TICKETS'],['$'+fmt(Math.round(sold*atpNow())),'VALUE'],
-               [pc1(pct(sold,seats)),'OF SEATS'],
-               [fmt(shows),'SHOWS'],[String(rows.length),'MARKETS']];
+  /* These five are the US seat map only - labelled so, because they sit
+     under a worldwide headline and "69 MARKETS" read as 69 countries. */
+  const stats=[[fmt(sold),'US TICKETS'],['$'+fmt(Math.round(sold*atpNow())),'US VALUE'],
+               [pc1(pct(sold,seats)),'OF US SEATS'],
+               [fmt(shows),'US SHOWS'],[String(rows.length),'US METROS']];
   /* COLUMNS ARE MEASURED, NEVER ASSUMED. These sat on a fixed 150px pitch,
      which worked until the US value passed six figures: '$695,252' at 34px
      mono is about 163px wide and ran straight through the column beside it,
@@ -6662,29 +6670,33 @@ async function drawShot(){
      off deliberately: it would be a zero bar and read as "sold nothing"
      rather than "not counted yet". */
   const mx=760, bw2=330;
-  const mrows=WW.rows, mmax=Math.max(1,...mrows.map(r=>r[1]));
-  /* THE ROW PITCH IS DERIVED FROM HOW MANY MARKETS THERE ARE. It was a fixed
-     62px against a PREVIEW NIGHT block pinned at y=508, and the fourth market
-     - Germany, added 18 Oct - put its bar underneath that heading. A fifth,
-     when India lands, would have buried two. The preview block keeps its
-     place, which is set by the footer below it; the markets get the room
-     above it and divide it between however many of them there are, always
-     leaving CLEAR between the last bar and the heading. */
-  const MTOP=300, PY=508, CLEAR=46;
-  const mstep=Math.min(62,
-    Math.floor((PY-CLEAR-19-MTOP)/Math.max(1,mrows.length-1)));
+  /* 31 OCT, PB: TWENTY-ONE MARKETS PRINTED ON TOP OF EACH OTHER. The pitch
+     was derived from the row count, so at 21 rows it fell to 7px and every
+     name overwrote the next. Now: biggest first, a fixed 23px pitch, as many
+     as fit above PREVIEW NIGHT, and the rest folded into one honest line. */
+  const MTOP=296, PY=508, PITCH=23;
+  const all=WW.rows.filter(r=>r[1]>0).slice().sort((a,b)=>b[1]-a[1]);
+  const fit=Math.floor((PY-34-MTOP)/PITCH)+1;
+  let mrows=all;
+  if(all.length>fit){
+    const keep=all.slice(0,fit-1), rest=all.slice(fit-1);
+    mrows=keep.concat([['+ '+rest.length+' more countries',
+      rest.reduce((a,r)=>a+r[1],0),rest.reduce((a,r)=>a+r[2],0),true]]);
+  }
+  const mmax=Math.max(1,...mrows.map(r=>r[1]));
   c.fillStyle=SNAP.ink; c.font='800 21px '+disp;
   c.fillText('MARKET BY MARKET',mx,262);
   mrows.forEach((r,i)=>{
-    const y=MTOP+i*mstep;
-    c.fillStyle=SNAP.mid; c.font='600 15px '+body;
+    const y=MTOP+i*PITCH;
+    c.fillStyle=r[3]?SNAP.muted:SNAP.mid; c.font=(r[3]?'500 ':'600 ')+'14px '+body;
     c.fillText(r[0],mx,y);
-    c.fillStyle=SNAP.line; c.fillRect(mx,y+9,bw2,10);
-    c.fillStyle=SNAP.accent;
-    c.fillRect(mx,y+9,Math.max(4,bw2*r[1]/mmax),10);
-    c.fillStyle=SNAP.muted; c.font='500 12.5px '+mono; c.textAlign='right';
-    c.fillText(fmt(r[1])+' · $'+fmt(Math.round(r[2]/1000))+'K',mx+bw2,y);
+    c.fillStyle=SNAP.muted; c.font='500 12px '+mono; c.textAlign='right';
+    const usd=r[2]>=1e6?'$'+(r[2]/1e6).toFixed(2)+'M':'$'+fmt(Math.round(r[2]/1000))+'K';
+    c.fillText(fmt(r[1])+' · '+usd,mx+bw2,y);
     c.textAlign='left';
+    c.fillStyle=SNAP.line; c.fillRect(mx,y+5,bw2,4);
+    c.fillStyle=r[3]?SNAP.muted:SNAP.accent;
+    c.fillRect(mx,y+5,Math.max(3,bw2*r[1]/mmax),4);
   });
 
   /* PREVIEW NIGHT - one night, one country, and that is the headline inside
@@ -6706,8 +6718,12 @@ async function drawShot(){
     {month:'short',day:'numeric',hour:'numeric',minute:'2-digit',timeZone:'America/Chicago'});
   /* The dollar figure is the headline now, so this line has to carry its
      weight: the tickets are counted, the price is ours. Do not shrink it. */
-  c.fillText('Tickets counted seat by seat · dollars use measured per-format prices '+
-             '(previews $'+ATP_PREV.toFixed(2)+'), not reported box office · scan '+when+' Central',44,H-26);
+  /* Shrink to fit so the footer never runs into boxoffy.com. */
+  const foot='Tickets counted seat by seat · dollars use measured per-format prices '+
+             '(previews $'+ATP_PREV.toFixed(2)+'), not reported box office · scan '+when+' Central';
+  let fs=12; c.font=fs+'px '+mono;
+  while(fs>8 && c.measureText(foot).width>W-88-110){ fs-=0.5; c.font='400 '+fs+'px '+mono; }
+  c.fillText(foot,44,H-26);
   c.textAlign='right'; c.fillStyle=SNAP.ink; c.font='700 13px '+body;
   c.fillText('boxoffy.com',W-44,H-26); c.textAlign='left';
 }
