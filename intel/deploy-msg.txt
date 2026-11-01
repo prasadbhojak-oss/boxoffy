@@ -1,4 +1,4 @@
-Ramayana tracker: 1 Nov 10:17 CT - US merged 145,516, Canada 13,568, worldwide 1,020,405 / $8.07M
+Ramayana tracker: 1 Nov 14:12 cycle - India District 349,241, ANZ 26,104, worldwide 1,020,480 / $8.08M
 
 Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
 Claude-Session: https://claude.ai/code/session_01C4QoUcxfFQuVHBLGsUts4A
