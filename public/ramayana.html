@@ -3155,6 +3155,16 @@ const IN = {
            ['Miraj', 12120, 95242, 417, 498],
            ['Movietime', 4474, 38705, 185, 389]],
   sacAsOf:'1 Nov, 12:48 pm IST',
+  /* 1 NOV, PB: "COUNT EVERY DAY". India now has more than opening day on
+     sale, and every other market here counts every day on sale, so India
+     does too. Day 2 (Fri 6 Nov) is BookMyShow + District as Sacnilk reports
+     it (incl. blocks) - our District scan reads 5 Nov only, so this part is
+     Sacnilk's alone. allTix/allInr stay OPENING DAY; the worldwide roll-up
+     uses wwTix/wwUsd. Add later days to d2* (or a d3*) as they open. */
+  d2Tix:272000, d2Inr:119500000, d2Usd:1254750, d2AsOf:'1 Nov, 12:48 pm IST',
+  get wwTix(){ return this.allTix+this.d2Tix; },
+  get wwUsd(){ return this.allUsd+this.d2Usd; },
+  get wwInr(){ return this.allInr+this.d2Inr; },
   coverInr:72,
   /* 21:32 CT RE-RUN of the call. Sacnilk data as of 06:47 IST, District read
      08:02 IST - 75 minutes apart, the closest pair yet. Same city-by-city
@@ -3852,7 +3862,7 @@ function mktShapes(){
   MKT.afr.pinNote='South Africa: every Nu Metro and Ster-Kinekor showtime plus '+
     'movies@ Montecasino, '+AF.shows+' showtimes. Grey rings: read with nothing '+
     'sold yet, or listed and not counted.';
-  MKT.ind.tix=IN.allTix; MKT.ind.usd=IN.allUsd;
+  MKT.ind.tix=IN.wwTix; MKT.ind.usd=IN.wwUsd;
   const ioff=[], ip=x=>{ const q=IN_LL[x]; if(!q){ ioff.push(x); return null; }
     return [+(20.5+(q[1]-72.88)*4.283).toFixed(1), +(83.1-(q[0]-19.08)*4.617).toFixed(1)]; };
   /* Circle = District tickets + that city's BookMyShow slice, so the circles
@@ -4306,8 +4316,8 @@ function tiles(){
        - Middle East, SE Asia, Europe outside the UK. It is deliberately a
        zero with a label, never a blank: a reader who sees no row assumes we
        looked and found nothing. */
-    const WT={tix:naTix+UK.tickets+AU.anzTix+DE.tickets+IN.allTix+NL.tickets+FR.tickets+SE.tickets+PH.tickets+TH.tickets+MY.tickets+GR.tickets+eu2Tix()+AF.tickets+ME.tickets+estTix(),
-              usd:naUsd+UK.usd+AU.anzUsd+DE.usd+IN.allUsd+NL.usd+FR.usd+(SE.usd||0)+PH.usd+TH.usd+MY.usd+GR.usd+eu2Usd()+AF.usd+ME.usd+estUsd(),
+    const WT={tix:naTix+UK.tickets+AU.anzTix+DE.tickets+IN.wwTix+NL.tickets+FR.tickets+SE.tickets+PH.tickets+TH.tickets+MY.tickets+GR.tickets+eu2Tix()+AF.tickets+ME.tickets+estTix(),
+              usd:naUsd+UK.usd+AU.anzUsd+DE.usd+IN.wwUsd+NL.usd+FR.usd+(SE.usd||0)+PH.usd+TH.usd+MY.usd+GR.usd+eu2Usd()+AF.usd+ME.usd+estUsd(),
               rows:[['North America',naTix,naUsd],['United Kingdom',UK.tickets+EST.odeon.c,UK.usd+odeonUsd()],
                     ['Australia & NZ',AU.anzTix+EST.village.c,AU.anzUsd+villageUsd()],
                     /* Germany went from footprint to counted on 18 Oct and
@@ -4319,7 +4329,7 @@ function tiles(){
                        data. It is ONE platform and ONE date and the panel
                        says so; in this row it behaves like every other
                        partial market on the page. */
-                    ['India',IN.allTix,IN.allUsd],
+                    ['India',IN.wwTix,IN.wwUsd],
                     /* The Netherlands joined 20 Oct, read by hand like
                        Germany. Sweden is listed at zero ON PURPOSE - four
                        showtimes were read and every seat map was empty. A
@@ -5190,7 +5200,8 @@ function inBody(){
     `letter-spacing:.14em;text-transform:uppercase;color:var(--accent)">`+
     `India · opening day, 5 November</div>`+
     `<p class="note" style="margin-top:8px"><b>${f(IN.allTix)} tickets · `+
-    `₹${(IN.allInr/1e7).toFixed(2)} Cr</b> ($${f(IN.allUsd)}) for opening day. That is `+
+    `₹${(IN.allInr/1e7).toFixed(2)} Cr</b> ($${f(IN.allUsd)}) for opening day, plus `+
+    `<b>${f(IN.d2Tix)} · ₹${(IN.d2Inr/1e7).toFixed(2)} Cr</b> already sold for Friday 6 Nov (Sacnilk, ${esc(IN.d2AsOf)}). Opening day is `+
     `our own District count plus BookMyShow's side as reported (${esc(IN.sacAsOf)}). `+
     `India sells close to release, so expect this to climb fast in the last few days.</p>`+
     `<p class="note"><b>Selling about ${f(IN.perHour)} tickets an hour</b> on our latest `+
@@ -6583,10 +6594,10 @@ function dayMove(n,t){
 }
 function wwTotals(){
   const usSold=DATA.total.sold;
-  const tix=usSold+xTix()+CA.canTix+UK.tickets+AU.anzTix+DE.tickets+IN.allTix+
+  const tix=usSold+xTix()+CA.canTix+UK.tickets+AU.anzTix+DE.tickets+IN.wwTix+
             NL.tickets+FR.tickets+SE.tickets+PH.tickets+TH.tickets+MY.tickets+GR.tickets+eu2Tix()+AF.tickets+ME.tickets+estTix();
   const usd=Math.round(usSold*atpNow())+xUsd()+CA.canUsd+UK.usd+AU.anzUsd+DE.usd+
-            IN.allUsd+NL.usd+FR.usd+PH.usd+TH.usd+MY.usd+GR.usd+eu2Usd()+(SE.usd||0)+AF.usd+ME.usd+estUsd();
+            IN.wwUsd+NL.usd+FR.usd+PH.usd+TH.usd+MY.usd+GR.usd+eu2Usd()+(SE.usd||0)+AF.usd+ME.usd+estUsd();
   const naTix=usSold+xTix()+CA.canTix;
   const naUsd=Math.round(usSold*atpNow())+xUsd()+CA.canUsd;
   /* NEW ZEALAND'S 14 WERE MISSING FROM THIS SUM. NZ folded into the
@@ -6597,7 +6608,7 @@ function wwTotals(){
             UK.cinemasRead+AU.ev.cinemas+AU.hy.cinemas+AU.nz.cinemas+
             DE.cinemas+IN.cinemas+NL.cinemas+FR.cinemas+SE.cinemas+PH.cinemasRead+TH.cinemas+MY.cinemas+GR.cinemas+eu2Cin()+AF.cinemas+ME.cinemasRead;
   return {tix,usd,cin,rows:[
-    ['North America',naTix,naUsd],['India',IN.allTix,IN.allUsd],
+    ['North America',naTix,naUsd],['India',IN.wwTix,IN.wwUsd],
     ['United Kingdom',UK.tickets+EST.odeon.c,UK.usd+odeonUsd()],
     ['Australia & NZ',AU.anzTix+EST.village.c,AU.anzUsd+villageUsd()],['Germany',DE.tickets,DE.usd],
     ['Netherlands',NL.tickets,NL.usd],['France',FR.tickets,FR.usd],
