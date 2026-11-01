@@ -1,4 +1,4 @@
-Ramayana tracker: 1 Nov Grok - Germany 8,604, NL 6,061, Thailand 1,052, Oman + Roxy UAE first read (ME 1,644), Greece 63, France 159; worldwide past $8M
+Ramayana tracker: 1 Nov 08:12 cycle - India District 338,677, ANZ 26,029
 
 Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
 Claude-Session: https://claude.ai/code/session_01C4QoUcxfFQuVHBLGsUts4A
