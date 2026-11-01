@@ -4664,24 +4664,26 @@ const RAMAYANA_TRACKER = {
   // twenty-two, two million four hundred ninety-two thousand ninety-five
   // dollars, seven point zero eight per cent, twelve thousand three hundred
   // seventy-three shows.
-  tickets: "167,558",
-  rate: "9.02%",
-  shows: "12,236",
+  // 1 NOV 10:17 CT: US merged 145,516 + indies 1,227 + Canada 22,182.
+  // Retired: one hundred sixty-seven thousand five hundred fifty-eight.
+  tickets: "168,925",
+  rate: "9.10%",
+  shows: "12,234",
   // 24 OCT 22:40: priced at MEASURED per-format prices (IMAX 23.90, PLF
   // 25.04, XD 20.47, 3D 17.13, Std 16.36). Retired: one million five hundred
   // fourteen thousand nine hundred twenty-four dollars.
-  value: "$3,153,713",
+  value: "$3,178,272",
   // 27 OCT 13:00 CT: the strip now leads WORLDWIDE, matching the tracker
   // page's roll-up (US map + US independents + Canada + India Sacnilk Day 1
   // + UK, ANZ, Germany, NL, FR, SE, PH, Africa + Odeon/Village estimates).
   // tickets/rate/shows/value above stay as the North America figures.
-  wwTickets: "1,019,038",
-  wwValue: "$8.04M",
+  wwTickets: "1,020,405",
+  wwValue: "$8.07M",
   indiaDay1: "5.07 lakh",
   indiaInr: "₹22.77 Cr",
   countries: 24,
   tminus: "T-4",
-  scan: "1 Nov · 4:08am CT",
+  scan: "1 Nov · 10:17am CT",
 };
 
 function RamayanaTrackerStrip() {
