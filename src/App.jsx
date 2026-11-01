@@ -4664,24 +4664,24 @@ const RAMAYANA_TRACKER = {
   // twenty-two, two million four hundred ninety-two thousand ninety-five
   // dollars, seven point zero eight per cent, twelve thousand three hundred
   // seventy-three shows.
-  tickets: "164,114",
-  rate: "8.84%",
-  shows: "12,223",
+  tickets: "167,558",
+  rate: "9.02%",
+  shows: "12,236",
   // 24 OCT 22:40: priced at MEASURED per-format prices (IMAX 23.90, PLF
   // 25.04, XD 20.47, 3D 17.13, Std 16.36). Retired: one million five hundred
   // fourteen thousand nine hundred twenty-four dollars.
-  value: "$3,086,710",
+  value: "$3,153,713",
   // 27 OCT 13:00 CT: the strip now leads WORLDWIDE, matching the tracker
   // page's roll-up (US map + US independents + Canada + India Sacnilk Day 1
   // + UK, ANZ, Germany, NL, FR, SE, PH, Africa + Odeon/Village estimates).
   // tickets/rate/shows/value above stay as the North America figures.
-  wwTickets: "739,258",
-  wwValue: "$6.65M",
+  wwTickets: "742,702",
+  wwValue: "$6.71M",
   indiaDay1: "5.07 lakh",
   indiaInr: "₹22.77 Cr",
   countries: 24,
   tminus: "T-4",
-  scan: "31 Oct · 10:14pm CT",
+  scan: "1 Nov · 4:08am CT",
 };
 
 function RamayanaTrackerStrip() {
@@ -4732,7 +4732,7 @@ function RamayanaTrackerStrip() {
           <div style={{ flex:"1 1 240px", minWidth:220 }}>
             <div style={{ fontFamily:"'DM Sans', sans-serif", fontSize:12, color:T.textMid,
                           lineHeight:1.5, borderLeft:`2px solid ${T.border}`, paddingLeft:10 }}>
-              <b style={{ color:T.text }}>Past 7.3 lakh tickets and $6.6 million, four days out.</b>{" "}
+              <b style={{ color:T.text }}>Past 7.4 lakh tickets and $6.7 million, four days out.</b>{" "}
               North America {R.tickets} tickets ({R.value}) across 4&ndash;12 Nov.
               India {R.indiaDay1} for opening day ({R.indiaInr}). The UK 25,089,
               Australia &amp; NZ 25,092 &mdash; IMAX Melbourne alone has sold 1,295.
