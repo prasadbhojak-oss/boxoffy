@@ -1,4 +1,4 @@
-Ramayana tracker: US+Canada 16:17 CT (US 135,712 merged, Canada 12,605)
+Ramayana tracker: 20:12 cycle - India District 304,123, ANZ 24,026
 
 Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
 Claude-Session: https://claude.ai/code/session_01C4QoUcxfFQuVHBLGsUts4A
