@@ -649,7 +649,7 @@ Need $app '10:33am'    'the strip carries the scan time'
 # moved into the Hawaii inset.
 Need $page 'const USV = {"'          'the US city layer carries cinema positions'
 # 23 OCT FRANCE: Grok's first count, 7 tickets, added to the worldwide total.
-Need $page 'const FR = { tickets:159,' 'France on the page, 24 Oct full read'
+Need $page 'const FR = { tickets:171,' 'France on the page, 24 Oct full read'
 Need $page 'const ME={tickets:1644'  'Middle East: VOX UAE first read, 30 Oct'
 # 23 OCT INDIA MAP: District disc + BookMyShow ring, India fullness scale.
 Need $page 'function indSvg(' 'India map draws both sources'

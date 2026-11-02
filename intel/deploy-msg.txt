@@ -1,4 +1,4 @@
-Ramayana tracker: 2 Nov 10:33 CT - US merged 162,532, Canada 15,311, worldwide 1,451,195 / $10.07M
+Ramayana tracker: 2 Nov Europe file - Kinepolis France 63 sold (France 171), worldwide 1,451,207 / $10.08M
 
 Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
 Claude-Session: https://claude.ai/code/session_01C4QoUcxfFQuVHBLGsUts4A
