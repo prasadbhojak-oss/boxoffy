@@ -1,4 +1,4 @@
-Ramayana tracker: 2 Nov Europe file - Kinepolis France 63 sold (France 171), worldwide 1,451,207 / $10.08M
+Ramayana tracker: 2 Nov 14:12 cycle - India District 418,458, ANZ 31,383, worldwide 1,451,530 / $10.10M
 
 Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
 Claude-Session: https://claude.ai/code/session_01C4QoUcxfFQuVHBLGsUts4A
