@@ -1,4 +1,4 @@
-Ramayana tracker: 2 Nov 22:17 CT - US merged 178,230, Canada 16,634, worldwide 1,469,439 / $10.43M
+Ramayana tracker: Landmark Canada night re-read 11,001 (+1,059); worldwide 1,483,055 / $10.66M
 
 Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
 Claude-Session: https://claude.ai/code/session_01C4QoUcxfFQuVHBLGsUts4A

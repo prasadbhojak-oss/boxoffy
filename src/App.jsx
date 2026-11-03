@@ -4664,26 +4664,34 @@ const RAMAYANA_TRACKER = {
   // twenty-two, two million four hundred ninety-two thousand ninety-five
   // dollars, seven point zero eight per cent, twelve thousand three hundred
   // seventy-three shows.
-  // 2 NOV 22:17 CT: US merged 178,230 + indies 1,227 + Canada 25,248.
+  // 3 NOV 06:55 CT: US merged 190,964 (nationwide 4 Nov read, 924 cinemas;
+  // preview night 60,828 on our own map, past Venky's 59,689 - no top-up)
+  // + indies 1,072 (13 Grok Cinemarks now on the map, -1,057) + Canada 27,933.
+  // 3 NOV 02:45 CT: India District 443,584 + Sacnilk 12:48 PM IST 3 Nov
+  // (Day 1 8.27 lakh, Days 2-4 added) + ANZ 03:00 CT +1,573 - worldwide 21.37 lakh / $12.94M.
+  // 2 NOV 22:17 CT: US merged 178,230 + indies 1,227 + Canada 25,248
+  // + 4,025 preview-night top-up to Venky Box Office's 59,689 (PB, 2 Nov)
+  // + 2 Nov Grok: Landmark +1,328, US independents +902 (Celebration 632)
+  // + 2 Nov night Landmark re-read +1,059.
   // Retired: one hundred ninety thousand nine hundred fifty-nine.
-  tickets: "204,705",
-  rate: "10.13%",
-  shows: "13,704",
+  tickets: "219,969",
+  rate: "9.73%",
+  shows: "15,540",
   // 24 OCT 22:40: priced at MEASURED per-format prices (IMAX 23.90, PLF
   // 25.04, XD 20.47, 3D 17.13, Std 16.36). Retired: one million five hundred
   // fourteen thousand nine hundred twenty-four dollars.
-  value: "$3,830,094",
+  value: "$4,113,202",
   // 27 OCT 13:00 CT: the strip now leads WORLDWIDE, matching the tracker
   // page's roll-up (US map + US independents + Canada + India Sacnilk Day 1
   // + UK, ANZ, Germany, NL, FR, SE, PH, Africa + Odeon/Village estimates).
   // tickets/rate/shows/value above stay as the North America figures.
-  wwTickets: "1,469,439",
-  wwValue: "$10.43M",
-  indiaDay1: "6.05 lakh",
-  indiaInr: "₹25.94 Cr",
+  wwTickets: "2,144,578",
+  wwValue: "$13.09M",
+  indiaDay1: "8.27 lakh",
+  indiaInr: "₹32.85 Cr",
   countries: 24,
-  tminus: "T-3",
-  scan: "2 Nov · 10:17pm CT",
+  tminus: "T-2",
+  scan: "3 Nov · 6:55am CT",
 };
 
 function RamayanaTrackerStrip() {
@@ -4734,10 +4742,10 @@ function RamayanaTrackerStrip() {
           <div style={{ flex:"1 1 240px", minWidth:220 }}>
             <div style={{ fontFamily:"'DM Sans', sans-serif", fontSize:12, color:T.textMid,
                           lineHeight:1.5, borderLeft:`2px solid ${T.border}`, paddingLeft:10 }}>
-              <b style={{ color:T.text }}>Past 14 lakh tickets and $10 million, three days out.</b>{" "}
+              <b style={{ color:T.text }}>Past 21 lakh tickets and $13 million, two days out.</b>{" "}
               North America {R.tickets} tickets ({R.value}) across 4&ndash;12 Nov.
-              India {R.indiaDay1} for opening day ({R.indiaInr}) plus 3.19 lakh for Friday and 2.62 lakh for Saturday. The UK 25,089,
-              Australia &amp; NZ 32,271 &mdash; IMAX Melbourne alone has sold 1,295.
+              India {R.indiaDay1} for opening day ({R.indiaInr}) plus 3.82 lakh for Friday, 4.06 lakh for Saturday and 2.23 lakh for Sunday. The UK 25,089,
+              Australia &amp; NZ 33,953 &mdash; IMAX Melbourne alone has sold 1,295.
             </div>
           </div>
 
