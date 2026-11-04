@@ -554,7 +554,7 @@ gtag("js",new Date());gtag("config","G-K6C9EVRFH4",{anonymize_ip:true});}})();
         <th style="padding:6px 8px 6px 0">Market</th><th style="padding:6px 8px">First show</th>
         <th style="padding:6px 8px">Actual tickets</th><th style="padding:6px 0 6px 8px">Actual gross</th></tr></thead>
       <tbody>
-        <tr><td style="padding:6px 8px 6px 0">US, shows started by 3:19 PM CT</td><td style="padding:6px 8px">637 of ~2,700</td><td style="padding:6px 8px">10,951 <span style="color:var(--muted)">(presold 10,205, +7.3%)</span></td><td style="padding:6px 0 6px 8px">~$228K <span style="color:var(--muted)">(at Venky's $20.86)</span></td></tr>
+        <tr><td style="padding:6px 8px 6px 0">US, shows started by 3:19 PM CT</td><td style="padding:6px 8px">637 of ~2,700</td><td style="padding:6px 8px">10,951 <span style="color:var(--muted)">(presold 10,205, +7.3%)</span></td><td style="padding:6px 0 6px 8px">~$228K <span style="color:var(--muted)">(at $20.86 a ticket)</span></td></tr>
         <tr><td style="padding:6px 8px 6px 0">US, evening shows</td><td style="padding:6px 8px">from 4 PM CT</td><td style="padding:6px 8px">counting</td><td style="padding:6px 0 6px 8px">counting</td></tr>
         <tr><td style="padding:6px 8px 6px 0">Canada</td><td style="padding:6px 8px">Wed 4 Nov</td><td style="padding:6px 8px">counting</td><td style="padding:6px 0 6px 8px">counting</td></tr>
         <tr><td style="padding:6px 8px 6px 0">Australia &amp; NZ</td><td style="padding:6px 8px">Thu 5 Nov, morning local</td><td style="padding:6px 8px">from Thu</td><td style="padding:6px 0 6px 8px">from Thu</td></tr>
@@ -1039,7 +1039,7 @@ const ATP_FMT={IMAX:23.90, PLF:25.04, XD:20.47, '3D':17.13, Standard:16.36};
    dollar figure prices previews at ATP_PREV and the other days at whatever
    keeps the US total unchanged (about $18.63). Totals do not move; only the
    split between days does. */
-/* 2 NOV, PB: PREVIEW PRICE NOW $21.12. Venky Box Office's full preview-night
+/* 2 NOV, PB: PREVIEW PRICE NOW $21.12. a North America tracker's full preview-night
    table (934 US locations) comes to $1,260,694 / 59,689 = $21.12 a ticket -
    a wider, real-gross average than our own format-mix $22.00. */
 const ATP_PREV=21.12;
@@ -1700,7 +1700,7 @@ const CA = {showtimes:582, cinemas:60, auditoriums:103, dates:5,
                each room's size is its emptiest read over all 49 scans since 16 Oct,
                when rooms were near empty (e.g. Milton UltraAVX 311, not 235). Seats a
                cinema has since held back count as taken. 17,408 -> 21,328; Wed
-               preview night 2,644 -> 3,597. Closer to Venky Box Office's Canada. */
+               preview night 2,644 -> 3,597. Closer to a North America tracker's Canada. */
   tickets:21328, seats:164608, rate:12.96, usd:276411, atpCad:18,
             medianHouse:211, bandedUsd:267839, bandedAtpCad:21.37,
             soloRooms:1, floorWas:1912, handCount:1899, publishedWas:1473,
@@ -1957,7 +1957,7 @@ const CA = {showtimes:582, cinemas:60, auditoriums:103, dates:5,
      Woodside unreachable. 508 -> 595. */
   /* 4 NOV GROK R3: Imagine 424 -> 433 (Sudbury +7, Timmins +2). 595 -> 604. */
   im:{tickets:604, shows:144, showsListed:213, cinemas:7, seats:14315, cad:6439, usd:4637},
-  /* 3 NOV 23:55 CT BCM TOP-UP (approved North America source). Venky Box Office,
+  /* 3 NOV 23:55 CT BCM TOP-UP (approved North America source). a North America tracker,
      3 Nov 10 PM PT: North America premiere advance $1.65M, US $1,454,663, so
      Canada preview night about $195,337. Our Canada preview read (Cineplex 3,597
      + Landmark ~4,070 by its 2 Nov date split + Imagine/Cine Starz ~60) prices at
@@ -1965,8 +1965,8 @@ const CA = {showtimes:582, cinemas:60, auditoriums:103, dates:5,
      $95,221 gap is added here, at Cineplex's measured C$21.37 (US$15.39):
      6,187 tickets. Shrink it by whatever the next Canada read adds - never both. */
   /* 4 NOV: Landmark R3 added ~463 preview-night tickets (30.4% of its rise), so the
-     Venky top-up shrinks by the same - never both. 6,187 -> 5,724. */
-  vb:{tickets:5724, usd:88095, src:'Venky Box Office 3 Nov 10 PM PT', date:'Wed 4 Nov'},
+     tracker top-up shrinks by the same - never both. 6,187 -> 5,724. */
+  vb:{tickets:5724, usd:88095, src:'a North America tracker 3 Nov 10 PM PT', date:'Wed 4 Nov'},
   get canTix(){ return this.tickets + this.lm.tickets + this.im.tickets + this.vb.tickets; },
   get canUsd(){ return this.usd + this.lm.usd + this.im.usd + this.vb.usd; }};
 
@@ -5100,7 +5100,7 @@ const SHARE=35000/(9.3e6/ATP_WK);
    Six rows are third-party: Box Office Mojo and The Numbers, cross-checked
    against Deadline and Variety where they reported the same span. The seventh,
    Dhurandhar 2, is Boxoffy's own reporting - our Apr 2 North America piece,
-   which carries Venky Box Office, Deadline, Comscore, Variety, Sacnilk and
+   which carries a North America tracker, Deadline, Comscore, Variety, Sacnilk and
    Pinkvilla as its sources. It belongs here: it is the all-time Indian opening
    in this market and leaving it out would misrepresent the ceiling. But a
    reader deserves to know which figures we took from an outside scoreboard and
@@ -5156,7 +5156,7 @@ function premiereTickets(){
   return DATA.metros.reduce((a,m)=>a+((m.byDate&&m.byDate[PREM_DATE]||{sold:0}).sold),0);
 }
 /* 2 NOV, PB: PREVIEW NIGHT IS THE HIGHER OF TWO COUNTS, as India is (District
-   vs Sacnilk). Venky Box Office (@Venky_BO, 2 Nov evening): 59,689 tickets,
+   vs Sacnilk). a North America tracker (2 Nov evening): 59,689 tickets,
    $1,260,694, 934 locations, 2,493 shows - AMC 28,595, Regal 13,207,
    Cinemark 11,675, other 6,212. Our map at 22:17 CT: 55,664 on 737 locations,
    2,085 shows. Where we both read a cinema the counts agree within 1-3%
@@ -5170,12 +5170,12 @@ function premiereTickets(){
 /* 3 NOV 10:35 CT: NATIONWIDE (1,123 postcodes, every date). Preview night
    61,723 tickets on our own map (925 cinemas found on the 4 Nov read; each
    showtime kept at the higher of the 06:46 and 09:45 CT reads, so failed
-   seat maps on the later pass do not take tickets off). Venky 59,689. */
+   seat maps on the later pass do not take tickets off). tracker 59,689. */
 /* 3 NOV 06:55 CT: our own map now has 60,828 preview-night tickets at 873
    cinemas (the 4 Nov read on 1,123 postcodes found 924 sites, 60,601 sold),
-   past Venky's 59,689 - the top-up below is now zero by itself. */
+   past tracker 59,689 - the top-up below is now zero by itself. */
 const US_PREV_EXT={tix:59689, usd:1260694, locations:934, shows:2493,
-                   src:'Venky Box Office', asOf:'2 Nov evening'};
+                   src:'a North America tracker', asOf:'2 Nov evening'};
 function prevTopUp(){ return Math.max(0, US_PREV_EXT.tix-premiereTickets()); }
 function previewShown(){ return premiereTickets()+prevTopUp(); }
 function usOn(d){
@@ -6636,7 +6636,7 @@ function intl(){
    2898 AD's, theatre by theatre and state by state.
    WHY KALKI AND NOT DHURANDHAR 2: Dhurandhar 2 released in March, before our
    scanners existed, and nobody publishes its presales by city or theatre -
-   only national totals (Venky Box Office). Kalki is the one big Indian
+   only national totals (a North America tracker). Kalki is the one big Indian
    release with a public theatre-level and state-level presale table:
    Track BO, "Kalki 2898 AD USA Premieres Advance Sales", compiled 26 Jun
    2024 21:34 IST (the morning of its US premiere), non-Comscore, scraped.
@@ -6723,7 +6723,7 @@ function h2h(){
     `<div style="max-height:420px;overflow:auto"><table>${thead}`+
       H2H.th.slice().sort((a,b)=>rP(b[0])/b[2]-rP(a[0])/a[2]).map(([n,mt,k])=>tr(n,rP(n),k,mt)).join('')+`</table></div>`+
     `<p class="note">Sources: Ramayana, Boxoffy US seat-map scan (${esc(new Date(DATA.scan).toLocaleString('en-US',{month:'short',day:'numeric',hour:'numeric',minute:'2-digit',timeZone:'America/Chicago'}))} CT). `+
-    `Kalki, Track BO (non-Comscore), top 25 theatres / 10 states / 10 chains only. Dhurandhar 2, Venky Box Office via Variety India, national only - `+
+    `Kalki, Track BO (non-Comscore), top 25 theatres / 10 states / 10 chains only. Dhurandhar 2, Variety India, national only - `+
     `no city or theatre split was ever published for it.</p>`;
 }
 function paint(){ stamp(); trajectory(); render(); worldMaps(); try{h2h();}catch(e){console.error(e);} }
