@@ -4670,6 +4670,10 @@ const RAMAYANA_TRACKER = {
   // NA 256,830 / $4,754,527; worldwide 2,505,025 / $15.19M.
   // 3 NOV 23:30 CT: Cineplex 11:46 CT read folded (16,932 -> 17,408):
   // NA 257,306 / $4,760,696; worldwide 2,505,501 / $15.20M.
+  // 3 NOV 23:45 CT: Cineplex room sizes from all 49 scans (17,408 -> 21,328):
+  // NA 261,226 / $4,811,499; worldwide 2,509,421 / $15.25M.
+  // 3 NOV 23:55 CT BCM: Venky Canada preview top-up +6,187 / $95,221:
+  // NA 267,413 / $4,906,720; worldwide 2,515,608 / $15.34M.
   // 3 NOV 22:10 CT: PB's FINAL presale Grok file reconciled - Landmark 13,383,
   // UK 25,041 (+Odeon est.), Germany 11,058, NL 7,897, France 1,263, Reel +79,
   // ANZ Reading/Ace/HOYTS NZ. NA 245,915 / $4,538,911.
@@ -4692,19 +4696,19 @@ const RAMAYANA_TRACKER = {
   // + 2 Nov Grok: Landmark +1,328, US independents +902 (Celebration 632)
   // + 2 Nov night Landmark re-read +1,059.
   // Retired: one hundred ninety thousand nine hundred fifty-nine.
-  tickets: "257,306",
-  rate: "8.19%",
+  tickets: "267,413",
+  rate: "8.51%",
   shows: "23,132",
   // 24 OCT 22:40: priced at MEASURED per-format prices (IMAX 23.90, PLF
   // 25.04, XD 20.47, 3D 17.13, Std 16.36). Retired: one million five hundred
   // fourteen thousand nine hundred twenty-four dollars.
-  value: "$4,760,696",
+  value: "$4,906,720",
   // 27 OCT 13:00 CT: the strip now leads WORLDWIDE, matching the tracker
   // page's roll-up (US map + US independents + Canada + India Sacnilk Day 1
   // + UK, ANZ, Germany, NL, FR, SE, PH, Africa + Odeon/Village estimates).
   // tickets/rate/shows/value above stay as the North America figures.
-  wwTickets: "2,505,501",
-  wwValue: "$15.20M",
+  wwTickets: "2,515,608",
+  wwValue: "$15.34M",
   indiaDay1: "9.27 lakh",
   indiaInr: "₹35.62 Cr",
   countries: 24,

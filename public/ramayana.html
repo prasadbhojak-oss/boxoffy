@@ -1657,19 +1657,26 @@ const CA = {showtimes:582, cinemas:60, auditoriums:103, dates:5,
      Mon 9 Nov reads 154 (was 167) - a room re-drawn, not refunds. */
             /* 3 NOV 23:30 CT: Cineplex 11:46 CT read folded (it had not been) - 582
                showtimes, 9 dates: 16,932 -> 17,408. Wed preview night 2,572 -> 2,644. */
-  tickets:17408, seats:160688, rate:10.83, usd:225608, atpCad:18,
+            /* 3 NOV 23:45 CT: ROOM SIZES FIXED. Cineplex gives seats left, not room
+               size. We sized each room from its emptiest show in the SAME read, so a
+               room with one show (29 of 103 - premiere rooms) counted zero sold. Now
+               each room's size is its emptiest read over all 49 scans since 16 Oct,
+               when rooms were near empty (e.g. Milton UltraAVX 311, not 235). Seats a
+               cinema has since held back count as taken. 17,408 -> 21,328; Wed
+               preview night 2,644 -> 3,597. Closer to Venky Box Office's Canada. */
+  tickets:21328, seats:164608, rate:12.96, usd:276411, atpCad:18,
             medianHouse:211, bandedUsd:267839, bandedAtpCad:21.37,
             soloRooms:1, floorWas:1912, handCount:1899, publishedWas:1473,
             /* The retired Canadian figures are a SERIES, not one slot. Each
                one was the published number once, and dropping the older to
                make room for the newer is how a figure stops being checkable. */
-            wasTickets:16932, wasTickets2:16634, wasTickets3:15784, wasTickets4:15311, wasTickets5:15142, wasTickets6:15050, wasTickets7:14250, wasTickets8:13568, wasTickets9:13420, wasTickets10:13178, wasTickets11:12605, wasTickets12:12006, wasTickets13:11922, wasTickets14:11832, wasTickets15:11209, wasTickets16:10935, wasTickets17:10727, wasTickets18:10372, wasTickets19:9886, wasTickets20:9553, wasTickets21:8984, wasTickets22:8540, wasTickets23:8420, wasTickets24:8137, wasTickets25:7860, wasTickets26:7758, wasTickets27:7640, wasTickets28:7363, wasTickets29:7203, wasTickets30:7138, wasTickets31:6389, wasTickets32:6252, wasTickets33:5811, wasTickets34:5633, wasTickets35:5555, wasTickets36:5412, wasTickets37:5075, wasTickets38:4986, wasTickets39:4851, wasTickets40:4711, wasTickets41:4447, wasTickets42:4344, wasTickets43:3719, wasTickets44:3040, wasTickets45:2449, wasSeats:99051, wasSeats2:99387, wasSeats3:96156, wasSeats4:95602,
+            wasTickets:17408, wasTickets1b:16932, wasTickets2:16634, wasTickets3:15784, wasTickets4:15311, wasTickets5:15142, wasTickets6:15050, wasTickets7:14250, wasTickets8:13568, wasTickets9:13420, wasTickets10:13178, wasTickets11:12605, wasTickets12:12006, wasTickets13:11922, wasTickets14:11832, wasTickets15:11209, wasTickets16:10935, wasTickets17:10727, wasTickets18:10372, wasTickets19:9886, wasTickets20:9553, wasTickets21:8984, wasTickets22:8540, wasTickets23:8420, wasTickets24:8137, wasTickets25:7860, wasTickets26:7758, wasTickets27:7640, wasTickets28:7363, wasTickets29:7203, wasTickets30:7138, wasTickets31:6389, wasTickets32:6252, wasTickets33:5811, wasTickets34:5633, wasTickets35:5555, wasTickets36:5412, wasTickets37:5075, wasTickets38:4986, wasTickets39:4851, wasTickets40:4711, wasTickets41:4447, wasTickets42:4344, wasTickets43:3719, wasTickets44:3040, wasTickets45:2449, wasSeats:99051, wasSeats2:99387, wasSeats3:96156, wasSeats4:95602,
             wasSoloRooms:2, dates:7,
             buying:435, seatsMoved:397, bestDate:'Sat 7 Nov', bestRate:24.53,
-            byDate:[['Wed 4 Nov',2644,21903,12.07],['Thu 5 Nov',2548,28864,8.83],
-                    ['Fri 6 Nov',3580,21173,16.91],['Sat 7 Nov',4339,22840,19.00],
-                    ['Sun 8 Nov',1353,21355,6.34],['Mon 9 Nov',354,17699,2.00],
-                    ['Tue 10 Nov',2590,20278,12.77]],
+            byDate:[['Wed 4 Nov',3597,22856,15.74],['Thu 5 Nov',3904,30220,12.92],
+                    ['Fri 6 Nov',3909,21502,18.18],['Sat 7 Nov',4678,23179,20.18],
+                    ['Sun 8 Nov',1669,21671,7.70],['Mon 9 Nov',665,18010,3.69],
+                    ['Tue 10 Nov',2906,20594,14.11]],
             exactMatch:165, within2:191,
             provHand:[['Ontario',1471,6.71],['BC',410,3.54],['Alberta',388,2.58],
                   ['Manitoba',62,1.39],['Quebec',54,0.93],['Nova Scotia',48,2.08],
@@ -1908,8 +1915,16 @@ const CA = {showtimes:582, cinemas:60, auditoriums:103, dates:5,
      show no seat map tonight - Cine Starz's 171 carried, Albion not counted.
      Woodside unreachable. 508 -> 595. */
   im:{tickets:595, shows:144, showsListed:213, cinemas:7, seats:14315, cad:6342, usd:4567},
-  get canTix(){ return this.tickets + this.lm.tickets + this.im.tickets; },
-  get canUsd(){ return this.usd + this.lm.usd + this.im.usd; }};
+  /* 3 NOV 23:55 CT BCM TOP-UP (approved North America source). Venky Box Office,
+     3 Nov 10 PM PT: North America premiere advance $1.65M, US $1,454,663, so
+     Canada preview night about $195,337. Our Canada preview read (Cineplex 3,597
+     + Landmark ~4,070 by its 2 Nov date split + Imagine/Cine Starz ~60) prices at
+     about $100,116 - Cineplex and Landmark both sell above our flat C$18. The
+     $95,221 gap is added here, at Cineplex's measured C$21.37 (US$15.39):
+     6,187 tickets. Shrink it by whatever the next Canada read adds - never both. */
+  vb:{tickets:6187, usd:95221, src:'Venky Box Office 3 Nov 10 PM PT', date:'Wed 4 Nov'},
+  get canTix(){ return this.tickets + this.lm.tickets + this.im.tickets + this.vb.tickets; },
+  get canUsd(){ return this.usd + this.lm.usd + this.im.usd + this.vb.usd; }};
 
 /* 20 OCT: THE BASIS IS NOW EVERY DATE ON SALE, 4-12 NOV. PB's call, and the
    reasoning is that the whole run is presale - a 4-8 window was a choice of

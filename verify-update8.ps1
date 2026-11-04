@@ -160,7 +160,7 @@ Absent $page 'on sale, not counted' 'no footprint-era Germany kicker'
 # 95,681 -> 95,658, twenty-three DOWN across the same seven dates, so the
 # +679 is buying rather than arithmetic. seats and tickets must move together
 # or the mechanic is back: that is what these two guards are for.
-Need $page 'tickets:17408'        'Cineplex 6,389 on its own all-presale dates, 25 Oct 02:28'
+Need $page 'tickets:21328'        'Cineplex 6,389 on its own all-presale dates, 25 Oct 02:28'
 Absent $page 'tickets:5555,'     'no 24 Oct 01:43 Cineplex total'
 Absent $page 'tickets:5412,'     'no 23 Oct 19:53 Cineplex total'
 Absent $page 'tickets:5075,'     'no 23 Oct 09:49 Cineplex total'
@@ -171,7 +171,7 @@ Absent $page 'tickets:4447,'     'no 22 Oct 08:22 Cineplex total'
 Absent $page 'tickets:4344,'     'no 21 Oct 23:29 Cineplex total'
 Absent $page 'tickets:3719,'     'no 21 Oct 04:33Z Cineplex total'
 Need $page 'buying:435'          'and the buying figure'
-Need $page 'usd:225608'           'Canadian dollars at the flat C$18 assumption'
+Need $page 'usd:276411'           'Canadian dollars at the flat C$18 assumption'
 # WHY THE MARKER IS THE PAIR AND NOT 'tickets:3040,'. The retired figures
 # are kept on the page as wasTickets and wasSeats. Contains() is case
 # SENSITIVE, so 'tickets:3040,' does not match 'wasTickets:3040,' - the
@@ -247,7 +247,7 @@ Absent $page 'Landmark Cinemas is not counted'     'the roll-up must not say Lan
 Absent $page 'Landmark is in for the first time'   'no first-read framing on the third read'
 Need $page 'canTix'              'the Canadian roll-up uses both chains'
 Absent $page 'const naTix=usSold+xTix()+CA.tickets;' 'no Cineplex-only North America'
-Need $page 'seats:160688'         'the offered-seat floor this scan actually read'
+Need $page 'seats:164608'         'the offered-seat floor this scan actually read'
 Need $page 'wasSeats4:95602,'      'the retired floor stays on the record'
 # Back to one unrecoverable room on the widened dates - the extra sittings
 # gave the second room something to recover its capacity from.
@@ -595,7 +595,7 @@ Write-Host '=== 3. the homepage strip agrees with the page'
 # 18 October. ONE NUMBER, ONE GUARD, ONE PLACE: when the strip moves, the
 # Need lines here and the Absent lines in section 4 change together or not
 # at all.
-Need $app '257,306'     'NA all-presale total on the strip, 25 Oct 02:28 sweep'
+Need $app '267,413'     'NA all-presale total on the strip, 25 Oct 02:28 sweep'
 Absent $app '81,688'   'no 24 Oct 21:39 strip total'
 Absent $app '81,594'   'no pre-Landmark-25-Oct strip total'
 Absent $app '78,379'   'no 14:00 strip total'
@@ -610,7 +610,7 @@ Absent $app '67,711'   'no 22 Oct 21:51 NA total'
 Absent $app '67,571'   'no 22 Oct 20:18 NA total'
 Absent $app '63,789'   'no 22 Oct 08:22 NA total'
 Absent $app '62,720'   'no 21 Oct 23:29 NA total'
-Need $app '$4,760,696' 'NA value on the strip, measured format prices'
+Need $app '$4,906,720' 'NA value on the strip, measured format prices'
 Absent $app '$1,563,502' 'no 24 Oct 21:39 NA value'
 Absent $app '$1,562,284' 'no pre-Landmark-25-Oct NA value'
 Absent $app '$1,514,924' 'no assumed-price NA value'
@@ -662,7 +662,7 @@ Need $page "XY_FIX = {'Honolulu'"        'Honolulu sits in the Hawaii inset'
 # rate is a 4-8 figure for the first time. For five updates it was US 4-6
 # only, because the baked map stopped at 6 Nov and there was no 4-8
 # denominator to divide by. There is one now: 33,668 of 904,291.
-Need $app 'rate: "8.19%"'    'US 4-12 Nov sell-through on the strip'
+Need $app 'rate: "8.51%"'    'US 4-12 Nov sell-through on the strip'
 Absent $app 'rate: "4.95%"' 'no 24 Oct 21:39 sell-through'
 Absent $app 'rate: "4.78%"' 'no 14:00 sell-through'
 Absent $app 'rate: "4.68%"' 'no 10:06 sell-through'
@@ -936,6 +936,9 @@ else {
     # IMAGINE + CINE STARZ, 3 Nov. Third Canadian line inside CA, on the strip too.
     $im = 0
     if ($t -match 'im:\{tickets:(\d+)')                 { $im = [int]$Matches[1] }
+    # VENKY CANADA PREVIEW TOP-UP, 3 Nov 23:55 CT (BCM approved NA source).
+    $vb = 0
+    if ($t -match 'vb:\{tickets:(\d+)')                 { $vb = [int]$Matches[1] }
     # US INDEPENDENTS, 27 Oct. Cinemas off our Fandango read are added through
     # xTix, so the strip carries them and this sum has to as well.
     $ind = 0
@@ -950,11 +953,11 @@ else {
       Write-Host "    FAIL  could not parse CA ($ca) or the strip ($strip)"
       $fail = 1
     } else {
-      $na = $us + $ex + $ind + $ca + $lm + $im
+      $na = $us + $ex + $ind + $ca + $lm + $im + $vb
       if ($na -eq $strip) {
-        Write-Host "    ok    baked map $us + $ex + US independents $ind + Cineplex $ca + Landmark $lm + Imagine $im = $na, matches the strip"
+        Write-Host "    ok    baked map $us + $ex + US independents $ind + Cineplex $ca + Landmark $lm + Imagine $im + Venky top-up $vb = $na, matches the strip"
       } else {
-        Write-Host "    FAIL  baked map $us + $ex + $ind + $ca + $lm + $im gives $na, but the strip says $strip"
+        Write-Host "    FAIL  baked map $us + $ex + $ind + $ca + $lm + $im + $vb gives $na, but the strip says $strip"
         Write-Host '          run: python rebake_page.py, then fix src\App.jsx'
         $fail = 1
       }
