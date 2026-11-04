@@ -525,94 +525,143 @@ gtag("js",new Date());gtag("config","G-K6C9EVRFH4",{anonymize_ip:true});}})();
   </nav>
 
   <p class="crumb"><a href="/">Boxoffy</a> › <a href="/ramayana-part-one-box-office.html">Ramayana: Rise of a Legend</a> › Presale + actuals tracker</p>
-  <!-- 4 NOV: ACTUALS SECTION. Presales closed at midnight on 3 Nov - everything
-       sold by then stays below as FINAL PRESALES. From 4 Nov this block carries
-       ACTUALS: seats taken on each show's map in the last 30 minutes before it
-       starts (box office and walk-ups take a seat on the same map), plus the
-       distributor's reported grosses as they come out. Filled by the fold. -->
-  <section id="actuals" aria-labelledby="actualsh" style="border:1px solid var(--line);
-     border-left:4px solid var(--saffron);border-radius:var(--r-sm);background:var(--card);
-     padding:14px 16px;margin:4px 0 18px">
-    <div style="display:flex;align-items:center;gap:10px;background:var(--saffron);color:#fff;
-       margin:-14px -16px 12px;padding:9px 16px;border-radius:var(--r-sm) var(--r-sm) 0 0">
-      <span style="width:9px;height:9px;border-radius:50%;background:#fff;display:inline-block"></span>
-      <span style="font-family:var(--mono);font-size:13px;font-weight:700;letter-spacing:.08em;
-         text-transform:uppercase">Ramayana Actuals · Live</span>
-    </div>
-    <h2 id="actualsh" style="font-family:var(--disp);font-size:22px;line-height:1.2;
-       margin:0 0 6px;color:var(--ink)">US previews: 637 daytime shows played, 10,951 admits</h2>
-    <p style="font-size:14.5px;line-height:1.55;color:var(--body-ink);margin:0 0 10px">
-      Presales closed at midnight on 3 Nov. Everything below this box is the
-      <b>final presale count</b>. From Wednesday 4 Nov we count what each show
-      actually sells: every show's seat map read just before it starts, so
-      box-office and walk-up buyers are included. India follows BookMyShow and
-      District actuals.</p>
-    <p style="font-family:var(--mono);font-size:12px;line-height:1.5;color:var(--muted);margin:0 0 8px">
-      Wed 4 Nov, 3:19 PM CT. Each show's last seat-map read before or just after it
-      started (14:12 CT scan for 607 of 637 shows). East Coast 3 PM shows 11.3% full
-      (+7.5% on presale); Central 3 PM shows read 35-50 min before start, so their
-      last walk-ups are still to come. Daytime on a working Wednesday.</p>
-    <!-- 4 NOV: OPENING OCCUPANCY + RATINGS. Occupancy = seats taken at showtime
-         over seats offered, from the same reads as the table. Ratings are quoted
-         from the source, never averaged or estimated; blank until published. -->
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px;margin:2px 0 14px">
-      <div style="border:1px solid var(--line);border-radius:var(--r-sm);padding:12px 14px">
-        <p style="font-family:var(--mono);font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin:0 0 8px">Opening occupancy · US previews</p>
-        <table style="width:100%;border-collapse:collapse;font-family:var(--mono);font-size:13px;color:var(--body-ink)">
-          <tr><td style="padding:3px 0">Daytime shows played (637)</td><td style="padding:3px 0;text-align:right"><b>10.7%</b> <span style="color:var(--muted)">(presale 10.0%)</span></td></tr>
-          <tr><td style="padding:3px 0">East Coast 3 PM shows</td><td style="padding:3px 0;text-align:right"><b>11.3%</b></td></tr>
-          <tr><td style="padding:3px 0">Prime time 7&ndash;9 PM, booked so far</td><td style="padding:3px 0;text-align:right"><b>27%</b> <span style="color:var(--muted)">before walk-ups</span></td></tr>
-          <tr><td style="padding:3px 0">India, Day 1</td><td style="padding:3px 0;text-align:right;color:var(--muted)">from Thu</td></tr>
-        </table>
+  <!-- 4 NOV: ACTUALS DASHBOARD. Presales closed at midnight on 3 Nov and sit
+       below as FINAL PRESALES. This block is the live count: each show's seats
+       taken at its last read before it starts (walk-ups included). All figures
+       come from ACT below - edit ACT, never the markup. -->
+  <style>
+  #actuals{border:1px solid var(--line);border-radius:var(--r);background:var(--card);margin:6px 0 10px;overflow:hidden}
+  #actuals .ab{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;background:var(--saffron);color:#fff;padding:10px 18px}
+  #actuals .ab b{font-family:var(--mono);font-size:13px;letter-spacing:.1em;text-transform:uppercase;display:flex;align-items:center;gap:9px}
+  #actuals .ab b i{width:9px;height:9px;border-radius:50%;background:#fff;animation:actp 1.6s infinite}
+  @keyframes actp{50%{opacity:.25}}
+  #actuals .ab span{font-family:var(--mono);font-size:12px;opacity:.95}
+  #actuals .ai{padding:16px 18px 18px}
+  #actuals h2{font-family:var(--disp);font-size:30px;line-height:1.05;margin:0 0 4px;color:var(--ink);letter-spacing:.01em}
+  #actuals .lede{font-size:14px;line-height:1.5;color:var(--body-ink);margin:0 0 14px}
+  #actuals .kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin:0 0 14px}
+  #actuals .kpi{border:1px solid var(--line);border-radius:var(--r-sm);padding:10px 12px}
+  #actuals .kpi .v{font-family:var(--disp);font-size:34px;line-height:1;color:var(--ink)}
+  #actuals .kpi .l{font-family:var(--mono);font-size:11px;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);margin-top:6px}
+  #actuals .kpi .s{font-size:12.5px;color:var(--body-ink);margin-top:3px}
+  #actuals .kpi.hi .v{color:var(--saffron)}
+  #actuals .grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:12px;margin:0 0 14px}
+  #actuals .panel{border:1px solid var(--line);border-radius:var(--r-sm);padding:12px 14px}
+  #actuals .ph{font-family:var(--mono);font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin:0 0 10px}
+  #actuals .mk{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:7px 0;border-top:1px solid var(--line);font-size:14px;color:var(--body-ink)}
+  #actuals .mk:first-of-type{border-top:0}
+  #actuals .mk .n{font-family:var(--mono);font-size:13px;text-align:right}
+  #actuals .pill{font-family:var(--mono);font-size:10.5px;letter-spacing:.05em;text-transform:uppercase;border-radius:999px;padding:2px 8px;white-space:nowrap}
+  #actuals .p-live{background:var(--saffron);color:#fff}
+  #actuals .p-wait{border:1px solid var(--line);color:var(--muted)}
+  #actuals .ob{margin:0 0 10px}
+  #actuals .ob .ot{display:flex;justify-content:space-between;font-size:13px;color:var(--body-ink);margin-bottom:4px}
+  #actuals .ob .ot em{font-style:normal;font-family:var(--mono);color:var(--muted);font-size:12px}
+  #actuals .ob .otr{position:relative;height:10px;border-radius:5px;background:var(--grid);overflow:hidden}
+  #actuals .ob .of{position:absolute;left:0;top:0;bottom:0;border-radius:5px;background:var(--saffron)}
+  #actuals .ob .of.pre{background:var(--zero)}
+  #actuals .lg{font-family:var(--mono);font-size:11px;color:var(--muted);display:flex;gap:14px;margin-top:2px}
+  #actuals .lg i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:5px;vertical-align:-1px}
+  #actuals table.al{width:100%;border-collapse:collapse;font-size:13px;color:var(--body-ink)}
+  #actuals table.al th{font-family:var(--mono);font-size:10.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);text-align:left;font-weight:500;padding:0 8px 6px 0;border-bottom:1px solid var(--line)}
+  #actuals table.al td{padding:7px 8px 7px 0;border-bottom:1px solid var(--line);vertical-align:top;text-align:left}
+  #actuals table.al tr:last-child td{border-bottom:0}
+  #actuals .miss{font-weight:600;color:var(--red)}
+  #actuals .note{font-family:var(--mono);font-size:11.5px;line-height:1.5;color:var(--muted);margin:0 0 12px}
+  #actuals .foot{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px;border-top:1px solid var(--line);padding-top:12px}
+  #actuals .jump{font-family:var(--mono);font-size:12px;color:var(--muted);text-decoration:none;border-bottom:1px dotted var(--muted)}
+  .presale-divider{display:flex;align-items:center;gap:12px;margin:22px 0 6px;font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+  .presale-divider:before,.presale-divider:after{content:"";flex:1;height:1px;background:var(--line)}
+  @media (max-width:520px){#actuals .ai{padding:14px}#actuals h2{font-size:26px}#actuals .kpi .v{font-size:28px}}
+  </style>
+  <section id="actuals" aria-labelledby="actualsh">
+    <div class="ab"><b><i></i>Ramayana Actuals · Live</b><span id="act-asof"></span></div>
+    <div class="ai">
+      <h2 id="actualsh"></h2>
+      <p class="lede">What Ramayana is actually selling, show by show: each show's seats
+        taken just before it starts, walk-ups included. Presales closed at
+        midnight on 3 Nov and are below as the final presale count.</p>
+      <div class="kpis" id="act-kpis"></div>
+      <div class="grid2">
+        <div class="panel"><p class="ph">Markets</p><div id="act-mk"></div></div>
+        <div class="panel"><p class="ph">Opening occupancy · US previews</p><div id="act-occ"></div>
+          <div class="lg"><span><i style="background:var(--saffron)"></i>actual at showtime</span><span><i style="background:var(--zero)"></i>booked, before walk-ups</span></div></div>
       </div>
-      <div style="border:1px solid var(--line);border-radius:var(--r-sm);padding:12px 14px">
-        <p style="font-family:var(--mono);font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin:0 0 8px">Ratings</p>
-        <table style="width:100%;border-collapse:collapse;font-family:var(--mono);font-size:13px;color:var(--body-ink)">
-          <tr><td style="padding:3px 0">Rotten Tomatoes critics</td><td style="padding:3px 0;text-align:right">8 reviews · <span style="color:var(--muted)">score not out yet</span></td></tr>
-          <tr><td style="padding:3px 0">Rotten Tomatoes audience</td><td style="padding:3px 0;text-align:right;color:var(--muted)">opens after shows</td></tr>
-          <tr><td style="padding:3px 0">IMDb</td><td style="padding:3px 0;text-align:right;color:var(--muted)">opens after release</td></tr>
-          <tr><td style="padding:3px 0">Bollywood Hungama</td><td style="padding:3px 0;text-align:right"><b>5/5</b> <span style="color:var(--muted)">(31 Oct)</span></td></tr>
-        </table>
+      <div class="grid2">
+        <div class="panel"><p class="ph">Ratings</p><div id="act-rt"></div></div>
+        <div class="panel" id="accuracy"><p class="ph">Accuracy log · our calls vs official</p>
+          <div style="overflow-x:auto"><table class="al"><thead><tr><th>Call</th><th>Ours</th><th>Official</th><th>Miss</th></tr></thead><tbody id="act-log"></tbody></table></div></div>
       </div>
-    </div>
-    <div style="overflow-x:auto"><table style="width:100%;border-collapse:collapse;
-       font-family:var(--mono);font-size:13px;color:var(--body-ink)">
-      <thead><tr style="text-align:left;border-bottom:1px solid var(--line)">
-        <th style="padding:6px 8px 6px 0">Market</th><th style="padding:6px 8px">First show</th>
-        <th style="padding:6px 8px">Actual tickets</th><th style="padding:6px 0 6px 8px">Actual gross</th></tr></thead>
-      <tbody>
-        <tr><td style="padding:6px 8px 6px 0">US, shows started by 3:19 PM CT</td><td style="padding:6px 8px">637 of ~2,700</td><td style="padding:6px 8px">10,951 <span style="color:var(--muted)">(presold 10,205, +7.3%)</span></td><td style="padding:6px 0 6px 8px">~$228K <span style="color:var(--muted)">(at $20.86 a ticket)</span></td></tr>
-        <tr><td style="padding:6px 8px 6px 0">US, evening shows</td><td style="padding:6px 8px">from 4 PM CT</td><td style="padding:6px 8px">counting</td><td style="padding:6px 0 6px 8px">counting</td></tr>
-        <tr><td style="padding:6px 8px 6px 0">Canada</td><td style="padding:6px 8px">Wed 4 Nov</td><td style="padding:6px 8px">counting</td><td style="padding:6px 0 6px 8px">counting</td></tr>
-        <tr><td style="padding:6px 8px 6px 0">Australia &amp; NZ</td><td style="padding:6px 8px">Thu 5 Nov, morning local</td><td style="padding:6px 8px">from Thu</td><td style="padding:6px 0 6px 8px">from Thu</td></tr>
-        <tr><td style="padding:6px 8px 6px 0">India</td><td style="padding:6px 8px">Thu 5 Nov</td><td style="padding:6px 8px">from Thu</td><td style="padding:6px 0 6px 8px">from Thu</td></tr>
-        <tr><td style="padding:6px 8px 6px 0">UK &amp; Europe</td><td style="padding:6px 8px">Thu 5 Nov</td><td style="padding:6px 8px">from Thu</td><td style="padding:6px 0 6px 8px">from Thu</td></tr>
-      </tbody></table></div>
-    <!-- 4 NOV: ACCURACY LOG. Every call we publish goes here with its time,
-         then the official number when it lands and our miss in %. Misses stay
-         on the page. Only add rows for calls actually published. -->
-    <div id="accuracy" style="border:1px solid var(--line);border-radius:var(--r-sm);padding:12px 14px;margin:14px 0 0">
-      <p style="font-family:var(--mono);font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin:0 0 4px">Accuracy log</p>
-      <p style="font-size:13.5px;line-height:1.5;color:var(--body-ink);margin:0 0 8px">Every number we call, the official number when it comes out, and how far off we were. Misses stay up.</p>
-      <div style="overflow-x:auto"><table style="width:100%;border-collapse:collapse;font-family:var(--mono);font-size:12.5px;color:var(--body-ink)">
-        <thead><tr style="text-align:left;border-bottom:1px solid var(--line)">
-          <th style="padding:6px 8px 6px 0;vertical-align:top">Call</th><th style="padding:6px 8px 6px 0;vertical-align:top">Our number (when)</th><th style="padding:6px 8px 6px 0;vertical-align:top">Official</th><th style="padding:6px 0;vertical-align:top">Miss</th></tr></thead>
-        <tbody>
-          <tr style="border-bottom:1px solid var(--line)"><td style="padding:6px 8px 6px 0;vertical-align:top">US daytime preview walk-ups</td><td style="padding:6px 8px 6px 0;vertical-align:top">+15&ndash;30% (4 Nov, 12:15 PM CT)</td><td style="padding:6px 8px 6px 0;vertical-align:top">+7.3% counted on 637 shows</td><td style="padding:6px 0;vertical-align:top"><b>Too high</b> &mdash; evening range cut to +15&ndash;25%</td></tr>
-          <tr style="border-bottom:1px solid var(--line)"><td style="padding:6px 8px 6px 0;vertical-align:top">North America preview night</td><td style="padding:6px 8px 6px 0;vertical-align:top">$1.9&ndash;2.0M (4 Nov, 3:30 PM CT)</td><td style="padding:6px 8px 6px 0;vertical-align:top;color:var(--muted)">Thu 5 Nov</td><td style="padding:6px 0;vertical-align:top;color:var(--muted)">&ndash;</td></tr>
-          <tr style="border-bottom:1px solid var(--line)"><td style="padding:6px 8px 6px 0;vertical-align:top">North America opening, Wed&ndash;Sun</td><td style="padding:6px 8px 6px 0;vertical-align:top">$16M+ (tracker, 3 Nov)</td><td style="padding:6px 8px 6px 0;vertical-align:top;color:var(--muted)">Sun 8 / Mon 9 Nov</td><td style="padding:6px 0;vertical-align:top;color:var(--muted)">&ndash;</td></tr>
-          <tr style="border-bottom:1px solid var(--line)"><td style="padding:6px 8px 6px 0;vertical-align:top">US weekend rank, Fri&ndash;Sun</td><td style="padding:6px 8px 6px 0;vertical-align:top">#3, $13M (4 Nov)</td><td style="padding:6px 8px 6px 0;vertical-align:top;color:var(--muted)">Sun 8 / Mon 9 Nov</td><td style="padding:6px 0;vertical-align:top;color:var(--muted)">&ndash;</td></tr>
-          <tr><td style="padding:6px 8px 6px 0;vertical-align:top">Worldwide opening weekend</td><td style="padding:6px 8px 6px 0;vertical-align:top;color:var(--muted)">posting Sun 8 Nov AM</td><td style="padding:6px 8px 6px 0;vertical-align:top;color:var(--muted)">Sun 8 Nov</td><td style="padding:6px 0;vertical-align:top;color:var(--muted)">&ndash;</td></tr>
-        </tbody></table></div>
-    </div>
-    <div class="sharebar inline" style="margin-top:12px">
+      <p class="note" id="act-note"></p>
+      <div class="foot">
+        <div class="sharebar inline" style="margin:0">
     <span class="sh-label">Share the actuals</span>
     <a class="sh wa" href="https://wa.me/?text=Ramayana%20actuals%2C%20counted%20seat%20by%20seat%3A%20637%20US%20preview%20shows%20played%2C%2010%2C951%20admits%20so%20far%20https%3A%2F%2Fwww.boxoffy.com%2Framayana%23actuals" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.1s-.8 1-1 1.2c-.2.2-.4.2-.7.1a7.2 7.2 0 0 1-3.6-3.2c-.2-.3 0-.5.1-.7l.6-.8c.1-.2.1-.4 0-.6l-.9-2.1c-.2-.5-.4-.5-.6-.5h-.6c-.2 0-.6.1-.9.4-.3.4-1.1 1.1-1.1 2.6s1.1 3 1.3 3.2a11 11 0 0 0 4.4 3.8c2.6 1 3.1.8 3.7.8.5 0 1.7-.6 2-1.3.2-.6.2-1.2.1-1.3zM12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.4A10 10 0 1 0 12 2z"/></svg>WhatsApp</a>
     <a class="sh x" href="https://x.com/intent/post?text=Ramayana%20actuals%2C%20counted%20seat%20by%20seat%3A%20637%20US%20preview%20shows%20played%2C%2010%2C951%20admits%20so%20far&amp;url=https%3A%2F%2Fwww.boxoffy.com%2Framayana%23actuals" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.9 2H22l-6.8 7.8L22.8 22h-6.5l-5-6.6L5.4 22H2.3l7.2-8.2L1.6 2h6.6l4.7 6.2L18.9 2zm-1.1 18h1.8L6.3 3.8H4.4L17.8 20z"/></svg>X</a>
     <a class="sh tg" href="https://t.me/share/url?url=https%3A%2F%2Fwww.boxoffy.com%2Framayana%23actuals&amp;text=Ramayana%20actuals%2C%20counted%20seat%20by%20seat%3A%20637%20US%20preview%20shows%20played%2C%2010%2C951%20admits%20so%20far" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.6 6.8-1.6 7.6c-.1.5-.5.7-.9.4l-2.5-1.9-1.2 1.2c-.1.1-.3.2-.5.2l.2-2.5 4.6-4.2c.2-.2-.1-.3-.3-.1l-5.7 3.6-2.4-.8c-.5-.2-.5-.5.1-.8l9.4-3.6c.4-.2.8.1.8.6z"/></svg>Telegram</a>
     <button class="sh cp" type="button" onclick="navigator.clipboard.writeText(location.href.split('#')[0]+'#actuals');this.classList.add('copied');this.lastChild.textContent=' Copied'"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7 0l2-2a5 5 0 0 0-7-7l-1 1"/><path d="M14 11a5 5 0 0 0-7 0l-2 2a5 5 0 0 0 7 7l1-1"/></svg><span> Copy link</span></button>
   </div>
+        <a class="jump" href="#prevlbl">Final presales ↓</a>
+      </div>
+    </div>
   </section>
+  <script>
+  /* ACT: the only place actuals numbers live. Fold = edit this object. */
+  const ACT = {
+    asOf: 'Wed 4 Nov · 3:19 PM CT',
+    headline: 'US previews: 637 shows played, 10,951 admits so far',
+    kpis: [
+      {v:'10,951', l:'Admits counted', s:'637 US shows played', hi:true},
+      {v:'~$228K', l:'Gross so far', s:'at $20.86 a ticket'},
+      {v:'10.7%', l:'Full at showtime', s:'daytime shows'},
+      {v:'+7.3%', l:'Vs presales', s:'walk-ups on the day'},
+      {v:'637 / 2,739', l:'US shows played', s:'prime time from 5 PM CT'}
+    ],
+    markets: [
+      {m:'🇺🇸 US', st:'live', n:'10,951 · 637 shows'},
+      {m:'🇨🇦 Canada', st:'live', n:'counting'},
+      {m:'🇦🇺🇳🇿 Australia & NZ', st:'live', n:'counting · first shows Thu AM local'},
+      {m:'🇮🇳 India', st:'wait', n:'Thu 5 Nov'},
+      {m:'🇬🇧 the UK & Europe', st:'wait', n:'Thu 5 Nov'},
+      {m:'🇦🇪 Gulf · 🌏 South-East Asia', st:'wait', n:'Thu 5 Nov'}
+    ],
+    occ: [
+      {t:'Daytime shows (played)', a:10.7, p:10.0},
+      {t:'East Coast 3 PM shows', a:11.3, p:10.5},
+      {t:'4–7 PM shows', a:null, p:16.7},
+      {t:'Prime time 7–9 PM', a:null, p:26.6},
+      {t:'9 PM and later', a:null, p:13.6}
+    ],
+    ratings: [
+      {r:'Rotten Tomatoes critics', v:'8 reviews · score not out yet', dim:true},
+      {r:'Rotten Tomatoes audience', v:'opens after shows', dim:true},
+      {r:'IMDb', v:'opens after release', dim:true},
+      {r:'Bollywood Hungama', v:'5/5 (31 Oct)'}
+    ],
+    log: [
+      {c:'US daytime walk-ups', o:'+15–30%', f:'+7.3% counted', x:'Too high', bad:true},
+      {c:'North America preview night', o:'$1.9–2.0M', f:'Thu 5 Nov', x:'–'},
+      {c:'North America opening, Wed–Sun', o:'$16M+', f:'Sun 8 / Mon 9 Nov', x:'–'},
+      {c:'US weekend rank, Fri–Sun', o:'#3 · $13M', f:'Sun 8 / Mon 9 Nov', x:'–'},
+      {c:'Worldwide opening weekend', o:'Sun 8 Nov AM', f:'Sun 8 Nov', x:'–'}
+    ],
+    note: 'How we count: each show\'s last seat-map read before it starts (a read up to 10 minutes after start counts if the map is still up). US: every Fandango cinema, read every 20 minutes on show days. Canada and cinemas not on Fandango: read in each show\'s last 30 minutes. Estimates are labelled; official numbers replace ours when they come out, and the miss goes in the accuracy log.'
+  };
+  (function(){
+    const $=id=>document.getElementById(id), esc=s=>String(s).replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
+    $('act-asof').textContent='Updated '+ACT.asOf;
+    $('actualsh').textContent=ACT.headline;
+    $('act-kpis').innerHTML=ACT.kpis.map(k=>`<div class="kpi${k.hi?' hi':''}"><div class="v">${esc(k.v)}</div><div class="l">${esc(k.l)}</div><div class="s">${esc(k.s)}</div></div>`).join('');
+    $('act-mk').innerHTML=ACT.markets.map(x=>`<div class="mk"><span>${esc(x.m)}</span><span class="n">${esc(x.n)} <span class="pill ${x.st==='live'?'p-live':'p-wait'}">${x.st==='live'?'Live':'Soon'}</span></span></div>`).join('');
+    const mx=30;
+    $('act-occ').innerHTML=ACT.occ.map(o=>{const a=o.a!=null, v=a?o.a:o.p;
+      return `<div class="ob"><div class="ot"><span>${esc(o.t)}</span><em>${a?`<b style="color:var(--ink)">${v}%</b> · booked ${o.p}%`:`${v}% booked`}</em></div><div class="otr">${a?`<div class="of pre" style="width:${Math.min(100,o.p/mx*100)}%"></div>`:''}<div class="of${a?'':' pre'}" style="width:${Math.min(100,v/mx*100)}%;${a?'opacity:.95':''}"></div></div></div>`}).join('');
+    $('act-rt').innerHTML=ACT.ratings.map(x=>`<div class="mk"><span>${esc(x.r)}</span><span class="n" style="${x.dim?'color:var(--muted)':''}">${x.dim?esc(x.v):'<b>'+esc(x.v)+'</b>'}</span></div>`).join('');
+    $('act-log').innerHTML=ACT.log.map(x=>`<tr><td>${esc(x.c)}</td><td>${esc(x.o)}</td><td>${esc(x.f)}</td><td${x.bad?' class="miss"':''}>${esc(x.x)}</td></tr>`).join('');
+    $('act-note').textContent=ACT.note;
+  })();
+  </script>
+  <div class="presale-divider">Final presales · closed midnight 3 Nov</div>
   <div class="hero">
     <figure class="posterwrap">
       <a class="poster" href="/ramayana-part-one-box-office.html"
