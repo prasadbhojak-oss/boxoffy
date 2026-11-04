@@ -4664,6 +4664,22 @@ const RAMAYANA_TRACKER = {
   // twenty-two, two million four hundred ninety-two thousand ninety-five
   // dollars, seven point zero eight per cent, twelve thousand three hundred
   // seventy-three shows.
+  // 3 NOV 23:40 CT: 20:12 CT nationwide US scan (4-6 Nov best of two reads per
+  // showtime, 20:26-23:22 CT): US map 225,900 (23,132 shows; preview 70,075).
+  // + Grok final indies 23:45 CT (Imagine 595, Star Cinema Grill 20, Marquee 0):
+  // NA 256,830 / $4,754,527; worldwide 2,505,025 / $15.19M.
+  // 3 NOV 22:10 CT: PB's FINAL presale Grok file reconciled - Landmark 13,383,
+  // UK 25,041 (+Odeon est.), Germany 11,058, NL 7,897, France 1,263, Reel +79,
+  // ANZ Reading/Ace/HOYTS NZ. NA 245,915 / $4,538,911.
+  // 3 NOV 20:50 CT: US map 215,080 (14:12 CT nationwide scan, 22,138 shows;
+  // preview 63,539) + Marquee 12 + Canada 28,441 = NA 243,533 / $4,508,040.
+  // 3 NOV 10:50 CT: map 195,855 at 1,003 cinemas (885 with preview shows);
+  // Grok independents now on the map taken out (1,072 -> 134). NA 224,430.
+  // 3 NOV 10:35 CT: NATIONWIDE US map 194,818 (1,123 postcodes, every date;
+  // preview night 61,723 on our own map). NA 224,331 / $4,186,062.
+  // 3 NOV 08:45 CT: PB's Grok files - ANZ +4,922 (Event seat maps over the API
+  // floor, HOYTS NZ, Reading, Ace Hoyts), Canada Imagine + Cine Starz +508,
+  // NL Pathe 172 shows +1,231, Gulf Reel + VOX +776, France +38, Sweden +3.
   // 3 NOV 06:55 CT: US merged 190,964 (nationwide 4 Nov read, 924 cinemas;
   // preview night 60,828 on our own map, past Venky's 59,689 - no top-up)
   // + indies 1,072 (13 Grok Cinemarks now on the map, -1,057) + Canada 27,933.
@@ -4674,24 +4690,24 @@ const RAMAYANA_TRACKER = {
   // + 2 Nov Grok: Landmark +1,328, US independents +902 (Celebration 632)
   // + 2 Nov night Landmark re-read +1,059.
   // Retired: one hundred ninety thousand nine hundred fifty-nine.
-  tickets: "219,969",
-  rate: "9.73%",
-  shows: "15,540",
+  tickets: "256,830",
+  rate: "8.26%",
+  shows: "23,132",
   // 24 OCT 22:40: priced at MEASURED per-format prices (IMAX 23.90, PLF
   // 25.04, XD 20.47, 3D 17.13, Std 16.36). Retired: one million five hundred
   // fourteen thousand nine hundred twenty-four dollars.
-  value: "$4,113,202",
+  value: "$4,754,527",
   // 27 OCT 13:00 CT: the strip now leads WORLDWIDE, matching the tracker
   // page's roll-up (US map + US independents + Canada + India Sacnilk Day 1
   // + UK, ANZ, Germany, NL, FR, SE, PH, Africa + Odeon/Village estimates).
   // tickets/rate/shows/value above stay as the North America figures.
-  wwTickets: "2,144,578",
-  wwValue: "$13.09M",
-  indiaDay1: "8.27 lakh",
-  indiaInr: "₹32.85 Cr",
+  wwTickets: "2,505,025",
+  wwValue: "$15.19M",
+  indiaDay1: "9.27 lakh",
+  indiaInr: "₹35.62 Cr",
   countries: 24,
   tminus: "T-2",
-  scan: "3 Nov · 6:55am CT",
+  scan: "3 Nov · 11:22pm CT",
 };
 
 function RamayanaTrackerStrip() {
@@ -4742,10 +4758,10 @@ function RamayanaTrackerStrip() {
           <div style={{ flex:"1 1 240px", minWidth:220 }}>
             <div style={{ fontFamily:"'DM Sans', sans-serif", fontSize:12, color:T.textMid,
                           lineHeight:1.5, borderLeft:`2px solid ${T.border}`, paddingLeft:10 }}>
-              <b style={{ color:T.text }}>Past 21 lakh tickets and $13 million, two days out.</b>{" "}
+              <b style={{ color:T.text }}>Past 25 lakh tickets and $15 million, a day out.</b>{" "}
               North America {R.tickets} tickets ({R.value}) across 4&ndash;12 Nov.
-              India {R.indiaDay1} for opening day ({R.indiaInr}) plus 3.82 lakh for Friday, 4.06 lakh for Saturday and 2.23 lakh for Sunday. The UK 25,089,
-              Australia &amp; NZ 33,953 &mdash; IMAX Melbourne alone has sold 1,295.
+              India {R.indiaDay1} for opening day ({R.indiaInr}) plus 4.22 lakh for Friday, 4.49 lakh for Saturday and 3.44 lakh for Sunday. The UK 30,110,
+              Australia &amp; NZ 43,896 &mdash; IMAX Melbourne alone has sold 1,295.
             </div>
           </div>
 
