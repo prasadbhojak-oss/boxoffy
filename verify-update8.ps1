@@ -201,7 +201,7 @@ Absent $page "['Tue 10 Nov',383" 'no pre-21-Oct Canadian second-week row'
 #            Zero of it buying. It is footprint we had not opened.
 # 676 -> 1,323 is +93 bought and +554 coverage. 86% of the jump is coverage,
 # and these guards exist so nobody quotes the 647 as a move.
-Need $page 'lm:{tickets:13383'    'Landmark read whole, 26 Oct, every version'
+Need $page 'lm:{tickets:14906'    'Landmark read whole, 26 Oct, every version'
 Absent $page 'lm:{tickets:1952'  'no 24 Oct Landmark'
 Absent $page 'lm:{tickets:1776'  'no 23 Oct Landmark'
 Absent $page 'lm:{tickets:1323'  'no 20 Oct Landmark'
@@ -595,7 +595,7 @@ Write-Host '=== 3. the homepage strip agrees with the page'
 # 18 October. ONE NUMBER, ONE GUARD, ONE PLACE: when the strip moves, the
 # Need lines here and the Absent lines in section 4 change together or not
 # at all.
-Need $app '267,413'     'NA all-presale total on the strip, 25 Oct 02:28 sweep'
+Need $app '271,383'     'NA all-presale total on the strip, 25 Oct 02:28 sweep'
 Absent $app '81,688'   'no 24 Oct 21:39 strip total'
 Absent $app '81,594'   'no pre-Landmark-25-Oct strip total'
 Absent $app '78,379'   'no 14:00 strip total'
@@ -610,7 +610,7 @@ Absent $app '67,711'   'no 22 Oct 21:51 NA total'
 Absent $app '67,571'   'no 22 Oct 20:18 NA total'
 Absent $app '63,789'   'no 22 Oct 08:22 NA total'
 Absent $app '62,720'   'no 21 Oct 23:29 NA total'
-Need $app '$4,906,720' 'NA value on the strip, measured format prices'
+Need $app '$4,980,308' 'NA value on the strip, measured format prices'
 Absent $app '$1,563,502' 'no 24 Oct 21:39 NA value'
 Absent $app '$1,562,284' 'no pre-Landmark-25-Oct NA value'
 Absent $app '$1,514,924' 'no assumed-price NA value'
@@ -635,7 +635,7 @@ Absent $app '$859,584' 'no pre-Landmark NA value on the strip'
 # Anchored to the FIELD, not the bare number: 10,539 and 3.19% also appear
 # in the update-16 comment above the strip, so a bare marker would pass off
 # the comment while the live value said anything at all.
-Need $app 'shows: "23,132"'  'US 4-12 Nov showtimes on the strip'
+Need $app 'shows: "23,333"'  'US 4-12 Nov showtimes on the strip'
 Absent $app 'shows: "11,478"' 'no 24 Oct 21:39 showtime count'
 Absent $app 'shows: "11,434"' 'no 14:00 showtime count'
 Absent $app 'shows: "11,448"' 'no 10:06 showtime count'
@@ -645,7 +645,7 @@ Absent $app 'shows: "11,176"' 'no 22 Oct 20:18 showtime count'
 Absent $app 'shows: "10,841"' 'no 22 Oct 08:22 showtime count'
 Absent $app 'shows: "10,793"' 'no 21 Oct showtime count'
 Absent $app 'shows: "10,661"' 'no 20 Oct showtime count'
-Need $app '11:22pm'    'the strip carries the scan time'
+Need $app '1:20am'    'the strip carries the scan time'
 # 23 OCT US CITY LAYER: every Fandango cinema placed in its own city (USV,
 # from us_theatre_geo.py), Alaska and Hawaii drawn as insets, and Honolulu
 # moved into the Hawaii inset.
@@ -662,7 +662,7 @@ Need $page "XY_FIX = {'Honolulu'"        'Honolulu sits in the Hawaii inset'
 # rate is a 4-8 figure for the first time. For five updates it was US 4-6
 # only, because the baked map stopped at 6 Nov and there was no 4-8
 # denominator to divide by. There is one now: 33,668 of 904,291.
-Need $app 'rate: "8.51%"'    'US 4-12 Nov sell-through on the strip'
+Need $app 'rate: "8.36%"'    'US 4-12 Nov sell-through on the strip'
 Absent $app 'rate: "4.95%"' 'no 24 Oct 21:39 sell-through'
 Absent $app 'rate: "4.78%"' 'no 14:00 sell-through'
 Absent $app 'rate: "4.68%"' 'no 10:06 sell-through'
@@ -672,7 +672,7 @@ Absent $app 'rate: "4.27%"' 'no 22 Oct 20:18 sell-through'
 Absent $app 'rate: "4.11%"'  'no 22 Oct 08:22 sell-through'
 Absent $app 'rate: "4.06%"'  'no 21 Oct sell-through'
 Absent $app 'rate: "3.57%"'  'no 20 Oct sell-through'
-Need $app 'T-2'       'countdown'
+Need $app 'T-1'       'countdown'
 
 Write-Host ''
 Write-Host '=== 4. what must NOT be there'
@@ -835,7 +835,7 @@ Absent $app  '3.72%'         'no pre-update-15 sell-through on the strip'
 # UPDATE 17, 21 OCT 04:33Z. The map is rebuilt across all nine dates:
 # 49,434 tickets, 1,383,690 seats, 10,661 showtimes, 549 venues, 69 metros,
 # every one of them with an x/y so rebake_page.py did not refuse.
-Need   $page '"sold":225900'  'the baked map is the 25 Oct 02:28 CT sweep, sold-out shows counted'
+Need   $page '"sold":228798'  'the baked map is the 25 Oct 02:28 CT sweep, sold-out shows counted'
 Need $page "MKT.usa.name='North America'" 'the world-map circle is North America, matching the headline'
 Need $page 'const naT = sold+xTix()+CA.canTix' 'unfiltered tiles lead with North America, not the US map alone'
 Absent $page '"sold":63828'  'no 23 Oct 09:49 baked map'

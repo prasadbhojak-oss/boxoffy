@@ -4674,6 +4674,11 @@ const RAMAYANA_TRACKER = {
   // NA 261,226 / $4,811,499; worldwide 2,509,421 / $15.25M.
   // 3 NOV 23:55 CT BCM: Venky Canada preview top-up +6,187 / $95,221:
   // NA 267,413 / $4,906,720; worldwide 2,515,608 / $15.34M.
+  // 4 NOV 05:10 CT FINAL US PRESALES (midnight close): 20:12 CT scan, every date
+  // best of two reads, Hooky Cary repeats dropped: US map 228,798 (23,333 shows).
+  // NA 270,311 / $4,967,570; worldwide 2,518,506 / $15.40M. Actuals section added.
+  // + Grok R3 (read to 01:18 CT): Landmark 14,906, Imagine 604, Star 23, Venky top-up 5,724:
+  // NA 271,383 / $4,980,308; worldwide 2,519,578 / $15.42M.
   // 3 NOV 22:10 CT: PB's FINAL presale Grok file reconciled - Landmark 13,383,
   // UK 25,041 (+Odeon est.), Germany 11,058, NL 7,897, France 1,263, Reel +79,
   // ANZ Reading/Ace/HOYTS NZ. NA 245,915 / $4,538,911.
@@ -4696,24 +4701,24 @@ const RAMAYANA_TRACKER = {
   // + 2 Nov Grok: Landmark +1,328, US independents +902 (Celebration 632)
   // + 2 Nov night Landmark re-read +1,059.
   // Retired: one hundred ninety thousand nine hundred fifty-nine.
-  tickets: "267,413",
-  rate: "8.51%",
-  shows: "23,132",
+  tickets: "271,383",
+  rate: "8.36%",
+  shows: "23,333",
   // 24 OCT 22:40: priced at MEASURED per-format prices (IMAX 23.90, PLF
   // 25.04, XD 20.47, 3D 17.13, Std 16.36). Retired: one million five hundred
   // fourteen thousand nine hundred twenty-four dollars.
-  value: "$4,906,720",
+  value: "$4,980,308",
   // 27 OCT 13:00 CT: the strip now leads WORLDWIDE, matching the tracker
   // page's roll-up (US map + US independents + Canada + India Sacnilk Day 1
   // + UK, ANZ, Germany, NL, FR, SE, PH, Africa + Odeon/Village estimates).
   // tickets/rate/shows/value above stay as the North America figures.
-  wwTickets: "2,515,608",
-  wwValue: "$15.34M",
+  wwTickets: "2,519,578",
+  wwValue: "$15.42M",
   indiaDay1: "9.27 lakh",
   indiaInr: "₹35.62 Cr",
   countries: 24,
-  tminus: "T-2",
-  scan: "3 Nov · 11:22pm CT",
+  tminus: "T-1",
+  scan: "4 Nov · 1:20am CT · final",
 };
 
 function RamayanaTrackerStrip() {
@@ -4764,7 +4769,7 @@ function RamayanaTrackerStrip() {
           <div style={{ flex:"1 1 240px", minWidth:220 }}>
             <div style={{ fontFamily:"'DM Sans', sans-serif", fontSize:12, color:T.textMid,
                           lineHeight:1.5, borderLeft:`2px solid ${T.border}`, paddingLeft:10 }}>
-              <b style={{ color:T.text }}>Past 25 lakh tickets and $15 million, a day out.</b>{" "}
+              <b style={{ color:T.text }}>Presales closed: 25 lakh tickets and $15.4 million worldwide.</b>{" "}
               North America {R.tickets} tickets ({R.value}) across 4&ndash;12 Nov.
               India {R.indiaDay1} for opening day ({R.indiaInr}) plus 4.22 lakh for Friday, 4.49 lakh for Saturday and 3.44 lakh for Sunday. The UK 30,110,
               Australia &amp; NZ 43,896 &mdash; IMAX Melbourne alone has sold 1,295.
