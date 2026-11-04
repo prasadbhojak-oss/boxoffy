@@ -570,6 +570,21 @@ gtag("js",new Date());gtag("config","G-K6C9EVRFH4",{anonymize_ip:true});}})();
   #actuals .note{font-family:var(--mono);font-size:11.5px;line-height:1.5;color:var(--muted);margin:0 0 12px}
   #actuals .foot{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px;border-top:1px solid var(--line);padding-top:12px}
   #actuals .jump{font-family:var(--mono);font-size:12px;color:var(--muted);text-decoration:none;border-bottom:1px dotted var(--muted)}
+  #actuals .race{border:2px solid var(--saffron);border-radius:var(--r-sm);padding:14px 16px;margin:0 0 14px;background:linear-gradient(0deg,transparent,transparent),var(--card)}
+  #actuals .race .rh{display:flex;justify-content:space-between;align-items:baseline;gap:10px;flex-wrap:wrap;margin-bottom:10px}
+  #actuals .race .rh b{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--saffron)}
+  #actuals .race .rh span{font-size:14px;color:var(--body-ink)}
+  #actuals .race .big{font-family:var(--disp);font-size:40px;line-height:1;color:var(--ink)}
+  #actuals .race .big small{font-family:var(--body);font-size:14px;color:var(--muted);margin-left:8px}
+  #actuals .rt{position:relative;height:22px;border-radius:11px;background:var(--grid);margin:30px 0 16px}
+  #actuals .rt .c{position:absolute;left:0;top:0;bottom:0;border-radius:11px;background:var(--saffron)}
+  #actuals .rt .pr{position:absolute;top:0;bottom:0;border-radius:11px;background:var(--saffron);opacity:.28}
+  #actuals .rt .mk2{position:absolute;top:-22px;bottom:-6px;width:0;border-left:2px dashed var(--ink)}
+  #actuals .rt .mk2 em{position:absolute;white-space:nowrap;font-style:normal;font-family:var(--mono);font-size:11px;color:var(--ink);transform:translateX(-50%)}
+  #actuals .rt .mk2 em.up{top:0}
+  #actuals .rt .mk2 em.dn{bottom:0}
+  #actuals .rl{display:flex;flex-wrap:wrap;gap:14px;font-family:var(--mono);font-size:11.5px;color:var(--muted)}
+  #actuals .rl i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:5px;vertical-align:-1px}
   .presale-divider{display:flex;align-items:center;gap:12px;margin:22px 0 6px;font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
   .presale-divider:before,.presale-divider:after{content:"";flex:1;height:1px;background:var(--line)}
   @media (max-width:520px){#actuals .ai{padding:14px}#actuals h2{font-size:26px}#actuals .kpi .v{font-size:28px}}
@@ -581,6 +596,7 @@ gtag("js",new Date());gtag("config","G-K6C9EVRFH4",{anonymize_ip:true});}})();
       <p class="lede">What Ramayana is actually selling, show by show: each show's seats
         taken just before it starts, walk-ups included. Presales closed at
         midnight on 3 Nov and are below as the final presale count.</p>
+      <div class="race" id="act-race"></div>
       <div class="kpis" id="act-kpis"></div>
       <div class="grid2">
         <div class="panel"><p class="ph">Markets</p><div id="act-mk"></div></div>
@@ -608,17 +624,25 @@ gtag("js",new Date());gtag("config","G-K6C9EVRFH4",{anonymize_ip:true});}})();
   <script>
   /* ACT: the only place actuals numbers live. Fold = edit this object. */
   const ACT = {
-    asOf: 'Wed 4 Nov · 3:19 PM CT',
-    headline: 'US previews: 637 shows played, 10,951 admits so far',
+    asOf: 'Wed 4 Nov · 4:35 PM CT',
+    headline: 'US previews: 838 shows played, 14,153 admits so far',
+    race: {
+      title: 'Preview night vs the records · North America',
+      target: 2.0, targetLabel: 'Hindi record $2.0M (Dhurandhar 2)',
+      stretch: 3.9, stretchLabel: 'All-time Indian $3.9M (Kalki 2898 AD)',
+      presold: 1.65, counted: 0.295, countedNote: '838 shows played',
+      projLow: 2.0, proj: 2.1, projHigh: 2.2,
+      verdict: 'On course for ~$2.1M: set to edge past the Hindi preview record'
+    },
     kpis: [
-      {v:'10,951', l:'Admits counted', s:'637 US shows played', hi:true},
-      {v:'~$228K', l:'Gross so far', s:'at $20.86 a ticket'},
-      {v:'10.7%', l:'Full at showtime', s:'daytime shows'},
-      {v:'+7.3%', l:'Vs presales', s:'walk-ups on the day'},
-      {v:'637 / 2,739', l:'US shows played', s:'prime time from 5 PM CT'}
+      {v:'14,153', l:'Admits counted', s:'838 US shows played', hi:true},
+      {v:'~$295K', l:'Gross so far', s:'at $20.86 a ticket'},
+      {v:'10.8%', l:'Full at showtime', s:'afternoon shows'},
+      {v:'+7.0%', l:'Vs presales', s:'walk-ups on the day'},
+      {v:'838 / 2,739', l:'US shows played', s:'prime time from 5 PM CT'}
     ],
     markets: [
-      {m:'🇺🇸 US', st:'live', n:'10,951 · 637 shows'},
+      {m:'🇺🇸 US', st:'live', n:'14,153 · 838 shows'},
       {m:'🇨🇦 Canada', st:'live', n:'counting'},
       {m:'🇦🇺🇳🇿 Australia & NZ', st:'live', n:'counting · first shows Thu AM local'},
       {m:'🇮🇳 India', st:'wait', n:'Thu 5 Nov'},
@@ -626,7 +650,7 @@ gtag("js",new Date());gtag("config","G-K6C9EVRFH4",{anonymize_ip:true});}})();
       {m:'🇦🇪 Gulf · 🌏 South-East Asia', st:'wait', n:'Thu 5 Nov'}
     ],
     occ: [
-      {t:'Daytime shows (played)', a:10.7, p:10.0},
+      {t:'Afternoon shows (played)', a:10.8, p:10.1},
       {t:'East Coast 3 PM shows', a:11.3, p:10.5},
       {t:'4–7 PM shows', a:null, p:16.7},
       {t:'Prime time 7–9 PM', a:null, p:26.6},
@@ -640,7 +664,7 @@ gtag("js",new Date());gtag("config","G-K6C9EVRFH4",{anonymize_ip:true});}})();
     ],
     log: [
       {c:'US daytime walk-ups', o:'+15–30%', f:'+7.3% counted', x:'Too high', bad:true},
-      {c:'North America preview night', o:'$1.9–2.0M', f:'Thu 5 Nov', x:'–'},
+      {c:'North America preview night', o:'~$2.1M reported ($1.9–2.0M counted)', f:'Thu 5 Nov', x:'–'},
       {c:'North America opening, Wed–Sun', o:'$16M+', f:'Sun 8 / Mon 9 Nov', x:'–'},
       {c:'US weekend rank, Fri–Sun', o:'#3 · $13M', f:'Sun 8 / Mon 9 Nov', x:'–'},
       {c:'Worldwide opening weekend', o:'Sun 8 Nov AM', f:'Sun 8 Nov', x:'–'}
@@ -651,6 +675,13 @@ gtag("js",new Date());gtag("config","G-K6C9EVRFH4",{anonymize_ip:true});}})();
     const $=id=>document.getElementById(id), esc=s=>String(s).replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
     $('act-asof').textContent='Updated '+ACT.asOf;
     $('actualsh').textContent=ACT.headline;
+    const R=ACT.race, sc=v=>Math.min(100,v/(R.stretch*1.05)*100), m=v=>'$'+v.toFixed(v<1?3:2).replace(/0+$/,'').replace(/\.$/,'')+'M';
+    $('act-race').innerHTML=`<div class="rh"><b>${esc(R.title)}</b><span>${esc(R.verdict)}</span></div>
+      <div class="big">~$${R.proj.toFixed(1)}M<small>expected (range $${R.projLow.toFixed(1)}–${R.projHigh.toFixed(1)}M) · presold $${R.presold.toFixed(2)}M · counted so far ~$${Math.round(R.counted*1000)}K, ${esc(R.countedNote)}</small></div>
+      <div class="rt"><div class="pr" style="left:${sc(R.projLow)}%;width:${sc(R.projHigh)-sc(R.projLow)}%"></div><div class="c" style="width:${sc(R.presold)}%;opacity:.55"></div><div class="c" style="width:${sc(R.counted)}%"></div>
+        <div class="mk2" style="left:${sc(R.target)}%"><em class="up" style="transform:translateX(5px)">🏆 $${R.target.toFixed(1)}M</em></div>
+        <div class="mk2" style="left:${sc(R.stretch)}%"><em class="up" style="transform:translateX(calc(-100% - 5px))">$${R.stretch.toFixed(1)}M</em></div></div>
+      <div class="rl"><span><i style="background:var(--saffron)"></i>counted at showtime</span><span><i style="background:var(--saffron);opacity:.55"></i>presold</span><span><i style="background:var(--saffron);opacity:.28"></i>expected final range</span><span>🏆 ${esc(R.targetLabel)}</span><span>┆ ${esc(R.stretchLabel)}</span></div>`;
     $('act-kpis').innerHTML=ACT.kpis.map(k=>`<div class="kpi${k.hi?' hi':''}"><div class="v">${esc(k.v)}</div><div class="l">${esc(k.l)}</div><div class="s">${esc(k.s)}</div></div>`).join('');
     $('act-mk').innerHTML=ACT.markets.map(x=>`<div class="mk"><span>${esc(x.m)}</span><span class="n">${esc(x.n)} <span class="pill ${x.st==='live'?'p-live':'p-wait'}">${x.st==='live'?'Live':'Soon'}</span></span></div>`).join('');
     const mx=30;
