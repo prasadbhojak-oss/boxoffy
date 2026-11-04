@@ -585,6 +585,11 @@ gtag("js",new Date());gtag("config","G-K6C9EVRFH4",{anonymize_ip:true});}})();
   #actuals .rt .mk2 em.dn{bottom:0}
   #actuals .rl{display:flex;flex-wrap:wrap;gap:14px;font-family:var(--mono);font-size:11.5px;color:var(--muted)}
   #actuals .rl i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:5px;vertical-align:-1px}
+  #actuals .chase{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:10px;margin:0 0 10px}
+  #actuals .cg{border:1px solid var(--line);border-radius:var(--r-sm);padding:10px 12px}
+  #actuals .cg .ct{font-size:14.5px;color:var(--ink)}
+  #actuals .cg .ct span{display:block;font-family:var(--mono);font-size:11px;color:var(--muted);margin-top:2px}
+  #actuals .cg .cv{font-size:13.5px;color:var(--body-ink);margin-top:6px}
   .presale-divider{display:flex;align-items:center;gap:12px;margin:22px 0 6px;font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
   .presale-divider:before,.presale-divider:after{content:"";flex:1;height:1px;background:var(--line)}
   @media (max-width:520px){#actuals .ai{padding:14px}#actuals h2{font-size:26px}#actuals .kpi .v{font-size:28px}}
@@ -627,12 +632,12 @@ gtag("js",new Date());gtag("config","G-K6C9EVRFH4",{anonymize_ip:true});}})();
     asOf: 'Wed 4 Nov · 4:35 PM CT',
     headline: 'US previews: 838 shows played, 14,153 admits so far',
     race: {
-      title: 'Preview night vs the records · North America',
-      target: 2.0, targetLabel: 'Hindi record $2.0M (Dhurandhar 2)',
-      stretch: 3.9, stretchLabel: 'All-time Indian $3.9M (Kalki 2898 AD)',
+      title: 'The chase · preview night, North America',
+      target: 2.0, targetLabel: 'Dhurandhar 2', targetNote: 'Hindi preview record',
+      stretch: 3.9, stretchLabel: 'Kalki 2898 AD', stretchNote: 'all-time Indian preview record',
       presold: 1.65, counted: 0.295, countedNote: '838 shows played',
       projLow: 2.0, proj: 2.1, projHigh: 2.2,
-      verdict: 'On course for ~$2.1M: set to edge past the Hindi preview record'
+      verdict: 'Chasing Dhurandhar 2 ($2.0M) and Kalki ($3.9M)'
     },
     kpis: [
       {v:'14,153', l:'Admits counted', s:'838 US shows played', hi:true},
@@ -680,8 +685,11 @@ gtag("js",new Date());gtag("config","G-K6C9EVRFH4",{anonymize_ip:true});}})();
       <div class="big">~$${R.proj.toFixed(1)}M<small>expected (range $${R.projLow.toFixed(1)}–${R.projHigh.toFixed(1)}M) · presold $${R.presold.toFixed(2)}M · counted so far ~$${Math.round(R.counted*1000)}K, ${esc(R.countedNote)}</small></div>
       <div class="rt"><div class="pr" style="left:${sc(R.projLow)}%;width:${sc(R.projHigh)-sc(R.projLow)}%"></div><div class="c" style="width:${sc(R.presold)}%;opacity:.55"></div><div class="c" style="width:${sc(R.counted)}%"></div>
         <div class="mk2" style="left:${sc(R.target)}%"><em class="up" style="transform:translateX(5px)">🏆 $${R.target.toFixed(1)}M</em></div>
-        <div class="mk2" style="left:${sc(R.stretch)}%"><em class="up" style="transform:translateX(calc(-100% - 5px))">$${R.stretch.toFixed(1)}M</em></div></div>
-      <div class="rl"><span><i style="background:var(--saffron)"></i>counted at showtime</span><span><i style="background:var(--saffron);opacity:.55"></i>presold</span><span><i style="background:var(--saffron);opacity:.28"></i>expected final range</span><span>🏆 ${esc(R.targetLabel)}</span><span>┆ ${esc(R.stretchLabel)}</span></div>`;
+        <div class="mk2" style="left:${sc(R.stretch)}%"><em class="up" style="transform:translateX(calc(-100% - 5px))">👑 $${R.stretch.toFixed(1)}M</em></div></div>
+      <div class="chase">${[[R.target,'🏆',R.targetLabel,R.targetNote],[R.stretch,'👑',R.stretchLabel,R.stretchNote]].map(([v,ic,l,n])=>{const togo=Math.max(0,v-R.proj), pct=Math.min(100,Math.round(R.proj/v*100));
+        return `<div class="cg"><div class="ct">${ic} ${esc(l)} · <b>$${v.toFixed(1)}M</b> <span>${esc(n)}</span></div>
+        <div class="cv">${R.proj>=v?'<b style="color:var(--green)">Expected to beat it</b>':`Expected to reach <b>${pct}%</b> · $${togo.toFixed(1)}M short`}</div></div>`}).join('')}</div>
+      <div class="rl"><span><i style="background:var(--saffron)"></i>counted at showtime</span><span><i style="background:var(--saffron);opacity:.55"></i>presold</span><span><i style="background:var(--saffron);opacity:.28"></i>expected final range</span></div>`;
     $('act-kpis').innerHTML=ACT.kpis.map(k=>`<div class="kpi${k.hi?' hi':''}"><div class="v">${esc(k.v)}</div><div class="l">${esc(k.l)}</div><div class="s">${esc(k.s)}</div></div>`).join('');
     $('act-mk').innerHTML=ACT.markets.map(x=>`<div class="mk"><span>${esc(x.m)}</span><span class="n">${esc(x.n)} <span class="pill ${x.st==='live'?'p-live':'p-wait'}">${x.st==='live'?'Live':'Soon'}</span></span></div>`).join('');
     const mx=30;
