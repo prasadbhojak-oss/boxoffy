@@ -613,6 +613,9 @@ gtag("js",new Date());gtag("config","G-K6C9EVRFH4",{anonymize_ip:true});}})();
         <div class="panel" id="accuracy"><p class="ph">Accuracy log · our calls vs official</p>
           <div style="overflow-x:auto"><table class="al"><thead><tr><th>Call</th><th>Ours</th><th>Official</th><th>Miss</th></tr></thead><tbody id="act-log"></tbody></table></div></div>
       </div>
+      <div class="panel" id="outside"><p class="ph">North America · our count vs outside sources</p>
+        <div style="overflow-x:auto"><table class="al"><thead><tr><th>Source</th><th>Figure</th><th>Covers</th><th>As of</th></tr></thead><tbody id="act-ext"></tbody></table></div>
+        <p class="note" id="act-extnote" style="margin:8px 0 0"></p></div>
       <p class="note"><span id="act-note"></span> <a href="/how-boxoffy-counts.html" style="color:var(--saffron);font-weight:600">Full method: how Boxoffy counts →</a></p>
       <div class="foot">
         <div class="sharebar inline" style="margin:0">
@@ -675,6 +678,16 @@ gtag("js",new Date());gtag("config","G-K6C9EVRFH4",{anonymize_ip:true});}})();
       {c:'US weekend rank, Fri–Sun', o:'#3 · $13M', f:'Sun 8 / Mon 9 Nov', x:'–'},
       {c:'Worldwide opening weekend', o:'Sun 8 Nov AM', f:'Sun 8 Nov', x:'–'}
     ],
+    ext: [
+      {s:'Boxoffy count (seats read)', f:'~$2.2M expected (range $2.0–2.3M)', c:'Preview night, Wed 4 Nov', t:'4 Nov · 4:54 PM CT', ours:true},
+      {s:'Studio tracking (Sony, via Variety)', f:'$6M', c:'First four days, Wed–Sat', t:'before release'},
+      {s:'Box Office Theory (Shawn Robbins)', f:'$11–16M (pinpoint $13M)', c:'Fri–Sun weekend', t:'29 Oct'},
+      {s:'Todd Thatcher', f:'$11.9M · $17.1M', c:'Fri–Sun · Thu–Sun', t:'before release'},
+      {s:'Comscore (ex-Rentrak)', f:'not out yet', c:'Preview gross', t:'due Thu 5 Nov AM', wait:true},
+      {s:'Exhibitor Relations', f:'not out yet', c:'Preview gross', t:'due Thu 5 Nov AM', wait:true},
+      {s:'Box Office Mojo', f:'not out yet', c:'Daily · weekend', t:'due Fri 6 Nov', wait:true}
+    ],
+    extNote: 'How we reconcile: our counted number and outside figures sit side by side with their times, never added together. When a reported figure lands, it becomes the headline and our miss goes in the accuracy log.',
     note: 'How we count: each show\'s last seat-map read before it starts (a read up to 10 minutes after start counts if the map is still up). US: every Fandango cinema, read every 20 minutes on show days. Canada and cinemas not on Fandango: read in each show\'s last 30 minutes. Estimates are labelled; official numbers replace ours when they come out, and the miss goes in the accuracy log.'
   };
   (function(){
@@ -698,6 +711,8 @@ gtag("js",new Date());gtag("config","G-K6C9EVRFH4",{anonymize_ip:true});}})();
       return `<div class="ob"><div class="ot"><span>${esc(o.t)}</span><em>${a?`<b style="color:var(--ink)">${v}%</b> · booked ${o.p}%`:`${v}% booked`}</em></div><div class="otr">${a?`<div class="of pre" style="width:${Math.min(100,o.p/mx*100)}%"></div>`:''}<div class="of${a?'':' pre'}" style="width:${Math.min(100,v/mx*100)}%;${a?'opacity:.95':''}"></div></div></div>`}).join('');
     $('act-rt').innerHTML=ACT.ratings.map(x=>`<div class="mk"><span>${esc(x.r)}</span><span class="n" style="${x.dim?'color:var(--muted)':''}">${x.dim?esc(x.v):'<b>'+esc(x.v)+'</b>'}</span></div>`).join('');
     $('act-log').innerHTML=ACT.log.map(x=>`<tr><td>${esc(x.c)}</td><td>${esc(x.o)}</td><td>${esc(x.f)}</td><td${x.bad?' class="miss"':''}>${esc(x.x)}</td></tr>`).join('');
+    $('act-ext').innerHTML=ACT.ext.map(x=>`<tr${x.ours?' style="font-weight:700"':''}><td>${esc(x.s)}</td><td${x.wait?' style="color:var(--muted)"':''}>${esc(x.f)}</td><td>${esc(x.c)}</td><td>${esc(x.t)}</td></tr>`).join('');
+    $('act-extnote').textContent=ACT.extNote;
     $('act-note').textContent=ACT.note;
   })();
   </script>
