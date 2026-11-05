@@ -384,10 +384,10 @@ Absent $page 'tickets:99408,'    'no 23 Oct 08:48 India total as the live figure
 Absent $page 'tickets:91171,'    'no 22 Oct 21:32 India total as the live figure'
 # ALL-INDIA CALL: District + BMS side from Sacnilk, city-by-city higher of
 # the two. The worldwide total and the India map both use it.
-Need $page 'allTix:1154000'
+Need $page 'allTix:1405000'
 Need $page "tixFloor:'sacnilk'" 'all-India tickets never below Sacnilk own combined count'      'the all-India call is on the page'
 Absent $page 'allTix:142810'    'no 23 Oct 08:48 all-India call'
-Need $page 'allInr:426900000'   'and its rupees'
+Need $page 'allInr:500800000'   'and its rupees'
 Absent $page 'allTix:132245'    'no 22 Oct all-India call'
 Need $page 'IN.wwTix+NL.tickets' 'the worldwide total uses the all-India call'
 Need $page 'bmsCity:{'  'the India map carries the BookMyShow side city by city'
@@ -412,7 +412,7 @@ Absent $page 'tickets:13702,'    'no first-read India total'
 # atpInr:635 was the third read's price and is, by coincidence, the 23 Oct
 # 15:26 read's price too (Rs 67,693,337 / 106,675), so it is a Need now.
 Need $page "distAsOf:'5 Nov, 1:45 am IST'" 'the District read is time-stamped on the page'
-Need $page "sacAsOf:'4 Nov, 8:00 pm IST'" 'and so is the Sacnilk BookMyShow side'
+Need $page "sacAsOf:'5 Nov, 6:00 am IST (final)'" 'and so is the Sacnilk BookMyShow side'
 Need $page 'atpInr:454'          'the 25 Oct 10:21 Indian price'
 Absent $page 'atpInr:578'        'no second-read Indian price'
 Absent $page 'atpInr:432'        'no first-read Indian price'
@@ -645,7 +645,7 @@ Absent $app 'shows: "11,176"' 'no 22 Oct 20:18 showtime count'
 Absent $app 'shows: "10,841"' 'no 22 Oct 08:22 showtime count'
 Absent $app 'shows: "10,793"' 'no 21 Oct showtime count'
 Absent $app 'shows: "10,661"' 'no 20 Oct showtime count'
-Need $app '6:20pm'    'the strip carries the scan time'
+Need $app '10:05pm'    'the strip carries the scan time'
 # 23 OCT US CITY LAYER: every Fandango cinema placed in its own city (USV,
 # from us_theatre_geo.py), Alaska and Hawaii drawn as insets, and Honolulu
 # moved into the Hawaii inset.

@@ -653,7 +653,8 @@ gtag("js",new Date());gtag("config","G-K6C9EVRFH4",{anonymize_ip:true});}})();
     markets: [
       {m:'🇺🇸 US', st:'live', n:'87,693 · 81,172 at showtime (2,544 shows) + 5,271 booked · ~1,250 estimated outside Fandango'},
       {m:'🇨🇦 Canada', st:'live', n:'9,850 · Cineplex 5,988 counted (97 shows, 41 cinemas) · Landmark 1,734 counted on 23 late shows + ~1,500 est. · Imagine & independents ~630 est.'},
-      {m:'🌍 Other territories', st:'wait', n:'India (final presale 11.54 lakh · ₹42.69 Cr), Australia & NZ, the UK & Europe, Gulf, South-East Asia · from Thu 5 Nov'}
+      {m:'🇮🇳 India · Day 1', st:'live', n:'₹4.32 Cr gross ($0.45M) on 1,549 shows so far (7:03 AM IST) · final advance ₹50.08 Cr, 14.05 lakh tickets, 26,615 shows'},
+      {m:'🌍 Other territories', st:'wait', n:'Australia & NZ, the UK & Europe, Gulf, South-East Asia · counting from Thu 5 Nov'}
     ],
     occ: [
       {t:'Afternoon 12–4 PM (played)', a:10.4, p:9.5},
@@ -2906,6 +2907,9 @@ const INTL = {
    cover all of them. FX 0.0105, valutafx, 19 Oct - Rs 94.97 to the dollar -
    pinned like every other rate here. */
 const IN = {
+  /* 4 NOV 22:05 CT: Sacnilk FINAL Day 1 advance, 6:00 AM IST 5 Nov: 14.05 lakh /
+     Rs 50.08 Cr gross incl. blocks (12.14 lakh / Rs 42.96 Cr without), 26,615
+     shows. Replaces the 8 PM IST 4 Nov read (11.54 lakh / Rs 42.69 Cr). */
   /* 4 NOV 14:12 CT (1:45 AM IST, 5 Nov) AUTOPILOT READ - FINAL INDIA PRESALE. 513,314 ->
      662,915 across three reads (1:45 PM, 7:45 PM, 1:45 AM IST). Last 6 hours: 11,541
      showtimes matched, 5,331 gained 58,984, 340 gave back 2,260. 121 new showtimes,
@@ -3594,9 +3598,9 @@ const IN = {
      cities. District read 6:21 PM IST - 91 MINUTES after Sacnilk, the
      closest pair yet. District wins Jaipur only. Additions Rs 2,94,81,630
      -> +52,760 tickets at Sacnilk's Rs 559. */
-  allTix:1154000, allInr:426900000, allUsd:4482450, bmsTix:491085, bmsInr:126051673, convTix:950692, tixFloor:'sacnilk',
-  sacInr:426900000, sacInrEx:364400000, sacTix:1154000, sacTixEx:982000,
-  sacShows:25640, sacCinemas:2146, sacCities:722, sacOthersCities:712, sacNamed:10,
+  allTix:1405000, allInr:500800000, allUsd:5258400, bmsTix:491085, bmsInr:126051673, convTix:950692, tixFloor:'sacnilk',
+  sacInr:500800000, sacInrEx:429600000, sacTix:1405000, sacTixEx:1214000,
+  sacShows:26615, sacCinemas:2146, sacCities:722, sacOthersCities:712, sacNamed:10,
   /* Named by Sacnilk but our District read is HIGHER, so District stands
      and nothing is added: [Sacnilk gross incl. blocks]. */
   bmsBelow:{'Jaipur':4286000},
@@ -3628,7 +3632,7 @@ const IN = {
      quicknews pages are still frozen at 12:48 PM; the city split for Day 1
      is not published at 8 PM, so the BookMyShow side by city keeps the
      12:48 PM split and the rest goes to Others. */
-  sacAsOf:'4 Nov, 8:00 pm IST',
+  sacAsOf:'5 Nov, 6:00 am IST (final)',
   /* 1 NOV, PB: "COUNT EVERY DAY". India now has more than opening day on
      sale, and every other market here counts every day on sale, so India
      does too. Day 2 (Fri 6 Nov) is BookMyShow + District as Sacnilk reports
