@@ -4386,10 +4386,10 @@ function WeekendLeadHero() {
   const pJailer2   = useTMDBPosterById(1234139, "w185");
   const pPremada   = useTMDBPosterById(1735270, "w185");
   const pDrishyam  = useTMDBPosterById(1269325, "w185");
-  const tiles = [ { src:pUdta, ab:"UT" }, { src:pJailer2, ab:"J2" }, { src:pPremada, ab:"PO" }, { src:pDrishyam, ab:"D3" } ];
+  const tiles = [ { src:null, ab:"RAM" }, { src:null, ab:"GDZ" }, { src:pJailer2, ab:"J2" }, { src:pUdta, ab:"UT" } ];
   const [hover, setHover] = React.useState(false);
   return (
-    <a href="/boxoffice-weekend-recap-october-23-25-2026.html" style={{ textDecoration:"none", display:"block" }}>
+    <a href="/boxoffice-weekend-preview-november-6-8-2026.html" style={{ textDecoration:"none", display:"block" }}>
       <div
         onMouseEnter={() => setHover(true)}
         onMouseLeave={() => setHover(false)}
@@ -4410,14 +4410,14 @@ function WeekendLeadHero() {
           ))}
         </div>
         <div style={{ flex:1, minWidth:0, display:"flex", flexDirection:"column", justifyContent:"center" }}>
-          <span style={{ alignSelf:"flex-start", background:"#C8201A", color:"#FFFFFF", fontFamily:"'Barlow Condensed', sans-serif", fontWeight:900, fontSize:9, letterSpacing:"0.12em", padding:"2px 7px", borderRadius:2, marginBottom:7 }}>WEEK 43 · WEEKEND RECAP</span>
+          <span style={{ alignSelf:"flex-start", background:"#C8201A", color:"#FFFFFF", fontFamily:"'Barlow Condensed', sans-serif", fontWeight:900, fontSize:9, letterSpacing:"0.12em", padding:"2px 7px", borderRadius:2, marginBottom:7 }}>WEEK 45 · WEEKEND PREVIEW</span>
           <div style={{ fontFamily:"'Barlow Condensed', sans-serif", fontWeight:900, fontSize:"clamp(15px, 1.7vw, 17px)", color:"#FFFFFF", lineHeight:1.15, letterSpacing:"-0.01em" }}>
-            UDTA TEER GREW EVERY DAY OF THE WEEKEND.
+            RAMAYANA OPENED LIKE AN EVENT. NOW THE DIWALI WEEKEND.
           </div>
           <div style={{ fontFamily:"'DM Sans', sans-serif", fontSize:10.5, color:"#9CA3AF", marginTop:5, lineHeight:1.4 }}>
-            ₹4.10 Cr Friday, ₹7.25 Cr Saturday, ₹8.20 Cr Sunday, and a strong ₹3.15 Cr Monday. Jailer 2 is at ₹408 Cr in India and ₹733 Cr worldwide in 12 days, Premada Oorali passed ₹100 Cr in week 5, and Hanuman Ansh sits at ₹342 Cr on a ₹2.95 Cr cost. Plus our charts for this Friday, OTT, music, and Ramayana at ₹13.53 Cr in advance.
+            ~1.05 lakh admits and ~$2.1M on North America preview night, a ₹50.08 Cr India day-one advance and $18M in worldwide presales. Where the weekend lands, what the trackers and Sony say, our India and US top 10s, plus OTT and music.
           </div>
-          <span style={{ fontFamily:"'Barlow Condensed', sans-serif", fontWeight:700, fontSize:11, color:"#E5C882", letterSpacing:"0.06em", marginTop:8 }}>READ THE RECAP →</span>
+          <span style={{ fontFamily:"'Barlow Condensed', sans-serif", fontWeight:700, fontSize:11, color:"#E5C882", letterSpacing:"0.06em", marginTop:8 }}>READ THE PREVIEW →</span>
         </div>
       </div>
     </a>
