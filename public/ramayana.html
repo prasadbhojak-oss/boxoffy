@@ -638,7 +638,7 @@ gtag("js",new Date());gtag("config","G-K6C9EVRFH4",{anonymize_ip:true});}})();
       title: 'Day 0 · preview night, North America',
       target: 2.0, targetLabel: 'Dhurandhar 2', targetNote: 'Hindi preview record',
       stretch: 3.9, stretchLabel: 'Kalki 2898 AD', stretchNote: 'all-time Indian preview record',
-      presold: 1.65, counted: 1.921, countedNote: 'seats read · US $20.90 · Canada $12.96',
+      presold: 1.65, counted: 2.19, countedNote: 'Day 0 final',
       projLow: 2.19, proj: 2.19, projHigh: 2.19,
       verdict: 'Biggest Bollywood preview night ever in North America · past Dhurandhar 2'
     },
@@ -705,7 +705,7 @@ gtag("js",new Date());gtag("config","G-K6C9EVRFH4",{anonymize_ip:true});}})();
       <div class="chase">${[[R.target,'🏆',R.targetLabel,R.targetNote],[R.stretch,'👑',R.stretchLabel,R.stretchNote]].map(([v,ic,l,n])=>{const togo=Math.max(0,v-R.proj), pct=Math.min(100,Math.round(R.proj/v*100));
         return `<div class="cg"><div class="ct">${ic} ${esc(l)} · <b>$${v.toFixed(1)}M</b> <span>${esc(n)}</span></div>
         <div class="cv">${R.proj>=v?'<b style="color:var(--green)">Beat it ✓</b>':`Reached <b>${pct}%</b> · $${togo.toFixed(1)}M short`}</div></div>`}).join('')}</div>
-      <div class="rl"><span><i style="background:var(--saffron)"></i>counted at showtime</span><span><i style="background:var(--saffron);opacity:.55"></i>presold</span><span><i style="background:var(--saffron);opacity:.28"></i>expected final range</span></div>`;
+      <div class="rl"><span><i style="background:var(--saffron)"></i>Day 0 final</span><span><i style="background:var(--saffron);opacity:.55"></i>presold</span></div>`;
     $('act-kpis').innerHTML=ACT.kpis.map(k=>`<div class="kpi${k.hi?' hi':''}"><div class="v">${esc(k.v)}</div><div class="l">${esc(k.l)}</div><div class="s">${esc(k.s)}</div></div>`).join('');
     $('act-mk').innerHTML=ACT.markets.map(x=>`<div class="mk"><span>${esc(x.m)}</span><span class="n">${esc(x.n)} <span class="pill ${x.st==='live'?'p-live':'p-wait'}">${x.st==='live'?'Live':'Soon'}</span></span></div>`).join('');
     const mx=30;
