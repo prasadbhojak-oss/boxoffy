@@ -6918,8 +6918,12 @@ function paint(){ stamp(); trajectory(); render(); worldMaps(); try{h2h();}catch
 /* Absolute so it resolves the same whether the page is served at
    /ramayana, /ramayana/ or /ramayana-tracker.html. Falls back to a relative
    path when opened as a local file, where a leading slash would break. */
+/* 4 NOV 23:30 CT: presales are FROZEN at the midnight 3 Nov close. The page
+   reads its own frozen copy so a later scan rebuilding ramayana-map.json for
+   live actuals can never change the presale tracker again (it did at 7:37 PM:
+   Nov 4 dropped out, benchmarks showed 0). */
 const MAP_JSON = (location.protocol === 'file:')
-  ? 'ramayana-map.json' : '/ramayana-map.json';
+  ? 'ramayana-map-final.json' : '/ramayana-map-final.json';
 const POLL_MS = 120000, MANUAL_COOLDOWN_MS = 30000;
 let lastManual = 0, polling = false, STATIC = false;
 
