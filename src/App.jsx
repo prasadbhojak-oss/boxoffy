@@ -4712,13 +4712,15 @@ const RAMAYANA_TRACKER = {
   // page's roll-up (US map + US independents + Canada + India Sacnilk Day 1
   // + UK, ANZ, Germany, NL, FR, SE, PH, Africa + Odeon/Village estimates).
   // tickets/rate/shows/value above stay as the North America figures.
-  wwTickets: "2,519,578",
-  wwValue: "$15.42M",
-  indiaDay1: "9.27 lakh",
-  indiaInr: "₹35.62 Cr",
+  // 4 NOV 18:20 CT: India final presale folded (Sacnilk 8 PM IST 4 Nov: Day 1
+  // 11.54 lakh / Rs 42.69 Cr; Days 2-4 updated). Retired: 2,519,578 / $15.42M.
+  wwTickets: "3,092,578",
+  wwValue: "$17.27M",
+  indiaDay1: "11.54 lakh",
+  indiaInr: "₹42.69 Cr",
   countries: 24,
   tminus: "T-1",
-  scan: "4 Nov · 1:20am CT · final",
+  scan: "4 Nov · 6:20pm CT · India final",
 };
 
 function RamayanaTrackerStrip() {
@@ -4769,7 +4771,7 @@ function RamayanaTrackerStrip() {
           <div style={{ flex:"1 1 240px", minWidth:220 }}>
             <div style={{ fontFamily:"'DM Sans', sans-serif", fontSize:12, color:T.textMid,
                           lineHeight:1.5, borderLeft:`2px solid ${T.border}`, paddingLeft:10 }}>
-              <b style={{ color:T.text }}>Presales closed: 25 lakh tickets and $15.4 million worldwide.</b>{" "}
+              <b style={{ color:T.text }}>Final presales: 31 lakh tickets and $17.3 million worldwide.</b>{" "}
               North America {R.tickets} tickets ({R.value}) across 4&ndash;12 Nov.
               India {R.indiaDay1} for opening day ({R.indiaInr}) plus 4.22 lakh for Friday, 4.49 lakh for Saturday and 3.44 lakh for Sunday. The UK 30,110,
               Australia &amp; NZ 43,896 &mdash; IMAX Melbourne alone has sold 1,295.
