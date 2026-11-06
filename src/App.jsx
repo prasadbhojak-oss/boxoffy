@@ -4805,74 +4805,47 @@ const RAMAYANA_TRACKER = {
   countries: 24,
   tminus: "T-1",
   scan: "4 Nov · 10:05pm CT · India final",
+  // 5 NOV 21:40 CT: the homepage strip is now RAMAYANA ACTUALS - a compact
+  // running total (previews + Day 1). Presale fields above stay as the record.
+  actuals: {
+    asOf: "5 Nov · 9:30 PM CT",
+    ww: "$13.4M", wwInr: "₹127 Cr",
+    india: "₹73.25 Cr", indiaNote: "nett · Day 1",
+    na: "$3.56M", naNote: "previews $2.19M + Day 1 $1.37M",
+    overseas: "$0.60M", overseasNote: "AU/NZ, the UK, Europe, Gulf, Asia",
+  },
 };
 
 function RamayanaTrackerStrip() {
-  const R = RAMAYANA_TRACKER;
+  const R = RAMAYANA_TRACKER, A = R.actuals;
   const figs = [
-    { n: R.wwTickets, l: "Tickets worldwide" },
-    { n: R.wwValue,   l: "Value worldwide" },
-    { n: R.tickets,   l: "North America" },
-    { n: R.indiaDay1, l: "India · Day 1" },
-    { n: R.tminus,    l: "To 5 Nov" },
+    { n: A.ww,    l: "Worldwide", s: A.wwInr, big: true },
+    { n: A.india, l: "India",     s: A.indiaNote },
+    { n: A.na,    l: "North America", s: A.naNote },
+    { n: A.overseas, l: "Rest of world", s: A.overseasNote },
   ];
   return (
-    <div style={{ maxWidth:1160, margin:"14px auto 0", padding:"0 16px" }}>
-      <a href={R.url} target="_blank" rel="noopener noreferrer"
-         style={{ textDecoration:"none", color:"inherit", display:"block" }}>
-        <div style={{
-          display:"flex", alignItems:"center", gap:18, flexWrap:"wrap",
-          background:T.surface, border:`1px solid ${T.border}`,
-          borderLeft:`4px solid ${T.accent}`, borderRadius:10, padding:"14px 18px",
-        }}>
-          <div style={{ flex:"1 1 300px", minWidth:240 }}>
-            <div style={{
-              fontFamily:"'Barlow Condensed', sans-serif", fontWeight:700, fontSize:12.5,
-              letterSpacing:"0.14em", textTransform:"uppercase", color:T.accent,
-              display:"flex", alignItems:"center", gap:7,
-            }}>
-              <span style={{ width:7, height:7, borderRadius:"50%", background:"#15803D",
-                             display:"inline-block" }} />
-              Live presale tracker · Worldwide
-            </div>
-            <div style={{
-              fontFamily:"'Barlow Condensed', sans-serif", fontWeight:800, fontSize:30,
-              lineHeight:1.05, letterSpacing:"-0.015em", margin:"3px 0 8px", color:T.text,
-            }}>Ramayana</div>
-            <div style={{ display:"flex", gap:22, flexWrap:"wrap" }}>
-              {figs.map(f => (
-                <div key={f.l}>
-                  <div style={{ fontFamily:"'IBM Plex Mono', monospace", fontWeight:600,
-                                fontSize:19, lineHeight:1.1, color:T.text }}>{f.n}</div>
-                  <div style={{ fontFamily:"'DM Sans', sans-serif", fontSize:10.5,
-                                color:T.textMuted, letterSpacing:"0.05em",
-                                textTransform:"uppercase", marginTop:1 }}>{f.l}</div>
-                </div>
-              ))}
-            </div>
+    <div style={{ maxWidth:1160, margin:"10px auto 0", padding:"0 16px" }}>
+      <a href={R.url} target="_blank" rel="noopener noreferrer" style={{ textDecoration:"none", color:"inherit", display:"block" }}>
+        <div style={{ display:"flex", alignItems:"center", gap:16, flexWrap:"wrap", background:T.surface,
+                      border:`1px solid ${T.border}`, borderLeft:`4px solid ${T.accent}`, borderRadius:8, padding:"9px 14px" }}>
+          <div style={{ display:"flex", flexDirection:"column", minWidth:120 }}>
+            <span style={{ fontFamily:"'Barlow Condensed', sans-serif", fontWeight:700, fontSize:11, letterSpacing:"0.14em",
+                           textTransform:"uppercase", color:T.accent, display:"flex", alignItems:"center", gap:6 }}>
+              <span style={{ width:6, height:6, borderRadius:"50%", background:"#15803D", display:"inline-block" }} />Ramayana Actuals
+            </span>
+            <span style={{ fontFamily:"'DM Sans', sans-serif", fontSize:10, color:T.textMuted }}>Running total · previews + Day 1</span>
           </div>
-
-          <div style={{ flex:"1 1 240px", minWidth:220 }}>
-            <div style={{ fontFamily:"'DM Sans', sans-serif", fontSize:12, color:T.textMid,
-                          lineHeight:1.5, borderLeft:`2px solid ${T.border}`, paddingLeft:10 }}>
-              <b style={{ color:T.text }}>Final presales: 33 lakh tickets and $18.0 million worldwide.</b>{" "}
-              North America {R.tickets} tickets ({R.value}) across 4&ndash;12 Nov.
-              India {R.indiaDay1} for opening day ({R.indiaInr}) plus 4.22 lakh for Friday, 4.49 lakh for Saturday and 3.44 lakh for Sunday. The UK 30,110,
-              Australia &amp; NZ 43,896 &mdash; IMAX Melbourne alone has sold 1,295.
+          {figs.map(f => (
+            <div key={f.l} style={{ minWidth:96 }}>
+              <div style={{ fontFamily:"'IBM Plex Mono', monospace", fontWeight:700, fontSize:f.big?19:16, lineHeight:1.1, color:f.big?T.accent:T.text }}>{f.n}</div>
+              <div style={{ fontFamily:"'DM Sans', sans-serif", fontSize:9.5, color:T.textMuted, letterSpacing:"0.04em", textTransform:"uppercase" }}>{f.l}</div>
+              <div style={{ fontFamily:"'DM Sans', sans-serif", fontSize:9.5, color:T.textMuted }}>{f.s}</div>
             </div>
-          </div>
-
-          <div style={{ flex:"0 0 auto" }}>
-            <span style={{
-              display:"inline-block", background:T.accent, color:"#fff",
-              fontFamily:"'DM Sans', sans-serif", fontWeight:700, fontSize:14,
-              padding:"11px 20px", borderRadius:999, whiteSpace:"nowrap",
-            }}>Open the live map →</span>
-            <div style={{ fontFamily:"'IBM Plex Mono', monospace", fontSize:10.5,
-                          color:T.textMuted, textAlign:"center", marginTop:7 }}>
-              {R.countries} countries · scan {R.scan}
-            </div>
-          </div>
+          ))}
+          <span style={{ marginLeft:"auto", fontFamily:"'DM Sans', sans-serif", fontWeight:700, fontSize:12, color:T.accent, whiteSpace:"nowrap" }}>
+            Live tracker → <span style={{ fontWeight:400, color:T.textMuted, fontSize:10 }}>{A.asOf}</span>
+          </span>
         </div>
       </a>
     </div>
@@ -5230,9 +5203,8 @@ function BoxOfficeSection({ onNavigate, forceAllTime, onClearForceAllTime }) {
           {/* ════════════════════════════════════════════════════════
                BOG-STYLE FOREIGN / HOLLYWOOD SECTION
                ════════════════════════════════════════════════════════ */}
-          {hollywoodMovies.length > 0 && (
-            <ForeignFilmsPanel movies={hollywoodMovies} />
-          )}
+          {/* 5 NOV: Foreign Films panel hidden - its sheet data was frozen at
+              Jul 31-Aug 2. Bring back once the Hollywood rows are current. */}
 
           <div style={{ padding:"12px 24px", borderTop:`1px solid ${T.border}`, fontFamily:"'DM Sans', sans-serif", fontSize:11, color:T.textMuted, lineHeight:1.7 }}>
             Indian film weekly collections are estimates based on industry tracking data as of Feb 21, 2026. Day 2 films show partial weekend data. "This Week" = Fri–Sat for new releases. · <strong>Foreign/Hollywood films show India Gross only</strong> (not global WW) — worldwide figures are noted in the weekly note. Click any row to expand OTT data.
