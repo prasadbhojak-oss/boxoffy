@@ -2476,21 +2476,22 @@ function BRSBadge({ brs, compact = false }) {
    estimate (64.85 Cr) plus our night-show estimate (~8.4 Cr: 2,618
    shows not counted at 9 PM x 1.2 the day's average per show); holdovers marked ~ are Boxoffy estimates from each film's
    Wed 4 Nov figure with the Ramayana-day drop measured on Premada Oorali
-   (-47%), replaced by the reported number when it lands. */
+   (-47%), replaced by the reported number when it lands. Reported Thu
+   figures: AK 47, Jailer 2, Premada Oorali, Udta Teer, Drishyam 3. */
 const INDIA_DAILY = {
   date: "Thu 5 Nov 2026",
   note: "India nett · ~ = Boxoffy estimate, replaced when the reported figure lands · BCM12",
   rows: [
     { title:"Ramayana: Part 1",                 lang:"Hindi + 4 dubs", day:1,  nett:73.25, est:true,  total:73.25,  tag:"NEW" },
-    { title:"Jailer 2",                          lang:"Tamil",          day:22, nett:1.65,  est:true,  total:467.70 },
-    { title:"Aadarsha Kutumbam House No: 47",    lang:"Telugu",         day:7,  nett:1.15,  est:true,  total:40.65 },
-    { title:"Udta Teer",                         lang:"Hindi",          day:14, nett:0.65,  est:true,  total:46.90 },
-    { title:"Drishyam 3: The Conclusion",        lang:"Hindi",          day:35, nett:0.30,  est:true,  total:379.50 },
+    { title:"Aadarsha Kutumbam House No: 47",    lang:"Telugu",         day:7,  nett:1.65,  est:false, total:41.15 },
+    { title:"Jailer 2",                          lang:"Tamil",          day:22, nett:1.60,  est:false, total:467.65 },
     { title:"Premada Oorali",                    lang:"Kannada",        day:42, nett:0.29,  est:false, total:112.91 },
-    { title:"Hanuman Ansh",                      lang:"Hindi",          day:91, nett:0.06,  est:true,  total:342.80 },
-    { title:"Spider-Man: Brand New Day",         lang:"English",        day:99, nett:0.02,  est:true,  total:501.03 },
-    { title:"The Odyssey",                       lang:"English",        day:112,nett:0.01,  est:true,  total:196.82 },
-    { title:"Jana Nayagan",                      lang:"Tamil",          day:106,nett:0.01,  est:true,  total:198.84 },
+    { title:"Cult",                              lang:"Telugu",         day:7,  nett:0.25,  est:true,  total:4.85 },
+    { title:"Udta Teer",                         lang:"Hindi",          day:14, nett:0.21,  est:false, total:46.46 },
+    { title:"418",                               lang:"Multi-language", day:14, nett:0.07,  est:true,  total:12.18 },
+    { title:"Hanuman Ansh",                      lang:"Hindi",          day:91, nett:0.05,  est:true,  total:342.79 },
+    { title:"Drishyam 3: The Conclusion",        lang:"Hindi",          day:35, nett:0.05,  est:false, total:379.25 },
+    { title:"Baththa",                           lang:"Tamil",          day:36, nett:0.02,  est:true,  total:30.31 },
   ],
 };
 function IndiaDailyTop10() {
