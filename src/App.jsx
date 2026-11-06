@@ -2471,6 +2471,53 @@ function BRSBadge({ brs, compact = false }) {
    NATIONAL TOP 10 ROW — BCM Weekly Chart (Apr 2026+)
    Columns: Rank | Poster | Film+Studio | This Wk | Last Wk | Chg | Domestic | Global
    ═══════════════════════════════════════════════════════════════ */
+/* ── INDIA DAILY TOP 10 (Boxoffy daily chart, 5 Nov 2026) ─────────
+   One row per film for ONE day. Ramayana is the published full-day
+   estimate (64.85 Cr) plus our night-show estimate (~8.4 Cr: 2,618
+   shows not counted at 9 PM x 1.2 the day's average per show); holdovers marked ~ are Boxoffy estimates from each film's
+   Wed 4 Nov figure with the Ramayana-day drop measured on Premada Oorali
+   (-47%), replaced by the reported number when it lands. */
+const INDIA_DAILY = {
+  date: "Thu 5 Nov 2026",
+  note: "India nett · ~ = Boxoffy estimate, replaced when the reported figure lands · BCM12",
+  rows: [
+    { title:"Ramayana: Part 1",                 lang:"Hindi + 4 dubs", day:1,  nett:73.25, est:true,  total:73.25,  tag:"NEW" },
+    { title:"Jailer 2",                          lang:"Tamil",          day:22, nett:1.65,  est:true,  total:467.70 },
+    { title:"Aadarsha Kutumbam House No: 47",    lang:"Telugu",         day:7,  nett:1.15,  est:true,  total:40.65 },
+    { title:"Udta Teer",                         lang:"Hindi",          day:14, nett:0.65,  est:true,  total:46.90 },
+    { title:"Drishyam 3: The Conclusion",        lang:"Hindi",          day:35, nett:0.30,  est:true,  total:379.50 },
+    { title:"Premada Oorali",                    lang:"Kannada",        day:42, nett:0.29,  est:false, total:112.91 },
+    { title:"Hanuman Ansh",                      lang:"Hindi",          day:91, nett:0.06,  est:true,  total:342.80 },
+    { title:"Spider-Man: Brand New Day",         lang:"English",        day:99, nett:0.02,  est:true,  total:501.03 },
+    { title:"The Odyssey",                       lang:"English",        day:112,nett:0.01,  est:true,  total:196.82 },
+    { title:"Jana Nayagan",                      lang:"Tamil",          day:106,nett:0.01,  est:true,  total:198.84 },
+  ],
+};
+function IndiaDailyTop10() {
+  const d = INDIA_DAILY, all = d.rows.reduce((a,r)=>a+r.nett,0), mx = d.rows[0].nett;
+  const crore = v => v >= 1 ? `₹${v.toFixed(2)} Cr` : `₹${Math.round(v*100)} L`;
+  return (
+    <div style={{ marginBottom:14, border:`1px solid ${T.border}`, borderRadius:8, overflow:"hidden", background:T.surface }}>
+      <div style={{ padding:"8px 12px", background:"#FEF2F2", borderBottom:`1px solid ${T.border}`, display:"flex", justifyContent:"space-between", flexWrap:"wrap", gap:6 }}>
+        <span style={{ fontFamily:"'DM Sans',sans-serif", fontSize:11, fontWeight:800, color:T.accent, letterSpacing:"0.08em", textTransform:"uppercase" }}>India National Top 10 · Daily · {d.date}</span>
+        <span style={{ fontFamily:"'IBM Plex Mono',monospace", fontSize:10, color:T.textMuted }}>All films ₹{all.toFixed(2)} Cr nett</span>
+      </div>
+      {d.rows.map((r,i) => (
+        <div key={r.title} style={{ display:"grid", gridTemplateColumns:"26px 1fr auto", gap:10, alignItems:"center", padding:"7px 12px", borderBottom:`1px solid ${T.border}` }}>
+          <div style={{ fontFamily:"'Barlow Condensed',sans-serif", fontWeight:800, fontSize:18, color:i<3?T.accent:T.textMuted, textAlign:"center" }}>{i+1}</div>
+          <div style={{ minWidth:0 }}>
+            <div style={{ fontFamily:"'DM Sans',sans-serif", fontWeight:700, fontSize:13, color:T.text, whiteSpace:"nowrap", overflow:"hidden", textOverflow:"ellipsis" }}>{r.title}{r.tag && <span style={{ marginLeft:6, fontSize:9, color:"#fff", background:T.accent, borderRadius:3, padding:"1px 4px" }}>{r.tag}</span>}</div>
+            <div style={{ fontFamily:"'DM Sans',sans-serif", fontSize:10, color:T.textMuted }}>{r.lang} · Day {r.day} · total ₹{r.total.toFixed(2)} Cr</div>
+            <div style={{ height:4, background:T.surfaceAlt, borderRadius:2, marginTop:4 }}><div style={{ height:"100%", width:`${Math.max(1.5, r.nett/mx*100)}%`, background:T.accent, borderRadius:2 }} /></div>
+          </div>
+          <div style={{ fontFamily:"'Barlow Condensed',sans-serif", fontWeight:800, fontSize:16, color:T.text, textAlign:"right", whiteSpace:"nowrap" }}>{r.est ? "~" : ""}{crore(r.nett)}</div>
+        </div>
+      ))}
+      <div style={{ padding:"6px 12px", fontFamily:"'DM Sans',sans-serif", fontSize:10, color:T.textMuted }}>{d.note}</div>
+    </div>
+  );
+}
+
 function NationalTop10Row({ movie, rank }) {
   const isMobile = useIsMobile();
   /* weekNum is the authority. Testing a blank last week first made every film
@@ -5064,6 +5111,7 @@ function BoxOfficeSection({ onNavigate, forceAllTime, onClearForceAllTime }) {
       {/* ── WEEKLY CHART VIEW ── */}
       {showWeekly ? (
         <div style={{ animation:"fadeIn 0.25s ease both" }}>
+          <IndiaDailyTop10 />
           {/* ── NATIONAL TOP 10 — BCM Weekly Chart ── */}
           {/* Column headers */}
           <div style={{
