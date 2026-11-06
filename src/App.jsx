@@ -2494,6 +2494,42 @@ const INDIA_DAILY = {
     { title:"Baththa",                           lang:"Tamil",          day:36, nett:0.02,  est:true,  total:30.31 },
   ],
 };
+const INDIA_WEEKLY = {
+  range: "Fri 30 Oct – Thu 5 Nov 2026",
+  rows: [
+    { title:"Ramayana: Part 1",               lang:"Hindi + 4 dubs", wk:1,  week:73.25, est:true,  total:73.25,  note:"Day 1 only · incl. our night-show estimate", tag:"NEW" },
+    { title:"Aadarsha Kutumbam House No: 47",  lang:"Telugu",         wk:1,  week:41.15, est:false, total:41.15,  tag:"NEW" },
+    { title:"Jailer 2",                        lang:"Tamil",          wk:3,  week:37.75, est:false, total:467.65 },
+    { title:"Udta Teer",                       lang:"Hindi",          wk:2,  week:15.56, est:false, total:46.46 },
+    { title:"Premada Oorali",                  lang:"Kannada",        wk:6,  week:6.19,  est:false, total:112.91 },
+    { title:"Cult",                            lang:"Telugu",         wk:1,  week:5.0,   est:true,  total:5.0,    tag:"NEW" },
+    { title:"Drishyam 3: The Conclusion",      lang:"Hindi",          wk:5,  week:2.4,   est:true,  total:379.25 },
+    { title:"418",                             lang:"Multi-language", wk:2,  week:1.18,  est:true,  total:12.18 },
+    { title:"Hanuman Ansh",                    lang:"Hindi",          wk:13, week:0.5,   est:true,  total:342.79 },
+    { title:"Baththa",                         lang:"Tamil",          wk:6,  week:0.15,  est:true,  total:30.31 },
+  ],
+};
+function IndiaWeeklyTop10() {
+  const d = INDIA_WEEKLY, mx = d.rows[0].week, all = d.rows.reduce((a,r)=>a+r.week,0);
+  const crore = v => v >= 1 ? `₹${v.toFixed(2)} Cr` : `₹${Math.round(v*100)} L`;
+  return (
+    <div>
+      {d.rows.map((r,i) => (
+        <div key={r.title} style={{ display:"grid", gridTemplateColumns:"28px 1fr auto", gap:10, alignItems:"center", padding:"8px 12px", borderBottom:`1px solid ${T.border}` }}>
+          <div style={{ fontFamily:"'Barlow Condensed',sans-serif", fontWeight:800, fontSize:18, color:i<3?T.accent:T.textMuted, textAlign:"center" }}>{i+1}</div>
+          <div style={{ minWidth:0 }}>
+            <div style={{ fontFamily:"'DM Sans',sans-serif", fontWeight:700, fontSize:13, color:T.text, whiteSpace:"nowrap", overflow:"hidden", textOverflow:"ellipsis" }}>{r.title}{r.tag && <span style={{ marginLeft:6, fontSize:9, color:"#fff", background:T.accent, borderRadius:3, padding:"1px 4px" }}>{r.tag}</span>}</div>
+            <div style={{ fontFamily:"'DM Sans',sans-serif", fontSize:10, color:T.textMuted }}>{r.lang} · Week {r.wk} · total ₹{r.total.toFixed(2)} Cr{r.note ? ` · ${r.note}` : ""}</div>
+            <div style={{ height:4, background:T.surfaceAlt, borderRadius:2, marginTop:4 }}><div style={{ height:"100%", width:`${Math.max(1.5, r.week/mx*100)}%`, background:T.accent, borderRadius:2 }} /></div>
+          </div>
+          <div style={{ fontFamily:"'Barlow Condensed',sans-serif", fontWeight:800, fontSize:16, color:T.text, textAlign:"right", whiteSpace:"nowrap" }}>{r.est ? "~" : ""}{crore(r.week)}</div>
+        </div>
+      ))}
+      <div style={{ padding:"6px 12px", fontFamily:"'DM Sans',sans-serif", fontSize:10, color:T.textMuted }}>Week total ₹{all.toFixed(2)} Cr India nett · Fri–Thu · ~ = Boxoffy estimate, replaced when the reported figure lands</div>
+    </div>
+  );
+}
+
 function IndiaDailyTop10() {
   const d = INDIA_DAILY, all = d.rows.reduce((a,r)=>a+r.nett,0), mx = d.rows[0].nett;
   const crore = v => v >= 1 ? `₹${v.toFixed(2)} Cr` : `₹${Math.round(v*100)} L`;
@@ -4434,10 +4470,10 @@ function WeekendLeadHero() {
   const pJailer2   = useTMDBPosterById(1234139, "w185");
   const pPremada   = useTMDBPosterById(1735270, "w185");
   const pDrishyam  = useTMDBPosterById(1269325, "w185");
-  const tiles = [ { src:null, ab:"RAM" }, { src:null, ab:"GDZ" }, { src:pJailer2, ab:"J2" }, { src:pUdta, ab:"UT" } ];
+  const tiles = [ { src:null, ab:"RAM" }, { src:pJailer2, ab:"J2" }, { src:pUdta, ab:"UT" }, { src:pPremada, ab:"PO" } ];
   const [hover, setHover] = React.useState(false);
   return (
-    <a href="/boxoffice-weekend-preview-november-6-8-2026.html" style={{ textDecoration:"none", display:"block" }}>
+    <a href="/ramayana" style={{ textDecoration:"none", display:"block" }}>
       <div
         onMouseEnter={() => setHover(true)}
         onMouseLeave={() => setHover(false)}
@@ -4458,14 +4494,14 @@ function WeekendLeadHero() {
           ))}
         </div>
         <div style={{ flex:1, minWidth:0, display:"flex", flexDirection:"column", justifyContent:"center" }}>
-          <span style={{ alignSelf:"flex-start", background:"#C8201A", color:"#FFFFFF", fontFamily:"'Barlow Condensed', sans-serif", fontWeight:900, fontSize:9, letterSpacing:"0.12em", padding:"2px 7px", borderRadius:2, marginBottom:7 }}>WEEK 45 · WEEKEND PREVIEW</span>
+          <span style={{ alignSelf:"flex-start", background:"#C8201A", color:"#FFFFFF", fontFamily:"'Barlow Condensed', sans-serif", fontWeight:900, fontSize:9, letterSpacing:"0.12em", padding:"2px 7px", borderRadius:2, marginBottom:7 }}>LIVE · RAMAYANA DAY 1</span>
           <div style={{ fontFamily:"'Barlow Condensed', sans-serif", fontWeight:900, fontSize:"clamp(15px, 1.7vw, 17px)", color:"#FFFFFF", lineHeight:1.15, letterSpacing:"-0.01em" }}>
-            RAMAYANA OPENED LIKE AN EVENT. NOW THE DIWALI WEEKEND.
+            RAMAYANA: $13.4M WORLDWIDE AFTER PREVIEWS + DAY 1.
           </div>
           <div style={{ fontFamily:"'DM Sans', sans-serif", fontSize:10.5, color:"#9CA3AF", marginTop:5, lineHeight:1.4 }}>
-            ~1.05 lakh admits and ~$2.1M on North America preview night, a ₹50.08 Cr India day-one advance and $18M in worldwide presales. Where the weekend lands, what the trackers and Sony say, our India and US top 10s, plus OTT and music.
+            India day one ~₹73 Cr nett (₹87.5 Cr gross). North America $3.56M: a record $2.19M preview night past Dhurandhar 2, then $1.37M+ on Thursday. Counted seat by seat, country by country.
           </div>
-          <span style={{ fontFamily:"'Barlow Condensed', sans-serif", fontWeight:700, fontSize:11, color:"#E5C882", letterSpacing:"0.06em", marginTop:8 }}>READ THE PREVIEW →</span>
+          <span style={{ fontFamily:"'Barlow Condensed', sans-serif", fontWeight:700, fontSize:11, color:"#E5C882", letterSpacing:"0.06em", marginTop:8 }}>OPEN THE LIVE TRACKER →</span>
         </div>
       </div>
     </a>
@@ -5116,7 +5152,7 @@ function BoxOfficeSection({ onNavigate, forceAllTime, onClearForceAllTime }) {
           {/* ── NATIONAL TOP 10 — BCM Weekly Chart ── */}
           {/* Column headers */}
           <div style={{
-            display: typeof window !== "undefined" && window.innerWidth < 640 ? "none" : "grid",
+            display: "none",
             gridTemplateColumns:"28px 38px 1fr 92px 92px 46px 106px 106px",
             background:T.surfaceAlt, borderBottom:`2px solid ${T.borderDark}`, padding:"6px 0",
           }}>
@@ -5141,15 +5177,11 @@ function BoxOfficeSection({ onNavigate, forceAllTime, onClearForceAllTime }) {
                   week of TODAY (41) while a Fri-Thu box-office week of Oct 2-8 is
                   week 40 - they can never agree, so neither belongs in the label.
                   Read the range from the data and say so plainly when none is set. */}
-              INDIA NATIONAL TOP 10 · {weeklyChartMovies.find(m => m.status === "Running" && m.showInMainChart && m.weekRange)?.weekRange
-                || weeklyChartMovies.find(m => m.status === "Running" && m.showInMainChart && m.lastWeekRange)?.lastWeekRange
-                || "WEEK NOT SET"} · BCM v2.1 · 12-SOURCE WEIGHTED · <span style={{ color:"#D97706" }}>~ = BCM ESTIMATE</span>
+              INDIA NATIONAL TOP 10 · WEEKLY · {INDIA_WEEKLY.range} · BCM12 · <span style={{ color:"#D97706" }}>~ = BOXOFFY ESTIMATE</span>
             </span>
           </div>
 
-          {weeklyChartMovies.filter(m => m.status === "Running" && m.showInMainChart === true).slice(0, 10).map((m, i) => (
-            <NationalTop10Row key={m.title} movie={m} rank={i + 1} />
-          ))}
+          <IndiaWeeklyTop10 />
 
           {/* Footer note */}
           <div style={{ padding:"8px 14px", borderTop:`1px solid ${T.border}`, display:"flex", alignItems:"center", justifyContent:"space-between", flexWrap:"wrap", gap:6 }}>
@@ -5194,8 +5226,6 @@ function BoxOfficeSection({ onNavigate, forceAllTime, onClearForceAllTime }) {
             ) : null;
           })()}
 
-          {/* Upcoming — Calendar Grid */}
-          <UpcomingCalendarGrid movies={weeklyChartMovies.filter(m => m.status === "Upcoming")} />
 
           {/* ════════════════════════════════════════════════════════
                BOG-STYLE FOREIGN / HOLLYWOOD SECTION
