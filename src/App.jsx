@@ -3673,7 +3673,7 @@ function USBoMobileCard({ film, getRankColor, getChangeColor }) {
           <span style={{ fontFamily:"'DM Sans',sans-serif", fontSize:11, color:T.textMuted }}>{film.theaters.toLocaleString()} thtr</span>
         </div>
         <div style={{ display:"flex", justifyContent:"space-between", alignItems:"center", gap:8, marginTop:6 }}>
-          <div style={{ fontFamily:"'DM Sans',sans-serif", fontSize:10, color:T.textMuted, flex:1 }}>{film.studio} · {film.genre} · Wk {film.weeks}</div>
+          <div style={{ fontFamily:"'DM Sans',sans-serif", fontSize:10, color:T.textMuted, flex:1 }}>{film.studio}{film.genre ? ` · ${film.genre}` : ""} · Wk {film.weeks}</div>
           <button onClick={() => setShareOpen(v => !v)} style={{
             fontFamily:"'DM Sans',sans-serif", fontWeight:700, fontSize:10,
             background: shareOpen ? T.accent : "#F3F4F6",
@@ -3704,7 +3704,7 @@ function USBoIndianMobileCard({ film, getChangeColor }) {
         <div style={{ display:"flex", gap:12, flexWrap:"wrap" }}>
           <span style={{ fontFamily:"'Barlow Condensed',sans-serif", fontWeight:800, fontSize:18, color:"#D97706" }}>{film.weekend}</span>
           <span style={{ fontFamily:"'DM Sans',sans-serif", fontSize:11, color:"#92400E" }}>Total: {film.total}</span>
-          <span style={{ fontFamily:"'DM Sans',sans-serif", fontSize:11, color:"#92400E" }}>{film.theaters} thtr</span>
+          {film.theaters ? <span style={{ fontFamily:"'DM Sans',sans-serif", fontSize:11, color:"#92400E" }}>{film.theaters} thtr</span> : null}
         </div>
         <div style={{ display:"flex", justifyContent:"space-between", alignItems:"center", gap:8, marginTop:6 }}>
           <div style={{ fontFamily:"'DM Sans',sans-serif", fontSize:10, color:"#B45309", flex:1 }}>{film.admitsNote}</div>
@@ -3719,6 +3719,14 @@ function USBoIndianMobileCard({ film, getChangeColor }) {
       </div>
     </div>
   );
+}
+
+// Newest "Week NN, YYYY" key in us-bo-weekly.json
+function latestUsWeek() {
+  const keys = Object.keys(US_BO_WEEKLY || {});
+  if (!keys.length) return null;
+  const parse = k => { const m = String(k).match(/Week\s+(\d+),\s+(\d+)/i); return m ? parseInt(m[2]) * 100 + parseInt(m[1]) : 0; };
+  return US_BO_WEEKLY[keys.slice().sort((a, b) => parse(b) - parse(a))[0]];
 }
 
 function USBoTop10({ weekData }) {
@@ -3817,7 +3825,7 @@ function USBoTop10({ weekData }) {
             </div>
             <div style={{ display:"flex", gap:6, marginTop:2, alignItems:"center", flexWrap:"wrap" }}>
               <span style={{ fontFamily:"'DM Sans',sans-serif", fontSize:10, color:T.textMuted }}>{film.studio}</span>
-              <span style={{ background:"#F3F4F6", border:`1px solid ${T.border}`, fontFamily:"'DM Sans',sans-serif", fontSize:9, color:T.textMuted, padding:"1px 5px", borderRadius:2 }}>{film.genre}</span>
+              {film.genre && <span style={{ background:"#F3F4F6", border:`1px solid ${T.border}`, fontFamily:"'DM Sans',sans-serif", fontSize:9, color:T.textMuted, padding:"1px 5px", borderRadius:2 }}>{film.genre}</span>}
               {film.rtScore && film.rtScore !== "N/A" && <span style={{ fontFamily:"'DM Sans',sans-serif", fontSize:9, color:"#DC2626", fontWeight:700 }}>🍅 {film.rtScore}</span>}
             </div>
           </div>
@@ -3866,12 +3874,12 @@ function USBoTop10({ weekData }) {
                 <div style={{ fontFamily:"'Barlow Condensed',sans-serif", fontWeight:700, fontSize:15, color:"#92400E" }}>{film.title}</div>
                 <div style={{ display:"flex", gap:6, marginTop:2 }}>
                   <span style={{ fontFamily:"'DM Sans',sans-serif", fontSize:10, color:"#B45309" }}>{film.studio}</span>
-                  <span style={{ background:"#FEF3C7", border:"1px solid #FDE68A", fontFamily:"'DM Sans',sans-serif", fontSize:9, color:"#92400E", padding:"1px 5px", borderRadius:2 }}>{film.genre}</span>
+                  {film.genre && <span style={{ background:"#FEF3C7", border:"1px solid #FDE68A", fontFamily:"'DM Sans',sans-serif", fontSize:9, color:"#92400E", padding:"1px 5px", borderRadius:2 }}>{film.genre}</span>}
                 </div>
               </div>
               <div style={{ padding:"0 8px", textAlign:"right" }}>
                 <div style={{ fontFamily:"'Barlow Condensed',sans-serif", fontWeight:700, fontSize:17, color:"#D97706" }}>{film.weekend}</div>
-                <div style={{ fontFamily:"'DM Sans',sans-serif", fontSize:9, color:"#B45309", marginTop:1 }}>Wk {film.weeks} · {film.theaters} thtr</div>
+                <div style={{ fontFamily:"'DM Sans',sans-serif", fontSize:9, color:"#B45309", marginTop:1 }}>Wk {film.weeks}{film.theaters ? ` · ${film.theaters} thtr` : ""}</div>
               </div>
               <div style={{ padding:"0 8px", textAlign:"right" }}>
                 <div style={{ fontFamily:"'Barlow Condensed',sans-serif", fontWeight:700, fontSize:15, color:"#92400E" }}>{film.total}</div>
@@ -3879,7 +3887,7 @@ function USBoTop10({ weekData }) {
               </div>
               <div style={{ padding:"0 8px", textAlign:"right" }}>
                 <div style={{ fontFamily:"'Barlow Condensed',sans-serif", fontWeight:600, fontSize:14, color:"#92400E" }}>{film.theaters}</div>
-                <div style={{ fontFamily:"'DM Sans',sans-serif", fontSize:9, color:"#B45309" }}>Locations</div>
+                {film.theaters ? <div style={{ fontFamily:"'DM Sans',sans-serif", fontSize:9, color:"#B45309" }}>Locations</div> : null}
               </div>
               <div style={{ padding:"0 8px", textAlign:"right" }}>
                 <span style={{ fontFamily:"'Barlow Condensed',sans-serif", fontWeight:700, fontSize:13, color:getChangeColor(film.change) }}>{film.change}</span>
@@ -5156,49 +5164,18 @@ function BoxOfficeSection({ onNavigate, forceAllTime, onClearForceAllTime }) {
 
           <IndiaWeeklyTop10 />
 
-          {/* Footer note */}
-          <div style={{ padding:"8px 14px", borderTop:`1px solid ${T.border}`, display:"flex", alignItems:"center", justifyContent:"space-between", flexWrap:"wrap", gap:6 }}>
-            <span style={{ fontFamily:"'DM Sans',sans-serif", fontSize:10, color:T.textMuted }}>
-              Domestic = India nett · Global = worldwide gross · ATB = all-time rank nominal · Conf. = BCM confidence
-            </span>
+          {/* Sources line (5 Nov rebuild: old Domestic/Global/ATB legend and the
+              sheet-driven "Recently closed / moved to OTT" list removed) */}
+          <div style={{ padding:"8px 14px", borderTop:`1px solid ${T.border}` }}>
             <span style={{ fontFamily:"'IBM Plex Mono',monospace", fontSize:8, color:T.textMuted, letterSpacing:"0.06em" }}>
-              BOI · SACNILK · TARAN ADARSH · FILM INFO · NISHIT SHAW · PINKVILLA · HUNGAMA · RAMESH BALA · VENKY BO · COMSCORE · BOM · DEADLINE · TRACKTOLLYWOOD
+              SOURCES · BOI · SACNILK · FILM INFORMATION · PINKVILLA · TARAN ADARSH · BOXOFFY SEAT-BY-SEAT COUNT (BCM12)
             </span>
           </div>
 
-          {/* ── RECENTLY CLOSED / MOVED TO OTT — Collapsible ── */}
-          {(() => {
-            const ottFilms = weeklyChartMovies.filter(m => m.status === "OTT");
-            return ottFilms.length > 0 ? (
-              <>
-                <button
-                  onClick={() => setShowOTT(v => !v)}
-                  style={{
-                    width:"100%", display:"flex", alignItems:"center", justifyContent:"space-between",
-                    padding:"8px 14px", background:T.surfaceAlt,
-                    borderBottom:`1px solid ${T.border}`, borderTop:`1px solid ${T.border}`,
-                    marginTop:4, cursor:"pointer", border:"none", textAlign:"left",
-                  }}
-                >
-                  <div style={{ display:"flex", alignItems:"center", gap:8 }}>
-                    <span style={{ fontFamily:"'DM Sans',sans-serif", fontSize:10, fontWeight:700, color:T.textMuted, letterSpacing:"0.1em", textTransform:"uppercase" }}>
-                      ◎ Recently Closed · Moved to OTT
-                    </span>
-                    <span style={{ fontFamily:"'IBM Plex Mono',monospace", fontSize:9, color:T.textMuted, background:T.surface, border:`1px solid ${T.border}`, padding:"1px 6px", borderRadius:2 }}>
-                      {ottFilms.length} titles
-                    </span>
-                  </div>
-                  <span style={{ fontFamily:"'IBM Plex Mono',monospace", fontSize:9, fontWeight:700, color:T.textMuted, letterSpacing:"0.08em" }}>
-                    {showOTT ? "HIDE ▲" : "SHOW ▼"}
-                  </span>
-                </button>
-                {showOTT && ottFilms.map((m, i) => (
-                  <WeeklyChartRow key={m.title} movie={m} rank={"—"} prevRank={null} />
-                ))}
-              </>
-            ) : null;
-          })()}
-
+          {/* ── US BOX OFFICE TOP 10 — newest week in us-bo-weekly.json ── */}
+          <div style={{ marginTop:20, borderTop:`2px solid ${T.accent}` }}>
+            <USBoTop10 weekData={latestUsWeek()} />
+          </div>
 
           {/* ════════════════════════════════════════════════════════
                BOG-STYLE FOREIGN / HOLLYWOOD SECTION
@@ -5206,9 +5183,6 @@ function BoxOfficeSection({ onNavigate, forceAllTime, onClearForceAllTime }) {
           {/* 5 NOV: Foreign Films panel hidden - its sheet data was frozen at
               Jul 31-Aug 2. Bring back once the Hollywood rows are current. */}
 
-          <div style={{ padding:"12px 24px", borderTop:`1px solid ${T.border}`, fontFamily:"'DM Sans', sans-serif", fontSize:11, color:T.textMuted, lineHeight:1.7 }}>
-            Indian film weekly collections are estimates based on industry tracking data as of Feb 21, 2026. Day 2 films show partial weekend data. "This Week" = Fri–Sat for new releases. · <strong>Foreign/Hollywood films show India Gross only</strong> (not global WW) — worldwide figures are noted in the weekly note. Click any row to expand OTT data.
-          </div>
         </div>
       ) : (
         /* ── ALL-TIME / HISTORICAL TABLE VIEW ── */
@@ -7483,7 +7457,7 @@ export default function App() {
 
             {/* Copyright strip */}
             <div style={{ display:"flex", alignItems:"center", justifyContent:"space-between", flexWrap:"wrap", gap:8, color:T.textMuted, lineHeight:1.8 }}>
-              <span style={{ fontSize:11 }}>© 2026 Boxoffy.com · Box Office Intelligence · Box office data from industry tracking sources · Current as of Jun 6, 2026 · All figures in ₹ Crores</span>
+              <span style={{ fontSize:11 }}>© 2026 Boxoffy.com · Box Office Intelligence · Box office data from industry tracking sources · Updated 5 Nov 2026 · All figures in ₹ Crores</span>
               <a
                 href="mailto:info@boxoffy.com"
                 onMouseEnter={e => e.target.style.color=T.accent}
