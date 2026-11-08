@@ -836,7 +836,7 @@ gtag("js",new Date());gtag("config","G-K6C9EVRFH4",{anonymize_ip:true});}})();
     {f:'🇪🇺', c:'Rest of Europe', a:0.62, s:0.51, src:'i', n:'industry · Germany $0.43M · Netherlands 4,551 counted Sat'},
     {g:'Asia & Middle East'},
     {f:'🌏', c:'South-East Asia', a:0.60, s:0.48, src:'i', n:'industry · Thailand $0.28M, Singapore $0.20M, Malaysia $0.18M'},
-    {f:'🇳🇵', c:'Nepal & others', a:0.35, s:0.33, src:'i', n:'industry · Nepal $0.45M Thu to Sat · QFX 17 cinemas: Sat 9,209 by noon, Sun 6,362 so far'},
+    {f:'🇳🇵', c:'Nepal & others', a:0.35, s:0.33, src:'i', n:'Nepal $0.45M Thu to Sat (Kantipur Day 1 NPR 2 crore+, trade) · 52 cinemas, QFX counted · Sunday ~NPR 2 crore est.'},
     {f:'🇦🇪', c:'Middle East', a:1.00, s:0.93, src:'i', n:'industry · UAE VOX 9,691 counted Sat'},
     {g:'Pacific'},
     {f:'🇦🇺🇳🇿', c:'Australia & NZ', a:0.81, s:0.64, x:0.29, src:'i', n:'industry to Sat · + Sunday $0.29M counted (17,649 tickets)'},
@@ -918,12 +918,12 @@ gtag("js",new Date());gtag("config","G-K6C9EVRFH4",{anonymize_ip:true});}})();
 <script>
 /* LIVE: the dashboard numbers. Update these; the layout draws itself. */
 const LIVE = {
-  asOf: 'Sun 8 Nov · 8:15 AM CT · Saturday reconciled, final city breakup, Sunday presales refreshed',
-  headline: 'Ramayana at <em>₹399 Cr</em> worldwide, ₹400 Cr on Diwali Sunday',
-  dek: 'Worldwide ₹399 Cr ($42.0M) from Wednesday previews to Saturday, plus Australia Sunday. Saturday was the biggest overseas day ever for an Indian film, about $7.3M, led by about $4M in North America. Diwali Sunday already has $1.69M booked in North America.',
+  asOf: 'Sun 8 Nov · 8:40 AM CT · India Diwali Sunday live, Nepal reconciled',
+  headline: 'Ramayana crosses <em>₹400 Cr</em> worldwide',
+  dek: 'Worldwide about ₹448 Cr ($47.2M) with India Diwali Sunday live (₹40.7 Cr net by 7 PM IST); overseas Sunday still being counted. Saturday was the biggest overseas day ever for an Indian film, about $7.3M, led by about $4M in North America.',
   kpis: [
-    {k:'Worldwide', v:'₹399 Cr', s:'$42.0M · Wed previews to Sat', src:'e', hi:true},
-    {k:'India', v:'₹218 Cr', s:'gross · ₹182.7 Cr net · Thu to Sat', src:'i'},
+    {k:'Worldwide', v:'₹448 Cr', s:'$47.2M · Wed to Sun so far · overseas Sunday not yet added', src:'e', hi:true},
+    {k:'India', v:'₹267 Cr', s:'gross · ₹223.4 Cr net · Sunday live ₹40.7 Cr net', src:'i'},
     {k:'Overseas', v:'$19.0M', s:'₹180 Cr · our count or industry, whichever is higher', src:'e'},
     {k:'North America', v:'$10.3M', s:'US $8.48M counted · Canada $1.78M industry · Wed to Sat', src:'c', hi:true},
     {k:'NA Saturday', v:'$3.99M', s:'$3.78M counted + walk-ups · biggest Saturday ever for an Indian film in NA', src:'c', hi:true},
@@ -959,8 +959,8 @@ const LIVE = {
   daysIN: [
     {d:'Thu', l:'Day 1', v:64.85},
     {d:'Fri', l:'Day 2', v:48.05},
-    {d:'Sat', l:'Day 3 · live', v:69.80, live:true},
-    {d:'Sun', l:'₹38 Cr gross booked', v:38.09, adv:true}
+    {d:'Sat', l:'Day 3', v:69.80},
+    {d:'Sun', l:'Day 4 · live 7 PM IST', v:40.69, live:true}
   ],
   citiesAsOf: 'Saturday full day · every show counted at its highest read · tickets, and dollars per cinema',
   cities: [
@@ -985,13 +985,13 @@ const LIVE = {
   ],
   sunAsOf: 'Sunday 8 Nov (Diwali) · bookings and counts so far · North America read 7:30 AM CT',
   sun: [
-    {f:'🇺🇸🇨🇦 North America', v:'$1.69M', s:'~101,800 tickets · US 78,476 (17.5% full) · Cineplex 16,757 · Landmark est.', src:'c'},
-    {f:'🇮🇳 India', v:'~₹37 Cr', s:'net, live trend at 5:30 PM IST', src:'i'},
+    {f:'🇺🇸🇨🇦 North America', v:'$1.69M', s:'~101,200 tickets · US 78,476 (17.5% full) · Cineplex 16,757 · Landmark 6,037 seats taken on 147 shows (30%, ~5,450 tickets)', src:'c'},
+    {f:'🇮🇳 India', v:'₹40.7 Cr', s:'net, live at 7 PM IST · 35.7% occupancy', src:'i'},
     {f:'🇦🇺🇳🇿 Australia', v:'17,649', s:'tickets counted, day played · $0.29M', src:'c'},
     {f:'🇬🇧 The UK (Cineworld)', v:'27% full', s:'305 shows · ~20,100 tickets by 2 PM UK', src:'e'},
     {f:'🇬🇧 The UK outside Cineworld', v:'2,935', s:'seats taken on 110 shows · Showcase 2,091 · Odeon, Vue blocked', src:'c'},
     {f:'🇩🇪 Germany', v:'6,998', s:'tickets on 118 shows', src:'c'},
-    {f:'🇳🇵 Nepal (QFX)', v:'33% full', s:'6,362 of 19,453 seats by 7:40 PM Nepal time · 27 shows still to start', src:'c'},
+    {f:'🇳🇵 Nepal', v:'~NPR 2 crore', s:'all 52 cinemas, estimate · QFX 6,362 tickets counted · 4 days ~NPR 8.8 crore', src:'e'},
     {f:'🇳🇱 Netherlands', v:'2,726', s:'tickets on 52 shows', src:'c'}
   ],
   /* giscus: fill repoId and categoryId from https://giscus.app to switch comments on */
