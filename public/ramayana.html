@@ -784,9 +784,9 @@ gtag("js",new Date());gtag("config","G-K6C9EVRFH4",{anonymize_ip:true});}})();
 <script>
   /* ACT: the only place actuals numbers live. Fold = edit this object. */
   const ACT = {
-    asOf: 'Sat 7 Nov · 11:35 PM CT · Landmark, Germany, Australia, the UK Sunday and Nepal Sunday folded in',
-    headline: 'Worldwide ~₹389 Cr ($41.0M) to 11 PM CT Saturday · India ₹218 Cr gross (₹182.7 Cr net; Saturday ₹69.8 Cr net, industry figure, final due) · Overseas ~$18.0M (~₹171 Cr): Wed to Fri $10.6M + Saturday ~$7.2M (North America $3.75M + rest of world ~$3.4M, partly estimated) + Australia Sunday so far $0.24M · industry worldwide figure ₹375.5 Cr · ₹400 Cr due on Diwali Sunday (₹38 Cr already booked in India, $1.43M in North America)',
-    ww: {
+    asOf: 'Sun 8 Nov · 12:25 AM CT · worldwide sweep: US Saturday late shows folded in, country card now Wed previews to Saturday',
+    headline: 'Worldwide ~₹390 Cr ($41.0M) Wed previews to Saturday · India ₹218.25 Cr gross (₹182.7 Cr net; Saturday ₹69.8 Cr net, industry figure, final due) · Overseas ~$18.05M (~₹171.5 Cr): Wed to Fri $10.6M + Saturday ~$7.2M (North America ~$3.78M + rest of world ~$3.4M, partly estimated) + Australia Sunday so far $0.24M · industry worldwide figure ₹375.5 Cr (early, Saturday not final) · Sony projected $10.8M North America Thu to Sun (Sat AM) · ₹400 Cr due on Diwali Sunday',
+    wwFri: {
       title: 'Worldwide · Wed previews to Friday',
       usd: 24.82, inr: '₹236 Cr', note: 'Country by country: our count where it is higher, the industry estimate where it is higher (7 Nov, 4:10 PM IST), never both added · the headline total uses the official Day 1 (₹155 Cr, Sony & makers) + Day 2 (~₹101 Cr: India ₹57.3 Cr gross + overseas ~$4.65M)',
       rows: [
@@ -801,6 +801,21 @@ gtag("js",new Date());gtag("config","G-K6C9EVRFH4",{anonymize_ip:true});}})();
         {f:'🌍', c:'Rest of world', v:0.35, t:'$0.35M', d:'2 days: Nepal $0.25M + Africa and others $0.10M (industry estimate, 7 Nov 4:10 PM IST) · our build was $0.34M · Nepal Sat: QFX counted 9,209 tickets by noon'}
       ]
     },
+    ww: {
+      title: 'Worldwide · Wed previews to Saturday',
+      usd: 41.02, inr: '₹390 Cr', note: 'Country by country, Wed previews to Saturday (Australia also Sunday so far): our count where it is higher, the industry estimate where it is higher, never both added · labels: counted = seats we read, estimate = scaled or trade estimate, industry = published figure · India from the industry figure (Saturday not final) · sweep Sun 8 Nov 12:25 AM CT',
+      rows: [
+        {f:'🇺🇸', c:'United States', v:8.30, t:'$8.30M', d:'Wed to Fri $5.17M (previews $2.06M + Thu $1.23M + Fri $1.88M, final) + Sat ~$3.13M · Saturday counted: 170,959 tickets on 4,228+ shows read seat by seat ($3.03M, Hindi + English; 961 more late-show tickets since the 10:40 PM fold) + ~5,000 estimated at 86 cinemas with no seat map ($0.09M) + ~400 estimated walk-ups on 61 West Coast late shows still to start at midnight CT ($0.01M) · Sunday advance $1.19M not added'},
+        {f:'🇮🇳', c:'India', v:22.97, t:'₹218.25 Cr ($22.97M)', d:'gross · Day 1 ₹77.50 Cr + Day 2 ₹57.30 Cr (final industry figures) + Day 3 Sat ₹83.45 Cr gross / ₹69.80 Cr net (industry figure, 7 Nov 10:07 PM IST, not final) · 3-day net ₹182.70 Cr · a second trade estimate has Saturday at ₹68.25 Cr net'},
+        {f:'🇬🇧', c:'the UK', v:2.84, t:'~£2.1M ($2.84M)', d:'Wed to Fri $1.37M (Day 1 £440K trade estimate + Fri ~£580K Boxoffy estimate) + Sat ~$1.47M Boxoffy estimate (Cineworld 299 shows 41% full, ~30,200 tickets UK-wide scaled at Cineworld ≈ 30% share) · Sunday advance 22% full at Cineworld · Comscore UK / BFI due Sun–Tue'},
+        {f:'🇦🇺🇳🇿', c:'Australia & NZ', v:1.54, t:'$1.54M', d:'Day 1 A$505K + Day 2 A$650K (trade estimates) + NZ ~$0.01M = $0.81M · Sat ~$0.49M (Boxoffy estimate from HOYTS + Event reads) · Sun so far $0.24M counted (14,266 tickets, Sunday under way; new scan running 12:16 AM CT) · Numero official due Mon 9 Nov'},
+        {f:'🇦🇪', c:'Middle East', v:1.50, t:'$1.50M', d:'Wed to Fri $1.00M (industry estimate, 7 Nov 4:10 PM IST) + Sat ~$0.50M Boxoffy estimate (UAE VOX 9,691 counted; Reel, Novo, Muvi and other Gulf chains not seat-read)'},
+        {f:'🇨🇦', c:'Canada', v:1.36, t:'$1.36M', d:'Wed to Fri $0.71M (final) + Sat ~$0.65M: Cineplex 39,627 counted ($0.51M, 41% full) + Landmark ~9,100 after held seats ($0.12M) + independents ~$0.02M · Sunday advance $0.23M not added'},
+        {f:'🇪🇺', c:'Rest of Europe', v:1.02, t:'$1.02M', d:'Wed to Fri $0.62M (Germany €165K Day 1 trade + Fri est., Netherlands, Sweden, others) + Sat ~$0.40M: Netherlands 4,551 counted on Pathé + Vue, Germany 2,431 counted on 43 of 96 shows, rest estimated · InsideKino (Germany) due Mon'},
+        {f:'🌏', c:'South-East Asia & Pacific', v:1.00, t:'$1.00M', d:'Wed to Fri $0.60M (industry estimate, 7 Nov 4:10 PM IST) + Sat ~$0.40M Boxoffy estimate'},
+        {f:'🌍', c:'Nepal & rest of world', v:0.49, t:'$0.49M', d:'Wed to Fri $0.35M (Nepal $0.25M + Africa and others $0.10M, industry estimate) + Sat ~$0.14M (Nepal QFX 9,209 counted by noon, ~24,600 estimated across ~40 cinemas)'}
+      ]
+    },
     race: {
       title: 'Day 0 · preview night, North America',
       target: 2.0, targetLabel: 'Dhurandhar 2', targetNote: 'Hindi preview record',
@@ -813,7 +828,7 @@ gtag("js",new Date());gtag("config","G-K6C9EVRFH4",{anonymize_ip:true});}})();
       {v:'$2.19M', l:'Day 0 · Wed previews', s:'North America · ~1.08 lakh tickets · past Dhurandhar 2', hi:true},
       {v:'$1.49M', l:'Day 1 · Thu final', s:'North America · ~88,500 tickets · 82,751 read seat by seat + ~5,700 estimated'},
       {v:'$3.68M', l:'North America total', s:'Day 0 + Day 1 · Wed–Thu', hi:true},
-      {v:'₹256 Cr', l:'Worldwide · Day 1 + Day 2', s:'$27.0M · Day 1 ₹155 Cr official (Sony & makers) + Day 2 ~₹101 Cr (India ₹57.3 Cr gross + overseas ~$4.65M industry estimate) · country-by-country card: $24.8M (₹236 Cr) · overseas 2 days: our count $10.6M vs industry estimate $10.05M · makers\' Day 1 alone: ₹155 Cr ($16.3M)', hi:true}
+      {v:'₹390 Cr', l:'Worldwide · Wed previews to Sat', s:'$41.0M · India ₹218.25 Cr gross (Saturday industry figure, not final) + overseas ~$18.05M (North America $9.66M counted + labelled estimates, the UK $2.84M, Australia & NZ $1.54M, Middle East $1.50M, others) · industry estimate ₹375.5 Cr · Day 1 alone ₹155 Cr official (Sony & makers)', hi:true}
     ],
     markets: [
       {m:'📍 Locations · all 1,433', st:'live', n:'Sony: 1,433 North America locations, about 384 more than Kalki 2898 AD (1,049) and 446 more than Dhurandhar 2 (987) · we read 1,323 seat by seat (92%): 1,198 US cinemas in 46 regions + Cineplex 96 + Landmark 29 · Harkins and Megaplex are already inside our Fandango count · only ~43 venues sit outside it (CMX, Malco, R/C and Canadian independents) · Saturday: 20 of them list 70 Ramayana shows, ~590 tickets estimated (10 a show US, 5 Canada) since their seat counts cannot be read without picking a seat · 23 list no Saturday shows'},
@@ -867,6 +882,8 @@ gtag("js",new Date());gtag("config","G-K6C9EVRFH4",{anonymize_ip:true});}})();
       {c:'North America Wed–Thu vs studio', o:'$3.68M (our seat count)', f:'$3,505,682 · The Numbers, 1,433 theatres (Sony $3.5M via IndieWire)', x:'+5.0% · our count higher'},
       {c:'India Day 3 (Sat), net', o:'no call yet', f:'~₹68 Cr · industry early trend, 7 Nov 8:30 PM IST · final due Sun 8 Nov', x:'–'},
       {c:'Worldwide Day 1 (incl. previews)', o:'₹132 Cr ($13.9M) verified build-up', f:'₹155 Cr · makers, Fri 6 Nov', x:'−15% · makers higher, no split given'},
+      {c:'North America Thu to Sun vs Sony projection', o:'$7.47M Thu–Sat + Sun $1.43M booked (Wed previews $2.19M extra)', f:'$10.8M Thu–Sun incl. previews · Sony projection, reported Sat 7 Nov 11:45 AM ET · not an actual', x:'– · Sony Sunday estimate due Sun 8 Nov'},
+      {c:'Worldwide Wed to Sat vs industry', o:'₹390 Cr ($41.0M) · overseas $18.05M', f:'₹375.5 Cr · overseas ₹157.25 Cr ($16.55M) · industry early estimate, 7 Nov 10:07 PM IST', x:'+4% · ours higher (overseas +9%); both pending official'},
       {c:'Worldwide opening weekend', o:'Sun 8 Nov AM', f:'Sun 8 Nov', x:'–'}
     ],
     ext: [
