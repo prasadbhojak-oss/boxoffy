@@ -918,35 +918,43 @@ gtag("js",new Date());gtag("config","G-K6C9EVRFH4",{anonymize_ip:true});}})();
 <script>
 /* LIVE: the dashboard numbers. Update these; the layout draws itself. */
 const LIVE = {
-  asOf: 'Sun 8 Nov · 7:55 AM CT · Nepal Sunday refreshed',
+  asOf: 'Sun 8 Nov · 8:15 AM CT · Saturday reconciled, final city breakup, Sunday presales refreshed',
   headline: 'Ramayana at <em>₹399 Cr</em> worldwide, ₹400 Cr on Diwali Sunday',
-  dek: 'Worldwide ₹399 Cr ($42.0M) from Wednesday previews to Saturday, plus Australia Sunday. North America had its biggest day yet on Saturday, about $3.99M by our final seat count. India Diwali Sunday is trending near ₹37 Cr net.',
+  dek: 'Worldwide ₹399 Cr ($42.0M) from Wednesday previews to Saturday, plus Australia Sunday. Saturday was the biggest overseas day ever for an Indian film, about $7.3M, led by about $4M in North America. Diwali Sunday already has $1.69M booked in North America.',
   kpis: [
     {k:'Worldwide', v:'₹399 Cr', s:'$42.0M · Wed previews to Sat', src:'e', hi:true},
     {k:'India', v:'₹218 Cr', s:'gross · ₹182.7 Cr net · Thu to Sat', src:'i'},
     {k:'Overseas', v:'$19.0M', s:'₹180 Cr · our count or industry, whichever is higher', src:'e'},
     {k:'North America', v:'$10.3M', s:'US $8.48M counted · Canada $1.78M industry · Wed to Sat', src:'c', hi:true},
-    {k:'NA Saturday', v:'$3.99M', s:'final count · range $3.96–4.04M · biggest day yet', src:'c', hi:true},
-    {k:'Diwali Sunday booked', v:'$1.43M', s:'North America · India ₹38 Cr booked', src:'c'}
+    {k:'NA Saturday', v:'$3.99M', s:'$3.78M counted + walk-ups · biggest Saturday ever for an Indian film in NA', src:'c', hi:true},
+    {k:'Diwali Sunday booked', v:'$1.69M', s:'North America by 7:30 AM CT · trending $2.5–2.9M', src:'c'}
   ],
   sat: {
-    title: 'North America Saturday · final', when: 'every show played · final seat count 1:40 AM CT · range $3.96–4.04M',
+    title: 'North America Saturday · final', when: 'every show played · final count 1:40 AM CT · range $3.96–4.04M',
     usd: 3.99, low: 3.96, high: 4.04, friday: 2.20, tickets: '~239,400 tickets · ~1,335 cinemas',
     parts: [
-      {n:'US, counted seat by seat', v:3.04, t:'171,527', src:'c', col:'var(--accent)'},
-      {n:'Cineplex Canada, counted', v:0.51, t:'39,627', src:'c', col:'var(--h4)'},
-      {n:'Landmark Canada, seat maps read', v:0.12, t:'~9,100', src:'c', col:'var(--h2)'},
-      {n:'Late buyers and walk-ups (+6%)', v:0.21, t:'~12,700', src:'e', col:'var(--h1)'},
+      {n:'US, 1,096 cinemas, seat maps read', v:3.04, t:'171,527', src:'c', col:'var(--accent)'},
+      {n:'Cineplex, 97 cinemas, counted', v:0.51, t:'39,627', src:'c', col:'var(--h4)'},
+      {n:'Landmark, 31 cinemas, seat maps read', v:0.12, t:'~9,100', src:'c', col:'var(--h2)'},
       {n:'88 US cinemas with no seat map', v:0.09, t:'~5,000', src:'e', col:'var(--saffron)'},
-      {n:'Independents (17 confirmed)', v:0.02, t:'~1,450', src:'e', col:'var(--gold)'}
-    ]
+      {n:'Independents, ~23 cinemas', v:0.02, t:'~1,450', src:'e', col:'var(--gold)'},
+      {n:'Late buyers and walk-ups (+6%)', v:0.21, t:'~12,700', src:'e', col:'var(--h1)'}
+    ],
+    bridge: [
+      ['Counted seat by seat', '220,250 tickets', '$3.67M'],
+      ['+ no-seat-map cinemas and independents', '6,450', '$3.78M'],
+      ['+ late buyers and walk-ups (5% to 7.3%)', '12,700', '$3.99M'],
+      ['+ ~98 cinemas we cannot see (1,433 studio count)', '~4,300', '~$4.06M'],
+      ['+ Canada gap vs industry (Saturday share)', '~7,700', '~$4.16M']
+    ],
+    rank: [['Ramayana (2026)', '~$3.99M'], ['Dhurandhar 2 (2026)', '$3.92M'], ['Kalki 2898 AD (2024)', '$2.12M']]
   },
   daysNA: [
     {d:'Wed', l:'previews', v:2.19},
     {d:'Thu', l:'Day 1', v:1.49},
     {d:'Fri', l:'Day 2', v:2.20},
     {d:'Sat', l:'Day 3 · final', v:3.99},
-    {d:'Sun', l:'booked so far', v:1.43, adv:true}
+    {d:'Sun', l:'booked by 7:30 AM', v:1.69, adv:true}
   ],
   daysIN: [
     {d:'Thu', l:'Day 1', v:64.85},
@@ -954,11 +962,12 @@ const LIVE = {
     {d:'Sat', l:'Day 3 · live', v:69.80, live:true},
     {d:'Sun', l:'₹38 Cr gross booked', v:38.09, adv:true}
   ],
-  citiesAsOf: 'Saturday by 5:45 PM CT · tickets sold',
+  citiesAsOf: 'Saturday full day · every show counted at its highest read · tickets, and dollars per cinema',
   cities: [
-    ['New York / New Jersey',20106,4700],['SF Bay Area',12009,5290],['Dallas–Fort Worth',10647,3030],
-    ['Chicago',8071,2170],['Los Angeles',8017,1980],['North Carolina',7464,2760],['Baltimore / DC',7041,4720],
-    ['Florida',6875,1620],['Philadelphia',6344,2750],['Georgia (Atlanta)',5838,2370],['Toronto 🇨🇦',5658,8150],['Mississauga 🇨🇦',4446,19210]
+    ['New York / New Jersey',21027,4920],['SF Bay Area',13885,6080],['Dallas–Fort Worth',11783,3360],
+    ['Los Angeles',9424,2320],['Chicago',9017,2420],['North Carolina',7712,2850],['Baltimore / DC',7461,5000],
+    ['Florida',7396,1740],['Philadelphia',6845,2970],['Seattle',6284,2990],['Georgia (Atlanta)',6257,2530],
+    ['Toronto 🇨🇦',5998,8640],['Boston',5979,3800],['Ohio',5781,2220],['Mississauga 🇨🇦',4731,20440]
   ],
   markets: [
     {g:'Europe'},
@@ -974,12 +983,12 @@ const LIVE = {
     {f:'🇺🇸', c:'United States', a:5.17, s:3.31, src:'c', n:'every Fandango cinema, every show · Sat final'},
     {f:'🇨🇦', c:'Canada', a:0.71, s:0.68, src:'c', n:'Cineplex + Landmark read · Sat final'}
   ],
-  sunAsOf: 'Sunday 8 Nov (Diwali) · bookings and counts so far',
+  sunAsOf: 'Sunday 8 Nov (Diwali) · bookings and counts so far · North America read 7:30 AM CT',
   sun: [
-    {f:'🇺🇸🇨🇦 North America', v:'$1.43M', s:'~86,100 tickets booked by Sat night', src:'c'},
+    {f:'🇺🇸🇨🇦 North America', v:'$1.69M', s:'~101,800 tickets · US 78,476 (17.5% full) · Cineplex 16,757 · Landmark est.', src:'c'},
     {f:'🇮🇳 India', v:'~₹37 Cr', s:'net, live trend at 5:30 PM IST', src:'i'},
     {f:'🇦🇺🇳🇿 Australia', v:'17,649', s:'tickets counted, day played · $0.29M', src:'c'},
-    {f:'🇬🇧 The UK (Cineworld)', v:'22% full', s:'304 shows · ~16,300 tickets', src:'e'},
+    {f:'🇬🇧 The UK (Cineworld)', v:'27% full', s:'305 shows · ~20,100 tickets by 2 PM UK', src:'e'},
     {f:'🇬🇧 The UK outside Cineworld', v:'2,935', s:'seats taken on 110 shows · Showcase 2,091 · Odeon, Vue blocked', src:'c'},
     {f:'🇩🇪 Germany', v:'6,998', s:'tickets on 118 shows', src:'c'},
     {f:'🇳🇵 Nepal (QFX)', v:'33% full', s:'6,362 of 19,453 seats by 7:40 PM Nepal time · 27 shows still to start', src:'c'},
@@ -1000,9 +1009,11 @@ const LIVE = {
    $('lv-sat').innerHTML=`<h3>${esc(S.title)}</h3><p class="sub">${esc(S.when)}</p>
     <div class="lv-big"><b>${usd(S.usd)}</b><span>${esc(S.tickets)}</span></div>
     <div class="lv-prog" aria-label="Progress toward the full-day range"><i style="width:${S.usd/top*100}%"></i><u style="left:${S.low/top*100}%;width:${(S.high-S.low)/top*100}%"></u></div>
-    <div class="lv-ticks"><span>Friday full day $${S.friday.toFixed(2)}M</span><span>trending $${S.low}–${S.high.toFixed(1)}M</span></div>
+    <div class="lv-ticks"><span>Friday full day $${S.friday.toFixed(2)}M</span><span>range $${S.low.toFixed(2)}–${S.high.toFixed(2)}M</span></div>
     <div class="lv-stack">${S.parts.map(p=>`<i style="width:${p.v/tot*100}%;background:${p.col}" title="${esc(p.n)}"></i>`).join('')}</div>
-    <div class="lv-leg">${S.parts.map(p=>`<span class="nm"><i style="background:${p.col}"></i>${esc(p.n)}</span><span class="t">${esc(p.t)}</span><b>${usd(p.v)}</b>`).join('')}</div>`;}
+    <div class="lv-leg">${S.parts.map(p=>`<span class="nm"><i style="background:${p.col}"></i>${esc(p.n)}</span><span class="t">${esc(p.t)}</span><b>${usd(p.v)}</b>`).join('')}</div>`+
+    (S.bridge?`<p class="sub" style="margin:14px 0 4px">How the number builds up</p><div class="lv-leg">${S.bridge.map((b,i)=>`<span class="nm"${i>2?' style="color:var(--muted)"':''}>${esc(b[0])}</span><span class="t">${esc(b[1])}</span><b${i===2?' style="color:var(--accent)"':i>2?' style="color:var(--muted)"':''}>${esc(b[2])}</b>`).join('')}</div>`:'')+
+    (S.rank?`<p class="sub" style="margin:14px 0 4px">Biggest Saturday for an Indian film in North America</p><div class="lv-leg">${S.rank.map((r,i)=>`<span class="nm">${i+1}. ${esc(r[0])}</span><span class="t"></span><b>${esc(r[1])}</b>`).join('')}</div>`:'');}
   const days=(id,arr,fmt)=>{const mx=Math.max(...arr.map(x=>x.v));
     $(id).style.gridTemplateColumns=`repeat(${arr.length},1fr)`;
     $(id).innerHTML=arr.map(x=>`<div class="lv-day"><span class="bv">${fmt(x.v)}</span><div class="bb${x.live?' live':''}${x.adv?' adv':''}" style="height:${Math.max(4,x.v/mx*118)}px"></div><span class="bl"><b style="color:var(--ink)">${esc(x.d)}</b><br>${esc(x.l)}</span></div>`).join('');};
