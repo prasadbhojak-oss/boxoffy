@@ -914,25 +914,26 @@ gtag("js",new Date());gtag("config","G-K6C9EVRFH4",{anonymize_ip:true});}})();
 <script>
 /* LIVE: the dashboard numbers. Update these; the layout draws itself. */
 const LIVE = {
-  asOf: 'Sat 7 Nov · 11:35 PM CT',
-  headline: 'Ramayana nears <em>₹400 Cr</em> worldwide in four days',
-  dek: 'Worldwide ₹389 Cr ($41.0M) from Wednesday previews to Saturday night. North America is heading for its biggest day yet, and Diwali Sunday is already well booked.',
+  asOf: 'Sun 8 Nov · 1:40 AM CT · North America Saturday final count',
+  headline: 'Ramayana hits <em>~$4M</em> on Saturday in North America',
+  dek: 'North America Saturday closed at about $3.99M by our final seat count, its biggest day yet and 1.8x Friday. Worldwide ₹391 Cr ($41.3M) from Wednesday previews to Saturday, with ₹400 Cr due on Diwali Sunday.',
   kpis: [
-    {k:'Worldwide', v:'₹389 Cr', s:'$41.0M · Wed previews to Sat', src:'e', hi:true},
+    {k:'Worldwide', v:'₹391 Cr', s:'$41.3M · Wed previews to Sat', src:'e', hi:true},
     {k:'India', v:'₹218 Cr', s:'gross · ₹182.7 Cr net · Thu to Sat', src:'i'},
-    {k:'Overseas', v:'$18.0M', s:'₹171 Cr · 40+ countries', src:'e'},
-    {k:'North America', v:'$9.6M', s:'US $8.27M · Canada $1.36M', src:'c', hi:true},
-    {k:'NA Saturday', v:'$3.75M', s:'by 10:40 PM CT · trending $3.85–4.0M', src:'c', hi:true},
+    {k:'Overseas', v:'$18.3M', s:'₹173 Cr · 40+ countries', src:'e'},
+    {k:'North America', v:'$9.9M', s:'US $8.48M · Canada $1.39M · Wed to Sat', src:'c', hi:true},
+    {k:'NA Saturday', v:'$3.99M', s:'final count · range $3.96–4.04M · biggest day yet', src:'c', hi:true},
     {k:'Diwali Sunday booked', v:'$1.43M', s:'North America · India ₹38 Cr booked', src:'c'}
   ],
   sat: {
-    title: 'North America Saturday', when: 'by 10:40 PM CT · West Coast late shows still playing',
-    usd: 3.75, low: 3.85, high: 4.0, friday: 2.20, tickets: '~225,200 tickets · ~1,330 cinemas',
+    title: 'North America Saturday · final', when: 'every show played · final seat count 1:40 AM CT · range $3.96–4.04M',
+    usd: 3.99, low: 3.96, high: 4.04, friday: 2.20, tickets: '~239,400 tickets · ~1,335 cinemas',
     parts: [
-      {n:'US, counted seat by seat', v:3.01, t:'169,999', src:'c', col:'var(--accent)'},
+      {n:'US, counted seat by seat', v:3.04, t:'171,527', src:'c', col:'var(--accent)'},
       {n:'Cineplex Canada, counted', v:0.51, t:'39,627', src:'c', col:'var(--h4)'},
       {n:'Landmark Canada, seat maps read', v:0.12, t:'~9,100', src:'c', col:'var(--h2)'},
-      {n:'86 US cinemas with no seat map', v:0.09, t:'~5,000', src:'e', col:'var(--saffron)'},
+      {n:'Late buyers and walk-ups (+6%)', v:0.21, t:'~12,700', src:'e', col:'var(--h1)'},
+      {n:'88 US cinemas with no seat map', v:0.09, t:'~5,000', src:'e', col:'var(--saffron)'},
       {n:'Independents (17 confirmed)', v:0.02, t:'~1,450', src:'e', col:'var(--gold)'}
     ]
   },
@@ -940,7 +941,7 @@ const LIVE = {
     {d:'Wed', l:'previews', v:2.19},
     {d:'Thu', l:'Day 1', v:1.49},
     {d:'Fri', l:'Day 2', v:2.20},
-    {d:'Sat', l:'Day 3 · live', v:3.75, live:true},
+    {d:'Sat', l:'Day 3 · final', v:3.99},
     {d:'Sun', l:'booked so far', v:1.43, adv:true}
   ],
   daysIN: [
@@ -966,8 +967,8 @@ const LIVE = {
     {g:'Pacific'},
     {f:'🇦🇺🇳🇿', c:'Australia & NZ', a:0.81, s:0.49, x:0.24, src:'i', n:'+ Sunday $0.24M counted'},
     {g:'North America'},
-    {f:'🇺🇸', c:'United States', a:5.17, s:3.10, src:'c', n:'every Fandango cinema, every show'},
-    {f:'🇨🇦', c:'Canada', a:0.71, s:0.65, src:'c', n:'Cineplex + Landmark read'}
+    {f:'🇺🇸', c:'United States', a:5.17, s:3.31, src:'c', n:'every Fandango cinema, every show · Sat final'},
+    {f:'🇨🇦', c:'Canada', a:0.71, s:0.68, src:'c', n:'Cineplex + Landmark read · Sat final'}
   ],
   sunAsOf: 'Advance sales for Sunday 8 Nov (Diwali), read Saturday night',
   sun: [
