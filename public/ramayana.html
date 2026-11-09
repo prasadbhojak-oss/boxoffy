@@ -896,7 +896,7 @@ gtag("js",new Date());gtag("config","G-K6C9EVRFH4",{anonymize_ip:true});}})();
 <script>
   /* ACT: the only place actuals numbers live. Fold = edit this object. */
   const ACT = {
-    asOf: 'Mon 9 Nov · 9:30 AM CT · North America Sunday final merged ($2.73M, 157,809 tickets) · Gulf, Malaysia, NZ, Ireland, Vietnam industry figures added · UK Tuesday advance read · earlier: worldwide sweep: the UK weekend figure out (£2.2M with previews, Screen Daily, 364 sites) · Australia Thu to Sun A$2.72M out (Variety Australia) · India Monday (Day 5) in progress, final due tonight IST · Comscore (North America), Numero and Comscore UK / BFI still due',
+    asOf: 'Mon 9 Nov · 12:00 PM CT · North America actuals $12.4M in · North America Sunday final merged ($2.73M, 157,809 tickets) · Gulf, Malaysia, NZ, Ireland, Vietnam industry figures added · UK Tuesday advance read · earlier: worldwide sweep: the UK weekend figure out (£2.2M with previews, Screen Daily, 364 sites) · Australia Thu to Sun A$2.72M out (Variety Australia) · India Monday (Day 5) in progress, final due tonight IST · Comscore (North America), Numero and Comscore UK / BFI still due',
     headline: 'Worldwide $55.7M (~₹529 Cr) Wed previews to Diwali Sunday · studio estimate (Sony, via Deadline, Sun 8 Nov) · India $32.0M (~₹304 Cr) · North America $12.2M · rest of world $11.5M across 37 markets: the UK $3.0M (record Indian opening), UAE $2.2M, Australia $1.9M, Germany $0.63M, Thailand $0.55M, Nepal $0.50M · India 4 days ₹285.2 Cr gross / ₹238.9 Cr net (industry figure, final) · our North America count for the 5 days is $12.60M, 3.7% above the studio estimate, with Sunday final at $2.73M (157,809 tickets) against the studio $2.41M · Comscore due Monday · the UK £2.2M with previews (Screen Daily, Mon 9 Nov) · Australia A$2.72M Thu to Sun (Variety Australia, Mon 9 Nov)',
     wwFri: {
       title: 'Worldwide · Wed previews to Friday',
@@ -1053,7 +1053,7 @@ gtag("js",new Date());gtag("config","G-K6C9EVRFH4",{anonymize_ip:true});}})();
 /* LIVE (9 Nov redesign): one worldwide banner + country list. Edit the numbers here; the layout draws itself.
    Strings use double quotes on purpose. v = 5-day gross in US$ millions (our reconciled figure). */
 const LIVE = {
-  asOf: "Updated Mon 9 Nov · 11:30 AM CT · North America actuals in · ₹ at ₹95 to $1",
+  asOf: "Updated Mon 9 Nov · 12:00 PM CT · North America actuals in · ₹ at ₹95 to $1",
   hero: {
     kick: "Worldwide · first 5 days · Wed previews to Diwali Sunday",
     big: "$55.7M", inr: "₹529 Cr",
@@ -6085,7 +6085,7 @@ function stamp(){
   const rate=pct(DATA.total.sold,DATA.total.seats);
   const rel=new Date('2026-11-05T00:00:00-06:00');
   const tminus=Math.max(0,Math.round((rel-new Date(DATA.scan))/864e5));
-  $('#livelbl').textContent='Live · '+(ACT.asOf||('last scan '+when+' CT')).split(' · ').slice(0,2).join(' · ');
+  $('#livelbl').textContent='Live · '+(((typeof LIVE!=='undefined'&&LIVE.asOf)?LIVE.asOf.replace(/^Updated /,''):'')||ACT.asOf||('last scan '+when+' CT')).split(' · ').slice(0,2).join(' · ');
   /* Preview night, carried under the title. A date slice of North America,
      so it is stated as such rather than left to look worldwide. */
   const pv=$('#prevlbl');

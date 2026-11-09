@@ -4502,12 +4502,12 @@ function WeekendLeadHero() {
           ))}
         </div>
         <div style={{ flex:1, minWidth:0, display:"flex", flexDirection:"column", justifyContent:"center" }}>
-          <span style={{ alignSelf:"flex-start", background:"#C8201A", color:"#FFFFFF", fontFamily:"'Barlow Condensed', sans-serif", fontWeight:900, fontSize:9, letterSpacing:"0.12em", padding:"2px 7px", borderRadius:2, marginBottom:7 }}>LIVE · RAMAYANA DAY 1</span>
+          <span style={{ alignSelf:"flex-start", background:"#C8201A", color:"#FFFFFF", fontFamily:"'Barlow Condensed', sans-serif", fontWeight:900, fontSize:9, letterSpacing:"0.12em", padding:"2px 7px", borderRadius:2, marginBottom:7 }}>LIVE · RAMAYANA · FIRST 5 DAYS</span>
           <div style={{ fontFamily:"'Barlow Condensed', sans-serif", fontWeight:900, fontSize:"clamp(15px, 1.7vw, 17px)", color:"#FFFFFF", lineHeight:1.15, letterSpacing:"-0.01em" }}>
-            RAMAYANA: $13.4M WORLDWIDE AFTER PREVIEWS + DAY 1.
+            RAMAYANA: $55.7M (₹529 CR) WORLDWIDE IN 5 DAYS.
           </div>
           <div style={{ fontFamily:"'DM Sans', sans-serif", fontSize:10.5, color:"#9CA3AF", marginTop:5, lineHeight:1.4 }}>
-            India day one ~₹73 Cr nett (₹87.5 Cr gross). North America $3.56M: a record $2.19M preview night past Dhurandhar 2, then $1.37M+ on Thursday. Counted seat by seat, country by country.
+            India ₹285.2 Cr gross (₹238.85 Cr nett) in 4 days. North America $12.4M actuals, the #2 Indian opening ever there; our seat count was within 1.6%. Records in the UK, Thailand, Vietnam, the Netherlands and South Africa.
           </div>
           <span style={{ fontFamily:"'Barlow Condensed', sans-serif", fontWeight:700, fontSize:11, color:"#E5C882", letterSpacing:"0.06em", marginTop:8 }}>OPEN THE LIVE TRACKER →</span>
         </div>
@@ -4816,11 +4816,11 @@ const RAMAYANA_TRACKER = {
   // 5 NOV 21:40 CT: the homepage strip is now RAMAYANA ACTUALS - a compact
   // running total (previews + Day 1). Presale fields above stay as the record.
   actuals: {
-    asOf: "5 Nov · 9:30 PM CT",
-    ww: "$13.4M", wwInr: "₹127 Cr",
-    india: "₹73.25 Cr", indiaNote: "nett · Day 1",
-    na: "$3.56M", naNote: "previews $2.19M + Day 1 $1.37M",
-    overseas: "$0.60M", overseasNote: "AU/NZ, the UK, Europe, Gulf, Asia",
+    asOf: "9 Nov · 12:00 PM CT",
+    ww: "$55.7M", wwInr: "₹529 Cr · 5 days",
+    india: "₹285.2 Cr", indiaNote: "gross · 4 days (₹238.85 Cr nett)",
+    na: "$12.4M", naNote: "actuals · Wed to Sun",
+    overseas: "$11.5M", overseasNote: "37 markets · the UK $3.0M, UAE $2.2M",
   },
 };
 
@@ -4842,7 +4842,7 @@ function RamayanaTrackerStrip() {
                            textTransform:"uppercase", color:T.accent, display:"flex", alignItems:"center", gap:6 }}>
               <span style={{ width:6, height:6, borderRadius:"50%", background:"#15803D", display:"inline-block" }} />Ramayana Actuals
             </span>
-            <span style={{ fontFamily:"'DM Sans', sans-serif", fontSize:10, color:T.textMuted }}>Running total · previews + Day 1</span>
+            <span style={{ fontFamily:"'DM Sans', sans-serif", fontSize:10, color:T.textMuted }}>Verified · first 5 days</span>
           </div>
           {figs.map(f => (
             <div key={f.l} style={{ minWidth:96 }}>
