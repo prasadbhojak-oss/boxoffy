@@ -973,6 +973,7 @@ gtag("js",new Date());gtag("config","G-K6C9EVRFH4",{anonymize_ip:true});}})();
       {r:'BookMyShow', v:'9.4/10 · 48.2K+ votes (6 Nov)'}
     ],
     log: [
+      {c:'India Monday (Day 5) vs ACTUAL', o:'~₹103 Cr net (v5 range ₹100–106 · v3 base ₹97–103)', f:'₹107.50 Cr net, ₹128.70 Cr gross, 41.04 lakh tickets · industry figure, Tue 10 Nov 1:45 AM IST', x:'−4% · Monday beat the top of our range by ₹1.5 Cr · late shows sold more than the night read showed', bad:true},
       {c:'North America Wed to Sun vs ACTUALS', o:'$12.60M our count (Wed 2.19 · Thu 1.49 · Fri 2.20 · Sat 3.99 · Sun 2.73)', f:'$12.4M actuals (Wed 2.0 · Thu 1.5 · Fri 2.4 · Sat 3.8 · Sun 2.7), Mon 9 Nov', x:'+1.6% · Sat +5% (walk-up add-on double counted; seat count alone $3.78M, −0.5%) · Sun +1% · Fri −8% · Wed +9.5%'},
       {c:'North America Sunday vs ACTUAL', o:'$2.73M (157,809 tickets, no walk-up add-on)', f:'$2.7M actual (studio estimate was $2.41M)', x:'+1.1% · within range'},
       {c:'North America Saturday vs ACTUAL', o:'$3.99M (count $3.67M + no-map $0.11M + walk-ups $0.21M)', f:'$3.8M actual', x:'+5% · walk-up add-on was the miss; count + no-map $3.78M = −0.5%', bad:true},
@@ -1053,26 +1054,26 @@ gtag("js",new Date());gtag("config","G-K6C9EVRFH4",{anonymize_ip:true});}})();
 /* LIVE (9 Nov redesign): one worldwide banner + country list. Edit the numbers here; the layout draws itself.
    Strings use double quotes on purpose. v = 5-day gross in US$ millions (our reconciled figure). */
 const LIVE = {
-  asOf: "Updated Mon 9 Nov · 12:10 PM CT",
+  asOf: "Updated Mon 9 Nov · 2:20 PM CT",
   hero: {
     kick: "Worldwide running total · Wed previews to Monday",
-    big: "$70.4M", inr: "₹669 Cr",
-    line: "Gross, 6 days. First 5 days $54.2M (₹515 Cr; studio $55.7M) + Monday in progress ~$16.2M (₹154 Cr).",
+    big: "$70.9M", inr: "₹673 Cr",
+    line: "Gross, 6 days. First 5 days $54.2M (₹515 Cr; studio $55.7M) + Monday ~$16.7M (₹158 Cr), India Monday final.",
     split: [
-      {k:"🇮🇳 India", v:"₹407 Cr", s:"$42.8M · gross, 5 days · ₹342 Cr net"},
-      {k:"🇺🇸🇨🇦 North America", v:"$13.6M", s:"₹129 Cr · $12.4M actuals + Monday"},
+      {k:"🇮🇳 India", v:"₹414 Cr", s:"$43.6M · gross, 5 days · ₹346 Cr net"},
+      {k:"🇺🇸🇨🇦 North America", v:"$13.3M", s:"₹126 Cr · $12.4M actuals + Monday so far"},
       {k:"🌍 Rest of world", v:"$14.0M", s:"₹133 Cr · 37 markets + Monday"}
     ],
     today: [],
     recs: ["#2 global weekend", "#2 Indian opening in North America", "Record Indian opening in 5 countries"]
   },
   countries: [
-    {f:"🇮🇳", c:"India", v:30.02, show:"₹285.2 Cr", sub:"gross · $30.0M", src:"i", tag:"₹100 Cr Monday in reach", sm:"₹238.85 Cr net in 4 days · Monday ₹93.5 Cr net live by ~9:45 PM IST, already the biggest day · 5 days ₹332.3 Cr net",
+    {f:"🇮🇳", c:"India", v:30.02, show:"₹285.2 Cr", sub:"gross · $30.0M", src:"i", tag:"₹100 Cr Monday", sm:"Monday ₹107.5 Cr net (₹128.7 Cr gross), its biggest day, 41 lakh tickets · 5 days ₹346.35 Cr net, ₹413.9 Cr gross",
       daysTitle:"Net by day, ₹ crore", unit:"inr",
-      days:[{d:"Thu",l:"Day 1",v:64.85},{d:"Fri",l:"Day 2",v:48.05},{d:"Sat",l:"Day 3",v:69.80},{d:"Sun",l:"Diwali",v:56.15},{d:"Mon",l:"live 9:45 PM",v:93.49,k:"live"}],
+      days:[{d:"Thu",l:"Day 1",v:64.85},{d:"Fri",l:"Day 2",v:48.05},{d:"Sat",l:"Day 3",v:69.80},{d:"Sun",l:"Diwali",v:56.15},{d:"Mon",l:"Day 5",v:107.50}],
       citiesTitle:"Fullest cities · Monday night shows (District, our read 9:09 PM IST)", cities:[["Bengaluru",97.4,"%"],["Chennai",95.2,"%"],["Agra",92.1,"%"],["Mumbai",60.7,"%"],["New Delhi",60.5,"%"],["Jaipur",56.9,"%"],["Hyderabad",52.3,"%"],["Pune",52.2,"%"]],
-      facts:[{k:"Monday call (v5)",b:"~₹103 Cr",s:"net · range ₹100–106 Cr · industry projection ₹105 Cr+ · v4 was ₹97–104"},{k:"Monday night, District",b:"2.92 lakh",s:"tickets on 2,500 night shows, 53.8% full, 71 sold out · 7–10 PM 70% · ₹14.4 Cr on District alone"},{k:"BookMyShow",b:"1.39 lakh/hr",s:"all-time hourly record · 9–10 AM alone ~91,500 vs 54,760 Sunday"},{k:"Monday advance",b:"15.99 lakh",s:"tickets · ₹59.51 Cr gross · 289 housefull"},{k:"Sunday by language",b:"Hindi ₹36.75 Cr",s:"Kannada ₹7.25 · Telugu ₹6.25 · Tamil ₹3.15 · Malayalam ₹2.75 Cr net"},{k:"IMAX India",b:"$2M",s:"opening, studio figure"}],
-      note:"Gross and net are industry figures (final through Sunday; Monday live, final due late tonight IST). Studio figure $32.0M (~₹304 Cr) shown in the banner, not added."},
+      facts:[{k:"Monday: our call vs actual",b:"₹107.5 Cr",s:"net · our call ~₹103 Cr (range ₹100–106) · 4% low"},{k:"Tuesday advance",b:"11.23 lakh",s:"tickets · ₹43.51 Cr gross booked in national chains"},{k:"Monday night, District",b:"2.92 lakh",s:"tickets on 2,500 night shows, 53.8% full, 71 sold out · 7–10 PM 70% · ₹14.4 Cr on District alone"},{k:"BookMyShow",b:"1.39 lakh/hr",s:"all-time hourly record · 9–10 AM alone ~91,500 vs 54,760 Sunday"},{k:"Monday advance",b:"15.99 lakh",s:"tickets · ₹59.51 Cr gross · 289 housefull"},{k:"Sunday by language",b:"Hindi ₹36.75 Cr",s:"Kannada ₹7.25 · Telugu ₹6.25 · Tamil ₹3.15 · Malayalam ₹2.75 Cr net"},{k:"IMAX India",b:"$2M",s:"opening, studio figure"}],
+      note:"Gross and net are industry figures, through Monday. Studio figure $32.0M (~₹304 Cr) shown in the banner, not added."},
     {f:"🇺🇸🇨🇦", c:"North America", v:12.40, show:"$12.4M", sub:"actuals · our count $12.60M", src:"i", tag:"#2 Indian opening ever", sm:"Actuals: $8.9M Fri to Sun, 1,433 theatres · past Dangal as the #10 Indian film ever in the US, in 5 days · our count was 1.6% high",
       daysTitle:"By day, actuals, US$ millions", unit:"usd",
       days:[{d:"Wed",l:"previews",v:2.0},{d:"Thu",l:"Day 1",v:1.5},{d:"Fri",l:"Day 2",v:2.4},{d:"Sat",l:"Day 3",v:3.8},{d:"Sun",l:"Diwali",v:2.7},{d:"Mon",l:"booked 10 AM",v:0.69,k:"live"}],

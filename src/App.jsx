@@ -4504,10 +4504,10 @@ function WeekendLeadHero() {
         <div style={{ flex:1, minWidth:0, display:"flex", flexDirection:"column", justifyContent:"center" }}>
           <span style={{ alignSelf:"flex-start", background:"#C8201A", color:"#FFFFFF", fontFamily:"'Barlow Condensed', sans-serif", fontWeight:900, fontSize:9, letterSpacing:"0.12em", padding:"2px 7px", borderRadius:2, marginBottom:7 }}>LIVE · RAMAYANA · RUNNING TOTAL</span>
           <div style={{ fontFamily:"'Barlow Condensed', sans-serif", fontWeight:900, fontSize:"clamp(15px, 1.7vw, 17px)", color:"#FFFFFF", lineHeight:1.15, letterSpacing:"-0.01em" }}>
-            RAMAYANA: $70.4M (₹669 CR) WORLDWIDE IN 6 DAYS.
+            RAMAYANA: $70.9M (₹673 CR) WORLDWIDE IN 6 DAYS.
           </div>
           <div style={{ fontFamily:"'DM Sans', sans-serif", fontSize:10.5, color:"#9CA3AF", marginTop:5, lineHeight:1.4 }}>
-            India ₹407 Cr gross (₹342 Cr nett) in 5 days with Monday in progress. North America $12.4M actuals, the #2 Indian opening ever there. First 5 days worldwide $55.7M (studio).
+            India ₹414 Cr gross (₹346 Cr nett) in 5 days, with a ₹107.5 Cr nett Monday. North America $12.4M actuals, the #2 Indian opening ever there. First 5 days worldwide $55.7M (studio).
           </div>
           <span style={{ fontFamily:"'Barlow Condensed', sans-serif", fontWeight:700, fontSize:11, color:"#E5C882", letterSpacing:"0.06em", marginTop:8 }}>OPEN THE LIVE TRACKER →</span>
         </div>
@@ -4816,10 +4816,10 @@ const RAMAYANA_TRACKER = {
   // 5 NOV 21:40 CT: the homepage strip is now RAMAYANA ACTUALS - a compact
   // running total (previews + Day 1). Presale fields above stay as the record.
   actuals: {
-    asOf: "9 Nov · 12:10 PM CT",
-    ww: "$70.4M", wwInr: "₹669 Cr · 6 days",
-    india: "₹407 Cr", indiaNote: "gross · 5 days (₹342 Cr nett)",
-    na: "$13.6M", naNote: "$12.4M actuals + Monday",
+    asOf: "9 Nov · 2:20 PM CT",
+    ww: "$70.9M", wwInr: "₹673 Cr · 6 days",
+    india: "₹414 Cr", indiaNote: "gross · 5 days (₹346 Cr nett)",
+    na: "$13.3M", naNote: "$12.4M actuals + Monday so far",
     overseas: "$14.0M", overseasNote: "37 markets + Monday",
   },
 };
