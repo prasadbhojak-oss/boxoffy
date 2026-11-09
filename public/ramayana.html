@@ -718,6 +718,14 @@ gtag("js",new Date());gtag("config","G-K6C9EVRFH4",{anonymize_ip:true});}})();
     @keyframes bxp{0%{box-shadow:0 0 0 0 rgba(232,38,26,.6)}70%{box-shadow:0 0 0 9px rgba(232,38,26,0)}100%{box-shadow:0 0 0 0 rgba(232,38,26,0)}}
     @media (prefers-reduced-motion:reduce){.bx-live i{animation:none}}
     .bx-asof{font-family:var(--mono);font-size:11px;color:#A39A92}
+    .bx-main{display:grid;grid-template-columns:170px minmax(0,1fr);gap:22px;align-items:end;position:relative;z-index:1;margin:14px 0 0}
+    .bx-poster{display:block;position:relative;border-radius:10px;overflow:hidden;box-shadow:0 14px 34px rgba(0,0,0,.55),0 0 0 1px rgba(255,255,255,.08);
+      transform:rotate(-1.5deg);transition:transform .25s}
+    .bx-poster:hover{transform:rotate(0) scale(1.02)}
+    .bx-poster img{display:block;width:100%;height:auto;aspect-ratio:2/3;object-fit:cover;background:#2B2420}
+    .bx-poster span{position:absolute;left:0;right:0;bottom:0;padding:14px 8px 6px;font-family:var(--mono);font-size:9.5px;letter-spacing:.08em;
+      text-transform:uppercase;color:#D6CEC6;background:linear-gradient(transparent,rgba(0,0,0,.75))}
+    .bx-txt .bx-kick{margin-top:0}
     .bx-kick{font-family:var(--disp);font-weight:700;font-size:15px;letter-spacing:.14em;text-transform:uppercase;
       color:#D4920A;margin:16px 0 0;position:relative;z-index:1}
     .bx-big{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;position:relative;z-index:1}
@@ -764,6 +772,9 @@ gtag("js",new Date());gtag("config","G-K6C9EVRFH4",{anonymize_ip:true});}})();
     .bx-v{text-align:right}
     .bx-v b{display:block;font-family:var(--disp);font-weight:800;font-size:26px;line-height:1;color:var(--ink)}
     .bx-v span{display:block;font-family:var(--mono);font-size:11px;color:var(--muted);margin-top:3px}
+    .bx-v em.cx{display:block;font-style:normal;font-family:var(--disp);font-weight:700;font-size:16px;color:var(--gold);margin-top:2px;letter-spacing:.01em}
+    .bx-day .val i{font-style:normal;color:var(--gold);font-size:10px}
+    .bx-day .val{text-align:center;line-height:1.25}
     .bx-ch{color:var(--accent);font-family:var(--mono);font-weight:700;transition:transform .2s;text-align:center}
     .bx-c[open] .bx-ch{transform:rotate(90deg)}
     .bx-c[open]>summary{background:var(--paper)}
@@ -796,6 +807,8 @@ gtag("js",new Date());gtag("config","G-K6C9EVRFH4",{anonymize_ip:true});}})();
     @media(max-width:700px){
       .bx-hero{padding:18px 16px 16px}
       .bx-split{grid-template-columns:1fr}
+      .bx-main{grid-template-columns:96px minmax(0,1fr);gap:14px;align-items:start}
+      .bx-poster span{display:none}
       .bx-d{grid-template-columns:1fr;padding:4px 16px 16px}
       .bx-c>summary,.bx-tot{grid-template-columns:22px 1fr auto 14px;gap:4px 9px;padding:11px 12px}
       .bx-v b{font-size:22px}
@@ -812,9 +825,20 @@ gtag("js",new Date());gtag("config","G-K6C9EVRFH4",{anonymize_ip:true});}})();
       <span class="bx-live"><i></i>Live box office · Ramayana: Rise of a Legend</span>
       <span class="bx-asof" id="bx-asof"></span>
     </div>
-    <div class="bx-kick" id="bx-kick"></div>
-    <div class="bx-big" id="bx-big"></div>
-    <p class="bx-line" id="bx-line"></p>
+    <div class="bx-main">
+      <a class="bx-poster" href="/ramayana-part-one-box-office.html" aria-label="Ramayana: Rise of a Legend, film page">
+        <img src="https://image.tmdb.org/t/p/w342/dPrtk4iNf6T5w8fWfg4uxDDbJSW.jpg"
+             srcset="https://image.tmdb.org/t/p/w342/dPrtk4iNf6T5w8fWfg4uxDDbJSW.jpg 1x, https://image.tmdb.org/t/p/w500/dPrtk4iNf6T5w8fWfg4uxDDbJSW.jpg 2x"
+             width="342" height="513" alt="Ramayana: Rise of a Legend poster" decoding="async" fetchpriority="high"
+             onerror="this.onerror=null;this.removeAttribute('srcset');this.src='/images/ramayana-poster.jpg'">
+        <span>Poster · TMDB</span>
+      </a>
+      <div class="bx-txt">
+        <div class="bx-kick" id="bx-kick"></div>
+        <div class="bx-big" id="bx-big"></div>
+        <p class="bx-line" id="bx-line"></p>
+      </div>
+    </div>
     <div class="bx-split" id="bx-split"></div>
     <div class="bx-today" id="bx-today"></div>
     <div class="bx-recs" id="bx-recs"></div>
@@ -1020,19 +1044,19 @@ gtag("js",new Date());gtag("config","G-K6C9EVRFH4",{anonymize_ip:true});}})();
 /* LIVE (9 Nov redesign): one worldwide banner + country list. Edit the numbers here; the layout draws itself.
    Strings use double quotes on purpose. v = 5-day gross in US$ millions (our reconciled figure). */
 const LIVE = {
-  asOf: "Updated Mon 9 Nov · 9:50 AM CT",
+  asOf: "Updated Mon 9 Nov · 9:50 AM CT · ₹ at ₹95 to $1",
   hero: {
     kick: "Worldwide · first 5 days · Wed previews to Diwali Sunday",
     big: "$55.7M", inr: "₹529 Cr",
     line: "Studio estimate (Sony). <b>Our country-by-country count: $54.4M (₹516 Cr)</b>, within 2.3%. The gap is India, where the studio counts $32.0M and the industry figure is ₹285.2 Cr ($30.0M).",
     split: [
-      {k:"🇮🇳 India", v:"₹285.2 Cr", s:"gross · ₹238.9 Cr net · studio $32.0M"},
-      {k:"🇺🇸🇨🇦 North America", v:"$12.16M", s:"studio · our count $12.60M"},
-      {k:"🌍 Rest of world", v:"$11.5M", s:"studio · 37 markets · our count $11.8M"}
+      {k:"🇮🇳 India", v:"₹285.2 Cr", s:"$30.0M · gross · ₹238.9 Cr net · studio $32.0M"},
+      {k:"🇺🇸🇨🇦 North America", v:"$12.16M", s:"₹115.5 Cr · studio · our count $12.60M (₹119.7 Cr)"},
+      {k:"🌍 Rest of world", v:"$11.5M", s:"₹109.3 Cr · studio, 37 markets · our count $11.8M (₹112 Cr)"}
     ],
     today: [
-      {k:"India", v:"₹68.65 Cr", s:"net by 5 PM IST · heading for ~₹100 Cr"},
-      {k:"North America", v:"~40,900", s:"tickets booked by 9 AM CT"},
+      {k:"India", v:"₹68.65 Cr", s:"($7.2M) net by 5 PM IST · heading for ~₹100 Cr ($10.5M)"},
+      {k:"North America", v:"~40,900", s:"tickets booked by 9 AM CT · ~$0.67M (₹6.4 Cr)"},
       {k:"Outside India", v:"~77,800", s:"tickets counted so far"}
     ],
     recs: ["#2 global weekend", "#2 Indian opening in North America", "Record Indian opening: the UK · Thailand · Netherlands · South Africa · Vietnam", "BookMyShow record: 1.39 lakh tickets in one hour"]
@@ -1061,26 +1085,26 @@ const LIVE = {
       facts:[{k:"Sunday",b:"49,846",s:"tickets · industry figure"},{k:"VOX Sunday",b:"6,845",s:"tickets we counted on 91 shows, 42% full"}],
       note:"Studio figure $2.2M used for the total; industry daily figures add to $2.48M and are shown, not added."},
     {f:"🇦🇺", c:"Australia", v:1.89, show:"A$2.72M", sub:"~$1.89M · No. 1", src:"i", sm:"No. 1 for the weekend Thu to Sun · Monday 12,848 tickets counted at HOYTS + Event",
-      daysTitle:"Tickets we counted (HOYTS + Event)", unit:"n",
-      days:[{d:"Thu",l:"Day 1",v:14550},{d:"Fri",l:"Day 2",v:19104},{d:"Sun",l:"Diwali",v:17649},{d:"Mon",l:"Day 5",v:12848}],
-      facts:[{k:"Monday",b:"12,848",s:"HOYTS 9,269 (40% full) · Event 3,579"},{k:"Studio",b:"$1.9M",s:"Thu to Sun"}],
+      daysTitle:"By day (trade figures, Sunday the rest of the weekend)", unit:"usd",
+      days:[{d:"Thu",l:"Day 1",v:0.35},{d:"Fri",l:"Day 2",v:0.45},{d:"Sat",l:"Day 3",v:0.65},{d:"Sun",l:"Diwali",v:0.44,k:"est"}],
+      facts:[{k:"Monday tickets",b:"12,848",s:"counted · HOYTS 9,269 (40% full) · Event 3,579 · ~$0.21M (₹2 Cr)"},{k:"Sunday tickets",b:"17,649",s:"counted at HOYTS + Event"},{k:"Studio",b:"$1.9M",s:"Thu to Sun (₹18 Cr)"}],
       note:"Weekend figure from Variety Australia. Village, Reading, Palace and Dendy not read; Numero official table due."},
-    {f:"🇩🇪", c:"Germany", v:0.625, show:"$625K", sub:"studio", src:"i", sm:"Biggest Bollywood opening day in Germany · Sunday 6,998 tickets counted on 118 shows", facts:[{k:"Day 1",b:"€165K",s:"biggest Bollywood opening day there"},{k:"Sunday",b:"6,998",s:"tickets counted on 118 shows"}], note:"InsideKino figures due."},
-    {f:"🇹🇭", c:"Thailand", v:0.55, show:"$550K", sub:"studio", src:"i", tag:"Record", sm:"Record opening for a film from India · the Ramakien is Thailand's national epic", note:"Studio figure."},
+    {f:"🇩🇪", c:"Germany", v:0.625, show:"$625K", sub:"studio", src:"i", sm:"Biggest Bollywood opening day in Germany · Sunday 6,998 tickets counted on 118 shows", facts:[{k:"Day 1",b:"€165K",s:"biggest Bollywood opening day there"},{k:"Sunday",b:"6,998",s:"tickets counted on 118 shows"}], daysTitle:"By day (trade, Sunday the rest of the studio figure)", unit:"k", days:[{d:"Thu",l:"Day 1",v:190},{d:"Fri+Sat",l:"Day 2–3",v:235},{d:"Sun",l:"rest",v:200}], note:"InsideKino figures due."},
+    {f:"🇹🇭", c:"Thailand", v:0.55, show:"$550K", sub:"studio", src:"i", tag:"Record", sm:"Record opening for a film from India · the Ramakien is Thailand's national epic", daysTitle:"By day (trade, Sunday the rest of the studio figure)", unit:"k", days:[{d:"Thu–Sat",l:"3 days",v:275},{d:"Sun",l:"rest",v:275}], note:"Studio figure."},
     {f:"🇳🇵", c:"Nepal", v:0.50, show:"$500K", sub:"studio", src:"i", sm:"52 cinemas · Monday 9,711 seats taken at QFX by 9 AM, 40% full", facts:[{k:"4 days",b:"~NPR 8.8 Cr",s:"our build, QFX counted"},{k:"Monday",b:"9,711",s:"QFX booked + held, 111 shows"}], note:"Studio $500K; industry $550K."},
-    {f:"🇲🇾", c:"Malaysia", v:0.395, show:"$395K", sub:"industry", src:"i", sm:"Sunday 27,977 tickets on 524 shows", note:"Industry figure, Thu to Sun."},
+    {f:"🇲🇾", c:"Malaysia", v:0.395, show:"$395K", sub:"industry", src:"i", sm:"Sunday 27,977 tickets on 524 shows", daysTitle:"By day (industry figures)", unit:"k", days:[{d:"Thu",l:"Day 1",v:69},{d:"Fri",l:"Day 2",v:65},{d:"Sat",l:"Day 3",v:85},{d:"Sun",l:"Diwali",v:176}], note:"Industry figure, Thu to Sun."},
     {f:"🇸🇬", c:"Singapore", v:0.375, show:"$375K", sub:"industry", src:"i", sm:"Wed to Sun", note:"Industry figure."},
     {f:"🇳🇱", c:"Netherlands", v:0.24, show:"$240K", sub:"studio", src:"i", tag:"Record", sm:"Record Indian opening · 11,783 tickets counted Thu to Sun at Pathé + Vue",
       daysTitle:"Tickets we counted (Pathé + Vue)", unit:"n",
       days:[{d:"Thu",l:"Day 1",v:1881},{d:"Fri",l:"Day 2",v:2625},{d:"Sat",l:"Day 3",v:4551},{d:"Sun",l:"Diwali",v:2726},{d:"Mon",l:"booked",v:1155,k:"live"}],
       note:"Kinepolis not counted. Tuesday 1,198 already booked."},
-    {f:"🇳🇿", c:"New Zealand", v:0.229, show:"$229K", sub:"industry", src:"i", sm:"Monday 1,200 tickets counted at Event (NZ$30K)", note:"Industry figure, Thu to Sun."},
+    {f:"🇳🇿", c:"New Zealand", v:0.229, show:"$229K", sub:"industry", src:"i", sm:"Monday 1,200 tickets counted at Event (NZ$30K)", daysTitle:"By day (industry figures)", unit:"k", days:[{d:"Thu",l:"Day 1",v:46},{d:"Fri",l:"Day 2",v:64},{d:"Sat",l:"Day 3",v:73},{d:"Sun",l:"Diwali",v:46}], note:"Industry figure, Thu to Sun."},
     {f:"🇻🇳", c:"Vietnam", v:0.20, show:"$200K", sub:"5.3 billion VND", src:"i", tag:"Record", sm:"Record 50,000+ tickets for an Indian film (Sony) · Champa temples carry the same epic", note:"Opening revenue from Tuoi Tre / Box Office Vietnam; ticket record from the studio."},
-    {f:"🇴🇲", c:"Oman", v:0.153, show:"$153K", sub:"industry", src:"i", sm:"Thu to Sun", note:"Industry figure."},
-    {f:"🇮🇪", c:"Ireland", v:0.096, show:"€86K", sub:"~$96K · industry", src:"i", sm:"Omniplex, IMC, Odeon Ireland, Movies@", note:"Industry figure, Thu to Sun. IMC, Odeon Ireland and Movies@ blocked our reads."},
-    {f:"🇧🇭", c:"Bahrain", v:0.083, show:"$83K", sub:"industry", src:"i", sm:"Thu to Sun", note:"Industry figure."},
+    {f:"🇴🇲", c:"Oman", v:0.153, show:"$153K", sub:"industry", src:"i", sm:"Thu to Sun", daysTitle:"By day (industry figures)", unit:"k", days:[{d:"Thu",l:"Day 1",v:30},{d:"Fri",l:"Day 2",v:57},{d:"Sat",l:"Day 3",v:44},{d:"Sun",l:"Diwali",v:21}], note:"Industry figure."},
+    {f:"🇮🇪", c:"Ireland", v:0.096, show:"€86K", sub:"~$96K · industry", src:"i", sm:"Omniplex, IMC, Odeon Ireland, Movies@", daysTitle:"By day (industry figures)", unit:"k", days:[{d:"Thu",l:"Day 1",v:22},{d:"Fri",l:"Day 2",v:18},{d:"Sat",l:"Day 3",v:32},{d:"Sun",l:"Diwali",v:24}], note:"Industry figure, Thu to Sun. IMC, Odeon Ireland and Movies@ blocked our reads."},
+    {f:"🇧🇭", c:"Bahrain", v:0.083, show:"$83K", sub:"industry", src:"i", sm:"Thu to Sun", daysTitle:"By day (industry figures)", unit:"k", days:[{d:"Thu",l:"Day 1",v:14},{d:"Fri",l:"Day 2",v:34},{d:"Sat",l:"Day 3",v:25},{d:"Sun",l:"Diwali",v:10}], note:"Industry figure."},
     {f:"🇿🇦", c:"South Africa", v:0.075, show:"$75K", sub:"studio", src:"i", tag:"Record", sm:"Record Indian opening", note:"Studio figure."},
-    {f:"🇰🇼", c:"Kuwait", v:0.048, show:"$48K", sub:"industry", src:"i", sm:"Thu to Sun", note:"Industry figure."},
+    {f:"🇰🇼", c:"Kuwait", v:0.048, show:"$48K", sub:"industry", src:"i", sm:"Thu to Sun", daysTitle:"By day (industry figures)", unit:"k", days:[{d:"Thu",l:"Day 1",v:5},{d:"Fri",l:"Day 2",v:13},{d:"Sat",l:"Day 3",v:19},{d:"Sun",l:"Diwali",v:11}], note:"Industry figure."},
     {f:"🌍", c:"Rest of the world", last:true, v:1.089, show:"$1.09M", sub:"industry", src:"e", sm:"Rest of Europe ~$0.64M · rest of Asia-Pacific $0.25M · Africa and others ~$0.20M", note:"Industry estimates for markets without a separate figure."}
   ],
   giscus: {repo:"prasadbhojak-oss/boxoffy-comments", repoId:"", category:"Comments", categoryId:""}
@@ -1096,7 +1120,8 @@ const LIVE = {
   $("bx-split").innerHTML=H.split.map(x=>`<div><small>${esc(x.k)}</small><b>${esc(x.v)}</b><em>${esc(x.s)}</em></div>`).join("");
   $("bx-today").innerHTML=`<span class="lbl">Today · Day 5</span>`+H.today.map(x=>`<span class="bx-chip">${esc(x.k)} <b>${esc(x.v)}</b> ${esc(x.s)}</span>`).join("");
   $("bx-recs").innerHTML=H.recs.map(r=>`<span class="bx-rec">★ ${esc(r)}</span>`).join("");
-  const fmt={inr:v=>"₹"+v.toFixed(1),usd:v=>"$"+v.toFixed(2)+"M",k:v=>"$"+v+"K",n:v=>v.toLocaleString()};
+  const RATE=95, cr=usd=>{const c=usd*RATE/10;return "₹"+(c>=10?c.toFixed(0):c.toFixed(1))+" Cr"};
+  const fmt={inr:v=>"₹"+v.toFixed(1)+" Cr<br><i>$"+(v*1e7/RATE/1e6).toFixed(1)+"M</i>",usd:v=>"$"+v.toFixed(2)+"M<br><i>"+cr(v)+"</i>",k:v=>"$"+v+"K<br><i>"+cr(v/1000)+"</i>",n:v=>v.toLocaleString()};
   const C=LIVE.countries.slice().sort((a,b)=>(a.last?1:0)-(b.last?1:0)||b.v-a.v), mx=C[0].v, tot=C.reduce((a,c)=>a+c.v,0);
   const days=c=>{if(!c.days)return"";const m=Math.max(...c.days.map(d=>d.v)),f=fmt[c.unit];
     return `<div><h4>${esc(c.daysTitle)}</h4><div class="bx-days" style="grid-template-columns:repeat(${c.days.length},1fr)">`+
@@ -1109,9 +1134,9 @@ const LIVE = {
     return `<details class="bx-c"${i===0?"":""}><summary><span class="bx-rk">${c.last?"":i+1}</span>
       <span class="bx-nm"><span class="fl">${c.f}</span><b>${esc(c.c)}</b>${c.tag?`<span class="tg">★ ${esc(c.tag)}</span>`:""}
         <span class="bar"><i style="width:${Math.max(1.5,c.v/mx*100)}%"></i></span><span class="sm">${esc(c.sm)}</span></span>
-      <span class="bx-v"><b>${esc(c.show)}</b><span>${esc(c.sub)} · ${pct.toFixed(1)}% of total</span></span><span class="bx-ch">›</span></summary>
+      <span class="bx-v"><b>${esc(c.show)}</b><em class="cx">${c.c==="India"?"$"+c.v.toFixed(1)+"M":(c.show.startsWith("$")?"":"$"+(c.v>=1?c.v.toFixed(2)+"M":Math.round(c.v*1000)+"K")+" · ")+cr(c.v)}</em><span>${esc(c.sub)} · ${pct.toFixed(1)}% of total</span></span><span class="bx-ch">›</span></summary>
       <div class="bx-d">${days(c)}${cities(c)}${facts}<p class="bx-src">${pill(c.src)} ${esc(c.note||"")}</p></div></details>`;}).join("")+
-    `<div class="bx-tot"><span></span><b>Worldwide · our count</b><span class="bx-v"><b>$${tot.toFixed(1)}M</b><span>~₹${Math.round(tot*95)} Cr · studio $55.7M</span></span><span></span></div>`;
+    `<div class="bx-tot"><span></span><b>Worldwide · our count</b><span class="bx-v"><b>$${tot.toFixed(1)}M</b><em class="cx">₹${Math.round(tot*95/10)} Cr</em><span>studio $55.7M (₹529 Cr)</span></span><span></span></div>`;
   /* the long notes, kept from ACT */
   if (typeof ACT!=="undefined"){
     $("act-mk").innerHTML=ACT.markets.map(x=>`<div class="mk"><b>${esc(x.m)}</b><span>${esc(x.n)}</span></div>`).join("");
