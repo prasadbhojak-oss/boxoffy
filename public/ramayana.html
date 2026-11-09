@@ -775,6 +775,10 @@ gtag("js",new Date());gtag("config","G-K6C9EVRFH4",{anonymize_ip:true});}})();
     .bx-v em.cx{display:block;font-style:normal;font-family:var(--disp);font-weight:700;font-size:16px;color:var(--gold);margin-top:2px;letter-spacing:.01em}
     .bx-day .val i{font-style:normal;color:var(--gold);font-size:10px}
     .bx-day .val{text-align:center;line-height:1.25}
+    .bx-also{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:8px;margin:0 0 18px}
+    .bx-al{border:1px dashed var(--line);border-radius:9px;padding:9px 11px;background:var(--card)}
+    .bx-al b{display:block;font-size:14px;color:var(--ink)}
+    .bx-al span{display:block;font-size:12px;color:var(--muted);line-height:1.35;margin-top:2px}
     .bx-ch{color:var(--accent);font-family:var(--mono);font-weight:700;transition:transform .2s;text-align:center}
     .bx-c[open] .bx-ch{transform:rotate(90deg)}
     .bx-c[open]>summary{background:var(--paper)}
@@ -854,6 +858,8 @@ gtag("js",new Date());gtag("config","G-K6C9EVRFH4",{anonymize_ip:true});}})();
     <span class="src e"><span>Boxoffy estimate</span></span>
   </div>
   <div class="bx-list" id="bx-list"></div>
+  <div class="bx-sec"><h3 style="font-size:22px">Also playing</h3><p>No separate figure yet · counted inside Rest of the world</p></div>
+  <div class="bx-also" id="bx-also"></div>
 
   <div class="lv-more">
     <details><summary>Accuracy log · our calls against official numbers</summary>
@@ -967,6 +973,9 @@ gtag("js",new Date());gtag("config","G-K6C9EVRFH4",{anonymize_ip:true});}})();
       {r:'BookMyShow', v:'9.4/10 · 48.2K+ votes (6 Nov)'}
     ],
     log: [
+      {c:'North America Wed to Sun vs ACTUALS', o:'$12.60M our count (Wed 2.19 · Thu 1.49 · Fri 2.20 · Sat 3.99 · Sun 2.73)', f:'$12.4M actuals (Wed 2.0 · Thu 1.5 · Fri 2.4 · Sat 3.8 · Sun 2.7), Mon 9 Nov', x:'+1.6% · Sat +5% (walk-up add-on double counted; seat count alone $3.78M, −0.5%) · Sun +1% · Fri −8% · Wed +9.5%'},
+      {c:'North America Sunday vs ACTUAL', o:'$2.73M (157,809 tickets, no walk-up add-on)', f:'$2.7M actual (studio estimate was $2.41M)', x:'+1.1% · within range'},
+      {c:'North America Saturday vs ACTUAL', o:'$3.99M (count $3.67M + no-map $0.11M + walk-ups $0.21M)', f:'$3.8M actual', x:'+5% · walk-up add-on was the miss; count + no-map $3.78M = −0.5%', bad:true},
       {c:'Australia Thu to Sun vs reported weekend', o:'$1.74M (industry Thu to Sat + our Sunday count $0.29M)', f:'A$2.72M (~$1.89M) · Variety Australia, Mon 9 Nov 12:49 PM AEDT', x:'−8% · Village, Reading, Palace, Dendy unread', bad:true},
       {c:'the UK Wed to Sun vs reported weekend', o:'$2.84M our estimate for Wed to Sat alone', f:'£2.2M (~$2.95M) with previews, £1.7M Fri to Sun · Screen Daily, Mon 9 Nov', x:'ours was 96% of the full 5 days before Sunday · Wed to Sat 29% high vs the trade figure', bad:true},
       {c:'North America Sunday (Day 4) vs studio', o:'$2.73M (157,809 tickets READ, $2.62M, + labelled estimates $0.11M) · every read to midnight merged, 9 Nov 9 AM CT', f:'$2,410,000 · studio estimate (The Numbers), 1,433 theatres', x:'+13% · ours higher; Comscore due Mon decides', bad:true},
@@ -1044,68 +1053,82 @@ gtag("js",new Date());gtag("config","G-K6C9EVRFH4",{anonymize_ip:true});}})();
 /* LIVE (9 Nov redesign): one worldwide banner + country list. Edit the numbers here; the layout draws itself.
    Strings use double quotes on purpose. v = 5-day gross in US$ millions (our reconciled figure). */
 const LIVE = {
-  asOf: "Updated Mon 9 Nov · 9:50 AM CT · ₹ at ₹95 to $1",
+  asOf: "Updated Mon 9 Nov · 11:30 AM CT · North America actuals in · ₹ at ₹95 to $1",
   hero: {
     kick: "Worldwide · first 5 days · Wed previews to Diwali Sunday",
     big: "$55.7M", inr: "₹529 Cr",
-    line: "Studio estimate (Sony). <b>Our country-by-country count: $54.4M (₹516 Cr)</b>, within 2.3%. The gap is India, where the studio counts $32.0M and the industry figure is ₹285.2 Cr ($30.0M).",
+    line: "Studio estimate (Sony). <b>Country by country: $54.2M (₹515 Cr)</b>, with North America now on actuals ($12.4M). The gap is India, where the studio counts $32.0M and the industry figure is ₹285.2 Cr ($30.0M).",
     split: [
       {k:"🇮🇳 India", v:"₹285.2 Cr", s:"$30.0M · gross · ₹238.9 Cr net · studio $32.0M"},
-      {k:"🇺🇸🇨🇦 North America", v:"$12.16M", s:"₹115.5 Cr · studio · our count $12.60M (₹119.7 Cr)"},
-      {k:"🌍 Rest of world", v:"$11.5M", s:"₹109.3 Cr · studio, 37 markets · our count $11.8M (₹112 Cr)"}
+      {k:"🇺🇸🇨🇦 North America", v:"$12.4M", s:"₹117.8 Cr · actuals · our count $12.60M, 1.6% high"},
+      {k:"🌍 Rest of world", v:"$11.8M", s:"₹112 Cr · 37 markets · studio $11.5M"}
     ],
     today: [
-      {k:"India", v:"₹68.65 Cr", s:"($7.2M) net by 5 PM IST · heading for ~₹100 Cr ($10.5M)"},
-      {k:"North America", v:"~40,900", s:"tickets booked by 9 AM CT · ~$0.67M (₹6.4 Cr)"},
-      {k:"Outside India", v:"~77,800", s:"tickets counted so far"}
+      {k:"India", v:"₹93.5 Cr", s:"net live ~9:45 PM IST (~₹111 Cr gross, $11.7M) · heading for ~₹103 Cr net / ₹122 Cr gross"},
+      {k:"North America", v:"$0.69M", s:"(₹6.6 Cr) booked by 10 AM CT · heading for $1.1–1.2M"},
+      {k:"Malaysia", v:"$276K", s:"(₹2.6 Cr) so far · its biggest day"},{k:"Australia", v:"A$541K", s:"(₹3.5 Cr) Monday"},{k:"Outside India", v:"$2.05M", s:"(₹19.5 Cr) so far · heading for $3.0–3.6M"},{k:"Monday worldwide", v:"$13.8M", s:"(₹131 Cr) gross so far · heading for ~$16.2M (₹154 Cr)"},{k:"Running total", v:"~$70M", s:"(~₹669 Cr) gross, 6 days with our Monday call"}
     ],
-    recs: ["#2 global weekend", "#2 Indian opening in North America", "Record Indian opening: the UK · Thailand · Netherlands · South Africa · Vietnam", "BookMyShow record: 1.39 lakh tickets in one hour"]
+    recs: ["#2 global weekend", "#2 Indian opening in North America ($12.4M actuals)", "#10 Indian film ever in the US, past Dangal", "Record Indian opening: the UK · Thailand · Netherlands · South Africa · Vietnam", "BookMyShow record: 1.39 lakh tickets in one hour"]
   },
   countries: [
-    {f:"🇮🇳", c:"India", v:30.02, show:"₹285.2 Cr", sub:"gross · $30.0M", src:"i", sm:"₹238.85 Cr net · 93.4 lakh tickets in 4 days · Monday ₹68.65 Cr net by 5 PM IST",
+    {f:"🇮🇳", c:"India", v:30.02, show:"₹285.2 Cr", sub:"gross · $30.0M", src:"i", tag:"₹100 Cr Monday in reach", sm:"₹238.85 Cr net in 4 days · Monday ₹93.5 Cr net live by ~9:45 PM IST, already the biggest day · 5 days ₹332.3 Cr net",
       daysTitle:"Net by day, ₹ crore", unit:"inr",
-      days:[{d:"Thu",l:"Day 1",v:64.85},{d:"Fri",l:"Day 2",v:48.05},{d:"Sat",l:"Day 3",v:69.80},{d:"Sun",l:"Diwali",v:56.15},{d:"Mon",l:"live 5 PM",v:68.65,k:"live"}],
-      citiesTitle:"Fullest cities · Monday, Hindi 3D", cities:[["Chennai",94.5,"%"],["Bengaluru",85.5,"%"],["Jaipur",75.0,"%"],["Chandigarh",75.0,"%"]],
-      facts:[{k:"Monday call",b:"~₹100 Cr",s:"net · range ₹97–104 Cr · Boxoffy model v4"},{k:"Monday advance",b:"15.99 lakh",s:"tickets · ₹59.51 Cr gross · 289 housefull"},{k:"Sunday by language",b:"Hindi ₹36.75 Cr",s:"Kannada ₹7.25 · Telugu ₹6.25 · Tamil ₹3.15 · Malayalam ₹2.75 Cr net"},{k:"IMAX India",b:"$2M",s:"opening, studio figure"}],
-      note:"Gross and net are industry figures (final through Sunday). Studio figure $32.0M (~₹304 Cr) shown in the banner, not added."},
-    {f:"🇺🇸🇨🇦", c:"North America", v:12.60, show:"$12.60M", sub:"our count · studio $12.16M", src:"c", tag:"#2 Indian opening", sm:"1,433 theatres · Sunday $2.73M, 13% above the studio estimate · IMAX $2.5M on 53 screens",
-      daysTitle:"By day, US$ millions", unit:"usd",
-      days:[{d:"Wed",l:"previews",v:2.19},{d:"Thu",l:"Day 1",v:1.49},{d:"Fri",l:"Day 2",v:2.20},{d:"Sat",l:"Day 3",v:3.99},{d:"Sun",l:"Diwali",v:2.73},{d:"Mon",l:"booked 9 AM",v:0.67,k:"live"}],
+      days:[{d:"Thu",l:"Day 1",v:64.85},{d:"Fri",l:"Day 2",v:48.05},{d:"Sat",l:"Day 3",v:69.80},{d:"Sun",l:"Diwali",v:56.15},{d:"Mon",l:"live 9:45 PM",v:93.49,k:"live"}],
+      citiesTitle:"Fullest cities · Monday night shows (District, our read 9:09 PM IST)", cities:[["Bengaluru",97.4,"%"],["Chennai",95.2,"%"],["Agra",92.1,"%"],["Mumbai",60.7,"%"],["New Delhi",60.5,"%"],["Jaipur",56.9,"%"],["Hyderabad",52.3,"%"],["Pune",52.2,"%"]],
+      facts:[{k:"Monday call (v5)",b:"~₹103 Cr",s:"net · range ₹100–106 Cr · industry projection ₹105 Cr+ · v4 was ₹97–104"},{k:"Monday night, District",b:"2.92 lakh",s:"tickets on 2,500 night shows, 53.8% full, 71 sold out · 7–10 PM 70% · ₹14.4 Cr on District alone"},{k:"BookMyShow",b:"1.39 lakh/hr",s:"all-time hourly record · 9–10 AM alone ~91,500 vs 54,760 Sunday"},{k:"Monday advance",b:"15.99 lakh",s:"tickets · ₹59.51 Cr gross · 289 housefull"},{k:"Sunday by language",b:"Hindi ₹36.75 Cr",s:"Kannada ₹7.25 · Telugu ₹6.25 · Tamil ₹3.15 · Malayalam ₹2.75 Cr net"},{k:"IMAX India",b:"$2M",s:"opening, studio figure"}],
+      note:"Gross and net are industry figures (final through Sunday; Monday live, final due late tonight IST). Studio figure $32.0M (~₹304 Cr) shown in the banner, not added."},
+    {f:"🇺🇸🇨🇦", c:"North America", v:12.40, show:"$12.4M", sub:"actuals · our count $12.60M", src:"i", tag:"#2 Indian opening ever", sm:"Actuals: $8.9M Fri to Sun, 1,433 theatres · past Dangal as the #10 Indian film ever in the US, in 5 days · our count was 1.6% high",
+      daysTitle:"By day, actuals, US$ millions", unit:"usd",
+      days:[{d:"Wed",l:"previews",v:2.0},{d:"Thu",l:"Day 1",v:1.5},{d:"Fri",l:"Day 2",v:2.4},{d:"Sat",l:"Day 3",v:3.8},{d:"Sun",l:"Diwali",v:2.7},{d:"Mon",l:"booked 10 AM",v:0.69,k:"live"}],
       citiesTitle:"Top metros · Diwali Sunday", cities:[["NY / New Jersey",293,"K"],["SF Bay Area",200,"K"],["Dallas–Fort Worth",152,"K"],["Los Angeles",135,"K"],["Chicago",124,"K"],["Florida",102,"K"],["North Carolina",96,"K"],["Baltimore / DC",86,"K"],["Boston",83,"K"],["Georgia",83,"K"]],
-      facts:[{k:"Biggest day",b:"$3.99M",s:"Saturday · biggest Saturday ever for an Indian film in North America"},{k:"Sunday tickets",b:"157,809",s:"counted seat by seat · US 124,025 · Cineplex 28,334 · Landmark ~5,450"},{k:"Canada",b:"60% full",s:"Mississauga Sunday · Brampton 57% · Toronto 41%"},{k:"Monday",b:"~$1.1–1.2M",s:"our call for the day · 40,900 booked by 9 AM CT"}],
-      note:"Every Fandango cinema and every Cineplex show read seat by seat; Landmark read; no-seat-map cinemas and independents estimated and labelled. Studio estimate $12.16M (Sony); Comscore actuals due Monday."},
-    {f:"🇬🇧", c:"The UK", v:3.00, show:"$3.0M", sub:"studio · No. 1", src:"i", tag:"Record", sm:"Biggest opening ever for a film from India · £2.2M with previews (UK-Ireland, 364 sites)",
+      facts:[{k:"Our count vs actuals",b:"+1.6%",s:"$12.60M vs $12.4M · Wed 2.19 vs 2.0 · Thu 1.49 vs 1.5 · Fri 2.20 vs 2.4 · Sat 3.99 vs 3.8 · Sun 2.73 vs 2.7"},{k:"Biggest day",b:"$3.8M",s:"Saturday, +58% on Friday · biggest Saturday ever for an Indian film in North America"},{k:"Ranking",b:"#2 opening",s:"behind Dhurandhar 2 ($14M) · ahead of Kalki 2898 AD ($11.2M) · #4 Fri to Sun weekend"},{k:"Sunday tickets",b:"157,809",s:"counted seat by seat · US 124,025 · Cineplex 28,334 · Landmark ~5,450"},{k:"Canada",b:"60% full",s:"Mississauga Sunday · Brampton 57% · Toronto 41%"},{k:"Monday",b:"~$1.1–1.2M",s:"our call for the day · 40,900 booked by 9 AM CT"}],
+      note:"Weekend actuals Mon 9 Nov (Wed $2.0M, Thu $1.5M, Fri $2.4M, Sat $3.8M, Sun $2.7M) replace the $12.16M studio estimate. Our count read every Fandango and Cineplex show seat by seat; on Saturday the seat count alone was $3.78M, and our +6% walk-up add-on made it $3.99M, so that add-on is dropped for days read up to show time."},
+    {f:"🇬🇧", c:"The UK", v:3.00, show:"$3.0M", sub:"studio · No. 1", src:"i", tag:"Record", sm:"Biggest opening ever for a film from India · Monday 12,004 tickets counted by early afternoon, Cineworld 21% full (about −55% vs Sunday)",
       daysTitle:"By day, US$ millions", unit:"usd",
       days:[{d:"Thu",l:"Day 1",v:0.59},{d:"Fri",l:"Day 2",v:0.60},{d:"Sat",l:"Day 3",v:0.97},{d:"Sun",l:"Diwali",v:0.84,k:"est"}],
       facts:[{k:"Busiest cinema",b:"O2 Greenwich",s:"2,517 Saturday tickets at Cineworld · then Ilford, South Ruislip, Wembley, Feltham, Birmingham, Milton Keynes, Belfast, Watford (85% full), Crawley"},{k:"Saturday",b:"£750K",s:"biggest single day · Cineworld 30,200 tickets, 41% full"},{k:"Monday so far",b:"12,004",s:"tickets counted by early afternoon · Cineworld 9,100 (21% full)"},{k:"Tuesday advance",b:"769",s:"tickets at Showcase, The Light, Metro, Arc"}],
       note:"Studio $3.0M Wed to Sun; daily split from trade figures (Thu £440K, Sat £750K), Sunday is the rest. Comscore UK / BFI due Tuesday. Cinema ranking from our Cineworld read."},
-    {f:"🇦🇪", c:"UAE", v:2.20, show:"$2.2M", sub:"studio", src:"i", sm:"Industry by day $2.48M · Sunday 49,846 tickets on 754 shows · Reel Dubai Mall sold out Monday",
+    {f:"🇦🇪", c:"UAE", v:2.20, show:"$2.2M", sub:"studio", src:"i", sm:"Industry by day $2.48M · Monday $346K (₹3.3 Cr) by 7 PM UAE, 19,504 tickets · Reel Dubai Mall sold out",
       daysTitle:"By day, US$ thousands (industry)", unit:"k",
-      days:[{d:"Thu",l:"Day 1",v:302},{d:"Fri",l:"Day 2",v:473},{d:"Sat",l:"Day 3",v:889},{d:"Sun",l:"Diwali",v:815}],
-      facts:[{k:"Sunday",b:"49,846",s:"tickets · industry figure"},{k:"VOX Sunday",b:"6,845",s:"tickets we counted on 91 shows, 42% full"}],
+      days:[{d:"Thu",l:"Day 1",v:302},{d:"Fri",l:"Day 2",v:473},{d:"Sat",l:"Day 3",v:889},{d:"Sun",l:"Diwali",v:815},{d:"Mon",l:"so far",v:346,k:"live"}],
+      facts:[{k:"Sunday",b:"49,846",s:"tickets · industry figure"},{k:"VOX Sunday",b:"6,845",s:"tickets we counted on 91 shows, 42% full"},{k:"Reel Monday",b:"243",s:"tickets counted on 7 late shows (Dubai Mall, Marina, Springs) · 6:30 PM Dubai Mall sold out"}],
       note:"Studio figure $2.2M used for the total; industry daily figures add to $2.48M and are shown, not added."},
-    {f:"🇦🇺", c:"Australia", v:1.89, show:"A$2.72M", sub:"~$1.89M · No. 1", src:"i", sm:"No. 1 for the weekend Thu to Sun · Monday 12,848 tickets counted at HOYTS + Event",
+    {f:"🇦🇺", c:"Australia", v:1.89, show:"A$2.72M", sub:"~$1.89M · No. 1", src:"i", sm:"No. 1 for the weekend (Numero) · Monday A$541K (~$372K, ₹3.5 Cr), 20,484 tickets · industry 5 days A$3.77M",
       daysTitle:"By day (trade figures, Sunday the rest of the weekend)", unit:"usd",
-      days:[{d:"Thu",l:"Day 1",v:0.35},{d:"Fri",l:"Day 2",v:0.45},{d:"Sat",l:"Day 3",v:0.65},{d:"Sun",l:"Diwali",v:0.44,k:"est"}],
-      facts:[{k:"Monday tickets",b:"12,848",s:"counted · HOYTS 9,269 (40% full) · Event 3,579 · ~$0.21M (₹2 Cr)"},{k:"Sunday tickets",b:"17,649",s:"counted at HOYTS + Event"},{k:"Studio",b:"$1.9M",s:"Thu to Sun (₹18 Cr)"}],
+      days:[{d:"Thu",l:"Day 1",v:0.35},{d:"Fri",l:"Day 2",v:0.45},{d:"Sat",l:"Day 3",v:0.65},{d:"Sun",l:"Diwali",v:0.44,k:"est"},{d:"Mon",l:"Day 5",v:0.37}],
+      facts:[{k:"Monday",b:"A$541K",s:"industry estimate · 20,484 tickets · we counted 12,848 at HOYTS (9,269, 40% full) + Event (3,579)"},{k:"Sunday tickets",b:"17,649",s:"counted at HOYTS + Event"},{k:"Fullest cinema Monday",b:"Blacktown 74%",s:"HOYTS Blacktown NSW, 1,316 tickets · Chadstone VIC 1,105 · Parramatta (Event) 52%"},{k:"Studio",b:"$1.9M",s:"Thu to Sun (₹18 Cr)"}],
       note:"Weekend figure from Variety Australia. Village, Reading, Palace and Dendy not read; Numero official table due."},
-    {f:"🇩🇪", c:"Germany", v:0.625, show:"$625K", sub:"studio", src:"i", sm:"Biggest Bollywood opening day in Germany · Sunday 6,998 tickets counted on 118 shows", facts:[{k:"Day 1",b:"€165K",s:"biggest Bollywood opening day there"},{k:"Sunday",b:"6,998",s:"tickets counted on 118 shows"}], daysTitle:"By day (trade, Sunday the rest of the studio figure)", unit:"k", days:[{d:"Thu",l:"Day 1",v:190},{d:"Fri+Sat",l:"Day 2–3",v:235},{d:"Sun",l:"rest",v:200}], note:"InsideKino figures due."},
-    {f:"🇹🇭", c:"Thailand", v:0.55, show:"$550K", sub:"studio", src:"i", tag:"Record", sm:"Record opening for a film from India · the Ramakien is Thailand's national epic", daysTitle:"By day (trade, Sunday the rest of the studio figure)", unit:"k", days:[{d:"Thu–Sat",l:"3 days",v:275},{d:"Sun",l:"rest",v:275}], note:"Studio figure."},
-    {f:"🇳🇵", c:"Nepal", v:0.50, show:"$500K", sub:"studio", src:"i", sm:"52 cinemas · Monday 9,711 seats taken at QFX by 9 AM, 40% full", facts:[{k:"4 days",b:"~NPR 8.8 Cr",s:"our build, QFX counted"},{k:"Monday",b:"9,711",s:"QFX booked + held, 111 shows"}], note:"Studio $500K; industry $550K."},
-    {f:"🇲🇾", c:"Malaysia", v:0.395, show:"$395K", sub:"industry", src:"i", sm:"Sunday 27,977 tickets on 524 shows", daysTitle:"By day (industry figures)", unit:"k", days:[{d:"Thu",l:"Day 1",v:69},{d:"Fri",l:"Day 2",v:65},{d:"Sat",l:"Day 3",v:85},{d:"Sun",l:"Diwali",v:176}], note:"Industry figure, Thu to Sun."},
-    {f:"🇸🇬", c:"Singapore", v:0.375, show:"$375K", sub:"industry", src:"i", sm:"Wed to Sun", note:"Industry figure."},
-    {f:"🇳🇱", c:"Netherlands", v:0.24, show:"$240K", sub:"studio", src:"i", tag:"Record", sm:"Record Indian opening · 11,783 tickets counted Thu to Sun at Pathé + Vue",
+    {f:"🇩🇪", c:"Germany", v:0.625, show:"$625K", sub:"studio", src:"i", sm:"Biggest Bollywood opening day in Germany · Sunday 6,998 tickets counted · Monday ~1,436 booked (€26K), Hamburg 76% full", facts:[{k:"Day 1",b:"€165K",s:"biggest Bollywood opening day there"},{k:"Sunday",b:"6,998",s:"tickets counted on 118 shows"},{k:"Fullest city Monday",b:"Hamburg 76%",s:"292 tickets booked by Sunday night · Berlin 70% · Hannover 36% · Regensburg 30% (our read, 43 shows)"},{k:"Monday",b:"108 of 228",s:"seats sold at CinemaxX Hamburg-Dammtor 8 PM · Kinopolis Main-Taunus 32% sold · advance ~1,436 tickets (€26K) industry"},{k:"Tuesday",b:"160",s:"tickets read on 4 shows (Hamburg 76, Traumpalast Leonberg 46, Esslingen 24, Schwäbisch Gmünd 14)"}], daysTitle:"By day (trade, Sunday the rest of the studio figure)", unit:"k", days:[{d:"Thu",l:"Day 1",v:190},{d:"Fri+Sat",l:"Day 2–3",v:235},{d:"Sun",l:"rest",v:200},{d:"Mon",l:"advance",v:29,k:"live"}], note:"Studio $625K used. An analyst post puts the weekend at €542K, No. 6 in Germany; InsideKino actuals due Tuesday. Most CineStar sites start their Hindi shows on 12 Nov."},
+    {f:"🇹🇭", c:"Thailand", v:0.55, show:"$550K", sub:"studio", src:"i", tag:"Record", sm:"No. 1 at the Thai box office · about 5.5× the old Indian-film benchmark (Pathaan, ~$100K lifetime) · the Ramakien is Thailand's national epic", facts:[{k:"Weekend rank",b:"No. 1",s:"topped the Thai chart, opened Thu 5 Nov"},{k:"Old benchmark",b:"~$100K",s:"Pathaan, lifetime in Thailand · Ramayana did 5.5× in one weekend"},{k:"Why it works",b:"Ramakien",s:"kings are named Rama · Ayutthaya is named after Ayodhya · Khon dance on UNESCO list"}], daysTitle:"By day (trade, Sunday the rest of the studio figure)", unit:"k", days:[{d:"Thu–Sat",l:"3 days",v:275},{d:"Sun",l:"rest",v:275}], note:"Studio figure."},
+    {f:"🇳🇵", c:"Nepal", v:0.50, show:"$500K", sub:"studio", src:"i", sm:"52 cinemas · Monday 9,711 seats taken at QFX by 9 AM, 40% full, already above Sunday at QFX (6,362)", facts:[{k:"4 days",b:"~NPR 8.8 Cr",s:"our build, QFX counted"},{k:"Monday",b:"9,711",s:"QFX booked + held, 111 shows"}], note:"Studio $500K; industry $550K."},
+    {f:"🇲🇾", c:"Malaysia", v:0.395, show:"$395K", sub:"industry", src:"i", tag:"Biggest day Monday", sm:"Monday RM1.12M (~$276K, ₹2.6 Cr) so far, 45,802 tickets, 48% full · already its biggest day", daysTitle:"By day (industry figures)", unit:"k", days:[{d:"Thu",l:"Day 1",v:69},{d:"Fri",l:"Day 2",v:65},{d:"Sat",l:"Day 3",v:85},{d:"Sun",l:"Diwali",v:176},{d:"Mon",l:"so far",v:276,k:"live"}], note:"Industry figure, Thu to Sun."},
+    {f:"🇸🇬", c:"Singapore", v:0.375, show:"$375K", sub:"industry", src:"i", sm:"Wed to Sun · Golden Village, Shaw, Cathay, Carnival", note:"Industry figure."},
+    {f:"🇳🇱", c:"Netherlands", v:0.24, show:"$240K", sub:"studio", src:"i", tag:"Record", sm:"Record Indian opening · 11,783 tickets counted Thu to Sun · Monday 1,155 booked (20% full), Den Haag leads",
       daysTitle:"Tickets we counted (Pathé + Vue)", unit:"n",
       days:[{d:"Thu",l:"Day 1",v:1881},{d:"Fri",l:"Day 2",v:2625},{d:"Sat",l:"Day 3",v:4551},{d:"Sun",l:"Diwali",v:2726},{d:"Mon",l:"booked",v:1155,k:"live"}],
-      note:"Kinepolis not counted. Tuesday 1,198 already booked."},
-    {f:"🇳🇿", c:"New Zealand", v:0.229, show:"$229K", sub:"industry", src:"i", sm:"Monday 1,200 tickets counted at Event (NZ$30K)", daysTitle:"By day (industry figures)", unit:"k", days:[{d:"Thu",l:"Day 1",v:46},{d:"Fri",l:"Day 2",v:64},{d:"Sat",l:"Day 3",v:73},{d:"Sun",l:"Diwali",v:46}], note:"Industry figure, Thu to Sun."},
-    {f:"🇻🇳", c:"Vietnam", v:0.20, show:"$200K", sub:"5.3 billion VND", src:"i", tag:"Record", sm:"Record 50,000+ tickets for an Indian film (Sony) · Champa temples carry the same epic", note:"Opening revenue from Tuoi Tre / Box Office Vietnam; ticket record from the studio."},
+      facts:[{k:"Fullest city Monday",b:"Den Haag",s:"345 tickets, 37% full · Utrecht 44% · Eindhoven 51% · Amsterdam 165"},{k:"Biggest day",b:"4,551",s:"Saturday tickets, 45% full"},{k:"Sweden",b:"45",s:"tickets on 8 shows Thu to Sun · no Monday shows"}], note:"Pathé + Vue read seat by seat. Kinepolis not counted. Tuesday 1,198 already booked."},
+    {f:"🇳🇿", c:"New Zealand", v:0.229, show:"$229K", sub:"industry", src:"i", sm:"Monday NZ$94K (~$52K), 4,031 tickets, up on Sunday · Queen Street Auckland 61% full · 5 days NZ$506K", daysTitle:"By day (industry figures)", unit:"k", days:[{d:"Thu",l:"Day 1",v:46},{d:"Fri",l:"Day 2",v:64},{d:"Sat",l:"Day 3",v:73},{d:"Sun",l:"Diwali",v:46},{d:"Mon",l:"Day 5",v:52}], note:"Industry figure, Thu to Sun."},
+    {f:"🇻🇳", c:"Vietnam", v:0.20, show:"$200K", sub:"5.3 billion VND", src:"i", tag:"Record", sm:"Record 50,000+ tickets for an Indian film (Sony) · top 5 at the Vietnamese box office · Champa temples carry the same epic", facts:[{k:"Weekend",b:"5.1–5.3 bn VND",s:"~$0.20M · top 5 in Vietnam (Thanh Nien, Tuoi Tre)"},{k:"Tickets",b:"50,000+",s:"record for an Indian film in Vietnam (studio)"},{k:"Screenings",b:"~500 a day",s:"reported on opening"}], note:"Opening revenue from Tuoi Tre / Box Office Vietnam; ticket record from the studio."},
     {f:"🇴🇲", c:"Oman", v:0.153, show:"$153K", sub:"industry", src:"i", sm:"Thu to Sun", daysTitle:"By day (industry figures)", unit:"k", days:[{d:"Thu",l:"Day 1",v:30},{d:"Fri",l:"Day 2",v:57},{d:"Sat",l:"Day 3",v:44},{d:"Sun",l:"Diwali",v:21}], note:"Industry figure."},
-    {f:"🇮🇪", c:"Ireland", v:0.096, show:"€86K", sub:"~$96K · industry", src:"i", sm:"Omniplex, IMC, Odeon Ireland, Movies@", daysTitle:"By day (industry figures)", unit:"k", days:[{d:"Thu",l:"Day 1",v:22},{d:"Fri",l:"Day 2",v:18},{d:"Sat",l:"Day 3",v:32},{d:"Sun",l:"Diwali",v:24}], note:"Industry figure, Thu to Sun. IMC, Odeon Ireland and Movies@ blocked our reads."},
+    {f:"🇮🇪", c:"Ireland", v:0.096, show:"€86K", sub:"~$96K · industry", src:"i", sm:"Monday advance €6.4K (~$7K), 459 tickets · Omniplex Cork, Limerick, Sligo play it Tuesday · IMC, Odeon IE, Movies@ blocked", daysTitle:"By day (industry figures)", unit:"k", days:[{d:"Thu",l:"Day 1",v:22},{d:"Fri",l:"Day 2",v:18},{d:"Sat",l:"Day 3",v:32},{d:"Sun",l:"Diwali",v:24},{d:"Mon",l:"advance",v:7,k:"live"}], note:"Industry figure, Thu to Sun. IMC, Odeon Ireland and Movies@ blocked our reads."},
     {f:"🇧🇭", c:"Bahrain", v:0.083, show:"$83K", sub:"industry", src:"i", sm:"Thu to Sun", daysTitle:"By day (industry figures)", unit:"k", days:[{d:"Thu",l:"Day 1",v:14},{d:"Fri",l:"Day 2",v:34},{d:"Sat",l:"Day 3",v:25},{d:"Sun",l:"Diwali",v:10}], note:"Industry figure."},
     {f:"🇿🇦", c:"South Africa", v:0.075, show:"$75K", sub:"studio", src:"i", tag:"Record", sm:"Record Indian opening", note:"Studio figure."},
-    {f:"🇰🇼", c:"Kuwait", v:0.048, show:"$48K", sub:"industry", src:"i", sm:"Thu to Sun", daysTitle:"By day (industry figures)", unit:"k", days:[{d:"Thu",l:"Day 1",v:5},{d:"Fri",l:"Day 2",v:13},{d:"Sat",l:"Day 3",v:19},{d:"Sun",l:"Diwali",v:11}], note:"Industry figure."},
-    {f:"🌍", c:"Rest of the world", last:true, v:1.089, show:"$1.09M", sub:"industry", src:"e", sm:"Rest of Europe ~$0.64M · rest of Asia-Pacific $0.25M · Africa and others ~$0.20M", note:"Industry estimates for markets without a separate figure."}
+    {f:"🇰🇼", c:"Kuwait", v:0.048, show:"$48K", sub:"industry", src:"i", sm:"Thu to Sun · Monday advance $43K, 4,151 tickets, nearly a Sunday by itself", daysTitle:"By day (industry figures)", unit:"k", days:[{d:"Thu",l:"Day 1",v:5},{d:"Fri",l:"Day 2",v:13},{d:"Sat",l:"Day 3",v:19},{d:"Sun",l:"Diwali",v:11}], note:"Industry figure."},
+    {f:"🌍", c:"Rest of the world", last:true, v:1.089, show:"$1.09M", sub:"industry", src:"e", sm:"Rest of Europe ~$0.64M (France, Belgium, Austria, Switzerland, Sweden, Norway and others) · rest of Asia-Pacific $0.25M · Africa and others ~$0.20M", facts:[{k:"France",b:"Playing",s:"released Fri 6 Nov · no figure published yet"},{k:"Austria",b:"8 cinemas",s:"Cineplexx Vienna, Graz, Linz, Innsbruck, Villach, Hohenems · Mon + Tue shows"},{k:"Switzerland",b:"Playing",s:"Pathé Schweiz + Blue Cinema · no figure yet"},{k:"Belgium",b:"Kinepolis",s:"listed · not read"}], note:"Industry estimates for markets without a separate figure."}
+  ],
+  also: [
+    {f:"🇫🇷", c:"France", s:"Released Fri 6 Nov (Paris and major cities) · no figure published yet"},
+    {f:"🇧🇪", c:"Belgium", s:"Kinepolis lists it · seat maps not read"},
+    {f:"🇦🇹", c:"Austria", s:"Cineplexx, 8 cinemas: Vienna, Graz, Linz, Innsbruck, Villach, Hohenems"},
+    {f:"🇨🇭", c:"Switzerland", s:"Pathé Schweiz + Blue Cinema · no figure yet"},
+    {f:"🇸🇪", c:"Sweden", s:"45 tickets on 8 shows Thu to Sun (our read) · no Monday shows"},
+    {f:"🇵🇹", c:"Portugal", s:"listed · no figure"},
+    {f:"🇮🇩", c:"Indonesia", s:"XXI / CGV · not read yet"},
+    {f:"🇵🇭", c:"Philippines", s:"SM Cinema · presales read before release"},
+    {f:"🇰🇪", c:"Kenya", s:"listed · no figure"},
+    {f:"🇱🇰", c:"Sri Lanka", s:"listed · no figure"},
+    {f:"🇰🇭", c:"Cambodia", s:"release not confirmed yet · checking (Reamker country)"},
+    {f:"🇵🇱", c:"Poland", s:"not playing"}
   ],
   giscus: {repo:"prasadbhojak-oss/boxoffy-comments", repoId:"", category:"Comments", categoryId:""}
 };
@@ -1137,6 +1160,7 @@ const LIVE = {
       <span class="bx-v"><b>${esc(c.show)}</b><em class="cx">${c.c==="India"?"$"+c.v.toFixed(1)+"M":(c.show.startsWith("$")?"":"$"+(c.v>=1?c.v.toFixed(2)+"M":Math.round(c.v*1000)+"K")+" · ")+cr(c.v)}</em><span>${esc(c.sub)} · ${pct.toFixed(1)}% of total</span></span><span class="bx-ch">›</span></summary>
       <div class="bx-d">${days(c)}${cities(c)}${facts}<p class="bx-src">${pill(c.src)} ${esc(c.note||"")}</p></div></details>`;}).join("")+
     `<div class="bx-tot"><span></span><b>Worldwide · our count</b><span class="bx-v"><b>$${tot.toFixed(1)}M</b><em class="cx">₹${Math.round(tot*95/10)} Cr</em><span>studio $55.7M (₹529 Cr)</span></span><span></span></div>`;
+  if (LIVE.also&&$("bx-also")) $("bx-also").innerHTML=LIVE.also.map(a=>`<div class="bx-al"><b>${a.f} ${esc(a.c)}</b><span>${esc(a.s)}</span></div>`).join("");
   /* the long notes, kept from ACT */
   if (typeof ACT!=="undefined"){
     $("act-mk").innerHTML=ACT.markets.map(x=>`<div class="mk"><b>${esc(x.m)}</b><span>${esc(x.n)}</span></div>`).join("");
