@@ -744,7 +744,13 @@ gtag("js",new Date());gtag("config","G-K6C9EVRFH4",{anonymize_ip:true});}})();
   </div>
 
   <div class="lv-card">
-    <h3>Diwali Sunday · already booked</h3>
+    <h3>Monday 9 Nov · Day 5 · live</h3>
+    <p class="sub" id="lv-mon-sub"></p>
+    <div class="lv-sun" id="lv-mon"></div>
+  </div>
+
+  <div class="lv-card">
+    <h3>Diwali Sunday · final</h3>
     <p class="sub" id="lv-sun-sub"></p>
     <div class="lv-sun" id="lv-sun"></div>
   </div>
@@ -937,7 +943,7 @@ gtag("js",new Date());gtag("config","G-K6C9EVRFH4",{anonymize_ip:true});}})();
 <script>
 /* LIVE: the dashboard numbers. Update these; the layout draws itself. */
 const LIVE = {
-  asOf: 'Mon 9 Nov · 9:45 AM CT · North America Sunday final ($2.73M, 157,809 tickets) · every market reconciled to published figures for the 5 days · India Monday (Day 5) running, final tonight IST · Comscore actuals due today',
+  asOf: 'Mon 9 Nov · 9:50 AM CT · Monday (Day 5) added: India live ₹68.65 Cr net at 5:03 PM IST, North America 40,900 booked, the UK, Nepal, Netherlands · North America Sunday final ($2.73M, 157,809 tickets) · every market reconciled to published figures for the 5 days · India Monday (Day 5) running, final tonight IST · Comscore actuals due today',
   headline: 'Ramayana opens to <em>$55.7M</em> (~₹528 Cr) worldwide · <em>$12.2M</em> North America',
   dek: 'Studio estimates for the first five days (Wednesday previews to Diwali Sunday): $55.7M worldwide, $12.16M North America ($8.65M Friday to Sunday) and $43.5M international including India. Our own reconciled count is ₹516 Cr ($54.4M): India ₹285.2 Cr gross (industry figure), North America $12.60M seat by seat, 37 other markets $11.8M from studio and industry figures. Our North America Sunday finished at $2.73M, 13% above the studio estimate. Saturday was the biggest overseas day ever for an Indian film.',
   kpis: [
@@ -945,7 +951,7 @@ const LIVE = {
     {k:'India', v:'₹285.2 Cr', s:'gross · ₹238.85 Cr net · 93.4 lakh tickets in 4 days · Sunday ₹56.15 Cr net (industry figure, 10:11 PM IST)', src:'i'},
     {k:'Overseas', v:'$24.4M', s:'~₹231 Cr · 5 days · North America $12.60M (our count) + 37 markets $11.8M (studio figure where out, industry for the rest) · studio $23.7M', src:'e'},
     {k:'North America', v:'$12.16M', s:'5 days · $8.65M Fri to Sun · 1,433 theatres · studio estimate', src:'i', hi:true},
-    {k:'NA Saturday', v:'$3.99M', s:'$3.78M counted + walk-ups · biggest Saturday ever for an Indian film in NA', src:'c', hi:true},
+    {k:'India Monday · Day 5', v:'₹68.65 Cr', s:'net, live 5:03 PM IST · 61% full · already past Sunday (₹56.15 Cr) · BookMyShow record 1.39 lakh tickets in one hour · our model v4 (9 PM IST): ~₹100 Cr net (₹97–104 Cr)', src:'i', hi:true},
     {k:'Diwali Sunday final', v:'$2.73M', s:'North America · 157,809 tickets counted seat by seat ($2.62M) + $0.11M labelled estimate · 13% above the studio estimate of $2.41M', src:'c', hi:true}
   ],
   sat: {
@@ -973,13 +979,15 @@ const LIVE = {
     {d:'Thu', l:'Day 1', v:1.49},
     {d:'Fri', l:'Day 2 · studio', v:2.40},
     {d:'Sat', l:'Day 3 · final', v:3.99},
-    {d:'Sun', l:'Day 4 · final count', v:2.73}
+    {d:'Sun', l:'Day 4 · final count', v:2.73},
+    {d:'Mon', l:'Day 5 · booked 9 AM', v:0.67, adv:true}
   ],
   daysIN: [
     {d:'Thu', l:'Day 1', v:64.85},
     {d:'Fri', l:'Day 2', v:48.05},
     {d:'Sat', l:'Day 3', v:69.80},
-    {d:'Sun', l:'Day 4 · industry figure', v:56.15}
+    {d:'Sun', l:'Day 4 · industry figure', v:56.15},
+    {d:'Mon', l:'Day 5 · live 5 PM IST', v:68.65, live:true}
   ],
   citiesAsOf: 'Saturday full day · every show counted at its highest read · tickets, and dollars per cinema',
   cities: [
@@ -1001,6 +1009,19 @@ const LIVE = {
     {g:'North America'},
     {f:'🇺🇸', c:'United States', a:5.17, s:3.31, x:2.29, src:'c', n:'every Fandango cinema, every show · Sunday final 124,025 tickets ($2.18M) + labelled estimate'},
     {f:'🇨🇦', c:'Canada', a:0.71, s:0.68, x:0.44, src:'c', n:'Cineplex + Landmark read · Sunday Cineplex 28,334 + Landmark ~5,450'}
+  ],
+  monAsOf: 'Monday 9 Nov · India live (industry figure 5:03 PM IST) · North America booked by 9:17 AM CT, shows still to play · the UK early afternoon UK · other markets as read',
+  mon: [
+    {f:'🇮🇳 India', v:'₹68.65 Cr', s:'net, live at 5:03 PM IST · 61% full on 16,315 shows · industry figure · ₹59.9 Cr net by 2:30 PM IST (Hindi ₹48.64 Cr, 3D ₹35.8 Cr) · advance final ₹59.51 Cr gross, 15.99 lakh tickets, 289 housefull · BookMyShow all-time record ~1.39 lakh tickets in one hour (9–10 AM alone ~91,500 vs 54,760 Sunday) · our model v4 (9 PM IST): ~₹100 Cr net (₹97–104 Cr)', src:'i'},
+    {f:'🇮🇳 India · District (our read)', v:'56% full', s:'evening shows, 5:51 PM IST · 5.84 lakh tickets, ₹28.73 Cr on District alone · 4–7 PM shows 77% full, 7–10 PM 64% · Bengaluru 95%, Chennai 92%', src:'c'},
+    {f:'🇺🇸🇨🇦 North America', v:'~40,900', s:'tickets booked by 9:17 AM CT (~$0.67M) · US 30,772 on 3,447 shows (Hindi 29,578 + English 1,194) · Cineplex 8,587 on 265 shows · Landmark ~1,500 · NY/NJ 4,807, SF Bay 2,802, Dallas 2,270 · day heading for ~$1.1–1.2M', src:'c'},
+    {f:'🇬🇧 The UK', v:'12,004', s:'tickets counted by early afternoon UK · Cineworld 9,100 on 181 shows (21% full, 1:50 PM UK) · Showcase 2,366 · Empire 166, The Light 248, Arc 36, Metro 88 · Vue, Odeon not readable', src:'c'},
+    {f:'🇳🇵 Nepal', v:'9,711', s:'seats at QFX by 9 AM NPT (8,963 booked + 748 held) · 111 shows, 40% full', src:'c'},
+    {f:'🇦🇺 Australia', v:'12,848', s:'tickets, every Monday show played · HOYTS 9,269 on 160 shows at 49 cinemas (40% full) · Event 3,579 on 120 shows (14%) · about $0.21M · Village, Reading, Palace, Dendy not read', src:'c'},
+    {f:'🇳🇿 New Zealand', v:'1,200', s:'tickets at Event, 36 shows (17% full) · NZ$30,155 (~$17K)', src:'c'},
+    {f:'🇳🇱 Netherlands', v:'1,155', s:'tickets booked at Pathé + Vue · Tuesday 1,198 already', src:'c'},
+    {f:'🇦🇪 UAE', v:'sold out', s:'Reel Dubai Mall shows sold out / nearly sold out (Monday read) · VOX Gulf sites blocked', src:'c'},
+    {f:'🌍 Outside India total', v:'$1.8–2.2M', s:'our estimate for the full Monday · ~77,800 tickets counted so far across North America, the UK, Australia, Nepal, New Zealand and the Netherlands · Germany and the rest of the Gulf being read now', src:'e'}
   ],
   sunAsOf: 'Sunday 8 Nov (Diwali) · final · North America every read to midnight merged · other markets from published figures',
   sun: [
@@ -1047,6 +1068,7 @@ const LIVE = {
     LIVE.markets.map(m=>m.g?`<tr class="lv-g"><td colspan="6">${esc(m.g)}</td></tr>`:(()=>{const t=m.a+m.s+(m.x||0);
       return `<tr><td>${m.f} <b>${esc(m.c)}</b><span class="note" style="display:block;margin:2px 0 0;font-size:10.5px">${esc(m.n)}</span><span class="mini"><i style="width:${t/mx*100}%"></i></span></td><td>${usd(m.a)}</td><td>${usd(m.s)}</td><td>${usd(m.x||0)}</td><td><b>${usd(t)}</b></td><td class="hm">${pill(m.src)}</td></tr>`})()).join('')+
     `<tr class="tot"><td>Outside India, 5 days</td><td>${usd(A)}</td><td>${usd(S)}</td><td>${usd(X)}</td><td>${usd(A+S+X)}</td><td class="hm"></td></tr></tbody>`;}
+  if (LIVE.mon){$('lv-mon-sub').textContent=LIVE.monAsOf; $('lv-mon').innerHTML=LIVE.mon.map(x=>`<div><span class="f" style="display:block;font-family:var(--body);font-size:13px;color:var(--ink)">${esc(x.f)}</span><b>${esc(x.v)}</b><span>${esc(x.s)}</span>${pill(x.src)}</div>`).join('');}
   $('lv-sun-sub').textContent=LIVE.sunAsOf;
   $('lv-sun').innerHTML=LIVE.sun.map(x=>`<div><span class="f" style="display:block;font-family:var(--body);font-size:13px;color:var(--ink)">${esc(x.f)}</span><b>${esc(x.v)}</b><span>${esc(x.s)}</span>${pill(x.src)}</div>`).join('');
   /* the long notes, kept from ACT */
