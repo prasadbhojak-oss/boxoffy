@@ -896,7 +896,7 @@ gtag("js",new Date());gtag("config","G-K6C9EVRFH4",{anonymize_ip:true});}})();
 <script>
   /* ACT: the only place actuals numbers live. Fold = edit this object. */
   const ACT = {
-    asOf: 'Mon 9 Nov · 12:00 PM CT · North America actuals $12.4M in · North America Sunday final merged ($2.73M, 157,809 tickets) · Gulf, Malaysia, NZ, Ireland, Vietnam industry figures added · UK Tuesday advance read · earlier: worldwide sweep: the UK weekend figure out (£2.2M with previews, Screen Daily, 364 sites) · Australia Thu to Sun A$2.72M out (Variety Australia) · India Monday (Day 5) in progress, final due tonight IST · Comscore (North America), Numero and Comscore UK / BFI still due',
+    asOf: 'Mon 9 Nov · 12:10 PM CT · North America actuals $12.4M in · North America Sunday final merged ($2.73M, 157,809 tickets) · Gulf, Malaysia, NZ, Ireland, Vietnam industry figures added · UK Tuesday advance read · earlier: worldwide sweep: the UK weekend figure out (£2.2M with previews, Screen Daily, 364 sites) · Australia Thu to Sun A$2.72M out (Variety Australia) · India Monday (Day 5) in progress, final due tonight IST · Comscore (North America), Numero and Comscore UK / BFI still due',
     headline: 'Worldwide $55.7M (~₹529 Cr) Wed previews to Diwali Sunday · studio estimate (Sony, via Deadline, Sun 8 Nov) · India $32.0M (~₹304 Cr) · North America $12.2M · rest of world $11.5M across 37 markets: the UK $3.0M (record Indian opening), UAE $2.2M, Australia $1.9M, Germany $0.63M, Thailand $0.55M, Nepal $0.50M · India 4 days ₹285.2 Cr gross / ₹238.9 Cr net (industry figure, final) · our North America count for the 5 days is $12.60M, 3.7% above the studio estimate, with Sunday final at $2.73M (157,809 tickets) against the studio $2.41M · Comscore due Monday · the UK £2.2M with previews (Screen Daily, Mon 9 Nov) · Australia A$2.72M Thu to Sun (Variety Australia, Mon 9 Nov)',
     wwFri: {
       title: 'Worldwide · Wed previews to Friday',
@@ -1053,22 +1053,18 @@ gtag("js",new Date());gtag("config","G-K6C9EVRFH4",{anonymize_ip:true});}})();
 /* LIVE (9 Nov redesign): one worldwide banner + country list. Edit the numbers here; the layout draws itself.
    Strings use double quotes on purpose. v = 5-day gross in US$ millions (our reconciled figure). */
 const LIVE = {
-  asOf: "Updated Mon 9 Nov · 12:00 PM CT · North America actuals in · ₹ at ₹95 to $1",
+  asOf: "Updated Mon 9 Nov · 12:10 PM CT",
   hero: {
-    kick: "Worldwide · first 5 days · Wed previews to Diwali Sunday",
-    big: "$55.7M", inr: "₹529 Cr",
-    line: "Studio estimate (Sony). <b>Country by country: $54.2M (₹515 Cr)</b>, with North America now on actuals ($12.4M). The gap is India, where the studio counts $32.0M and the industry figure is ₹285.2 Cr ($30.0M).",
+    kick: "Worldwide running total · Wed previews to Monday",
+    big: "$70.4M", inr: "₹669 Cr",
+    line: "Gross, 6 days. First 5 days $54.2M (₹515 Cr; studio $55.7M) + Monday in progress ~$16.2M (₹154 Cr).",
     split: [
-      {k:"🇮🇳 India", v:"₹285.2 Cr", s:"$30.0M · gross · ₹238.9 Cr net · studio $32.0M"},
-      {k:"🇺🇸🇨🇦 North America", v:"$12.4M", s:"₹117.8 Cr · actuals · our count $12.60M, 1.6% high"},
-      {k:"🌍 Rest of world", v:"$11.8M", s:"₹112 Cr · 37 markets · studio $11.5M"}
+      {k:"🇮🇳 India", v:"₹407 Cr", s:"$42.8M · gross, 5 days · ₹342 Cr net"},
+      {k:"🇺🇸🇨🇦 North America", v:"$13.6M", s:"₹129 Cr · $12.4M actuals + Monday"},
+      {k:"🌍 Rest of world", v:"$14.0M", s:"₹133 Cr · 37 markets + Monday"}
     ],
-    today: [
-      {k:"India", v:"₹93.5 Cr", s:"net live ~9:45 PM IST (~₹111 Cr gross, $11.7M) · heading for ~₹103 Cr net / ₹122 Cr gross"},
-      {k:"North America", v:"$0.69M", s:"(₹6.6 Cr) booked by 10 AM CT · heading for $1.1–1.2M"},
-      {k:"Malaysia", v:"$276K", s:"(₹2.6 Cr) so far · its biggest day"},{k:"Australia", v:"A$541K", s:"(₹3.5 Cr) Monday"},{k:"Outside India", v:"$2.05M", s:"(₹19.5 Cr) so far · heading for $3.0–3.6M"},{k:"Monday worldwide", v:"$13.8M", s:"(₹131 Cr) gross so far · heading for ~$16.2M (₹154 Cr)"},{k:"Running total", v:"~$70M", s:"(~₹669 Cr) gross, 6 days with our Monday call"}
-    ],
-    recs: ["#2 global weekend", "#2 Indian opening in North America ($12.4M actuals)", "#10 Indian film ever in the US, past Dangal", "Record Indian opening: the UK · Thailand · Netherlands · South Africa · Vietnam", "BookMyShow record: 1.39 lakh tickets in one hour"]
+    today: [],
+    recs: ["#2 global weekend", "#2 Indian opening in North America", "Record Indian opening in 5 countries"]
   },
   countries: [
     {f:"🇮🇳", c:"India", v:30.02, show:"₹285.2 Cr", sub:"gross · $30.0M", src:"i", tag:"₹100 Cr Monday in reach", sm:"₹238.85 Cr net in 4 days · Monday ₹93.5 Cr net live by ~9:45 PM IST, already the biggest day · 5 days ₹332.3 Cr net",
@@ -1141,7 +1137,7 @@ const LIVE = {
   $("bx-big").innerHTML=`<b>${esc(H.big)}</b><span>${esc(H.inr)}</span>`;
   $("bx-line").innerHTML=H.line;
   $("bx-split").innerHTML=H.split.map(x=>`<div><small>${esc(x.k)}</small><b>${esc(x.v)}</b><em>${esc(x.s)}</em></div>`).join("");
-  $("bx-today").innerHTML=`<span class="lbl">Today · Day 5</span>`+H.today.map(x=>`<span class="bx-chip">${esc(x.k)} <b>${esc(x.v)}</b> ${esc(x.s)}</span>`).join("");
+  $("bx-today").style.display=H.today.length?"":"none"; $("bx-today").innerHTML=`<span class="lbl">Today</span>`+H.today.map(x=>`<span class="bx-chip">${esc(x.k)} <b>${esc(x.v)}</b> ${esc(x.s)}</span>`).join("");
   $("bx-recs").innerHTML=H.recs.map(r=>`<span class="bx-rec">★ ${esc(r)}</span>`).join("");
   const RATE=95, cr=usd=>{const c=usd*RATE/10;return "₹"+(c>=10?c.toFixed(0):c.toFixed(1))+" Cr"};
   const fmt={inr:v=>"₹"+v.toFixed(1)+" Cr<br><i>$"+(v*1e7/RATE/1e6).toFixed(1)+"M</i>",usd:v=>"$"+v.toFixed(2)+"M<br><i>"+cr(v)+"</i>",k:v=>"$"+v+"K<br><i>"+cr(v/1000)+"</i>",n:v=>v.toLocaleString()};
