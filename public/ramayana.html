@@ -983,6 +983,7 @@ gtag("js",new Date());gtag("config","G-K6C9EVRFH4",{anonymize_ip:true});}})();
     log: [
       {c:'Overseas Wed previews to Monday vs industry', o:'$27.08M our table (10 Nov 12:45 AM CT; Monday missing for most markets)', f:'$27.225M · industry estimate, 18 markets, 10 Nov 1:31 PM IST', x:'−0.5% · Middle East −11% (ours $2.83M vs $3.20M), Nepal −26%, Singapore −21%, France −33% · now replaced market by market where higher'},
       {c:'India Monday (Day 5) vs ACTUAL', o:'~₹103 Cr net (v5 range ₹100–106 · v3 base ₹97–103)', f:'₹107.50 Cr net, ₹128.70 Cr gross, 41.04 lakh tickets · industry figure, Tue 10 Nov 1:45 AM IST', x:'−4% · Monday beat the top of our range by ₹1.5 Cr · late shows sold more than the night read showed', bad:true},
+      {c:'India Tuesday (Day 6) vs ACTUAL', o:'₹85–95 Cr nett (10 Nov call)', f:'₹94.10 Cr nett, ₹112.60 Cr gross, 35.49 lakh tickets · industry figure, 10 Nov 10:08 PM IST', x:'Inside our range, near the top · midpoint ₹90 Cr was 4% low'},
       {c:'North America Monday vs confirmed figure', o:'~$1.32M (counted $1.23M + $0.09M Canada correction), 10 Nov 12:05 AM CT', f:'$1.40M · confirmed industry figure, 10 Nov 9:54 AM CT', x:'−5.7% · ours lower; counted alone −12%: blank US seat maps (65 sites), Canadian sales before our first read, late Pacific shows read early', bad:true},
       {c:'North America Sunday vs ACTUAL', o:'$2.73M (157,809 tickets)', f:'$2,695,979 actual · The Numbers', x:'+1.3% · within range'},
       {c:'Worldwide Wed previews to Monday vs industry', o:'$70.65M (~₹671 Cr), 10 Nov 12:45 AM CT', f:'₹663.90 Cr (~$69.9M) · industry estimate, 10 Nov 10 AM IST · second estimate ₹650.32 Cr', x:'+1.1% · ours higher; overseas Monday figures still missing for most markets'},
@@ -1066,25 +1067,26 @@ gtag("js",new Date());gtag("config","G-K6C9EVRFH4",{anonymize_ip:true});}})();
 /* LIVE (9 Nov redesign): one worldwide banner + country list. Edit the numbers here; the layout draws itself.
    Strings use double quotes on purpose. v = 5-day gross in US$ millions (our reconciled figure). */
 const LIVE = {
-  asOf: "Updated Tue 10 Nov · 10:00 AM CT",
+  asOf: "Updated Tue 10 Nov · 12:10 PM CT",
   hero: {
-    kick: "Worldwide running total · Wed previews to Tuesday (live) · India past ₹500 Cr gross",
-    big: "$83.0M", inr: "₹789 Cr",
-    line: "Gross, 7 days so far. Through Monday $71.9M (₹683 Cr) + Tuesday so far ~$11.0M (₹104 Cr): India ₹87.9 Cr gross live, North America $1.35M booked, Australia and New Zealand counted. Tuesday so far is 35% below Monday (~$17.0M), with India still counting and most overseas markets not in yet.",
+    kick: "Worldwide running total · Wed previews to Tuesday · India Tuesday final ₹94.1 Cr nett",
+    big: "$85.7M", inr: "₹814 Cr",
+    line: "Gross, 7 days so far. Through Monday $71.9M (₹683 Cr) + Tuesday $13.8M (₹131 Cr): India ₹112.6 Cr gross final ($11.9M) + $1.91M counted outside India (North America $1.35M booked, Australia, the UK and 6 more). Tuesday is 19% below Monday (~$17.0M), and about $0.7M more is still to come from the Gulf, Malaysia and others.",
     split: [
-      {k:"🇮🇳 India", v:"₹420.8 Cr nett", s:"6 days · ₹501.8 Cr gross ($52.8M) · Tuesday ₹74.5 Cr nett by 8 PM IST, −31% vs Monday ₹107.5 Cr so far"},
+      {k:"🇮🇳 India", v:"₹440.5 Cr nett", s:"6 days · ₹526.5 Cr gross ($55.4M) · Tuesday ₹94.1 Cr nett final, −12% vs Monday ₹107.5 Cr"},
       {k:"🇺🇸🇨🇦 North America", v:"$15.2M", s:"₹145 Cr · $12.4M actuals + $1.40M Monday + $1.35M Tuesday booked, Tuesday already 96% of Monday before walk-ups"},
-      {k:"🌍 Rest of world", v:"$15.0M", s:"₹142 Cr · 40+ markets to Monday + Australia, New Zealand Tuesday"}
+      {k:"🌍 Rest of world", v:"$15.2M", s:"₹144 Cr · 40+ markets to Monday + Tuesday counted in Australia, the UK, NZ, Netherlands, Germany, Nepal, Thailand, Singapore"},
+      {k:"🌐 Tuesday outside India", v:"~$1.91M", s:"₹18.2 Cr counted: North America $1.35M · Australia $320K · the UK $138K · NZ $33K · Netherlands $25K · Germany $15K · Nepal $12K · Thailand $9K · Singapore $9K · full day ~$2.64M (₹25 Cr) with UAE ~$310K, Malaysia ~$250K, Kuwait ~$35K, France ~$25K and the rest (estimate, not added) · tickets counted × average local price"}
     ],
     today: [],
     recs: ["Best Indian Monday ever in North America: $1.40M", "#1 worldwide by tickets this week: 10.9M in 83 countries (industry figure)", "#2 global weekend", "#2 Indian opening in North America", "Record Indian opening in 5 countries"]
   },
   countries: [
-    {f:"🇮🇳", c:"India", v:52.82, show:"₹420.84 Cr", sub:"nett, 6 days, Tuesday live to 8 PM IST · ₹501.8 Cr gross", src:"i", tag:"₹100 Cr Monday", sm:"Monday ₹107.5 Cr net (₹128.7 Cr gross), its biggest day, 41 lakh tickets · 5 days ₹346.35 Cr net, ₹413.9 Cr gross · Tuesday advance final ₹49.5 Cr gross, 13.18 lakh tickets",
+    {f:"🇮🇳", c:"India", v:55.42, show:"₹440.45 Cr", sub:"nett, 6 days · ₹526.5 Cr gross · 1.70 crore tickets", src:"i", tag:"₹100 Cr Monday", sm:"Monday ₹107.5 Cr net (₹128.7 Cr gross), its biggest day, 41 lakh tickets · 5 days ₹346.35 Cr net, ₹413.9 Cr gross · Tuesday advance final ₹49.5 Cr gross, 13.18 lakh tickets",
       daysTitle:"Net by day, ₹ crore", unit:"inr",
-      days:[{d:"Thu",l:"Day 1",v:64.85},{d:"Fri",l:"Day 2",v:48.05},{d:"Sat",l:"Day 3",v:69.80},{d:"Sun",l:"Diwali",v:56.15},{d:"Mon",l:"Day 5",v:107.50}],
+      days:[{d:"Thu",l:"Day 1",v:64.85},{d:"Fri",l:"Day 2",v:48.05},{d:"Sat",l:"Day 3",v:69.80},{d:"Sun",l:"Diwali",v:56.15},{d:"Mon",l:"Day 5",v:107.50},{d:"Tue",l:"Day 6",v:94.10}],
       citiesTitle:"Fullest cities · Monday night shows (District, our read 9:09 PM IST)", cities:[["Bengaluru",97.4,"%"],["Chennai",95.2,"%"],["Agra",92.1,"%"],["Mumbai",60.7,"%"],["New Delhi",60.5,"%"],["Jaipur",56.9,"%"],["Hyderabad",52.3,"%"],["Pune",52.2,"%"]],
-      facts:[{k:"Monday: our call vs actual",b:"₹107.5 Cr",s:"net · our call ~₹103 Cr (range ₹100–106) · 4% low"},{k:"Tuesday live",b:"₹74.49 Cr",s:"nett by 8 PM IST, from 20,180 shows (Hindi ₹62.51 Cr) · India total now ₹420.84 Cr nett (₹501.80 Cr gross), past ₹500 Cr gross in 6 days · our call for the day ₹85–95 Cr nett"},{k:"Tuesday advance, final",b:"13.18 lakh",s:"tickets · ₹49.53 Cr gross (₹43.42 Cr without block seats) · 25,395 shows, 23% full, 103 housefull · NCR top at ₹6.57 Cr · Hindi 80% · our Tuesday call ₹75–85 Cr net"},{k:"Monday night, District",b:"2.92 lakh",s:"tickets on 2,500 night shows, 53.8% full, 71 sold out · 7–10 PM 70% · ₹14.4 Cr on District alone"},{k:"BookMyShow",b:"1.39 lakh/hr",s:"all-time hourly record · 9–10 AM alone ~91,500 vs 54,760 Sunday"},{k:"Monday advance",b:"15.99 lakh",s:"tickets · ₹59.51 Cr gross · 289 housefull"},{k:"Sunday by language",b:"Hindi ₹36.75 Cr",s:"Kannada ₹7.25 · Telugu ₹6.25 · Tamil ₹3.15 · Malayalam ₹2.75 Cr net"},{k:"IMAX India",b:"$2M",s:"opening, studio figure"}],
+      facts:[{k:"Monday: our call vs actual",b:"₹107.5 Cr",s:"net · our call ~₹103 Cr (range ₹100–106) · 4% low"},{k:"Tuesday (Day 6) final",b:"₹94.10 Cr",s:"nett, ₹112.60 Cr gross, 35.49 lakh tickets · −12% vs Monday · Hindi ₹76.00 Cr · our call ₹85–95 Cr nett, inside the range · Wednesday advance ₹30.75 Cr so far"},{k:"Tuesday advance, final",b:"13.18 lakh",s:"tickets · ₹49.53 Cr gross (₹43.42 Cr without block seats) · 25,395 shows, 23% full, 103 housefull · NCR top at ₹6.57 Cr · Hindi 80% · our Tuesday call ₹75–85 Cr net"},{k:"Monday night, District",b:"2.92 lakh",s:"tickets on 2,500 night shows, 53.8% full, 71 sold out · 7–10 PM 70% · ₹14.4 Cr on District alone"},{k:"BookMyShow",b:"1.39 lakh/hr",s:"all-time hourly record · 9–10 AM alone ~91,500 vs 54,760 Sunday"},{k:"Monday advance",b:"15.99 lakh",s:"tickets · ₹59.51 Cr gross · 289 housefull"},{k:"Sunday by language",b:"Hindi ₹36.75 Cr",s:"Kannada ₹7.25 · Telugu ₹6.25 · Tamil ₹3.15 · Malayalam ₹2.75 Cr net"},{k:"IMAX India",b:"$2M",s:"opening, studio figure"}],
       note:"Gross and net are industry figures, Thu to Mon. Dollars are the ₹413.9 Cr gross at ₹95 to the dollar. Studio figure $32.0M (~₹304 Cr) was Thu to Sun only."},
     {f:"🇺🇸🇨🇦", c:"North America", v:15.15, show:"$15.2M", sub:"$12.4M actuals Wed to Sun + $1.40M Monday (confirmed) + $1.35M Tuesday booked (our count)", src:"i", tag:"Monday record", sm:"Monday $1.40M (confirmed), a new Indian Monday record, 23% above Dhurandhar 2's $1.14M · actuals: $8.9M Fri to Sun, 1,433 theatres · past Dangal as the #10 Indian film ever in the US, in 5 days · our count was 1.6% high",
       daysTitle:"By day, actuals, US$ millions", unit:"usd",
