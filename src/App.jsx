@@ -4504,10 +4504,10 @@ function WeekendLeadHero() {
         <div style={{ flex:1, minWidth:0, display:"flex", flexDirection:"column", justifyContent:"center" }}>
           <span style={{ alignSelf:"flex-start", background:"#C8201A", color:"#FFFFFF", fontFamily:"'Barlow Condensed', sans-serif", fontWeight:900, fontSize:9, letterSpacing:"0.12em", padding:"2px 7px", borderRadius:2, marginBottom:7 }}>LIVE · RAMAYANA · RUNNING TOTAL</span>
           <div style={{ fontFamily:"'Barlow Condensed', sans-serif", fontWeight:900, fontSize:"clamp(15px, 1.7vw, 17px)", color:"#FFFFFF", lineHeight:1.15, letterSpacing:"-0.01em" }}>
-            RAMAYANA: $71.2M (₹676 CR) WORLDWIDE IN 6 DAYS.
+            RAMAYANA: $71.3M (₹677 CR) WORLDWIDE IN 6 DAYS.
           </div>
           <div style={{ fontFamily:"'DM Sans', sans-serif", fontSize:10.5, color:"#9CA3AF", marginTop:5, lineHeight:1.4 }}>
-            India ₹346 Cr nett (₹414 Cr gross) in 5 days, with a ₹107.5 Cr nett Monday. North America $13.6M, with a record $1.23M+ Monday. First 5 days worldwide $55.7M (studio).
+            India ₹346 Cr nett (₹414 Cr gross) in 5 days, with a ₹107.5 Cr nett Monday. North America $13.7M, with a record ~$1.32M Monday. First 5 days worldwide $55.7M (studio).
           </div>
           <span style={{ fontFamily:"'Barlow Condensed', sans-serif", fontWeight:700, fontSize:11, color:"#E5C882", letterSpacing:"0.06em", marginTop:8 }}>OPEN THE LIVE TRACKER →</span>
         </div>
@@ -4816,10 +4816,10 @@ const RAMAYANA_TRACKER = {
   // 5 NOV 21:40 CT: the homepage strip is now RAMAYANA ACTUALS - a compact
   // running total (previews + Day 1). Presale fields above stay as the record.
   actuals: {
-    asOf: "9 Nov · 10:50 PM CT",
-    ww: "$71.2M", wwInr: "₹676 Cr · 6 days",
+    asOf: "10 Nov · 12:05 AM CT",
+    ww: "$71.3M", wwInr: "₹677 Cr · 6 days",
     india: "₹346 Cr", indiaNote: "nett · 5 days (₹414 Cr gross)",
-    na: "$13.6M", naNote: "$12.4M actuals + $1.23M Monday, a record",
+    na: "$13.7M", naNote: "$12.4M actuals + ~$1.32M Monday, a record",
     overseas: "$14.0M", overseasNote: "37 markets + Monday",
   },
 };
