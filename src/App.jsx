@@ -4504,10 +4504,10 @@ function WeekendLeadHero() {
         <div style={{ flex:1, minWidth:0, display:"flex", flexDirection:"column", justifyContent:"center" }}>
           <span style={{ alignSelf:"flex-start", background:"#C8201A", color:"#FFFFFF", fontFamily:"'Barlow Condensed', sans-serif", fontWeight:900, fontSize:9, letterSpacing:"0.12em", padding:"2px 7px", borderRadius:2, marginBottom:7 }}>LIVE · RAMAYANA · RUNNING TOTAL</span>
           <div style={{ fontFamily:"'Barlow Condensed', sans-serif", fontWeight:900, fontSize:"clamp(15px, 1.7vw, 17px)", color:"#FFFFFF", lineHeight:1.15, letterSpacing:"-0.01em" }}>
-            RAMAYANA: $94.5M (₹898 CR) WORLDWIDE IN 8 DAYS.
+            RAMAYANA: $97.2M (₹923 CR) WORLDWIDE IN 8 DAYS.
           </div>
           <div style={{ fontFamily:"'DM Sans', sans-serif", fontSize:10.5, color:"#9CA3AF", marginTop:5, lineHeight:1.4 }}>
-            India ₹492.7 Cr nett in 7 days. North America $15.6M, with a record $1.82M Tuesday.
+            India ₹511.1 Cr nett in 7 days. North America $15.9M, with a record $2.05M Tuesday.
           </div>
           <span style={{ fontFamily:"'Barlow Condensed', sans-serif", fontWeight:700, fontSize:11, color:"#E5C882", letterSpacing:"0.06em", marginTop:8 }}>OPEN THE LIVE TRACKER →</span>
         </div>
@@ -4816,10 +4816,10 @@ const RAMAYANA_TRACKER = {
   // 5 NOV 21:40 CT: the homepage strip is now RAMAYANA ACTUALS - a compact
   // running total (previews + Day 1). Presale fields above stay as the record.
   actuals: {
-    asOf: "11 Nov · 8:30 AM CT",
-    ww: "$94.5M", wwInr: "₹898 Cr · 8 days (Wed live)",
-    india: "₹492.7 Cr", indiaNote: "nett · 7 days, Wed live (₹588.2 Cr gross)",
-    na: "$15.6M", naNote: "$12.4M actuals + $1.41M Mon + $1.82M Tue counted · Wed $1.05M sold so far",
+    asOf: "11 Nov · 12:20 PM CT",
+    ww: "$97.2M", wwInr: "₹923 Cr · 8 days (Wed live)",
+    india: "₹511.1 Cr", indiaNote: "nett · 7 days (₹611.05 Cr gross)",
+    na: "$15.9M", naNote: "actuals: $12.4M Wed–Sun + $1.41M Mon + $2.05M Tue (record) · Wed $1.05M sold so far",
     overseas: "$14.0M", overseasNote: "37 markets + Monday",
   },
 };
