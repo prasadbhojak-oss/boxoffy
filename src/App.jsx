@@ -2471,45 +2471,44 @@ function BRSBadge({ brs, compact = false }) {
    NATIONAL TOP 10 ROW — BCM Weekly Chart (Apr 2026+)
    Columns: Rank | Poster | Film+Studio | This Wk | Last Wk | Chg | Domestic | Global
    ═══════════════════════════════════════════════════════════════ */
-/* ── INDIA DAILY TOP 10 (Boxoffy daily chart, 5 Nov 2026) ─────────
-   One row per film for ONE day. Ramayana is the published full-day
-   estimate (64.85 Cr) plus our night-show estimate (~8.4 Cr: 2,618
-   shows not counted at 9 PM x 1.2 the day's average per show); holdovers marked ~ are Boxoffy estimates from each film's
-   Wed 4 Nov figure with the Ramayana-day drop measured on Premada Oorali
-   (-47%), replaced by the reported number when it lands. Reported Thu
-   figures: AK 47, Jailer 2, Premada Oorali, Udta Teer, Drishyam 3. */
+/* ── INDIA DAILY TOP 10 (Boxoffy daily chart, 11 Nov 2026) ────────
+   Latest full reported day. India nett, all languages. Rows marked ~
+   are Boxoffy estimates for small holdovers, replaced when the reported
+   figure lands. Weekly chart: Fri 6 – Thu 12 Nov; Thursday figures are
+   estimates until Friday's reports. */
 const INDIA_DAILY = {
-  date: "Thu 5 Nov 2026",
+  date: "Wed 11 Nov 2026",
   note: "India nett · ~ = Boxoffy estimate, replaced when the reported figure lands · BCM12",
   rows: [
-    { title:"Ramayana: Part 1",                 lang:"Hindi + 4 dubs", day:1,  nett:73.25, est:true,  total:73.25,  tag:"NEW" },
-    { title:"Aadarsha Kutumbam House No: 47",    lang:"Telugu",         day:7,  nett:1.65,  est:false, total:41.15 },
-    { title:"Jailer 2",                          lang:"Tamil",          day:22, nett:1.60,  est:false, total:467.65 },
-    { title:"Premada Oorali",                    lang:"Kannada",        day:42, nett:0.29,  est:false, total:112.91 },
-    { title:"Cult",                              lang:"Telugu",         day:7,  nett:0.25,  est:true,  total:4.85 },
-    { title:"Udta Teer",                         lang:"Hindi",          day:14, nett:0.21,  est:false, total:46.46 },
-    { title:"418",                               lang:"Multi-language", day:14, nett:0.07,  est:true,  total:12.18 },
-    { title:"Hanuman Ansh",                      lang:"Hindi",          day:91, nett:0.05,  est:true,  total:342.79 },
-    { title:"Drishyam 3: The Conclusion",        lang:"Hindi",          day:35, nett:0.05,  est:false, total:379.25 },
-    { title:"Baththa",                           lang:"Tamil",          day:36, nett:0.02,  est:true,  total:30.31 },
+    { title:"Ramayana: Part 1", lang:"Hindi + 4 dubs", day:7, nett:70.65, est:false, total:511.1 },
+    { title:"Scene", lang:"Tamil + dubs", day:6, nett:8.05, est:false, total:105.45, tag:"NEW" },
+    { title:"Mookuthi Amman 2", lang:"Tamil", day:6, nett:1.0, est:false, total:17.18, tag:"NEW" },
+    { title:"Aadarsha Kutumbam House No: 47", lang:"Telugu", day:13, nett:0.66, est:false, total:48.36 },
+    { title:"Jailer 2", lang:"Tamil", day:28, nett:0.52, est:false, total:473.05 },
+    { title:"Premada Oorali", lang:"Kannada", day:48, nett:0.29, est:false, total:115.14 },
+    { title:"Udta Teer", lang:"Hindi", day:20, nett:0.12, est:true, total:47.7 },
+    { title:"Cult", lang:"Telugu", day:13, nett:0.05, est:true, total:5.35 },
+    { title:"Hanuman Ansh", lang:"Hindi", day:97, nett:0.04, est:true, total:343.05 },
+    { title:"Drishyam 3: The Conclusion", lang:"Hindi", day:41, nett:0.03, est:true, total:379.45 },
   ],
 };
 const INDIA_WEEKLY = {
-  range: "Fri 30 Oct – Thu 5 Nov 2026",
+  range: "Fri 6 – Thu 12 Nov 2026",
   rows: [
-    { title:"Ramayana: Part 1",               lang:"Hindi + 4 dubs", wk:1,  week:73.25, est:true,  total:73.25,  note:"Day 1 only · incl. our night-show estimate", tag:"NEW" },
-    { title:"Aadarsha Kutumbam House No: 47",  lang:"Telugu",         wk:1,  week:41.15, est:false, total:41.15,  tag:"NEW" },
-    { title:"Jailer 2",                        lang:"Tamil",          wk:3,  week:37.75, est:false, total:467.65 },
-    { title:"Udta Teer",                       lang:"Hindi",          wk:2,  week:15.56, est:false, total:46.46 },
-    { title:"Premada Oorali",                  lang:"Kannada",        wk:6,  week:6.19,  est:false, total:112.91 },
-    { title:"Cult",                            lang:"Telugu",         wk:1,  week:5.0,   est:true,  total:5.0,    tag:"NEW" },
-    { title:"Drishyam 3: The Conclusion",      lang:"Hindi",          wk:5,  week:2.4,   est:true,  total:379.25 },
-    { title:"418",                             lang:"Multi-language", wk:2,  week:1.18,  est:true,  total:12.18 },
-    { title:"Hanuman Ansh",                    lang:"Hindi",          wk:13, week:0.5,   est:true,  total:342.79 },
-    { title:"Baththa",                         lang:"Tamil",          wk:6,  week:0.15,  est:true,  total:30.31 },
+    { title:"Ramayana: Part 1", lang:"Hindi + 4 dubs", wk:1, week:499.75, est:true, total:564.6, note:"Fri–Thu · Thu is a live estimate · 8-day total incl. Thu 5 opening", tag:"NEW" },
+    { title:"Scene", lang:"Tamil + dubs", wk:1, week:112.45, est:true, total:112.45, note:"Fri–Wed reported ₹105.45 Cr + Thu estimate", tag:"NEW" },
+    { title:"Mookuthi Amman 2", lang:"Tamil", wk:1, week:17.98, est:true, total:17.98, note:"Fri–Wed reported ₹17.18 Cr + Thu estimate", tag:"NEW" },
+    { title:"Aadarsha Kutumbam House No: 47", lang:"Telugu", wk:2, week:7.76, est:true, total:48.91 },
+    { title:"Jailer 2", lang:"Tamil", wk:4, week:5.85, est:true, total:473.5 },
+    { title:"Premada Oorali", lang:"Kannada", wk:7, week:2.48, est:true, total:115.39 },
+    { title:"Udta Teer", lang:"Hindi", wk:3, week:1.35, est:true, total:47.81 },
+    { title:"Cult", lang:"Telugu", wk:2, week:0.4, est:true, total:5.4 },
+    { title:"Hanuman Ansh", lang:"Hindi", wk:14, week:0.3, est:true, total:343.09 },
+    { title:"Drishyam 3: The Conclusion", lang:"Hindi", wk:6, week:0.25, est:true, total:379.5 },
   ],
 };
-function IndiaWeeklyTop10() {
+function IndiaWeeklyTop10() { return null; }
+function IndiaWeeklyTop10_old() {
   const d = INDIA_WEEKLY, mx = d.rows[0].week, all = d.rows.reduce((a,r)=>a+r.week,0);
   const crore = v => v >= 1 ? `₹${v.toFixed(2)} Cr` : `₹${Math.round(v*100)} L`;
   return (
@@ -2530,27 +2529,268 @@ function IndiaWeeklyTop10() {
   );
 }
 
-function IndiaDailyTop10() {
-  const d = INDIA_DAILY, all = d.rows.reduce((a,r)=>a+r.nett,0), mx = d.rows[0].nett;
-  const crore = v => v >= 1 ? `₹${v.toFixed(2)} Cr` : `₹${Math.round(v*100)} L`;
+/* ── INDIA BOX OFFICE BOARD (12 Nov 2026) ─────────────────────────────
+   One table, no tabs: day, % vs previous day, 7-day trend, this week,
+   India total and worldwide side by side. Same figures as the plain-HTML
+   page /india-box-office.html, which AI search and crawlers can read.
+   All India figures nett, to the date in INDIA_BOARD.date. ~ = estimate. */
+const INDIA_BOARD = {
+  date: "Wed 11 Nov 2026",
+  week: "Fri 6 – Wed 11 Nov",
+  rows: [
+ {
+  "title": "Ramayana: Part 1",
+  "lang": "Hindi + 4 dubs",
+  "day": 7,
+  "nett": 70.65,
+  "prev": 94.1,
+  "trend": [
+   64.85,
+   48.05,
+   69.8,
+   56.15,
+   107.5,
+   94.1,
+   70.65
+  ],
+  "week": 446.25,
+  "total": 511.1,
+  "ww": "₹1,034 Cr",
+  "wwUsd": "$108.8M",
+  "wwNote": "9 days, to Thu",
+  "tag": "NEW"
+ },
+ {
+  "title": "Scene",
+  "lang": "Tamil + dubs",
+  "day": 6,
+  "nett": 8.05,
+  "prev": 12.85,
+  "trend": [
+   19.15,
+   20.35,
+   23.65,
+   21.4,
+   12.85,
+   8.05
+  ],
+  "week": 105.45,
+  "total": 105.45,
+  "ww": "₹188.50 Cr",
+  "wwUsd": "$19.8M",
+  "tag": "NEW"
+ },
+ {
+  "title": "Mookuthi Amman 2",
+  "lang": "Tamil",
+  "day": 6,
+  "nett": 1.0,
+  "prev": 2.1,
+  "trend": [
+   1.88,
+   2.45,
+   4.6,
+   5.15,
+   2.1,
+   1.0
+  ],
+  "week": 17.18,
+  "total": 17.18,
+  "tag": "NEW"
+ },
+ {
+  "title": "Aadarsha Kutumbam House No: 47",
+  "lang": "Telugu",
+  "day": 13,
+  "nett": 0.66,
+  "prev": 0.9,
+  "trend": [
+   1.65,
+   1.15,
+   1.55,
+   1.6,
+   1.35,
+   0.9,
+   0.66
+  ],
+  "week": 7.21,
+  "total": 48.36,
+  "ww": "₹72.55 Cr",
+  "wwUsd": "$7.6M"
+ },
+ {
+  "title": "Jailer 2",
+  "lang": "Tamil",
+  "day": 28,
+  "nett": 0.52,
+  "prev": 0.88,
+  "trend": [
+   1.6,
+   0.6,
+   1.0,
+   1.15,
+   1.25,
+   0.88,
+   0.52
+  ],
+  "week": 5.4,
+  "total": 473.05,
+  "ww": "₹830.30 Cr",
+  "wwUsd": "$87.4M"
+ },
+ {
+  "title": "Premada Oorali",
+  "lang": "Kannada",
+  "day": 48,
+  "nett": 0.29,
+  "prev": 0.52,
+  "trend": [
+   0.29,
+   0.23,
+   0.31,
+   0.4,
+   0.48,
+   0.52,
+   0.29
+  ],
+  "week": 2.23,
+  "total": 115.14
+ },
+ {
+  "title": "Udta Teer",
+  "lang": "Hindi",
+  "day": 20,
+  "nett": 0.12,
+  "est": true,
+  "week": 1.24,
+  "total": 47.7
+ },
+ {
+  "title": "Cult",
+  "lang": "Telugu",
+  "day": 13,
+  "nett": 0.05,
+  "est": true,
+  "week": 0.35,
+  "total": 5.35
+ },
+ {
+  "title": "Hanuman Ansh",
+  "lang": "Hindi",
+  "day": 97,
+  "nett": 0.04,
+  "est": true,
+  "week": 0.26,
+  "total": 343.05
+ },
+ {
+  "title": "Drishyam 3: The Conclusion",
+  "lang": "Hindi",
+  "day": 41,
+  "nett": 0.03,
+  "est": true,
+  "week": 0.22,
+  "total": 379.45
+ }
+],
+};
+
+function Spark({ v, hot }) {
+  if (!v || v.length < 2) return <span style={{ color:T.textMuted, fontSize:11 }}>—</span>;
+  const w = 84, h = 24, mx = Math.max(...v), mn = Math.min(...v);
+  const pts = v.map((x,i) => [2 + i*(w-4)/(v.length-1), h-3 - ((x-mn)/((mx-mn)||1))*(h-6)]);
+  const c = hot ? T.accent : T.textMuted, last = pts[pts.length-1];
   return (
-    <div style={{ marginBottom:14, border:`1px solid ${T.border}`, borderRadius:8, overflow:"hidden", background:T.surface }}>
-      <div style={{ padding:"8px 12px", background:"#FEF2F2", borderBottom:`1px solid ${T.border}`, display:"flex", justifyContent:"space-between", flexWrap:"wrap", gap:6 }}>
-        <span style={{ fontFamily:"'DM Sans',sans-serif", fontSize:11, fontWeight:800, color:T.accent, letterSpacing:"0.08em", textTransform:"uppercase" }}>India National Top 10 · Daily · {d.date}</span>
-        <span style={{ fontFamily:"'IBM Plex Mono',monospace", fontSize:10, color:T.textMuted }}>All films ₹{all.toFixed(2)} Cr nett</span>
-      </div>
-      {d.rows.map((r,i) => (
-        <div key={r.title} style={{ display:"grid", gridTemplateColumns:"26px 1fr auto", gap:10, alignItems:"center", padding:"7px 12px", borderBottom:`1px solid ${T.border}` }}>
-          <div style={{ fontFamily:"'Barlow Condensed',sans-serif", fontWeight:800, fontSize:18, color:i<3?T.accent:T.textMuted, textAlign:"center" }}>{i+1}</div>
-          <div style={{ minWidth:0 }}>
-            <div style={{ fontFamily:"'DM Sans',sans-serif", fontWeight:700, fontSize:13, color:T.text, whiteSpace:"nowrap", overflow:"hidden", textOverflow:"ellipsis" }}>{r.title}{r.tag && <span style={{ marginLeft:6, fontSize:9, color:"#fff", background:T.accent, borderRadius:3, padding:"1px 4px" }}>{r.tag}</span>}</div>
-            <div style={{ fontFamily:"'DM Sans',sans-serif", fontSize:10, color:T.textMuted }}>{r.lang} · Day {r.day} · total ₹{r.total.toFixed(2)} Cr</div>
-            <div style={{ height:4, background:T.surfaceAlt, borderRadius:2, marginTop:4 }}><div style={{ height:"100%", width:`${Math.max(1.5, r.nett/mx*100)}%`, background:T.accent, borderRadius:2 }} /></div>
-          </div>
-          <div style={{ fontFamily:"'Barlow Condensed',sans-serif", fontWeight:800, fontSize:16, color:T.text, textAlign:"right", whiteSpace:"nowrap" }}>{r.est ? "~" : ""}{crore(r.nett)}</div>
+    <svg width={w} height={h} viewBox={`0 0 ${w} ${h}`} aria-hidden="true" style={{ display:"block" }}>
+      <polyline points={pts.map(p=>p.join(",")).join(" ")} fill="none" stroke={c} strokeWidth="1.6" strokeLinejoin="round" />
+      <circle cx={last[0]} cy={last[1]} r="2.3" fill={c} />
+    </svg>
+  );
+}
+
+function IndiaDailyTop10() {
+  const isMobile = useIsMobile();
+  const d = INDIA_BOARD, all = d.rows.reduce((a,r)=>a+r.nett,0);
+  const cr = v => v >= 1 ? `₹${v.toLocaleString("en-IN",{minimumFractionDigits:2,maximumFractionDigits:2})} Cr` : `₹${Math.round(v*100)} L`;
+  const pct = r => r.prev ? Math.round((r.nett - r.prev) / r.prev * 100) : null;
+  const head = { fontFamily:"'IBM Plex Mono',monospace", fontSize:9, fontWeight:700, color:T.textMuted, letterSpacing:"0.08em", textTransform:"uppercase" };
+  const num = { fontFamily:"'DM Sans',sans-serif", fontVariantNumeric:"tabular-nums", textAlign:"right", whiteSpace:"nowrap" };
+  const GRID = "30px minmax(0,1fr) 92px 56px 92px 96px 104px 112px";
+  const top = d.rows[0], tmx = Math.max(...top.trend);
+  return (
+    <div style={{ marginBottom:14 }}>
+      {/* Film in focus */}
+      <div style={{ border:`1px solid ${T.border}`, borderTop:`3px solid ${T.accent}`, borderRadius:8, background:T.surface, padding:isMobile?"12px":"14px 16px", marginBottom:10, display:"grid", gridTemplateColumns:isMobile?"1fr":"220px 1fr", gap:isMobile?10:20 }}>
+        <div>
+          <div style={{ ...head, color:T.accent }}>Film in focus</div>
+          <div style={{ fontFamily:"'Barlow Condensed',sans-serif", fontWeight:800, fontSize:22, textTransform:"uppercase", color:T.text, margin:"2px 0 8px" }}>{top.title}</div>
+          <div style={{ fontFamily:"'Barlow Condensed',sans-serif", fontWeight:800, fontSize:30, color:T.accent, lineHeight:1 }}>{cr(top.total)}</div>
+          <div style={{ fontSize:11, color:T.textMuted, marginBottom:8 }}>India nett · {top.day} days · to {d.date}</div>
+          <div style={{ fontFamily:"'Barlow Condensed',sans-serif", fontWeight:800, fontSize:26, color:T.text, lineHeight:1 }}>{top.wwUsd}</div>
+          <div style={{ fontSize:11, color:T.textMuted }}>Worldwide · {top.ww} · {top.wwNote}</div>
         </div>
-      ))}
-      <div style={{ padding:"6px 12px", fontFamily:"'DM Sans',sans-serif", fontSize:10, color:T.textMuted }}>{d.note}</div>
+        <div>
+          <div style={{ ...head, marginBottom:6 }}>India nett per day (₹ Cr)</div>
+          <div style={{ display:"flex", alignItems:"flex-end", gap:isMobile?6:10, height:isMobile?120:150 }}>
+            {top.trend.map((v,i) => (
+              <div key={i} style={{ flex:1, display:"flex", flexDirection:"column", alignItems:"center", justifyContent:"flex-end", height:"100%" }}>
+                <div style={{ fontFamily:"'DM Sans',sans-serif", fontSize:isMobile?9:11, fontWeight:700, color:T.text, marginBottom:3 }}>{v.toFixed(v>=100?1:2).replace(/\.?0+$/,"")}</div>
+                <div style={{ width:"100%", height:`${v/tmx*78}%`, background:T.accent, opacity:i===top.trend.length-1?1:0.5, borderRadius:"3px 3px 0 0" }} />
+                <div style={{ ...head, fontSize:8, marginTop:4 }}>{["Thu","Fri","Sat","Sun","Mon","Tue","Wed"][i]}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* The board */}
+      <div style={{ border:`1px solid ${T.border}`, borderRadius:8, overflow:"hidden", background:T.surface }}>
+        <div style={{ padding:"8px 12px", background:"#FEF2F2", borderBottom:`1px solid ${T.border}`, display:"flex", justifyContent:"space-between", flexWrap:"wrap", gap:6 }}>
+          <span style={{ fontFamily:"'DM Sans',sans-serif", fontSize:11, fontWeight:800, color:T.accent, letterSpacing:"0.08em", textTransform:"uppercase" }}>India Box Office · {d.date}</span>
+          <span style={{ fontFamily:"'IBM Plex Mono',monospace", fontSize:10, color:T.textMuted }}>All films ₹{all.toFixed(2)} Cr nett that day</span>
+        </div>
+        {!isMobile && (
+          <div style={{ display:"grid", gridTemplateColumns:GRID, gap:8, padding:"7px 12px", borderBottom:`1px solid ${T.border}`, background:T.surfaceAlt }}>
+            <span /><span style={head}>Film</span><span style={{...head,textAlign:"right"}}>{d.date.slice(0,10)}</span><span style={{...head,textAlign:"right"}}>vs prev</span>
+            <span style={head}>7-day trend</span><span style={{...head,textAlign:"right"}}>This week</span><span style={{...head,textAlign:"right"}}>India total</span><span style={{...head,textAlign:"right"}}>Worldwide</span>
+          </div>
+        )}
+        {d.rows.map((r,i) => {
+          const p = pct(r);
+          const pc = p == null ? null : <span style={{ color: p >= 0 ? "#15803D" : "#B42318", fontWeight:700 }}>{p > 0 ? "+" : ""}{p}%</span>;
+          const name = (
+            <div style={{ minWidth:0 }}>
+              <div style={{ fontFamily:"'DM Sans',sans-serif", fontWeight:700, fontSize:13, color:T.text, whiteSpace:"nowrap", overflow:"hidden", textOverflow:"ellipsis" }}>{r.title}{r.tag && <span style={{ marginLeft:6, fontSize:9, color:"#fff", background:T.accent, borderRadius:3, padding:"1px 4px" }}>{r.tag}</span>}</div>
+              <div style={{ fontFamily:"'DM Sans',sans-serif", fontSize:10.5, color:T.textMuted }}>{r.lang} · Day {r.day}{isMobile ? ` · week ${r.est?"~":""}${cr(r.week)} · total ${cr(r.total)}${r.ww ? ` · WW ${r.ww}` : ""}` : ""}</div>
+            </div>
+          );
+          const rank = <div style={{ fontFamily:"'Barlow Condensed',sans-serif", fontWeight:800, fontSize:18, color:i<3?T.accent:T.textMuted, textAlign:"center" }}>{i+1}</div>;
+          if (isMobile) return (
+            <div key={r.title} style={{ display:"grid", gridTemplateColumns:"24px minmax(0,1fr) auto", gap:8, alignItems:"center", padding:"8px 10px", borderBottom:`1px solid ${T.border}` }}>
+              {rank}{name}
+              <div style={{ ...num }}>
+                <div style={{ fontWeight:800, fontSize:14, color:T.text }}>{r.est?"~":""}{cr(r.nett)}</div>
+                <div style={{ fontSize:11 }}>{pc}</div>
+              </div>
+            </div>
+          );
+          return (
+            <div key={r.title} style={{ display:"grid", gridTemplateColumns:GRID, gap:8, alignItems:"center", padding:"8px 12px", borderBottom:`1px solid ${T.border}` }}>
+              {rank}{name}
+              <div style={{ ...num, fontWeight:800, fontSize:14, color:T.text }}>{r.est?"~":""}{cr(r.nett)}</div>
+              <div style={{ ...num, fontSize:12 }}>{pc || <span style={{ color:T.textMuted }}>—</span>}</div>
+              <div><Spark v={r.trend} hot={i===0} /></div>
+              <div style={{ ...num, fontSize:12.5, color:T.text }}>{r.est?"~":""}{cr(r.week)}</div>
+              <div style={{ ...num, fontSize:12.5, fontWeight:700, color:T.text }}>{cr(r.total)}</div>
+              <div style={{ ...num, fontSize:12.5, color:T.text }}>{r.ww ? <>{r.ww}<div style={{ fontSize:10, color:T.textMuted }}>{r.wwUsd}</div></> : <span style={{ color:T.textMuted }}>—</span>}</div>
+            </div>
+          );
+        })}
+        <div style={{ padding:"7px 12px", fontFamily:"'DM Sans',sans-serif", fontSize:10.5, color:T.textMuted, display:"flex", justifyContent:"space-between", flexWrap:"wrap", gap:6 }}>
+          <span>India nett · this week = {d.week} · worldwide = India gross + overseas · ~ = Boxoffy estimate · BCM12</span>
+          <a href="/india-box-office.html" style={{ color:T.accent, fontWeight:700, textDecoration:"none" }}>Full India box office table →</a>
+        </div>
+      </div>
     </div>
   );
 }
@@ -4820,7 +5060,7 @@ const RAMAYANA_TRACKER = {
     ww: "$108.8M", wwInr: "₹1,034 Cr · 9 days (to Thu, industry figure)",
     india: "₹564.60 Cr", indiaNote: "nett · 8 days (₹675.05 Cr gross)",
     na: "$17.8M", naNote: "to Wed · record $1.9M Wednesday, $2.05M Tuesday",
-    overseas: "$14.0M", overseasNote: "37 markets + Monday",
+    overseas: "~$20.1M", overseasNote: "outside India & N. America · to Wed",
   },
 };
 
@@ -4842,7 +5082,7 @@ function RamayanaTrackerStrip() {
                            textTransform:"uppercase", color:T.accent, display:"flex", alignItems:"center", gap:6 }}>
               <span style={{ width:6, height:6, borderRadius:"50%", background:"#15803D", display:"inline-block" }} />Ramayana Actuals
             </span>
-            <span style={{ fontFamily:"'DM Sans', sans-serif", fontSize:10, color:T.textMuted }}>Running total · 6 days</span>
+            <span style={{ fontFamily:"'DM Sans', sans-serif", fontSize:10, color:T.textMuted }}>Running total · since 4 Nov previews</span>
           </div>
           {figs.map(f => (
             <div key={f.l} style={{ minWidth:96 }}>
@@ -5149,8 +5389,8 @@ function BoxOfficeSection({ onNavigate, forceAllTime, onClearForceAllTime }) {
             ))}
           </div>
 
-          {/* Top 10 live rows */}
-          <div style={{ padding:"4px 8px 2px", background:"#FEF2F2", borderBottom:`1px solid ${T.border}`, display:"flex", alignItems:"center", gap:8 }}>
+          {/* Top 10 live rows (12 Nov: weekly strip off - the board above carries the week) */}
+          <div style={{ display:"none", padding:"4px 8px 2px", background:"#FEF2F2", borderBottom:`1px solid ${T.border}`, display:"flex", alignItems:"center", gap:8 }}>
             <span style={{ width:7, height:7, borderRadius:"50%", background:T.accent, display:"inline-block", animation:"boPulse 1.8s ease-in-out infinite" }} />
             <span style={{ fontFamily:"'DM Sans',sans-serif", fontSize:10, fontWeight:700, color:T.accent, letterSpacing:"0.08em", textTransform:"uppercase" }}>
               {/* "JUN 5-7" was a string literal next to a live {BO_WEEK.num}, so the
@@ -5168,7 +5408,7 @@ function BoxOfficeSection({ onNavigate, forceAllTime, onClearForceAllTime }) {
               sheet-driven "Recently closed / moved to OTT" list removed) */}
           <div style={{ padding:"8px 14px", borderTop:`1px solid ${T.border}` }}>
             <span style={{ fontFamily:"'IBM Plex Mono',monospace", fontSize:8, color:T.textMuted, letterSpacing:"0.06em" }}>
-              SOURCES · BOI · SACNILK · FILM INFORMATION · PINKVILLA · TARAN ADARSH · BOXOFFY SEAT-BY-SEAT COUNT (BCM12)
+              SOURCES · PUBLISHED INDUSTRY FIGURES · BOXOFFY SEAT-BY-SEAT COUNT (BCM12)
             </span>
           </div>
 
@@ -7448,7 +7688,7 @@ export default function App() {
               <span style={{ fontWeight:700, color:T.text, display:"block", marginBottom:4, fontSize:10, letterSpacing:"0.06em", textTransform:"uppercase" }}>
                 Data Disclaimer &amp; Legal Notice
               </span>
-              Boxoffy.com is an independent box office intelligence platform that aggregates, analyses and presents publicly available entertainment industry data sourced from third-party trade publications, ticketing platforms and industry analysts including but not limited to Box Office India, Sacnilk, Venky Box Office and Koimoi. All box office figures, advance booking data, verdict calls, predictions and editorial analysis published on this website represent estimates based on available information at the time of publication and are not official figures unless expressly stated otherwise. Boxoffy.com does not represent, warrant or guarantee the absolute accuracy, completeness or timeliness of any data presented herein.{" "}
+              Boxoffy.com is an independent box office intelligence platform that aggregates, analyses and presents publicly available entertainment industry data sourced from third-party trade publications, ticketing platforms and industry analysts. All box office figures, advance booking data, verdict calls, predictions and editorial analysis published on this website represent estimates based on available information at the time of publication and are not official figures unless expressly stated otherwise. Boxoffy.com does not represent, warrant or guarantee the absolute accuracy, completeness or timeliness of any data presented herein.{" "}
               <strong style={{ color:T.text }}>Boxoffy.com is not affiliated with, endorsed by, or acting on behalf of any film production house, studio, distributor or exhibitor.</strong>{" "}
               Opinions, predictions and editorial commentary published on this platform constitute the views of the Boxoffy editorial team and are protected expression under Article 19(1)(a) of the Constitution of India. Nothing published on Boxoffy.com is intended to defame, disparage or make false factual claims against any individual, company or film production. In the event any content is alleged to be inaccurate, please contact{" "}
               <a href="mailto:info@boxoffy.com" style={{ color:T.accent, textDecoration:"none" }}>info@boxoffy.com</a>{" "}
@@ -7457,7 +7697,7 @@ export default function App() {
 
             {/* Copyright strip */}
             <div style={{ display:"flex", alignItems:"center", justifyContent:"space-between", flexWrap:"wrap", gap:8, color:T.textMuted, lineHeight:1.8 }}>
-              <span style={{ fontSize:11 }}>© 2026 Boxoffy.com · Box Office Intelligence · Box office data from industry tracking sources · Updated 5 Nov 2026 · All figures in ₹ Crores</span>
+              <span style={{ fontSize:11 }}>© 2026 Boxoffy.com · Box Office Intelligence · Box office data from industry tracking sources · Updated 12 Nov 2026 · All figures in ₹ Crores</span>
               <a
                 href="mailto:info@boxoffy.com"
                 onMouseEnter={e => e.target.style.color=T.accent}
