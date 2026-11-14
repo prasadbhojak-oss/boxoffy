@@ -4744,10 +4744,10 @@ function WeekendLeadHero() {
         <div style={{ flex:1, minWidth:0, display:"flex", flexDirection:"column", justifyContent:"center" }}>
           <span style={{ alignSelf:"flex-start", background:"#C8201A", color:"#FFFFFF", fontFamily:"'Barlow Condensed', sans-serif", fontWeight:900, fontSize:9, letterSpacing:"0.12em", padding:"2px 7px", borderRadius:2, marginBottom:7 }}>LIVE · RAMAYANA · RUNNING TOTAL</span>
           <div style={{ fontFamily:"'Barlow Condensed', sans-serif", fontWeight:900, fontSize:"clamp(15px, 1.7vw, 17px)", color:"#FFFFFF", lineHeight:1.15, letterSpacing:"-0.01em" }}>
-            RAMAYANA: $116.9M (₹1,111 CR) WORLDWIDE IN 10 DAYS.
+            RAMAYANA: $117.2M (₹1,113 CR) WORLDWIDE IN 11 DAYS.
           </div>
           <div style={{ fontFamily:"'DM Sans', sans-serif", fontSize:10.5, color:"#9CA3AF", marginTop:5, lineHeight:1.4 }}>
-            India ₹612.45 Cr nett in 9 days. North America $17.8M.
+            India ₹614.51 Cr nett in 10 days. North America $17.8M.
           </div>
           <span style={{ fontFamily:"'Barlow Condensed', sans-serif", fontWeight:700, fontSize:11, color:"#E5C882", letterSpacing:"0.06em", marginTop:8 }}>OPEN THE LIVE TRACKER →</span>
         </div>
@@ -5056,9 +5056,9 @@ const RAMAYANA_TRACKER = {
   // 5 NOV 21:40 CT: the homepage strip is now RAMAYANA ACTUALS - a compact
   // running total (previews + Day 1). Presale fields above stay as the record.
   actuals: {
-    asOf: "13 Nov · 10:50 AM CT",
-    ww: "$116.9M", wwInr: "₹1,111 Cr · 10 days (Fri final, industry figure)",
-    india: "₹612.45 Cr", indiaNote: "nett · 9 days (₹732.20 Cr gross)",
+    asOf: "13 Nov · 8:50 PM CT",
+    ww: "$117.2M", wwInr: "₹1,113 Cr · 11 days (Sat live, industry figure)",
+    india: "₹614.51 Cr", indiaNote: "nett · 10 days, Sat live (₹734.63 Cr gross)",
     na: "$17.8M", naNote: "to Wed · record $1.9M Wednesday, $2.05M Tuesday",
     overseas: "~$20.1M", overseasNote: "outside India & N. America · to Wed",
   },
