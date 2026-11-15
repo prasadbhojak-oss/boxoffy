@@ -828,6 +828,7 @@ gtag("js",new Date());gtag("config","G-K6C9EVRFH4",{anonymize_ip:true});}})();
     <div class="bx-top">
       <span class="bx-live"><i></i>Live box office · Ramayana: Rise of a Legend</span>
       <span class="bx-asof" id="bx-asof"></span>
+      <span class="bx-views" id="bx-views" hidden></span>
     </div>
     <div class="bx-main">
       <a class="bx-poster" href="/ramayana-part-one-box-office.html" aria-label="Ramayana: Rise of a Legend, film page">
@@ -850,9 +851,10 @@ gtag("js",new Date());gtag("config","G-K6C9EVRFH4",{anonymize_ip:true});}})();
 
   <div class="bx-sec">
     <h3>Country by country</h3>
-    <p>Wed previews to Diwali Sunday · tap a country for days and cities</p>
+    <p>Running total for each country · tap a row for its days and cities</p>
   </div>
   <div class="bx-key">
+    <span class="bx-keyl">Where each number comes from</span>
     <span class="src c"><span>Counted seat by seat</span></span>
     <span class="src i"><span>Studio or industry figure</span></span>
     <span class="src e"><span>Boxoffy estimate</span></span>
@@ -1080,17 +1082,18 @@ gtag("js",new Date());gtag("config","G-K6C9EVRFH4",{anonymize_ip:true});}})();
 /* LIVE (9 Nov redesign): one worldwide banner + country list. Edit the numbers here; the layout draws itself.
    Strings use double quotes on purpose. v = 5-day gross in US$ millions (our reconciled figure). */
 const LIVE = {
+  views: "",
   asOf: "Updated Sat 14 Nov · 11:05 PM CT",
   hero: {
-    kick: "Worldwide running total · Wed 4 to Sun 15 Nov",
+    kick: "Worldwide gross · India + all overseas · Wed 4 to Sun 15 Nov",
     big: "$130.7M", inr: "₹1,242 Cr",
     line: "🎉 ₹1,242 Cr worldwide in 12 days · India ₹833.61 Cr gross (Sun live) + overseas ₹408.50 Cr, industry figures, at ₹95/$",
     split: [
-      {k:"🇮🇳 India", v:"₹697.56 Cr nett", s:"11 days · ₹833.61 Cr gross ($87.7M) · Sat ₹72.90 Cr nett final · Sun ₹11.96 Cr live (industry figure)"},
-      {k:"🇺🇸🇨🇦 North America", v:"$20.0M", s:"₹190 Cr · to Fri · Friday ~$1.4M (industry figure) · Thursday $856K · Wednesday $1.9M, a record"},
-      {k:"🌍 Rest of world", v:"$23.0M", s:"₹218 Cr · industry overseas $43.0M to Sat less North America · the UK $3.88M · Middle East $3.60M"},
-      {k:"🌍 Worldwide · Saturday", v:"$12.3M", s:"₹117.00 Cr · India ₹72.90 Cr nett (₹87.00 Cr gross) · outside India ₹30 Cr · North America 140,674 tickets, final count"},
-      {k:"🇮🇳 Sunday so far", v:"₹11.96 Cr", s:"India nett live (₹14.11 Cr gross, industry) · 5,716 shows, 32% full by mid-morning"},
+      {k:"🇮🇳 India · total so far", v:"₹697.56 Cr nett", s:"11 days · ₹833.61 Cr gross ($87.7M) · Sat ₹72.90 Cr nett final · Sun ₹11.96 Cr live (industry figure)"},
+      {k:"🇺🇸🇨🇦 North America · total so far", v:"$20.0M", s:"₹190 Cr · to Fri · Friday ~$1.4M (industry figure) · Thursday $856K · Wednesday $1.9M, a record"},
+      {k:"🌍 All other countries · total so far", v:"$23.0M", s:"₹218 Cr · industry overseas $43.0M to Sat less North America · the UK $3.88M · Middle East $3.60M"},
+      {k:"🌍 Worldwide · Saturday only", v:"$12.3M", s:"₹117.00 Cr · India ₹72.90 Cr nett (₹87.00 Cr gross) · outside India ₹30 Cr · North America 140,674 tickets, final count"},
+      {k:"🇮🇳 India · Sunday so far", v:"₹11.96 Cr", s:"India nett live (₹14.11 Cr gross, industry) · 5,716 shows, 32% full by mid-morning"},
       {k:"🇮🇳 India · Monday presales", v:"₹9.27 Cr", s:"India advance, gross · 3.57 lakh tickets · 15,822 shows, 10% full · Sunday final ₹42.84 Cr"}
     ],
     today: [],
@@ -1169,6 +1172,7 @@ const LIVE = {
   const SRC={c:"Counted",i:"Studio / industry",e:"Estimate"}, pill=k=>`<span class="src ${k}"><span>${SRC[k]}</span></span>`;
   const H=LIVE.hero;
   $("bx-asof").textContent=LIVE.asOf;
+  if(LIVE.views&&$("bx-views")){$("bx-views").hidden=false;$("bx-views").textContent="👁 "+LIVE.views;}
   $("bx-kick").textContent=H.kick;
   $("bx-big").innerHTML=`<b>${esc(H.big)}</b><span>${esc(H.inr)}</span>`;
   $("bx-line").innerHTML=H.line;
@@ -1188,10 +1192,10 @@ const LIVE = {
     const facts=c.facts?`<div class="bx-facts">${c.facts.map(f=>`<div class="bx-fact"><small>${esc(f.k)}</small><b>${esc(f.b)}</b><span>${esc(f.s)}</span></div>`).join("")}</div>`:"";
     return `<details class="bx-c"${i===0?"":""}><summary><span class="bx-rk">${c.last?"":i+1}</span>
       <span class="bx-nm"><span class="fl">${c.f}</span><b>${esc(c.c)}</b>${c.tag?`<span class="tg">★ ${esc(c.tag)}</span>`:""}
-        <span class="bar"><i style="width:${Math.max(1.5,c.v/mx*100)}%"></i></span><span class="sm">${esc(c.sm)}</span></span>
-      <span class="bx-v"><b>${esc(c.show)}</b><em class="cx">${c.c==="India"?"$"+c.v.toFixed(1)+"M":(c.show.startsWith("$")?"":"$"+(c.v>=1?c.v.toFixed(2)+"M":Math.round(c.v*1000)+"K")+" · ")+cr(c.v)}</em><span>${esc(c.sub)} · ${pct.toFixed(1)}% of total</span></span><span class="bx-ch">›</span></summary>
+        <span class="bar"><i style="width:${Math.max(1.5,c.v/mx*100)}%"></i></span><span class="pd"><i class="sd ${c.src}"></i>${esc(c.sub)}</span><span class="sm">${esc(c.sm)}</span></span>
+      <span class="bx-v"><b>${esc(c.show)}</b><em class="cx">${c.c==="India"?"$"+c.v.toFixed(1)+"M":(c.show.startsWith("$")?"":"$"+(c.v>=1?c.v.toFixed(2)+"M":Math.round(c.v*1000)+"K")+" · ")+cr(c.v)}</em><span><i class="sd ${c.src}"></i>${esc(c.sub)} · ${pct.toFixed(1)}% of total</span></span><span class="bx-ch">›</span></summary>
       <div class="bx-d">${days(c)}${cities(c)}${facts}<p class="bx-src">${pill(c.src)} ${esc(c.note||"")}</p></div></details>`;}).join("")+
-    `<div class="bx-tot"><span></span><b>Worldwide · our count</b><span class="bx-v"><b>$${tot.toFixed(1)}M</b><em class="cx">₹${Math.round(tot*95/10)} Cr</em><span>studio $55.7M (₹529 Cr)</span></span><span></span></div>`;
+    `<div class="bx-tot"><span></span><b>Countries listed above<small>Headline ${esc(H.big)} also has newer days not yet split by country</small></b><span class="bx-v"><b>$${tot.toFixed(1)}M</b><em class="cx">₹${Math.round(tot*95/10)} Cr</em></span><span></span></div>`;
   if (LIVE.also&&$("bx-also")) $("bx-also").innerHTML=LIVE.also.map(a=>`<div class="bx-al"><b>${a.f} ${esc(a.c)}</b><span>${esc(a.s)}</span></div>`).join("");
   /* the long notes, kept from ACT */
   if (typeof ACT!=="undefined"){
@@ -6101,6 +6105,11 @@ function freshline(){
     return `<span${cls}>${esc(lbl)} ${esc(ago(f[d]))}</span>`;
   });
   const cinemas = DATA.metros.reduce((a,m)=>a+m.nVenues,0);
+  const fv = Object.values(f);
+  if (fv.length && fv.every(t=>(Date.now()-new Date(t))/3600000>24)){
+    $('#fresh').innerHTML = `<b>Reporting ${fmt(cinemas)} cinemas</b> · final presale scan · presales closed, these numbers no longer change`;
+    return;
+  }
   $('#fresh').innerHTML = parts.length
     ? `<b>Reporting ${fmt(cinemas)} cinemas</b> · ` + parts.join(' · ') +
       ` · <span style="opacity:.75">we scan on a schedule; this page only reads the result</span>`
@@ -8144,6 +8153,56 @@ schedule();
 .bx-nm .sm{overflow:hidden!important;display:-webkit-box!important;-webkit-line-clamp:2;-webkit-box-orient:vertical}
 .bx-split em{overflow:hidden!important;display:-webkit-box!important;-webkit-line-clamp:3;-webkit-box-orient:vertical}
 .bx-c[open] .bx-nm .sm,.bx-c[open] .bx-v span{display:block!important;-webkit-line-clamp:unset}
+
+/* 14 Nov: phone clean-up. Nothing cut off, every number says what it covers. */
+.sd{display:inline-block;width:7px;height:7px;border-radius:50%;margin-right:5px;vertical-align:1px;background:var(--muted)}
+.sd.c{background:var(--green)}.sd.i{background:var(--bms)}.sd.e{background:var(--saffron)}
+.bx-nm .pd{display:none}
+.bx-keyl{font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);align-self:center;margin-right:2px}
+.bx-views{font-family:var(--mono);font-size:11px;color:#F5C518;border:1px solid rgba(212,146,10,.4);border-radius:999px;padding:2px 9px}
+.bx-tot b small{display:block;font-family:var(--body);font-weight:400;font-size:12px;letter-spacing:0;text-transform:none;color:var(--muted);line-height:1.35;margin-top:3px}
+@media(max-width:700px){
+  html,body{overflow-x:hidden}
+  .lv{padding:12px 10px!important}
+  .bx-hero{padding:16px 14px 14px}
+  .bx-main{grid-template-columns:56px minmax(0,1fr);gap:6px 12px;align-items:center}
+  .bx-txt{display:contents}
+  .bx-kick{font-size:13px;letter-spacing:.1em;line-height:1.3}
+  .bx-big{grid-column:1/-1;gap:4px 12px;margin-top:6px}
+  .bx-big b{font-size:clamp(54px,18vw,76px)}
+  .bx-big span{font-size:24px}
+  .bx-line{grid-column:1/-1;font-size:14px;margin:2px 0 0}
+  .bx-poster{transform:none}
+  .bx-split div{padding:10px 12px}
+  .bx-split b{font-size:24px}
+  .bx-split em{-webkit-line-clamp:2!important;line-height:1.4}
+  .bx-rec{font-size:10.5px;line-height:1.4}
+  .bx-c>summary,.bx-tot{grid-template-columns:20px minmax(0,1fr) auto 12px;gap:4px 8px;padding:12px 10px;align-items:start}
+  .bx-rk{font-size:16px;padding-top:2px}
+  .bx-ch{padding-top:4px}
+  .bx-nm b{font-size:15.5px}
+  .bx-nm .fl{white-space:nowrap}
+  .bx-nm .tg{display:block;width:fit-content;margin:5px 0 0;font-size:9.5px}
+  .bx-nm .pd{display:block;font-family:var(--mono);font-size:10.5px;color:var(--muted);margin:6px 0 0;line-height:1.4}
+  .bx-nm .sm{margin-top:4px}
+  .bx-c>summary .bx-nm{grid-column:2/4;grid-row:1}
+  .bx-c>summary .bx-v{grid-column:3;grid-row:1;position:relative;z-index:1;pointer-events:none}
+  .bx-c>summary .bx-nm::before{content:"";float:right;width:112px;height:42px}
+  .bx-day .val{font-size:9px;letter-spacing:-.03em}
+  .bx-day .val br,.bx-day .val i{display:none}
+  .bx-day .lb{font-size:9px}
+  .bx-nm .bar{clear:both}
+  .bx-c>summary .bx-v span,.bx-c[open]>summary .bx-v span{display:none!important}
+  .bx-v b{font-size:21px;white-space:nowrap}
+  .bx-v em.cx{font-size:14px;white-space:nowrap}
+  .bx-tot{align-items:center}
+  .bx-tot b{font-size:15px}
+  .bx-d{padding:4px 12px 16px}
+  .bx-sec p{font-size:12.5px}
+  #h2h table th:last-child,#h2h table td:last-child{display:none}
+  #h2h table{width:100%}
+  #h2h table th,#h2h table td{padding-left:4px;padding-right:4px}
+}
 </style>
 </body>
 </html>
