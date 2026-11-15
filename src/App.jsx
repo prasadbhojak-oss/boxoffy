@@ -4720,7 +4720,8 @@ function WeekendLeadHero() {
   const pJailer2   = useTMDBPosterById(1234139, "w185");
   const pPremada   = useTMDBPosterById(1735270, "w185");
   const pDrishyam  = useTMDBPosterById(1269325, "w185");
-  const tiles = [ { src:null, ab:"RAM" }, { src:pJailer2, ab:"J2" }, { src:pUdta, ab:"UT" }, { src:pPremada, ab:"PO" } ];
+  // 15 Nov: Ramayana tile now shows its TMDB poster (path dPrtk4iNf6T5w8fWfg4uxDDbJSW).
+  const tiles = [ { src:"https://image.tmdb.org/t/p/w185/dPrtk4iNf6T5w8fWfg4uxDDbJSW.jpg", ab:"RAM" }, { src:pJailer2, ab:"J2" }, { src:pUdta, ab:"UT" }, { src:pPremada, ab:"PO" } ];
   const [hover, setHover] = React.useState(false);
   return (
     <a href="/ramayana" style={{ textDecoration:"none", display:"block" }}>
@@ -4752,6 +4753,70 @@ function WeekendLeadHero() {
             India ₹760.60 Cr nett in 11 days. North America $24.1M.
           </div>
           <span style={{ fontFamily:"'Barlow Condensed', sans-serif", fontWeight:700, fontSize:11, color:"#E5C882", letterSpacing:"0.06em", marginTop:8 }}>OPEN THE LIVE TRACKER →</span>
+        </div>
+      </div>
+    </a>
+  );
+}
+
+/* ── KING LIVE PRESALES BANNER (15 Nov 2026) ─────────────────────────────
+   Same look as the Ramayana banner. No numbers are hardcoded here: it reads
+   /king-live.json (the file the King tracker and the sweeps update) and
+   counts what is selling, so it never goes stale. Poster: TMDB
+   Aq5J3pzesN7WJLIzEkWD2b4FqV9, served from /king-poster.jpg.
+   ─────────────────────────────────────────────────────────────────────── */
+function KingLiveHero() {
+  const [d, setD] = React.useState(null);
+  const [hover, setHover] = React.useState(false);
+  React.useEffect(() => {
+    let on = true;
+    fetch("/king-live.json?t=" + Date.now(), { cache:"no-store" })
+      .then(r => r.ok ? r.json() : null).then(j => { if (on && j && Array.isArray(j.countries)) setD(j); }).catch(() => {});
+    return () => { on = false; };
+  }, []);
+  let head = "KING: PRESALES TRACKER IS LIVE.", sub = "Shah Rukh Khan · Christmas Eve · every country, city and cinema we can count.";
+  if (d) {
+    const cs = d.countries;
+    const tix = cs.reduce((a, c) => a + (c.tickets || 0), 0);
+    const st = c => c.tickets > 0 ? "counted" : (c.status || (c.shows ? "selling" : "waiting"));
+    const sell = cs.filter(c => st(c) === "selling" || st(c) === "counted");
+    const listed = cs.filter(c => st(c) === "listed");
+    let cin = 0;
+    sell.forEach(c => (c.cities || []).forEach(x => (x.cin || []).forEach(k => { if ((k.st || "selling") === "selling") cin++; })));
+    const days = Math.ceil((new Date((d.release || "2026-12-24") + "T00:00:00+05:30") - Date.now()) / 864e5);
+    head = tix > 0
+      ? `KING: ${tix.toLocaleString("en-US")} TICKETS SOLD IN ${sell.length} ${sell.length === 1 ? "COUNTRY" : "COUNTRIES"}.`
+      : sell.length
+        ? `KING: NOW SELLING IN ${sell.map(c => c.name.toUpperCase()).join(", ")}.`
+        : "KING: PRESALES TRACKER IS LIVE.";
+    sub = `${cin ? cin + " cinema" + (cin === 1 ? "" : "s") + " selling · " : ""}${listed.length ? listed.length + " more listed (" + listed.map(c => c.name).join(", ") + ") · " : ""}${cs.length} markets tracked${days > 0 ? " · " + days + " days to release" : ""}.`;
+  }
+  return (
+    <a href="/king" style={{ textDecoration:"none", display:"block" }}>
+      <div
+        onMouseEnter={() => setHover(true)}
+        onMouseLeave={() => setHover(false)}
+        style={{
+          background: hover ? "#0F1115" : "#14171C",
+          border:"0.5px solid #1F2937", borderLeft:"4px solid #E5C882", borderTop:"none",
+          padding:"14px 16px", cursor:"pointer", display:"flex", gap:14, alignItems:"stretch",
+          transition:"background 0.15s",
+        }}
+      >
+        <div style={{ flexShrink:0, width:78, height:117, borderRadius:4, overflow:"hidden", background:"#1F2937", border:"0.5px solid #374151" }}>
+          <img src="/king-poster.jpg" alt="King (2026) poster" width="78" height="117"
+               onError={e => { e.currentTarget.src = "https://image.tmdb.org/t/p/w185/Aq5J3pzesN7WJLIzEkWD2b4FqV9.jpg"; }}
+               style={{ width:"100%", height:"100%", objectFit:"cover", display:"block" }} />
+        </div>
+        <div style={{ flex:1, minWidth:0, display:"flex", flexDirection:"column", justifyContent:"center" }}>
+          <span style={{ alignSelf:"flex-start", background:"#E5C882", color:"#14171C", fontFamily:"'Barlow Condensed', sans-serif", fontWeight:900, fontSize:9, letterSpacing:"0.12em", padding:"2px 7px", borderRadius:2, marginBottom:7 }}>LIVE · KING · PRESALES</span>
+          <div style={{ fontFamily:"'Barlow Condensed', sans-serif", fontWeight:900, fontSize:"clamp(15px, 1.7vw, 17px)", color:"#FFFFFF", lineHeight:1.15, letterSpacing:"-0.01em" }}>
+            {head}
+          </div>
+          <div style={{ fontFamily:"'DM Sans', sans-serif", fontSize:10.5, color:"#9CA3AF", marginTop:5, lineHeight:1.4 }}>
+            {sub}
+          </div>
+          <span style={{ fontFamily:"'Barlow Condensed', sans-serif", fontWeight:700, fontSize:11, color:"#E5C882", letterSpacing:"0.06em", marginTop:8 }}>OPEN THE KING TRACKER →</span>
         </div>
       </div>
     </a>
@@ -5107,6 +5172,7 @@ function HeaderSnapshotCards({ activeSection }) {
   return (
     <div style={{ display:"flex", flexDirection:"column", gap:0, flexShrink:0, maxWidth: isMobile ? "100%" : 380 }}>
       <WeekendLeadHero />
+      <KingLiveHero />
 
       {/* ── PINNED: Industry Report ─────────────────────────────── */}
       <a href="/india-cinema-state-2026.html" style={{ textDecoration:"none", display:"block" }}>
