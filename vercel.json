@@ -13,6 +13,10 @@
       "destination": "/ramayana.html"
     },
     {
+      "source": "/king",
+      "destination": "/king.html"
+    },
+    {
       "source": "/((?!.*\\.html$|.*\\.xml$|.*\\.txt$|.*\\.json$|.*\\.js$|.*\\.css$|.*\\.png$|.*\\.jpg$|.*\\.ico$|.*\\.svg$|.*\\.webp$|.*\\.woff2?$|.*\\.ttf$).*)",
       "destination": "/index.html"
     }
