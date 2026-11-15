@@ -2493,7 +2493,7 @@ const INDIA_DAILY = {
   ],
 };
 const INDIA_WEEKLY = {
-  range: "Fri 6 – Thu 12 Nov 2026",
+  range: "Fri 13 – Thu 19 Nov 2026 · running, to Sat 14",
   rows: [
     { title:"Ramayana: Part 1", lang:"Hindi + 4 dubs", wk:1, week:499.75, est:true, total:564.6, note:"Fri–Thu · Thu is a live estimate · 8-day total incl. Thu 5 opening", tag:"NEW" },
     { title:"Scene", lang:"Tamil + dubs", wk:1, week:112.45, est:true, total:112.45, note:"Fri–Wed reported ₹105.45 Cr + Thu estimate", tag:"NEW" },
@@ -2529,168 +2529,170 @@ function IndiaWeeklyTop10_old() {
   );
 }
 
-/* ── INDIA BOX OFFICE BOARD (12 Nov 2026) ─────────────────────────────
+/* ── INDIA BOX OFFICE BOARD (15 Nov 2026, Sacnilk to Sat 14) ─────────────────────────────
    One table, no tabs: day, % vs previous day, 7-day trend, this week,
    India total and worldwide side by side. Same figures as the plain-HTML
    page /india-box-office.html, which AI search and crawlers can read.
    All India figures nett, to the date in INDIA_BOARD.date. ~ = estimate. */
 const INDIA_BOARD = {
-  date: "Wed 11 Nov 2026",
-  week: "Fri 6 – Wed 11 Nov",
+  date: "Sat 14 Nov 2026",
+  week: "Fri 13 – Sat 14 Nov",
+  trendDays: ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],
   rows: [
  {
   "title": "Ramayana: Part 1",
   "lang": "Hindi + 4 dubs",
-  "day": 7,
-  "nett": 70.65,
-  "prev": 94.1,
+  "day": 10,
+  "nett": 72.9,
+  "prev": 48.1,
   "trend": [
-   64.85,
-   48.05,
-   69.8,
    56.15,
    107.5,
    94.1,
-   70.65
+   70.65,
+   53.5,
+   48.1,
+   72.9
   ],
-  "week": 446.25,
-  "total": 511.1,
-  "ww": "₹1,034 Cr",
-  "wwUsd": "$108.8M",
-  "wwNote": "9 days, to Thu",
+  "week": 121.0,
+  "total": 685.6,
+  "ww": "₹1,401 Cr",
+  "wwUsd": "$147.5M",
+  "wwNote": "to Sun 15 Nov, industry figure",
   "tag": "NEW"
  },
  {
   "title": "Scene",
   "lang": "Tamil + dubs",
-  "day": 6,
-  "nett": 8.05,
-  "prev": 12.85,
+  "day": 9,
+  "nett": 9.5,
+  "prev": 6.0,
   "trend": [
-   19.15,
-   20.35,
    23.65,
    21.4,
    12.85,
-   8.05
+   8.05,
+   6.25,
+   6.0,
+   9.5
   ],
-  "week": 105.45,
-  "total": 105.45,
-  "ww": "₹188.50 Cr",
-  "wwUsd": "$19.8M",
+  "week": 15.5,
+  "total": 127.2,
+  "ww": "₹227.25 Cr",
+  "wwUsd": "$23.9M",
+  "tag": "NEW"
+ },
+ {
+  "title": "Donga Naa Koduku",
+  "lang": "Telugu",
+  "day": 2,
+  "nett": 2.0,
+  "prev": 1.85,
+  "trend": [
+   1.85,
+   2.0
+  ],
+  "week": 3.85,
+  "total": 3.85,
+  "tag": "NEW"
+ },
+ {
+  "title": "Bouma",
+  "lang": "Malayalam",
+  "day": 3,
+  "nett": 1.43,
+  "prev": 0.9,
+  "trend": [
+   0.5,
+   0.9,
+   1.43
+  ],
+  "week": 2.33,
+  "total": 2.83,
+  "tag": "NEW"
+ },
+ {
+  "title": "Itllu Arjuna",
+  "lang": "Telugu",
+  "day": 2,
+  "nett": 1.16,
+  "prev": 1.05,
+  "trend": [
+   1.05,
+   1.16
+  ],
+  "week": 2.21,
+  "total": 2.21,
   "tag": "NEW"
  },
  {
   "title": "Mookuthi Amman 2",
   "lang": "Tamil",
-  "day": 6,
-  "nett": 1.0,
-  "prev": 2.1,
+  "day": 9,
+  "nett": 0.85,
+  "prev": 0.47,
   "trend": [
-   1.88,
-   2.45,
    4.6,
    5.15,
    2.1,
-   1.0
+   1.0,
+   0.75,
+   0.47,
+   0.85
   ],
-  "week": 17.18,
-  "total": 17.18,
-  "tag": "NEW"
- },
- {
-  "title": "Aadarsha Kutumbam House No: 47",
-  "lang": "Telugu",
-  "day": 13,
-  "nett": 0.66,
-  "prev": 0.9,
-  "trend": [
-   1.65,
-   1.15,
-   1.55,
-   1.6,
-   1.35,
-   0.9,
-   0.66
-  ],
-  "week": 7.21,
-  "total": 48.36,
-  "ww": "₹72.55 Cr",
-  "wwUsd": "$7.6M"
+  "week": 1.32,
+  "total": 19.25,
+  "ww": "₹22.25 Cr",
+  "wwUsd": "$2.3M"
  },
  {
   "title": "Jailer 2",
   "lang": "Tamil",
-  "day": 28,
-  "nett": 0.52,
-  "prev": 0.88,
+  "day": 31,
+  "nett": 0.5,
+  "prev": 0.39,
   "trend": [
-   1.6,
-   0.6,
-   1.0,
    1.15,
    1.25,
    0.88,
-   0.52
+   0.52,
+   0.35,
+   0.39,
+   0.5
   ],
-  "week": 5.4,
-  "total": 473.05,
-  "ww": "₹830.30 Cr",
-  "wwUsd": "$87.4M"
+  "week": 0.89,
+  "total": 474.29,
+  "ww": "₹831.73 Cr",
+  "wwUsd": "$87.6M"
+ },
+ {
+  "title": "Aadarsha Kutumbam House No: 47",
+  "lang": "Telugu",
+  "day": 16,
+  "nett": 0.38,
+  "est": true,
+  "week": 0.68,
+  "total": 49.32,
+  "ww": "₹74.51 Cr",
+  "wwUsd": "$7.8M"
  },
  {
   "title": "Premada Oorali",
   "lang": "Kannada",
-  "day": 48,
-  "nett": 0.29,
-  "prev": 0.52,
-  "trend": [
-   0.29,
-   0.23,
-   0.31,
-   0.4,
-   0.48,
-   0.52,
-   0.29
-  ],
-  "week": 2.23,
-  "total": 115.14
- },
- {
-  "title": "Udta Teer",
-  "lang": "Hindi",
-  "day": 20,
-  "nett": 0.12,
+  "day": 51,
+  "nett": 0.3,
   "est": true,
-  "week": 1.24,
-  "total": 47.7
- },
- {
-  "title": "Cult",
-  "lang": "Telugu",
-  "day": 13,
-  "nett": 0.05,
-  "est": true,
-  "week": 0.35,
-  "total": 5.35
- },
- {
-  "title": "Hanuman Ansh",
-  "lang": "Hindi",
-  "day": 97,
-  "nett": 0.04,
-  "est": true,
-  "week": 0.26,
-  "total": 343.05
+  "week": 0.54,
+  "total": 115.9
  },
  {
   "title": "Drishyam 3: The Conclusion",
   "lang": "Hindi",
-  "day": 41,
-  "nett": 0.03,
+  "day": 44,
+  "nett": 0.17,
+  "week": 0.32,
   "est": true,
-  "week": 0.22,
-  "total": 379.45
+  "total": 380.48
  }
 ],
 };
@@ -2736,7 +2738,7 @@ function IndiaDailyTop10() {
               <div key={i} style={{ flex:1, display:"flex", flexDirection:"column", alignItems:"center", justifyContent:"flex-end", height:"100%" }}>
                 <div style={{ fontFamily:"'DM Sans',sans-serif", fontSize:isMobile?9:11, fontWeight:700, color:T.text, marginBottom:3 }}>{v.toFixed(v>=100?1:2).replace(/\.?0+$/,"")}</div>
                 <div style={{ width:"100%", height:`${v/tmx*78}%`, background:T.accent, opacity:i===top.trend.length-1?1:0.5, borderRadius:"3px 3px 0 0" }} />
-                <div style={{ ...head, fontSize:8, marginTop:4 }}>{["Thu","Fri","Sat","Sun","Mon","Tue","Wed"][i]}</div>
+                <div style={{ ...head, fontSize:8, marginTop:4 }}>{(d.trendDays||["Thu","Fri","Sat","Sun","Mon","Tue","Wed"])[i]}</div>
               </div>
             ))}
           </div>
@@ -4744,10 +4746,10 @@ function WeekendLeadHero() {
         <div style={{ flex:1, minWidth:0, display:"flex", flexDirection:"column", justifyContent:"center" }}>
           <span style={{ alignSelf:"flex-start", background:"#C8201A", color:"#FFFFFF", fontFamily:"'Barlow Condensed', sans-serif", fontWeight:900, fontSize:9, letterSpacing:"0.12em", padding:"2px 7px", borderRadius:2, marginBottom:7 }}>LIVE · RAMAYANA · RUNNING TOTAL</span>
           <div style={{ fontFamily:"'Barlow Condensed', sans-serif", fontWeight:900, fontSize:"clamp(15px, 1.7vw, 17px)", color:"#FFFFFF", lineHeight:1.15, letterSpacing:"-0.01em" }}>
-            RAMAYANA: $138.1M (₹1,312 CR) WORLDWIDE IN 12 DAYS.
+            RAMAYANA: $147.5M (₹1,401 CR) WORLDWIDE IN 12 DAYS.
           </div>
           <div style={{ fontFamily:"'DM Sans', sans-serif", fontSize:10.5, color:"#9CA3AF", marginTop:5, lineHeight:1.4 }}>
-            India ₹756.84 Cr nett in 11 days. North America $20.0M.
+            India ₹756.84 Cr nett in 11 days. North America $24.1M.
           </div>
           <span style={{ fontFamily:"'Barlow Condensed', sans-serif", fontWeight:700, fontSize:11, color:"#E5C882", letterSpacing:"0.06em", marginTop:8 }}>OPEN THE LIVE TRACKER →</span>
         </div>
@@ -5056,11 +5058,11 @@ const RAMAYANA_TRACKER = {
   // 5 NOV 21:40 CT: the homepage strip is now RAMAYANA ACTUALS - a compact
   // running total (previews + Day 1). Presale fields above stay as the record.
   actuals: {
-    asOf: "15 Nov · 9:47 AM CT",
-    ww: "$138.1M", wwInr: "₹1,312 Cr · 12 days (Sun live, industry figure)",
+    asOf: "15 Nov · 12:15 PM CT",
+    ww: "$147.5M", wwInr: "₹1,401 Cr · to Sun 15 Nov · +$38.1M this weekend (industry figure)",
     india: "₹756.84 Cr", indiaNote: "nett · 11 days, Sun live (₹903.56 Cr gross)",
-    na: "$20.0M", naNote: "to Fri · record $1.9M Wednesday, $2.05M Tuesday",
-    overseas: "~$20.1M", overseasNote: "outside India & N. America · to Wed",
+    na: "$24.1M", naNote: "to Sun · 2nd weekend $5.5M (Sony est.): Fri $1.415M · Sat $2.4M · Sun $1.6M",
+    overseas: "$26.2M", overseasNote: "outside India & N. America · to Sun (industry figure)",
   },
 };
 
