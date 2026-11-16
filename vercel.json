@@ -2,8 +2,143 @@
   "redirects": [
     {
       "source": "/:path*",
-      "has": [{ "type": "host", "value": "boxoffy.com" }],
+      "has": [
+        {
+          "type": "host",
+          "value": "boxoffy.com"
+        }
+      ],
       "destination": "https://www.boxoffy.com/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/us-box-office.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/editorials.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/mirzapur-box-office.html",
+      "destination": "/mirzapur-the-film-box-office.html",
+      "permanent": true
+    },
+    {
+      "source": "/i-m-game-box-office.html",
+      "destination": "/im-game-box-office.html",
+      "permanent": true
+    },
+    {
+      "source": "/the-odyssey-box-office.html",
+      "destination": "/odyssey-bcm-hype-index.html",
+      "permanent": true
+    },
+    {
+      "source": "/welcome-to-the-jungle-welcome-3-box-office.html",
+      "destination": "/welcome-to-the-jungle-box-office.html",
+      "permanent": true
+    },
+    {
+      "source": "/avengers-doomsday-box-office.html",
+      "destination": "/upcoming-releases.html",
+      "permanent": true
+    },
+    {
+      "source": "/spirit-box-office.html",
+      "destination": "/upcoming-releases.html",
+      "permanent": true
+    },
+    {
+      "source": "/paw-patrol-dino-box-office.html",
+      "destination": "/india-box-office-2026.html",
+      "permanent": true
+    },
+    {
+      "source": "/insidious-out-of-the-further-box-office.html",
+      "destination": "/india-box-office-2026.html",
+      "permanent": true
+    },
+    {
+      "source": "/star-wars-the-mandalorian-and-grogu-box-office.html",
+      "destination": "/india-box-office-2026.html",
+      "permanent": true
+    },
+    {
+      "source": "/insidious-further-box-office.html",
+      "destination": "/india-box-office-2026.html",
+      "permanent": true
+    },
+    {
+      "source": "/the-end-of-oak-street-box-office.html",
+      "destination": "/india-box-office-2026.html",
+      "permanent": true
+    },
+    {
+      "source": "/sia-nostalgic-for-the-present-box-office.html",
+      "destination": "/india-box-office-2026.html",
+      "permanent": true
+    },
+    {
+      "source": "/ranger-box-office.html",
+      "destination": "/india-box-office-2026.html",
+      "permanent": true
+    },
+    {
+      "source": "/maa-inti-bangaaram-box-office.html",
+      "destination": "/india-box-office-2026.html",
+      "permanent": true
+    },
+    {
+      "source": "/moana-3d-box-office.html",
+      "destination": "/india-box-office-2026.html",
+      "permanent": true
+    },
+    {
+      "source": "/dc-box-office.html",
+      "destination": "/india-box-office-2026.html",
+      "permanent": true
+    },
+    {
+      "source": "/nagabandham-the-secret-treasure-box-office.html",
+      "destination": "/india-box-office-2026.html",
+      "permanent": true
+    },
+    {
+      "source": "/carry-on-jatta-4-box-office.html",
+      "destination": "/india-box-office-2026.html",
+      "permanent": true
+    },
+    {
+      "source": "/magudam-box-office.html",
+      "destination": "/india-box-office-2026.html",
+      "permanent": true
+    },
+    {
+      "source": "/minions-monsters-box-office.html",
+      "destination": "/india-box-office-2026.html",
+      "permanent": true
+    },
+    {
+      "source": "/shakti-shalini-box-office.html",
+      "destination": "/india-box-office-2026.html",
+      "permanent": true
+    },
+    {
+      "source": "/prahaar-box-office.html",
+      "destination": "/india-box-office-2026.html",
+      "permanent": true
+    },
+    {
+      "source": "/toy-story-5-box-office.html",
+      "destination": "/india-box-office-2026.html",
+      "permanent": true
+    },
+    {
+      "source": "/evil-dead-burn-box-office.html",
+      "destination": "/india-box-office-2026.html",
       "permanent": true
     }
   ],
@@ -25,27 +160,45 @@
     {
       "source": "/sitemap.xml",
       "headers": [
-        { "key": "Content-Type", "value": "application/xml; charset=utf-8" },
-        { "key": "Cache-Control", "value": "public, max-age=86400, s-maxage=86400" }
+        {
+          "key": "Content-Type",
+          "value": "application/xml; charset=utf-8"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=86400, s-maxage=86400"
+        }
       ]
     },
     {
       "source": "/robots.txt",
       "headers": [
-        { "key": "Content-Type", "value": "text/plain; charset=utf-8" }
+        {
+          "key": "Content-Type",
+          "value": "text/plain; charset=utf-8"
+        }
       ]
     },
     {
       "source": "/ramayana-map.json",
       "headers": [
-        { "key": "Content-Type", "value": "application/json; charset=utf-8" },
-        { "key": "Cache-Control", "value": "public, max-age=60, s-maxage=60, stale-while-revalidate=600" }
+        {
+          "key": "Content-Type",
+          "value": "application/json; charset=utf-8"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=60, s-maxage=60, stale-while-revalidate=600"
+        }
       ]
     },
     {
       "source": "/ramayana.html",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=0, must-revalidate, s-maxage=60, stale-while-revalidate=60" }
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, must-revalidate, s-maxage=60, stale-while-revalidate=60"
+        }
       ]
     }
   ]
