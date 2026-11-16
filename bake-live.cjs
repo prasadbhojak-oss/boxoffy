@@ -41,6 +41,8 @@ const RF = path.join(R, 'public', 'ramayana.html');
 let s = fs.readFileSync(RF, 'utf8'), n = 0, k;
 const LIVE = objAt(s, 'const LIVE = {');
 if (LIVE) {
+  // Phase 2 feed: the same LIVE block as JSON, read by the test page every 60 s
+  try { fs.writeFileSync(path.join(R, 'public', 'ramayana-live-data.json'), JSON.stringify({ ...LIVE, built: new Date().toISOString() })); log.push('feed json'); } catch (e) { log.push('feed json skipped: ' + e.message); }
   const H = LIVE.hero || {};
   const parts = {
     'bx-asof': esc(LIVE.asOf || ''), 'bx-kick': esc(H.kick || ''),
