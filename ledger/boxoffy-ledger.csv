@@ -5104,3 +5104,27 @@ mookuthi-amman-2,Mookuthi Amman 2,Worldwide,2026-11-10,2026-11-06,,to_date,gross
 ramayana,Ramayana: Part 1,North America,2026-11-15,,11,day,tickets,108681,tickets,,Boxoffy seat count,ours,partial,"booked by 7 PM CT: US 81,610 + Cineplex 22,693 + Landmark/independents 4,378 (3 PM read)",2026-11-16T01:41Z,inbox:na-count-20261115-1907
 ramayana,Ramayana: Part 1,North America,2026-11-15,,11,day,gross,1923547,USD,,Boxoffy seat count,ours,partial,"to 7 PM CT at format prices: US $1,538,325 + Canada $385222",2026-11-16T01:41Z,inbox:na-count-20261115-1907
 ramayana,Ramayana: Part 1,United States,2026-11-15,,11,day,tickets,81610,tickets,,Boxoffy seat count,ours,partial,"891 cinemas, 2,776 show groups, by 7 PM CT",2026-11-16T01:41Z,inbox:na-count-20261115-1907
+ramayana,Ramayana: Part 1,India,2026-11-16,2026-11-05,,to_date,nett,762.12,INR_cr,,"Ramayana tracker · to Mon 16 Nov · nett, 12 days · ₹910.79 Cr gross",industry,final,,2026-11-16T05:17Z,import:ramayana
+ramayana,Ramayana: Part 1,India,2026-11-16,2026-11-05,,to_date,gross,910.79,INR_cr,95870000,"Ramayana tracker · to Mon 16 Nov · nett, 12 days · ₹910.79 Cr gross",industry,estimate,,2026-11-16T05:17Z,import:ramayana
+ramayana,Ramayana: Part 1,India,2026-11-05,,1,day,nett,64.85,INR_cr,,"Ramayana tracker · to Mon 16 Nov · nett, 12 days · ₹910.79 Cr gross",industry,final,Thu Day 1,2026-11-16T05:17Z,import:ramayana
+ramayana,Ramayana: Part 1,India,2026-11-06,,2,day,nett,48.05,INR_cr,,"Ramayana tracker · to Mon 16 Nov · nett, 12 days · ₹910.79 Cr gross",industry,final,Fri Day 2,2026-11-16T05:17Z,import:ramayana
+ramayana,Ramayana: Part 1,India,2026-11-07,,3,day,nett,69.8,INR_cr,,"Ramayana tracker · to Mon 16 Nov · nett, 12 days · ₹910.79 Cr gross",industry,final,Sat Day 3,2026-11-16T05:17Z,import:ramayana
+ramayana,Ramayana: Part 1,India,2026-11-08,,4,day,nett,56.15,INR_cr,,"Ramayana tracker · to Mon 16 Nov · nett, 12 days · ₹910.79 Cr gross",industry,final,Sun Diwali,2026-11-16T05:17Z,import:ramayana
+ramayana,Ramayana: Part 1,India,2026-11-09,,5,day,nett,107.5,INR_cr,,"Ramayana tracker · to Mon 16 Nov · nett, 12 days · ₹910.79 Cr gross",industry,final,Mon Day 5,2026-11-16T05:17Z,import:ramayana
+ramayana,Ramayana: Part 1,India,2026-11-10,,6,day,nett,94.1,INR_cr,,"Ramayana tracker · to Mon 16 Nov · nett, 12 days · ₹910.79 Cr gross",industry,final,Tue Day 6,2026-11-16T05:17Z,import:ramayana
+ramayana,Ramayana: Part 1,India,2026-11-11,,7,day,nett,70.65,INR_cr,,"Ramayana tracker · to Mon 16 Nov · nett, 12 days · ₹910.79 Cr gross",industry,final,Wed Day 7,2026-11-16T05:17Z,import:ramayana
+ramayana,Ramayana: Part 1,India,2026-11-12,,8,day,nett,53.5,INR_cr,,"Ramayana tracker · to Mon 16 Nov · nett, 12 days · ₹910.79 Cr gross",industry,final,Thu Day 8,2026-11-16T05:17Z,import:ramayana
+ramayana,Ramayana: Part 1,India,2026-11-13,,9,day,nett,48.1,INR_cr,,"Ramayana tracker · to Mon 16 Nov · nett, 12 days · ₹910.79 Cr gross",industry,final,Fri Day 9,2026-11-16T05:17Z,import:ramayana
+ramayana,Ramayana: Part 1,India,2026-11-14,,10,day,nett,72.9,INR_cr,,"Ramayana tracker · to Mon 16 Nov · nett, 12 days · ₹910.79 Cr gross",industry,final,Sat Day 10,2026-11-16T05:17Z,import:ramayana
+ramayana,Ramayana: Part 1,India,2026-11-15,,11,day,nett,75,INR_cr,,"Ramayana tracker · to Mon 16 Nov · nett, 12 days · ₹910.79 Cr gross",industry,final,Sun Day 11,2026-11-16T05:17Z,import:ramayana
+king,King,Australia,2026-11-16,,,listing,cinemas,1,count,,Boxoffy listing sweep,ours,final,"listed, not open",2026-11-16T05:17Z,import:king
+king,King,Malaysia,2026-11-16,,,listing,cinemas,1,count,,Boxoffy listing sweep,ours,final,"listed, not open",2026-11-16T05:17Z,import:king
+king,King,Sri Lanka,2026-11-16,,,listing,cinemas,1,count,,Boxoffy listing sweep,ours,final,"listed, not open",2026-11-16T05:17Z,import:king
+king,King,Germany,2026-11-16,,,listing,cinemas,2,count,,Boxoffy listing sweep,ours,final,booking open,2026-11-16T05:17Z,import:king
+king,King,Germany,2026-11-16,,,listing,cinemas,2,count,,Boxoffy listing sweep,ours,final,"listed, not open",2026-11-16T05:17Z,import:king
+ramayana,,Germany,2026-11-15,,11,day,tickets,2037,tickets,,Boxoffy seat count,ours,final,"Grok full count 7:32 PM CT, 92 shows",2026-11-16T05:17Z,inbox:grok-20261115-2220
+ramayana,,Germany,2026-11-16,,,presale,tickets,715,tickets,,Boxoffy seat count,ours,live,"Monday booked by 7:32 PM CT Sunday, 34 shows",2026-11-16T05:17Z,inbox:grok-20261115-2220
+king,,Germany,2026-11-15,,,listing,shows,5,count,,Boxoffy listing read,ours,live,"4 cinemas; bookings not open, 0 tickets",2026-11-16T05:17Z,inbox:grok-20261115-2220
+ramayana,,United States,2026-11-15,,12,day,tickets,82727,tickets,,Boxoffy seat count,ours,final,"9 PM CT final read; 2,776 shows, 891 theatres; max sold per show across all reads",2026-11-16T05:17Z,inbox:na-count-20261115-2115
+ramayana,,Canada,2026-11-15,,12,day,tickets,28443,tickets,,Boxoffy seat count,ours,final,"Cineplex 23,154 (368 sessions) + Landmark 5,289 (4 PM read incl. last reads of started shows)",2026-11-16T05:17Z,inbox:na-count-20261115-2115
+ramayana,,North America,2026-11-15,,12,day,tickets,111170,tickets,,Boxoffy seat count,ours,final,"final Sunday count; ~$1.88M at $16.95/ticket (Sony Sat ratio), ~$1.97M at $17.68",2026-11-16T05:17Z,inbox:na-count-20261115-2115
