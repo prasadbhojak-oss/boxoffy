@@ -5101,3 +5101,6 @@ scene,Scene,India,2026-11-10,2026-11-06,,to_date,nett,97.4,INR_cr,,Boxoffy India
 scene,Scene,Worldwide,2026-11-10,2026-11-06,,to_date,gross,149.55,INR_cr,,Boxoffy India chart sheet,industry,estimate,,2026-11-15T23:41Z,import:sheet
 mookuthi-amman-2,Mookuthi Amman 2,India,2026-11-10,2026-11-06,,to_date,nett,16.18,INR_cr,,Boxoffy India chart sheet,industry,estimate,,2026-11-15T23:41Z,import:sheet
 mookuthi-amman-2,Mookuthi Amman 2,Worldwide,2026-11-10,2026-11-06,,to_date,gross,16.3,INR_cr,,Boxoffy India chart sheet,industry,estimate,,2026-11-15T23:41Z,import:sheet
+ramayana,Ramayana: Part 1,North America,2026-11-15,,11,day,tickets,108681,tickets,,Boxoffy seat count,ours,partial,"booked by 7 PM CT: US 81,610 + Cineplex 22,693 + Landmark/independents 4,378 (3 PM read)",2026-11-16T01:41Z,inbox:na-count-20261115-1907
+ramayana,Ramayana: Part 1,North America,2026-11-15,,11,day,gross,1923547,USD,,Boxoffy seat count,ours,partial,"to 7 PM CT at format prices: US $1,538,325 + Canada $385222",2026-11-16T01:41Z,inbox:na-count-20261115-1907
+ramayana,Ramayana: Part 1,United States,2026-11-15,,11,day,tickets,81610,tickets,,Boxoffy seat count,ours,partial,"891 cinemas, 2,776 show groups, by 7 PM CT",2026-11-16T01:41Z,inbox:na-count-20261115-1907
