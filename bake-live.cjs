@@ -55,8 +55,9 @@ if (LIVE) {
 const LF = path.join(R, 'ledger', 'boxoffy-ledger.csv');
 if (fs.existsSync(LF)) {
   if (!s.includes('id="bx-days"')) {
-    s = s.replace(/(<div class="bx-split" id="bx-split">(?:<!--bake-->[\s\S]*?<!--\/bake-->)?<\/div>)/,
-      `$1\n    <section class="bx-days" id="bx-days" aria-label="Ramayana box office collection day by day"></section>`);
+    // outside the hero, own class: .bx-days is the country bar-chart class (fixed 150px height)
+    s = s.replace('\n  <div class="bx-sec">\n    <h3>Country by country</h3>',
+      `\n  <section class="bx-ledger" id="bx-days" aria-label="Ramayana box office collection day by day"></section>\n  <div class="bx-sec">\n    <h3>Country by country</h3>`);
   }
   const L = csv(LF).filter(r => r.film === 'ramayana' && r.scope === 'day' && ['official', 'industry', 'studio'].includes(r.source_type) && r.status !== 'partial' && r.status !== 'live');
   const pick = (mkt, metric) => {
@@ -78,10 +79,10 @@ if (fs.existsSync(LF)) {
   let tin = 0; for (const d of dates) if (IN[d]) tin += Number(IN[d].value);
   const rows = dates.map(d => `<tr><td>${dn(d) === '0' ? 'Previews' : 'Day ' + dn(d)}</td><td>${wd(d)}</td><td>${inr(IN[d])}</td><td>${usd(NA[d])}</td></tr>`).join('');
   const html = `<h2>Ramayana box office collection day by day</h2>
-<p>India nett in ₹ crore (industry figure) and North America gross in US$ (The Numbers / Comscore actuals; Sony estimate where marked). India total so far ₹${tin.toFixed(2)} Cr nett. From the Boxoffy ledger, updated ${TODAY}.</p>
+<p>India nett in ₹ crore (industry figure) and North America gross in US$ (The Numbers / Comscore actuals; Sony estimate where marked). India total, days with a final figure, ₹${tin.toFixed(2)} Cr nett. From the Boxoffy ledger, updated ${TODAY}.</p>
 <div class="bx-days-wrap"><table><thead><tr><th>Day</th><th>Date</th><th>India nett</th><th>North America</th></tr></thead><tbody>${rows}</tbody></table></div>`;
   [s, k] = fillId(s, 'bx-days', html);
-  if (k && !s.includes('/*bx-days*/')) s = s.replace('</style>', `/*bx-days*/.bx-days{margin:18px 0 6px}.bx-days h2{font-size:18px;margin:0 0 6px}.bx-days p{font-size:13px;opacity:.8;margin:0 0 8px}.bx-days-wrap{overflow-x:auto}.bx-days table{border-collapse:collapse;width:100%;font-size:14px}.bx-days th,.bx-days td{padding:6px 10px;border-bottom:1px solid rgba(127,127,127,.25);text-align:left;white-space:nowrap}.bx-days td i{font-size:11px;opacity:.75;font-style:normal}\n</style>`);
+  if (k && !s.includes('/*bx-days*/')) s = s.replace('</style>', `/*bx-days*/.bx-ledger{margin:18px 0 6px}.bx-ledger h2{font-size:18px;margin:0 0 6px}.bx-ledger p{font-size:13px;opacity:.8;margin:0 0 8px}.bx-days-wrap{overflow-x:auto}.bx-ledger table{border-collapse:collapse;width:100%;font-size:14px}.bx-ledger th,.bx-ledger td{padding:6px 10px;border-bottom:1px solid rgba(127,127,127,.25);text-align:left;white-space:nowrap}.bx-ledger td i{font-size:11px;opacity:.75;font-style:normal}\n</style>`);
   log.push(`days ${k ? dates.length : 0} rows`);
 }
 // Dataset freshness
