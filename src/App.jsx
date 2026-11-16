@@ -2493,18 +2493,18 @@ const INDIA_DAILY = {
   ],
 };
 const INDIA_WEEKLY = {
-  range: "Fri 13 – Thu 19 Nov 2026 · running, to Sat 14",
+  range: "Fri 13 – Thu 19 Nov 2026 · running, to Sun 15",
   rows: [
-    { title:"Ramayana: Part 1", lang:"Hindi + 4 dubs", wk:1, week:499.75, est:true, total:564.6, note:"Fri–Thu · Thu is a live estimate · 8-day total incl. Thu 5 opening", tag:"NEW" },
-    { title:"Scene", lang:"Tamil + dubs", wk:1, week:112.45, est:true, total:112.45, note:"Fri–Wed reported ₹105.45 Cr + Thu estimate", tag:"NEW" },
-    { title:"Mookuthi Amman 2", lang:"Tamil", wk:1, week:17.98, est:true, total:17.98, note:"Fri–Wed reported ₹17.18 Cr + Thu estimate", tag:"NEW" },
-    { title:"Aadarsha Kutumbam House No: 47", lang:"Telugu", wk:2, week:7.76, est:true, total:48.91 },
-    { title:"Jailer 2", lang:"Tamil", wk:4, week:5.85, est:true, total:473.5 },
-    { title:"Premada Oorali", lang:"Kannada", wk:7, week:2.48, est:true, total:115.39 },
-    { title:"Udta Teer", lang:"Hindi", wk:3, week:1.35, est:true, total:47.81 },
-    { title:"Cult", lang:"Telugu", wk:2, week:0.4, est:true, total:5.4 },
-    { title:"Hanuman Ansh", lang:"Hindi", wk:14, week:0.3, est:true, total:343.09 },
-    { title:"Drishyam 3: The Conclusion", lang:"Hindi", wk:6, week:0.25, est:true, total:379.5 },
+    { title:"Ramayana: Part 1", lang:"Hindi + 4 dubs", wk:2, week:196.0, est:true, total:760.6, note:"Fri–Sun · Sunday ₹75.00 Cr" },
+    { title:"Scene", lang:"Tamil + dubs", wk:2, week:24.8, est:true, total:136.5, note:"Fri–Sun" },
+    { title:"Donga Naa Koduku", lang:"Telugu", wk:1, week:5.8, est:true, total:5.8, note:"Opened Fri 13 Nov", tag:"NEW" },
+    { title:"Bouma", lang:"Malayalam", wk:1, week:3.65, est:true, total:4.15, note:"Fri–Sun; opened Thu 12 Nov", tag:"NEW" },
+    { title:"Itllu Arjuna", lang:"Telugu", wk:1, week:3.09, est:true, total:3.09, note:"Opened Fri 13 Nov", tag:"NEW" },
+    { title:"Mookuthi Amman 2", lang:"Tamil", wk:2, week:2.2, est:true, total:20.13, note:"Fri–Sun" },
+    { title:"Jailer 2", lang:"Tamil", wk:5, week:1.41, est:true, total:474.81 },
+    { title:"Udta Teer", lang:"Hindi", wk:4, week:0.92, est:true, total:49.47 },
+    { title:"Pyre", lang:"Hindi", wk:3, week:0.75, est:true, total:3.34 },
+    { title:"Aadarsha Kutumbam House No: 47", lang:"Telugu", wk:3, week:0.73, est:true, total:49.6 },
   ],
 };
 function IndiaWeeklyTop10() { return null; }
@@ -2535,165 +2535,20 @@ function IndiaWeeklyTop10_old() {
    page /india-box-office.html, which AI search and crawlers can read.
    All India figures nett, to the date in INDIA_BOARD.date. ~ = estimate. */
 const INDIA_BOARD = {
-  date: "Sat 14 Nov 2026",
-  week: "Fri 13 – Sat 14 Nov",
-  trendDays: ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],
+  date: "Sun 15 Nov 2026",
+  week: "Fri 13 – Sun 15 Nov",
+  trendDays: ["Mon","Tue","Wed","Thu","Fri","Sat","Sun"],
   rows: [
- {
-  "title": "Ramayana: Part 1",
-  "lang": "Hindi + 4 dubs",
-  "day": 10,
-  "nett": 72.9,
-  "prev": 48.1,
-  "trend": [
-   56.15,
-   107.5,
-   94.1,
-   70.65,
-   53.5,
-   48.1,
-   72.9
-  ],
-  "week": 121.0,
-  "total": 685.6,
-  "ww": "₹1,401 Cr",
-  "wwUsd": "$147.5M",
-  "wwNote": "to Sun 15 Nov, industry figure",
-  "tag": "NEW"
- },
- {
-  "title": "Scene",
-  "lang": "Tamil + dubs",
-  "day": 9,
-  "nett": 9.5,
-  "prev": 6.0,
-  "trend": [
-   23.65,
-   21.4,
-   12.85,
-   8.05,
-   6.25,
-   6.0,
-   9.5
-  ],
-  "week": 15.5,
-  "total": 127.2,
-  "ww": "₹227.25 Cr",
-  "wwUsd": "$23.9M",
-  "tag": "NEW"
- },
- {
-  "title": "Donga Naa Koduku",
-  "lang": "Telugu",
-  "day": 2,
-  "nett": 2.0,
-  "prev": 1.85,
-  "trend": [
-   1.85,
-   2.0
-  ],
-  "week": 3.85,
-  "total": 3.85,
-  "tag": "NEW"
- },
- {
-  "title": "Bouma",
-  "lang": "Malayalam",
-  "day": 3,
-  "nett": 1.43,
-  "prev": 0.9,
-  "trend": [
-   0.5,
-   0.9,
-   1.43
-  ],
-  "week": 2.33,
-  "total": 2.83,
-  "tag": "NEW"
- },
- {
-  "title": "Itllu Arjuna",
-  "lang": "Telugu",
-  "day": 2,
-  "nett": 1.16,
-  "prev": 1.05,
-  "trend": [
-   1.05,
-   1.16
-  ],
-  "week": 2.21,
-  "total": 2.21,
-  "tag": "NEW"
- },
- {
-  "title": "Mookuthi Amman 2",
-  "lang": "Tamil",
-  "day": 9,
-  "nett": 0.85,
-  "prev": 0.47,
-  "trend": [
-   4.6,
-   5.15,
-   2.1,
-   1.0,
-   0.75,
-   0.47,
-   0.85
-  ],
-  "week": 1.32,
-  "total": 19.25,
-  "ww": "₹22.25 Cr",
-  "wwUsd": "$2.3M"
- },
- {
-  "title": "Jailer 2",
-  "lang": "Tamil",
-  "day": 31,
-  "nett": 0.5,
-  "prev": 0.39,
-  "trend": [
-   1.15,
-   1.25,
-   0.88,
-   0.52,
-   0.35,
-   0.39,
-   0.5
-  ],
-  "week": 0.89,
-  "total": 474.29,
-  "ww": "₹831.73 Cr",
-  "wwUsd": "$87.6M"
- },
- {
-  "title": "Aadarsha Kutumbam House No: 47",
-  "lang": "Telugu",
-  "day": 16,
-  "nett": 0.38,
-  "est": true,
-  "week": 0.68,
-  "total": 49.32,
-  "ww": "₹74.51 Cr",
-  "wwUsd": "$7.8M"
- },
- {
-  "title": "Premada Oorali",
-  "lang": "Kannada",
-  "day": 51,
-  "nett": 0.3,
-  "est": true,
-  "week": 0.54,
-  "total": 115.9
- },
- {
-  "title": "Drishyam 3: The Conclusion",
-  "lang": "Hindi",
-  "day": 44,
-  "nett": 0.17,
-  "week": 0.32,
-  "est": true,
-  "total": 380.48
- }
+  {"title":"Ramayana: Part 1", "lang":"Hindi + 4 dubs", "day":11, "nett":75.0, "prev":72.9, "trend":[107.5, 94.1, 70.65, 53.5, 48.1, 72.9, 75.0], "week":196.0, "total":760.6, "ww":"₹1,401 Cr", "wwUsd":"$147.5M", "wwNote":"to Sun 15 Nov, industry figure"},
+  {"title":"Scene", "lang":"Tamil + dubs", "day":10, "nett":9.3, "prev":9.5, "trend":[21.4, 12.85, 8.05, 6.25, 6.0, 9.5, 9.3], "week":24.8, "total":136.5, "ww":"₹242.05 Cr", "wwUsd":"$25.5M"},
+  {"title":"Donga Naa Koduku", "lang":"Telugu", "day":3, "nett":1.95, "prev":2.0, "trend":[1.85, 2.0, 1.95], "week":5.8, "total":5.8, "ww":"₹6.70 Cr", "wwUsd":"$0.7M", "tag":"NEW"},
+  {"title":"Bouma", "lang":"Malayalam", "day":4, "nett":1.5, "prev":1.32, "trend":[0.5, 0.83, 1.32, 1.5], "week":3.65, "total":4.15, "tag":"NEW"},
+  {"title":"Itllu Arjuna", "lang":"Telugu", "day":3, "nett":1.0, "prev":1.04, "trend":[1.05, 1.04, 1.0], "week":3.09, "total":3.09, "ww":"₹3.58 Cr", "wwUsd":"$0.4M", "tag":"NEW"},
+  {"title":"Mookuthi Amman 2", "lang":"Tamil", "day":10, "nett":0.87, "prev":0.86, "trend":[5.15, 2.1, 1.0, 0.75, 0.47, 0.86, 0.87], "week":2.2, "total":20.13},
+  {"title":"Jailer 2", "lang":"Tamil", "day":32, "nett":0.52, "prev":0.5, "trend":[1.25, 0.88, 0.52, 0.35, 0.39, 0.5, 0.52], "week":1.41, "total":474.81, "ww":"₹832.31 Cr", "wwUsd":"$87.6M"},
+  {"title":"Udta Teer", "lang":"Hindi", "day":24, "nett":0.41, "prev":0.31, "trend":[0.4, 0.4, 0.3, 0.22, 0.2, 0.31, 0.41], "week":0.92, "total":49.47, "ww":"₹68.88 Cr", "wwUsd":"$7.3M"},
+  {"title":"Pyre", "lang":"Hindi", "day":17, "nett":0.37, "prev":0.27, "trend":[0.25, 0.25, 0.21, 0.13, 0.11, 0.27, 0.37], "week":0.75, "total":3.34, "ww":"₹3.74 Cr", "wwUsd":"$0.4M"},
+  {"title":"Premada Oorali", "lang":"Kannada", "day":52, "nett":0.34, "prev":0.25, "trend":[0.48, 0.52, 0.29, 0.19, 0.13, 0.25, 0.34], "week":0.72, "total":116.05, "ww":"₹139.17 Cr", "wwUsd":"$14.6M"}
 ],
 };
 
