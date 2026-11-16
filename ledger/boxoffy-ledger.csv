@@ -5351,3 +5351,28 @@ ramayana,Ramayana: Part 1,Overseas,2026-11-15,2026-11-04,,to_date,gross,475.5,IN
 ramayana,Ramayana: Part 1,Worldwide,2026-11-15,2026-11-04,,to_date,gross,1384.5,INR_cr,,Sacnilk day-wise,industry,final,"Sacnilk WW; board keeps ERC $147.5M (Rs1,401 Cr) already in ledger",2026-11-16T13:46Z,inbox:india-board-20261116-0745
 ramayana,Ramayana: Part 1,India,2026-11-15,,11,day,nett,70.2,INR_cr,,Bollywood Hungama,industry,final,BH date-wise toppers 15 Nov; lower than Sacnilk 75.00,2026-11-16T13:46Z,inbox:india-board-20261116-0745
 bouma,Bouma,India,2026-11-15,,,to_date,gross,4.82,INR_cr,,Sacnilk day-wise,industry,final,Sacnilk labels 4.82 both India gross and WW; overseas 0,2026-11-16T13:46Z,inbox:india-board-20261116-0745
+ramayana,Ramayana: Part 1,India,2026-11-16,2026-11-05,,to_date,nett,785.53,INR_cr,,"Ramayana tracker · to Mon 16 Nov · nett, 12 days · ₹938.42 Cr gross",industry,final,,2026-11-16T15:46Z,import:ramayana
+ramayana,Ramayana: Part 1,India,2026-11-16,2026-11-05,,to_date,gross,938.42,INR_cr,98800000,"Ramayana tracker · to Mon 16 Nov · nett, 12 days · ₹938.42 Cr gross",industry,estimate,,2026-11-16T15:46Z,import:ramayana
+ramayana,Ramayana: Part 1,India,2026-11-05,,1,day,nett,64.85,INR_cr,,"Ramayana tracker · to Mon 16 Nov · nett, 12 days · ₹938.42 Cr gross",industry,final,Thu Day 1,2026-11-16T15:46Z,import:ramayana
+ramayana,Ramayana: Part 1,India,2026-11-06,,2,day,nett,48.05,INR_cr,,"Ramayana tracker · to Mon 16 Nov · nett, 12 days · ₹938.42 Cr gross",industry,final,Fri Day 2,2026-11-16T15:46Z,import:ramayana
+ramayana,Ramayana: Part 1,India,2026-11-07,,3,day,nett,69.8,INR_cr,,"Ramayana tracker · to Mon 16 Nov · nett, 12 days · ₹938.42 Cr gross",industry,final,Sat Day 3,2026-11-16T15:46Z,import:ramayana
+ramayana,Ramayana: Part 1,India,2026-11-08,,4,day,nett,56.15,INR_cr,,"Ramayana tracker · to Mon 16 Nov · nett, 12 days · ₹938.42 Cr gross",industry,final,Sun Diwali,2026-11-16T15:46Z,import:ramayana
+ramayana,Ramayana: Part 1,India,2026-11-09,,5,day,nett,107.5,INR_cr,,"Ramayana tracker · to Mon 16 Nov · nett, 12 days · ₹938.42 Cr gross",industry,final,Mon Day 5,2026-11-16T15:46Z,import:ramayana
+ramayana,Ramayana: Part 1,India,2026-11-10,,6,day,nett,94.1,INR_cr,,"Ramayana tracker · to Mon 16 Nov · nett, 12 days · ₹938.42 Cr gross",industry,final,Tue Day 6,2026-11-16T15:46Z,import:ramayana
+ramayana,Ramayana: Part 1,India,2026-11-11,,7,day,nett,70.65,INR_cr,,"Ramayana tracker · to Mon 16 Nov · nett, 12 days · ₹938.42 Cr gross",industry,final,Wed Day 7,2026-11-16T15:46Z,import:ramayana
+ramayana,Ramayana: Part 1,India,2026-11-12,,8,day,nett,53.5,INR_cr,,"Ramayana tracker · to Mon 16 Nov · nett, 12 days · ₹938.42 Cr gross",industry,final,Thu Day 8,2026-11-16T15:46Z,import:ramayana
+ramayana,Ramayana: Part 1,India,2026-11-13,,9,day,nett,48.1,INR_cr,,"Ramayana tracker · to Mon 16 Nov · nett, 12 days · ₹938.42 Cr gross",industry,final,Fri Day 9,2026-11-16T15:46Z,import:ramayana
+ramayana,Ramayana: Part 1,India,2026-11-14,,10,day,nett,72.9,INR_cr,,"Ramayana tracker · to Mon 16 Nov · nett, 12 days · ₹938.42 Cr gross",industry,final,Sat Day 10,2026-11-16T15:46Z,import:ramayana
+ramayana,Ramayana: Part 1,India,2026-11-15,,11,day,nett,75,INR_cr,,"Ramayana tracker · to Mon 16 Nov · nett, 12 days · ₹938.42 Cr gross",industry,final,Sun Day 11,2026-11-16T15:46Z,import:ramayana
+ramayana,,India,2026-11-16,,12,day,nett,24.93,INR_cr,,industry figure,industry,live,"Day 12 live 9:03 PM IST, all languages",2026-11-16T15:46Z,inbox:ramayana-india-20261116-0945
+ramayana,,India,2026-11-16,,12,day,gross,29.42,INR_cr,,industry figure,industry,live,Day 12 live 9:03 PM IST,2026-11-16T15:46Z,inbox:ramayana-india-20261116-0945
+ramayana,,India,2026-11-16,,12,day,shows,21653,count,,industry figure,industry,live,shows tracked today 9:03 PM IST,2026-11-16T15:46Z,inbox:ramayana-india-20261116-0945
+ramayana,,India,2026-11-16,,12,day,occupancy,24,pct,,industry figure,industry,live,all shows tracked 9:03 PM IST,2026-11-16T15:46Z,inbox:ramayana-india-20261116-0945
+ramayana,,India,2026-11-16,2026-11-05,,to_date,nett,785.53,INR_cr,,industry figure,industry,live,12 days incl Day 12 live,2026-11-16T15:46Z,inbox:ramayana-india-20261116-0945
+ramayana,,India,2026-11-16,2026-11-05,,to_date,gross,938.42,INR_cr,,industry figure,industry,live,12 days incl Day 12 live,2026-11-16T15:46Z,inbox:ramayana-india-20261116-0945
+ramayana,,India,2026-11-17,,13,presale,gross,13.57,INR_cr,,industry figure,industry,partial,"Tue advance incl block seats, 8:00 PM IST Mon; 5.17 lakh tickets, 23,036 shows",2026-11-16T15:46Z,inbox:ramayana-india-20261116-0945
+ramayana,,India,2026-11-17,,13,presale,tickets,517000,tickets,,industry figure,industry,partial,Tue advance 8:00 PM IST Mon,2026-11-16T15:46Z,inbox:ramayana-india-20261116-0945
+ramayana,,India,2026-11-16,,12,day,nett,20.04,INR_cr,,industry figure,industry,live,"Hindi only, live 9:03 PM IST",2026-11-16T15:46Z,inbox:ramayana-india-20261116-0945
+ramayana,,India,2026-11-16,,12,day,nett,1.84,INR_cr,,industry figure,industry,live,"Kannada only, live 9:03 PM IST",2026-11-16T15:46Z,inbox:ramayana-india-20261116-0945
+ramayana,,India,2026-11-16,,12,day,nett,1.63,INR_cr,,industry figure,industry,live,"Tamil only, live 9:03 PM IST",2026-11-16T15:46Z,inbox:ramayana-india-20261116-0945
+ramayana,,India,2026-11-16,,12,day,nett,1.42,INR_cr,,industry figure,industry,live,"Telugu only, live 9:03 PM IST",2026-11-16T15:46Z,inbox:ramayana-india-20261116-0945
