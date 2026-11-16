@@ -45,6 +45,9 @@ const EDITORIALS = readJSON(path.join(ROOT, 'src/data/editorials.json')) || [];
 /** Never submit these even though they exist. */
 const EXCLUDE = new Set(['boxoffy-admin.html', 'boxoffy-contest-wireframe.html', '404.html']);
 
+/** Pages whose canonical is a clean path (vercel.json rewrite) — list the canonical, not the .html. */
+const CLEAN = { 'ramayana.html': ['/ramayana', 'hourly', '0.95'], 'king.html': ['/king', 'daily', '0.9'] };
+
 function readJSON(p) {
   try { return JSON.parse(fs.readFileSync(p, 'utf8')); } catch { return null; }
 }
@@ -171,6 +174,7 @@ for (const file of files) {
 }
 
 // Highest priority first, so the important pages sit at the top of the file.
+for (const e of entries) if (CLEAN[e.file]) e.pri = CLEAN[e.file][2];
 entries.sort((a, b) => parseFloat(b.pri) - parseFloat(a.pri) || a.file.localeCompare(b.file));
 
 let xml = `<?xml version="1.0" encoding="UTF-8"?>
@@ -183,7 +187,10 @@ let xml = `<?xml version="1.0" encoding="UTF-8"?>
   -->
 ${urlEntry(`${BASE}/`, TODAY, 'daily', '1.0')}`;
 
-for (const e of entries) xml += urlEntry(`${BASE}/${e.file}`, e.mod, e.freq, e.pri, e.news);
+for (const e of entries) {
+  const c = CLEAN[e.file];
+  xml += c ? urlEntry(`${BASE}${c[0]}`, TODAY, c[1], c[2]) : urlEntry(`${BASE}/${e.file}`, e.mod, e.freq, e.pri, e.news);
+}
 
 xml += `\n\n</urlset>\n`;
 

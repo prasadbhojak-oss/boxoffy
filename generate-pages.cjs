@@ -31,8 +31,8 @@ const path = require('path');
 
 const DATA_FILE      = path.join(__dirname, 'src/data/films.json');
 const HIST_FILE      = path.join(__dirname, 'src/data/films-historical.json');
-const OUTPUT_DIR     = path.join(__dirname, 'public');
-const BASE_URL       = 'https://boxoffy.com';
+const OUTPUT_DIR     = process.env.BOXOFFY_GEN_OUT || path.join(__dirname, 'public');
+const BASE_URL       = 'https://www.boxoffy.com';   // www is the live host; non-www redirects (fixed 15 Nov 2026)
 const GA_ID          = 'G-K6C9EVRFH4';
 const TODAY          = new Date().toISOString().split('T')[0];
 
@@ -61,6 +61,12 @@ const HAND_CRAFTED = new Set([
 ]);
 
 // ── Helpers ──────────────────────────────────────────────────────────────────
+// Worldwide gross string or null. films.json totalCollection is INDIA NETT, so it must never be shown as worldwide.
+function wwOf(film) {
+  const w = String(film.wwGross || '').trim();
+  return /\d/.test(w) && !/nett/i.test(w) ? w.replace(/\s*WW$/i, '') : null;
+}
+
 function esc(s) {
   if (!s) return '';
   return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
@@ -135,7 +141,7 @@ function verdictExplanation(film) {
 function roiAnalysis(film) {
   const india  = parseFloat(film.totalNum) || 0;
   const budget = parseFloat(film.budget) || 0;
-  const ww     = parseFloat(film.ww?.replace(/[^0-9.]/g,'')) || parseFloat(film.totalCollection?.replace(/[^0-9.]/g,'')) || 0;
+  const ww     = parseFloat(String(film.wwGross||'').replace(/[^0-9.]/g,'')) || 0;   // worldwide gross only; never India nett
   if (budget <= 0 || india <= 0) return '';
 
   const roi         = Math.round((india / budget) * 100);
@@ -172,7 +178,7 @@ function buildFAQ(film, yearContext) {
   const title   = film.title || '';
   const verdict = film.verdict || '';
   const india   = parseFloat(film.totalNum) || 0;
-  const ww      = film.totalCollection || (india > 0 ? fmtCr(india) : null);
+  const ww      = wwOf(film);
   const budget  = parseFloat(film.budget) || 0;
   const year    = film.year || film.releaseDate?.match(/\d{4}/)?.[0] || '';
   const lang    = film.language || 'Hindi';
@@ -193,6 +199,20 @@ function buildFAQ(film, yearContext) {
     faqs.push({
       q: `What is ${title} total box office collection?`,
       a: `${title} collected ${fmtCr(india)} India nett at the box office${ww && ww !== fmtCr(india) ? `, with a worldwide gross of ${ww}` : ''}. The India nett figure represents collections after GST extraction, as reported by Box Office India and cross-referenced with Sacnilk and Pinkvilla.`
+    });
+  }
+
+  // Q2b/Q2c: budget and worldwide, the two questions Search Console shows people asking most
+  if (budget > 0) {
+    faqs.push({
+      q: `What was ${title} budget?`,
+      a: `${title} was made on a reported budget of ${fmtCr(budget)}.${india > 0 ? ` It collected ${fmtCr(india)} India nett, ${(india / budget).toFixed(1)}x its budget.` : ''}`
+    });
+  }
+  if (ww && india > 0) {
+    faqs.push({
+      q: `How much did ${title} earn worldwide?`,
+      a: `${title} grossed ${ww} worldwide, including ${fmtCr(india)} India nett.`
     });
   }
 
@@ -256,6 +276,16 @@ function buildFAQ(film, yearContext) {
 }
 
 // ── Comparable films ──────────────────────────────────────────────────────────
+// Pages that exist on the site or will be written in this run: only these get links (no phantom 404s).
+const LIVE_PAGES = new Set();
+function pageExists(slug) {
+  return LIVE_PAGES.has(slug) || fs.existsSync(path.join(__dirname, 'public', slug));
+}
+function yearPage(year) {
+  const f = `india-box-office-${year}.html`;
+  return fs.existsSync(path.join(__dirname, 'public', f)) ? '/' + f : null;
+}
+
 function getComparables(film, allFilmsFlat) {
   const india = parseFloat(film.totalNum) || 0;
   if (india <= 0) return [];
@@ -282,7 +312,7 @@ function generatePage(film, slug, allFilmsFlat, yearStats) {
   const vBg       = verdictBg(verdict);
   const india     = parseFloat(film.totalNum) || 0;
   const indiaStr  = film.indiaNet && film.indiaNet !== '—' ? film.indiaNet : (india > 0 ? fmtCr(india) : null);
-  const ww        = film.totalCollection || null;
+  const ww        = wwOf(film);
   const overseas  = film.overseas || null;
   const budget    = film.budget || null;
   const director  = film.director || null;
@@ -307,20 +337,22 @@ function generatePage(film, slug, allFilmsFlat, yearStats) {
   const comparables = getComparables({...film, year}, allFilmsFlat);
 
   // SEO title + description
+  // Titles answer what people search: "<film> budget and collection", "<film> hit or flop" (Search Console, Nov 2026)
+  const budgetNum = parseFloat(String(budget || '').replace(/[^0-9.]/g, '')) || 0;
   const seoTitle = india > 0
-    ? `${title} Box Office Collection — ${ww || fmtCr(india)} | ${verdict} | Boxoffy`
+    ? `${title} (${year}) ${budgetNum > 0 ? 'Budget & ' : ''}Box Office Collection: ${fmtCr(india)} Nett${ww ? ', ' + ww + ' Worldwide' : ''} — ${verdict} | Boxoffy`
     : `${title} Box Office Collection | ${verdict} | Boxoffy`;
 
   const seoDesc = india > 0
-    ? `${title} (${year}) box office collection: ${indiaStr ? indiaStr + ' India nett' : ''}${ww ? ' · ' + ww + ' worldwide' : ''}. ${verdict}. ${lang} film${director ? ' directed by ' + director : ''}. Boxoffy verified verdict and analysis.`
+    ? `Hit or flop? ${title} (${year}) was ${/^[AEIOU]/i.test(verdict) ? 'an' : 'a'} ${verdict}.${budgetNum > 0 ? ' Budget ' + fmtCr(budgetNum) + ',' : ''} India nett ${fmtCr(india)}${ww ? ', worldwide ' + ww : ''}. ${lang} film${director ? ' by ' + director : ''}: full box office collection on Boxoffy.`
     : `${title} (${year}) ${lang} film box office collection, verdict and OTT information. Boxoffy India box office intelligence.`;
 
   // Stats to show
   const stats = [];
   if (ww)      stats.push({ l:'Worldwide', v: ww, s:'Gross collection' });
   if (indiaStr) stats.push({ l:'India Nett', v: indiaStr, s:'After GST' });
-  if (overseas && overseas !== 'null') stats.push({ l:'Overseas', v:`₹${overseas}`, s:'International gross' });
-  if (budget)  stats.push({ l:'Budget', v:`₹${budget}`, s:'Production cost' });
+  if (overseas && overseas !== 'null') stats.push({ l:'Overseas', v: String(overseas).startsWith('₹') ? overseas : `₹${overseas}`, s:'International gross' });
+  if (budget)  stats.push({ l:'Budget', v: String(budget).startsWith('₹') ? budget : `₹${budget}`, s:'Production cost' });
   if (ott?.rightsDeal && ott.rightsDeal !== 'TBD') stats.push({ l:'OTT Rights', v:ott.rightsDeal, s:ott.platform });
 
   const statsHTML = stats.map(s => `
@@ -338,15 +370,16 @@ function generatePage(film, slug, allFilmsFlat, yearStats) {
       ${comparables.map(c => {
         const cSlug = c.pageUrl || `${slugify(c.title)}-box-office.html`;
         const cIndia = parseFloat(c.totalNum) || 0;
-        return `<a href="/${cSlug}" class="comp-card">
-          <div class="comp-title">${esc(c.title)}</div>
+        const inner = `<div class="comp-title">${esc(c.title)}</div>
           <div class="comp-meta">${esc(c.language)} · ${esc(c.year)}</div>
           <div class="comp-verdict" style="color:${verdictColor(c.verdict)}">${esc(c.verdict)}</div>
-          ${cIndia > 0 ? `<div class="comp-collection">${fmtCr(cIndia)} India nett</div>` : ''}
-        </a>`;
+          ${cIndia > 0 ? `<div class="comp-collection">${fmtCr(cIndia)} India nett</div>` : ''}`;
+        return pageExists(cSlug) ? `<a href="/${cSlug}" class="comp-card">${inner}</a>` : `<div class="comp-card">${inner}</div>`;
       }).join('')}
     </div>
-  </div>` : '';
+    ${yearPage(year) ? `<p style="margin-top:12px;font-size:14px"><a href="${yearPage(year)}">Box office collection ${esc(year)}: every top film, hits and flops →</a></p>` : ''}
+  </div>` : (yearPage(year) ? `
+  <div class="section"><p style="font-size:14px"><a href="${yearPage(year)}">Box office collection ${esc(year)}: every top film, hits and flops →</a></p></div>` : '');
 
   // OTT block
   const ottHTML = ott ? `
@@ -422,8 +455,8 @@ function generatePage(film, slug, allFilmsFlat, yearStats) {
       "url": "${url}",
       "datePublished": "${year}-01-01",
       "dateModified": "${TODAY}",
-      "author": {"@type":"Organization","name":"Boxoffy","url":"${BASE_URL}"},
-      "publisher": {"@type":"Organization","name":"Boxoffy","url":"${BASE_URL}"}
+      "author": {"@type":"Organization","@id":"https://www.boxoffy.com/#org","name":"Boxoffy","url":"${BASE_URL}/","logo":{"@type":"ImageObject","url":"${BASE_URL}/favicon.svg"},"sameAs":["https://x.com/BoxoffyMI"]},
+      "publisher": {"@type":"Organization","@id":"https://www.boxoffy.com/#org","name":"Boxoffy","url":"${BASE_URL}/","logo":{"@type":"ImageObject","url":"${BASE_URL}/favicon.svg"},"sameAs":["https://x.com/BoxoffyMI"]}
     },
     {
       "@type": "Movie",
@@ -449,6 +482,7 @@ a{color:var(--accent);text-decoration:none}
 .hero-inner{max-width:760px;margin:0 auto}
 .hero-eyebrow{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:#6B7280;margin-bottom:10px}
 .hero-title{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:clamp(34px,6vw,64px);color:#fff;line-height:.92;letter-spacing:-.02em;margin-bottom:10px}
+.answer{color:#E5E1DA;font-size:16px;line-height:1.5;margin:0 0 16px;max-width:760px}.answer strong{color:#fff}
 .verdict-badge{display:inline-flex;align-items:center;padding:5px 14px;font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:12px;letter-spacing:.14em;text-transform:uppercase;border-radius:2px;margin-bottom:16px}
 .meta-row{font-size:12px;color:#6B7280;margin-bottom:20px}
 .meta-row strong{color:#9CA3AF}
@@ -508,6 +542,7 @@ footer{background:#0D0C0B;border-top:2px solid #1F2937;padding:22px 24px;display
 .ft-logo{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:20px;color:#fff}
 .ft-logo span{color:var(--accent)}
 .ft-link{font-size:12px;color:#6B7280;text-decoration:none}
+.ft-nav{font-size:12px;color:#374151;line-height:1.9}
 .ft-link:hover{color:#fff}
 .disclaimer{background:#111;padding:12px 24px;font-size:9px;color:#4B5563;line-height:1.7}
 /* Mobile share floating bar */
@@ -544,9 +579,10 @@ footer{background:#0D0C0B;border-top:2px solid #1F2937;padding:22px 24px;display
 
 <section class="hero">
   <div class="hero-inner">
-    <div class="hero-eyebrow">${esc(lang)} Film · ${esc(year)} · Box Office Collection</div>
+    <div class="hero-eyebrow">${esc(lang)} Film · ${yearPage(year) ? `<a href="${yearPage(year)}" style="color:inherit">${esc(year)}</a>` : esc(year)} · Box Office Collection</div>
     <h1 class="hero-title">${esc(title)}</h1>
     <div class="verdict-badge" style="background:${vBg};color:${vColor}">${esc(verdict)}</div>
+    ${india > 0 ? `<p class="answer"><strong>Hit or flop:</strong> ${esc(title)} was ${/^[AEIOU]/i.test(verdict) ? 'an' : 'a'} ${esc(verdict)}.${budgetNum > 0 ? ` <strong>Budget</strong> ${esc(fmtCr(budgetNum))} ·` : ''} <strong>India nett</strong> ${esc(fmtCr(india))}${ww ? ` · <strong>Worldwide</strong> ${esc(ww)}` : ''}</p>` : ''}
     <div class="meta-row">
       ${director ? `<strong>Director</strong> ${esc(director)}` : ''}
       ${cast ? ` &nbsp;·&nbsp; <strong>Cast</strong> ${esc(cast)}` : ''}
@@ -647,7 +683,7 @@ footer{background:#0D0C0B;border-top:2px solid #1F2937;padding:22px 24px;display
 
 <footer>
   <a href="/" class="ft-logo">BOX<span>OF</span>FY</a>
-  <a href="/" class="ft-link">← Live 2026 Dashboard</a>
+  <nav class="ft-nav"><a href="/" class="ft-link">Live charts</a> · <a href="/india-box-office.html" class="ft-link">India box office today</a> · <a href="/india-box-office-2026.html" class="ft-link">2026 box office</a> · <a href="/ramayana" class="ft-link">Ramayana tracker</a> · <a href="/how-boxoffy-counts.html" class="ft-link">How Boxoffy counts</a> · <a href="/about.html" class="ft-link">About</a></nav>
 </footer>
 <div class="disclaimer">Boxoffy.com is an independent box office intelligence platform. All figures are estimates based on publicly available trade data from Box Office India, Sacnilk and Pinkvilla. Boxoffy is not affiliated with any production house, studio or distributor. © 2026 Boxoffy.com</div>
 
@@ -683,6 +719,9 @@ function main() {
   if (!fs.existsSync(OUTPUT_DIR)) fs.mkdirSync(OUTPUT_DIR, { recursive: true });
 
   let generated = 0, skipped = 0, handCrafted = 0;
+  for (const [, films] of Object.entries(data)) for (const f of films) {
+    if ((parseFloat(f.totalNum) || 0) > 0 && f.verdict !== 'Upcoming') LIVE_PAGES.add(f.pageUrl || `${slugify(f.title)}-box-office.html`);
+  }
 
   for (const [year, films] of Object.entries(data)) {
     if (filterYear && year !== filterYear) continue;

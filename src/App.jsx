@@ -4747,10 +4747,10 @@ function WeekendLeadHero() {
         <div style={{ flex:1, minWidth:0, display:"flex", flexDirection:"column", justifyContent:"center" }}>
           <span style={{ alignSelf:"flex-start", background:"#C8201A", color:"#FFFFFF", fontFamily:"'Barlow Condensed', sans-serif", fontWeight:900, fontSize:9, letterSpacing:"0.12em", padding:"2px 7px", borderRadius:2, marginBottom:7 }}>LIVE · RAMAYANA · RUNNING TOTAL</span>
           <div style={{ fontFamily:"'Barlow Condensed', sans-serif", fontWeight:900, fontSize:"clamp(15px, 1.7vw, 17px)", color:"#FFFFFF", lineHeight:1.15, letterSpacing:"-0.01em" }}>
-            RAMAYANA: $147.5M (₹1,401 CR) WORLDWIDE IN 12 DAYS.
+            RAMAYANA: $147.5M (₹1,401 CR) WORLDWIDE TO SUNDAY.
           </div>
           <div style={{ fontFamily:"'DM Sans', sans-serif", fontSize:10.5, color:"#9CA3AF", marginTop:5, lineHeight:1.4 }}>
-            India ₹760.60 Cr nett in 11 days. North America $24.1M.
+            India ₹762.12 Cr nett in 12 days. North America $24.1M.
           </div>
           <span style={{ fontFamily:"'Barlow Condensed', sans-serif", fontWeight:700, fontSize:11, color:"#E5C882", letterSpacing:"0.06em", marginTop:8 }}>OPEN THE LIVE TRACKER →</span>
         </div>
@@ -5123,10 +5123,10 @@ const RAMAYANA_TRACKER = {
   // 5 NOV 21:40 CT: the homepage strip is now RAMAYANA ACTUALS - a compact
   // running total (previews + Day 1). Presale fields above stay as the record.
   actuals: {
-    asOf: "15 Nov · 1:15 PM CT",
+    asOf: "15 Nov · 9:55 PM CT",
     ww: "$147.5M", wwInr: "₹1,401 Cr · to Sun 15 Nov · +$38.1M this weekend (industry figure)",
-    india: "₹760.60 Cr", indiaNote: "nett · 11 days, Sun early est. (₹909 Cr gross)",
-    na: "$24.1M", naNote: "to Sun · 2nd weekend $5.5M (Sony est.): Fri $1.415M · Sat $2.4M · Sun $1.6M",
+    india: "₹762.12 Cr", indiaNote: "nett · 12 days, Mon live (₹910.79 Cr gross)",
+    na: "$24.1M", naNote: "to Sun · 2nd weekend $5.5M (Sony est.) · Fri $1.415M actual",
     overseas: "$26.2M", overseasNote: "outside India & N. America · to Sun (industry figure)",
   },
 };
