@@ -5123,9 +5123,9 @@ const RAMAYANA_TRACKER = {
   // 5 NOV 21:40 CT: the homepage strip is now RAMAYANA ACTUALS - a compact
   // running total (previews + Day 1). Presale fields above stay as the record.
   actuals: {
-    asOf: "15 Nov · 9:55 PM CT",
+    asOf: "16 Nov · 3:45 AM CT",
     ww: "$147.5M", wwInr: "₹1,401 Cr · to Sun 15 Nov · +$38.1M this weekend (industry figure)",
-    india: "₹762.12 Cr", indiaNote: "nett · 12 days, Mon live (₹910.79 Cr gross)",
+    india: "₹771.21 Cr", indiaNote: "nett · 12 days, Mon live (₹921.52 Cr gross)",
     na: "$24.1M", naNote: "to Sun · 2nd weekend $5.5M (Sony est.) · Fri $1.415M actual",
     overseas: "$26.2M", overseasNote: "outside India & N. America · to Sun (industry figure)",
   },
